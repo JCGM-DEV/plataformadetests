@@ -48,7 +48,7 @@ function renderSubjects() {
                 <button onclick="startExam('${subject.id}')">Iniciar Simulacro Aleatorio</button>
             </div>
             <div class="card-stats">
-                <span>V7.1 FINAL Pro: Pureza Contextual 100%</span>
+                <span>V8 LEGENDARY: 1.400 Conceptos Técnicos Reales</span>
             </div>
         `;
         subjectGrid.appendChild(card);
@@ -74,26 +74,24 @@ function startExam(subjectId) {
     // Select 30 random questions from pool (Truly random each time)
     let pool = QUESTION_POOL[subjectId] || [];
     
-    // Non-deterministic shuffle using current timestamp
-    const seed = Date.now().toString();
-    APP_STATE.examQuestions = getDeterministicRandomQuestions(pool, 30, seed);
+    // Truly non-repetitive V8 Legendary randomization
+    APP_STATE.examQuestions = getDeterministicRandomQuestions(pool, 30);
     
     examModal.classList.remove('hidden');
     renderQuestion();
     startTimer();
 }
 
-function getDeterministicRandomQuestions(pool, count, seed) {
-    // Unique Selection Logic (No repeats within 30 questions)
+function getDeterministicRandomQuestions(pool, count) {
+    // V8 Legendary: Pure non-deterministic shuffle
     let shuffled = [...pool];
     
-    // Shuffle algorithm (Fisher-Yates)
+    // Fisher-Yates shuffle with true randomness
     for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
     
-    // Filter by concept_id to be extra sure (V5 logic)
     const uniqueQuestions = [];
     const usedIds = new Set();
     
