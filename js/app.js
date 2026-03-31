@@ -214,22 +214,31 @@ function nextQuestion() {
 function finishExam() {
     clearInterval(APP_STATE.timerInterval);
     
+    const totalPreguntas = APP_STATE.examQuestions.length;
+    const N = 4; // Number of answer options (always 4 in this platform)
+    const penalizacionPorError = 1 / (N - 1); // = 1/3 ≈ 0.333
+
     let aciertos = 0;
     let errores = 0;
-    let omitidas = 30 - APP_STATE.answers.length;
+    let omitidas = 0;
 
     APP_STATE.answers.forEach(a => {
         if (a.selected === a.correct) aciertos++;
-        else if (a.selected !== -1) errores++;
+        else if (a.selected === -1) omitidas++;  // blank
+        else errores++;
     });
+    // Count unanswered questions (navigated away without selecting)
+    omitidas += (totalPreguntas - APP_STATE.answers.length);
 
-    // SISTEMA FP EUROFORMAC (Standard)
-    // Nota = (Aciertos - Errores/2) / N * 10
-    // Asumiendo 3 opciones. Si hay 4, a veces es Errores/3. Usamos 0.5 de penalización.
-    let calificacion = ((aciertos - (errores * 0.5)) / 30) * 10;
-    if (calificacion < 0) calificacion = 0;
+    // FÓRMULA OFICIAL DAW EUROFORMAC
+    // Puntuación = Aciertos - Errores / (N - 1)
+    // Con N=4: Puntuación = Aciertos - Errores/3
+    const puntuacionBruta = aciertos - (errores * penalizacionPorError);
+    const puntuacionFinal = Math.max(0, puntuacionBruta); // No puede ser negativa
+    const calificacion = (puntuacionFinal / totalPreguntas) * 10;
     
     const passed = calificacion >= 5;
+    const penalizacionTotal = (errores * penalizacionPorError).toFixed(2);
 
     examRoot.innerHTML = `
         <div class="results-container">
@@ -238,14 +247,19 @@ function finishExam() {
                 ${calificacion.toFixed(2)}
             </div>
             <div class="stats-grid">
-                <div class="stat-item"><span>Aciertos:</span> <strong>${aciertos}</strong></div>
-                <div class="stat-item"><span>Errores:</span> <strong>${errores}</strong></div>
-                <div class="stat-item"><span>Omitidas:</span> <strong>${omitidas}</strong></div>
-                <div class="stat-item"><span>Penalización:</span> <strong>-${(errores * 0.5).toFixed(1)}</strong></div>
+                <div class="stat-item"><span>✅ Aciertos:</span> <strong>${aciertos}</strong></div>
+                <div class="stat-item"><span>❌ Errores:</span> <strong>${errores}</strong></div>
+                <div class="stat-item"><span>⬜ Omitidas:</span> <strong>${omitidas}</strong></div>
+                <div class="stat-item"><span>📉 Penalización:</span> <strong>-${penalizacionTotal}</strong></div>
+            </div>
+            <div class="formula-box">
+                <p><strong>Fórmula aplicada (DAW):</strong></p>
+                <p>Puntos = ${aciertos} − ${errores} ÷ ${N - 1} = <strong>${puntuacionFinal.toFixed(2)}</strong></p>
+                <p>Nota = ${puntuacionFinal.toFixed(2)} ÷ ${totalPreguntas} × 10 = <strong>${calificacion.toFixed(2)}</strong></p>
+                <small>Blanco = 0 pts | Error = −1/${N - 1} pts | Acierto = +1 pto</small>
             </div>
             <div class="feedback-final">
-                ${passed ? '<h3>¡Enhorabuena! Has aprobado.</h3>' : '<h3>Necesitas repasar un poco más.</h3>'}
-                <p>Calificación final: ${calificacion.toFixed(2)} / 10</p>
+                ${passed ? '<h3>¡Enhorabuena! Has aprobado. 🎉</h3>' : '<h3>Necesitas repasar un poco más. 💪</h3>'}
             </div>
             <button class="option-btn" style="width: auto; margin-top: 2rem;" onclick="location.reload()">Volver al Inicio</button>
         </div>

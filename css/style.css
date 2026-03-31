@@ -399,6 +399,35 @@ h1, h2, h3 {
     border-radius: 10px;
 }
 
+.formula-box {
+    background: rgba(234, 179, 8, 0.07);
+    border: 1px solid rgba(234, 179, 8, 0.25);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.formula-box p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.formula-box p strong {
+    color: #fbbf24;
+}
+
+.formula-box small {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+    display: block;
+    margin-top: 0.5rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 0.5rem;
+}
+
 /* Background Blurs */
 .bg-blur-1 {
   position: fixed;
