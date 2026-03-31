@@ -1187,6 +1187,354 @@
       ],
       "correct": 3,
       "explanation": "L1 es la más rápida y pequeña; L3 la más grande."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_99",
+      "question": "¿Cuánto es el número binario 1010 en decimal?",
+      "options": [
+        "8",
+        "10",
+        "14",
+        "12"
+      ],
+      "correct": 1,
+      "explanation": "1×8 + 0×4 + 1×2 + 0×1 = 10."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_100",
+      "question": "¿Cuánto es el número decimal 255 en hexadecimal?",
+      "options": [
+        "F0",
+        "FE",
+        "EF",
+        "FF"
+      ],
+      "correct": 3,
+      "explanation": "255 = 15×16 + 15 = FF en hex."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_101",
+      "question": "¿Cuánto es el número hexadecimal A en decimal?",
+      "options": [
+        "11",
+        "12",
+        "10",
+        "16"
+      ],
+      "correct": 2,
+      "explanation": "A=10, B=11, C=12, D=13, E=14, F=15."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_102",
+      "question": "¿Cuántos bits tiene un byte?",
+      "options": [
+        "16",
+        "4",
+        "32",
+        "8"
+      ],
+      "correct": 3,
+      "explanation": "1 byte = 8 bits."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_103",
+      "question": "¿Cuántos bytes tiene un kilobyte (KiB) en la escala binaria?",
+      "options": [
+        "1024",
+        "1000",
+        "2048",
+        "512"
+      ],
+      "correct": 0,
+      "explanation": "1 KiB = 2^10 = 1024 bytes."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_104",
+      "question": "¿Qué sistema de codificación representa todos los caracteres del mundo con hasta 4 bytes?",
+      "options": [
+        "ASCII",
+        "Unicode / UTF-8",
+        "ISO-8859-1",
+        "EBCDIC"
+      ],
+      "correct": 1,
+      "explanation": "UTF-8 es compatible con ASCII y cubre todos los idiomas."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_105",
+      "question": "¿Cuántos caracteres distintos puede representar el código ASCII estándar (7 bits)?",
+      "options": [
+        "128",
+        "256",
+        "64",
+        "512"
+      ],
+      "correct": 0,
+      "explanation": "2^7 = 128 caracteres."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_106",
+      "question": "¿Qué es el complemento a dos?",
+      "options": [
+        "La resta en numeración hexadecimal",
+        "El inverso de los bits sin más",
+        "Sistema para representar números negativos en binario",
+        "Un tipo de suma binaria"
+      ],
+      "correct": 2,
+      "explanation": "Los ordenadores usan complemento a dos para negativos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_107",
+      "question": "¿Cuánto es 1111 en binario convertido a decimal?",
+      "options": [
+        "16",
+        "14",
+        "8",
+        "15"
+      ],
+      "correct": 3,
+      "explanation": "8+4+2+1 = 15."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_108",
+      "question": "¿Qué base numérica usa los dígitos del 0 al 7?",
+      "options": [
+        "Decimal (base 10)",
+        "Binario (base 2)",
+        "Hexadecimal (base 16)",
+        "Octal (base 8)"
+      ],
+      "correct": 3,
+      "explanation": "En octal se usan solo 0-7."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_109",
+      "question": "¿Qué algoritmo de planificación de CPU asigna el procesador al proceso que lleva más tiempo esperando?",
+      "options": [
+        "FCFS (First Come First Served)",
+        "Prioridad",
+        "SJF",
+        "Round Robin"
+      ],
+      "correct": 0,
+      "explanation": "FCFS: el primero en llegar, el primero en ser atendido."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_110",
+      "question": "¿Qué algoritmo de planificación de CPU asigna un quantum de tiempo a cada proceso de forma rotativa?",
+      "options": [
+        "FCFS",
+        "Round Robin",
+        "Multilevel Queue",
+        "SJF"
+      ],
+      "correct": 1,
+      "explanation": "Round Robin es el más usado en SO modernos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_111",
+      "question": "¿Qué algoritmo de planificación selecciona el proceso con el menor tiempo estimado de ejecución?",
+      "options": [
+        "FCFS",
+        "Round Robin",
+        "LIFO",
+        "SJF (Shortest Job First)"
+      ],
+      "correct": 3,
+      "explanation": "SJF minimiza el tiempo medio de espera."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_112",
+      "question": "¿Qué es el tiempo de espera (waiting time) de un proceso?",
+      "options": [
+        "Tiempo bloqueado en I/O",
+        "Tiempo total de vida del proceso",
+        "Tiempo de CPU usado",
+        "Tiempo que el proceso pasa en la cola de listos sin ejecutarse"
+      ],
+      "correct": 3,
+      "explanation": "Waiting time = Turnaround - Burst time."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_113",
+      "question": "¿Qué significa 'inanición' (starvation) en planificación de CPU?",
+      "options": [
+        "Un proceso consume el 100% de CPU",
+        "El SO se queda sin memoria",
+        "Un proceso de baja prioridad nunca llega a ejecutarse porque siempre hay otros con mayor prioridad",
+        "El disco duro se llena"
+      ],
+      "correct": 2,
+      "explanation": "El aging o envejecimiento resuelve la inanición."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_114",
+      "question": "¿Qué protocolo permite compartir archivos e impresoras entre Linux y Windows?",
+      "options": [
+        "FTP",
+        "Samba (SMB/CIFS)",
+        "SSH",
+        "NFS"
+      ],
+      "correct": 1,
+      "explanation": "Samba implementa el protocolo SMB de Windows en Linux."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_115",
+      "question": "¿Qué protocolo permite montar sistemas de archivos remotos en red entre sistemas Unix/Linux?",
+      "options": [
+        "FTP",
+        "SFTP",
+        "Samba",
+        "NFS (Network File System)"
+      ],
+      "correct": 3,
+      "explanation": "NFS es nativo de entornos Unix."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_116",
+      "question": "¿Qué es Active Directory?",
+      "options": [
+        "Un firewall de Windows",
+        "Un protocolo de enrutamiento",
+        "Un sistema de archivos de red",
+        "Servicio de directorio de Microsoft para gestionar usuarios, equipos y políticas en una red Windows"
+      ],
+      "correct": 3,
+      "explanation": "AD usa LDAP y Kerberos para autenticación."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_117",
+      "question": "¿Qué es un controlador de dominio en Windows Server?",
+      "options": [
+        "Servidor que gestiona la autenticación y autorización de todos los equipos del dominio",
+        "Un servidor de archivos",
+        "Un servidor web IIS",
+        "Un hub de red"
+      ],
+      "correct": 0,
+      "explanation": "El DC almacena y replica Active Directory."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_118",
+      "question": "¿Qué es RAID 6?",
+      "options": [
+        "Como RAID 5 pero con doble paridad, soporta el fallo de 2 discos simultáneos",
+        "RAID 1 con 6 discos",
+        "RAID 5 con un disco adicional de caché",
+        "RAID 0 con paridad"
+      ],
+      "correct": 0,
+      "explanation": "RAID 6 necesita mínimo 4 discos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_119",
+      "question": "¿Qué es LVM (Logical Volume Manager)?",
+      "options": [
+        "Sistema que permite redimensionar particiones lógicas dinámicamente sin formatear",
+        "Un tipo de RAID por software",
+        "Un protocolo de red de almacenamiento",
+        "Un formato de sistema de archivos"
+      ],
+      "correct": 0,
+      "explanation": "LVM abstrae el almacenamiento físico en volúmenes lógicos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_120",
+      "question": "¿Qué es un Physical Volume (PV) en LVM?",
+      "options": [
+        "Un grupo de volúmenes",
+        "Un volumen lógico asignado a un directorio",
+        "Un snapshot de LVM",
+        "Un disco o partición física incorporada al sistema LVM"
+      ],
+      "correct": 3,
+      "explanation": "Los PV son la capa base de LVM."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_121",
+      "question": "¿Qué es el phishing?",
+      "options": [
+        "Técnica de engaño para que la víctima revele credenciales mediante webs o correos falsos",
+        "Un ataque de denegación de servicio",
+        "Una escucha pasiva del tráfico de red",
+        "Un virus que cifra los ficheros"
+      ],
+      "correct": 0,
+      "explanation": "El phishing explota la ingeniería social."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_122",
+      "question": "¿Qué es el ransomware?",
+      "options": [
+        "Un troyano bancario",
+        "Un gusano de red",
+        "Malware que cifra los archivos de la víctima y pide un rescate para recuperarlos",
+        "Un virus que muestra anuncios"
+      ],
+      "correct": 2,
+      "explanation": "WannaCry y Ryuk son ejemplos famosos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_123",
+      "question": "¿Qué es la autenticación multifactor (MFA)?",
+      "options": [
+        "Cambiar la contraseña cada mes",
+        "Usar contraseñas distintas en cada servicio",
+        "Verificar la identidad usando dos o más factores: algo que sabes, tienes o eres",
+        "Usar contraseñas muy largas"
+      ],
+      "correct": 2,
+      "explanation": "MFA reduce drásticamente el riesgo de cuenta comprometida."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_124",
+      "question": "¿Qué significa 'HTTPS' y qué garantiza?",
+      "options": [
+        "HTTP con compresión gzip",
+        "HTTP sobre TLS/SSL, garantiza cifrado y autenticidad del servidor",
+        "HTTP sobre UDP",
+        "HTTP con cookies seguras"
+      ],
+      "correct": 1,
+      "explanation": "El candado verde del navegador indica HTTPS."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_125",
+      "question": "¿Qué es un certificado digital SSL/TLS?",
+      "options": [
+        "Un tipo de cookie segura",
+        "Un protocolo de red",
+        "Archivo que autentica la identidad de un servidor y habilita el cifrado",
+        "Una contraseña de servidor"
+      ],
+      "correct": 2,
+      "explanation": "Lo emite una Autoridad de Certificación (CA)."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_126",
+      "question": "¿Qué protocolo de enrutamiento dinámico usa métricas de costo (Dijkstra) y es el más usado dentro de una organización?",
+      "options": [
+        "BGP",
+        "OSPF (Open Shortest Path First)",
+        "RIP",
+        "EIGRP"
+      ],
+      "correct": 1,
+      "explanation": "OSPF es un protocolo de estado de enlace (IGP)."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp2_127",
+      "question": "¿Qué protocolo de enrutamiento gestiona el intercambio de rutas entre distintos sistemas autónomos en Internet?",
+      "options": [
+        "BGP (Border Gateway Protocol)",
+        "IGMP",
+        "OSPF",
+        "RIP"
+      ],
+      "correct": 0,
+      "explanation": "BGP es el protocolo de enrutamiento de Internet."
     }
   ],
   "bases_de_datos": [
@@ -2029,6 +2377,258 @@
       ],
       "correct": 2,
       "explanation": "READ UNCOMMITTED es el nivel más bajo."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_70",
+      "question": "¿Qué establece el Teorema CAP?",
+      "options": [
+        "Que NoSQL no puede ser consistente",
+        "Que toda BD debe cumplir ACID",
+        "Que SQL siempre es más rápido que NoSQL",
+        "Un sistema distribuido solo puede garantizar 2 de 3: Consistencia, Disponibilidad y Tolerancia a particiones"
+      ],
+      "correct": 3,
+      "explanation": "CAP: Consistency, Availability, Partition Tolerance."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_71",
+      "question": "¿Qué tipo de consistencia prioriza Cassandra según el Teorema CAP?",
+      "options": [
+        "Las tres a la vez",
+        "Disponibilidad y Tolerancia a particiones (AP)",
+        "Consistencia y Disponibilidad (CA)",
+        "Consistencia y Tolerancia (CP)"
+      ],
+      "correct": 1,
+      "explanation": "Cassandra sacrifica consistencia estricta por disponibilidad."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_72",
+      "question": "¿Qué tipo de base de datos NoSQL usa grafos con nodos y aristas?",
+      "options": [
+        "Clave-Valor (Redis)",
+        "Columnar (Cassandra)",
+        "Grafos (ej: Neo4j)",
+        "Documental (MongoDB)"
+      ],
+      "correct": 2,
+      "explanation": "Los grafos modelan relaciones complejas como redes sociales."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_73",
+      "question": "¿Qué es BASE en sistemas NoSQL?",
+      "options": [
+        "Basically Available, Soft state, Eventually consistent (alternativa a ACID)",
+        "Un nivel de aislamiento",
+        "Un tipo de índice",
+        "Un acrónimo de comandos NoSQL"
+      ],
+      "correct": 0,
+      "explanation": "BASE es la contrapartida de ACID en sistemas distribuidos."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_74",
+      "question": "¿Qué es la consistencia eventual?",
+      "options": [
+        "Un nivel de aislamiento ACID",
+        "Los datos serán consistentes en todos los nodos tras un período de tiempo",
+        "Los datos nunca son consistentes",
+        "Los datos son siempre consistentes al instante"
+      ],
+      "correct": 1,
+      "explanation": "DNS es un ejemplo de consistencia eventual."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_75",
+      "question": "¿Qué es la Forma Normal de Boyce-Codd (BCNF)?",
+      "options": [
+        "Una forma normal solo para claves compuestas",
+        "Igual a la 3FN",
+        "Extensión estricta de 3FN donde toda dependencia funcional X→Y requiere que X sea superclave",
+        "La última forma normal posible"
+      ],
+      "correct": 2,
+      "explanation": "BCNF resuelve anomalías que 3FN no cubre."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_76",
+      "question": "¿Qué es una dependencia funcional?",
+      "options": [
+        "Un índice compuesto",
+        "Un trigger de actualización",
+        "Una restricción FK",
+        "Relación donde el valor de un atributo determina el valor de otro: A→B"
+      ],
+      "correct": 3,
+      "explanation": "El DNI determina el nombre: DNI→Nombre."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_77",
+      "question": "¿Qué es una dependencia transitiva?",
+      "options": [
+        "Una dependencia dentro de una clave compuesta",
+        "Una FK que referencia otra FK",
+        "A→B y B→C implica A→C, donde B no es clave candidata",
+        "Un índice que referencia a otro"
+      ],
+      "correct": 2,
+      "explanation": "La 3FN elimina dependencias transitivas."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_78",
+      "question": "¿Qué hace EXPLAIN en una consulta SQL?",
+      "options": [
+        "Muestra el plan de ejecución para entender si se usan índices y el coste estimado",
+        "Muestra las restricciones activas",
+        "Ejecuta la consulta y muestra el tiempo",
+        "Describe la estructura de la tabla"
+      ],
+      "correct": 0,
+      "explanation": "EXPLAIN ANALYZE muestra el tiempo real en PostgreSQL."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_79",
+      "question": "¿Qué es un índice compuesto?",
+      "options": [
+        "Un índice que abarca varias columnas a la vez",
+        "Un índice único",
+        "Un índice con varios registros iguales",
+        "Un índice de texto completo"
+      ],
+      "correct": 0,
+      "explanation": "CREATE INDEX idx ON tabla(col1, col2)."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_80",
+      "question": "¿Qué es la cardinalidad de un índice?",
+      "options": [
+        "El tamaño en bytes del índice",
+        "El número de valores únicos que contiene",
+        "La profundidad del árbol B-Tree",
+        "El número de tablas que lo usan"
+      ],
+      "correct": 1,
+      "explanation": "Alta cardinalidad = índice más selectivo y efectivo."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_81",
+      "question": "¿Qué es una entidad débil en el modelo ER?",
+      "options": [
+        "Entidad que no tiene clave propia y depende de otra entidad para su identificación",
+        "Una entidad con un solo atributo",
+        "Una entidad sin relaciones",
+        "Una entidad con pocos atributos"
+      ],
+      "correct": 0,
+      "explanation": "La entidad débil usa la PK de la entidad fuerte más un discriminante."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_82",
+      "question": "¿Qué es la especialización en el modelo ER?",
+      "options": [
+        "Normalizar una entidad",
+        "Proceso de definir subtipos de una entidad con atributos propios (herencia ER)",
+        "Añadir más atributos a una entidad",
+        "Crear una tabla intermedia"
+      ],
+      "correct": 1,
+      "explanation": "Ej: EMPLEADO se especializa en PROGRAMADOR y DISEÑADOR."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_83",
+      "question": "¿Qué es la generalización en el modelo ER?",
+      "options": [
+        "Unir todas las tablas en una",
+        "El proceso inverso a la especialización... que es lo mismo visto al revés",
+        "Crear una vista de varias tablas",
+        "Proceso de agrupar entidades con características comunes en una superentidad"
+      ],
+      "correct": 3,
+      "explanation": "Bottom-up: se descubren características comunes."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_84",
+      "question": "¿Qué hace la función RANK() en SQL?",
+      "options": [
+        "Calcula el percentil",
+        "Asigna un rango a cada fila dentro de una partición, con saltos en caso de empate",
+        "Numera filas consecutivamente sin saltos",
+        "Ordena los registros"
+      ],
+      "correct": 1,
+      "explanation": "RANK() vs ROW_NUMBER() vs DENSE_RANK()."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_85",
+      "question": "¿Qué son las Window Functions (funciones de ventana) en SQL?",
+      "options": [
+        "Funciones que calculan valores sobre un conjunto de filas relacionadas sin agruparlas (OVER/PARTITION)",
+        "Funciones de texto",
+        "Funciones de cifrado",
+        "Tipos de vistas"
+      ],
+      "correct": 0,
+      "explanation": "SELECT salario, AVG(salario) OVER (PARTITION BY dept)."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_86",
+      "question": "¿Qué hace CTE (Common Table Expression) con la cláusula WITH?",
+      "options": [
+        "Define una consulta temporal con nombre reutilizable dentro de otra consulta",
+        "Importa datos de otro esquema",
+        "Crea una tabla temporal en disco",
+        "Crea una vista permanente"
+      ],
+      "correct": 0,
+      "explanation": "WITH empleados_madrid AS (SELECT ...) SELECT * FROM empleados_madrid."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_87",
+      "question": "¿Qué es la integridad de dominio?",
+      "options": [
+        "Restricción sobre los valores válidos de una columna (tipo de dato, CHECK, NOT NULL)",
+        "El uso de transacciones ACID",
+        "La coherencia entre tablas relacionadas",
+        "La obligación de tener PK"
+      ],
+      "correct": 0,
+      "explanation": "El tipo de dato y CHECK definen el dominio."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_88",
+      "question": "¿Qué es un tablespace en Oracle/PostgreSQL?",
+      "options": [
+        "Ubicación física de almacenamiento donde se guardan los objetos de la BD",
+        "Un espacio de nombres lógico",
+        "Un grupo de usuarios",
+        "Una partición de datos"
+      ],
+      "correct": 0,
+      "explanation": "Permite controlar dónde se almacenan físicamente las tablas."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_89",
+      "question": "¿Qué hace la sentencia UPSERT?",
+      "options": [
+        "Inserta un registro si no existe, o lo actualiza si ya existe",
+        "Solo funciona con claves únicas compuestas",
+        "Es equivalente a INSERT INTO",
+        "Actualiza todos los registros de la tabla"
+      ],
+      "correct": 0,
+      "explanation": "INSERT ... ON CONFLICT DO UPDATE en PostgreSQL."
+    },
+    {
+      "concept_id": "bases_de_datos_exp2_90",
+      "question": "¿Qué es la replicación maestro-esclavo?",
+      "options": [
+        "Todos los servidores aceptan escrituras",
+        "Es solo para MongoDB",
+        "Los esclavos replican al maestro",
+        "El servidor maestro acepta escrituras y las replica a los esclavos que sirven lecturas"
+      ],
+      "correct": 3,
+      "explanation": "Mejora el rendimiento de lectura y la disponibilidad."
     }
   ],
   "programacion": [
@@ -2727,6 +3327,282 @@
       ],
       "correct": 0,
       "explanation": "Evita condiciones de carrera entre hilos."
+    },
+    {
+      "concept_id": "programacion_exp2_58",
+      "question": "¿Qué clase de Java se usa para leer un archivo de texto línea a línea de forma eficiente?",
+      "options": [
+        "InputStreamReader",
+        "FileReader",
+        "BufferedReader",
+        "Scanner"
+      ],
+      "correct": 2,
+      "explanation": "BufferedReader usa buffers internos para mayor velocidad."
+    },
+    {
+      "concept_id": "programacion_exp2_59",
+      "question": "¿Qué clase de Java representa una ruta de fichero o directorio (NIO.2)?",
+      "options": [
+        "URL",
+        "File",
+        "Path (java.nio.file.Path)",
+        "URI"
+      ],
+      "correct": 2,
+      "explanation": "Path es más moderno y flexible que File."
+    },
+    {
+      "concept_id": "programacion_exp2_60",
+      "question": "¿Qué clase utilitaria de NIO.2 permite leer, escribir y copiar archivos con métodos estáticos?",
+      "options": [
+        "FileSystem",
+        "Files",
+        "Path",
+        "File"
+      ],
+      "correct": 1,
+      "explanation": "Files.readAllLines(path) lee todas las líneas."
+    },
+    {
+      "concept_id": "programacion_exp2_61",
+      "question": "¿Qué método de Files lee todas las líneas de un archivo y las devuelve como List<String>?",
+      "options": [
+        "Files.readAllLines(path)",
+        "Files.read(path)",
+        "Files.getContent(path)",
+        "Files.lines(path).collect()"
+      ],
+      "correct": 0,
+      "explanation": "Files.readAllLines(Paths.get('fichero.txt'), StandardCharsets.UTF_8)."
+    },
+    {
+      "concept_id": "programacion_exp2_62",
+      "question": "¿Qué excepción debe manejarse al trabajar con operaciones de ficheros en Java?",
+      "options": [
+        "RuntimeException",
+        "FileException",
+        "IOException",
+        "PathException"
+      ],
+      "correct": 2,
+      "explanation": "IOException es la excepción chequeada de I/O."
+    },
+    {
+      "concept_id": "programacion_exp2_63",
+      "question": "¿Qué hace 'try-with-resources' cuando el recurso implementa AutoCloseable?",
+      "options": [
+        "Crea un buffer automático",
+        "Serializa el objeto al cerrarlo",
+        "Evita que se lancen excepciones I/O",
+        "Lo cierra automáticamente al salir del bloque, incluso si hay excepción"
+      ],
+      "correct": 3,
+      "explanation": "try (BufferedReader br = ...) { ... } cierra br automáticamente."
+    },
+    {
+      "concept_id": "programacion_exp2_64",
+      "question": "¿Qué patrón de diseño define una dependencia uno-a-muchos donde los observadores se notifican automáticamente al cambiar el sujeto?",
+      "options": [
+        "Observer",
+        "Factory",
+        "Decorator",
+        "Strategy"
+      ],
+      "correct": 0,
+      "explanation": "Observer = sujeto observable + observadores suscritos."
+    },
+    {
+      "concept_id": "programacion_exp2_65",
+      "question": "¿Qué patrón de diseño separa el algoritmo de la clase que lo usa, permitiendo intercambiarlo en tiempo de ejecución?",
+      "options": [
+        "Decorator",
+        "Singleton",
+        "Strategy",
+        "Observer"
+      ],
+      "correct": 2,
+      "explanation": "Strategy encapsula algoritmos intercambiables."
+    },
+    {
+      "concept_id": "programacion_exp2_66",
+      "question": "¿Qué patrón de diseño construye objetos complejos paso a paso con un objeto Builder?",
+      "options": [
+        "Prototype",
+        "Factory",
+        "Composite",
+        "Builder"
+      ],
+      "correct": 3,
+      "explanation": "StringBuilder es un ejemplo de Builder en Java."
+    },
+    {
+      "concept_id": "programacion_exp2_67",
+      "question": "¿Qué patrón de diseño convierte la interfaz de una clase en otra que el cliente espera?",
+      "options": [
+        "Decorator",
+        "Proxy",
+        "Facade",
+        "Adapter"
+      ],
+      "correct": 3,
+      "explanation": "Adapter permite que clases incompatibles trabajen juntas."
+    },
+    {
+      "concept_id": "programacion_exp2_68",
+      "question": "¿Qué patrón de diseño proporciona una interfaz simplificada a un subsistema complejo?",
+      "options": [
+        "Facade",
+        "Proxy",
+        "Adapter",
+        "Bridge"
+      ],
+      "correct": 0,
+      "explanation": "Facade reduce la complejidad visible al cliente."
+    },
+    {
+      "concept_id": "programacion_exp2_69",
+      "question": "¿Qué es JDBC?",
+      "options": [
+        "Un ORM para mapeo objeto-relacional",
+        "Un framework web de Java",
+        "API de Java para conectar y ejecutar consultas en bases de datos relacionales",
+        "Un servidor de base de datos"
+      ],
+      "correct": 2,
+      "explanation": "Java Database Connectivity."
+    },
+    {
+      "concept_id": "programacion_exp2_70",
+      "question": "¿Cuál es el orden correcto de pasos para ejecutar una consulta con JDBC?",
+      "options": [
+        "Crear Statement → conectar → ejecutar → cerrar driver",
+        "Conectar → ejecutar → crear Statement → cerrar",
+        "Solo crear Connection y ejecutar directamente",
+        "Cargar driver → obtener Connection → crear Statement → ejecutar → cerrar"
+      ],
+      "correct": 3,
+      "explanation": "El flujo JDBC es siempre Connection → Statement → ResultSet."
+    },
+    {
+      "concept_id": "programacion_exp2_71",
+      "question": "¿Qué es un PreparedStatement en JDBC?",
+      "options": [
+        "Un Statement normal con validación adicional",
+        "Una conexión segura a la BD",
+        "Un tipo de ResultSet",
+        "Consulta SQL precompilada con parámetros '?' que evita inyección SQL y mejora rendimiento"
+      ],
+      "correct": 3,
+      "explanation": "PreparedStatement ps = conn.prepareStatement('SELECT * FROM users WHERE id=?')."
+    },
+    {
+      "concept_id": "programacion_exp2_72",
+      "question": "¿Qué interfaz JDBC contiene el resultado de una consulta SELECT?",
+      "options": [
+        "Connection",
+        "ResultSet",
+        "Statement",
+        "DataSource"
+      ],
+      "correct": 1,
+      "explanation": "ResultSet rs = stmt.executeQuery(sql); while(rs.next()) { ... }"
+    },
+    {
+      "concept_id": "programacion_exp2_73",
+      "question": "¿Qué es ExecutorService en Java?",
+      "options": [
+        "Framework que gestiona un pool de hilos para ejecutar tareas de forma eficiente",
+        "Un hilo de alta prioridad",
+        "Un monitor de rendimiento de la JVM",
+        "Una clase para sincronizar hilos"
+      ],
+      "correct": 0,
+      "explanation": "ExecutorService es = Executors.newFixedThreadPool(4)."
+    },
+    {
+      "concept_id": "programacion_exp2_74",
+      "question": "¿Qué devuelve el método submit() de ExecutorService?",
+      "options": [
+        "Un nuevo hilo",
+        "La prioridad de la tarea",
+        "El resultado directo de la tarea",
+        "Un objeto Future<T> con el resultado futuro de la tarea"
+      ],
+      "correct": 3,
+      "explanation": "Future.get() bloquea hasta obtener el resultado."
+    },
+    {
+      "concept_id": "programacion_exp2_75",
+      "question": "¿Qué es una condición de carrera (race condition)?",
+      "options": [
+        "Un error de compilación en código multihilo",
+        "Un hilo que acaba antes que otro",
+        "Cuando dos hilos acceden y modifican datos compartidos simultáneamente dando resultados inesperados",
+        "Un deadlock entre dos hilos"
+      ],
+      "correct": 2,
+      "explanation": "Se resuelve con synchronized, Lock o estructuras thread-safe."
+    },
+    {
+      "concept_id": "programacion_exp2_76",
+      "question": "¿Qué colección de Java está diseñada para ser usada de forma segura por múltiples hilos?",
+      "options": [
+        "ConcurrentHashMap",
+        "HashSet",
+        "ArrayList",
+        "HashMap"
+      ],
+      "correct": 0,
+      "explanation": "ConcurrentHashMap permite operaciones atómicas concurrentes."
+    },
+    {
+      "concept_id": "programacion_exp2_77",
+      "question": "¿Qué significa el principio DRY?",
+      "options": [
+        "Data Redundancy Yielding",
+        "Dynamic Reuse Yourself",
+        "Design Right the first Year",
+        "Don't Repeat Yourself: evitar duplicar lógica en el código"
+      ],
+      "correct": 3,
+      "explanation": "DRY reduce el mantenimiento y los errores."
+    },
+    {
+      "concept_id": "programacion_exp2_78",
+      "question": "¿Qué significa KISS en diseño de software?",
+      "options": [
+        "Knowledge Is Shared Software",
+        "Keep Interfaces Stable and Safe",
+        "Keep It Simple, Stupid: preferir soluciones simples a complejas",
+        "Key Integration Support System"
+      ],
+      "correct": 2,
+      "explanation": "KISS hace el código más legible y mantenible."
+    },
+    {
+      "concept_id": "programacion_exp2_79",
+      "question": "¿Qué es la inyección de dependencias (Dependency Injection)?",
+      "options": [
+        "Principio donde las dependencias de una clase se pasan desde fuera en lugar de crearlas internamente",
+        "La búsqueda automática de clases en el classpath",
+        "Un tipo de herencia",
+        "La inyección de código en tiempo de ejecución"
+      ],
+      "correct": 0,
+      "explanation": "Spring Framework usa DI con @Autowired."
+    },
+    {
+      "concept_id": "programacion_exp2_80",
+      "question": "¿Qué es una clase anónima en Java?",
+      "options": [
+        "Una clase sin atributos",
+        "Una clase con método privado",
+        "Clase sin nombre definida e instanciada en una sola expresión",
+        "Una clase interna estática"
+      ],
+      "correct": 2,
+      "explanation": "button.addListener(new ActionListener() { public void... });"
     }
   ],
   "lenguaje_de_marcas": [
@@ -3329,6 +4205,294 @@
       ],
       "correct": 2,
       "explanation": "Muy usado para limpiar floats y recortar contenido."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_50",
+      "question": "¿Qué regla CSS define los pasos de una animación personalizada?",
+      "options": [
+        "@keyframes",
+        "@animation",
+        "@frames",
+        "@transition"
+      ],
+      "correct": 0,
+      "explanation": "@keyframes mover { from {left:0} to {left:100px} }"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_51",
+      "question": "¿Qué propiedad CSS aplica una animación definida con @keyframes a un elemento?",
+      "options": [
+        "animation",
+        "transform",
+        "transition",
+        "keyframe"
+      ],
+      "correct": 0,
+      "explanation": "animation: mover 2s ease infinite;"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_52",
+      "question": "¿Qué propiedad CSS crea una transición suave al cambiar un valor de propiedad?",
+      "options": [
+        "animation",
+        "transform",
+        "hover",
+        "transition"
+      ],
+      "correct": 3,
+      "explanation": "transition: background-color 0.3s ease;"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_53",
+      "question": "¿Qué propiedad CSS aplica transformaciones 2D/3D como rotar, escalar o trasladar?",
+      "options": [
+        "transform",
+        "position",
+        "filter",
+        "animation"
+      ],
+      "correct": 0,
+      "explanation": "transform: rotate(45deg) scale(1.2);"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_54",
+      "question": "¿Qué hace la Fetch API en JavaScript?",
+      "options": [
+        "Verifica la conexión a Internet",
+        "Obtiene datos del localStorage",
+        "Descarga archivos automáticamente",
+        "Realiza peticiones HTTP asíncronas (GET, POST...) de forma nativa sin librerías externas"
+      ],
+      "correct": 3,
+      "explanation": "fetch(url).then(r => r.json()).then(data => console.log(data))"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_55",
+      "question": "¿Qué es una Promesa (Promise) en JavaScript?",
+      "options": [
+        "Una variable global asíncrona",
+        "Objeto que representa el resultado futuro de una operación asíncrona (pendiente, resuelta o rechazada)",
+        "Una función que devuelve null",
+        "Un tipo de callback anidado"
+      ],
+      "correct": 1,
+      "explanation": "Las promesas sustituyen al callback hell."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_56",
+      "question": "¿Qué hace 'async/await' en JavaScript?",
+      "options": [
+        "Permite escribir código asíncrono con sintaxis síncrona usando Promesas internamente",
+        "Crea hilos de ejecución paralela",
+        "Sustituye a los bucles for",
+        "Bloquea el hilo principal de JS"
+      ],
+      "correct": 0,
+      "explanation": "const data = await fetch(url).then(r => r.json())"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_57",
+      "question": "¿Qué evento del DOM se dispara cuando el usuario hace clic en un elemento?",
+      "options": [
+        "submit",
+        "press",
+        "touch",
+        "click"
+      ],
+      "correct": 3,
+      "explanation": "element.addEventListener('click', handler)"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_58",
+      "question": "¿Qué método del DOM selecciona el primer elemento que coincide con un selector CSS?",
+      "options": [
+        "findElement()",
+        "getElement()",
+        "getElementById()",
+        "querySelector()"
+      ],
+      "correct": 3,
+      "explanation": "document.querySelector('.clase') o '#id'."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_59",
+      "question": "¿Qué método del DOM selecciona todos los elementos que coinciden con un selector?",
+      "options": [
+        "querySelectorAll()",
+        "getElementsByClass()",
+        "selectAll()",
+        "findAll()"
+      ],
+      "correct": 0,
+      "explanation": "Devuelve una NodeList."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_60",
+      "question": "¿Qué es XML?",
+      "options": [
+        "El sucesor de HTML",
+        "Lenguaje de marcas extensible para estructura y transporte de datos, con etiquetas personalizables",
+        "Un protocolo de red",
+        "Un lenguaje de programación"
+      ],
+      "correct": 1,
+      "explanation": "eXtensible Markup Language."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_61",
+      "question": "¿Qué es un DTD en XML?",
+      "options": [
+        "Document Type Definition: define la estructura válida del documento XML",
+        "Un tipo de dato de XML",
+        "La declaración inicial del fichero XML",
+        "Un espacio de nombres XML"
+      ],
+      "correct": 0,
+      "explanation": "DTD define qué elementos y atributos son válidos."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_62",
+      "question": "¿Qué es XSD en XML?",
+      "options": [
+        "Un estándar de cifrado XML",
+        "XML Schema Definition: descripción más potente y tipada que DTD para validar XML",
+        "Una extensión de DTD",
+        "Un tipo de consulta XML"
+      ],
+      "correct": 1,
+      "explanation": "XSD permite tipos de datos y es en sí mismo XML."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_63",
+      "question": "¿Qué es XSLT?",
+      "options": [
+        "Un tipo de DTD",
+        "Lenguaje para transformar documentos XML en otros formatos (HTML, PDF, otro XML)",
+        "Un lenguaje de consulta XML",
+        "Un protocolo de transferencia XML"
+      ],
+      "correct": 1,
+      "explanation": "eXtensible Stylesheet Language Transformations."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_64",
+      "question": "¿Qué es XPath?",
+      "options": [
+        "Una extensión de CSS para XML",
+        "Un tipo de esquema XML",
+        "Un protocolo de red basado en XML",
+        "Lenguaje para seleccionar nodos dentro de un documento XML"
+      ],
+      "correct": 3,
+      "explanation": "//libro/titulo selecciona todos los títulos de libros."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_65",
+      "question": "¿Qué atributo HTML5 hace que un campo de formulario sea obligatorio?",
+      "options": [
+        "mandatory",
+        "required",
+        "notnull",
+        "obligatory"
+      ],
+      "correct": 1,
+      "explanation": "<input type='text' required>"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_66",
+      "question": "¿Qué atributo HTML5 define un patrón de validación con expresión regular?",
+      "options": [
+        "regex",
+        "format",
+        "pattern",
+        "validate"
+      ],
+      "correct": 2,
+      "explanation": "<input pattern='[0-9]{8}[A-Z]' title='DNI'>"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_67",
+      "question": "¿Qué tipo de input HTML5 muestra un selector de fecha?",
+      "options": [
+        "calendar",
+        "date",
+        "datetime",
+        "time"
+      ],
+      "correct": 1,
+      "explanation": "<input type='date'>"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_68",
+      "question": "¿Qué tipo de input HTML5 valida automáticamente el formato de correo electrónico?",
+      "options": [
+        "contact",
+        "email",
+        "text",
+        "mail"
+      ],
+      "correct": 1,
+      "explanation": "<input type='email'>"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_69",
+      "question": "¿Qué tipo de input HTML5 muestra un control deslizante (slider)?",
+      "options": [
+        "scroll",
+        "number",
+        "slider",
+        "range"
+      ],
+      "correct": 3,
+      "explanation": "<input type='range' min='0' max='100'>"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_70",
+      "question": "¿Qué hace 'will-change' en CSS?",
+      "options": [
+        "Avisa al navegador de qué propiedades cambiarán para que optimice el renderizado",
+        "Aplica cambios antes de que ocurran",
+        "Invalida el caché de estilos",
+        "Define una animación futura"
+      ],
+      "correct": 0,
+      "explanation": "will-change: transform; mejora el rendimiento de animaciones."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_71",
+      "question": "¿Qué propiedad CSS hace que una imagen de fondo cubra completamente el contenedor?",
+      "options": [
+        "background-position: center",
+        "background-repeat: no-repeat",
+        "background-size: cover",
+        "background-size: contain"
+      ],
+      "correct": 2,
+      "explanation": "cover escala la imagen sin dejar huecos."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_72",
+      "question": "¿Qué pseudo-elemento CSS permite añadir contenido antes del contenido real del elemento?",
+      "options": [
+        "::after",
+        "::before",
+        "::prepend",
+        "::first"
+      ],
+      "correct": 1,
+      "explanation": ".card::before { content: '★'; }"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp2_73",
+      "question": "¿Qué pseudo-elemento CSS permite añadir contenido después del contenido real?",
+      "options": [
+        "::after",
+        "::last",
+        "::before",
+        "::append"
+      ],
+      "correct": 0,
+      "explanation": ".card::after { content: ''; display: block; clear: both; }"
     }
   ],
   "entornos_de_desarrollo": [
@@ -3811,6 +4975,246 @@
       ],
       "correct": 0,
       "explanation": "La velocidad ayuda a estimar sprints futuros."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_40",
+      "question": "¿Qué diagrama UML representa los casos de uso del sistema y los actores que interactúan con él?",
+      "options": [
+        "Diagrama de Estado",
+        "Diagrama de Casos de Uso",
+        "Diagrama de Clases",
+        "Diagrama de Secuencia"
+      ],
+      "correct": 1,
+      "explanation": "Muestra el QUÉ hace el sistema, no el CÓMO."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_41",
+      "question": "¿Qué es un actor en un diagrama de casos de uso?",
+      "options": [
+        "Un estado del sistema",
+        "Un método de una clase",
+        "Una clase del sistema",
+        "Entidad externa (persona, sistema) que interactúa con el sistema"
+      ],
+      "correct": 3,
+      "explanation": "Los actores están fuera del sistema."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_42",
+      "question": "¿Qué relación UML indica que un caso de uso incluye siempre otro?",
+      "options": [
+        "<<include>>",
+        "generalización",
+        "<<uses>>",
+        "<<extend>>"
+      ],
+      "correct": 0,
+      "explanation": "<<include>> modela comportamiento obligatorio compartido."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_43",
+      "question": "¿Qué relación UML indica que un caso de uso puede (opcionalmente) incluir otro?",
+      "options": [
+        "<<uses>>",
+        "asociación",
+        "<<include>>",
+        "<<extend>>"
+      ],
+      "correct": 3,
+      "explanation": "<<extend>> modela comportamiento opcional o excepcional."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_44",
+      "question": "¿Qué diagrama UML modela los estados posibles de un objeto y las transiciones entre ellos?",
+      "options": [
+        "Diagrama de Actividad",
+        "Diagrama de Estados (State Machine)",
+        "Diagrama de Secuencia",
+        "Diagrama de Componentes"
+      ],
+      "correct": 1,
+      "explanation": "Útil para modelar el ciclo de vida de objetos."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_45",
+      "question": "¿Qué diagrama UML muestra el flujo de actividades o pasos de un proceso (similar a un diagrama de flujo)?",
+      "options": [
+        "Diagrama de Estado",
+        "Diagrama de Componentes",
+        "Diagrama de Casos de Uso",
+        "Diagrama de Actividad"
+      ],
+      "correct": 3,
+      "explanation": "Los swimlanes en diagramas de actividad muestran responsables."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_46",
+      "question": "¿Qué diagrama UML muestra la arquitectura física del sistema (nodos, servidores, dispositivos)?",
+      "options": [
+        "Diagrama de Componentes",
+        "Diagrama de Paquetes",
+        "Diagrama de Clases",
+        "Diagrama de Despliegue"
+      ],
+      "correct": 3,
+      "explanation": "El de despliegue es clave en arquitecturas distribuidas."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_47",
+      "question": "¿Qué es Mockito?",
+      "options": [
+        "Una herramienta de CI/CD",
+        "Un generador de datos de prueba",
+        "Un framework de testing funcional",
+        "Framework de Java para crear objetos simulados (mocks) en pruebas unitarias"
+      ],
+      "correct": 3,
+      "explanation": "when(mock.metodo()).thenReturn(valor)"
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_48",
+      "question": "¿Qué es un mock object?",
+      "options": [
+        "Una copia exacta del objeto real",
+        "Un objeto genérico sin métodos",
+        "Un objeto de la clase padre",
+        "Objeto simulado que imita el comportamiento de una dependencia real en un test"
+      ],
+      "correct": 3,
+      "explanation": "Los mocks aíslan la unidad bajo prueba."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_49",
+      "question": "¿Qué es BDD (Behavior Driven Development)?",
+      "options": [
+        "Metodología que escribe tests en lenguaje natural (Given/When/Then) entendible por negocio",
+        "Tests automáticos en producción",
+        "Un framework de integración continua",
+        "Una variante de TDD solo para frontend"
+      ],
+      "correct": 0,
+      "explanation": "Cucumber usa Gherkin (Given/When/Then) para BDD."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_50",
+      "question": "¿Qué es una prueba de aceptación?",
+      "options": [
+        "Una prueba unitaria automatizada",
+        "Una prueba de carga y rendimiento",
+        "Una prueba de seguridad",
+        "Verifica que el sistema cumple los requisitos del cliente desde su perspectiva"
+      ],
+      "correct": 3,
+      "explanation": "Las pruebas de aceptación validan el valor de negocio."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_51",
+      "question": "¿Qué es Selenium?",
+      "options": [
+        "Herramienta para automatizar pruebas de interfaz web (E2E) en navegadores",
+        "Un gestor de dependencias",
+        "Un servidor de CI/CD",
+        "Un framework de testing unitario"
+      ],
+      "correct": 0,
+      "explanation": "Selenium WebDriver controla el navegador programáticamente."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_52",
+      "question": "¿Qué es el Sprint Review?",
+      "options": [
+        "La planificación del siguiente Sprint",
+        "La retrospectiva del equipo",
+        "Reunión al final del Sprint donde el equipo presenta el incremento a los stakeholders",
+        "El daily standup del viernes"
+      ],
+      "correct": 2,
+      "explanation": "El Sprint Review es con el cliente o Product Owner."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_53",
+      "question": "¿Qué es la Sprint Retrospectiva?",
+      "options": [
+        "El daily standup del lunes",
+        "Reunión de planificación del Sprint",
+        "Reunión del equipo para analizar qué salió bien, qué mejorar y cómo en el próximo Sprint",
+        "Revisión del producto con el cliente"
+      ],
+      "correct": 2,
+      "explanation": "La retro mejora el proceso del equipo, no el producto."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_54",
+      "question": "¿Qué es la Definición de Hecho (Definition of Done)?",
+      "options": [
+        "La descripción de una historia de usuario",
+        "Conjunto de criterios acordados que debe cumplir todo incremento para considerarse terminado",
+        "El criterio de aceptación de un Sprint",
+        "Los requisitos del Product Backlog"
+      ],
+      "correct": 1,
+      "explanation": "Ejemplos: código revisado, tests pasados, documentado."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_55",
+      "question": "¿Qué es una historia de usuario (User Story)?",
+      "options": [
+        "Un caso de uso UML",
+        "Un commit de Git",
+        "Descripción breve de una funcionalidad desde la perspectiva del usuario: Como [rol] quiero [acción] para [beneficio]",
+        "Un informe de bug"
+      ],
+      "correct": 2,
+      "explanation": "Las historias de usuario son el corazón del backlog."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_56",
+      "question": "¿Qué es Jenkins?",
+      "options": [
+        "Un servidor de aplicaciones Java",
+        "Un gestor de repositorios Git",
+        "Un sistema de monitorización",
+        "Servidor de automatización open source para implementar pipelines CI/CD"
+      ],
+      "correct": 3,
+      "explanation": "Jenkins automatiza build, test y deploy."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_57",
+      "question": "¿Qué es un pipeline en CI/CD?",
+      "options": [
+        "Una rama especial de Git",
+        "Un servidor de pruebas",
+        "Una herramienta de versionado",
+        "Secuencia automatizada de etapas (build, test, deploy) que el código atraviesa automáticamente"
+      ],
+      "correct": 3,
+      "explanation": "Los pipelines garantizan calidad continua."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_58",
+      "question": "¿Qué es GitHub Actions?",
+      "options": [
+        "Un cliente de escritorio de Git",
+        "Una extensión del IDE para GitHub",
+        "Un servicio de hosting de imágenes Docker",
+        "Plataforma de CI/CD integrada en GitHub que ejecuta workflows definidos en YAML"
+      ],
+      "correct": 3,
+      "explanation": "Los workflows se definen en .github/workflows/*.yml."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp2_59",
+      "question": "¿Qué es un artefacto en el contexto de CI/CD?",
+      "options": [
+        "Un registro de log del pipeline",
+        "Una rama de Git",
+        "El resultado compilado del proceso de build (JAR, WAR, Docker image, APK)",
+        "Una variable de entorno del servidor"
+      ],
+      "correct": 2,
+      "explanation": "Los artefactos se publican en repositorios como Nexus o Artifactory."
     }
   ],
   "cloud_computing": [
@@ -4173,6 +5577,186 @@
       ],
       "correct": 1,
       "explanation": "Cada región tiene múltiples AZ para alta disponibilidad."
+    },
+    {
+      "concept_id": "cloud_computing_exp2_30",
+      "question": "¿Qué es Azure Blob Storage?",
+      "options": [
+        "Una base de datos relacional de Azure",
+        "Servicio de almacenamiento de objetos no estructurados en Microsoft Azure",
+        "Un servicio de DNS de Microsoft",
+        "Un servidor virtual de Azure"
+      ],
+      "correct": 1,
+      "explanation": "Equivalente a Amazon S3."
+    },
+    {
+      "concept_id": "cloud_computing_exp2_31",
+      "question": "¿Qué es Google Kubernetes Engine (GKE)?",
+      "options": [
+        "Servicio gestionado de Kubernetes en Google Cloud Platform",
+        "Un servicio serverless de Google",
+        "Una base de datos de Google",
+        "Una red privada virtual de GCP"
+      ],
+      "correct": 0,
+      "explanation": "GKE simplifica el despliegue y gestión de Kubernetes."
+    },
+    {
+      "concept_id": "cloud_computing_exp2_32",
+      "question": "¿Qué es FinOps?",
+      "options": [
+        "Un tipo de facturación cloud",
+        "Una herramienta de monitorización de costes",
+        "Práctica de gestión financiera del cloud para optimizar costes sin perder rendimiento",
+        "Un modelo de disponibilidad cloud"
+      ],
+      "correct": 2,
+      "explanation": "FinOps une equipos de finanzas, tecnología y negocio."
+    },
+    {
+      "concept_id": "cloud_computing_exp2_33",
+      "question": "¿Qué es RPO (Recovery Point Objective) en disaster recovery?",
+      "options": [
+        "Máxima cantidad de datos que se puede perder medida en tiempo antes de un desastre",
+        "El coste de la recuperación",
+        "El número de réplicas necesarias",
+        "Tiempo máximo de recuperación del servicio"
+      ],
+      "correct": 0,
+      "explanation": "RPO define la frecuencia mínima de backups."
+    },
+    {
+      "concept_id": "cloud_computing_exp2_34",
+      "question": "¿Qué es RTO (Recovery Time Objective)?",
+      "options": [
+        "El número de zonas de disponibilidad",
+        "El coste de la interrupción",
+        "Cantidad máxima de datos perdidos",
+        "Tiempo máximo aceptable para restaurar el servicio tras un fallo"
+      ],
+      "correct": 3,
+      "explanation": "RTO define cuánto tiempo puede estar el servicio caído."
+    },
+    {
+      "concept_id": "cloud_computing_exp2_35",
+      "question": "¿Qué es una VPC (Virtual Private Cloud)?",
+      "options": [
+        "Una VPN de alta velocidad",
+        "Red privada virtual aislada dentro de la infraestructura de un proveedor cloud",
+        "Un servidor virtual privado",
+        "Una VLAN de datacenter físico"
+      ],
+      "correct": 1,
+      "explanation": "Cada VPC tiene su propio espacio de IPs privadas."
+    },
+    {
+      "concept_id": "cloud_computing_exp2_36",
+      "question": "¿Qué son los Security Groups en AWS?",
+      "options": [
+        "Grupos de usuarios con permisos IAM",
+        "Políticas de cifrado de datos",
+        "Firewalls virtuales que controlan el tráfico de entrada y salida de instancias EC2",
+        "VLANs dentro de la VPC"
+      ],
+      "correct": 2,
+      "explanation": "Los Security Groups son stateful: si aceptas entrada, la salida es automática."
+    },
+    {
+      "concept_id": "cloud_computing_exp2_37",
+      "question": "¿Qué es un Load Balancer en cloud?",
+      "options": [
+        "Distribuye el tráfico entrante entre múltiples instancias para evitar sobrecarga",
+        "Un sistema de caché",
+        "Un router de alta velocidad",
+        "Un servidor de DNS"
+      ],
+      "correct": 0,
+      "explanation": "AWS Elastic Load Balancing (ELB) tiene 3 tipos: ALB, NLB, CLB."
+    },
+    {
+      "concept_id": "cloud_computing_exp2_38",
+      "question": "¿Qué es el principio de diseño 'Design for Failure' en cloud?",
+      "options": [
+        "Documentar todos los posibles fallos",
+        "Usar hardware de máxima calidad",
+        "Probar el sistema hasta que falle",
+        "Asumir que cualquier componente puede fallar y diseñar el sistema para que siga funcionando"
+      ],
+      "correct": 3,
+      "explanation": "Netflix Chaos Monkey implementa este principio deliberadamente."
+    },
+    {
+      "concept_id": "cloud_computing_exp2_39",
+      "question": "¿Qué es un snapshot en cloud?",
+      "options": [
+        "Una fotografía de la interfaz de usuario",
+        "Una imagen de contenedor Docker",
+        "Captura del estado de un disco o volumen en un momento concreto, usada para backup",
+        "Una copia del código fuente"
+      ],
+      "correct": 2,
+      "explanation": "Los snapshots son la base de los backups en cloud."
+    },
+    {
+      "concept_id": "cloud_computing_exp2_40",
+      "question": "¿Qué es la computación multi-nube (multi-cloud)?",
+      "options": [
+        "Nube privada con múltiples servidores",
+        "Cloud en varios centros de datos del mismo proveedor",
+        "Usar servicios de varios proveedores cloud a la vez (AWS + Azure + GCP)",
+        "Tener múltiples cuentas en un mismo proveedor"
+      ],
+      "correct": 2,
+      "explanation": "Multi-cloud evita el vendor lock-in."
+    },
+    {
+      "concept_id": "cloud_computing_exp2_41",
+      "question": "¿Qué es el vendor lock-in en cloud?",
+      "options": [
+        "Dependencia excesiva de un proveedor cloud que dificulta migrar a otro",
+        "El contrato mínimo de un proveedor cloud",
+        "Los costes de egreso de datos",
+        "Las restricciones de uso de un servicio"
+      ],
+      "correct": 0,
+      "explanation": "El uso de estándares abiertos y Kubernetes reduce el lock-in."
+    },
+    {
+      "concept_id": "cloud_computing_exp2_42",
+      "question": "¿Qué es un Cloud Access Security Broker (CASB)?",
+      "options": [
+        "Un tipo de firewall cloud",
+        "Un servicio de IAM externo",
+        "Un agente de monitorización",
+        "Software intermediario que aplica políticas de seguridad entre usuarios y proveedores cloud"
+      ],
+      "correct": 3,
+      "explanation": "Los CASB dan visibilidad y control sobre el uso del cloud."
+    },
+    {
+      "concept_id": "cloud_computing_exp2_43",
+      "question": "¿Qué es el cifrado en reposo (encryption at rest) en cloud?",
+      "options": [
+        "Cifrar los datos mientras viajan por la red",
+        "Cifrar el tráfico entre microservicios",
+        "Cifrar los datos almacenados en disco para protegerlos si hay acceso físico no autorizado",
+        "Cifrar las contraseñas de acceso"
+      ],
+      "correct": 2,
+      "explanation": "AWS S3 y EBS cifran en reposo con AES-256 por defecto."
+    },
+    {
+      "concept_id": "cloud_computing_exp2_44",
+      "question": "¿Qué es el cifrado en tránsito (encryption in transit)?",
+      "options": [
+        "Cifrar la base de datos en reposo",
+        "Cifrar los backups",
+        "Cifrar los discos del servidor",
+        "Cifrar los datos mientras viajan entre sistemas mediante TLS/SSL"
+      ],
+      "correct": 3,
+      "explanation": "HTTPS usa TLS para cifrar el tráfico en tránsito."
     }
   ],
   "empleabilidad": [
@@ -4559,6 +6143,198 @@
       ],
       "correct": 1,
       "explanation": "Artículo 35 del Estatuto de los Trabajadores."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_32",
+      "question": "¿Qué establece la Ley 31/1995 de Prevención de Riesgos Laborales?",
+      "options": [
+        "Las obligaciones de empresas y trabajadores para garantizar la seguridad y salud en el trabajo",
+        "Los tipos de contratos laborales",
+        "El régimen de cotizaciones a la Seguridad Social",
+        "La duración de la jornada laboral"
+      ],
+      "correct": 0,
+      "explanation": "La LPRL es la norma básica de seguridad laboral en España."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_33",
+      "question": "¿Qué es la evaluación de riesgos laborales?",
+      "options": [
+        "El estudio del mercado laboral",
+        "El análisis de la productividad del equipo",
+        "La revisión médica anual del trabajador",
+        "Proceso para identificar peligros en el trabajo y valorar el riesgo para tomar medidas preventivas"
+      ],
+      "correct": 3,
+      "explanation": "Es obligatoria para todas las empresas."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_34",
+      "question": "¿Qué es un Delegado de Prevención?",
+      "options": [
+        "Representante de los trabajadores con funciones específicas en materia de prevención de riesgos",
+        "El médico de empresa",
+        "El responsable de RRHH",
+        "El inspector de trabajo"
+      ],
+      "correct": 0,
+      "explanation": "Lo elige el comité de empresa o los delegados de personal."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_35",
+      "question": "¿Qué es el Servicio de Prevención de Riesgos Laborales?",
+      "options": [
+        "Conjunto de medios humanos y materiales de la empresa para asesorar y apoyar en prevención",
+        "La inspección de trabajo externa",
+        "La mutua de accidentes",
+        "El departamento médico de la empresa"
+      ],
+      "correct": 0,
+      "explanation": "Puede ser propio, ajeno o mancomunado."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_36",
+      "question": "¿Qué es un EPI (Equipo de Protección Individual)?",
+      "options": [
+        "El carné de empresa",
+        "Dispositivo destinado a ser llevado por el trabajador para protegerle de riesgos (casco, guantes, gafas)",
+        "La ropa de trabajo estándar",
+        "El seguro de enfermedad del trabajador"
+      ],
+      "correct": 1,
+      "explanation": "Los EPIs son el último recurso de protección."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_37",
+      "question": "¿Qué establece la Ley Orgánica 3/2007 de Igualdad Efectiva?",
+      "options": [
+        "El régimen de permisos de maternidad exclusivamente",
+        "La igualdad de trato y oportunidades entre mujeres y hombres en el ámbito laboral y social",
+        "Las cuotas de representación sindical",
+        "Los derechos de los menores en el trabajo"
+      ],
+      "correct": 1,
+      "explanation": "Incluye el Plan de Igualdad obligatorio en empresas de más de 50 empleados."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_38",
+      "question": "¿Qué es la brecha salarial de género?",
+      "options": [
+        "La diferencia entre SMI y salario real",
+        "La diferencia entre salario bruto y neto",
+        "La diferencia entre pagas fijas y variables",
+        "Diferencia porcentual entre el salario medio de hombres y mujeres en el mercado laboral"
+      ],
+      "correct": 3,
+      "explanation": "Es uno de los indicadores clave del Plan de Igualdad."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_39",
+      "question": "¿Cuántos días de permiso retribuido tiene un trabajador por matrimonio?",
+      "options": [
+        "15 días naturales",
+        "3 días laborables",
+        "7 días naturales",
+        "5 días laborables"
+      ],
+      "correct": 0,
+      "explanation": "Artículo 37.3.a del Estatuto de los Trabajadores."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_40",
+      "question": "¿Cuántos días de permiso retribuido corresponden por fallecimiento de familiar de primer grado?",
+      "options": [
+        "2 días (4 si hay desplazamiento)",
+        "5 días naturales",
+        "Solo el día del funeral",
+        "1 día laborable"
+      ],
+      "correct": 0,
+      "explanation": "Artículo 37.3.b del ET. El convenio puede mejorarlo."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_41",
+      "question": "¿Cuántas horas semanales como máximo puede trabajar un empleado según el ET?",
+      "options": [
+        "40 horas semanales de media anual",
+        "30 horas semanales",
+        "35 horas semanales",
+        "48 horas semanales"
+      ],
+      "correct": 0,
+      "explanation": "Artículo 34 ET: máximo 40h semanales en cómputo anual."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_42",
+      "question": "¿Qué es la movilidad geográfica?",
+      "options": [
+        "El teletrabajo desde otro municipio",
+        "Traslado del trabajador a un centro de trabajo diferente que requiere cambio de residencia",
+        "Un desplazamiento temporal a otra ciudad",
+        "Un cambio de turno de trabajo"
+      ],
+      "correct": 1,
+      "explanation": "El trabajador puede aceptar, extinguir el contrato con indemnización o impugnar."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_43",
+      "question": "¿Qué es una modificación sustancial de condiciones de trabajo?",
+      "options": [
+        "Un cambio de turno puntual",
+        "Cambio significativo en jornada, horario, salario, funciones o lugar de trabajo impuesto por la empresa",
+        "Un ascenso del trabajador",
+        "Una mejora voluntaria del convenio"
+      ],
+      "correct": 1,
+      "explanation": "El trabajador puede rescindir el contrato con 20 días de indemnización/año."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_44",
+      "question": "¿Qué es el teletrabajo y qué ley lo regula en España?",
+      "options": [
+        "El trabajo por turnos en industria",
+        "El trabajo nocturno regulado por el ET",
+        "Trabajo a distancia realizado principalmente desde casa, regulado por la Ley 10/2021",
+        "El trabajo autónomo desde casa"
+      ],
+      "correct": 2,
+      "explanation": "La Ley 10/2021 establece derechos del teletrabajador: equipos, gastos, derecho a la desconexión."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_45",
+      "question": "¿Qué es el derecho a la desconexión digital?",
+      "options": [
+        "La desconexión de internet durante la jornada",
+        "El derecho a no usar ordenador en el trabajo",
+        "Derecho del trabajador a no responder comunicaciones laborales fuera de su horario de trabajo",
+        "El derecho a tomar pausas para el móvil"
+      ],
+      "correct": 2,
+      "explanation": "Reconocido por la Ley 10/2021 y la LOPDGDD."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_46",
+      "question": "¿Qué es la prestación por IT (Incapacidad Temporal)?",
+      "options": [
+        "La baja voluntaria del trabajador",
+        "Subsidio económico para trabajadores que no pueden trabajar temporalmente por enfermedad o accidente",
+        "La pensión de jubilación parcial",
+        "El subsidio de desempleo"
+      ],
+      "correct": 1,
+      "explanation": "La IT la gestiona la Seguridad Social o la mutua."
+    },
+    {
+      "concept_id": "empleabilidad_exp2_47",
+      "question": "¿Qué porcentaje del salario base percibe el trabajador en baja por enfermedad común a partir del día 21?",
+      "options": [
+        "50% hasta el día 90",
+        "100% desde el primer día",
+        "75% de la base reguladora",
+        "60% de la base reguladora"
+      ],
+      "correct": 2,
+      "explanation": "Del día 4 al 20: 60%. Del día 21 en adelante: 75%."
     }
   ]
 }
