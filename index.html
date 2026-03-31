@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <meta name="description" content="Prepárate para tus exámenes con simulacros interactivos basados en tus materiales de estudio.">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
 </head>
 <body class="dark-theme">
     <div id="app">
@@ -20,8 +21,8 @@
             </div>
             <nav class="user-nav">
                 <div class="progress-info">
-                    <span class="label">Progreso General</span>
-                    <div class="progress-bar-small"><div class="fill" style="width: 45%;"></div></div>
+                    <span class="label" id="global-avg-label">Media General</span>
+                    <div class="progress-bar-small"><div class="fill" id="global-progress-fill" style="width: 0%;"></div></div>
                 </div>
             </nav>
         </header>
@@ -35,11 +36,27 @@
 
             <!-- Subject Grid -->
             <div id="subject-grid" class="grid-container">
-                <!-- Subjects will be dynamically loaded here -->
                 <div class="skeleton-card"></div>
                 <div class="skeleton-card"></div>
                 <div class="skeleton-card"></div>
             </div>
+
+            <!-- Progress & Learning Curve -->
+            <section class="progress-section" id="progress-section" style="display:none;">
+                <div class="progress-section-header">
+                    <h2>📈 Curva de Aprendizaje</h2>
+                    <button class="clear-history-btn" onclick="clearHistory()">🗑️ Borrar historial</button>
+                </div>
+                <div class="progress-layout">
+                    <div class="chart-card">
+                        <canvas id="learningChart"></canvas>
+                    </div>
+                    <div class="history-table-card">
+                        <h3>Últimos exámenes</h3>
+                        <div id="history-table-container"></div>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <!-- Modal for Exam View -->

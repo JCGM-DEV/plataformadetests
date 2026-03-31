@@ -3,13 +3,172 @@ const APP_STATE = {
     currentExam: null,
     examNumber: 1,
     currentQuestionIndex: 0,
-    answers: [], // Stores { correct, selected } for scoring
+    answers: [],
     score: 0,
-    timer: 3600, // 1 hour per exam
+    timer: 3600,
     timerInterval: null
 };
 
 let QUESTION_POOL = {};
+let learningChart = null;
+
+// ─── HISTORY HELPERS ────────────────────────────────────────────────────────
+const HISTORY_KEY = 'exam_history_v1';
+
+function getHistory() {
+    return JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+}
+
+function saveExamResult(subjectId, subjectName, score, aciertos, errores, omitidas, total) {
+    const history = getHistory();
+    history.push({
+        id: Date.now(),
+        date: new Date().toISOString(),
+        subjectId,
+        subjectName,
+        score: parseFloat(score.toFixed(2)),
+        aciertos,
+        errores,
+        omitidas,
+        total
+    });
+    localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+}
+
+function clearHistory() {
+    if (!confirm('¿Borrar todo el historial de exámenes?')) return;
+    localStorage.removeItem(HISTORY_KEY);
+    if (learningChart) { learningChart.destroy(); learningChart = null; }
+    document.getElementById('progress-section').style.display = 'none';
+    document.getElementById('global-progress-fill').style.width = '0%';
+    document.getElementById('global-avg-label').textContent = 'Media General';
+}
+
+// ─── PROGRESS SECTION ───────────────────────────────────────────────────────
+function renderProgress() {
+    const history = getHistory();
+    if (history.length === 0) {
+        document.getElementById('progress-section').style.display = 'none';
+        return;
+    }
+    document.getElementById('progress-section').style.display = 'block';
+
+    // Global average
+    const globalAvg = history.reduce((s, e) => s + e.score, 0) / history.length;
+    const pct = Math.min(100, (globalAvg / 10) * 100);
+    document.getElementById('global-progress-fill').style.width = pct + '%';
+    document.getElementById('global-avg-label').textContent = `Media: ${globalAvg.toFixed(2)} / 10`;
+
+    // ── Chart ──────────────────────────────────────────────────────────────
+    const subjectColors = {
+        sistemas_informaticos: '#6366f1',
+        bases_de_datos:         '#22d3ee',
+        programacion:           '#a855f7',
+        lenguaje_de_marcas:     '#f59e0b',
+        entornos_de_desarrollo: '#10b981',
+        cloud_computing:        '#3b82f6',
+        empleabilidad:          '#ec4899'
+    };
+
+    // Group by subject, keep chronological order
+    const bySubject = {};
+    history.forEach(e => {
+        if (!bySubject[e.subjectId]) bySubject[e.subjectId] = [];
+        bySubject[e.subjectId].push({ date: e.date, score: e.score });
+    });
+
+    // Build datasets
+    const datasets = Object.entries(bySubject).map(([sid, entries]) => ({
+        label: entries[0] ? history.find(h => h.subjectId === sid)?.subjectName : sid,
+        data: entries.map((e, i) => ({ x: i + 1, y: e.score })),
+        borderColor: subjectColors[sid] || '#ffffff',
+        backgroundColor: (subjectColors[sid] || '#ffffff') + '22',
+        tension: 0.4,
+        fill: false,
+        pointRadius: 5,
+        pointHoverRadius: 8
+    }));
+
+    // Threshold line at 5
+    const maxExams = Math.max(...Object.values(bySubject).map(a => a.length));
+    datasets.push({
+        label: 'Aprobado (5)',
+        data: Array.from({ length: maxExams }, (_, i) => ({ x: i + 1, y: 5 })),
+        borderColor: '#ef444488',
+        borderDash: [6, 4],
+        borderWidth: 1.5,
+        pointRadius: 0,
+        fill: false,
+        tension: 0
+    });
+
+    const ctx = document.getElementById('learningChart').getContext('2d');
+    if (learningChart) learningChart.destroy();
+    learningChart = new Chart(ctx, {
+        type: 'line',
+        data: { datasets },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: 'index', intersect: false },
+            plugins: {
+                legend: { labels: { color: '#94a3b8', font: { family: 'Inter' } } },
+                tooltip: {
+                    backgroundColor: '#1e293b',
+                    borderColor: '#334155',
+                    borderWidth: 1,
+                    titleColor: '#f8fafc',
+                    bodyColor: '#94a3b8',
+                    callbacks: {
+                        title: items => `Examen nº ${items[0].raw.x}`,
+                        label: item => ` ${item.dataset.label}: ${item.raw.y.toFixed(2)}`
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    type: 'linear',
+                    title: { display: true, text: 'Nº Examen', color: '#64748b' },
+                    ticks: { color: '#64748b', stepSize: 1 },
+                    grid: { color: '#1e293b' }
+                },
+                y: {
+                    min: 0, max: 10,
+                    title: { display: true, text: 'Nota', color: '#64748b' },
+                    ticks: { color: '#64748b' },
+                    grid: { color: '#1e293b' }
+                }
+            }
+        }
+    });
+
+    // ── Recent results table ───────────────────────────────────────────────
+    const recent = [...history].reverse().slice(0, 20);
+    const tableHTML = `
+        <table class="history-table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Asignatura</th>
+                    <th>✅</th><th>❌</th><th>⬜</th>
+                    <th>Nota</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${recent.map(e => {
+                    const d = new Date(e.date);
+                    const dateStr = `${d.getDate().toString().padStart(2,'0')}/${(d.getMonth()+1).toString().padStart(2,'0')} ${d.getHours().toString().padStart(2,'0')}:${d.getMinutes().toString().padStart(2,'0')}`;
+                    const badge = e.score >= 5
+                        ? `<span class="badge-pass">${e.score.toFixed(2)}</span>`
+                        : `<span class="badge-fail">${e.score.toFixed(2)}</span>`;
+                    const shortName = e.subjectName.split(' ').slice(0, 2).join(' ');
+                    return `<tr><td>${dateStr}</td><td title="${e.subjectName}">${shortName}</td><td>${e.aciertos}</td><td>${e.errores}</td><td>${e.omitidas}</td><td>${badge}</td></tr>`;
+                }).join('')}
+            </tbody>
+        </table>
+    `;
+    document.getElementById('history-table-container').innerHTML = tableHTML;
+}
 
 // DOM Elements
 const subjectGrid = document.getElementById('subject-grid');
@@ -19,17 +178,16 @@ const examRoot = document.getElementById('exam-engine-root');
 
 async function init() {
     try {
-        // Load subjects
         const subRes = await fetch('data/subjects.json');
         const subjects = await subRes.json();
         APP_STATE.subjects = subjects.filter(s => s.units_count > 0);
 
-        // Load real questions from studied PDFs
         const qRes = await fetch('data/test_bank.json');
         QUESTION_POOL = await qRes.json();
 
         renderSubjects();
         setupEventListeners();
+        renderProgress(); // Show history on load
     } catch (error) {
         console.error("Error loading app data:", error);
     }
@@ -240,6 +398,14 @@ function finishExam() {
     const passed = calificacion >= 5;
     const penalizacionTotal = (errores * penalizacionPorError).toFixed(2);
 
+    // 💾 Save to localStorage history
+    saveExamResult(
+        APP_STATE.currentExam.id,
+        APP_STATE.currentExam.name,
+        calificacion,
+        aciertos, errores, omitidas, totalPreguntas
+    );
+
     examRoot.innerHTML = `
         <div class="results-container">
             <h2>Resultado del Examen</h2>
@@ -261,7 +427,10 @@ function finishExam() {
             <div class="feedback-final">
                 ${passed ? '<h3>¡Enhorabuena! Has aprobado. 🎉</h3>' : '<h3>Necesitas repasar un poco más. 💪</h3>'}
             </div>
-            <button class="option-btn" style="width: auto; margin-top: 2rem;" onclick="location.reload()">Volver al Inicio</button>
+            <button class="option-btn" style="width: auto; margin-top: 2rem;"
+                onclick="examModal.classList.add('hidden'); clearInterval(APP_STATE.timerInterval); renderProgress();">
+                🏠 Volver al Inicio
+            </button>
         </div>
     `;
 }
