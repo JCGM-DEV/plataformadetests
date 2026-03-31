@@ -48,7 +48,7 @@ function renderSubjects() {
                 <button onclick="startExam('${subject.id}')">Iniciar Simulacro Aleatorio</button>
             </div>
             <div class="card-stats">
-                <span>V6 Professional: 3.500 Preguntas con Contexto Real</span>
+                <span>V6.1 Fixed: 3.500 Preguntas (Pool Ampliado)</span>
             </div>
         `;
         subjectGrid.appendChild(card);
@@ -128,18 +128,23 @@ function updateTimerUI() {
 }
 
 function renderQuestion() {
+    if (!APP_STATE.examQuestions[APP_STATE.currentQuestionIndex]) {
+        finishExam();
+        return;
+    }
     const q = APP_STATE.examQuestions[APP_STATE.currentQuestionIndex];
+    const totalQ = APP_STATE.examQuestions.length;
     examRoot.innerHTML = `
         <div class="question-container">
             <div class="question-header">
                 <div>
                     <h3>Simulacro: ${APP_STATE.currentExam.name}</h3>
-                    <p>Pregunta ${APP_STATE.currentQuestionIndex + 1} de 30 (Pool de 500)</p>
+                    <p>Pregunta ${APP_STATE.currentQuestionIndex + 1} de ${totalQ} (Pool de 500)</p>
                 </div>
                 <span id="exam-timer" class="timer">1:00:00</span>
             </div>
             <div class="progress-bar-small" style="width: 100%; margin: 1.5rem 0;">
-                <div class="fill" style="width: ${((APP_STATE.currentQuestionIndex) / 30) * 100}%"></div>
+                <div class="fill" style="width: ${((APP_STATE.currentQuestionIndex) / totalQ) * 100}%"></div>
             </div>
             <p class="question-text">${q.question}</p>
             <div id="options-grid" class="options-grid">
@@ -191,7 +196,7 @@ function handleResponse(index) {
 
 function nextQuestion() {
     APP_STATE.currentQuestionIndex++;
-    if (APP_STATE.currentQuestionIndex < 30) {
+    if (APP_STATE.currentQuestionIndex < APP_STATE.examQuestions.length) {
         renderQuestion();
     } else {
         finishExam();
