@@ -293,6 +293,16 @@ function updateTimerUI() {
     }
 }
 
+// Prevent HTML tags in question/option text from being rendered as real elements
+function escapeHTML(str) {
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
+
 function renderQuestion() {
     if (!APP_STATE.examQuestions[APP_STATE.currentQuestionIndex]) {
         finishExam();
@@ -312,10 +322,10 @@ function renderQuestion() {
             <div class="progress-bar-small" style="width: 100%; margin: 1.5rem 0;">
                 <div class="fill" style="width: ${((APP_STATE.currentQuestionIndex) / totalQ) * 100}%"></div>
             </div>
-            <p class="question-text">${q.question}</p>
+            <p class="question-text">${escapeHTML(q.question)}</p>
             <div id="options-grid" class="options-grid">
                 ${q.options.map((opt, i) => `
-                    <button class="option-btn" onclick="handleResponse(${i})">${opt}</button>
+                    <button class="option-btn" onclick="handleResponse(${i})">${escapeHTML(opt)}</button>
                 `).join('')}
             </div>
             <div id="feedback-area" class="feedback-area hidden"></div>
@@ -345,9 +355,9 @@ function handleResponse(index) {
         feedback.innerHTML = `
             <div class="explanation-box">
                 <strong>❌ Incorrecto</strong>
-                <p>La respuesta correcta es: <em>${q.options[q.correct]}</em></p>
+                <p>La respuesta correcta es: <em>${escapeHTML(q.options[q.correct])}</em></p>
                 <hr>
-                <p>${q.explanation}</p>
+                <p>${escapeHTML(q.explanation)}</p>
             </div>
         `;
         feedback.classList.remove('hidden');
