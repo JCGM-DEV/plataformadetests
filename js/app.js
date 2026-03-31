@@ -48,7 +48,7 @@ function renderSubjects() {
                 <button onclick="startExam('${subject.id}')">Iniciar Simulacro Aleatorio</button>
             </div>
             <div class="card-stats">
-                <span>V10 OVERLOAD: Preguntas Reales (1.400 Unique)</span>
+                <span>V11 SYLLABUS MASTER: 20 Preguntas (Max 3 Repetidas)</span>
             </div>
         `;
         subjectGrid.appendChild(card);
@@ -69,36 +69,48 @@ function startExam(subjectId) {
     APP_STATE.currentExam = subject;
     APP_STATE.currentQuestionIndex = 0;
     APP_STATE.answers = [];
-    APP_STATE.timer = 3600; // 1 Hour
+    APP_STATE.timer = 1800; // 30 Minutes for 20 questions
     
-    // Select 30 random questions from pool (Truly random each time)
     let pool = QUESTION_POOL[subjectId] || [];
     
-    // Truly non-repetitive V8 Legendary randomization
-    APP_STATE.examQuestions = getDeterministicRandomQuestions(pool, 30);
+    // V11: Intelligent Repeat Filtering (Limit repeats from last test to max 3)
+    const lastTestIds = JSON.parse(localStorage.getItem(`last_test_${subjectId}`) || "[]");
+    APP_STATE.examQuestions = getSmartRandomQuestions(pool, 20, lastTestIds);
+    
+    // Save current IDs for next time to avoid repeating them
+    const currentIds = APP_STATE.examQuestions.map(q => q.concept_id);
+    localStorage.setItem(`last_test_${subjectId}`, JSON.stringify(currentIds));
     
     examModal.classList.remove('hidden');
     renderQuestion();
     startTimer();
 }
 
-function getDeterministicRandomQuestions(pool, count) {
-    // V8 Legendary: Pure non-deterministic shuffle
+function getSmartRandomQuestions(pool, count, forbiddenIds) {
     let shuffled = [...pool];
-    
-    // Fisher-Yates shuffle with true randomness
     for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
-    
+
     const uniqueQuestions = [];
-    const usedIds = new Set();
-    
+    const usedConceptIds = new Set();
+    let repeatsCount = 0;
+    const MAX_REPEATS = 3;
+
     for (const q of shuffled) {
-        if (!usedIds.has(q.concept_id)) {
-            uniqueQuestions.push(q);
-            usedIds.add(q.concept_id);
+        if (!usedConceptIds.has(q.concept_id)) {
+            // Check if it's from last test
+            const isRepeat = forbiddenIds.includes(q.concept_id);
+            
+            if (isRepeat && repeatsCount < MAX_REPEATS) {
+                uniqueQuestions.push(q);
+                usedConceptIds.add(q.concept_id);
+                repeatsCount++;
+            } else if (!isRepeat) {
+                uniqueQuestions.push(q);
+                usedConceptIds.add(q.concept_id);
+            }
         }
         if (uniqueQuestions.length >= count) break;
     }
@@ -137,7 +149,7 @@ function renderQuestion() {
             <div class="question-header">
                 <div>
                     <h3>Simulacro: ${APP_STATE.currentExam.name}</h3>
-                    <p>Pregunta ${APP_STATE.currentQuestionIndex + 1} de ${totalQ} (Pool de 500)</p>
+                    <p>Pregunta ${APP_STATE.currentQuestionIndex + 1} de ${totalQ} (Pool Temario: ${QUESTION_POOL[APP_STATE.currentExam.id].length})</p>
                 </div>
                 <span id="exam-timer" class="timer">1:00:00</span>
             </div>
