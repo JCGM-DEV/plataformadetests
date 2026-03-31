@@ -719,6 +719,474 @@
       ],
       "correct": 2,
       "explanation": "El chipset coordina el flujo de datos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_60",
+      "question": "¿Qué capa OSI gestiona la compresión y el cifrado de datos?",
+      "options": [
+        "Capa 6 - Presentación",
+        "Capa 4 - Transporte",
+        "Capa 5 - Sesión",
+        "Capa 7 - Aplicación"
+      ],
+      "correct": 0,
+      "explanation": "La capa de Presentación traduce el formato de los datos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_61",
+      "question": "¿Qué capa OSI establece, mantiene y termina las sesiones entre aplicaciones?",
+      "options": [
+        "Capa 3 - Red",
+        "Capa 4 - Transporte",
+        "Capa 5 - Sesión",
+        "Capa 6 - Presentación"
+      ],
+      "correct": 2,
+      "explanation": "La capa de Sesión administra el diálogo entre equipos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_62",
+      "question": "¿Qué protocolo de capa de transporte garantiza la entrega ordenada de datos?",
+      "options": [
+        "TCP",
+        "UDP",
+        "ICMP",
+        "ARP"
+      ],
+      "correct": 0,
+      "explanation": "TCP usa el saludo de tres vías y confirmaciones ACK."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_63",
+      "question": "¿Qué puerto usa el protocolo Telnet?",
+      "options": [
+        "23",
+        "22",
+        "80",
+        "25"
+      ],
+      "correct": 0,
+      "explanation": "Telnet es inseguro; SSH (22) lo reemplaza."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_64",
+      "question": "¿Qué puerto usa el protocolo POP3?",
+      "options": [
+        "110",
+        "143",
+        "587",
+        "25"
+      ],
+      "correct": 0,
+      "explanation": "POP3 descarga el correo en local."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_65",
+      "question": "¿Qué puerto usa el protocolo IMAP?",
+      "options": [
+        "143",
+        "110",
+        "25",
+        "465"
+      ],
+      "correct": 0,
+      "explanation": "IMAP deja el correo en el servidor."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_66",
+      "question": "¿Qué significa TTL en un paquete de red?",
+      "options": [
+        "Time To Live: contador de saltos antes de descartar el paquete",
+        "Time To Load",
+        "Tipo de Terminal Linux",
+        "Total Transfer Latency"
+      ],
+      "correct": 0,
+      "explanation": "Evita que paquetes circulen indefinidamente."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_67",
+      "question": "¿Qué es una dirección MAC?",
+      "options": [
+        "La IP privada de un dispositivo",
+        "Identificador físico único de una interfaz de red de 48 bits",
+        "El nombre del host en la red",
+        "La máscara de subred"
+      ],
+      "correct": 1,
+      "explanation": "Media Access Control Address."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_68",
+      "question": "¿Qué clase de IP privada usa el rango 192.168.0.0 – 192.168.255.255?",
+      "options": [
+        "Clase B",
+        "Clase D",
+        "Clase C",
+        "Clase A"
+      ],
+      "correct": 2,
+      "explanation": "Clase C es la más común en redes domésticas."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_69",
+      "question": "¿Qué herramienta Linux muestra las conexiones de red activas y puertos en escucha?",
+      "options": [
+        "top",
+        "netstat / ss",
+        "route",
+        "ifconfig"
+      ],
+      "correct": 1,
+      "explanation": "ss es el sucesor moderno de netstat."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_70",
+      "question": "¿Qué hace el comando 'tail -f /var/log/syslog'?",
+      "options": [
+        "Borra el archivo de log",
+        "Copia el log a otro fichero",
+        "Muestra las últimas líneas del log en tiempo real",
+        "Lista los procesos del sistema"
+      ],
+      "correct": 2,
+      "explanation": "tail -f sigue el fichero según crece."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_71",
+      "question": "¿Cuál es la función del directorio /var en Linux?",
+      "options": [
+        "Aloja los directorios de usuario",
+        "Almacena archivos variables: logs, colas de impresión, bases de datos temporales",
+        "Guarda la configuración",
+        "Contiene los binarios del sistema"
+      ],
+      "correct": 1,
+      "explanation": "/var = variable data."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_72",
+      "question": "¿Qué es GRUB?",
+      "options": [
+        "Un sistema de copias de seguridad",
+        "Un protocolo de red",
+        "Un sistema de archivos de Linux",
+        "Gestor de arranque que permite elegir el sistema operativo al inicio"
+      ],
+      "correct": 3,
+      "explanation": "Grand Unified Bootloader."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_73",
+      "question": "¿Qué nivel RAID combina RAID 1 y RAID 0 para velocidad y redundancia?",
+      "options": [
+        "RAID 6",
+        "RAID 10",
+        "RAID 5",
+        "RAID 2"
+      ],
+      "correct": 1,
+      "explanation": "RAID 10 (1+0): mínimo 4 discos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_74",
+      "question": "¿Qué sistema de archivos de Linux soporta snapshots y compresión nativa?",
+      "options": [
+        "ext4",
+        "NTFS",
+        "Btrfs",
+        "XFS"
+      ],
+      "correct": 2,
+      "explanation": "Btrfs es moderno y orientado a SSD."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_75",
+      "question": "¿Qué hace el comando 'mount' en Linux?",
+      "options": [
+        "Lista las particiones del disco",
+        "Crea una nueva partición",
+        "Formatea una partición",
+        "Asocia un dispositivo de almacenamiento a un directorio del árbol de ficheros"
+      ],
+      "correct": 3,
+      "explanation": "mount /dev/sdb1 /mnt/disco."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_76",
+      "question": "¿Qué comando de Linux verifica la integridad del sistema de archivos en una partición?",
+      "options": [
+        "mkfs",
+        "lsblk",
+        "fsck",
+        "fdisk"
+      ],
+      "correct": 2,
+      "explanation": "File System Check."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_77",
+      "question": "¿Qué es un proceso 'zombie' en Linux?",
+      "options": [
+        "Un proceso sin permisos",
+        "Un proceso en estado de espera de I/O",
+        "Un proceso que consume el 100% de CPU",
+        "Un proceso que ha terminado pero cuya entrada en la tabla de procesos aún no fue eliminada por el padre"
+      ],
+      "correct": 3,
+      "explanation": "El padre debe hacer wait() para eliminarlo."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_78",
+      "question": "¿Qué comando muestra el árbol de directorios en Linux?",
+      "options": [
+        "tree",
+        "find",
+        "ls -R",
+        "du"
+      ],
+      "correct": 0,
+      "explanation": "tree muestra la jerarquía de forma visual."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_79",
+      "question": "¿Qué es el protocolo LDAP?",
+      "options": [
+        "Protocolo de monitorización",
+        "Protocolo de transferencia de archivos",
+        "Protocolo para acceder y mantener directorios de usuarios en red",
+        "Protocolo de envío de correo"
+      ],
+      "correct": 2,
+      "explanation": "Lightweight Directory Access Protocol."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_80",
+      "question": "¿Qué tipo de ataque consiste en interceptar comunicaciones entre dos partes sin que lo sepan?",
+      "options": [
+        "Phishing",
+        "Man-in-the-Middle (MitM)",
+        "SQL Injection",
+        "DoS"
+      ],
+      "correct": 1,
+      "explanation": "MitM intercept y puede modificar el tráfico."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_81",
+      "question": "¿Qué es un ataque DoS?",
+      "options": [
+        "Instalación de software malicioso",
+        "Denegación de Servicio: saturar un servidor para dejarlo inaccesible",
+        "Robo de contraseñas mediante engaño",
+        "Intercepción del tráfico de red"
+      ],
+      "correct": 1,
+      "explanation": "Denial of Service."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_82",
+      "question": "¿Qué es el cifrado simétrico?",
+      "options": [
+        "Usa la misma clave para cifrar y descifrar",
+        "Cifra el disco completo",
+        "Usa una clave pública y una privada",
+        "Solo cifra datos en tránsito"
+      ],
+      "correct": 0,
+      "explanation": "AES es el algoritmo simétrico más usado."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_83",
+      "question": "¿Qué es el cifrado asimétrico?",
+      "options": [
+        "Usa un par de claves: pública para cifrar y privada para descifrar",
+        "Usa la misma clave para cifrar y descifrar",
+        "Solo se usa en WiFi",
+        "Cifra solo archivos de texto"
+      ],
+      "correct": 0,
+      "explanation": "RSA es el algoritmo asimétrico más conocido."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_84",
+      "question": "¿Qué es una VPN?",
+      "options": [
+        "Un protocolo de enrutamiento",
+        "Red privada virtual que cifra el tráfico a través de una red pública",
+        "Un sistema de backup",
+        "Un tipo de VLAN"
+      ],
+      "correct": 1,
+      "explanation": "Virtual Private Network."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_85",
+      "question": "¿Qué indica el bit 'x' (ejecución) en los permisos de un directorio en Linux?",
+      "options": [
+        "Permite crear archivos dentro",
+        "Permite borrarlo",
+        "Permite entrar (cd) al directorio",
+        "Permite listar su contenido"
+      ],
+      "correct": 2,
+      "explanation": "Sin x no se puede hacer cd."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_86",
+      "question": "¿Qué hace 'chmod 644 archivo'?",
+      "options": [
+        "Propietario: r--, Grupo: ---, Otros: ---",
+        "Propietario: rwx, Grupo: rw-, Otros: r--",
+        "Propietario: rw-, Grupo: r--, Otros: r--",
+        "Propietario: rw-, Grupo: rw-, Otros: rw-"
+      ],
+      "correct": 2,
+      "explanation": "6=rw-, 4=r--, 4=r--."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_87",
+      "question": "¿Qué diferencia hay entre un proceso y un hilo (thread)?",
+      "options": [
+        "Los procesos son más rápidos",
+        "Un proceso tiene su propio espacio de memoria; los hilos comparten el del proceso",
+        "Un hilo ocupa más recursos que un proceso",
+        "Son sinónimos"
+      ],
+      "correct": 1,
+      "explanation": "Los hilos son más ligeros."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_88",
+      "question": "¿Qué es la virtualización?",
+      "options": [
+        "El uso de la nube",
+        "Crear recursos lógicos (máquinas virtuales) sobre hardware físico compartido",
+        "El uso de contenedores Docker",
+        "La emulación de hardware antiguo"
+      ],
+      "correct": 1,
+      "explanation": "VMware, VirtualBox y KVM son hipervisores."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_89",
+      "question": "¿Qué es un hipervisor de tipo 1?",
+      "options": [
+        "Se instala sobre un SO existente",
+        "Es un emulador de CPU",
+        "Es solo para contenedores",
+        "Se ejecuta directamente sobre el hardware sin SO anfitrión (bare metal)"
+      ],
+      "correct": 3,
+      "explanation": "VMware ESXi y Hyper-V son tipo 1."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_90",
+      "question": "¿Cuál es la función del DNS inverso?",
+      "options": [
+        "Redirigir el tráfico web",
+        "Resolver un nombre de dominio a IP",
+        "Resolver una IP a un nombre de dominio",
+        "Asignar IPs dinámicamente"
+      ],
+      "correct": 2,
+      "explanation": "rDNS: IP → nombre del host."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_91",
+      "question": "¿Qué protocolo usa IEEE 802.11 para las redes WiFi?",
+      "options": [
+        "Ethernet",
+        "Zigbee",
+        "Bluetooth",
+        "Wireless LAN (WiFi)"
+      ],
+      "correct": 3,
+      "explanation": "IEEE 802.11 define todos los estándares WiFi (a/b/g/n/ac/ax)."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_92",
+      "question": "¿Qué estándar WiFi opera en la banda de 5 GHz y se conoce también como WiFi 5?",
+      "options": [
+        "IEEE 802.11ax",
+        "IEEE 802.11ac",
+        "IEEE 802.11g",
+        "IEEE 802.11n"
+      ],
+      "correct": 1,
+      "explanation": "802.11ac es WiFi 5."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_93",
+      "question": "¿Qué es el direccionamiento CIDR?",
+      "options": [
+        "Notación que indica la máscara de red con /prefijo (ej: 192.168.1.0/24)",
+        "Un tipo de dirección MAC",
+        "Un protocolo de enrutamiento dinámico",
+        "Un estándar de cables de red"
+      ],
+      "correct": 0,
+      "explanation": "Classless Inter-Domain Routing."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_94",
+      "question": "¿Qué capa del modelo TCP/IP engloba las capas Física y de Enlace del modelo OSI?",
+      "options": [
+        "Capa de Internet",
+        "Capa de Transporte",
+        "Capa de Aplicación",
+        "Capa de Acceso a la Red"
+      ],
+      "correct": 3,
+      "explanation": "TCP/IP tiene 4 capas vs las 7 del OSI."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_95",
+      "question": "¿Qué es el BSSID de una red WiFi?",
+      "options": [
+        "El nombre de la red (SSID)",
+        "La dirección MAC del punto de acceso (router WiFi)",
+        "La contraseña de la red",
+        "La IP del router"
+      ],
+      "correct": 1,
+      "explanation": "Basic Service Set Identifier."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_96",
+      "question": "¿Qué herramienta Linux permite analizar el tráfico de red en tiempo real?",
+      "options": [
+        "ping",
+        "tcpdump / Wireshark",
+        "ifconfig",
+        "netstat"
+      ],
+      "correct": 1,
+      "explanation": "Wireshark es la versión gráfica de tcpdump."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_97",
+      "question": "¿Qué tipo de memoria mantiene su contenido sin necesidad de corriente eléctrica?",
+      "options": [
+        "Memoria no volátil (ROM, Flash, SSD)",
+        "Caché L1",
+        "Memoria de vídeo",
+        "RAM DDR4"
+      ],
+      "correct": 0,
+      "explanation": "La ROM y el Flash son no volátiles."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp_98",
+      "question": "¿Cuántos niveles de caché suele tener una CPU moderna?",
+      "options": [
+        "2 niveles: L1 y L2",
+        "Solo 1 nivel",
+        "4 niveles: L0 a L3",
+        "3 niveles: L1, L2 y L3"
+      ],
+      "correct": 3,
+      "explanation": "L1 es la más rápida y pequeña; L3 la más grande."
     }
   ],
   "bases_de_datos": [
@@ -1273,6 +1741,294 @@
       ],
       "correct": 2,
       "explanation": "El modelo E-R define entidades y sus relaciones."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_46",
+      "question": "¿Qué es una subconsulta correlacionada?",
+      "options": [
+        "Una subconsulta que hace referencia a columnas de la consulta exterior",
+        "Una subconsulta independiente",
+        "Un JOIN escrito con subquery",
+        "Una consulta que devuelve múltiples columnas"
+      ],
+      "correct": 0,
+      "explanation": "Se evalúa una vez por cada fila de la consulta exterior."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_47",
+      "question": "¿Qué operador SQL verifica si una subconsulta devuelve algún resultado?",
+      "options": [
+        "EXISTS",
+        "ALL",
+        "IN",
+        "ANY"
+      ],
+      "correct": 0,
+      "explanation": "IF EXISTS es muy eficiente con índices."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_48",
+      "question": "¿Qué función SQL devuelve el número de filas de cada grupo?",
+      "options": [
+        "SUM(campo)",
+        "AVG(campo)",
+        "COUNT(*)",
+        "MAX(campo)"
+      ],
+      "correct": 2,
+      "explanation": "COUNT(*) no ignora nulos."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_49",
+      "question": "¿Qué es la desnormalización?",
+      "options": [
+        "Introducir redundancia deliberada para mejorar el rendimiento de lectura",
+        "Aplicar 3FN a todas las tablas",
+        "Eliminar tablas del esquema",
+        "Cifrar los datos sensibles"
+      ],
+      "correct": 0,
+      "explanation": "Es una optimización para OLAP y reportes."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_50",
+      "question": "¿Qué tipo de índice es el más adecuado para búsquedas de texto completo?",
+      "options": [
+        "Índice Non-Clustered",
+        "Índice Único",
+        "Índice Full-Text",
+        "Índice Clustered"
+      ],
+      "correct": 2,
+      "explanation": "FULLTEXT en MySQL permite buscar palabras."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_51",
+      "question": "¿Qué es un esquema en una base de datos relacional?",
+      "options": [
+        "El archivo de configuración",
+        "El nombre del servidor",
+        "Conjunto de objetos (tablas, vistas, procedimientos) dentro de una BD",
+        "El usuario administrador"
+      ],
+      "correct": 2,
+      "explanation": "Schema agrupa objetos lógicamente."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_52",
+      "question": "¿Cuál es la diferencia entre PRIMARY KEY y UNIQUE?",
+      "options": [
+        "PRIMARY KEY no permite nulos; UNIQUE sí puede tenerlos",
+        "Son completamente iguales",
+        "PRIMARY KEY puede repetirse",
+        "UNIQUE no sirve para relaciones"
+      ],
+      "correct": 0,
+      "explanation": "Solo puede haber una PK por tabla pero varias UNIQUE."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_53",
+      "question": "¿Qué es un modelo OLAP?",
+      "options": [
+        "Un protocolo de replicación",
+        "Procesamiento analítico en línea: optimizado para consultas complejas y agregaciones",
+        "Procesamiento transaccional en tiempo real",
+        "Un tipo de base de datos NoSQL"
+      ],
+      "correct": 1,
+      "explanation": "OLAP vs OLTP: análisis vs transacciones."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_54",
+      "question": "¿Qué es la replicación en bases de datos?",
+      "options": [
+        "Copiar y sincronizar datos entre varios servidores",
+        "Cifrar la comunicación entre BD",
+        "Hacer un backup completo",
+        "Fragmentar la tabla en particiones"
+      ],
+      "correct": 0,
+      "explanation": "La replicación mejora la disponibilidad y el rendimiento de lectura."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_55",
+      "question": "¿Qué significa 'sharding' en bases de datos?",
+      "options": [
+        "Crear índices en todas las columnas",
+        "Replicar los datos en espejo",
+        "Comprimir las tablas grandes",
+        "Dividir horizontalmente los datos entre múltiples servidores"
+      ],
+      "correct": 3,
+      "explanation": "Sharding escala horizontalmente."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_56",
+      "question": "¿Qué es MongoDB Atlas?",
+      "options": [
+        "Un tipo de índice de MongoDB",
+        "Servicio cloud gestionado de MongoDB",
+        "Una herramienta de modelado ER",
+        "Un driver de conexión a BD"
+      ],
+      "correct": 1,
+      "explanation": "Atlas ofrece MongoDB as a Service."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_57",
+      "question": "¿Qué tipo de JOIN devuelve todas las filas de la tabla derecha aunque no haya coincidencia?",
+      "options": [
+        "RIGHT JOIN",
+        "INNER JOIN",
+        "FULL JOIN",
+        "LEFT JOIN"
+      ],
+      "correct": 0,
+      "explanation": "RIGHT JOIN prioriza la tabla de la derecha."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_58",
+      "question": "¿Qué hace la función COALESCE en SQL?",
+      "options": [
+        "Convierte un tipo de dato",
+        "Concatena cadenas de texto",
+        "Devuelve el primer valor no nulo de la lista de argumentos",
+        "Redondea un número decimal"
+      ],
+      "correct": 2,
+      "explanation": "COALESCE(col1, col2, 'default')."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_59",
+      "question": "¿Qué hace CAST en SQL?",
+      "options": [
+        "Convierte un valor de un tipo de dato a otro",
+        "Filtra nulos",
+        "Agrupa registros",
+        "Ordena el resultado"
+      ],
+      "correct": 0,
+      "explanation": "CAST(precio AS INT)."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_60",
+      "question": "¿Qué es una tabla de hechos en un Data Warehouse?",
+      "options": [
+        "Tabla de configuración",
+        "Tabla que almacena dimensiones de tiempo",
+        "Tabla de usuarios del sistema",
+        "Tabla central que contiene las métricas cuantitativas del negocio"
+      ],
+      "correct": 3,
+      "explanation": "Las tablas de hechos se conectan a dimensiones (esquema estrella)."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_61",
+      "question": "¿Qué modelo de diseño de Data Warehouse tiene una tabla de hechos central con dimensiones directamente relacionadas?",
+      "options": [
+        "Modelo Relacional",
+        "Esquema Copo de Nieve",
+        "Esquema Estrella",
+        "Esquema Constelación"
+      ],
+      "correct": 2,
+      "explanation": "El esquema estrella es el más sencillo y performante."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_62",
+      "question": "¿Qué lenguaje se usa para insertar, actualizar y consultar datos en MongoDB?",
+      "options": [
+        "SQL estándar",
+        "PL/SQL",
+        "XML",
+        "Consultas en formato JSON / BSON"
+      ],
+      "correct": 3,
+      "explanation": "MongoDB usa su propio lenguaje de consulta basado en documentos."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_63",
+      "question": "¿Qué es Redis?",
+      "options": [
+        "Un gestor de colas de mensajes",
+        "Un sistema de archivos distribuido",
+        "Una base de datos relacional de Oracle",
+        "Base de datos NoSQL clave-valor en memoria, usada para caché y sesiones"
+      ],
+      "correct": 3,
+      "explanation": "Redis es extremadamente rápido al operar en RAM."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_64",
+      "question": "¿Qué garantiza la cláusula ON DELETE CASCADE en una FK?",
+      "options": [
+        "Impide borrar el padre si tiene hijos",
+        "Al borrar un hijo, se borra el padre",
+        "Solo funciona en claves primarias",
+        "Al borrar un registro padre, se borran automáticamente sus hijos"
+      ],
+      "correct": 3,
+      "explanation": "Mantiene la integridad referencial automáticamente."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_65",
+      "question": "¿Qué es un cursor en SQL?",
+      "options": [
+        "Un tipo de índice",
+        "Un objeto de conexión a la BD",
+        "Mecanismo para procesar fila por fila el resultado de una consulta",
+        "Una variable de texto"
+      ],
+      "correct": 2,
+      "explanation": "Los cursores se usan en procedimientos almacenados."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_66",
+      "question": "¿Qué significa ACID en el contexto de bases de datos?",
+      "options": [
+        "Atomicidad, Consistencia, Aislamiento, Durabilidad",
+        "Acceso, Control, Integridad, Datos",
+        "Archivo, Columna, Índice, Dominio",
+        "Autenticación, Cifrado, Índice, Diccionario"
+      ],
+      "correct": 0,
+      "explanation": "Las 4 propiedades fundamentales de las transacciones."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_67",
+      "question": "¿Qué hace la sentencia MERGE en SQL?",
+      "options": [
+        "Combina INSERT, UPDATE y DELETE en una sola operación según condiciones",
+        "Fusiona dos tablas en una sola",
+        "Renombra una tabla",
+        "Hace un backup de la tabla"
+      ],
+      "correct": 0,
+      "explanation": "MERGE es útil para sincronizar tablas."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_68",
+      "question": "¿Qué es el plan de ejecución de una consulta SQL?",
+      "options": [
+        "El historial de transacciones",
+        "La ruta que sigue el SGBD para resolver una consulta de forma eficiente",
+        "La lista de índices de la tabla",
+        "El esquema de la base de datos"
+      ],
+      "correct": 1,
+      "explanation": "EXPLAIN PLAN muestra si se usan índices."
+    },
+    {
+      "concept_id": "bases_de_datos_exp_69",
+      "question": "¿Qué nivel de aislamiento puede producir 'lecturas sucias' (dirty reads)?",
+      "options": [
+        "READ COMMITTED",
+        "SERIALIZABLE",
+        "READ UNCOMMITTED",
+        "REPEATABLE READ"
+      ],
+      "correct": 2,
+      "explanation": "READ UNCOMMITTED es el nivel más bajo."
     }
   ],
   "programacion": [
@@ -1707,6 +2463,270 @@
       ],
       "correct": 0,
       "explanation": "JUnit es el estándar de testing en Java."
+    },
+    {
+      "concept_id": "programacion_exp_36",
+      "question": "¿Qué es una expresión Lambda en Java 8+?",
+      "options": [
+        "Un método de la clase Object",
+        "Función anónima que implementa una interfaz funcional de forma compacta",
+        "Un tipo de bucle avanzado",
+        "Un operador ternario extendido"
+      ],
+      "correct": 1,
+      "explanation": "Sintaxis: (params) -> expresión."
+    },
+    {
+      "concept_id": "programacion_exp_37",
+      "question": "¿Qué es la API Stream de Java 8?",
+      "options": [
+        "Una librería de red Java",
+        "Una clase para leer ficheros",
+        "Un tipo de colección",
+        "Permite procesar colecciones de forma funcional (filter, map, reduce) sin bucles explícitos"
+      ],
+      "correct": 3,
+      "explanation": "list.stream().filter(...).collect(Collectors.toList())."
+    },
+    {
+      "concept_id": "programacion_exp_38",
+      "question": "¿Qué interfaz funcional de Java acepta un argumento y devuelve un resultado?",
+      "options": [
+        "Consumer<T>",
+        "Supplier<T>",
+        "Function<T,R>",
+        "Predicate<T>"
+      ],
+      "correct": 2,
+      "explanation": "Function<String, Integer> parse = Integer::parseInt;"
+    },
+    {
+      "concept_id": "programacion_exp_39",
+      "question": "¿Qué hace el operador '::' (method reference) en Java?",
+      "options": [
+        "Crea un nuevo objeto",
+        "Accede a atributos estáticos",
+        "Llama al constructor padre",
+        "Referencia a un método existente como si fuera una lambda"
+      ],
+      "correct": 3,
+      "explanation": "String::toUpperCase equivale a s -> s.toUpperCase()."
+    },
+    {
+      "concept_id": "programacion_exp_40",
+      "question": "¿Qué es un Optional en Java?",
+      "options": [
+        "Un tipo de excepción",
+        "Contenedor que puede o no contener un valor, evitando NullPointerException",
+        "Un modificador de acceso",
+        "Una colección de un solo elemento"
+      ],
+      "correct": 1,
+      "explanation": "Optional.ofNullable(valor).orElse('default')."
+    },
+    {
+      "concept_id": "programacion_exp_41",
+      "question": "¿Qué patrón de diseño asegura que una clase tenga solo una instancia?",
+      "options": [
+        "Singleton",
+        "Strategy",
+        "Factory",
+        "Observer"
+      ],
+      "correct": 0,
+      "explanation": "Singleton controla el punto de acceso global."
+    },
+    {
+      "concept_id": "programacion_exp_42",
+      "question": "¿Qué patrón de diseño define una interfaz para crear objetos, delegando la decisión a las subclases?",
+      "options": [
+        "Proxy",
+        "Singleton",
+        "Decorator",
+        "Factory Method"
+      ],
+      "correct": 3,
+      "explanation": "El Factory Method desacopla la creación del uso."
+    },
+    {
+      "concept_id": "programacion_exp_43",
+      "question": "¿Qué patrón de diseño permite añadir funcionalidad a un objeto dinámicamente?",
+      "options": [
+        "Observer",
+        "Decorator",
+        "Command",
+        "Adapter"
+      ],
+      "correct": 1,
+      "explanation": "Decorator envuelve el objeto original."
+    },
+    {
+      "concept_id": "programacion_exp_44",
+      "question": "¿Qué es la interfaz Comparable en Java?",
+      "options": [
+        "Interfaz de streams",
+        "Interfaz para clonar objetos",
+        "Interfaz que define el método compareTo() para el ordenamiento natural",
+        "Interfaz de colec­ciones"
+      ],
+      "correct": 2,
+      "explanation": "Collections.sort() usa Comparable."
+    },
+    {
+      "concept_id": "programacion_exp_45",
+      "question": "¿Qué diferencia hay entre ArrayList y LinkedList?",
+      "options": [
+        "Son idénticos en rendimiento",
+        "LinkedList es más rápida en todo",
+        "ArrayList usa array dinámico (acceso O(1)); LinkedList usa nodos enlazados (inserción O(1))",
+        "ArrayList no permite duplicados"
+      ],
+      "correct": 2,
+      "explanation": "Elige según el patrón de acceso."
+    },
+    {
+      "concept_id": "programacion_exp_46",
+      "question": "¿Qué es la programación orientada a eventos?",
+      "options": [
+        "Programación funcional con lambdas",
+        "Programación en tiempo real",
+        "El flujo del programa lo determinan eventos del usuario o del sistema",
+        "Programación sin bucles"
+      ],
+      "correct": 2,
+      "explanation": "GUI y JavaScript funcionan con eventos."
+    },
+    {
+      "concept_id": "programacion_exp_47",
+      "question": "¿Qué es la herencia múltiple y por qué Java no la permite en clases?",
+      "options": [
+        "Una clase hereda de varias a la vez; Java la evita para prevenir el 'diamante de la muerte'",
+        "La herencia múltiple es obligatoria en Java",
+        "Java no soporta herencia de ningún tipo",
+        "Java la permite usando extends múltiple"
+      ],
+      "correct": 0,
+      "explanation": "Java usa interfaces para simular herencia múltiple."
+    },
+    {
+      "concept_id": "programacion_exp_48",
+      "question": "¿Qué es el principio SOLID 'S'?",
+      "options": [
+        "Separación del front y el back",
+        "Sincronización de hilos",
+        "Seguridad en el acceso a datos",
+        "Single Responsibility: una clase debe tener un solo motivo para cambiar"
+      ],
+      "correct": 3,
+      "explanation": "Principio de Responsabilidad Única."
+    },
+    {
+      "concept_id": "programacion_exp_49",
+      "question": "¿Qué es el principio SOLID 'O'?",
+      "options": [
+        "Opciones de herencia",
+        "Orden de constructores",
+        "Open/Closed: abierto para extensión, cerrado para modificación",
+        "Orientación a objetos obligatoria"
+      ],
+      "correct": 2,
+      "explanation": "Extiende sin modificar el código existente."
+    },
+    {
+      "concept_id": "programacion_exp_50",
+      "question": "¿Qué estructura de control en Java permite ejecutar código según el tipo de una variable (Java 17+)?",
+      "options": [
+        "switch tradicional",
+        "Pattern Matching con instanceof",
+        "try-with-resources",
+        "Operador ternario"
+      ],
+      "correct": 1,
+      "explanation": "if (obj instanceof String s) { ... }"
+    },
+    {
+      "concept_id": "programacion_exp_51",
+      "question": "¿Qué es una clase genérica en Java?",
+      "options": [
+        "Una clase que hereda de Object",
+        "Una clase parametrizada por tipo: List<T> puede ser List<String> o List<Integer>",
+        "Una clase sin atributos",
+        "Una clase abstracta"
+      ],
+      "correct": 1,
+      "explanation": "Los genéricos aportan seguridad de tipos en tiempo de compilación."
+    },
+    {
+      "concept_id": "programacion_exp_52",
+      "question": "¿Qué hace 'try-with-resources' en Java?",
+      "options": [
+        "Crea un pool de conexiones",
+        "Cierra automáticamente recursos que implementan AutoCloseable al salir del bloque",
+        "Lanza una excepción chequeada",
+        "Captura todas las excepciones posibles"
+      ],
+      "correct": 1,
+      "explanation": "Elimina la necesidad de finally para cerrar recursos."
+    },
+    {
+      "concept_id": "programacion_exp_53",
+      "question": "¿Qué es la serialización en Java?",
+      "options": [
+        "Comprimir un fichero",
+        "Convertir un objeto a bytes para guardarlo o enviarlo por red",
+        "Ordenar una colección",
+        "Cifrar datos sensibles"
+      ],
+      "correct": 1,
+      "explanation": "Implementar Serializable activa la serialización."
+    },
+    {
+      "concept_id": "programacion_exp_54",
+      "question": "¿Qué tipo primitivo en Java almacena un número decimal de alta precisión?",
+      "options": [
+        "long",
+        "float",
+        "double",
+        "int"
+      ],
+      "correct": 2,
+      "explanation": "double ocupa 64 bits; float 32 bits."
+    },
+    {
+      "concept_id": "programacion_exp_55",
+      "question": "¿Qué es un bloque estático en Java?",
+      "options": [
+        "Una variable de clase inmutable",
+        "Un constructor privado",
+        "Un método sin retorno",
+        "Código que se ejecuta una sola vez cuando la clase se carga por primera vez"
+      ],
+      "correct": 3,
+      "explanation": "static { ... } inicializa la clase."
+    },
+    {
+      "concept_id": "programacion_exp_56",
+      "question": "¿Qué es la concurrencia en Java?",
+      "options": [
+        "Usar múltiples clases en un mismo paquete",
+        "Tener varios constructores",
+        "Ejecutar múltiples hilos (threads) simultáneamente para mejorar el rendimiento",
+        "Compilar varios proyectos a la vez"
+      ],
+      "correct": 2,
+      "explanation": "Java usa Thread, Runnable y ExecutorService."
+    },
+    {
+      "concept_id": "programacion_exp_57",
+      "question": "¿Qué hace la palabra reservada 'synchronized' en Java?",
+      "options": [
+        "Garantiza que solo un hilo a la vez puede ejecutar ese método o bloque",
+        "Crea una copia del objeto para cada hilo",
+        "Hace el método más rápido",
+        "Lanza una excepción si hay concurrencia"
+      ],
+      "correct": 0,
+      "explanation": "Evita condiciones de carrera entre hilos."
     }
   ],
   "lenguaje_de_marcas": [
@@ -2009,6 +3029,306 @@
       ],
       "correct": 1,
       "explanation": "table row."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_25",
+      "question": "¿Qué etiqueta HTML5 representa un artículo de contenido independiente y reutilizable?",
+      "options": [
+        "<article>",
+        "<section>",
+        "<aside>",
+        "<div>"
+      ],
+      "correct": 0,
+      "explanation": "<article> puede ser un post, noticia o comentario."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_26",
+      "question": "¿Qué etiqueta HTML5 representa contenido complementario (barra lateral)?",
+      "options": [
+        "<footer>",
+        "<section>",
+        "<aside>",
+        "<nav>"
+      ],
+      "correct": 2,
+      "explanation": "<aside> es una barra lateral o widget."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_27",
+      "question": "¿Qué etiqueta HTML5 define la cabecera de la página o de una sección?",
+      "options": [
+        "<head>",
+        "<h1>",
+        "<header>",
+        "<nav>"
+      ],
+      "correct": 2,
+      "explanation": "<header> puede aparecer en cada <section>."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_28",
+      "question": "¿Qué etiqueta HTML5 define el pie de página?",
+      "options": [
+        "<end>",
+        "<section>",
+        "<bottom>",
+        "<footer>"
+      ],
+      "correct": 3,
+      "explanation": "<footer> suele tener copyright, enlaces legales."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_29",
+      "question": "¿Qué atributo CSS controla el orden de apilamiento de los elementos superpuestos?",
+      "options": [
+        "layer",
+        "stack",
+        "order",
+        "z-index"
+      ],
+      "correct": 3,
+      "explanation": "Mayor z-index = más al frente."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_30",
+      "question": "¿Qué valor de 'position' hace que el elemento se quede fijo en la ventana al hacer scroll?",
+      "options": [
+        "fixed",
+        "sticky",
+        "absolute",
+        "relative"
+      ],
+      "correct": 0,
+      "explanation": "fixed: siempre visible en la misma posición."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_31",
+      "question": "¿Qué propiedad CSS alinea los ítems a lo largo del eje principal en Flexbox?",
+      "options": [
+        "flex-wrap",
+        "flex-direction",
+        "justify-content",
+        "align-items"
+      ],
+      "correct": 2,
+      "explanation": "justify-content: center|flex-start|space-between..."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_32",
+      "question": "¿Qué propiedad CSS alinea los ítems a lo largo del eje transversal en Flexbox?",
+      "options": [
+        "align-self",
+        "align-items",
+        "justify-content",
+        "flex-grow"
+      ],
+      "correct": 1,
+      "explanation": "align-items: center|stretch|flex-start..."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_33",
+      "question": "¿Qué propiedad CSS define las columnas y filas de un grid?",
+      "options": [
+        "grid-template-columns / grid-template-rows",
+        "column-count",
+        "flex-direction",
+        "display"
+      ],
+      "correct": 0,
+      "explanation": "grid-template-columns: 1fr 2fr 1fr;"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_34",
+      "question": "¿Qué pseudo-clase CSS aplica estilos cuando el ratón pasa sobre un elemento?",
+      "options": [
+        ":active",
+        ":hover",
+        ":focus",
+        ":visited"
+      ],
+      "correct": 1,
+      "explanation": "a:hover { color: red; }"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_35",
+      "question": "¿Qué pseudo-clase CSS aplica estilos al primer hijo de su padre?",
+      "options": [
+        ":nth-child(1)",
+        ":root",
+        ":first-child",
+        ":first-of-type"
+      ],
+      "correct": 2,
+      "explanation": "li:first-child { font-weight: bold; }"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_36",
+      "question": "¿Qué es una Media Query en CSS?",
+      "options": [
+        "Regla CSS que aplica estilos según características del dispositivo (ancho, resolución)",
+        "Un tipo de selector avanzado",
+        "Una API del navegador",
+        "Una función de JavaScript"
+      ],
+      "correct": 0,
+      "explanation": "@media (max-width: 768px) { ... }"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_37",
+      "question": "¿Qué hace 'box-sizing: border-box'?",
+      "options": [
+        "Solo aplica el border sin padding",
+        "Excluye el margin del modelo de caja",
+        "Resetea todos los estilos",
+        "Incluye padding y border dentro del ancho/alto declarado del elemento"
+      ],
+      "correct": 3,
+      "explanation": "Hace el diseño más predecible."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_38",
+      "question": "¿Qué es la especificidad en CSS?",
+      "options": [
+        "La prioridad que tiene un selector para aplicar sus estilos sobre otros",
+        "El orden en que se cargan los estilos",
+        "El peso del archivo CSS",
+        "La herencia de propiedades"
+      ],
+      "correct": 0,
+      "explanation": "ID > Clase > Elemento."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_39",
+      "question": "¿Qué atributo HTML5 permite que un campo de formulario muestre texto de ayuda antes de escribir?",
+      "options": [
+        "hint",
+        "placeholder",
+        "label",
+        "title"
+      ],
+      "correct": 1,
+      "explanation": "<input placeholder='Tu nombre'>"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_40",
+      "question": "¿Qué etiqueta HTML5 agrupa un conjunto de campos de formulario con una leyenda?",
+      "options": [
+        "<group>",
+        "<section>",
+        "<fieldset> y <legend>",
+        "<form>"
+      ],
+      "correct": 2,
+      "explanation": "<fieldset><legend>Datos</legend>...</fieldset>"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_41",
+      "question": "¿Qué etiqueta define una celda de encabezado en una tabla HTML?",
+      "options": [
+        "<td>",
+        "<th>",
+        "<caption>",
+        "<tr>"
+      ],
+      "correct": 1,
+      "explanation": "<th> se muestra en negrita por defecto."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_42",
+      "question": "¿Para qué sirve el atributo 'colspan' en una celda de tabla?",
+      "options": [
+        "Fusiona filas",
+        "Permite que la celda ocupe múltiples columnas",
+        "Alinea el contenido",
+        "Define el ancho de la celda"
+      ],
+      "correct": 1,
+      "explanation": "<td colspan='2'> ocupa 2 columnas."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_43",
+      "question": "¿Qué propiedad CSS cambia la apariencia del cursor del ratón sobre un elemento?",
+      "options": [
+        "hover",
+        "cursor",
+        "pointer",
+        "mouse"
+      ],
+      "correct": 1,
+      "explanation": "cursor: pointer muestra la manita de enlace."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_44",
+      "question": "¿Qué es CSS custom properties (variables)?",
+      "options": [
+        "Propiedades heredadas automáticamente",
+        "Selectores avanzados de atributo",
+        "Variables declaradas con '--nombre' y usadas con 'var(--nombre)'",
+        "Clases dinámicas generadas con JavaScript"
+      ],
+      "correct": 2,
+      "explanation": ":root { --color: #3b82f6; } p { color: var(--color); }"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_45",
+      "question": "¿Qué es el DOM en el contexto de HTML y JavaScript?",
+      "options": [
+        "El sistema de caché del navegador",
+        "El protocolo de comunicación entre HTML y CSS",
+        "Document Object Model: representación en árbol del documento HTML que JS puede manipular",
+        "Un tipo de base de datos del navegador"
+      ],
+      "correct": 2,
+      "explanation": "JS usa document.getElementById() para acceder al DOM."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_46",
+      "question": "¿Qué hace 'localStorage' en JavaScript?",
+      "options": [
+        "Almacena datos en el navegador de forma persistente (no se borra al cerrar)",
+        "Envía datos al servidor",
+        "Cifra los datos del formulario",
+        "Guarda datos solo durante la sesión"
+      ],
+      "correct": 0,
+      "explanation": "localStorage.setItem('clave', 'valor')."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_47",
+      "question": "¿Qué hace 'sessionStorage' en JavaScript?",
+      "options": [
+        "Establece cookies",
+        "Almacena datos permanentemente",
+        "Almacena datos solo durante la sesión activa del navegador (se borra al cerrar)",
+        "Comunica con la API"
+      ],
+      "correct": 2,
+      "explanation": "sessionStorage vs localStorage: duración de vida."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_48",
+      "question": "¿Qué es JSON?",
+      "options": [
+        "Formato ligero de intercambio de datos basado en texto, legible por humanos",
+        "Un tipo de base de datos",
+        "Un protocolo de red",
+        "JavaScript Object Notation: solo para webs"
+      ],
+      "correct": 0,
+      "explanation": "JSON se usa en APIs REST y configuración."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp_49",
+      "question": "¿Qué hace la propiedad CSS 'overflow: hidden'?",
+      "options": [
+        "Añade scroll automático",
+        "Borra el elemento desbordado",
+        "Oculta el contenido que sobrepasa los límites del contenedor",
+        "Fuerza una media query"
+      ],
+      "correct": 2,
+      "explanation": "Muy usado para limpiar floats y recortar contenido."
     }
   ],
   "entornos_de_desarrollo": [
@@ -2287,6 +3607,210 @@
       ],
       "correct": 0,
       "explanation": "Project Object Model."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_23",
+      "question": "¿Qué hace 'git stash'?",
+      "options": [
+        "Borra los cambios no guardados",
+        "Crea una nueva rama",
+        "Sube los cambios al remoto",
+        "Guarda temporalmente los cambios no confirmados sin hacer commit"
+      ],
+      "correct": 3,
+      "explanation": "git stash pop recupera los cambios guardados."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_24",
+      "question": "¿Qué hace 'git rebase'?",
+      "options": [
+        "Reaplica los commits de una rama sobre otra, reescribiendo el historial",
+        "Descarga cambios remotos",
+        "Borra el historial de commits",
+        "Fusiona dos ramas"
+      ],
+      "correct": 0,
+      "explanation": "Rebase crea un historial lineal."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_25",
+      "question": "¿Qué hace 'git cherry-pick <hash>'?",
+      "options": [
+        "Hace un merge selectivo",
+        "Aplica un commit específico de otra rama en la rama actual",
+        "Borra un commit",
+        "Copia una rama completa"
+      ],
+      "correct": 1,
+      "explanation": "Útil para traer solo un fix de otra rama."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_26",
+      "question": "¿Qué es un 'pull request' (o merge request)?",
+      "options": [
+        "Un tipo de commit",
+        "Un comando Git",
+        "Una petición HTTP",
+        "Solicitud de revisión y fusión de código de una rama a otra en plataformas como GitHub"
+      ],
+      "correct": 3,
+      "explanation": "Los PR habilitan la revisión de código en equipo."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_27",
+      "question": "¿Qué es un 'conflicto de merge' en Git?",
+      "options": [
+        "Un error de red al hacer push",
+        "Ocurre cuando dos ramas modificaron las mismas líneas y Git no puede fusionarlas automáticamente",
+        "Un commit duplicado",
+        "Una rama huérfana"
+      ],
+      "correct": 1,
+      "explanation": "Hay que resolver el conflicto manualmente y hacer commit."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_28",
+      "question": "¿Qué es el archivo '.gitignore'?",
+      "options": [
+        "El historial de commits",
+        "La configuración de ramas remotas",
+        "Un log de errores de Git",
+        "Archivo que lista los ficheros y directorios que Git debe ignorar"
+      ],
+      "correct": 3,
+      "explanation": "node_modules/ y .env suelen estar en .gitignore."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_29",
+      "question": "¿Qué tipo de prueba verifica que los módulos del sistema funcionan correctamente juntos?",
+      "options": [
+        "Prueba de regresión",
+        "Prueba de sistema",
+        "Prueba unitaria",
+        "Prueba de integración"
+      ],
+      "correct": 3,
+      "explanation": "Integration Testing: varios componentes cooperando."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_30",
+      "question": "¿Qué son las pruebas de regresión?",
+      "options": [
+        "Verifican que los cambios nuevos no rompieron funcionalidad existente",
+        "Prueban la interfaz de usuario",
+        "Prueban el rendimiento bajo carga",
+        "Prueban la seguridad de la aplicación"
+      ],
+      "correct": 0,
+      "explanation": "Fundamentales en CI/CD para detectar roturas."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_31",
+      "question": "¿Qué es el 'coverage' de pruebas?",
+      "options": [
+        "La velocidad de los tests",
+        "Porcentaje de líneas de código ejecutadas por los tests",
+        "El resultado de los tests automáticos",
+        "El número total de tests"
+      ],
+      "correct": 1,
+      "explanation": "Un coverage alto no garantiza la calidad, pero es indicador."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_32",
+      "question": "¿Qué herramienta de construcción usa ficheros 'build.gradle'?",
+      "options": [
+        "Make",
+        "Ant",
+        "Gradle",
+        "Maven"
+      ],
+      "correct": 2,
+      "explanation": "Gradle es más moderno y flexible que Maven."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_33",
+      "question": "¿Qué es un 'linter'?",
+      "options": [
+        "Un gestor de dependencias",
+        "Un formateador de bases de datos",
+        "Un depurador de memoria",
+        "Herramienta que analiza el código fuente para detectar errores de estilo y posibles bugs"
+      ],
+      "correct": 3,
+      "explanation": "ESLint para JS, Checkstyle para Java."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_34",
+      "question": "¿Qué significa 'código legacy'?",
+      "options": [
+        "Código de terceros",
+        "Código en un lenguaje obsoleto",
+        "Código antiguo, difícil de mantener, generalmente sin tests",
+        "Código comentado"
+      ],
+      "correct": 2,
+      "explanation": "El legacy es el mayor reto de la ingeniería de software."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_35",
+      "question": "¿Qué es el pair programming?",
+      "options": [
+        "Dos programadores trabajando juntos en el mismo código simultáneamente",
+        "Hacer dos versiones del mismo módulo",
+        "Trabajar en dos ramas distintas",
+        "Programar en dos lenguajes a la vez"
+      ],
+      "correct": 0,
+      "explanation": "Un escribe, el otro revisa: mayor calidad."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_36",
+      "question": "¿Qué es un 'code review'?",
+      "options": [
+        "Revisión del código por otro desarrollador antes de integrarlo",
+        "La ejecución automática de tests",
+        "La documentación del código",
+        "El análisis de rendimiento"
+      ],
+      "correct": 0,
+      "explanation": "El code review mejora la calidad y comparte conocimiento."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_37",
+      "question": "¿Qué es el 'Agile Manifesto'?",
+      "options": [
+        "Documento que establece los 4 valores y 12 principios del desarrollo ágil de software",
+        "Un lenguaje de programación ágil",
+        "Un framework de gestión de proyectos",
+        "Un estándar ISO para software"
+      ],
+      "correct": 0,
+      "explanation": "Publicado en 2001 por 17 desarrolladores."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_38",
+      "question": "¿Qué es el 'Product Backlog' en Scrum?",
+      "options": [
+        "Lista priorizada de todas las funcionalidades y mejoras pendientes del producto",
+        "El plan de sprints completados",
+        "El registro de errores del software",
+        "El documento de requisitos técnicos"
+      ],
+      "correct": 0,
+      "explanation": "El Product Owner es responsable del Backlog."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp_39",
+      "question": "¿Qué es la velocidad (velocity) en Scrum?",
+      "options": [
+        "Cantidad de trabajo (story points) completada en un Sprint",
+        "El número de commits por día",
+        "La rapidez del servidor",
+        "El rendimiento de la CPU del equipo"
+      ],
+      "correct": 0,
+      "explanation": "La velocidad ayuda a estimar sprints futuros."
     }
   ],
   "cloud_computing": [
@@ -2469,6 +3993,186 @@
       ],
       "correct": 3,
       "explanation": "Jenkins, GitHub Actions y GitLab CI son herramientas CI/CD."
+    },
+    {
+      "concept_id": "cloud_computing_exp_15",
+      "question": "¿Qué es la nube híbrida?",
+      "options": [
+        "Una red local con VPN",
+        "Combinación de nube pública y privada interconectadas",
+        "Solo servicios de AWS y Azure",
+        "Un tipo de VLAN en la nube"
+      ],
+      "correct": 1,
+      "explanation": "Permite mover cargas entre on-premise y cloud."
+    },
+    {
+      "concept_id": "cloud_computing_exp_16",
+      "question": "¿Qué es el SLA en cloud computing?",
+      "options": [
+        "El contrato de confidencialidad",
+        "Acuerdo de niveau de servicio que garantiza disponibilidad y rendimiento mínimos",
+        "El precio del servicio cloud",
+        "El plan de backup del proveedor"
+      ],
+      "correct": 1,
+      "explanation": "Service Level Agreement: ej. 99.9% uptime."
+    },
+    {
+      "concept_id": "cloud_computing_exp_17",
+      "question": "¿Qué es el modelo de responsabilidad compartida en cloud?",
+      "options": [
+        "Solo aplica a IaaS",
+        "Todo lo gestiona el cliente",
+        "El proveedor gestiona la infraestructura; el cliente gestiona sus datos y aplicaciones",
+        "Todo lo gestiona el proveedor"
+      ],
+      "correct": 2,
+      "explanation": "El cliente siempre es responsable de sus datos."
+    },
+    {
+      "concept_id": "cloud_computing_exp_18",
+      "question": "¿Qué es Google Cloud Functions?",
+      "options": [
+        "Una base de datos de Google",
+        "Servicio serverless de Google Cloud para ejecutar código sin gestionar servidores",
+        "Una herramienta de CI/CD",
+        "Un servicio de DNS de Google"
+      ],
+      "correct": 1,
+      "explanation": "Equivalente a AWS Lambda."
+    },
+    {
+      "concept_id": "cloud_computing_exp_19",
+      "question": "¿Qué es Azure Active Directory?",
+      "options": [
+        "Un servidor virtual de Microsoft",
+        "Un sistema de archivos cloud",
+        "Un servicio de monitorización",
+        "Servicio de identidad y acceso (IAM) de Microsoft en la nube"
+      ],
+      "correct": 3,
+      "explanation": "Gestiona identidades, autenticación y permisos."
+    },
+    {
+      "concept_id": "cloud_computing_exp_20",
+      "question": "¿Qué es el principio de 'least privilege' en seguridad cloud?",
+      "options": [
+        "Usar siempre autenticación multifactor",
+        "Dar acceso total a los administradores",
+        "Cifrar todos los datos en reposo",
+        "Dar a cada usuario o servicio solo los permisos mínimos necesarios para su función"
+      ],
+      "correct": 3,
+      "explanation": "Minimiza el impacto de una brecha de seguridad."
+    },
+    {
+      "concept_id": "cloud_computing_exp_21",
+      "question": "¿Qué servicio de AWS gestiona bases de datos relacionales gestionadas?",
+      "options": [
+        "RDS (Relational Database Service)",
+        "EC2",
+        "Lambda",
+        "S3"
+      ],
+      "correct": 0,
+      "explanation": "RDS soporta MySQL, PostgreSQL, Oracle, SQL Server."
+    },
+    {
+      "concept_id": "cloud_computing_exp_22",
+      "question": "¿Qué es Terraform?",
+      "options": [
+        "Un servicio de monitorización",
+        "Un sistema de contenedores",
+        "Herramienta de Infrastructure as Code (IaC) para provisionar recursos cloud de forma declarativa",
+        "Un gestor de DNS"
+      ],
+      "correct": 2,
+      "explanation": "Terraform es de HashiCorp y multi-cloud."
+    },
+    {
+      "concept_id": "cloud_computing_exp_23",
+      "question": "¿Qué es la observabilidad en cloud?",
+      "options": [
+        "El uso de CPU del servidor",
+        "El SLA contratado",
+        "El número de usuarios conectados",
+        "Capacidad de entender el estado interno del sistema con métricas, logs y trazas"
+      ],
+      "correct": 3,
+      "explanation": "Observabilidad = Métricas + Logs + Trazas."
+    },
+    {
+      "concept_id": "cloud_computing_exp_24",
+      "question": "¿Qué es el cómputo en el borde (Edge Computing)?",
+      "options": [
+        "Cloud computing especial para dispositivos móviles",
+        "Un tipo de red WiFi de baja latencia",
+        "Una región adicional de AWS",
+        "Procesar datos cerca del origen (dispositivo/sensor) en lugar de en un datacenter central"
+      ],
+      "correct": 3,
+      "explanation": "Reduce latencia para IoT y aplicaciones en tiempo real."
+    },
+    {
+      "concept_id": "cloud_computing_exp_25",
+      "question": "¿Qué es un 'bucket' en Amazon S3?",
+      "options": [
+        "Una zona de disponibilidad",
+        "Contenedor lógico para almacenar objetos (archivos) en S3",
+        "Una instancia virtual EC2",
+        "Una base de datos de clave-valor"
+      ],
+      "correct": 1,
+      "explanation": "Los buckets tienen nombres únicos globales."
+    },
+    {
+      "concept_id": "cloud_computing_exp_26",
+      "question": "¿Qué diferencia hay entre escalado vertical y horizontal?",
+      "options": [
+        "Vertical es más barato",
+        "Horizontal no aplica en cloud",
+        "Vertical: añadir más potencia a un servidor; Horizontal: añadir más servidores",
+        "Son lo mismo visto desde distinto ángulo"
+      ],
+      "correct": 2,
+      "explanation": "Scale up vs Scale out."
+    },
+    {
+      "concept_id": "cloud_computing_exp_27",
+      "question": "¿Qué es un grupo de autoescalado (Auto Scaling Group) en AWS?",
+      "options": [
+        "Una VPC privada",
+        "Conjunto de instancias EC2 que escalan automáticamente según la demanda",
+        "Un cluster de Kubernetes",
+        "Un grupo de usuarios con permisos"
+      ],
+      "correct": 1,
+      "explanation": "Define capacidad mínima, deseada y máxima."
+    },
+    {
+      "concept_id": "cloud_computing_exp_28",
+      "question": "¿Qué es IAM en AWS?",
+      "options": [
+        "Un firewall de AWS",
+        "Un servicio de almacenamiento",
+        "Identity and Access Management: gestiona usuarios, roles y permisos en AWS",
+        "Una base de datos de identidades"
+      ],
+      "correct": 2,
+      "explanation": "IAM es la piedra angular de la seguridad en AWS."
+    },
+    {
+      "concept_id": "cloud_computing_exp_29",
+      "question": "¿Qué es una zona de disponibilidad (AZ) en AWS?",
+      "options": [
+        "Una región geográfica de AWS",
+        "Datacenter físico independiente dentro de una región de AWS",
+        "Una VLAN de AWS",
+        "Un grupo de servidores del mismo tipo"
+      ],
+      "correct": 1,
+      "explanation": "Cada región tiene múltiples AZ para alta disponibilidad."
     }
   ],
   "empleabilidad": [
@@ -2675,6 +4379,186 @@
       ],
       "correct": 0,
       "explanation": "Bruto - Deducciones = Salario Neto."
+    },
+    {
+      "concept_id": "empleabilidad_exp_17",
+      "question": "¿Cuáles son los tipos básicos de contratos de trabajo en España?",
+      "options": [
+        "Solo fijo y fijo discontinuo",
+        "Laboral, mercantil y administrativo",
+        "Indefinido, temporal, formativo y de relevo",
+        "Solo indefinido y temporal"
+      ],
+      "correct": 2,
+      "explanation": "El ET clasifica los contratos según duración y finalidad."
+    },
+    {
+      "concept_id": "empleabilidad_exp_18",
+      "question": "¿Qué es el contrato de formación y aprendizaje?",
+      "options": [
+        "Un contrato en prácticas para universitarios",
+        "Un contrato subvencionado por la AEAT",
+        "Un contrato a tiempo parcial",
+        "Contrato para jóvenes sin cualificación que alterna trabajo y formación profesional"
+      ],
+      "correct": 3,
+      "explanation": "Dirigido a menores de 25-30 años sin FP del puesto."
+    },
+    {
+      "concept_id": "empleabilidad_exp_19",
+      "question": "¿Qué es el contrato en prácticas?",
+      "options": [
+        "Un becario no remunerado",
+        "Un contrato de formación sin cualificación",
+        "Contrato para titulados que permite aplicar su formación en un entorno laboral real",
+        "Un contrato indefinido a prueba"
+      ],
+      "correct": 2,
+      "explanation": "Ahora se llama 'contrato formativo en alternancia'."
+    },
+    {
+      "concept_id": "empleabilidad_exp_20",
+      "question": "¿Qué es el despido procedente?",
+      "options": [
+        "Despido sin causa que da 33 días por año",
+        "Despido pactado de mutuo acuerdo",
+        "Despido con causa justificada que no da derecho a indemnización por despido",
+        "Despido por cierre de empresa"
+      ],
+      "correct": 2,
+      "explanation": "Causas: disciplinarias o económicas justificadas."
+    },
+    {
+      "concept_id": "empleabilidad_exp_21",
+      "question": "¿Qué es el despido improcedente?",
+      "options": [
+        "Despido sin causa justificada: da derecho a 33 días de salario por año trabajado",
+        "Suspensión del contrato",
+        "Despido procedente sin indemnización",
+        "Reducción de jornada forzosa"
+      ],
+      "correct": 0,
+      "explanation": "El trabajador puede elegir readmisión o indemnización."
+    },
+    {
+      "concept_id": "empleabilidad_exp_22",
+      "question": "¿Qué son las pagas extraordinarias?",
+      "options": [
+        "Retribución adicional (habitualmente 2 al año) que completan el salario anual",
+        "Las horas extra remuneradas",
+        "La parte variable del salario",
+        "Bonus discrecional del empresario"
+      ],
+      "correct": 0,
+      "explanation": "El ET garantiza mínimo 2 pagas extra al año."
+    },
+    {
+      "concept_id": "empleabilidad_exp_23",
+      "question": "¿Qué es el salario neto?",
+      "options": [
+        "El importe que el trabajador recibe tras descontar IRPF y cotizaciones a la SS",
+        "El salario pactado en convenio",
+        "El salario antes de deducciones",
+        "El salario más las pagas extra"
+      ],
+      "correct": 0,
+      "explanation": "Neto = Bruto - IRPF - Cuota SS trabajador."
+    },
+    {
+      "concept_id": "empleabilidad_exp_24",
+      "question": "¿Qué es una ERE (Expediente de Regulación de Empleo)?",
+      "options": [
+        "Un tipo de contrato temporal",
+        "Procedimiento colectivo para suspender contratos, reducir jornadas o despedir colectivamente",
+        "Una sanción administrativa a la empresa",
+        "Una baja médica colectiva"
+      ],
+      "correct": 1,
+      "explanation": "Requiere negociación con los representantes de los trabajadores."
+    },
+    {
+      "concept_id": "empleabilidad_exp_25",
+      "question": "¿Qué es el curriculum vitae (CV) cronológico inverso?",
+      "options": [
+        "CV sin fechas",
+        "CV ordenado desde el primer trabajo",
+        "CV que lista la experiencia desde la más reciente a la más antigua",
+        "CV funcional por habilidades"
+      ],
+      "correct": 2,
+      "explanation": "Es el formato más extendido en España y Europa."
+    },
+    {
+      "concept_id": "empleabilidad_exp_26",
+      "question": "¿Qué es el perfil de LinkedIn?",
+      "options": [
+        "Red social profesional para mostrar experiencia, formación y conectar con empresas",
+        "Una bolsa de trabajo gubernamental",
+        "Un CV en papel digitalizado",
+        "Un formulario de inscripción al SEPE"
+      ],
+      "correct": 0,
+      "explanation": "LinkedIn es la mayor red profesional del mundo."
+    },
+    {
+      "concept_id": "empleabilidad_exp_27",
+      "question": "¿Qué es una entrevista por competencias?",
+      "options": [
+        "Una prueba escrita de conocimientos",
+        "Una entrevista técnica de programación",
+        "Tipo de entrevista donde se piden ejemplos reales de situaciones pasadas para evaluar habilidades",
+        "Una entrevista grupal de selección"
+      ],
+      "correct": 2,
+      "explanation": "STAR: Situación, Tarea, Acción, Resultado."
+    },
+    {
+      "concept_id": "empleabilidad_exp_28",
+      "question": "¿Qué son los derechos de conciliación laboral y familiar?",
+      "options": [
+        "Los días de vacaciones adicionales",
+        "Las horas sindicales",
+        "Medidas que permiten compatibilizar el trabajo con las responsabilidades familiares (reducción jornada, permisos)",
+        "Los permisos por enfermedad"
+      ],
+      "correct": 2,
+      "explanation": "Regulados en el ET y leyes de igualdad."
+    },
+    {
+      "concept_id": "empleabilidad_exp_29",
+      "question": "¿Qué es el trabajo autónomo (RETA)?",
+      "options": [
+        "Trabajo en el sector público",
+        "Trabajo temporal a través de ETT",
+        "Trabajo sin contrato",
+        "Régimen Especial de Trabajadores Autónomos: trabajo por cuenta propia con cotización propia"
+      ],
+      "correct": 3,
+      "explanation": "Los autónomos pagan su propia cuota a la SS."
+    },
+    {
+      "concept_id": "empleabilidad_exp_30",
+      "question": "¿Qué es una ETT (Empresa de Trabajo Temporal)?",
+      "options": [
+        "Una empresa de formación profesional",
+        "Una empresa de trabajo a distancia",
+        "Empresa que cede trabajadores a otras empresas de forma temporal",
+        "Una agencia de empleo del Estado"
+      ],
+      "correct": 2,
+      "explanation": "El trabajador cotiza por la empresa usuaria pero le contrata la ETT."
+    },
+    {
+      "concept_id": "empleabilidad_exp_31",
+      "question": "¿Qué son las horas extra y cuál es su límite legal?",
+      "options": [
+        "No tienen regulación específica",
+        "Horas trabajadas sobre la jornada ordinaria; límite legal de 80 horas/año",
+        "Solo aplican a contratos a tiempo parcial",
+        "Horas pagadas doble sin límite"
+      ],
+      "correct": 1,
+      "explanation": "Artículo 35 del Estatuto de los Trabajadores."
     }
   ]
 }
