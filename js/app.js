@@ -48,7 +48,7 @@ function renderSubjects() {
                 <button onclick="startExam('${subject.id}')">Iniciar Simulacro Aleatorio</button>
             </div>
             <div class="card-stats">
-                <span>V6.1 Fixed: 3.500 Preguntas (Pool Ampliado)</span>
+                <span>V7 Ultimate Pro: 30 Preguntas Únicas por Test</span>
             </div>
         `;
         subjectGrid.appendChild(card);
