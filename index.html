@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso Examenes 1º DAW 2026 Tech Hub Euroformac</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Prepárate para tus exámenes con simulacros interactivos basados en tus materiales de estudio.">
+</head>
+<body class="dark-theme">
+    <div id="app">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="logo">
+                <span class="logo-icon">🎓</span>
+                <h1>TechHub<span>Euroformac</span></h1>
+            </div>
+            <nav class="user-nav">
+                <div class="progress-info">
+                    <span class="label">Progreso General</span>
+                    <div class="progress-bar-small"><div class="fill" style="width: 45%;"></div></div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <main id="main-container">
+            <section class="hero">
+                <h2>Centro de Alto Rendimiento Académico</h2>
+                <p>Repaso Examenes 1º DAW 2026 Tech Hub Euroformac. Prepárate para el éxito.</p>
+            </section>
+
+            <!-- Subject Grid -->
+            <div id="subject-grid" class="grid-container">
+                <!-- Subjects will be dynamically loaded here -->
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+        </main>
+
+        <!-- Modal for Exam View -->
+        <div id="exam-modal" class="modal hidden">
+            <div class="modal-content">
+                <button id="close-exam" class="close-btn">&times;</button>
+                <div id="exam-engine-root"></div>
+            </div>
+        </div>
+
+        <footer>
+            <p class="footer2">&copy; 2026 <a href="https://JCGM.dev" target="_blank">JCGM.DEV</a> — Elevando tu aprendizaje</p>
+        </footer>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="bg-blur-1"></div>
+    <div class="bg-blur-2"></div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
