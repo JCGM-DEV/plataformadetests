@@ -48,7 +48,7 @@ function renderSubjects() {
                 <button onclick="startExam('${subject.id}')">Iniciar Simulacro Aleatorio</button>
             </div>
             <div class="card-stats">
-                <span>V8 LEGENDARY: 1.400 Conceptos Técnicos Reales</span>
+                <span>V9 TITAN: 100% Preguntas Reales de Examen</span>
             </div>
         `;
         subjectGrid.appendChild(card);
