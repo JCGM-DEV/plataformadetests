@@ -48,7 +48,7 @@ function renderSubjects() {
                 <button onclick="startExam('${subject.id}')">Iniciar Simulacro Aleatorio</button>
             </div>
             <div class="card-stats">
-                <span>V14 COMPLETE: ${(QUESTION_POOL[subject.id] || []).length} Preguntas Reales</span>
+                <span>V15 FULL COVERAGE: ${(QUESTION_POOL[subject.id] || []).length} Preguntas Reales</span>
             </div>
         `;
         subjectGrid.appendChild(card);

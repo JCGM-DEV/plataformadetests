@@ -1535,6 +1535,162 @@
       ],
       "correct": 0,
       "explanation": "BGP es el protocolo de enrutamiento de Internet."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp3_128",
+      "question": "¿Qué es la memoria RAM DDR5 respecto a DDR4?",
+      "options": [
+        "Solo una mejora de nombre sin cambios técnicos",
+        "DDR5 solo se usa en servidores",
+        "DDR5 es más lenta pero más eficiente",
+        "Estándar más reciente con mayor ancho de banda y menor consumo (voltaje 1.1V vs 1.2V)"
+      ],
+      "correct": 3,
+      "explanation": "DDR5 duplica el ancho de banda frente a DDR4."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp3_129",
+      "question": "¿Qué es la latencia CAS en la memoria RAM?",
+      "options": [
+        "Número de ciclos de reloj que tarda en responder tras recibir una solicitud de columna",
+        "La capacidad máxima del módulo de RAM",
+        "El tiempo de acceso al disco",
+        "La velocidad en MHz de la RAM"
+      ],
+      "correct": 0,
+      "explanation": "CAS Latency: menor valor = menor latencia = más rápida."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp3_130",
+      "question": "¿Qué es el bus PCIe?",
+      "options": [
+        "Un protocolo de red",
+        "El bus de datos entre CPU y RAM",
+        "Interfaz de expansión de alta velocidad para tarjetas gráficas, SSD NVMe y otras tarjetas",
+        "Un formato de disco duro"
+      ],
+      "correct": 2,
+      "explanation": "PCI Express reemplazó al AGP y PCI convencional."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp3_131",
+      "question": "¿Qué función tiene la fuente de alimentación (PSU) en un PC?",
+      "options": [
+        "Almacena energía de emergencia para el sistema",
+        "Regula la velocidad de la CPU",
+        "Gestiona la distribución de RAM entre procesos",
+        "Convierte la corriente alterna (AC) de la red en corriente continua (DC) para los componentes"
+      ],
+      "correct": 3,
+      "explanation": "La PSU debe tener potencia suficiente para todos los componentes."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp3_132",
+      "question": "¿Qué es el POST (Power-On Self-Test)?",
+      "options": [
+        "La secuencia de GRUB",
+        "El arranque del sistema operativo",
+        "Un tipo de protocolo de red",
+        "Proceso de autocomprobación del hardware que realiza la BIOS/UEFI al encenderse el equipo"
+      ],
+      "correct": 3,
+      "explanation": "Si el POST falla, emite pitidos (beep codes) indicando el error."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp3_133",
+      "question": "¿Qué es el overclocking?",
+      "options": [
+        "Actualizar el firmware de la BIOS",
+        "Limpiar la caché del procesador",
+        "Reducir el consumo energético del procesador",
+        "Aumentar la frecuencia de reloj de la CPU o RAM por encima de sus especificaciones de fábrica"
+      ],
+      "correct": 3,
+      "explanation": "El overclocking aumenta el rendimiento pero también el calor y el riesgo."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp3_134",
+      "question": "¿Qué es la memoria ECC (Error-Correcting Code)?",
+      "options": [
+        "Memoria caché de nivel 3",
+        "Memoria de solo lectura para la BIOS",
+        "Memoria de alta velocidad para GPU",
+        "Tipo de RAM que detecta y corrige automáticamente errores de un bit, usada en servidores"
+      ],
+      "correct": 3,
+      "explanation": "ECC es fundamental en servidores y estaciones de trabajo críticas."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp3_135",
+      "question": "¿Qué tipo de refrigeración usa un disipador de agua (watercooling) en lugar de aire?",
+      "options": [
+        "Refrigeración líquida (water cooling)",
+        "Refrigeración por efecto Peltier",
+        "Refrigeración pasiva sin ventiladores",
+        "Refrigeración por nitrógeno"
+      ],
+      "correct": 0,
+      "explanation": "El watercooling es más silencioso y eficiente para CPUs de alta potencia."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp3_136",
+      "question": "¿Qué es Wake-on-LAN (WOL)?",
+      "options": [
+        "Un protocolo de transferencia de archivos en red local",
+        "Funcionalidad que permite encender un equipo remotamente enviando un 'magic packet' por red",
+        "Un servicio de DNS especial",
+        "Un tipo de actualización de firmware remota"
+      ],
+      "correct": 1,
+      "explanation": "WOL debe estar habilitado en la BIOS y en la tarjeta de red."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp3_137",
+      "question": "¿Qué es una interrupción (IRQ) en sistemas informáticos?",
+      "options": [
+        "Una señal de red",
+        "Un error del sistema operativo",
+        "Un tipo de instrucción ensamblador",
+        "Señal que envía un dispositivo al procesador para solicitar atención inmediata"
+      ],
+      "correct": 3,
+      "explanation": "Los IRQ permiten la comunicación asíncrona entre hardware y CPU."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp3_138",
+      "question": "¿Qué es un certificado autofirmado (self-signed)?",
+      "options": [
+        "Un tipo de contraseña cifrada",
+        "Certificado SSL/TLS creado y firmado por el propio servidor, no por una CA reconocida",
+        "Un certificado de dominio wildcard",
+        "El certificado más seguro del mercado"
+      ],
+      "correct": 1,
+      "explanation": "Los navegadores muestran advertencia de seguridad ante certificados autofirmados."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp3_139",
+      "question": "¿Qué es un ataque XSS (Cross-Site Scripting)?",
+      "options": [
+        "Un ataque de interceptación de tráfico",
+        "Un DDOS distribuido",
+        "Un ataque de fuerza bruta a contraseñas",
+        "Inyección de código JavaScript malicioso en una web que se ejecuta en el navegador de la víctima"
+      ],
+      "correct": 3,
+      "explanation": "XSS explota la falta de sanitización de entrada en aplicaciones web."
+    },
+    {
+      "concept_id": "sistemas_informaticos_exp3_140",
+      "question": "¿Qué es un ataque de inyección SQL?",
+      "options": [
+        "Un virus que cifra las tablas de la BD",
+        "Un ataque de denegación de servicio a un servidor MySQL",
+        "Insertar código SQL malicioso en campos de formulario para manipular la base de datos",
+        "Un error de sintaxis SQL"
+      ],
+      "correct": 2,
+      "explanation": "' OR '1'='1 es el ejemplo clásico de SQL Injection."
     }
   ],
   "bases_de_datos": [
@@ -2629,6 +2785,162 @@
       ],
       "correct": 3,
       "explanation": "Mejora el rendimiento de lectura y la disponibilidad."
+    },
+    {
+      "concept_id": "bases_de_datos_exp3_91",
+      "question": "¿Qué tipo de índice ordena físicamente las filas de la tabla según la clave del índice?",
+      "options": [
+        "Índice Non-Clustered",
+        "Índice Clustered (agrupado)",
+        "Índice Full-Text",
+        "Índice Bitmap"
+      ],
+      "correct": 1,
+      "explanation": "Solo puede haber un índice clustered por tabla (generalmente la PK)."
+    },
+    {
+      "concept_id": "bases_de_datos_exp3_92",
+      "question": "¿Qué tipo de índice no altera el orden físico de los datos y tiene su propia estructura?",
+      "options": [
+        "Índice de función",
+        "Índice Único",
+        "Índice Clustered",
+        "Índice Non-Clustered"
+      ],
+      "correct": 3,
+      "explanation": "Una tabla puede tener múltiples índices non-clustered."
+    },
+    {
+      "concept_id": "bases_de_datos_exp3_93",
+      "question": "¿Qué estructura de datos usa internamente la mayoría de índices en bases de datos relacionales?",
+      "options": [
+        "Árbol binario AVL",
+        "Árbol B+ (B+ Tree)",
+        "Lista enlazada",
+        "Tabla hash"
+      ],
+      "correct": 1,
+      "explanation": "El B+ Tree permite búsquexas O(log n) y recorridos en orden."
+    },
+    {
+      "concept_id": "bases_de_datos_exp3_94",
+      "question": "¿Qué es la fragmentación de un índice?",
+      "options": [
+        "Desorganización del índice que reduce su rendimiento al insertarse/borrarse muchos registros",
+        "La división de un índice entre varios discos",
+        "El tamaño excesivo de un índice",
+        "La compresión de un índice"
+      ],
+      "correct": 0,
+      "explanation": "REBUILD o REORGANIZE del índice eliminan la fragmentación."
+    },
+    {
+      "concept_id": "bases_de_datos_exp3_95",
+      "question": "¿Qué es el particionado de tablas (Table Partitioning)?",
+      "options": [
+        "Crear una copia de la tabla",
+        "Dividir físicamente una tabla muy grande en partes según un criterio (fecha, región...)",
+        "Comprimir las filas de una tabla",
+        "Separar una tabla en varias por normalización"
+      ],
+      "correct": 1,
+      "explanation": "El particionado mejora el rendimiento de consultas sobre tablas grandes."
+    },
+    {
+      "concept_id": "bases_de_datos_exp3_96",
+      "question": "¿Qué hace la función ROW_NUMBER() en SQL?",
+      "options": [
+        "Asigna un número de fila secuencial único dentro de cada partición, sin saltos",
+        "Asigna un rango con saltos en empates",
+        "Numera solo las filas seleccionadas",
+        "Cuenta el número de filas del resultado"
+      ],
+      "correct": 0,
+      "explanation": "ROW_NUMBER() no repite valores; RANK() sí puede tener saltos."
+    },
+    {
+      "concept_id": "bases_de_datos_exp3_97",
+      "question": "¿Qué hace DENSE_RANK() en SQL?",
+      "options": [
+        "Ordena por densidad de datos",
+        "Igual que RANK() con huecos",
+        "Igual que ROW_NUMBER()",
+        "Asigna rangos sin huecos: si hay empate, el siguiente rango es inmediatamente el siguiente"
+      ],
+      "correct": 3,
+      "explanation": "1,2,2,3 (DENSE_RANK) vs 1,2,2,4 (RANK)."
+    },
+    {
+      "concept_id": "bases_de_datos_exp3_98",
+      "question": "¿Qué hace la cláusula PARTITION BY en funciones de ventana?",
+      "options": [
+        "Divide el resultado en grupos para calcular la función por separado en cada grupo",
+        "Crea índices por partición",
+        "Separa los datos en distintos esquemas",
+        "Divide la tabla en particiones físicas"
+      ],
+      "correct": 0,
+      "explanation": "SELECT dept, salario, AVG(salario) OVER (PARTITION BY dept)."
+    },
+    {
+      "concept_id": "bases_de_datos_exp3_99",
+      "question": "¿Para qué sirve la función LEAD() en SQL?",
+      "options": [
+        "Accede al valor de la fila siguiente dentro de la misma partición",
+        "Desplaza todas las filas una posición",
+        "Calcula la diferencia entre filas consecutivas",
+        "Accede al valor de la fila anterior"
+      ],
+      "correct": 0,
+      "explanation": "LEAD(col, 1) vs LAG(col, 1) para fila anterior."
+    },
+    {
+      "concept_id": "bases_de_datos_exp3_100",
+      "question": "¿Qué es una función escalar en SQL?",
+      "options": [
+        "Un procedimiento almacenado sin parámetros",
+        "Una función que devuelve una tabla",
+        "Una vista parametrizada",
+        "Función que recibe parámetros y devuelve un único valor (no una tabla)"
+      ],
+      "correct": 3,
+      "explanation": "CREATE FUNCTION calcularIVA(@precio DECIMAL) RETURNS DECIMAL."
+    },
+    {
+      "concept_id": "bases_de_datos_exp3_101",
+      "question": "¿Qué es Apache Cassandra?",
+      "options": [
+        "BD NoSQL columnar distribuida diseñada para alta disponibilidad y escalabilidad masiva",
+        "Una herramienta de backup de MongoDB",
+        "Un motor de búsqueda de texto",
+        "Un servidor de base de datos relacional de Apache"
+      ],
+      "correct": 0,
+      "explanation": "Cassandra no tiene un único punto de fallo (masterless)."
+    },
+    {
+      "concept_id": "bases_de_datos_exp3_102",
+      "question": "¿Qué es Neo4j?",
+      "options": [
+        "Base de datos de grafos que almacena nodos y relaciones de forma nativa",
+        "Un motor de búsqueda de texto completo",
+        "Una BD relacional de código abierto",
+        "Una base de datos documental"
+      ],
+      "correct": 0,
+      "explanation": "Neo4j usa Cypher como lenguaje de consulta."
+    },
+    {
+      "concept_id": "bases_de_datos_exp3_103",
+      "question": "¿Qué es Elasticsearch?",
+      "options": [
+        "Una base de datos relacional elástica",
+        "Motor de búsqueda y análisis distribuido, orientado a texto completo y logs",
+        "Un servidor de caché distribuido",
+        "Un sistema de cola de mensajes"
+      ],
+      "correct": 1,
+      "explanation": "Elasticsearch usa índices invertidos para búsqueda ultrarrápida en texto."
     }
   ],
   "programacion": [
@@ -3603,6 +3915,198 @@
       ],
       "correct": 2,
       "explanation": "button.addListener(new ActionListener() { public void... });"
+    },
+    {
+      "concept_id": "programacion_exp3_81",
+      "question": "¿Qué método de String extrae una subcadena entre dos índices?",
+      "options": [
+        "substring(inicio, fin)",
+        "slice(inicio, fin)",
+        "extract(inicio, fin)",
+        "cut(inicio, fin)"
+      ],
+      "correct": 0,
+      "explanation": "'Hola Mundo'.substring(0, 4) = 'Hola'."
+    },
+    {
+      "concept_id": "programacion_exp3_82",
+      "question": "¿Qué método comprueba si una cadena contiene otra subcadena en Java?",
+      "options": [
+        "includes()",
+        "has()",
+        "indexOf() >= 0",
+        "contains()"
+      ],
+      "correct": 3,
+      "explanation": "str.contains('texto') devuelve boolean."
+    },
+    {
+      "concept_id": "programacion_exp3_83",
+      "question": "¿Qué hace String.split() en Java?",
+      "options": [
+        "Divide la cadena por un delimitador y devuelve un array de Strings",
+        "Busca un patrón en la cadena",
+        "Une varios strings con un separador",
+        "Elimina espacios de la cadena"
+      ],
+      "correct": 0,
+      "explanation": "'a,b,c'.split(',') = ['a','b','c']."
+    },
+    {
+      "concept_id": "programacion_exp3_84",
+      "question": "¿Qué clase se usa para construir cadenas de forma eficiente y mutable en Java?",
+      "options": [
+        "StringBuffer",
+        "StringBuilder",
+        "CharSequence",
+        "String"
+      ],
+      "correct": 1,
+      "explanation": "StringBuilder es más eficiente que concatenar con + en bucles."
+    },
+    {
+      "concept_id": "programacion_exp3_85",
+      "question": "¿Cuál es la diferencia entre StringBuilder y StringBuffer?",
+      "options": [
+        "StringBuilder no existe en Java antiguo",
+        "StringBuilder no es thread-safe pero es más rápido; StringBuffer es synchronized",
+        "StringBuffer es más moderno",
+        "Son idénticos en todo"
+      ],
+      "correct": 1,
+      "explanation": "En código de un solo hilo usa StringBuilder."
+    },
+    {
+      "concept_id": "programacion_exp3_86",
+      "question": "¿Qué colección mantiene los elementos ordenados según su orden natural o un Comparator?",
+      "options": [
+        "HashSet / HashMap",
+        "LinkedHashSet",
+        "ArrayDeque",
+        "TreeSet / TreeMap"
+      ],
+      "correct": 3,
+      "explanation": "TreeSet implementa NavigableSet con ordenación O(log n)."
+    },
+    {
+      "concept_id": "programacion_exp3_87",
+      "question": "¿Qué es la interfaz Comparator en Java?",
+      "options": [
+        "La interfaz para calcular igualdad",
+        "Interfaz funcional para definir un criterio de ordenación externo a la clase",
+        "La interfaz que permite clonar objetos",
+        "La interfaz de las colecciones ordenadas"
+      ],
+      "correct": 1,
+      "explanation": "Collections.sort(lista, (a,b) -> a.getNombre().compareTo(b.getNombre()))."
+    },
+    {
+      "concept_id": "programacion_exp3_88",
+      "question": "¿Qué diferencia hay entre Comparable y Comparator?",
+      "options": [
+        "Comparator está dentro de la clase; Comparable es externo",
+        "Son la misma interfaz con diferente nombre",
+        "Solo Comparator funciona con Lambda",
+        "Comparable define el orden natural dentro de la clase; Comparator es un criterio externo reutilizable"
+      ],
+      "correct": 3,
+      "explanation": "Una clase solo puede implementar Comparable una vez; puede haber varios Comparator."
+    },
+    {
+      "concept_id": "programacion_exp3_89",
+      "question": "¿Qué es un Enum en Java?",
+      "options": [
+        "Tipo especial de clase que define un conjunto fijo de constantes nombradas",
+        "Un tipo de excepción catalogada",
+        "Una variable de tipo entero con nombre",
+        "Una clase abstracta con valores constantes"
+      ],
+      "correct": 0,
+      "explanation": "enum Dia { LUNES, MARTES, MIERCOLES... }"
+    },
+    {
+      "concept_id": "programacion_exp3_90",
+      "question": "¿Qué es una clase interna (inner class) en Java?",
+      "options": [
+        "Clase definida dentro de otra clase, con acceso a los miembros de la clase exterior",
+        "Una clase en otro paquete",
+        "Una clase que hereda de otra",
+        "Una clase abstracta"
+      ],
+      "correct": 0,
+      "explanation": "Las clases internas sirven para encapsular lógica auxiliar."
+    },
+    {
+      "concept_id": "programacion_exp3_91",
+      "question": "¿Qué son los Records en Java (desde Java 16)?",
+      "options": [
+        "Una forma de serializar objetos",
+        "Un tipo de interfaz sellada",
+        "Una colección especial de Java 16",
+        "Clases inmutables declaradas de forma compacta con constructor, getters y equals automáticos"
+      ],
+      "correct": 3,
+      "explanation": "record Punto(int x, int y) {} genera automáticamente constructor, getters, equals y hashCode."
+    },
+    {
+      "concept_id": "programacion_exp3_92",
+      "question": "¿Qué son las Sealed Classes en Java (desde Java 17)?",
+      "options": [
+        "Clases que restringen qué subclases pueden extenderlas usando 'permits'",
+        "Clases selladas en un módulo específico",
+        "Clases que no pueden ser instanciadas",
+        "Clases que no pueden ser heredadas (equivalente a final)"
+      ],
+      "correct": 0,
+      "explanation": "sealed class Forma permits Circulo, Rectangulo."
+    },
+    {
+      "concept_id": "programacion_exp3_93",
+      "question": "¿Qué es el operador instanceof mejorado (Pattern Matching, Java 16+)?",
+      "options": [
+        "Comprueba el tipo y lo asigna directamente a una variable en una sola expresión",
+        "Solo funciona con interfaces",
+        "Solo funciona en switch",
+        "Es igual al instanceof clásico"
+      ],
+      "correct": 0,
+      "explanation": "if (obj instanceof String s) { System.out.println(s.length()); }"
+    },
+    {
+      "concept_id": "programacion_exp3_94",
+      "question": "¿Qué hace la palabra clave 'var' en Java (desde Java 10)?",
+      "options": [
+        "Declara una variable de tipo variante genérica",
+        "Crea una variable mutable compartida entre hilos",
+        "Declara una variable global",
+        "Permite la inferencia de tipo local, el compilador deduce el tipo automáticamente"
+      ],
+      "correct": 3,
+      "explanation": "var lista = new ArrayList<String>(); // el compilador infiere ArrayList<String>."
+    },
+    {
+      "concept_id": "programacion_exp3_95",
+      "question": "¿Qué clase de Java se usa para trabajar con expresiones regulares?",
+      "options": [
+        "StringRegex",
+        "Pattern y Matcher (java.util.regex)",
+        "RegExp",
+        "Regex.compile()"
+      ],
+      "correct": 1,
+      "explanation": "Pattern.compile('[0-9]+').matcher('123abc').find()."
+    },
+    {
+      "concept_id": "programacion_exp3_96",
+      "question": "¿Qué simboliza '\\d+' en una expresión regular?",
+      "options": [
+        "Uno o más dígitos (0-9)",
+        "Un carácter no numérico",
+        "Un dígito exactamente",
+        "Uno o más caracteres cualquiera"
+      ],
+      "correct": 0,
+      "explanation": "\\d equivale a [0-9]; el + significa uno o más."
     }
   ],
   "lenguaje_de_marcas": [
@@ -4493,6 +4997,186 @@
       ],
       "correct": 0,
       "explanation": ".card::after { content: ''; display: block; clear: both; }"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp3_74",
+      "question": "¿Qué es SVG?",
+      "options": [
+        "Una extensión de CSS para formas",
+        "Un tipo de imagen rasterizada de alta resolución",
+        "Scalable Vector Graphics: formato de imagen vectorial basado en XML que escala sin perder calidad",
+        "Un protocolo de transferencia de gráficos"
+      ],
+      "correct": 2,
+      "explanation": "SVG es ideal para iconos, logos y gráficos interactivos."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp3_75",
+      "question": "¿Qué elemento HTML5 permite dibujar gráficos 2D mediante JavaScript?",
+      "options": [
+        "<graphic>",
+        "<svg>",
+        "<canvas>",
+        "<draw>"
+      ],
+      "correct": 2,
+      "explanation": "Canvas usa la API JavaScript para dibujar píxel a píxel."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp3_76",
+      "question": "¿Cuál es la diferencia principal entre SVG y Canvas?",
+      "options": [
+        "SVG es vectorial y declarativo (DOM); Canvas es rasterizado y controlado por JS",
+        "Son equivalentes técnicamente",
+        "SVG no escala; Canvas sí",
+        "Canvas es vectorial; SVG es de mapa de bits"
+      ],
+      "correct": 0,
+      "explanation": "SVG: manipulable con CSS/JS. Canvas: ideal para juegos y visualizaciones."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp3_77",
+      "question": "¿Qué es WCAG?",
+      "options": [
+        "Un estándar de responsive design",
+        "Un protocolo de cifrado web",
+        "Un lenguaje de programación accesible",
+        "Web Content Accessibility Guidelines: estándar internacional para hacer la web accesible a personas con discapacidad"
+      ],
+      "correct": 3,
+      "explanation": "WCAG 2.1 define niveles A, AA y AAA."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp3_78",
+      "question": "¿Qué atributo ARIA se usa para dar un nombre accesible a un elemento sin texto visible?",
+      "options": [
+        "aria-live",
+        "aria-label",
+        "aria-role",
+        "aria-hidden"
+      ],
+      "correct": 1,
+      "explanation": "<button aria-label='Cerrar ventana'>✕</button>"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp3_79",
+      "question": "¿Qué significa 'aria-hidden=\"true\"' en HTML?",
+      "options": [
+        "Oculta el elemento visualmente",
+        "Oculta el elemento a los lectores de pantalla sin quitarlo visualmente",
+        "Lo convierte en no interactivo",
+        "Lo excluye del DOM"
+      ],
+      "correct": 1,
+      "explanation": "Útil para iconos decorativos que no aportan información."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp3_80",
+      "question": "¿Qué hace el atributo 'srcset' en una etiqueta <img>?",
+      "options": [
+        "Define múltiples fuentes de vídeo",
+        "Permite definir varias versiones de la imagen para distintas resoluciones y densidades de pantalla",
+        "Comprime automáticamente la imagen",
+        "Establece un fallback para navegadores antiguos"
+      ],
+      "correct": 1,
+      "explanation": "<img srcset='img-sm.jpg 480w, img-lg.jpg 1080w'>."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp3_81",
+      "question": "¿Qué hace el elemento <picture> en HTML5?",
+      "options": [
+        "Optimiza automáticamente las imágenes",
+        "Permite servir imágenes diferentes según el dispositivo usando <source> con media queries",
+        "Define el copyright de la imagen",
+        "Es un contenedor para varias etiquetas <img>"
+      ],
+      "correct": 1,
+      "explanation": "<picture><source media='(max-width: 768px)' srcset='sm.jpg'><img src='lg.jpg'></picture>"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp3_82",
+      "question": "¿Qué es el atributo 'meta viewport' y para qué sirve?",
+      "options": [
+        "Controla la escala y el ancho de la ventana en dispositivos móviles para el responsive design",
+        "Configura la caché del navegador",
+        "Define el tamaño de la ventana del navegador en escritorio",
+        "Establece el idioma del documento"
+      ],
+      "correct": 0,
+      "explanation": "<meta name='viewport' content='width=device-width, initial-scale=1.0'>"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp3_83",
+      "question": "¿Qué son las etiquetas Open Graph?",
+      "options": [
+        "Etiquetas de Schema.org para datos estructurados",
+        "Etiquetas de control de caché",
+        "Meta tags de SEO para motores de búsqueda",
+        "Meta tags que controlan cómo se previsualiza un enlace al compartirlo en redes sociales"
+      ],
+      "correct": 3,
+      "explanation": "<meta property='og:title' content='Mi artículo'>"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp3_84",
+      "question": "¿Qué etiqueta HTML define el título que aparece en la pestaña del navegador y en buscadores?",
+      "options": [
+        "<h1>",
+        "<header>",
+        "<title>",
+        "<meta name='title'>"
+      ],
+      "correct": 2,
+      "explanation": "<title> dentro de <head> es crucial para el SEO."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp3_85",
+      "question": "¿Qué atributo de <a> indica al navegador que el enlace es externo y no debe pasar autoridad SEO?",
+      "options": [
+        "rel='nofollow'",
+        "target='_blank'",
+        "rel='external'",
+        "href='#'"
+      ],
+      "correct": 0,
+      "explanation": "nofollow le dice a Google que no siga ese enlace."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp3_86",
+      "question": "¿Qué es la especificidad de selectores en CSS y cómo se calcula?",
+      "options": [
+        "El tipo de selector: gana el más genérico",
+        "No hay reglas fijas para especificidad",
+        "El orden en el archivo CSS: gana el último",
+        "Peso de cada selector: ID(100) > Clase/Atributo(10) > Elemento(1). Gana el mayor peso total"
+      ],
+      "correct": 3,
+      "explanation": "#id .clase div tiene especificidad (1,1,1) = 111 puntos."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp3_87",
+      "question": "¿Qué hace 'min-height: 100vh' en CSS?",
+      "options": [
+        "El elemento ocupa al menos toda la altura de la ventana visible",
+        "El elemento ocupa exactamente la altura de su contenido",
+        "El elemento ocupa el 100% de su contenedor padre",
+        "La propiedad no tiene ningún efecto visible"
+      ],
+      "correct": 0,
+      "explanation": "vh = viewport height. 100vh = altura completa de la ventana."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_exp3_88",
+      "question": "¿Qué es el 'Critical Rendering Path' en el navegador?",
+      "options": [
+        "La ruta de los archivos JavaScript",
+        "El proceso de minificación de CSS",
+        "Secuencia de pasos para renderizar la página: HTML→DOM, CSS→CSSOM, merge→Render Tree→Layout→Paint",
+        "El recorrido del puntero del ratón en la página"
+      ],
+      "correct": 2,
+      "explanation": "Optimizar el CRP mejora el First Contentful Paint (FCP)."
     }
   ],
   "entornos_de_desarrollo": [
@@ -5215,6 +5899,198 @@
       ],
       "correct": 2,
       "explanation": "Los artefactos se publican en repositorios como Nexus o Artifactory."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_60",
+      "question": "¿Qué hace 'git tag v1.0.0'?",
+      "options": [
+        "Crea una copia de seguridad del repositorio",
+        "Sube el commit al servidor con ese nombre",
+        "Crea una etiqueta (tag) que marca un commit específico, usada para versiones de lanzamiento",
+        "Crea una rama llamada v1.0.0"
+      ],
+      "correct": 2,
+      "explanation": "Los tags son inmutables; las ramas se mueven con los commits."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_61",
+      "question": "¿Qué hace 'git bisect'?",
+      "options": [
+        "Divide el repositorio en dos partes",
+        "Realiza una búsqueda binaria en el historial para encontrar el commit que introdujo un bug",
+        "Compara dos ramas automáticamente",
+        "Elimina commits duplicados"
+      ],
+      "correct": 1,
+      "explanation": "git bisect start → git bisect bad → git bisect good <hash>."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_62",
+      "question": "¿Qué hace 'git blame <archivo>'?",
+      "options": [
+        "Muestra todos los cambios en el archivo",
+        "Borra el historial del archivo",
+        "Muestra quién escribió cada línea del archivo y en qué commit",
+        "Culpa a un colaborador de un error"
+      ],
+      "correct": 2,
+      "explanation": "git blame ayuda a entender la autoría de cada línea."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_63",
+      "question": "¿Qué son los Git Hooks?",
+      "options": [
+        "Plugins de autenticación de GitHub",
+        "Scripts que se ejecutan automáticamente antes o después de acciones Git (commit, push, merge)",
+        "Webhooks de GitHub Actions",
+        "Ramas protegidas del repositorio"
+      ],
+      "correct": 1,
+      "explanation": "pre-commit hooks pueden ejecutar linters automáticamente."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_64",
+      "question": "¿Qué es un monorepo?",
+      "options": [
+        "Un repositorio privado de un solo desarrollador",
+        "Un repositorio con una sola rama",
+        "Repositorio Git único que contiene múltiples proyectos o servicios relacionados",
+        "Un repositorio muy grande"
+      ],
+      "correct": 2,
+      "explanation": "Empresas como Google y Meta usan monorepos con herramientas especiales."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_65",
+      "question": "¿Qué metodología ágil se basa en un tablero visual con columnas (Pendiente, En progreso, Hecho) y limita el trabajo en curso (WIP)?",
+      "options": [
+        "Scrum",
+        "XP",
+        "SAFe",
+        "Kanban"
+      ],
+      "correct": 3,
+      "explanation": "Kanban es continuo, sin sprints fijos."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_66",
+      "question": "¿Qué práctica de XP (Extreme Programming) consiste en integrar el código continuamente durante el día?",
+      "options": [
+        "Refactoring",
+        "Pair Programming",
+        "Integración Continua",
+        "TDD"
+      ],
+      "correct": 2,
+      "explanation": "XP propone commits y builds varias veces al día."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_67",
+      "question": "¿Qué es la deuda técnica?",
+      "options": [
+        "El coste del hardware del proyecto",
+        "Costo acumulado de decisiones técnicas rápidas que habrá que corregir en el futuro",
+        "El coste del licenciamiento del software",
+        "Los errores sin resolver de la Sprint anterior"
+      ],
+      "correct": 1,
+      "explanation": "La deuda técnica frena la velocidad del equipo si no se gestiona."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_68",
+      "question": "¿Qué es SonarQube?",
+      "options": [
+        "Un gestor de dependencias",
+        "Plataforma de análisis y medición continua de la calidad y seguridad del código fuente",
+        "Un IDE orientado a métricas",
+        "Un servidor de integración continua"
+      ],
+      "correct": 1,
+      "explanation": "SonarQube detecta bugs, vulnerabilidades y code smells."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_69",
+      "question": "¿Qué es un 'code smell'?",
+      "options": [
+        "Indicio en el código de un problema de diseño que dificulta el mantenimiento (sin ser un bug)",
+        "Un error de compilación",
+        "Un bug oculto en el código",
+        "Una vulnerabilidad de seguridad"
+      ],
+      "correct": 0,
+      "explanation": "Ejemplos: métodos muy largos, clases con demasiadas responsabilidades."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_70",
+      "question": "¿Qué es Javadoc?",
+      "options": [
+        "Un plugin de Maven para tests",
+        "Un generador de diagramas UML",
+        "Herramienta que genera documentación HTML a partir de comentarios /** */ en el código Java",
+        "La documentación oficial de Oracle"
+      ],
+      "correct": 2,
+      "explanation": "/** @param nombre El nombre del usuario @return boolean */ genera HTML automáticamente."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_71",
+      "question": "¿Qué etiqueta Javadoc documenta un parámetro de un método?",
+      "options": [
+        "@parameter",
+        "@input",
+        "@param",
+        "@arg"
+      ],
+      "correct": 2,
+      "explanation": "/** @param nombre Nombre del usuario */"
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_72",
+      "question": "¿Qué etiqueta Javadoc documenta el valor de retorno de un método?",
+      "options": [
+        "@returns",
+        "@result",
+        "@return",
+        "@output"
+      ],
+      "correct": 2,
+      "explanation": "/** @return true si el usuario existe */"
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_73",
+      "question": "¿Qué es npm?",
+      "options": [
+        "Gestor de paquetes de Node.js para instalar y gestionar dependencias JavaScript",
+        "Un framework JavaScript",
+        "Un servidor web de Node.js",
+        "Un transpilador de TypeScript"
+      ],
+      "correct": 0,
+      "explanation": "npm install, npm run, npm publish."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_74",
+      "question": "¿Qué archivo define las dependencias y scripts de un proyecto Node.js/npm?",
+      "options": [
+        "dependencies.json",
+        "node_modules.json",
+        "npm.config",
+        "package.json"
+      ],
+      "correct": 3,
+      "explanation": "package.json es el equivalente a pom.xml para JS."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_exp3_75",
+      "question": "¿Qué es Webpack?",
+      "options": [
+        "Un framework CSS",
+        "Empaquetador de módulos que agrupa archivos JS, CSS e imágenes en bundles optimizados",
+        "Un servidor de desarrollo JavaScript",
+        "Un transpilador de JavaScript"
+      ],
+      "correct": 1,
+      "explanation": "Webpack transforma y optimiza el código para producción."
     }
   ],
   "cloud_computing": [
@@ -5757,6 +6633,186 @@
       ],
       "correct": 3,
       "explanation": "HTTPS usa TLS para cifrar el tráfico en tránsito."
+    },
+    {
+      "concept_id": "cloud_computing_exp3_45",
+      "question": "¿Qué es Amazon CloudWatch?",
+      "options": [
+        "El servicio de DNS de AWS",
+        "Servicio de monitorización de métricas, logs y alarmas para recursos de AWS",
+        "La consola de administración de AWS",
+        "Un servicio de almacenamiento de logs"
+      ],
+      "correct": 1,
+      "explanation": "CloudWatch permite crear dashboards y alarmas automáticas."
+    },
+    {
+      "concept_id": "cloud_computing_exp3_46",
+      "question": "¿Qué es AWS CloudTrail?",
+      "options": [
+        "El historial de facturación de AWS",
+        "Una herramienta de depuración de Lambda",
+        "Servicio que registra todas las llamadas a la API de AWS para auditoría y cumplimiento",
+        "El log de acceso de S3"
+      ],
+      "correct": 2,
+      "explanation": "CloudTrail registra quién hizo qué, cuándo y desde dónde."
+    },
+    {
+      "concept_id": "cloud_computing_exp3_47",
+      "question": "¿Qué son las Instancias Spot de EC2?",
+      "options": [
+        "Instancias de máxima disponibilidad garantizada",
+        "Instancias para desarrollo y pruebas",
+        "Instancias reservadas con contrato anual",
+        "Instancias EC2 con hasta 90% de descuento sobre el precio bajo demanda, que AWS puede interrumpir"
+      ],
+      "correct": 3,
+      "explanation": "Las Spot Instances son ideales para cargas tolerantes a interrupciones."
+    },
+    {
+      "concept_id": "cloud_computing_exp3_48",
+      "question": "¿Qué es Amazon SQS?",
+      "options": [
+        "Servicio de colas de mensajes gestionado para desacoplar componentes de aplicaciones",
+        "Un servicio de streaming de datos en tiempo real",
+        "Una base de datos de colas",
+        "Un servicio de envío de notificaciones push"
+      ],
+      "correct": 0,
+      "explanation": "Simple Queue Service: garantiza entrega aunque el receptor esté caído."
+    },
+    {
+      "concept_id": "cloud_computing_exp3_49",
+      "question": "¿Qué es Amazon SNS?",
+      "options": [
+        "Servicio de mensajería pub/sub que envía notificaciones a múltiples suscriptores a la vez",
+        "Un servicio de correo electrónico",
+        "Un sistema de cola punto a punto",
+        "Una base de datos de series temporales"
+      ],
+      "correct": 0,
+      "explanation": "Simple Notification Service: un mensaje llega a múltiples destinos."
+    },
+    {
+      "concept_id": "cloud_computing_exp3_50",
+      "question": "¿Qué es Amazon ElastiCache?",
+      "options": [
+        "Un acelerador de CDN de AWS",
+        "Una base de datos elástica de AWS",
+        "Un servicio de almacenamiento de objetos",
+        "Servicio gestionado de caché en memoria (Redis o Memcached) para acelerar aplicaciones"
+      ],
+      "correct": 3,
+      "explanation": "ElastiCache reduce la carga sobre la base de datos principal."
+    },
+    {
+      "concept_id": "cloud_computing_exp3_51",
+      "question": "¿Qué es Amazon API Gateway?",
+      "options": [
+        "Un proxy inverso de AWS",
+        "Servicio para crear, publicar y gestionar APIs REST, HTTP y WebSocket de forma escalable",
+        "Un servicio de autenticación de APIs",
+        "Un balanceador de carga de AWS"
+      ],
+      "correct": 1,
+      "explanation": "API Gateway conecta clientes con funciones Lambda o servicios backend."
+    },
+    {
+      "concept_id": "cloud_computing_exp3_52",
+      "question": "¿Qué es una arquitectura de microservicios?",
+      "options": [
+        "Un patrón de base de datos distribuida",
+        "Un framework de desarrollo rápido",
+        "Una aplicación monolítica optimizada",
+        "División de una aplicación en servicios pequeños e independientes que se comunican por API"
+      ],
+      "correct": 3,
+      "explanation": "Netflix, Spotify y Amazon usan microservicios."
+    },
+    {
+      "concept_id": "cloud_computing_exp3_53",
+      "question": "¿Qué diferencia hay entre REST y GraphQL?",
+      "options": [
+        "GraphQL es solo para bases de datos de grafos",
+        "GraphQL no puede hacer mutaciones (escrituras)",
+        "REST usa endpoints fijos; GraphQL usa un único endpoint donde el cliente especifica exactamente qué datos quiere",
+        "REST es más moderno que GraphQL"
+      ],
+      "correct": 2,
+      "explanation": "GraphQL elimina el over-fetching y under-fetching de datos."
+    },
+    {
+      "concept_id": "cloud_computing_exp3_54",
+      "question": "¿Qué es un mensaje de cola (message queue) y para qué sirve?",
+      "options": [
+        "Una base de datos temporal",
+        "Una cola de prioridad de CPU",
+        "Un tipo de cache distribuida",
+        "Mecanismo de comunicación asíncrona entre servicios para desacoplarlos y absorber picos de carga"
+      ],
+      "correct": 3,
+      "explanation": "RabbitMQ, Kafka y SQS son sistemas de colas de mensajes."
+    },
+    {
+      "concept_id": "cloud_computing_exp3_55",
+      "question": "¿Qué es Apache Kafka?",
+      "options": [
+        "Un servidor de base de datos",
+        "Un framework de microservicios",
+        "Plataforma de streaming distribuido para procesar millones de eventos por segundo en tiempo real",
+        "Un servidor de aplicaciones Java"
+      ],
+      "correct": 2,
+      "explanation": "Kafka es el estándar en arquitecturas de eventos en tiempo real."
+    },
+    {
+      "concept_id": "cloud_computing_exp3_56",
+      "question": "¿Qué es el patrón Circuit Breaker en microservicios?",
+      "options": [
+        "Mecanismo que detecta fallos en un servicio y cortocircuita las llamadas para evitar cascadas de errores",
+        "Una estrategia de reintento automático",
+        "Un patrón de autenticación entre servicios",
+        "Un tipo de balanceo de carga"
+      ],
+      "correct": 0,
+      "explanation": "Netflix Hystrix y Resilience4j implementan el Circuit Breaker."
+    },
+    {
+      "concept_id": "cloud_computing_exp3_57",
+      "question": "¿Qué es la computación sin servidor (serverless)?",
+      "options": [
+        "Modelo donde el proveedor gestiona la infraestructura y el desarrollador solo escribe funciones",
+        "Cloud sin acceso a la configuración",
+        "Servidores físicos sin sistema operativo",
+        "Computación en local sin internet"
+      ],
+      "correct": 0,
+      "explanation": "AWS Lambda, Azure Functions y Google Cloud Functions son serverless."
+    },
+    {
+      "concept_id": "cloud_computing_exp3_58",
+      "question": "¿Qué es el formato YAML y dónde se usa habitualmente?",
+      "options": [
+        "Un lenguaje de programación funcional",
+        "Lenguaje de serialización de datos legible por humanos, usado en configuraciones (Docker, K8s, CI/CD)",
+        "Un tipo de base de datos",
+        "Un protocolo de comunicación web"
+      ],
+      "correct": 1,
+      "explanation": "YAML es un superconjunto de JSON más legible."
+    },
+    {
+      "concept_id": "cloud_computing_exp3_59",
+      "question": "¿Qué es Docker Compose?",
+      "options": [
+        "Herramienta para definir y ejecutar aplicaciones multi-contenedor con un archivo YAML (docker-compose.yml)",
+        "Un registro de imágenes Docker privado",
+        "Un orquestador de producción para contenedores",
+        "La CLI de Docker para gestionar contenedores individuales"
+      ],
+      "correct": 0,
+      "explanation": "docker compose up arranca todos los servicios definidos."
     }
   ],
   "empleabilidad": [
@@ -6335,6 +7391,174 @@
       ],
       "correct": 2,
       "explanation": "Del día 4 al 20: 60%. Del día 21 en adelante: 75%."
+    },
+    {
+      "concept_id": "empleabilidad_exp3_48",
+      "question": "¿Qué tipos de riesgos laborales existen según su naturaleza?",
+      "options": [
+        "Directos e indirectos",
+        "Físicos, químicos, biológicos, ergonómicos y psicosociales",
+        "Graves, leves y muy graves",
+        "Internos y externos"
+      ],
+      "correct": 1,
+      "explanation": "La clasificación es por el agente que genera el riesgo."
+    },
+    {
+      "concept_id": "empleabilidad_exp3_49",
+      "question": "¿Qué es un accidente de trabajo?",
+      "options": [
+        "Lesión corporal sufrida por el trabajador a causa del trabajo por cuenta ajena",
+        "Cualquier daño material en la empresa",
+        "Una enfermedad crónica por exposición laboral",
+        "Un incidente sin consecuencias físicas"
+      ],
+      "correct": 0,
+      "explanation": "También se consideran accidentes los que ocurren in itinere (trayecto)."
+    },
+    {
+      "concept_id": "empleabilidad_exp3_50",
+      "question": "¿Qué es un accidente in itinere?",
+      "options": [
+        "Accidente ocurrido en el trayecto de ida o vuelta entre el domicilio y el trabajo",
+        "Accidente dentro de las instalaciones de la empresa",
+        "Accidente durante un viaje de empresa",
+        "Accidente durante una reunión de trabajo"
+      ],
+      "correct": 0,
+      "explanation": "Está cubierto por la Seguridad Social como accidente de trabajo."
+    },
+    {
+      "concept_id": "empleabilidad_exp3_51",
+      "question": "¿Qué es una enfermedad profesional?",
+      "options": [
+        "Cualquier enfermedad que se padece siendo trabajador",
+        "Enfermedad adquirida como consecuencia del trabajo en actividades listadas oficialmente",
+        "Una baja por enfermedad común",
+        "Una lesión por accidente en el trabajo"
+      ],
+      "correct": 1,
+      "explanation": "El Real Decreto 1299/2006 establece el cuadro de enfermedades profesionales."
+    },
+    {
+      "concept_id": "empleabilidad_exp3_52",
+      "question": "¿Qué es la señalización de seguridad en el ámbito laboral?",
+      "options": [
+        "El manual de empleado",
+        "Los carteles informativos de la empresa",
+        "Señales visuales, acústicas o luminosas que advierten de riesgos y orientan en emergencias",
+        "Los rótulos de las salidas de la empresa"
+      ],
+      "correct": 2,
+      "explanation": "Colores: Rojo=peligro/prohibición, Amarillo=advertencia, Verde=emergencia/seguridad."
+    },
+    {
+      "concept_id": "empleabilidad_exp3_53",
+      "question": "¿Cuándo es obligatorio el uso de EPIs?",
+      "options": [
+        "Solo en obras de construcción",
+        "Cuando los riesgos no se pueden eliminar o proteger suficientemente con medidas colectivas",
+        "Solo para trabajos de altura",
+        "Siempre que el trabajador lo solicite"
+      ],
+      "correct": 1,
+      "explanation": "Los EPIs son la última línea de defensa, no la primera."
+    },
+    {
+      "concept_id": "empleabilidad_exp3_54",
+      "question": "¿Qué es el Plan de Emergencia de una empresa?",
+      "options": [
+        "El protocolo de acoso laboral",
+        "El calendario de formación preventiva",
+        "El plan de riesgos laborales anual",
+        "Documento que define cómo actuar ante incendio, evacuación u otras emergencias"
+      ],
+      "correct": 3,
+      "explanation": "Incluye rutas de evacuación, puntos de encuentro y responsables."
+    },
+    {
+      "concept_id": "empleabilidad_exp3_55",
+      "question": "¿Qué es la Inspección de Trabajo y Seguridad Social?",
+      "options": [
+        "Organismo que vigila el cumplimiento de la normativa laboral y de seguridad social",
+        "El tribunal que juzga conflictos laborales",
+        "El sindicato representativo del sector",
+        "El departamento de RRHH de la empresa"
+      ],
+      "correct": 0,
+      "explanation": "Los inspectores de trabajo pueden sancionar a las empresas incumplidoras."
+    },
+    {
+      "concept_id": "empleabilidad_exp3_56",
+      "question": "¿Cuáles son las categorías de infracciones laborales según su gravedad?",
+      "options": [
+        "Leves, graves y muy graves",
+        "Menores y mayores",
+        "Formales y materiales",
+        "Básicas, medias y críticas"
+      ],
+      "correct": 0,
+      "explanation": "La LISOS (Ley de Infracciones y Sanciones en el Orden Social) las clasifica así."
+    },
+    {
+      "concept_id": "empleabilidad_exp3_57",
+      "question": "¿Qué es el Plan de Igualdad?",
+      "options": [
+        "La política de conciliación familiar",
+        "El plan de diversidad étnica de la empresa",
+        "Conjunto de medidas para alcanzar la igualdad entre hombres y mujeres en la empresa",
+        "Un programa de formación en valores"
+      ],
+      "correct": 2,
+      "explanation": "Obligatorio para empresas de 50 o más trabajadores desde 2022."
+    },
+    {
+      "concept_id": "empleabilidad_exp3_58",
+      "question": "¿Qué es el protocolo de acoso laboral?",
+      "options": [
+        "El reglamento de disciplina de la empresa",
+        "El plan de prevención de riesgos",
+        "Procedimiento interno para prevenir, detectar y actuar ante situaciones de acoso en el trabajo",
+        "El convenio colectivo del sector"
+      ],
+      "correct": 2,
+      "explanation": "Obligatorio para todas las empresas."
+    },
+    {
+      "concept_id": "empleabilidad_exp3_59",
+      "question": "¿Qué es el 'acoso sexual' en el ámbito laboral?",
+      "options": [
+        "Conducta de naturaleza sexual no deseada que atenta contra la dignidad del trabajador",
+        "Una conducta sancionada solo en empresas grandes",
+        "Una discriminación salarial por sexo",
+        "Un conflicto interpersonal entre compañeros"
+      ],
+      "correct": 0,
+      "explanation": "Es una infracción muy grave según la LISOS."
+    },
+    {
+      "concept_id": "empleabilidad_exp3_60",
+      "question": "¿Qué se considera trabajo nocturno según el ET?",
+      "options": [
+        "El realizado entre las 22:00 y las 06:00 horas",
+        "El realizado entre las 20:00 y las 08:00",
+        "El realizado a partir de las 23:00",
+        "El realizado fuera del horario laboral habitual"
+      ],
+      "correct": 0,
+      "explanation": "Artículo 36 del Estatuto de los Trabajadores."
+    },
+    {
+      "concept_id": "empleabilidad_exp3_61",
+      "question": "¿Cuántas horas máximas puede trabajar un trabajador nocturno de media?",
+      "options": [
+        "10 horas con compensación posterior",
+        "8 horas de promedio en un período de 15 días",
+        "6 horas diarias sin excepción",
+        "Las mismas que el trabajador diurno (40h semanales)"
+      ],
+      "correct": 1,
+      "explanation": "El trabajo nocturno tiene restricciones especiales por su impacto en la salud."
     }
   ]
 }
