@@ -48,7 +48,7 @@ function renderSubjects() {
                 <button onclick="startExam('${subject.id}')">Iniciar Simulacro Aleatorio</button>
             </div>
             <div class="card-stats">
-                <span>V9 TITAN: 100% Preguntas Reales de Examen</span>
+                <span>V10 OVERLOAD: Preguntas Reales (1.400 Unique)</span>
             </div>
         `;
         subjectGrid.appendChild(card);
