@@ -1,1576 +1,2680 @@
 {
-    "bases_de_datos": [
-        {
-            "concept_id": "bases_de_datos_master_0",
-            "question": "¿Qué propiedad ACID garantiza que una transacción se realice completa o no se realice en absoluto?",
-            "options": [
-                "Consistencia",
-                "Durabilidad",
-                "Aislamiento",
-                "Atomicidad"
-            ],
-            "correct": 3,
-            "explanation": "Atomicidad (Todo o nada)."
-        },
-        {
-            "concept_id": "bases_de_datos_master_1",
-            "question": "¿Qué nivel de normalización requiere eliminar todas las dependencias transitivas?",
-            "options": [
-                "Forma Boyce-Codd",
-                "Segunda Forma Normal (2FN)",
-                "Tercera Forma Normal (3FN)",
-                "Primera Forma Normal (1FN)"
-            ],
-            "correct": 2,
-            "explanation": "3FN elimina transitividades."
-        },
-        {
-            "concept_id": "bases_de_datos_master_2",
-            "question": "¿Qué comando SQL se utiliza para eliminar permanentemente una tabla y todos sus datos del esquema?",
-            "options": [
-                "DELETE FROM",
-                "REMOVE TABLE",
-                "TRUNCATE TABLE",
-                "DROP TABLE"
-            ],
-            "correct": 3,
-            "explanation": "DROP borra la estructura."
-        },
-        {
-            "concept_id": "bases_de_datos_master_3",
-            "question": "¿Qué tipo de JOIN devuelve todas las filas de la primera tabla aunque no haya coincidencias en la segunda?",
-            "options": [
-                "CROSS JOIN",
-                "LEFT JOIN",
-                "RIGHT JOIN",
-                "INNER JOIN"
-            ],
-            "correct": 1,
-            "explanation": "LEFT JOIN prioriza la tabla de origen."
-        },
-        {
-            "concept_id": "bases_de_datos_master_4",
-            "question": "¿Qué cláusula SQL permite filtrar grupos de registros después de usar un GROUP BY?",
-            "options": [
-                "WHERE",
-                "ORDER BY",
-                "HAVING",
-                "DISTINCT"
-            ],
-            "correct": 2,
-            "explanation": "HAVING filtra agrupaciones."
-        },
-        {
-            "concept_id": "bases_de_datos_master_5",
-            "question": "¿Cuál es la función principal de un Trigger en una base de datos?",
-            "options": [
-                "Ejecutar código automáticamente ante eventos INSERT, UPDATE o DELETE",
-                "Hacer copias de seguridad",
-                "Cifrar la tabla",
-                "Ordenar los registros"
-            ],
-            "correct": 0,
-            "explanation": "Los triggers son disparadores reactivos."
-        },
-        {
-            "concept_id": "bases_de_datos_master_6",
-            "question": "¿Cómo se llama la restricción que garantiza que los valores de una columna sean únicos pero permite nulos?",
-            "options": [
-                "UNIQUE",
-                "PRIMARY KEY",
-                "NOT NULL",
-                "CHECK"
-            ],
-            "correct": 0,
-            "explanation": "Unique asegura unicidad."
-        },
-        {
-            "concept_id": "bases_de_datos_master_7",
-            "question": "¿Qué comando de control de transacciones confirma todos los cambios realizados?",
-            "options": [
-                "ROLLBACK",
-                "COMMIT",
-                "SAVEPOINT",
-                "CHECKPOINT"
-            ],
-            "correct": 1,
-            "explanation": "COMMIT hace los cambios permanentes."
-        },
-        {
-            "concept_id": "bases_de_datos_master_8",
-            "question": "¿Qué objeto de la base de datos es esencialmente una consulta SQL almacenada que se comporta como una tabla virtual?",
-            "options": [
-                "Procedimiento",
-                "Vista",
-                "Secuencia",
-                "Índice"
-            ],
-            "correct": 1,
-            "explanation": "Las vistas son tablas lógicas."
-        },
-        {
-            "concept_id": "bases_de_datos_master_9",
-            "question": "¿Qué tipo de relación requiere obligatoriamente una tabla intermedia de unión?",
-            "options": [
-                "Relación N:M (Muchos a Muchos)",
-                "Relación 1:1",
-                "Relación de especialización",
-                "Relación 1:N"
-            ],
-            "correct": 0,
-            "explanation": "N:M necesita una tabla puente."
-        }
-    ],
-    "sistemas_informaticos": [
-        {
-            "concept_id": "sistemas_informaticos_master_0",
-            "question": "¿En qué arquitectura de ordenador se encuentran físicamente separadas la memoria de datos y la de instrucciones?",
-            "options": [
-                "Máquina de Turing",
-                "Arquitectura de Registros",
-                "Arquitectura Harvard",
-                "Arquitectura Von Neumann"
-            ],
-            "correct": 2,
-            "explanation": "Harvard separa memorias para mejorar el rendimiento."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_1",
-            "question": "¿Cuál es la característica principal de la Arquitectura Von Neumann?",
-            "options": [
-                "Es exclusiva de microcontroladores",
-                "No tiene unidad de control",
-                "Usa una única memoria para datos e instrucciones",
-                "Usa memorias separadas"
-            ],
-            "correct": 2,
-            "explanation": "Von Neumann es la arquitectura generalista estándar."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_2",
-            "question": "Según el modelo OSI, ¿en qué capa se realiza el direccionamiento lógico mediante IP?",
-            "options": [
-                "Capa 3 (Red)",
-                "Capa 4 (Transporte)",
-                "Capa 1 (Física)",
-                "Capa 2 (Enlace)"
-            ],
-            "correct": 0,
-            "explanation": "La Capa 3 gestiona el routing e IPs."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_3",
-            "question": "¿Qué topología de red conecta todos los nodos a un dispositivo central como un switch?",
-            "options": [
-                "Topología en Malla",
-                "Topología en Estrella",
-                "Topología en Anillo",
-                "Topología en Bus"
-            ],
-            "correct": 1,
-            "explanation": "La estrella es la más común en redes LAN actuales."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_4",
-            "question": "¿Qué tipo de cable de par trenzado incluye un blindaje global para reducir interferencias?",
-            "options": [
-                "UTP (Unshielded Twisted Pair)",
-                "Cable Coaxial",
-                "Fibra Óptica",
-                "STP (Shielded Twisted Pair)"
-            ],
-            "correct": 3,
-            "explanation": "STP está blindado."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_5",
-            "question": "¿Cómo se define a una red que abarca una ciudad o un área metropolitana?",
-            "options": [
-                "WAN",
-                "PAN",
-                "LAN",
-                "MAN (Metropolitan Area Network)"
-            ],
-            "correct": 3,
-            "explanation": "MAN es para áreas urbanas."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_6",
-            "question": "¿Qué modo de transmisión permite enviar datos en ambas direcciones pero no simultáneamente?",
-            "options": [
-                "Half-Duplex",
-                "Simplex",
-                "Full-Duplex",
-                "Multiplex"
-            ],
-            "correct": 0,
-            "explanation": "Half-Duplex es como un Walkie-Talkie."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_7",
-            "question": "¿Cuál de estos es un componente del 'Peopleware' en un sistema informático?",
-            "options": [
-                "Microprocesador",
-                "Usuario final",
-                "Base de Datos",
-                "Sistema Operativo"
-            ],
-            "correct": 1,
-            "explanation": "Peopleware se refiere al factor humano."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_8",
-            "question": "¿Qué dispositivo segmenta dominios de colisión trabajando en la Capa 2 (Enlace)?",
-            "options": [
-                "Switch",
-                "Hub",
-                "Repetidor",
-                "Router"
-            ],
-            "correct": 0,
-            "explanation": "El switch usa tablas MAC para segmentar."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_9",
-            "question": "¿Qué conector se utiliza típicamente para las conexiones de red Ethernet con cable de cobre?",
-            "options": [
-                "RJ-45",
-                "BNC",
-                "SC",
-                "USB-C"
-            ],
-            "correct": 0,
-            "explanation": "RJ-45 es el estándar de conectores Ethernet."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_10",
-            "question": "¿Qué tipo de memoria pierde su contenido al interrumpirse el suministro eléctrico?",
-            "options": [
-                "Pendrive USB",
-                "Memoria RAM",
-                "Disco SSD",
-                "Memoria ROM"
-            ],
-            "correct": 1,
-            "explanation": "La RAM es volátil."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_11",
-            "question": "¿Qué nivel de RAID realiza 'Mirroring' proporcionando redundancia total al duplicar datos?",
-            "options": [
-                "RAID 6",
-                "RAID 0",
-                "RAID 1",
-                "RAID 5"
-            ],
-            "correct": 2,
-            "explanation": "RAID 1 es el espejo de discos."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_12",
-            "question": "¿Qué interfaz moderna de alta velocidad sustituye al bus SATA para los discos SSD de alto rendimiento?",
-            "options": [
-                "SCSI",
-                "Firewire",
-                "IDE",
-                "NVMe (sobre PCIe)"
-            ],
-            "correct": 3,
-            "explanation": "NVMe ofrece latencias mínimas."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_13",
-            "question": "¿Cuál es la función del Gestor de Arranque (Bootloader)?",
-            "options": [
-                "Cifrar las carpetas de usuario",
-                "Instalar drivers de red",
-                "Formatear el disco duro",
-                "Cargar el Kernel del sistema operativo en memoria"
-            ],
-            "correct": 3,
-            "explanation": "El bootloader arranca el núcleo del SO."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_14",
-            "question": "¿Qué sistema de archivos es el estándar actual en Windows y soporta Journaling y ACLs?",
-            "options": [
-                "NTFS",
-                "ext4",
-                "HFS+",
-                "FAT32"
-            ],
-            "correct": 0,
-            "explanation": "NTFS es el sistema avanzado de Microsoft."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_15",
-            "question": "En Linux, ¿qué permiso otorga el valor numérico '7' en un comando chmod?",
-            "options": [
-                "Solo Ejecución",
-                "Solo Lectura",
-                "Lectura, Escritura y Ejecución (rwx)",
-                "Lectura y Escritura"
-            ],
-            "correct": 2,
-            "explanation": "7 = 4(r)+2(w)+1(x)."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_16",
-            "question": "¿Qué comando Linux se utiliza para cambiar el dueño de un archivo?",
-            "options": [
-                "chmod",
-                "chown",
-                "ps",
-                "top"
-            ],
-            "correct": 1,
-            "explanation": "chown (CHange OWNer)."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_17",
-            "question": "¿Qué comando muestra los procesos en tiempo real y el uso de recursos del sistema?",
-            "options": [
-                "pwd",
-                "grep",
-                "ls",
-                "top / htop"
-            ],
-            "correct": 3,
-            "explanation": "Top es el visor dinámico."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_18",
-            "question": "¿Cuál es la señal por defecto que envía el comando 'kill' sin argumentos adicionales?",
-            "options": [
-                "SIGSTOP",
-                "SIGTERM (15)",
-                "SIGHUP (1)",
-                "SIGKILL (9)"
-            ],
-            "correct": 1,
-            "explanation": "Kill envía SIGTERM por defecto para un cierre limpio."
-        },
-        {
-            "concept_id": "sistemas_informaticos_master_19",
-            "question": "¿Qué directorio de la jerarquía Linux contiene los archivos de configuración del sistema?",
-            "options": [
-                "/etc",
-                "/home",
-                "/bin",
-                "/var"
-            ],
-            "correct": 0,
-            "explanation": "/etc es estratégico para la configuración."
-        }
-    ],
-    "programacion": [
-        {
-            "concept_id": "programacion_master_0",
-            "question": "¿En qué arquitectura de ordenador se encuentran físicamente separadas la memoria de datos y la de instrucciones?",
-            "options": [
-                "Arquitectura Harvard",
-                "Arquitectura de Registros",
-                "Arquitectura Von Neumann",
-                "Máquina de Turing"
-            ],
-            "correct": 0,
-            "explanation": "Harvard separa memorias para mejorar el rendimiento."
-        },
-        {
-            "concept_id": "programacion_master_1",
-            "question": "¿Cuál es la característica principal de la Arquitectura Von Neumann?",
-            "options": [
-                "Usa una única memoria para datos e instrucciones",
-                "Usa memorias separadas",
-                "No tiene unidad de control",
-                "Es exclusiva de microcontroladores"
-            ],
-            "correct": 0,
-            "explanation": "Von Neumann es la arquitectura generalista estándar."
-        },
-        {
-            "concept_id": "programacion_master_2",
-            "question": "Según el modelo OSI, ¿en qué capa se realiza el direccionamiento lógico mediante IP?",
-            "options": [
-                "Capa 1 (Física)",
-                "Capa 3 (Red)",
-                "Capa 4 (Transporte)",
-                "Capa 2 (Enlace)"
-            ],
-            "correct": 1,
-            "explanation": "La Capa 3 gestiona el routing e IPs."
-        },
-        {
-            "concept_id": "programacion_master_3",
-            "question": "¿Qué topología de red conecta todos los nodos a un dispositivo central como un switch?",
-            "options": [
-                "Topología en Estrella",
-                "Topología en Bus",
-                "Topología en Anillo",
-                "Topología en Malla"
-            ],
-            "correct": 0,
-            "explanation": "La estrella es la más común en redes LAN actuales."
-        },
-        {
-            "concept_id": "programacion_master_4",
-            "question": "¿Qué tipo de cable de par trenzado incluye un blindaje global para reducir interferencias?",
-            "options": [
-                "UTP (Unshielded Twisted Pair)",
-                "Fibra Óptica",
-                "STP (Shielded Twisted Pair)",
-                "Cable Coaxial"
-            ],
-            "correct": 2,
-            "explanation": "STP está blindado."
-        },
-        {
-            "concept_id": "programacion_master_5",
-            "question": "¿Cómo se define a una red que abarca una ciudad o un área metropolitana?",
-            "options": [
-                "LAN",
-                "WAN",
-                "MAN (Metropolitan Area Network)",
-                "PAN"
-            ],
-            "correct": 2,
-            "explanation": "MAN es para áreas urbanas."
-        },
-        {
-            "concept_id": "programacion_master_6",
-            "question": "¿Qué modo de transmisión permite enviar datos en ambas direcciones pero no simultáneamente?",
-            "options": [
-                "Half-Duplex",
-                "Full-Duplex",
-                "Simplex",
-                "Multiplex"
-            ],
-            "correct": 0,
-            "explanation": "Half-Duplex es como un Walkie-Talkie."
-        },
-        {
-            "concept_id": "programacion_master_7",
-            "question": "¿Cuál de estos es un componente del 'Peopleware' en un sistema informático?",
-            "options": [
-                "Base de Datos",
-                "Usuario final",
-                "Sistema Operativo",
-                "Microprocesador"
-            ],
-            "correct": 1,
-            "explanation": "Peopleware se refiere al factor humano."
-        },
-        {
-            "concept_id": "programacion_master_8",
-            "question": "¿Qué dispositivo segmenta dominios de colisión trabajando en la Capa 2 (Enlace)?",
-            "options": [
-                "Hub",
-                "Router",
-                "Switch",
-                "Repetidor"
-            ],
-            "correct": 2,
-            "explanation": "El switch usa tablas MAC para segmentar."
-        },
-        {
-            "concept_id": "programacion_master_9",
-            "question": "¿Qué conector se utiliza típicamente para las conexiones de red Ethernet con cable de cobre?",
-            "options": [
-                "BNC",
-                "RJ-45",
-                "SC",
-                "USB-C"
-            ],
-            "correct": 1,
-            "explanation": "RJ-45 es el estándar de conectores Ethernet."
-        },
-        {
-            "concept_id": "programacion_master_10",
-            "question": "¿Qué tipo de memoria pierde su contenido al interrumpirse el suministro eléctrico?",
-            "options": [
-                "Disco SSD",
-                "Pendrive USB",
-                "Memoria RAM",
-                "Memoria ROM"
-            ],
-            "correct": 2,
-            "explanation": "La RAM es volátil."
-        },
-        {
-            "concept_id": "programacion_master_11",
-            "question": "¿Qué nivel de RAID realiza 'Mirroring' proporcionando redundancia total al duplicar datos?",
-            "options": [
-                "RAID 0",
-                "RAID 1",
-                "RAID 6",
-                "RAID 5"
-            ],
-            "correct": 1,
-            "explanation": "RAID 1 es el espejo de discos."
-        },
-        {
-            "concept_id": "programacion_master_12",
-            "question": "¿Qué interfaz moderna de alta velocidad sustituye al bus SATA para los discos SSD de alto rendimiento?",
-            "options": [
-                "IDE",
-                "SCSI",
-                "Firewire",
-                "NVMe (sobre PCIe)"
-            ],
-            "correct": 3,
-            "explanation": "NVMe ofrece latencias mínimas."
-        },
-        {
-            "concept_id": "programacion_master_13",
-            "question": "¿Cuál es la función del Gestor de Arranque (Bootloader)?",
-            "options": [
-                "Cifrar las carpetas de usuario",
-                "Instalar drivers de red",
-                "Formatear el disco duro",
-                "Cargar el Kernel del sistema operativo en memoria"
-            ],
-            "correct": 3,
-            "explanation": "El bootloader arranca el núcleo del SO."
-        },
-        {
-            "concept_id": "programacion_master_14",
-            "question": "¿Qué sistema de archivos es el estándar actual en Windows y soporta Journaling y ACLs?",
-            "options": [
-                "HFS+",
-                "NTFS",
-                "FAT32",
-                "ext4"
-            ],
-            "correct": 1,
-            "explanation": "NTFS es el sistema avanzado de Microsoft."
-        },
-        {
-            "concept_id": "programacion_master_15",
-            "question": "En Linux, ¿qué permiso otorga el valor numérico '7' en un comando chmod?",
-            "options": [
-                "Lectura, Escritura y Ejecución (rwx)",
-                "Solo Ejecución",
-                "Lectura y Escritura",
-                "Solo Lectura"
-            ],
-            "correct": 0,
-            "explanation": "7 = 4(r)+2(w)+1(x)."
-        },
-        {
-            "concept_id": "programacion_master_16",
-            "question": "¿Qué comando Linux se utiliza para cambiar el dueño de un archivo?",
-            "options": [
-                "chmod",
-                "chown",
-                "ps",
-                "top"
-            ],
-            "correct": 1,
-            "explanation": "chown (CHange OWNer)."
-        },
-        {
-            "concept_id": "programacion_master_17",
-            "question": "¿Qué comando muestra los procesos en tiempo real y el uso de recursos del sistema?",
-            "options": [
-                "ls",
-                "pwd",
-                "grep",
-                "top / htop"
-            ],
-            "correct": 3,
-            "explanation": "Top es el visor dinámico."
-        },
-        {
-            "concept_id": "programacion_master_18",
-            "question": "¿Cuál es la señal por defecto que envía el comando 'kill' sin argumentos adicionales?",
-            "options": [
-                "SIGKILL (9)",
-                "SIGHUP (1)",
-                "SIGSTOP",
-                "SIGTERM (15)"
-            ],
-            "correct": 3,
-            "explanation": "Kill envía SIGTERM por defecto para un cierre limpio."
-        },
-        {
-            "concept_id": "programacion_master_19",
-            "question": "¿Qué directorio de la jerarquía Linux contiene los archivos de configuración del sistema?",
-            "options": [
-                "/bin",
-                "/home",
-                "/var",
-                "/etc"
-            ],
-            "correct": 3,
-            "explanation": "/etc es estratégico para la configuración."
-        }
-    ],
-    "lenguaje_de_marcas": [
-        {
-            "concept_id": "lenguaje_de_marcas_master_0",
-            "question": "¿En qué arquitectura de ordenador se encuentran físicamente separadas la memoria de datos y la de instrucciones?",
-            "options": [
-                "Máquina de Turing",
-                "Arquitectura Harvard",
-                "Arquitectura Von Neumann",
-                "Arquitectura de Registros"
-            ],
-            "correct": 1,
-            "explanation": "Harvard separa memorias para mejorar el rendimiento."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_1",
-            "question": "¿Cuál es la característica principal de la Arquitectura Von Neumann?",
-            "options": [
-                "Es exclusiva de microcontroladores",
-                "Usa memorias separadas",
-                "Usa una única memoria para datos e instrucciones",
-                "No tiene unidad de control"
-            ],
-            "correct": 2,
-            "explanation": "Von Neumann es la arquitectura generalista estándar."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_2",
-            "question": "Según el modelo OSI, ¿en qué capa se realiza el direccionamiento lógico mediante IP?",
-            "options": [
-                "Capa 4 (Transporte)",
-                "Capa 2 (Enlace)",
-                "Capa 3 (Red)",
-                "Capa 1 (Física)"
-            ],
-            "correct": 2,
-            "explanation": "La Capa 3 gestiona el routing e IPs."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_3",
-            "question": "¿Qué topología de red conecta todos los nodos a un dispositivo central como un switch?",
-            "options": [
-                "Topología en Bus",
-                "Topología en Anillo",
-                "Topología en Estrella",
-                "Topología en Malla"
-            ],
-            "correct": 2,
-            "explanation": "La estrella es la más común en redes LAN actuales."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_4",
-            "question": "¿Qué tipo de cable de par trenzado incluye un blindaje global para reducir interferencias?",
-            "options": [
-                "UTP (Unshielded Twisted Pair)",
-                "Fibra Óptica",
-                "STP (Shielded Twisted Pair)",
-                "Cable Coaxial"
-            ],
-            "correct": 2,
-            "explanation": "STP está blindado."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_5",
-            "question": "¿Cómo se define a una red que abarca una ciudad o un área metropolitana?",
-            "options": [
-                "WAN",
-                "PAN",
-                "LAN",
-                "MAN (Metropolitan Area Network)"
-            ],
-            "correct": 3,
-            "explanation": "MAN es para áreas urbanas."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_6",
-            "question": "¿Qué modo de transmisión permite enviar datos en ambas direcciones pero no simultáneamente?",
-            "options": [
-                "Half-Duplex",
-                "Full-Duplex",
-                "Simplex",
-                "Multiplex"
-            ],
-            "correct": 0,
-            "explanation": "Half-Duplex es como un Walkie-Talkie."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_7",
-            "question": "¿Cuál de estos es un componente del 'Peopleware' en un sistema informático?",
-            "options": [
-                "Usuario final",
-                "Base de Datos",
-                "Microprocesador",
-                "Sistema Operativo"
-            ],
-            "correct": 0,
-            "explanation": "Peopleware se refiere al factor humano."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_8",
-            "question": "¿Qué dispositivo segmenta dominios de colisión trabajando en la Capa 2 (Enlace)?",
-            "options": [
-                "Hub",
-                "Router",
-                "Switch",
-                "Repetidor"
-            ],
-            "correct": 2,
-            "explanation": "El switch usa tablas MAC para segmentar."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_9",
-            "question": "¿Qué conector se utiliza típicamente para las conexiones de red Ethernet con cable de cobre?",
-            "options": [
-                "USB-C",
-                "BNC",
-                "SC",
-                "RJ-45"
-            ],
-            "correct": 3,
-            "explanation": "RJ-45 es el estándar de conectores Ethernet."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_10",
-            "question": "¿Qué tipo de memoria pierde su contenido al interrumpirse el suministro eléctrico?",
-            "options": [
-                "Pendrive USB",
-                "Disco SSD",
-                "Memoria RAM",
-                "Memoria ROM"
-            ],
-            "correct": 2,
-            "explanation": "La RAM es volátil."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_11",
-            "question": "¿Qué nivel de RAID realiza 'Mirroring' proporcionando redundancia total al duplicar datos?",
-            "options": [
-                "RAID 0",
-                "RAID 1",
-                "RAID 6",
-                "RAID 5"
-            ],
-            "correct": 1,
-            "explanation": "RAID 1 es el espejo de discos."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_12",
-            "question": "¿Qué interfaz moderna de alta velocidad sustituye al bus SATA para los discos SSD de alto rendimiento?",
-            "options": [
-                "IDE",
-                "NVMe (sobre PCIe)",
-                "Firewire",
-                "SCSI"
-            ],
-            "correct": 1,
-            "explanation": "NVMe ofrece latencias mínimas."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_13",
-            "question": "¿Cuál es la función del Gestor de Arranque (Bootloader)?",
-            "options": [
-                "Formatear el disco duro",
-                "Instalar drivers de red",
-                "Cifrar las carpetas de usuario",
-                "Cargar el Kernel del sistema operativo en memoria"
-            ],
-            "correct": 3,
-            "explanation": "El bootloader arranca el núcleo del SO."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_14",
-            "question": "¿Qué sistema de archivos es el estándar actual en Windows y soporta Journaling y ACLs?",
-            "options": [
-                "ext4",
-                "HFS+",
-                "FAT32",
-                "NTFS"
-            ],
-            "correct": 3,
-            "explanation": "NTFS es el sistema avanzado de Microsoft."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_15",
-            "question": "En Linux, ¿qué permiso otorga el valor numérico '7' en un comando chmod?",
-            "options": [
-                "Solo Ejecución",
-                "Lectura, Escritura y Ejecución (rwx)",
-                "Lectura y Escritura",
-                "Solo Lectura"
-            ],
-            "correct": 1,
-            "explanation": "7 = 4(r)+2(w)+1(x)."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_16",
-            "question": "¿Qué comando Linux se utiliza para cambiar el dueño de un archivo?",
-            "options": [
-                "ps",
-                "top",
-                "chown",
-                "chmod"
-            ],
-            "correct": 2,
-            "explanation": "chown (CHange OWNer)."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_17",
-            "question": "¿Qué comando muestra los procesos en tiempo real y el uso de recursos del sistema?",
-            "options": [
-                "top / htop",
-                "grep",
-                "pwd",
-                "ls"
-            ],
-            "correct": 0,
-            "explanation": "Top es el visor dinámico."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_18",
-            "question": "¿Cuál es la señal por defecto que envía el comando 'kill' sin argumentos adicionales?",
-            "options": [
-                "SIGTERM (15)",
-                "SIGSTOP",
-                "SIGHUP (1)",
-                "SIGKILL (9)"
-            ],
-            "correct": 0,
-            "explanation": "Kill envía SIGTERM por defecto para un cierre limpio."
-        },
-        {
-            "concept_id": "lenguaje_de_marcas_master_19",
-            "question": "¿Qué directorio de la jerarquía Linux contiene los archivos de configuración del sistema?",
-            "options": [
-                "/etc",
-                "/home",
-                "/var",
-                "/bin"
-            ],
-            "correct": 0,
-            "explanation": "/etc es estratégico para la configuración."
-        }
-    ],
-    "entornos_de_desarrollo": [
-        {
-            "concept_id": "entornos_de_desarrollo_master_0",
-            "question": "¿En qué arquitectura de ordenador se encuentran físicamente separadas la memoria de datos y la de instrucciones?",
-            "options": [
-                "Arquitectura Harvard",
-                "Arquitectura de Registros",
-                "Arquitectura Von Neumann",
-                "Máquina de Turing"
-            ],
-            "correct": 0,
-            "explanation": "Harvard separa memorias para mejorar el rendimiento."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_1",
-            "question": "¿Cuál es la característica principal de la Arquitectura Von Neumann?",
-            "options": [
-                "Usa una única memoria para datos e instrucciones",
-                "Usa memorias separadas",
-                "No tiene unidad de control",
-                "Es exclusiva de microcontroladores"
-            ],
-            "correct": 0,
-            "explanation": "Von Neumann es la arquitectura generalista estándar."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_2",
-            "question": "Según el modelo OSI, ¿en qué capa se realiza el direccionamiento lógico mediante IP?",
-            "options": [
-                "Capa 3 (Red)",
-                "Capa 2 (Enlace)",
-                "Capa 1 (Física)",
-                "Capa 4 (Transporte)"
-            ],
-            "correct": 0,
-            "explanation": "La Capa 3 gestiona el routing e IPs."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_3",
-            "question": "¿Qué topología de red conecta todos los nodos a un dispositivo central como un switch?",
-            "options": [
-                "Topología en Anillo",
-                "Topología en Estrella",
-                "Topología en Malla",
-                "Topología en Bus"
-            ],
-            "correct": 1,
-            "explanation": "La estrella es la más común en redes LAN actuales."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_4",
-            "question": "¿Qué tipo de cable de par trenzado incluye un blindaje global para reducir interferencias?",
-            "options": [
-                "STP (Shielded Twisted Pair)",
-                "UTP (Unshielded Twisted Pair)",
-                "Cable Coaxial",
-                "Fibra Óptica"
-            ],
-            "correct": 0,
-            "explanation": "STP está blindado."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_5",
-            "question": "¿Cómo se define a una red que abarca una ciudad o un área metropolitana?",
-            "options": [
-                "LAN",
-                "MAN (Metropolitan Area Network)",
-                "PAN",
-                "WAN"
-            ],
-            "correct": 1,
-            "explanation": "MAN es para áreas urbanas."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_6",
-            "question": "¿Qué modo de transmisión permite enviar datos en ambas direcciones pero no simultáneamente?",
-            "options": [
-                "Half-Duplex",
-                "Full-Duplex",
-                "Multiplex",
-                "Simplex"
-            ],
-            "correct": 0,
-            "explanation": "Half-Duplex es como un Walkie-Talkie."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_7",
-            "question": "¿Cuál de estos es un componente del 'Peopleware' en un sistema informático?",
-            "options": [
-                "Sistema Operativo",
-                "Microprocesador",
-                "Base de Datos",
-                "Usuario final"
-            ],
-            "correct": 3,
-            "explanation": "Peopleware se refiere al factor humano."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_8",
-            "question": "¿Qué dispositivo segmenta dominios de colisión trabajando en la Capa 2 (Enlace)?",
-            "options": [
-                "Hub",
-                "Repetidor",
-                "Switch",
-                "Router"
-            ],
-            "correct": 2,
-            "explanation": "El switch usa tablas MAC para segmentar."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_9",
-            "question": "¿Qué conector se utiliza típicamente para las conexiones de red Ethernet con cable de cobre?",
-            "options": [
-                "SC",
-                "USB-C",
-                "BNC",
-                "RJ-45"
-            ],
-            "correct": 3,
-            "explanation": "RJ-45 es el estándar de conectores Ethernet."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_10",
-            "question": "¿Qué tipo de memoria pierde su contenido al interrumpirse el suministro eléctrico?",
-            "options": [
-                "Disco SSD",
-                "Pendrive USB",
-                "Memoria RAM",
-                "Memoria ROM"
-            ],
-            "correct": 2,
-            "explanation": "La RAM es volátil."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_11",
-            "question": "¿Qué nivel de RAID realiza 'Mirroring' proporcionando redundancia total al duplicar datos?",
-            "options": [
-                "RAID 1",
-                "RAID 6",
-                "RAID 0",
-                "RAID 5"
-            ],
-            "correct": 0,
-            "explanation": "RAID 1 es el espejo de discos."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_12",
-            "question": "¿Qué interfaz moderna de alta velocidad sustituye al bus SATA para los discos SSD de alto rendimiento?",
-            "options": [
-                "NVMe (sobre PCIe)",
-                "IDE",
-                "Firewire",
-                "SCSI"
-            ],
-            "correct": 0,
-            "explanation": "NVMe ofrece latencias mínimas."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_13",
-            "question": "¿Cuál es la función del Gestor de Arranque (Bootloader)?",
-            "options": [
-                "Instalar drivers de red",
-                "Cargar el Kernel del sistema operativo en memoria",
-                "Cifrar las carpetas de usuario",
-                "Formatear el disco duro"
-            ],
-            "correct": 1,
-            "explanation": "El bootloader arranca el núcleo del SO."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_14",
-            "question": "¿Qué sistema de archivos es el estándar actual en Windows y soporta Journaling y ACLs?",
-            "options": [
-                "FAT32",
-                "NTFS",
-                "HFS+",
-                "ext4"
-            ],
-            "correct": 1,
-            "explanation": "NTFS es el sistema avanzado de Microsoft."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_15",
-            "question": "En Linux, ¿qué permiso otorga el valor numérico '7' en un comando chmod?",
-            "options": [
-                "Lectura, Escritura y Ejecución (rwx)",
-                "Lectura y Escritura",
-                "Solo Lectura",
-                "Solo Ejecución"
-            ],
-            "correct": 0,
-            "explanation": "7 = 4(r)+2(w)+1(x)."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_16",
-            "question": "¿Qué comando Linux se utiliza para cambiar el dueño de un archivo?",
-            "options": [
-                "chown",
-                "ps",
-                "chmod",
-                "top"
-            ],
-            "correct": 0,
-            "explanation": "chown (CHange OWNer)."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_17",
-            "question": "¿Qué comando muestra los procesos en tiempo real y el uso de recursos del sistema?",
-            "options": [
-                "ls",
-                "top / htop",
-                "grep",
-                "pwd"
-            ],
-            "correct": 1,
-            "explanation": "Top es el visor dinámico."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_18",
-            "question": "¿Cuál es la señal por defecto que envía el comando 'kill' sin argumentos adicionales?",
-            "options": [
-                "SIGKILL (9)",
-                "SIGSTOP",
-                "SIGHUP (1)",
-                "SIGTERM (15)"
-            ],
-            "correct": 3,
-            "explanation": "Kill envía SIGTERM por defecto para un cierre limpio."
-        },
-        {
-            "concept_id": "entornos_de_desarrollo_master_19",
-            "question": "¿Qué directorio de la jerarquía Linux contiene los archivos de configuración del sistema?",
-            "options": [
-                "/home",
-                "/var",
-                "/bin",
-                "/etc"
-            ],
-            "correct": 3,
-            "explanation": "/etc es estratégico para la configuración."
-        }
-    ],
-    "cloud_computing": [
-        {
-            "concept_id": "cloud_computing_master_0",
-            "question": "¿En qué arquitectura de ordenador se encuentran físicamente separadas la memoria de datos y la de instrucciones?",
-            "options": [
-                "Máquina de Turing",
-                "Arquitectura Von Neumann",
-                "Arquitectura Harvard",
-                "Arquitectura de Registros"
-            ],
-            "correct": 2,
-            "explanation": "Harvard separa memorias para mejorar el rendimiento."
-        },
-        {
-            "concept_id": "cloud_computing_master_1",
-            "question": "¿Cuál es la característica principal de la Arquitectura Von Neumann?",
-            "options": [
-                "Usa una única memoria para datos e instrucciones",
-                "No tiene unidad de control",
-                "Es exclusiva de microcontroladores",
-                "Usa memorias separadas"
-            ],
-            "correct": 0,
-            "explanation": "Von Neumann es la arquitectura generalista estándar."
-        },
-        {
-            "concept_id": "cloud_computing_master_2",
-            "question": "Según el modelo OSI, ¿en qué capa se realiza el direccionamiento lógico mediante IP?",
-            "options": [
-                "Capa 4 (Transporte)",
-                "Capa 3 (Red)",
-                "Capa 2 (Enlace)",
-                "Capa 1 (Física)"
-            ],
-            "correct": 1,
-            "explanation": "La Capa 3 gestiona el routing e IPs."
-        },
-        {
-            "concept_id": "cloud_computing_master_3",
-            "question": "¿Qué topología de red conecta todos los nodos a un dispositivo central como un switch?",
-            "options": [
-                "Topología en Estrella",
-                "Topología en Bus",
-                "Topología en Malla",
-                "Topología en Anillo"
-            ],
-            "correct": 0,
-            "explanation": "La estrella es la más común en redes LAN actuales."
-        },
-        {
-            "concept_id": "cloud_computing_master_4",
-            "question": "¿Qué tipo de cable de par trenzado incluye un blindaje global para reducir interferencias?",
-            "options": [
-                "Cable Coaxial",
-                "STP (Shielded Twisted Pair)",
-                "UTP (Unshielded Twisted Pair)",
-                "Fibra Óptica"
-            ],
-            "correct": 1,
-            "explanation": "STP está blindado."
-        },
-        {
-            "concept_id": "cloud_computing_master_5",
-            "question": "¿Cómo se define a una red que abarca una ciudad o un área metropolitana?",
-            "options": [
-                "PAN",
-                "LAN",
-                "WAN",
-                "MAN (Metropolitan Area Network)"
-            ],
-            "correct": 3,
-            "explanation": "MAN es para áreas urbanas."
-        },
-        {
-            "concept_id": "cloud_computing_master_6",
-            "question": "¿Qué modo de transmisión permite enviar datos en ambas direcciones pero no simultáneamente?",
-            "options": [
-                "Half-Duplex",
-                "Simplex",
-                "Multiplex",
-                "Full-Duplex"
-            ],
-            "correct": 0,
-            "explanation": "Half-Duplex es como un Walkie-Talkie."
-        },
-        {
-            "concept_id": "cloud_computing_master_7",
-            "question": "¿Cuál de estos es un componente del 'Peopleware' en un sistema informático?",
-            "options": [
-                "Base de Datos",
-                "Microprocesador",
-                "Usuario final",
-                "Sistema Operativo"
-            ],
-            "correct": 2,
-            "explanation": "Peopleware se refiere al factor humano."
-        },
-        {
-            "concept_id": "cloud_computing_master_8",
-            "question": "¿Qué dispositivo segmenta dominios de colisión trabajando en la Capa 2 (Enlace)?",
-            "options": [
-                "Router",
-                "Switch",
-                "Repetidor",
-                "Hub"
-            ],
-            "correct": 1,
-            "explanation": "El switch usa tablas MAC para segmentar."
-        },
-        {
-            "concept_id": "cloud_computing_master_9",
-            "question": "¿Qué conector se utiliza típicamente para las conexiones de red Ethernet con cable de cobre?",
-            "options": [
-                "BNC",
-                "RJ-45",
-                "USB-C",
-                "SC"
-            ],
-            "correct": 1,
-            "explanation": "RJ-45 es el estándar de conectores Ethernet."
-        },
-        {
-            "concept_id": "cloud_computing_master_10",
-            "question": "¿Qué tipo de memoria pierde su contenido al interrumpirse el suministro eléctrico?",
-            "options": [
-                "Pendrive USB",
-                "Disco SSD",
-                "Memoria RAM",
-                "Memoria ROM"
-            ],
-            "correct": 2,
-            "explanation": "La RAM es volátil."
-        },
-        {
-            "concept_id": "cloud_computing_master_11",
-            "question": "¿Qué nivel de RAID realiza 'Mirroring' proporcionando redundancia total al duplicar datos?",
-            "options": [
-                "RAID 1",
-                "RAID 5",
-                "RAID 6",
-                "RAID 0"
-            ],
-            "correct": 0,
-            "explanation": "RAID 1 es el espejo de discos."
-        },
-        {
-            "concept_id": "cloud_computing_master_12",
-            "question": "¿Qué interfaz moderna de alta velocidad sustituye al bus SATA para los discos SSD de alto rendimiento?",
-            "options": [
-                "SCSI",
-                "Firewire",
-                "NVMe (sobre PCIe)",
-                "IDE"
-            ],
-            "correct": 2,
-            "explanation": "NVMe ofrece latencias mínimas."
-        },
-        {
-            "concept_id": "cloud_computing_master_13",
-            "question": "¿Cuál es la función del Gestor de Arranque (Bootloader)?",
-            "options": [
-                "Instalar drivers de red",
-                "Formatear el disco duro",
-                "Cifrar las carpetas de usuario",
-                "Cargar el Kernel del sistema operativo en memoria"
-            ],
-            "correct": 3,
-            "explanation": "El bootloader arranca el núcleo del SO."
-        },
-        {
-            "concept_id": "cloud_computing_master_14",
-            "question": "¿Qué sistema de archivos es el estándar actual en Windows y soporta Journaling y ACLs?",
-            "options": [
-                "FAT32",
-                "ext4",
-                "HFS+",
-                "NTFS"
-            ],
-            "correct": 3,
-            "explanation": "NTFS es el sistema avanzado de Microsoft."
-        },
-        {
-            "concept_id": "cloud_computing_master_15",
-            "question": "En Linux, ¿qué permiso otorga el valor numérico '7' en un comando chmod?",
-            "options": [
-                "Solo Ejecución",
-                "Solo Lectura",
-                "Lectura, Escritura y Ejecución (rwx)",
-                "Lectura y Escritura"
-            ],
-            "correct": 2,
-            "explanation": "7 = 4(r)+2(w)+1(x)."
-        },
-        {
-            "concept_id": "cloud_computing_master_16",
-            "question": "¿Qué comando Linux se utiliza para cambiar el dueño de un archivo?",
-            "options": [
-                "chown",
-                "ps",
-                "chmod",
-                "top"
-            ],
-            "correct": 0,
-            "explanation": "chown (CHange OWNer)."
-        },
-        {
-            "concept_id": "cloud_computing_master_17",
-            "question": "¿Qué comando muestra los procesos en tiempo real y el uso de recursos del sistema?",
-            "options": [
-                "grep",
-                "pwd",
-                "top / htop",
-                "ls"
-            ],
-            "correct": 2,
-            "explanation": "Top es el visor dinámico."
-        },
-        {
-            "concept_id": "cloud_computing_master_18",
-            "question": "¿Cuál es la señal por defecto que envía el comando 'kill' sin argumentos adicionales?",
-            "options": [
-                "SIGTERM (15)",
-                "SIGHUP (1)",
-                "SIGKILL (9)",
-                "SIGSTOP"
-            ],
-            "correct": 0,
-            "explanation": "Kill envía SIGTERM por defecto para un cierre limpio."
-        },
-        {
-            "concept_id": "cloud_computing_master_19",
-            "question": "¿Qué directorio de la jerarquía Linux contiene los archivos de configuración del sistema?",
-            "options": [
-                "/bin",
-                "/home",
-                "/etc",
-                "/var"
-            ],
-            "correct": 2,
-            "explanation": "/etc es estratégico para la configuración."
-        }
-    ],
-    "empleabilidad": [
-        {
-            "concept_id": "empleabilidad_master_0",
-            "question": "¿En qué arquitectura de ordenador se encuentran físicamente separadas la memoria de datos y la de instrucciones?",
-            "options": [
-                "Arquitectura Von Neumann",
-                "Arquitectura Harvard",
-                "Máquina de Turing",
-                "Arquitectura de Registros"
-            ],
-            "correct": 1,
-            "explanation": "Harvard separa memorias para mejorar el rendimiento."
-        },
-        {
-            "concept_id": "empleabilidad_master_1",
-            "question": "¿Cuál es la característica principal de la Arquitectura Von Neumann?",
-            "options": [
-                "Usa una única memoria para datos e instrucciones",
-                "No tiene unidad de control",
-                "Es exclusiva de microcontroladores",
-                "Usa memorias separadas"
-            ],
-            "correct": 0,
-            "explanation": "Von Neumann es la arquitectura generalista estándar."
-        },
-        {
-            "concept_id": "empleabilidad_master_2",
-            "question": "Según el modelo OSI, ¿en qué capa se realiza el direccionamiento lógico mediante IP?",
-            "options": [
-                "Capa 1 (Física)",
-                "Capa 4 (Transporte)",
-                "Capa 2 (Enlace)",
-                "Capa 3 (Red)"
-            ],
-            "correct": 3,
-            "explanation": "La Capa 3 gestiona el routing e IPs."
-        },
-        {
-            "concept_id": "empleabilidad_master_3",
-            "question": "¿Qué topología de red conecta todos los nodos a un dispositivo central como un switch?",
-            "options": [
-                "Topología en Anillo",
-                "Topología en Malla",
-                "Topología en Bus",
-                "Topología en Estrella"
-            ],
-            "correct": 3,
-            "explanation": "La estrella es la más común en redes LAN actuales."
-        },
-        {
-            "concept_id": "empleabilidad_master_4",
-            "question": "¿Qué tipo de cable de par trenzado incluye un blindaje global para reducir interferencias?",
-            "options": [
-                "Fibra Óptica",
-                "Cable Coaxial",
-                "STP (Shielded Twisted Pair)",
-                "UTP (Unshielded Twisted Pair)"
-            ],
-            "correct": 2,
-            "explanation": "STP está blindado."
-        },
-        {
-            "concept_id": "empleabilidad_master_5",
-            "question": "¿Cómo se define a una red que abarca una ciudad o un área metropolitana?",
-            "options": [
-                "WAN",
-                "MAN (Metropolitan Area Network)",
-                "LAN",
-                "PAN"
-            ],
-            "correct": 1,
-            "explanation": "MAN es para áreas urbanas."
-        },
-        {
-            "concept_id": "empleabilidad_master_6",
-            "question": "¿Qué modo de transmisión permite enviar datos en ambas direcciones pero no simultáneamente?",
-            "options": [
-                "Half-Duplex",
-                "Simplex",
-                "Full-Duplex",
-                "Multiplex"
-            ],
-            "correct": 0,
-            "explanation": "Half-Duplex es como un Walkie-Talkie."
-        },
-        {
-            "concept_id": "empleabilidad_master_7",
-            "question": "¿Cuál de estos es un componente del 'Peopleware' en un sistema informático?",
-            "options": [
-                "Microprocesador",
-                "Base de Datos",
-                "Sistema Operativo",
-                "Usuario final"
-            ],
-            "correct": 3,
-            "explanation": "Peopleware se refiere al factor humano."
-        },
-        {
-            "concept_id": "empleabilidad_master_8",
-            "question": "¿Qué dispositivo segmenta dominios de colisión trabajando en la Capa 2 (Enlace)?",
-            "options": [
-                "Switch",
-                "Hub",
-                "Router",
-                "Repetidor"
-            ],
-            "correct": 0,
-            "explanation": "El switch usa tablas MAC para segmentar."
-        },
-        {
-            "concept_id": "empleabilidad_master_9",
-            "question": "¿Qué conector se utiliza típicamente para las conexiones de red Ethernet con cable de cobre?",
-            "options": [
-                "BNC",
-                "RJ-45",
-                "SC",
-                "USB-C"
-            ],
-            "correct": 1,
-            "explanation": "RJ-45 es el estándar de conectores Ethernet."
-        },
-        {
-            "concept_id": "empleabilidad_master_10",
-            "question": "¿Qué tipo de memoria pierde su contenido al interrumpirse el suministro eléctrico?",
-            "options": [
-                "Pendrive USB",
-                "Memoria RAM",
-                "Memoria ROM",
-                "Disco SSD"
-            ],
-            "correct": 1,
-            "explanation": "La RAM es volátil."
-        },
-        {
-            "concept_id": "empleabilidad_master_11",
-            "question": "¿Qué nivel de RAID realiza 'Mirroring' proporcionando redundancia total al duplicar datos?",
-            "options": [
-                "RAID 5",
-                "RAID 6",
-                "RAID 0",
-                "RAID 1"
-            ],
-            "correct": 3,
-            "explanation": "RAID 1 es el espejo de discos."
-        },
-        {
-            "concept_id": "empleabilidad_master_12",
-            "question": "¿Qué interfaz moderna de alta velocidad sustituye al bus SATA para los discos SSD de alto rendimiento?",
-            "options": [
-                "NVMe (sobre PCIe)",
-                "IDE",
-                "SCSI",
-                "Firewire"
-            ],
-            "correct": 0,
-            "explanation": "NVMe ofrece latencias mínimas."
-        },
-        {
-            "concept_id": "empleabilidad_master_13",
-            "question": "¿Cuál es la función del Gestor de Arranque (Bootloader)?",
-            "options": [
-                "Formatear el disco duro",
-                "Instalar drivers de red",
-                "Cifrar las carpetas de usuario",
-                "Cargar el Kernel del sistema operativo en memoria"
-            ],
-            "correct": 3,
-            "explanation": "El bootloader arranca el núcleo del SO."
-        },
-        {
-            "concept_id": "empleabilidad_master_14",
-            "question": "¿Qué sistema de archivos es el estándar actual en Windows y soporta Journaling y ACLs?",
-            "options": [
-                "HFS+",
-                "NTFS",
-                "ext4",
-                "FAT32"
-            ],
-            "correct": 1,
-            "explanation": "NTFS es el sistema avanzado de Microsoft."
-        },
-        {
-            "concept_id": "empleabilidad_master_15",
-            "question": "En Linux, ¿qué permiso otorga el valor numérico '7' en un comando chmod?",
-            "options": [
-                "Solo Lectura",
-                "Solo Ejecución",
-                "Lectura y Escritura",
-                "Lectura, Escritura y Ejecución (rwx)"
-            ],
-            "correct": 3,
-            "explanation": "7 = 4(r)+2(w)+1(x)."
-        },
-        {
-            "concept_id": "empleabilidad_master_16",
-            "question": "¿Qué comando Linux se utiliza para cambiar el dueño de un archivo?",
-            "options": [
-                "chmod",
-                "ps",
-                "chown",
-                "top"
-            ],
-            "correct": 2,
-            "explanation": "chown (CHange OWNer)."
-        },
-        {
-            "concept_id": "empleabilidad_master_17",
-            "question": "¿Qué comando muestra los procesos en tiempo real y el uso de recursos del sistema?",
-            "options": [
-                "pwd",
-                "ls",
-                "grep",
-                "top / htop"
-            ],
-            "correct": 3,
-            "explanation": "Top es el visor dinámico."
-        },
-        {
-            "concept_id": "empleabilidad_master_18",
-            "question": "¿Cuál es la señal por defecto que envía el comando 'kill' sin argumentos adicionales?",
-            "options": [
-                "SIGKILL (9)",
-                "SIGSTOP",
-                "SIGTERM (15)",
-                "SIGHUP (1)"
-            ],
-            "correct": 2,
-            "explanation": "Kill envía SIGTERM por defecto para un cierre limpio."
-        },
-        {
-            "concept_id": "empleabilidad_master_19",
-            "question": "¿Qué directorio de la jerarquía Linux contiene los archivos de configuración del sistema?",
-            "options": [
-                "/home",
-                "/var",
-                "/etc",
-                "/bin"
-            ],
-            "correct": 2,
-            "explanation": "/etc es estratégico para la configuración."
-        }
-    ]
+  "sistemas_informaticos": [
+    {
+      "concept_id": "sistemas_informaticos_0",
+      "question": "¿Qué arquitectura de ordenador usa una memoria unificada para datos e instrucciones?",
+      "options": [
+        "CISC",
+        "Harvard",
+        "Von Neumann",
+        "RISC"
+      ],
+      "correct": 2,
+      "explanation": "Von Neumann usa un único bus de memoria."
+    },
+    {
+      "concept_id": "sistemas_informaticos_1",
+      "question": "¿En qué arquitectura están separadas físicamente la memoria de datos y la de instrucciones?",
+      "options": [
+        "x86",
+        "ARM",
+        "Von Neumann",
+        "Harvard"
+      ],
+      "correct": 3,
+      "explanation": "Harvard separa las memorias para mayor velocidad."
+    },
+    {
+      "concept_id": "sistemas_informaticos_2",
+      "question": "¿Qué capa del modelo OSI se ocupa del direccionamiento IP y el enrutamiento?",
+      "options": [
+        "Capa 3 - Red",
+        "Capa 4 - Transporte",
+        "Capa 2 - Enlace",
+        "Capa 7 - Aplicación"
+      ],
+      "correct": 0,
+      "explanation": "La capa de Red gestiona las IPs y routers."
+    },
+    {
+      "concept_id": "sistemas_informaticos_3",
+      "question": "¿Qué capa del modelo OSI gestiona el direccionamiento físico mediante MAC?",
+      "options": [
+        "Capa 2 - Enlace",
+        "Capa 3 - Red",
+        "Capa 1 - Física",
+        "Capa 4 - Transporte"
+      ],
+      "correct": 0,
+      "explanation": "La capa de Enlace trabaja con direcciones MAC."
+    },
+    {
+      "concept_id": "sistemas_informaticos_4",
+      "question": "¿Qué protocolo asigna automáticamente direcciones IP a los dispositivos de la red?",
+      "options": [
+        "ARP",
+        "DNS",
+        "DHCP",
+        "ICMP"
+      ],
+      "correct": 2,
+      "explanation": "Dynamic Host Configuration Protocol."
+    },
+    {
+      "concept_id": "sistemas_informaticos_5",
+      "question": "¿Qué protocolo traduce nombres de dominio (google.com) a direcciones IP?",
+      "options": [
+        "DNS",
+        "DHCP",
+        "SNMP",
+        "FTP"
+      ],
+      "correct": 0,
+      "explanation": "Domain Name System."
+    },
+    {
+      "concept_id": "sistemas_informaticos_6",
+      "question": "¿Qué nivel de RAID duplica los datos en dos discos ofreciendo redundancia total?",
+      "options": [
+        "RAID 1",
+        "RAID 10",
+        "RAID 0",
+        "RAID 5"
+      ],
+      "correct": 0,
+      "explanation": "RAID 1 es mirroring."
+    },
+    {
+      "concept_id": "sistemas_informaticos_7",
+      "question": "¿Qué nivel de RAID distribuye datos sin redundancia para máxima velocidad?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 6"
+      ],
+      "correct": 0,
+      "explanation": "RAID 0 es Striping, sin tolerancia a fallos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_8",
+      "question": "¿Qué nivel de RAID usa paridad distribuida y necesita mínimo 3 discos?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 2",
+        "RAID 5"
+      ],
+      "correct": 3,
+      "explanation": "RAID 5 equilibra rendimiento y seguridad."
+    },
+    {
+      "concept_id": "sistemas_informaticos_9",
+      "question": "¿Qué sistema de archivos usa Windows con soporte para permisos ACL y archivos grandes?",
+      "options": [
+        "NTFS",
+        "exFAT",
+        "ext4",
+        "FAT32"
+      ],
+      "correct": 0,
+      "explanation": "NTFS es el estándar de Windows."
+    },
+    {
+      "concept_id": "sistemas_informaticos_10",
+      "question": "¿Qué sistema de archivos es el estándar en la mayoría de distribuciones Linux?",
+      "options": [
+        "ext4",
+        "FAT32",
+        "Btrfs",
+        "NTFS"
+      ],
+      "correct": 0,
+      "explanation": "ext4 es el más extendido en Linux."
+    },
+    {
+      "concept_id": "sistemas_informaticos_11",
+      "question": "¿Qué comando Linux muestra los procesos en ejecución en tiempo real?",
+      "options": [
+        "ls",
+        "top",
+        "pwd",
+        "cat"
+      ],
+      "correct": 1,
+      "explanation": "top es el monitor dinámico de procesos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_12",
+      "question": "¿Qué comando Linux cambia los permisos de un archivo?",
+      "options": [
+        "chown",
+        "kill",
+        "ps",
+        "chmod"
+      ],
+      "correct": 3,
+      "explanation": "chmod (change mode)."
+    },
+    {
+      "concept_id": "sistemas_informaticos_13",
+      "question": "¿Qué comando Linux cambia el propietario de un archivo?",
+      "options": [
+        "chown",
+        "chmod",
+        "ls",
+        "chgrp"
+      ],
+      "correct": 0,
+      "explanation": "chown (change owner)."
+    },
+    {
+      "concept_id": "sistemas_informaticos_14",
+      "question": "¿Qué puerto usa SSH por defecto?",
+      "options": [
+        "80",
+        "22",
+        "21",
+        "443"
+      ],
+      "correct": 1,
+      "explanation": "SSH escucha en el puerto 22."
+    },
+    {
+      "concept_id": "sistemas_informaticos_15",
+      "question": "¿Qué puerto usa HTTP por defecto?",
+      "options": [
+        "443",
+        "22",
+        "80",
+        "8080"
+      ],
+      "correct": 2,
+      "explanation": "HTTP usa el puerto 80."
+    },
+    {
+      "concept_id": "sistemas_informaticos_16",
+      "question": "¿Qué puerto usa HTTPS por defecto?",
+      "options": [
+        "22",
+        "443",
+        "80",
+        "8443"
+      ],
+      "correct": 1,
+      "explanation": "HTTPS usa TLS sobre el puerto 443."
+    },
+    {
+      "concept_id": "sistemas_informaticos_17",
+      "question": "¿Qué puerto usa FTP para transferencia de datos?",
+      "options": [
+        "23",
+        "22",
+        "21",
+        "20"
+      ],
+      "correct": 3,
+      "explanation": "Puerto 20 para datos, 21 para control."
+    },
+    {
+      "concept_id": "sistemas_informaticos_18",
+      "question": "¿Qué señal envía 'kill -9' a un proceso?",
+      "options": [
+        "SIGSTOP (pausa)",
+        "SIGKILL (terminación inmediata)",
+        "SIGHUP (recarga)",
+        "SIGTERM (terminación limpia)"
+      ],
+      "correct": 1,
+      "explanation": "SIGKILL no puede ser ignorada."
+    },
+    {
+      "concept_id": "sistemas_informaticos_19",
+      "question": "¿Qué topología de red conecta todos los dispositivos a un nodo central?",
+      "options": [
+        "Bus",
+        "Anillo",
+        "Malla",
+        "Estrella"
+      ],
+      "correct": 3,
+      "explanation": "La topología estrella es la más común en LAN."
+    },
+    {
+      "concept_id": "sistemas_informaticos_20",
+      "question": "¿Qué topología comparte un único cable de transmisión entre todos los nodos?",
+      "options": [
+        "Estrella",
+        "Bus",
+        "Anillo",
+        "Árbol"
+      ],
+      "correct": 1,
+      "explanation": "La topología bus es simple pero con un punto de fallo único."
+    },
+    {
+      "concept_id": "sistemas_informaticos_21",
+      "question": "¿Qué dispositivo opera en la Capa 3 del modelo OSI para interconectar redes?",
+      "options": [
+        "Switch",
+        "Hub",
+        "Bridge",
+        "Router"
+      ],
+      "correct": 3,
+      "explanation": "El router encamina paquetes IP."
+    },
+    {
+      "concept_id": "sistemas_informaticos_22",
+      "question": "¿Qué dispositivo opera en la Capa 2 del modelo OSI usando tablas MAC?",
+      "options": [
+        "Repetidor",
+        "Switch",
+        "Router",
+        "Hub"
+      ],
+      "correct": 1,
+      "explanation": "El switch segmenta dominios de colisión."
+    },
+    {
+      "concept_id": "sistemas_informaticos_23",
+      "question": "¿Qué protocolo usa el comando 'ping' para verificar la conectividad?",
+      "options": [
+        "ARP",
+        "ICMP",
+        "TCP",
+        "UDP"
+      ],
+      "correct": 1,
+      "explanation": "Internet Control Message Protocol."
+    },
+    {
+      "concept_id": "sistemas_informaticos_24",
+      "question": "¿Cuántos bits tiene una dirección IPv4?",
+      "options": [
+        "48",
+        "128",
+        "64",
+        "32"
+      ],
+      "correct": 3,
+      "explanation": "IPv4 usa 4 octetos = 32 bits."
+    },
+    {
+      "concept_id": "sistemas_informaticos_25",
+      "question": "¿Cuántos bits tiene una dirección IPv6?",
+      "options": [
+        "32",
+        "64",
+        "48",
+        "128"
+      ],
+      "correct": 3,
+      "explanation": "IPv6 usa 128 bits en hexadecimal."
+    },
+    {
+      "concept_id": "sistemas_informaticos_26",
+      "question": "¿Qué comando muestra la configuración de red en Windows?",
+      "options": [
+        "netstat",
+        "ifconfig",
+        "ip addr",
+        "ipconfig"
+      ],
+      "correct": 3,
+      "explanation": "ipconfig es el comando de Windows."
+    },
+    {
+      "concept_id": "sistemas_informaticos_27",
+      "question": "¿Qué comando muestra la configuración de red en Linux (moderno)?",
+      "options": [
+        "ifconfig",
+        "ip addr show",
+        "ipconfig",
+        "route"
+      ],
+      "correct": 1,
+      "explanation": "El paquete iproute2 moderniza ifconfig."
+    },
+    {
+      "concept_id": "sistemas_informaticos_28",
+      "question": "¿Qué es el NAT en redes?",
+      "options": [
+        "Traduce IPs privadas a públicas en el router",
+        "Resuelve nombres de dominio",
+        "Encripta el tráfico de red",
+        "Asigna IPs automáticamente"
+      ],
+      "correct": 0,
+      "explanation": "Network Address Translation."
+    },
+    {
+      "concept_id": "sistemas_informaticos_29",
+      "question": "¿Qué es una VLAN?",
+      "options": [
+        "Segmentación lógica de una red física",
+        "Una red inalámbrica virtual",
+        "Un protocolo de cifrado",
+        "Un tipo de Router"
+      ],
+      "correct": 0,
+      "explanation": "Virtual LAN segmenta el tráfico."
+    },
+    {
+      "concept_id": "sistemas_informaticos_30",
+      "question": "¿Qué archivo en Linux guarda las contraseñas cifradas de los usuarios?",
+      "options": [
+        "/bin/pass",
+        "/home/user",
+        "/etc/passwd",
+        "/etc/shadow"
+      ],
+      "correct": 3,
+      "explanation": "/etc/shadow almacena los hashes."
+    },
+    {
+      "concept_id": "sistemas_informaticos_31",
+      "question": "¿Qué directorio de Linux contiene los binarios esenciales del sistema?",
+      "options": [
+        "/bin",
+        "/var",
+        "/home",
+        "/etc"
+      ],
+      "correct": 0,
+      "explanation": "/bin tiene comandos como ls, cd, cp."
+    },
+    {
+      "concept_id": "sistemas_informaticos_32",
+      "question": "¿Qué significa el flag '-R' en el comando 'chmod -R'?",
+      "options": [
+        "Aplica los permisos de forma recursiva a subdirectorios",
+        "Solo aplica a archivos de lectura",
+        "Requiere permisos de root",
+        "Restablece permisos por defecto"
+      ],
+      "correct": 0,
+      "explanation": "-R es recursive."
+    },
+    {
+      "concept_id": "sistemas_informaticos_33",
+      "question": "¿Qué comando de Linux busca texto dentro de archivos?",
+      "options": [
+        "find",
+        "locate",
+        "grep",
+        "sed"
+      ],
+      "correct": 2,
+      "explanation": "grep (Global Regular Expression Print)."
+    },
+    {
+      "concept_id": "sistemas_informaticos_34",
+      "question": "¿Qué comando crea un nuevo directorio en Linux?",
+      "options": [
+        "mkdir",
+        "cp",
+        "mv",
+        "touch"
+      ],
+      "correct": 0,
+      "explanation": "mkdir (make directory)."
+    },
+    {
+      "concept_id": "sistemas_informaticos_35",
+      "question": "¿Qué hace 'df -h' en Linux?",
+      "options": [
+        "Lista los archivos del directorio",
+        "Cambia los permisos de disco",
+        "Muestra los procesos activos",
+        "Muestra el espacio libre de los discos en formato legible"
+      ],
+      "correct": 3,
+      "explanation": "df (disk free), -h es human-readable."
+    },
+    {
+      "concept_id": "sistemas_informaticos_36",
+      "question": "¿Qué hace 'du -sh' en un directorio?",
+      "options": [
+        "Comprime el directorio",
+        "Muestra el tamaño total del directorio",
+        "Muestra las particiones del disco",
+        "Lista todos los archivos ocultos"
+      ],
+      "correct": 1,
+      "explanation": "du (disk usage), -s es summary."
+    },
+    {
+      "concept_id": "sistemas_informaticos_37",
+      "question": "¿Qué protocolo se usa para el envío de correo electrónico entre servidores?",
+      "options": [
+        "SMTP",
+        "FTP",
+        "IMAP",
+        "POP3"
+      ],
+      "correct": 0,
+      "explanation": "Simple Mail Transfer Protocol (puerto 25)."
+    },
+    {
+      "concept_id": "sistemas_informaticos_38",
+      "question": "¿Qué protocolo descarga correos al cliente local borrándolos del servidor?",
+      "options": [
+        "SMTP",
+        "SNMP",
+        "IMAP",
+        "POP3"
+      ],
+      "correct": 3,
+      "explanation": "POP3 descarga y borra del servidor."
+    },
+    {
+      "concept_id": "sistemas_informaticos_39",
+      "question": "¿Qué protocolo permite acceder al correo del servidor sin descargarlo?",
+      "options": [
+        "POP3",
+        "IMAP",
+        "SMTP",
+        "HTTP"
+      ],
+      "correct": 1,
+      "explanation": "IMAP sincroniza el correo en servidor."
+    },
+    {
+      "concept_id": "sistemas_informaticos_40",
+      "question": "¿Qué término describe la capacidad máxima de transferencia de datos de un enlace?",
+      "options": [
+        "Latencia",
+        "Ancho de banda",
+        "Throughput",
+        "Jitter"
+      ],
+      "correct": 1,
+      "explanation": "El ancho de banda se mide en bps."
+    },
+    {
+      "concept_id": "sistemas_informaticos_41",
+      "question": "¿Qué es la latencia de red?",
+      "options": [
+        "El número de saltos de red",
+        "El tiempo de retardo en la transmisión de un paquete",
+        "La velocidad de descarga máxima",
+        "La cantidad de datos enviados"
+      ],
+      "correct": 1,
+      "explanation": "La latencia se mide en milisegundos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_42",
+      "question": "¿Qué tipo de cable de par trenzado NO tiene blindaje?",
+      "options": [
+        "STP",
+        "UTP",
+        "FTP",
+        "S/FTP"
+      ],
+      "correct": 1,
+      "explanation": "UTP (Unshielded Twisted Pair)."
+    },
+    {
+      "concept_id": "sistemas_informaticos_43",
+      "question": "¿Qué conector se utiliza en los cables de red Ethernet de cobre (RJ...)?",
+      "options": [
+        "BNC",
+        "RJ-45",
+        "RJ-11",
+        "LC"
+      ],
+      "correct": 1,
+      "explanation": "RJ-45 es el conector estándar de red."
+    },
+    {
+      "concept_id": "sistemas_informaticos_44",
+      "question": "¿Qué significa 'BIOS'?",
+      "options": [
+        "Binary Input/Output System",
+        "Base Integrated OS",
+        "Basic Input/Output System",
+        "Boot Initialization and Output System"
+      ],
+      "correct": 2,
+      "explanation": "La BIOS inicializa el hardware al arrancar."
+    },
+    {
+      "concept_id": "sistemas_informaticos_45",
+      "question": "¿Qué sustituyó a la BIOS en los equipos modernos?",
+      "options": [
+        "UEFI",
+        "MBR",
+        "POST",
+        "GRUB"
+      ],
+      "correct": 0,
+      "explanation": "UEFI (Unified Extensible Firmware Interface)."
+    },
+    {
+      "concept_id": "sistemas_informaticos_46",
+      "question": "¿Qué tabla de particiones soporta discos de más de 2TB y más de 4 particiones primarias?",
+      "options": [
+        "GPT",
+        "FAT",
+        "MBR",
+        "EBR"
+      ],
+      "correct": 0,
+      "explanation": "GUID Partition Table."
+    },
+    {
+      "concept_id": "sistemas_informaticos_47",
+      "question": "¿Qué es el Kernel de un sistema operativo?",
+      "options": [
+        "El sistema de archivos principal",
+        "El gestor de paquetes",
+        "El núcleo que gestiona el hardware y los recursos",
+        "La interfaz gráfica del SO"
+      ],
+      "correct": 2,
+      "explanation": "El kernel es el corazón del SO."
+    },
+    {
+      "concept_id": "sistemas_informaticos_48",
+      "question": "¿Qué es la memoria Swap en Linux?",
+      "options": [
+        "Espacio en disco que actúa como RAM cuando ésta se agota",
+        "Una partición de arranque del sistema",
+        "Un tipo de caché de CPU",
+        "La memoria de la tarjeta gráfica"
+      ],
+      "correct": 0,
+      "explanation": "Swap es la memoria de intercambio."
+    },
+    {
+      "concept_id": "sistemas_informaticos_49",
+      "question": "¿Qué interfaz de almacenamiento ofrece mayor velocidad para SSD modernos?",
+      "options": [
+        "USB 3.0",
+        "IDE",
+        "NVMe (PCIe)",
+        "SATA III"
+      ],
+      "correct": 2,
+      "explanation": "NVMe reduce la latencia al máximo."
+    },
+    {
+      "concept_id": "sistemas_informaticos_50",
+      "question": "¿Qué herramienta Linux programa la ejecución automática de tareas?",
+      "options": [
+        "top",
+        "bash",
+        "cron",
+        "systemd"
+      ],
+      "correct": 2,
+      "explanation": "cron usa el crontab para planificar."
+    },
+    {
+      "concept_id": "sistemas_informaticos_51",
+      "question": "¿Qué hace el comando 'ps aux' en Linux?",
+      "options": [
+        "Muestra todos los procesos del sistema con detalle",
+        "Muestra el uso de la CPU",
+        "Cambia el proceso actual",
+        "Para todos los procesos"
+      ],
+      "correct": 0,
+      "explanation": "ps (process status), aux muestra todos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_52",
+      "question": "¿Qué protocolo de red gestiona y monitoriza dispositivos de red remotamente?",
+      "options": [
+        "SNMP",
+        "LDAP",
+        "HTTP",
+        "FTP"
+      ],
+      "correct": 0,
+      "explanation": "Simple Network Management Protocol."
+    },
+    {
+      "concept_id": "sistemas_informaticos_53",
+      "question": "¿Qué tipo de memoria integrada en la CPU ofrece el acceso más rápido?",
+      "options": [
+        "Caché L1",
+        "RAM DDR5",
+        "Caché L2",
+        "Registro de CPU"
+      ],
+      "correct": 0,
+      "explanation": "La caché L1 está dentro del propio núcleo."
+    },
+    {
+      "concept_id": "sistemas_informaticos_54",
+      "question": "¿Qué significa 'DMA' en arquitectura de computadores?",
+      "options": [
+        "Disk Management Architecture",
+        "Direct Memory Access",
+        "Dynamic Memory Allocation",
+        "Data Management Area"
+      ],
+      "correct": 1,
+      "explanation": "Permite acceso directo a RAM sin pasar por la CPU."
+    },
+    {
+      "concept_id": "sistemas_informaticos_55",
+      "question": "¿Qué tipo de red abarca un área geográfica amplia como un país o continente?",
+      "options": [
+        "WAN",
+        "LAN",
+        "MAN",
+        "PAN"
+      ],
+      "correct": 0,
+      "explanation": "Wide Area Network (ej: Internet)."
+    },
+    {
+      "concept_id": "sistemas_informaticos_56",
+      "question": "¿Qué protocolo resuelve una dirección MAC a partir de una IP conocida?",
+      "options": [
+        "DNS",
+        "DHCP",
+        "RARP",
+        "ARP"
+      ],
+      "correct": 3,
+      "explanation": "Address Resolution Protocol."
+    },
+    {
+      "concept_id": "sistemas_informaticos_57",
+      "question": "¿Qué es un firewall?",
+      "options": [
+        "Un servidor de archivos",
+        "Sistema que filtra el tráfico de red según reglas de seguridad",
+        "Un tipo de router inalámbrico",
+        "Un antivirus de disco"
+      ],
+      "correct": 1,
+      "explanation": "El firewall inspecciona y filtra paquetes."
+    },
+    {
+      "concept_id": "sistemas_informaticos_58",
+      "question": "¿Qué modo operativo del bus de transmisión envía datos en ambas direcciones a la vez?",
+      "options": [
+        "Half-Duplex",
+        "Multiplex",
+        "Simplex",
+        "Full-Duplex"
+      ],
+      "correct": 3,
+      "explanation": "Full-Duplex es bidireccional simultáneo."
+    },
+    {
+      "concept_id": "sistemas_informaticos_59",
+      "question": "¿Qué componente gestiona la comunicación entre la CPU y el resto del sistema?",
+      "options": [
+        "Caché",
+        "Swap",
+        "Chipset",
+        "BIOS"
+      ],
+      "correct": 2,
+      "explanation": "El chipset coordina el flujo de datos."
+    }
+  ],
+  "bases_de_datos": [
+    {
+      "concept_id": "bases_de_datos_0",
+      "question": "¿Qué propiedad ACID garantiza que una transacción se ejecuta completa o no se ejecuta?",
+      "options": [
+        "Aislamiento",
+        "Consistencia",
+        "Durabilidad",
+        "Atomicidad"
+      ],
+      "correct": 3,
+      "explanation": "Todo o nada."
+    },
+    {
+      "concept_id": "bases_de_datos_1",
+      "question": "¿Qué propiedad ACID asegura que los datos quedan en un estado válido tras la transacción?",
+      "options": [
+        "Atomicidad",
+        "Aislamiento",
+        "Consistencia",
+        "Durabilidad"
+      ],
+      "correct": 2,
+      "explanation": "Consistencia mantiene las reglas de integridad."
+    },
+    {
+      "concept_id": "bases_de_datos_2",
+      "question": "¿Qué propiedad ACID garantiza que los cambios persisten aunque falle el sistema?",
+      "options": [
+        "Atomicidad",
+        "Durabilidad",
+        "Aislamiento",
+        "Consistencia"
+      ],
+      "correct": 1,
+      "explanation": "Durabilidad usa el log de transacciones."
+    },
+    {
+      "concept_id": "bases_de_datos_3",
+      "question": "¿Qué propiedad ACID asegura que las transacciones concurrentes no se interfieren?",
+      "options": [
+        "Consistencia",
+        "Durabilidad",
+        "Aislamiento",
+        "Atomicidad"
+      ],
+      "correct": 2,
+      "explanation": "Aislamiento evita lecturas sucias."
+    },
+    {
+      "concept_id": "bases_de_datos_4",
+      "question": "¿Qué forma normal elimina los grupos repetitivos y garantiza la atomicidad de los atributos?",
+      "options": [
+        "BCNF",
+        "2FN",
+        "3FN",
+        "1FN"
+      ],
+      "correct": 3,
+      "explanation": "Primera Forma Normal: atributos atómicos."
+    },
+    {
+      "concept_id": "bases_de_datos_5",
+      "question": "¿Qué forma normal elimina las dependencias parciales de la clave primaria?",
+      "options": [
+        "3FN",
+        "2FN",
+        "1FN",
+        "4FN"
+      ],
+      "correct": 1,
+      "explanation": "Segunda Forma Normal."
+    },
+    {
+      "concept_id": "bases_de_datos_6",
+      "question": "¿Qué forma normal elimina las dependencias transitivas entre atributos no clave?",
+      "options": [
+        "1FN",
+        "2FN",
+        "3FN",
+        "BCNF"
+      ],
+      "correct": 2,
+      "explanation": "Tercera Forma Normal."
+    },
+    {
+      "concept_id": "bases_de_datos_7",
+      "question": "¿Qué tipo de JOIN devuelve solo las filas que tienen coincidencia en ambas tablas?",
+      "options": [
+        "FULL JOIN",
+        "RIGHT JOIN",
+        "INNER JOIN",
+        "LEFT JOIN"
+      ],
+      "correct": 2,
+      "explanation": "INNER JOIN es la intersección."
+    },
+    {
+      "concept_id": "bases_de_datos_8",
+      "question": "¿Qué tipo de JOIN devuelve todas las filas de la tabla izquierda aunque no haya coincidencia?",
+      "options": [
+        "INNER JOIN",
+        "LEFT JOIN",
+        "RIGHT JOIN",
+        "CROSS JOIN"
+      ],
+      "correct": 1,
+      "explanation": "LEFT JOIN prioriza la tabla fuente."
+    },
+    {
+      "concept_id": "bases_de_datos_9",
+      "question": "¿Qué tipo de JOIN devuelve el producto cartesiano de dos tablas?",
+      "options": [
+        "LEFT JOIN",
+        "INNER JOIN",
+        "CROSS JOIN",
+        "SELF JOIN"
+      ],
+      "correct": 2,
+      "explanation": "CROSS JOIN multiplica todas las filas."
+    },
+    {
+      "concept_id": "bases_de_datos_10",
+      "question": "¿Qué sentencia SQL deshace los cambios de la transacción actual?",
+      "options": [
+        "COMMIT",
+        "TRUNCATE",
+        "SAVEPOINT",
+        "ROLLBACK"
+      ],
+      "correct": 3,
+      "explanation": "ROLLBACK deshace los cambios."
+    },
+    {
+      "concept_id": "bases_de_datos_11",
+      "question": "¿Qué sentencia SQL confirma de forma definitiva los cambios de la transacción?",
+      "options": [
+        "COMMIT",
+        "SAVEPOINT",
+        "ROLLBACK",
+        "BEGIN"
+      ],
+      "correct": 0,
+      "explanation": "COMMIT hace los cambios permanentes."
+    },
+    {
+      "concept_id": "bases_de_datos_12",
+      "question": "¿Qué sentencia SQL elimina todos los registros de una tabla pero conserva su estructura?",
+      "options": [
+        "REMOVE",
+        "TRUNCATE",
+        "DELETE",
+        "DROP"
+      ],
+      "correct": 1,
+      "explanation": "TRUNCATE vacía la tabla rápidamente."
+    },
+    {
+      "concept_id": "bases_de_datos_13",
+      "question": "¿Qué sentencia SQL elimina la tabla incluyendo su estructura?",
+      "options": [
+        "DELETE TABLE",
+        "ALTER TABLE",
+        "DROP TABLE",
+        "TRUNCATE TABLE"
+      ],
+      "correct": 2,
+      "explanation": "DROP elimina la tabla del esquema."
+    },
+    {
+      "concept_id": "bases_de_datos_14",
+      "question": "¿Qué cláusula filtra filas individuales antes de aplicar una agrupación?",
+      "options": [
+        "WHERE",
+        "ORDER BY",
+        "HAVING",
+        "GROUP BY"
+      ],
+      "correct": 0,
+      "explanation": "WHERE filtra antes de agrupar."
+    },
+    {
+      "concept_id": "bases_de_datos_15",
+      "question": "¿Qué cláusula filtra grupos de registros después de un GROUP BY?",
+      "options": [
+        "WHERE",
+        "LIMIT",
+        "DISTINCT",
+        "HAVING"
+      ],
+      "correct": 3,
+      "explanation": "HAVING filtra después de agrupar."
+    },
+    {
+      "concept_id": "bases_de_datos_16",
+      "question": "¿Qué función SQL cuenta el número de registros?",
+      "options": [
+        "MAX()",
+        "COUNT()",
+        "SUM()",
+        "AVG()"
+      ],
+      "correct": 1,
+      "explanation": "COUNT(*) cuenta todas las filas."
+    },
+    {
+      "concept_id": "bases_de_datos_17",
+      "question": "¿Qué función SQL calcula el valor promedio de una columna numérica?",
+      "options": [
+        "COUNT()",
+        "SUM()",
+        "MIN()",
+        "AVG()"
+      ],
+      "correct": 3,
+      "explanation": "Average."
+    },
+    {
+      "concept_id": "bases_de_datos_18",
+      "question": "¿Qué función SQL devuelve el valor máximo de una columna?",
+      "options": [
+        "MAX()",
+        "MIN()",
+        "TOP()",
+        "UPPER()"
+      ],
+      "correct": 0,
+      "explanation": "MAX()."
+    },
+    {
+      "concept_id": "bases_de_datos_19",
+      "question": "¿Cuál es la diferencia entre UNION y UNION ALL?",
+      "options": [
+        "UNION ALL solo funciona con texto",
+        "No hay diferencia práctica",
+        "UNION es más lento por definición",
+        "UNION elimina duplicados, UNION ALL los conserva"
+      ],
+      "correct": 3,
+      "explanation": "UNION aplica DISTINCT internamente."
+    },
+    {
+      "concept_id": "bases_de_datos_20",
+      "question": "¿Qué objeto de BD se ejecuta automáticamente ante INSERT, UPDATE o DELETE?",
+      "options": [
+        "Índice",
+        "Vista",
+        "Trigger",
+        "Procedimiento almacenado"
+      ],
+      "correct": 2,
+      "explanation": "Los triggers son disparadores automáticos."
+    },
+    {
+      "concept_id": "bases_de_datos_21",
+      "question": "¿Qué restricción garantiza que una columna no pueda tener valores nulos?",
+      "options": [
+        "NOT NULL",
+        "DEFAULT",
+        "CHECK",
+        "UNIQUE"
+      ],
+      "correct": 0,
+      "explanation": "NOT NULL obliga a tener valor."
+    },
+    {
+      "concept_id": "bases_de_datos_22",
+      "question": "¿Qué restricción garantiza que todos los valores de una columna son únicos?",
+      "options": [
+        "NOT NULL",
+        "UNIQUE",
+        "PRIMARY KEY",
+        "FOREIGN KEY"
+      ],
+      "correct": 1,
+      "explanation": "UNIQUE permite nulos salvo que se combine con NOT NULL."
+    },
+    {
+      "concept_id": "bases_de_datos_23",
+      "question": "¿Qué restricción valida que los valores de una columna cumplan una condición específica?",
+      "options": [
+        "UNIQUE",
+        "NOT NULL",
+        "CHECK",
+        "DEFAULT"
+      ],
+      "correct": 2,
+      "explanation": "CHECK impone una regla lógica."
+    },
+    {
+      "concept_id": "bases_de_datos_24",
+      "question": "¿Qué es una Vista en una base de datos relacional?",
+      "options": [
+        "Una consulta SELECT almacenada que actúa como tabla virtual",
+        "Una copia física de los datos",
+        "Una tabla temporal en disco",
+        "Un índice especial"
+      ],
+      "correct": 0,
+      "explanation": "Las vistas simplifican consultas complejas."
+    },
+    {
+      "concept_id": "bases_de_datos_25",
+      "question": "¿Qué es un índice en una base de datos?",
+      "options": [
+        "Un tipo de trigger",
+        "Una restricción de clave",
+        "Estructura que acelera la búsqueda de registros",
+        "Una copia de seguridad"
+      ],
+      "correct": 2,
+      "explanation": "Los índices mejoran el rendimiento de las consultas."
+    },
+    {
+      "concept_id": "bases_de_datos_26",
+      "question": "¿Qué lenguaje SQL se usa para definir la estructura (CREATE, ALTER, DROP)?",
+      "options": [
+        "TCL",
+        "DDL",
+        "DML",
+        "DCL"
+      ],
+      "correct": 1,
+      "explanation": "Data Definition Language."
+    },
+    {
+      "concept_id": "bases_de_datos_27",
+      "question": "¿Qué lenguaje SQL se usa para manipular datos (SELECT, INSERT, UPDATE, DELETE)?",
+      "options": [
+        "DCL",
+        "TCL",
+        "DDL",
+        "DML"
+      ],
+      "correct": 3,
+      "explanation": "Data Manipulation Language."
+    },
+    {
+      "concept_id": "bases_de_datos_28",
+      "question": "¿Qué lenguaje SQL gestiona los permisos de los usuarios (GRANT, REVOKE)?",
+      "options": [
+        "DML",
+        "DDL",
+        "TCL",
+        "DCL"
+      ],
+      "correct": 3,
+      "explanation": "Data Control Language."
+    },
+    {
+      "concept_id": "bases_de_datos_29",
+      "question": "¿Qué sentencia SQL concede permisos de acceso a un usuario?",
+      "options": [
+        "GRANT",
+        "ALLOW",
+        "REVOKE",
+        "DENY"
+      ],
+      "correct": 0,
+      "explanation": "GRANT otorga privilegios."
+    },
+    {
+      "concept_id": "bases_de_datos_30",
+      "question": "¿Qué sentencia SQL retira permisos de acceso a un usuario?",
+      "options": [
+        "GRANT",
+        "REVOKE",
+        "DELETE",
+        "REMOVE"
+      ],
+      "correct": 1,
+      "explanation": "REVOKE quita privilegios."
+    },
+    {
+      "concept_id": "bases_de_datos_31",
+      "question": "¿Qué tipo de SGBD organiza los datos en documentos tipo JSON en lugar de tablas?",
+      "options": [
+        "Jerárquico",
+        "De red",
+        "NoSQL documental (MongoDB)",
+        "Relacional"
+      ],
+      "correct": 2,
+      "explanation": "MongoDB es el más popular NoSQL documental."
+    },
+    {
+      "concept_id": "bases_de_datos_32",
+      "question": "¿Cuál es la diferencia entre DELETE y TRUNCATE?",
+      "options": [
+        "Son equivalentes",
+        "DELETE puede filtrar con WHERE y registra en el log; TRUNCATE no",
+        "TRUNCATE es más lento",
+        "DELETE borra la estructura"
+      ],
+      "correct": 1,
+      "explanation": "DELETE es fila a fila, TRUNCATE es masivo."
+    },
+    {
+      "concept_id": "bases_de_datos_33",
+      "question": "¿Qué comando SQL añade una nueva columna a una tabla existente?",
+      "options": [
+        "ALTER TABLE … ADD COLUMN",
+        "MODIFY SCHEMA",
+        "UPDATE TABLE",
+        "CREATE COLUMN"
+      ],
+      "correct": 0,
+      "explanation": "ALTER TABLE modifica la estructura."
+    },
+    {
+      "concept_id": "bases_de_datos_34",
+      "question": "¿Qué es un SAVEPOINT?",
+      "options": [
+        "Un punto de restauración intermedio dentro de una transacción",
+        "El final de un procedimiento",
+        "Una copia de seguridad completa",
+        "El inicio de una transacción"
+      ],
+      "correct": 0,
+      "explanation": "SAVEPOINT permite rollbacks parciales."
+    },
+    {
+      "concept_id": "bases_de_datos_35",
+      "question": "¿Qué es un Deadlock en bases de datos?",
+      "options": [
+        "Un error de sintaxis SQL",
+        "Un timeout de conexión",
+        "Bloqueo mutuo entre transacciones que se esperan entre sí indefinidamente",
+        "Una corrupción de índice"
+      ],
+      "correct": 2,
+      "explanation": "El SGBD detecta y resuelve deadlocks automáticamente."
+    },
+    {
+      "concept_id": "bases_de_datos_36",
+      "question": "¿Qué significa que una clave sea 'Primaria' (Primary Key)?",
+      "options": [
+        "Identifica de forma única y no nula cada fila de la tabla",
+        "Puede tener valores nulos",
+        "Se usa para ordenar la tabla",
+        "Es la clave más grande de la tabla"
+      ],
+      "correct": 0,
+      "explanation": "PK = Único + No Nulo."
+    },
+    {
+      "concept_id": "bases_de_datos_37",
+      "question": "¿Qué es una clave foránea (Foreign Key)?",
+      "options": [
+        "Atributo que referencia la clave primaria de otra tabla",
+        "El nombre de la base de datos",
+        "Una clave de cifrado de datos",
+        "Un índice de texto completo"
+      ],
+      "correct": 0,
+      "explanation": "FK garantiza la integridad referencial."
+    },
+    {
+      "concept_id": "bases_de_datos_38",
+      "question": "¿Qué significa 'integridad referencial'?",
+      "options": [
+        "Que los backups están actualizados",
+        "Que los datos están cifrados",
+        "Que los valores de una FK siempre apuntan a una PK válida existente",
+        "Que la tabla tiene índices"
+      ],
+      "correct": 2,
+      "explanation": "Sin integridad referencial habría registros huérfanos."
+    },
+    {
+      "concept_id": "bases_de_datos_39",
+      "question": "¿Qué tipo de relación requiere obligatoriamente una tabla intermedia?",
+      "options": [
+        "1:N (Uno a Muchos)",
+        "N:M (Muchos a Muchos)",
+        "0:N (Cero a Muchos)",
+        "1:1 (Uno a Uno)"
+      ],
+      "correct": 1,
+      "explanation": "La tabla puente gestiona la relación N:M."
+    },
+    {
+      "concept_id": "bases_de_datos_40",
+      "question": "¿Qué es PL/SQL?",
+      "options": [
+        "Un protocolo de backup",
+        "Extensión procedimental de SQL para Oracle que permite lógica (IF, bucles)",
+        "Un tipo de base de datos NoSQL",
+        "Un lenguaje de marcas"
+      ],
+      "correct": 1,
+      "explanation": "Procedural Language / SQL."
+    },
+    {
+      "concept_id": "bases_de_datos_41",
+      "question": "¿Qué es un Stored Procedure?",
+      "options": [
+        "Un tipo de índice",
+        "Bloque de código SQL almacenado en el servidor y reutilizable",
+        "Un trigger especial",
+        "Una consulta SELECT guardada"
+      ],
+      "correct": 1,
+      "explanation": "Los procedimientos almacenados mejoran el rendimiento."
+    },
+    {
+      "concept_id": "bases_de_datos_42",
+      "question": "¿Qué sentencia SQL se usa para crear una tabla nueva?",
+      "options": [
+        "CREATE TABLE",
+        "BUILD TABLE",
+        "MAKE TABLE",
+        "NEW TABLE"
+      ],
+      "correct": 0,
+      "explanation": "CREATE TABLE define la estructura."
+    },
+    {
+      "concept_id": "bases_de_datos_43",
+      "question": "¿Qué hace la cláusula ORDER BY en SQL?",
+      "options": [
+        "Limita el número de filas",
+        "Filtra duplicados",
+        "Agrupa registros",
+        "Ordena el resultado de la consulta"
+      ],
+      "correct": 3,
+      "explanation": "ORDER BY acepta ASC o DESC."
+    },
+    {
+      "concept_id": "bases_de_datos_44",
+      "question": "¿Qué hace DISTINCT en una consulta SELECT?",
+      "options": [
+        "Ordena el resultado",
+        "Cuenta los registros",
+        "Crea un índice temporal",
+        "Elimina duplicados de los resultados"
+      ],
+      "correct": 3,
+      "explanation": "SELECT DISTINCT id FROM tabla."
+    },
+    {
+      "concept_id": "bases_de_datos_45",
+      "question": "¿Qué modelo conceptual se usa para diseñar la estructura lógica de una BD antes de implementarla?",
+      "options": [
+        "Esquema JSON",
+        "UML de secuencia",
+        "Entidad-Relación (E-R)",
+        "Diagrama de flujo"
+      ],
+      "correct": 2,
+      "explanation": "El modelo E-R define entidades y sus relaciones."
+    }
+  ],
+  "programacion": [
+    {
+      "concept_id": "programacion_0",
+      "question": "En Java, ¿qué palabra clave establece que una clase hereda de otra?",
+      "options": [
+        "super",
+        "extends",
+        "inherits",
+        "implements"
+      ],
+      "correct": 1,
+      "explanation": "class Perro extends Animal."
+    },
+    {
+      "concept_id": "programacion_1",
+      "question": "En Java, ¿qué palabra clave indica que una clase implementa un contrato (interfaz)?",
+      "options": [
+        "override",
+        "inherits",
+        "implements",
+        "extends"
+      ],
+      "correct": 2,
+      "explanation": "class Circulo implements Figura."
+    },
+    {
+      "concept_id": "programacion_2",
+      "question": "¿Qué modificador de acceso hace que un miembro solo sea visible dentro de su propia clase?",
+      "options": [
+        "protected",
+        "public",
+        "package",
+        "private"
+      ],
+      "correct": 3,
+      "explanation": "private es la restricción máxima."
+    },
+    {
+      "concept_id": "programacion_3",
+      "question": "¿Qué modificador de acceso hace un miembro visible desde cualquier clase?",
+      "options": [
+        "private",
+        "protected",
+        "default",
+        "public"
+      ],
+      "correct": 3,
+      "explanation": "public no tiene restricciones."
+    },
+    {
+      "concept_id": "programacion_4",
+      "question": "¿Qué excepción se produce al intentar usar un objeto que tiene valor null?",
+      "options": [
+        "ArrayIndexOutOfBoundsException",
+        "ClassCastException",
+        "ArithmeticException",
+        "NullPointerException"
+      ],
+      "correct": 3,
+      "explanation": "El error más común en Java."
+    },
+    {
+      "concept_id": "programacion_5",
+      "question": "¿Qué excepción se produce al dividir un número entero por cero?",
+      "options": [
+        "NullPointerException",
+        "StackOverflowError",
+        "NumberFormatException",
+        "ArithmeticException"
+      ],
+      "correct": 3,
+      "explanation": "/ by zero lanza ArithmeticException."
+    },
+    {
+      "concept_id": "programacion_6",
+      "question": "¿Qué excepción se produce al acceder a un índice fuera de los límites de un array?",
+      "options": [
+        "NullPointerException",
+        "IndexException",
+        "ArrayIndexOutOfBoundsException",
+        "OutOfRangeException"
+      ],
+      "correct": 2,
+      "explanation": "El índice debe estar entre 0 y length-1."
+    },
+    {
+      "concept_id": "programacion_7",
+      "question": "¿Qué palabra clave en Java se usa para referirse al objeto actual dentro de su propio método?",
+      "options": [
+        "super",
+        "this",
+        "current",
+        "self"
+      ],
+      "correct": 1,
+      "explanation": "this.atributo o this()."
+    },
+    {
+      "concept_id": "programacion_8",
+      "question": "¿Qué palabra clave se usa para referirse a la clase padre desde una subclase?",
+      "options": [
+        "base",
+        "this",
+        "super",
+        "parent"
+      ],
+      "correct": 2,
+      "explanation": "super() llama al constructor padre."
+    },
+    {
+      "concept_id": "programacion_9",
+      "question": "¿Cuál es la estructura de datos de Java que almacena pares clave-valor de forma no ordenada?",
+      "options": [
+        "ArrayList",
+        "LinkedList",
+        "TreeSet",
+        "HashMap"
+      ],
+      "correct": 3,
+      "explanation": "HashMap permite acceso O(1) por clave."
+    },
+    {
+      "concept_id": "programacion_10",
+      "question": "¿Qué colección de Java permite elementos duplicados y mantiene el orden de inserción?",
+      "options": [
+        "TreeSet",
+        "HashSet",
+        "ArrayList",
+        "LinkedHashSet"
+      ],
+      "correct": 2,
+      "explanation": "ArrayList es la lista dinámica estándar."
+    },
+    {
+      "concept_id": "programacion_11",
+      "question": "¿Qué colección de Java NO permite duplicados y no garantiza orden?",
+      "options": [
+        "Vector",
+        "LinkedList",
+        "HashSet",
+        "ArrayList"
+      ],
+      "correct": 2,
+      "explanation": "HashSet usa tabla hash para unicidad."
+    },
+    {
+      "concept_id": "programacion_12",
+      "question": "¿Cuál es el punto de entrada de cualquier aplicación Java?",
+      "options": [
+        "public static void main(String[] args)",
+        "start()",
+        "init()",
+        "run()"
+      ],
+      "correct": 0,
+      "explanation": "El método main es obligatorio."
+    },
+    {
+      "concept_id": "programacion_13",
+      "question": "¿Qué hace la palabra clave 'static' en Java?",
+      "options": [
+        "El miembro es inmutable",
+        "El miembro solo existe una vez por JVM",
+        "El miembro pertenece a la clase, no a la instancia",
+        "El miembro es privado"
+      ],
+      "correct": 2,
+      "explanation": "static se comparte por todas las instancias."
+    },
+    {
+      "concept_id": "programacion_14",
+      "question": "¿Qué hace la palabra clave 'final' en una variable en Java?",
+      "options": [
+        "La hace privada",
+        "La elimina al salir del método",
+        "La convierte en una constante que no puede reasignarse",
+        "La comparte entre hilos"
+      ],
+      "correct": 2,
+      "explanation": "final + variable = constante."
+    },
+    {
+      "concept_id": "programacion_15",
+      "question": "¿Qué es el Polimorfismo en POO?",
+      "options": [
+        "La capacidad de un objeto de tomar distintas formas según el contexto",
+        "La herencia múltiple",
+        "La copia de un objeto",
+        "Tener múltiples constructores"
+      ],
+      "correct": 0,
+      "explanation": "El polimorfismo permite el diseño por interfaz."
+    },
+    {
+      "concept_id": "programacion_16",
+      "question": "¿Qué es el Encapsulamiento en POO?",
+      "options": [
+        "Ocultar el estado interno y exponer solo lo necesario mediante métodos",
+        "Crear múltiples instancias",
+        "Implementar interfaces",
+        "Heredar atributos de otra clase"
+      ],
+      "correct": 0,
+      "explanation": "Getters y setters son la herramienta clave."
+    },
+    {
+      "concept_id": "programacion_17",
+      "question": "¿Para qué sirve el bloque 'finally' en un try-catch?",
+      "options": [
+        "Se ejecuta siempre, haya o no excepción, para liberar recursos",
+        "Relanza la excepción capturada",
+        "Solo se ejecuta si no hay excepción",
+        "Solo se ejecuta si hay excepción"
+      ],
+      "correct": 0,
+      "explanation": "Finally se usa para cerrar ficheros o conexiones."
+    },
+    {
+      "concept_id": "programacion_18",
+      "question": "¿Qué herramienta del JDK compila el código fuente .java a bytecode .class?",
+      "options": [
+        "javarun",
+        "javadoc",
+        "java",
+        "javac"
+      ],
+      "correct": 3,
+      "explanation": "javac es el compilador."
+    },
+    {
+      "concept_id": "programacion_19",
+      "question": "¿Qué es la JVM?",
+      "options": [
+        "El gestor de memoria de Windows",
+        "La interfaz gráfica de Java",
+        "El compilador de Java",
+        "Máquina virtual que interpreta el bytecode y lo hace multiplataforma"
+      ],
+      "correct": 3,
+      "explanation": "Java Virtual Machine: Write Once, Run Anywhere."
+    },
+    {
+      "concept_id": "programacion_20",
+      "question": "¿Qué es el Garbage Collector en Java?",
+      "options": [
+        "Proceso automático que libera la memoria de objetos sin referencias",
+        "Un tipo de bucle eficiente",
+        "Una clase para gestionar archivos",
+        "Una herramienta de depuración"
+      ],
+      "correct": 0,
+      "explanation": "GC automatiza la gestión de memoria."
+    },
+    {
+      "concept_id": "programacion_21",
+      "question": "¿Qué diferencia hay entre una Clase Abstracta y una Interfaz?",
+      "options": [
+        "No hay diferencia práctica",
+        "La abstracta no se puede heredar",
+        "La clase abstracta puede tener código implementado; la interfaz solo define contratos (antes de Java 8)",
+        "La interfaz puede tener atributos de estado"
+      ],
+      "correct": 2,
+      "explanation": "Con Java 8+, las interfaces pueden tener métodos default."
+    },
+    {
+      "concept_id": "programacion_22",
+      "question": "¿Qué es la 'Sobrecarga' (overloading) de métodos?",
+      "options": [
+        "Definir varios métodos con el mismo nombre pero distintos parámetros en la misma clase",
+        "Llamar a un método de la clase padre",
+        "Cambiar el cuerpo de un método heredado",
+        "Definir un método abstracto"
+      ],
+      "correct": 0,
+      "explanation": "Sobrecarga = mismo nombre, diferente firma."
+    },
+    {
+      "concept_id": "programacion_23",
+      "question": "¿Qué es la 'Sobrescritura' (overriding) de métodos?",
+      "options": [
+        "Usar @Deprecated",
+        "Definir varios métodos con el mismo nombre",
+        "Redefinir en la subclase un método heredado de la clase padre",
+        "Llamar a super()"
+      ],
+      "correct": 2,
+      "explanation": "Se usa @Override para marcarla explícitamente."
+    },
+    {
+      "concept_id": "programacion_24",
+      "question": "¿Qué estructura de datos sigue la política LIFO (Last In, First Out)?",
+      "options": [
+        "Stack (Pila)",
+        "HashMap",
+        "Queue (Cola)",
+        "ArrayList"
+      ],
+      "correct": 0,
+      "explanation": "La pila se usa en llamadas recursivas."
+    },
+    {
+      "concept_id": "programacion_25",
+      "question": "¿Qué estructura de datos sigue la política FIFO (First In, First Out)?",
+      "options": [
+        "HashMap",
+        "Stack (Pila)",
+        "TreeSet",
+        "Queue (Cola)"
+      ],
+      "correct": 3,
+      "explanation": "La cola se usa en procesamiento de tareas."
+    },
+    {
+      "concept_id": "programacion_26",
+      "question": "¿Qué es la Recursividad?",
+      "options": [
+        "El uso de múltiples hilos",
+        "Un bucle infinito",
+        "La herencia en cadena",
+        "Un método que se llama a sí mismo con un caso base de parada"
+      ],
+      "correct": 3,
+      "explanation": "Sin caso base, la recursión causa StackOverflowError."
+    },
+    {
+      "concept_id": "programacion_27",
+      "question": "¿Qué anotación se usa en Java para indicar que un método sobrescribe uno del padre?",
+      "options": [
+        "@FunctionalInterface",
+        "@Deprecated",
+        "@Override",
+        "@SuppressWarnings"
+      ],
+      "correct": 2,
+      "explanation": "Ayuda al compilador a detectar errores."
+    },
+    {
+      "concept_id": "programacion_28",
+      "question": "¿Qué método de String devuelve la longitud de la cadena?",
+      "options": [
+        "charAt(0)",
+        "count()",
+        "size()",
+        "length()"
+      ],
+      "correct": 3,
+      "explanation": "\"Hola\".length() devuelve 4."
+    },
+    {
+      "concept_id": "programacion_29",
+      "question": "¿Qué método de String convierte todos los caracteres a minúsculas?",
+      "options": [
+        "downCase()",
+        "lower()",
+        "toSmall()",
+        "toLowerCase()"
+      ],
+      "correct": 3,
+      "explanation": "\"JAVA\".toLowerCase() = \"java\"."
+    },
+    {
+      "concept_id": "programacion_30",
+      "question": "¿Qué es un constructor en Java?",
+      "options": [
+        "Un método que devuelve una copia del objeto",
+        "Un método estático de clase",
+        "Un bloque de código final",
+        "Método especial que inicializa el objeto al crearse, sin tipo de retorno"
+      ],
+      "correct": 3,
+      "explanation": "Tiene el mismo nombre que la clase."
+    },
+    {
+      "concept_id": "programacion_31",
+      "question": "¿Qué tipo de dato primitivo almacena un número entero en Java?",
+      "options": [
+        "int",
+        "boolean",
+        "float",
+        "String"
+      ],
+      "correct": 0,
+      "explanation": "int ocupa 32 bits."
+    },
+    {
+      "concept_id": "programacion_32",
+      "question": "¿Qué tipo de dato primitivo almacena true o false?",
+      "options": [
+        "bit",
+        "boolean",
+        "String",
+        "int"
+      ],
+      "correct": 1,
+      "explanation": "boolean es el tipo lógico."
+    },
+    {
+      "concept_id": "programacion_33",
+      "question": "¿Qué hace la instrucción 'break' dentro de un bucle?",
+      "options": [
+        "Pausa el hilo",
+        "Lanza una excepción",
+        "Omite la iteración actual y continúa",
+        "Sale inmediatamente del bucle actual"
+      ],
+      "correct": 3,
+      "explanation": "break termina el bucle."
+    },
+    {
+      "concept_id": "programacion_34",
+      "question": "¿Qué hace 'continue' dentro de un bucle?",
+      "options": [
+        "Reinicia el bucle desde cero",
+        "Sale del bucle",
+        "Lanza una excepción",
+        "Salta a la siguiente iteración sin ejecutar el resto del cuerpo"
+      ],
+      "correct": 3,
+      "explanation": "continue es el salto de iteración."
+    },
+    {
+      "concept_id": "programacion_35",
+      "question": "¿Qué framework de Java se usa para realizar pruebas unitarias?",
+      "options": [
+        "JUnit",
+        "Maven",
+        "Hibernate",
+        "Spring"
+      ],
+      "correct": 0,
+      "explanation": "JUnit es el estándar de testing en Java."
+    }
+  ],
+  "lenguaje_de_marcas": [
+    {
+      "concept_id": "lenguaje_de_marcas_0",
+      "question": "¿Cuál es la función del elemento <head> en un documento HTML?",
+      "options": [
+        "Vincula a otros documentos HTML",
+        "Contiene metadatos del documento no visibles en la página",
+        "Agrupa los elementos del menú",
+        "Define el encabezado visual de la página"
+      ],
+      "correct": 1,
+      "explanation": "<head> lleva title, meta, link, script."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_1",
+      "question": "¿Qué atributo HTML hace que un formulario envíe datos sin recargar la página?",
+      "options": [
+        "action='none'",
+        "method='post'",
+        "type='ajax'",
+        "No es HTML, es JavaScript (preventDefault)"
+      ],
+      "correct": 3,
+      "explanation": "Se usa JS con event.preventDefault()."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_2",
+      "question": "¿Qué etiqueta HTML5 define la navegación principal de un sitio?",
+      "options": [
+        "<nav>",
+        "<main>",
+        "<section>",
+        "<header>"
+      ],
+      "correct": 0,
+      "explanation": "<nav> es semántica de navegación."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_3",
+      "question": "¿Qué etiqueta HTML5 define el contenido principal y único de la página?",
+      "options": [
+        "<div>",
+        "<main>",
+        "<section>",
+        "<article>"
+      ],
+      "correct": 1,
+      "explanation": "Solo debe haber un <main> por página."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_4",
+      "question": "¿Cuál es la propiedad CSS para cambiar el color de fondo de un elemento?",
+      "options": [
+        "background-color",
+        "font-color",
+        "color",
+        "border-color"
+      ],
+      "correct": 0,
+      "explanation": "background-color vs color (texto)."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_5",
+      "question": "¿Qué propiedad CSS controla el espacio entre el borde del elemento y su contenido?",
+      "options": [
+        "padding",
+        "border",
+        "margin",
+        "spacing"
+      ],
+      "correct": 0,
+      "explanation": "padding es interior, margin es exterior."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_6",
+      "question": "¿Qué propiedad CSS controla el espacio fuera del borde del elemento?",
+      "options": [
+        "padding",
+        "margin",
+        "border",
+        "outline"
+      ],
+      "correct": 1,
+      "explanation": "margin separa elementos entre sí."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_7",
+      "question": "¿Qué valor de 'display' convierte los elementos en un contenedor flexible?",
+      "options": [
+        "flex",
+        "grid",
+        "inline",
+        "block"
+      ],
+      "correct": 0,
+      "explanation": "display: flex activa Flexbox."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_8",
+      "question": "¿Qué selector CSS aplica estilos a todos los elementos de una clase?",
+      "options": [
+        ".nombre-clase",
+        "elemento",
+        "*",
+        "#id-elemento"
+      ],
+      "correct": 0,
+      "explanation": ".clase es el selector de clase."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_9",
+      "question": "¿Qué selector CSS aplica estilos a un único elemento por su ID?",
+      "options": [
+        "#id",
+        "@id",
+        ".id",
+        "*id"
+      ],
+      "correct": 0,
+      "explanation": "#id es el selector de ID."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_10",
+      "question": "¿Qué etiqueta HTML se usa para insertar una imagen?",
+      "options": [
+        "<src>",
+        "<img>",
+        "<image>",
+        "<pic>"
+      ],
+      "correct": 1,
+      "explanation": "<img src='...' alt='...'>"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_11",
+      "question": "¿Qué atributo de <img> proporciona texto alternativo para accesibilidad?",
+      "options": [
+        "alt",
+        "src",
+        "href",
+        "title"
+      ],
+      "correct": 0,
+      "explanation": "alt es obligatorio para accesibilidad (WCAG)."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_12",
+      "question": "¿Qué etiqueta HTML crea un enlace (hipervínculo)?",
+      "options": [
+        "<url>",
+        "<link>",
+        "<a>",
+        "<href>"
+      ],
+      "correct": 2,
+      "explanation": "<a href='ruta'>texto</a>."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_13",
+      "question": "¿Cuál es la diferencia entre <strong> y <b> en HTML5?",
+      "options": [
+        "<strong> indica importancia semántica; <b> es solo negrita visual",
+        "<b> es correcto en HTML5",
+        "Son idénticos",
+        "<strong> no tiene efecto visual"
+      ],
+      "correct": 0,
+      "explanation": "HTML5 favorece el marcado semántico."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_14",
+      "question": "¿Qué propiedad CSS permite posicionar un elemento en relación a su contenedor más cercano con position?",
+      "options": [
+        "position: fixed",
+        "position: absolute",
+        "position: sticky",
+        "position: relative"
+      ],
+      "correct": 1,
+      "explanation": "absolute se posiciona respecto al ancestro posicionado."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_15",
+      "question": "¿Qué es el modelo de caja (Box Model) en CSS?",
+      "options": [
+        "El layout de una cuadrícula",
+        "La forma en que se heredan las propiedades",
+        "Describe el espacio de un elemento: content, padding, border y margin",
+        "El modelo de renderizado de la GPU"
+      ],
+      "correct": 2,
+      "explanation": "Content → Padding → Border → Margin."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_16",
+      "question": "¿Qué atributo HTML define el tipo de un campo de formulario (texto, email, etc.)?",
+      "options": [
+        "input",
+        "type",
+        "mode",
+        "kind"
+      ],
+      "correct": 1,
+      "explanation": "<input type='email'>."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_17",
+      "question": "¿Qué etiqueta agrupa un conjunto de opciones dentro de un <select>?",
+      "options": [
+        "<fieldset>",
+        "<datalist>",
+        "<option>",
+        "<optgroup>"
+      ],
+      "correct": 3,
+      "explanation": "<optgroup label='Grupo'>."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_18",
+      "question": "¿Qué significa que HTML sea un lenguaje 'de marcas'?",
+      "options": [
+        "Que es case sensitive",
+        "Que se compila antes de usarse",
+        "Que requiere servidor para funcionar",
+        "Usa etiquetas para estructurar y dar significado al contenido"
+      ],
+      "correct": 3,
+      "explanation": "HyperText Markup Language."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_19",
+      "question": "¿Qué propiedad CSS establece el tipo y tamaño de la fuente?",
+      "options": [
+        "text-style y text-size",
+        "font-family y font-size",
+        "font y texto",
+        "typeface y size"
+      ],
+      "correct": 1,
+      "explanation": "font-family: 'Inter'; font-size: 16px;"
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_20",
+      "question": "¿Qué propiedad CSS crea sombras en un elemento de caja?",
+      "options": [
+        "border-shadow",
+        "box-shadow",
+        "text-shadow",
+        "element-shadow"
+      ],
+      "correct": 1,
+      "explanation": "box-shadow: 0 4px 8px rgba(0,0,0,0.2)."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_21",
+      "question": "¿Qué unidad CSS es relativa al tamaño de fuente del elemento padre?",
+      "options": [
+        "em",
+        "rem",
+        "px",
+        "vh"
+      ],
+      "correct": 0,
+      "explanation": "em es relativa al padre; rem al root."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_22",
+      "question": "¿Qué unidad CSS es relativa al tamaño de fuente del elemento raíz (<html>)?",
+      "options": [
+        "rem",
+        "%",
+        "em",
+        "px"
+      ],
+      "correct": 0,
+      "explanation": "rem es más predecible que em."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_23",
+      "question": "¿Qué etiqueta HTML crea una tabla de datos?",
+      "options": [
+        "<table>",
+        "<list>",
+        "<grid>",
+        "<matrix>"
+      ],
+      "correct": 0,
+      "explanation": "<table><tr><td>...</td></tr></table>."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_24",
+      "question": "¿Qué etiqueta define una fila dentro de una tabla HTML?",
+      "options": [
+        "<td>",
+        "<tr>",
+        "<row>",
+        "<th>"
+      ],
+      "correct": 1,
+      "explanation": "table row."
+    }
+  ],
+  "entornos_de_desarrollo": [
+    {
+      "concept_id": "entornos_de_desarrollo_0",
+      "question": "¿Qué hace 'git init' en un directorio?",
+      "options": [
+        "Configura el usuario de Git",
+        "Inicializa un nuevo repositorio Git local vacío",
+        "Hace un primer commit",
+        "Descarga un repositorio remoto"
+      ],
+      "correct": 1,
+      "explanation": "El primer paso para empezar a usar Git."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_1",
+      "question": "¿Qué hace 'git clone <url>'?",
+      "options": [
+        "Confirma los cambios locales",
+        "Sube cambios al servidor",
+        "Crea una rama nueva",
+        "Descarga una copia completa de un repositorio remoto"
+      ],
+      "correct": 3,
+      "explanation": "clone es para obtener un repo existente."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_2",
+      "question": "¿Qué hace 'git status'?",
+      "options": [
+        "Fusiona dos ramas",
+        "Sube los cambios a remoto",
+        "Muestra el historial de commits",
+        "Muestra los archivos modificados, preparados y sin seguimiento"
+      ],
+      "correct": 3,
+      "explanation": "git status es el comando más usado del día a día."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_3",
+      "question": "¿Qué hace 'git add .'?",
+      "options": [
+        "Hace el commit",
+        "Crea una rama",
+        "Elimina archivos del control de versiones",
+        "Prepara todos los cambios del directorio actual para el próximo commit"
+      ],
+      "correct": 3,
+      "explanation": "git add pasa cambios al staging area."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_4",
+      "question": "¿Qué hace 'git commit -m \"mensaje\"'?",
+      "options": [
+        "Fusiona ramas",
+        "Guarda los cambios preparados en el historial local con un mensaje",
+        "Descarta los cambios",
+        "Sube los cambios a remote"
+      ],
+      "correct": 1,
+      "explanation": "commit = guardar snapshot en el repositorio local."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_5",
+      "question": "¿Qué hace 'git push'?",
+      "options": [
+        "Descarga cambios del remoto",
+        "Crea un tag",
+        "Envía los commits locales al repositorio remoto",
+        "Fusiona ramas"
+      ],
+      "correct": 2,
+      "explanation": "push sincroniza local → remoto."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_6",
+      "question": "¿Qué hace 'git pull'?",
+      "options": [
+        "Sube cambios",
+        "Borra la rama remota",
+        "Descarga y fusiona los cambios del remoto en la rama local",
+        "Muestra el log"
+      ],
+      "correct": 2,
+      "explanation": "pull = fetch + merge."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_7",
+      "question": "¿Qué es una 'rama' (branch) en Git?",
+      "options": [
+        "Una línea de desarrollo paralela e independiente del proyecto",
+        "Un repositorio secundario",
+        "Una copia de seguridad",
+        "Un colaborador del proyecto"
+      ],
+      "correct": 0,
+      "explanation": "Las ramas permiten trabajo paralelo sin conflictos."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_8",
+      "question": "¿Qué hace 'git merge <rama>'?",
+      "options": [
+        "Sube la rama a remoto",
+        "Fusiona los cambios de la rama indicada en la rama actual",
+        "Crea una copia de la rama",
+        "Borra la rama"
+      ],
+      "correct": 1,
+      "explanation": "merge integra cambios de una rama a otra."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_9",
+      "question": "¿Qué hace 'git log'?",
+      "options": [
+        "Muestra los archivos modificados",
+        "Muestra el historial de commits del repositorio",
+        "Muestra las ramas remotas",
+        "Muestra los stashes"
+      ],
+      "correct": 1,
+      "explanation": "git log --oneline es más legible."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_10",
+      "question": "¿Qué es el 'staging area' o índice en Git?",
+      "options": [
+        "Zona intermedia donde se preparan los cambios antes del commit",
+        "El directorio de trabajo",
+        "La caché de Git",
+        "El repositorio remoto"
+      ],
+      "correct": 0,
+      "explanation": "git add añade cambios al staging area."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_11",
+      "question": "¿Qué metodología ágil organiza el trabajo en 'Sprints' con roles definidos?",
+      "options": [
+        "Waterfall",
+        "XP (Extreme Programming)",
+        "Kanban",
+        "Scrum"
+      ],
+      "correct": 3,
+      "explanation": "Scrum tiene Product Owner, Scrum Master y Dev Team."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_12",
+      "question": "¿Quién prioriza el Product Backlog y representa al cliente en Scrum?",
+      "options": [
+        "Product Owner",
+        "Developer",
+        "Stakeholder",
+        "Scrum Master"
+      ],
+      "correct": 0,
+      "explanation": "El Product Owner es la voz del cliente."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_13",
+      "question": "¿Cuál es el rol del Scrum Master?",
+      "options": [
+        "Probar la aplicación",
+        "Tomar decisiones de negocio",
+        "Facilitar el proceso Scrum y eliminar impedimentos del equipo",
+        "Escribir el código"
+      ],
+      "correct": 2,
+      "explanation": "El Scrum Master protege al equipo."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_14",
+      "question": "¿Qué es un 'Sprint' en Scrum?",
+      "options": [
+        "El sprint final del proyecto",
+        "Una reunión de revisión",
+        "La lista de tareas pendientes",
+        "Iteración de duración fija (1-4 semanas) para entregar un incremento"
+      ],
+      "correct": 3,
+      "explanation": "Cada sprint produce software potencialmente entregable."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_15",
+      "question": "¿Qué tipo de prueba verifica el correcto funcionamiento de una unidad mínima de código (función)?",
+      "options": [
+        "Prueba de integración",
+        "Prueba de aceptación",
+        "Prueba de sistema",
+        "Prueba unitaria"
+      ],
+      "correct": 3,
+      "explanation": "Unit testing: JUnit en Java."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_16",
+      "question": "¿Qué significa TDD (Test Driven Development)?",
+      "options": [
+        "Hacer los tests al final del desarrollo",
+        "No hacer tests en código simple",
+        "Tests automáticos en producción",
+        "Escribir primero el test que falla y luego el código que lo pasa"
+      ],
+      "correct": 3,
+      "explanation": "Red → Green → Refactor."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_17",
+      "question": "¿Qué diagrama UML muestra la interacción entre objetos a lo largo del tiempo?",
+      "options": [
+        "Diagrama de Secuencia",
+        "Diagrama de Estado",
+        "Diagrama de Casos de Uso",
+        "Diagrama de Clases"
+      ],
+      "correct": 0,
+      "explanation": "El de secuencia muestra mensajes cronológicos."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_18",
+      "question": "¿Qué diagrama UML muestra las clases del sistema y sus relaciones?",
+      "options": [
+        "Diagrama de Componentes",
+        "Diagrama de Actividad",
+        "Diagrama de Secuencia",
+        "Diagrama de Clases"
+      ],
+      "correct": 3,
+      "explanation": "El diagrama de clases es el más usado en POO."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_19",
+      "question": "¿Qué es el refactoring de código?",
+      "options": [
+        "Añadir nuevas funcionalidades",
+        "Corregir bugs",
+        "Optimizar la base de datos",
+        "Mejorar la estructura interna del código sin cambiar su comportamiento externo"
+      ],
+      "correct": 3,
+      "explanation": "Refactoring mejora la mantenibilidad."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_20",
+      "question": "¿Qué es un IDE?",
+      "options": [
+        "Un gestor de dependencias",
+        "Un sistema de control de versiones",
+        "Un servidor de aplicaciones",
+        "Entorno de Desarrollo Integrado con editor, depurador y compilador"
+      ],
+      "correct": 3,
+      "explanation": "IntelliJ IDEA, Eclipse, VS Code son IDEs."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_21",
+      "question": "¿Qué herramienta gestiona las dependencias y fases de construcción en proyectos Java?",
+      "options": [
+        "JUnit",
+        "Git",
+        "Tomcat",
+        "Maven"
+      ],
+      "correct": 3,
+      "explanation": "Maven usa el archivo pom.xml."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_22",
+      "question": "¿Qué archivo de configuración define las dependencias en un proyecto Maven?",
+      "options": [
+        "pom.xml",
+        "requirements.txt",
+        "package.json",
+        "build.gradle"
+      ],
+      "correct": 0,
+      "explanation": "Project Object Model."
+    }
+  ],
+  "cloud_computing": [
+    {
+      "concept_id": "cloud_computing_0",
+      "question": "¿Qué modelo de servicio cloud proporciona infraestructura virtualizada (servidores, redes, almacenamiento)?",
+      "options": [
+        "IaaS",
+        "FaaS",
+        "PaaS",
+        "SaaS"
+      ],
+      "correct": 0,
+      "explanation": "Infrastructure as a Service (ej: AWS EC2)."
+    },
+    {
+      "concept_id": "cloud_computing_1",
+      "question": "¿Qué modelo de servicio cloud ofrece una plataforma para que los desarrolladores desplieguen aplicaciones sin gestionar el SO?",
+      "options": [
+        "SaaS",
+        "PaaS",
+        "IaaS",
+        "DBaaS"
+      ],
+      "correct": 1,
+      "explanation": "Platform as a Service (ej: Heroku, Google App Engine)."
+    },
+    {
+      "concept_id": "cloud_computing_2",
+      "question": "¿Qué modelo de servicio cloud ofrece software listo para usar a través del navegador?",
+      "options": [
+        "SaaS",
+        "NaaS",
+        "IaaS",
+        "PaaS"
+      ],
+      "correct": 0,
+      "explanation": "Software as a Service (ej: Gmail, Office 365)."
+    },
+    {
+      "concept_id": "cloud_computing_3",
+      "question": "¿Qué tipo de nube es infraestructura exclusiva para una organización?",
+      "options": [
+        "Nube Comunitaria",
+        "Nube Pública",
+        "Nube Híbrida",
+        "Nube Privada"
+      ],
+      "correct": 3,
+      "explanation": "La nube privada ofrece máximo control."
+    },
+    {
+      "concept_id": "cloud_computing_4",
+      "question": "¿Qué es Amazon S3?",
+      "options": [
+        "Un servicio de DNS",
+        "Servicio de almacenamiento de objetos en la nube de AWS",
+        "Una base de datos relacional",
+        "Un servidor virtual de cómputo"
+      ],
+      "correct": 1,
+      "explanation": "Simple Storage Service: buckets y objetos."
+    },
+    {
+      "concept_id": "cloud_computing_5",
+      "question": "¿Qué servicio de AWS proporciona servidores virtuales elásticos?",
+      "options": [
+        "Lambda",
+        "S3",
+        "RDS",
+        "EC2 (Elastic Compute Cloud)"
+      ],
+      "correct": 3,
+      "explanation": "EC2 permite configurar instancias de servidor."
+    },
+    {
+      "concept_id": "cloud_computing_6",
+      "question": "¿Qué es el 'escalado automático' (auto scaling) en la nube?",
+      "options": [
+        "Ajustar automáticamente la capacidad de recursos según la demanda",
+        "Ampliar el storage manualmente",
+        "Reiniciar servidores automáticamente",
+        "Duplicar el ancho de banda"
+      ],
+      "correct": 0,
+      "explanation": "Auto scaling optimiza coste y rendimiento."
+    },
+    {
+      "concept_id": "cloud_computing_7",
+      "question": "¿Qué es un contenedor en el contexto de cloud computing?",
+      "options": [
+        "Un servidor físico",
+        "Una máquina virtual completa",
+        "Una cuenta de usuario cloud",
+        "Unidad ligera y portable que empaqueta una app con sus dependencias"
+      ],
+      "correct": 3,
+      "explanation": "Docker es la tecnología de contenedores más usada."
+    },
+    {
+      "concept_id": "cloud_computing_8",
+      "question": "¿Qué herramienta orquesta y gestiona contenedores a escala?",
+      "options": [
+        "Docker Compose",
+        "Ansible",
+        "Terraform",
+        "Kubernetes"
+      ],
+      "correct": 3,
+      "explanation": "Kubernetes (K8s) es el estándar de orquestación."
+    },
+    {
+      "concept_id": "cloud_computing_9",
+      "question": "¿Qué es serverless computing?",
+      "options": [
+        "Servidores sin sistema operativo",
+        "Ejecutar código sin gestionar servidores (el proveedor los gestiona)",
+        "Cloud sin acceso a internet",
+        "Computación local sin red"
+      ],
+      "correct": 1,
+      "explanation": "AWS Lambda es el servicio serverless más popular."
+    },
+    {
+      "concept_id": "cloud_computing_10",
+      "question": "¿Qué término describe la capacidad de un sistema cloud de crecer añadiendo más nodos?",
+      "options": [
+        "Resiliencia",
+        "Alta disponibilidad",
+        "Escalabilidad vertical",
+        "Escalabilidad horizontal"
+      ],
+      "correct": 3,
+      "explanation": "Scale out (horizontal) vs Scale up (vertical)."
+    },
+    {
+      "concept_id": "cloud_computing_11",
+      "question": "¿Qué es la Alta Disponibilidad (HA) en cloud?",
+      "options": [
+        "Diseño que minimiza el tiempo de inactividad distribuyendo recursos",
+        "Un tipo de backup",
+        "Una región de AWS",
+        "Tener muchos usuarios simultáneos"
+      ],
+      "correct": 0,
+      "explanation": "HA usa redundancia y zonas de disponibilidad."
+    },
+    {
+      "concept_id": "cloud_computing_12",
+      "question": "¿Qué significa 'CDN' en cloud?",
+      "options": [
+        "Central Data Node",
+        "Content Definition Node",
+        "Content Delivery Network: red de servidores que distribuye contenido globalmente cerca del usuario",
+        "Cloud Data Network"
+      ],
+      "correct": 2,
+      "explanation": "CloudFront (AWS) y Cloudflare son CDNs."
+    },
+    {
+      "concept_id": "cloud_computing_13",
+      "question": "¿Qué es DevOps?",
+      "options": [
+        "Cultura y prácticas que unen desarrollo y operaciones para acelerar entregas",
+        "Un proveedor cloud",
+        "Un tipo de base de datos cloud",
+        "Un lenguaje de programación"
+      ],
+      "correct": 0,
+      "explanation": "DevOps incluye CI/CD, automatización y monitorización."
+    },
+    {
+      "concept_id": "cloud_computing_14",
+      "question": "¿Qué es CI/CD?",
+      "options": [
+        "Configuración Inicial de Clúster y Despliegue",
+        "Control de Instancias Cloud/Datos",
+        "Código Interno / Código Distribuido",
+        "Integración Continua y Entrega/Despliegue Continuos: automatizar pruebas y despliegues"
+      ],
+      "correct": 3,
+      "explanation": "Jenkins, GitHub Actions y GitLab CI son herramientas CI/CD."
+    }
+  ],
+  "empleabilidad": [
+    {
+      "concept_id": "empleabilidad_0",
+      "question": "¿Qué ley regula el marco básico de las relaciones laborales entre trabajadores y empresas en España?",
+      "options": [
+        "El Código Civil",
+        "La Ley de Sociedades",
+        "La Constitución Española",
+        "El Estatuto de los Trabajadores"
+      ],
+      "correct": 3,
+      "explanation": "Real Decreto Legislativo 2/2015."
+    },
+    {
+      "concept_id": "empleabilidad_1",
+      "question": "¿Qué es el Salario Mínimo Interprofesional (SMI)?",
+      "options": [
+        "El salario más alto de la empresa",
+        "El salario del sector público",
+        "La retribución mínima legal que un trabajador puede percibir",
+        "El importe neto de la nómina"
+      ],
+      "correct": 2,
+      "explanation": "Lo fija el Gobierno anualmente."
+    },
+    {
+      "concept_id": "empleabilidad_2",
+      "question": "¿Qué es el IRPF?",
+      "options": [
+        "Impuesto sobre la Renta de las Personas Físicas, retenido en nómina",
+        "El seguro de los autónomos",
+        "La cotización a la SS del empresario",
+        "El impuesto de sociedades"
+      ],
+      "correct": 0,
+      "explanation": "Es un impuesto directo y progresivo."
+    },
+    {
+      "concept_id": "empleabilidad_3",
+      "question": "¿Qué es el finiquito?",
+      "options": [
+        "El preaviso de despido",
+        "Documento de liquidación económica de los haberes pendientes al terminar el contrato",
+        "La baja médica",
+        "El certificado de empresa"
+      ],
+      "correct": 1,
+      "explanation": "El finiquito liquida vacaciones, pagas extras y salario pendiente."
+    },
+    {
+      "concept_id": "empleabilidad_4",
+      "question": "¿Qué es un Convenio Colectivo?",
+      "options": [
+        "La nómina mensual",
+        "El contrato individual",
+        "Acuerdo entre sindicatos y empresas de un sector que regula condiciones laborales",
+        "El Estatuto de los Trabajadores"
+      ],
+      "correct": 2,
+      "explanation": "Negocia condiciones por encima de la ley."
+    },
+    {
+      "concept_id": "empleabilidad_5",
+      "question": "¿Cuántos días naturales de vacaciones retribuidas garantiza el Estatuto de los Trabajadores como mínimo?",
+      "options": [
+        "20 días hábiles",
+        "30 días naturales",
+        "22 días laborables",
+        "15 días naturales"
+      ],
+      "correct": 1,
+      "explanation": "El Estatuto garantiza 30 días naturales al año."
+    },
+    {
+      "concept_id": "empleabilidad_6",
+      "question": "¿Qué es el período de prueba en un contrato laboral?",
+      "options": [
+        "El tiempo de espera antes de cobrar",
+        "Tiempo inicial en que cualquiera de las partes puede rescindir sin preaviso ni indemnización",
+        "El período de baja médica",
+        "Los primeros 3 meses de cotización"
+      ],
+      "correct": 1,
+      "explanation": "Su duración depende de la categoría y el convenio."
+    },
+    {
+      "concept_id": "empleabilidad_7",
+      "question": "¿Qué organismo público gestiona las prestaciones por desempleo y las ofertas de empleo?",
+      "options": [
+        "Seguridad Social",
+        "SEPE (Servicio Público de Empleo Estatal)",
+        "AEAT",
+        "Ministerio de Hacienda"
+      ],
+      "correct": 1,
+      "explanation": "SEPE gestiona el paro y la formación."
+    },
+    {
+      "concept_id": "empleabilidad_8",
+      "question": "¿Qué cotización a la Seguridad Social es responsabilidad directa del trabajador?",
+      "options": [
+        "La cuota patronal íntegra",
+        "El IRPF empresarial",
+        "Las mutuas de accidentes",
+        "La cuota obrera (parte del trabajador)"
+      ],
+      "correct": 3,
+      "explanation": "El trabajador cotiza una parte, el empresario la mayor parte."
+    },
+    {
+      "concept_id": "empleabilidad_9",
+      "question": "¿Qué tipo de contrato no tiene fecha de finalización establecida?",
+      "options": [
+        "Contrato Temporal",
+        "Contrato de Obra",
+        "Contrato de Formación",
+        "Contrato Indefinido"
+      ],
+      "correct": 3,
+      "explanation": "El indefinido ofrece la mayor estabilidad."
+    },
+    {
+      "concept_id": "empleabilidad_10",
+      "question": "¿Qué es una nómina?",
+      "options": [
+        "Un contrato laboral",
+        "Documento justificativo del pago del salario que desglosá devengos y deducciones",
+        "Un recibo de autónomo",
+        "Un certificado de cotización"
+      ],
+      "correct": 1,
+      "explanation": "La nómina muestra salario bruto, deducciones y salario neto."
+    },
+    {
+      "concept_id": "empleabilidad_11",
+      "question": "¿Qué es la 'Seguridad Social' en España?",
+      "options": [
+        "El sistema de pensiones de empresa",
+        "Un banco público",
+        "Sistema público de protección ante situaciones de necesidad (enfermedad, paro, jubilación)",
+        "Una empresa de seguros privada"
+      ],
+      "correct": 2,
+      "explanation": "Las cotizaciones financian el sistema."
+    },
+    {
+      "concept_id": "empleabilidad_12",
+      "question": "¿Qué entidad representa colectivamente a los trabajadores en la negociación con la empresa?",
+      "options": [
+        "La Seguridad Social",
+        "El SEPE",
+        "La Inspección de Trabajo",
+        "El Sindicato / Comité de Empresa"
+      ],
+      "correct": 3,
+      "explanation": "Sindicatos como UGT o CCOO."
+    },
+    {
+      "concept_id": "empleabilidad_13",
+      "question": "¿Qué documento acredita la situación legal de un trabajador ante la empresa al finalizar la relación laboral?",
+      "options": [
+        "Finiquito",
+        "Certificado de Empresa",
+        "Contrato",
+        "Nómina"
+      ],
+      "correct": 1,
+      "explanation": "El certificado de empresa se necesita para solicitar el paro."
+    },
+    {
+      "concept_id": "empleabilidad_14",
+      "question": "¿Qué es la excedencia laboral?",
+      "options": [
+        "Un permiso retribuido",
+        "Una reducción de jornada",
+        "Un tipo de despido",
+        "Suspensión temporal del contrato con derecho a reserva del puesto (en ciertos casos)"
+      ],
+      "correct": 3,
+      "explanation": "La excedencia voluntaria no es siempre retribuida."
+    },
+    {
+      "concept_id": "empleabilidad_15",
+      "question": "¿Qué tipo de jornada laboral tiene el trabajador derecho a pedir para el cuidado de hijos menores?",
+      "options": [
+        "Excedencia forzosa",
+        "Baja médica",
+        "Reducción de jornada",
+        "Despido procedente"
+      ],
+      "correct": 2,
+      "explanation": "Artículo 37 del Estatuto de los Trabajadores."
+    },
+    {
+      "concept_id": "empleabilidad_16",
+      "question": "¿Qué es el 'salario bruto'?",
+      "options": [
+        "El salario total antes de aplicar deducciones (IRPF, SS)",
+        "El salario que entra en cuenta",
+        "El salario con complementos incluidos",
+        "El salario mínimo legal"
+      ],
+      "correct": 0,
+      "explanation": "Bruto - Deducciones = Salario Neto."
+    }
+  ]
 }

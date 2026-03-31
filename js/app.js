@@ -48,7 +48,7 @@ function renderSubjects() {
                 <button onclick="startExam('${subject.id}')">Iniciar Simulacro Aleatorio</button>
             </div>
             <div class="card-stats">
-                <span>V11 SYLLABUS MASTER: 20 Preguntas (Max 3 Repetidas)</span>
+                <span>V12 FINAL: ${(QUESTION_POOL[subject.id] || []).length} Preguntas Reales</span>
             </div>
         `;
         subjectGrid.appendChild(card);
@@ -69,15 +69,17 @@ function startExam(subjectId) {
     APP_STATE.currentExam = subject;
     APP_STATE.currentQuestionIndex = 0;
     APP_STATE.answers = [];
-    APP_STATE.timer = 1800; // 30 Minutes for 20 questions
     
     let pool = QUESTION_POOL[subjectId] || [];
+    // Test size: 20 if pool allows, otherwise all questions in pool
+    const testSize = Math.min(20, pool.length);
+    APP_STATE.timer = testSize * 90; // 90 seconds per question
     
-    // V11: Intelligent Repeat Filtering (Limit repeats from last test to max 3)
+    // Smart repeat filter: max 3 repeats from previous test
     const lastTestIds = JSON.parse(localStorage.getItem(`last_test_${subjectId}`) || "[]");
-    APP_STATE.examQuestions = getSmartRandomQuestions(pool, 20, lastTestIds);
+    APP_STATE.examQuestions = getSmartRandomQuestions(pool, testSize, lastTestIds);
     
-    // Save current IDs for next time to avoid repeating them
+    // Remember this test for next time
     const currentIds = APP_STATE.examQuestions.map(q => q.concept_id);
     localStorage.setItem(`last_test_${subjectId}`, JSON.stringify(currentIds));
     
@@ -87,35 +89,31 @@ function startExam(subjectId) {
 }
 
 function getSmartRandomQuestions(pool, count, forbiddenIds) {
+    // Fisher-Yates shuffle
     let shuffled = [...pool];
     for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
 
-    const uniqueQuestions = [];
-    const usedConceptIds = new Set();
-    let repeatsCount = 0;
-    const MAX_REPEATS = 3;
+    // Separate into 'new' and 'repeat' buckets
+    const fresh = shuffled.filter(q => !forbiddenIds.includes(q.concept_id));
+    const repeats = shuffled.filter(q => forbiddenIds.includes(q.concept_id));
 
-    for (const q of shuffled) {
-        if (!usedConceptIds.has(q.concept_id)) {
-            // Check if it's from last test
-            const isRepeat = forbiddenIds.includes(q.concept_id);
-            
-            if (isRepeat && repeatsCount < MAX_REPEATS) {
-                uniqueQuestions.push(q);
-                usedConceptIds.add(q.concept_id);
-                repeatsCount++;
-            } else if (!isRepeat) {
-                uniqueQuestions.push(q);
-                usedConceptIds.add(q.concept_id);
-            }
-        }
-        if (uniqueQuestions.length >= count) break;
+    // Build final list: up to (count - 3) from fresh, then up to 3 from repeats
+    const freshCount = Math.max(count - 3, count - repeats.length);
+    const selected = [
+        ...fresh.slice(0, freshCount),
+        ...repeats.slice(0, Math.min(3, count - fresh.slice(0, freshCount).length))
+    ];
+
+    // If still not enough (very small pool), fill with whatever is left
+    if (selected.length < count) {
+        const remaining = shuffled.filter(q => !selected.find(s => s.concept_id === q.concept_id));
+        selected.push(...remaining.slice(0, count - selected.length));
     }
-    
-    return uniqueQuestions;
+
+    return selected.slice(0, count);
 }
 
 function startTimer() {
