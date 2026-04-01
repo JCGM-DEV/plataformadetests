@@ -1691,6 +1691,318 @@
       ],
       "correct": 2,
       "explanation": "' OR '1'='1 es el ejemplo clásico de SQL Injection."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_141",
+      "question": "¿Cuál es el componente físico del sistema informático?",
+      "options": [
+        "Componente humano",
+        "Sistema operativo",
+        "Software",
+        "Hardware"
+      ],
+      "correct": 3,
+      "explanation": "El hardware son todos los componentes físicos del ordenador (CPU, RAM, disco, teclado...)."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_142",
+      "question": "¿Qué periférico permite ingresar texto y comandos en el ordenador?",
+      "options": [
+        "Cámara web",
+        "Teclado",
+        "Escáner",
+        "Monitor"
+      ],
+      "correct": 1,
+      "explanation": "El teclado es el periférico de entrada más común para texto y comandos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_143",
+      "question": "¿Qué dispositivo permite la reproducción de sonido en el ordenador?",
+      "options": [
+        "Micrófono",
+        "Altavoces",
+        "Ratón",
+        "Impresora"
+      ],
+      "correct": 1,
+      "explanation": "Los altavoces son periféricos de salida de audio."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_144",
+      "question": "¿Qué es un periférico de entrada?",
+      "options": [
+        "Dispositivo que muestra datos al usuario",
+        "Dispositivo de red",
+        "Dispositivo de almacenamiento",
+        "Dispositivo que envía datos al ordenador"
+      ],
+      "correct": 3,
+      "explanation": "Teclado, ratón, escáner y micrófono son periféricos de entrada."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_145",
+      "question": "¿Qué es un periférico de salida?",
+      "options": [
+        "Dispositivo que el ordenador usa para comunicar resultados al exterior",
+        "Dispositivo de almacenamiento",
+        "Dispositivo de procesamiento",
+        "Dispositivo que recibe datos del usuario"
+      ],
+      "correct": 0,
+      "explanation": "Monitor, impresora y altavoces son periféricos de salida."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_146",
+      "question": "¿Qué es un periférico mixto (entrada/salida)?",
+      "options": [
+        "El teclado",
+        "El escáner",
+        "El monitor",
+        "La pantalla táctil"
+      ],
+      "correct": 3,
+      "explanation": "La pantalla táctil recibe input (táctil) y muestra output (imagen)."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_147",
+      "question": "¿Cuál de los siguientes es un dispositivo de almacenamiento secundario?",
+      "options": [
+        "Disco duro (HDD)",
+        "Caché",
+        "RAM",
+        "Registros del procesador"
+      ],
+      "correct": 0,
+      "explanation": "Los discos duros son memoria secundaria no volátil."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_148",
+      "question": "¿Qué significa que la RAM es volátil?",
+      "options": [
+        "Que necesita refrigeración activa",
+        "Que es muy rápida",
+        "Que pierde su contenido al apagar el ordenador",
+        "Que no se puede ampliar"
+      ],
+      "correct": 2,
+      "explanation": "La RAM es temporal: se borra al cortar el suministro eléctrico."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_149",
+      "question": "¿Cuál es la función de la CPU?",
+      "options": [
+        "Mostrar imágenes en el monitor",
+        "Gestionar la red local",
+        "Procesar y ejecutar instrucciones del programa",
+        "Almacenar datos permanentemente"
+      ],
+      "correct": 2,
+      "explanation": "La CPU (Unidad Central de Procesamiento) es el 'cerebro' del ordenador."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_150",
+      "question": "¿Qué es la placa base (motherboard)?",
+      "options": [
+        "El circuito principal que interconecta todos los componentes del ordenador",
+        "La fuente de alimentación",
+        "El disco duro principal",
+        "La tarjeta gráfica"
+      ],
+      "correct": 0,
+      "explanation": "La placa base aloja la CPU, RAM, BIOS y conecta todos los periféricos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_151",
+      "question": "¿Qué permite la escalabilidad de las redes informáticas?",
+      "options": [
+        "Permitir la comunicación entre dispositivos",
+        "Reducir el costo del hardware",
+        "Proteger la información de posibles amenazas",
+        "Adaptarse a las necesidades crecientes de la organización"
+      ],
+      "correct": 3,
+      "explanation": "Una red escalable puede crecer añadiendo nodos sin rediseñar toda la infraestructura."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_152",
+      "question": "¿Cuál es una de las principales características de las redes informáticas?",
+      "options": [
+        "Gestionar el sistema operativo",
+        "Adquirir una copia independiente para cada usuario",
+        "Reproducir multimedia",
+        "Proteger la privacidad y la integridad de los datos"
+      ],
+      "correct": 3,
+      "explanation": "La seguridad (privacidad e integridad) es una característica fundamental de las redes."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_153",
+      "question": "¿Qué tipo de medios de transmisión requiere un canal físico para transmitir los datos?",
+      "options": [
+        "Inalámbricos",
+        "Satelitales",
+        "No guiados",
+        "Guiados"
+      ],
+      "correct": 3,
+      "explanation": "Los medios guiados usan un soporte físico: cable coaxial, par trenzado, fibra óptica."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_154",
+      "question": "¿Qué significa que las redes informáticas permitan la comunicación entre dispositivos conectados?",
+      "options": [
+        "Que los usuarios deben tener los mismos recursos",
+        "Los usuarios pueden enviar y recibir información de manera rápida y eficiente",
+        "Que deben estar disponibles en todo momento",
+        "Que deben estar clasificadas para proteger la información"
+      ],
+      "correct": 1,
+      "explanation": "La comunicación entre nodos es la función básica de cualquier red."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_155",
+      "question": "¿Qué deben ser las redes informáticas para proteger la privacidad e integridad de los datos?",
+      "options": [
+        "Seguras",
+        "Escalables",
+        "Económicas",
+        "Flexibles"
+      ],
+      "correct": 0,
+      "explanation": "La seguridad protege datos en tránsito y en reposo contra accesos no autorizados."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_156",
+      "question": "¿Qué norma básica debe seguir un administrador de redes para la seguridad de la información?",
+      "options": [
+        "Realizar copias de seguridad periódicas",
+        "No proteger dispositivos móviles",
+        "Mantener una buena organización de cables",
+        "Desactivar el firewall para mayor velocidad"
+      ],
+      "correct": 0,
+      "explanation": "Los backups periódicos son fundamentales para la continuidad del negocio."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_157",
+      "question": "¿Qué tipo de red abarca un área geográfica amplia como un país o continente?",
+      "options": [
+        "WAN",
+        "MAN",
+        "LAN",
+        "PAN"
+      ],
+      "correct": 0,
+      "explanation": "WAN = Wide Area Network. Internet es la WAN más grande del mundo."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_158",
+      "question": "¿Qué tipo de red abarca un edificio o campus universitario?",
+      "options": [
+        "MAN",
+        "PAN",
+        "LAN",
+        "WAN"
+      ],
+      "correct": 2,
+      "explanation": "LAN = Local Area Network. Cubre distancias de metros a pocos kilómetros."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_159",
+      "question": "¿Qué topología de red conecta todos los dispositivos a un único cable central?",
+      "options": [
+        "Bus",
+        "Malla",
+        "Estrella",
+        "Anillo"
+      ],
+      "correct": 0,
+      "explanation": "En la topología en bus todos los nodos comparten el mismo medio de transmisión."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_160",
+      "question": "¿Qué topología de red conecta cada dispositivo directamente a un switch o hub central?",
+      "options": [
+        "Estrella",
+        "Malla",
+        "Bus",
+        "Anillo"
+      ],
+      "correct": 0,
+      "explanation": "La estrella es la topología más usada hoy en redes LAN por su facilidad de gestión."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_161",
+      "question": "¿Qué es una máquina de Turing?",
+      "options": [
+        "Un tipo de ordenador basado en el uso de tarjetas perforadas",
+        "Una máquina matemática abstracta con cinta infinita que modela cualquier computación",
+        "El primer ordenador electrónico de la historia",
+        "Un sistema de hardware y software para tareas en secuencia de pasos discretos"
+      ],
+      "correct": 1,
+      "explanation": "La máquina de Turing (1936) es el modelo teórico base de la computación moderna."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_162",
+      "question": "¿Quién formuló el concepto de máquina de Turing?",
+      "options": [
+        "Alan Turing",
+        "Bill Gates",
+        "John von Neumann",
+        "Ada Lovelace"
+      ],
+      "correct": 0,
+      "explanation": "Alan Turing propuso el modelo en 1936 en su artículo 'On Computable Numbers'."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_163",
+      "question": "¿Qué es la arquitectura de Von Neumann?",
+      "options": [
+        "Un tipo de procesador RISC",
+        "El primer sistema operativo de la historia",
+        "Una red de ordenadores en malla",
+        "Un modelo de computador con CPU, memoria, entrada/salida y bus de datos compartido para instrucciones y datos"
+      ],
+      "correct": 3,
+      "explanation": "La arquitectura Von Neumann es la base de todos los ordenadores modernos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_164",
+      "question": "¿Qué es el software de sistema?",
+      "options": [
+        "Programas que gestionan el hardware y los recursos del ordenador (SO, drivers)",
+        "Los videojuegos y multimedia",
+        "Las aplicaciones de ofimática",
+        "Los programas de diseño gráfico"
+      ],
+      "correct": 0,
+      "explanation": "El sistema operativo y los drivers son el software de sistema más importante."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_165",
+      "question": "¿Cuál es la diferencia entre software libre y software propietario?",
+      "options": [
+        "El software propietario es siempre gratuito",
+        "El software libre permite ver, modificar y distribuir el código fuente; el propietario no",
+        "No hay diferencia técnica",
+        "El software libre cuesta menos"
+      ],
+      "correct": 1,
+      "explanation": "Linux, Firefox y LibreOffice son ejemplos de software libre (open source)."
+    },
+    {
+      "concept_id": "sistemas_informaticos_basic_166",
+      "question": "¿Qué es el firmware?",
+      "options": [
+        "Software grabado en memoria ROM de un dispositivo hardware que controla su funcionamiento básico",
+        "Un sistema operativo ligero",
+        "Un tipo de virus",
+        "Un controlador de dispositivo externo"
+      ],
+      "correct": 0,
+      "explanation": "La BIOS/UEFI es el firmware más conocido en ordenadores personales."
     }
   ],
   "bases_de_datos": [
