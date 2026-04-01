@@ -3616,6 +3616,215 @@
       ],
       "correct": 1,
       "explanation": "La tabla intermedia (tabla de unión) resuelve las relaciones muchos a muchos."
+    },
+    {
+      "question": "Entre los tipos de bases de datos que permiten almacenar datos semiestructurados se encuentran:",
+      "options": [
+        "Relacionales",
+        "NoSQL",
+        "Ninguna respuesta es correcta"
+      ],
+      "correct": 1,
+      "explanation": "Las BD NoSQL (documento, clave-valor, columnar, grafo) almacenan datos semiestructurados como JSON.",
+      "concept_id": "bases_de_datos_img_111"
+    },
+    {
+      "question": "Las bases de datos que permiten incluir herencia en su diseño son las:",
+      "options": [
+        "Jerárquicas",
+        "Orientadas a objetos",
+        "Relacionales"
+      ],
+      "correct": 1,
+      "explanation": "Las BD orientadas a objetos soportan herencia, encapsulamiento y polimorfismo.",
+      "concept_id": "bases_de_datos_img_113"
+    },
+    {
+      "question": "Un fichero DBASE puede considerarse de tipo:",
+      "options": [
+        "Plano",
+        "Indexado",
+        "Multimedia"
+      ],
+      "correct": 1,
+      "explanation": "dBASE usa ficheros .DBF con índices .NDX/.MDX para acceso rápido a registros.",
+      "concept_id": "bases_de_datos_img_115"
+    },
+    {
+      "question": "El lenguaje que habitualmente usa la inmensa mayoría de bases de datos relacionales es:",
+      "options": [
+        "C++",
+        "Java",
+        "SQL"
+      ],
+      "correct": 2,
+      "explanation": "SQL (Structured Query Language) es el estándar ISO para BD relacionales desde 1987.",
+      "concept_id": "bases_de_datos_img_117"
+    },
+    {
+      "question": "La palabra 'informática' tiene su origen en la palabra francesa 'informatique', acuñada en 1962 por:",
+      "options": [
+        "Philippe Doumar",
+        "Philippe Dreyfus",
+        "Philippe Chason"
+      ],
+      "correct": 1,
+      "explanation": "Philippe Dreyfus acuñó 'informatique' en 1962, contracción de 'information automatique'.",
+      "concept_id": "bases_de_datos_img_119"
+    },
+    {
+      "question": "En el modelo E-R, el conjunto de objetos del mundo real con los mismos atributos identificados con un nombre común es:",
+      "options": [
+        "Entidad",
+        "Relación",
+        "Atributo"
+      ],
+      "correct": 0,
+      "explanation": "La entidad es el tipo; el objeto individual es la instancia de esa entidad.",
+      "concept_id": "bases_de_datos_img_121"
+    },
+    {
+      "question": "Los tipos de bases de datos que permiten reducir cuellos de botella y aumentar disponibilidad son:",
+      "options": [
+        "Centralizadas",
+        "Distribuidas",
+        "Jerárquicas"
+      ],
+      "correct": 1,
+      "explanation": "Las BD distribuidas replican datos en múltiples nodos aumentando disponibilidad y rendimiento.",
+      "concept_id": "bases_de_datos_img_123"
+    },
+    {
+      "question": "¿Cuál de los formatos representa información en estructura tabular estrictamente estructurada (filas y columnas)?",
+      "options": [
+        "CSV",
+        "JSON",
+        "Ambos"
+      ],
+      "correct": 0,
+      "explanation": "CSV (Comma-Separated Values) tiene estructura tabular fija. JSON es semiestructurado.",
+      "concept_id": "bases_de_datos_img_125"
+    },
+    {
+      "question": "¿Cuál NO pertenece a la clasificación de BD basada en su modelo lógico (jerárquico, red, relacional, OO)?",
+      "options": [
+        "Jerárquicas",
+        "Relacionales",
+        "Empresariales"
+      ],
+      "correct": 2,
+      "explanation": "'Empresariales' no es un modelo lógico de BD. Los modelos son: jerárquico, red, relacional, OO, NoSQL.",
+      "concept_id": "bases_de_datos_img_127"
+    },
+    {
+      "question": "Un modelo de datos es una representación:",
+      "options": [
+        "Física",
+        "Básica",
+        "Abstracta"
+      ],
+      "correct": 2,
+      "explanation": "El modelo de datos es una abstracción que oculta complejidad física de almacenamiento.",
+      "concept_id": "bases_de_datos_img_129"
+    },
+    {
+      "question": "El valor 'verdadero' o 'falso' encaja con un tipo de dato:",
+      "options": [
+        "Booleano",
+        "Fecha y hora",
+        "Cadena de caracteres"
+      ],
+      "correct": 0,
+      "explanation": "Boolean/bit: solo dos valores posibles. En SQL: BIT(1), BOOLEAN, TINYINT(1).",
+      "concept_id": "bases_de_datos_img_131"
+    },
+    {
+      "question": "¿Qué tipo de índice es más adecuado para consultas por rangos de valores?",
+      "options": [
+        "Hash",
+        "Árbol B",
+        "Compuesto"
+      ],
+      "correct": 1,
+      "explanation": "El Árbol B permite búsquedas por rango (BETWEEN, <, >). El Hash solo igualdad exacta.",
+      "concept_id": "bases_de_datos_img_133"
+    },
+    {
+      "question": "Una clave primaria que incluye más de una columna se denomina:",
+      "options": [
+        "Compuesta",
+        "Heterogénea",
+        "Simple"
+      ],
+      "correct": 0,
+      "explanation": "Primary Key compuesta: PK(DNI, asignatura) en la tabla Matrícula.",
+      "concept_id": "bases_de_datos_img_135"
+    },
+    {
+      "question": "La matrícula de un vehículo encaja con el concepto de:",
+      "options": [
+        "Relación",
+        "Atributo",
+        "Tupla"
+      ],
+      "correct": 1,
+      "explanation": "La matrícula es un atributo (propiedad) de la entidad Vehículo.",
+      "concept_id": "bases_de_datos_img_137"
+    },
+    {
+      "question": "El comando DML que permite cancelar los cambios de una transacción se denomina:",
+      "options": [
+        "COMMIT TRANSACTION",
+        "SAVEPOINT TRANSACTION",
+        "ROLLBACK TRANSACTION"
+      ],
+      "correct": 2,
+      "explanation": "ROLLBACK deshace todos los cambios desde el último COMMIT o SAVEPOINT.",
+      "concept_id": "bases_de_datos_img_139"
+    },
+    {
+      "question": "El comando DDL que sirve para eliminar una tabla se denomina:",
+      "options": [
+        "ALTER TABLE",
+        "DROP TABLE",
+        "Todas las respuestas son ciertas"
+      ],
+      "correct": 1,
+      "explanation": "DROP TABLE elimina la tabla y todos sus datos. ALTER TABLE modifica la estructura.",
+      "concept_id": "bases_de_datos_img_141"
+    },
+    {
+      "question": "A los grupos de usuarios que comparten privilegios y responsabilidades se les denomina:",
+      "options": [
+        "Privilegiados",
+        "Grupos",
+        "Roles"
+      ],
+      "correct": 2,
+      "explanation": "GRANT SELECT ON tabla TO rol_lectura; todos los usuarios con ese rol heredan el permiso.",
+      "concept_id": "bases_de_datos_img_143"
+    },
+    {
+      "question": "Las relaciones entre tablas se establecen utilizando:",
+      "options": [
+        "Claves primarias y foráneas",
+        "Índices Árbol-B",
+        "Índices Hash"
+      ],
+      "correct": 0,
+      "explanation": "FOREIGN KEY referencia la PRIMARY KEY de otra tabla estableciendo integridad referencial.",
+      "concept_id": "bases_de_datos_img_145"
+    },
+    {
+      "question": "¿Qué diferencia esencial hay entre una vista y una tabla?",
+      "options": [
+        "Una vista almacena datos físicamente",
+        "Una vista es virtual; se reconstruye al vuelo a partir de la consulta SQL que la define",
+        "Una vista no admite filtros"
+      ],
+      "correct": 1,
+      "explanation": "Las vistas (VIEW) son consultas guardadas; no almacenan datos propios salvo vistas materializadas.",
+      "concept_id": "bases_de_datos_img_147"
     }
   ],
   "programacion": [
@@ -5035,6 +5244,490 @@
       ],
       "correct": 0,
       "explanation": "Un array de 5 elementos tiene índices 0,1,2,3,4. Acceder al [5] lanza ArrayIndexOutOfBoundsException."
+    },
+    {
+      "question": "Dentro del modelo Entrada-Proceso-Salida, ¿qué elemento es el núcleo del programa?",
+      "options": [
+        "Los datos que introduce el usuario mediante dispositivos de entrada",
+        "El algoritmo que procesa los datos y aplica la lógica del programa",
+        "El sistema que muestra el resultado final al usuario"
+      ],
+      "correct": 1,
+      "explanation": "El algoritmo es el corazón del programa: transforma entradas en salidas útiles.",
+      "concept_id": "programacion_img_120"
+    },
+    {
+      "question": "¿Cuál define mejor qué es programar?",
+      "options": [
+        "Utilizar programas ya existentes para resolver tareas cotidianas",
+        "Diseñar, codificar, depurar y mantener programas que ejecuta un ordenador",
+        "Ejecutar instrucciones previamente creadas sin modificarlas"
+      ],
+      "correct": 1,
+      "explanation": "Programar = todo el ciclo de vida del software, no solo escribir código.",
+      "concept_id": "programacion_img_122"
+    },
+    {
+      "question": "¿Qué tipo de estructura se usa cuando hay que repetir instrucciones mientras se cumpla una condición?",
+      "options": [
+        "Estructura secuencial",
+        "Estructura selectiva",
+        "Estructura repetitiva"
+      ],
+      "correct": 2,
+      "explanation": "Repetitiva: while, for, do-while. Selectiva: if, switch. Secuencial: línea a línea.",
+      "concept_id": "programacion_img_124"
+    },
+    {
+      "question": "¿Cuál NO pertenece a los tipos de datos básicos o primitivos en Java?",
+      "options": [
+        "Número entero",
+        "Valor booleano",
+        "Array o arreglo"
+      ],
+      "correct": 2,
+      "explanation": "Los tipos primitivos Java son: byte, short, int, long, float, double, char, boolean. Array es referencia.",
+      "concept_id": "programacion_img_126"
+    },
+    {
+      "question": "¿Cuál es la diferencia correcta entre dato e información?",
+      "options": [
+        "El dato es información interpretada y la información es un dato sin procesar",
+        "El dato es un valor aislado y la información es el resultado de procesar datos con contexto",
+        "Ambos términos son idénticos sin diferencia real"
+      ],
+      "correct": 1,
+      "explanation": "Dato = valor bruto (ejemplo: 37). Información = dato con contexto (temperatura corporal = 37°C).",
+      "concept_id": "programacion_img_128"
+    },
+    {
+      "question": "¿Cuál es la relación correcta entre algoritmo y programa?",
+      "options": [
+        "El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación",
+        "El programa es independiente del lenguaje y el algoritmo depende del lenguaje",
+        "Ambos son idénticos y solo se diferencian por el formato"
+      ],
+      "correct": 0,
+      "explanation": "Algoritmo = solución abstracta independiente del lenguaje. Programa = algoritmo codificado.",
+      "concept_id": "programacion_img_130"
+    },
+    {
+      "question": "¿Cuál es la regla obligatoria cuando se define una clase pública en Java?",
+      "options": [
+        "El nombre de la clase debe escribirse en minúsculas",
+        "El archivo debe llamarse igual que la clase pública y tener extensión .java",
+        "La clase debe contener al menos un método main"
+      ],
+      "correct": 1,
+      "explanation": "Java exige que el archivo .java tenga el mismo nombre que la clase pública que contiene.",
+      "concept_id": "programacion_img_132"
+    },
+    {
+      "question": "¿Cuál es la regla de oro del encapsulamiento en Java?",
+      "options": [
+        "Atributos públicos y métodos privados",
+        "Atributos privados y métodos públicos",
+        "Atributos y métodos siempre protected"
+      ],
+      "correct": 1,
+      "explanation": "Atributos privados + getters/setters públicos = encapsulamiento correcto.",
+      "concept_id": "programacion_img_134"
+    },
+    {
+      "question": "Cuando una clase tiene relación fuerte 'todo-parte' y la parte no puede existir sin el todo, ¿qué relación es?",
+      "options": [
+        "Dependencia",
+        "Agregación",
+        "Composición"
+      ],
+      "correct": 2,
+      "explanation": "Composición (diamante negro): Motor no existe sin Coche. Agregación: partes independientes.",
+      "concept_id": "programacion_img_136"
+    },
+    {
+      "question": "¿Cuál describe correctamente el concepto de clase en Java?",
+      "options": [
+        "Estructura que contiene únicamente métodos sin datos asociados",
+        "Plantilla que define los atributos y comportamientos de una entidad",
+        "Objeto creado en memoria mediante el operador new"
+      ],
+      "correct": 1,
+      "explanation": "La clase es el molde; el objeto (instancia) es el resultado de new Clase().",
+      "concept_id": "programacion_img_138"
+    },
+    {
+      "question": "¿Qué indica que un método tenga tipo de retorno void?",
+      "options": [
+        "Que el método devuelve un valor vacío",
+        "Que el método no realiza ninguna acción",
+        "Que el método realiza una acción pero no devuelve ningún valor"
+      ],
+      "correct": 2,
+      "explanation": "void = sin retorno. El método hace algo (calcula, imprime, modifica estado) pero no retorna nada.",
+      "concept_id": "programacion_img_140"
+    },
+    {
+      "question": "¿Cuál es la principal ventaja de usar setters en lugar de atributos públicos?",
+      "options": [
+        "Permiten acceder directamente a la memoria del objeto",
+        "Permiten validar los datos antes de modificar el estado del objeto",
+        "Eliminan la necesidad de constructores"
+      ],
+      "correct": 1,
+      "explanation": "Un setter puede rechazar valores inválidos: if (edad > 0) this.edad = edad;",
+      "concept_id": "programacion_img_142"
+    },
+    {
+      "question": "¿Qué requisito técnico es necesario para que el polimorfismo funcione en Java?",
+      "options": [
+        "El uso exclusivo de atributos protected",
+        "La sobrescritura (@Override) de métodos en las clases hijas",
+        "La creación de múltiples constructores"
+      ],
+      "correct": 1,
+      "explanation": "Polimorfismo en tiempo de ejecución requiere herencia + sobrescritura de métodos.",
+      "concept_id": "programacion_img_144"
+    },
+    {
+      "question": "¿Qué consecuencia tiene asignar una referencia de objeto a otra variable en Java?",
+      "options": [
+        "Se crea automáticamente una copia independiente del objeto",
+        "Ambas referencias apuntan al mismo objeto en memoria",
+        "El objeto original se elimina de la memoria"
+      ],
+      "correct": 1,
+      "explanation": "En Java los objetos son por referencia; solo los primitivos se copian por valor.",
+      "concept_id": "programacion_img_146"
+    },
+    {
+      "question": "¿Cuál es la misión principal de un constructor en Java?",
+      "options": [
+        "Finalizar la ejecución del programa",
+        "Inicializar los atributos del objeto en el momento de su creación",
+        "Definir el comportamiento común de todas las clases"
+      ],
+      "correct": 1,
+      "explanation": "El constructor se llama automáticamente con new y prepara el estado inicial del objeto.",
+      "concept_id": "programacion_img_148"
+    },
+    {
+      "question": "¿Cuál es correcta sobre los atributos de una clase?",
+      "options": [
+        "Los atributos se declaran dentro de los métodos",
+        "Cada objeto tiene su propia copia de los atributos definidos en la clase",
+        "Todos los objetos comparten los mismos valores de los atributos"
+      ],
+      "correct": 1,
+      "explanation": "Cada instancia tiene su propio espacio en el Heap para sus atributos de instancia.",
+      "concept_id": "programacion_img_150"
+    },
+    {
+      "question": "¿Cuál es el orden correcto para utilizar una variable en Java sin error de compilación?",
+      "options": [
+        "Inicializar → declarar → utilizar",
+        "Declarar → inicializar → utilizar",
+        "Utilizar → declarar → inicializar"
+      ],
+      "correct": 1,
+      "explanation": "Siempre: int x; (declarar) x = 5; (inicializar) System.out.println(x); (usar).",
+      "concept_id": "programacion_img_152"
+    },
+    {
+      "question": "¿Qué función principal cumplen las llaves {} en Java?",
+      "options": [
+        "Indicar el final de cada instrucción",
+        "Definir bloques de código y el ámbito de las variables",
+        "Separar visualmente el código para mejorar legibilidad"
+      ],
+      "correct": 1,
+      "explanation": "Las llaves definen el scope: las variables dentro no existen fuera del bloque.",
+      "concept_id": "programacion_img_154"
+    },
+    {
+      "question": "¿Cuál es la principal ventaja de usar constantes (final) frente a valores literales repetidos?",
+      "options": [
+        "Aumentan el rendimiento del programa",
+        "Permiten cambiar su valor en tiempo de ejecución",
+        "Mejoran la legibilidad y facilitan el mantenimiento del código"
+      ],
+      "correct": 2,
+      "explanation": "final int MAX = 100; es más legible y fácil de modificar que repetir '100' por todo el código.",
+      "concept_id": "programacion_img_156"
+    },
+    {
+      "question": "¿Cuál es correcta sobre los tipos primitivos en Java?",
+      "options": [
+        "Son objetos y disponen de métodos propios",
+        "Almacenan directamente el valor en memoria y no son objetos",
+        "Siempre se almacenan en el heap"
+      ],
+      "correct": 1,
+      "explanation": "int, double, boolean, char... se almacenan directamente en el stack (no como objetos).",
+      "concept_id": "programacion_img_158"
+    },
+    {
+      "question": "¿Qué operador tiene mayor prioridad en una expresión Java compleja?",
+      "options": [
+        "Los operadores aritméticos de suma y resta",
+        "Los operadores de asignación",
+        "Los paréntesis"
+      ],
+      "correct": 2,
+      "explanation": "Paréntesis > unarios > * / % > + - > comparación > lógicos > asignación.",
+      "concept_id": "programacion_img_160"
+    },
+    {
+      "question": "¿Qué ocurre cuando se ejecuta return dentro de un bucle en Java?",
+      "options": [
+        "Se salta únicamente la iteración actual del bucle",
+        "Se finaliza el bucle pero continúa el método",
+        "Se sale inmediatamente del método completo"
+      ],
+      "correct": 2,
+      "explanation": "return = salida del método completo. break = salida del bucle. continue = salta iteración.",
+      "concept_id": "programacion_img_162"
+    },
+    {
+      "question": "¿Cuál es el orden correcto de elementos en un programa Java ejecutable?",
+      "options": [
+        "Clase → Paquete → Método → Sentencias",
+        "Paquete (opcional) → Clase → Método → Sentencias",
+        "Método → Clase → Paquete → Sentencias"
+      ],
+      "correct": 1,
+      "explanation": "Java: package (opcional) → imports → class → methods → statements.",
+      "concept_id": "programacion_img_164"
+    },
+    {
+      "question": "¿Cuál es un identificador válido y bien escrito para una variable en Java?",
+      "options": [
+        "1contador",
+        "nombre usuario",
+        "nombreUsuario"
+      ],
+      "correct": 2,
+      "explanation": "camelCase para variables/métodos. No puede empezar con número ni tener espacios.",
+      "concept_id": "programacion_img_166"
+    },
+    {
+      "question": "¿Qué indica realmente el punto y coma en Java?",
+      "options": [
+        "El final lógico de un bloque de código",
+        "El final de una sentencia para el compilador",
+        "El final de una línea de texto para el programador"
+      ],
+      "correct": 1,
+      "explanation": "El ; termina una sentencia Java; una sentencia puede ocupar varias líneas físicas.",
+      "concept_id": "programacion_img_168"
+    },
+    {
+      "question": "¿Qué característica permite la sobrecarga de métodos (overloading) en Java?",
+      "options": [
+        "Diferenciar métodos únicamente por su tipo de retorno",
+        "Definir varios métodos con el mismo nombre y distinta firma de parámetros",
+        "Usar modificadores de acceso diferentes en cada método"
+      ],
+      "correct": 1,
+      "explanation": "Overloading: mismo nombre, diferente lista de parámetros (tipo o número).",
+      "concept_id": "programacion_img_170"
+    },
+    {
+      "question": "¿Cuál es la finalidad principal del encapsulamiento en OOP profesional?",
+      "options": [
+        "Facilitar el acceso directo a atributos desde cualquier clase",
+        "Proteger el estado interno del objeto y controlar su modificación",
+        "Reducir el número de métodos definidos en una clase"
+      ],
+      "correct": 1,
+      "explanation": "Encapsulamiento = ocultación de implementación interna + API pública controlada.",
+      "concept_id": "programacion_img_172"
+    },
+    {
+      "question": "¿Cuándo un objeto es candidato a la recolección de basura en Java?",
+      "options": [
+        "Cuando se declara la variable de referencia que lo apuntará",
+        "Cuando ninguna referencia activa apunta al objeto en memoria",
+        "Cuando el programa invoca explícitamente el recolector de basura"
+      ],
+      "correct": 1,
+      "explanation": "GC gestiona automáticamente la memoria; no se puede invocar garantizadamente con System.gc().",
+      "concept_id": "programacion_img_174"
+    },
+    {
+      "question": "¿Qué combinación contribuye a la organización y mantenibilidad en proyectos Java grandes?",
+      "options": [
+        "Uso de paquetes, gestión de librerías y documentación mediante Javadoc",
+        "Uso exclusivo de clases públicas sin separación en paquetes",
+        "Eliminación de comentarios para simplificar el código"
+      ],
+      "correct": 0,
+      "explanation": "packages + Maven/Gradle + Javadoc = buenas prácticas de proyectos Java.",
+      "concept_id": "programacion_img_176"
+    },
+    {
+      "question": "¿Qué ocurre cuando dos variables de tipo objeto se igualan en Java?",
+      "options": [
+        "Se crea automáticamente una copia independiente del objeto",
+        "Ambas variables pasan a compartir la referencia al mismo objeto",
+        "El objeto se duplica en el Heap para evitar efectos colaterales"
+      ],
+      "correct": 1,
+      "explanation": "Copia de referencia: ambas variables apuntan al mismo objeto en el Heap.",
+      "concept_id": "programacion_img_178"
+    },
+    {
+      "question": "¿Qué consecuencia tiene definir al menos un constructor con parámetros en una clase Java?",
+      "options": [
+        "Java mantiene siempre disponible el constructor vacío implícito",
+        "El constructor vacío deja de existir si no se define explícitamente",
+        "Se impide la sobrecarga de constructores"
+      ],
+      "correct": 1,
+      "explanation": "Si defines Persona(String nombre), pierdes el Persona() gratuito de Java.",
+      "concept_id": "programacion_img_180"
+    },
+    {
+      "question": "¿Cuál es la diferencia conceptual entre herencia y composición en OOP?",
+      "options": [
+        "La herencia modela 'tiene un' y la composición 'es un'",
+        "La herencia establece 'es un' y la composición 'tiene un'",
+        "Ambas representan exactamente el mismo tipo de relación"
+      ],
+      "correct": 1,
+      "explanation": "Herencia: Perro ES UN Animal. Composición: Coche TIENE UN Motor.",
+      "concept_id": "programacion_img_182"
+    },
+    {
+      "question": "En relación con el paso de parámetros en Java, ¿cuál es correcta?",
+      "options": [
+        "Java usa paso por referencia para objetos y por valor para primitivos",
+        "Java pasa siempre una copia del valor (en objetos es copia de la referencia)",
+        "Java permite elegir entre paso por valor o por referencia"
+      ],
+      "correct": 1,
+      "explanation": "Java es siempre 'pass by value'. Para objetos, el valor pasado es la referencia (dirección).",
+      "concept_id": "programacion_img_184"
+    },
+    {
+      "question": "¿Qué elemento se almacena en el Stack cuando se trabaja con objetos en Java?",
+      "options": [
+        "El objeto completo con todos sus atributos",
+        "La referencia que apunta al objeto almacenado en el Heap",
+        "Una copia independiente del objeto original"
+      ],
+      "correct": 1,
+      "explanation": "Stack: variables locales + referencias. Heap: objetos instanciados con new.",
+      "concept_id": "programacion_img_186"
+    },
+    {
+      "question": "¿Qué significa que la clase String sea inmutable en Java?",
+      "options": [
+        "Que no se pueden comparar dos cadenas entre sí",
+        "Que una vez creado un texto, no puede modificarse su contenido",
+        "Que solo puede crearse mediante el operador new"
+      ],
+      "correct": 1,
+      "explanation": "String inmutable: 's += x' crea un nuevo String. Usar StringBuilder para concatenación en bucles.",
+      "concept_id": "programacion_img_188"
+    },
+    {
+      "question": "¿Cuál es la característica fundamental de un array en Java desde el punto de vista de la memoria?",
+      "options": [
+        "Es una estructura primitiva almacenada íntegramente en el Stack",
+        "Es un objeto almacenado en el Heap accedido mediante una referencia",
+        "Es una colección dinámica cuyo tamaño varía durante la ejecución"
+      ],
+      "correct": 1,
+      "explanation": "int[] arr = new int[5]: arr es referencia en Stack; el array en Heap. Tamaño fijo.",
+      "concept_id": "programacion_img_190"
+    },
+    {
+      "question": "¿Cuál es la forma correcta de comparar el contenido de dos Strings en Java?",
+      "options": [
+        "Con == para comprobar referencias",
+        "Comparando directamente su longitud",
+        "Con el método equals() que evalúa el contenido textual"
+      ],
+      "correct": 2,
+      "explanation": "s1.equals(s2) compara contenido. s1 == s2 compara si son el mismo objeto en memoria.",
+      "concept_id": "programacion_img_192"
+    },
+    {
+      "question": "¿Cuál es la condición indispensable para poder aplicar búsqueda binaria?",
+      "options": [
+        "Que el array tenga tamaño reducido",
+        "Que el array esté previamente ordenado",
+        "Que el array contenga únicamente valores numéricos"
+      ],
+      "correct": 1,
+      "explanation": "Búsqueda binaria divide el array a la mitad en cada paso; requiere array ordenado.",
+      "concept_id": "programacion_img_194"
+    },
+    {
+      "question": "¿Cuál es correcta sobre arrays multidimensionales en Java?",
+      "options": [
+        "Representan una estructura continua de memoria bidimensional real",
+        "Son arrays cuyos elementos son, a su vez, otros arrays",
+        "Tienen un único valor de longitud para filas y columnas"
+      ],
+      "correct": 1,
+      "explanation": "int[][] matriz = new int[3][4]: es un array de 3 arrays de 4 enteros cada uno.",
+      "concept_id": "programacion_img_196"
+    },
+    {
+      "question": "¿Qué característica distingue al recorrido with for-each frente al for clásico?",
+      "options": [
+        "Permite modificar directamente los elementos del array",
+        "Proporciona acceso al índice y al valor simultáneamente",
+        "Está orientado a la lectura secuencial sin acceso a la posición"
+      ],
+      "correct": 2,
+      "explanation": "for-each: legible y seguro. No da el índice ni permite modificar el array.",
+      "concept_id": "programacion_img_198"
+    },
+    {
+      "question": "¿Cuáles son los índices válidos de un array de tamaño n?",
+      "options": [
+        "Del 1 al n",
+        "Del 0 al length-1",
+        "Del 0 al length"
+      ],
+      "correct": 1,
+      "explanation": "Array de 5 elementos: índices 0,1,2,3,4. [5] lanza ArrayIndexOutOfBoundsException.",
+      "concept_id": "programacion_img_200"
+    },
+    {
+      "question": "¿Cuál es la ventaja principal de los métodos de ordenación de Java frente a algoritmos propios?",
+      "options": [
+        "Son más sencillos conceptualmente que los algoritmos clásicos",
+        "Están optimizados (TimSort) y reducen errores en la implementación",
+        "Permiten mantener el orden original del array automáticamente"
+      ],
+      "correct": 1,
+      "explanation": "Arrays.sort() usa TimSort; Collections.sort() también. Eficiente y libre de bugs.",
+      "concept_id": "programacion_img_202"
+    },
+    {
+      "question": "¿Cuál es la finalidad principal de la propiedad length en los arrays?",
+      "options": [
+        "Modificar el tamaño del array durante la ejecución",
+        "Conocer el número de elementos para acceder y recorrer el array de forma segura",
+        "Contar solo los elementos inicializados explícitamente"
+      ],
+      "correct": 1,
+      "explanation": "arr.length es constante (el tamaño no cambia). For: for(int i=0; i<arr.length; i++)",
+      "concept_id": "programacion_img_204"
+    },
+    {
+      "question": "¿Qué afirmación describe correctamente el tamaño de un array en Java?",
+      "options": [
+        "El tamaño puede modificarse añadiendo o eliminando elementos",
+        "El tamaño se fija en el momento de su creación y no puede cambiar",
+        "El tamaño depende del número de elementos inicializados manualmente"
+      ],
+      "correct": 1,
+      "explanation": "Los arrays Java tienen tamaño fijo. Para tamaño dinámico usar ArrayList.",
+      "concept_id": "programacion_img_206"
     }
   ],
   "lenguaje_de_marcas": [
@@ -6347,6 +7040,798 @@
       ],
       "correct": 1,
       "explanation": "La exportación de datos sensibles es un riesgo de seguridad importante en los ERP."
+    },
+    {
+      "question": "A diferencia de HTML, el lenguaje XML se caracteriza por:",
+      "options": [
+        "Ser una versión más estricta de HTML",
+        "Combinar información estructural con diseño",
+        "Ser exclusivamente estructural, sin diseño, usado para describir y estructurar datos"
+      ],
+      "correct": 2,
+      "explanation": "XML describe datos; HTML describe presentación.",
+      "concept_id": "lenguaje_de_marcas_img_111"
+    },
+    {
+      "question": "¿Cuáles eran las tres variantes de DTD contempladas en HTML 4.0?",
+      "options": [
+        "Lineal, Jerárquico y de Programación",
+        "Estructural, de Presentación y de Programación",
+        "Estricta, de Transición (transicional) y Frameset"
+      ],
+      "correct": 2,
+      "explanation": "HTML 4.01: Strict, Transitional (flexible) y Frameset.",
+      "concept_id": "lenguaje_de_marcas_img_113"
+    },
+    {
+      "question": "¿Cuál es el objetivo principal del W3C (World Wide Web Consortium)?",
+      "options": [
+        "Establecer normas internacionales de calidad y seguridad en productos",
+        "Desarrollar y promover estándares web abiertos para garantizar la interoperabilidad de la WWW",
+        "Lanzar nuevas versiones de JavaScript para mejorar la interactividad web"
+      ],
+      "correct": 1,
+      "explanation": "El W3C define los estándares de HTML, CSS, XML, etc.",
+      "concept_id": "lenguaje_de_marcas_img_115"
+    },
+    {
+      "question": "¿Cuál es la distinción correcta entre 'etiqueta' y 'elemento' en lenguajes de marcas?",
+      "options": [
+        "Una etiqueta es el par nombre-valor que indica propiedades asociadas a los elementos",
+        "Una etiqueta es el texto entre los símbolos <nombre>; un elemento tiene etiqueta de inicio y cierre y organiza el contenido",
+        "Un elemento siempre se refiere a contenido vacío sin etiqueta de fin"
+      ],
+      "correct": 1,
+      "explanation": "Elemento = <etiqueta_apertura>contenido</etiqueta_cierre>.",
+      "concept_id": "lenguaje_de_marcas_img_117"
+    },
+    {
+      "question": "¿Quién propuso en 1980 el hipertexto que dio origen al HTML?",
+      "options": [
+        "El Consorcio W3C",
+        "Tim Berners-Lee mientras trabajaba en el CERN",
+        "La ISO"
+      ],
+      "correct": 1,
+      "explanation": "Tim Berners-Lee inventó la Web y el HTML en el CERN.",
+      "concept_id": "lenguaje_de_marcas_img_119"
+    },
+    {
+      "question": "El lenguaje SGML fue estandarizado en 1986 y se originó como descendiente de:",
+      "options": [
+        "HTML, por su creciente complejidad",
+        "GML propuesto por IBM para compartir información, estandarizado por ISO 8879",
+        "XML, para un lenguaje más potente"
+      ],
+      "correct": 1,
+      "explanation": "SGML → XML es el padre. GML → SGML es el abuelo.",
+      "concept_id": "lenguaje_de_marcas_img_121"
+    },
+    {
+      "question": "¿Cómo se define principalmente un lenguaje de marcas?",
+      "options": [
+        "Método de codificación que usa variables y funciones aritméticas",
+        "Método de codificación donde texto se combina con etiquetas para indicar estructura o estilo",
+        "Lenguaje de programación para crear aplicaciones web interactivas"
+      ],
+      "correct": 1,
+      "explanation": "Las marcas (tags) añaden semántica o presentación al texto.",
+      "concept_id": "lenguaje_de_marcas_img_123"
+    },
+    {
+      "question": "¿Cómo se clasifica CSS en relación con los lenguajes de marcas?",
+      "options": [
+        "Es un lenguaje de marcas estructural",
+        "Es un lenguaje de marcas jerárquico",
+        "No es un lenguaje de marcas, sino un lenguaje de estilos que separa contenido de presentación"
+      ],
+      "correct": 2,
+      "explanation": "CSS no tiene etiquetas de contenido; define reglas de presentación.",
+      "concept_id": "lenguaje_de_marcas_img_125"
+    },
+    {
+      "question": "Dado <p><a href='#'><span>Texto</span></a></p>, ¿qué selector CSS NO aplicaría al <span>?",
+      "options": [
+        "p span",
+        "a span",
+        "p > span"
+      ],
+      "correct": 2,
+      "explanation": "p > span selecciona hijos directos de p. El span es hijo de a, no de p.",
+      "concept_id": "lenguaje_de_marcas_img_127"
+    },
+    {
+      "question": "¿Cuál es un atributo específico de ciertos elementos (como <img> o <a>), no global?",
+      "options": [
+        "class",
+        "id",
+        "src"
+      ],
+      "correct": 2,
+      "explanation": "src solo existe en <img>, <script>, <iframe>...; class e id son atributos globales.",
+      "concept_id": "lenguaje_de_marcas_img_129"
+    },
+    {
+      "question": "¿Cuál es la forma menos recomendable de incluir CSS porque mezcla contenido y presentación?",
+      "options": [
+        "Enlace a CSS externo mediante <link> en el <head>",
+        "CSS mediante <style> en el <head>",
+        "CSS en línea (inline) con el atributo style='...' en la etiqueta HTML"
+      ],
+      "correct": 2,
+      "explanation": "El CSS inline dificulta el mantenimiento y tiene la mayor especificidad.",
+      "concept_id": "lenguaje_de_marcas_img_131"
+    },
+    {
+      "question": "¿Cuál es una diferencia correcta entre HTML y XHTML?",
+      "options": [
+        "En XHTML los nombres de etiquetas pueden ser mayúsculas o minúsculas indistintamente",
+        "XHTML exige el cierre de todas las etiquetas y que los atributos tengan valor entre comillas",
+        "HTML permite integrar MathML o SVG mientras XHTML no"
+      ],
+      "correct": 1,
+      "explanation": "XHTML es HTML adaptado a las reglas estrictas de XML.",
+      "concept_id": "lenguaje_de_marcas_img_133"
+    },
+    {
+      "question": "¿Qué etiqueta semántica HTML5 se usa para barras laterales con contenido relacionado pero no principal?",
+      "options": [
+        "<header>",
+        "<section>",
+        "<aside>"
+      ],
+      "correct": 2,
+      "explanation": "<aside> = contenido tangencial al principal (sidebar, notas al margen).",
+      "concept_id": "lenguaje_de_marcas_img_135"
+    },
+    {
+      "question": "¿Qué etiqueta HTML está explícitamente obsoleta (deprecated) en HTML5?",
+      "options": [
+        "<p>",
+        "<b>",
+        "<font>"
+      ],
+      "correct": 2,
+      "explanation": "<font>, <center>, <strike> son deprecated en HTML5; su función la cubre CSS.",
+      "concept_id": "lenguaje_de_marcas_img_137"
+    },
+    {
+      "question": "¿Qué atributo del <form> es esencial para la subida de archivos?",
+      "options": [
+        "action",
+        "target",
+        "enctype"
+      ],
+      "correct": 2,
+      "explanation": "enctype='multipart/form-data' es obligatorio para subir archivos.",
+      "concept_id": "lenguaje_de_marcas_img_139"
+    },
+    {
+      "question": "¿Cuál es el objetivo principal del DOM?",
+      "options": [
+        "Establecer la estructura del contenido web",
+        "Definir cómo se almacenan los documentos en el servidor",
+        "Permitir que programas (JS) accedan y modifiquen dinámicamente el contenido, estructura y estilo"
+      ],
+      "correct": 2,
+      "explanation": "DOM = interfaz de programación que conecta HTML/CSS con JavaScript.",
+      "concept_id": "lenguaje_de_marcas_img_141"
+    },
+    {
+      "question": "¿Qué etiquetas agrupan semánticamente encabezado, cuerpo y pie de una tabla HTML?",
+      "options": [
+        "<table>, <tr>, <td>",
+        "<caption>, <thead>, <tfoot>",
+        "<thead>, <tbody>, <tfoot>"
+      ],
+      "correct": 2,
+      "explanation": "thead/tbody/tfoot permiten scroll de tbody manteniendo cabecera visible.",
+      "concept_id": "lenguaje_de_marcas_img_143"
+    },
+    {
+      "question": "En XHTML, ¿cómo debe manejarse el atributo 'checked' de un <input>?",
+      "options": [
+        "Debe omitirse, no es compatible con XML",
+        "Debe llevar siempre un valor: checked='checked'",
+        "Se usa tal cual si hay DOCTYPE Frameset"
+      ],
+      "correct": 1,
+      "explanation": "XHTML no permite atributos minimizados; requiere checked='checked'.",
+      "concept_id": "lenguaje_de_marcas_img_145"
+    },
+    {
+      "question": "¿Cuál es un inconveniente principal de DTD frente a XSD?",
+      "options": [
+        "Su sintaxis es demasiado compleja y no está basada en XML",
+        "Permite definición de secuencias no ordenadas y claves combinadas",
+        "Carece de soporte para namespaces y limita los elementos terminales a datos textuales"
+      ],
+      "correct": 2,
+      "explanation": "DTD: sin tipos de datos, sin namespaces, sintaxis no-XML.",
+      "concept_id": "lenguaje_de_marcas_img_147"
+    },
+    {
+      "question": "Si <alumno> está dentro de <carrera> que es hijo de <facultad>, ¿qué relación tiene <alumno> con <facultad>?",
+      "options": [
+        "<alumno> es hijo directo de <facultad>",
+        "No tienen relación de descendencia",
+        "<alumno> es descendiente de <facultad>, al estar en un hijo de <facultad>"
+      ],
+      "correct": 2,
+      "explanation": "La jerarquía XML es transitiva: nieto también es descendiente.",
+      "concept_id": "lenguaje_de_marcas_img_149"
+    },
+    {
+      "question": "¿Qué elemento XSD indica que los componentes deben aparecer en un orden determinado y fijo?",
+      "options": [
+        "xs:choice, que selecciona uno de varios elementos sin orden",
+        "xs:complexType con mixed=true que mezcla texto con elementos",
+        "xs:sequence, que enumera los componentes en secuencia obligatoria"
+      ],
+      "correct": 2,
+      "explanation": "xs:sequence = orden fijo y obligatorio. xs:all = cualquier orden. xs:choice = uno de varios.",
+      "concept_id": "lenguaje_de_marcas_img_151"
+    },
+    {
+      "question": "Si se quiere restringir un xs:string a un conjunto cerrado de valores predefinidos, ¿qué faceta usar?",
+      "options": [
+        "xs:maxLength para longitud máxima",
+        "xs:pattern para expresión regular",
+        "xs:enumeration que lista los valores exactos permitidos"
+      ],
+      "correct": 2,
+      "explanation": "xs:enumeration = lista blanca de valores permitidos.",
+      "concept_id": "lenguaje_de_marcas_img_153"
+    },
+    {
+      "question": "¿Cuál es una afirmación correcta sobre JSON?",
+      "options": [
+        "JSON es un lenguaje de marcas con estructura jerárquica de etiquetas",
+        "Los documentos JSON son más difíciles de interpretar que XML",
+        "JSON se basa en dos estructuras: objetos (pares nombre/valor) y arrays (lista ordenada de valores)"
+      ],
+      "correct": 2,
+      "explanation": "JSON: {} para objetos, [] para arrays. Ligero y fácil de parsear.",
+      "concept_id": "lenguaje_de_marcas_img_155"
+    },
+    {
+      "question": "¿Cómo muestra un navegador un documento XML sin CSS ni XSLT?",
+      "options": [
+        "Aplica estilos por defecto para hacerlo visualmente atractivo",
+        "Muestra un error indicando que no tiene formato válido",
+        "Muestra la jerarquía de etiquetas en texto plano sin estilo"
+      ],
+      "correct": 2,
+      "explanation": "Los navegadores modernos muestran el árbol XML coloreado pero sin layout.",
+      "concept_id": "lenguaje_de_marcas_img_157"
+    },
+    {
+      "question": "Según las reglas de buena formación XML, ¿cuál es correcta sobre etiquetas?",
+      "options": [
+        "Las etiquetas XML no son sensibles a mayúsculas/minúsculas",
+        "Es posible cerrar una etiqueta exterior antes de que sus hijos sean cerrados",
+        "Los elementos vacíos pueden representarse como <hr></hr> o <hr/>"
+      ],
+      "correct": 2,
+      "explanation": "XML es case-sensitive y requiere anidamiento correcto.",
+      "concept_id": "lenguaje_de_marcas_img_159"
+    },
+    {
+      "question": "¿Qué nombre XML es inválido según las reglas de nomenclatura?",
+      "options": [
+        "_nombre-usuario",
+        "titulo-2024",
+        "XML_data"
+      ],
+      "correct": 2,
+      "explanation": "Nombres XML no pueden empezar con dígito, espacio o guion. XML como prefijo está reservado.",
+      "concept_id": "lenguaje_de_marcas_img_161"
+    },
+    {
+      "question": "¿Qué debe cumplir un documento XML para ser considerado válido además de estar bien formado?",
+      "options": [
+        "Debe ser compatible con cualquier navegador sin estilos adicionales",
+        "Debe comenzar con prólogo con versión, codificación y standalone='yes'",
+        "Debe ajustarse a las restricciones definidas en una DTD o XSD asociado"
+      ],
+      "correct": 2,
+      "explanation": "Bien formado = reglas sintácticas XML. Válido = además cumple el esquema.",
+      "concept_id": "lenguaje_de_marcas_img_163"
+    },
+    {
+      "question": "¿Qué afirmación sobre el procesador DOM es correcta?",
+      "options": [
+        "Es una API basada en eventos, ideal para documentos muy grandes por su bajo consumo de memoria",
+        "Carga todo el documento XML en memoria como árbol de objetos para manipulación dinámica",
+        "No permite modificar el XML, solo leerlo secuencialmente"
+      ],
+      "correct": 1,
+      "explanation": "DOM: árbol en memoria, acceso aleatorio, modificable. SAX: eventos, bajo consumo, solo lectura secuencial.",
+      "concept_id": "lenguaje_de_marcas_img_165"
+    },
+    {
+      "question": "¿Qué componente XSL está orientado a definir formatos de presentación para PDF y otros medios?",
+      "options": [
+        "XPath",
+        "XSLT",
+        "XSL-FO"
+      ],
+      "correct": 2,
+      "explanation": "XSL-FO (Formatting Objects) = diseño para impresión/PDF. XSLT = transformación a HTML/XML.",
+      "concept_id": "lenguaje_de_marcas_img_167"
+    },
+    {
+      "question": "Para mostrar el valor del atributo 'identificador' en XSLT, ¿qué expresión XPath usar en xsl:value-of?",
+      "options": [
+        "identificador",
+        "/identificador",
+        "@identificador"
+      ],
+      "correct": 2,
+      "explanation": "@ en XPath selecciona atributos. @identificador = el atributo identificador del nodo actual.",
+      "concept_id": "lenguaje_de_marcas_img_169"
+    },
+    {
+      "question": "¿Qué característica de XSLT 2.0 permite procesar documentos XML grandes sin cargarlos en memoria?",
+      "options": [
+        "La mejora del sistema de tipos de datos",
+        "xsl:function para definir funciones reutilizables",
+        "El soporte de streaming para documentos fuente"
+      ],
+      "correct": 2,
+      "explanation": "Streaming XSLT 2.0/3.0 procesa el XML como flujo sin cargarlo completo.",
+      "concept_id": "lenguaje_de_marcas_img_171"
+    },
+    {
+      "question": "Al abrir un XML con XSLT en Chrome desde file://..., ¿qué resultado es probable?",
+      "options": [
+        "Se muestra el XML transformado con estilos aplicados",
+        "Se muestra el XML original con estructura de etiquetas",
+        "Se muestra página en blanco; Chrome bloquea XSLT local por seguridad"
+      ],
+      "correct": 2,
+      "explanation": "Chrome bloquea XSLT local por política CORS/seguridad. Usar servidor web.",
+      "concept_id": "lenguaje_de_marcas_img_173"
+    },
+    {
+      "question": "¿Qué atributo match de xsl:template hace en XSLT?",
+      "options": [
+        "Indica el namespace de la hoja de estilos",
+        "Define el tipo de documento de salida (html, xml)",
+        "Especifica los elementos XML de entrada a los que aplica la plantilla, usando XPath"
+      ],
+      "correct": 2,
+      "explanation": "match='/' aplica la plantilla al nodo raíz; match='libro' a todos los <libro>.",
+      "concept_id": "lenguaje_de_marcas_img_175"
+    },
+    {
+      "question": "¿Qué instrucción XSLT itera sobre un conjunto de nodos aplicando transformación a cada uno?",
+      "options": [
+        "xsl:value-of",
+        "xsl:for-each",
+        "xsl:if"
+      ],
+      "correct": 1,
+      "explanation": "xsl:for-each select='//producto' itera sobre todos los elementos <producto>.",
+      "concept_id": "lenguaje_de_marcas_img_177"
+    },
+    {
+      "question": "¿Qué instrucción XSLT implementa lógica condicional compleja con múltiples ramas?",
+      "options": [
+        "xsl:if con test",
+        "<xsl:choose> con <xsl:when> y <xsl:otherwise>",
+        "xsl:for-each con select"
+      ],
+      "correct": 1,
+      "explanation": "xsl:choose = switch/case de XSLT. xsl:if = if simple sin else.",
+      "concept_id": "lenguaje_de_marcas_img_179"
+    },
+    {
+      "question": "¿Qué distingue a las bases de datos XML nativas?",
+      "options": [
+        "Usan SQL para todas las operaciones",
+        "Almacenan el XML en su forma original sin alterarlo, aprovechando su modelo jerárquico",
+        "Convierten el XML a esquema relacional optimizado"
+      ],
+      "correct": 1,
+      "explanation": "eXist-db, BaseX, MarkLogic: guardan el XML tal cual y lo consultan con XQuery/XPath.",
+      "concept_id": "lenguaje_de_marcas_img_181"
+    },
+    {
+      "question": "¿Qué requisito es indispensable para instalar eXist-db?",
+      "options": [
+        "Apache o Nginx preinstalado",
+        "Java 1.7 o posterior instalado en el sistema",
+        "Mínimo 2048 MB de RAM dedicados"
+      ],
+      "correct": 1,
+      "explanation": "eXist-db es una aplicación Java; requiere JRE/JDK instalado.",
+      "concept_id": "lenguaje_de_marcas_img_183"
+    },
+    {
+      "question": "La herramienta IMPORTXML de Google Sheets, ¿para qué sirve?",
+      "options": [
+        "Transformar documentos XML a JSON o PDF",
+        "Importar datos de formatos estructurados (XML, HTML, CSV) desde una URL aplicando XPath",
+        "Crear documentos XML nuevos desde datos de una hoja de cálculo"
+      ],
+      "correct": 1,
+      "explanation": "=IMPORTXML(url, xpath_query) extrae datos de páginas web directamente a Sheets.",
+      "concept_id": "lenguaje_de_marcas_img_185"
+    },
+    {
+      "question": "¿Cuál es una desventaja de las bases de datos 'XML enabled' frente a las nativas?",
+      "options": [
+        "No pueden procesar XML sin middleware adicional",
+        "No permiten gestión de transacciones en entornos XML",
+        "No pueden restaurar el XML original sin alterarlo; tienen diferencia de filosofía con la naturaleza jerárquica del XML"
+      ],
+      "correct": 2,
+      "explanation": "Las BD relacionales almacenan el XML desnormalizado; pierden la estructura original.",
+      "concept_id": "lenguaje_de_marcas_img_187"
+    },
+    {
+      "question": "En XPath, ¿qué operador une varias rutas (unión de conjuntos de nodos)?",
+      "options": [
+        "AND",
+        "OR",
+        "|"
+      ],
+      "correct": 2,
+      "explanation": "//marca | //modelo selecciona todos los <marca> Y todos los <modelo>.",
+      "concept_id": "lenguaje_de_marcas_img_189"
+    },
+    {
+      "question": "¿Para qué sirve la cláusula Let en una expresión FLWOR de XQuery?",
+      "options": [
+        "Iterar sobre un conjunto de nodos",
+        "Crear variables temporales usadas en otras cláusulas",
+        "Filtrar resultados con expresión booleana"
+      ],
+      "correct": 1,
+      "explanation": "let $precio := /tienda/producto/precio crea una variable temporal.",
+      "concept_id": "lenguaje_de_marcas_img_191"
+    },
+    {
+      "question": "¿Qué expresión XPath devuelve el elemento <coche> con atributo id igual a '2'?",
+      "options": [
+        "/concesionario/coche[position()=2]",
+        "//coche[@id='2']",
+        "//concesionario/coche[@id='2']"
+      ],
+      "correct": 1,
+      "explanation": "[@atributo='valor'] es un predicado XPath que filtra por valor de atributo.",
+      "concept_id": "lenguaje_de_marcas_img_193"
+    },
+    {
+      "question": "¿Qué afirmación sobre XQuery es correcta?",
+      "options": [
+        "No permite acceso a múltiples documentos en una consulta",
+        "Ofrece transformación: no solo recupera datos sino que devuelve nuevas estructuras",
+        "Carece de funciones para cadenas, números o fechas"
+      ],
+      "correct": 1,
+      "explanation": "XQuery es Turing-completo: puede agrupar, transformar y crear documentos XML.",
+      "concept_id": "lenguaje_de_marcas_img_195"
+    },
+    {
+      "question": "¿Qué XPath selecciona todos los hijos directos de <coche> bajo <concesionario>?",
+      "options": [
+        "//coche/[nodos]",
+        "//concesionario/coche/*",
+        "concesionario/coche//@*"
+      ],
+      "correct": 1,
+      "explanation": "* como comodín selecciona cualquier elemento hijo. @* selecciona atributos.",
+      "concept_id": "lenguaje_de_marcas_img_197"
+    },
+    {
+      "question": "Si un CMS genera RSS y HTML del mismo contenido, ¿qué proceso técnico subyace?",
+      "options": [
+        "Creación manual separada por el webmaster",
+        "Transformación del contenido almacenado en repositorio para adaptarlo al formato RSS",
+        "Almacenamiento directo en formato RSS sin transformación"
+      ],
+      "correct": 1,
+      "explanation": "XSLT transforma el contenido fuente (XML/DB) al formato de salida deseado.",
+      "concept_id": "lenguaje_de_marcas_img_199"
+    },
+    {
+      "question": "¿Cuál es la función esencial de un 'agregador' de canales RSS/Atom?",
+      "options": [
+        "Crear nuevos artículos y publicarlos en sitios web",
+        "Suscribirse a fuentes RSS/Atom y notificar al usuario sobre actualizaciones desde la última lectura",
+        "Validar la sintaxis de feeds para asegurar compatibilidad con estándares"
+      ],
+      "correct": 1,
+      "explanation": "Feedreader/agregador: Feedly, Inoreader, Netvibes son ejemplos populares.",
+      "concept_id": "lenguaje_de_marcas_img_201"
+    },
+    {
+      "question": "¿Por qué se desarrolló Atom como alternativa a RSS?",
+      "options": [
+        "Para reemplazar completamente a RSS y hacerlo obsoleto",
+        "Para abordar la confusión por múltiples estándares RSS incompatibles, dando solución más consistente",
+        "Para crear feeds sin usar XML como base"
+      ],
+      "correct": 1,
+      "explanation": "Atom 1.0 (RFC 4287) surgió para unificar y superar las limitaciones de RSS 0.9x/1.0/2.0.",
+      "concept_id": "lenguaje_de_marcas_img_203"
+    },
+    {
+      "question": "¿Qué mejora técnica introdujo Atom 1.0 respecto a RSS 2.0?",
+      "options": [
+        "Más popularidad y soporte universal",
+        "Menos elementos obligatorios para crear un feed",
+        "Capacidad de indicar el tipo de contenido (texto, HTML, multimedia) y usar fecha estándar ISO"
+      ],
+      "correct": 2,
+      "explanation": "Atom usa RFC 3339 para fechas y type='html/text/xhtml' para el contenido.",
+      "concept_id": "lenguaje_de_marcas_img_205"
+    },
+    {
+      "question": "¿Cuáles son los tres elementos obligatorios del elemento <channel> en RSS 2.0?",
+      "options": [
+        "<item>, <author>, <pubDate>",
+        "<category>, <image>, <language>",
+        "<title>, <link>, <description>"
+      ],
+      "correct": 2,
+      "explanation": "El canal RSS necesita mínimo título, enlace y descripción.",
+      "concept_id": "lenguaje_de_marcas_img_207"
+    },
+    {
+      "question": "¿Cuál es el propósito principal de la sindicación de contenidos (redifusión web)?",
+      "options": [
+        "Almacenar información de sitios web en base de datos centralizada",
+        "Permitir que un sitio acceda a contenidos de otro, distribuyendo automáticamente info actualizada a suscriptores",
+        "Convertir XML a formatos no-marcas para visualización en navegadores"
+      ],
+      "correct": 1,
+      "explanation": "RSS/Atom permiten suscribirse a actualizaciones sin visitar el sitio.",
+      "concept_id": "lenguaje_de_marcas_img_209"
+    },
+    {
+      "question": "¿Por qué es importante validar un feed RSS/Atom?",
+      "options": [
+        "Para mejorar su posición automáticamente en buscadores",
+        "Para asegurar que cumple estándares W3C, verificar accesibilidad de la URI y ausencia de errores de sintaxis",
+        "Para registrarse en directorios sin aprobación manual"
+      ],
+      "correct": 1,
+      "explanation": "Feed Validator (validator.w3.org/feed) comprueba conformidad con la especificación.",
+      "concept_id": "lenguaje_de_marcas_img_211"
+    },
+    {
+      "question": "Para evitar problemas con acentos o 'ñ' en sindicación, ¿qué se recomienda?",
+      "options": [
+        "Convertir los caracteres especiales al alfabeto inglés",
+        "Usar codificación UTF-8 y entidades XML correspondientes (ej. á)",
+        "Limitar la sindicación a plataformas que no admitan esos caracteres"
+      ],
+      "correct": 1,
+      "explanation": "UTF-8 codifica cualquier carácter Unicode; las entidades XML son alternativa segura.",
+      "concept_id": "lenguaje_de_marcas_img_213"
+    },
+    {
+      "question": "¿Cuál es la diferencia clave entre agregadores web y de escritorio?",
+      "options": [
+        "Los de escritorio no requieren conexión a Internet",
+        "Los web se alojan en sitios y se acceden por navegador (multi-dispositivo); los de escritorio se instalan localmente",
+        "Los web no sincronizan la lectura entre dispositivos"
+      ],
+      "correct": 1,
+      "explanation": "Feedly = web. Thunderbird = escritorio. NetNewsWire = escritorio Mac.",
+      "concept_id": "lenguaje_de_marcas_img_215"
+    },
+    {
+      "question": "¿Cuáles son los dos formatos más usados para sindicación de contenidos, ambos basados en XML?",
+      "options": [
+        "HTML y CSS",
+        "JSON y YAML",
+        "RSS y Atom"
+      ],
+      "correct": 2,
+      "explanation": "RSS (Really Simple Syndication) y Atom son los estándares de sindicación web basados en XML.",
+      "concept_id": "lenguaje_de_marcas_img_217"
+    },
+    {
+      "question": "¿Por qué los dispositivos portátiles y empleados móviles impulsan necesidades en la gestión empresarial?",
+      "options": [
+        "Para limitar el acceso solo desde oficinas centrales",
+        "Para encontrar soluciones que integren a empleados móviles en los flujos de información en tiempo real",
+        "Para reducir la información disponible a empleados móviles"
+      ],
+      "correct": 1,
+      "explanation": "El trabajo remoto y BYOD requieren que los ERP sean accesibles desde cualquier dispositivo.",
+      "concept_id": "lenguaje_de_marcas_img_219"
+    },
+    {
+      "question": "¿De dónde pueden provenir los módulos complementarios de un ERP?",
+      "options": [
+        "Solo del fabricante del software base para asegurar compatibilidad",
+        "Del fabricante, de terceros o como programas personalizados solicitados por la empresa",
+        "Solo de repositorios open source"
+      ],
+      "correct": 1,
+      "explanation": "SAP, Odoo, etc. tienen ecosistemas de partners que crean módulos certificados.",
+      "concept_id": "lenguaje_de_marcas_img_221"
+    },
+    {
+      "question": "¿Cuál es el objetivo de un ERP unificado frente a aplicaciones por departamento?",
+      "options": [
+        "Reducir la formación del personal estandarizando interfaces",
+        "Controlar procesos de negocio coordinadamente para toma de decisiones, reducir costes y aumentar productividad",
+        "Permitir que cada departamento mantenga autonomía total en sus datos"
+      ],
+      "correct": 1,
+      "explanation": "El ERP elimina silos de información y proporciona una única fuente de verdad.",
+      "concept_id": "lenguaje_de_marcas_img_223"
+    },
+    {
+      "question": "¿Cuál es un requisito previo fundamental antes de instalar cualquier ERP?",
+      "options": [
+        "Contratar hosting cloud específico para el ERP",
+        "Crear previamente la base de datos, ya que todo ERP se apoya en una BD centralizada",
+        "Instalar un IDE para la personalización futura"
+      ],
+      "correct": 1,
+      "explanation": "El ERP necesita una BD (MySQL, PostgreSQL, Oracle, etc.) configurada previamente.",
+      "concept_id": "lenguaje_de_marcas_img_225"
+    },
+    {
+      "question": "¿Qué función adicional cumple un CRM más allá de ser una lista de contactos?",
+      "options": [
+        "Generar automáticamente informes financieros para auditorías externas",
+        "Mantener equipos actualizados con información personalizada sobre clientes, historial y preferencias",
+        "Reemplazar completamente las funciones de un sistema de gestión de almacén"
+      ],
+      "correct": 1,
+      "explanation": "CRM = 360° del cliente: historial de compras, interacciones, preferencias, oportunidades.",
+      "concept_id": "lenguaje_de_marcas_img_227"
+    },
+    {
+      "question": "¿Cuál es el riesgo crítico al exportar información de un ERP a suites ofimáticas?",
+      "options": [
+        "Incompatibilidad de formatos entre ERP y ofimática",
+        "Ralentización del sistema ERP por la carga de datos exportados",
+        "Filtrar información confidencial de la empresa hacia el exterior sin control adecuado"
+      ],
+      "correct": 2,
+      "explanation": "El control DLP (Data Loss Prevention) es crucial al exportar datos críticos del ERP.",
+      "concept_id": "lenguaje_de_marcas_img_229"
+    },
+    {
+      "question": "En un ERP con múltiples roles asignados a un usuario donde uno impone restricciones más estrictas, ¿qué ocurre?",
+      "options": [
+        "El usuario obtiene la suma de todos los privilegios",
+        "Prevalece el rol que impone las restricciones más estrictas para garantizar la seguridad",
+        "El sistema pide al usuario que elija qué rol activar cada sesión"
+      ],
+      "correct": 1,
+      "explanation": "Principio de mínimo privilegio: si hay conflicto, gana la restricción más estricta.",
+      "concept_id": "lenguaje_de_marcas_img_231"
+    },
+    {
+      "question": "¿Cuál de las siguientes representa una 'adaptación' de un ERP?",
+      "options": [
+        "Añadir un campo personalizado en órdenes de envío que no venía por defecto",
+        "Definir que facturas electrónicas se emitan en formato XML-UBL",
+        "Configurar reglas de seguridad y restricciones de acceso para usuarios"
+      ],
+      "correct": 0,
+      "explanation": "Adaptación = añadir funcionalidad nueva. Configuración = ajustar lo que ya existe.",
+      "concept_id": "lenguaje_de_marcas_img_233"
+    },
+    {
+      "question": "¿Cuál describe mejor el objetivo principal de un Schema XML (XSD) frente a DTD?",
+      "options": [
+        "XSD se centra solo en sintaxis de etiquetas sin tipos de datos ni restricciones",
+        "XSD está escrito en un lenguaje diferente al XML que requiere analizadores distintos",
+        "XSD define estructura de documentos XML incluyendo tipos de datos, orden, ocurrencias y valores por defecto, mejorando las capacidades de DTD"
+      ],
+      "correct": 2,
+      "explanation": "XSD usa sintaxis XML; DTD usa una sintaxis propia no-XML.",
+      "concept_id": "lenguaje_de_marcas_img_235"
+    },
+    {
+      "question": "Para definir un tipo de dato simple personalizado en XSD, ¿qué estructura se usa?",
+      "options": [
+        "xs:complexType",
+        "xs:simpleType",
+        "xs:element"
+      ],
+      "correct": 1,
+      "explanation": "xs:simpleType define tipos personalizados simples (con restricciones como pattern, enumeration, etc.).",
+      "concept_id": "lenguaje_de_marcas_img_237"
+    },
+    {
+      "question": "¿Qué elemento XSD define tipos complejos con elementos/atributos y permite especificar orden de hijos?",
+      "options": [
+        "xs:all",
+        "xs:choice",
+        "xs:sequence"
+      ],
+      "correct": 2,
+      "explanation": "xs:complexType + xs:sequence define la estructura interna de un elemento complejo con orden.",
+      "concept_id": "lenguaje_de_marcas_img_239"
+    },
+    {
+      "question": "¿Qué atributo del elemento raíz xs:schema indica si los elementos deben llevar el namespace delante?",
+      "options": [
+        "targetNamespace",
+        "xmlns:alias",
+        "elementFormDefault"
+      ],
+      "correct": 2,
+      "explanation": "elementFormDefault='qualified' obliga a usar el prefijo del namespace en todos los elementos.",
+      "concept_id": "lenguaje_de_marcas_img_241"
+    },
+    {
+      "question": "¿Cómo se asocia un XML a su XSD cuando se usan namespaces en las etiquetas?",
+      "options": [
+        "Con el atributo noNamespaceSchemaLocation",
+        "Con el atributo schemaLocation",
+        "El navegador lo detecta automáticamente sin asociación explícita"
+      ],
+      "correct": 1,
+      "explanation": "xsi:schemaLocation='namespace ruta-xsd' asocia el namespace con su esquema XSD.",
+      "concept_id": "lenguaje_de_marcas_img_243"
+    },
+    {
+      "question": "¿Cuál es un problema recurrente de las DTD que XSD resuelve?",
+      "options": [
+        "Facilidad para combinarse con otras DTD y soporte nativo para namespaces XML",
+        "Soporte robusto para tipos de datos complejos y especificación del elemento raíz",
+        "Ausencia de tipos de datos, dificultad para ordenar elementos y limitada compatibilidad con namespaces XML"
+      ],
+      "correct": 2,
+      "explanation": "DTD: sin tipos, sin namespaces, sintaxis propia. XSD resuelve todo esto.",
+      "concept_id": "lenguaje_de_marcas_img_245"
+    },
+    {
+      "question": "Para hacer un atributo obligatorio en XSD, ¿qué se usa?",
+      "options": [
+        "default",
+        "use con valor 'optional'",
+        "use con valor 'required'"
+      ],
+      "correct": 2,
+      "explanation": "<xs:attribute name='id' type='xs:string' use='required'/>",
+      "concept_id": "lenguaje_de_marcas_img_247"
+    },
+    {
+      "question": "¿Cuál es correcta sobre validación de documentos XML?",
+      "options": [
+        "Un documento XML siempre es válido si está bien formado",
+        "Un documento XML puede estar bien formado pero no válido si no cumple reglas del DTD/XSD",
+        "La validación solo verifica sintaxis, no estructura ni tipos de datos"
+      ],
+      "correct": 1,
+      "explanation": "Bien formado ≠ válido. Un XML puede estar correctamente formado pero violar su esquema.",
+      "concept_id": "lenguaje_de_marcas_img_249"
+    },
+    {
+      "question": "¿Qué valor asignar a maxOccurs para que un elemento aparezca ilimitadas veces?",
+      "options": [
+        "'0'",
+        "'1'",
+        "'unbounded'"
+      ],
+      "correct": 2,
+      "explanation": "maxOccurs='unbounded' permite cero o más repeticiones (junto con minOccurs='0' hace el elemento opcional y repetible).",
+      "concept_id": "lenguaje_de_marcas_img_251"
+    },
+    {
+      "question": "¿Qué faceta XSD especifica una expresión regular para el valor de un elemento?",
+      "options": [
+        "xs:enumeration",
+        "xs:maxLength",
+        "xs:pattern"
+      ],
+      "correct": 2,
+      "explanation": "xs:pattern='[A-Z]{2}[0-9]{4}' limita el formato del valor con una regex.",
+      "concept_id": "lenguaje_de_marcas_img_253"
     }
   ],
   "entornos_de_desarrollo": [
@@ -8488,6 +9973,30 @@
       ],
       "correct": 2,
       "explanation": "TCO incluye hardware, software, mantenimiento, personal, energía y espacio físico. NO el transporte."
+    },
+    {
+      "question": "¿Cuál de los siguientes servicios pertenece a la categoría IaaS (Infraestructura como Servicio)?",
+      "options": [
+        "AWS Elastic Beanstalk",
+        "Azure Virtual Machines",
+        "Google Docs",
+        "Microsoft Office 365"
+      ],
+      "correct": 1,
+      "explanation": "IaaS: VMs, redes, almacenamiento. PaaS: Elastic Beanstalk. SaaS: Google Docs, Office 365.",
+      "concept_id": "cloud_computing_img_70"
+    },
+    {
+      "question": "¿Cuál es un beneficio clave de la infraestructura de la nube en términos generales?",
+      "options": [
+        "Mayor consumo de recursos físicos",
+        "Acceso limitado a servidores",
+        "Escalabilidad flexible",
+        "Solo accesible desde una ubicación fija"
+      ],
+      "correct": 2,
+      "explanation": "La elasticidad es el beneficio clave del cloud: escala automáticamente según demanda.",
+      "concept_id": "cloud_computing_img_72"
     }
   ],
   "empleabilidad": [
@@ -9388,6 +10897,116 @@
       ],
       "correct": 0,
       "explanation": "La IA y automatización están transformando el mercado laboral TIC más rápidamente que cualquier otra tecnología."
+    },
+    {
+      "question": "¿Cuál es el propósito principal del análisis DAFO en el contexto del empleo?",
+      "options": [
+        "Evaluar el entorno social y económico de una persona",
+        "Identificar fortalezas y debilidades, así como amenazas y oportunidades",
+        "Analizar y planificar la gestión de la carrera profesional a largo plazo"
+      ],
+      "correct": 1,
+      "explanation": "DAFO: Debilidades, Amenazas, Fortalezas, Oportunidades. Análisis personal para empleabilidad.",
+      "concept_id": "empleabilidad_img_76"
+    },
+    {
+      "question": "¿Qué es el Currículum Europass?",
+      "options": [
+        "Un formato de CV común en Europa para facilitar la movilidad laboral",
+        "Un formato de CV utilizado solo en España",
+        "Un diploma europeo de competencias profesionales"
+      ],
+      "correct": 0,
+      "explanation": "El CV Europass es el formato estándar europeo diseñado para facilitar la búsqueda de empleo en la UE.",
+      "concept_id": "empleabilidad_img_78"
+    },
+    {
+      "question": "¿Cuál es la finalidad de un Plan de Acción en el desarrollo profesional?",
+      "options": [
+        "Evaluar el rendimiento financiero en la vida laboral",
+        "Describir paso a paso actividades, metas y plazos para mejorar competencias y aumentar empleabilidad",
+        "Elegir el plan formativo más adecuado a largo plazo"
+      ],
+      "correct": 1,
+      "explanation": "El Plan de Acción es la hoja de ruta para alcanzar los objetivos profesionales.",
+      "concept_id": "empleabilidad_img_80"
+    },
+    {
+      "question": "El Portal Europeo de Movilidad Profesional se denomina:",
+      "options": [
+        "EURES",
+        "Europass",
+        "Erasmus"
+      ],
+      "correct": 0,
+      "explanation": "EURES (EURopean Employment Services): portal con ofertas de empleo en toda la UE.",
+      "concept_id": "empleabilidad_img_82"
+    },
+    {
+      "question": "¿Por qué es importante reflexionar sobre competencias e intereses profesionales en el sector TIC?",
+      "options": [
+        "Para encontrar equilibrio entre habilidades/aspiraciones y lo que busca el mercado laboral",
+        "Para decidir cambiar de sector profesional",
+        "Para seleccionar cursos online que amplíen conocimientos"
+      ],
+      "correct": 0,
+      "explanation": "El autoconocimiento + análisis del mercado = empleabilidad efectiva.",
+      "concept_id": "empleabilidad_img_84"
+    },
+    {
+      "question": "La Carta de motivación:",
+      "options": [
+        "Sustituye al currículum vitae",
+        "Solo opera en búsqueda de empleo por internet",
+        "Muestra el interés por participar en un proceso de selección"
+      ],
+      "correct": 2,
+      "explanation": "La carta de motivación complementa el CV; es personalizada para cada oferta.",
+      "concept_id": "empleabilidad_img_86"
+    },
+    {
+      "question": "Las pruebas de evaluación en procesos de selección tratan de medir:",
+      "options": [
+        "Desempeño",
+        "Competencias",
+        "Valoración funcional"
+      ],
+      "correct": 1,
+      "explanation": "Los procesos de selección evalúan competencias: conocimientos, habilidades y actitudes.",
+      "concept_id": "empleabilidad_img_88"
+    },
+    {
+      "question": "¿Cuál es una característica de la Formación Profesional Dual según la nueva ley española?",
+      "options": [
+        "Se centra exclusivamente en teoría impartida en el aula",
+        "Combina formación en el centro educativo con experiencia práctica en la empresa",
+        "Ofrece formación online exclusivamente"
+      ],
+      "correct": 1,
+      "explanation": "La FP Dual combina formación académica con prácticas remuneradas en empresa (mínimo 25% en empresa).",
+      "concept_id": "empleabilidad_img_90"
+    },
+    {
+      "question": "El currículum vitae:",
+      "options": [
+        "Sustituye a la carta de presentación",
+        "Complementa la carta de presentación",
+        "Es la forma actual de la carta de presentación"
+      ],
+      "correct": 1,
+      "explanation": "CV + carta de motivación = dúo estándar para candidaturas. Se complementan, no se sustituyen.",
+      "concept_id": "empleabilidad_img_92"
+    },
+    {
+      "question": "En un currículum funcional, la información se organiza:",
+      "options": [
+        "Por sectores o temas",
+        "Por orden cronológico",
+        "De forma interactiva"
+      ],
+      "correct": 0,
+      "explanation": "CV funcional: agrupa por competencias/áreas. CV cronológico: por fecha de experiencias.",
+      "concept_id": "empleabilidad_img_94"
     }
   ]
 }
