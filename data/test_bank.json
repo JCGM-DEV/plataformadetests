@@ -2003,6 +2003,292 @@
       ],
       "correct": 0,
       "explanation": "La BIOS/UEFI es el firmware más conocido en ordenadores personales."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_168",
+      "question": "¿Cuál es una de las funciones principales de un sistema operativo?",
+      "options": [
+        "Proteger el sistema de ataques de virus",
+        "Ejecutar aplicaciones",
+        "Gestionar y coordinar el uso de los recursos de hardware y software"
+      ],
+      "correct": 2,
+      "explanation": "El SO gestiona CPU, memoria, disco y periféricos de forma coordinada."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_169",
+      "question": "¿Qué es necesario hacer antes de actualizar una aplicación a una versión superior?",
+      "options": [
+        "Comprobar si la versión superior es compatible con el sistema operativo y la licencia",
+        "Realizar una copia de seguridad de los archivos asociados",
+        "Descargar manualmente e instalar la versión superior"
+      ],
+      "correct": 0,
+      "explanation": "Verificar compatibilidad y licencia evita problemas tras la actualización."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_170",
+      "question": "¿Cuál es la ventaja principal de la arquitectura monolítica del SO?",
+      "options": [
+        "Su modularidad y escalabilidad",
+        "Su capacidad para agregar funciones sin recompilar el sistema",
+        "Su simplicidad y eficiencia"
+      ],
+      "correct": 2,
+      "explanation": "Los SO monolíticos tienen todo el código del kernel en un solo espacio, lo que los hace más rápidos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_171",
+      "question": "¿Para qué se utiliza la preparación de imágenes del sistema en instalación masiva de ordenadores?",
+      "options": [
+        "Para verificar si se dispone de la licencia correspondiente",
+        "Para automatizar la instalación del sistema operativo en varios ordenadores",
+        "Para dividir el disco duro en particiones lógicas"
+      ],
+      "correct": 1,
+      "explanation": "Las imágenes del sistema (clonación) permiten instalar el SO en múltiples equipos simultáneamente."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_172",
+      "question": "¿Cuáles son los cuatro componentes principales de un sistema informático?",
+      "options": [
+        "Hardware, software, usuarios, seguridad",
+        "Hardware, software, datos, usuarios",
+        "Hardware, software, redes, periféricos"
+      ],
+      "correct": 1,
+      "explanation": "Todo sistema informático se compone de hardware, software, datos y personas (usuarios)."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_173",
+      "question": "¿Qué son las aplicaciones de seguridad?",
+      "options": [
+        "Programas para proteger el sistema contra virus, malware y otras amenazas",
+        "Programas que se utilizan para la diversión y el entretenimiento",
+        "Programas que se utilizan para la comunicación en línea"
+      ],
+      "correct": 0,
+      "explanation": "Antivirus, firewall y antimalware son aplicaciones de seguridad."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_174",
+      "question": "¿Cuáles son los dos esquemas de particiones más comunes?",
+      "options": [
+        "MBR y GPT",
+        "FAT y NTFS",
+        "HFS+ y APFS"
+      ],
+      "correct": 0,
+      "explanation": "MBR (Master Boot Record) y GPT (GUID Partition Table) son los esquemas estándar."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_175",
+      "question": "¿Qué tipo de dispositivo de almacenamiento es más resistente a golpes y vibraciones?",
+      "options": [
+        "Tarjeta de memoria",
+        "Unidad de estado sólido (SSD)",
+        "Disco duro (HDD)"
+      ],
+      "correct": 1,
+      "explanation": "Los SSD no tienen partes móviles, por eso son más resistentes a golpes."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_176",
+      "question": "¿Qué comando se utiliza en Linux para mostrar información sobre los procesos ejecutándose?",
+      "options": [
+        "free",
+        "systeminfo",
+        "top"
+      ],
+      "correct": 2,
+      "explanation": "El comando 'top' muestra en tiempo real los procesos y su uso de CPU y memoria."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_177",
+      "question": "La interfaz de transferencia PATA utiliza:",
+      "options": [
+        "Un bus en serie para transferir datos",
+        "Un cable plano con 40 u 80 conductores para transferir datos de forma paralela",
+        "Un solo cable para transferir datos de forma serial"
+      ],
+      "correct": 1,
+      "explanation": "PATA (Parallel ATA) transfiere datos en paralelo usando un cable ribbon."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_178",
+      "question": "¿Cuál es la principal ventaja del esquema GPT sobre el esquema MBR?",
+      "options": [
+        "Tiene una mejor protección contra la corrupción de datos",
+        "Solo permite particiones primarias",
+        "Es compatible con más sistemas operativos"
+      ],
+      "correct": 0,
+      "explanation": "GPT almacena múltiples copias de la tabla de particiones y usa CRC para detectar corrupción."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_179",
+      "question": "¿Cuál es la capacidad de almacenamiento de un disco DVD estándar?",
+      "options": [
+        "Hasta 2,5 GB",
+        "Hasta 4,7 GB",
+        "Hasta 25 GB"
+      ],
+      "correct": 1,
+      "explanation": "Un DVD de una capa y una cara almacena hasta 4,7 GB."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_180",
+      "question": "¿Por qué es importante tener una correcta gestión de permisos y acceso en un sistema informático?",
+      "options": [
+        "Para aumentar el rendimiento del procesador",
+        "Para mejorar la velocidad de Internet",
+        "Para prevenir el acceso no autorizado a datos confidenciales"
+      ],
+      "correct": 2,
+      "explanation": "La gestión de accesos es el pilar de la seguridad de la información."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_181",
+      "question": "¿Qué comando se utiliza para crear un nuevo usuario en consola de comandos de Windows?",
+      "options": [
+        "create_user",
+        "add_user",
+        "net user"
+      ],
+      "correct": 2,
+      "explanation": "El comando 'net user nombre /add' crea un nuevo usuario local en Windows."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_182",
+      "question": "¿Qué comando se utiliza para añadir un usuario a un grupo en consola de Windows?",
+      "options": [
+        "add_user_to_group",
+        "add_group_member",
+        "net group"
+      ],
+      "correct": 2,
+      "explanation": "net localgroup 'NombreGrupo' 'Usuario' /add"
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_183",
+      "question": "¿Qué es un perfil de usuario local en Windows?",
+      "options": [
+        "Una cuenta que solo puede acceder a recursos en red local",
+        "Una cuenta que solo puede acceder a recursos en línea",
+        "Una cuenta que solo puede acceder a recursos locales en una computadora"
+      ],
+      "correct": 2,
+      "explanation": "El perfil local almacena configuración del usuario solo en ese equipo."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_184",
+      "question": "¿Qué es una máscara de subred?",
+      "options": [
+        "Una herramienta para bloquear el tráfico",
+        "Una herramienta para identificar qué parte de la IP identifica la red y qué parte el dispositivo",
+        "Un código para identificar el dispositivo en red"
+      ],
+      "correct": 1,
+      "explanation": "La máscara permite separar la parte de red de la parte de host en una dirección IP."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_185",
+      "question": "¿Qué es una WLAN?",
+      "options": [
+        "Una red inalámbrica de corto alcance",
+        "Una red inalámbrica para conectar dispositivos en un área geográfica limitada",
+        "Una red inalámbrica de largo alcance"
+      ],
+      "correct": 1,
+      "explanation": "Wireless LAN: red WiFi local para conectar dispositivos en un edificio o campus."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_186",
+      "question": "¿Qué es una tabla de enrutamiento estática?",
+      "options": [
+        "Una tabla creada mediante protocolos dinámicos",
+        "Una tabla donde se especifican manualmente las rutas que deben tomar los paquetes",
+        "Una tabla en la que las rutas se determinan automáticamente"
+      ],
+      "correct": 1,
+      "explanation": "El administrador configura manualmente cada ruta en el router."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_187",
+      "question": "¿Qué es una ACL?",
+      "options": [
+        "Una lista de control de acceso",
+        "Un sistema operativo",
+        "Un objeto de directiva de seguridad"
+      ],
+      "correct": 0,
+      "explanation": "Access Control List: lista que define qué usuarios o sistemas pueden acceder a qué recursos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_188",
+      "question": "¿Para qué se utiliza OpenSSL?",
+      "options": [
+        "Para crear y gestionar certificados digitales y claves de cifrado",
+        "Para enviar correos electrónicos cifrados",
+        "Para cifrar unidades de almacenamiento"
+      ],
+      "correct": 0,
+      "explanation": "OpenSSL es la librería estándar para TLS/SSL, certificados y criptografía."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_189",
+      "question": "¿Qué es el control de acceso basado en roles (RBAC)?",
+      "options": [
+        "Una técnica que restringe el acceso en función del rol del usuario",
+        "Permite el acceso a todos los recursos sin restricciones",
+        "Una técnica sin relación con el acceso a recursos"
+      ],
+      "correct": 0,
+      "explanation": "Role-Based Access Control asigna permisos según el rol, no al usuario individualmente."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_190",
+      "question": "¿Cuál es una herramienta de gestión de usuarios y recursos de red de Microsoft?",
+      "options": [
+        "Active Directory",
+        "Firewall",
+        "LDAP"
+      ],
+      "correct": 0,
+      "explanation": "Active Directory gestiona usuarios, equipos y políticas en redes Windows."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_191",
+      "question": "¿Cuál es un ejemplo de software de recuperación de datos?",
+      "options": [
+        "Norton",
+        "McAfee",
+        "EaseUS"
+      ],
+      "correct": 2,
+      "explanation": "EaseUS Data Recovery Wizard es una herramienta popular de recuperación de datos."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_192",
+      "question": "¿Qué son las herramientas de desarrollo integradas (IDEs)?",
+      "options": [
+        "Herramientas con editor de código, depurador y compilador integrados en una interfaz",
+        "Herramientas para copias de seguridad y optimización del sistema",
+        "Herramientas para identificar problemas de hardware"
+      ],
+      "correct": 0,
+      "explanation": "Un IDE integra editor, compilador, depurador y otras herramientas en un solo entorno."
+    },
+    {
+      "concept_id": "sistemas_informaticos_real_193",
+      "question": "¿Cuál es la función principal del software de sistema?",
+      "options": [
+        "Controlar y coordinar el hardware y proporcionar interfaz entre el usuario y el hardware",
+        "Escribir, depurar y mantener programas de software",
+        "Realizar tareas específicas en la computadora"
+      ],
+      "correct": 0,
+      "explanation": "El software de sistema incluye el SO, drivers y herramientas del sistema."
     }
   ],
   "bases_de_datos": [
@@ -3253,6 +3539,83 @@
       ],
       "correct": 1,
       "explanation": "Elasticsearch usa índices invertidos para búsqueda ultrarrápida en texto."
+    },
+    {
+      "concept_id": "bases_de_datos_real_104",
+      "question": "En el modelo E-R, los atributos que se calculan a partir de otros se denominan:",
+      "options": [
+        "Multievaluados",
+        "Simples",
+        "Derivados"
+      ],
+      "correct": 2,
+      "explanation": "Atributo derivado: la edad se calcula a partir de la fecha de nacimiento."
+    },
+    {
+      "concept_id": "bases_de_datos_real_105",
+      "question": "¿Qué concepto introduce el modelo E/R ampliado que no tenía el original?",
+      "options": [
+        "Atributos",
+        "Relaciones recursivas",
+        "Entidades"
+      ],
+      "correct": 1,
+      "explanation": "El modelo EER añade: especialización, generalización, herencia y relaciones recursivas."
+    },
+    {
+      "concept_id": "bases_de_datos_real_106",
+      "question": "¿Cómo se representan las entidades en el modelo E-R?",
+      "options": [
+        "Una línea",
+        "Un cuadrado",
+        "Un círculo o elipse"
+      ],
+      "correct": 1,
+      "explanation": "Entidades: rectángulos. Relaciones: rombos. Atributos: elipses."
+    },
+    {
+      "concept_id": "bases_de_datos_real_107",
+      "question": "En el modelo E-R, una entidad que puede existir por sí sola se denomina:",
+      "options": [
+        "Fuerte",
+        "Débil",
+        "Independiente"
+      ],
+      "correct": 0,
+      "explanation": "Entidad fuerte: tiene clave propia. Entidad débil: depende de otra entidad."
+    },
+    {
+      "concept_id": "bases_de_datos_real_108",
+      "question": "¿Cómo se representan las relaciones en el modelo E-R?",
+      "options": [
+        "Un rombo o diamante",
+        "Un círculo o elipse",
+        "Un rectángulo"
+      ],
+      "correct": 0,
+      "explanation": "Las relaciones se representan con rombos, conectados a las entidades participantes."
+    },
+    {
+      "concept_id": "bases_de_datos_real_109",
+      "question": "¿Cuál de las siguientes acciones NO forma parte habitual de la desnormalización?",
+      "options": [
+        "Creación de columnas derivadas",
+        "Combinación de tablas",
+        "Aplicar la primera forma normal"
+      ],
+      "correct": 2,
+      "explanation": "La desnormalización añade redundancia; la normalización la elimina (1FN es normalización)."
+    },
+    {
+      "concept_id": "bases_de_datos_real_110",
+      "question": "¿Cómo se implementa una relación N:M en el modelo relacional?",
+      "options": [
+        "Con dos vistas materializadas",
+        "Creando una tabla intermedia cuya clave primaria es la combinación de las PK de las dos tablas",
+        "Una única tabla con clave artificial y atributos duplicados"
+      ],
+      "correct": 1,
+      "explanation": "La tabla intermedia (tabla de unión) resuelve las relaciones muchos a muchos."
     }
   ],
   "programacion": [
@@ -4419,6 +4782,259 @@
       ],
       "correct": 0,
       "explanation": "\\d equivale a [0-9]; el + significa uno o más."
+    },
+    {
+      "concept_id": "programacion_real_97",
+      "question": "¿Cuál es el elemento central del paradigma OOP según el modelo E-P-S?",
+      "options": [
+        "El procesamiento de datos",
+        "Los datos del sistema",
+        "Los objetos que combinan datos y comportamiento"
+      ],
+      "correct": 2,
+      "explanation": "En OOP los objetos encapsulan estado (atributos) y comportamiento (métodos)."
+    },
+    {
+      "concept_id": "programacion_real_98",
+      "question": "¿Cuál es una característica básica de todo algoritmo?",
+      "options": [
+        "Puede ejecutarse indefinidamente",
+        "Debe ser finito: termina en un número limitado de pasos",
+        "Debe estar implementado en un lenguaje de programación"
+      ],
+      "correct": 1,
+      "explanation": "Un algoritmo tiene que terminar; si no termina, no es un algoritmo sino un proceso."
+    },
+    {
+      "concept_id": "programacion_real_99",
+      "question": "¿Cuál es la función de un depurador (debugger)?",
+      "options": [
+        "Optimizar el código para mayor eficiencia",
+        "Generar documentación automáticamente",
+        "Analizar la ejecución paso a paso para encontrar errores lógicos"
+      ],
+      "correct": 2,
+      "explanation": "El debugger permite poner breakpoints, inspeccionar variables y ejecutar línea a línea."
+    },
+    {
+      "concept_id": "programacion_real_100",
+      "question": "¿Cómo funciona el modelo híbrido de Java (bytecode + JVM)?",
+      "options": [
+        "Compila directamente a código nativo de la CPU",
+        "Compila a bytecode independiente de la plataforma y lo ejecuta en la JVM",
+        "Solo interpreta el código sin compilar"
+      ],
+      "correct": 1,
+      "explanation": "Java = compilado a bytecode (.class) + interpretado por la JVM. Lo mejor de ambos mundos."
+    },
+    {
+      "concept_id": "programacion_real_101",
+      "question": "¿Cuál es la regla de encapsulación en POO?",
+      "options": [
+        "Atributos públicos y métodos privados",
+        "Atributos privados y métodos públicos (getters/setters)",
+        "Todo público para facilitar el acceso"
+      ],
+      "correct": 1,
+      "explanation": "La encapsulación protege el estado interno usando atributos privados y métodos de acceso públicos."
+    },
+    {
+      "concept_id": "programacion_real_102",
+      "question": "¿Qué es una relación de Composición en POO?",
+      "options": [
+        "Relación fuerte parte-todo donde las partes no pueden existir sin el objeto contenedor",
+        "Relación débil donde las partes pueden existir sin el todo",
+        "Relación de herencia entre clases"
+      ],
+      "correct": 0,
+      "explanation": "Composición: un Motor no existe sin el Coche que lo contiene. Diferente a Agregación."
+    },
+    {
+      "concept_id": "programacion_real_103",
+      "question": "¿Qué hace la palabra clave 'void' en un método Java?",
+      "options": [
+        "El método realiza una acción pero no devuelve ningún valor",
+        "El método es estático de clase",
+        "El método es abstracto y debe ser implementado"
+      ],
+      "correct": 0,
+      "explanation": "void indica ausencia de valor de retorno."
+    },
+    {
+      "concept_id": "programacion_real_104",
+      "question": "¿Qué ventaja tiene usar un setter en lugar de acceso directo al atributo?",
+      "options": [
+        "Permite validar los datos antes de modificar el estado del objeto",
+        "No hay diferencia funcional",
+        "Es más rápido que el acceso directo"
+      ],
+      "correct": 0,
+      "explanation": "El setter puede incluir validaciones: if (edad > 0 && edad < 150) this.edad = edad;"
+    },
+    {
+      "concept_id": "programacion_real_105",
+      "question": "¿Qué sucede al asignar una referencia de objeto a otra variable en Java?",
+      "options": [
+        "Se copia el valor de cada atributo",
+        "Ambas variables apuntan al MISMO objeto en memoria",
+        "Se crea una copia independiente del objeto"
+      ],
+      "correct": 1,
+      "explanation": "En Java los objetos se manejan por referencia. Solo los primitivos se copian por valor."
+    },
+    {
+      "concept_id": "programacion_real_106",
+      "question": "¿Cuál es la misión de un constructor en Java?",
+      "options": [
+        "Destruir el objeto cuando ya no se necesita",
+        "Definir los métodos de la clase",
+        "Inicializar los atributos del objeto al crearlo"
+      ],
+      "correct": 2,
+      "explanation": "El constructor se llama automáticamente al hacer 'new Clase()' e inicializa el objeto."
+    },
+    {
+      "concept_id": "programacion_real_107",
+      "question": "¿Qué orden correcto se debe seguir con las variables en Java?",
+      "options": [
+        "Declarar → Inicializar → Usar",
+        "Usar → Declarar → Inicializar",
+        "Inicializar → Declarar → Usar"
+      ],
+      "correct": 0,
+      "explanation": "Siempre hay que declarar el tipo, luego asignar un valor, luego usar."
+    },
+    {
+      "concept_id": "programacion_real_108",
+      "question": "¿Qué definen las llaves {} en Java?",
+      "options": [
+        "Un array de valores",
+        "Bloques de código y ámbito de variables",
+        "Los parámetros de un método"
+      ],
+      "correct": 1,
+      "explanation": "Los bloques {} delimitan el scope: las variables declaradas dentro no existen fuera."
+    },
+    {
+      "concept_id": "programacion_real_109",
+      "question": "¿Qué prioridad tienen los paréntesis () en las expresiones Java?",
+      "options": [
+        "La misma que * y /",
+        "La más alta, se evalúan primero",
+        "La más baja, se evalúan al final"
+      ],
+      "correct": 1,
+      "explanation": "Los paréntesis fuerzan el orden de evaluación: (2+3)*4 = 20, no 14."
+    },
+    {
+      "concept_id": "programacion_real_110",
+      "question": "¿Qué causa un casting de double a int en Java?",
+      "options": [
+        "Causa truncación y posible pérdida de datos",
+        "Lanza una excepción automática",
+        "Redondea al entero más cercano"
+      ],
+      "correct": 0,
+      "explanation": "(int) 3.9 = 3 (no 4). Java trunca, no redondea."
+    },
+    {
+      "concept_id": "programacion_real_111",
+      "question": "¿Qué es la sobrecarga de métodos (overloading) en Java?",
+      "options": [
+        "Usar el mismo método en varias clases",
+        "Redefinir un método de la clase padre en la clase hija",
+        "Definir métodos con el mismo nombre pero distintos parámetros en la misma clase"
+      ],
+      "correct": 2,
+      "explanation": "Overloading: suma(int, int) y suma(double, double) coexisten en la misma clase."
+    },
+    {
+      "concept_id": "programacion_real_112",
+      "question": "¿Cuándo un objeto es elegible para el Garbage Collector en Java?",
+      "options": [
+        "Cuando se llama explícitamente al método destroy()",
+        "Cuando ha sido usado más de un número de veces",
+        "Cuando no hay ninguna referencia activa apuntando a él"
+      ],
+      "correct": 2,
+      "explanation": "El GC libera objetos que ninguna variable puede alcanzar (unreachable objects)."
+    },
+    {
+      "concept_id": "programacion_real_113",
+      "question": "¿Qué ocurre al definir un constructor con parámetros en Java?",
+      "options": [
+        "Se deshabilita el constructor vacío implícito que Java generaba",
+        "Se generan automáticamente todos los constructores posibles",
+        "El constructor vacío sigue disponible automáticamente"
+      ],
+      "correct": 0,
+      "explanation": "Si defines algún constructor, Java no genera el constructor vacío automáticamente."
+    },
+    {
+      "concept_id": "programacion_real_114",
+      "question": "¿Dónde se almacenan los objetos y dónde las referencias en Java?",
+      "options": [
+        "Todo en el Heap",
+        "Todo en el Stack",
+        "Referencias en el Stack; objetos en el Heap"
+      ],
+      "correct": 2,
+      "explanation": "Stack: variables locales y referencias. Heap: objetos instanciados con 'new'."
+    },
+    {
+      "concept_id": "programacion_real_115",
+      "question": "¿Por qué los Strings son inmutables en Java?",
+      "options": [
+        "Una vez creado, su contenido no puede modificarse",
+        "Solo son inmutables en versiones antiguas de Java",
+        "Por eficiencia en la compilación"
+      ],
+      "correct": 0,
+      "explanation": "String inmutabilidad: cada modificación crea un nuevo objeto. Usar StringBuilder para concatenar en bucles."
+    },
+    {
+      "concept_id": "programacion_real_116",
+      "question": "¿Cómo se almacenan los arrays en Java?",
+      "options": [
+        "Como objetos en el Heap accedidos mediante referencias",
+        "Como tipos primitivos en registros de la CPU",
+        "Como primitivos en el Stack"
+      ],
+      "correct": 0,
+      "explanation": "int[] arr = new int[5]; arr es una referencia en el Stack al array en el Heap."
+    },
+    {
+      "concept_id": "programacion_real_117",
+      "question": "¿Cómo se deben comparar dos Strings en Java?",
+      "options": [
+        "Con el método .equals() para comparar contenido textual",
+        "Con el operador === como en JavaScript",
+        "Con el operador == para comparar contenido"
+      ],
+      "correct": 0,
+      "explanation": "== compara referencias (si son el mismo objeto); .equals() compara el contenido."
+    },
+    {
+      "concept_id": "programacion_real_118",
+      "question": "¿Qué requiere la búsqueda binaria en un array?",
+      "options": [
+        "Que el array esté previamente ordenado",
+        "Que el array tenga longitud impar",
+        "Que el array contenga solo números enteros"
+      ],
+      "correct": 0,
+      "explanation": "Binary search divide el array a la mitad en cada paso, pero requiere que esté ordenado."
+    },
+    {
+      "concept_id": "programacion_real_119",
+      "question": "¿Cuáles son los índices válidos de un array de tamaño n en Java?",
+      "options": [
+        "De 0 a length-1",
+        "De 0 a length",
+        "De 1 a n"
+      ],
+      "correct": 0,
+      "explanation": "Un array de 5 elementos tiene índices 0,1,2,3,4. Acceder al [5] lanza ArrayIndexOutOfBoundsException."
     }
   ],
   "lenguaje_de_marcas": [
@@ -5489,6 +6105,248 @@
       ],
       "correct": 2,
       "explanation": "Optimizar el CRP mejora el First Contentful Paint (FCP)."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_89",
+      "question": "¿Cuál es la característica principal de XML respecto al diseño?",
+      "options": [
+        "Es exclusivamente estructural, sin información de diseño, usado para describir datos",
+        "Contiene información de diseño y estructura",
+        "Es un lenguaje de programación para manipular datos"
+      ],
+      "correct": 0,
+      "explanation": "XML describe datos; HTML describe presentación."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_90",
+      "question": "¿Cuáles son los tres tipos de DTD en HTML 4.0?",
+      "options": [
+        "Basic, Extended, Full",
+        "Strict, Modern, Legacy",
+        "Strict, Transitional, Frameset"
+      ],
+      "correct": 2,
+      "explanation": "HTML 4.01 tenía tres variantes de DTD: Strict, Transitional y Frameset."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_91",
+      "question": "¿Qué ventaja tiene XSD sobre DTD en XML?",
+      "options": [
+        "Son equivalentes en capacidades",
+        "XSD ofrece mayor capacidad expresiva, gramática sofisticada y fácil extensión",
+        "DTD tiene mayor capacidad expresiva"
+      ],
+      "correct": 1,
+      "explanation": "XSD soporta tipos de datos, namespaces y herencia de tipos, cosas que DTD no puede hacer."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_92",
+      "question": "¿Qué hace el selector CSS 'p > span'?",
+      "options": [
+        "Aplica a cualquier span dentro de un p aunque esté anidado",
+        "Aplica solo al primer span de cada párrafo",
+        "No aplica a un span dentro de un a que está dentro de un p"
+      ],
+      "correct": 2,
+      "explanation": "El selector hijo directo (>) solo selecciona hijos inmediatos, no nietos."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_93",
+      "question": "¿Qué etiqueta HTML5 está diseñada para contenido relacionado pero no principal, como barras laterales?",
+      "options": [
+        "<section>",
+        "<article>",
+        "<aside>"
+      ],
+      "correct": 2,
+      "explanation": "El elemento <aside> representa contenido tangencialmente relacionado con el contenido principal."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_94",
+      "question": "¿Cuál de estas etiquetas está obsoleta (deprecated) en HTML5?",
+      "options": [
+        "<main>",
+        "<font>",
+        "<figure>"
+      ],
+      "correct": 1,
+      "explanation": "Las etiquetas de presentación como <font>, <center>, <b legacy> están obsoletas en HTML5."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_95",
+      "question": "¿Cuál es el objetivo de la especificación DOM?",
+      "options": [
+        "Mejorar la velocidad de carga de páginas web",
+        "Permitir a programas (JS) acceder y modificar dinámicamente contenido, estructura y estilo",
+        "Definir la apariencia visual de elementos HTML"
+      ],
+      "correct": 1,
+      "explanation": "El DOM es la API que conecta HTML/CSS con JavaScript para hacer las páginas interactivas."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_96",
+      "question": "¿Qué inconveniente principal tiene DTD frente a XSD?",
+      "options": [
+        "No es compatible con XML",
+        "Falta de soporte para namespaces y tipos de datos limitados",
+        "No permite definir elementos"
+      ],
+      "correct": 1,
+      "explanation": "DTD no soporta tipos de datos y tiene problemas con namespaces."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_97",
+      "question": "¿Qué especifica xs:sequence en XSD?",
+      "options": [
+        "Que los elementos son opcionales",
+        "Un orden fijo para los componentes",
+        "Que los elementos pueden aparecer en cualquier orden"
+      ],
+      "correct": 1,
+      "explanation": "xs:sequence exige que los elementos aparezcan en el orden exacto especificado."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_98",
+      "question": "¿Qué hace xs:enumeration en XSD?",
+      "options": [
+        "Define el tipo base de un elemento",
+        "Limita los valores a un conjunto específico",
+        "Define el número máximo de ocurrencias"
+      ],
+      "correct": 1,
+      "explanation": "xs:enumeration = la restricción equivalente a un enum: solo valores predefinidos."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_99",
+      "question": "¿Qué define JSON como estructura de datos?",
+      "options": [
+        "Basado en pares (objetos) y listas ordenadas (arrays)",
+        "Solo objetos, no arrays",
+        "Pares de valores sin estructura definida"
+      ],
+      "correct": 0,
+      "explanation": "JSON = JavaScript Object Notation: objetos {clave:valor} y arrays [valor1, valor2]."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_100",
+      "question": "¿Qué hace maxOccurs='unbounded' en XSD?",
+      "options": [
+        "Define el elemento como opcional",
+        "Permite que el elemento aparezca un número ilimitado de veces",
+        "Limita el elemento a una sola ocurrencia"
+      ],
+      "correct": 1,
+      "explanation": "unbounded = el elemento puede repetirse infinitas veces."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_101",
+      "question": "¿Qué usa xsl:for-each en XSLT?",
+      "options": [
+        "Define una condición para filtrar nodos",
+        "Itera sobre un conjunto de nodos",
+        "Ordena los resultados de una transformación"
+      ],
+      "correct": 1,
+      "explanation": "xsl:for-each es el bucle de XSLT para procesar múltiples nodos."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_102",
+      "question": "¿Cuándo es mejor usar SAX que DOM para procesar XML?",
+      "options": [
+        "Cuando se necesita modificar el XML",
+        "Para documentos muy grandes que no caben en memoria",
+        "Cuando se necesita acceso aleatorio a nodos"
+      ],
+      "correct": 1,
+      "explanation": "SAX es un parser de evento (streaming) que no carga todo el XML en memoria."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_103",
+      "question": "¿Qué hace xsl:choose en XSLT?",
+      "options": [
+        "Ordena los nodos de un conjunto",
+        "Copia nodos del XML origen al resultado",
+        "Implementa lógica condicional compleja con xsl:when y xsl:otherwise"
+      ],
+      "correct": 2,
+      "explanation": "xsl:choose es el equivalente de if/else-if/else en XSLT."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_104",
+      "question": "¿Cuál es la diferencia entre XPath y XQuery?",
+      "options": [
+        "XPath selecciona nodos; XQuery es un lenguaje completo de consulta con FLWOR",
+        "XQuery selecciona nodos; XPath es un lenguaje completo con FLWOR",
+        "Son equivalentes con distinta sintaxis"
+      ],
+      "correct": 0,
+      "explanation": "XPath = selección de nodos. XQuery = lenguaje de consulta completo con For-Let-Where-Order-Return."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_105",
+      "question": "¿Qué hace el operador | en XPath?",
+      "options": [
+        "Une múltiples rutas (unión de conjuntos de nodos)",
+        "Filtra nodos por condición",
+        "Navega al nodo padre"
+      ],
+      "correct": 0,
+      "explanation": "//titulo | //precio selecciona todos los títulos Y todos los precios."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_106",
+      "question": "¿Qué atributo se usa para asociar un documento XML a su XSD?",
+      "options": [
+        "schemaLocation",
+        "xsi:type",
+        "xmlns:schema"
+      ],
+      "correct": 0,
+      "explanation": "xsi:schemaLocation indica la ruta al archivo XSD validador."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_107",
+      "question": "¿Qué es xs:simpleType en XSD?",
+      "options": [
+        "Define la estructura de un elemento complejo",
+        "Define un tipo con elementos hijo",
+        "Define un tipo personalizado simple basado en restricciones de tipos existentes"
+      ],
+      "correct": 2,
+      "explanation": "xs:simpleType crea tipos personalizados simples (ej: un string con patrón específico)."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_108",
+      "question": "¿Puede un documento XML ser bien formado pero no válido?",
+      "options": [
+        "Sí, puede estar bien formado pero romper las reglas de su DTD o XSD asociado",
+        "No, si es bien formado siempre es válido",
+        "No, la validación y la buena formación son equivalentes"
+      ],
+      "correct": 0,
+      "explanation": "Bien formado = cumple reglas XML básicas. Válido = además cumple el esquema (DTD/XSD)."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_109",
+      "question": "¿Para qué sirve un sistema ERP?",
+      "options": [
+        "Para coordinar procesos empresariales facilitando la toma de decisiones y productividad",
+        "Solo para gestión de recursos humanos",
+        "Solo para gestión de relaciones con clientes"
+      ],
+      "correct": 0,
+      "explanation": "Enterprise Resource Planning: integra todos los procesos de la empresa en un único sistema."
+    },
+    {
+      "concept_id": "lenguaje_de_marcas_real_110",
+      "question": "¿Qué riesgo existe al exportar datos de un ERP?",
+      "options": [
+        "Que los datos pierdan formato",
+        "Filtrar información confidencial fuera de la empresa",
+        "Que el sistema ERP deje de funcionar"
+      ],
+      "correct": 1,
+      "explanation": "La exportación de datos sensibles es un riesgo de seguridad importante en los ERP."
     }
   ],
   "entornos_de_desarrollo": [
@@ -6403,6 +7261,391 @@
       ],
       "correct": 1,
       "explanation": "Webpack transforma y optimiza el código para producción."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_76",
+      "question": "¿Cuál es la distinción entre tipado fuerte y débil, y entre estático y dinámico?",
+      "options": [
+        "El tipado fuerte restringe operaciones por tipo; el estático vincula el tipo al declarar la variable",
+        "El tipado débil no permite uso indiscriminado de variables",
+        "En tipado fuerte el tipo se asigna dinámicamente"
+      ],
+      "correct": 0,
+      "explanation": "Fuerte vs débil: rigor en conversiones. Estático vs dinámico: cuándo se asigna el tipo."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_77",
+      "question": "¿Qué actividad caracteriza principalmente la fase de Análisis en el ciclo de vida del software?",
+      "options": [
+        "La definición de interfaces gráficas y organización del proyecto",
+        "La determinación del alcance, definiendo exhaustivamente qué va a hacer el sistema",
+        "La creación del código fuente con herramientas de generación"
+      ],
+      "correct": 1,
+      "explanation": "El análisis responde al '¿QUÉ?' del sistema, el diseño al '¿CÓMO?'."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_78",
+      "question": "¿Qué proceso realiza un compilador además de generar el código ejecutable?",
+      "options": [
+        "Transforma bytecode en código máquina",
+        "Une códigos objeto para construir un ejecutable",
+        "Verifica el código léxica, sintáctica y semánticamente, avisando de errores"
+      ],
+      "correct": 2,
+      "explanation": "El compilador hace análisis léxico, sintáctico y semántico antes de generar código."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_79",
+      "question": "¿Qué son los lenguajes de segunda generación?",
+      "options": [
+        "Lenguajes ensamblador con simbología legible, convertidos a código máquina mediante un ensamblador",
+        "Lenguajes de alto nivel como Java o C#",
+        "Lenguajes binarios de código máquina"
+      ],
+      "correct": 0,
+      "explanation": "Los lenguajes de 2ª generación son los lenguajes ensamblador."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_80",
+      "question": "¿Cómo se categoriza el software según su naturaleza?",
+      "options": [
+        "Software de sistema, Software de aplicación y Software de programación",
+        "BIOS, UEFI y Controladores",
+        "Hardware, Firmware y Sistemas Operativos"
+      ],
+      "correct": 0,
+      "explanation": "El software se divide en: sistema (SO, drivers), aplicación (ofimática, navegador) y programación (IDEs)."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_81",
+      "question": "¿Cuál es la diferencia fundamental entre el código objeto y el código ejecutable?",
+      "options": [
+        "El código objeto requiere enlazado para convertirse en código ejecutable",
+        "El código objeto es el código fuente del programador",
+        "El ejecutable es válido para múltiples SO sin recompilación"
+      ],
+      "correct": 0,
+      "explanation": "El compilador genera código objeto; el linker une los objetos para crear el ejecutable."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_82",
+      "question": "¿Qué paradigma de programación estructura programas en funciones/procedimientos y usa estructuras de control?",
+      "options": [
+        "Paradigma de Programación Estructurada",
+        "Paradigma Orientado a Objetos",
+        "Paradigma Imperativo"
+      ],
+      "correct": 0,
+      "explanation": "La programación estructurada usa secuencia, selección e iteración como estructuras de control."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_83",
+      "question": "¿Para qué se usan las máquinas virtuales y bytecode en lenguajes como Java?",
+      "options": [
+        "Reducir el tamaño de los ejecutables",
+        "Aumentar la velocidad de ejecución superando a lenguajes compilados",
+        "Lograr portabilidad: el mismo bytecode se ejecuta en cualquier SO con la JVM instalada"
+      ],
+      "correct": 2,
+      "explanation": "Write once, run anywhere: la JVM interpreta el bytecode en cada plataforma."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_84",
+      "question": "¿Qué es cierto sobre la generación de ejecutables en Python?",
+      "options": [
+        "Python genera ejecutables directamente desde el IDE como lenguajes compilados",
+        "La generación de ejecutables en Python siempre la automatiza el IDE",
+        "Generalmente no se generan ejecutables; los archivos se copian y ejecutan llamando al intérprete"
+      ],
+      "correct": 2,
+      "explanation": "Python es interpretado; se distribuye como scripts que requieren el intérprete Python."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_85",
+      "question": "¿Cuál es una ventaja clave de los editores de código frente a los IDEs?",
+      "options": [
+        "Están dedicados a un único lenguaje garantizando rendimiento superior",
+        "Son más ligeros y consumen menos recursos, adecuados para front-end web",
+        "Son más completos y ofrecen más funcionalidades"
+      ],
+      "correct": 1,
+      "explanation": "VS Code y Sublime Text son editores ligeros; Eclipse e IntelliJ son IDEs completos."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_86",
+      "question": "¿Cuál es el propósito principal de los plugins en un IDE?",
+      "options": [
+        "Reemplazar funcionalidades centrales del IDE",
+        "Permitir que el IDE se ejecute en diferentes SO",
+        "Extender o mejorar las características y funcionalidades del IDE"
+      ],
+      "correct": 2,
+      "explanation": "Los plugins añaden soporte para nuevos lenguajes, frameworks o herramientas."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_87",
+      "question": "¿Cómo gestionan los IDEs la detección de errores en lenguajes interpretados como Python?",
+      "options": [
+        "En ambos tipos los errores se muestran durante la compilación",
+        "En interpretados los errores se detectan durante la ejecución; en compilados durante la compilación",
+        "En interpretados solo el programador detecta errores manualmente"
+      ],
+      "correct": 1,
+      "explanation": "Python detecta errores en tiempo de ejecución (runtime); Java en compilación."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_88",
+      "question": "¿Cómo se define un 'Objeto' en el contexto de UML?",
+      "options": [
+        "La representación genérica de un elemento sin atributos",
+        "Una característica o propiedad de una clase",
+        "La concreción de una clase, también denominada instancia"
+      ],
+      "correct": 2,
+      "explanation": "Un objeto es la instancia concreta de una clase en memoria."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_89",
+      "question": "¿En qué dos grandes categorías se agrupan los diagramas de UML?",
+      "options": [
+        "Diagramas estructurales y diagramas de comportamiento",
+        "Diagramas de diseño y de implementación",
+        "Diagramas de requisitos y de arquitectura"
+      ],
+      "correct": 0,
+      "explanation": "Estructurales: clases, componentes, despliegue. Comportamiento: secuencia, actividad, estados."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_90",
+      "question": "¿Cuál es el objetivo fundamental de UML?",
+      "options": [
+        "Proporcionar un lenguaje de programación de alto nivel",
+        "Estandarizar interfaces entre lenguajes de programación",
+        "Ofrecer herramientas para representación gráfica de un sistema informático con orientación a objetos"
+      ],
+      "correct": 2,
+      "explanation": "UML = Unified Modeling Language: notación gráfica estándar para modelar software."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_91",
+      "question": "¿Cuál es probablemente el diagrama UML más habitual y útil?",
+      "options": [
+        "El diagrama de Casos de Uso",
+        "El diagrama de Clases",
+        "El diagrama de Actividad"
+      ],
+      "correct": 1,
+      "explanation": "El diagrama de clases muestra clases, atributos, métodos y relaciones del sistema."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_92",
+      "question": "¿Qué capacidad valiosa ofrecen las herramientas CASE para documentar proyectos existentes?",
+      "options": [
+        "Optimizar automáticamente el rendimiento del código",
+        "La ingeniería inversa: generar diagramas de clase a partir del código fuente",
+        "Migrar bases de datos entre sistemas"
+      ],
+      "correct": 1,
+      "explanation": "La ingeniería inversa permite entender código heredado generando diagramas automáticamente."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_93",
+      "question": "¿Cómo se distinguen las clases y métodos abstractos en un diagrama de clases UML?",
+      "options": [
+        "Sus nombres se escriben en cursiva",
+        "Se representan con borde punteado",
+        "Sus nombres se escriben en negrita"
+      ],
+      "correct": 0,
+      "explanation": "La cursiva en UML indica que el elemento es abstracto."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_94",
+      "question": "Si un atributo en UML es estático, ¿cómo se indica en el diagrama?",
+      "options": [
+        "Debe ir subrayado",
+        "Su nombre se escribe entre corchetes",
+        "Se precede de un asterisco (*)"
+      ],
+      "correct": 0,
+      "explanation": "Los miembros estáticos (de clase) se subrayan en UML."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_95",
+      "question": "¿Qué significa en UML que un atributo o método esté precedido por el símbolo #?",
+      "options": [
+        "Que tiene visibilidad pública",
+        "Que tiene visibilidad de paquete",
+        "Que tiene visibilidad protegida"
+      ],
+      "correct": 2,
+      "explanation": "En UML: + público, - privado, # protegido, ~ paquete."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_96",
+      "question": "¿Qué información indica la línea de relación de Asociación en un diagrama de clases?",
+      "options": [
+        "El orden en que se instancian los objetos",
+        "La prioridad de ejecución de los métodos",
+        "La multiplicidad y la navegabilidad"
+      ],
+      "correct": 2,
+      "explanation": "La multiplicidad (1, *, 0..1) indica cuántas instancias participan en la relación."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_97",
+      "question": "¿Cuál es la diferencia entre Composición y Agregación en UML?",
+      "options": [
+        "La Composición se representa con diamante hueco y la Agregación con diamante sólido",
+        "La Composición es fuerte y las partes se eliminan con el todo (diamante sólido); la Agregación es débil (diamante hueco)",
+        "La Agregación es fuerte (diamante sólido); la Composición es débil (diamante hueco)"
+      ],
+      "correct": 1,
+      "explanation": "Composición (diamante negro): las partes no pueden existir sin el todo. Agregación (diamante blanco): partes independientes."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_98",
+      "question": "¿Qué diagrama representa los estados de un componente y las transiciones entre ellos?",
+      "options": [
+        "El diagrama de casos de uso",
+        "El diagrama de estados o de máquina de estados",
+        "El diagrama general de interacción"
+      ],
+      "correct": 1,
+      "explanation": "El diagrama de estados modela el ciclo de vida de un objeto (ej: pedido: creado→confirmado→enviado→entregado)."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_99",
+      "question": "¿Un Actor en un diagrama de casos de uso puede ser?",
+      "options": [
+        "Cualquier elemento que se relaciona con el sistema: persona, otro sistema o hardware",
+        "Solo una función interna del sistema",
+        "Únicamente una persona física que interactúa con el sistema"
+      ],
+      "correct": 0,
+      "explanation": "Los actores son entidades externas: usuarios humanos, sistemas externos o hardware."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_100",
+      "question": "La relación <<include>> entre casos de uso indica que:",
+      "options": [
+        "Es opcional para la funcionalidad del caso base",
+        "Un caso de uso amplía opcionalmente a otro",
+        "Un caso de uso incluye a otro siempre de forma obligatoria para realizar su funcionalidad"
+      ],
+      "correct": 2,
+      "explanation": "<<include>> = dependencia obligatoria. <<extend>> = extensión opcional."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_101",
+      "question": "¿Qué representa la 'línea de vida' en un diagrama de secuencia?",
+      "options": [
+        "Una línea vertical discontinua que indica el orden de los eventos asociados a cada elemento",
+        "La duración absoluta de un proceso",
+        "La jerarquía de las clases"
+      ],
+      "correct": 0,
+      "explanation": "La línea de vida baja verticalmente representando el tiempo; las barras de activación muestran cuándo está activo."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_102",
+      "question": "¿Quién es el principal responsable de realizar las pruebas unitarias?",
+      "options": [
+        "El equipo del cliente",
+        "Cualquier actor del desarrollo de modo no exhaustivo",
+        "Los programadores, para verificar que funciones, métodos o clases funcionan correctamente"
+      ],
+      "correct": 2,
+      "explanation": "Las pruebas unitarias las escriben los desarrolladores para su propio código."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_103",
+      "question": "¿Qué representa el concepto de 'cobertura' o 'cubrimiento' en pruebas de código?",
+      "options": [
+        "El número de errores detectados",
+        "El porcentaje del código fuente que ha sido probado",
+        "La capacidad del programa para manejar excepciones"
+      ],
+      "correct": 1,
+      "explanation": "Code coverage: métrica que indica qué porcentaje de líneas/ramas se ejecutan en los tests."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_104",
+      "question": "¿Cuál es la distinción entre pruebas de caja negra y caja blanca?",
+      "options": [
+        "Caja negra verifica funcionamiento externo sin ver el interior; caja blanca observa la construcción interna",
+        "Caja negra comprueba rendimiento bajo carga; caja blanca verifica usabilidad",
+        "Caja negra busca errores internos; caja blanca se centra en experiencia de usuario"
+      ],
+      "correct": 0,
+      "explanation": "Black box: se prueba como usuario. White box: se conoce y prueba el código interno."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_105",
+      "question": "¿Cuándo se realizan las pruebas de regresión y cuál es su propósito?",
+      "options": [
+        "Después de realizar cambios para comprobar que otras partes no se han visto afectadas negativamente",
+        "Solo antes del despliegue inicial",
+        "Antes de cualquier cambio para establecer una línea base"
+      ],
+      "correct": 0,
+      "explanation": "Las pruebas de regresión garantizan que los cambios no 'rompen' funcionalidad existente."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_106",
+      "question": "¿Cuál es la diferencia entre análisis estático y dinámico en pruebas de código?",
+      "options": [
+        "El estático analiza el código sin ejecutarlo; el dinámico comprueba el funcionamiento ejecutándolo",
+        "El estático busca sintaxis; el dinámico solo la interfaz",
+        "El estático se realiza en producción; el dinámico en desarrollo"
+      ],
+      "correct": 0,
+      "explanation": "Estático: linters, revisión de código. Dinámico: ejecutar tests y ver resultados."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_107",
+      "question": "¿Qué es la refactorización en desarrollo de software?",
+      "options": [
+        "Eliminar errores funcionales del sistema",
+        "Añadir nuevas funcionalidades o características al programa",
+        "Técnicas que modifican un programa funcional para mejorar legibilidad y mantenimiento sin alterar su comportamiento"
+      ],
+      "correct": 2,
+      "explanation": "Refactorizar mejora la calidad interna del código sin cambiar lo que hace externamente."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_108",
+      "question": "¿Qué comando de Git permite restaurar el repositorio a una versión anterior específica?",
+      "options": [
+        "git log + git revert",
+        "git merge <nombre_de_rama>",
+        "git reset --hard <identificador_del_commit>"
+      ],
+      "correct": 2,
+      "explanation": "git reset --hard vuelve al estado exacto de un commit anterior (cuidado: descarta cambios locales)."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_109",
+      "question": "¿Cuál es la principal distinción entre control de versiones centralizado y distribuido?",
+      "options": [
+        "Los centralizados almacenan en local; los distribuidos en servidor remoto",
+        "Los centralizados son de código cerrado; los distribuidos son open source",
+        "En centralizados las copias están en un servidor único; en distribuidos en el servidor y en cada máquina del equipo"
+      ],
+      "correct": 2,
+      "explanation": "SVN es centralizado; Git es distribuido (cada desarrollador tiene una copia completa del historial)."
+    },
+    {
+      "concept_id": "entornos_de_desarrollo_real_110",
+      "question": "¿Cómo se denomina el tipo de comentario formal en Python que documenta funciones y es visible con help()?",
+      "options": [
+        "Docstring",
+        "Comentario de línea",
+        "Comentario de bloque"
+      ],
+      "correct": 0,
+      "explanation": "Los docstrings se escriben con triple comilla \"\"\" y son accesibles en tiempo de ejecución."
     }
   ],
   "cloud_computing": [
@@ -7125,6 +8368,126 @@
       ],
       "correct": 0,
       "explanation": "docker compose up arranca todos los servicios definidos."
+    },
+    {
+      "concept_id": "cloud_computing_real_60",
+      "question": "¿Qué permite la infraestructura de la nube en términos de almacenamiento?",
+      "options": [
+        "Solo almacenamiento local",
+        "Almacenamiento escalable y accesible",
+        "No permite grandes volúmenes",
+        "Almacenamiento limitado y costoso"
+      ],
+      "correct": 1,
+      "explanation": "El cloud storage es elástico: puedes aumentar o reducir capacidad según necesidad."
+    },
+    {
+      "concept_id": "cloud_computing_real_61",
+      "question": "¿Qué tipo de servicio es Google Docs dentro de la computación en la nube?",
+      "options": [
+        "Nube híbrida",
+        "IaaS",
+        "SaaS",
+        "PaaS"
+      ],
+      "correct": 2,
+      "explanation": "SaaS: el proveedor ofrece la aplicación completa. Gmail, Salesforce, Office 365 también son SaaS."
+    },
+    {
+      "concept_id": "cloud_computing_real_62",
+      "question": "¿Cuál describe mejor la computación en la nube?",
+      "options": [
+        "Un tipo de hardware especializado en redes",
+        "Una red de servidores que ofrece servicios informáticos a través de Internet",
+        "Un protocolo de comunicación entre servidores",
+        "Un sistema operativo avanzado para servidores"
+      ],
+      "correct": 1,
+      "explanation": "Cloud computing = acceder a recursos informáticos (computación, almacenamiento) vía Internet."
+    },
+    {
+      "concept_id": "cloud_computing_real_63",
+      "question": "¿Cuál es una ventaja de las redes de fibra óptica en la nube?",
+      "options": [
+        "Ancho de banda alto y baja latencia",
+        "Conexiones inestables",
+        "Solo funciona en redes locales",
+        "Alta latencia en transmisión"
+      ],
+      "correct": 0,
+      "explanation": "La fibra óptica transmite datos a velocidades próximas a la luz con mínima latencia."
+    },
+    {
+      "concept_id": "cloud_computing_real_64",
+      "question": "¿Cuál de estas opciones representa un servicio de nube pública?",
+      "options": [
+        "Un disco duro externo en red",
+        "Servidores internos de una empresa",
+        "Un centro de datos privado",
+        "Microsoft Azure"
+      ],
+      "correct": 3,
+      "explanation": "Azure, AWS y Google Cloud son los principales proveedores de nube pública."
+    },
+    {
+      "concept_id": "cloud_computing_real_65",
+      "question": "¿Qué caracteriza a una nube híbrida?",
+      "options": [
+        "No permite compartir datos entre sistemas",
+        "Solo accesible dentro de la empresa",
+        "Es una combinación de nube privada y pública",
+        "La opera únicamente un proveedor público"
+      ],
+      "correct": 2,
+      "explanation": "Nube híbrida: mezcla infraestructura on-premise (privada) con servicios cloud públicos."
+    },
+    {
+      "concept_id": "cloud_computing_real_66",
+      "question": "¿Cuál es la principal característica del modelo de facturación en la nube?",
+      "options": [
+        "Pago anticipado por recursos contratados",
+        "Pago por uso: solo se paga por los recursos consumidos",
+        "Pago fijo mensual sin importar el uso",
+        "Pago único al inicio del servicio"
+      ],
+      "correct": 1,
+      "explanation": "Pay-as-you-go o pay-per-use: el modelo que democratizó el acceso a infraestructura IT."
+    },
+    {
+      "concept_id": "cloud_computing_real_67",
+      "question": "¿Qué modelo de precios en la nube ofrece descuentos a cambio de comprometerse a largo plazo?",
+      "options": [
+        "Pago por uso",
+        "Facturación consolidada",
+        "Instancias spot",
+        "Instancias reservadas"
+      ],
+      "correct": 3,
+      "explanation": "Las instancias reservadas (1 o 3 años) ofrecen hasta un 75% de descuento frente al precio bajo demanda."
+    },
+    {
+      "concept_id": "cloud_computing_real_68",
+      "question": "¿Qué permite la facturación consolidada en AWS/Azure?",
+      "options": [
+        "Evitar el pago de impuestos",
+        "Pagar menos por los recursos utilizados",
+        "Automatizar completamente la contabilidad",
+        "Gestionar múltiples cuentas desde una sola plataforma"
+      ],
+      "correct": 3,
+      "explanation": "La facturación consolidada agrupa el gasto de múltiples cuentas para obtener descuentos por volumen."
+    },
+    {
+      "concept_id": "cloud_computing_real_69",
+      "question": "¿Qué elemento NO forma parte del Coste Total de la Propiedad (TCO)?",
+      "options": [
+        "Costes operativos en la nube",
+        "Coste de hardware y software",
+        "Gastos de transporte de los empleados",
+        "Mantenimiento y energía"
+      ],
+      "correct": 2,
+      "explanation": "TCO incluye hardware, software, mantenimiento, personal, energía y espacio físico. NO el transporte."
     }
   ],
   "empleabilidad": [
@@ -7871,6 +9234,160 @@
       ],
       "correct": 1,
       "explanation": "El trabajo nocturno tiene restricciones especiales por su impacto en la salud."
+    },
+    {
+      "concept_id": "empleabilidad_real_62",
+      "question": "El protocolo PAS ante una situación de emergencia consiste en:",
+      "options": [
+        "Proteger, Avisar y Socorrer",
+        "Proteger, Atender y Socorrer",
+        "Proteger, Avisar y Supervisar"
+      ],
+      "correct": 0,
+      "explanation": "PAS: Proteger la zona, Avisar a los servicios de emergencia, Socorrer a los afectados."
+    },
+    {
+      "concept_id": "empleabilidad_real_63",
+      "question": "¿Qué tipo de emergencia es aquella que requiere recurrir a servicios externos para controlarla?",
+      "options": [
+        "Una emergencia general",
+        "Una emergencia parcial",
+        "Un conato de emergencia"
+      ],
+      "correct": 0,
+      "explanation": "La emergencia general necesita la intervención de bomberos, policía o servicios médicos externos."
+    },
+    {
+      "concept_id": "empleabilidad_real_64",
+      "question": "¿Cuál es la secuencia correcta de actuación preventiva ante riesgos?",
+      "options": [
+        "Evaluar los riesgos, identificarlos y evitarlos",
+        "Evaluar los que no se pueden evitar, evitar los riesgos y planificarlos",
+        "Identificar los riesgos, evitarlos, evaluar los que no se pueden evitar"
+      ],
+      "correct": 2,
+      "explanation": "Primero identificar, luego evitar, luego evaluar y controlar los que no se pueden evitar."
+    },
+    {
+      "concept_id": "empleabilidad_real_65",
+      "question": "¿Cuándo es obligatorio el local de primeros auxilios en una empresa?",
+      "options": [
+        "En empresas de más de 50 trabajadores/as, en todo caso",
+        "En empresas de más de 25 trabajadores/as, en todo caso",
+        "En todas las empresas"
+      ],
+      "correct": 0,
+      "explanation": "El Reglamento de los Servicios de Prevención establece este umbral de 50 trabajadores."
+    },
+    {
+      "concept_id": "empleabilidad_real_66",
+      "question": "¿Cómo se define la Prevención de Riesgos Laborales?",
+      "options": [
+        "El conjunto de medidas destinadas a evitar o disminuir los riesgos derivados del trabajo",
+        "El riesgo laboral asociado a cada puesto",
+        "Los daños derivados del trabajo"
+      ],
+      "correct": 0,
+      "explanation": "La LPRL define la prevención como el conjunto de actividades para evitar o minimizar los riesgos."
+    },
+    {
+      "concept_id": "empleabilidad_real_67",
+      "question": "En reanimación cardiopulmonar (RCP), ¿a qué ritmo se realizan las compresiones torácicas?",
+      "options": [
+        "50 compresiones por minuto",
+        "60-80 compresiones por minuto",
+        "100-120 compresiones por minuto"
+      ],
+      "correct": 2,
+      "explanation": "El protocolo de RCP actual indica 100-120 compresiones/minuto con profundidad de 5-6 cm."
+    },
+    {
+      "concept_id": "empleabilidad_real_68",
+      "question": "El mobbing (acoso laboral) se incluye entre los riesgos laborales:",
+      "options": [
+        "Biológicos",
+        "Ergonómicos",
+        "Psicosociales"
+      ],
+      "correct": 2,
+      "explanation": "Los riesgos psicosociales incluyen estrés, burnout, mobbing y violencia laboral."
+    },
+    {
+      "concept_id": "empleabilidad_real_69",
+      "question": "¿A quién corresponde la aprobación del Plan de Prevención?",
+      "options": [
+        "Al Servicio de Prevención",
+        "A la empresa",
+        "A los representantes de los trabajadores"
+      ],
+      "correct": 1,
+      "explanation": "La empresa (dirección) es responsable de aprobar e implantar el Plan de Prevención."
+    },
+    {
+      "concept_id": "empleabilidad_real_70",
+      "question": "El accidente de trabajo: ¿incluye o no el accidente 'in itinere'?",
+      "options": [
+        "Es una lesión laboral que no incluye el accidente in itinere",
+        "Es una lesión corporal consecuencia del trabajo que sí incluye el accidente in itinere",
+        "Es una lesión que debe aparecer en el listado de accidentes profesionales, sin incluir el in itinere"
+      ],
+      "correct": 1,
+      "explanation": "El accidente in itinere (en el trayecto casa-trabajo) sí está protegido como accidente laboral."
+    },
+    {
+      "concept_id": "empleabilidad_real_71",
+      "question": "¿Qué son las competencias profesionales?",
+      "options": [
+        "Los títulos académicos que una persona posee",
+        "Conocimientos técnicos aprendidos en un curso específico",
+        "Una combinación de conocimientos, habilidades y actitudes para desempeñar eficazmente una actividad profesional"
+      ],
+      "correct": 2,
+      "explanation": "Competencias = saber (conocimientos) + saber hacer (habilidades) + saber ser (actitudes)."
+    },
+    {
+      "concept_id": "empleabilidad_real_72",
+      "question": "¿Qué son las soft skills o habilidades blandas?",
+      "options": [
+        "Capacidades técnicas adquiridas mediante la experiencia profesional",
+        "Capacidades técnicas medibles objetivamente adquiridas en educación formal",
+        "Competencias personales y sociales que afectan cómo una persona se relaciona en el entorno laboral"
+      ],
+      "correct": 2,
+      "explanation": "Soft skills: comunicación, trabajo en equipo, liderazgo, empatía, resolución de conflictos."
+    },
+    {
+      "concept_id": "empleabilidad_real_73",
+      "question": "¿Qué es la competencia digital?",
+      "options": [
+        "La destreza en el manejo de las TIC en diversos contextos",
+        "La habilidad de programar en varios lenguajes",
+        "La capacidad de diseñar y fabricar dispositivos electrónicos"
+      ],
+      "correct": 0,
+      "explanation": "La competencia digital es una de las 8 competencias clave establecidas por la UE."
+    },
+    {
+      "concept_id": "empleabilidad_real_74",
+      "question": "¿Cuál es la titulación exigida para pertenecer al grupo B del cuerpo de funcionarios?",
+      "options": [
+        "Licenciado, graduado o equivalente",
+        "Bachillerato o equivalente",
+        "Ciclo de grado superior de formación profesional"
+      ],
+      "correct": 2,
+      "explanation": "Grupo A1: titulación universitaria. Grupo A2: diplomatura. Grupo C1: bachillerato. Técnico Superior = Grupo B."
+    },
+    {
+      "concept_id": "empleabilidad_real_75",
+      "question": "¿Cuál es la principal tendencia del mercado laboral en el sector de la informática?",
+      "options": [
+        "Inteligencia artificial y automatización",
+        "Robótica",
+        "Computación cuántica"
+      ],
+      "correct": 0,
+      "explanation": "La IA y automatización están transformando el mercado laboral TIC más rápidamente que cualquier otra tecnología."
     }
   ]
 }
