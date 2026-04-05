@@ -1,0 +1,41 @@
+tema 4
+¿Qué elemento se utiliza en un Schema XML (XSD) para definir tipos complejos que contienen otros elementos o atributos, y que permite especificar la secuencia u orden de aparición de sus hijos?
+xs:all
+xs:choice
+xs:sequence
+Los DTD (Document Type Definition) tienen varios problemas que los Schemas XML resuelven. ¿Cuál de los siguientes es un problema recurrente de los DTD?
+Su capacidad para combinarse fácilmente con otros DTD y su soporte nativo para espacios de nombres XML.
+Su soporte robusto para la definición de tipos de datos complejos y la especificación del elemento raíz del documento.
+Su ausencia de tipos de datos, la dificultad para acciones sencillas como ordenar elementos, y su limitada compatibilidad con los espacios de nombres XML.
+¿Cuál de los siguientes atributos del elemento raíz xs:schema en un XSD se utiliza para indicar si los elementos deben llevar el espacio de nombres delante (qualified o unqualified)?
+TargetNamespace
+xmlns:alias
+elementFormDefault
+¿Cuál de las siguientes afirmaciones describe mejor el objetivo principal de un Schema XML en comparación con un DTD?
+Un Schema XML se centra exclusivamente en la sintaxis de las etiquetas XML, sin capacidad para definir tipos de datos o restricciones.
+Los Schemas XML están escritos en un lenguaje diferente a XML, lo que requiere analizadores y APIs distintos para su procesamiento.
+Un Schema XML tiene como objetivo definir la estructura base de un documento XML, incluyendo elementos, atributos, tipos de datos, orden, ocurrencia y valores por defecto o fijos, mejorando las capacidades de los DTD.
+Para definir un tipo de dato simple personalizado en un Schema XML, ¿qué estructura principal se utiliza?
+xs:complexType
+*xs:simpleType
+xs:element
+En XML Schema, ¿cuál de las siguientes facetas o restricciones se utiliza para especificar un rango de caracteres admitidos o una expresión regular para el valor de un elemento o atributo?
+xs:Enumeration
+xs:MaxLength
+xs:Pattern
+¿Cómo se asocia un documento XML con un Schema XML (XSD) cuando se utilizan explícitamente los nombres de los espacios de nombres en las etiquetas del documento XML?
+Mediante el atributo noNamespaceSchemaLocation.
+Mediante el atributo schemaLocation.
+El documento XML no necesita asociarse explícitamente; el navegador lo detecta automáticamente.
+En un documento XSD, si se desea especificar que un elemento puede aparecer un número ilimitado de veces, ¿qué valor se debe asignar al atributo maxOccurs?
+0
+1
+unbounded
+Si en un XSD se desea imponer una restricción a un atributo para que su valor sea obligatorio (required), ¿qué atributo del elemento xs:attribute se debe usar y con qué valor?
+default
+use con valor optional
+use con valor required
+Según los principios de validación de documentos XML, ¿cuál de las siguientes afirmaciones es correcta?
+Un documento XML siempre es válido si está bien formado.
+Un documento XML puede estar bien formado, pero no ser válido si no cumple con las reglas semánticas establecidas en el DTD o XSD.
+La validación solo verifica la sintaxis del documento, no su estructura ni el tipo de datos.

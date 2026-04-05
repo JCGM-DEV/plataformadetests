@@ -1,0 +1,41 @@
+tema 5
+¿Qué característica clave introducida en XSLT 2.0 permite procesar documentos XML de gran tamaño de manera más eficiente al no requerir que todo el documento se cargue por completo en memoria?
+La mejora del sistema de tipos de datos.
+La instrucción xsl:function para definir funciones reutilizables.
+El soporte de streaming para documentos fuente.
+Según el contenido de la unidad, ¿cuál de los siguientes es un componente fundamental de XSL específicamente orientado a la definición de formatos de presentación para distintos medios (como PDF) y no a la transformación directa a HTML/XML?
+XPath
+XSLT
+XSL-FO
+Para mostrar el valor de un atributo llamado "identificador" de un elemento actual dentro de una plantilla XSLT, ¿qué expresión XPath se utilizaría correctamente con la instrucción <https://www.google.com/search?q=xsl:value-of select="..." />?
+../identificador
+identificador
+@identificador
+Un desarrollador necesita aplicar una lógica condicional en XSLT donde, basándose en el valor de una cantidad, se apliquen diferentes formatos (por ejemplo, colorear de amarillo si la cantidad es superior a 25 y de verde si es igual o inferior). ¿Qué conjunto de instrucciones XSLT es el más adecuado para este escenario?
+<https://www.google.com/search?q=xsl:if test="cantidad>25"/>
+xsl:choose con xsl:when y xsl:otherwise
+<https://www.google.com/search?q=xsl:for-each select="cantidad"/>
+¿Cuál de las siguientes afirmaciones sobre el procesador DOM (Document Object Model) es correcta?
+Es una API basada en eventos, ideal para documentos XML muy grandes debido a su bajo consumo de memoria.
+Carga todo el documento XML en memoria, construyendo un árbol de objetos que permite la manipulación y modificación dinámica de sus nodos.
+No permite modificar el documento XML, solo leerlo de forma secuencial.
+Si se desea iterar sobre un conjunto de nodos en un documento XML (por ejemplo, todos los elementos <producto>) y aplicar una transformación a cada uno de ellos, ¿qué instrucción XSLT se debe utilizar junto con una expresión XPath en su atributo select?
+xsl:value-of
+xsl:for-each
+xsl:if
+En la estructura de una hoja de estilo XSLT, ¿cuál es el propósito principal del atributo match en la etiqueta xsl:template?
+Indica el espacio de nombres (namespace) de la hoja de estilo para asegurar su compatibilidad.
+Define el tipo de documento de salida (por ejemplo, xml, html) que se generará.
+Especifica los elementos del documento XML de entrada a los que se aplicará la plantilla, utilizando una expresión XPath.
+¿Cuál de las siguientes afirmaciones describe con mayor precisión el rol de XSL en el procesamiento de documentos XML?
+XSL es un lenguaje de programación para crear bases de datos XML y gestionar su almacenamiento.
+XSL es un lenguaje de consulta para extraer datos específicos de documentos XML sin modificarlos.
+XSL es un lenguaje de marcado que define la presentación y la transformación de documentos XML, permitiendo adaptarlos a diversos formatos y sistemas.
+¿En qué escenario se recomienda priorizar el uso de SAX (Simple API for XML) sobre DOM para procesar documentos XML?
+Cuando se necesita modificar el documento XML en memoria antes de generar la salida final.
+Cuando el documento XML es de tamaño pequeño o mediano y se requiere acceso aleatorio a los nodos.
+Cuando se procesan documentos XML muy grandes y el bajo consumo de memoria y la velocidad de lectura secuencial son críticos, sin necesidad de modificar el documento.
+Al enlazar una hoja de estilo XSLT a un documento XML local y abrirlo en Google Chrome directamente desde el explorador de archivos (file://...), ¿qué resultado es probable que observe el usuario?
+Se mostrará el documento XML original con su estructura de etiquetas.
+Se mostrará el documento XML transformado con los estilos aplicados por la hoja de estilo.
+Se mostrará una página en blanco o no se aplicará la transformación, incluso si el documento está bien formado.

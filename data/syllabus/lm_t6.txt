@@ -1,0 +1,41 @@
+tema 6
+¿Qué característica distingue a las bases de datos XML nativas y las hace especialmente eficientes para trabajar con documentos XML grandes y complejos?
+Utilizan SQL para todas las operaciones, facilitando la integración con sistemas relacionales.
+Almacenan el documento XML en su forma original sin alterarlo, lo que permite recuperar el original y aprovechar su modelo jerárquico mediante nodos.
+Convierten el XML a un esquema relacional optimizado para búsquedas rápidas.
+¿Cuál de los siguientes es un requisito indispensable para la instalación y ejecución de la base de datos XML nativa eXist-db?
+Un entorno de desarrollo como Apache o Nginx preinstalado.
+Tener Java 1.7 o una versión posterior instalada en el sistema operativo.
+Un mínimo de 2048 MB de memoria RAM dedicados exclusivamente al servicio.
+¿Cuál es el propósito fundamental de la cláusula Let en una expresión FLWOR de XQuery?
+Iterar sobre un conjunto de nodos en el documento XML.
+*Crear variables temporales que representan valores o expresiones para ser usadas en otras cláusulas de la consulta.
+Filtrar los resultados de la consulta utilizando una expresión booleana.
+¿Cuál es una de las principales desventajas de las bases de datos "XML enabled" en comparación con las bases de datos XML nativas?
+Su incapacidad para procesar documentos XML directamente sin un middleware adicional.
+Su modelo relacional no permite la gestión de transacciones complejas en entornos XML.
+No pueden restaurar el documento XML original sin alterarlo y tienen una diferencia de filosofía con la naturaleza jerárquica de XML.
+Si en un documento XML queremos seleccionar todos los nodos elemento hijos directos de cada elemento <coche> que esté bajo <concesionario>, sin especificar los nombres de esos hijos, ¿qué comodín o expresión XPath se usaría correctamente?
+//coche/node()
+/concesionario/coche/*
+concesionario/coche//@*
+XQuery es un lenguaje de consulta y manipulación de XML que incorpora XPath.<br/>¿Cuál de las siguientes afirmaciones sobre XQuery es correcta?
+No permite el acceso a múltiples documentos XML en una misma consulta, a diferencia de SQL.
+Ofrece capacidades de transformación, permitiendo no solo recuperar datos sino también devolver un resultado con una nueva estructura.
+Carece de funciones integradas para trabajar con tipos de datos como cadenas, números o fechas.
+Si tenemos el siguiente fragmento XML: <concesionario><coche id="1"><marca>Volkswagen</marca></coche><coche id="2"><marca>Audi</marca></coche></concesionario>, ¿qué expresión XPath devolvería el elemento <coche> con el atributo id igual a "2"?
+/concesionario/coche[position()=2]
+//coche[id="2"]
+/concesionario/coche[@id="2"]
+La herramienta IMPORTXML de Google Sheets, ¿para qué se utiliza principalmente?
+Para transformar documentos XML a otros formatos como JSON o PDF.
+Para importar datos de formatos estructurados (como XML, HTML, CSV) desde una URL específica, aplicando una consulta XPath.
+Para crear documentos XML nuevos a partir de datos estructurados en una hoja de cálculo.
+En XPath, si se necesita seleccionar la marca y el modelo de todos los coches en un documento XML dentro de una misma expresión de ruta, ¿qué operador se debe utilizar para unir ambas rutas?
+AND
++
+|
+¿Cuál es la principal diferencia funcional entre XPath y XQuery según los materiales de la unidad?
+XPath es un lenguaje para generar nuevos documentos XML, mientras que XQuery es solo para búsquedas.
+Ambos sirven para lo mismo, pero XPath es más moderno y ofrece más funciones de transformación.
+XPath es un lenguaje para seleccionar nodos en documentos XML, mientras que XQuery, además de incluir XPath, es un lenguaje completo de consulta y transformación con sintaxis FLWOR.

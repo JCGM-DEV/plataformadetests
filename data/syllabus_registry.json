@@ -96,5 +96,96 @@
         "subject_id": "entornos_de_desarrollo",
         "file": "data/syllabus/ed_t7.txt",
         "icon": "🛠️"
+    },
+    {
+        "id": "lm_tema_1",
+        "name": "LM Tema 1: Introd. Marcas",
+        "subject_id": "lenguaje_de_marcas",
+        "file": "data/syllabus/lm_t1.txt",
+        "icon": "📝"
+    },
+    {
+        "id": "lm_tema_2",
+        "name": "LM Tema 2: HTML y CSS",
+        "subject_id": "lenguaje_de_marcas",
+        "file": "data/syllabus/lm_t2.txt",
+        "icon": "📝"
+    },
+    {
+        "id": "lm_tema_3",
+        "name": "LM Tema 3: XML y XSD",
+        "subject_id": "lenguaje_de_marcas",
+        "file": "data/syllabus/lm_t3.txt",
+        "icon": "📝"
+    },
+    {
+        "id": "lm_tema_4",
+        "name": "LM Tema 4: Almacenamiento",
+        "subject_id": "lenguaje_de_marcas",
+        "file": "data/syllabus/lm_t4.txt",
+        "icon": "📝"
+    },
+    {
+        "id": "lm_tema_5",
+        "name": "LM Tema 5: XPath y XSLT",
+        "subject_id": "lenguaje_de_marcas",
+        "file": "data/syllabus/lm_t5.txt",
+        "icon": "📝"
+    },
+    {
+        "id": "lm_tema_6",
+        "name": "LM Tema 6: XQuery y BD-XML",
+        "subject_id": "lenguaje_de_marcas",
+        "file": "data/syllabus/lm_t6.txt",
+        "icon": "📝"
+    },
+    {
+        "id": "lm_tema_7",
+        "name": "LM Tema 7: RSS y Atom",
+        "subject_id": "lenguaje_de_marcas",
+        "file": "data/syllabus/lm_t7.txt",
+        "icon": "📝"
+    },
+    {
+        "id": "lm_tema_8",
+        "name": "LM Tema 8: ERP y CRM",
+        "subject_id": "lenguaje_de_marcas",
+        "file": "data/syllabus/lm_t8.txt",
+        "icon": "📝"
+    },
+    {
+        "id": "emp_tema_1",
+        "name": "EMP Tema 1: Prevención Riscos",
+        "subject_id": "empleabilidad",
+        "file": "data/syllabus/emp_t1.txt",
+        "icon": "💼"
+    },
+    {
+        "id": "emp_tema_2",
+        "name": "EMP Tema 2: Seguridad y RCP",
+        "subject_id": "empleabilidad",
+        "file": "data/syllabus/emp_t2.txt",
+        "icon": "💼"
+    },
+    {
+        "id": "emp_tema_3",
+        "name": "EMP Tema 3: Competencias",
+        "subject_id": "empleabilidad",
+        "file": "data/syllabus/emp_t3.txt",
+        "icon": "💼"
+    },
+    {
+        "id": "emp_tema_4",
+        "name": "EMP Tema 4: Mercado Laboral",
+        "subject_id": "empleabilidad",
+        "file": "data/syllabus/emp_t4.txt",
+        "icon": "💼"
+    },
+    {
+        "id": "emp_tema_5",
+        "name": "EMP Tema 5: Acción y FP Dual",
+        "subject_id": "empleabilidad",
+        "file": "data/syllabus/emp_t5.txt",
+        "icon": "💼"
     }
 ]
