@@ -1,0 +1,895 @@
+tema 1
+
+¿Quién propuso la creación de un nuevo sistema de "hipertexto" en 1980 con el objetivo de facilitar el intercambio de documentos entre diferentes usuarios, lo que eventualmente dio origen a HTML?
+
+
+El Consorcio World Wide Web (W3C).
+
+
+Tim Berners-Lee, mientras trabajaba en la Organización Europea para la Investigación Nuclear (CERN).
+
+
+La International Organization for Standardization (ISO).
+
+El objetivo principal del World Wide Web Consortium (W3C) es:
+
+
+Establecer normas internacionales para garantizar la calidad, la seguridad y la eficiencia de los productos y servicios en una amplia gama de sectores.
+
+
+Desarrollar y promover estándares y tecnologías web abiertas para garantizar el crecimiento a largo plazo y la interoperabilidad de la World Wide Web.
+
+
+Lanzar nuevas versiones de lenguajes de programación del lado del cliente como JavaScript para mejorar la interactividad web.
+
+¿Cómo se clasifica CSS (Cascading Style Sheets) en relación con los lenguajes de marcas como HTML o XML?
+
+
+Es un lenguaje de marcas estructural, utilizado para definir la estructura de documentos web y de datos.
+
+
+Es un lenguaje de marcas jerárquico, organizado en forma de árbol para la presentación de datos en la web.
+
+
+No es un lenguaje de marcas, sino un lenguaje de estilos encaminado a separar el contenido de su representación o estética, permitiendo adaptar la información según el dispositivo.
+
+Una ventaja clave de la especificación XML Schema (XSD) sobre la DTD para definir la estructura de documentos XML es:
+
+
+Un menor consumo de recursos para la validación del documento, lo que la hace más eficiente en entornos de alta demanda.
+
+
+Una mayor capacidad expresiva, una gramática más sofisticada y la facilidad para la extensión del documento sin dificultad.
+
+
+La simplificación de la declaración del tipo de documento a una única variante, lo que eliminó la necesidad de elegir entre diferentes tipos.
+
+Un lenguaje de marcas se define principalmente como:
+
+
+Un método de codificación de documentos que utiliza variables y funciones aritméticas para el procesamiento de datos complejos.
+
+
+Un método de codificación de documentos donde el texto se combina con etiquetas para proporcionar información adicional sobre la estructura o el estilo de presentación.
+
+
+Un lenguaje de programación utilizado para crear aplicaciones web interactivas y dinámicas.
+
+El Standard Generalized Markup Language (SGML) fue estandarizado en 1986 y se originó como descendiente de:
+
+
+HTML, debido a su creciente complejidad.
+
+
+GML, propuesto por IBM para compartir información entre sistemas, y posteriormente estandarizado por ISO 8879.
+
+
+XML, buscando un lenguaje más potente y con estructura semántica.
+
+En el contexto de los lenguajes de marcas, ¿cuál es la distinción correcta entre una "etiqueta" y un "elemento"?
+
+
+Una etiqueta es un par nombre-valor que indica propiedades asociadas a los elementos, mientras que un elemento es el texto que va entre los símbolos <nombre>.
+
+
+Una etiqueta es el texto que va entre los símbolos <nombre>, mientras que un elemento es una estructura básica que organiza el contenido y generalmente tiene una etiqueta de inicio y una de cierre.
+
+
+Un elemento siempre se refiere a un contenido vacío que no requiere etiqueta de fin, mientras que una etiqueta siempre encierra contenido explícito.
+
+La especificación del W3C para HTML 4.0 contemplaba tres tipos de DTD (Definición de Tipo de Documento). ¿Cuáles eran estas tres variantes?
+
+
+Lineal, Jerárquico y de Programación.
+
+
+Estructural, de Presentación y de Programación.
+
+
+Estricta, de Transición (transicional o flexible) y Frameset.
+
+Una característica fundamental que diferencia a los lenguajes de marcas de los lenguajes de programación es:
+
+
+Su flexibilidad, que permite combinarlos con otros lenguajes como PHP y JavaScript para crear páginas web dinámicas.
+
+
+No poseen variables ni funciones aritméticas, y su uso principal es dar formato a documentos de texto o definir la estructura de datos.
+
+
+Su compacidad, que hace que los archivos sean muy eficientes en cuanto al uso del espacio de almacenamiento.
+
+A diferencia de HTML, el lenguaje de marcas XML (eXtensible Markup Language) se caracteriza por:
+
+
+Ser una versión más estricta y bien formada de HTML, utilizando una sintaxis basada en XML para asegurar la compatibilidad con múltiples dispositivos.
+
+
+Combinar información estructural con el diseño, permitiendo una mayor versatilidad en la presentación visual de documentos.
+
+
+Ser exclusivamente estructural, sin contener ninguna información relacionada con el diseño, y se utiliza para describir información y definir la estructura de datos de un documento.
+
+tema 2
+
+¿Cuál es el objetivo principal del DOM (Modelo de Objetos de Documentos)?
+
+
+Establecer la estructura y el significado del contenido en línea o web.
+
+
+Definir la forma en que los documentos HTML, XHTML y XML son almacenados en el servidor.
+
+
+Permitir que los programas (por ejemplo, JavaScript) puedan acceder y modificar dinámicamente el contenido, la estructura y el estilo de los documentos HTML y XML.
+
+Dentro de los atributos HTML, ¿cuál de los siguientes es considerado un atributo específico de ciertos elementos (como <img> o <a>), y no un atributo global que se pueda usar en la mayoría de las etiquetas?
+
+
+class
+
+
+id
+
+
+src
+
+De las siguientes formas de incluir CSS en una página web, ¿cuál es considerada la menos recomendable porque mezcla contenido y presentación, dificultando el mantenimiento del código?
+
+
+Enlace a CSS externo mediante la etiqueta <link> en el <head>.
+
+
+CSS en el HTML mediante la etiqueta <style> en el <head>.
+
+
+CSS en línea (inline) a través del atributo style="..." directamente en la etiqueta HTML.
+
+Según las restricciones básicas de XHTML, si en HTML se permite la minimización de atributos (ej. <input checked>), ¿cómo debe manejarse este tipo de atributo en XHTML?
+
+
+El atributo debe omitirse completamente, ya que no es compatible con la sintaxis XML.
+
+
+El atributo debe llevar siempre un valor, como, por ejemplo, checked="checked".
+
+
+El atributo se puede usar tal cual, pero solo si la página incluye un DOCTYPE Frameset.
+
+En HTML5, ¿qué etiqueta semántica se utiliza para representar una sección de una página que contiene información relacionada con el contenido principal, pero que no es tan relevante o importante, como una barra lateral?
+
+
+<header>
+
+
+<section>
+
+
+<aside>
+
+Dado el siguiente fragmento de HTML: <p><a href="#"><span>Texto del enlace</span></a></p>, ¿qué selector CSS NO aplicaría estilos directamente al elemento <span> en este caso?
+
+
+p span
+
+
+a span
+
+
+p > span
+
+¿Cuál de las siguientes afirmaciones sobre las diferencias entre HTML y XHTML es correcta?
+
+
+En XHTML, los nombres de etiquetas y atributos pueden escribirse indistintamente en mayúsculas o minúsculas.
+
+
+XHTML exige el cierre de todas las etiquetas, incluidas las vacías, y que todos los atributos tengan un valor y estén entre comillas.
+
+
+HTML permite la integración de otros lenguajes basados en XML como MathML o SVG, mientras que XHTML no.
+
+Para una tabla HTML, ¿qué conjunto de etiquetas se utiliza para agrupar semánticamente las filas del encabezado, el cuerpo y el pie, respectivamente, lo cual es útil para tablas muy largas que ocupan varias páginas?
+
+
+<table>, <tr>, <td>
+
+
+<caption>, <thead>, <tfoot>
+
+
+<thead>, <tbody>, <tfoot>
+
+¿Cuál de las siguientes etiquetas HTML es explícitamente mencionada como obsoleta (deprecated) en el contenido, recomendándose que su funcionalidad de estilo sea manejada por CSS en HTML5?
+
+
+<p>
+
+
+<h1>
+
+
+<font>
+
+Al utilizar la etiqueta <form> con el atributo method="post", ¿qué atributo es el encargado de indicar el tipo de contenido utilizado para enviar los datos, siendo esencial, por ejemplo, para la subida de archivos?
+
+
+action
+
+
+target
+
+
+enctype
+
+tema 3
+
+Según las reglas de las etiquetas XML para la buena formación de un documento, ¿cuál de las siguientes afirmaciones es correcta?
+
+
+Las etiquetas XML no son sensibles a las mayúsculas y minúsculas, lo que permite flexibilidad en su escritura para mejorar la legibilidad del código.
+
+
+Es posible cerrar una etiqueta exterior antes de que todos los elementos anidados dentro de ella hayan sido cerrados, siempre que el documento tenga un elemento raíz único.
+
+
+Los elementos vacíos pueden representarse mediante una etiqueta de inicio seguida inmediatamente por una de cierre (ej. <hr></hr>), o con una etiqueta única con "/>" al final (ej. <hr />).
+
+¿Qué característica debe cumplir un documento XML para ser considerado válido, además de estar bien formado?
+
+
+Debe ser compatible con cualquier navegador web sin necesidad de hojas de estilo o transformaciones adicionales para su visualización.
+
+
+Debe contener obligatoriamente un prólogo con la declaración XML que incluya la versión, la codificación y el atributo standalone="yes".
+
+
+Debe ajustarse a las restricciones estructurales y de contenido definidas en una Declaración de Tipo de Documento (DTD) o un Esquema XML (XSD) asociado.
+
+¿Cuál de las siguientes afirmaciones sobre JSON es correcta?
+
+
+JSON es un lenguaje de marcado extensible diseñado principalmente para la elaboración de documentos complejos con una estructura jerárquica basada en etiquetas.
+
+
+Los documentos JSON suelen ser más difíciles de interpretar y comprender por las personas en comparación con los documentos XML debido a su sintaxis técnica.
+
+
+JSON se basa en dos estructuras fundamentales: una colección de pares nombre/valor (objetos) y una lista ordenada de valores (arrays).
+
+¿Cuál de los siguientes nombres de etiqueta o atributo XML es inválido según las reglas de nombres de XML?
+
+
+<nombreValido>
+
+
+<dato-2023>
+
+
+<XML_data>
+
+Al abrir un documento XML directamente en un navegador web sin asociarle ninguna tecnología adicional (como CSS o XSLT), ¿cómo se presentará la información al usuario?
+
+
+El navegador intentará aplicar un conjunto de estilos por defecto para hacer el documento visualmente atractivo y navegable.
+
+
+Se mostrará un mensaje de error indicando que el documento no tiene un formato de presentación válido y requiere un estilo.
+
+
+El navegador simplemente mostrará la jerarquía de etiquetas y el contenido del documento en texto plano, sin aplicar ningún estilo ni formato visual.
+
+En la estructura jerárquica de un documento XML, si la etiqueta <carreras> es un hijo de <facultad>, y dentro de <carreras> se encuentra la etiqueta <carrera>, ¿qué relación tiene <carrera> con <facultad>?
+
+
+<carrera> es un hijo directo de <facultad>, ya que se encuentra dentro de su ámbito.
+
+
+<carrera> es un hermano de <facultad>, dado que ambos descienden del mismo elemento raíz.
+
+
+<carrera> es un descendiente de <facultad>, al estar contenida en un elemento que a su vez es hijo de <facultad>.
+
+Si en un esquema XML (XSD) se desea restringir el valor de un elemento de tipo xs:string a un conjunto específico y limitado de valores predefinidos (por ejemplo, "conectado", "ocupado" o "ausente"), ¿qué faceta se debe utilizar dentro de xs:restriction?
+
+
+La faceta xs:maxLength, para definir la longitud máxima permitida de la cadena de texto.
+
+
+La faceta xs:pattern, para establecer una expresión regular que el valor de la cadena debe cumplir.
+
+
+La faceta xs:enumeration, que permite listar los valores exactos que el elemento puede tomar.
+
+¿Cuál de los siguientes es un inconveniente principal de las Definiciones de Tipo de Documento (DTD) en comparación con los Esquemas XML (XSD)?
+
+
+Su sintaxis es demasiado compleja y, a diferencia de XML Schema, no está basada en XML, lo que dificulta su integración.
+
+
+Permiten la definición flexible de secuencias no ordenadas de elementos y la creación de claves combinadas a partir de varios atributos o elementos.
+
+
+Carecen de soporte para espacios de nombres (namespaces), limitan los elementos terminales a datos textuales y no permiten definir tipos de datos complejos.
+
+En XML, cuando se declara un espacio de nombres por defecto (sin prefijo, por ejemplo xmlns="URI"), ¿a qué elementos del documento afecta su ámbito de aplicación?
+
+
+A todos los elementos y atributos del documento XML, incluyendo los de elementos anidados, de forma global.
+
+
+Solo al elemento en el que se declara y a los atributos específicos de ese elemento, excluyendo a sus descendientes.
+
+
+Al elemento en el que está declarado y a todos sus elementos descendientes, pero no a sus atributos, los cuales se tratan como atributos regulares.
+
+¿Qué elemento del lenguaje XSD (XML Schema Definition) se utiliza para construir tipos complejos especificando que sus componentes deben aparecer en un orden determinado y fijo?
+
+
+El elemento xs:choice, que permite seleccionar uno de varios elementos definidos sin un orden estricto.
+
+
+El atributo mixed="true" del elemento xs:complexType, que permite combinar texto con elementos en cualquier orden.
+
+
+El elemento xs:sequence, que enumera los componentes de un tipo complejo indicando la secuencia obligatoria en que deben aparecer.
+
+tema 4
+
+¿Qué elemento se utiliza en un Schema XML (XSD) para definir tipos complejos que contienen otros elementos o atributos, y que permite especificar la secuencia u orden de aparición de sus hijos?
+
+
+xs:all
+
+
+xs:choice
+
+
+xs:sequence
+
+Los DTD (Document Type Definition) tienen varios problemas que los Schemas XML resuelven. ¿Cuál de los siguientes es un problema recurrente de los DTD?
+
+
+Su capacidad para combinarse fácilmente con otros DTD y su soporte nativo para espacios de nombres XML.
+
+
+Su soporte robusto para la definición de tipos de datos complejos y la especificación del elemento raíz del documento.
+
+
+Su ausencia de tipos de datos, la dificultad para acciones sencillas como ordenar elementos, y su limitada compatibilidad con los espacios de nombres XML.
+
+¿Cuál de los siguientes atributos del elemento raíz xs:schema en un XSD se utiliza para indicar si los elementos deben llevar el espacio de nombres delante (qualified o unqualified)?
+
+
+TargetNamespace
+
+
+xmlns:alias
+
+
+elementFormDefault
+
+¿Cuál de las siguientes afirmaciones describe mejor el objetivo principal de un Schema XML en comparación con un DTD?
+
+
+Un Schema XML se centra exclusivamente en la sintaxis de las etiquetas XML, sin capacidad para definir tipos de datos o restricciones.
+
+
+Los Schemas XML están escritos en un lenguaje diferente a XML, lo que requiere analizadores y APIs distintos para su procesamiento.
+
+
+Un Schema XML tiene como objetivo definir la estructura base de un documento XML, incluyendo elementos, atributos, tipos de datos, orden, ocurrencia y valores por defecto o fijos, mejorando las capacidades de los DTD.
+
+Para definir un tipo de dato simple personalizado en un Schema XML, ¿qué estructura principal se utiliza?
+
+
+xs:complexType
+
+
+xs:simpleType
+
+
+xs:element
+
+En XML Schema, ¿cuál de las siguientes facetas o restricciones se utiliza para especificar un rango de caracteres admitidos o una expresión regular para el valor de un elemento o atributo?
+
+
+xs:Enumeration
+
+
+xs:MaxLength
+
+
+xs:Pattern
+
+¿Cómo se asocia un documento XML con un Schema XML (XSD) cuando se utilizan explícitamente los nombres de los espacios de nombres en las etiquetas del documento XML?
+
+
+Mediante el atributo noNamespaceSchemaLocation.
+
+
+Mediante el atributo schemaLocation.
+
+
+El documento XML no necesita asociarse explícitamente; el navegador lo detecta automáticamente.
+
+En un documento XSD, si se desea especificar que un elemento puede aparecer un número ilimitado de veces, ¿qué valor se debe asignar al atributo maxOccurs?
+
+
+0
+
+
+1
+
+
+unbounded
+
+Si en un XSD se desea imponer una restricción a un atributo para que su valor sea obligatorio (required), ¿qué atributo del elemento xs:attribute se debe usar y con qué valor?
+
+
+default
+
+
+use con valor optional
+
+
+use con valor required
+
+Según los principios de validación de documentos XML, ¿cuál de las siguientes afirmaciones es correcta?
+
+
+Un documento XML siempre es válido si está bien formado.
+
+
+Un documento XML puede estar bien formado, pero no ser válido si no cumple con las reglas semánticas establecidas en el DTD o XSD.
+
+
+La validación solo verifica la sintaxis del documento, no su estructura ni el tipo de datos.
+
+tema 5
+
+¿Qué característica clave introducida en XSLT 2.0 permite procesar documentos XML de gran tamaño de manera más eficiente al no requerir que todo el documento se cargue por completo en memoria?
+
+
+La mejora del sistema de tipos de datos.
+
+
+La instrucción xsl:function para definir funciones reutilizables.
+
+
+El soporte de streaming para documentos fuente.
+
+Según el contenido de la unidad, ¿cuál de los siguientes es un componente fundamental de XSL específicamente orientado a la definición de formatos de presentación para distintos medios (como PDF) y no a la transformación directa a HTML/XML?
+
+
+XPath
+
+
+XSLT
+
+
+XSL-FO
+
+Para mostrar el valor de un atributo llamado "identificador" de un elemento actual dentro de una plantilla XSLT, ¿qué expresión XPath se utilizaría correctamente con la instrucción <https://www.google.com/search?q=xsl:value-of select="..." />?
+
+
+../identificador
+
+
+identificador
+
+
+@identificador
+
+Un desarrollador necesita aplicar una lógica condicional en XSLT donde, basándose en el valor de una cantidad, se apliquen diferentes formatos (por ejemplo, colorear de amarillo si la cantidad es superior a 25 y de verde si es igual o inferior). ¿Qué conjunto de instrucciones XSLT es el más adecuado para este escenario?
+
+
+<https://www.google.com/search?q=xsl:if test="cantidad>25"/>
+
+
+xsl:choose con xsl:when y xsl:otherwise
+
+
+<https://www.google.com/search?q=xsl:for-each select="cantidad"/>
+
+¿Cuál de las siguientes afirmaciones sobre el procesador DOM (Document Object Model) es correcta?
+
+
+Es una API basada en eventos, ideal para documentos XML muy grandes debido a su bajo consumo de memoria.
+
+
+Carga todo el documento XML en memoria, construyendo un árbol de objetos que permite la manipulación y modificación dinámica de sus nodos.
+
+
+No permite modificar el documento XML, solo leerlo de forma secuencial.
+
+Si se desea iterar sobre un conjunto de nodos en un documento XML (por ejemplo, todos los elementos <producto>) y aplicar una transformación a cada uno de ellos, ¿qué instrucción XSLT se debe utilizar junto con una expresión XPath en su atributo select?
+
+
+xsl:value-of
+
+
+xsl:for-each
+
+
+xsl:if
+
+En la estructura de una hoja de estilo XSLT, ¿cuál es el propósito principal del atributo match en la etiqueta xsl:template?
+
+
+Indica el espacio de nombres (namespace) de la hoja de estilo para asegurar su compatibilidad.
+
+
+Define el tipo de documento de salida (por ejemplo, xml, html) que se generará.
+
+
+Especifica los elementos del documento XML de entrada a los que se aplicará la plantilla, utilizando una expresión XPath.
+
+¿Cuál de las siguientes afirmaciones describe con mayor precisión el rol de XSL en el procesamiento de documentos XML?
+
+
+XSL es un lenguaje de programación para crear bases de datos XML y gestionar su almacenamiento.
+
+
+XSL es un lenguaje de consulta para extraer datos específicos de documentos XML sin modificarlos.
+
+
+XSL es un lenguaje de marcado que define la presentación y la transformación de documentos XML, permitiendo adaptarlos a diversos formatos y sistemas.
+
+¿En qué escenario se recomienda priorizar el uso de SAX (Simple API for XML) sobre DOM para procesar documentos XML?
+
+
+Cuando se necesita modificar el documento XML en memoria antes de generar la salida final.
+
+
+Cuando el documento XML es de tamaño pequeño o mediano y se requiere acceso aleatorio a los nodos.
+
+
+Cuando se procesan documentos XML muy grandes y el bajo consumo de memoria y la velocidad de lectura secuencial son críticos, sin necesidad de modificar el documento.
+
+Al enlazar una hoja de estilo XSLT a un documento XML local y abrirlo en Google Chrome directamente desde el explorador de archivos (file://...), ¿qué resultado es probable que observe el usuario?
+
+
+Se mostrará el documento XML original con su estructura de etiquetas.
+
+
+Se mostrará el documento XML transformado con los estilos aplicados por la hoja de estilo.
+
+
+Se mostrará una página en blanco o no se aplicará la transformación, incluso si el documento está bien formado.
+
+tema 6
+
+¿Qué característica distingue a las bases de datos XML nativas y las hace especialmente eficientes para trabajar con documentos XML grandes y complejos?
+
+
+Utilizan SQL para todas las operaciones, facilitando la integración con sistemas relacionales.
+
+
+Almacenan el documento XML en su forma original sin alterarlo, lo que permite recuperar el original y aprovechar su modelo jerárquico mediante nodos.
+
+
+Convierten el XML a un esquema relacional optimizado para búsquedas rápidas.
+
+¿Cuál de los siguientes es un requisito indispensable para la instalación y ejecución de la base de datos XML nativa eXist-db?
+
+
+Un entorno de desarrollo como Apache o Nginx preinstalado.
+
+
+Tener Java 1.7 o una versión posterior instalada en el sistema operativo.
+
+
+Un mínimo de 2048 MB de memoria RAM dedicados exclusivamente al servicio.
+
+¿Cuál es el propósito fundamental de la cláusula Let en una expresión FLWOR de XQuery?
+
+
+Iterar sobre un conjunto de nodos en el documento XML.
+
+
+Crear variables temporales que representan valores o expresiones para ser usadas en otras cláusulas de la consulta.
+
+
+Filtrar los resultados de la consulta utilizando una expresión booleana.
+
+¿Cuál es una de las principales desventajas de las bases de datos "XML enabled" en comparación con las bases de datos XML nativas?
+
+
+Su incapacidad para procesar documentos XML directamente sin un middleware adicional.
+
+
+Su modelo relacional no permite la gestión de transacciones complejas en entornos XML.
+
+
+No pueden restaurar el documento XML original sin alterarlo y tienen una diferencia de filosofía con la naturaleza jerárquica de XML.
+
+Si en un documento XML queremos seleccionar todos los nodos elemento hijos directos de cada elemento <coche> que esté bajo <concesionario>, sin especificar los nombres de esos hijos, ¿qué comodín o expresión XPath se usaría correctamente?
+
+
+//coche/node()
+
+
+/concesionario/coche/*
+
+
+concesionario/coche//@*
+
+XQuery es un lenguaje de consulta y manipulación de XML que incorpora XPath.<br/>¿Cuál de las siguientes afirmaciones sobre XQuery es correcta?
+
+
+No permite el acceso a múltiples documentos XML en una misma consulta, a diferencia de SQL.
+
+
+Ofrece capacidades de transformación, permitiendo no solo recuperar datos sino también devolver un resultado con una nueva estructura.
+
+
+Carece de funciones integradas para trabajar con tipos de datos como cadenas, números o fechas.
+
+Si tenemos el siguiente fragmento XML: <concesionario><coche id="1"><marca>Volkswagen</marca></coche><coche id="2"><marca>Audi</marca></coche></concesionario>, ¿qué expresión XPath devolvería el elemento <coche> con el atributo id igual a "2"?
+
+
+/concesionario/coche[position()=2]
+
+
+//coche[id="2"]
+
+
+/concesionario/coche[@id="2"]
+
+La herramienta IMPORTXML de Google Sheets, ¿para qué se utiliza principalmente?
+
+
+Para transformar documentos XML a otros formatos como JSON o PDF.
+
+
+Para importar datos de formatos estructurados (como XML, HTML, CSV) desde una URL específica, aplicando una consulta XPath.
+
+
+Para crear documentos XML nuevos a partir de datos estructurados en una hoja de cálculo.
+
+En XPath, si se necesita seleccionar la marca y el modelo de todos los coches en un documento XML dentro de una misma expresión de ruta, ¿qué operador se debe utilizar para unir ambas rutas?
+
+
+AND
+
+
++
+
+
+|
+
+¿Cuál es la principal diferencia funcional entre XPath y XQuery según los materiales de la unidad?
+
+
+XPath es un lenguaje para generar nuevos documentos XML, mientras que XQuery es solo para búsquedas.
+
+
+Ambos sirven para lo mismo, pero XPath es más moderno y ofrece más funciones de transformación.
+
+
+XPath es un lenguaje para seleccionar nodos en documentos XML, mientras que XQuery, además de incluir XPath, es un lenguaje completo de consulta y transformación con sintaxis FLWOR.
+
+tema 7
+
+En la estructura de un feed RSS 2.0, ¿cuáles son los tres elementos secundarios obligatorios que debe contener el elemento <channel>?
+
+
+<item>, <author>, <pubDate>.
+
+
+<category>, <image>, <language>.
+
+
+<title>, <link>, <description>.
+
+¿Cuál fue una de las principales motivaciones para el desarrollo del estándar Atom como alternativa a RSS, según el contenido de la unidad?
+
+
+La intención de reemplazar por completo a RSS y hacer obsoleto su uso.
+
+
+Abordar la confusión y la incompatibilidad surgida por la existencia de varios estándares RSS similares, proporcionando una solución más consistente.
+
+
+Permitir la creación de feeds sin necesidad de utilizar el lenguaje XML como base.
+
+Para evitar problemas con caracteres acentuados o la letra "ñ" al sindicar un canal, ¿qué práctica se recomienda en la codificación?
+
+
+Convertir todos los caracteres especiales a sus equivalentes en el alfabeto inglés.
+
+
+Utilizar la codificación UTF-8 y las entidades XML correspondientes (por ejemplo, á en lugar de á).
+
+
+Limitar la sindicación de contenidos a plataformas que no admitan dichos caracteres.
+
+¿Cuál es el propósito principal de la sindicación de contenidos, también conocida como redifusión web?
+
+
+Almacenar de forma segura la información de un sitio web en una base de datos centralizada para evitar pérdidas.
+
+
+Permitir que un sitio web acceda a los servicios y contenidos de otro sitio web a través de una licencia, distribuyendo automáticamente información actualizada a los usuarios interesados.
+
+
+Convertir documentos XML a formatos no basados en lenguajes de marcas para una mejor visualización en navegadores.
+
+Si un Sistema de Gestión de Contenidos (CMS) permite generar tanto archivos HTML como canales RSS a partir del mismo contenido, ¿qué proceso técnico subyace a la creación de los canales RSS en este contexto?
+
+
+La creación manual y separada de cada archivo RSS por parte del webmaster.
+
+
+Un proceso de transformación del contenido almacenado en un repositorio para adaptarlo al formato RSS.
+
+
+El almacenamiento directo del contenido en formato RSS en el repositorio, sin necesidad de transformación.
+
+¿Cuáles son los dos estándares o formatos más utilizados para la sindicación de contenidos, ambos basados en tecnología XML?
+
+
+HTML y CSS.
+
+
+JSON y YAML.
+
+
+RSS y Atom.
+
+¿Cuál es una diferencia clave entre los "agregadores web" y los "agregadores de escritorio" mencionados en la unidad?
+
+
+Los agregadores de escritorio no requieren una conexión a Internet, a diferencia de los agregadores web.
+
+
+Los agregadores web están alojados en sitios específicos y se acceden a través de un navegador (ideales para múltiples dispositivos), mientras que los de escritorio son aplicaciones que se instalan localmente en un dispositivo (ideales para un uso fijo).
+
+
+Los agregadores web no permiten la sincronización de la lectura entre diferentes dispositivos, a diferencia de los de escritorio.
+
+Una de las mejoras técnicas que Atom 1.0 introdujo respecto a RSS 2.0 fue la capacidad de:
+
+
+Ser más popular y contar con un soporte universal en todos los agregadores.
+
+
+Requerir menos elementos obligatorios para la creación de un feed.
+
+
+Indicar el tipo de contenido (texto plano, HTML o multimedia) de la noticia, y utilizar un formato de fecha estándar ISO para una mayor flexibilidad.
+
+La validación de un feed de contenidos (RSS/Atom) es crucial porque:
+
+
+Garantiza que el feed aumentará su posición en los motores de búsqueda automáticamente.
+
+
+Asegura que el feed cumple con los estándares del W3C y las especificaciones RSS/Atom, verificando la accesibilidad de su URI y la ausencia de errores de sintaxis.
+
+
+Permite que el feed se registre en directorios de canales sin necesidad de aprobación manual.
+
+¿Cuál es la función esencial de un "agregador" (lector de canales o noticias) en el ecosistema de la sindicación de contenidos?
+
+
+Crear nuevos artículos y publicarlos en los sitios web de los autores.
+
+
+Suscribirse a fuentes de noticias en formatos RSS o Atom y notificar al usuario sobre las actualizaciones de contenido desde la última lectura.
+
+
+Validar la sintaxis de los feeds RSS o Atom para asegurar su compatibilidad con los estándares.
+
+tema 8
+
+¿Cuál es el objetivo principal que persigue el uso de un software ERP unificado en una empresa en contraste con el uso de aplicaciones distintas por departamento?
+
+
+Reducir la necesidad de formación del personal al estandarizar interfaces.
+
+
+Controlar los procesos de negocio de forma coordinada para la toma de decisiones, reducir costes y aumentar la productividad.
+
+
+Permitir que cada departamento mantenga su autonomía total en la gestión de sus datos.
+
+Antes de proceder a la instalación de cualquier paquete de gestión empresarial (ERP), ¿cuál es un requisito previo fundamental, independientemente del software seleccionado?
+
+
+Contratar un servicio de hosting en la nube específico para el ERP.
+
+
+Crear previamente la base de datos en el sistema, ya que todo ERP se apoya en una base de datos centralizada.
+
+
+Instalar un entorno de desarrollo integrado (IDE) para la personalización futura.
+
+La proliferación de dispositivos portátiles y la presencia de empleados móviles ha impulsado una necesidad específica en la gestión de flujos de información empresarial. ¿Cuál es esta necesidad?
+
+
+Limitar el acceso a la información únicamente desde las oficinas centrales para garantizar la seguridad.
+
+
+Encontrar soluciones que integren a estos empleados en los flujos de información de la empresa en tiempo real.
+
+
+Reducir la cantidad de información disponible para los empleados móviles para evitar la saturación.
+
+Más allá de ser una simple lista de contactos, ¿qué función adicional y crucial cumple una plataforma CRM al recopilar e integrar datos?
+
+
+Generar automáticamente informes financieros detallados para auditorías externas.
+
+
+Mantener a los equipos actualizados con información personalizada sobre los clientes, su historial y sus preferencias de compra.
+
+
+Reemplazar completamente las funciones de un sistema de gestión de almacén (WMS).
+
+Si bien la exportación de información desde un ERP a suites ofimáticas ofrece muchas ventajas, ¿cuál es el riesgo crítico que se menciona explícitamente y requiere medidas de seguridad?
+
+
+La incompatibilidad de formatos entre el ERP y el software ofimático.
+
+
+La ralentización del sistema ERP debido a la carga de datos exportados.
+
+
+El riesgo de filtrar información confidencial de la empresa hacia el exterior sin el control adecuado.
+
+¿De dónde pueden provenir los módulos complementarios que se integran en una aplicación ERP base?
+
+
+Únicamente del fabricante del software base para asegurar la compatibilidad.
+
+
+Pueden ser provistos por el fabricante, desarrollados por terceros o incluso ser programas personalizados solicitados por la empresa.
+
+
+Solamente de repositorios open source, ya que los módulos propietarios limitan la flexibilidad.
+
+¿Cuál es una de las capacidades de configuración que ofrecen los formularios en un sistema ERP al ser completados?
+
+
+Generar automáticamente código de programación para nuevas funcionalidades.
+
+
+Activar acciones automatizadas como notificar a personas designadas o integrar los datos con otro software como SAP o Salesforce.
+
+
+Modificar la estructura de la base de datos central del ERP.
+
+En un sistema ERP, ¿qué ocurre cuando a un usuario se le asignan múltiples roles y uno de ellos impone restricciones más estrictas que los demás?
+
+
+El usuario obtiene la suma de todos los privilegios de los roles asignados.
+
+
+Prevalecerá el rol que imponga las restricciones más estrictas para garantizar la seguridad.
+
+
+El sistema solicitará al usuario que elija qué rol desea activar en cada sesión.
+
+¿Cuál de las siguientes acciones representa un ejemplo de "adaptación" de un sistema ERP, según la definición de la unidad?
+
+
+Añadir un campo personalizado en las órdenes de envío para indicar el tipo de embalaje, que no venía por defecto en el sistema.
+
+
+Definir que las facturas electrónicas se emitan automáticamente en formato XML-UBL.
+
+
+Configurar las reglas de seguridad y las restricciones de acceso para distintos usuarios.
+
+¿Qué ventaja clave ofrecen los ERP en la nube en términos de seguridad?
+
+
+La seguridad se relaja pasado un tiempo, ya que es más difícil de mantener actualizada.
+
+
+Son inherentemente invulnerables a cualquier tipo de ataque informático.
+
+
+Implementan las últimas novedades en seguridad de forma inmediata y aplican la seguridad por capas, reduciendo vulnerabilidades.

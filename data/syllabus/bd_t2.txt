@@ -1,0 +1,41 @@
+tema 2
+Una clave primaria que incluye más de una columna de una tabla se denomina:
+*Compuesta
+Heterogénea
+Simple
+El comando DML que permite cancelar los cambios realizados durante una transacción se denomina:
+COMMIT TRANSACTION
+SAVEPOINT TRANSACTION
+*ROLLBACK TRANSACTION
+¿Qué tipo de índice es más adecuado para consultas por rangos de valores?
+Hash
+*Árbol B
+Compuesto
+¿Qué diferencia esencial hay entre una vista y una tabla?
+Una vista almacena datos físicamente
+*Una vista es virtual; se reconstruye al vuelo
+Una vista no admite filtros
+Un modelo de datos es una representación:
+Física
+Básica
+*Abstracta
+El valor representativo de “verdadero” o “falso” encaja con un tipo de dato:
+*Booleano
+Fecha y hora
+Cadena de caracteres
+Las relaciones entre tablas se establecen utilizando:
+*Claves primarias y foráneas
+Índices Árbol b
+Índices Hash
+A los grupos de usuarios que comparten privilegios y responsabilidades, se les denomina:
+Privilegiados
+Grupos
+*Roles
+La matrícula de un vehículo encaja con el concepto de:
+Relación
+*Atributo
+Tupla
+El comando DDL que sirve para eliminar una tabla se denomina:
+ALTER TABLE
+*DROP TABLE
+Todas las respuestas son ciertas.

@@ -1,0 +1,50 @@
+tema 3
+¿Qué símbolo se utiliza para representar las entidades en un diagrama ER?
+*Rectángulos
+Elipses
+Rombos
+
+¿Cuál es la definición de un atributo derivado?
+Un atributo que se descompone en varios atributos simples.
+Un atributo que puede tener múltiples valores para una misma entidad.
+*Un atributo cuyo valor se calcula a partir de otros atributos del modelo.
+
+En una relación de cardinalidad 1:N entre "Agentes" y "Clientes", ¿qué se entiende?
+*Un agente gestiona varios clientes, pero un cliente solo es gestionado por un agente.
+Varios agentes pueden gestionar a un solo cliente.
+Un agente solo puede tener un cliente asignado.
+
+¿Cuál es una característica fundamental de una entidad débil?
+Posee una clave primaria única e independiente.
+*Carece de identificador autosuficiente y depende de una entidad propietaria.
+Se representa gráficamente con un rectángulo de línea simple.
+
+En el modelo E/R ampliado, ¿qué es la generalización?
+El proceso de dividir una entidad en subentidades más específicas.
+*El proceso de agrupar entidades con rasgos comunes en una entidad padre abstracta.
+Una relación donde una entidad se vincula consigo misma.
+
+¿Qué restricción de especialización determina si una instancia del supertipo puede pertenecer a una sola subentidad o a varias?
+Completeness (totalidad/parcialidad).
+*Disjointness (exclusividad/solapamiento).
+Relación recursiva.
+
+Al pasar del modelo E/R al modelo relacional, ¿cuándo se crean normalmente las claves foráneas?
+Al identificar las entidades.
+*Al establecer las relaciones entre las tablas para vincular registros.
+Únicamente durante el proceso de normalización.
+
+¿Qué requisito debe cumplir una tabla para estar en Primera Forma Normal (1FN)?
+No tener dependencias transitivas.
+*Que todas las columnas almacenen valores atómicos e indivisibles.
+Que todos los atributos dependan de la clave primaria completa.
+
+¿Cuándo se dice que una tabla viola la Segunda Forma Normal (2FN)?
+Cuando existen atributos que pueden tomar varios valores.
+*Cuando un atributo no clave depende solo de una parte de la clave primaria (dependencia parcial).
+Cuando un atributo no clave depende de otro atributo no clave.
+
+¿Cuál es el objetivo principal de la normalización de modelos relacionales?
+Aumentar la redundancia para facilitar la lectura de datos.
+*Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente.
+Eliminar todas las relaciones entre tablas para simplificar el modelo.

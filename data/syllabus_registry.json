@@ -1,0 +1,100 @@
+[
+    {
+        "id": "bd_tema_1",
+        "name": "Tema 1: Conceptos",
+        "subject_id": "bases_de_datos",
+        "file": "data/syllabus/bd_t1.txt",
+        "icon": "🗄️"
+    },
+    {
+        "id": "bd_tema_2",
+        "name": "Tema 2: SQL y DDL",
+        "subject_id": "bases_de_datos",
+        "file": "data/syllabus/bd_t2.txt",
+        "icon": "🗄️"
+    },
+    {
+        "id": "bd_tema_3",
+        "name": "Tema 3: Diagramas E-R",
+        "subject_id": "bases_de_datos",
+        "file": "data/syllabus/bd_t3.txt",
+        "icon": "🗄️"
+    },
+    {
+        "id": "bd_tema_4",
+        "name": "Tema 4: Consultas SQL",
+        "subject_id": "bases_de_datos",
+        "file": "data/syllabus/bd_t4.txt",
+        "icon": "🗄️"
+    },
+    {
+        "id": "bd_tema_5",
+        "name": "Tema 5: Tratamiento Datos",
+        "subject_id": "bases_de_datos",
+        "file": "data/syllabus/bd_t5.txt",
+        "icon": "🗄️"
+    },
+    {
+        "id": "bd_tema_6",
+        "name": "Tema 6: Programación",
+        "subject_id": "bases_de_datos",
+        "file": "data/syllabus/bd_t6.txt",
+        "icon": "🗄️"
+    },
+    {
+        "id": "bd_tema_7",
+        "name": "Tema 7: Objeto-Relacional",
+        "subject_id": "bases_de_datos",
+        "file": "data/syllabus/bd_t7.txt",
+        "icon": "🗄️"
+    },
+    {
+        "id": "ed_tema_1",
+        "name": "Tema 1: Conceptos Software",
+        "subject_id": "entornos_de_desarrollo",
+        "file": "data/syllabus/ed_t1.txt",
+        "icon": "🛠️"
+    },
+    {
+        "id": "ed_tema_2",
+        "name": "Tema 2: El IDE",
+        "subject_id": "entornos_de_desarrollo",
+        "file": "data/syllabus/ed_t2.txt",
+        "icon": "🛠️"
+    },
+    {
+        "id": "ed_tema_3",
+        "name": "Tema 3: Introducción UML",
+        "subject_id": "entornos_de_desarrollo",
+        "file": "data/syllabus/ed_t3.txt",
+        "icon": "🛠️"
+    },
+    {
+        "id": "ed_tema_4",
+        "name": "Tema 4: Diag. Estructurales",
+        "subject_id": "entornos_de_desarrollo",
+        "file": "data/syllabus/ed_t4.txt",
+        "icon": "🛠️"
+    },
+    {
+        "id": "ed_tema_5",
+        "name": "Tema 5: Diag. Comportamiento",
+        "subject_id": "entornos_de_desarrollo",
+        "file": "data/syllabus/ed_t5.txt",
+        "icon": "🛠️"
+    },
+    {
+        "id": "ed_tema_6",
+        "name": "Tema 6: Pruebas y Depuración",
+        "subject_id": "entornos_de_desarrollo",
+        "file": "data/syllabus/ed_t6.txt",
+        "icon": "🛠️"
+    },
+    {
+        "id": "ed_tema_7",
+        "name": "Tema 7: Optimización y Git",
+        "subject_id": "entornos_de_desarrollo",
+        "file": "data/syllabus/ed_t7.txt",
+        "icon": "🛠️"
+    }
+]

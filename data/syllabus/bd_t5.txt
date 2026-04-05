@@ -1,0 +1,50 @@
+tema 5
+¿Cuál es la sentencia SQL estándar para insertar nuevos registros en una tabla?
+ADD RECORD
+*INSERT INTO
+UPDATE
+
+¿Cómo se insertan datos en una tabla de destino a partir del resultado de otra consulta?
+*Usando la sintaxis INSERT INTO tabla_destino SELECT ...
+Ejecutando un UPDATE con una subconsulta en el SET.
+No es posible realizar esta operación en una sola sentencia.
+
+¿Por qué es fundamental incluir la cláusula WHERE en una sentencia UPDATE?
+Porque si se omite, se actualizarán todos los registros de la tabla. *
+Porque es necesaria para definir qué columnas se van a modificar.
+Porque sin ella, el motor de la base de datos devolverá un error de sintaxis siempre.
+
+¿Qué opción de integridad referencial borra automáticamente las filas hijas cuando se borra la fila padre?
+ON DELETE SET NULL
+*ON DELETE CASCADE
+ON DELETE RESTRICT
+
+¿Qué sentencia se utiliza para confirmar y guardar permanentemente todos los cambios de una transacción?
+START TRANSACTION
+ROLLBACK
+*COMMIT
+
+¿Qué acción realiza el comando ROLLBACK?
+Guarda los cambios actuales de forma definitiva.
+*Deshace todos los cambios realizados en la transacción actual volviendo al estado inicial.
+Bloquea la tabla para impedir ediciones de otros usuarios.
+
+¿Cuál es una ventaja clave de utilizar Common Table Expressions (CTE) o composiciones en órdenes de edición?
+Permiten saltarse las restricciones de integridad referencial.
+*Mejoran la legibilidad al permitir nombrar subconsultas y reutilizarlas en una única instrucción.
+Cifran los datos antes de insertarlos en la base de datos.
+
+¿En qué consiste el "bloqueo a nivel de registro" (row-level locking)?
+Impide el acceso a toda la tabla mientras un usuario edita una fila.
+*Bloquea solo la fila específica que se está modificando, permitiendo que otros usuarios trabajen en otras filas.
+Borra el registro si detecta que dos usuarios intentan acceder a él.
+
+¿Qué sintaxis se utiliza en MySQL para bloquear filas seleccionadas para una posterior actualización dentro de una transacción?
+*SELECT * FROM tabla WHERE id=1 FOR UPDATE;
+LOCK TABLES tabla WRITE;
+UPDATE tabla SET locked = true;
+
+En el modo estricto de MySQL (STRICT_ALL_TABLES), ¿qué ocurre si se intenta realizar una operación con datos inválidos?
+Se truncan los valores silenciosamente.
+*Se rechaza la operación y se genera un error.
+Se insertan valores nulos por defecto sin avisar.

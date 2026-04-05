@@ -1,0 +1,102 @@
+tema 1
+Indique cuál de los siguientes formatos de archivo representa la información en una estructura tabular fija (filas y columnas), es decir, estrictamente estructurada:
+*CSV
+JSON
+Ambos
+
+En el modelo Entidad-Relación, el conjunto de objetos del mundo real que comparten los mismos atributos y se identifican con un nombre común se denomina:
+*Entidad
+Relación
+Atributo
+
+Según la clasificación de bases de datos basada en su modelo lógico (jerárquico, en red, relacional, orientado a objetos), ¿cuál de las siguientes opciones NO pertenece a dicha clasificación?:
+Jerárquicas
+Relacionales
+*Empresariales
+
+Los tipos de fichero que permiten incorporar medidas de seguridad como contraseñas y encriptación son:
+Planos
+Ninguna respuesta es correcta
+*Indexados
+
+Entre los tipos de bases de datos que permiten almacenar datos semiestructurados se encuentran:
+Relacionales
+*NoSQL
+Ninguna respuesta es correcta.
+
+Las bases de datos que permiten incluir herencia en su diseño son las:
+Jerárquicas
+*Orientadas a objetos
+Relacionales
+
+El lenguaje que habitualmente usan inmensa mayoría de bases de datos relacionales es:
+C++
+Java
+*SQL
+
+Los tipos de bases de datos que permiten reducir los cuellos de botella y aumentar la disponibilidad de los datos, son:
+Centralizadas
+*Distribuidas
+Jerárquicas
+
+La palabra informática, tiene su origen en la palabra francesa “informatique”, que acuñó en 1962
+Philippe Doumar
+*Philippe Dreyfus
+Philippe Chason
+
+Un fichero DBASE puede considerarse de tipo
+Plano
+*Indexado
+Multimedia
+
+tema 2
+
+Una clave primaria que incluye más de una columna de una tabla se denomina:
+*Compuesta
+Heterogénea
+Simple
+
+El comando DML que permite cancelar los cambios realizados durante una transacción se denomina:
+COMMIT TRANSACTION
+SAVEPOINT TRANSACTION
+*ROLLBACK TRANSACTION
+
+¿Qué tipo de índice es más adecuado para consultas por rangos de valores?
+Hash
+*Árbol B
+Compuesto
+
+¿Qué diferencia esencial hay entre una vista y una tabla?
+Una vista almacena datos físicamente
+*Una vista es virtual; se reconstruye al vuelo
+Una vista no admite filtros
+
+Un modelo de datos es una representación:
+Física
+Básica
+*Abstracta
+
+El valor representativo de “verdadero” o “falso” encaja con un tipo de dato:
+*Booleano
+Fecha y hora
+Cadena de caracteres
+
+Las relaciones entre tablas se establecen utilizando:
+*Claves primarias y foráneas
+Índices Árbol b
+Índices Hash
+
+A los grupos de usuarios que comparten privilegios y responsabilidades, se les denomina:
+Privilegiados
+Grupos
+*Roles
+
+La matrícula de un vehículo encaja con el concepto de:
+Relación
+*Atributo
+Tupla
+
+El comando DDL que sirve para eliminar una tabla se denomina:
+ALTER TABLE
+*DROP TABLE
+Todas las respuestas son ciertas.

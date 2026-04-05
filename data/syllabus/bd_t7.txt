@@ -1,0 +1,50 @@
+tema 7
+¿Qué característica de un ORDBMS permite definir una tabla "hija" que incluya automáticamente las columnas y restricciones de una tabla "padre"?
+Polimorfismo
+*Herencia de tablas
+Encapsulamiento de tipos
+
+Durante la instalación de PostgreSQL, ¿cuál es el puerto de conexión que se asigna por defecto?
+3306
+8080
+*5434
+
+¿Qué cláusula se utiliza en la sentencia CREATE TABLE de PostgreSQL para heredar de otra tabla?
+EXTENDS
+*INHERITS
+FROM
+
+¿Cuál de los siguientes es un tipo de dato nativo geométrico en PostgreSQL?
+*CIRCLE
+SPHERE
+TRIANGLE
+
+Al ejecutar un SELECT * FROM tabla_padre en PostgreSQL, ¿qué registros se obtienen por defecto?
+Solo los de la tabla padre.
+Solo los de las tablas hijas.
+*Los de la tabla padre y todos los de sus tablas hijas relacionadas.
+
+¿Qué tipo de dato de colección representa un intervalo de valores continuos (como un rango de fechas)?
+ARRAY
+JSONB
+*RANGE
+
+Respecto al borrado de datos en una estructura de herencia en PostgreSQL, ¿cuál es la afirmación correcta?
+Existe un borrado en cascada automático entre padres e hijos.
+*No hay cascada automática; se debe declarar ON DELETE CASCADE en las claves foráneas si se requiere.
+Si borras un registro en el padre, el hijo se bloquea.
+
+¿Cómo se llama el lenguaje procedimental propio de PostgreSQL utilizado para crear funciones avanzadas?
+PL/SQL
+*PL/pgSQL
+T-SQL
+
+¿Qué sentencia estándar de SQL se utiliza en PostgreSQL para definir un tipo de dato personalizado (como un tipo compuesto)?
+*CREATE TYPE
+CREATE OBJECT
+DEFINE DATA
+
+¿A qué se refiere la "navegabilidad" en el contexto de bases de datos objeto-relacionales?
+A la velocidad de navegación web de la base de datos.
+*A la capacidad de seguir las conexiones lógicas o referencias entre objetos.
+Al uso de comandos NEXT y PREV en los cursores.

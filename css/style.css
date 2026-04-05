@@ -127,6 +127,99 @@ h1, h2, h3 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.grid-container.syllabus-grid {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Section Divider */
+.section-divider {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0 2rem;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.section-divider::before, .section-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to var(--side), var(--glass-border), transparent);
+}
+
+.section-divider::before { --side: left; margin-right: 1.5rem; }
+.section-divider::after { --side: right; margin-left: 1.5rem; }
+
+/* Syllabus Cards specifically */
+.syllabus-card {
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+  padding: 1rem;
+}
+
+.syllabus-card:hover {
+  border-color: #f59e0b;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.1);
+}
+
+.syllabus-card .card-icon {
+  color: #f59e0b;
+  opacity: 0.15;
+  font-size: 2rem;
+}
+
+.syllabus-card .exam-selector-large button {
+  background: linear-gradient(to right, #f59e0b, #d97706);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+}
+
+.syllabus-card .exam-selector-large button:hover {
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
+}
+
+/* Syllabus Grouping */
+.syllabus-group {
+  margin-bottom: 3rem;
+  animation: fadeIn 0.5s ease forwards;
+  grid-column: 1 / -1; /* Take full width of parent grid */
+}
+
+.syllabus-group-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.syllabus-group-header .header-icon {
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.syllabus-group-header h4 {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Card Style */
@@ -149,6 +242,33 @@ h1, h2, h3 {
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
   margin-top: 1rem;
+}
+
+.unit-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.unit-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1 1 calc(33.33% - 0.5rem);
+}
+
+.unit-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .exam-selector button {

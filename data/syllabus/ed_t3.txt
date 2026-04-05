@@ -1,0 +1,50 @@
+tema 3
+En el contexto de las metodologías de desarrollo orientado a objetos, ¿cómo se posiciona UML?
+UML es una metodología de desarrollo completa y prescriptiva que debe ser adoptada en todos los proyectos orientados a objetos.
+UML define un conjunto estricto de reglas que restringen las metodologías de desarrollo a unas pocas opciones compatibles.
+*UML no sigue ninguna metodología en concreto, sino que proporciona herramientas para aplicar en estas, permitiendo representar las diferentes partes estáticas o dinámicas del sistema como parte del trabajo metodológico.
+
+¿Qué organismo internacional aprobó el lenguaje UML como estándar a partir del año 2004?
+El Object Management Group (OMG), que fue el consorcio que lo presentó inicialmente en 1997.
+La World Wide Web Consortium (W3C), por su relevancia en aplicaciones web.
+*La Organización Internacional de Estandarización (ISO, International Organization for Standardization).
+
+¿Cuál es el objetivo fundamental del Lenguaje Unificado de Modelado (UML) según la introducción de la unidad?
+Proporcionar un lenguaje de programación de alto nivel para el desarrollo de aplicaciones empresariales.
+*Ofrecer herramientas para la representación gráfica y textual de un sistema informático, especialmente cuando se utiliza el paradigma de la orientación a objetos.
+Estandarizar las interfaces de comunicación entre diferentes lenguajes de programación y sistemas operativos.
+
+Dentro de los diagramas estructurales, ¿cuál de ellos permite representar no solo elementos software sino también el hardware del sistema, con el fin de documentar la explotación o ejecución de una aplicación?
+El diagrama de componentes, que muestra la relación entre subsistemas.
+El diagrama de clases, que modela la estructura estática del sistema.
+*El diagrama de lanzamiento o despliegue.
+
+¿Cuál es la característica principal de las herramientas CASE (Computer Aided Software Engineering) con soporte UML, en contraste con herramientas de dibujo genéricas?
+Son exclusivamente gratuitas y de código abierto.
+Se centran únicamente en la generación automática de interfaces de usuario.
+*Están diseñadas y construidas específicamente para ayudar en diferentes fases del proceso de creación de software, proporcionando soporte específico para UML.
+
+Según la unidad, ¿cuál es probablemente el diagrama más habitual y útil de UML, que permite representar las clases del sistema, incluyendo sus atributos, métodos y las reglas entre ellas?
+El diagrama de casos de uso, que describe la interacción de los actores con el sistema.
+El diagrama de actividad, que detalla la secuencia de pasos de una tarea.
+*El diagrama de clases.
+
+Más allá de la generación de código a partir de diagramas, ¿qué otra capacidad valiosa suelen ofrecer las herramientas CASE con soporte UML para la documentación de proyectos existentes?
+La capacidad de optimizar automáticamente el rendimiento del código generado sin intervención del desarrollador.
+La posibilidad de migrar bases de datos entre diferentes sistemas de gestión.
+*La ingeniería inversa, que permite generar diagramas de clase u otros a partir del código fuente ya programado.
+
+Según el glosario de la unidad, ¿cómo se define un "Objeto" en el contexto de la programación orientada a objetos y UML?
+La representación genérica de un elemento del sistema, sin atributos ni métodos específicos.
+Una característica o propiedad de una clase que describe su estado.
+*La concreción de una clase, también conocida como instancia.
+
+¿Cuál de los diagramas de comportamiento se utiliza para representar de manera más detallada la secuencia de pasos que se van a realizar para una actividad, siendo más específico que un diagrama de caso de uso?
+El diagrama de secuencia, que muestra la interacción entre objetos a lo largo del tiempo.
+El diagrama de comunicación, que se centra en el intercambio de mensajes entre objetos.
+*El diagrama de actividad.
+
+Los múltiples diagramas de UML, diseñados para cubrir diversas perspectivas de un sistema software, se agrupan en dos grandes categorías principales. ¿Cuáles son estas categorías?
+Diagramas de diseño y diagramas de implementación.
+*Diagramas estructurales y diagramas de comportamiento.
+Diagramas de requisitos y diagramas de arquitectura.

@@ -1,6 +1,8 @@
 const APP_STATE = {
     subjects: [],
+    syllabusExams: [],
     currentExam: null,
+    isSyllabusMode: false,
     examNumber: 1,
     currentQuestionIndex: 0,
     answers: [],
@@ -185,12 +187,65 @@ async function init() {
         const qRes = await fetch('data/test_bank.json');
         QUESTION_POOL = await qRes.json();
 
+        // Load Syllabus Exams
+        try {
+            const sylRes = await fetch('data/syllabus_registry.json');
+            if (sylRes.ok) {
+                APP_STATE.syllabusExams = await sylRes.json();
+            }
+        } catch (e) { console.warn("No syllabus registry found"); }
+
         renderSubjects();
+        renderSyllabusExams();
         setupEventListeners();
         renderProgress(); // Show history on load
     } catch (error) {
         console.error("Error loading app data:", error);
     }
+}
+
+function renderSyllabusExams() {
+    const syllabusContainer = document.getElementById('syllabus-container');
+    const syllabusGrid = document.getElementById('syllabus-grid');
+    if (!syllabusContainer || APP_STATE.syllabusExams.length === 0) return;
+
+    syllabusContainer.style.display = 'block';
+    syllabusGrid.innerHTML = '';
+    
+    // Grouping logic
+    const grouped = {};
+    APP_STATE.syllabusExams.forEach(exam => {
+        if (!grouped[exam.subject_id]) grouped[exam.subject_id] = [];
+        grouped[exam.subject_id].push(exam);
+    });
+
+    Object.keys(grouped).forEach(subjectId => {
+        const subject = APP_STATE.subjects.find(s => s.id === subjectId) || { name: 'Especiales', icon: '✨' };
+        const groupEl = document.createElement('div');
+        groupEl.className = 'syllabus-group';
+        groupEl.innerHTML = `
+            <div class="syllabus-group-header">
+                <span class="header-icon">${subject.icon}</span>
+                <h4>${subject.name}</h4>
+            </div>
+            <div class="grid-container syllabus-grid">
+                ${grouped[subjectId].map(exam => `
+                    <div class="subject-card syllabus-card">
+                        <div class="card-icon">${exam.icon || '📖'}</div>
+                        <div class="badge" style="background:#f59e0b; color:white; font-size:0.6rem; padding:2px 6px; border-radius:4px; width:fit-content; margin-bottom:0.5rem; font-weight:bold;">TEMARIO OFICIAL</div>
+                        <h3>${exam.name}</h3>
+                        <div class="exam-selector-large">
+                            <button onclick="startSyllabusExam('${exam.id}')">Iniciar Examen de Temario</button>
+                        </div>
+                        <div class="card-stats">
+                            <span>Modo Entrenamiento: Todas las preguntas</span>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        syllabusGrid.appendChild(groupEl);
+    });
 }
 
 
@@ -199,14 +254,25 @@ function renderSubjects() {
     APP_STATE.subjects.forEach(subject => {
         const card = document.createElement('div');
         card.className = 'subject-card';
+
+        let unitsHTML = '';
+        if (subject.units_count > 0) {
+            unitsHTML = `<div class="unit-selector">`;
+            for (let i = 1; i <= subject.units_count; i++) {
+                unitsHTML += `<button class="unit-btn" onclick="startExam('${subject.id}', ${i})">Tema ${i}</button>`;
+            }
+            unitsHTML += `</div>`;
+        }
+
         card.innerHTML = `
             <div class="card-icon">${subject.icon}</div>
             <h3>${subject.name}</h3>
             <div class="exam-selector-large">
-                <button onclick="startExam('${subject.id}')">Iniciar Simulacro Aleatorio</button>
+                <button onclick="startExam('${subject.id}')">Simulacro Completo Aleatorio</button>
             </div>
-            <div class="card-stats">
-                <span>V15 FULL COVERAGE: ${(QUESTION_POOL[subject.id] || []).length} Preguntas Reales</span>
+            ${unitsHTML}
+            <div class="card-stats" style="margin-top: 1rem;">
+                <span>V18 FULL COVERAGE: ${(QUESTION_POOL[subject.id] || []).length} Preguntas</span>
             </div>
         `;
         subjectGrid.appendChild(card);
@@ -222,15 +288,27 @@ function setupEventListeners() {
     };
 }
 
-function startExam(subjectId) {
+function startExam(subjectId, unitId = null) {
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
     APP_STATE.currentExam = subject;
+    APP_STATE.currentUnit = unitId;
+    APP_STATE.isSyllabusMode = false;
     APP_STATE.currentQuestionIndex = 0;
     APP_STATE.answers = [];
     
     let pool = QUESTION_POOL[subjectId] || [];
-    // Test size: 20 if pool allows, otherwise all questions in pool
-    const testSize = Math.min(20, pool.length);
+    if (unitId !== null) {
+        pool = pool.filter(q => q.unit === unitId);
+    }
+
+    if (pool.length === 0) {
+        alert("No hay preguntas disponibles para este tema.");
+        return;
+    }
+
+    // Test size: If unit is specified, use all questions in that unit pool.
+    // Otherwise, 20 questions if pool allows.
+    const testSize = unitId !== null ? pool.length : Math.min(20, pool.length);
     APP_STATE.timer = testSize * 90; // 90 seconds per question
     
     // Smart repeat filter: max 3 repeats from previous test
@@ -303,6 +381,95 @@ function escapeHTML(str) {
         .replace(/'/g, '&#039;');
 }
 
+async function startSyllabusExam(syllabusId) {
+    const examInfo = APP_STATE.syllabusExams.find(e => e.id === syllabusId);
+    if (!examInfo) return;
+
+    try {
+        const res = await fetch(examInfo.file);
+        const text = await res.text();
+        const questions = parseTxtExam(text, syllabusId);
+        
+        if (questions.length === 0) {
+            alert("No se han podido extraer preguntas del archivo.");
+            return;
+        }
+
+        APP_STATE.currentExam = { ...examInfo, id: syllabusId };
+        APP_STATE.isSyllabusMode = true;
+        APP_STATE.examQuestions = questions;
+        APP_STATE.currentQuestionIndex = 0;
+        APP_STATE.answers = [];
+        APP_STATE.timer = questions.length * 90;
+
+        examModal.classList.remove('hidden');
+        renderQuestion();
+        startTimer();
+    } catch (error) {
+        console.error("Error loading syllabus exam:", error);
+        alert("Error al cargar el archivo de examen.");
+    }
+}
+
+function parseTxtExam(text, syllabusId) {
+    const lines = text.split('\n').map(l => l.trim()).filter(l => l !== "");
+    const questions = [];
+    let currentQ = null;
+
+    lines.forEach((line, index) => {
+        // Skip theme headers like "tema 1"
+        if (line.toLowerCase().startsWith("tema ")) return;
+        // Skip points marker
+        if (line.includes("( 1.00 puntos )")) return;
+
+        // Determination: If line ends with "?" or is a paragraph before a set of options
+        // This is a simplified heuristic. better: if it's not starting with * and next lines look like options.
+        // Actually, let's use a smarter one: 
+        // If we don't have a current question, this line is the start of a question.
+        if (!currentQ) {
+            currentQ = {
+                concept_id: `${syllabusId}_${index}`,
+                question: line,
+                options: [],
+                correct: 0,
+                explanation: "Pregunta del temario oficial."
+            };
+        } else {
+            // If it starts with *, it's the correct option
+            if (line.startsWith("*")) {
+                currentQ.correct = currentQ.options.length;
+                currentQ.options.push(line.substring(1).trim());
+            } else {
+                currentQ.options.push(line);
+            }
+
+            // Check if next line is a new question (ends with ?) or we have reach 3-4 options
+            // In the provided file, questions usually come one after another with options.
+            // Let's assume a question ends when we have at least 2 options and the next line looks like a question or it's the end.
+            const nextLine = lines[index + 1];
+            const looksLikeQuestion = nextLine && (nextLine.endsWith(":") || nextLine.endsWith("?") || nextLine.toLowerCase().startsWith("indique") || nextLine.toLowerCase().startsWith("qué") || nextLine.toLowerCase().startsWith("según") || nextLine.toLowerCase().startsWith("los") || nextLine.toLowerCase().startsWith("las") || nextLine.toLowerCase().startsWith("una"));
+            
+            // Wait, also check if next line is a "tema X" marker. If so, end currentQ.
+            const nextIsTema = nextLine && nextLine.toLowerCase().startsWith("tema ");
+            
+            // Wait, "los tipos de ficheros" starts with Los. 
+            // Better: if currentQ has options and next line is not an option (manual check or limit)
+            // Let's use a simpler rule: A question usually has 3-4 options.
+            if (currentQ.options.length >= 3 || (currentQ.options.length >= 2 && (looksLikeQuestion || nextIsTema))) {
+                questions.push(currentQ);
+                currentQ = null;
+            }
+        }
+    });
+
+    // Push the last one if exists
+    if (currentQ && currentQ.options.length >= 2) {
+        questions.push(currentQ);
+    }
+
+    return questions;
+}
+
 function renderQuestion() {
     if (!APP_STATE.examQuestions[APP_STATE.currentQuestionIndex]) {
         finishExam();
@@ -310,12 +477,14 @@ function renderQuestion() {
     }
     const q = APP_STATE.examQuestions[APP_STATE.currentQuestionIndex];
     const totalQ = APP_STATE.examQuestions.length;
+    const poolSize = APP_STATE.isSyllabusMode ? totalQ : QUESTION_POOL[APP_STATE.currentExam.id].length;
+
     examRoot.innerHTML = `
         <div class="question-container">
             <div class="question-header">
                 <div>
-                    <h3>Simulacro: ${APP_STATE.currentExam.name}</h3>
-                    <p>Pregunta ${APP_STATE.currentQuestionIndex + 1} de ${totalQ} (Pool Temario: ${QUESTION_POOL[APP_STATE.currentExam.id].length})</p>
+                    <h3>${APP_STATE.isSyllabusMode ? '📚 Temario:' : 'Simulacro:'} ${APP_STATE.currentExam.name}${APP_STATE.currentUnit ? ' - Tema ' + APP_STATE.currentUnit : ''}</h3>
+                    <p>Pregunta ${APP_STATE.currentQuestionIndex + 1} de ${totalQ} (Pool: ${poolSize})</p>
                 </div>
                 <span id="exam-timer" class="timer">1:00:00</span>
             </div>
@@ -409,9 +578,10 @@ function finishExam() {
     const penalizacionTotal = (errores * penalizacionPorError).toFixed(2);
 
     // 💾 Save to localStorage history
+    const examName = APP_STATE.currentUnit ? `${APP_STATE.currentExam.name} (T${APP_STATE.currentUnit})` : APP_STATE.currentExam.name;
     saveExamResult(
         APP_STATE.currentExam.id,
-        APP_STATE.currentExam.name,
+        examName,
         calificacion,
         aciertos, errores, omitidas, totalPreguntas
     );
