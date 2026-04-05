@@ -749,11 +749,21 @@ footer {
 .modal.modal-full .modal-content {
     max-width: 95vw;
     height: 95vh;
-    padding: 1rem;
+    padding: 0.5rem;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#exam-engine-root {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
 }
 
 .lab-container {
+    flex: 1;
     width: 100%;
     height: 100%;
     border-radius: 12px;
