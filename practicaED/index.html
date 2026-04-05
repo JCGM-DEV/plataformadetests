@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UML Practice Lab — ED Examen</title>
+  <meta name="description" content="Plataforma interactiva para practicar Diagramas de Clases (UD4) y Diagramas de Comportamiento (UD5) de Entornos de Desarrollo DAW/DAM.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- SPLASH SCREEN -->
+  <div id="splash" class="splash">
+    <div class="splash-content">
+      <div class="splash-icon">⬡</div>
+      <h1 class="splash-title">UML Practice Lab</h1>
+      <p class="splash-subtitle">Entornos de Desarrollo · DAW/DAM</p>
+      <div class="splash-units">
+        <div class="unit-card" onclick="selectUnit('ud4')">
+          <div class="unit-badge">UD4</div>
+          <h3>Diagramas de Clases</h3>
+          <p>Visibilidad, relaciones, herencia, composición, agregación e interfaces</p>
+          <div class="unit-topics">
+            <span>Notación</span><span>Relaciones</span><span>Herencia</span><span>Interfaces</span>
+          </div>
+          <button class="btn-primary">Practicar →</button>
+        </div>
+        <div class="unit-card" onclick="selectUnit('ud5')">
+          <div class="unit-badge">UD5</div>
+          <h3>Diagramas de Comportamiento</h3>
+          <p>Casos de uso, secuencia, comunicación, actividad y estados</p>
+          <div class="unit-topics">
+            <span>Casos de uso</span><span>Secuencia</span><span>Actividad</span><span>Estados</span>
+          </div>
+          <button class="btn-primary">Practicar →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN APP -->
+  <div id="app" class="app hidden">
+    <!-- TOPBAR -->
+    <header class="topbar">
+      <button class="back-btn" onclick="goHome()">← Inicio</button>
+      <div class="topbar-center">
+        <span id="topbar-unit" class="topbar-unit"></span>
+        <span id="topbar-title" class="topbar-title"></span>
+      </div>
+      <div class="score-display">
+        <span id="score-correct" class="score correct">✓ <span>0</span></span>
+        <span id="score-wrong" class="score wrong">✗ <span>0</span></span>
+      </div>
+    </header>
+
+    <!-- SIDEBAR -->
+    <div class="layout">
+      <aside class="sidebar">
+        <nav id="sidebar-nav" class="sidebar-nav"></nav>
+        <div class="sidebar-progress">
+          <div class="progress-label">Progreso del módulo</div>
+          <div class="progress-bar-wrap">
+            <div id="progress-bar" class="progress-bar-fill"></div>
+          </div>
+          <div id="progress-pct" class="progress-pct">0%</div>
+        </div>
+      </aside>
+
+      <!-- CONTENT AREA -->
+      <main class="content" id="content-area">
+        <div id="lesson-view" class="lesson-view hidden"></div>
+        <div id="quiz-view" class="quiz-view hidden"></div>
+        <div id="drag-view" class="drag-view hidden"></div>
+        <div id="diagram-view" class="diagram-view hidden"></div>
+        <div id="lab-view" class="lab-view hidden"></div>
+        <div id="welcome-panel" class="welcome-panel">
+          <div class="welcome-icon">📚</div>
+          <h2>Selecciona un tema del menú</h2>
+          <p>Elige entre lecciones teóricas, quizzes interactivos y ejercicios de drag & drop</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- FEEDBACK TOAST -->
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- MODAL for explanations -->
+  <div id="modal-overlay" class="modal-overlay hidden" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="diagrams.js"></script>
+  <script src="lab.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
