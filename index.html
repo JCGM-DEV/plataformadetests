@@ -3,89 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repaso Examenes 1º DAW 2026 Tech Hub Euroformac</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Repaso Examenes 1º DAW 2026 — Tech Hub Euroformac</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
     <meta name="description" content="Prepárate para tus exámenes con simulacros interactivos basados en tus materiales de estudio.">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
 </head>
 <body class="dark-theme">
-    <div id="app">
-        <!-- Header -->
-        <header class="main-header">
-            <div class="logo">
-                <span class="logo-icon">🎓</span>
-                <h1>TechHub<span>Euroformac</span></h1>
-            </div>
-            <nav class="user-nav">
-                <div class="progress-info">
-                    <span class="label" id="global-avg-label">Media General</span>
-                    <div class="progress-bar-small"><div class="fill" id="global-progress-fill" style="width: 0%;"></div></div>
-                </div>
-            </nav>
-        </header>
 
-        <!-- Main Content Area -->
-        <main id="main-container">
-            <section class="hero">
-                <h2>Centro de Alto Rendimiento Académico</h2>
-                <p>Repaso Examenes 1º DAW 2026 Tech Hub Euroformac. Prepárate para el éxito.</p>
-            </section>
-
-            <!-- Subject Grid -->
-            <div id="subject-grid" class="grid-container">
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-                <div class="skeleton-card"></div>
-            </div>
-
-            <!-- Syllabus Exams Section -->
-            <section class="syllabus-section" id="syllabus-container" style="display:none;">
-                <div class="section-divider">
-                    <span>📚 EXÁMENES DEL TEMARIO (OFICIALES)</span>
+    <!-- ── DASHBOARD VIEW ─────────────────────────────────────────── -->
+    <div id="view-dashboard">
+        <div id="app">
+            <header class="main-header">
+                <div class="logo">
+                    <span class="logo-icon">🎓</span>
+                    <h1>TechHub<span>Euroformac</span></h1>
                 </div>
-                <div id="syllabus-grid" class="grid-container syllabus-grid">
-                    <!-- Cards will be injected by app.js -->
-                </div>
-            </section>
-
-            <!-- Progress & Learning Curve -->
-            <section class="progress-section" id="progress-section" style="display:none;">
-                <div class="progress-section-header">
-                    <h2>📈 Curva de Aprendizaje</h2>
-                    <button class="clear-history-btn" onclick="clearHistory()">🗑️ Borrar historial</button>
-                </div>
-                <div class="progress-layout">
-                    <div class="chart-card">
-                        <canvas id="learningChart"></canvas>
+                <nav class="user-nav">
+                    <div class="progress-info">
+                        <span class="label" id="global-avg-label">Media General</span>
+                        <div class="progress-bar-small"><div class="fill" id="global-progress-fill" style="width:0%"></div></div>
                     </div>
-                    <div class="history-table-card">
-                        <h3>Últimos exámenes</h3>
-                        <div id="history-table-container"></div>
-                    </div>
-                </div>
-            </section>
-        </main>
+                </nav>
+            </header>
 
-        <!-- Modal for Exam View -->
-        <div id="exam-modal" class="modal hidden">
-            <div class="modal-content">
-                <button id="close-exam" class="close-btn">&times;</button>
-                <div id="exam-engine-root"></div>
-            </div>
+            <main id="main-container">
+                <section class="hero">
+                    <h2>Centro de Alto Rendimiento Académico</h2>
+                    <p>Repaso Examenes 1º DAW 2026 — Tech Hub Euroformac. Prepárate para el éxito.</p>
+                </section>
+
+                <!-- Subject Grid -->
+                <div id="subject-grid" class="grid-container">
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                </div>
+
+                <!-- Labs Interactivos Section -->
+                <section id="labs-container" style="display:none;">
+                    <div class="section-divider"><span>🧪 LABORATORIOS INTERACTIVOS</span></div>
+                    <div id="labs-grid" class="grid-container labs-grid"></div>
+                </section>
+
+                <!-- Syllabus Exams Section -->
+                <section class="syllabus-section" id="syllabus-container" style="display:none;">
+                    <div class="section-divider"><span>📚 EXÁMENES DEL TEMARIO (OFICIALES)</span></div>
+                    <div id="syllabus-grid" class="grid-container syllabus-grid"></div>
+                </section>
+
+                <!-- Progress & Learning Curve -->
+                <section class="progress-section" id="progress-section" style="display:none;">
+                    <div class="progress-section-header">
+                        <h2>📈 Curva de Aprendizaje</h2>
+                        <div style="display:flex;gap:0.75rem;align-items:center;">
+                            <button class="btn-secondary" onclick="showView('stats')">📊 Estadísticas por Tema</button>
+                            <button class="clear-history-btn" onclick="clearHistory()">🗑️ Borrar historial</button>
+                        </div>
+                    </div>
+                    <div class="progress-layout">
+                        <div class="chart-card"><canvas id="learningChart"></canvas></div>
+                        <div class="history-table-card">
+                            <h3>Últimos exámenes</h3>
+                            <div id="history-table-container"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Fallos Section -->
+                <section id="fallos-section" style="display:none;">
+                    <div class="section-divider"><span>❌ REPASO DE FALLOS</span></div>
+                    <div id="fallos-grid" class="grid-container"></div>
+                </section>
+            </main>
+
+            <footer>
+                <p class="footer2">&copy; 2026 <a href="https://JCGM.dev" target="_blank">JCGM.DEV</a> — Elevando tu aprendizaje</p>
+            </footer>
         </div>
-
-        <footer>
-            <p class="footer2">&copy; 2026 <a href="https://JCGM.dev" target="_blank">JCGM.DEV</a> — Elevando tu aprendizaje</p>
-        </footer>
     </div>
 
-    <!-- Background Elements -->
+    <!-- ── EXAM VIEW (full screen) ────────────────────────────────── -->
+    <div id="view-exam" class="view-fullscreen hidden">
+        <div class="exam-topbar">
+            <button class="back-btn" onclick="exitExam()">← Salir</button>
+            <span id="exam-subject-label" class="exam-subject-label"></span>
+            <span id="exam-timer" class="timer">60:00</span>
+        </div>
+        <div class="exam-body">
+            <div id="exam-engine-root"></div>
+        </div>
+    </div>
+
+    <!-- ── FLASHCARD VIEW ─────────────────────────────────────────── -->
+    <div id="view-flashcard" class="view-fullscreen hidden">
+        <div class="exam-topbar">
+            <button class="back-btn" onclick="exitFlashcard()">← Salir</button>
+            <span id="fc-subject-label" class="exam-subject-label"></span>
+            <span id="fc-counter" class="timer"></span>
+        </div>
+        <div class="exam-body">
+            <div id="flashcard-root"></div>
+        </div>
+    </div>
+
+    <!-- ── STATS VIEW ─────────────────────────────────────────────── -->
+    <div id="view-stats" class="view-fullscreen hidden">
+        <div class="exam-topbar">
+            <button class="back-btn" onclick="showView('dashboard')">← Volver</button>
+            <span class="exam-subject-label">📊 Estadísticas por Tema</span>
+            <span></span>
+        </div>
+        <div class="exam-body" style="padding:2rem;">
+            <div id="stats-root"></div>
+        </div>
+    </div>
+
+    <!-- ── LAB MODAL ──────────────────────────────────────────────── -->
+    <div id="lab-modal" class="modal hidden">
+        <div class="modal-content lab-modal-content">
+            <button class="close-btn" onclick="closeLab()">&times;</button>
+            <div id="lab-root" style="flex:1;display:flex;flex-direction:column;min-height:0;"></div>
+        </div>
+    </div>
+
     <div class="bg-blur-1"></div>
     <div class="bg-blur-2"></div>
 
-    <script src="js/app.js"></script>
+    <script src="js/app.js?v=2"></script>
 </body>
 </html>

@@ -1,0 +1,153 @@
+tema 10
+¿Cuál es la principal diferencia entre el escalado horizontal y vertical?
+
+
+El escalado horizontal agrega más servidores, mientras que el vertical aumenta la capacidad de un servidor existente.
+
+
+El escalado vertical es más eficiente que el horizontal.
+
+
+
+El escalado horizontal solo funciona en servidores físicos.
+
+
+
+Ambos términos significan lo mismo.
+
+¿Cuál de las siguientes NO es una ventaja del escalado automático?
+
+
+Mejora el rendimiento de la aplicación
+
+
+Reduce los costes operativos.
+
+
+Disminuye la cantidad de usuarios en la plataforma
+
+
+Aumenta la disponibilidad de la aplicación.
+
+¿Qué función cumple un balanceador de carga en el escalado automático?
+
+
+Almacenar los datos de los usuarios.
+
+
+Distribuir las solicitudes de usuarios entre varios servidores. 
+
+
+Reducir el tráfico de red.
+
+
+
+Cerrar conexiones inactivas.
+
+¿Cuál de las siguientes afirmaciones sobre la monitorización es correcta?
+
+
+Solo es útil cuando la aplicación presenta fallos.
+
+
+
+Permite recopilar datos sobre el estado y rendimiento de la aplicación.
+
+
+No puede generar alertas en tiempo real.
+
+
+
+Es un proceso opcional en aplicaciones en la nube.
+
+¿Qué tipo de regla puede desencadenar el escalado automático?
+
+
+Cuando el uso de CPU supera un umbral definido.
+
+
+Cuando el usuario cambia su contraseña.
+
+
+Cuando un servidor está en mantenimiento.
+
+
+
+Cuando la aplicación recibe menos tráfico.
+
+¿Qué métrica NO es clave para la monitorización de una aplicación?
+
+
+Uso de CPU
+
+
+
+Consumo de memoria
+
+
+
+Color de la interfaz gráfica
+
+
+Tráfico de red
+
+¿En qué escenario es más útil el escalado automático?
+
+
+Una aplicación de escritorio instalada en un solo equipo.
+
+
+
+Un sitio de comercio electrónico que recibe picos de tráfico en eventos especiales.
+
+
+Un documento almacenado en una memoria USB.
+
+
+
+Un usuario navegando en su propio sitio web local.
+
+En el método de balanceo "Least Connections", las solicitudes se dirigen al servidor que…
+
+
+Tiene más memoria disponible.
+
+
+Posee menos conexiones activas.
+
+
+Procesa las solicitudes más rápido.
+
+
+Se encuentra más cerca del usuario.
+
+¿Cuál es el principal objetivo del escalado automático?
+
+
+Reducir la necesidad de servidores físicos.
+
+
+
+Ajustar los recursos de una aplicación según la demanda.
+
+
+Mejorar la seguridad de la infraestructura.
+
+
+
+Minimizar la cantidad de servidores disponibles
+
+¿Cuál es una de las mejores prácticas para una estrategia de escalado automático efectiva?
+
+
+No definir métricas de rendimiento para evitar alertas innecesarias.
+
+
+Configurar reglas de escalado precisas y monitorear continuamente la aplicación
+
+
+No usar balanceadores de carga para reducir costos.
+
+
+
+Limitar el número de servidores sin importar la demanda.

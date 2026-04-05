@@ -1,226 +1,199 @@
+// ═══════════════════════════════════════════════════════════════
+//  TechHub Euroformac — DAW 2026 — app.js
+// ═══════════════════════════════════════════════════════════════
+
 const APP_STATE = {
     subjects: [],
     syllabusExams: [],
     currentExam: null,
+    currentUnit: null,
     isSyllabusMode: false,
-    examNumber: 1,
+    examQuestions: [],
     currentQuestionIndex: 0,
     answers: [],
-    score: 0,
     timer: 3600,
-    timerInterval: null
+    timerInterval: null,
+    // flashcard
+    fcQuestions: [],
+    fcIndex: 0,
+    fcFlipped: false
 };
 
 let QUESTION_POOL = {};
 let learningChart = null;
 
-// ─── HISTORY HELPERS ────────────────────────────────────────────────────────
-const HISTORY_KEY = 'exam_history_v1';
+// ─── STORAGE KEYS ───────────────────────────────────────────────
+const HISTORY_KEY   = 'exam_history_v2';
+const FALLOS_KEY    = 'fallos_v2';
 
-function getHistory() {
-    return JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
-}
+// ─── HISTORY ────────────────────────────────────────────────────
+function getHistory() { return JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]'); }
 
 function saveExamResult(subjectId, subjectName, score, aciertos, errores, omitidas, total) {
-    const history = getHistory();
-    history.push({
-        id: Date.now(),
-        date: new Date().toISOString(),
-        subjectId,
-        subjectName,
-        score: parseFloat(score.toFixed(2)),
-        aciertos,
-        errores,
-        omitidas,
-        total
-    });
-    localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+    const h = getHistory();
+    h.push({ id: Date.now(), date: new Date().toISOString(), subjectId, subjectName,
+             score: parseFloat(score.toFixed(2)), aciertos, errores, omitidas, total });
+    localStorage.setItem(HISTORY_KEY, JSON.stringify(h));
 }
 
 function clearHistory() {
     if (!confirm('¿Borrar todo el historial de exámenes?')) return;
     localStorage.removeItem(HISTORY_KEY);
+    localStorage.removeItem(FALLOS_KEY);
     if (learningChart) { learningChart.destroy(); learningChart = null; }
     document.getElementById('progress-section').style.display = 'none';
+    document.getElementById('fallos-section').style.display = 'none';
     document.getElementById('global-progress-fill').style.width = '0%';
     document.getElementById('global-avg-label').textContent = 'Media General';
 }
 
-// ─── PROGRESS SECTION ───────────────────────────────────────────────────────
-function renderProgress() {
-    const history = getHistory();
-    if (history.length === 0) {
-        document.getElementById('progress-section').style.display = 'none';
-        return;
+// ─── FALLOS ─────────────────────────────────────────────────────
+function getFallos() { return JSON.parse(localStorage.getItem(FALLOS_KEY) || '{}'); }
+
+function saveFallo(subjectId, question) {
+    const f = getFallos();
+    if (!f[subjectId]) f[subjectId] = {};
+    const key = question.concept_id;
+    if (!f[subjectId][key]) {
+        f[subjectId][key] = { ...question, failCount: 0 };
     }
-    document.getElementById('progress-section').style.display = 'block';
-
-    // Global average
-    const globalAvg = history.reduce((s, e) => s + e.score, 0) / history.length;
-    const pct = Math.min(100, (globalAvg / 10) * 100);
-    document.getElementById('global-progress-fill').style.width = pct + '%';
-    document.getElementById('global-avg-label').textContent = `Media: ${globalAvg.toFixed(2)} / 10`;
-
-    // ── Chart ──────────────────────────────────────────────────────────────
-    const subjectColors = {
-        sistemas_informaticos: '#6366f1',
-        bases_de_datos:         '#22d3ee',
-        programacion:           '#a855f7',
-        lenguaje_de_marcas:     '#f59e0b',
-        entornos_de_desarrollo: '#10b981',
-        cloud_computing:        '#3b82f6',
-        empleabilidad:          '#ec4899'
-    };
-
-    // Group by subject, keep chronological order
-    const bySubject = {};
-    history.forEach(e => {
-        if (!bySubject[e.subjectId]) bySubject[e.subjectId] = [];
-        bySubject[e.subjectId].push({ date: e.date, score: e.score });
-    });
-
-    // Build datasets
-    const datasets = Object.entries(bySubject).map(([sid, entries]) => ({
-        label: entries[0] ? history.find(h => h.subjectId === sid)?.subjectName : sid,
-        data: entries.map((e, i) => ({ x: i + 1, y: e.score })),
-        borderColor: subjectColors[sid] || '#ffffff',
-        backgroundColor: (subjectColors[sid] || '#ffffff') + '22',
-        tension: 0.4,
-        fill: false,
-        pointRadius: 5,
-        pointHoverRadius: 8
-    }));
-
-    // Threshold line at 5
-    const maxExams = Math.max(...Object.values(bySubject).map(a => a.length));
-    datasets.push({
-        label: 'Aprobado (5)',
-        data: Array.from({ length: maxExams }, (_, i) => ({ x: i + 1, y: 5 })),
-        borderColor: '#ef444488',
-        borderDash: [6, 4],
-        borderWidth: 1.5,
-        pointRadius: 0,
-        fill: false,
-        tension: 0
-    });
-
-    const ctx = document.getElementById('learningChart').getContext('2d');
-    if (learningChart) learningChart.destroy();
-    learningChart = new Chart(ctx, {
-        type: 'line',
-        data: { datasets },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            interaction: { mode: 'index', intersect: false },
-            plugins: {
-                legend: { labels: { color: '#94a3b8', font: { family: 'Inter' } } },
-                tooltip: {
-                    backgroundColor: '#1e293b',
-                    borderColor: '#334155',
-                    borderWidth: 1,
-                    titleColor: '#f8fafc',
-                    bodyColor: '#94a3b8',
-                    callbacks: {
-                        title: items => `Examen nº ${items[0].raw.x}`,
-                        label: item => ` ${item.dataset.label}: ${item.raw.y.toFixed(2)}`
-                    }
-                }
-            },
-            scales: {
-                x: {
-                    type: 'linear',
-                    title: { display: true, text: 'Nº Examen', color: '#64748b' },
-                    ticks: { color: '#64748b', stepSize: 1 },
-                    grid: { color: '#1e293b' }
-                },
-                y: {
-                    min: 0, max: 10,
-                    title: { display: true, text: 'Nota', color: '#64748b' },
-                    ticks: { color: '#64748b' },
-                    grid: { color: '#1e293b' }
-                }
-            }
-        }
-    });
-
-    // ── Recent results table ───────────────────────────────────────────────
-    const recent = [...history].reverse().slice(0, 20);
-    const tableHTML = `
-        <table class="history-table">
-            <thead>
-                <tr>
-                    <th>Fecha</th>
-                    <th>Asignatura</th>
-                    <th>✅</th><th>❌</th><th>⬜</th>
-                    <th>Nota</th>
-                </tr>
-            </thead>
-            <tbody>
-                ${recent.map(e => {
-                    const d = new Date(e.date);
-                    const dateStr = `${d.getDate().toString().padStart(2,'0')}/${(d.getMonth()+1).toString().padStart(2,'0')} ${d.getHours().toString().padStart(2,'0')}:${d.getMinutes().toString().padStart(2,'0')}`;
-                    const badge = e.score >= 5
-                        ? `<span class="badge-pass">${e.score.toFixed(2)}</span>`
-                        : `<span class="badge-fail">${e.score.toFixed(2)}</span>`;
-                    const shortName = e.subjectName.split(' ').slice(0, 2).join(' ');
-                    return `<tr><td>${dateStr}</td><td title="${e.subjectName}">${shortName}</td><td>${e.aciertos}</td><td>${e.errores}</td><td>${e.omitidas}</td><td>${badge}</td></tr>`;
-                }).join('')}
-            </tbody>
-        </table>
-    `;
-    document.getElementById('history-table-container').innerHTML = tableHTML;
+    f[subjectId][key].failCount++;
+    localStorage.setItem(FALLOS_KEY, JSON.stringify(f));
 }
 
-// DOM Elements
-const subjectGrid = document.getElementById('subject-grid');
-const examModal = document.getElementById('exam-modal');
-const closeExamBtn = document.getElementById('close-exam');
-const examRoot = document.getElementById('exam-engine-root');
+function removeFallo(subjectId, conceptId) {
+    const f = getFallos();
+    if (f[subjectId]) delete f[subjectId][conceptId];
+    localStorage.setItem(FALLOS_KEY, JSON.stringify(f));
+}
 
+// ─── VIEW ROUTER ────────────────────────────────────────────────
+function showView(name) {
+    ['dashboard','exam','flashcard','stats'].forEach(v => {
+        const el = document.getElementById(`view-${v}`);
+        if (el) el.classList.toggle('hidden', v !== name);
+    });
+    if (name === 'dashboard') renderProgress();
+    if (name === 'stats') renderStats();
+}
+
+// ─── INIT ────────────────────────────────────────────────────────
 async function init() {
     try {
-        const subRes = await fetch('data/subjects.json');
-        const subjects = await subRes.json();
-        APP_STATE.subjects = subjects.filter(s => s.units_count > 0);
-
-        const qRes = await fetch('data/test_bank.json');
+        const v = '?v=' + Date.now();
+        const [subRes, qRes, sylRes] = await Promise.all([
+            fetch('data/subjects.json' + v),
+            fetch('data/test_bank.json' + v),
+            fetch('data/syllabus_registry.json' + v).catch(() => null)
+        ]);
+        APP_STATE.subjects = await subRes.json();
         QUESTION_POOL = await qRes.json();
-
-        // Load Syllabus Exams
-        try {
-            const sylRes = await fetch('data/syllabus_registry.json');
-            if (sylRes.ok) {
-                APP_STATE.syllabusExams = await sylRes.json();
-            }
-        } catch (e) { console.warn("No syllabus registry found"); }
+        if (sylRes && sylRes.ok) APP_STATE.syllabusExams = await sylRes.json();
 
         renderSubjects();
         renderSyllabusExams();
-        setupEventListeners();
-        renderProgress(); // Show history on load
-    } catch (error) {
-        console.error("Error loading app data:", error);
+        renderProgress();
+        renderFallosSection();
+    } catch (err) {
+        console.error('Error loading app data:', err);
     }
 }
 
-function renderSyllabusExams() {
-    const syllabusContainer = document.getElementById('syllabus-container');
-    const syllabusGrid = document.getElementById('syllabus-grid');
-    if (!syllabusContainer || APP_STATE.syllabusExams.length === 0) return;
+// ─── RENDER SUBJECTS ────────────────────────────────────────────
+function renderSubjects() {
+    const grid = document.getElementById('subject-grid');
+    grid.innerHTML = '';
+    APP_STATE.subjects.forEach(subject => {
+        const pool = QUESTION_POOL[subject.id] || [];
+        const fallos = getFallos()[subject.id] || {};
+        const fallosCount = Object.keys(fallos).length;
 
-    syllabusContainer.style.display = 'block';
-    syllabusGrid.innerHTML = '';
-    
-    // Grouping logic
+        let unitsHTML = '<div class="unit-selector">';
+        for (let i = 1; i <= subject.units_count; i++) {
+            const unitPool = pool.filter(q => q.unit === i);
+            unitsHTML += `<button class="unit-btn" onclick="startExam('${subject.id}',${i})" ${unitPool.length === 0 ? 'disabled title="Sin preguntas"' : ''}>T${i}</button>`;
+        }
+        unitsHTML += '</div>';
+
+        const card = document.createElement('div');
+        card.className = 'subject-card';
+        card.style.setProperty('--card-color', subject.color || '#6366f1');
+        card.innerHTML = `
+            <div class="card-icon">${subject.icon}</div>
+            <h3>${subject.name}</h3>
+            <div class="card-pool-badge">${pool.length} preguntas</div>
+            <div class="exam-selector-large">
+                <button onclick="startExam('${subject.id}')">🎯 Simulacro Completo</button>
+            </div>
+            <div class="card-actions-row">
+                <button class="btn-flashcard" onclick="startFlashcard('${subject.id}')">⚡ Flashcards</button>
+                ${fallosCount > 0 ? `<button class="btn-fallos" onclick="startFallosExam('${subject.id}')">❌ Repasar fallos (${fallosCount})</button>` : ''}
+            </div>
+            ${unitsHTML}
+        `;
+        grid.appendChild(card);
+    });
+}
+
+// ─── RENDER SYLLABUS ────────────────────────────────────────────
+function renderSyllabusExams() {
+    const container = document.getElementById('syllabus-container');
+    const grid = document.getElementById('syllabus-grid');
+    const labsContainer = document.getElementById('labs-container');
+    const labsGrid = document.getElementById('labs-grid');
+
+    if (!container) return;
+
+    // Separate labs from syllabus exams
+    const labs = APP_STATE.syllabusExams.filter(e => e.type === 'lab');
+    const syllabusExams = APP_STATE.syllabusExams.filter(e => e.type !== 'lab');
+
+    // ── RENDER LABS ──────────────────────────────────────────────
+    if (labs.length > 0) {
+        labsContainer.style.display = 'block';
+        labsGrid.innerHTML = '';
+
+        const labColors = {
+            bases_de_datos:         { color: '#06b6d4', bg: 'rgba(6,182,212,0.08)', border: 'rgba(6,182,212,0.3)' },
+            lenguaje_de_marcas:     { color: '#84cc16', bg: 'rgba(132,204,22,0.08)', border: 'rgba(132,204,22,0.3)' },
+            programacion:           { color: '#f97316', bg: 'rgba(249,115,22,0.08)', border: 'rgba(249,115,22,0.3)' },
+            entornos_de_desarrollo: { color: '#a855f7', bg: 'rgba(168,85,247,0.08)', border: 'rgba(168,85,247,0.3)' },
+        };
+
+        labs.forEach(lab => {
+            const subject = APP_STATE.subjects.find(s => s.id === lab.subject_id);
+            const theme = labColors[lab.subject_id] || { color: '#6366f1', bg: 'rgba(99,102,241,0.08)', border: 'rgba(99,102,241,0.3)' };
+            const card = document.createElement('div');
+            card.className = 'lab-card';
+            card.style.cssText = `--lab-color:${theme.color};--lab-bg:${theme.bg};--lab-border:${theme.border}`;
+            card.innerHTML = `
+                <div class="lab-card-icon">${lab.icon || '🧪'}</div>
+                <div class="lab-card-body">
+                    <div class="lab-card-subject">${subject ? subject.name : lab.subject_id}</div>
+                    <h3 class="lab-card-title">${lab.name}</h3>
+                    <p class="lab-card-desc">${getLabDescription(lab.id)}</p>
+                </div>
+                <button class="lab-card-btn" onclick="startLab('${lab.id}')">
+                    Abrir Lab →
+                </button>
+            `;
+            labsGrid.appendChild(card);
+        });
+    }
+
+    // ── RENDER SYLLABUS EXAMS ────────────────────────────────────
+    if (syllabusExams.length === 0) return;
+    container.style.display = 'block';
+    grid.innerHTML = '';
+
     const grouped = {};
-    APP_STATE.syllabusExams.forEach(exam => {
-        if (!grouped[exam.subject_id]) grouped[exam.subject_id] = [];
-        grouped[exam.subject_id].push(exam);
+    syllabusExams.forEach(e => {
+        if (!grouped[e.subject_id]) grouped[e.subject_id] = [];
+        grouped[e.subject_id].push(e);
     });
 
     Object.keys(grouped).forEach(subjectId => {
-        const subject = APP_STATE.subjects.find(s => s.id === subjectId) || { name: 'Especiales', icon: '✨' };
+        const subject = APP_STATE.subjects.find(s => s.id === subjectId) || { name: subjectId, icon: '📖' };
         const groupEl = document.createElement('div');
         groupEl.className = 'syllabus-group';
         groupEl.innerHTML = `
@@ -232,131 +205,308 @@ function renderSyllabusExams() {
                 ${grouped[subjectId].map(exam => `
                     <div class="subject-card syllabus-card">
                         <div class="card-icon">${exam.icon || '📖'}</div>
-                        <div class="badge" style="background:#f59e0b; color:white; font-size:0.6rem; padding:2px 6px; border-radius:4px; width:fit-content; margin-bottom:0.5rem; font-weight:bold;">TEMARIO OFICIAL</div>
+                        <div class="badge-oficial">TEMARIO OFICIAL</div>
                         <h3>${exam.name}</h3>
                         <div class="exam-selector-large">
-                            ${exam.type === 'lab' 
-                                ? `<button onclick="startLab('${exam.id}')" style="background: linear-gradient(to right, var(--accent-color), var(--primary-color));">🚀 Iniciar UML Lab Interactivo</button>`
-                                : `<button onclick="startSyllabusExam('${exam.id}')">Iniciar Examen de Temario</button>`
-                            }
-                        </div>
-                        <div class="card-stats">
-                            <span>${exam.type === 'lab' ? 'Práctica interactiva' : 'Modo Entrenamiento: Todas las preguntas'}</span>
+                            <button onclick="startSyllabusExam('${exam.id}')">Iniciar Examen</button>
                         </div>
                     </div>
                 `).join('')}
             </div>
         `;
-        syllabusGrid.appendChild(groupEl);
+        grid.appendChild(groupEl);
     });
 }
 
+function getLabDescription(labId) {
+    const descs = {
+        bd_lab:   'SQL interactivo, diagramas E-R, normalización y programación de BD en MySQL',
+        lm_lab:   'Editor HTML en vivo, validación XML/XSD, XPath y transformaciones XSLT',
+        prog_lab: 'POO en Java, colecciones, excepciones, ficheros e hilos con análisis de código',
+        ed_lab_uml: 'Diagramas de clases UML, casos de uso, secuencia, estados y actividad'
+    };
+    return descs[labId] || 'Laboratorio interactivo de práctica';
+}
 
-function renderSubjects() {
-    subjectGrid.innerHTML = '';
-    APP_STATE.subjects.forEach(subject => {
+// ─── RENDER FALLOS SECTION ──────────────────────────────────────
+function renderFallosSection() {
+    const section = document.getElementById('fallos-section');
+    const grid = document.getElementById('fallos-grid');
+    const fallos = getFallos();
+    const subjects = Object.keys(fallos).filter(k => Object.keys(fallos[k]).length > 0);
+
+    if (subjects.length === 0) { section.style.display = 'none'; return; }
+    section.style.display = 'block';
+    grid.innerHTML = '';
+
+    subjects.forEach(subjectId => {
+        const subject = APP_STATE.subjects.find(s => s.id === subjectId);
+        const count = Object.keys(fallos[subjectId]).length;
+        if (!subject || count === 0) return;
         const card = document.createElement('div');
-        card.className = 'subject-card';
-
-        let unitsHTML = '';
-        if (subject.units_count > 0) {
-            unitsHTML = `<div class="unit-selector">`;
-            for (let i = 1; i <= subject.units_count; i++) {
-                unitsHTML += `<button class="unit-btn" onclick="startExam('${subject.id}', ${i})">Tema ${i}</button>`;
-            }
-            unitsHTML += `</div>`;
-        }
-
+        card.className = 'subject-card fallos-card';
         card.innerHTML = `
             <div class="card-icon">${subject.icon}</div>
             <h3>${subject.name}</h3>
+            <p style="color:var(--text-secondary);font-size:0.9rem;">${count} pregunta${count > 1 ? 's' : ''} fallada${count > 1 ? 's' : ''}</p>
             <div class="exam-selector-large">
-                <button onclick="startExam('${subject.id}')">Simulacro Completo Aleatorio</button>
+                <button onclick="startFallosExam('${subjectId}')">❌ Repasar fallos</button>
             </div>
-            ${unitsHTML}
-            <div class="card-stats" style="margin-top: 1rem;">
-                <span>V18 FULL COVERAGE: ${(QUESTION_POOL[subject.id] || []).length} Preguntas</span>
+            <div class="card-actions-row">
+                <button class="btn-flashcard" onclick="startFallosFlashcard('${subjectId}')">⚡ Flashcards de fallos</button>
             </div>
         `;
-        subjectGrid.appendChild(card);
+        grid.appendChild(card);
     });
 }
 
-function setupEventListeners() {
-    closeExamBtn.onclick = () => {
-        if(confirm("¿Seguro que quieres salir? Se perderá el progreso.")) {
-            examModal.classList.add('hidden');
-            examModal.classList.remove('modal-full');
-            examRoot.innerHTML = '';
-            clearInterval(APP_STATE.timerInterval);
-        }
+// ─── PROGRESS / CHART ───────────────────────────────────────────
+function renderProgress() {
+    const history = getHistory();
+    const section = document.getElementById('progress-section');
+    if (history.length === 0) { section.style.display = 'none'; return; }
+    section.style.display = 'block';
+
+    const globalAvg = history.reduce((s, e) => s + e.score, 0) / history.length;
+    document.getElementById('global-progress-fill').style.width = Math.min(100, (globalAvg / 10) * 100) + '%';
+    document.getElementById('global-avg-label').textContent = `Media: ${globalAvg.toFixed(2)} / 10`;
+
+    const subjectColors = {
+        sistemas_informaticos: '#6366f1', bases_de_datos: '#22d3ee',
+        programacion: '#a855f7', lenguaje_de_marcas: '#f59e0b',
+        entornos_de_desarrollo: '#10b981', cloud_computing: '#3b82f6',
+        empleabilidad: '#ec4899'
     };
+
+    const bySubject = {};
+    history.forEach(e => {
+        if (!bySubject[e.subjectId]) bySubject[e.subjectId] = [];
+        bySubject[e.subjectId].push({ date: e.date, score: e.score });
+    });
+
+    const datasets = Object.entries(bySubject).map(([sid, entries]) => ({
+        label: history.find(h => h.subjectId === sid)?.subjectName || sid,
+        data: entries.map((e, i) => ({ x: i + 1, y: e.score })),
+        borderColor: subjectColors[sid] || '#ffffff',
+        backgroundColor: (subjectColors[sid] || '#ffffff') + '22',
+        tension: 0.4, fill: false, pointRadius: 5, pointHoverRadius: 8
+    }));
+
+    const maxExams = Math.max(...Object.values(bySubject).map(a => a.length));
+    datasets.push({
+        label: 'Aprobado (5)',
+        data: Array.from({ length: maxExams }, (_, i) => ({ x: i + 1, y: 5 })),
+        borderColor: '#ef444488', borderDash: [6, 4], borderWidth: 1.5,
+        pointRadius: 0, fill: false, tension: 0
+    });
+
+    const ctx = document.getElementById('learningChart').getContext('2d');
+    if (learningChart) learningChart.destroy();
+    learningChart = new Chart(ctx, {
+        type: 'line', data: { datasets },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            interaction: { mode: 'index', intersect: false },
+            plugins: {
+                legend: { labels: { color: '#94a3b8', font: { family: 'Inter' } } },
+                tooltip: {
+                    backgroundColor: '#1e293b', borderColor: '#334155', borderWidth: 1,
+                    titleColor: '#f8fafc', bodyColor: '#94a3b8',
+                    callbacks: {
+                        title: items => `Examen nº ${items[0].raw.x}`,
+                        label: item => ` ${item.dataset.label}: ${item.raw.y.toFixed(2)}`
+                    }
+                }
+            },
+            scales: {
+                x: { type: 'linear', title: { display: true, text: 'Nº Examen', color: '#64748b' },
+                     ticks: { color: '#64748b', stepSize: 1 }, grid: { color: '#1e293b' } },
+                y: { min: 0, max: 10, title: { display: true, text: 'Nota', color: '#64748b' },
+                     ticks: { color: '#64748b' }, grid: { color: '#1e293b' } }
+            }
+        }
+    });
+
+    const recent = [...history].reverse().slice(0, 20);
+    document.getElementById('history-table-container').innerHTML = `
+        <table class="history-table">
+            <thead><tr><th>Fecha</th><th>Asignatura</th><th>✅</th><th>❌</th><th>⬜</th><th>Nota</th></tr></thead>
+            <tbody>
+                ${recent.map(e => {
+                    const d = new Date(e.date);
+                    const ds = `${d.getDate().toString().padStart(2,'0')}/${(d.getMonth()+1).toString().padStart(2,'0')} ${d.getHours().toString().padStart(2,'0')}:${d.getMinutes().toString().padStart(2,'0')}`;
+                    const badge = e.score >= 5 ? `<span class="badge-pass">${e.score.toFixed(2)}</span>` : `<span class="badge-fail">${e.score.toFixed(2)}</span>`;
+                    return `<tr><td>${ds}</td><td title="${e.subjectName}">${e.subjectName.split(' ').slice(0,2).join(' ')}</td><td>${e.aciertos}</td><td>${e.errores}</td><td>${e.omitidas}</td><td>${badge}</td></tr>`;
+                }).join('')}
+            </tbody>
+        </table>`;
 }
 
+// ─── STATS VIEW ─────────────────────────────────────────────────
+function renderStats() {
+    const history = getHistory();
+    const root = document.getElementById('stats-root');
+    if (history.length === 0) { root.innerHTML = '<p style="color:var(--text-secondary);text-align:center;margin-top:4rem;">Aún no hay historial de exámenes.</p>'; return; }
+
+    // Group by subjectId + unit (from subjectName)
+    const bySubject = {};
+    history.forEach(e => {
+        if (!bySubject[e.subjectId]) bySubject[e.subjectId] = { name: e.subjectName.replace(/ \(T\d+\)$/, ''), exams: [] };
+        bySubject[e.subjectId].exams.push(e);
+    });
+
+    let html = '<div class="stats-grid-full">';
+    Object.entries(bySubject).forEach(([sid, data]) => {
+        const subject = APP_STATE.subjects.find(s => s.id === sid);
+        const avg = data.exams.reduce((s, e) => s + e.score, 0) / data.exams.length;
+        const best = Math.max(...data.exams.map(e => e.score));
+        const worst = Math.min(...data.exams.map(e => e.score));
+        const totalAciertos = data.exams.reduce((s, e) => s + e.aciertos, 0);
+        const totalErrores = data.exams.reduce((s, e) => s + e.errores, 0);
+        const totalOmitidas = data.exams.reduce((s, e) => s + e.omitidas, 0);
+        const totalPreguntas = data.exams.reduce((s, e) => s + e.total, 0);
+        const pctAciertos = totalPreguntas > 0 ? ((totalAciertos / totalPreguntas) * 100).toFixed(1) : 0;
+        const color = subject?.color || '#6366f1';
+        const passedCount = data.exams.filter(e => e.score >= 5).length;
+
+        html += `
+        <div class="stats-subject-card">
+            <div class="stats-card-header" style="border-left:4px solid ${color}">
+                <span style="font-size:1.5rem">${subject?.icon || '📚'}</span>
+                <div>
+                    <h3>${subject?.name || data.name}</h3>
+                    <span style="color:var(--text-secondary);font-size:0.8rem">${data.exams.length} examen${data.exams.length > 1 ? 'es' : ''} realizados</span>
+                </div>
+                <div class="stats-avg ${avg >= 5 ? 'pass' : 'fail'}">${avg.toFixed(2)}</div>
+            </div>
+            <div class="stats-bars">
+                <div class="stats-bar-row">
+                    <span>Media</span>
+                    <div class="stats-bar-track"><div class="stats-bar-fill" style="width:${(avg/10)*100}%;background:${color}"></div></div>
+                    <span>${avg.toFixed(2)}</span>
+                </div>
+                <div class="stats-bar-row">
+                    <span>% Aciertos</span>
+                    <div class="stats-bar-track"><div class="stats-bar-fill" style="width:${pctAciertos}%;background:#10b981"></div></div>
+                    <span>${pctAciertos}%</span>
+                </div>
+            </div>
+            <div class="stats-mini-grid">
+                <div class="stats-mini-item"><span>🏆 Mejor</span><strong>${best.toFixed(2)}</strong></div>
+                <div class="stats-mini-item"><span>📉 Peor</span><strong>${worst.toFixed(2)}</strong></div>
+                <div class="stats-mini-item"><span>✅ Aprobados</span><strong>${passedCount}/${data.exams.length}</strong></div>
+                <div class="stats-mini-item"><span>❌ Errores</span><strong>${totalErrores}</strong></div>
+            </div>
+        </div>`;
+    });
+    html += '</div>';
+    root.innerHTML = html;
+}
+
+// ─── EXAM ENGINE ────────────────────────────────────────────────
 function startExam(subjectId, unitId = null) {
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
+    let pool = QUESTION_POOL[subjectId] || [];
+    if (unitId !== null) pool = pool.filter(q => q.unit === unitId);
+    if (pool.length === 0) { alert('No hay preguntas disponibles para este tema.'); return; }
+
+    const testSize = unitId !== null ? pool.length : Math.min(20, pool.length);
+    const lastIds = JSON.parse(localStorage.getItem(`last_test_${subjectId}`) || '[]');
+
     APP_STATE.currentExam = subject;
     APP_STATE.currentUnit = unitId;
     APP_STATE.isSyllabusMode = false;
+    APP_STATE.examQuestions = getSmartRandom(pool, testSize, lastIds);
     APP_STATE.currentQuestionIndex = 0;
     APP_STATE.answers = [];
-    
-    let pool = QUESTION_POOL[subjectId] || [];
-    if (unitId !== null) {
-        pool = pool.filter(q => q.unit === unitId);
-    }
+    APP_STATE.timer = testSize * 90;
 
-    if (pool.length === 0) {
-        alert("No hay preguntas disponibles para este tema.");
-        return;
-    }
+    localStorage.setItem(`last_test_${subjectId}`, JSON.stringify(APP_STATE.examQuestions.map(q => q.concept_id)));
 
-    // Test size: If unit is specified, use all questions in that unit pool.
-    // Otherwise, 20 questions if pool allows.
-    const testSize = unitId !== null ? pool.length : Math.min(20, pool.length);
-    APP_STATE.timer = testSize * 90; // 90 seconds per question
-    
-    // Smart repeat filter: max 3 repeats from previous test
-    const lastTestIds = JSON.parse(localStorage.getItem(`last_test_${subjectId}`) || "[]");
-    APP_STATE.examQuestions = getSmartRandomQuestions(pool, testSize, lastTestIds);
-    
-    // Remember this test for next time
-    const currentIds = APP_STATE.examQuestions.map(q => q.concept_id);
-    localStorage.setItem(`last_test_${subjectId}`, JSON.stringify(currentIds));
-    
-    examModal.classList.remove('hidden');
+    document.getElementById('exam-subject-label').textContent = `${subject.icon} ${subject.name}${unitId ? ' — Tema ' + unitId : ''}`;
+    showView('exam');
     renderQuestion();
     startTimer();
 }
 
-function getSmartRandomQuestions(pool, count, forbiddenIds) {
-    // Fisher-Yates shuffle
-    let shuffled = [...pool];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
+function startFallosExam(subjectId) {
+    const subject = APP_STATE.subjects.find(s => s.id === subjectId);
+    const fallos = getFallos()[subjectId] || {};
+    const pool = Object.values(fallos);
+    if (pool.length === 0) { alert('No hay fallos registrados para esta asignatura.'); return; }
 
-    // Separate into 'new' and 'repeat' buckets
+    APP_STATE.currentExam = subject;
+    APP_STATE.currentUnit = null;
+    APP_STATE.isSyllabusMode = false;
+    APP_STATE.examQuestions = shuffleArray([...pool]);
+    APP_STATE.currentQuestionIndex = 0;
+    APP_STATE.answers = [];
+    APP_STATE.timer = pool.length * 90;
+
+    document.getElementById('exam-subject-label').textContent = `${subject.icon} ${subject.name} — Repaso de Fallos`;
+    showView('exam');
+    renderQuestion();
+    startTimer();
+}
+
+async function startSyllabusExam(syllabusId) {
+    const examInfo = APP_STATE.syllabusExams.find(e => e.id === syllabusId);
+    if (!examInfo) return;
+    try {
+        const res = await fetch(examInfo.file);
+        const text = await res.text();
+        const questions = parseTxtExam(text, syllabusId);
+        if (questions.length === 0) { alert('No se han podido extraer preguntas del archivo.'); return; }
+
+        APP_STATE.currentExam = { ...examInfo, id: syllabusId };
+        APP_STATE.isSyllabusMode = true;
+        APP_STATE.examQuestions = questions;
+        APP_STATE.currentQuestionIndex = 0;
+        APP_STATE.answers = [];
+        APP_STATE.timer = questions.length * 90;
+
+        document.getElementById('exam-subject-label').textContent = `📚 ${examInfo.name}`;
+        showView('exam');
+        renderQuestion();
+        startTimer();
+    } catch (err) {
+        console.error(err);
+        alert('Error al cargar el archivo de examen.');
+    }
+}
+
+function exitExam() {
+    if (!confirm('¿Seguro que quieres salir? Se perderá el progreso.')) return;
+    clearInterval(APP_STATE.timerInterval);
+    document.getElementById('exam-engine-root').innerHTML = '';
+    showView('dashboard');
+    renderFallosSection();
+}
+
+// ─── SMART SHUFFLE ──────────────────────────────────────────────
+function shuffleArray(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+}
+
+function getSmartRandom(pool, count, forbiddenIds) {
+    const shuffled = shuffleArray(pool);
     const fresh = shuffled.filter(q => !forbiddenIds.includes(q.concept_id));
     const repeats = shuffled.filter(q => forbiddenIds.includes(q.concept_id));
-
-    // Build final list: up to (count - 3) from fresh, then up to 3 from repeats
     const freshCount = Math.max(count - 3, count - repeats.length);
-    const selected = [
-        ...fresh.slice(0, freshCount),
-        ...repeats.slice(0, Math.min(3, count - fresh.slice(0, freshCount).length))
-    ];
-
-    // If still not enough (very small pool), fill with whatever is left
+    const selected = [...fresh.slice(0, freshCount), ...repeats.slice(0, Math.min(3, count - fresh.slice(0, freshCount).length))];
     if (selected.length < count) {
         const remaining = shuffled.filter(q => !selected.find(s => s.concept_id === q.concept_id));
         selected.push(...remaining.slice(0, count - selected.length));
     }
-
     return selected.slice(0, count);
 }
 
+// ─── TIMER ──────────────────────────────────────────────────────
 function startTimer() {
     clearInterval(APP_STATE.timerInterval);
     APP_STATE.timerInterval = setInterval(() => {
@@ -367,194 +517,79 @@ function startTimer() {
 }
 
 function updateTimerUI() {
-    const timerEl = document.getElementById('exam-timer');
-    if (timerEl) {
-        const min = Math.floor(APP_STATE.timer / 60);
-        const sec = APP_STATE.timer % 60;
-        timerEl.textContent = `Tiempo: ${min}:${sec.toString().padStart(2, '0')}`;
-        if (APP_STATE.timer < 300) timerEl.style.color = "#ef4444";
-    }
+    const el = document.getElementById('exam-timer');
+    if (!el) return;
+    const min = Math.floor(APP_STATE.timer / 60);
+    const sec = APP_STATE.timer % 60;
+    el.textContent = `${min}:${sec.toString().padStart(2, '0')}`;
+    el.style.color = APP_STATE.timer < 300 ? '#ef4444' : '';
 }
 
-// Prevent HTML tags in question/option text from being rendered as real elements
-function escapeHTML(str) {
-    return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#039;');
+// ─── HTML ESCAPE ────────────────────────────────────────────────
+function esc(str) {
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
 }
 
-async function startSyllabusExam(syllabusId) {
-    const examInfo = APP_STATE.syllabusExams.find(e => e.id === syllabusId);
-    if (!examInfo) return;
-
-    try {
-        const res = await fetch(examInfo.file);
-        const text = await res.text();
-        const questions = parseTxtExam(text, syllabusId);
-        
-        if (questions.length === 0) {
-            alert("No se han podido extraer preguntas del archivo.");
-            return;
-        }
-
-        APP_STATE.currentExam = { ...examInfo, id: syllabusId };
-        APP_STATE.isSyllabusMode = true;
-        APP_STATE.examQuestions = questions;
-        APP_STATE.currentQuestionIndex = 0;
-        APP_STATE.answers = [];
-        APP_STATE.timer = questions.length * 90;
-
-        examModal.classList.remove('hidden');
-        renderQuestion();
-        startTimer();
-    } catch (error) {
-        console.error("Error loading syllabus exam:", error);
-        alert("Error al cargar el archivo de examen.");
-    }
-}
-
-async function startLab(syllabusId) {
-    const examInfo = APP_STATE.syllabusExams.find(e => e.id === syllabusId);
-    if (!examInfo) return;
-
-    examModal.classList.add('modal-full');
-    examModal.classList.remove('hidden');
-    
-    examRoot.innerHTML = `
-        <div class="lab-container">
-            <iframe src="${examInfo.file}" class="lab-iframe"></iframe>
-        </div>
-    `;
-}
-
-function parseTxtExam(text, syllabusId) {
-    const lines = text.split('\n').map(l => l.trim()).filter(l => l !== "");
-    const questions = [];
-    let currentQ = null;
-
-    lines.forEach((line, index) => {
-        // Skip theme headers like "tema 1"
-        if (line.toLowerCase().startsWith("tema ")) return;
-        // Skip points marker
-        if (line.includes("( 1.00 puntos )")) return;
-
-        // Determination: If line ends with "?" or is a paragraph before a set of options
-        // This is a simplified heuristic. better: if it's not starting with * and next lines look like options.
-        // Actually, let's use a smarter one: 
-        // If we don't have a current question, this line is the start of a question.
-        if (!currentQ) {
-            currentQ = {
-                concept_id: `${syllabusId}_${index}`,
-                question: line,
-                options: [],
-                correct: 0,
-                explanation: "Pregunta del temario oficial."
-            };
-        } else {
-            // If it starts with *, it's the correct option
-            if (line.startsWith("*")) {
-                currentQ.correct = currentQ.options.length;
-                currentQ.options.push(line.substring(1).trim());
-            } else {
-                currentQ.options.push(line);
-            }
-
-            // Check if next line is a new question (ends with ?) or we have reach 3-4 options
-            // In the provided file, questions usually come one after another with options.
-            // Let's assume a question ends when we have at least 2 options and the next line looks like a question or it's the end.
-            const nextLine = lines[index + 1];
-            const looksLikeQuestion = nextLine && (nextLine.endsWith(":") || nextLine.endsWith("?") || nextLine.toLowerCase().startsWith("indique") || nextLine.toLowerCase().startsWith("qué") || nextLine.toLowerCase().startsWith("según") || nextLine.toLowerCase().startsWith("los") || nextLine.toLowerCase().startsWith("las") || nextLine.toLowerCase().startsWith("una"));
-            
-            // Wait, also check if next line is a "tema X" marker. If so, end currentQ.
-            const nextIsTema = nextLine && nextLine.toLowerCase().startsWith("tema ");
-            
-            // Wait, "los tipos de ficheros" starts with Los. 
-            // Better: if currentQ has options and next line is not an option (manual check or limit)
-            // Let's use a simpler rule: A question usually has 3-4 options.
-            if (currentQ.options.length >= 3 || (currentQ.options.length >= 2 && (looksLikeQuestion || nextIsTema))) {
-                questions.push(currentQ);
-                currentQ = null;
-            }
-        }
-    });
-
-    // Push the last one if exists
-    if (currentQ && currentQ.options.length >= 2) {
-        questions.push(currentQ);
-    }
-
-    return questions;
-}
-
+// ─── QUESTION RENDER ────────────────────────────────────────────
 function renderQuestion() {
-    if (!APP_STATE.examQuestions[APP_STATE.currentQuestionIndex]) {
-        finishExam();
-        return;
-    }
     const q = APP_STATE.examQuestions[APP_STATE.currentQuestionIndex];
-    const totalQ = APP_STATE.examQuestions.length;
-    const poolSize = APP_STATE.isSyllabusMode ? totalQ : QUESTION_POOL[APP_STATE.currentExam.id].length;
+    if (!q) { finishExam(); return; }
+    const total = APP_STATE.examQuestions.length;
+    const pct = (APP_STATE.currentQuestionIndex / total) * 100;
 
-    examRoot.innerHTML = `
+    document.getElementById('exam-engine-root').innerHTML = `
         <div class="question-container">
-            <div class="question-header">
-                <div>
-                    <h3>${APP_STATE.isSyllabusMode ? '📚 Temario:' : 'Simulacro:'} ${APP_STATE.currentExam.name}${APP_STATE.currentUnit ? ' - Tema ' + APP_STATE.currentUnit : ''}</h3>
-                    <p>Pregunta ${APP_STATE.currentQuestionIndex + 1} de ${totalQ} (Pool: ${poolSize})</p>
-                </div>
-                <span id="exam-timer" class="timer">1:00:00</span>
+            <div class="question-meta">
+                <span>Pregunta ${APP_STATE.currentQuestionIndex + 1} / ${total}</span>
+                ${q.unit ? `<span class="unit-badge">Tema ${q.unit}</span>` : ''}
             </div>
-            <div class="progress-bar-small" style="width: 100%; margin: 1.5rem 0;">
-                <div class="fill" style="width: ${((APP_STATE.currentQuestionIndex) / totalQ) * 100}%"></div>
+            <div class="progress-bar-small" style="width:100%;margin:0.75rem 0 1.5rem">
+                <div class="fill" style="width:${pct}%"></div>
             </div>
-            <p class="question-text">${escapeHTML(q.question)}</p>
+            <p class="question-text">${esc(q.question)}</p>
             <div id="options-grid" class="options-grid">
                 ${q.options.map((opt, i) => `
-                    <button class="option-btn" onclick="handleResponse(${i})">${escapeHTML(opt)}</button>
+                    <button class="option-btn" onclick="handleResponse(${i})">
+                        <span class="opt-letter">${String.fromCharCode(65+i)}</span>
+                        <span>${esc(opt)}</span>
+                    </button>
                 `).join('')}
             </div>
             <div id="feedback-area" class="feedback-area hidden"></div>
-            <div id="next-control" class="hidden" style="margin-top: 2rem; text-align: right;">
-                <button class="next-btn" onclick="nextQuestion()">Siguiente Pregunta →</button>
+            <div id="next-control" class="hidden" style="margin-top:1.5rem;text-align:right;">
+                <button class="next-btn" onclick="nextQuestion()">
+                    ${APP_STATE.currentQuestionIndex + 1 < total ? 'Siguiente →' : 'Ver Resultado'}
+                </button>
             </div>
-        </div>
-    `;
+        </div>`;
     updateTimerUI();
 }
 
 function handleResponse(index) {
     const q = APP_STATE.examQuestions[APP_STATE.currentQuestionIndex];
     const isCorrect = index === q.correct;
-    
-    // Store answer for final scoring
-    APP_STATE.answers.push({ correct: q.correct, selected: index });
+    APP_STATE.answers.push({ correct: q.correct, selected: index, question: q });
 
-    const buttons = document.querySelectorAll('.option-btn');
-    buttons.forEach(b => b.disabled = true);
-    
-    buttons[index].classList.add(isCorrect ? 'correct' : 'incorrect');
-    
+    document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
+    document.querySelectorAll('.option-btn')[index].classList.add(isCorrect ? 'correct' : 'incorrect');
     if (!isCorrect) {
-        buttons[q.correct].classList.add('correct');
-        const feedback = document.getElementById('feedback-area');
-        feedback.innerHTML = `
+        document.querySelectorAll('.option-btn')[q.correct].classList.add('correct');
+        // Save to fallos
+        if (APP_STATE.currentExam?.id) saveFallo(APP_STATE.currentExam.id, q);
+        document.getElementById('feedback-area').innerHTML = `
             <div class="explanation-box">
                 <strong>❌ Incorrecto</strong>
-                <p>La respuesta correcta es: <em>${escapeHTML(q.options[q.correct])}</em></p>
-                <hr>
-                <p>${escapeHTML(q.explanation)}</p>
-            </div>
-        `;
-        feedback.classList.remove('hidden');
+                <p>Respuesta correcta: <em>${esc(q.options[q.correct])}</em></p>
+                <hr style="border-color:rgba(255,255,255,0.07);margin:0.75rem 0">
+                <p>${esc(q.explanation)}</p>
+            </div>`;
     } else {
-        const feedback = document.getElementById('feedback-area');
-        feedback.innerHTML = `<div class="explanation-box correct-box"><strong>✅ ¡Correcto!</strong></div>`;
-        feedback.classList.remove('hidden');
+        // Remove from fallos if answered correctly
+        if (APP_STATE.currentExam?.id) removeFallo(APP_STATE.currentExam.id, q.concept_id);
+        document.getElementById('feedback-area').innerHTML = `
+            <div class="explanation-box correct-box"><strong>✅ ¡Correcto!</strong></div>`;
     }
-
+    document.getElementById('feedback-area').classList.remove('hidden');
     document.getElementById('next-control').classList.remove('hidden');
 }
 
@@ -567,71 +602,224 @@ function nextQuestion() {
     }
 }
 
+// ─── FINISH EXAM ────────────────────────────────────────────────
 function finishExam() {
     clearInterval(APP_STATE.timerInterval);
-    
-    const totalPreguntas = APP_STATE.examQuestions.length;
-    const N = 4; // Number of answer options (always 4 in this platform)
-    const penalizacionPorError = 1 / (N - 1); // = 1/3 ≈ 0.333
-
-    let aciertos = 0;
-    let errores = 0;
-    let omitidas = 0;
-
+    const total = APP_STATE.examQuestions.length;
+    const N = 4;
+    let aciertos = 0, errores = 0;
     APP_STATE.answers.forEach(a => {
         if (a.selected === a.correct) aciertos++;
-        else if (a.selected === -1) omitidas++;  // blank
-        else errores++;
+        else if (a.selected !== -1) errores++;
     });
-    // Count unanswered questions (navigated away without selecting)
-    omitidas += (totalPreguntas - APP_STATE.answers.length);
-
-    // FÓRMULA OFICIAL DAW EUROFORMAC
-    // Puntuación = Aciertos - Errores / (N - 1)
-    // Con N=4: Puntuación = Aciertos - Errores/3
-    const puntuacionBruta = aciertos - (errores * penalizacionPorError);
-    const puntuacionFinal = Math.max(0, puntuacionBruta); // No puede ser negativa
-    const calificacion = (puntuacionFinal / totalPreguntas) * 10;
-    
+    const omitidas = total - APP_STATE.answers.length;
+    const puntuacionBruta = aciertos - errores / (N - 1);
+    const puntuacionFinal = Math.max(0, puntuacionBruta);
+    const calificacion = (puntuacionFinal / total) * 10;
     const passed = calificacion >= 5;
-    const penalizacionTotal = (errores * penalizacionPorError).toFixed(2);
 
-    // 💾 Save to localStorage history
-    const examName = APP_STATE.currentUnit ? `${APP_STATE.currentExam.name} (T${APP_STATE.currentUnit})` : APP_STATE.currentExam.name;
-    saveExamResult(
-        APP_STATE.currentExam.id,
-        examName,
-        calificacion,
-        aciertos, errores, omitidas, totalPreguntas
-    );
+    const examName = APP_STATE.currentUnit
+        ? `${APP_STATE.currentExam.name} (T${APP_STATE.currentUnit})`
+        : APP_STATE.currentExam.name;
 
-    examRoot.innerHTML = `
+    saveExamResult(APP_STATE.currentExam.id, examName, calificacion, aciertos, errores, omitidas, total);
+
+    document.getElementById('exam-engine-root').innerHTML = `
         <div class="results-container">
             <h2>Resultado del Examen</h2>
-            <div class="score-circle ${passed ? 'passed' : 'failed'}">
-                ${calificacion.toFixed(2)}
-            </div>
+            <div class="score-circle ${passed ? 'passed' : 'failed'}">${calificacion.toFixed(2)}</div>
             <div class="stats-grid">
-                <div class="stat-item"><span>✅ Aciertos:</span> <strong>${aciertos}</strong></div>
-                <div class="stat-item"><span>❌ Errores:</span> <strong>${errores}</strong></div>
-                <div class="stat-item"><span>⬜ Omitidas:</span> <strong>${omitidas}</strong></div>
-                <div class="stat-item"><span>📉 Penalización:</span> <strong>-${penalizacionTotal}</strong></div>
+                <div class="stat-item"><span>✅ Aciertos</span><strong>${aciertos}</strong></div>
+                <div class="stat-item"><span>❌ Errores</span><strong>${errores}</strong></div>
+                <div class="stat-item"><span>⬜ Omitidas</span><strong>${omitidas}</strong></div>
+                <div class="stat-item"><span>📉 Penalización</span><strong>-${(errores/(N-1)).toFixed(2)}</strong></div>
             </div>
             <div class="formula-box">
                 <p><strong>Fórmula aplicada (DAW):</strong></p>
-                <p>Puntos = ${aciertos} − ${errores} ÷ ${N - 1} = <strong>${puntuacionFinal.toFixed(2)}</strong></p>
-                <p>Nota = ${puntuacionFinal.toFixed(2)} ÷ ${totalPreguntas} × 10 = <strong>${calificacion.toFixed(2)}</strong></p>
-                <small>Blanco = 0 pts | Error = −1/${N - 1} pts | Acierto = +1 pto</small>
+                <p>Puntos = ${aciertos} − ${errores} ÷ ${N-1} = <strong>${puntuacionFinal.toFixed(2)}</strong></p>
+                <p>Nota = ${puntuacionFinal.toFixed(2)} ÷ ${total} × 10 = <strong>${calificacion.toFixed(2)}</strong></p>
+                <small>Blanco = 0 pts | Error = −1/${N-1} pts | Acierto = +1 pto</small>
             </div>
             <div class="feedback-final">
                 ${passed ? '<h3>¡Enhorabuena! Has aprobado. 🎉</h3>' : '<h3>Necesitas repasar un poco más. 💪</h3>'}
             </div>
-            <button class="option-btn" style="width: auto; margin-top: 2rem;"
-                onclick="examModal.classList.add('hidden'); clearInterval(APP_STATE.timerInterval); renderProgress();">
-                🏠 Volver al Inicio
-            </button>
-        </div>
-    `;
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
+                <button class="next-btn" onclick="exitExamToHome()">🏠 Volver al Inicio</button>
+                <button class="next-btn" style="background:var(--secondary-color)" onclick="startExam('${APP_STATE.currentExam.id}'${APP_STATE.currentUnit ? ', ' + APP_STATE.currentUnit : ''})">🔄 Repetir</button>
+            </div>
+        </div>`;
 }
 
+function exitExamToHome() {
+    clearInterval(APP_STATE.timerInterval);
+    document.getElementById('exam-engine-root').innerHTML = '';
+    showView('dashboard');
+    renderFallosSection();
+}
+
+// ─── ROBUST TXT PARSER ──────────────────────────────────────────
+function parseTxtExam(text, syllabusId) {
+    const lines = text.split('\n')
+        .map(l => l.trim())
+        .filter(l => l !== '' && !l.toLowerCase().match(/^tema\s+\d+$/) && !l.includes('( 1.00 puntos )'));
+
+    const questions = [];
+    let i = 0;
+
+    while (i < lines.length) {
+        const questionLine = lines[i];
+        i++;
+
+        // Collect options: lines until we hit a line that doesn't look like an option
+        // Options are: lines starting with * (correct) or plain text that follows a question
+        const options = [];
+        let correctIndex = 0;
+
+        while (i < lines.length) {
+            const line = lines[i];
+            // Stop if this line looks like a new question (no * prefix and options already collected)
+            if (options.length >= 2) {
+                const nextIsOption = line.startsWith('*') || options.length < 4;
+                // Heuristic: if we have 3+ options and next line doesn't start with * and is not short, it's a new question
+                if (!line.startsWith('*') && options.length >= 3) break;
+                if (!line.startsWith('*') && options.length >= 2 && line.length > 80) break;
+            }
+
+            if (line.startsWith('*')) {
+                correctIndex = options.length;
+                options.push(line.substring(1).trim());
+            } else {
+                options.push(line);
+            }
+            i++;
+
+            if (options.length >= 4) break;
+        }
+
+        if (options.length >= 2) {
+            questions.push({
+                concept_id: `${syllabusId}_q${questions.length}`,
+                question: questionLine,
+                options,
+                correct: correctIndex,
+                explanation: 'Pregunta del temario oficial.',
+                unit: null
+            });
+        }
+    }
+
+    return questions;
+}
+
+// ─── SYLLABUS LAB ───────────────────────────────────────────────
+function startLab(syllabusId) {
+    const examInfo = APP_STATE.syllabusExams.find(e => e.id === syllabusId);
+    if (!examInfo) return;
+    const modal = document.getElementById('lab-modal');
+    document.getElementById('lab-root').innerHTML = `
+        <iframe src="${examInfo.file}" style="width:100%;height:100%;border:none;border-radius:12px;"></iframe>`;
+    modal.classList.remove('hidden');
+}
+
+function closeLab() {
+    document.getElementById('lab-modal').classList.add('hidden');
+    document.getElementById('lab-root').innerHTML = '';
+}
+
+// ─── FLASHCARD ENGINE ───────────────────────────────────────────
+function startFlashcard(subjectId, poolOverride = null) {
+    const subject = APP_STATE.subjects.find(s => s.id === subjectId);
+    const pool = poolOverride || shuffleArray(QUESTION_POOL[subjectId] || []);
+    if (pool.length === 0) { alert('No hay preguntas disponibles.'); return; }
+
+    APP_STATE.fcQuestions = pool;
+    APP_STATE.fcIndex = 0;
+    APP_STATE.fcFlipped = false;
+    APP_STATE.currentExam = subject;
+
+    document.getElementById('fc-subject-label').textContent = `${subject.icon} ${subject.name} — Flashcards`;
+    showView('flashcard');
+    renderFlashcard();
+}
+
+function startFallosFlashcard(subjectId) {
+    const subject = APP_STATE.subjects.find(s => s.id === subjectId);
+    const fallos = getFallos()[subjectId] || {};
+    const pool = shuffleArray(Object.values(fallos));
+    if (pool.length === 0) { alert('No hay fallos registrados.'); return; }
+    startFlashcard(subjectId, pool);
+    document.getElementById('fc-subject-label').textContent = `${subject.icon} ${subject.name} — Flashcards de Fallos`;
+}
+
+function renderFlashcard() {
+    const q = APP_STATE.fcQuestions[APP_STATE.fcIndex];
+    const total = APP_STATE.fcQuestions.length;
+    document.getElementById('fc-counter').textContent = `${APP_STATE.fcIndex + 1} / ${total}`;
+
+    document.getElementById('flashcard-root').innerHTML = `
+        <div class="fc-wrapper">
+            <div class="fc-card ${APP_STATE.fcFlipped ? 'flipped' : ''}" onclick="flipCard()">
+                <div class="fc-front">
+                    <div class="fc-hint">Toca para ver la respuesta</div>
+                    <p class="fc-question">${esc(q.question)}</p>
+                    ${q.unit ? `<span class="unit-badge" style="margin-top:1rem">Tema ${q.unit}</span>` : ''}
+                </div>
+                <div class="fc-back">
+                    <div class="fc-hint">Respuesta correcta</div>
+                    <p class="fc-answer">${esc(q.options[q.correct])}</p>
+                    <p class="fc-explanation">${esc(q.explanation)}</p>
+                </div>
+            </div>
+            <div class="fc-controls">
+                <button class="fc-btn fc-btn-fail" onclick="fcAnswer(false)" ${!APP_STATE.fcFlipped ? 'disabled' : ''}>❌ No lo sabía</button>
+                <button class="fc-btn fc-btn-skip" onclick="fcSkip()">⏭ Saltar</button>
+                <button class="fc-btn fc-btn-pass" onclick="fcAnswer(true)" ${!APP_STATE.fcFlipped ? 'disabled' : ''}>✅ Lo sabía</button>
+            </div>
+            <div class="fc-progress">
+                <div class="progress-bar-small" style="width:100%">
+                    <div class="fill" style="width:${(APP_STATE.fcIndex/total)*100}%"></div>
+                </div>
+            </div>
+        </div>`;
+}
+
+function flipCard() {
+    APP_STATE.fcFlipped = !APP_STATE.fcFlipped;
+    renderFlashcard();
+}
+
+function fcAnswer(knew) {
+    const q = APP_STATE.fcQuestions[APP_STATE.fcIndex];
+    if (!knew && APP_STATE.currentExam?.id) saveFallo(APP_STATE.currentExam.id, q);
+    if (knew && APP_STATE.currentExam?.id) removeFallo(APP_STATE.currentExam.id, q.concept_id);
+    fcNext();
+}
+
+function fcSkip() { fcNext(); }
+
+function fcNext() {
+    APP_STATE.fcIndex++;
+    APP_STATE.fcFlipped = false;
+    if (APP_STATE.fcIndex >= APP_STATE.fcQuestions.length) {
+        document.getElementById('flashcard-root').innerHTML = `
+            <div class="results-container" style="text-align:center;padding:3rem">
+                <h2>🎉 ¡Flashcards completadas!</h2>
+                <p style="color:var(--text-secondary);margin:1rem 0">Has repasado ${APP_STATE.fcQuestions.length} tarjetas.</p>
+                <div style="display:flex;gap:1rem;justify-content:center;margin-top:2rem;flex-wrap:wrap">
+                    <button class="next-btn" onclick="exitFlashcard()">🏠 Volver al Inicio</button>
+                    <button class="next-btn" style="background:var(--secondary-color)" onclick="startFlashcard('${APP_STATE.currentExam.id}')">🔄 Repetir</button>
+                </div>
+            </div>`;
+    } else {
+        renderFlashcard();
+    }
+}
+
+function exitFlashcard() {
+    document.getElementById('flashcard-root').innerHTML = '';
+    showView('dashboard');
+    renderFallosSection();
+}
+
+// ─── BOOT ───────────────────────────────────────────────────────
 init();

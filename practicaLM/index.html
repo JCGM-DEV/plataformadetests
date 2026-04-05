@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML/XML Practice Lab — Lenguaje de Marcas DAW</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="splash" class="splash">
+    <div class="splash-content">
+      <div class="splash-icon">🏷️</div>
+      <h1 class="splash-title">HTML/XML Practice Lab</h1>
+      <p class="splash-subtitle">Lenguaje de Marcas · DAW 2026</p>
+      <div class="splash-units">
+        <div class="unit-card" onclick="selectUnit('html')">
+          <div class="unit-badge">T2</div>
+          <h3>HTML5 & CSS3</h3>
+          <p>Editor en vivo: escribe HTML y ve el resultado al instante. Semántica, formularios, selectores CSS</p>
+          <div class="unit-topics"><span>Semántica</span><span>Formularios</span><span>CSS</span><span>DOM</span></div>
+          <button class="btn-primary">Practicar →</button>
+        </div>
+        <div class="unit-card" onclick="selectUnit('xml')">
+          <div class="unit-badge">T3–T4</div>
+          <h3>XML & XSD</h3>
+          <p>Valida documentos XML, escribe esquemas XSD y practica la estructura jerárquica</p>
+          <div class="unit-topics"><span>XML</span><span>XSD</span><span>DTD</span><span>Namespaces</span></div>
+          <button class="btn-primary">Practicar →</button>
+        </div>
+        <div class="unit-card" onclick="selectUnit('xslt')">
+          <div class="unit-badge">T5</div>
+          <h3>XPath & XSLT</h3>
+          <p>Practica expresiones XPath y transformaciones XSLT con ejercicios guiados</p>
+          <div class="unit-topics"><span>XPath</span><span>XSLT</span><span>xsl:for-each</span><span>xsl:if</span></div>
+          <button class="btn-primary">Practicar →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="app" class="app hidden">
+    <header class="topbar">
+      <button class="back-btn" onclick="goHome()">← Inicio</button>
+      <div class="topbar-center">
+        <span id="topbar-unit" class="topbar-unit"></span>
+        <span id="topbar-title" class="topbar-title"></span>
+      </div>
+      <div class="score-display">
+        <span id="score-correct" class="score correct">✓ <span>0</span></span>
+        <span id="score-wrong" class="score wrong">✗ <span>0</span></span>
+      </div>
+    </header>
+    <div class="layout">
+      <aside class="sidebar">
+        <nav id="sidebar-nav" class="sidebar-nav"></nav>
+        <div class="sidebar-progress">
+          <div class="progress-label">Progreso</div>
+          <div class="progress-bar-wrap"><div id="progress-bar" class="progress-bar-fill"></div></div>
+          <div id="progress-pct" class="progress-pct">0%</div>
+        </div>
+      </aside>
+      <main class="content" id="content-area">
+        <div id="lesson-view" class="lesson-view hidden"></div>
+        <div id="quiz-view" class="quiz-view hidden"></div>
+        <div id="drag-view" class="drag-view hidden"></div>
+        <div id="editor-view" class="editor-view hidden"></div>
+        <div id="welcome-panel" class="welcome-panel">
+          <div class="welcome-icon">🏷️</div>
+          <h2>Selecciona un tema del menú</h2>
+          <p>Lecciones, quizzes, editor en vivo y ejercicios de validación</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <div id="modal-overlay" class="modal-overlay hidden" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,741 @@
+tema 1
+
+¿Qué es una máquina de Turing?
+
+
+Una máquina matemática que permite reducir la estructura de cualquier dispositivo a su forma más esencial
+
+
+Un sistema de hardware y software que permite realizar tareas en una secuencia de pasos discretos
+
+
+Un tipo de ordenador que se basa en el uso de una cinta infinita y extensible para ejecutar funciones
+
+¿Qué permite la escalabilidad de las redes informáticas?
+
+
+Proteger la información y los recursos de posibles amenazas
+
+
+Adaptarse a las necesidades crecientes de la organización
+
+
+Ser fiables y estar disponibles en todo momento
+
+¿Qué deben ser las redes informáticas para proteger la privacidad y la integridad de los datos?
+
+
+Fiables y estar disponibles en todo momento
+
+
+Escalables
+
+
+Seguras
+
+¿Qué significa que las redes informáticas permitan la comunicación entre los dispositivos conectados?
+
+
+Los usuarios deben ser capaces de acceder a los mismos recursos de manera simultánea
+
+
+Los usuarios pueden enviar y recibir información de manera rápida y eficiente
+
+
+Deben estar diseñadas para proteger la información y los recursos de posibles amenazas
+
+¿Cuál es una de las principales características de las redes informáticas? 
+
+ 
+
+
+Proteger la privacidad y la integridad de los datos 
+
+
+Permitir la comunicación entre los dispositivos conectados 
+
+
+Adquirir una copia independiente para cada usuario
+
+¿Qué dispositivo permite la reproducción de sonido en el ordenador?
+
+
+Ratón
+
+
+Altavoces
+
+
+Impresora
+
+¿Qué es una de las normas importantes que un administrador de redes debe seguir para garantizar la seguridad de la información y los sistemas?
+
+
+Mantener una buena organización de cables
+
+
+Realizar copias de seguridad irregulares
+
+
+No proteger dispositivos móviles
+
+¿Cuál es el componente físico del sistema informático?
+
+
+Software
+
+
+Hardware
+
+
+Componente humano 
+
+¿Qué tipo de medios de transmisión requiere un canal físico para transmitir los datos?
+
+
+ Guiados 
+
+
+No guiados
+
+
+Ambos
+
+¿Qué periférico permite ingresar texto y comandos en el ordenador?
+
+
+Escáner
+
+
+Teclado
+
+
+Cámara web 
+
+tema 2
+
+¿Cuáles son los cuatro componentes principales de un sistema informático?
+
+
+Hardware, software, usuarios, seguridad
+
+
+Hardware, software, datos, usuarios
+
+
+Hardware, software, redes, periféricos
+
+¿Qué tarea crítica del sistema operativo implica la planificación de la ejecución de procesos y supervisar su finalización?
+
+
+Controlar y gestionar el uso del hardware del ordenador
+
+
+Administrar la ejecución de los procesos
+
+
+Controlar el proceso de organización de la información
+
+¿Qué es necesario hacer antes de actualizar una aplicación a una versión superior?
+
+
+Descargar manualmente e instalar la versión superior
+
+
+Comprobar si la versión superior es compatible con el sistema operativo y la licencia de la aplicación
+
+
+Realizar una copia de seguridad de los archivos y carpetas asociados a la aplicación
+
+¿Qué es la virtualización del hardware?
+
+
+La capacidad de ejecutar múltiples sistemas operativos en diferentes servidores físicos
+
+
+La capacidad de crear varias máquinas virtuales en un solo servidor físico
+
+
+La capacidad de almacenar datos de diferentes sistemas operativos en un solo servidor físico
+
+¿Cuál es la ventaja principal de la arquitectura monolítica?
+
+
+Su simplicidad y eficiencia
+
+
+Su modularidad y escalabilidad
+
+
+Su capacidad para agregar o eliminar funciones sin tener que recompilar todo el sistema
+
+¿Para qué se utiliza la preparación de imágenes del sistema para automatizar la instalación masiva de ordenadores?
+
+
+Para verificar si se dispone de la licencia correspondiente
+
+
+Para dividir el disco duro en secciones o particiones lógicas
+
+
+Para automatizar la instalación del sistema operativo en varios ordenadores
+
+¿Por qué es importante comprobar los requisitos, versiones y licencias antes de instalar una aplicación?
+
+
+Para asegurarse de tener suficiente espacio en disco
+
+
+Para garantizar el correcto funcionamiento de la aplicación y evitar problemas de licencia
+
+
+Para obtener nuevas funcionalidades y correcciones de errores
+
+¿Qué es el particionado del disco duro?
+
+
+La instalación de un sistema operativo
+
+
+La división del disco duro en secciones o particiones lógicas
+
+
+La verificación de la memoria RAM
+
+¿Qué son las aplicaciones de seguridad?
+
+
+Programas que se utilizan para proteger el sistema informático contra virus, malware y otras amenazas de seguridad
+
+
+Programas que se utilizan para la diversión y el entretenimiento
+
+
+Programas que se utilizan para la comunicación en línea
+
+¿Cuál es una de las funciones principales de un sistema operativo?
+
+
+Ejecutar aplicaciones
+
+
+Gestionar y coordinar el uso de los recursos de hardware y software
+
+
+Proteger el sistema de ataques de virus
+
+tema 3
+
+¿Qué tipo de particiones solo se pueden crear en un esquema MBR?  
+
+
+Primarias
+
+
+Extendidas
+
+
+Lógicas
+
+¿Cuál es la principal ventaja del esquema GPT sobre el esquema MBR?
+
+
+Es compatible con una amplia variedad de sistemas operativos y software
+
+
+Tiene una mejor protección contra la corrupción de datos
+
+
+Solo permite la creación de particiones primarias
+
+¿Cuál es la estructura de directorios típica de Windows?
+
+
+/, /bin, /etc, /home, /usr, /var
+
+
+ C:, C:\Windows, C:\Program Files, C:\Users
+
+
+/, /Applications, /Library, /System, /Users
+
+La interfaz de transferencia PATA:
+
+
+Utiliza un cable plano con 40 o 80 conductores para transferir datos de forma paralela
+
+
+Utiliza un solo cable para transferir datos de forma serial
+
+
+Utiliza un bus en serie para transferir datos
+
+¿Cuál es la principal ventaja de los dispositivos de almacenamiento externo?
+
+
+Mayor velocidad de transferencia de datos
+
+
+Mayor capacidad de almacenamiento
+
+
+Mayor flexibilidad y portabilidad
+
+¿Cuál es la principal diferencia entre el almacenamiento interno y externo?
+
+
+La velocidad de transferencia de datos
+
+
+La ubicación física del dispositivo
+
+
+La capacidad de almacenamiento
+
+¿Qué comando se utiliza en Linux para mostrar información sobre los procesos que se están ejecutando en el sistema?
+
+
+systeminfo
+
+
+top
+
+
+free
+
+¿Cuál es la capacidad de almacenamiento de un disco DVD?
+
+
+Hasta 2,5 GB
+
+
+Hasta 4,7 GB
+
+
+Hasta 25 GB
+
+¿Cuáles son los dos esquemas de particiones más comunes?
+
+
+FAT y NTFS
+
+
+MBR y GPT
+
+
+HFS+ y APFS  
+
+¿Qué tipo de dispositivo de almacenamiento es más resistente a golpes y vibraciones?
+
+
+Disco duro (HDD)
+
+
+Unidad de estado sólido (SSD)
+
+
+Tarjeta de memoria
+
+tema 4
+
+¿Qué es un perfil de usuario local en Windows?
+
+
+Una cuenta de usuario que solo puede acceder a recursos en línea
+
+
+Una cuenta de usuario que solo puede acceder a recursos locales en una computadora
+
+
+Una cuenta de usuario que solo puede acceder a recursos en una red local
+
+¿Qué comando se utiliza para añadir un usuario a un grupo en la consola de comandos de Windows?
+
+
+add_group_member
+
+
+net group
+
+
+add_user_to_group
+
+¿Por qué es importante la configuración de usuarios y grupos locales en la gestión de sistemas operativos?
+
+
+Para personalizar la apariencia del sistema operativo
+
+
+Para controlar el acceso y los permisos de los usuarios a los recursos del sistema
+
+
+Para mejorar la velocidad del sistema operativo
+
+¿Qué comando se utiliza para crear un nuevo usuario en la consola de comandos de Windows?
+
+
+create_user
+
+
+add_user
+
+
+net user
+
+¿Qué beneficios puede tener cambiar la ruta de las carpetas de documentos a otra partición o recurso de red?
+
+
+Liberar espacio en el disco principal y reducir la fragmentación del disco
+
+
+Mejorar la velocidad de Internet
+
+
+Aumentar el rendimiento del procesador
+
+¿Cómo se verifica que un usuario se ha creado correctamente en Windows utilizando la consola de comandos?
+
+
+Con el comando "show_user"
+
+
+Con el comando "verify_user"
+
+
+Con el comando "net user"
+
+¿Quién debe tener la capacidad de habilitar o deshabilitar cuentas de usuario?
+
+
+Todos los usuarios del sistema
+
+
+Solo los usuarios con privilegios de administrador
+
+
+Solo los usuarios que tengan una contraseña segura
+
+¿Por qué es importante tener una correcta gestión de permisos y acceso a recursos en un sistema informático?
+
+
+Para prevenir el acceso no autorizado a datos confidenciales
+
+
+Para mejorar la velocidad de Internet
+
+
+Para aumentar el rendimiento del procesador
+
+¿Por qué es importante asignar a un usuario a un grupo en un sistema operativo?
+
+
+Para que el usuario tenga acceso a todos los recursos del sistema
+
+
+Para simplificar la administración de permisos y ahorrar tiempo y esfuerzo.
+
+
+Para aumentar el riesgo de que un usuario tenga acceso a recursos que no debería tener
+
+¿Cuáles son algunas normas para crear una contraseña segura?
+
+
+La contraseña debe tener menos de ocho caracteres de longitud
+
+
+La contraseña debe contener una combinación de letras mayúsculas y minúsculas, números y símbolos
+
+
+La contraseña debe ser una palabra común o una secuencia de caracteres fácilmente reconocible
+
+tema 5
+
+¿Cuál es un ejemplo de protocolo de enrutamiento dinámico?
+
+
+Protocolo de enrutamiento estático
+
+
+Protocolo OSPF
+
+
+Protocolo de enrutamiento HTTP
+
+¿Cuáles son algunas de las ventajas de la configuración estática de redes?
+
+
+Mayor seguridad, estabilidad y control
+
+
+Menor seguridad, estabilidad y control
+
+
+Mayor seguridad, menor estabilidad y menor control
+
+¿Qué es una tabla de enrutamiento estática?
+
+
+Una tabla en la que las rutas se determinan automáticamente mediante protocolos de enrutamiento
+
+
+Una tabla que se crea automáticamente mediante el uso de protocolos de enrutamiento dinámicos
+
+
+Una tabla en la que se especifican manualmente las rutas que deben tomar los paquetes de datos para llegar a su destino
+
+¿Qué es una WLAN?
+
+
+Una red inalámbrica de largo alcance
+
+
+Una red inalámbrica de corto alcance
+
+
+Una red inalámbrica utilizada para conectar dispositivos en un área geográfica limitada
+
+¿Qué son las direcciones IP?
+
+
+Un número único que identifica a cada dispositivo en una red
+
+
+Un número aleatorio que se asigna a cada dispositivo en una red
+
+
+Una secuencia de letras que identifica a cada dispositivo en una red
+
+¿Qué es una máscara de subred?
+
+
+Una herramienta para bloquear el tráfico de la red
+
+
+Un código para identificar el dispositivo en una red
+
+
+Una herramienta para identificar qué parte de una dirección IP se utiliza para identificar la red y qué parte se utiliza para identificar el dispositivo en la red
+
+tema 6
+
+¿Qué es el control de acceso basado en roles?
+
+
+Una técnica que restringe el acceso a ciertos recursos del sistema en función del rol del usuario
+
+
+Una técnica que permite el acceso a todos los recursos del sistema sin restricciones
+
+
+Una técnica que no tiene relación con el acceso a recursos del sistema
+
+¿Qué es el cifrado de datos?
+
+
+Una técnica que se utiliza para proteger la confidencialidad de los datos almacenados en el equipo o transmitidos
+
+
+Una técnica que se utiliza para compartir datos públicamente sin protección
+
+
+Una técnica que no tiene relación con la protección de datos
+
+¿Para qué se utiliza OpenSSL?
+
+
+Para cifrar unidades de almacenamiento como discos duros internos o externos
+
+
+Para crear y gestionar certificados digitales y claves de cifrado
+
+
+Para enviar y recibir correos electrónicos cifrados
+
+¿Qué son los derechos de usuario en una red?
+
+
+Los permisos que se otorgan a los usuarios para acceder y utilizar los recursos compartidos de la red
+
+
+Los privilegios que se otorgan a los administradores de la red
+
+
+Los permisos que se otorgan a los usuarios para acceder a Internet
+
+¿Qué es una ACL?
+
+
+Un objeto de directiva de seguridad
+
+
+Una lista de control de acceso
+
+
+Un sistema operativo
+
+¿Cuál es una herramienta de gestión de usuarios y recursos de red de Microsoft?
+
+
+Firewall
+
+
+LDAP
+
+
+Active Directory
+
+¿Qué es la autenticación multifactorial?
+
+
+Una técnica que requiere que los usuarios proporcionen una forma de identificación antes de acceder a una cuenta
+
+
+Una técnica que requiere que los usuarios proporcionen dos o más formas de identificación antes de acceder a una cuenta
+
+
+Una técnica que permite el acceso a una cuenta sin necesidad de identificación
+
+¿Para qué se utilizan las directivas de seguridad?
+
+
+Para proteger la información confidencial
+
+
+Para garantizar la integridad del sistema
+
+
+Todas las anteriores
+
+¿Qué tipo de objetos de directiva de seguridad se utilizan para especificar los requisitos de contraseña?
+
+
+Usuarios y grupos
+
+
+Contraseñas
+
+
+Auditoría
+
+¿Por qué es importante establecer diferentes niveles de acceso en una red?
+
+
+Para que los usuarios tengan acceso completo a todos los recursos de la red
+
+
+Para evitar que los usuarios accedan a recursos que no necesitan y reducir el riesgo de violaciones de seguridad
+
+
+Para permitir que todos los usuarios tengan acceso a todos los recursos de la red
+
+tema 7
+
+¿Cuál es un ejemplo de software de recuperación de datos?
+
+
+Norton
+
+
+McAfee
+
+
+EaseUS
+
+¿Qué es un procesador de texto?
+
+
+Una herramienta informática que permite la creación, edición y formateo de documentos de texto
+
+
+Un tipo de hoja de cálculo que se utiliza para realizar cálculos y análisis de datos
+
+
+Un programa de edición de imágenes
+
+¿Cuál es el programa que controla y gestiona los recursos del hardware y proporciona una interfaz de usuario para que los usuarios puedan interactuar con la computadora?
+
+
+Los sistemas de archivos
+
+
+Los controladores de dispositivos
+
+
+El sistema operativo
+
+¿Cuál es una de las características principales de las herramientas de productividad?
+
+
+Automatización de tareas
+
+
+Recuperación de datos
+
+
+Escaneo de archivos
+
+¿Qué ventaja ofrece Google Docs en comparación con Microsoft Word?
+
+
+Amplia gama de funciones y herramientas avanzadas para crear documentos complejos
+
+
+Almacenamiento en la nube y acceso en cualquier momento y desde cualquier lugar
+
+
+Es software libre y de pago
+
+¿Cuál es el procesador de texto más utilizado en el mundo?
+
+
+microsoft Word
+
+
+Google Docs
+
+
+LibreOffice Writer
+
+¿Qué es el software antivirus?
+
+
+Un tipo de software diseñado para mejorar la productividad
+
+
+Un tipo de software diseñado para detectar, prevenir y eliminar programas maliciosos
+
+
+Un tipo de software diseñado para recuperar datos perdidos
+
+¿Cuál es la función principal del software de sistema?
+
+
+Realizar tareas específicas en la computadora.
+
+
+Controlar y coordinar el funcionamiento del hardware y proporcionar una interfaz entre el usuario y el hardware
+
+
+Escribir, depurar y mantener programas de software
+
+¿Qué son las herramientas de desarrollo integradas?
+
+
+Herramientas que permiten al usuario realizar diferentes tareas, como realizar copias de seguridad de datos, optimizar el rendimiento del sistema, o desinstalar programas
+
+
+Herramientas que incluyen un editor de código, un depurador y un compilador, todos integrados en una única interfaz de usuario
+
+
+Herramientas que permiten al usuario identificar y solucionar problemas en el sistema, como errores de hardware o software
+
+¿Qué significa que las bases de datos sean escalables y flexibles?
+
+
+Que tienen una estructura y organización definida
+
+
+Que pueden crecer y evolucionar a medida que cambian las necesidades de la organización
+
+
+Que no se pueden integrar con otras aplicaciones informáticas

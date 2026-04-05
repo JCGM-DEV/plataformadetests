@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQL & BD Practice Lab — Bases de Datos DAW</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- SPLASH -->
+  <div id="splash" class="splash">
+    <div class="splash-content">
+      <div class="splash-icon">🗄️</div>
+      <h1 class="splash-title">SQL & BD Practice Lab</h1>
+      <p class="splash-subtitle">Bases de Datos · DAW 2026</p>
+      <div class="splash-units">
+        <div class="unit-card" onclick="selectUnit('sql')">
+          <div class="unit-badge">T2–T5</div>
+          <h3>SQL Interactivo</h3>
+          <p>Escribe y ejecuta consultas SELECT, INSERT, UPDATE, DELETE sobre una BD simulada en memoria</p>
+          <div class="unit-topics"><span>SELECT</span><span>JOIN</span><span>GROUP BY</span><span>DML</span></div>
+          <button class="btn-primary">Practicar →</button>
+        </div>
+        <div class="unit-card" onclick="selectUnit('er')">
+          <div class="unit-badge">T3</div>
+          <h3>Diagramas E-R</h3>
+          <p>Identifica entidades, atributos, relaciones y cardinalidades. Normalización 1FN–3FN</p>
+          <div class="unit-topics"><span>Entidades</span><span>Cardinalidad</span><span>Normalización</span></div>
+          <button class="btn-primary">Practicar →</button>
+        </div>
+        <div class="unit-card" onclick="selectUnit('prog')">
+          <div class="unit-badge">T6</div>
+          <h3>Programación BD</h3>
+          <p>Procedimientos almacenados, funciones, cursores, triggers y transacciones en MySQL</p>
+          <div class="unit-topics"><span>Procedimientos</span><span>Funciones</span><span>Cursores</span><span>Triggers</span></div>
+          <button class="btn-primary">Practicar →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN APP -->
+  <div id="app" class="app hidden">
+    <header class="topbar">
+      <button class="back-btn" onclick="goHome()">← Inicio</button>
+      <div class="topbar-center">
+        <span id="topbar-unit" class="topbar-unit"></span>
+        <span id="topbar-title" class="topbar-title"></span>
+      </div>
+      <div class="score-display">
+        <span id="score-correct" class="score correct">✓ <span>0</span></span>
+        <span id="score-wrong" class="score wrong">✗ <span>0</span></span>
+      </div>
+    </header>
+    <div class="layout">
+      <aside class="sidebar">
+        <nav id="sidebar-nav" class="sidebar-nav"></nav>
+        <div class="sidebar-progress">
+          <div class="progress-label">Progreso</div>
+          <div class="progress-bar-wrap"><div id="progress-bar" class="progress-bar-fill"></div></div>
+          <div id="progress-pct" class="progress-pct">0%</div>
+        </div>
+      </aside>
+      <main class="content" id="content-area">
+        <div id="lesson-view" class="lesson-view hidden"></div>
+        <div id="quiz-view" class="quiz-view hidden"></div>
+        <div id="drag-view" class="drag-view hidden"></div>
+        <div id="sql-view" class="sql-view hidden"></div>
+        <div id="er-view" class="er-view hidden"></div>
+        <div id="welcome-panel" class="welcome-panel">
+          <div class="welcome-icon">🗄️</div>
+          <h2>Selecciona un tema del menú</h2>
+          <p>Lecciones, quizzes, ejercicios SQL interactivos y diagramas E-R</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <div id="modal-overlay" class="modal-overlay hidden" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java POO Practice Lab — Programación DAW</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="splash" class="splash">
+    <div class="splash-content">
+      <div class="splash-icon">💻</div>
+      <h1 class="splash-title">Java POO Practice Lab</h1>
+      <p class="splash-subtitle">Programación · DAW 2026</p>
+      <div class="splash-units">
+        <div class="unit-card" onclick="selectUnit('poo')">
+          <div class="unit-badge">T1–T5</div>
+          <h3>POO & Fundamentos</h3>
+          <p>Clases, objetos, herencia, polimorfismo, encapsulación e interfaces en Java</p>
+          <div class="unit-topics"><span>Clases</span><span>Herencia</span><span>Polimorfismo</span><span>Interfaces</span></div>
+          <button class="btn-primary">Practicar →</button>
+        </div>
+        <div class="unit-card" onclick="selectUnit('colecciones')">
+          <div class="unit-badge">T6–T8</div>
+          <h3>Colecciones & Excepciones</h3>
+          <p>ArrayList, HashMap, iteradores, manejo de excepciones try-catch-finally</p>
+          <div class="unit-topics"><span>ArrayList</span><span>HashMap</span><span>Excepciones</span><span>Iteradores</span></div>
+          <button class="btn-primary">Practicar →</button>
+        </div>
+        <div class="unit-card" onclick="selectUnit('ficheros')">
+          <div class="unit-badge">T9–T10</div>
+          <h3>Ficheros & Hilos</h3>
+          <p>Lectura/escritura de ficheros, serialización, hilos y sincronización</p>
+          <div class="unit-topics"><span>File I/O</span><span>Serialización</span><span>Threads</span><span>Sync</span></div>
+          <button class="btn-primary">Practicar →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="app" class="app hidden">
+    <header class="topbar">
+      <button class="back-btn" onclick="goHome()">← Inicio</button>
+      <div class="topbar-center">
+        <span id="topbar-unit" class="topbar-unit"></span>
+        <span id="topbar-title" class="topbar-title"></span>
+      </div>
+      <div class="score-display">
+        <span id="score-correct" class="score correct">✓ <span>0</span></span>
+        <span id="score-wrong" class="score wrong">✗ <span>0</span></span>
+      </div>
+    </header>
+    <div class="layout">
+      <aside class="sidebar">
+        <nav id="sidebar-nav" class="sidebar-nav"></nav>
+        <div class="sidebar-progress">
+          <div class="progress-label">Progreso</div>
+          <div class="progress-bar-wrap"><div id="progress-bar" class="progress-bar-fill"></div></div>
+          <div id="progress-pct" class="progress-pct">0%</div>
+        </div>
+      </aside>
+      <main class="content" id="content-area">
+        <div id="lesson-view" class="lesson-view hidden"></div>
+        <div id="quiz-view" class="quiz-view hidden"></div>
+        <div id="drag-view" class="drag-view hidden"></div>
+        <div id="code-view" class="code-view hidden"></div>
+        <div id="welcome-panel" class="welcome-panel">
+          <div class="welcome-icon">💻</div>
+          <h2>Selecciona un tema del menú</h2>
+          <p>Lecciones, quizzes, ejercicios de código y clasificación de conceptos</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <div id="modal-overlay" class="modal-overlay hidden" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

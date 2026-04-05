@@ -1,0 +1,1020 @@
+tema 1
+
+Los lenguajes de programación utilizan distintos tipos de datos para representar la información y gestionar la memoria de forma adecuada. ¿Cuál de los siguientes no pertenece a los tipos de datos básicos o primitivos?
+
+Número entero.
+
+
+Valor booleano.
+
+
+Array o arreglo.
+
+Aunque a menudo se confunden, los conceptos de algoritmo y programa no son equivalentes. ¿Cuál de las siguientes afirmaciones describe correctamente la relación entre ambos?
+
+El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación.
+
+
+El programa es independiente del lenguaje y el algoritmo depende del lenguaje utilizado.
+
+
+Ambos conceptos son idénticos y se diferencian solo por el formato en el que se escriben.
+
+Durante el desarrollo de un programa, pueden aparecer errores que no impiden la compilación pero provocan resultados incorrectos. ¿Cuál es la función principal de un depurador (debugger) dentro de un entorno de desarrollo?
+
+Detectar errores de sintaxis antes de ejecutar el programa.
+
+
+Ejecutar el programa de forma más rápida y optimizada.
+
+
+Analizar la ejecución paso a paso para localizar errores lógicos.
+
+Antes de escribir un programa, es fundamental diseñar correctamente el algoritmo que resolverá el problema. Para que una secuencia de pasos pueda considerarse un algoritmo válido, debe cumplir una serie de características. ¿Cuál de las siguientes es una de ellas?
+
+Debe poder ejecutarse directamente por la máquina sin traducción.
+
+
+Debe ser finito y finalizar tras un número limitado de pasos.
+
+
+Debe estar escrito obligatoriamente en un lenguaje de programación concreto.
+
+Todo programa informático sigue un modelo básico de funcionamiento que permite transformar datos en información útil. Dentro del modelo Entrada–Proceso–Salida, ¿qué elemento se considera el núcleo del programa?
+
+Los datos que introduce el usuario mediante dispositivos de entrada.
+
+
+El algoritmo que procesa los datos y aplica la lógica del programa.
+
+
+El sistema que muestra el resultado final al usuario.
+
+Las estructuras de control permiten modificar el flujo normal de ejecución de un programa. ¿Qué tipo de estructura se utiliza cuando es necesario repetir varias veces un conjunto de instrucciones mientras se cumpla una condición?
+
+Estructura secuencial.
+
+
+Estructura selectiva.
+
+
+Estructura iterativa.
+
+Los paradigmas de programación ofrecen diferentes formas de organizar y estructurar el software. En el paradigma orientado a objetos, ¿cuál es el elemento central sobre el que se construyen los programas?
+
+Las funciones matemáticas.
+
+
+Los objetos que combinan datos y comportamiento.
+
+
+Las instrucciones ejecutadas de forma secuencial.
+
+Java es un lenguaje de programación con un modelo de ejecución particular que combina características de distintos enfoques. ¿Por qué se considera que Java utiliza un sistema híbrido de compilación e interpretación?
+
+Porque el código se ejecuta directamente como código máquina del sistema operativo.
+
+
+Porque el código se compila a bytecode y se ejecuta mediante la Máquina Virtual de Java.
+
+
+Porque no necesita ningún proceso previo para poder ejecutarse.
+
+La programación no se limita únicamente a escribir código, sino que engloba varias tareas necesarias para que un programa funcione correctamente a lo largo del tiempo. ¿Cuál de las siguientes opciones define mejor qué es programar?
+
+Utilizar programas informáticos ya existentes para resolver tareas cotidianas.
+
+
+Diseñar, codificar, depurar y mantener programas que ejecuta un ordenador.
+
+
+Ejecutar instrucciones previamente creadas sin necesidad de modificarlas.
+
+En informática es importante diferenciar entre los conceptos de dato e información, ya que no significan exactamente lo mismo. ¿Cuál de las siguientes afirmaciones es correcta?
+
+El dato es información interpretada y la información es un dato sin procesar.
+
+
+El dato es un valor aislado y la información es el resultado de procesar datos con un contexto.
+
+
+Ambos términos se utilizan indistintamente y no existe diferencia real entre ellos.
+
+tema 2
+
+Los métodos permiten definir el comportamiento de los objetos y pueden devolver o no un valor. ¿Qué indica que un método tenga como tipo de retorno la palabra clave void?
+
+Que el método devuelve un valor vacío.
+
+
+Que el método no realiza ninguna acción.
+
+
+Que el método realiza una acción pero no devuelve ningún valor.
+
+Los atributos de una clase representan el estado de los objetos creados a partir de ella. ¿Cuál de las siguientes afirmaciones sobre los atributos es correcta?
+
+Los atributos se declaran dentro de los métodos.
+
+
+Cada objeto tiene su propia copia de los atributos definidos en la clase.
+
+
+Todos los objetos comparten los mismos valores de los atributos.
+
+El constructor es un elemento fundamental dentro de una clase en Java y cumple una función específica. ¿Cuál es la misión principal de un constructor?
+
+Ejecutar la lógica principal del programa.
+
+
+Inicializar los atributos del objeto en el momento de su creación.
+
+
+Definir el comportamiento común de todas las clases.
+
+En programación orientada a objetos, una clase no representa directamente un objeto real, sino una definición abstracta que sirve como base para crear instancias. ¿Cuál de las siguientes afirmaciones describe correctamente el concepto de clase?
+
+Es una estructura que contiene únicamente métodos sin datos asociados.
+
+
+Es una plantilla que define los atributos y comportamientos de una entidad.
+
+
+Es un objeto creado en memoria mediante el operador new.
+
+En Java, las variables que hacen referencia a objetos no almacenan el objeto en sí, sino una dirección de memoria. ¿Qué consecuencia tiene esto al asignar una referencia a otra?
+
+Se crea automáticamente una copia independiente del objeto.
+
+
+Ambas referencias apuntan al mismo objeto en memoria.
+
+
+El objeto original se elimina de la memoria.
+
+Cuando una clase tiene una relación fuerte de “todo-parte” con otra y la parte no puede existir sin el todo, estamos ante un tipo concreto de relación entre clases. ¿De cuál se trata?
+
+Dependencia.
+
+
+Agregación.
+
+
+Composición.
+
+Los métodos getter y setter se utilizan para controlar el acceso a los atributos privados de una clase. ¿Cuál es una de las principales ventajas de usar setters en lugar de hacer públicos los atributos?
+
+Permiten acceder directamente a la memoria del objeto.
+
+
+Permiten validar los datos antes de modificar el estado del objeto.
+
+
+Eliminan la necesidad de constructores.
+
+El encapsulamiento es uno de los principios clave de la programación orientada a objetos y se apoya en los modificadores de acceso. ¿Cuál es la regla de oro más habitual en Java para aplicar correctamente el encapsulamiento?
+
+Atributos públicos y métodos privados.
+
+
+Atributos privados y métodos públicos.
+
+
+Atributos y métodos siempre protected.
+
+El polimorfismo permite que un mismo mensaje provoque comportamientos distintos según el objeto que lo reciba. ¿Qué requisito técnico es necesario para que el polimorfismo funcione correctamente en Java?
+
+El uso exclusivo de atributos protected.
+
+
+La sobreescritura de métodos en las clases hijas.
+
+
+La creación de múltiples constructores.
+
+En Java, todo el código debe estar contenido dentro de clases, y estas siguen una estructura concreta y unas normas estrictas. ¿Cuál de las siguientes reglas es obligatoria cuando se define una clase pública?
+
+El nombre de la clase debe escribirse en minúsculas.
+
+
+El archivo debe llamarse igual que la clase pública y tener extensión .java.
+
+
+La clase debe contener al menos un método main.
+
+tema 3
+
+Las variables en Java tienen un ciclo de vida y un proceso de uso muy definido. ¿Cuál es el orden correcto para poder utilizar una variable sin provocar un error de compilación?
+
+Inicializar &rarr; declarar &rarr; utilizar.
+
+
+Declarar &rarr; inicializar &rarr; utilizar.
+
+
+Utilizar &rarr; declarar &rarr; inicializar.
+
+En Java, el punto y coma es un elemento sintáctico obligatorio en la mayoría de las instrucciones. ¿Qué indica realmente el punto y coma dentro del código?
+
+El final lógico de un bloque de código.
+
+
+El final de una sentencia para el compilador.
+
+
+El final de una línea de texto para el programador.
+
+Cuando se realiza una conversión explícita de un tipo de dato mayor a uno menor, como de double a int, ¿qué efecto se produce?
+
+El valor se redondea automáticamente.
+
+
+Se produce un truncamiento y posible pérdida de información.
+
+
+Java lanza siempre una excepción en tiempo de ejecución.
+
+Las llaves { } juegan un papel fundamental en la organización del código Java y afectan directamente a la visibilidad de las variables. ¿Qué función principal cumplen las llaves dentro de un programa?
+
+Indicar el final de cada instrucción.
+
+
+Definir bloques de código y el ámbito de las variables.
+
+
+Separar visualmente el código para mejorar su legibilidad.
+
+Las expresiones pueden combinar varios operadores, y Java sigue una jerarquía estricta para evaluarlas. ¿Qué operador tiene mayor prioridad en una expresión compleja?
+
+Los operadores aritméticos de suma y resta.
+
+
+Los operadores de asignación.
+
+
+Los paréntesis.
+
+Al trabajar con constantes en Java se utiliza la palabra reservada final. ¿Cuál es la principal ventaja de usar constantes frente a valores literales repetidos en el código?
+
+Aumentan el rendimiento del programa.
+
+
+Permiten cambiar su valor en tiempo de ejecución.
+
+
+Mejoran la legibilidad y facilitan el mantenimiento del código.
+
+Dentro de las estructuras de control de flujo, las sentencias break, continue y return tienen efectos distintos. ¿Qué ocurre cuando se ejecuta una sentencia return dentro de un bucle?
+
+Se salta únicamente la iteración actual del bucle.
+
+
+Se finaliza el bucle pero continúa el método.
+
+
+Se sale inmediatamente del método completo.
+
+Los identificadores permiten nombrar variables, métodos, clases y paquetes, pero deben cumplir unas reglas estrictas. ¿Cuál de las siguientes opciones representa un identificador válido y bien escrito para una variable?
+
+1contador
+
+
+nombre usuario
+
+
+nombreUsuario
+
+En Java, el código fuente no es un texto plano, sino que sigue una estructura jerárquica muy concreta. ¿Cuál es el orden correcto y obligatorio de los elementos que debe respetar un programa ejecutable?
+
+Clase &rarr; Paquete &rarr; Método &rarr; Sentencias.
+
+
+Paquete (opcional) &rarr; Clase &rarr; Método &rarr; Sentencias.
+
+
+Método &rarr; Clase &rarr; Paquete &rarr; Sentencias.
+
+Java distingue claramente entre tipos de datos primitivos y tipos de referencia. ¿Cuál de las siguientes afirmaciones es correcta respecto a los tipos primitivos?
+
+Son objetos y disponen de métodos propios.
+
+
+Almacenan directamente el valor en memoria y no son objetos.
+
+
+Siempre se almacenan en el Heap.
+
+tema 4
+
+¿Cuál de las siguientes afirmaciones describe correctamente la relación entre una clase y un objeto en Python?
+
+
+Una clase es un tipo de dato primitivo, y un objeto es una variable que almacena ese tipo de dato.
+
+
+Una clase actúa como una plantilla o plano que define las propiedades y métodos, mientras que un objeto es una instancia específica creada a partir de esa clase.
+
+
+Un objeto es una función que se define dentro de una clase, y la clase es el resultado de la ejecución de un objeto.
+
+Durante la ejecución de un programa Java, ¿en qué situación un objeto pasa a ser considerado inalcanzable y candidato a la recolección de basura?
+
+Cuando se declara la variable de referencia que lo apuntará.
+
+
+Cuando ninguna referencia activa apunta al objeto en memoria.
+
+
+Cuando el programa invoca explícitamente el recolector de basura.
+
+En relación con el paso de parámetros en Java, señale la afirmación correcta:
+
+Java utiliza paso por referencia para objetos y paso por valor para primitivos.
+
+
+Java pasa siempre una copia del valor, aunque en los objetos dicho valor sea la referencia.
+
+
+Java permite elegir entre paso por valor o por referencia.
+
+En el uso profesional de la Programación Orientada a Objetos, ¿cuál es la finalidad principal del encapsulamiento?
+
+Facilitar el acceso directo a los atributos desde cualquier clase.
+
+
+Proteger el estado interno del objeto y controlar su modificación.
+
+
+Reducir el número de métodos definidos en una clase.
+
+Respecto a la definición y uso de métodos en una clase, ¿qué característica permite la sobrecarga de métodos?
+
+Diferenciar los métodos únicamente por su tipo de retorno.
+
+
+Definir varios métodos con el mismo nombre y distinta firma de parámetros.
+
+
+Utilizar modificadores de acceso diferentes en cada método.
+
+Desde el punto de vista del diseño orientado a objetos, ¿cuál es la diferencia conceptual entre herencia y composición?
+
+La herencia modela una relación “tiene un” y la composición una relación “es un”.
+
+
+La herencia establece una relación “es un” y la composición una relación “tiene un”.
+
+
+Ambas representan exactamente el mismo tipo de relación.
+
+Desde el punto de vista de la gestión de memoria, ¿qué elemento se almacena en el Stack cuando se trabaja con objetos en Java?
+
+El objeto completo con todos sus atributos.
+
+
+La referencia que apunta al objeto almacenado en el Heap.
+
+
+Una copia independiente del objeto original.
+
+En proyectos Java de tamaño medio o grande, ¿qué combinación de prácticas contribuye directamente a la organización, reutilización y mantenibilidad del código?
+
+Uso de paquetes, gestión de librerías y documentación mediante Javadoc.
+
+
+Uso exclusivo de clases públicas sin separación en paquetes.
+
+
+Eliminación de comentarios y documentación para simplificar el código.
+
+En relación con la asignación de variables en Java, ¿qué ocurre cuando dos variables de tipo objeto se igualan?
+
+Se crea automáticamente una copia independiente del objeto.
+
+
+Ambas variables pasan a compartir la referencia al mismo objeto.
+
+
+El objeto se duplica en el Heap para evitar efectos colaterales.
+
+En el diseño de constructores, ¿qué consecuencia tiene definir al menos un constructor con parámetros en una clase?
+
+Java mantiene siempre disponible el constructor vacío implícito.
+
+
+El constructor vacío deja de existir si no se define explícitamente.
+
+
+Se impide la sobrecarga de constructores.
+
+tema 5
+
+En relación con los arrays multidimensionales en Java, ¿cuál de las siguientes afirmaciones es correcta?
+
+Representan una estructura continua de memoria bidimensional real.
+
+
+Son arrays cuyos elementos son, a su vez, otros arrays.
+
+
+Tienen un único valor de longitud para filas y columnas.
+
+En relación con los índices de un array, señale la afirmación correcta:
+
+El primer elemento se encuentra en la posición 1.
+
+
+El último elemento se encuentra en la posición igual a la longitud del array.
+
+
+Los índices válidos van desde 0 hasta longitud menos uno.
+
+Desde el punto de vista de la memoria en Java, ¿cuál es la característica fundamental de un array?
+
+Es una estructura primitiva que se almacena íntegramente en el Stack.
+
+
+Es un objeto que se almacena en el Heap y se accede mediante una referencia.
+
+
+Es una colección dinámica cuyo tamaño puede variar durante la ejecución.
+
+En el procesamiento de arrays, ¿qué característica distingue al recorrido con for-each frente al for clásico?
+
+Permite modificar directamente los elementos del array.
+
+
+Proporciona acceso al índice y al valor simultáneamente.
+
+
+Está orientado a la lectura secuencial sin acceso a la posición.
+
+¿Cuál es la finalidad principal de la propiedad length en los arrays?
+
+Modificar el tamaño del array durante la ejecución.
+
+
+Conocer el número de elementos para acceder y recorrer el array de forma segura.
+
+
+Contar únicamente los elementos que han sido inicializados explícitamente.
+
+Desde un enfoque profesional, ¿cuál es la ventaja principal de utilizar los métodos de ordenación proporcionados por Java frente a los algoritmos académicos?
+
+Son más sencillos conceptualmente que los algoritmos clásicos.
+
+
+Están optimizados y reducen errores en la implementación.
+
+
+Permiten mantener el orden original del array automáticamente.
+
+Respecto a los algoritmos de búsqueda, ¿cuál es la condición indispensable para poder aplicar una búsqueda binaria?
+
+Que el array tenga un tamaño reducido.
+
+
+Que el array esté previamente ordenado.
+
+
+Que el array contenga únicamente valores numéricos.
+
+¿Qué afirmación describe correctamente el tamaño de un array en Java?
+
+El tamaño puede modificarse añadiendo o eliminando elementos.
+
+
+El tamaño se fija en el momento de su creación y no puede cambiar.
+
+
+El tamaño depende del número de elementos inicializados manualmente.
+
+Al trabajar con cadenas de caracteres en Java, ¿qué significa que la clase String sea inmutable?
+
+Que no se pueden comparar dos cadenas entre sí.
+
+
+Que una vez creado un texto, no puede modificarse su contenido.
+
+
+Que solo puede crearse mediante el operador new.
+
+¿Cuál es la forma correcta de comparar el contenido de dos cadenas de caracteres en Java?
+
+Utilizando el operador de igualdad para comprobar las referencias.
+
+
+Comparando directamente su longitud.
+
+
+Utilizando un método que evalúa el contenido textual.
+
+tema 6
+
+¿Cuál es la diferencia fundamental de diseño entre una Clase Abstracta y una Interfaz?
+
+La Clase Abstracta define qué "ES" el objeto (identidad), mientras que la Interfaz define qué "PUEDE HACER" (capacidad).
+
+
+Las Interfaces permiten guardar variables de estado mutables y las Clases Abstractas no.
+
+
+Las Clases Abstractas permiten herencia múltiple y las Interfaces solo herencia simple.
+
+¿Qué característica define al modificador de acceso protected?
+
+Hace que el miembro sea visible solo para la clase actual y nadie más.
+
+
+Permite el acceso a cualquier clase del mismo paquete y a cualquier subclase, incluso en paquetes distintos.
+
+
+Es exactamente igual al acceso public, pero solo funciona con métodos static.
+
+En Java, ¿cuál es la jerarquía máxima de la que heredan implícitamente todas las clases, incluidos los arrays y Strings?
+
+La clase java.lang.Object.
+
+
+La clase Super.
+
+
+No existe una jerarquía común; cada clase es independiente a menos que use extends.
+
+¿Por qué Java prohíbe la herencia múltiple de clases (heredar de dos padres a la vez)?
+
+Para evitar el "Problema del Diamante" y la ambigüedad en la ejecución de métodos.
+
+
+Porque consumiría demasiada memoria en el Heap al duplicar los constructores.
+
+
+Porque todas las clases deben ser obligatoriamente final para ser seguras.
+
+¿Cuál es la función principal de la anotación @Override en la sobreescritura de métodos?
+
+Obligar al método a ser final para que no pueda volver a cambiarse.
+
+
+Actuar como un control de calidad que avisa al compilador si el método no existe en el padre.
+
+
+Permitir que el método cambie su lista de parámetros (Sobrecarga).
+
+Sobre las clases abstractas, ¿cuál es la "Regla de Hierro" mencionada en el temario?
+
+Deben tener obligatoriamente todos sus métodos vacíos.
+
+
+No se pueden crear objetos (instancias) de una clase abstracta.
+
+
+Solo pueden heredar de interfaces y nunca de otras clases.
+
+Si deseamos garantizar que un algoritmo crítico no sea alterado por ninguna subclase, ¿qué debemos hacer?
+
+Declarar el método como abstract.
+
+
+Declarar el método como final.
+
+
+Declarar el método como static y private simultáneamente.
+
+Al decidir entre Herencia y Composición, ¿qué principio de diseño de software recomienda el temario?
+
+Priorizar siempre la Herencia para maximizar la reutilización de código de "Caja Blanca".
+
+
+Favorecer la Composición sobre la Herencia para obtener un acoplamiento más bajo y flexible.
+
+
+Usar la Herencia para relaciones "Tiene-Un" y la Composición para relaciones "Es-Un".
+
+Si un método es declarado como static, ¿cuál de las siguientes afirmaciones es CORRECTA?
+
+Pertenece a la clase y no puede acceder a variables de instancia ni usar this.
+
+
+Requiere crear un objeto con new antes de poder ser invocado.
+
+
+Cada objeto creado tiene su propia copia privada de dicho método en memoria.
+
+Respecto a los constructores y la herencia, ¿cuál es el orden estricto de inicialización?
+
+Primero se inicializa la subclase (hija) y finalmente la superclase (padre).
+
+
+Se inicializan simultáneamente para optimizar la carga de la JVM.
+
+
+Los padres siempre se inicializan antes que los hijos, empezando desde la clase Object.
+
+tema 7
+
+¿Para qué se utiliza la palabra clave throws (en plural) en la firma de un método?
+
+Para lanzar una instancia específica de una excepción en una línea concreta de código.
+
+
+Para indicar que el método delega la responsabilidad de gestionar ciertas excepciones a quien lo invoque.
+
+
+Para obligar al bloque finally a cerrar todos los recursos abiertos de forma manual.
+
+Al recorrer una colección, ¿en qué caso es indispensable utilizar un Iterator en lugar de un bucle for-each?
+
+Cuando solo necesitamos leer los datos sin modificarlos.
+
+
+Cuando queremos filtrar la colección mediante un objeto Stream.
+
+
+Cuando necesitamos eliminar elementos de la colección de forma segura mientras la recorremos.
+
+¿Cuál es el propósito de utilizar Genéricos (<T>) al declarar una colección como ArrayList<String>?
+
+Permitir que la lista guarde cualquier tipo de objeto (mezclar enteros, cadenas, etc.).
+
+
+Aportar seguridad de tipos en tiempo de compilación y evitar la necesidad de realizar castings manuales.
+
+
+Hacer que la colección sea inmutable y no se puedan añadir más elementos tras su creación.
+
+Dentro del Java Collections Framework, ¿qué interfaz debe usarse si se requiere una colección que no permita elementos duplicados?
+
+List
+
+
+Set
+
+
+Queue
+
+¿Cuál es la diferencia principal entre un ArrayList y un HashSet?
+
+El ArrayList mantiene el orden de inserción, mientras que el HashSet no garantiza ningún orden.
+
+
+El ArrayList no permite duplicados y el HashSet sí.
+
+
+El HashSet es más lento para acceder a elementos que el ArrayList porque usa índices.
+
+Sobre la interfaz Map, ¿cuál de las siguientes afirmaciones es correcta según el temario?
+
+Hereda directamente de la interfaz Collection.
+
+
+Almacena elementos en parejas de Clave-Valor y no pertenece a la jerarquía de Collection.
+
+
+Es una lista ordenada que permite acceder a los elementos mediante un índice numérico.
+
+¿Cuál es la principal ventaja del "try-with-resources" introducido en versiones modernas de Java?
+
+Permite capturar múltiples excepciones en una sola línea de código.
+
+
+Gestiona automáticamente el cierre de recursos (como archivos o conexiones) al finalizar el bloque.
+
+
+Aumenta la velocidad de ejecución de las colecciones tipo List y Map.
+
+Según la jerarquía de excepciones en Java, ¿cuál es la diferencia entre un Error y una Exception?
+
+Las Exception son fallos graves del sistema (como falta de memoria), mientras que los Error son fallos del programa.
+
+
+Los Error son situaciones irrecuperables de la JVM, mientras que las Exception son condiciones que una aplicación debería capturar.
+
+
+No hay diferencia; ambos términos se usan indistintamente para cualquier fallo en tiempo de ejecución.
+
+¿Qué caracteriza a las excepciones de tipo RuntimeException (Unchecked)?
+
+El compilador no obliga a capturarlas ni a declararlas en la firma del método.
+
+
+Son excepciones que deben ser revisadas obligatoriamente por el programador antes de compilar.
+
+
+Son las únicas excepciones que pueden lanzarse mediante la palabra clave throw.
+
+En una estructura try-catch-finally, ¿cuándo se ejecuta el bloque finally?
+
+Solo si se produce una excepción y esta es capturada correctamente.
+
+
+Solo si no se produce ninguna excepción durante la ejecución del try.
+
+
+Siempre, independientemente de si se lanzó una excepción o si fue capturada.
+
+tema 8
+
+Si un atributo de una clase se marca con la palabra clave transient, ¿qué ocurre durante la serialización?
+
+Ese atributo se guarda con prioridad absoluta antes que los demás.
+
+
+Ese atributo se ignora y no se guarda en el fichero (útil para datos sensibles como contraseñas).
+
+
+El atributo se convierte automáticamente a formato hexadecimal para ahorrar espacio.
+
+¿Cuál es la diferencia principal entre un flujo de Bytes y un flujo de Caracteres?
+
+Los de Bytes procesan datos de 8 bits (imágenes, audio), mientras que los de Caracteres procesan datos de 16 bits usando Unicode (texto).
+
+
+Los flujos de Bytes son solo para lectura y los de Caracteres solo para escritura.
+
+
+No hay diferencia técnica; Java decide cuál usar automáticamente según el tamaño del archivo.
+
+Al trabajar con archivos de texto, ¿qué sucede si se abre un FileWriter con el parámetro append en true?
+
+El archivo se borra completamente antes de empezar a escribir.
+
+
+El nuevo contenido se añade al final del archivo sin borrar lo que ya existía.
+
+
+El archivo se bloquea para que otros programas no puedan leerlo mientras se escribe.
+
+¿Qué método de la clase Scanner es el más adecuado para leer una frase completa que contenga espacios?
+
+next()
+
+
+nextInt()
+
+
+nextLine()
+
+¿Qué clase de la jerarquía de caracteres se utiliza específicamente para leer texto de un archivo de forma eficiente?
+
+FileInputStream
+
+
+FileWriter
+
+
+FileReader
+
+¿Qué es la "Serialización" de objetos en Java?
+
+El proceso de convertir un objeto en una secuencia de bytes para poder almacenarlo en un fichero o enviarlo por red.
+
+
+Un método para ordenar alfabéticamente los atributos de una clase.
+
+
+El proceso de borrar un objeto del Heap para liberar memoria.
+
+Respecto a la Salida Estándar de Errores (System.err), ¿qué afirmación es correcta?
+
+Envía los datos directamente a la impresora del sistema.
+
+
+Se utiliza para mensajes de diagnóstico y errores, y por defecto suele mostrarse en color rojo en la consola.
+
+
+Es exactamente lo mismo que System.out y no se recomienda su uso en entornos profesionales.
+
+¿Cuál es la función del "Buffer" en las operaciones de entrada/salida?
+
+Actuar como una memoria intermedia para reducir el número de accesos físicos al disco o red, mejorando el rendimiento.
+
+
+Cifrar los datos para que no puedan ser leídos por otros programas del sistema operativo.
+
+
+Convertir automáticamente archivos binarios en archivos de texto plano.
+
+En el contexto de Java, ¿qué es un "Stream" o flujo de datos?
+
+Es una estructura de datos estática que almacena información en la memoria RAM.
+
+
+Es un canal unidireccional que transporta información de forma secuencial desde un origen a un destino.
+
+
+Es una base de datos interna que Java utiliza para guardar objetos de forma permanente.
+
+Para que una clase pueda ser serializada, ¿qué requisito debe cumplir obligatoriamente?
+
+Debe heredar de la clase File.
+
+
+Debe implementar la interfaz Serializable, que actúa como una "interfaz de marcado".
+
+
+Todos sus métodos deben ser declarados como static.
+
+tema 9
+
+¿Cuál es la función del "Driver" (Controlador) en una conexión JDBC?
+
+Traducir las llamadas de la API JDBC al protocolo específico del gestor de base de datos (MySQL, Oracle, etc.).
+
+
+Diseñar las tablas de la base de datos automáticamente desde el código Java.
+
+
+Comprobar que el código SQL no tenga errores de sintaxis antes de enviarlo.
+
+En caso de que una de las operaciones de una transacción falle, ¿qué método se debe invocar para devolver la base de datos a su estado original?
+
+conn.rollback()
+
+
+conn.reset()
+
+
+conn.undo()
+
+¿Qué representan las siglas ACID en el contexto de las transacciones de bases de datos?
+
+Un conjunto de propiedades (Atomicidad, Consistencia, Aislamiento y Durabilidad) que garantizan la integridad de las operaciones.
+
+
+Un protocolo de cifrado para que las contraseñas de la base de datos viajen seguras.
+
+
+El nombre del driver estándar utilizado para conectar Java con bases de datos SQLite.
+
+Para gestionar una transacción de forma manual en Java, ¿cuál es el primer paso imprescindible?
+
+Llamar al método conn.commit().
+
+
+Establecer conn.setAutoCommit(false).
+
+
+Cerrar la conexión con el bloque finally.
+
+¿Qué componente de la URL de conexión jdbc:mysql://localhost:3306/empresa indica el puerto donde escucha el servidor?
+
+jdbc:mysql
+
+
+localhost
+
+
+3306
+
+¿Por qué se recomienda el uso de PreparedStatement en lugar de Statement para ejecutar consultas con parámetros?
+
+Porque Statement no permite ejecutar consultas de tipo SELECT.
+
+
+Porque PreparedStatement aumenta la seguridad contra ataques de Inyección SQL y mejora el rendimiento mediante la precompilación.
+
+
+Porque Statement solo puede usarse con bases de datos locales y no en red.
+
+¿Cómo funciona el objeto ResultSet al recuperar datos de una consulta?
+
+Carga todos los datos de la base de datos en una lista estática de forma inmediata.
+
+
+Actúa como un cursor que inicialmente apunta "antes de la primera fila" y requiere el método next() para avanzar.
+
+
+Es una interfaz que solo permite leer datos de tipo texto (String).
+
+¿Cuál es la forma más profesional y segura de gestionar el cierre de Connection, Statement y ResultSet para evitar fugas de memoria?
+
+Cerrarlos manualmente uno a uno en el cuerpo principal del código.
+
+
+Confiar en que el Garbage Collector los cerrará cuando el programa termine.
+
+
+Utilizar la estructura try-with-resources para que Java los cierre automáticamente al finalizar el bloque.
+
+Al ejecutar una sentencia DML (INSERT, UPDATE o DELETE), ¿qué método de PreparedStatement debe utilizarse?
+
+executeQuery()
+
+
+executeUpdate()
+
+
+executeSelect()
+
+¿Qué es JDBC dentro del ecosistema de Java?
+
+Una base de datos ligera que se integra directamente en el JDK.
+
+
+Una API que proporciona un conjunto de interfaces estándar para interactuar con bases de datos independientemente del motor usado.
+
+
+Un lenguaje de consulta que sustituye al SQL tradicional para mejorar el rendimiento.
+
+tema 10
+
+¿Qué es el OID (Object Identifier) en una base de datos orientada a objetos?
+
+Una clave primaria numérica que el programador debe gestionar manualmente.
+
+
+Un identificador único generado por el sistema que es independiente del valor de los atributos del objeto.
+
+
+El nombre de la variable que utilizamos en el código Java para referenciar al objeto.
+
+Al trabajar con un motor como db4o u ObjectDB, ¿cuál es el objeto principal que actúa como "Contenedor de Objetos" y gestiona la sesión?
+
+ObjectContainer
+
+
+DatabaseManager
+
+
+SessionSocket
+
+¿Qué sucede si se activa la propiedad de "Cascada" (Cascade On Update/Delete)?
+
+Las operaciones realizadas sobre un objeto padre se propagan automáticamente a sus objetos hijos relacionados.
+
+
+El sistema operativo borra la base de datos si ocurre un error crítico.
+
+
+El objeto se guarda simultáneamente en dos bases de datos distintas para mayor seguridad.
+
+¿Qué problema fundamental vienen a solucionar las BDOO en comparación con las bases de datos relacionales?
+
+La lentitud de los discos duros actuales.
+
+
+La "Desadaptación de Impedancia", evitando tener que traducir objetos a tablas y filas.
+
+
+La imposibilidad de usar SQL en entornos de red.
+
+¿Cómo funciona el mecanismo de consulta QBE (Query By Example)?
+
+Se escribe una sentencia de texto similar a SQL.
+
+
+Se crea un objeto "prototipo" o plantilla y el sistema busca objetos que coincidan con sus atributos no nulos.
+
+
+Se programa un filtro mediante una función lambda de Java.
+
+¿Qué ventaja principal ofrecen las "Native Queries" (Consultas Nativas) frente a otros métodos?
+
+Son mucho más rápidas que las consultas por OID.
+
+
+Permiten usar código Java puro para filtrar, proporcionando total seguridad de tipos (Type-Safe).
+
+
+No requieren que la base de datos esté abierta para ejecutarse.
+
+En las consultas OQL, ¿cómo se navega a través de las relaciones entre objetos?
+
+Mediante el uso de sentencias JOIN complejas como en el modelo relacional.
+
+
+Utilizando la "notación de punto" (ej. p.ciudad.nombre) para seguir los grafos de objetos.
+
+
+No se puede navegar entre relaciones; solo se pueden consultar objetos aislados.
+
+¿Qué controla el parámetro "Activation Depth" (Profundidad de Activación)?
+
+El número máximo de usuarios que pueden conectarse a la vez.
+
+
+El nivel de profundidad del grafo de objetos que se carga en la memoria RAM al recuperar un objeto.
+
+
+La cantidad de copias de seguridad que el sistema realiza cada hora.
+
+En el estándar ODMG, ¿qué lenguaje se utiliza específicamente para definir la estructura de la base de datos?
+
+OQL (Object Query Language).
+
+
+ODL (Object Definition Language).
+
+
+SQL-92.
+
+¿Cuál es la diferencia principal entre el modo de funcionamiento "Embebido" y el modo "Servidor"?
+
+El modo Embebido permite múltiples conexiones remotas, mientras que el Servidor es solo para un usuario.
+
+
+El modo Embebido la base de datos corre en el mismo proceso que la aplicación, mientras que el modo Servidor es un proceso independiente.
+
+
+El modo Servidor es gratuito y el modo Embebido requiere licencia comercial.

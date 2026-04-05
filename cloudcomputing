@@ -1,0 +1,1615 @@
+tema 1
+
+¿Cuál de las siguientes es una ventaja de la computación en la nube?
+
+
+Aumento de costos operativos.
+
+
+
+Dependencia del hardware local
+
+
+Acceso ubicuo a los datos y aplicaciones.
+
+
+Falta de escalabilidad.
+
+¿Qué significa "escalabilidad elástica" en la computación en la nube?
+
+
+Capacidad de aumentar o reducir recursos según la demanda.
+
+
+La infraestructura de la nube se adapta solo a aumentos de demanda.
+
+
+Es un modelo exclusivo para grandes empresas.
+
+
+
+La nube no permite escalabilidad.
+
+¿Cuál de los siguientes es un posible riesgo de la computación en la nube?
+
+
+Reducción de costos operativos.
+
+
+
+Dependencia del proveedor de servicios.
+
+
+Mayor control sobre la infraestructura.
+
+
+
+Eliminación total de amenazas cibernéticas.
+
+¿Qué función cumple la redundancia en la computación en la nube?
+
+
+Aumenta los costos operativos.
+
+
+
+Garantiza la disponibilidad de los servicios en caso de fallos.
+
+
+Limita el acceso a los datos.
+
+
+
+Reduce la seguridad de la información.
+
+¿Cuál de los siguientes modelos de implementación de la nube permite combinar infraestructura pública y privada?
+
+
+Nube privada
+
+
+
+Nube pública
+
+
+
+Nube híbrida
+
+
+Nube comunitaria
+
+¿Qué aspecto es clave al elegir un proveedor de servicios en la nube?
+
+
+La disponibilidad de planes gratuitos.
+
+
+
+La ubicación de los servidores en el mismo país del usuario.
+
+
+
+La seguridad, fiabilidad y escalabilidad del servicio.
+
+
+Que ofrezca hardware de última generación.
+
+¿Cuál de estos modelos de servicio en la nube ofrece aplicaciones completas listas para usar?
+
+
+IaaS
+
+
+
+PaaS
+
+
+SaaS
+
+
+On-Premise
+
+¿Cuál es la principal característica del modelo de computación en la nube?
+
+
+Requiere una gran inversión en hardware propio.
+
+
+
+Permite acceder a recursos informáticos a través de Internet.
+
+
+Solo puede ser utilizado por grandes empresas.
+
+
+
+No ofrece ventajas sobre la infraestructura tradicional.
+
+¿Cuál de las siguientes afirmaciones es correcta sobre la migración a la nube?
+
+
+Es un proceso inmediato y sin riesgos.
+
+
+
+No requiere planificación previa.
+
+
+
+Debe incluir una evaluación de necesidades, migración de datos y pruebas
+
+
+Solo es recomendable para pequeñas empresas.
+
+¿Qué modelo de servicio en la nube permite a los desarrolladores crear aplicaciones sin gestionar la infraestructura?
+
+
+SaaS
+
+
+PaaS
+
+
+IaaS
+
+
+
+VPN
+
+tema 2
+
+¿Qué ventaja ofrece la escalabilidad en la nube?
+
+
+Permite ajustar los recursos en tiempo real según las necesidades
+
+
+Bloquea el uso de recursos adicionales para evitar sobrecostes.
+
+
+
+Solo está disponible en modelos de pago fijo.
+
+
+
+Asegura un descuento automático en el coste de los recursos.
+
+¿Qué aspecto clave de la seguridad se garantiza en los servicios en la nube?
+
+
+Copias de seguridad físicas en todas las oficinas.
+
+
+
+Medidas de seguridad robustas y cumplimiento normativo.
+
+
+Control absoluto de los datos por parte del usuario sin intervención del proveedor.
+
+
+
+Eliminación automática de datos después de 30 días.
+
+¿Cuál de las siguientes afirmaciones sobre las instancias spot es correcta?
+
+
+Son más costosas que las instancias reservadas.
+
+
+
+Permiten adquirir recursos a menor precio, pero pueden ser interrumpidas.
+
+
+No pueden utilizarse en entornos de producción.
+
+
+
+Son el único modelo de precios disponible en la nube.
+
+¿Cuál de los siguientes modelos de precios en la nube ofrece descuentos por comprometerse a un uso a largo plazo?
+
+
+Pago por uso.
+
+
+
+Instancias reservadas
+
+
+Instancias spot.
+
+
+Facturación consolidada.
+
+¿Qué tipo de herramientas ayudan a analizar los costes en la nube?
+
+
+Plataformas de análisis de datos y predicciones.
+
+
+Redes sociales y foros de discusión.
+
+
+Servicios de almacenamiento en la nube.
+
+
+
+Programas de ofimática.
+
+¿Cuál es la principal característica del modelo de facturación en la nube?
+
+
+Pago anticipado por los recursos contratados.
+
+
+
+Pago fijo mensual sin importar el uso.
+
+
+
+Pago por uso, donde solo se paga por los recursos consumidos.
+
+
+Pago único al inicio del servicio.
+
+¿Cuál es la ventaja principal de utilizar servicios de facturación consolidada?
+
+
+Permite pagar menos por los recursos utilizados.
+
+
+Facilita la gestión de múltiples cuentas desde una sola plataforma.
+
+
+Evita el pago de impuestos sobre los servicios en la nube.
+
+
+
+Automatiza completamente la contabilidad empresarial
+
+¿Qué elemento NO forma parte del Coste Total de la Propiedad (TCO)?
+
+
+Coste de hardware y software.
+
+
+
+Mantenimiento y energía.
+
+
+
+Gastos de transporte de los empleados.
+
+
+Costes operativos en la nube.
+
+¿Qué función tienen los servicios de monitorización de costes?
+
+
+Establecer presupuestos y alertar sobre gastos elevados.
+
+
+Modificar automáticamente los precios de los servicios en la nube.
+
+
+
+Cancelar automáticamente servicios que superan el presupuesto.
+
+
+
+Garantizar un precio fijo sin variaciones.
+
+¿Cuál es una de las tendencias futuras en la gestión de la facturación en la nube?
+
+
+Uso de inteligencia artificial y aprendizaje automático para optimizar los costes
+
+
+Eliminación total de los modelos de pago por uso.
+
+
+
+Cobro adelantado de todos los servicios en la nube.
+
+
+
+Prohibición del uso de herramientas de análisis de costes.
+
+tema 3
+
+¿Cuál es una ventaja de las redes de fibra óptica en la nube?
+
+
+Alta latencia en la transmisión de datos
+
+
+
+Ancho de banda alto y baja latencia
+
+
+Conexiones inestables
+
+
+
+Solo funciona en redes locales
+
+¿Cuál de las siguientes opciones es una característica de la infraestructura de la nube?
+
+
+Mayor latencia en la transferencia de datos
+
+
+Acceso solo desde equipos de escritorio
+
+
+Protección de datos mediante encriptación
+
+
+Dependencia total de hardware físico
+
+¿Qué permite la infraestructura de la nube en términos de almacenamiento?
+
+
+Un almacenamiento limitado y costoso
+
+
+Almacenamiento escalable y accesible
+
+
+Solo permite almacenamiento local
+
+
+
+No permite almacenar grandes volúmenes de datos
+
+¿Cuál es un caso de uso común para la infraestructura de la nube?
+
+
+Desarrollo de software
+
+
+Solo almacenamiento de archivos personales
+
+
+Exclusivamente para videojuegos
+
+
+
+No tiene aplicaciones en educación
+
+¿Qué tipo de servicio es Google Docs dentro de la computación en la nube?
+
+
+IaaS
+
+
+
+PaaS
+
+
+
+SaaS
+
+
+Nube híbrida
+
+¿Cuál de las siguientes opciones describe mejor la computación en la nube?
+
+
+Un sistema operativo avanzado para servidores
+
+
+
+Una red de servidores que ofrece servicios informáticos a través de internet
+
+
+Un tipo de hardware especializado en redes
+
+
+Un protocolo de comunicación entre servidores
+
+¿Cuál de los siguientes servicios pertenece a la categoría IaaS?
+
+
+AWS Elastic Beanstalk
+
+
+
+Azure Virtual Machines
+
+
+Google Docs
+
+
+
+Microsoft Office 365
+
+¿Cuál es un beneficio clave de la infraestructura de la nube?
+
+
+Mayor consumo de recursos físicos
+
+
+
+Acceso limitado a servidores
+
+
+
+Escalabilidad flexible
+
+
+Solo se puede acceder desde una ubicación fija
+
+¿Qué caracteriza a una nube híbrida?
+
+
+Es operada únicamente por un proveedor público
+
+
+
+Es una combinación de nube privada y pública
+
+
+Solo es accesible dentro de una empresa
+
+
+
+No permite compartir datos entre sistemas
+
+¿Cuál de las siguientes opciones representa un servicio de nube pública?
+
+
+Servidores internos de una empresa
+
+
+Microsoft Azure
+
+
+Un disco duro externo conectado a una red
+
+
+Un centro de datos privado
+
+  Anterior
+
+tema 4
+
+¿Cuál de los siguientes métodos de control de acceso permite asignar permisos específicos según la función del usuario en la empresa?
+
+
+Control de acceso discrecional (DAC)
+
+
+
+Control de acceso basado en roles (RBAC)
+
+
+
+Control de acceso basado en identidad
+
+
+
+Control de acceso abierto
+
+¿Cuál es una de las principales ventajas de la gestión de identidades federada?
+
+
+Permite a los usuarios acceder a múltiples sistemas sin necesidad de múltiples credenciales
+
+
+
+Requiere la creación de una nueva cuenta para cada sistema diferente
+
+
+
+Elimina la necesidad de autenticación en sistemas externos
+
+
+
+Impide el acceso desde dispositivos móviles
+
+¿Qué método de autenticación añade una capa adicional de seguridad al requerir dos formas de verificación?
+
+
+Contraseña segura
+
+
+
+Autenticación de dos factores (2FA)
+
+
+Token de seguridad único
+
+
+Pregunta de seguridad
+
+¿Qué práctica ayuda a evitar la fuga de información confidencial desde la red corporativa?
+
+
+Uso exclusivo de contraseñas largas
+
+
+
+Implementación de soluciones de prevención de pérdida de datos (DLP)
+
+
+
+Acceso abierto a todos los archivos en la nube
+
+
+Compartir contraseñas con todos los miembros del equipo
+
+¿Cuál es la principal función de los respaldos regulares de datos?
+
+
+Asegurar que los datos puedan recuperarse en caso de un desastre o ataque
+
+
+Reducir el uso de almacenamiento en la nube
+
+
+
+Evitar la autenticación de usuarios en la nube
+
+
+
+Permitir que los usuarios accedan a los datos sin autenticación
+
+¿Cuál de los siguientes es un control técnico de seguridad en la nube?
+
+
+Políticas de seguridad
+
+
+
+Programas de capacitación para empleados
+
+
+Cortafuegos y sistemas de prevención de intrusiones
+
+
+Procedimientos de gestión de riesgos
+
+¿Qué tipo de cifrado protege los datos durante su transmisión entre la red del cliente y la nube?
+
+
+Cifrado en reposo
+
+
+
+Cifrado en tránsito
+
+
+
+Cifrado de doble clave
+
+
+
+Cifrado basado en hardware
+
+¿Qué regulación deben cumplir las empresas de la industria financiera para garantizar la seguridad de los datos?
+
+
+HIPAA
+
+
+
+PCI DSS
+
+
+
+ISO 9001
+
+
+
+GDPR
+
+¿Cuál es la principal responsabilidad del proveedor de servicios en la nube?
+
+
+Administrar las credenciales de acceso de los clientes
+
+
+
+Garantizar la seguridad de la infraestructura física y la plataforma subyacente
+
+
+Cifrar los datos almacenados por los usuarios
+
+
+
+Gestionar las políticas de seguridad internas de las empresas
+
+¿Por qué es importante establecer políticas de contraseñas fuertes?
+
+
+Para dificultar el acceso de los propios usuarios
+
+
+
+Para evitar que los empleados olviden sus contraseñas
+
+
+
+Para mejorar la seguridad de las cuentas y reducir el riesgo de ataques
+
+
+
+Para facilitar el acceso a los sistemas en la nube
+
+tema 5
+
+¿Cuál de los siguientes es un beneficio clave de una nube privada virtual (VPC)?
+
+
+Menos seguridad que las redes públicas
+
+
+Control total sobre la infraestructura
+
+
+
+Menor escalabilidad que una nube pública
+
+
+
+Acceso gratuito para todos los usuarios
+
+¿Cuál es el propósito principal de una red de computadoras?
+
+
+Mejorar la velocidad de los dispositivos
+
+
+
+Conectar dispositivos para compartir información y recursos
+
+
+
+Reducir el consumo de energía
+
+
+
+Aumentar el almacenamiento de los dispositivos
+
+¿Cómo funcionan los servidores DNS en la nube?
+
+
+Almacenan los datos de los usuarios
+
+
+
+Resuelven nombres de dominio en direcciones IP
+
+
+
+Filtran el tráfico no autorizado
+
+
+
+Bloquean los ataques de malware automáticamente
+
+¿Cuál es la función principal de la capa de red en la arquitectura de las redes?
+
+
+Gestionar la transmisión de datos dentro de una red local
+
+
+
+Enrutar los datos a través de la red
+
+
+
+Definir las especificaciones físicas del cableado
+
+
+Permitir que las aplicaciones accedan a la red
+
+¿Qué ventaja ofrece una CDN (Red de Entrega de Contenidos)?
+
+
+Aumenta la latencia de los contenidos
+
+
+
+Reduce la velocidad de carga de sitios web
+
+
+
+Distribuye los contenidos desde servidores cercanos al usuario
+
+
+
+Bloquea el acceso a contenidos de alta demanda
+
+¿Qué protocolo es fundamental para la comunicación en Internet?
+
+
+HTTP
+
+
+
+FTP
+
+
+
+TCP/IP
+
+
+
+DHCP
+
+¿Cuál es una de las principales amenazas a la seguridad en redes?
+
+
+CSS
+
+
+DDoS
+
+
+HTML
+
+
+
+XML
+
+¿Qué medida de seguridad ayuda a proteger los datos en una nube privada virtual?
+
+
+Eliminación de registros de actividad
+
+
+
+Acceso libre sin autenticación
+
+
+Cifrado de datos
+
+
+
+Compartición de claves de acceso
+
+¿Qué tipo de red se utiliza para conectar dispositivos dentro de una oficina o un hogar?
+
+
+WAN
+
+
+
+MAN
+
+
+
+LAN
+
+
+
+VPN
+
+¿Qué protocolo se utiliza para la seguridad en la transmisión de datos?
+
+
+SSL/TLS
+
+
+
+UDP
+
+
+
+RIP
+
+
+
+FTP
+
+tema 6
+
+¿Cuál es una de las principales ventajas de los servicios de cómputo en comparación con la computación tradicional?
+
+
+Requieren una mayor inversión inicial
+
+
+Permiten delegar la gestión de la infraestructura
+
+
+No permiten escalar los recursos
+
+
+
+Exigen la compra de servidores propios
+
+¿Qué aspecto se debe considerar al adoptar servicios administrados de cómputo?
+
+
+Seguridad y escalabilidad
+
+
+Solo el coste
+
+
+
+No se requiere considerar ningún aspecto
+
+
+
+No afectan la facilidad de uso
+
+¿Qué tecnología permite ejecutar múltiples sistemas operativos en una misma máquina física?
+
+
+Contenedores
+
+
+
+Máquinas virtuales
+
+
+
+Computación sin servidor
+
+
+
+Servicios SaaS
+
+¿Cuál es una de las ventajas de la computación sin servidor?
+
+
+Requiere administración constante de la infraestructura
+
+
+Permite escalar automáticamente en función de la demanda
+
+
+Obliga a pagar por capacidad reservada
+
+
+Es más costosa que las VMs
+
+¿Cuál de las siguientes opciones es un ejemplo de un servicio SaaS?
+
+
+Amazon EC2
+
+
+
+Google App Engine
+
+
+
+Microsoft 365
+
+
+
+Kubernetes
+
+¿Cuál es uno de los principios clave de los servicios de cómputo?
+
+
+Uso exclusivo de hardware propio
+
+
+
+Pago por una tarifa fija
+
+
+
+Pago por uso
+
+
+
+Falta de flexibilidad
+
+¿Cuál es una de las ventajas de usar máquinas virtuales (VM)?
+
+
+No permiten escalabilidad
+
+
+
+Comparten recursos físicos, optimizando costos
+
+
+
+Son menos eficientes que los servidores físicos
+
+
+
+ No ofrecen aislamiento entre aplicaciones
+
+¿Qué tecnología permite ejecutar código sin preocuparse por la administración de servidores?
+
+
+Computación sin servidor (serverless)
+
+
+
+Máquinas virtuales
+
+
+
+IaaS
+
+
+
+SaaS
+
+¿Qué característica distingue a los contenedores de las máquinas virtuales?
+
+
+Son más pesados que las VMs
+
+
+
+No permiten aislamiento entre aplicaciones
+
+
+
+Comparten el sistema operativo del host
+
+
+
+No pueden ejecutarse en múltiples entornos
+
+¿Qué tipo de servicio de cómputo proporciona un entorno completo de desarrollo y despliegue de aplicaciones?
+
+
+IaaS
+
+
+
+PaaS
+
+
+
+SaaS
+
+
+
+Serverless
+
+tema 7
+
+¿Qué característica es común en los servicios de almacenamiento en la nube?
+
+
+Se limitan a almacenar solo archivos de texto
+
+
+
+Son escalables y permiten gestionar grandes volúmenes de datos
+
+
+
+No permiten el acceso remoto
+
+
+
+Solo pueden ser utilizados por empresas grandes
+
+¿Cuál es un beneficio clave del archivado de datos?
+
+
+Permite un acceso instantáneo a la información en todo momento
+
+
+Reduce los costos al utilizar soluciones de almacenamiento de bajo costo
+
+
+Es la mejor opción para servidores de bases de datos
+
+
+No permite la recuperación de datos
+
+¿Cuál es una de las principales aplicaciones del almacenamiento de ficheros?
+
+
+Streaming de videos en línea
+
+
+
+Almacenamiento de máquinas virtuales
+
+
+
+Repositorios de código fuente
+
+
+
+Bases de datos SQL
+
+¿Qué ventaja tiene el almacenamiento de ficheros sobre otros tipos de almacenamiento?
+
+
+Permite una estructura jerárquica de archivos y carpetas
+
+
+
+Es el más rápido para bases de datos transaccionales
+
+
+Es más barato que el almacenamiento en cinta
+
+
+No permite el control de versiones
+
+¿Qué tipo de almacenamiento se recomienda para datos históricos o con baja frecuencia de acceso?
+
+
+Almacenamiento de objetos
+
+
+
+Almacenamiento de ficheros
+
+
+
+Archivado de datos
+
+
+
+Almacenamiento de bloques
+
+¿Cuál es una ventaja del almacenamiento de objetos sobre el almacenamiento de bloques?
+
+
+Es más rápido para bases de datos transaccionales
+
+
+Permite la identificación de cada archivo mediante una URL única
+
+
+
+No requiere estructura jerárquica
+
+
+
+Ambos son exactamente iguales
+
+¿Cuál de los siguientes beneficios es característico del almacenamiento de bloques?
+
+
+Alta durabilidad y escalabilidad
+
+
+
+Bajo costo y facilidad de uso
+
+
+
+Acceso rápido y aleatorio a los datos
+
+
+
+Solo es útil para almacenamiento en la nube
+
+¿Cuál de los siguientes es un caso de uso común del almacenamiento de objetos?
+
+
+Bases de datos relacionales
+
+
+
+Almacenamiento de contenido multimedia para streaming
+
+
+
+Gestión de documentos empresariales
+
+
+
+Máquinas virtuales
+
+¿Cuál es la principal característica del almacenamiento de bloques?
+
+
+Se basa en la organización de archivos en carpetas
+
+
+
+Permite almacenar datos en objetos individuales con URL
+
+
+
+Se accede a los datos en bloques de tamaño fijo
+
+
+
+Se utiliza solo para copias de seguridad
+
+¿Cuál de los siguientes servicios de almacenamiento es más adecuado para aplicaciones de análisis de datos?
+
+
+Almacenamiento de bloques
+
+
+Almacenamiento de objetos
+
+
+
+Archivado de datos
+
+
+
+Almacenamiento en papel
+
+tema 8
+
+¿Cuál de las siguientes es una característica de las bases de datos analíticas?
+
+
+Optimizadas para consultas complejas
+
+
+Uso exclusivo en sistemas transaccionales
+
+
+
+Requieren estructuras fijas y rígidas
+
+
+
+No pueden manejar grandes volúmenes de datos
+
+ 
+
+¿Qué tipo de base de datos NoSQL organiza los datos en pares clave-valor?
+
+
+Documentales
+
+
+Graph
+
+
+
+Column-Family
+
+
+
+Key-Value
+
+¿Qué característica es exclusiva de las bases de datos NoSQL?
+
+
+Uso de claves primarias y foráneas
+
+
+Escalabilidad horizontal
+
+
+Transacciones ACID
+
+
+Organización en tablas
+
+¿Cuál de las siguientes es una base de datos relacional?
+
+
+MongoDB
+
+
+
+Cassandra
+
+
+
+MySQL
+
+
+Redis
+
+¿Cuál es un proveedor de bases de datos NoSQL?
+
+
+PostgreSQL
+
+
+
+MongoDB
+
+
+Oracle
+
+
+
+SQL Server
+
+¿Cuál de las siguientes NO es una ventaja de los servicios de bases de datos?
+
+
+Mayor eficiencia
+
+
+
+Mejora de la toma de decisiones
+
+
+
+Mayor consumo de recursos
+
+
+Seguridad y confiabilidad
+
+¿Qué lenguaje se utiliza para interactuar con bases de datos relacionales?
+
+
+Python
+
+
+
+SQL
+
+
+NoSQL
+
+
+
+XML
+
+Las bases de datos NoSQL son ideales para:
+
+
+Aplicaciones con grandes volúmenes de datos no estructurados
+
+
+Aplicaciones que requieren relaciones complejas entre datos
+
+
+
+Sistemas de gestión de contenido (CMS)
+
+
+
+Sistemas bancarios
+
+¿Qué tipo de base de datos es ideal para analizar grandes conjuntos de datos?
+
+
+Relacionales
+
+
+
+Analíticas
+
+
+NoSQL
+
+
+
+ Documentales
+
+¿Qué característica permite que los servicios de bases de datos ajusten su capacidad según la demanda?
+
+
+Seguridad
+
+
+
+Persistencia
+
+
+
+Escalabilidad
+
+
+Rendimiento
+
+tema 9
+
+¿Cuál de estas estrategias ayuda a optimizar el costo de los recursos en la nube?
+
+
+Mantener servidores encendidos sin monitoreo
+
+
+
+Escalar recursos según la demanda
+
+
+
+Comprar más recursos de los necesarios
+
+
+
+No realizar copias de seguridad
+
+¿Qué principio de diseño se enfoca en minimizar interrupciones y optimizar operaciones?
+
+
+Seguridad
+
+
+Fiabilidad
+
+
+
+Excelencia operacional
+
+
+
+Eficiencia en costos
+
+¿Qué herramienta permite automatizar el despliegue y la gestión de aplicaciones en la nube?
+
+
+Microsoft Excel
+
+
+
+Kubernetes
+
+
+Notepad++
+
+
+
+Photoshop
+
+¿Cuál es el principal objetivo de la arquitectura en la nube?
+
+
+Reducir la velocidad de procesamiento
+
+
+Aumentar los costos de infraestructura
+
+
+
+Diseñar sistemas escalables, seguros y eficientes
+
+
+
+Limitar el acceso a los servicios en línea
+
+¿Cómo se logra la alta disponibilidad en la arquitectura en la nube?
+
+
+Eliminando los servidores de respaldo
+
+
+
+Implementando redundancia y tolerancia a fallos
+
+
+Usando un solo servidor para evitar conflictos
+
+
+
+Deshabilitando la supervisión del sistema
+
+¿Cuál es un servicio de almacenamiento en la nube?
+
+
+Amazon S3
+
+
+
+Google Docs
+
+
+
+Adobe Premiere
+
+
+Excel
+
+¿Qué técnica se usa para distribuir la carga de trabajo entre múltiples servidores?
+
+
+Optimización de código
+
+
+
+Almacenamiento en caché
+
+
+
+Balanceo de carga
+
+
+Supervisión constante
+
+¿Por qué es importante la supervisión constante de los sistemas en la nube?
+
+
+Para generar más costos en la empresa
+
+
+Para detectar y resolver problemas de forma proactiva
+
+
+Para reducir la seguridad de los sistemas
+
+
+Para aumentar la latencia del servicio
+
+¿Cuál de los siguientes elementos es clave para mejorar la seguridad en la nube?
+
+
+Uso de protocolos obsoletos
+
+
+
+Implementación de encriptación de datos
+
+
+
+Permitir accesos sin autenticación
+
+
+Evitar el monitoreo del sistema
+
+¿Qué método es clave para la recuperación ante desastres en la nube?
+
+
+No hacer copias de seguridad
+
+
+
+Usar almacenamiento local sin redundancia
+
+
+
+Implementar estrategias de respaldo y recuperación
+
+
+
+Evitar el uso de firewalls y control de accesos
+
+tema 10
+
+¿Cuál es la principal diferencia entre el escalado horizontal y vertical?
+
+
+El escalado horizontal agrega más servidores, mientras que el vertical aumenta la capacidad de un servidor existente.
+
+
+El escalado vertical es más eficiente que el horizontal.
+
+
+
+El escalado horizontal solo funciona en servidores físicos.
+
+
+
+Ambos términos significan lo mismo.
+
+¿Cuál de las siguientes NO es una ventaja del escalado automático?
+
+
+Mejora el rendimiento de la aplicación
+
+
+Reduce los costes operativos.
+
+
+Disminuye la cantidad de usuarios en la plataforma
+
+
+Aumenta la disponibilidad de la aplicación.
+
+¿Qué función cumple un balanceador de carga en el escalado automático?
+
+
+Almacenar los datos de los usuarios.
+
+
+Distribuir las solicitudes de usuarios entre varios servidores. 
+
+
+Reducir el tráfico de red.
+
+
+
+Cerrar conexiones inactivas.
+
+¿Cuál de las siguientes afirmaciones sobre la monitorización es correcta?
+
+
+Solo es útil cuando la aplicación presenta fallos.
+
+
+
+Permite recopilar datos sobre el estado y rendimiento de la aplicación.
+
+
+No puede generar alertas en tiempo real.
+
+
+
+Es un proceso opcional en aplicaciones en la nube.
+
+¿Qué tipo de regla puede desencadenar el escalado automático?
+
+
+Cuando el uso de CPU supera un umbral definido.
+
+
+Cuando el usuario cambia su contraseña.
+
+
+Cuando un servidor está en mantenimiento.
+
+
+
+Cuando la aplicación recibe menos tráfico.
+
+¿Qué métrica NO es clave para la monitorización de una aplicación?
+
+
+Uso de CPU
+
+
+
+Consumo de memoria
+
+
+
+Color de la interfaz gráfica
+
+
+Tráfico de red
+
+¿En qué escenario es más útil el escalado automático?
+
+
+Una aplicación de escritorio instalada en un solo equipo.
+
+
+
+Un sitio de comercio electrónico que recibe picos de tráfico en eventos especiales.
+
+
+Un documento almacenado en una memoria USB.
+
+
+
+Un usuario navegando en su propio sitio web local.
+
+En el método de balanceo "Least Connections", las solicitudes se dirigen al servidor que…
+
+
+Tiene más memoria disponible.
+
+
+Posee menos conexiones activas.
+
+
+Procesa las solicitudes más rápido.
+
+
+Se encuentra más cerca del usuario.
+
+¿Cuál es el principal objetivo del escalado automático?
+
+
+Reducir la necesidad de servidores físicos.
+
+
+
+Ajustar los recursos de una aplicación según la demanda.
+
+
+Mejorar la seguridad de la infraestructura.
+
+
+
+Minimizar la cantidad de servidores disponibles
+
+¿Cuál es una de las mejores prácticas para una estrategia de escalado automático efectiva?
+
+
+No definir métricas de rendimiento para evitar alertas innecesarias.
+
+
+Configurar reglas de escalado precisas y monitorear continuamente la aplicación
+
+
+No usar balanceadores de carga para reducir costos.
+
+
+
+Limitar el número de servidores sin importar la demanda.

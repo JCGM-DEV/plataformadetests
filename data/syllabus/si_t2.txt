@@ -1,0 +1,110 @@
+tema 2
+¿Cuáles son los cuatro componentes principales de un sistema informático?
+
+
+Hardware, software, usuarios, seguridad
+
+
+Hardware, software, datos, usuarios
+
+
+Hardware, software, redes, periféricos
+
+¿Qué tarea crítica del sistema operativo implica la planificación de la ejecución de procesos y supervisar su finalización?
+
+
+Controlar y gestionar el uso del hardware del ordenador
+
+
+Administrar la ejecución de los procesos
+
+
+Controlar el proceso de organización de la información
+
+¿Qué es necesario hacer antes de actualizar una aplicación a una versión superior?
+
+
+Descargar manualmente e instalar la versión superior
+
+
+Comprobar si la versión superior es compatible con el sistema operativo y la licencia de la aplicación
+
+
+Realizar una copia de seguridad de los archivos y carpetas asociados a la aplicación
+
+¿Qué es la virtualización del hardware?
+
+
+La capacidad de ejecutar múltiples sistemas operativos en diferentes servidores físicos
+
+
+La capacidad de crear varias máquinas virtuales en un solo servidor físico
+
+
+La capacidad de almacenar datos de diferentes sistemas operativos en un solo servidor físico
+
+¿Cuál es la ventaja principal de la arquitectura monolítica?
+
+
+Su simplicidad y eficiencia
+
+
+Su modularidad y escalabilidad
+
+
+Su capacidad para agregar o eliminar funciones sin tener que recompilar todo el sistema
+
+¿Para qué se utiliza la preparación de imágenes del sistema para automatizar la instalación masiva de ordenadores?
+
+
+Para verificar si se dispone de la licencia correspondiente
+
+
+Para dividir el disco duro en secciones o particiones lógicas
+
+
+Para automatizar la instalación del sistema operativo en varios ordenadores
+
+¿Por qué es importante comprobar los requisitos, versiones y licencias antes de instalar una aplicación?
+
+
+Para asegurarse de tener suficiente espacio en disco
+
+
+Para garantizar el correcto funcionamiento de la aplicación y evitar problemas de licencia
+
+
+Para obtener nuevas funcionalidades y correcciones de errores
+
+¿Qué es el particionado del disco duro?
+
+
+La instalación de un sistema operativo
+
+
+La división del disco duro en secciones o particiones lógicas
+
+
+La verificación de la memoria RAM
+
+¿Qué son las aplicaciones de seguridad?
+
+
+Programas que se utilizan para proteger el sistema informático contra virus, malware y otras amenazas de seguridad
+
+
+Programas que se utilizan para la diversión y el entretenimiento
+
+
+Programas que se utilizan para la comunicación en línea
+
+¿Cuál es una de las funciones principales de un sistema operativo?
+
+
+Ejecutar aplicaciones
+
+
+Gestionar y coordinar el uso de los recursos de hardware y software
+
+
+Proteger el sistema de ataques de virus

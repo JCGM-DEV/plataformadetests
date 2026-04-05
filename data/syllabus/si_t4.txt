@@ -1,0 +1,110 @@
+tema 4
+¿Qué es un perfil de usuario local en Windows?
+
+
+Una cuenta de usuario que solo puede acceder a recursos en línea
+
+
+Una cuenta de usuario que solo puede acceder a recursos locales en una computadora
+
+
+Una cuenta de usuario que solo puede acceder a recursos en una red local
+
+¿Qué comando se utiliza para añadir un usuario a un grupo en la consola de comandos de Windows?
+
+
+add_group_member
+
+
+net group
+
+
+add_user_to_group
+
+¿Por qué es importante la configuración de usuarios y grupos locales en la gestión de sistemas operativos?
+
+
+Para personalizar la apariencia del sistema operativo
+
+
+Para controlar el acceso y los permisos de los usuarios a los recursos del sistema
+
+
+Para mejorar la velocidad del sistema operativo
+
+¿Qué comando se utiliza para crear un nuevo usuario en la consola de comandos de Windows?
+
+
+create_user
+
+
+add_user
+
+
+net user
+
+¿Qué beneficios puede tener cambiar la ruta de las carpetas de documentos a otra partición o recurso de red?
+
+
+Liberar espacio en el disco principal y reducir la fragmentación del disco
+
+
+Mejorar la velocidad de Internet
+
+
+Aumentar el rendimiento del procesador
+
+¿Cómo se verifica que un usuario se ha creado correctamente en Windows utilizando la consola de comandos?
+
+
+Con el comando "show_user"
+
+
+Con el comando "verify_user"
+
+
+Con el comando "net user"
+
+¿Quién debe tener la capacidad de habilitar o deshabilitar cuentas de usuario?
+
+
+Todos los usuarios del sistema
+
+
+Solo los usuarios con privilegios de administrador
+
+
+Solo los usuarios que tengan una contraseña segura
+
+¿Por qué es importante tener una correcta gestión de permisos y acceso a recursos en un sistema informático?
+
+
+Para prevenir el acceso no autorizado a datos confidenciales
+
+
+Para mejorar la velocidad de Internet
+
+
+Para aumentar el rendimiento del procesador
+
+¿Por qué es importante asignar a un usuario a un grupo en un sistema operativo?
+
+
+Para que el usuario tenga acceso a todos los recursos del sistema
+
+
+Para simplificar la administración de permisos y ahorrar tiempo y esfuerzo.
+
+
+Para aumentar el riesgo de que un usuario tenga acceso a recursos que no debería tener
+
+¿Cuáles son algunas normas para crear una contraseña segura?
+
+
+La contraseña debe tener menos de ocho caracteres de longitud
+
+
+La contraseña debe contener una combinación de letras mayúsculas y minúsculas, números y símbolos
+
+
+La contraseña debe ser una palabra común o una secuencia de caracteres fácilmente reconocible

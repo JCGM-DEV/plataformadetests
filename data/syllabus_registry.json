@@ -195,5 +195,218 @@
         "subject_id": "empleabilidad",
         "file": "data/syllabus/emp_t5.txt",
         "icon": "💼"
+    },
+    {
+        "id": "bd_lab",
+        "name": "SQL & BD Practice Lab",
+        "type": "lab",
+        "subject_id": "bases_de_datos",
+        "file": "practicaBD/index.html",
+        "icon": "🗄️"
+    },
+    {
+        "id": "lm_lab",
+        "name": "HTML/XML Practice Lab",
+        "type": "lab",
+        "subject_id": "lenguaje_de_marcas",
+        "file": "practicaLM/index.html",
+        "icon": "🏷️"
+    },
+    {
+        "id": "prog_lab",
+        "name": "Java POO Practice Lab",
+        "type": "lab",
+        "subject_id": "programacion",
+        "file": "practicaPROG/index.html",
+        "icon": "💻"
+    },
+    {
+        "id": "prog_tema_1",
+        "name": "Tema 1: Fundamentos",
+        "subject_id": "programacion",
+        "file": "data/syllabus/prog_t1.txt",
+        "icon": "💻"
+    },
+    {
+        "id": "prog_tema_2",
+        "name": "Tema 2: Clases y Objetos",
+        "subject_id": "programacion",
+        "file": "data/syllabus/prog_t2.txt",
+        "icon": "💻"
+    },
+    {
+        "id": "prog_tema_3",
+        "name": "Tema 3: Variables y Control",
+        "subject_id": "programacion",
+        "file": "data/syllabus/prog_t3.txt",
+        "icon": "💻"
+    },
+    {
+        "id": "prog_tema_4",
+        "name": "Tema 4: POO Avanzada",
+        "subject_id": "programacion",
+        "file": "data/syllabus/prog_t4.txt",
+        "icon": "💻"
+    },
+    {
+        "id": "prog_tema_5",
+        "name": "Tema 5: Arrays y Strings",
+        "subject_id": "programacion",
+        "file": "data/syllabus/prog_t5.txt",
+        "icon": "💻"
+    },
+    {
+        "id": "prog_tema_6",
+        "name": "Tema 6: Herencia e Interfaces",
+        "subject_id": "programacion",
+        "file": "data/syllabus/prog_t6.txt",
+        "icon": "💻"
+    },
+    {
+        "id": "prog_tema_7",
+        "name": "Tema 7: Colecciones y Excepciones",
+        "subject_id": "programacion",
+        "file": "data/syllabus/prog_t7.txt",
+        "icon": "💻"
+    },
+    {
+        "id": "prog_tema_8",
+        "name": "Tema 8: Ficheros y Streams",
+        "subject_id": "programacion",
+        "file": "data/syllabus/prog_t8.txt",
+        "icon": "💻"
+    },
+    {
+        "id": "prog_tema_9",
+        "name": "Tema 9: JDBC y Bases de Datos",
+        "subject_id": "programacion",
+        "file": "data/syllabus/prog_t9.txt",
+        "icon": "💻"
+    },
+    {
+        "id": "prog_tema_10",
+        "name": "Tema 10: BD Orientada a Objetos",
+        "subject_id": "programacion",
+        "file": "data/syllabus/prog_t10.txt",
+        "icon": "💻"
+    },
+    {
+        "id": "si_tema_1",
+        "name": "Tema 1: Redes y Hardware",
+        "subject_id": "sistemas_informaticos",
+        "file": "data/syllabus/si_t1.txt",
+        "icon": "🖥️"
+    },
+    {
+        "id": "si_tema_2",
+        "name": "Tema 2: Sistemas Operativos",
+        "subject_id": "sistemas_informaticos",
+        "file": "data/syllabus/si_t2.txt",
+        "icon": "🖥️"
+    },
+    {
+        "id": "si_tema_3",
+        "name": "Tema 3: Almacenamiento",
+        "subject_id": "sistemas_informaticos",
+        "file": "data/syllabus/si_t3.txt",
+        "icon": "🖥️"
+    },
+    {
+        "id": "si_tema_4",
+        "name": "Tema 4: Usuarios y Permisos",
+        "subject_id": "sistemas_informaticos",
+        "file": "data/syllabus/si_t4.txt",
+        "icon": "🖥️"
+    },
+    {
+        "id": "si_tema_5",
+        "name": "Tema 5: Redes TCP/IP",
+        "subject_id": "sistemas_informaticos",
+        "file": "data/syllabus/si_t5.txt",
+        "icon": "🖥️"
+    },
+    {
+        "id": "si_tema_6",
+        "name": "Tema 6: Seguridad",
+        "subject_id": "sistemas_informaticos",
+        "file": "data/syllabus/si_t6.txt",
+        "icon": "🖥️"
+    },
+    {
+        "id": "si_tema_7",
+        "name": "Tema 7: Software y Herramientas",
+        "subject_id": "sistemas_informaticos",
+        "file": "data/syllabus/si_t7.txt",
+        "icon": "🖥️"
+    },
+    {
+        "id": "cc_tema_1",
+        "name": "Tema 1: Conceptos Cloud",
+        "subject_id": "cloud_computing",
+        "file": "data/syllabus/cc_t1.txt",
+        "icon": "☁️"
+    },
+    {
+        "id": "cc_tema_2",
+        "name": "Tema 2: Economía y Facturación",
+        "subject_id": "cloud_computing",
+        "file": "data/syllabus/cc_t2.txt",
+        "icon": "☁️"
+    },
+    {
+        "id": "cc_tema_3",
+        "name": "Tema 3: Infraestructura",
+        "subject_id": "cloud_computing",
+        "file": "data/syllabus/cc_t3.txt",
+        "icon": "☁️"
+    },
+    {
+        "id": "cc_tema_4",
+        "name": "Tema 4: Seguridad en la Nube",
+        "subject_id": "cloud_computing",
+        "file": "data/syllabus/cc_t4.txt",
+        "icon": "☁️"
+    },
+    {
+        "id": "cc_tema_5",
+        "name": "Tema 5: Redes y CDN",
+        "subject_id": "cloud_computing",
+        "file": "data/syllabus/cc_t5.txt",
+        "icon": "☁️"
+    },
+    {
+        "id": "cc_tema_6",
+        "name": "Tema 6: Servicios de Cómputo",
+        "subject_id": "cloud_computing",
+        "file": "data/syllabus/cc_t6.txt",
+        "icon": "☁️"
+    },
+    {
+        "id": "cc_tema_7",
+        "name": "Tema 7: Almacenamiento",
+        "subject_id": "cloud_computing",
+        "file": "data/syllabus/cc_t7.txt",
+        "icon": "☁️"
+    },
+    {
+        "id": "cc_tema_8",
+        "name": "Tema 8: Bases de Datos Cloud",
+        "subject_id": "cloud_computing",
+        "file": "data/syllabus/cc_t8.txt",
+        "icon": "☁️"
+    },
+    {
+        "id": "cc_tema_9",
+        "name": "Tema 9: Arquitectura Cloud",
+        "subject_id": "cloud_computing",
+        "file": "data/syllabus/cc_t9.txt",
+        "icon": "☁️"
+    },
+    {
+        "id": "cc_tema_10",
+        "name": "Tema 10: Escalado y Monitorización",
+        "subject_id": "cloud_computing",
+        "file": "data/syllabus/cc_t10.txt",
+        "icon": "☁️"
     }
 ]
