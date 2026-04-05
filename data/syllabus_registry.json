@@ -98,6 +98,14 @@
         "icon": "🛠️"
     },
     {
+        "id": "ed_lab_uml",
+        "name": "Práctica: UML Practice Lab",
+        "type": "lab",
+        "subject_id": "entornos_de_desarrollo",
+        "file": "practicaED/index.html",
+        "icon": "⬡"
+    },
+    {
         "id": "lm_tema_1",
         "name": "LM Tema 1: Introd. Marcas",
         "subject_id": "lenguaje_de_marcas",

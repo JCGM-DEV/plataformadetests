@@ -235,10 +235,13 @@ function renderSyllabusExams() {
                         <div class="badge" style="background:#f59e0b; color:white; font-size:0.6rem; padding:2px 6px; border-radius:4px; width:fit-content; margin-bottom:0.5rem; font-weight:bold;">TEMARIO OFICIAL</div>
                         <h3>${exam.name}</h3>
                         <div class="exam-selector-large">
-                            <button onclick="startSyllabusExam('${exam.id}')">Iniciar Examen de Temario</button>
+                            ${exam.type === 'lab' 
+                                ? `<button onclick="startLab('${exam.id}')" style="background: linear-gradient(to right, var(--accent-color), var(--primary-color));">🚀 Iniciar UML Lab Interactivo</button>`
+                                : `<button onclick="startSyllabusExam('${exam.id}')">Iniciar Examen de Temario</button>`
+                            }
                         </div>
                         <div class="card-stats">
-                            <span>Modo Entrenamiento: Todas las preguntas</span>
+                            <span>${exam.type === 'lab' ? 'Práctica interactiva' : 'Modo Entrenamiento: Todas las preguntas'}</span>
                         </div>
                     </div>
                 `).join('')}
@@ -281,8 +284,10 @@ function renderSubjects() {
 
 function setupEventListeners() {
     closeExamBtn.onclick = () => {
-        if(confirm("¿Seguro que quieres salir? Se perderá el progreso del examen.")) {
+        if(confirm("¿Seguro que quieres salir? Se perderá el progreso.")) {
             examModal.classList.add('hidden');
+            examModal.classList.remove('modal-full');
+            examRoot.innerHTML = '';
             clearInterval(APP_STATE.timerInterval);
         }
     };
@@ -409,6 +414,20 @@ async function startSyllabusExam(syllabusId) {
         console.error("Error loading syllabus exam:", error);
         alert("Error al cargar el archivo de examen.");
     }
+}
+
+async function startLab(syllabusId) {
+    const examInfo = APP_STATE.syllabusExams.find(e => e.id === syllabusId);
+    if (!examInfo) return;
+
+    examModal.classList.add('modal-full');
+    examModal.classList.remove('hidden');
+    
+    examRoot.innerHTML = `
+        <div class="lab-container">
+            <iframe src="${examInfo.file}" class="lab-iframe"></iframe>
+        </div>
+    `;
 }
 
 function parseTxtExam(text, syllabusId) {
