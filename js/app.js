@@ -200,6 +200,9 @@ function renderSyllabusExams() {
             <div class="syllabus-group-header">
                 <span class="header-icon">${subject.icon}</span>
                 <h4>${subject.name}</h4>
+                <button class="simulacro-temario-btn" onclick="startSimulacroTemario('${subjectId}')">
+                    🎯 Simulacro Completo (40 preguntas)
+                </button>
             </div>
             <div class="grid-container syllabus-grid">
                 ${grouped[subjectId].map(exam => `
@@ -447,6 +450,73 @@ function startFallosExam(subjectId) {
     showView('exam');
     renderQuestion();
     startTimer();
+}
+
+// ─── SIMULACRO TEMARIO COMPLETO ─────────────────────────────────
+async function startSimulacroTemario(subjectId) {
+    const subject = APP_STATE.subjects.find(s => s.id === subjectId);
+    const temas = APP_STATE.syllabusExams.filter(e => e.subject_id === subjectId && e.type !== 'lab');
+
+    if (temas.length === 0) { alert('No hay temas disponibles para esta asignatura.'); return; }
+
+    // Show loading state
+    document.getElementById('exam-subject-label').textContent = `⏳ Cargando simulacro...`;
+    showView('exam');
+    document.getElementById('exam-engine-root').innerHTML = `
+        <div style="text-align:center;padding:4rem;color:var(--text-secondary)">
+            <div style="font-size:2rem;margin-bottom:1rem">⏳</div>
+            <p>Cargando preguntas de ${temas.length} temas...</p>
+        </div>`;
+
+    try {
+        // Fetch all tema files in parallel
+        const fetches = temas.map(t => fetch(t.file + '?v=' + Date.now())
+            .then(r => r.text())
+            .then(text => parseTxtExam(text, t.id))
+            .catch(() => []));
+
+        const allArrays = await Promise.all(fetches);
+        const allQuestions = allArrays.flat();
+
+        if (allQuestions.length === 0) { alert('No se pudieron cargar preguntas.'); showView('dashboard'); return; }
+
+        // Pick 40 questions distributed across all temas
+        const TARGET = 40;
+        const perTema = Math.ceil(TARGET / temas.length);
+        let selected = [];
+
+        allArrays.forEach((pool, idx) => {
+            const shuffled = shuffleArray(pool);
+            selected.push(...shuffled.slice(0, perTema));
+        });
+
+        // Shuffle final selection and cap at 40
+        selected = shuffleArray(selected).slice(0, TARGET);
+
+        // If we got less than 40 (small pools), fill with remaining
+        if (selected.length < TARGET) {
+            const usedIds = new Set(selected.map(q => q.concept_id));
+            const remaining = shuffleArray(allQuestions.filter(q => !usedIds.has(q.concept_id)));
+            selected.push(...remaining.slice(0, TARGET - selected.length));
+        }
+
+        APP_STATE.currentExam = { ...subject, id: subjectId };
+        APP_STATE.currentUnit = null;
+        APP_STATE.isSyllabusMode = true;
+        APP_STATE.examQuestions = selected;
+        APP_STATE.currentQuestionIndex = 0;
+        APP_STATE.answers = [];
+        APP_STATE.timer = selected.length * 90; // 90s per question = 60min for 40q
+
+        document.getElementById('exam-subject-label').textContent = `📋 ${subject.icon} ${subject.name} — Simulacro Completo (${selected.length} preguntas)`;
+        renderQuestion();
+        startTimer();
+
+    } catch (err) {
+        console.error(err);
+        alert('Error al cargar el simulacro.');
+        showView('dashboard');
+    }
 }
 
 async function startSyllabusExam(syllabusId) {

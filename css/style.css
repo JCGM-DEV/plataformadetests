@@ -810,3 +810,31 @@ footer { margin-top: 4rem; padding-bottom: 2rem; }
   transform: translateY(-1px);
   box-shadow: 0 4px 16px color-mix(in srgb, var(--lab-color, #6366f1) 40%, transparent);
 }
+
+/* ── SIMULACRO TEMARIO BTN ──────────────────────────────────── */
+.syllabus-group-header {
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.simulacro-temario-btn {
+  margin-left: auto;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border: none;
+  color: #1a0800;
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 3px 12px rgba(245,158,11,0.3);
+}
+
+.simulacro-temario-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(245,158,11,0.4);
+}
