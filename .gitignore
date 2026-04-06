@@ -1,3 +1,8 @@
 scripts/
 __pycache__/
 node_modules/
+*.py
+*.log
+COHERENCIA_REPORT*.json
+MISALIGNMENT_REPORT*.json
+/tmp/
