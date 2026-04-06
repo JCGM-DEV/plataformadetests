@@ -20,8 +20,8 @@ Se escribe una sentencia de texto similar a SQL.
 *Se crea un objeto "prototipo" o plantilla y el sistema busca objetos que coincidan con sus atributos no nulos.
 Se programa un filtro mediante una función lambda de Java.
 ¿Qué ventaja principal ofrecen las "Native Queries" (Consultas Nativas) frente a otros métodos?
-*Son mucho más rápidas que las consultas por OID.
-Permiten usar código Java puro para filtrar, proporcionando total seguridad de tipos (Type-Safe).
+Son mucho más rápidas que las consultas por OID.
+*Permiten usar código Java puro para filtrar, proporcionando total seguridad de tipos (Type-Safe).
 No requieren que la base de datos esté abierta para ejecutarse.
 En las consultas OQL, ¿cómo se navega a través de las relaciones entre objetos?
 Mediante el uso de sentencias JOIN complejas como en el modelo relacional.
@@ -32,10 +32,10 @@ El número máximo de usuarios que pueden conectarse a la vez.
 *El nivel de profundidad del grafo de objetos que se carga en la memoria RAM al recuperar un objeto.
 La cantidad de copias de seguridad que el sistema realiza cada hora.
 En el estándar ODMG, ¿qué lenguaje se utiliza específicamente para definir la estructura de la base de datos?
-*OQL (Object Query Language).
-ODL (Object Definition Language).
+OQL (Object Query Language).
+*ODL (Object Definition Language).
 SQL-92.
 ¿Cuál es la diferencia principal entre el modo de funcionamiento "Embebido" y el modo "Servidor"?
 El modo Embebido permite múltiples conexiones remotas, mientras que el Servidor es solo para un usuario.
-El modo Embebido la base de datos corre en el mismo proceso que la aplicación, mientras que el modo Servidor es un proceso independiente.
-*El modo Servidor es gratuito y el modo Embebido requiere licencia comercial.
+*El modo Embebido: la base de datos corre en el mismo proceso que la aplicación; el modo Servidor es un proceso independiente.
+El modo Servidor es gratuito y el modo Embebido requiere licencia comercial.
