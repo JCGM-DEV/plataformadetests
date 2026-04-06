@@ -730,19 +730,15 @@ function exitExamToHome() {
 // ─── ROBUST TXT PARSER ──────────────────────────────────────────
 function parseTxtExam(text, syllabusId) {
     const normalized = text.replace(/\r\n/g, '\n').replace(/^tema\s+\d+\s*$/gim, '').trim();
-
-    // Detect format: if there are blank lines between options → block format (prog/si/cc)
-    // Otherwise → line format with * marker (bd/ed/lm/emp)
-    const hasBlanksBetweenOptions = /\n\n/.test(normalized);
-
-    if (hasBlanksBetweenOptions) {
-        return parseBlockFormat(normalized, syllabusId);
-    } else {
-        return parseLineFormat(normalized, syllabusId);
-    }
+    // Detect format by presence of blank lines between content blocks
+    const hasBlankLines = /\n\n/.test(normalized);
+    return hasBlankLines
+        ? parseBlockFormat(normalized, syllabusId)
+        : parseLineFormat(normalized, syllabusId);
 }
 
-// Format: BD, ED, LM, Empleabilidad — lines consecutive, * marks correct
+// ── Format A: BD, ED, LM, Empleabilidad ─────────────────────────
+// Lines consecutive, no blank lines, * marks correct option
 function parseLineFormat(text, syllabusId) {
     const lines = text.split('\n')
         .map(l => l.trim())
@@ -752,83 +748,78 @@ function parseLineFormat(text, syllabusId) {
     let i = 0;
 
     while (i < lines.length) {
-        const questionText = lines[i];
-        i++;
-        const options = [];
-        let correctIndex = 0;
+        const questionText = lines[i]; i++;
+        const options = []; let correctIndex = 0;
 
         while (i < lines.length && options.length < 4) {
             const line = lines[i];
-            // Stop if looks like a new question (no * and we have 2+ options)
             if (options.length >= 2 && !line.startsWith('*')) {
-                // Check if next line after this one starts with * (meaning this IS an option)
-                const nextLine = lines[i + 1] || '';
-                if (!nextLine.startsWith('*') && options.length >= 3) break;
-                if (!nextLine.startsWith('*') && options.length >= 2 && line.length > 80) break;
+                const next = lines[i + 1] || '';
+                if (!next.startsWith('*') && options.length >= 3) break;
+                if (!next.startsWith('*') && options.length >= 2 && line.length > 80) break;
             }
-            if (line.startsWith('*')) {
-                correctIndex = options.length;
-                options.push(line.substring(1).trim());
-            } else {
-                options.push(line);
-            }
+            if (line.startsWith('*')) { correctIndex = options.length; options.push(line.slice(1).trim()); }
+            else options.push(line);
             i++;
             if (options.length >= 4) break;
         }
 
-        if (options.length >= 2) {
-            questions.push({
-                concept_id: `${syllabusId}_q${questions.length}`,
-                question: questionText,
-                options,
-                correct: correctIndex,
-                explanation: 'Pregunta del temario oficial.',
-                unit: null
-            });
-        }
+        if (options.length >= 2) questions.push({
+            concept_id: `${syllabusId}_q${questions.length}`,
+            question: questionText, options, correct: correctIndex,
+            explanation: 'Pregunta del temario oficial.', unit: null
+        });
     }
     return questions;
 }
 
-// Format: Programación, Sistemas, Cloud — blank lines between blocks, last option = correct
+// ── Format B: Programación, Sistemas, Cloud ──────────────────────
+// Blank lines between blocks. * marks correct OR last option is correct.
 function parseBlockFormat(text, syllabusId) {
+    // Each question + its options are separated by blank lines
+    // A question block: no * prefix, usually ends with ?
+    // An option block: short text, may start with *
     const blocks = text.split(/\n\n+/).map(b => b.trim()).filter(b => b);
     const questions = [];
     let i = 0;
 
     while (i < blocks.length) {
-        const questionText = blocks[i].replace(/^\*/, '').trim();
-        const options = [];
-        let correctIndex = 0;
+        // Find next question block (doesn't start with * and looks like a question)
+        const qBlock = blocks[i];
+        // Clean any leading * (shouldn't happen but safety)
+        const questionText = qBlock.replace(/^\*/, '').trim();
+        const options = []; let correctIndex = -1;
         let j = i + 1;
 
         while (j < blocks.length && options.length < 4) {
             const candidate = blocks[j];
-            // Stop if this looks like a new question
+
+            // Stop if this looks like a new question (not an option)
             if (options.length >= 2 && !candidate.startsWith('*')) {
-                const looksLikeQuestion =
-                    /\?/.test(candidate) ||
-                    /^(¿|En |Los |Las |Cuando |Qué |Cuál |Según |Si |Al |Para |Desde |Respecto|Durante|Sobre|Dentro|Ante|Java|Un |Una |El |La |Durante|Todo|Cada)/i.test(candidate);
-                if (looksLikeQuestion && candidate.length > 50) break;
+                const isQuestion =
+                    candidate.includes('?') ||
+                    /^(¿|En |Los |Las |Cuando |Qué |Cuál |Según |Si |Al |Para |Desde |Respecto|Durante|Sobre|Dentro|Ante|Java|Un |Una |El |La |Todo|Cada|Al |Si |Sobre|Respecto)/i.test(candidate);
+                if (isQuestion && candidate.length > 50) break;
                 if (options.length >= 3) break;
             }
+
             if (candidate.startsWith('*')) {
                 correctIndex = options.length;
-                options.push(candidate.substring(1).trim());
+                options.push(candidate.slice(1).trim());
             } else {
                 options.push(candidate);
             }
             j++;
         }
 
+        // If no * marker found, last option is correct
+        if (correctIndex === -1 && options.length >= 2) correctIndex = options.length - 1;
+
         if (options.length >= 2) {
             questions.push({
                 concept_id: `${syllabusId}_q${questions.length}`,
-                question: questionText,
-                options,
-                correct: correctIndex,
-                explanation: 'Pregunta del temario oficial.',
-                unit: null
+                question: questionText, options, correct: correctIndex,
+                explanation: 'Pregunta del temario oficial.', unit: null
             });
             i = j;
         } else {
