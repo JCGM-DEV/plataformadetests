@@ -729,48 +729,89 @@ function exitExamToHome() {
 
 // ─── ROBUST TXT PARSER ──────────────────────────────────────────
 function parseTxtExam(text, syllabusId) {
-    // Normalize: remove tema headers, collapse multiple blank lines to one
-    const normalized = text
-        .replace(/\r\n/g, '\n')
-        .replace(/^tema\s+\d+\s*$/gim, '')
-        .replace(/\n{3,}/g, '\n\n')
-        .trim();
+    const normalized = text.replace(/\r\n/g, '\n').replace(/^tema\s+\d+\s*$/gim, '').trim();
 
-    // Split into blocks by blank line
-    const blocks = normalized.split(/\n\n+/).map(b => b.trim()).filter(b => b);
+    // Detect format: if there are blank lines between options → block format (prog/si/cc)
+    // Otherwise → line format with * marker (bd/ed/lm/emp)
+    const hasBlanksBetweenOptions = /\n\n/.test(normalized);
+
+    if (hasBlanksBetweenOptions) {
+        return parseBlockFormat(normalized, syllabusId);
+    } else {
+        return parseLineFormat(normalized, syllabusId);
+    }
+}
+
+// Format: BD, ED, LM, Empleabilidad — lines consecutive, * marks correct
+function parseLineFormat(text, syllabusId) {
+    const lines = text.split('\n')
+        .map(l => l.trim())
+        .filter(l => l !== '' && !l.includes('( 1.00 puntos )'));
 
     const questions = [];
     let i = 0;
 
+    while (i < lines.length) {
+        const questionText = lines[i];
+        i++;
+        const options = [];
+        let correctIndex = 0;
+
+        while (i < lines.length && options.length < 4) {
+            const line = lines[i];
+            // Stop if looks like a new question (no * and we have 2+ options)
+            if (options.length >= 2 && !line.startsWith('*')) {
+                // Check if next line after this one starts with * (meaning this IS an option)
+                const nextLine = lines[i + 1] || '';
+                if (!nextLine.startsWith('*') && options.length >= 3) break;
+                if (!nextLine.startsWith('*') && options.length >= 2 && line.length > 80) break;
+            }
+            if (line.startsWith('*')) {
+                correctIndex = options.length;
+                options.push(line.substring(1).trim());
+            } else {
+                options.push(line);
+            }
+            i++;
+            if (options.length >= 4) break;
+        }
+
+        if (options.length >= 2) {
+            questions.push({
+                concept_id: `${syllabusId}_q${questions.length}`,
+                question: questionText,
+                options,
+                correct: correctIndex,
+                explanation: 'Pregunta del temario oficial.',
+                unit: null
+            });
+        }
+    }
+    return questions;
+}
+
+// Format: Programación, Sistemas, Cloud — blank lines between blocks, last option = correct
+function parseBlockFormat(text, syllabusId) {
+    const blocks = text.split(/\n\n+/).map(b => b.trim()).filter(b => b);
+    const questions = [];
+    let i = 0;
+
     while (i < blocks.length) {
-        const block = blocks[i];
-
-        // Skip if empty
-        if (!block) { i++; continue; }
-
-        // This block is a question. Collect following option blocks.
-        const questionText = block.replace(/^\*/, '').trim();
+        const questionText = blocks[i].replace(/^\*/, '').trim();
         const options = [];
         let correctIndex = 0;
         let j = i + 1;
 
         while (j < blocks.length && options.length < 4) {
             const candidate = blocks[j];
-
-            // Stop collecting options if this looks like a new question:
-            // A question block has NO * prefix AND options.length >= 2
-            // AND the candidate doesn't start with * AND we already have 3 options
-            if (options.length >= 3 && !candidate.startsWith('*')) {
-                break;
-            }
-            // Also stop if we already have 2+ options and candidate looks like a question
-            // (ends with ? or starts with common question words and is long)
+            // Stop if this looks like a new question
             if (options.length >= 2 && !candidate.startsWith('*')) {
-                const looksLikeQuestion = /\?$/.test(candidate) ||
-                    /^(¿|En |Los |Las |Cuando |Qué |Cuál |Según |Si |Al |Para |Desde |Respecto|Durante|Sobre|Dentro|Ante)/i.test(candidate);
-                if (looksLikeQuestion && candidate.length > 40) break;
+                const looksLikeQuestion =
+                    /\?/.test(candidate) ||
+                    /^(¿|En |Los |Las |Cuando |Qué |Cuál |Según |Si |Al |Para |Desde |Respecto|Durante|Sobre|Dentro|Ante|Java|Un |Una |El |La |Durante|Todo|Cada)/i.test(candidate);
+                if (looksLikeQuestion && candidate.length > 50) break;
+                if (options.length >= 3) break;
             }
-
             if (candidate.startsWith('*')) {
                 correctIndex = options.length;
                 options.push(candidate.substring(1).trim());
@@ -791,11 +832,9 @@ function parseTxtExam(text, syllabusId) {
             });
             i = j;
         } else {
-            // Can't form a valid question, skip this block
             i++;
         }
     }
-
     return questions;
 }
 
