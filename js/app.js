@@ -194,15 +194,27 @@ function renderSyllabusExams() {
 
     Object.keys(grouped).forEach(subjectId => {
         const subject = APP_STATE.subjects.find(s => s.id === subjectId) || { name: subjectId, icon: '📖' };
+        const fallos = getFallos()[subjectId] || {};
+        const fallosCount = Object.keys(fallos).length;
+
         const groupEl = document.createElement('div');
         groupEl.className = 'syllabus-group';
+        groupEl.id = `syllabus-group-${subjectId}`;
         groupEl.innerHTML = `
             <div class="syllabus-group-header">
                 <span class="header-icon">${subject.icon}</span>
                 <h4>${subject.name}</h4>
-                <button class="simulacro-temario-btn" onclick="startSimulacroTemario('${subjectId}')">
-                    🎯 Simulacro Completo (40 preguntas)
-                </button>
+                <div class="syllabus-group-actions">
+                    <button class="simulacro-temario-btn" onclick="startSimulacroTemario('${subjectId}')">
+                        🎯 Simulacro (40 preguntas)
+                    </button>
+                    <button class="btn-flashcard" onclick="startSyllabusFlashcard('${subjectId}')" title="Flashcards del temario">
+                        ⚡ Flashcards
+                    </button>
+                    ${fallosCount > 0 ? `<button class="btn-fallos" onclick="startFallosExam('${subjectId}')" title="Repasar fallos">
+                        ❌ Fallos (${fallosCount})
+                    </button>` : ''}
+                </div>
             </div>
             <div class="grid-container syllabus-grid">
                 ${grouped[subjectId].map(exam => `
@@ -453,6 +465,31 @@ function startFallosExam(subjectId) {
 }
 
 // ─── SIMULACRO TEMARIO COMPLETO ─────────────────────────────────
+async function startSyllabusFlashcard(subjectId) {
+    const subject = APP_STATE.subjects.find(s => s.id === subjectId);
+    const temas = APP_STATE.syllabusExams.filter(e => e.subject_id === subjectId && e.type !== 'lab');
+    if (temas.length === 0) { alert('No hay temas disponibles.'); return; }
+
+    document.getElementById('fc-subject-label').textContent = `⏳ Cargando...`;
+    showView('flashcard');
+    document.getElementById('flashcard-root').innerHTML = `<div style="text-align:center;padding:4rem;color:var(--text-secondary)"><p>Cargando flashcards del temario...</p></div>`;
+
+    try {
+        const fetches = temas.map(t => fetch(t.file + '?v=' + Date.now())
+            .then(r => r.text()).then(text => parseTxtExam(text, t.id)).catch(() => []));
+        const allArrays = await Promise.all(fetches);
+        const pool = shuffleArray(allArrays.flat());
+        if (pool.length === 0) { alert('No se pudieron cargar preguntas.'); showView('dashboard'); return; }
+
+        APP_STATE.fcQuestions = pool;
+        APP_STATE.fcIndex = 0;
+        APP_STATE.fcFlipped = false;
+        APP_STATE.currentExam = { ...subject, id: subjectId };
+        document.getElementById('fc-subject-label').textContent = `${subject.icon} ${subject.name} — Flashcards Temario`;
+        renderFlashcard();
+    } catch(e) { alert('Error al cargar.'); showView('dashboard'); }
+}
+
 async function startSimulacroTemario(subjectId) {
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
     const temas = APP_STATE.syllabusExams.filter(e => e.subject_id === subjectId && e.type !== 'lab');

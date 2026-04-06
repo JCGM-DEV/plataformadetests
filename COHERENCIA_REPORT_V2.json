@@ -1,0 +1,1350 @@
+{
+  "summary": {
+    "total_questions": 939,
+    "flagged_count": 15,
+    "percentage": 1.5974440894568689
+  },
+  "by_subject": {
+    "sistemas_informaticos": {
+      "Total": 193,
+      "Flagged": 4,
+      "Examples": [
+        {
+          "index": 47,
+          "question": "¿Qué es el Kernel de un sistema operativo?",
+          "options": [
+            "El sistema de archivos principal",
+            "El gestor de paquetes",
+            "El núcleo que gestiona el hardware y los recursos",
+            "La interfaz gráfica del SO"
+          ],
+          "correct": 2,
+          "details": {
+            "type": "Opciones de contextos diferentes",
+            "details": [
+              {
+                "option": 0,
+                "text": "El sistema de archivos principal",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "sistemas_informaticos",
+                    "sistemas"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ]
+                ]
+              },
+              {
+                "option": 2,
+                "text": "El núcleo que gestiona el hardware y los recursos",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "sistemas_informaticos",
+                    "sistemas"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ]
+                ]
+              },
+              {
+                "option": 3,
+                "text": "La interfaz gráfica del SO",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "sistemas_informaticos",
+                    "sistemas"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "programacion",
+                    "oop"
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "index": 132,
+          "question": "¿Qué es el POST (Power-On Self-Test)?",
+          "options": [
+            "La secuencia de GRUB",
+            "El arranque del sistema operativo",
+            "Un tipo de protocolo de red",
+            "Proceso de autocomprobación del hardware que realiza la BIOS/UEFI al encenderse el equipo"
+          ],
+          "correct": 3,
+          "details": {
+            "type": "Opciones de contextos diferentes",
+            "details": [
+              {
+                "option": 0,
+                "text": "La secuencia de GRUB",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "entornos_de_desarrollo",
+                    "testing"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ]
+                ]
+              },
+              {
+                "option": 2,
+                "text": "Un tipo de protocolo de red",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "entornos_de_desarrollo",
+                    "testing"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ],
+                  [
+                    "programacion",
+                    "datos"
+                  ]
+                ]
+              },
+              {
+                "option": 3,
+                "text": "Proceso de autocomprobación del hardware que realiza la BIOS/UEFI al encenderse el equipo",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "entornos_de_desarrollo",
+                    "testing"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ],
+                  [
+                    "empleabilidad",
+                    "soft_skills"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "sistemas"
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "index": 144,
+          "question": "¿Qué es un periférico de entrada?",
+          "options": [
+            "Dispositivo que muestra datos al usuario",
+            "Dispositivo de red",
+            "Dispositivo de almacenamiento",
+            "Dispositivo que envía datos al ordenador"
+          ],
+          "correct": 3,
+          "details": {
+            "type": "Opciones de contextos diferentes",
+            "details": [
+              {
+                "option": 0,
+                "text": "Dispositivo que muestra datos al usuario",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "programacion",
+                    "control"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ]
+                ]
+              },
+              {
+                "option": 1,
+                "text": "Dispositivo de red",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "programacion",
+                    "control"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ]
+                ]
+              },
+              {
+                "option": 3,
+                "text": "Dispositivo que envía datos al ordenador",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "programacion",
+                    "control"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "index": 181,
+          "question": "¿Qué comando se utiliza para añadir un usuario a un grupo en consola de Windows?",
+          "options": [
+            "add_user_to_group",
+            "add_group_member",
+            "net group",
+            "YAML"
+          ],
+          "correct": 2,
+          "details": {
+            "type": "Opciones de contextos diferentes",
+            "details": [
+              {
+                "option": 0,
+                "text": "add_user_to_group",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "sistemas"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "bases_de_datos",
+                    "sql"
+                  ]
+                ]
+              },
+              {
+                "option": 1,
+                "text": "add_group_member",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "sistemas"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "bases_de_datos",
+                    "sql"
+                  ]
+                ]
+              },
+              {
+                "option": 2,
+                "text": "net group",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "sistemas"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "bases_de_datos",
+                    "sql"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "bases_de_datos": {
+      "Total": 130,
+      "Flagged": 1,
+      "Examples": [
+        {
+          "index": 14,
+          "question": "¿Qué cláusula filtra filas individuales antes de aplicar una agrupación?",
+          "options": [
+            "WHERE",
+            "ORDER BY",
+            "HAVING",
+            "GROUP BY"
+          ],
+          "correct": 0,
+          "details": {
+            "type": "Opciones de contextos diferentes",
+            "details": [
+              {
+                "option": 0,
+                "text": "WHERE",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "css"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "html"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "bases_de_datos",
+                    "sql"
+                  ]
+                ]
+              },
+              {
+                "option": 1,
+                "text": "ORDER BY",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "css"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "html"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "bases_de_datos",
+                    "sql"
+                  ]
+                ]
+              },
+              {
+                "option": 3,
+                "text": "GROUP BY",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "css"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "html"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "bases_de_datos",
+                    "sql"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "lenguaje_de_marcas": {
+      "Total": 183,
+      "Flagged": 4,
+      "Examples": [
+        {
+          "index": 60,
+          "question": "¿Qué es XML?",
+          "options": [
+            "El sucesor de HTML",
+            "Lenguaje de marcas extensible para estructura y transporte de datos, con etiquetas personalizables",
+            "Un protocolo de red",
+            "Un lenguaje de programación"
+          ],
+          "correct": 1,
+          "details": {
+            "type": "Opciones de contextos diferentes",
+            "details": [
+              {
+                "option": 0,
+                "text": "El sucesor de HTML",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "lenguaje_de_marcas",
+                    "xml"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "html"
+                  ]
+                ]
+              },
+              {
+                "option": 1,
+                "text": "Lenguaje de marcas extensible para estructura y transporte de datos, con etiquetas personalizables",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "lenguaje_de_marcas",
+                    "xml"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "programacion",
+                    "datos"
+                  ]
+                ]
+              },
+              {
+                "option": 2,
+                "text": "Un protocolo de red",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "lenguaje_de_marcas",
+                    "xml"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ]
+                ]
+              },
+              {
+                "option": 3,
+                "text": "Un lenguaje de programación",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "lenguaje_de_marcas",
+                    "xml"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "index": 82,
+          "question": "¿Qué es el atributo 'meta viewport' y para qué sirve?",
+          "options": [
+            "Controla la escala y el ancho de la ventana en dispositivos móviles para el responsive design",
+            "Configura la caché del navegador",
+            "Define el tamaño de la ventana del navegador en escritorio",
+            "Establece el idioma del documento"
+          ],
+          "correct": 0,
+          "details": {
+            "type": "Opciones de contextos diferentes",
+            "details": [
+              {
+                "option": 0,
+                "text": "Controla la escala y el ancho de la ventana en dispositivos móviles para el responsive design",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "lenguaje_de_marcas",
+                    "xml"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "html"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ]
+                ]
+              },
+              {
+                "option": 1,
+                "text": "Configura la caché del navegador",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "lenguaje_de_marcas",
+                    "xml"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "html"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "web"
+                  ]
+                ]
+              },
+              {
+                "option": 2,
+                "text": "Define el tamaño de la ventana del navegador en escritorio",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "lenguaje_de_marcas",
+                    "xml"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "html"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "css"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "web"
+                  ]
+                ]
+              },
+              {
+                "option": 3,
+                "text": "Establece el idioma del documento",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "lenguaje_de_marcas",
+                    "xml"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "html"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "css"
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "index": 115,
+          "question": "¿Quién propuso en 1980 el hipertexto que dio origen al HTML?",
+          "options": [
+            "El Consorcio W3C",
+            "Tim Berners-Lee mientras trabajaba en el CERN",
+            "La ISO",
+            "Combinación de las anteriores"
+          ],
+          "correct": 1,
+          "details": {
+            "type": "Opciones de contextos diferentes",
+            "details": [
+              {
+                "option": 0,
+                "text": "El Consorcio W3C",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "html"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ]
+                ]
+              },
+              {
+                "option": 1,
+                "text": "Tim Berners-Lee mientras trabajaba en el CERN",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "html"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ]
+                ]
+              },
+              {
+                "option": 3,
+                "text": "Combinación de las anteriores",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "html"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "index": 161,
+          "question": "¿Por qué es importante validar un feed RSS/Atom?",
+          "options": [
+            "Para mejorar su posición automáticamente en buscadores",
+            "Para asegurar que cumple estándares W3C, verificar accesibilidad de la URI y ausencia de errores de sintaxis",
+            "Para registrarse en directorios sin aprobación manual",
+            "Combinación de las anteriores"
+          ],
+          "correct": 1,
+          "details": {
+            "type": "Opciones de contextos diferentes",
+            "details": [
+              {
+                "option": 0,
+                "text": "Para mejorar su posición automáticamente en buscadores",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "lenguaje_de_marcas",
+                    "css"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ]
+                ]
+              },
+              {
+                "option": 2,
+                "text": "Para registrarse en directorios sin aprobación manual",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "lenguaje_de_marcas",
+                    "css"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ]
+                ]
+              },
+              {
+                "option": 3,
+                "text": "Combinación de las anteriores",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "lenguaje_de_marcas",
+                    "css"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "entornos_de_desarrollo": {
+      "Total": 111,
+      "Flagged": 2,
+      "Examples": [
+        {
+          "index": 37,
+          "question": "¿Qué es el 'Agile Manifesto'?",
+          "options": [
+            "Documento que establece los 4 valores y 12 principios del desarrollo ágil de software",
+            "Un lenguaje de programación ágil",
+            "Un framework de gestión de proyectos",
+            "Un estándar ISO para software"
+          ],
+          "correct": 0,
+          "details": {
+            "type": "Opciones de contextos diferentes",
+            "details": [
+              {
+                "option": 0,
+                "text": "Documento que establece los 4 valores y 12 principios del desarrollo ágil de software",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "control"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ]
+                ]
+              },
+              {
+                "option": 1,
+                "text": "Un lenguaje de programación ágil",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "control"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ]
+                ]
+              },
+              {
+                "option": 2,
+                "text": "Un framework de gestión de proyectos",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "control"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "index": 56,
+          "question": "¿Qué es Jenkins?",
+          "options": [
+            "Un servidor de aplicaciones Java",
+            "Un gestor de repositorios Git",
+            "Un sistema de monitorización",
+            "Servidor de automatización open source para implementar pipelines CI/CD"
+          ],
+          "correct": 3,
+          "details": {
+            "type": "Opciones de contextos diferentes",
+            "details": [
+              {
+                "option": 0,
+                "text": "Un servidor de aplicaciones Java",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "entornos_de_desarrollo",
+                    "devops"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "web"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "css"
+                  ],
+                  [
+                    "cloud_computing",
+                    "infraestructura"
+                  ]
+                ]
+              },
+              {
+                "option": 1,
+                "text": "Un gestor de repositorios Git",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "entornos_de_desarrollo",
+                    "devops"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ],
+                  [
+                    "entornos_de_desarrollo",
+                    "git"
+                  ]
+                ]
+              },
+              {
+                "option": 2,
+                "text": "Un sistema de monitorización",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "entornos_de_desarrollo",
+                    "devops"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "cloud_computing": {
+      "Total": 72,
+      "Flagged": 2,
+      "Examples": [
+        {
+          "index": 22,
+          "question": "¿Qué es Terraform?",
+          "options": [
+            "Un servicio de monitorización",
+            "Un sistema de contenedores",
+            "Herramienta de Infrastructure as Code (IaC) para provisionar recursos cloud de forma declarativa",
+            "Un gestor de DNS"
+          ],
+          "correct": 2,
+          "details": {
+            "type": "Opciones de contextos diferentes",
+            "details": [
+              {
+                "option": 0,
+                "text": "Un servicio de monitorización",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "control"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ]
+                ]
+              },
+              {
+                "option": 1,
+                "text": "Un sistema de contenedores",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "control"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "entornos_de_desarrollo",
+                    "devops"
+                  ],
+                  [
+                    "cloud_computing",
+                    "virtualizacion"
+                  ]
+                ]
+              },
+              {
+                "option": 3,
+                "text": "Un gestor de DNS",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "control"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "index": 58,
+          "question": "¿Qué es el formato YAML y dónde se usa habitualmente?",
+          "options": [
+            "Un lenguaje de programación funcional",
+            "Lenguaje de serialización de datos legible por humanos, usado en configuraciones (Docker, K8s, CI/CD)",
+            "Un tipo de base de datos",
+            "Un protocolo de comunicación web"
+          ],
+          "correct": 1,
+          "details": {
+            "type": "Opciones de contextos diferentes",
+            "details": [
+              {
+                "option": 0,
+                "text": "Un lenguaje de programación funcional",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "control"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ]
+                ]
+              },
+              {
+                "option": 1,
+                "text": "Lenguaje de serialización de datos legible por humanos, usado en configuraciones (Docker, K8s, CI/CD)",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "control"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "entornos_de_desarrollo",
+                    "devops"
+                  ]
+                ]
+              },
+              {
+                "option": 2,
+                "text": "Un tipo de base de datos",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "control"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "datos"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ]
+                ]
+              },
+              {
+                "option": 3,
+                "text": "Un protocolo de comunicación web",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "programacion",
+                    "control"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "empleabilidad": {
+      "Total": 86,
+      "Flagged": 2,
+      "Examples": [
+        {
+          "index": 30,
+          "question": "¿Qué es una ETT (Empresa de Trabajo Temporal)?",
+          "options": [
+            "Una empresa de formación profesional",
+            "Una empresa de trabajo a distancia",
+            "Empresa que cede trabajadores a otras empresas de forma temporal",
+            "Una agencia de empleo del Estado"
+          ],
+          "correct": 2,
+          "details": {
+            "type": "Opciones de contextos diferentes",
+            "details": [
+              {
+                "option": 0,
+                "text": "Una empresa de formación profesional",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "empleabilidad",
+                    "soft_skills"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "control"
+                  ],
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "sistemas_informaticos",
+                    "redes"
+                  ],
+                  [
+                    "empleabilidad",
+                    "profesional"
+                  ]
+                ]
+              },
+              {
+                "option": 2,
+                "text": "Empresa que cede trabajadores a otras empresas de forma temporal",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "empleabilidad",
+                    "soft_skills"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "programacion",
+                    "control"
+                  ]
+                ]
+              },
+              {
+                "option": 3,
+                "text": "Una agencia de empleo del Estado",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "empleabilidad",
+                    "soft_skills"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ]
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "index": 51,
+          "question": "¿Qué es una enfermedad profesional?",
+          "options": [
+            "Cualquier enfermedad que se padece siendo trabajador",
+            "Enfermedad adquirida como consecuencia del trabajo en actividades listadas oficialmente",
+            "Una baja por enfermedad común",
+            "Una lesión por accidente en el trabajo"
+          ],
+          "correct": 1,
+          "details": {
+            "type": "Opciones de contextos diferentes",
+            "details": [
+              {
+                "option": 0,
+                "text": "Cualquier enfermedad que se padece siendo trabajador",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "empleabilidad",
+                    "profesional"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ]
+                ]
+              },
+              {
+                "option": 1,
+                "text": "Enfermedad adquirida como consecuencia del trabajo en actividades listadas oficialmente",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "empleabilidad",
+                    "profesional"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "programacion",
+                    "datos"
+                  ],
+                  [
+                    "empleabilidad",
+                    "soft_skills"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "css"
+                  ]
+                ]
+              },
+              {
+                "option": 2,
+                "text": "Una baja por enfermedad común",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "empleabilidad",
+                    "profesional"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ]
+                ]
+              },
+              {
+                "option": 3,
+                "text": "Una lesión por accidente en el trabajo",
+                "reason": "Diferente contexto temático",
+                "question_domains": [
+                  [
+                    "empleabilidad",
+                    "profesional"
+                  ]
+                ],
+                "option_domains": [
+                  [
+                    "programacion",
+                    "lenguajes"
+                  ],
+                  [
+                    "entornos_de_desarrollo",
+                    "ide"
+                  ],
+                  [
+                    "empleabilidad",
+                    "soft_skills"
+                  ],
+                  [
+                    "lenguaje_de_marcas",
+                    "css"
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

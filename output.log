@@ -1,0 +1,298 @@
+🔎 ANÁLISIS DE DESALINEACIÓN PREGUNTA-OPCIONES
+================================================================================
+
+📚 SISTEMAS_INFORMATICOS
+--------------------------------------------------------------------------------
+Preguntas sospechosas: 88/193
+
+📚 BASES_DE_DATOS
+--------------------------------------------------------------------------------
+Preguntas sospechosas: 53/130
+
+📚 PROGRAMACION
+--------------------------------------------------------------------------------
+Preguntas sospechosas: 40/164
+
+📚 LENGUAJE_DE_MARCAS
+--------------------------------------------------------------------------------
+Preguntas sospechosas: 61/183
+
+📚 ENTORNOS_DE_DESARROLLO
+--------------------------------------------------------------------------------
+Preguntas sospechosas: 9/111
+
+📚 CLOUD_COMPUTING
+--------------------------------------------------------------------------------
+Preguntas sospechosas: 9/72
+
+📚 EMPLEABILIDAD
+--------------------------------------------------------------------------------
+Preguntas sospechosas: 4/86
+
+================================================================================
+📊 TOTAL SOSPECHOSAS: 264
+================================================================================
+
+Mostrando primeras 20:
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #0
+Razón: Baja resonancia general
+Similitud promedio: 0.077
+
+❓ ¿Qué arquitectura de ordenador usa una memoria unificada para datos e instrucciones?
+
+Opciones (resonancia):
+  ✗ [0] CISC                                                    (0.068)
+  ✗ [1] Harvard                                                 (0.110)
+  ✗ [2] Von Neumann                                             (0.063)
+  ✗ [3] RISC                                                    (0.068)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #1
+Razón: Baja resonancia general
+Similitud promedio: 0.061
+
+❓ ¿En qué arquitectura están separadas físicamente la memoria de datos y la de instrucciones?
+
+Opciones (resonancia):
+  ✗ [0] x86                                                     (0.000)
+  ✗ [1] ARM                                                     (0.064)
+  ✗ [2] Von Neumann                                             (0.078)
+  ✗ [3] Harvard                                                 (0.102)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #4
+Razón: Baja resonancia general
+Similitud promedio: 0.041
+
+❓ ¿Qué protocolo asigna automáticamente direcciones IP a los dispositivos de la red?
+
+Opciones (resonancia):
+  ✗ [0] ARP                                                     (0.024)
+  ✗ [1] DNS                                                     (0.024)
+  ✗ [2] DHCP                                                    (0.023)
+  ✗ [3] ICMP                                                    (0.093)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #5
+Razón: Baja resonancia general
+Similitud promedio: 0.040
+
+❓ ¿Qué protocolo traduce nombres de dominio (google.com) a direcciones IP?
+
+Opciones (resonancia):
+  ✗ [0] DNS                                                     (0.080)
+  ✗ [1] DHCP                                                    (0.026)
+  ✗ [2] SNMP                                                    (0.026)
+  ✗ [3] FTP                                                     (0.027)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #6
+Razón: Baja resonancia general
+Similitud promedio: 0.116
+
+❓ ¿Qué nivel de RAID duplica los datos en dos discos ofreciendo redundancia total?
+
+Opciones (resonancia):
+  ✗ [0] RAID 1                                                  (0.116)
+  ✗ [1] RAID 10                                                 (0.115)
+  ✗ [2] RAID 0                                                  (0.116)
+  ✗ [3] RAID 5                                                  (0.116)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #7
+Razón: Baja resonancia general
+Similitud promedio: 0.125
+
+❓ ¿Qué nivel de RAID distribuye datos sin redundancia para máxima velocidad?
+
+Opciones (resonancia):
+  ✗ [0] RAID 0                                                  (0.125)
+  ✗ [1] RAID 1                                                  (0.125)
+  ✗ [2] RAID 5                                                  (0.125)
+  ✗ [3] RAID 6                                                  (0.125)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #8
+Razón: Baja resonancia general
+Similitud promedio: 0.132
+
+❓ ¿Qué nivel de RAID usa paridad distribuida y necesita mínimo 3 discos?
+
+Opciones (resonancia):
+  ✗ [0] RAID 0                                                  (0.132)
+  ✗ [1] RAID 1                                                  (0.132)
+  ✗ [2] RAID 2                                                  (0.132)
+  ✗ [3] RAID 5                                                  (0.132)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #9
+Razón: Baja resonancia general
+Similitud promedio: 0.022
+
+❓ ¿Qué sistema de archivos usa Windows con soporte para permisos ACL y archivos grandes?
+
+Opciones (resonancia):
+  ✗ [0] NTFS                                                    (0.022)
+  ✗ [1] exFAT                                                   (0.022)
+  ✗ [2] ext4                                                    (0.022)
+  ✗ [3] FAT32                                                   (0.022)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #10
+Razón: Baja resonancia general
+Similitud promedio: 0.036
+
+❓ ¿Qué sistema de archivos es el estándar en la mayoría de distribuciones Linux?
+
+Opciones (resonancia):
+  ✗ [0] ext4                                                    (0.024)
+  ✗ [1] FAT32                                                   (0.024)
+  ✗ [2] Btrfs                                                   (0.072)
+  ✗ [3] NTFS                                                    (0.024)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #11
+Razón: Baja resonancia general
+Similitud promedio: 0.057
+
+❓ ¿Qué comando Linux muestra los procesos en ejecución en tiempo real?
+
+Opciones (resonancia):
+  ✗ [0] ls                                                      (0.057)
+  ✗ [1] top                                                     (0.056)
+  ✗ [2] pwd                                                     (0.028)
+  ✗ [3] cat                                                     (0.085)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #12
+Razón: Baja resonancia general
+Similitud promedio: 0.078
+
+❓ ¿Qué comando Linux cambia los permisos de un archivo?
+
+Opciones (resonancia):
+  ✗ [0] chown                                                   (0.103)
+  ✗ [1] kill                                                    (0.070)
+  ✗ [2] ps                                                      (0.036)
+  ✗ [3] chmod                                                   (0.103)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #13
+Razón: Baja resonancia general
+Similitud promedio: 0.075
+
+❓ ¿Qué comando Linux cambia el propietario de un archivo?
+
+Opciones (resonancia):
+  ✗ [0] chown                                                   (0.100)
+  ✗ [1] chmod                                                   (0.100)
+  ✗ [2] ls                                                      (0.035)
+  ✗ [3] chgrp                                                   (0.067)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #14
+Razón: Baja resonancia general
+Similitud promedio: 0.000
+
+❓ ¿Qué puerto usa SSH por defecto?
+
+Opciones (resonancia):
+  ✗ [0] 80                                                      (0.000)
+  ✗ [1] 22                                                      (0.000)
+  ✗ [2] 21                                                      (0.000)
+  ✗ [3] 443                                                     (0.000)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #15
+Razón: Baja resonancia general
+Similitud promedio: 0.000
+
+❓ ¿Qué puerto usa HTTP por defecto?
+
+Opciones (resonancia):
+  ✗ [0] 443                                                     (0.000)
+  ✗ [1] 22                                                      (0.000)
+  ✗ [2] 80                                                      (0.000)
+  ✗ [3] 8080                                                    (0.000)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #16
+Razón: Baja resonancia general
+Similitud promedio: 0.000
+
+❓ ¿Qué puerto usa HTTPS por defecto?
+
+Opciones (resonancia):
+  ✗ [0] 22                                                      (0.000)
+  ✗ [1] 443                                                     (0.000)
+  ✗ [2] 80                                                      (0.000)
+  ✗ [3] 8443                                                    (0.000)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #17
+Razón: Baja resonancia general
+Similitud promedio: 0.000
+
+❓ ¿Qué puerto usa FTP para transferencia de datos?
+
+Opciones (resonancia):
+  ✗ [0] 23                                                      (0.000)
+  ✗ [1] 22                                                      (0.000)
+  ✗ [2] 21                                                      (0.000)
+  ✗ [3] 20                                                      (0.000)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #19
+Razón: Baja resonancia general
+Similitud promedio: 0.065
+
+❓ ¿Qué topología de red conecta todos los dispositivos a un nodo central?
+
+Opciones (resonancia):
+  ✗ [0] Bus                                                     (0.054)
+  ✗ [1] Anillo                                                  (0.052)
+  ✗ [2] Malla                                                   (0.053)
+  ✗ [3] Estrella                                                (0.101)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #20
+Razón: Baja resonancia general
+Similitud promedio: 0.073
+
+❓ ¿Qué topología comparte un único cable de transmisión entre todos los nodos?
+
+Opciones (resonancia):
+  ✗ [0] Estrella                                                (0.143)
+  ✗ [1] Bus                                                     (0.051)
+  ✗ [2] Anillo                                                  (0.049)
+  ✗ [3] Árbol                                                   (0.049)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #21
+Razón: Baja resonancia general
+Similitud promedio: 0.067
+
+❓ ¿Qué dispositivo opera en la Capa 3 del modelo OSI para interconectar redes?
+
+Opciones (resonancia):
+  ✗ [0] Switch                                                  (0.098)
+  ✗ [1] Hub                                                     (0.025)
+  ✗ [2] Bridge                                                  (0.049)
+  ✗ [3] Router                                                  (0.098)
+
+================================================================================
+📚 sistemas_informaticos - Pregunta #22
+Razón: Baja resonancia general
+Similitud promedio: 0.099
+
+❓ ¿Qué dispositivo opera en la Capa 2 del modelo OSI usando tablas MAC?
+
+Opciones (resonancia):
+  ✗ [0] Repetidor                                               (0.128)
+  ✗ [1] Switch                                                  (0.107)
+  ✗ [2] Router                                                  (0.107)
+  ✗ [3] Hub                                                     (0.056)
+
+✅ Reporte guardado: MISALIGNMENT_REPORT.json
