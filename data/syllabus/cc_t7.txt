@@ -1,163 +1,61 @@
 tema 7
 ¿Qué característica es común en los servicios de almacenamiento en la nube?
-
-
 Se limitan a almacenar solo archivos de texto
-
-
-
 Son escalables y permiten gestionar grandes volúmenes de datos
-
-
-
-No permiten el acceso remoto
-
-
+*No permiten el acceso remoto
 
 Solo pueden ser utilizados por empresas grandes
-
 ¿Cuál es un beneficio clave del archivado de datos?
-
-
 Permite un acceso instantáneo a la información en todo momento
-
-
-Reduce los costos al utilizar soluciones de almacenamiento de bajo costo
-
+*Reduce los costos al utilizar soluciones de almacenamiento de bajo costo
 
 Es la mejor opción para servidores de bases de datos
-
-
 No permite la recuperación de datos
-
 ¿Cuál es una de las principales aplicaciones del almacenamiento de ficheros?
-
-
-Streaming de videos en línea
-
-
+*Streaming de videos en línea
 
 Almacenamiento de máquinas virtuales
-
-
-
 Repositorios de código fuente
-
-
-
 Bases de datos SQL
-
-¿Qué ventaja tiene el almacenamiento de ficheros sobre otros tipos de almacenamiento?
-
+*¿Qué ventaja tiene el almacenamiento de ficheros sobre otros tipos de almacenamiento?
 
 Permite una estructura jerárquica de archivos y carpetas
-
-
-
 Es el más rápido para bases de datos transaccionales
-
-
 Es más barato que el almacenamiento en cinta
-
-
-No permite el control de versiones
+*No permite el control de versiones
 
 ¿Qué tipo de almacenamiento se recomienda para datos históricos o con baja frecuencia de acceso?
-
-
 Almacenamiento de objetos
-
-
-
 Almacenamiento de ficheros
-
-
-
-Archivado de datos
-
-
+*Archivado de datos
 
 Almacenamiento de bloques
-
 ¿Cuál es una ventaja del almacenamiento de objetos sobre el almacenamiento de bloques?
-
-
 Es más rápido para bases de datos transaccionales
-
-
-Permite la identificación de cada archivo mediante una URL única
-
-
+*Permite la identificación de cada archivo mediante una URL única
 
 No requiere estructura jerárquica
-
-
-
 Ambos son exactamente iguales
-
 ¿Cuál de los siguientes beneficios es característico del almacenamiento de bloques?
-
-
-Alta durabilidad y escalabilidad
-
-
+*Alta durabilidad y escalabilidad
 
 Bajo costo y facilidad de uso
-
-
-
 Acceso rápido y aleatorio a los datos
-
-
-
 Solo es útil para almacenamiento en la nube
-
-¿Cuál de los siguientes es un caso de uso común del almacenamiento de objetos?
-
+*¿Cuál de los siguientes es un caso de uso común del almacenamiento de objetos?
 
 Bases de datos relacionales
-
-
-
 Almacenamiento de contenido multimedia para streaming
-
-
-
 Gestión de documentos empresariales
-
-
-
-Máquinas virtuales
+*Máquinas virtuales
 
 ¿Cuál es la principal característica del almacenamiento de bloques?
-
-
 Se basa en la organización de archivos en carpetas
-
-
-
 Permite almacenar datos en objetos individuales con URL
-
-
-
-Se accede a los datos en bloques de tamaño fijo
-
-
+*Se accede a los datos en bloques de tamaño fijo
 
 Se utiliza solo para copias de seguridad
-
 ¿Cuál de los siguientes servicios de almacenamiento es más adecuado para aplicaciones de análisis de datos?
-
-
 Almacenamiento de bloques
+*Almacenamiento de objetos
 
-
-Almacenamiento de objetos
-
-
-
-Archivado de datos
-
-
-
-Almacenamiento en papel

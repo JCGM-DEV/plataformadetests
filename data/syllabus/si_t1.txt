@@ -1,112 +1,51 @@
 tema 1
 ¿Qué es una máquina de Turing?
-
-
 Una máquina matemática que permite reducir la estructura de cualquier dispositivo a su forma más esencial
-
-
 Un sistema de hardware y software que permite realizar tareas en una secuencia de pasos discretos
-
-
-Un tipo de ordenador que se basa en el uso de una cinta infinita y extensible para ejecutar funciones
+*Un tipo de ordenador que se basa en el uso de una cinta infinita y extensible para ejecutar funciones
 
 ¿Qué permite la escalabilidad de las redes informáticas?
-
-
 Proteger la información y los recursos de posibles amenazas
-
-
 Adaptarse a las necesidades crecientes de la organización
-
-
-Ser fiables y estar disponibles en todo momento
+*Ser fiables y estar disponibles en todo momento
 
 ¿Qué deben ser las redes informáticas para proteger la privacidad y la integridad de los datos?
-
-
 Fiables y estar disponibles en todo momento
-
-
 Escalables
-
-
-Seguras
+*Seguras
 
 ¿Qué significa que las redes informáticas permitan la comunicación entre los dispositivos conectados?
-
-
 Los usuarios deben ser capaces de acceder a los mismos recursos de manera simultánea
-
-
 Los usuarios pueden enviar y recibir información de manera rápida y eficiente
+*Deben estar diseñadas para proteger la información y los recursos de posibles amenazas
 
-
-Deben estar diseñadas para proteger la información y los recursos de posibles amenazas
-
-¿Cuál es una de las principales características de las redes informáticas? 
-
- 
-
-
-Proteger la privacidad y la integridad de los datos 
-
-
-Permitir la comunicación entre los dispositivos conectados 
-
-
-Adquirir una copia independiente para cada usuario
+¿Cuál es una de las principales características de las redes informáticas?
+Proteger la privacidad y la integridad de los datos
+Permitir la comunicación entre los dispositivos conectados
+*Adquirir una copia independiente para cada usuario
 
 ¿Qué dispositivo permite la reproducción de sonido en el ordenador?
-
-
 Ratón
-
-
 Altavoces
-
-
-Impresora
+*Impresora
 
 ¿Qué es una de las normas importantes que un administrador de redes debe seguir para garantizar la seguridad de la información y los sistemas?
-
-
 Mantener una buena organización de cables
-
-
 Realizar copias de seguridad irregulares
-
-
-No proteger dispositivos móviles
+*No proteger dispositivos móviles
 
 ¿Cuál es el componente físico del sistema informático?
-
-
 Software
-
-
 Hardware
-
-
-Componente humano 
+*Componente humano
 
 ¿Qué tipo de medios de transmisión requiere un canal físico para transmitir los datos?
-
-
- Guiados 
-
-
+Guiados
 No guiados
-
-
-Ambos
+*Ambos
 
 ¿Qué periférico permite ingresar texto y comandos en el ordenador?
-
-
 Escáner
-
-
 Teclado
+*Cámara web
 
-
-Cámara web

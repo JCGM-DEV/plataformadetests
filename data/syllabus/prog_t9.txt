@@ -1,100 +1,51 @@
 tema 9
 ¿Cuál es la función del "Driver" (Controlador) en una conexión JDBC?
-
 Traducir las llamadas de la API JDBC al protocolo específico del gestor de base de datos (MySQL, Oracle, etc.).
-
-
 Diseñar las tablas de la base de datos automáticamente desde el código Java.
-
-
-Comprobar que el código SQL no tenga errores de sintaxis antes de enviarlo.
+*Comprobar que el código SQL no tenga errores de sintaxis antes de enviarlo.
 
 En caso de que una de las operaciones de una transacción falle, ¿qué método se debe invocar para devolver la base de datos a su estado original?
-
 conn.rollback()
-
-
 conn.reset()
-
-
-conn.undo()
+*conn.undo()
 
 ¿Qué representan las siglas ACID en el contexto de las transacciones de bases de datos?
-
 Un conjunto de propiedades (Atomicidad, Consistencia, Aislamiento y Durabilidad) que garantizan la integridad de las operaciones.
-
-
 Un protocolo de cifrado para que las contraseñas de la base de datos viajen seguras.
-
-
-El nombre del driver estándar utilizado para conectar Java con bases de datos SQLite.
+*El nombre del driver estándar utilizado para conectar Java con bases de datos SQLite.
 
 Para gestionar una transacción de forma manual en Java, ¿cuál es el primer paso imprescindible?
-
 Llamar al método conn.commit().
-
-
 Establecer conn.setAutoCommit(false).
-
-
-Cerrar la conexión con el bloque finally.
+*Cerrar la conexión con el bloque finally.
 
 ¿Qué componente de la URL de conexión jdbc:mysql://localhost:3306/empresa indica el puerto donde escucha el servidor?
-
 jdbc:mysql
-
-
 localhost
-
-
-3306
+*3306
 
 ¿Por qué se recomienda el uso de PreparedStatement en lugar de Statement para ejecutar consultas con parámetros?
-
 Porque Statement no permite ejecutar consultas de tipo SELECT.
-
-
 Porque PreparedStatement aumenta la seguridad contra ataques de Inyección SQL y mejora el rendimiento mediante la precompilación.
-
-
-Porque Statement solo puede usarse con bases de datos locales y no en red.
+*Porque Statement solo puede usarse con bases de datos locales y no en red.
 
 ¿Cómo funciona el objeto ResultSet al recuperar datos de una consulta?
-
 Carga todos los datos de la base de datos en una lista estática de forma inmediata.
-
-
 Actúa como un cursor que inicialmente apunta "antes de la primera fila" y requiere el método next() para avanzar.
-
-
-Es una interfaz que solo permite leer datos de tipo texto (String).
+*Es una interfaz que solo permite leer datos de tipo texto (String).
 
 ¿Cuál es la forma más profesional y segura de gestionar el cierre de Connection, Statement y ResultSet para evitar fugas de memoria?
-
 Cerrarlos manualmente uno a uno en el cuerpo principal del código.
-
-
 Confiar en que el Garbage Collector los cerrará cuando el programa termine.
-
-
-Utilizar la estructura try-with-resources para que Java los cierre automáticamente al finalizar el bloque.
+*Utilizar la estructura try-with-resources para que Java los cierre automáticamente al finalizar el bloque.
 
 Al ejecutar una sentencia DML (INSERT, UPDATE o DELETE), ¿qué método de PreparedStatement debe utilizarse?
-
 executeQuery()
-
-
 executeUpdate()
-
-
-executeSelect()
+*executeSelect()
 
 ¿Qué es JDBC dentro del ecosistema de Java?
-
 Una base de datos ligera que se integra directamente en el JDK.
-
-
 Una API que proporciona un conjunto de interfaces estándar para interactuar con bases de datos independientemente del motor usado.
+*Un lenguaje de consulta que sustituye al SQL tradicional para mejorar el rendimiento.
 
-
-Un lenguaje de consulta que sustituye al SQL tradicional para mejorar el rendimiento.

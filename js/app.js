@@ -729,52 +729,70 @@ function exitExamToHome() {
 
 // ─── ROBUST TXT PARSER ──────────────────────────────────────────
 function parseTxtExam(text, syllabusId) {
-    const lines = text.split('\n')
-        .map(l => l.trim())
-        .filter(l => l !== '' && !l.toLowerCase().match(/^tema\s+\d+$/) && !l.includes('( 1.00 puntos )'));
+    // Normalize: remove tema headers, collapse multiple blank lines to one
+    const normalized = text
+        .replace(/\r\n/g, '\n')
+        .replace(/^tema\s+\d+\s*$/gim, '')
+        .replace(/\n{3,}/g, '\n\n')
+        .trim();
+
+    // Split into blocks by blank line
+    const blocks = normalized.split(/\n\n+/).map(b => b.trim()).filter(b => b);
 
     const questions = [];
     let i = 0;
 
-    while (i < lines.length) {
-        const questionLine = lines[i];
-        i++;
+    while (i < blocks.length) {
+        const block = blocks[i];
 
-        // Collect options: lines until we hit a line that doesn't look like an option
-        // Options are: lines starting with * (correct) or plain text that follows a question
+        // Skip if empty
+        if (!block) { i++; continue; }
+
+        // This block is a question. Collect following option blocks.
+        const questionText = block.replace(/^\*/, '').trim();
         const options = [];
         let correctIndex = 0;
+        let j = i + 1;
 
-        while (i < lines.length) {
-            const line = lines[i];
-            // Stop if this line looks like a new question (no * prefix and options already collected)
-            if (options.length >= 2) {
-                const nextIsOption = line.startsWith('*') || options.length < 4;
-                // Heuristic: if we have 3+ options and next line doesn't start with * and is not short, it's a new question
-                if (!line.startsWith('*') && options.length >= 3) break;
-                if (!line.startsWith('*') && options.length >= 2 && line.length > 80) break;
+        while (j < blocks.length && options.length < 4) {
+            const candidate = blocks[j];
+
+            // Stop collecting options if this looks like a new question:
+            // A question block has NO * prefix AND options.length >= 2
+            // AND the candidate doesn't start with * AND we already have 3 options
+            if (options.length >= 3 && !candidate.startsWith('*')) {
+                break;
+            }
+            // Also stop if we already have 2+ options and candidate looks like a question
+            // (ends with ? or starts with common question words and is long)
+            if (options.length >= 2 && !candidate.startsWith('*')) {
+                const looksLikeQuestion = /\?$/.test(candidate) ||
+                    /^(¿|En |Los |Las |Cuando |Qué |Cuál |Según |Si |Al |Para |Desde |Respecto|Durante|Sobre|Dentro|Ante)/i.test(candidate);
+                if (looksLikeQuestion && candidate.length > 40) break;
             }
 
-            if (line.startsWith('*')) {
+            if (candidate.startsWith('*')) {
                 correctIndex = options.length;
-                options.push(line.substring(1).trim());
+                options.push(candidate.substring(1).trim());
             } else {
-                options.push(line);
+                options.push(candidate);
             }
-            i++;
-
-            if (options.length >= 4) break;
+            j++;
         }
 
         if (options.length >= 2) {
             questions.push({
                 concept_id: `${syllabusId}_q${questions.length}`,
-                question: questionLine,
+                question: questionText,
                 options,
                 correct: correctIndex,
                 explanation: 'Pregunta del temario oficial.',
                 unit: null
             });
+            i = j;
+        } else {
+            // Can't form a valid question, skip this block
+            i++;
         }
     }
 
