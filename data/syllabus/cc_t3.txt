@@ -9,36 +9,36 @@ Solo funciona en redes locales
 Acceso solo desde equipos de escritorio
 Protección de datos mediante encriptación
 Dependencia total de hardware físico
-*¿Qué permite la infraestructura de la nube en términos de almacenamiento?
-Un almacenamiento limitado y costoso
+¿Qué permite la infraestructura de la nube en términos de almacenamiento?
+*Un almacenamiento limitado y costoso
 Almacenamiento escalable y accesible
 Solo permite almacenamiento local
-*No permite almacenar grandes volúmenes de datos
+No permite almacenar grandes volúmenes de datos
 ¿Cuál es un caso de uso común para la infraestructura de la nube?
-Desarrollo de software
+*Desarrollo de software
 Solo almacenamiento de archivos personales
 Exclusivamente para videojuegos
 No tiene aplicaciones en educación
-*¿Qué tipo de servicio es Google Docs dentro de la computación en la nube?
-IaaS
+¿Qué tipo de servicio es Google Docs dentro de la computación en la nube?
+*IaaS
 PaaS
 SaaS
-*Nube híbrida
+Nube híbrida
 ¿Cuál de las siguientes opciones describe mejor la computación en la nube?
 *Un sistema operativo avanzado para servidores
 Una red de servidores que ofrece servicios informáticos a través de internet
 Un tipo de hardware especializado en redes
 Un protocolo de comunicación entre servidores
-*¿Cuál de los siguientes servicios pertenece a la categoría IaaS?
-AWS Elastic Beanstalk
+¿Cuál de los siguientes servicios pertenece a la categoría IaaS?
+*AWS Elastic Beanstalk
 Azure Virtual Machines
 Google Docs
 *Microsoft Office 365
 ¿Cuál es un beneficio clave de la infraestructura de la nube?
 Mayor consumo de recursos físicos
 Acceso limitado a servidores
-Escalabilidad flexible
-*Solo se puede acceder desde una ubicación fija
+*Escalabilidad flexible
+Solo se puede acceder desde una ubicación fija
 ¿Qué caracteriza a una nube híbrida?
 Es operada únicamente por un proveedor público
 *Es una combinación de nube privada y pública
@@ -47,4 +47,3 @@ No permite compartir datos entre sistemas
 ¿Cuál de las siguientes opciones representa un servicio de nube pública?
 *Servidores internos de una empresa
 Microsoft Azure
-Un disco duro externo conectado a una red

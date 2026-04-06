@@ -12,9 +12,6 @@ Tiene una mejor protección contra la corrupción de datos
 *C:, C:\Windows, C:\Program Files, C:\Users
 /, /Applications, /Library, /System, /Users
 La interfaz de transferencia PATA:
-*Utiliza un cable plano con 40 o 80 conductores para transferir datos de forma paralela
-Utiliza un solo cable para transferir datos de forma serial
-Utiliza un bus en serie para transferir datos
 ¿Cuál es la principal ventaja de los dispositivos de almacenamiento externo?
 *Mayor velocidad de transferencia de datos
 Mayor capacidad de almacenamiento
@@ -28,14 +25,13 @@ La capacidad de almacenamiento
 top
 free
 ¿Cuál es la capacidad de almacenamiento de un disco DVD?
-Hasta 2,5 GB
+*Hasta 2,5 GB
 Hasta 4,7 GB
 Hasta 25 GB
-*¿Cuáles son los dos esquemas de particiones más comunes?
-FAT y NTFS
+¿Cuáles son los dos esquemas de particiones más comunes?
+*FAT y NTFS
 MBR y GPT
 HFS+ y APFS
-*¿Qué tipo de dispositivo de almacenamiento es más resistente a golpes y vibraciones?
-Disco duro (HDD)
-*Unidad de estado sólido (SSD)
-Tarjeta de memoria
+¿Qué tipo de dispositivo de almacenamiento es más resistente a golpes y vibraciones?
+*Disco duro (HDD)
+Unidad de estado sólido (SSD)

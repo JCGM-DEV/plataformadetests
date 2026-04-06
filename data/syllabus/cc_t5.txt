@@ -4,26 +4,26 @@ tema 5
 Control total sobre la infraestructura
 Menor escalabilidad que una nube pública
 Acceso gratuito para todos los usuarios
-*¿Cuál es el propósito principal de una red de computadoras?
-Mejorar la velocidad de los dispositivos
+¿Cuál es el propósito principal de una red de computadoras?
+*Mejorar la velocidad de los dispositivos
 Conectar dispositivos para compartir información y recursos
 Reducir el consumo de energía
 Aumentar el almacenamiento de los dispositivos
-*¿Cómo funcionan los servidores DNS en la nube?
-Almacenan los datos de los usuarios
+¿Cómo funcionan los servidores DNS en la nube?
+*Almacenan los datos de los usuarios
 Resuelven nombres de dominio en direcciones IP
-*Filtran el tráfico no autorizado
+Filtran el tráfico no autorizado
 Bloquean los ataques de malware automáticamente
 ¿Cuál es la función principal de la capa de red en la arquitectura de las redes?
-Gestionar la transmisión de datos dentro de una red local
+*Gestionar la transmisión de datos dentro de una red local
 Enrutar los datos a través de la red
-*Definir las especificaciones físicas del cableado
+Definir las especificaciones físicas del cableado
 Permitir que las aplicaciones accedan a la red
 ¿Qué ventaja ofrece una CDN (Red de Entrega de Contenidos)?
-Aumenta la latencia de los contenidos
+*Aumenta la latencia de los contenidos
 Reduce la velocidad de carga de sitios web
 Distribuye los contenidos desde servidores cercanos al usuario
-*Bloquea el acceso a contenidos de alta demanda
+Bloquea el acceso a contenidos de alta demanda
 ¿Qué protocolo es fundamental para la comunicación en Internet?
 *HTTP
 FTP
@@ -39,13 +39,13 @@ XML
 Acceso libre sin autenticación
 Cifrado de datos
 Compartición de claves de acceso
-*¿Qué tipo de red se utiliza para conectar dispositivos dentro de una oficina o un hogar?
-WAN
+¿Qué tipo de red se utiliza para conectar dispositivos dentro de una oficina o un hogar?
+*WAN
 MAN
 LAN
 VPN
-*¿Qué protocolo se utiliza para la seguridad en la transmisión de datos?
-SSL/TLS
+¿Qué protocolo se utiliza para la seguridad en la transmisión de datos?
+*SSL/TLS
 UDP
-*RIP
-FTP
+RIP
+*FTP

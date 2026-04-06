@@ -1,8 +1,8 @@
 tema 5
 ¿Cuál es un ejemplo de protocolo de enrutamiento dinámico?
 Protocolo de enrutamiento estático
-Protocolo OSPF
-*Protocolo de enrutamiento HTTP
+*Protocolo OSPF
+Protocolo de enrutamiento HTTP
 ¿Cuáles son algunas de las ventajas de la configuración estática de redes?
 *Mayor seguridad, estabilidad y control
 Menor seguridad, estabilidad y control
@@ -12,11 +12,6 @@ Una tabla en la que las rutas se determinan automáticamente mediante protocolos
 *Una tabla que se crea automáticamente mediante el uso de protocolos de enrutamiento dinámicos
 Una tabla en la que se especifican manualmente las rutas que deben tomar los paquetes de datos para llegar a su destino
 ¿Qué es una WLAN?
-Una red inalámbrica de largo alcance
-Una red inalámbrica de corto alcance
-*Una red inalámbrica utilizada para conectar dispositivos en un área geográfica limitada
 ¿Qué son las direcciones IP?
-Un número único que identifica a cada dispositivo en una red
+*Un número único que identifica a cada dispositivo en una red
 Un número aleatorio que se asigna a cada dispositivo en una red
-Una secuencia de letras que identifica a cada dispositivo en una red
-*¿Qué es una máscara de subred?

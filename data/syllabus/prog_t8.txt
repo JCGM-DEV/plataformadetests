@@ -21,21 +21,21 @@ FileWriter
 FileReader
 ¿Qué es la "Serialización" de objetos en Java?
 El proceso de convertir un objeto en una secuencia de bytes para poder almacenarlo en un fichero o enviarlo por red.
-Un método para ordenar alfabéticamente los atributos de una clase.
+*Un método para ordenar alfabéticamente los atributos de una clase.
 El proceso de borrar un objeto del Heap para liberar memoria.
-*Respecto a la Salida Estándar de Errores (System.err), ¿qué afirmación es correcta?
+Respecto a la Salida Estándar de Errores (System.err), ¿qué afirmación es correcta?
 Envía los datos directamente a la impresora del sistema.
 Se utiliza para mensajes de diagnóstico y errores, y por defecto suele mostrarse en color rojo en la consola.
-Es exactamente lo mismo que System.out y no se recomienda su uso en entornos profesionales.
-*¿Cuál es la función del "Buffer" en las operaciones de entrada/salida?
+*Es exactamente lo mismo que System.out y no se recomienda su uso en entornos profesionales.
+¿Cuál es la función del "Buffer" en las operaciones de entrada/salida?
 Actuar como una memoria intermedia para reducir el número de accesos físicos al disco o red, mejorando el rendimiento.
 Cifrar los datos para que no puedan ser leídos por otros programas del sistema operativo.
-Convertir automáticamente archivos binarios en archivos de texto plano.
-*En el contexto de Java, ¿qué es un "Stream" o flujo de datos?
+*Convertir automáticamente archivos binarios en archivos de texto plano.
+En el contexto de Java, ¿qué es un "Stream" o flujo de datos?
 Es una estructura de datos estática que almacena información en la memoria RAM.
 Es un canal unidireccional que transporta información de forma secuencial desde un origen a un destino.
 *Es una base de datos interna que Java utiliza para guardar objetos de forma permanente.
 Para que una clase pueda ser serializada, ¿qué requisito debe cumplir obligatoriamente?
-Debe heredar de la clase File.
-*Debe implementar la interfaz Serializable, que actúa como una "interfaz de marcado".
+*Debe heredar de la clase File.
+Debe implementar la interfaz Serializable, que actúa como una "interfaz de marcado".
 Todos sus métodos deben ser declarados como static.

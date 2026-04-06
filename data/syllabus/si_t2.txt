@@ -16,9 +16,9 @@ La capacidad de ejecutar múltiples sistemas operativos en diferentes servidores
 *La capacidad de crear varias máquinas virtuales en un solo servidor físico
 La capacidad de almacenar datos de diferentes sistemas operativos en un solo servidor físico
 ¿Cuál es la ventaja principal de la arquitectura monolítica?
-Su simplicidad y eficiencia
+*Su simplicidad y eficiencia
 Su modularidad y escalabilidad
-*Su capacidad para agregar o eliminar funciones sin tener que recompilar todo el sistema
+Su capacidad para agregar o eliminar funciones sin tener que recompilar todo el sistema
 ¿Para qué se utiliza la preparación de imágenes del sistema para automatizar la instalación masiva de ordenadores?
 Para verificar si se dispone de la licencia correspondiente
 Para dividir el disco duro en secciones o particiones lógicas
@@ -38,3 +38,4 @@ Programas que se utilizan para la comunicación en línea
 ¿Cuál es una de las funciones principales de un sistema operativo?
 Ejecutar aplicaciones
 *Gestionar y coordinar el uso de los recursos de hardware y software
+Proteger el sistema de ataques de virus

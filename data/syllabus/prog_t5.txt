@@ -3,10 +3,6 @@ En relación con los arrays multidimensionales en Java, ¿cuál de las siguiente
 Representan una estructura continua de memoria bidimensional real.
 *Son arrays cuyos elementos son, a su vez, otros arrays.
 Tienen un único valor de longitud para filas y columnas.
-En relación con los índices de un array, señale la afirmación correcta:
-El primer elemento se encuentra en la posición 1.
-*El último elemento se encuentra en la posición igual a la longitud del array.
-Los índices válidos van desde 0 hasta longitud menos uno.
 Desde el punto de vista de la memoria en Java, ¿cuál es la característica fundamental de un array?
 Es una estructura primitiva que se almacena íntegramente en el Stack.
 *Es un objeto que se almacena en el Heap y se accede mediante una referencia.

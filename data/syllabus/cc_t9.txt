@@ -12,39 +12,40 @@ Eficiencia en costos
 ¿Qué herramienta permite automatizar el despliegue y la gestión de aplicaciones en la nube?
 *Microsoft Excel
 Kubernetes
-*Notepad++
-Photoshop
+Notepad++
+*Photoshop
 ¿Cuál es el principal objetivo de la arquitectura en la nube?
 Reducir la velocidad de procesamiento
-*Aumentar los costos de infraestructura
-Diseñar sistemas escalables, seguros y eficientes
+Aumentar los costos de infraestructura
+*Diseñar sistemas escalables, seguros y eficientes
 Limitar el acceso a los servicios en línea
 ¿Cómo se logra la alta disponibilidad en la arquitectura en la nube?
-*Eliminando los servidores de respaldo
+Eliminando los servidores de respaldo
 Implementando redundancia y tolerancia a fallos
 Usando un solo servidor para evitar conflictos
-Deshabilitando la supervisión del sistema
-*¿Cuál es un servicio de almacenamiento en la nube?
-Amazon S3
+*Deshabilitando la supervisión del sistema
+¿Cuál es un servicio de almacenamiento en la nube?
+*Amazon S3
 Google Docs
 Adobe Premiere
 Excel
 ¿Qué técnica se usa para distribuir la carga de trabajo entre múltiples servidores?
-*Optimización de código
+Optimización de código
 Almacenamiento en caché
 *Balanceo de carga
 Supervisión constante
 ¿Por qué es importante la supervisión constante de los sistemas en la nube?
-Para generar más costos en la empresa
-*Para detectar y resolver problemas de forma proactiva
+*Para generar más costos en la empresa
+Para detectar y resolver problemas de forma proactiva
 Para reducir la seguridad de los sistemas
 Para aumentar la latencia del servicio
 ¿Cuál de los siguientes elementos es clave para mejorar la seguridad en la nube?
 *Uso de protocolos obsoletos
 Implementación de encriptación de datos
 Permitir accesos sin autenticación
-Evitar el monitoreo del sistema
-*¿Qué método es clave para la recuperación ante desastres en la nube?
+*Evitar el monitoreo del sistema
+¿Qué método es clave para la recuperación ante desastres en la nube?
 No hacer copias de seguridad
 Usar almacenamiento local sin redundancia
-Implementar estrategias de respaldo y recuperación
+*Implementar estrategias de respaldo y recuperación
+Evitar el uso de firewalls y control de accesos

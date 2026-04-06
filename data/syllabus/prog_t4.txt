@@ -5,12 +5,8 @@ Una clase actúa como una plantilla o plano que define las propiedades y método
 *Un objeto es una función que se define dentro de una clase, y la clase es el resultado de la ejecución de un objeto.
 Durante la ejecución de un programa Java, ¿en qué situación un objeto pasa a ser considerado inalcanzable y candidato a la recolección de basura?
 Cuando se declara la variable de referencia que lo apuntará.
-Cuando ninguna referencia activa apunta al objeto en memoria.
-*Cuando el programa invoca explícitamente el recolector de basura.
-En relación con el paso de parámetros en Java, señale la afirmación correcta:
-*Java utiliza paso por referencia para objetos y paso por valor para primitivos.
-Java pasa siempre una copia del valor, aunque en los objetos dicho valor sea la referencia.
-Java permite elegir entre paso por valor o por referencia.
+*Cuando ninguna referencia activa apunta al objeto en memoria.
+Cuando el programa invoca explícitamente el recolector de basura.
 En el uso profesional de la Programación Orientada a Objetos, ¿cuál es la finalidad principal del encapsulamiento?
 Facilitar el acceso directo a los atributos desde cualquier clase.
 Proteger el estado interno del objeto y controlar su modificación.
