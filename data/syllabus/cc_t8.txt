@@ -1,51 +1,51 @@
 tema 8
 ¿Cuál de las siguientes es una característica de las bases de datos analíticas?
-Optimizadas para consultas complejas
+*Optimizadas para consultas complejas
 Uso exclusivo en sistemas transaccionales
 Requieren estructuras fijas y rígidas
-*No pueden manejar grandes volúmenes de datos
-¿Qué tipo de base de datos NoSQL organiza los datos en pares clave-valor?
+No pueden manejar grandes volúmenes de datos
+*¿Qué tipo de base de datos NoSQL organiza los datos en pares clave-valor?
 Documentales
 Graph
 Column-Family
-*Key-Value
-¿Qué característica es exclusiva de las bases de datos NoSQL?
+Key-Value
+*¿Qué característica es exclusiva de las bases de datos NoSQL?
 Uso de claves primarias y foráneas
 Escalabilidad horizontal
-Transacciones ACID
-*Organización en tablas
+*Transacciones ACID
+Organización en tablas
 ¿Cuál de las siguientes es una base de datos relacional?
 MongoDB
 Cassandra
-MySQL
-*Redis
+*MySQL
+Redis
 ¿Cuál es un proveedor de bases de datos NoSQL?
 PostgreSQL
 MongoDB
-Oracle
-*SQL Server
+*Oracle
+SQL Server
 ¿Cuál de las siguientes NO es una ventaja de los servicios de bases de datos?
 Mayor eficiencia
 Mejora de la toma de decisiones
-Mayor consumo de recursos
-*Seguridad y confiabilidad
+*Mayor consumo de recursos
+Seguridad y confiabilidad
 ¿Qué lenguaje se utiliza para interactuar con bases de datos relacionales?
 Python
 SQL
-NoSQL
-*XML
+*NoSQL
+XML
 Las bases de datos NoSQL son ideales para:
-Aplicaciones con grandes volúmenes de datos no estructurados
+*Aplicaciones con grandes volúmenes de datos no estructurados
 Aplicaciones que requieren relaciones complejas entre datos
 Sistemas de gestión de contenido (CMS)
-*Sistemas bancarios
-¿Qué tipo de base de datos es ideal para analizar grandes conjuntos de datos?
+Sistemas bancarios
+*¿Qué tipo de base de datos es ideal para analizar grandes conjuntos de datos?
 Relacionales
 Analíticas
 NoSQL
-*Documentales
+Documentales
 ¿Qué característica permite que los servicios de bases de datos ajusten su capacidad según la demanda?
-Seguridad
+*Seguridad
 Persistencia
-Escalabilidad
-*Rendimiento
+*Escalabilidad
+Rendimiento

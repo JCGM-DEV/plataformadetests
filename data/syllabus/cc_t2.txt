@@ -2,9 +2,9 @@ tema 2
 ¿Qué ventaja ofrece la escalabilidad en la nube?
 Permite ajustar los recursos en tiempo real según las necesidades
 Bloquea el uso de recursos adicionales para evitar sobrecostes.
-Solo está disponible en modelos de pago fijo.
-*Asegura un descuento automático en el coste de los recursos.
-¿Qué aspecto clave de la seguridad se garantiza en los servicios en la nube?
+*Solo está disponible en modelos de pago fijo.
+Asegura un descuento automático en el coste de los recursos.
+*¿Qué aspecto clave de la seguridad se garantiza en los servicios en la nube?
 Copias de seguridad físicas en todas las oficinas.
 Medidas de seguridad robustas y cumplimiento normativo.
 Control absoluto de los datos por parte del usuario sin intervención del proveedor.
@@ -13,39 +13,39 @@ Control absoluto de los datos por parte del usuario sin intervención del provee
 Son más costosas que las instancias reservadas.
 Permiten adquirir recursos a menor precio, pero pueden ser interrumpidas.
 No pueden utilizarse en entornos de producción.
-*Son el único modelo de precios disponible en la nube.
+Son el único modelo de precios disponible en la nube.
 ¿Cuál de los siguientes modelos de precios en la nube ofrece descuentos por comprometerse a un uso a largo plazo?
 Pago por uso.
-Instancias reservadas
+*Instancias reservadas
 Instancias spot.
 *Facturación consolidada.
 ¿Qué tipo de herramientas ayudan a analizar los costes en la nube?
 Plataformas de análisis de datos y predicciones.
 Redes sociales y foros de discusión.
 Servicios de almacenamiento en la nube.
-*Programas de ofimática.
-¿Cuál es la principal característica del modelo de facturación en la nube?
+Programas de ofimática.
+*¿Cuál es la principal característica del modelo de facturación en la nube?
 Pago anticipado por los recursos contratados.
 Pago fijo mensual sin importar el uso.
-Pago por uso, donde solo se paga por los recursos consumidos.
-*Pago único al inicio del servicio.
+*Pago por uso, donde solo se paga por los recursos consumidos.
+Pago único al inicio del servicio.
 ¿Cuál es la ventaja principal de utilizar servicios de facturación consolidada?
 Permite pagar menos por los recursos utilizados.
 Facilita la gestión de múltiples cuentas desde una sola plataforma.
-Evita el pago de impuestos sobre los servicios en la nube.
-*Automatiza completamente la contabilidad empresarial
-¿Qué elemento NO forma parte del Coste Total de la Propiedad (TCO)?
+*Evita el pago de impuestos sobre los servicios en la nube.
+Automatiza completamente la contabilidad empresarial
+*¿Qué elemento NO forma parte del Coste Total de la Propiedad (TCO)?
 Coste de hardware y software.
 Mantenimiento y energía.
 Gastos de transporte de los empleados.
-*Costes operativos en la nube.
-¿Qué función tienen los servicios de monitorización de costes?
+Costes operativos en la nube.
+*¿Qué función tienen los servicios de monitorización de costes?
 Establecer presupuestos y alertar sobre gastos elevados.
 Modificar automáticamente los precios de los servicios en la nube.
 Cancelar automáticamente servicios que superan el presupuesto.
-*Garantizar un precio fijo sin variaciones.
+Garantizar un precio fijo sin variaciones.
 ¿Cuál es una de las tendencias futuras en la gestión de la facturación en la nube?
-Uso de inteligencia artificial y aprendizaje automático para optimizar los costes
+*Uso de inteligencia artificial y aprendizaje automático para optimizar los costes
 Eliminación total de los modelos de pago por uso.
-Cobro adelantado de todos los servicios en la nube.
-*Prohibición del uso de herramientas de análisis de costes.
+*Cobro adelantado de todos los servicios en la nube.
+Prohibición del uso de herramientas de análisis de costes.

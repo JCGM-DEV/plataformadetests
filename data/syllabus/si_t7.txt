@@ -1,20 +1,20 @@
 tema 7
 ¿Cuál es un ejemplo de software de recuperación de datos?
-Norton
+*Norton
 McAfee
 EaseUS
-*¿Qué es un procesador de texto?
+¿Qué es un procesador de texto?
 Una herramienta informática que permite la creación, edición y formateo de documentos de texto
 Un tipo de hoja de cálculo que se utiliza para realizar cálculos y análisis de datos
 *Un programa de edición de imágenes
 ¿Cuál es el programa que controla y gestiona los recursos del hardware y proporciona una interfaz de usuario para que los usuarios puedan interactuar con la computadora?
 Los sistemas de archivos
-Los controladores de dispositivos
-*El sistema operativo
+*Los controladores de dispositivos
+El sistema operativo
 ¿Cuál es una de las características principales de las herramientas de productividad?
 Automatización de tareas
-Recuperación de datos
-*Escaneo de archivos
+*Recuperación de datos
+Escaneo de archivos
 ¿Qué ventaja ofrece Google Docs en comparación con Microsoft Word?
 Amplia gama de funciones y herramientas avanzadas para crear documentos complejos
 Almacenamiento en la nube y acceso en cualquier momento y desde cualquier lugar
@@ -22,20 +22,20 @@ Almacenamiento en la nube y acceso en cualquier momento y desde cualquier lugar
 ¿Cuál es el procesador de texto más utilizado en el mundo?
 microsoft Word
 Google Docs
-LibreOffice Writer
-*¿Qué es el software antivirus?
-Un tipo de software diseñado para mejorar la productividad
+*LibreOffice Writer
+¿Qué es el software antivirus?
+*Un tipo de software diseñado para mejorar la productividad
 Un tipo de software diseñado para detectar, prevenir y eliminar programas maliciosos
-*Un tipo de software diseñado para recuperar datos perdidos
+Un tipo de software diseñado para recuperar datos perdidos
 ¿Cuál es la función principal del software de sistema?
 Realizar tareas específicas en la computadora.
-Controlar y coordinar el funcionamiento del hardware y proporcionar una interfaz entre el usuario y el hardware
-*Escribir, depurar y mantener programas de software
+*Controlar y coordinar el funcionamiento del hardware y proporcionar una interfaz entre el usuario y el hardware
+Escribir, depurar y mantener programas de software
 ¿Qué son las herramientas de desarrollo integradas?
 Herramientas que permiten al usuario realizar diferentes tareas, como realizar copias de seguridad de datos, optimizar el rendimiento del sistema, o desinstalar programas
-Herramientas que incluyen un editor de código, un depurador y un compilador, todos integrados en una única interfaz de usuario
-*Herramientas que permiten al usuario identificar y solucionar problemas en el sistema, como errores de hardware o software
+*Herramientas que incluyen un editor de código, un depurador y un compilador, todos integrados en una única interfaz de usuario
+Herramientas que permiten al usuario identificar y solucionar problemas en el sistema, como errores de hardware o software
 ¿Qué significa que las bases de datos sean escalables y flexibles?
-Que tienen una estructura y organización definida
+*Que tienen una estructura y organización definida
 Que pueden crecer y evolucionar a medida que cambian las necesidades de la organización
-*Que no se pueden integrar con otras aplicaciones informáticas
+Que no se pueden integrar con otras aplicaciones informáticas
