@@ -149,3 +149,203 @@ tracert add [destino]
 15 GB.
 *20 GB.
 50 GB.
+¿Cuál es la principal desventaja de la topología en bus?
+Necesita un dispositivo central caro.
+Es difícil de instalar.
+*Un fallo en el cable principal afecta a toda la red.
+No permite compartir recursos.
+¿Qué topología de red conecta cada nodo directamente con todos los demás?
+Estrella.
+Bus.
+Anillo.
+*Malla.
+En la topología en anillo, ¿en qué dirección viajan los datos?
+En ambas direcciones simultáneamente siempre.
+Solo de izquierda a derecha.
+*En una dirección (o ambas en anillo doble).
+De forma aleatoria según la carga.
+¿Qué tipo de topología es más adecuada para una empresa pequeña con pocos equipos y presupuesto limitado?
+Malla.
+Anillo.
+*Bus o estrella simple.
+Árbol jerárquico.
+En VirtualBox, ¿qué opción permite que varias máquinas virtuales se comuniquen entre sí pero no con el exterior?
+NAT.
+Adaptador puente.
+*Red interna.
+Solo anfitrión.
+¿Qué sistema operativo invitado se instala en la práctica de VirtualBox?
+Windows 10.
+Debian.
+*Ubuntu.
+Fedora.
+¿Desde dónde se descarga la imagen ISO oficial de Ubuntu para instalarla en VirtualBox?
+Desde el repositorio de VirtualBox.
+Desde GitHub.
+*Desde el sitio web oficial de Ubuntu (ubuntu.com).
+Desde Microsoft Store.
+En la configuración de red NAT de VirtualBox, ¿cuál es la dirección IP por defecto asignada al huésped?
+192.168.1.100.
+172.16.0.1.
+*10.0.2.15.
+10.0.0.1.
+¿Qué sección de VirtualBox se usa para ajustar el número de procesadores virtuales asignados a la máquina?
+Red.
+Almacenamiento.
+*Sistema → Procesador.
+Pantalla.
+¿Qué significa "instantánea" (snapshot) en el contexto de VirtualBox?
+Una copia del disco duro físico del anfitrión.
+Una captura de pantalla de la máquina virtual.
+*Un punto de restauración del estado completo de la máquina virtual en un momento dado.
+Un archivo de configuración exportado.
+¿Qué herramienta de Windows permite ver los registros de eventos del sistema para diagnosticar errores?
+Monitor de rendimiento.
+Administración de discos.
+*Visor de eventos.
+Administrador de tareas.
+¿Qué contador del Monitor de rendimiento de Windows indica el porcentaje de tiempo que el procesador está ocupado?
+Memory\Available MBytes.
+Disk\Avg. Disk Queue Length.
+*Processor\% Processor Time.
+Network\Bytes Total/sec.
+En el caso práctico de monitorización, ¿qué indica una cola de disco (Disk Queue Length) muy alta?
+Que la CPU está saturada.
+Que la red está congestionada.
+*Que el disco duro es el cuello de botella del sistema.
+Que la memoria RAM es insuficiente.
+¿Qué comando de Windows muestra información detallada de la configuración de red incluyendo la dirección MAC?
+ipconfig
+netstat
+*ipconfig /all
+arp -a
+¿Qué comando de Windows muestra la tabla ARP (asociación IP-MAC) de la red local?
+netstat -an
+ipconfig /all
+*arp -a
+route print
+¿Qué hace el comando "ipconfig /release" en Windows?
+Renueva la dirección IP obtenida por DHCP.
+Muestra la configuración de red.
+*Libera la dirección IP obtenida por DHCP.
+Borra la caché DNS.
+¿Qué comando de Windows renueva la dirección IP obtenida por DHCP?
+ipconfig /release
+ipconfig /flushdns
+*ipconfig /renew
+ipconfig /all
+¿Qué comando de Windows elimina una ruta estática de la tabla de enrutamiento?
+route delete [destino]
+netsh route remove [destino]
+*route delete [destino]
+ipconfig /route del [destino]
+¿Qué comando de Windows verifica si el puerto 80 está abierto en una máquina remota?
+ping [IP] -p 80
+netstat -p 80 [IP]
+*telnet [IP] 80
+tracert [IP] 80
+¿Qué significa que un puerto aparezca en estado "LISTENING" en la salida de netstat?
+Que el puerto está bloqueado por el firewall.
+Que hay una conexión activa en ese puerto.
+*Que hay un servicio esperando conexiones entrantes en ese puerto.
+Que el puerto está cerrado.
+En Linux, ¿qué valor numérico de chmod da permisos rwxr-xr-x?
+644.
+777.
+*755.
+700.
+¿Qué significa el permiso "r" en un archivo de Linux?
+Permite ejecutar el archivo.
+Permite modificar el archivo.
+*Permite leer el contenido del archivo.
+Permite borrar el archivo.
+¿Qué comando de Linux cambia el propietario de un archivo?
+chmod.
+chgrp.
+*chown.
+setperm.
+En Windows, ¿qué tipo de permiso NTFS tiene prioridad sobre los permisos de "Permitir"?
+Heredado.
+Explícito.
+*Denegar.
+De grupo.
+¿Qué es la "delegación de permisos" en sistemas operativos?
+Asignar todos los permisos a un usuario estándar.
+Eliminar permisos de administrador.
+*Permitir que un usuario o grupo gestione permisos sobre recursos específicos sin ser administrador global.
+Copiar los permisos de un archivo a otro.
+¿Qué herramienta de gestión de proyectos se menciona en los casos prácticos para asignar tareas?
+Trello.
+Asana.
+*Notion.
+Jira.
+¿Qué tipo de análisis realiza Avast en la práctica de herramientas de productividad?
+Análisis de rendimiento del sistema.
+Análisis de particiones del disco.
+*Análisis de amenazas (virus, malware) en el ordenador.
+Análisis de la red local.
+¿Qué ventaja principal ofrece Google Workspace frente a software de escritorio tradicional?
+Mayor velocidad de procesamiento.
+No requiere conexión a Internet.
+*Colaboración en tiempo real y acceso desde cualquier dispositivo con Internet.
+Mayor compatibilidad con hardware antiguo.
+¿Qué tipo de software es EaseUS Partition Master?
+Software antivirus.
+Herramienta de monitorización.
+*Herramienta de gestión y clonación de particiones de disco.
+Gestor de máquinas virtuales.
+¿Cuál es la diferencia entre "Reducir volumen" y "Eliminar volumen" en Administración de discos de Windows?
+No hay diferencia, ambas borran los datos.
+Reducir volumen borra los datos; eliminar volumen los conserva.
+*Reducir volumen disminuye el tamaño conservando los datos; eliminar volumen borra la partición y sus datos.
+Eliminar volumen solo funciona en discos externos.
+¿Qué tipo de dirección IP usa la configuración NAT de VirtualBox para el adaptador de red del anfitrión?
+Una IP pública asignada por el ISP.
+La misma IP que el huésped.
+*La IP real del anfitrión en la red local.
+Siempre 192.168.0.1.
+En la práctica de redes, ¿qué comando verifica la conectividad con la puerta de enlace predeterminada?
+tracert gateway
+netstat -r
+*ping [IP de la puerta de enlace]
+route print gateway
+¿Qué información proporciona el comando tracert además de verificar la conectividad?
+El ancho de banda disponible en cada salto.
+Los puertos abiertos en cada router.
+*Los routers intermedios (saltos) y la latencia en cada uno hasta el destino.
+La dirección MAC de cada dispositivo en la ruta.
+¿Qué ocurre si se intenta ampliar un volumen en Windows y no hay espacio no asignado contiguo?
+Windows crea automáticamente espacio no asignado.
+Se puede ampliar usando espacio de otra partición directamente.
+*La opción "Ampliar volumen" aparece desactivada (en gris).
+Windows mueve los datos automáticamente para hacer espacio.
+¿Qué versión de Ubuntu se configura en la práctica de VirtualBox?
+Ubuntu 32-bit.
+Ubuntu Server.
+*Ubuntu 64-bit.
+Ubuntu LTS 32-bit.
+¿Cuál es el puerto estándar del protocolo SSH?
+80.
+443.
+*22.
+3389.
+¿Qué significa NAT en el contexto de redes?
+Network Access Terminal.
+Node Address Transfer.
+*Network Address Translation.
+Network Allocation Table.
+¿Qué herramienta de Windows muestra en tiempo real los procesos activos, uso de CPU y memoria de forma básica?
+Monitor de rendimiento.
+Visor de eventos.
+*Administrador de tareas.
+Administración de discos.
+¿Qué comando de Linux muestra los permisos de los archivos en un directorio?
+dir -p.
+chmod -l.
+*ls -la.
+perms -show.
+¿En qué caso práctico se trabaja con la herramienta "Administración de discos" de Windows?
+Caso 2 (VirtualBox).
+Caso 5 (Redes).
+*Caso 3 (Particiones).
+Caso 6 (Permisos).
