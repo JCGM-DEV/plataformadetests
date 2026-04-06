@@ -741,111 +741,64 @@ function isLikelyQuestion(text) {
            (t.endsWith(':') && t.length > 20);
 }
 
-// ─── ROBUST TXT PARSER ──────────────────────────────────────────
+// ─── TXT PARSER — formato único: pregunta con ?, opciones, *correcta ───────
 function parseTxtExam(text, syllabusId) {
-    const normalized = text.replace(/\r\n/g, '\n').replace(/^tema\s+\d+\s*$/gim, '').trim();
-    // Detect format by presence of blank lines between content blocks
-    const hasBlankLines = /\n\n/.test(normalized);
-    return hasBlankLines
-        ? parseBlockFormat(normalized, syllabusId)
-        : parseLineFormat(normalized, syllabusId);
-}
-
-// ── Format A: BD, ED, LM, Empleabilidad ─────────────────────────
-// Lines consecutive, no blank lines, * marks correct option
-function parseLineFormat(text, syllabusId) {
-    const lines = text.split('\n')
+    // Strip tema headers and normalize line endings
+    const lines = text
+        .replace(/\r\n/g, '\n')
+        .split('\n')
         .map(l => l.trim())
-        .filter(l => l !== '' && !l.includes('( 1.00 puntos )'));
+        .filter(l => l !== '' && !l.match(/^tema\s+\d+$/i) && !l.includes('( 1.00 puntos )'));
 
     const questions = [];
     let i = 0;
 
     while (i < lines.length) {
-        const questionText = lines[i]; i++;
-        const options = []; let correctIndex = 0;
+        const line = lines[i];
+
+        // Only start a question on a line that contains '?'
+        if (!line.includes('?') && !line.startsWith('¿')) {
+            i++; continue;
+        }
+
+        const questionText = line.startsWith('*') ? line.slice(1).trim() : line;
+        i++;
+
+        const options = [];
+        let correctIndex = 0;
 
         while (i < lines.length && options.length < 4) {
-            const line = lines[i];
-            
-            // Break if this line looks like a new question
-            if (options.length >= 2 && !line.startsWith('*')) {
-                const next = lines[i + 1] || '';
-                // If this line itself is a question OR it's followed by a correct answer (*)
-                if (isLikelyQuestion(line)) break;
-                if (!next.startsWith('*') && options.length >= 3) break;
-                // If it's a very long line and not starting with *, it's likely a question
-                if (line.length > 70 && !next.startsWith('*')) break;
-            }
-            if (line.startsWith('*')) { correctIndex = options.length; options.push(line.slice(1).trim()); }
-            else options.push(line);
-            i++;
-            if (options.length >= 4) break;
-        }
+            const opt = lines[i];
 
-        if (options.length >= 2) questions.push({
-            concept_id: `${syllabusId}_q${questions.length}`,
-            question: questionText, options, correct: correctIndex,
-            explanation: 'Pregunta del temario oficial.', unit: null
-        });
-    }
-    return questions;
-}
+            // Stop collecting options if this line is a new question
+            if ((opt.includes('?') || opt.startsWith('¿')) && options.length >= 2) break;
 
-// ── Format B: Programación, Sistemas, Cloud ──────────────────────
-// Blank lines between blocks. * marks correct OR last option is correct.
-function parseBlockFormat(text, syllabusId) {
-    // Each question + its options are separated by blank lines
-    // A question block: no * prefix, usually ends with ?
-    // An option block: short text, may start with *
-    const blocks = text.split(/\n\n+/).map(b => b.trim()).filter(b => b);
-    const questions = [];
-    let i = 0;
-
-    while (i < blocks.length) {
-        // Find next question block (doesn't start with * and looks like a question)
-        const qBlock = blocks[i];
-        // Clean any leading * (shouldn't happen but safety)
-        const questionText = qBlock.replace(/^\*/, '').trim();
-        const options = []; let correctIndex = -1;
-        let j = i + 1;
-
-        while (j < blocks.length && options.length < 4) {
-            const candidate = blocks[j];
-
-            // Stop if this looks like a new question (not an option)
-            if (options.length >= 2 && !candidate.startsWith('*')) {
-                if (isLikelyQuestion(candidate)) break;
-                if (options.length >= 3) break;
-            }
-
-            if (candidate.startsWith('*')) {
+            if (opt.startsWith('*')) {
                 correctIndex = options.length;
-                options.push(candidate.slice(1).trim());
+                options.push(opt.slice(1).trim());
             } else {
-                options.push(candidate);
+                options.push(opt);
             }
-            j++;
+            i++;
         }
-
-        // If no * marker found, last option is correct
-        if (correctIndex === -1 && options.length >= 2) correctIndex = options.length - 1;
 
         if (options.length >= 2) {
             questions.push({
                 concept_id: `${syllabusId}_q${questions.length}`,
-                question: questionText, options, correct: correctIndex,
-                explanation: 'Pregunta del temario oficial.', unit: null
+                question: questionText,
+                options,
+                correct: correctIndex,
+                explanation: 'Pregunta del temario oficial.',
+                unit: null
             });
-            i = j;
-        } else {
-            i++;
         }
     }
+
     return questions;
 }
 
 // ─── SYLLABUS LAB ───────────────────────────────────────────────
+
 function startLab(syllabusId) {
     const examInfo = APP_STATE.syllabusExams.find(e => e.id === syllabusId);
     if (!examInfo) return;
