@@ -1,15 +1,16 @@
 tema 1
 Los lenguajes de programación utilizan distintos tipos de datos para representar la información y gestionar la memoria de forma adecuada. ¿Cuál de los siguientes no pertenece a los tipos de datos básicos o primitivos?
-*Número entero.
+Número entero.
 Valor booleano.
 Array o arreglo.
 Aunque a menudo se confunden, los conceptos de algoritmo y programa no son equivalentes. ¿Cuál de las siguientes afirmaciones describe correctamente la relación entre ambos?
-*El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación.
+El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación.
 El programa es independiente del lenguaje y el algoritmo depende del lenguaje utilizado.
+
 Ambos conceptos son idénticos y se diferencian solo por el formato en el que se escriben.
-Durante el desarrollo de un programa, pueden aparecer errores que no impiden la compilación pero provocan resultados incorrectos. ¿Cuál es la función principal de un depurador (debugger) dentro de un entorno de desarrollo?
+*Durante el desarrollo de un programa, pueden aparecer errores que no impiden la compilación pero provocan resultados incorrectos. ¿Cuál es la función principal de un depurador (debugger) dentro de un entorno de desarrollo?
 Detectar errores de sintaxis antes de ejecutar el programa.
-*Ejecutar el programa de forma más rápida y optimizada.
+Ejecutar el programa de forma más rápida y optimizada.
 Analizar la ejecución paso a paso para localizar errores lógicos.
 Antes de escribir un programa, es fundamental diseñar correctamente el algoritmo que resolverá el problema. Para que una secuencia de pasos pueda considerarse un algoritmo válido, debe cumplir una serie de características. ¿Cuál de las siguientes es una de ellas?
 Debe poder ejecutarse directamente por la máquina sin traducción.

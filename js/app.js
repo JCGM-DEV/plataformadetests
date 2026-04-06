@@ -727,6 +727,20 @@ function exitExamToHome() {
     renderFallosSection();
 }
 
+// ─── ROBUST QUESTION DETECTION ──────────────────────────────────
+const QUESTION_START_REGEX = /^(¿|En |Los |Las |Cuando |Qué |Cuál |Según |Si |Al |Para |Desde |Respecto|Durante|Sobre|Dentro|Ante|Java|Un |Una |El |La |Todo|Cada|Al |Si |Sobre|Respecto)/i;
+
+function isLikelyQuestion(text) {
+    if (!text) return false;
+    const t = text.trim();
+    if (t.startsWith('*')) return false; // Answers start with *
+    // A question usually has a ? or starts with specific words AND is long enough
+    // or ends with a colon (common in some formats)
+    return t.includes('?') || 
+           (QUESTION_START_REGEX.test(t) && t.length > 35) || 
+           (t.endsWith(':') && t.length > 20);
+}
+
 // ─── ROBUST TXT PARSER ──────────────────────────────────────────
 function parseTxtExam(text, syllabusId) {
     const normalized = text.replace(/\r\n/g, '\n').replace(/^tema\s+\d+\s*$/gim, '').trim();
@@ -753,10 +767,15 @@ function parseLineFormat(text, syllabusId) {
 
         while (i < lines.length && options.length < 4) {
             const line = lines[i];
+            
+            // Break if this line looks like a new question
             if (options.length >= 2 && !line.startsWith('*')) {
                 const next = lines[i + 1] || '';
+                // If this line itself is a question OR it's followed by a correct answer (*)
+                if (isLikelyQuestion(line)) break;
                 if (!next.startsWith('*') && options.length >= 3) break;
-                if (!next.startsWith('*') && options.length >= 2 && line.length > 80) break;
+                // If it's a very long line and not starting with *, it's likely a question
+                if (line.length > 70 && !next.startsWith('*')) break;
             }
             if (line.startsWith('*')) { correctIndex = options.length; options.push(line.slice(1).trim()); }
             else options.push(line);
@@ -796,10 +815,7 @@ function parseBlockFormat(text, syllabusId) {
 
             // Stop if this looks like a new question (not an option)
             if (options.length >= 2 && !candidate.startsWith('*')) {
-                const isQuestion =
-                    candidate.includes('?') ||
-                    /^(¿|En |Los |Las |Cuando |Qué |Cuál |Según |Si |Al |Para |Desde |Respecto|Durante|Sobre|Dentro|Ante|Java|Un |Una |El |La |Todo|Cada|Al |Si |Sobre|Respecto)/i.test(candidate);
-                if (isQuestion && candidate.length > 50) break;
+                if (isLikelyQuestion(candidate)) break;
                 if (options.length >= 3) break;
             }
 

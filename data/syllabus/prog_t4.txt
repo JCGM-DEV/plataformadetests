@@ -1,8 +1,11 @@
 tema 4
 ¿Cuál de las siguientes afirmaciones describe correctamente la relación entre una clase y un objeto en Python?
+
 Una clase es un tipo de dato primitivo, y un objeto es una variable que almacena ese tipo de dato.
+
 Una clase actúa como una plantilla o plano que define las propiedades y métodos, mientras que un objeto es una instancia específica creada a partir de esa clase.
-*Un objeto es una función que se define dentro de una clase, y la clase es el resultado de la ejecución de un objeto.
+
+Un objeto es una función que se define dentro de una clase, y la clase es el resultado de la ejecución de un objeto.
 Durante la ejecución de un programa Java, ¿en qué situación un objeto pasa a ser considerado inalcanzable y candidato a la recolección de basura?
 Cuando se declara la variable de referencia que lo apuntará.
 *Cuando ninguna referencia activa apunta al objeto en memoria.
