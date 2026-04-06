@@ -759,6 +759,18 @@ function renderQuestion() {
     const total = APP_STATE.examQuestions.length;
     const pct = (APP_STATE.currentQuestionIndex / total) * 100;
 
+    // Shuffle options but track where the correct answer ends up
+    const indices = [0, 1, 2, 3].slice(0, q.options.length);
+    for (let i = indices.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [indices[i], indices[j]] = [indices[j], indices[i]];
+    }
+    const shuffledOptions = indices.map(i => q.options[i]);
+    const newCorrectIndex = indices.indexOf(q.correct);
+    // Store shuffled mapping on the question for handleResponse
+    q._shuffledCorrect = newCorrectIndex;
+    q._shuffledOptions = shuffledOptions;
+
     document.getElementById('exam-engine-root').innerHTML = `
         <div class="question-container">
             <div class="question-meta">
@@ -770,7 +782,7 @@ function renderQuestion() {
             </div>
             <p class="question-text">${esc(q.question)}</p>
             <div id="options-grid" class="options-grid">
-                ${q.options.map((opt, i) => `
+                ${shuffledOptions.map((opt, i) => `
                     <button class="option-btn" onclick="handleResponse(${i})">
                         <span class="opt-letter">${String.fromCharCode(65+i)}</span>
                         <span>${esc(opt)}</span>
@@ -789,19 +801,24 @@ function renderQuestion() {
 
 function handleResponse(index) {
     const q = APP_STATE.examQuestions[APP_STATE.currentQuestionIndex];
-    const isCorrect = index === q.correct;
-    APP_STATE.answers.push({ correct: q.correct, selected: index, question: q });
+    // Use shuffled correct index if available
+    const correctIndex = q._shuffledCorrect !== undefined ? q._shuffledCorrect : q.correct;
+    const displayOptions = q._shuffledOptions || q.options;
+    const isCorrect = index === correctIndex;
+
+    // Save answer using original correct for history consistency
+    APP_STATE.answers.push({ correct: correctIndex, selected: index, question: q });
 
     document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
     document.querySelectorAll('.option-btn')[index].classList.add(isCorrect ? 'correct' : 'incorrect');
     if (!isCorrect) {
-        document.querySelectorAll('.option-btn')[q.correct].classList.add('correct');
-        // Save to fallos
+        document.querySelectorAll('.option-btn')[correctIndex].classList.add('correct');
+        // Save to fallos — store with original correct for consistency
         if (APP_STATE.currentExam?.id) saveFallo(APP_STATE.currentExam.id, q);
         document.getElementById('feedback-area').innerHTML = `
             <div class="explanation-box">
                 <strong>❌ Incorrecto</strong>
-                <p>Respuesta correcta: <em>${esc(q.options[q.correct])}</em></p>
+                <p>Respuesta correcta: <em>${esc(displayOptions[correctIndex])}</em></p>
                 <hr style="border-color:rgba(255,255,255,0.07);margin:0.75rem 0">
                 <p>${esc(q.explanation)}</p>
             </div>`;
