@@ -218,13 +218,18 @@ function renderSyllabusExams() {
             </div>
             <div class="grid-container syllabus-grid">
                 ${grouped[subjectId].map(exam => `
-                    <div class="subject-card syllabus-card">
+                    <div class="subject-card syllabus-card ${exam.type === 'examen_final' ? 'examen-final-card' : ''}">
                         <div class="card-icon">${exam.icon || '📖'}</div>
-                        <div class="badge-oficial">TEMARIO OFICIAL</div>
+                        ${exam.type === 'examen_final'
+                            ? `<div class="badge-examen-final">EXAMEN FINAL</div>`
+                            : `<div class="badge-oficial">TEMARIO OFICIAL</div>`}
                         <h3>${exam.name}</h3>
                         <div class="exam-selector-large">
-                            <button onclick="startSyllabusExam('${exam.id}')">Iniciar Examen</button>
+                            ${exam.type === 'examen_final'
+                                ? `<button onclick="startExamenFinal('${exam.subject_id}')" style="background:linear-gradient(135deg,#ef4444,#f97316)">🎯 Iniciar Simulacro Final</button>`
+                                : `<button onclick="startSyllabusExam('${exam.id}')">Iniciar Examen</button>`}
                         </div>
+                        ${exam.type === 'examen_final' ? `<p style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.5rem">30 teóricas + 30 prácticas · Penalización -1/3</p>` : ''}
                     </div>
                 `).join('')}
             </div>
@@ -530,6 +535,51 @@ function startFallosExam(subjectId) {
 }
 
 // ─── SIMULACRO TEMARIO COMPLETO ─────────────────────────────────
+async function startExamenFinal(subjectId) {
+    const subject = APP_STATE.subjects.find(s => s.id === subjectId);
+    // Get teoricas (from test bank) and practicas (from si_practicas.txt)
+    const teoricasPool = QUESTION_POOL[subjectId] || [];
+    const practicasEntry = APP_STATE.syllabusExams.find(e => e.id === `${subjectId.replace('sistemas_informaticos','si')}_practicas` || e.id === 'si_practicas');
+
+    document.getElementById('exam-subject-label').textContent = `⏳ Preparando examen final...`;
+    showView('exam');
+    document.getElementById('exam-engine-root').innerHTML = `<div style="text-align:center;padding:4rem;color:var(--text-secondary)"><p>Cargando 60 preguntas...</p></div>`;
+
+    try {
+        // 30 teoricas aleatorias del banco
+        const teoricas = shuffleArray(teoricasPool).slice(0, 30);
+
+        // 30 practicas del archivo de casos practicos
+        let practicas = [];
+        if (practicasEntry) {
+            const res = await fetch(practicasEntry.file + '?v=' + Date.now());
+            const text = await res.text();
+            practicas = shuffleArray(parseTxtExam(text, 'si_practicas')).slice(0, 30);
+        }
+
+        // Combine: shuffle within each group, then interleave
+        const allQ = shuffleArray([...teoricas, ...practicas]);
+
+        if (allQ.length === 0) { alert('No se pudieron cargar preguntas.'); showView('dashboard'); return; }
+
+        APP_STATE.currentExam = { ...subject, id: subjectId, name: 'SI — Simulacro Examen Final' };
+        APP_STATE.currentUnit = null;
+        APP_STATE.isSyllabusMode = true;
+        APP_STATE.examQuestions = allQ;
+        APP_STATE.currentQuestionIndex = 0;
+        APP_STATE.answers = [];
+        APP_STATE.timer = allQ.length * 90; // ~90min for 60 questions
+
+        document.getElementById('exam-subject-label').textContent = `🎯 ${subject.icon} Simulacro Examen Final — ${allQ.length} preguntas (30T + ${practicas.length}P)`;
+        renderQuestion();
+        startTimer();
+    } catch(e) {
+        console.error(e);
+        alert('Error al cargar el examen final.');
+        showView('dashboard');
+    }
+}
+
 async function startSyllabusFlashcard(subjectId) {
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
     const temas = APP_STATE.syllabusExams.filter(e => e.subject_id === subjectId && e.type !== 'lab');

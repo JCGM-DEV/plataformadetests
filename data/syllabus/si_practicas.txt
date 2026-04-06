@@ -1,0 +1,151 @@
+tema practicas
+En la empresa TodoEsGratis se necesita una topología que permita que si un cable falla, el resto de la red siga funcionando. ¿Qué topología cumple mejor este requisito?
+Topología en bus.
+Topología en estrella.
+*Topología en anillo o malla.
+Topología lineal.
+En la topología en estrella, ¿qué ocurre si el dispositivo central (switch/hub) falla?
+Solo falla el nodo más alejado.
+La red sigue funcionando con menor velocidad.
+*Toda la red deja de funcionar.
+Solo fallan los nodos pares.
+Al crear una máquina virtual en VirtualBox para Ubuntu, ¿cuánta memoria RAM mínima se recomienda en la práctica?
+512 MB.
+1024 MB.
+*2048 MB.
+4096 MB.
+En VirtualBox, ¿qué modo de red permite que la máquina virtual acceda a Internet usando la IP del anfitrión sin ser visible desde la red externa?
+Red interna.
+Adaptador puente.
+*NAT.
+Solo anfitrión.
+Para conectarse por SSH a una máquina virtual con reenvío de puertos configurado (anfitrión 2222 → huésped 22), ¿qué comando es correcto?
+ssh user@10.0.2.15
+ssh -p 22 user@localhost
+*ssh -p 2222 user@127.0.0.1
+ssh -p 2222 user@10.0.2.15
+¿Qué comando de VBoxManage se usa para crear una instantánea de la máquina virtual "Ubuntu"?
+VBoxManage backup Ubuntu save "Instantánea 1"
+VBoxManage clone Ubuntu "Instantánea 1"
+*VBoxManage snapshot Ubuntu take "Instantánea 1"
+VBoxManage Ubuntu snapshot create "Instantánea 1"
+Para transferir un archivo desde el anfitrión a la máquina virtual con el reenvío de puertos configurado, ¿qué comando es correcto?
+scp file.txt user@10.0.2.15:/home/user/
+ftp -P 2222 user@127.0.0.1
+*scp -P 2222 file.txt user@127.0.0.1:/home/user/
+rsync -p 2222 file.txt user@127.0.0.1:/home/user/
+En Windows, ¿qué herramienta del sistema operativo se usa para crear, borrar y redimensionar particiones sin software adicional?
+Explorador de archivos.
+Panel de control.
+*Administración de discos.
+Símbolo del sistema.
+Al crear una nueva partición en "Administración de discos" de Windows, ¿qué opción se selecciona sobre el espacio no asignado?
+Formatear volumen.
+Extender volumen.
+*Nuevo volumen simple.
+Convertir a disco dinámico.
+¿Qué herramienta de clonación de particiones se menciona en los casos prácticos?
+Acronis True Image.
+Clonezilla.
+*EaseUS Partition Master.
+GParted.
+Para reducir el tamaño de una partición en Windows desde "Administración de discos", ¿qué opción se usa?
+Eliminar volumen.
+Ampliar volumen.
+*Reducir volumen.
+Desfragmentar volumen.
+En el caso práctico de monitorización, un servidor de base de datos está lento. ¿Qué herramienta de Windows permite ver en tiempo real el uso de CPU, memoria y disco?
+Visor de eventos.
+Administración de discos.
+*Monitor de rendimiento (Performance Monitor).
+Administrador de tareas avanzado.
+¿Qué comando de Windows muestra la dirección IP y la máscara de subred de la máquina?
+netstat
+ping
+*ipconfig
+tracert
+¿Qué comando de Windows permite verificar la conectividad con otra máquina en la red?
+ipconfig /all
+netstat -an
+*ping [dirección IP]
+route print
+¿Qué comando de Windows borra la caché de resolución de nombres DNS?
+ipconfig /release
+nslookup /flush
+*ipconfig /flushdns
+netsh dns clear
+¿Qué comando de Windows muestra la tabla de enrutamiento actual?
+netstat -r
+ipconfig /route
+*route print
+tracert /table
+¿Qué comando de Windows verifica qué puertos están abiertos y en escucha en la máquina local?
+ipconfig /ports
+route print
+*netstat -an
+ping localhost
+¿Qué comando de Windows muestra la ruta que sigue un paquete desde tu máquina hasta un destino?
+ping -t
+netstat -r
+*tracert [destino]
+route trace
+En sistemas de archivos, ¿qué son los permisos efectivos?
+Los permisos que el administrador asigna globalmente.
+Los permisos del grupo al que pertenece el usuario.
+*Los permisos resultantes de combinar los permisos del usuario y los de sus grupos, aplicando las restricciones de denegación.
+Los permisos heredados del directorio raíz.
+En Linux, ¿qué comando asigna permisos de lectura, escritura y ejecución al propietario, y solo lectura al grupo y otros?
+chmod 777 archivo
+chmod 644 archivo
+*chmod 744 archivo
+chmod 755 archivo
+¿Qué herramienta de productividad en la nube de Google permite crear documentos, hojas de cálculo y presentaciones colaborativas?
+Microsoft 365.
+Notion.
+*Google Workspace.
+Slack.
+¿Para qué se utiliza principalmente Slack en un entorno de trabajo?
+Gestión de proyectos con tableros Kanban.
+Almacenamiento de archivos en la nube.
+*Comunicación en tiempo real mediante canales y mensajes.
+Creación de documentos colaborativos.
+¿Qué software antivirus se menciona en los casos prácticos para realizar un análisis de amenazas?
+Kaspersky.
+Norton.
+*Avast.
+Malwarebytes.
+¿Para qué sirve EaseUS Data Recovery Wizard?
+Clonar particiones del disco duro.
+Monitorizar el rendimiento del sistema.
+*Recuperar archivos perdidos o eliminados del ordenador.
+Gestionar usuarios y permisos.
+En VirtualBox, ¿qué modo de red permite que la máquina virtual tenga su propia IP en la red local y sea accesible desde otros dispositivos?
+NAT.
+Red interna.
+*Adaptador puente.
+Solo anfitrión.
+¿Qué ventaja principal tiene la topología en estrella frente a la topología en bus?
+Es más barata de implementar.
+Usa menos cable.
+*Un fallo en un nodo no afecta al resto de la red.
+No necesita dispositivo central.
+En la práctica de particiones, ¿qué ocurre con los datos al eliminar un volumen en "Administración de discos"?
+Los datos se mueven automáticamente a otra partición.
+Los datos quedan en el espacio no asignado y se pueden recuperar fácilmente.
+*Los datos se pierden permanentemente.
+Los datos se comprimen y se guardan en la partición del sistema.
+¿Qué protocolo usa el reenvío de puertos configurado en la práctica de VirtualBox para la conexión SSH?
+UDP.
+ICMP.
+*TCP.
+FTP.
+En el caso práctico de redes, ¿qué comando agrega una ruta estática en Windows hacia una red de destino?
+netsh route add [destino]
+ipconfig /route add [destino]
+*route add [destino] mask [máscara] [puerta de enlace]
+tracert add [destino]
+¿Qué tamaño de disco duro virtual se configura en la práctica de VirtualBox para la máquina Ubuntu?
+10 GB.
+15 GB.
+*20 GB.
+50 GB.
