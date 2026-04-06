@@ -1,0 +1,1805 @@
+{
+  "total_suspicious": 264,
+  "examples": [
+    {
+      "subject": "sistemas_informaticos",
+      "index": 0,
+      "question": "¿Qué arquitectura de ordenador usa una memoria unificada para datos e instrucciones?",
+      "options": [
+        "CISC",
+        "Harvard",
+        "Von Neumann",
+        "RISC"
+      ],
+      "correct": 2,
+      "avg_similarity": 0.0773529102476471,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "CISC",
+          "similarity": 0.06818181818181818
+        },
+        {
+          "option_idx": 1,
+          "option_text": "Harvard",
+          "similarity": 0.10989010989010989
+        },
+        {
+          "option_idx": 2,
+          "option_text": "Von Neumann",
+          "similarity": 0.06315789473684211
+        },
+        {
+          "option_idx": 3,
+          "option_text": "RISC",
+          "similarity": 0.06818181818181818
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 1,
+      "question": "¿En qué arquitectura están separadas físicamente la memoria de datos y la de instrucciones?",
+      "options": [
+        "x86",
+        "ARM",
+        "Von Neumann",
+        "Harvard"
+      ],
+      "correct": 3,
+      "avg_similarity": 0.06107549402739819,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "x86",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 1,
+          "option_text": "ARM",
+          "similarity": 0.06382978723404255
+        },
+        {
+          "option_idx": 2,
+          "option_text": "Von Neumann",
+          "similarity": 0.0784313725490196
+        },
+        {
+          "option_idx": 3,
+          "option_text": "Harvard",
+          "similarity": 0.10204081632653061
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 4,
+      "question": "¿Qué protocolo asigna automáticamente direcciones IP a los dispositivos de la red?",
+      "options": [
+        "ARP",
+        "DNS",
+        "DHCP",
+        "ICMP"
+      ],
+      "correct": 2,
+      "avg_similarity": 0.0408344733242134,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "ARP",
+          "similarity": 0.023529411764705882
+        },
+        {
+          "option_idx": 1,
+          "option_text": "DNS",
+          "similarity": 0.023529411764705882
+        },
+        {
+          "option_idx": 2,
+          "option_text": "DHCP",
+          "similarity": 0.023255813953488372
+        },
+        {
+          "option_idx": 3,
+          "option_text": "ICMP",
+          "similarity": 0.09302325581395349
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 5,
+      "question": "¿Qué protocolo traduce nombres de dominio (google.com) a direcciones IP?",
+      "options": [
+        "DNS",
+        "DHCP",
+        "SNMP",
+        "FTP"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.03982456140350877,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "DNS",
+          "similarity": 0.08
+        },
+        {
+          "option_idx": 1,
+          "option_text": "DHCP",
+          "similarity": 0.02631578947368421
+        },
+        {
+          "option_idx": 2,
+          "option_text": "SNMP",
+          "similarity": 0.02631578947368421
+        },
+        {
+          "option_idx": 3,
+          "option_text": "FTP",
+          "similarity": 0.02666666666666667
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 6,
+      "question": "¿Qué nivel de RAID duplica los datos en dos discos ofreciendo redundancia total?",
+      "options": [
+        "RAID 1",
+        "RAID 10",
+        "RAID 0",
+        "RAID 5"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.11594493450948944,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "RAID 1",
+          "similarity": 0.11627906976744186
+        },
+        {
+          "option_idx": 1,
+          "option_text": "RAID 10",
+          "similarity": 0.11494252873563218
+        },
+        {
+          "option_idx": 2,
+          "option_text": "RAID 0",
+          "similarity": 0.11627906976744186
+        },
+        {
+          "option_idx": 3,
+          "option_text": "RAID 5",
+          "similarity": 0.11627906976744186
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 7,
+      "question": "¿Qué nivel de RAID distribuye datos sin redundancia para máxima velocidad?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 6"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.125,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "RAID 0",
+          "similarity": 0.125
+        },
+        {
+          "option_idx": 1,
+          "option_text": "RAID 1",
+          "similarity": 0.125
+        },
+        {
+          "option_idx": 2,
+          "option_text": "RAID 5",
+          "similarity": 0.125
+        },
+        {
+          "option_idx": 3,
+          "option_text": "RAID 6",
+          "similarity": 0.125
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 8,
+      "question": "¿Qué nivel de RAID usa paridad distribuida y necesita mínimo 3 discos?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 2",
+        "RAID 5"
+      ],
+      "correct": 3,
+      "avg_similarity": 0.13157894736842105,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "RAID 0",
+          "similarity": 0.13157894736842105
+        },
+        {
+          "option_idx": 1,
+          "option_text": "RAID 1",
+          "similarity": 0.13157894736842105
+        },
+        {
+          "option_idx": 2,
+          "option_text": "RAID 2",
+          "similarity": 0.13157894736842105
+        },
+        {
+          "option_idx": 3,
+          "option_text": "RAID 5",
+          "similarity": 0.13157894736842105
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 9,
+      "question": "¿Qué sistema de archivos usa Windows con soporte para permisos ACL y archivos grandes?",
+      "options": [
+        "NTFS",
+        "exFAT",
+        "ext4",
+        "FAT32"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.0221001221001221,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "NTFS",
+          "similarity": 0.022222222222222223
+        },
+        {
+          "option_idx": 1,
+          "option_text": "exFAT",
+          "similarity": 0.02197802197802198
+        },
+        {
+          "option_idx": 2,
+          "option_text": "ext4",
+          "similarity": 0.022222222222222223
+        },
+        {
+          "option_idx": 3,
+          "option_text": "FAT32",
+          "similarity": 0.02197802197802198
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 10,
+      "question": "¿Qué sistema de archivos es el estándar en la mayoría de distribuciones Linux?",
+      "options": [
+        "ext4",
+        "FAT32",
+        "Btrfs",
+        "NTFS"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.036291507493388185,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "ext4",
+          "similarity": 0.024390243902439025
+        },
+        {
+          "option_idx": 1,
+          "option_text": "FAT32",
+          "similarity": 0.024096385542168676
+        },
+        {
+          "option_idx": 2,
+          "option_text": "Btrfs",
+          "similarity": 0.07228915662650602
+        },
+        {
+          "option_idx": 3,
+          "option_text": "NTFS",
+          "similarity": 0.024390243902439025
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 11,
+      "question": "¿Qué comando Linux muestra los procesos en ejecución en tiempo real?",
+      "options": [
+        "ls",
+        "top",
+        "pwd",
+        "cat"
+      ],
+      "correct": 1,
+      "avg_similarity": 0.056539235412474846,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "ls",
+          "similarity": 0.05714285714285714
+        },
+        {
+          "option_idx": 1,
+          "option_text": "top",
+          "similarity": 0.056338028169014086
+        },
+        {
+          "option_idx": 2,
+          "option_text": "pwd",
+          "similarity": 0.028169014084507043
+        },
+        {
+          "option_idx": 3,
+          "option_text": "cat",
+          "similarity": 0.08450704225352113
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 12,
+      "question": "¿Qué comando Linux cambia los permisos de un archivo?",
+      "options": [
+        "chown",
+        "kill",
+        "ps",
+        "chmod"
+      ],
+      "correct": 3,
+      "avg_similarity": 0.07835890667106638,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "chown",
+          "similarity": 0.10344827586206896
+        },
+        {
+          "option_idx": 1,
+          "option_text": "kill",
+          "similarity": 0.07017543859649122
+        },
+        {
+          "option_idx": 2,
+          "option_text": "ps",
+          "similarity": 0.03636363636363636
+        },
+        {
+          "option_idx": 3,
+          "option_text": "chmod",
+          "similarity": 0.10344827586206896
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 13,
+      "question": "¿Qué comando Linux cambia el propietario de un archivo?",
+      "options": [
+        "chown",
+        "chmod",
+        "ls",
+        "chgrp"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.07543859649122807,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "chown",
+          "similarity": 0.1
+        },
+        {
+          "option_idx": 1,
+          "option_text": "chmod",
+          "similarity": 0.1
+        },
+        {
+          "option_idx": 2,
+          "option_text": "ls",
+          "similarity": 0.03508771929824561
+        },
+        {
+          "option_idx": 3,
+          "option_text": "chgrp",
+          "similarity": 0.06666666666666667
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 14,
+      "question": "¿Qué puerto usa SSH por defecto?",
+      "options": [
+        "80",
+        "22",
+        "21",
+        "443"
+      ],
+      "correct": 1,
+      "avg_similarity": 0.0,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "80",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 1,
+          "option_text": "22",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 2,
+          "option_text": "21",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 3,
+          "option_text": "443",
+          "similarity": 0.0
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 15,
+      "question": "¿Qué puerto usa HTTP por defecto?",
+      "options": [
+        "443",
+        "22",
+        "80",
+        "8080"
+      ],
+      "correct": 2,
+      "avg_similarity": 0.0,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "443",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 1,
+          "option_text": "22",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 2,
+          "option_text": "80",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 3,
+          "option_text": "8080",
+          "similarity": 0.0
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 16,
+      "question": "¿Qué puerto usa HTTPS por defecto?",
+      "options": [
+        "22",
+        "443",
+        "80",
+        "8443"
+      ],
+      "correct": 1,
+      "avg_similarity": 0.0,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "22",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 1,
+          "option_text": "443",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 2,
+          "option_text": "80",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 3,
+          "option_text": "8443",
+          "similarity": 0.0
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 17,
+      "question": "¿Qué puerto usa FTP para transferencia de datos?",
+      "options": [
+        "23",
+        "22",
+        "21",
+        "20"
+      ],
+      "correct": 3,
+      "avg_similarity": 0.0,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "23",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 1,
+          "option_text": "22",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 2,
+          "option_text": "21",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 3,
+          "option_text": "20",
+          "similarity": 0.0
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 19,
+      "question": "¿Qué topología de red conecta todos los dispositivos a un nodo central?",
+      "options": [
+        "Bus",
+        "Anillo",
+        "Malla",
+        "Estrella"
+      ],
+      "correct": 3,
+      "avg_similarity": 0.06497487693357114,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "Bus",
+          "similarity": 0.05405405405405406
+        },
+        {
+          "option_idx": 1,
+          "option_text": "Anillo",
+          "similarity": 0.05194805194805195
+        },
+        {
+          "option_idx": 2,
+          "option_text": "Malla",
+          "similarity": 0.05263157894736842
+        },
+        {
+          "option_idx": 3,
+          "option_text": "Estrella",
+          "similarity": 0.10126582278481013
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 20,
+      "question": "¿Qué topología comparte un único cable de transmisión entre todos los nodos?",
+      "options": [
+        "Estrella",
+        "Bus",
+        "Anillo",
+        "Árbol"
+      ],
+      "correct": 1,
+      "avg_similarity": 0.07291331452595216,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "Estrella",
+          "similarity": 0.14285714285714285
+        },
+        {
+          "option_idx": 1,
+          "option_text": "Bus",
+          "similarity": 0.05063291139240506
+        },
+        {
+          "option_idx": 2,
+          "option_text": "Anillo",
+          "similarity": 0.04878048780487805
+        },
+        {
+          "option_idx": 3,
+          "option_text": "Árbol",
+          "similarity": 0.04938271604938271
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 21,
+      "question": "¿Qué dispositivo opera en la Capa 3 del modelo OSI para interconectar redes?",
+      "options": [
+        "Switch",
+        "Hub",
+        "Bridge",
+        "Router"
+      ],
+      "correct": 3,
+      "avg_similarity": 0.0673047236801482,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "Switch",
+          "similarity": 0.0975609756097561
+        },
+        {
+          "option_idx": 1,
+          "option_text": "Hub",
+          "similarity": 0.02531645569620253
+        },
+        {
+          "option_idx": 2,
+          "option_text": "Bridge",
+          "similarity": 0.04878048780487805
+        },
+        {
+          "option_idx": 3,
+          "option_text": "Router",
+          "similarity": 0.0975609756097561
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 22,
+      "question": "¿Qué dispositivo opera en la Capa 2 del modelo OSI usando tablas MAC?",
+      "options": [
+        "Repetidor",
+        "Switch",
+        "Router",
+        "Hub"
+      ],
+      "correct": 1,
+      "avg_similarity": 0.09927350427350427,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "Repetidor",
+          "similarity": 0.1282051282051282
+        },
+        {
+          "option_idx": 1,
+          "option_text": "Switch",
+          "similarity": 0.10666666666666667
+        },
+        {
+          "option_idx": 2,
+          "option_text": "Router",
+          "similarity": 0.10666666666666667
+        },
+        {
+          "option_idx": 3,
+          "option_text": "Hub",
+          "similarity": 0.05555555555555555
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 23,
+      "question": "¿Qué protocolo usa el comando 'ping' para verificar la conectividad?",
+      "options": [
+        "ARP",
+        "ICMP",
+        "TCP",
+        "UDP"
+      ],
+      "correct": 1,
+      "avg_similarity": 0.04910015649452269,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "ARP",
+          "similarity": 0.056338028169014086
+        },
+        {
+          "option_idx": 1,
+          "option_text": "ICMP",
+          "similarity": 0.05555555555555555
+        },
+        {
+          "option_idx": 2,
+          "option_text": "TCP",
+          "similarity": 0.028169014084507043
+        },
+        {
+          "option_idx": 3,
+          "option_text": "UDP",
+          "similarity": 0.056338028169014086
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 24,
+      "question": "¿Cuántos bits tiene una dirección IPv4?",
+      "options": [
+        "48",
+        "128",
+        "64",
+        "32"
+      ],
+      "correct": 3,
+      "avg_similarity": 0.024390243902439025,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "48",
+          "similarity": 0.04878048780487805
+        },
+        {
+          "option_idx": 1,
+          "option_text": "128",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 2,
+          "option_text": "64",
+          "similarity": 0.04878048780487805
+        },
+        {
+          "option_idx": 3,
+          "option_text": "32",
+          "similarity": 0.0
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 25,
+      "question": "¿Cuántos bits tiene una dirección IPv6?",
+      "options": [
+        "32",
+        "64",
+        "48",
+        "128"
+      ],
+      "correct": 3,
+      "avg_similarity": 0.012195121951219513,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "32",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 1,
+          "option_text": "64",
+          "similarity": 0.04878048780487805
+        },
+        {
+          "option_idx": 2,
+          "option_text": "48",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 3,
+          "option_text": "128",
+          "similarity": 0.0
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 27,
+      "question": "¿Qué comando muestra la configuración de red en Linux (moderno)?",
+      "options": [
+        "ifconfig",
+        "ip addr show",
+        "ipconfig",
+        "route"
+      ],
+      "correct": 1,
+      "avg_similarity": 0.11098398169336383,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "ifconfig",
+          "similarity": 0.16666666666666666
+        },
+        {
+          "option_idx": 1,
+          "option_text": "ip addr show",
+          "similarity": 0.05263157894736842
+        },
+        {
+          "option_idx": 2,
+          "option_text": "ipconfig",
+          "similarity": 0.16666666666666666
+        },
+        {
+          "option_idx": 3,
+          "option_text": "route",
+          "similarity": 0.057971014492753624
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 30,
+      "question": "¿Qué archivo en Linux guarda las contraseñas cifradas de los usuarios?",
+      "options": [
+        "/bin/pass",
+        "/home/user",
+        "/etc/passwd",
+        "/etc/shadow"
+      ],
+      "correct": 3,
+      "avg_similarity": 0.11837396468198155,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "/bin/pass",
+          "similarity": 0.12658227848101267
+        },
+        {
+          "option_idx": 1,
+          "option_text": "/home/user",
+          "similarity": 0.1
+        },
+        {
+          "option_idx": 2,
+          "option_text": "/etc/passwd",
+          "similarity": 0.12345679012345678
+        },
+        {
+          "option_idx": 3,
+          "option_text": "/etc/shadow",
+          "similarity": 0.12345679012345678
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 31,
+      "question": "¿Qué directorio de Linux contiene los binarios esenciales del sistema?",
+      "options": [
+        "/bin",
+        "/var",
+        "/home",
+        "/etc"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.05396396396396397,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "/bin",
+          "similarity": 0.08108108108108109
+        },
+        {
+          "option_idx": 1,
+          "option_text": "/var",
+          "similarity": 0.05405405405405406
+        },
+        {
+          "option_idx": 2,
+          "option_text": "/home",
+          "similarity": 0.02666666666666667
+        },
+        {
+          "option_idx": 3,
+          "option_text": "/etc",
+          "similarity": 0.05405405405405406
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 33,
+      "question": "¿Qué comando de Linux busca texto dentro de archivos?",
+      "options": [
+        "find",
+        "locate",
+        "grep",
+        "sed"
+      ],
+      "correct": 2,
+      "avg_similarity": 0.07761724225818784,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "find",
+          "similarity": 0.07017543859649122
+        },
+        {
+          "option_idx": 1,
+          "option_text": "locate",
+          "similarity": 0.1694915254237288
+        },
+        {
+          "option_idx": 2,
+          "option_text": "grep",
+          "similarity": 0.03508771929824561
+        },
+        {
+          "option_idx": 3,
+          "option_text": "sed",
+          "similarity": 0.03571428571428571
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 34,
+      "question": "¿Qué comando crea un nuevo directorio en Linux?",
+      "options": [
+        "mkdir",
+        "cp",
+        "mv",
+        "touch"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.0979199372056515,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "mkdir",
+          "similarity": 0.15384615384615385
+        },
+        {
+          "option_idx": 1,
+          "option_text": "cp",
+          "similarity": 0.04081632653061224
+        },
+        {
+          "option_idx": 2,
+          "option_text": "mv",
+          "similarity": 0.08163265306122448
+        },
+        {
+          "option_idx": 3,
+          "option_text": "touch",
+          "similarity": 0.11538461538461539
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 37,
+      "question": "¿Qué protocolo se usa para el envío de correo electrónico entre servidores?",
+      "options": [
+        "SMTP",
+        "FTP",
+        "IMAP",
+        "POP3"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.038055826030509575,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "SMTP",
+          "similarity": 0.02531645569620253
+        },
+        {
+          "option_idx": 1,
+          "option_text": "FTP",
+          "similarity": 0.02564102564102564
+        },
+        {
+          "option_idx": 2,
+          "option_text": "IMAP",
+          "similarity": 0.02531645569620253
+        },
+        {
+          "option_idx": 3,
+          "option_text": "POP3",
+          "similarity": 0.0759493670886076
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 38,
+      "question": "¿Qué protocolo descarga correos al cliente local borrándolos del servidor?",
+      "options": [
+        "SMTP",
+        "SNMP",
+        "IMAP",
+        "POP3"
+      ],
+      "correct": 3,
+      "avg_similarity": 0.03205128205128205,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "SMTP",
+          "similarity": 0.02564102564102564
+        },
+        {
+          "option_idx": 1,
+          "option_text": "SNMP",
+          "similarity": 0.02564102564102564
+        },
+        {
+          "option_idx": 2,
+          "option_text": "IMAP",
+          "similarity": 0.02564102564102564
+        },
+        {
+          "option_idx": 3,
+          "option_text": "POP3",
+          "similarity": 0.05128205128205128
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 39,
+      "question": "¿Qué protocolo permite acceder al correo del servidor sin descargarlo?",
+      "options": [
+        "POP3",
+        "IMAP",
+        "SMTP",
+        "HTTP"
+      ],
+      "correct": 1,
+      "avg_similarity": 0.04054054054054054,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "POP3",
+          "similarity": 0.08108108108108109
+        },
+        {
+          "option_idx": 1,
+          "option_text": "IMAP",
+          "similarity": 0.02702702702702703
+        },
+        {
+          "option_idx": 2,
+          "option_text": "SMTP",
+          "similarity": 0.02702702702702703
+        },
+        {
+          "option_idx": 3,
+          "option_text": "HTTP",
+          "similarity": 0.02702702702702703
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 40,
+      "question": "¿Qué término describe la capacidad máxima de transferencia de datos de un enlace?",
+      "options": [
+        "Latencia",
+        "Ancho de banda",
+        "Throughput",
+        "Jitter"
+      ],
+      "correct": 1,
+      "avg_similarity": 0.1262897580134881,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "Latencia",
+          "similarity": 0.1797752808988764
+        },
+        {
+          "option_idx": 1,
+          "option_text": "Ancho de banda",
+          "similarity": 0.18947368421052632
+        },
+        {
+          "option_idx": 2,
+          "option_text": "Throughput",
+          "similarity": 0.04395604395604396
+        },
+        {
+          "option_idx": 3,
+          "option_text": "Jitter",
+          "similarity": 0.09195402298850575
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 42,
+      "question": "¿Qué tipo de cable de par trenzado NO tiene blindaje?",
+      "options": [
+        "STP",
+        "UTP",
+        "FTP",
+        "S/FTP"
+      ],
+      "correct": 1,
+      "avg_similarity": 0.07974137931034482,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "STP",
+          "similarity": 0.07142857142857142
+        },
+        {
+          "option_idx": 1,
+          "option_text": "UTP",
+          "similarity": 0.10714285714285714
+        },
+        {
+          "option_idx": 2,
+          "option_text": "FTP",
+          "similarity": 0.07142857142857142
+        },
+        {
+          "option_idx": 3,
+          "option_text": "S/FTP",
+          "similarity": 0.06896551724137931
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 43,
+      "question": "¿Qué conector se utiliza en los cables de red Ethernet de cobre (RJ...)?",
+      "options": [
+        "BNC",
+        "RJ-45",
+        "RJ-11",
+        "LC"
+      ],
+      "correct": 1,
+      "avg_similarity": 0.0393974493974494,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "BNC",
+          "similarity": 0.02666666666666667
+        },
+        {
+          "option_idx": 1,
+          "option_text": "RJ-45",
+          "similarity": 0.05194805194805195
+        },
+        {
+          "option_idx": 2,
+          "option_text": "RJ-11",
+          "similarity": 0.05194805194805195
+        },
+        {
+          "option_idx": 3,
+          "option_text": "LC",
+          "similarity": 0.02702702702702703
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 45,
+      "question": "¿Qué sustituyó a la BIOS en los equipos modernos?",
+      "options": [
+        "UEFI",
+        "MBR",
+        "POST",
+        "GRUB"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.08526850507982583,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "UEFI",
+          "similarity": 0.07547169811320754
+        },
+        {
+          "option_idx": 1,
+          "option_text": "MBR",
+          "similarity": 0.07692307692307693
+        },
+        {
+          "option_idx": 2,
+          "option_text": "POST",
+          "similarity": 0.11320754716981132
+        },
+        {
+          "option_idx": 3,
+          "option_text": "GRUB",
+          "similarity": 0.07547169811320754
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 46,
+      "question": "¿Qué tabla de particiones soporta discos de más de 2TB y más de 4 particiones primarias?",
+      "options": [
+        "GPT",
+        "FAT",
+        "MBR",
+        "EBR"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.03296703296703297,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "GPT",
+          "similarity": 0.02197802197802198
+        },
+        {
+          "option_idx": 1,
+          "option_text": "FAT",
+          "similarity": 0.02197802197802198
+        },
+        {
+          "option_idx": 2,
+          "option_text": "MBR",
+          "similarity": 0.04395604395604396
+        },
+        {
+          "option_idx": 3,
+          "option_text": "EBR",
+          "similarity": 0.04395604395604396
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 49,
+      "question": "¿Qué interfaz de almacenamiento ofrece mayor velocidad para SSD modernos?",
+      "options": [
+        "USB 3.0",
+        "IDE",
+        "NVMe (PCIe)",
+        "SATA III"
+      ],
+      "correct": 2,
+      "avg_similarity": 0.09264248584424023,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "USB 3.0",
+          "similarity": 0.05
+        },
+        {
+          "option_idx": 1,
+          "option_text": "IDE",
+          "similarity": 0.07894736842105263
+        },
+        {
+          "option_idx": 2,
+          "option_text": "NVMe (PCIe)",
+          "similarity": 0.14285714285714285
+        },
+        {
+          "option_idx": 3,
+          "option_text": "SATA III",
+          "similarity": 0.09876543209876543
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 50,
+      "question": "¿Qué herramienta Linux programa la ejecución automática de tareas?",
+      "options": [
+        "top",
+        "bash",
+        "cron",
+        "systemd"
+      ],
+      "correct": 2,
+      "avg_similarity": 0.07075498454295356,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "top",
+          "similarity": 0.057971014492753624
+        },
+        {
+          "option_idx": 1,
+          "option_text": "bash",
+          "similarity": 0.05714285714285714
+        },
+        {
+          "option_idx": 2,
+          "option_text": "cron",
+          "similarity": 0.08571428571428572
+        },
+        {
+          "option_idx": 3,
+          "option_text": "systemd",
+          "similarity": 0.0821917808219178
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 52,
+      "question": "¿Qué protocolo de red gestiona y monitoriza dispositivos de red remotamente?",
+      "options": [
+        "SNMP",
+        "LDAP",
+        "HTTP",
+        "FTP"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.025079113924050635,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "SNMP",
+          "similarity": 0.025
+        },
+        {
+          "option_idx": 1,
+          "option_text": "LDAP",
+          "similarity": 0.025
+        },
+        {
+          "option_idx": 2,
+          "option_text": "HTTP",
+          "similarity": 0.025
+        },
+        {
+          "option_idx": 3,
+          "option_text": "FTP",
+          "similarity": 0.02531645569620253
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 53,
+      "question": "¿Qué tipo de memoria integrada en la CPU ofrece el acceso más rápido?",
+      "options": [
+        "Caché L1",
+        "RAM DDR5",
+        "Caché L2",
+        "Registro de CPU"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.11201298701298701,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "Caché L1",
+          "similarity": 0.07792207792207792
+        },
+        {
+          "option_idx": 1,
+          "option_text": "RAM DDR5",
+          "similarity": 0.07792207792207792
+        },
+        {
+          "option_idx": 2,
+          "option_text": "Caché L2",
+          "similarity": 0.07792207792207792
+        },
+        {
+          "option_idx": 3,
+          "option_text": "Registro de CPU",
+          "similarity": 0.21428571428571427
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 55,
+      "question": "¿Qué tipo de red abarca un área geográfica amplia como un país o continente?",
+      "options": [
+        "WAN",
+        "LAN",
+        "MAN",
+        "PAN"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.056962025316455694,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "WAN",
+          "similarity": 0.05063291139240506
+        },
+        {
+          "option_idx": 1,
+          "option_text": "LAN",
+          "similarity": 0.05063291139240506
+        },
+        {
+          "option_idx": 2,
+          "option_text": "MAN",
+          "similarity": 0.05063291139240506
+        },
+        {
+          "option_idx": 3,
+          "option_text": "PAN",
+          "similarity": 0.0759493670886076
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 56,
+      "question": "¿Qué protocolo resuelve una dirección MAC a partir de una IP conocida?",
+      "options": [
+        "DNS",
+        "DHCP",
+        "RARP",
+        "ARP"
+      ],
+      "correct": 3,
+      "avg_similarity": 0.06118104405775639,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "DNS",
+          "similarity": 0.0273972602739726
+        },
+        {
+          "option_idx": 1,
+          "option_text": "DHCP",
+          "similarity": 0.02702702702702703
+        },
+        {
+          "option_idx": 2,
+          "option_text": "RARP",
+          "similarity": 0.10810810810810811
+        },
+        {
+          "option_idx": 3,
+          "option_text": "ARP",
+          "similarity": 0.0821917808219178
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 58,
+      "question": "¿Qué modo operativo del bus de transmisión envía datos en ambas direcciones a la vez?",
+      "options": [
+        "Half-Duplex",
+        "Multiplex",
+        "Simplex",
+        "Full-Duplex"
+      ],
+      "correct": 3,
+      "avg_similarity": 0.07403927690410114,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "Half-Duplex",
+          "similarity": 0.0625
+        },
+        {
+          "option_idx": 1,
+          "option_text": "Multiplex",
+          "similarity": 0.0851063829787234
+        },
+        {
+          "option_idx": 2,
+          "option_text": "Simplex",
+          "similarity": 0.06521739130434782
+        },
+        {
+          "option_idx": 3,
+          "option_text": "Full-Duplex",
+          "similarity": 0.08333333333333333
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 59,
+      "question": "¿Qué componente gestiona la comunicación entre la CPU y el resto del sistema?",
+      "options": [
+        "Caché",
+        "Swap",
+        "Chipset",
+        "BIOS"
+      ],
+      "correct": 2,
+      "avg_similarity": 0.06679356476104444,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "Caché",
+          "similarity": 0.07317073170731707
+        },
+        {
+          "option_idx": 1,
+          "option_text": "Swap",
+          "similarity": 0.024691358024691357
+        },
+        {
+          "option_idx": 2,
+          "option_text": "Chipset",
+          "similarity": 0.09523809523809523
+        },
+        {
+          "option_idx": 3,
+          "option_text": "BIOS",
+          "similarity": 0.07407407407407407
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 62,
+      "question": "¿Qué protocolo de capa de transporte garantiza la entrega ordenada de datos?",
+      "options": [
+        "TCP",
+        "UDP",
+        "ICMP",
+        "ARP"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.037895569620253165,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "TCP",
+          "similarity": 0.02531645569620253
+        },
+        {
+          "option_idx": 1,
+          "option_text": "UDP",
+          "similarity": 0.05063291139240506
+        },
+        {
+          "option_idx": 2,
+          "option_text": "ICMP",
+          "similarity": 0.025
+        },
+        {
+          "option_idx": 3,
+          "option_text": "ARP",
+          "similarity": 0.05063291139240506
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 63,
+      "question": "¿Qué puerto usa el protocolo Telnet?",
+      "options": [
+        "23",
+        "22",
+        "80",
+        "25"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.0,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "23",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 1,
+          "option_text": "22",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 2,
+          "option_text": "80",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 3,
+          "option_text": "25",
+          "similarity": 0.0
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 64,
+      "question": "¿Qué puerto usa el protocolo POP3?",
+      "options": [
+        "110",
+        "143",
+        "587",
+        "25"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.013513513513513514,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "110",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 1,
+          "option_text": "143",
+          "similarity": 0.05405405405405406
+        },
+        {
+          "option_idx": 2,
+          "option_text": "587",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 3,
+          "option_text": "25",
+          "similarity": 0.0
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 65,
+      "question": "¿Qué puerto usa el protocolo IMAP?",
+      "options": [
+        "143",
+        "110",
+        "25",
+        "465"
+      ],
+      "correct": 0,
+      "avg_similarity": 0.0,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "143",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 1,
+          "option_text": "110",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 2,
+          "option_text": "25",
+          "similarity": 0.0
+        },
+        {
+          "option_idx": 3,
+          "option_text": "465",
+          "similarity": 0.0
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 69,
+      "question": "¿Qué herramienta Linux muestra las conexiones de red activas y puertos en escucha?",
+      "options": [
+        "top",
+        "netstat / ss",
+        "route",
+        "ifconfig"
+      ],
+      "correct": 1,
+      "avg_similarity": 0.08827077908688542,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "top",
+          "similarity": 0.047058823529411764
+        },
+        {
+          "option_idx": 1,
+          "option_text": "netstat / ss",
+          "similarity": 0.14893617021276595
+        },
+        {
+          "option_idx": 2,
+          "option_text": "route",
+          "similarity": 0.04597701149425287
+        },
+        {
+          "option_idx": 3,
+          "option_text": "ifconfig",
+          "similarity": 0.1111111111111111
+        }
+      ],
+      "reason": "Baja resonancia general"
+    },
+    {
+      "subject": "sistemas_informaticos",
+      "index": 73,
+      "question": "¿Qué nivel RAID combina RAID 1 y RAID 0 para velocidad y redundancia?",
+      "options": [
+        "RAID 6",
+        "RAID 10",
+        "RAID 5",
+        "RAID 2"
+      ],
+      "correct": 1,
+      "avg_similarity": 0.14605263157894738,
+      "similarities": [
+        {
+          "option_idx": 0,
+          "option_text": "RAID 6",
+          "similarity": 0.13333333333333333
+        },
+        {
+          "option_idx": 1,
+          "option_text": "RAID 10",
+          "similarity": 0.18421052631578946
+        },
+        {
+          "option_idx": 2,
+          "option_text": "RAID 5",
+          "similarity": 0.13333333333333333
+        },
+        {
+          "option_idx": 3,
+          "option_text": "RAID 2",
+          "similarity": 0.13333333333333333
+        }
+      ],
+      "reason": "Baja resonancia general"
+    }
+  ]
+}

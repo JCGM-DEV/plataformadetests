@@ -256,24 +256,89 @@ function renderFallosSection() {
 
     subjects.forEach(subjectId => {
         const subject = APP_STATE.subjects.find(s => s.id === subjectId);
-        const count = Object.keys(fallos[subjectId]).length;
+        const subjectFallos = fallos[subjectId];
+        const count = Object.keys(subjectFallos).length;
         if (!subject || count === 0) return;
+
+        // ── Analyse which temas have most failures ──────────────
+        const byTema = {};
+        Object.values(subjectFallos).forEach(q => {
+            // concept_id format: "subjectId_tN_qX" or syllabus "syllabusId_qX"
+            // Extract tema from concept_id or from the question's unit field
+            let tema = q.unit || extractTemaFromId(q.concept_id, subjectId);
+            if (!byTema[tema]) byTema[tema] = [];
+            byTema[tema].push(q);
+        });
+
+        // Sort temas by failure count
+        const sortedTemas = Object.entries(byTema)
+            .sort((a, b) => b[1].length - a[1].length);
+
+        const worstTema = sortedTemas[0];
+        const worstTemaNum = worstTema ? worstTema[0] : null;
+        const worstCount = worstTema ? worstTema[1].length : 0;
+
+        // ── Get PDF info for worst tema ─────────────────────────
+        const pdfInfo = PDF_MAP[subjectId]?.[worstTemaNum];
+        const pdfLink = pdfInfo ? `
+            <div class="fallos-pdf-hint">
+                <span class="pdf-icon">📄</span>
+                <div>
+                    <div class="pdf-hint-label">Consulta el PDF del ${pdfInfo.name}</div>
+                    <a href="${pdfInfo.path}" target="_blank" class="pdf-link">
+                        Abrir ${pdfInfo.name} (${pdfInfo.total_pages}p) →
+                    </a>
+                </div>
+            </div>` : '';
+
+        // ── Tema breakdown ──────────────────────────────────────
+        const temaBreakdown = sortedTemas.slice(0, 4).map(([tema, qs]) => `
+            <div class="tema-fail-row">
+                <span class="tema-fail-label">${tema !== 'null' && tema ? 'Tema ' + tema : 'Temario'}</span>
+                <div class="tema-fail-bar-track">
+                    <div class="tema-fail-bar" style="width:${Math.min(100, (qs.length / count) * 100)}%"></div>
+                </div>
+                <span class="tema-fail-count">${qs.length}</span>
+            </div>`).join('');
+
         const card = document.createElement('div');
         card.className = 'subject-card fallos-card';
         card.innerHTML = `
             <div class="card-icon">${subject.icon}</div>
             <h3>${subject.name}</h3>
-            <p style="color:var(--text-secondary);font-size:0.9rem;">${count} pregunta${count > 1 ? 's' : ''} fallada${count > 1 ? 's' : ''}</p>
-            <div class="exam-selector-large">
+            <p class="fallos-total">${count} pregunta${count > 1 ? 's' : ''} fallada${count > 1 ? 's' : ''}</p>
+            ${worstTemaNum && worstTemaNum !== 'null' ? `
+            <div class="fallos-worst-tema">
+                <span class="worst-tema-badge">⚠️ Peor tema: ${worstTemaNum !== 'null' ? 'Tema ' + worstTemaNum : 'Temario'}</span>
+                <span class="worst-tema-count">${worstCount} fallos</span>
+            </div>` : ''}
+            <div class="tema-breakdown">${temaBreakdown}</div>
+            ${pdfLink}
+            <div class="exam-selector-large" style="margin-top:0.75rem">
                 <button onclick="startFallosExam('${subjectId}')">❌ Repasar fallos</button>
             </div>
             <div class="card-actions-row">
-                <button class="btn-flashcard" onclick="startFallosFlashcard('${subjectId}')">⚡ Flashcards de fallos</button>
+                <button class="btn-flashcard" onclick="startFallosFlashcard('${subjectId}')">⚡ Flashcards</button>
             </div>
         `;
         grid.appendChild(card);
     });
 }
+
+function extractTemaFromId(conceptId, subjectId) {
+    // Try to extract tema number from concept_id
+    // Formats: "bd_tema_1_q0", "prog_t2_q5", "sistemas_informaticos_5", etc.
+    const m = conceptId.match(/_t(\d+)_/) || conceptId.match(/tema[_\s](\d+)/i) || conceptId.match(/_(\d+)$/);
+    return m ? m[1] : null;
+}
+
+// PDF map loaded from data/pdf_map.json
+let PDF_MAP = {};
+fetch('data/pdf_map.json?v=' + Date.now())
+    .then(r => r.json())
+    .then(data => { PDF_MAP = data; })
+    .catch(() => {});
+
 
 // ─── PROGRESS / CHART ───────────────────────────────────────────
 function renderProgress() {
