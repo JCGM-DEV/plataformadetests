@@ -3,49 +3,39 @@ tema 3
 Primarias
 Extendidas
 *Lógicas
-
 ¿Cuál es la principal ventaja del esquema GPT sobre el esquema MBR?
 Es compatible con una amplia variedad de sistemas operativos y software
 Tiene una mejor protección contra la corrupción de datos
 *Solo permite la creación de particiones primarias
-
 ¿Cuál es la estructura de directorios típica de Windows?
 /, /bin, /etc, /home, /usr, /var
 C:, C:\Windows, C:\Program Files, C:\Users
-*/, /Applications, /Library, /System, /Users
-
-La interfaz de transferencia PATA:
+/, /Applications, /Library, /System, /Users
+*La interfaz de transferencia PATA:
 Utiliza un cable plano con 40 o 80 conductores para transferir datos de forma paralela
 Utiliza un solo cable para transferir datos de forma serial
 *Utiliza un bus en serie para transferir datos
-
 ¿Cuál es la principal ventaja de los dispositivos de almacenamiento externo?
 Mayor velocidad de transferencia de datos
 Mayor capacidad de almacenamiento
 *Mayor flexibilidad y portabilidad
-
 ¿Cuál es la principal diferencia entre el almacenamiento interno y externo?
 La velocidad de transferencia de datos
 La ubicación física del dispositivo
 *La capacidad de almacenamiento
-
 ¿Qué comando se utiliza en Linux para mostrar información sobre los procesos que se están ejecutando en el sistema?
 systeminfo
 top
 *free
-
 ¿Cuál es la capacidad de almacenamiento de un disco DVD?
 Hasta 2,5 GB
 Hasta 4,7 GB
 *Hasta 25 GB
-
 ¿Cuáles son los dos esquemas de particiones más comunes?
 FAT y NTFS
 MBR y GPT
 *HFS+ y APFS
-
 ¿Qué tipo de dispositivo de almacenamiento es más resistente a golpes y vibraciones?
 Disco duro (HDD)
 Unidad de estado sólido (SSD)
 *Tarjeta de memoria
-

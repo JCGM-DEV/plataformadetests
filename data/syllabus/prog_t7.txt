@@ -3,49 +3,39 @@ tema 7
 Para lanzar una instancia específica de una excepción en una línea concreta de código.
 Para indicar que el método delega la responsabilidad de gestionar ciertas excepciones a quien lo invoque.
 *Para obligar al bloque finally a cerrar todos los recursos abiertos de forma manual.
-
 Al recorrer una colección, ¿en qué caso es indispensable utilizar un Iterator en lugar de un bucle for-each?
 Cuando solo necesitamos leer los datos sin modificarlos.
 Cuando queremos filtrar la colección mediante un objeto Stream.
 *Cuando necesitamos eliminar elementos de la colección de forma segura mientras la recorremos.
-
 ¿Cuál es el propósito de utilizar Genéricos (<T>) al declarar una colección como ArrayList<String>?
 Permitir que la lista guarde cualquier tipo de objeto (mezclar enteros, cadenas, etc.).
 Aportar seguridad de tipos en tiempo de compilación y evitar la necesidad de realizar castings manuales.
 *Hacer que la colección sea inmutable y no se puedan añadir más elementos tras su creación.
-
 Dentro del Java Collections Framework, ¿qué interfaz debe usarse si se requiere una colección que no permita elementos duplicados?
 List
 Set
 *Queue
-
 ¿Cuál es la diferencia principal entre un ArrayList y un HashSet?
 El ArrayList mantiene el orden de inserción, mientras que el HashSet no garantiza ningún orden.
-El ArrayList no permite duplicados y el HashSet sí.
-*El HashSet es más lento para acceder a elementos que el ArrayList porque usa índices.
-
+*El ArrayList no permite duplicados y el HashSet sí.
+El HashSet es más lento para acceder a elementos que el ArrayList porque usa índices.
 Sobre la interfaz Map, ¿cuál de las siguientes afirmaciones es correcta según el temario?
 Hereda directamente de la interfaz Collection.
 Almacena elementos en parejas de Clave-Valor y no pertenece a la jerarquía de Collection.
 *Es una lista ordenada que permite acceder a los elementos mediante un índice numérico.
-
 ¿Cuál es la principal ventaja del "try-with-resources" introducido en versiones modernas de Java?
 Permite capturar múltiples excepciones en una sola línea de código.
 Gestiona automáticamente el cierre de recursos (como archivos o conexiones) al finalizar el bloque.
 *Aumenta la velocidad de ejecución de las colecciones tipo List y Map.
-
 Según la jerarquía de excepciones en Java, ¿cuál es la diferencia entre un Error y una Exception?
 Las Exception son fallos graves del sistema (como falta de memoria), mientras que los Error son fallos del programa.
 Los Error son situaciones irrecuperables de la JVM, mientras que las Exception son condiciones que una aplicación debería capturar.
 *No hay diferencia; ambos términos se usan indistintamente para cualquier fallo en tiempo de ejecución.
-
 ¿Qué caracteriza a las excepciones de tipo RuntimeException (Unchecked)?
 El compilador no obliga a capturarlas ni a declararlas en la firma del método.
 Son excepciones que deben ser revisadas obligatoriamente por el programador antes de compilar.
 *Son las únicas excepciones que pueden lanzarse mediante la palabra clave throw.
-
 En una estructura try-catch-finally, ¿cuándo se ejecuta el bloque finally?
 Solo si se produce una excepción y esta es capturada correctamente.
 Solo si no se produce ninguna excepción durante la ejecución del try.
 *Siempre, independientemente de si se lanzó una excepción o si fue capturada.
-

@@ -1,51 +1,41 @@
 tema 6
 ¿Cuál es la diferencia fundamental de diseño entre una Clase Abstracta y una Interfaz?
 La Clase Abstracta define qué "ES" el objeto (identidad), mientras que la Interfaz define qué "PUEDE HACER" (capacidad).
-Las Interfaces permiten guardar variables de estado mutables y las Clases Abstractas no.
-*Las Clases Abstractas permiten herencia múltiple y las Interfaces solo herencia simple.
-
+*Las Interfaces permiten guardar variables de estado mutables y las Clases Abstractas no.
+Las Clases Abstractas permiten herencia múltiple y las Interfaces solo herencia simple.
 ¿Qué característica define al modificador de acceso protected?
 Hace que el miembro sea visible solo para la clase actual y nadie más.
 Permite el acceso a cualquier clase del mismo paquete y a cualquier subclase, incluso en paquetes distintos.
 *Es exactamente igual al acceso public, pero solo funciona con métodos static.
-
 En Java, ¿cuál es la jerarquía máxima de la que heredan implícitamente todas las clases, incluidos los arrays y Strings?
 La clase java.lang.Object.
 La clase Super.
 *No existe una jerarquía común; cada clase es independiente a menos que use extends.
-
 ¿Por qué Java prohíbe la herencia múltiple de clases (heredar de dos padres a la vez)?
 Para evitar el "Problema del Diamante" y la ambigüedad en la ejecución de métodos.
 Porque consumiría demasiada memoria en el Heap al duplicar los constructores.
 *Porque todas las clases deben ser obligatoriamente final para ser seguras.
-
 ¿Cuál es la función principal de la anotación @Override en la sobreescritura de métodos?
 Obligar al método a ser final para que no pueda volver a cambiarse.
 Actuar como un control de calidad que avisa al compilador si el método no existe en el padre.
 *Permitir que el método cambie su lista de parámetros (Sobrecarga).
-
 Sobre las clases abstractas, ¿cuál es la "Regla de Hierro" mencionada en el temario?
 Deben tener obligatoriamente todos sus métodos vacíos.
 No se pueden crear objetos (instancias) de una clase abstracta.
 *Solo pueden heredar de interfaces y nunca de otras clases.
-
 Si deseamos garantizar que un algoritmo crítico no sea alterado por ninguna subclase, ¿qué debemos hacer?
 Declarar el método como abstract.
 Declarar el método como final.
 *Declarar el método como static y private simultáneamente.
-
 Al decidir entre Herencia y Composición, ¿qué principio de diseño de software recomienda el temario?
 Priorizar siempre la Herencia para maximizar la reutilización de código de "Caja Blanca".
 Favorecer la Composición sobre la Herencia para obtener un acoplamiento más bajo y flexible.
 *Usar la Herencia para relaciones "Tiene-Un" y la Composición para relaciones "Es-Un".
-
 Si un método es declarado como static, ¿cuál de las siguientes afirmaciones es CORRECTA?
 Pertenece a la clase y no puede acceder a variables de instancia ni usar this.
-Requiere crear un objeto con new antes de poder ser invocado.
-*Cada objeto creado tiene su propia copia privada de dicho método en memoria.
-
+*Requiere crear un objeto con new antes de poder ser invocado.
+Cada objeto creado tiene su propia copia privada de dicho método en memoria.
 Respecto a los constructores y la herencia, ¿cuál es el orden estricto de inicialización?
 Primero se inicializa la subclase (hija) y finalmente la superclase (padre).
-Se inicializan simultáneamente para optimizar la carga de la JVM.
-*Los padres siempre se inicializan antes que los hijos, empezando desde la clase Object.
-
+*Se inicializan simultáneamente para optimizar la carga de la JVM.
+Los padres siempre se inicializan antes que los hijos, empezando desde la clase Object.

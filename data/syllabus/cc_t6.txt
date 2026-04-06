@@ -2,60 +2,50 @@ tema 6
 ¿Cuál es una de las principales ventajas de los servicios de cómputo en comparación con la computación tradicional?
 Requieren una mayor inversión inicial
 Permiten delegar la gestión de la infraestructura
-*No permiten escalar los recursos
-
-Exigen la compra de servidores propios
+No permiten escalar los recursos
+*Exigen la compra de servidores propios
 ¿Qué aspecto se debe considerar al adoptar servicios administrados de cómputo?
 Seguridad y escalabilidad
-*Solo el coste
-
+Solo el coste
 No se requiere considerar ningún aspecto
-No afectan la facilidad de uso
+*No afectan la facilidad de uso
 ¿Qué tecnología permite ejecutar múltiples sistemas operativos en una misma máquina física?
-*Contenedores
-
+Contenedores
 Máquinas virtuales
 Computación sin servidor
-Servicios SaaS
-*¿Cuál es una de las ventajas de la computación sin servidor?
-
+*Servicios SaaS
+¿Cuál es una de las ventajas de la computación sin servidor?
 Requiere administración constante de la infraestructura
 Permite escalar automáticamente en función de la demanda
 Obliga a pagar por capacidad reservada
 *Es más costosa que las VMs
-
 ¿Cuál de las siguientes opciones es un ejemplo de un servicio SaaS?
 Amazon EC2
 Google App Engine
-*Microsoft 365
-
-Kubernetes
+Microsoft 365
+*Kubernetes
 ¿Cuál es uno de los principios clave de los servicios de cómputo?
 Uso exclusivo de hardware propio
-*Pago por una tarifa fija
-
+Pago por una tarifa fija
 Pago por uso
-Falta de flexibilidad
+*Falta de flexibilidad
 ¿Cuál es una de las ventajas de usar máquinas virtuales (VM)?
-*No permiten escalabilidad
-
+No permiten escalabilidad
 Comparten recursos físicos, optimizando costos
 Son menos eficientes que los servidores físicos
-No ofrecen aislamiento entre aplicaciones
-*¿Qué tecnología permite ejecutar código sin preocuparse por la administración de servidores?
-
+*No ofrecen aislamiento entre aplicaciones
+¿Qué tecnología permite ejecutar código sin preocuparse por la administración de servidores?
 Computación sin servidor (serverless)
 Máquinas virtuales
 IaaS
 *SaaS
-
 ¿Qué característica distingue a los contenedores de las máquinas virtuales?
 Son más pesados que las VMs
 No permiten aislamiento entre aplicaciones
-*Comparten el sistema operativo del host
-
-No pueden ejecutarse en múltiples entornos
+Comparten el sistema operativo del host
+*No pueden ejecutarse en múltiples entornos
 ¿Qué tipo de servicio de cómputo proporciona un entorno completo de desarrollo y despliegue de aplicaciones?
 IaaS
-*PaaS
-
+PaaS
+SaaS
+*Serverless

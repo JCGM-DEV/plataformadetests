@@ -2,60 +2,50 @@ tema 1
 ¿Cuál de las siguientes es una ventaja de la computación en la nube?
 Aumento de costos operativos.
 Dependencia del hardware local
-*Acceso ubicuo a los datos y aplicaciones.
-
-Falta de escalabilidad.
+Acceso ubicuo a los datos y aplicaciones.
+*Falta de escalabilidad.
 ¿Qué significa "escalabilidad elástica" en la computación en la nube?
 Capacidad de aumentar o reducir recursos según la demanda.
-*La infraestructura de la nube se adapta solo a aumentos de demanda.
-
+La infraestructura de la nube se adapta solo a aumentos de demanda.
 Es un modelo exclusivo para grandes empresas.
-La nube no permite escalabilidad.
+*La nube no permite escalabilidad.
 ¿Cuál de los siguientes es un posible riesgo de la computación en la nube?
-*Reducción de costos operativos.
-
+Reducción de costos operativos.
 Dependencia del proveedor de servicios.
 Mayor control sobre la infraestructura.
-Eliminación total de amenazas cibernéticas.
-*¿Qué función cumple la redundancia en la computación en la nube?
-
+*Eliminación total de amenazas cibernéticas.
+¿Qué función cumple la redundancia en la computación en la nube?
 Aumenta los costos operativos.
 Garantiza la disponibilidad de los servicios en caso de fallos.
 Limita el acceso a los datos.
 *Reduce la seguridad de la información.
-
 ¿Cuál de los siguientes modelos de implementación de la nube permite combinar infraestructura pública y privada?
 Nube privada
 Nube pública
-*Nube híbrida
-
-Nube comunitaria
+Nube híbrida
+*Nube comunitaria
 ¿Qué aspecto es clave al elegir un proveedor de servicios en la nube?
 La disponibilidad de planes gratuitos.
 *La ubicación de los servidores en el mismo país del usuario.
-
 La seguridad, fiabilidad y escalabilidad del servicio.
 Que ofrezca hardware de última generación.
 ¿Cuál de estos modelos de servicio en la nube ofrece aplicaciones completas listas para usar?
-*IaaS
-
-PaaS
+IaaS
+*PaaS
 SaaS
 On-Premise
-*¿Cuál es la principal característica del modelo de computación en la nube?
-
+¿Cuál es la principal característica del modelo de computación en la nube?
 Requiere una gran inversión en hardware propio.
-Permite acceder a recursos informáticos a través de Internet.
+*Permite acceder a recursos informáticos a través de Internet.
 Solo puede ser utilizado por grandes empresas.
-*No ofrece ventajas sobre la infraestructura tradicional.
-
+No ofrece ventajas sobre la infraestructura tradicional.
 ¿Cuál de las siguientes afirmaciones es correcta sobre la migración a la nube?
 Es un proceso inmediato y sin riesgos.
-No requiere planificación previa.
-*Debe incluir una evaluación de necesidades, migración de datos y pruebas
-
+*No requiere planificación previa.
+Debe incluir una evaluación de necesidades, migración de datos y pruebas
 Solo es recomendable para pequeñas empresas.
 ¿Qué modelo de servicio en la nube permite a los desarrolladores crear aplicaciones sin gestionar la infraestructura?
 SaaS
 *PaaS
-
+IaaS
+*VPN
