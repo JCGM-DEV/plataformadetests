@@ -10,13 +10,13 @@ EXPL:La respuesta es 'FROM'. "SELECT" y "WHERE" son incorrectos porque describen
 LIKE
 IN
 *BETWEEN
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:BETWEEN a AND b es equivalente a col >= a AND col <= b. Incluye ambos extremos. Es más legible que escribir las dos condiciones por separado.
 
 ¿Para qué sirve el modificador DISTINCT en una sentencia SELECT?
-Para ordenar los resultados de forma alfabética.
+Para ordenar los resultados de forma alfabética
 *Para eliminar las filas duplicadas en el conjunto de resultados.
-Para filtrar registros que contengan valores nulos.
+Para filtrar registros que contengan valores nulos
 Mediante una subconsulta correlacionada con EXISTS
 EXPL:DISTINCT elimina filas duplicadas del resultado. Se aplica sobre todas las columnas del SELECT. Tiene un coste de rendimiento porque requiere ordenar o hashear los resultados.
 
@@ -24,7 +24,7 @@ EXPL:DISTINCT elimina filas duplicadas del resultado. Se aplica sobre todas las 
 SUM()
 *MAX()
 AVG()
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:MAX() devuelve el valor máximo de una columna. MIN() el mínimo, SUM() la suma, AVG() la media, COUNT() el número de filas. Son funciones de agregado que operan sobre grupos de filas.
 
 ¿Qué diferencia principal hay entre las cláusulas WHERE y HAVING?
@@ -42,9 +42,9 @@ Mediante una subconsulta correlacionada con EXISTS
 EXPL:LEFT JOIN devuelve TODAS las filas de la tabla izquierda, más las coincidentes de la derecha. Las filas sin pareja en la derecha aparecen con NULL. Útil para "todos los X aunque no tengan Y".
 
 En una composición interna (INNER JOIN), ¿qué ocurre con las filas de la tabla A que no coinciden con ninguna de la tabla B?
-Aparecen en el resultado con valores NULL.
+Aparecen en el resultado con valores NULL
 *Se excluyen del conjunto de resultados.
-Detienen la ejecución de la consulta por error de integridad.
+Detienen la ejecución de la consulta por error de integridad
 Mediante una subconsulta correlacionada con EXISTS
 EXPL:INNER JOIN devuelve solo las filas que tienen coincidencia en AMBAS tablas. Las filas sin pareja se excluyen del resultado. Es el JOIN más restrictivo.
 
@@ -56,9 +56,9 @@ Mediante una subconsulta correlacionada con EXISTS
 EXPL:La respuesta es 'IN'. "LIKE" y "EXISTS" son incorrectos porque describen conceptos diferentes.
 
 En Oracle, ¿qué combinación de cláusulas se utiliza para realizar consultas jerárquicas?
-GROUP BY y HAVING.
+GROUP BY y HAVING
 *START WITH y CONNECT BY.
-UNION e INTERSECT.
+UNION e INTERSECT
 Mediante una subconsulta correlacionada con EXISTS
 EXPL:START WITH define el nodo raíz de la jerarquía y CONNECT BY define la relación padre-hijo. Son cláusulas específicas de Oracle para consultas jerárquicas (árboles organizativos, categorías anidadas).
 

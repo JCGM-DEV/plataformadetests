@@ -54,7 +54,7 @@ Permitir accesos sin autenticación
 Evitar el monitoreo del sistema
 EXPL:La respuesta es 'Uso de protocolos obsoletos'. "Implementación de encriptación de datos" y "Permitir accesos sin autenticación" son incorrectos porque describen conceptos diferentes.
 ¿Qué método es clave para la recuperación ante desastres en la nube?
-No hacer copias de seguridad, aunque esto no es correcto en este contexto.
+No hacer copias de seguridad
 Usar almacenamiento local sin redundancia
 *Implementar estrategias de respaldo y recuperación
 Evitar el uso de firewalls y control de accesos

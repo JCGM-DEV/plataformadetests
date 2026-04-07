@@ -8,62 +8,62 @@ EXPL:INSERT INTO tabla (col1, col2) VALUES (v1, v2) inserta una fila. INSERT INT
 
 ¿Cómo se insertan datos en una tabla de destino a partir del resultado de otra consulta?
 *Usando la sintaxis INSERT INTO tabla_destino SELECT ...
-Ejecutando un UPDATE con una subconsulta en el SET.
-No es posible realizar esta operación en una sola sentencia.
+Ejecutando un UPDATE con una subconsulta en el SET
+No es posible realizar esta operación en una sola sentencia
 Mediante una subconsulta correlacionada con EXISTS
 EXPL:INSERT INTO tabla (col1, col2) VALUES (v1, v2) inserta una fila. INSERT INTO tabla SELECT... inserta múltiples filas desde otra consulta. Es la sentencia DML estándar para insertar datos.
 
 ¿Por qué es fundamental incluir la cláusula WHERE en una sentencia UPDATE?
 Porque si se omite, se actualizarán todos los registros de la tabla. *
-Porque es necesaria para definir qué columnas se van a modificar.
-Porque sin ella, el motor de la base de datos devolverá un error de sintaxis siempre.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Porque es necesaria para definir qué columnas se van a modificar
+*Porque sin ella, el motor de la base de datos devolverá un error de sintaxis siempre
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 
 ¿Qué opción de integridad referencial borra automáticamente las filas hijas cuando se borra la fila padre?
 ON DELETE SET NULL
 *ON DELETE CASCADE
 ON DELETE RESTRICT
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:ON DELETE CASCADE borra automáticamente las filas hijas cuando se borra la fila padre. ON DELETE SET NULL pone NULL en las hijas. ON DELETE RESTRICT impide borrar el padre si tiene hijos.
 
 ¿Qué sentencia se utiliza para confirmar y guardar permanentemente todos los cambios de una transacción?
 START TRANSACTION
 ROLLBACK
 *COMMIT
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:COMMIT confirma permanentemente todos los cambios de la transacción actual. Una vez ejecutado, los cambios son visibles para otros usuarios y no se pueden deshacer con ROLLBACK.
 
 ¿Qué acción realiza el comando ROLLBACK?
 Guarda los cambios actuales de forma definitiva
 *Deshace todos los cambios realizados en la transacción actual volviendo al estado inicial.
 Bloquea la tabla para impedir ediciones de otros usuarios
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:ROLLBACK deshace todos los cambios realizados desde el último START TRANSACTION o SAVEPOINT, devolviendo la base de datos al estado anterior. Es la operación de "deshacer" de las transacciones.
 
 ¿Cuál es una ventaja clave de utilizar Common Table Expressions (CTE) o composiciones en órdenes de edición?
 Permiten saltarse las restricciones de integridad referencial
 *Mejoran la legibilidad al permitir nombrar subconsultas y reutilizarlas en una única instrucción.
 Cifran los datos antes de insertarlos en la base de datos
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Mejoran la legibilidad al permitir nombrar subconsultas y reutilizarlas en una única instrucción.
 
 ¿En qué consiste el "bloqueo a nivel de registro" (row-level locking)?
 Impide el acceso a toda la tabla mientras un usuario edita una fila
 *Bloquea solo la fila específica que se está modificando, permitiendo que otros usuarios trabajen en otras filas.
 Borra el registro si detecta que dos usuarios intentan acceder a él
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El bloqueo a nivel de registro (row-level locking) bloquea solo la fila que se está modificando, permitiendo que otros usuarios trabajen en otras filas simultáneamente. Es más eficiente que bloquear toda la tabla.
 
 ¿Qué sintaxis se utiliza en MySQL para bloquear filas seleccionadas para una posterior actualización dentro de una transacción?
 *SELECT * FROM tabla WHERE id=1 FOR UPDATE;
-LOCK TABLES tabla WRITE;, aunque esto no es correcto en este contexto.
+LOCK TABLES tabla WRITE;
 UPDATE tabla SET locked = true;
 Mediante una subconsulta correlacionada con EXISTS
 EXPL:SELECT ... FOR UPDATE bloquea las filas seleccionadas para que otros usuarios no puedan modificarlas hasta que se haga COMMIT o ROLLBACK. Es el mecanismo de bloqueo pesimista en MySQL.
 
 En el modo estricto de MySQL (STRICT_ALL_TABLES), ¿qué ocurre si se intenta realizar una operación con datos inválidos?
-Se truncan los valores silenciosamente.
+Se truncan los valores silenciosamente
 *Se rechaza la operación y se genera un error.
-Se insertan valores nulos por defecto sin avisar.
+Se insertan valores nulos por defecto sin avisar
 Mediante una subconsulta correlacionada con EXISTS
 EXPL:La respuesta es 'Se rechaza la operación y se genera un error.'. "Se truncan los valores silenciosamente." y "Se insertan valores nulos por defecto sin avisar." son incorrectos porque describen conceptos diferentes.

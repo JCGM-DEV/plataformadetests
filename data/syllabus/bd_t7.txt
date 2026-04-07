@@ -28,8 +28,8 @@ Mediante una subconsulta correlacionada con EXISTS
 EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
 
 Al ejecutar un SELECT * FROM tabla_padre en PostgreSQL, ¿qué registros se obtienen por defecto?
-Solo los de la tabla padre., aunque esto no es correcto en este contexto.
-Solo los de las tablas hijas., aunque esto no es correcto en este contexto.
+Solo los de la tabla padre
+Solo los de las tablas hijas
 *Los de la tabla padre y todos los de sus tablas hijas relacionadas.
 Mediante una subconsulta correlacionada con EXISTS
 EXPL:Los de la tabla padre y todos los de sus tablas hijas relacionadas.

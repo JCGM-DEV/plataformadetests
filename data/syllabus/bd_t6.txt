@@ -10,7 +10,7 @@ EXPL:SET @variable = valor define una variable de sesión de usuario en MySQL. L
 STABLE
 VOLATILE
 *DETERMINISTIC
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:DETERMINISTIC indica que la función siempre devuelve el mismo resultado para los mismos parámetros. Permite al optimizador cachear el resultado y mejorar el rendimiento.
 
 ¿Cuál es la función del comando DELIMITER en MySQL?
@@ -24,7 +24,7 @@ EXPL:DELIMITER cambia el carácter de fin de comando (por defecto ;) para poder 
 WHILE
 *REPEAT
 LOOP
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'REPEAT'. "WHILE" y "LOOP" son incorrectos porque describen conceptos diferentes.
 
 Para ejecutar un procedimiento almacenado en MySQL, ¿qué instrucción debe utilizarse?
@@ -38,14 +38,14 @@ EXPL:Un procedimiento almacenado es código SQL precompilado que se ejecuta con 
 *event_scheduler
 system_event_monitor
 timer_running
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:event_scheduler = ON activa el planificador de eventos de MySQL. Sin esto, los eventos creados con CREATE EVENT no se ejecutarán aunque estén correctamente definidos.
 
 ¿Cuál es una diferencia fundamental entre las Funciones y los Procedimientos almacenados?
 *Las funciones siempre devuelven un valor; los procedimientos no devuelven un valor (aunque pueden usar parámetros de salida).
 Los procedimientos solo pueden leer datos; las funciones pueden modificarlos
 Las funciones se llaman con CALL y los procedimientos con SELECT
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Las funciones siempre devuelven un valor; los procedimientos no devuelven un valor (aunque pueden usar parámetros de sal...
 
 ¿Qué tipo de dato compuesto se utiliza para almacenar uno o varios valores de un conjunto de opciones predefinidas, guardándose internamente como un mapa de bits?
@@ -59,7 +59,7 @@ En el tratamiento de excepciones, ¿qué manejador aborta la ejecución del cód
 CONTINUE HANDLER
 *EXIT HANDLER
 STOP HANDLER
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:EXIT HANDLER aborta la ejecución del procedimiento inmediatamente cuando ocurre el error. CONTINUE HANDLER continúa la ejecución después del error. Se usan para gestionar excepciones en MySQL.
 
 ¿Qué objeto de base de datos se utiliza para recorrer los resultados de una consulta SQL de manera secuencial y fila por fila?

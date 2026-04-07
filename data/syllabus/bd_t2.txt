@@ -16,7 +16,7 @@ EXPL:El Árbol B mantiene los datos ordenados, lo que permite recorrer rangos ef
 ¿Qué diferencia esencial hay entre una vista y una tabla?
 Una vista almacena datos físicamente
 *Una vista es virtual; se reconstruye al vuelo
-Una vista no admite filtros, aunque esto no es correcto en este contexto.
+Una vista no admite filtros
 Un modelo de datos es una representación:
 EXPL:Una vista es una consulta almacenada que se ejecuta cada vez que se accede a ella. No ocupa espacio físico de datos; se reconstruye dinámicamente desde las tablas base.
 Física
@@ -41,4 +41,4 @@ Tupla
 El comando DDL que sirve para eliminar una tabla se denomina:
 ALTER TABLE
 *DROP TABLE
-Todas las respuestas son ciertas.
+Todas las respuestas son ciertas

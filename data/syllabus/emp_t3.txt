@@ -1,50 +1,50 @@
 tema 3
 ¿Cuál es la tasa de paro en el sector de las TIC en España en comparación con la tasa general de desempleo del país?
-Considerablemente más alta
+*Considerablemente más alta
 Aproximadamente igual
 Considerablemente más baja
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 ¿Cuál es la titulación exigida para pertenecer al grupo B del cuerpo de funcionarios?
 *Ciclo de grado superior de Formación Profesional
 Licenciado, graduado, diplomado, ingeniero, arquitecto o equivalente
-Bachillerato o equivalente, aunque esto no es correcto en este contexto.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Bachillerato o equivalente
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Ciclo de grado superior de Formación Profesional'.
 ¿Qué son las actitudes?
-La disposición o las tendencias emocionales y mentales que influyen en el comportamiento de las personas en el entorno laboral.
-Las habilidades y capacidades que permiten a una persona realizar tareas o funciones específicas y que están estrechamente relacionadas con los conocimientos técnicos.
-Los conocimientos técnicos que se adquieren mediante la educación reglada.
+La disposición o las tendencias emocionales y mentales que influyen en el comportamiento de las personas en el entorno laboral
+*Las habilidades y capacidades que permiten a una persona realizar tareas o funciones específicas y que están estrechamente relacionadas con los conocimientos técnicos
+Los conocimientos técnicos que se adquieren mediante la educación reglada
 Uno de los requisitos para el ingreso en la administración pública es…
 Poseer la titulación exigida en la convocatoria para cada puesto
-Haber trabajado previamente en una administración del Estado.
-Contar con al menos 4 años de experiencia laboral demostrable.
+Haber trabajado previamente en una administración del Estado
+Contar con al menos 4 años de experiencia laboral demostrable
 ¿Qué son las competencias profesionales?
-Son los títulos académicos que una persona posee.
-Son una combinación de conocimientos, habilidades y actitudes que permiten desempeñar eficazmente una actividad profesional.
-Son el conjunto de conocimientos técnicos que se pueden aprender en un curso específico y que son demandados por las empresas.
+Son los títulos académicos que una persona posee
+Son una combinación de conocimientos, habilidades y actitudes que permiten desempeñar eficazmente una actividad profesional
+*Son el conjunto de conocimientos técnicos que se pueden aprender en un curso específico y que son demandados por las empresas
 Las aptitudes profesionales son esenciales para la empleabilidad porque…
 Sustituyen a la experiencia profesional
 Favorecen las competencias sociales como trabajo en equipo y comunicación efectiva
 Determinan la capacidad de un individuo para desempeñar eficazmente las tareas y responsabilidades de un puesto de trabajo
 ¿Qué son las soft skills o habilidades blandas?
-Son capacidades técnicas y conocimientos concretos que se pueden medir y evaluar de manera objetiva, adquiridas a través de la educación formal.
+*Son capacidades técnicas y conocimientos concretos que se pueden medir y evaluar de manera objetiva, adquiridas a través de la educación formal
 Son competencias personales y sociales que afectan cómo una persona se relaciona consigo misma y con los demás en el entorno laboral
-Son capacidades técnicas que se adquieren mediante la experiencia una vez se inicia la labor profesional en la empresa.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Son capacidades técnicas que se adquieren mediante la experiencia una vez se inicia la labor profesional en la empresa
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 ¿Qué establece la Constitución Española con respecto al acceso al empleo público?
-Establece el derecho a acceder a puestos de funcionariado público siempre que se esté en posesión de un título universitario.
-Establece que solo los funcionarios de carrera pueden acceder a las pruebas de acceso a los puestos en la administración pública.
-Establece el derecho de todos los ciudadanos al acceso al empleo público de acuerdo con los principios constitucionales de mérito y capacidad.
+Establece el derecho a acceder a puestos de funcionariado público siempre que se esté en posesión de un título universitario
+Establece que solo los funcionarios de carrera pueden acceder a las pruebas de acceso a los puestos en la administración pública
+*Establece el derecho de todos los ciudadanos al acceso al empleo público de acuerdo con los principios constitucionales de mérito y capacidad
 Con un certificado SSL autofirmado
 ¿Qué es la competencia digital?
 *La destreza en el manejo de las herramientas de las tecnologías de la información y la comunicación en diversos contextos
 La capacidad de diseñar y fabricar dispositivos electrónicos avanzados
 La habilidad de programar en varios lenguajes de codificación
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La destreza en el manejo de las herramientas de las tecnologías de la información y la comunicación en diversos contexto...
 ¿Cuál es la principal tendencia del mercado laboral en el sector de la informática?
 *Inteligencia artificial y automatización
-Computación cuántica, aunque esto no es correcto en este contexto.
-Robótica, aunque esto no es correcto en este contexto.
+Computación cuántica
+Robótica
 Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:El mercado laboral es el espacio donde se encuentran la oferta (trabajadores) y la demanda (empresas) de trabajo. Factores como la tecnología, la globalización y la formación influyen en su evolución.

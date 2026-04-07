@@ -2,8 +2,8 @@ tema 1
 ¿Cómo se categoriza el software según su naturaleza en un ordenador?
 Hardware, Firmware y Sistemas Operativos
 *Software de sistema, Software de aplicación y Software de programación.
-BIOS, UEFI y Controladores., aunque esto no es correcto en este contexto.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+BIOS, UEFI y Controladores
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
 
 Además de las líneas de código con instrucciones, ¿qué otro elemento es frecuentemente necesario para que un programa informático realice sus tareas?
@@ -17,19 +17,19 @@ Según el texto, ¿qué proceso realiza un compilador durante la compilación, a
 Transforma el bytecode en código máquina para su ejecución
 *Verifica que el código fuente esté escrito correctamente desde los puntos de vista léxico, sintáctico y semántico, avisando al programador de posibles errores.
 Une uno o más códigos objeto para construir un programa ejecutable
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El compilador verifica el código en tres fases: léxica (tokens válidos), sintáctica (estructura gramatical correcta) y semántica (significado coherente). Si hay errores, los reporta al programador.
 
 Respecto a la clasificación de lenguajes por nivel de abstracción y generación, ¿qué es cierto sobre los lenguajes de segunda generación?
 Son lenguajes de alto nivel con sintaxis sencilla, como Java o C#
 Implican programación directa en código máquina o binario (ceros y unos)
 *Son lenguajes de programación en ensamblador, que utilizan una simbología y códigos legibles por las personas, y son convertidos a código máquina mediante un ensamblador.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Los lenguajes de 2ª generación son los lenguajes ensamblador. Usan mnemónicos legibles (MOV, ADD) en lugar de código binario. Se convierten a código máquina mediante un ensamblador.
 
 ¿Cuál es la diferencia fundamental entre el código objeto y el código ejecutable?
-El código objeto es el resultado directo de la escritura del programador, mientras que el código ejecutable es lo que entiende la máquina.
-El código ejecutable es válido para múltiples sistemas operativos sin necesidad de recompilación, a diferencia del código objeto.
+El código objeto es el resultado directo de la escritura del programador, mientras que el código ejecutable es lo que entiende la máquina
+El código ejecutable es válido para múltiples sistemas operativos sin necesidad de recompilación, a diferencia del código objeto
 *El código objeto contiene instrucciones comprensibles por la máquina, pero no es directamente ejecutable, requiriendo un proceso de enlazado para convertirse en código ejecutable.
 Mediante una clase abstracta con métodos estáticos
 EXPL:El código objeto contiene instrucciones comprensibles por la máquina pero no es directamente ejecutable. El enlazador (linker) combina varios códigos objeto y resuelve referencias externas para crear el ejecutable.
@@ -44,13 +44,13 @@ EXPL:Tipado fuerte: restringe operaciones según el tipo (Java, Python). Tipado 
 ¿Por qué se considera la reutilización de código de máxima importancia en el desarrollo de software?
 Porque implica duplicar bloques de código para asegurar la redundancia y fiabilidad
 *Porque ahorra costes de creación y modificación, y reduce la probabilidad de cometer errores al centralizar los cambios en un único lugar.
-Porque permite que el código fuente sea directamente comprensible por el ordenador sin necesidad de compilación o interpretación.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Porque permite que el código fuente sea directamente comprensible por el ordenador sin necesidad de compilación o interpretación
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La reutilización de código ahorra costes de creación y modificación, y reduce errores al centralizar los cambios en un único lugar. Es uno de los principios fundamentales de la ingeniería del software.
 
 En las fases tradicionales del ciclo de vida de una aplicación informática, ¿qué actividad caracteriza principalmente la fase de Análisis?
 La creación del código fuente y la ayuda de herramientas de generación de código
-La determinación de cómo se va a organizar el proyecto a nivel de software y la definición de las interfaces gráficas.
+La determinación de cómo se va a organizar el proyecto a nivel de software y la definición de las interfaces gráficas
 *La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software.
 Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software...
@@ -63,8 +63,8 @@ Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que...
 
 ¿Qué paradigma de programación se caracteriza por estructurar los programas en agrupaciones de código fuente (como funciones o procedimientos) y utilizar estructuras de control para determinar el flujo de ejecución?
-Paradigma Imperativo.
-Paradigma Orientado a Objetos.
+Paradigma Imperativo
+Paradigma Orientado a Objetos
 *Paradigma de Programación Estructurada.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Paradigma de Programación Estructurada.'. "Paradigma Imperativo." y "Paradigma Orientado a Objetos." son incorrectos porque describen conceptos diferentes.

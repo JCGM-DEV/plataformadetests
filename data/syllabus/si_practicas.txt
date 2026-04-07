@@ -1,27 +1,27 @@
 tema practicas
 En la empresa TodoEsGratis se necesita una topología que permita que si un cable falla, el resto de la red siga funcionando. ¿Qué topología cumple mejor este requisito?
-Topología en bus.
-Topología en estrella.
+Topología en bus
+Topología en estrella
 *Topología en anillo o malla.
-Topología lineal.
+Topología lineal
 EXPL:En la topología en anillo, los datos viajan en una dirección (o ambas en anillo doble). Si un nodo falla, puede interrumpir toda la red (en anillo simple). Es más ordenada que el bus.
 En la topología en estrella, ¿qué ocurre si el dispositivo central (switch/hub) falla?
-Solo falla el nodo más alejado.
-La red sigue funcionando con menor velocidad.
+Solo falla el nodo más alejado
+La red sigue funcionando con menor velocidad
 *Toda la red deja de funcionar.
-Solo fallan los nodos pares.
+Solo fallan los nodos pares
 EXPL:En la topología estrella, todos los nodos se conectan a un dispositivo central (switch/hub). Si falla un nodo, el resto sigue funcionando. Si falla el nodo central, cae toda la red.
 Al crear una máquina virtual en VirtualBox para Ubuntu, ¿cuánta memoria RAM mínima se recomienda en la práctica?
-512 MB.
-1024 MB.
+512 MB
+1024 MB
 *2048 MB.
-4096 MB.
+4096 MB
 EXPL:La respuesta es '2048 MB.'. "512 MB." y "1024 MB." son incorrectos porque describen conceptos diferentes.
 En VirtualBox, ¿qué modo de red permite que la máquina virtual acceda a Internet usando la IP del anfitrión sin ser visible desde la red externa?
-Red interna.
-Adaptador puente.
+Red interna
+Adaptador puente
 *NAT.
-Solo anfitrión.
+Solo anfitrión
 EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
 Para conectarse por SSH a una máquina virtual con reenvío de puertos configurado (anfitrión 2222 → huésped 22), ¿qué comando es correcto?
 ssh user@10.0.2.15
@@ -37,39 +37,39 @@ VBoxManage Ubuntu snapshot create "Instantánea 1"
 EXPL:La respuesta es 'VBoxManage snapshot Ubuntu take "Instantánea 1"'. "VBoxManage backup Ubuntu save "Instantánea 1"" y "VBoxManage clone Ubuntu "Instantánea 1"" son incorrectos porque describen conceptos diferentes.
 Para transferir un archivo desde el anfitrión a la máquina virtual con el reenvío de puertos configurado, ¿qué comando es correcto?
 scp file.txt user@10.0.2.15:/home/user/
-ftp -P 2222 user@127.0.0.1, aunque esto no es correcto en este contexto.
+ftp -P 2222 user@127.0.0.1
 *scp -P 2222 file.txt user@127.0.0.1:/home/user/
 rsync -p 2222 file.txt user@127.0.0.1:/home/user/
 EXPL:La respuesta es 'scp -P 2222 file.txt user@127.0.0.1:/home/user/'.
 En Windows, ¿qué herramienta del sistema operativo se usa para crear, borrar y redimensionar particiones sin software adicional?
-Explorador de archivos.
-Panel de control.
+Explorador de archivos
+Panel de control
 *Administración de discos.
-Símbolo del sistema.
+Símbolo del sistema
 EXPL:La herramienta "Administración de discos" de Windows permite crear, eliminar, formatear y redimensionar particiones sin software adicional. Se accede desde el Panel de control o ejecutando diskmgmt.msc.
 Al crear una nueva partición en "Administración de discos" de Windows, ¿qué opción se selecciona sobre el espacio no asignado?
-Formatear volumen.
-Extender volumen.
+Formatear volumen
+Extender volumen
 *Nuevo volumen simple.
-Convertir a disco dinámico.
+Convertir a disco dinámico
 EXPL:La herramienta "Administración de discos" de Windows permite crear, eliminar, formatear y redimensionar particiones sin software adicional. Se accede desde el Panel de control o ejecutando diskmgmt.msc.
 ¿Qué herramienta de clonación de particiones se menciona en los casos prácticos?
-Acronis True Image.
-Clonezilla.
+Acronis True Image
+Clonezilla
 *EaseUS Partition Master.
-GParted.
+GParted
 EXPL:EaseUS Partition Master es una herramienta de gestión de particiones que permite clonar, redimensionar, mover y convertir particiones. La clonación crea una copia exacta de una partición en otra ubicación.
 Para reducir el tamaño de una partición en Windows desde "Administración de discos", ¿qué opción se usa?
-Eliminar volumen.
-Ampliar volumen.
+Eliminar volumen
+Ampliar volumen
 *Reducir volumen.
-Desfragmentar volumen.
+Desfragmentar volumen
 EXPL:La herramienta "Administración de discos" de Windows permite crear, eliminar, formatear y redimensionar particiones sin software adicional. Se accede desde el Panel de control o ejecutando diskmgmt.msc.
 En el caso práctico de monitorización, un servidor de base de datos está lento. ¿Qué herramienta de Windows permite ver en tiempo real el uso de CPU, memoria y disco?
-Visor de eventos., aunque esto no es correcto en este contexto.
-Administración de discos., aunque esto no es correcto en este contexto.
+Visor de eventos
+Administración de discos
 *Monitor de rendimiento (Performance Monitor).
-Administrador de tareas avanzado.
+Administrador de tareas avanzado
 EXPL:El Monitor de rendimiento (perfmon) de Windows permite ver en tiempo real contadores de CPU, memoria, disco y red. Es más detallado que el Administrador de tareas y permite registrar datos históricos.
 ¿Qué comando de Windows muestra la dirección IP y la máscara de subred de la máquina?
 netstat
@@ -120,118 +120,118 @@ chmod 644 archivo
 chmod 755 archivo
 EXPL:chmod (change mode) cambia los permisos de un archivo en Linux. Usa notación octal (755) o simbólica (u+x). chown cambia el propietario, chgrp cambia el grupo.
 ¿Qué herramienta de productividad en la nube de Google permite crear documentos, hojas de cálculo y presentaciones colaborativas?
-Microsoft 365.
-Notion.
+Microsoft 365
+Notion
 *Google Workspace.
-Slack.
+Slack
 EXPL:Google Workspace (antes G Suite) incluye Gmail, Drive, Docs, Sheets, Slides y Meet. Permite colaboración en tiempo real y acceso desde cualquier dispositivo con Internet.
 ¿Para qué se utiliza principalmente Slack en un entorno de trabajo?
-Gestión de proyectos con tableros Kanban.
+Gestión de proyectos con tableros Kanban
 Almacenamiento de archivos en la nube
 *Comunicación en tiempo real mediante canales y mensajes.
 Creación de documentos colaborativos
 EXPL:Slack es una plataforma de comunicación empresarial en tiempo real. Organiza las conversaciones en canales temáticos, permite mensajes directos, compartir archivos e integrarse con otras herramientas.
 ¿Qué software antivirus se menciona en los casos prácticos para realizar un análisis de amenazas?
-Kaspersky.
-Norton.
+Kaspersky
+Norton
 *Avast.
-Malwarebytes.
+Malwarebytes
 EXPL:La respuesta es 'Avast.'. "Kaspersky." y "Norton." son incorrectos porque describen conceptos diferentes.
 ¿Para qué sirve EaseUS Data Recovery Wizard?
 Clonar particiones del disco duro
-Monitorizar el rendimiento del sistema.
+Monitorizar el rendimiento del sistema
 *Recuperar archivos perdidos o eliminados del ordenador.
 Gestionar usuarios y permisos
 EXPL:EaseUS Data Recovery Wizard recupera archivos eliminados, formateados o perdidos por fallos del sistema. Escanea el disco en busca de datos recuperables aunque la papelera esté vacía.
 En VirtualBox, ¿qué modo de red permite que la máquina virtual tenga su propia IP en la red local y sea accesible desde otros dispositivos?
-NAT.
-Red interna.
+NAT
+Red interna
 *Adaptador puente.
-Solo anfitrión.
+Solo anfitrión
 EXPL:En modo Adaptador Puente, la VM obtiene su propia IP en la red local y es accesible desde otros dispositivos. Es como si fuera un equipo físico más en la red.
 ¿Qué ventaja principal tiene la topología en estrella frente a la topología en bus?
-Es más barata de implementar., aunque esto no es correcto en este contexto.
-Usa menos cable., aunque esto no es correcto en este contexto.
+Es más barata de implementar
+Usa menos cable
 *Un fallo en un nodo no afecta al resto de la red.
 No necesita dispositivo central
 EXPL:En la topología estrella, todos los nodos se conectan a un dispositivo central (switch/hub). Si falla un nodo, el resto sigue funcionando. Si falla el nodo central, cae toda la red.
 En la práctica de particiones, ¿qué ocurre con los datos al eliminar un volumen en "Administración de discos"?
-Los datos se mueven automáticamente a otra partición.
-Los datos quedan en el espacio no asignado y se pueden recuperar fácilmente.
+Los datos se mueven automáticamente a otra partición
+Los datos quedan en el espacio no asignado y se pueden recuperar fácilmente
 *Los datos se pierden permanentemente.
-Los datos se comprimen y se guardan en la partición del sistema.
+Los datos se comprimen y se guardan en la partición del sistema
 EXPL:La herramienta "Administración de discos" de Windows permite crear, eliminar, formatear y redimensionar particiones sin software adicional. Se accede desde el Panel de control o ejecutando diskmgmt.msc.
 ¿Qué protocolo usa el reenvío de puertos configurado en la práctica de VirtualBox para la conexión SSH?
-UDP.
-ICMP.
+UDP
+ICMP
 *TCP.
-FTP.
+FTP
 EXPL:La respuesta es 'TCP.'. "UDP." y "ICMP." son incorrectos porque describen conceptos diferentes.
 En el caso práctico de redes, ¿qué comando agrega una ruta estática en Windows hacia una red de destino?
-netsh route add [destino], aunque esto no es correcto en este contexto.
-ipconfig /route add [destino], aunque esto no es correcto en este contexto.
+netsh route add [destino]
+ipconfig /route add [destino]
 *route add [destino] mask [máscara] [puerta de enlace]
-tracert add [destino], aunque esto no es correcto en este contexto.
+tracert add [destino]
 EXPL:La respuesta es 'route add [destino] mask [máscara] [puerta de enlace]'.
 ¿Qué tamaño de disco duro virtual se configura en la práctica de VirtualBox para la máquina Ubuntu?
-10 GB.
-15 GB.
+10 GB
+15 GB
 *20 GB.
-50 GB.
+50 GB
 EXPL:La respuesta es '20 GB.'. "10 GB." y "15 GB." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es la principal desventaja de la topología en bus?
-Necesita un dispositivo central caro.
-Es difícil de instalar., aunque esto no es correcto en este contexto.
+Necesita un dispositivo central caro
+Es difícil de instalar
 *Un fallo en el cable principal afecta a toda la red.
 No permite compartir recursos
 EXPL:En la topología bus, todos los nodos comparten un único cable. Es barata pero si el cable principal falla, toda la red cae. Además, las colisiones son frecuentes.
 ¿Qué topología de red conecta cada nodo directamente con todos los demás?
-Estrella.
-Bus.
-Anillo.
+Estrella
+Bus
+Anillo
 *Malla.
 EXPL:La topología en malla conecta cada nodo con todos los demás. Ofrece máxima redundancia: si falla un enlace, los datos pueden tomar rutas alternativas. Es cara pero muy tolerante a fallos.
 En la topología en anillo, ¿en qué dirección viajan los datos?
-En ambas direcciones simultáneamente siempre.
-Solo de izquierda a derecha., aunque esto no es correcto en este contexto.
+En ambas direcciones simultáneamente siempre
+Solo de izquierda a derecha
 *En una dirección (o ambas en anillo doble).
-De forma aleatoria según la carga.
+De forma aleatoria según la carga
 EXPL:En la topología en anillo, los datos viajan en una dirección (o ambas en anillo doble). Si un nodo falla, puede interrumpir toda la red (en anillo simple). Es más ordenada que el bus.
 ¿Qué tipo de topología es más adecuada para una empresa pequeña con pocos equipos y presupuesto limitado?
-Malla.
-Anillo.
+Malla
+Anillo
 *Bus o estrella simple.
-Árbol jerárquico.
+Árbol jerárquico
 EXPL:En la topología estrella, todos los nodos se conectan a un dispositivo central (switch/hub). Si falla un nodo, el resto sigue funcionando. Si falla el nodo central, cae toda la red.
 En VirtualBox, ¿qué opción permite que varias máquinas virtuales se comuniquen entre sí pero no con el exterior?
-NAT.
-Adaptador puente.
+NAT
+Adaptador puente
 *Red interna.
-Solo anfitrión.
+Solo anfitrión
 EXPL:La respuesta es 'Red interna.'. "NAT." y "Adaptador puente." son incorrectos porque describen conceptos diferentes.
 ¿Qué sistema operativo invitado se instala en la práctica de VirtualBox?
-Windows 10.
-Debian.
+Windows 10
+Debian
 *Ubuntu.
-Fedora.
+Fedora
 EXPL:La respuesta es 'Ubuntu.'. "Windows 10." y "Debian." son incorrectos porque describen conceptos diferentes.
 ¿Desde dónde se descarga la imagen ISO oficial de Ubuntu para instalarla en VirtualBox?
-Desde el repositorio de VirtualBox.
-Desde GitHub., aunque esto no es correcto en este contexto.
+Desde el repositorio de VirtualBox
+Desde GitHub
 *Desde el sitio web oficial de Ubuntu (ubuntu.com).
-Desde Microsoft Store., aunque esto no es correcto en este contexto.
+Desde Microsoft Store
 EXPL:La respuesta es 'Desde el sitio web oficial de Ubuntu (ubuntu.com).'.
 En la configuración de red NAT de VirtualBox, ¿cuál es la dirección IP por defecto asignada al huésped?
-192.168.1.100.
-172.16.0.1.
+192.168.1.100
+172.16.0.1
 *10.0.2.15.
-10.0.0.1.
+10.0.0.1
 EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
 ¿Qué sección de VirtualBox se usa para ajustar el número de procesadores virtuales asignados a la máquina?
-Red.
-Almacenamiento.
+Red
+Almacenamiento
 *Sistema → Procesador.
-Pantalla.
+Pantalla
 EXPL:La respuesta es 'Sistema → Procesador.'. "Red." y "Almacenamiento." son incorrectos porque describen conceptos diferentes.
 ¿Qué significa "instantánea" (snapshot) en el contexto de VirtualBox?
 Una copia del disco duro físico del anfitrión
@@ -240,19 +240,19 @@ Una captura de pantalla de la máquina virtual
 Un archivo de configuración exportado
 EXPL:Un snapshot (instantánea) en VirtualBox guarda el estado completo de la VM en un momento dado. Permite volver a ese estado si algo sale mal. Es como un punto de restauración del sistema.
 ¿Qué herramienta de Windows permite ver los registros de eventos del sistema para diagnosticar errores?
-Monitor de rendimiento.
-Administración de discos.
+Monitor de rendimiento
+Administración de discos
 *Visor de eventos.
-Administrador de tareas.
+Administrador de tareas
 EXPL:El Visor de eventos de Windows registra todos los eventos del sistema: errores, advertencias e información. Es fundamental para diagnosticar problemas de rendimiento, fallos de aplicaciones y errores de seguridad.
 ¿Qué contador del Monitor de rendimiento de Windows indica el porcentaje de tiempo que el procesador está ocupado?
-Memory\Available MBytes.
-Disk\Avg. Disk Queue Length.
+Memory\Available MBytes
+Disk\Avg. Disk Queue Length
 *Processor\% Processor Time.
-Network\Bytes Total/sec.
+Network\Bytes Total/sec
 EXPL:El Monitor de rendimiento (perfmon) de Windows permite ver en tiempo real contadores de CPU, memoria, disco y red. Es más detallado que el Administrador de tareas y permite registrar datos históricos.
 En el caso práctico de monitorización, ¿qué indica una cola de disco (Disk Queue Length) muy alta?
-Que la CPU está saturada., aunque esto no es correcto en este contexto.
+Que la CPU está saturada
 Que la red está congestionada
 *Que el disco duro es el cuello de botella del sistema.
 Que la memoria RAM es insuficiente
@@ -270,10 +270,10 @@ ipconfig /all
 route print
 EXPL:arp -a muestra la tabla ARP: la asociación entre direcciones IP y direcciones MAC de los dispositivos en la red local. Es útil para diagnosticar problemas de conectividad en la red local.
 ¿Qué hace el comando "ipconfig /release" en Windows?
-Renueva la dirección IP obtenida por DHCP.
-Muestra la configuración de red.
+Renueva la dirección IP obtenida por DHCP
+Muestra la configuración de red
 *Libera la dirección IP obtenida por DHCP.
-Borra la caché DNS., aunque esto no es correcto en este contexto.
+Borra la caché DNS
 EXPL:DHCP (Dynamic Host Configuration Protocol) asigna automáticamente direcciones IP, máscara de subred, puerta de enlace y DNS a los dispositivos de la red.
 ¿Qué comando de Windows renueva la dirección IP obtenida por DHCP?
 ipconfig /release
@@ -297,31 +297,31 @@ EXPL:La respuesta es 'telnet [IP] 80'. "ping [IP] -p 80" y "netstat -p 80 [IP]" 
 Que el puerto está bloqueado por el firewall
 Que hay una conexión activa en ese puerto
 *Que hay un servicio esperando conexiones entrantes en ese puerto.
-Que el puerto está cerrado., aunque esto no es correcto en este contexto.
+Que el puerto está cerrado
 EXPL:Que hay un servicio esperando conexiones entrantes en ese puerto.
 En Linux, ¿qué valor numérico de chmod da permisos rwxr-xr-x?
-644.
-777.
+644
+777
 *755.
-700.
+700
 EXPL:chmod (change mode) cambia los permisos de un archivo en Linux. Usa notación octal (755) o simbólica (u+x). chown cambia el propietario, chgrp cambia el grupo.
 ¿Qué significa el permiso "r" en un archivo de Linux?
-Permite ejecutar el archivo.
-Permite modificar el archivo.
+Permite ejecutar el archivo
+Permite modificar el archivo
 *Permite leer el contenido del archivo.
-Permite borrar el archivo.
+Permite borrar el archivo
 EXPL:La respuesta es 'Permite leer el contenido del archivo.'. "Permite ejecutar el archivo." y "Permite modificar el archivo." son incorrectos porque describen conceptos diferentes.
 ¿Qué comando de Linux cambia el propietario de un archivo?
-chmod.
-chgrp.
+chmod
+chgrp
 *chown.
-setperm.
+setperm
 EXPL:La respuesta es 'chown.'. "chmod." y "chgrp." son incorrectos porque describen conceptos diferentes.
 En Windows, ¿qué tipo de permiso NTFS tiene prioridad sobre los permisos de "Permitir"?
-Heredado.
-Explícito.
+Heredado
+Explícito
 *Denegar.
-De grupo.
+De grupo
 EXPL:NTFS es el sistema de archivos estándar de Windows. Soporta permisos ACL, cifrado (EFS), compresión, journaling y archivos de más de 4GB. FAT32 no soporta archivos >4GB.
 ¿Qué es la "delegación de permisos" en sistemas operativos?
 Asignar todos los permisos a un usuario estándar
@@ -330,16 +330,16 @@ Eliminar permisos de administrador
 Copiar los permisos de un archivo a otro
 EXPL:Permitir que un usuario o grupo gestione permisos sobre recursos específicos sin ser administrador global.
 ¿Qué herramienta de gestión de proyectos se menciona en los casos prácticos para asignar tareas?
-Trello.
-Asana.
+Trello
+Asana
 *Notion.
-Jira.
+Jira
 EXPL:La respuesta es 'Notion.'. "Trello." y "Asana." son incorrectos porque describen conceptos diferentes.
 ¿Qué tipo de análisis realiza Avast en la práctica de herramientas de productividad?
 Análisis de rendimiento del sistema
 Análisis de particiones del disco
 *Análisis de amenazas (virus, malware) en el ordenador.
-Análisis de la red local., aunque esto no es correcto en este contexto.
+Análisis de la red local
 EXPL:La respuesta es 'Análisis de amenazas (virus, malware) en el ordenador.'.
 ¿Qué ventaja principal ofrece Google Workspace frente a software de escritorio tradicional?
 Mayor velocidad de procesamiento
@@ -348,10 +348,10 @@ No requiere conexión a Internet
 Mayor compatibilidad con hardware antiguo
 EXPL:Google Workspace (antes G Suite) incluye Gmail, Drive, Docs, Sheets, Slides y Meet. Permite colaboración en tiempo real y acceso desde cualquier dispositivo con Internet.
 ¿Qué tipo de software es EaseUS Partition Master?
-Software antivirus., aunque esto no es correcto en este contexto.
+Software antivirus
 Herramienta de monitorización
 *Herramienta de gestión y clonación de particiones de disco.
-Gestor de máquinas virtuales., aunque esto no es correcto en este contexto.
+Gestor de máquinas virtuales
 EXPL:EaseUS Partition Master es una herramienta de gestión de particiones que permite clonar, redimensionar, mover y convertir particiones. La clonación crea una copia exacta de una partición en otra ubicación.
 ¿Cuál es la diferencia entre "Reducir volumen" y "Eliminar volumen" en Administración de discos de Windows?
 No hay diferencia, ambas borran los datos
@@ -360,10 +360,10 @@ Reducir volumen borra los datos; eliminar volumen los conserva
 Eliminar volumen solo funciona en discos externos
 EXPL:La herramienta "Administración de discos" de Windows permite crear, eliminar, formatear y redimensionar particiones sin software adicional. Se accede desde el Panel de control o ejecutando diskmgmt.msc.
 ¿Qué tipo de dirección IP usa la configuración NAT de VirtualBox para el adaptador de red del anfitrión?
-Una IP pública asignada por el ISP.
-La misma IP que el huésped., aunque esto no es correcto en este contexto.
+Una IP pública asignada por el ISP
+La misma IP que el huésped
 *La IP real del anfitrión en la red local.
-Siempre 192.168.0.1., aunque esto no es correcto en este contexto.
+Siempre 192.168.0.1
 EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
 En la práctica de redes, ¿qué comando verifica la conectividad con la puerta de enlace predeterminada?
 tracert gateway
@@ -378,44 +378,44 @@ Los puertos abiertos en cada router
 La dirección MAC de cada dispositivo en la ruta
 EXPL:El router opera en la Capa 3 (Red) del modelo OSI y enruta paquetes IP entre redes diferentes. El switch opera en Capa 2 y conmuta tramas MAC dentro de la misma red.
 ¿Qué ocurre si se intenta ampliar un volumen en Windows y no hay espacio no asignado contiguo?
-Windows crea automáticamente espacio no asignado.
-Se puede ampliar usando espacio de otra partición directamente.
+Windows crea automáticamente espacio no asignado
+Se puede ampliar usando espacio de otra partición directamente
 *La opción "Ampliar volumen" aparece desactivada (en gris).
-Windows mueve los datos automáticamente para hacer espacio.
+Windows mueve los datos automáticamente para hacer espacio
 EXPL:La respuesta es 'La opción "Ampliar volumen" aparece desactivada (en gris).'.
 ¿Qué versión de Ubuntu se configura en la práctica de VirtualBox?
-Ubuntu 32-bit.
-Ubuntu Server.
+Ubuntu 32-bit
+Ubuntu Server
 *Ubuntu 64-bit.
-Ubuntu LTS 32-bit.
+Ubuntu LTS 32-bit
 EXPL:La respuesta es 'Ubuntu 64-bit.'. "Ubuntu 32-bit." y "Ubuntu Server." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es el puerto estándar del protocolo SSH?
-80.
-443.
+80
+443
 *22.
-3389.
+3389
 EXPL:SSH (Secure Shell) usa el puerto 22 por defecto para conexiones remotas cifradas. El reenvío de puertos en VirtualBox permite acceder a la VM desde el anfitrión usando un puerto diferente (ej: 2222).
 ¿Qué significa NAT en el contexto de redes?
-Network Access Terminal.
-Node Address Transfer.
+Network Access Terminal
+Node Address Transfer
 *Network Address Translation.
-Network Allocation Table.
+Network Allocation Table
 EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
 ¿Qué herramienta de Windows muestra en tiempo real los procesos activos, uso de CPU y memoria de forma básica?
-Monitor de rendimiento.
-Visor de eventos.
+Monitor de rendimiento
+Visor de eventos
 *Administrador de tareas.
-Administración de discos.
+Administración de discos
 EXPL:La respuesta es 'Administrador de tareas.'. "Monitor de rendimiento." y "Visor de eventos." son incorrectos porque describen conceptos diferentes.
 ¿Qué comando de Linux muestra los permisos de los archivos en un directorio?
-dir -p.
-chmod -l.
+dir -p
+chmod -l
 *ls -la.
-perms -show.
+perms -show
 EXPL:La respuesta es 'ls -la.'. "dir -p." y "chmod -l." son incorrectos porque describen conceptos diferentes.
 ¿En qué caso práctico se trabaja con la herramienta "Administración de discos" de Windows?
-Caso 2 (VirtualBox).
-Caso 5 (Redes).
+Caso 2 (VirtualBox)
+Caso 5 (Redes)
 *Caso 3 (Particiones).
-Caso 6 (Permisos).
+Caso 6 (Permisos)
 EXPL:La herramienta "Administración de discos" de Windows permite crear, eliminar, formatear y redimensionar particiones sin software adicional. Se accede desde el Panel de control o ejecutando diskmgmt.msc.

@@ -1,45 +1,45 @@
 tema 7
 ¿Cuál es un ejemplo de software de recuperación de datos?
-Norton.
-McAfee.
+Norton
+McAfee
 *EaseUS.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'EaseUS.'. "Norton." y "McAfee." son incorrectos porque describen conceptos diferentes.
 ¿Qué es un procesador de texto?
 *Una herramienta informática que permite la creación, edición y formateo de documentos de texto.
-Un tipo de hoja de cálculo que se utiliza para realizar cálculos y análisis de datos.
+Un tipo de hoja de cálculo que se utiliza para realizar cálculos y análisis de datos
 Un programa de edición de imágenes
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Una herramienta informática que permite la creación, edición y formateo de documentos de texto.
 ¿Cuál es el programa que controla y gestiona los recursos del hardware y proporciona una interfaz de usuario para que los usuarios puedan interactuar con la computadora?
-Los sistemas de archivos.
-Los controladores de dispositivos.
+Los sistemas de archivos
+Los controladores de dispositivos
 *El sistema operativo.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'El sistema operativo.'. "Los sistemas de archivos." y "Los controladores de dispositivos." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es una de las características principales de las herramientas de productividad?
 *Automatización de tareas.
-Recuperación de datos.
-Escaneo de archivos.
+Recuperación de datos
+Escaneo de archivos
 Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Automatización de tareas.'. "Recuperación de datos." y "Escaneo de archivos." son incorrectos porque describen conceptos diferentes.
 ¿Qué ventaja ofrece Google Docs en comparación con Microsoft Word?
-Amplia gama de funciones y herramientas avanzadas para crear documentos complejos.
+Amplia gama de funciones y herramientas avanzadas para crear documentos complejos
 *Almacenamiento en la nube y acceso en cualquier momento y desde cualquier lugar.
-Es software libre y de pago., aunque esto no es correcto en este contexto.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Es software libre y de pago
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Almacenamiento en la nube y acceso en cualquier momento y desde cualquier lugar.
 ¿Cuál es el procesador de texto más utilizado en el mundo?
 *Microsoft Word.
-Google Docs.
-LibreOffice Writer.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Google Docs
+LibreOffice Writer
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Microsoft Word.'. "Google Docs." y "LibreOffice Writer." son incorrectos porque describen conceptos diferentes.
 ¿Qué es el software antivirus?
 *Un tipo de software diseñado para detectar, prevenir y eliminar programas maliciosos.
 Un tipo de software diseñado para mejorar la productividad
 Un tipo de software diseñado para recuperar datos perdidos
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Un tipo de software diseñado para detectar, prevenir y eliminar programas maliciosos.
 ¿Cuál es la función principal del software de sistema?
 Realizar tareas específicas en la computadora
@@ -48,14 +48,14 @@ Escribir, depurar y mantener programas de software
 Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:Controlar y coordinar el funcionamiento del hardware y proporcionar una interfaz entre el usuario y el hardware.
 ¿Qué son las herramientas de desarrollo integradas?
-Herramientas que permiten al usuario realizar diferentes tareas, como realizar copias de seguridad de datos, optimizar el rendimiento del sistema, o desinstalar programas.
+Herramientas que permiten al usuario realizar diferentes tareas, como realizar copias de seguridad de datos, optimizar el rendimiento del sistema, o desinstalar programas
 *Herramientas que incluyen un editor de código, un depurador y un compilador, todos integrados en una única interfaz de usuario.
-Herramientas que permiten al usuario identificar y solucionar problemas en el sistema, como errores de hardware o software.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Herramientas que permiten al usuario identificar y solucionar problemas en el sistema, como errores de hardware o software
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Herramientas que incluyen un editor de código, un depurador y un compilador, todos integrados en una única interfaz de u...
 ¿Qué significa que las bases de datos sean escalables y flexibles?
 Que tienen una estructura y organización definida
 *Que pueden crecer y evolucionar a medida que cambian las necesidades de la organización.
-Que no se pueden integrar con otras aplicaciones informáticas.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Que no se pueden integrar con otras aplicaciones informáticas
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Que pueden crecer y evolucionar a medida que cambian las necesidades de la organización.

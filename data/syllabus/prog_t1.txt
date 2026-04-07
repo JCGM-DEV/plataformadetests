@@ -1,61 +1,61 @@
 tema 1
 Los lenguajes de programación utilizan distintos tipos de datos para representar la información y gestionar la memoria de forma adecuada. ¿Cuál de los siguientes no pertenece a los tipos de datos básicos o primitivos?
-Número entero.
-Valor booleano.
+Número entero
+Valor booleano
 *Array o arreglo.
 Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Array o arreglo.'. "Número entero." y "Valor booleano." son incorrectos porque describen conceptos diferentes.
 Aunque a menudo se confunden, los conceptos de algoritmo y programa no son equivalentes. ¿Cuál de las siguientes afirmaciones describe correctamente la relación entre ambos?
 *El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación.
-El programa es independiente del lenguaje y el algoritmo depende del lenguaje utilizado.
-Ambos conceptos son idénticos y se diferencian solo por el formato en el que se escriben.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+El programa es independiente del lenguaje y el algoritmo depende del lenguaje utilizado
+Ambos conceptos son idénticos y se diferencian solo por el formato en el que se escriben
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación.
 Durante el desarrollo de un programa, pueden aparecer errores que no impiden la compilación pero provocan resultados incorrectos. ¿Cuál es la función principal de un depurador (debugger) dentro de un entorno de desarrollo?
-Detectar errores de sintaxis antes de ejecutar el programa.
-Ejecutar el programa de forma más rápida y optimizada.
+Detectar errores de sintaxis antes de ejecutar el programa
+Ejecutar el programa de forma más rápida y optimizada
 *Analizar la ejecución paso a paso para localizar errores lógicos.
 Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
 Antes de escribir un programa, es fundamental diseñar correctamente el algoritmo que resolverá el problema. Para que una secuencia de pasos pueda considerarse un algoritmo válido, debe cumplir una serie de características. ¿Cuál de las siguientes es una de ellas?
-Debe poder ejecutarse directamente por la máquina sin traducción.
+Debe poder ejecutarse directamente por la máquina sin traducción
 *Debe ser finito y finalizar tras un número limitado de pasos.
-Debe estar escrito obligatoriamente en un lenguaje de programación concreto.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Debe estar escrito obligatoriamente en un lenguaje de programación concreto
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
 Todo programa informático sigue un modelo básico de funcionamiento que permite transformar datos en información útil. Dentro del modelo Entrada–Proceso–Salida, ¿qué elemento se considera el núcleo del programa?
-Los datos que introduce el usuario mediante dispositivos de entrada.
+Los datos que introduce el usuario mediante dispositivos de entrada
 *El algoritmo que procesa los datos y aplica la lógica del programa.
-El sistema que muestra el resultado final al usuario.
+El sistema que muestra el resultado final al usuario
 Con el atributo xmlns:xsi en el elemento raíz
 EXPL:Además del código, un programa necesita datos para operar. Los datos son la información que el programa procesa (operandos en una operación, registros de una BD, etc.).
 Las estructuras de control permiten modificar el flujo normal de ejecución de un programa. ¿Qué tipo de estructura se utiliza cuando es necesario repetir varias veces un conjunto de instrucciones mientras se cumpla una condición?
-Estructura secuencial.
-Estructura selectiva.
+Estructura secuencial
+Estructura selectiva
 *Estructura iterativa.
 Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Estructura iterativa.'. "Estructura secuencial." y "Estructura selectiva." son incorrectos porque describen conceptos diferentes.
 Los paradigmas de programación ofrecen diferentes formas de organizar y estructurar el software. En el paradigma orientado a objetos, ¿cuál es el elemento central sobre el que se construyen los programas?
-Las funciones matemáticas., aunque esto no es correcto en este contexto.
+Las funciones matemáticas
 *Los objetos que combinan datos y comportamiento.
-Las instrucciones ejecutadas de forma secuencial.
+Las instrucciones ejecutadas de forma secuencial
 Mediante una clase abstracta con métodos estáticos
 EXPL:La respuesta es 'Los objetos que combinan datos y comportamiento.'.
 Java es un lenguaje de programación con un modelo de ejecución particular que combina características de distintos enfoques. ¿Por qué se considera que Java utiliza un sistema híbrido de compilación e interpretación?
-Porque el código se ejecuta directamente como código máquina del sistema operativo.
+Porque el código se ejecuta directamente como código máquina del sistema operativo
 *Porque el código se compila a bytecode y se ejecuta mediante la Máquina Virtual de Java.
-Porque no necesita ningún proceso previo para poder ejecutarse.
+Porque no necesita ningún proceso previo para poder ejecutarse
 Mediante una clase abstracta con métodos estáticos
 EXPL:Porque el código se compila a bytecode y se ejecuta mediante la Máquina Virtual de Java.
 La programación no se limita únicamente a escribir código, sino que engloba varias tareas necesarias para que un programa funcione correctamente a lo largo del tiempo. ¿Cuál de las siguientes opciones define mejor qué es programar?
-Utilizar programas informáticos ya existentes para resolver tareas cotidianas.
+Utilizar programas informáticos ya existentes para resolver tareas cotidianas
 *Diseñar, codificar, depurar y mantener programas que ejecuta un ordenador.
-Ejecutar instrucciones previamente creadas sin necesidad de modificarlas.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ejecutar instrucciones previamente creadas sin necesidad de modificarlas
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Diseñar, codificar, depurar y mantener programas que ejecuta un ordenador.
 En informática es importante diferenciar entre los conceptos de dato e información, ya que no significan exactamente lo mismo. ¿Cuál de las siguientes afirmaciones es correcta?
-El dato es información interpretada y la información es un dato sin procesar.
+El dato es información interpretada y la información es un dato sin procesar
 *El dato es un valor aislado y la información es el resultado de procesar datos con un contexto.
-Ambos términos se utilizan indistintamente y no existe diferencia real entre ellos.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+Ambos términos se utilizan indistintamente y no existe diferencia real entre ellos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El dato es un valor aislado y la información es el resultado de procesar datos con un contexto.

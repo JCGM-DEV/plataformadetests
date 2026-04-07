@@ -19,7 +19,7 @@ Ninguna respuesta es correcta
 Entre los tipos de bases de datos que permiten almacenar datos semiestructurados se encuentran:
 Relacionales
 *NoSQL
-Ninguna respuesta es correcta.
+Ninguna respuesta es correcta
 Las bases de datos que permiten incluir herencia en su diseño son las:
 Jerárquicas
 *Orientadas a objetos

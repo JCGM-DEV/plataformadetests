@@ -1,21 +1,21 @@
 tema 2
 ¿En cuál de los siguientes procedimientos de resolución de conflictos es un tercero el que establece la solución?
 Arbitraje
-Conciliación
-Negociación.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+*Conciliación
+Negociación
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 ¿Cuáles de estos derechos laborales recoge la Constitución española de 1978?
 Descanso, Seguridad Social, Remuneración suficiente y libertad sindical
 Pertenencia a una mutua, Seguridad Social, pago de IRPF y derecho a huelga
-Permisos no remunerados, Seguridad Social, libertad sindical y cumplimiento de las obligaciones laborales con diligencia y buena fe
+*Permisos no remunerados, Seguridad Social, libertad sindical y cumplimiento de las obligaciones laborales con diligencia y buena fe
 El contrato indefinido:
 Puede ser por circunstancias de la producción o por interinidad
 Puede concertarse a tiempo completo y a tiempo parcial
-Puede ser a tiempo completo, pero no a tiempo parcial
+Puede ser a tiempo completo
 El contrato temporal por circunstancias de la producción no podrá durar más de:
 12 meses
 6 meses, que por convenio sectorial se puede ampliar hasta 1 año
-12 meses, que por convenio sectorial puede ampliarte hasta 24 meses.
+12 meses, que por convenio sectorial puede ampliarte hasta 24 meses
 El periodo de prueba para técnicos titulados:
 Tendrá una duración de no más de 6 meses
 Tendrá una duración de no más de 2 meses (y tres meses para empresas de menos de 25 trabajadores)
@@ -23,11 +23,11 @@ Tendrá una duración de 4 meses para contratos temporales y 8 meses para contra
 Si una empresa cuenta con 85 trabajadores habrá de tener:
 3 Delegados/as de personal
 Un Comité de empresa con 5 miembros
-Un Comité de empresa con 9 miembros.
+Un Comité de empresa con 9 miembros
 La movilidad funcional de un trabajador a otro grupo profesional no exige uno de estos requisitos:
 Acuerdo entre trabajador/a y empresa
 Que se haga por el tiempo imprescindible
-Razones técnicas u organizativas.
+Razones técnicas u organizativas
 El descanso mínimo entre jornadas de trabajo para trabajadores menores de 18 años es de:
 2 días
 1 día y medio
@@ -35,8 +35,8 @@ El descanso mínimo entre jornadas de trabajo para trabajadores menores de 18 a�
 ¿Cuál de los siguientes está recogido en el Estatuto de los Trabajadores a la vez como derecho y como deber de los trabajadores/as?
 La ocupación efectiva
 La negociación colectiva
-La prevención de riesgos laborales.
-La primera Ley española en materia laboral, Ley Benot de 1873, trataba de:
+La prevención de riesgos laborales
+*La primera Ley española en materia laboral, Ley Benot de 1873, trataba de:
 Proteger a las mujeres y los niños en la actividad agrícola
 Proteger a los menores en la industria
-Reconocer el seguro por enfermedad.
+Reconocer el seguro por enfermedad

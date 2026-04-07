@@ -26,7 +26,7 @@ Una emergencia parcial
 ¿Cuál de las siguientes es la secuencia correcta?
 Identificar los riesgos, evitarlos, evaluar los que no se pueden evitar
 Evaluar los riesgos, identificarlos y evitarlos
-Evaluar los riesgos que no se pueden evitar, evitar los riesgos y planificarlos
+*Evaluar los riesgos que no se pueden evitar, evitar los riesgos y planificarlos
 La aprobación del Plan de Prevención corresponde:
 Al Servicio de Prevención
 *A la empresa

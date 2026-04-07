@@ -1,55 +1,55 @@
 tema 3
 ¿Qué tipo de particiones solo se pueden crear en un esquema MBR?
 *Primarias.
-Extendidas.
-Lógicas.
+Extendidas
+Lógicas
 Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Primarias.'. "Extendidas." y "Lógicas." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es la principal ventaja del esquema GPT sobre el esquema MBR?
-Es compatible con una amplia variedad de sistemas operativos y software.
+Es compatible con una amplia variedad de sistemas operativos y software
 *Tiene una mejor protección contra la corrupción de datos y soporta discos de más de 2TB.
 Solo permite la creación de particiones primarias
 Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:GPT (GUID Partition Table) soporta discos de más de 2TB y hasta 128 particiones primarias. MBR está limitado a 2TB y 4 particiones primarias.
 ¿Cuál es la estructura de directorios típica de Windows?
-/, /bin, /etc, /home, /usr, /var.
+/, /bin, /etc, /home, /usr, /var
 *C:, C:\Windows, C:\Program Files, C:\Users.
-/, /Applications, /Library, /System, /Users.
-Con el comando fsck para verificar la integridad del sistema de archivos.
+/, /Applications, /Library, /System, /Users
+Con el comando fsck para verificar la integridad del sistema de archivos
 EXPL:La respuesta es 'C:, C:\Windows, C:\Program Files, C:\Users.'. "/, /bin, /etc, /home, /usr, /var." y "/, /Applications, /Library, /System, /Users." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es la principal ventaja de los dispositivos de almacenamiento externo?
-Mayor velocidad de transferencia de datos.
-Mayor capacidad de almacenamiento.
+Mayor velocidad de transferencia de datos
+Mayor capacidad de almacenamiento
 *Mayor flexibilidad y portabilidad.
 Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Mayor flexibilidad y portabilidad.'. "Mayor velocidad de transferencia de datos." y "Mayor capacidad de almacenamiento." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es la principal diferencia entre el almacenamiento interno y externo?
-La velocidad de transferencia de datos.
+La velocidad de transferencia de datos
 *La ubicación física del dispositivo.
-La capacidad de almacenamiento.
+La capacidad de almacenamiento
 Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'La ubicación física del dispositivo.'. "La velocidad de transferencia de datos." y "La capacidad de almacenamiento." son incorrectos porque describen conceptos diferentes.
 ¿Qué comando se utiliza en Linux para mostrar información sobre los procesos que se están ejecutando en el sistema?
-systeminfo.
+systeminfo
 *top.
-free.
-Con el comando fsck para verificar la integridad del sistema de archivos.
+free
+Con el comando fsck para verificar la integridad del sistema de archivos
 EXPL:La respuesta es 'top.'. "systeminfo." y "free." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es la capacidad de almacenamiento de un disco DVD estándar?
-Hasta 2,5 GB.
+Hasta 2,5 GB
 *Hasta 4,7 GB.
-Hasta 25 GB.
-Con el comando fsck para verificar la integridad del sistema de archivos.
+Hasta 25 GB
+Con el comando fsck para verificar la integridad del sistema de archivos
 EXPL:ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).
 ¿Cuáles son los dos esquemas de particiones más comunes?
-FAT y NTFS.
+FAT y NTFS
 *MBR y GPT.
-HFS+ y APFS.
-Ninguna de las anteriores opciones es completamente correcta en este contexto.
+HFS+ y APFS
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:GPT (GUID Partition Table) soporta discos de más de 2TB y hasta 128 particiones primarias. MBR está limitado a 2TB y 4 particiones primarias.
 ¿Qué tipo de dispositivo de almacenamiento es más resistente a golpes y vibraciones?
-Disco duro (HDD).
+Disco duro (HDD)
 *Unidad de estado sólido (SSD).
-Tarjeta de memoria.
+Tarjeta de memoria
 Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Unidad de estado sólido (SSD).'. "Disco duro (HDD)." y "Tarjeta de memoria." son incorrectos porque describen conceptos diferentes.

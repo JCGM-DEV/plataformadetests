@@ -11,7 +11,7 @@ Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:Identificar fortalezas y debilidades, así como amenazas y oportunidades
 ¿Cuál es la finalidad de un Plan de Acción en el desarrollo profesional?
 Evaluar el rendimiento financiero en la vida laboral
-Describir paso a paso las actividades, metas y plazos para mejorar competencias y aumentar la empleabilidad
+*Describir paso a paso las actividades, metas y plazos para mejorar competencias y aumentar la empleabilidad
 Elegir el plan formativo más adecuado a nuestros intereses profesionales a largo plazo
 La Carta de motivación:
 Sustituye al currículum vitae
@@ -21,7 +21,7 @@ Sólo opera en la búsqueda de empleo a través de internet
 Para encontrar el equilibrio entre nuestras habilidades y aspiraciones y lo que busca el mercado laboral
 Para decidir si cambiar de sector profesional
 Para seleccionar cursos online que amplíen nuestros conocimientos
-Las pruebas de evaluación en los procesos de selección de personal tratan de valorar los elementos que integran uno de los conceptos siguientes:
+*Las pruebas de evaluación en los procesos de selección de personal tratan de valorar los elementos que integran uno de los conceptos siguientes:
 Desempeño
 Competencias
 Valoración funcional
@@ -33,12 +33,12 @@ En un currículum funcional la información académica y profesional se organiza
 EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
 *Por sectores o temas
 Por orden cronológico
-De forma interactiva.
+De forma interactiva
 ¿Cuál es una característica de la Formación Profesional Dual en España según la nueva ley?
 Se centra exclusivamente en la teoría impartida en el aula
 *Combina formación en el centro educativo con experiencia práctica en la empresa
 Ofrece formación online exclusivamente
-El currículum vitae:, aunque esto no es correcto en este contexto.
+El currículum vitae:
 EXPL:Combina formación en el centro educativo con experiencia práctica en la empresa
 Sustituye a la carta de presentación
 *Complementa la carta de presentación

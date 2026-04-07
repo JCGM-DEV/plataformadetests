@@ -1,0 +1,175 @@
+🔍 ANÁLISIS MEJORADO DE COHERENCIA TEMÁTICA
+================================================================================
+
+📚 SISTEMAS_INFORMATICOS
+--------------------------------------------------------------------------------
+Preguntas con posibles incoherencias: 4/193
+
+📚 BASES_DE_DATOS
+--------------------------------------------------------------------------------
+Preguntas con posibles incoherencias: 1/130
+
+📚 PROGRAMACION
+--------------------------------------------------------------------------------
+Preguntas con posibles incoherencias: 0/164
+
+📚 LENGUAJE_DE_MARCAS
+--------------------------------------------------------------------------------
+Preguntas con posibles incoherencias: 4/183
+
+📚 ENTORNOS_DE_DESARROLLO
+--------------------------------------------------------------------------------
+Preguntas con posibles incoherencias: 2/111
+
+📚 CLOUD_COMPUTING
+--------------------------------------------------------------------------------
+Preguntas con posibles incoherencias: 2/72
+
+📚 EMPLEABILIDAD
+--------------------------------------------------------------------------------
+Preguntas con posibles incoherencias: 2/86
+
+================================================================================
+📊 RESUMEN
+================================================================================
+Total preguntas: 939
+Preguntas flaggeadas: 15
+Porcentaje: 1.60%
+
+================================================================================
+🚨 EJEMPLOS D INCOHERENCIAS DETECTADAS
+================================================================================
+
+📚 sistemas_informaticos
+
+  Pregunta #47
+  Q: ¿Qué es el Kernel de un sistema operativo?
+  [0] El sistema de archivos principal
+  [1] El gestor de paquetes
+  [2] El núcleo que gestiona el hardware y los recursos ✓
+  [3] La interfaz gráfica del SO
+  Issue: {'type': 'Opciones de contextos diferentes', 'details': [{'option': 0, 'text': 'El sistema de archivos principal', 'reason': 'Diferente contexto temático', 'question_domains': [('sistemas_informaticos', 'sistemas')], 'option_domains': [('sistemas_informaticos', 'redes'), ('programacion', 'lenguajes')]}, {'option': 2, 'text': 'El núcleo que gestiona el hardware y los recursos', 'reason': 'Diferente contexto temático', 'question_domains': [('sistemas_informaticos', 'sistemas')], 'option_domains': [('programacion', 'lenguajes')]}, {'option': 3, 'text': 'La interfaz gráfica del SO', 'reason': 'Diferente contexto temático', 'question_domains': [('sistemas_informaticos', 'sistemas')], 'option_domains': [('programacion', 'oop'), ('programacion', 'lenguajes')]}]}
+
+  Pregunta #132
+  Q: ¿Qué es el POST (Power-On Self-Test)?
+  [0] La secuencia de GRUB
+  [1] El arranque del sistema operativo
+  [2] Un tipo de protocolo de red
+  [3] Proceso de autocomprobación del hardware que realiza la BIOS/UEFI al encenderse el equipo ✓
+  Issue: {'type': 'Opciones de contextos diferentes', 'details': [{'option': 0, 'text': 'La secuencia de GRUB', 'reason': 'Diferente contexto temático', 'question_domains': [('entornos_de_desarrollo', 'testing')], 'option_domains': [('programacion', 'lenguajes')]}, {'option': 2, 'text': 'Un tipo de protocolo de red', 'reason': 'Diferente contexto temático', 'question_domains': [('entornos_de_desarrollo', 'testing')], 'option_domains': [('sistemas_informaticos', 'redes'), ('programacion', 'datos'), ('programacion', 'lenguajes')]}, {'option': 3, 'text': 'Proceso de autocomprobación del hardware que realiza la BIOS/UEFI al encenderse el equipo', 'reason': 'Diferente contexto temático', 'question_domains': [('entornos_de_desarrollo', 'testing')], 'option_domains': [('sistemas_informaticos', 'redes'), ('sistemas_informaticos', 'sistemas'), ('empleabilidad', 'soft_skills'), ('programacion', 'lenguajes')]}]}
+
+  Pregunta #144
+  Q: ¿Qué es un periférico de entrada?
+  [0] Dispositivo que muestra datos al usuario
+  [1] Dispositivo de red
+  [2] Dispositivo de almacenamiento
+  [3] Dispositivo que envía datos al ordenador ✓
+  Issue: {'type': 'Opciones de contextos diferentes', 'details': [{'option': 0, 'text': 'Dispositivo que muestra datos al usuario', 'reason': 'Diferente contexto temático', 'question_domains': [('programacion', 'control'), ('programacion', 'lenguajes')], 'option_domains': [('sistemas_informaticos', 'redes')]}, {'option': 1, 'text': 'Dispositivo de red', 'reason': 'Diferente contexto temático', 'question_domains': [('programacion', 'control'), ('programacion', 'lenguajes')], 'option_domains': [('sistemas_informaticos', 'redes')]}, {'option': 3, 'text': 'Dispositivo que envía datos al ordenador', 'reason': 'Diferente contexto temático', 'question_domains': [('programacion', 'control'), ('programacion', 'lenguajes')], 'option_domains': [('sistemas_informaticos', 'redes')]}]}
+
+  Pregunta #181
+  Q: ¿Qué comando se utiliza para añadir un usuario a un grupo en consola de Windows?
+  [0] add_user_to_group
+  [1] add_group_member
+  [2] net group ✓
+  [3] YAML
+  Issue: {'type': 'Opciones de contextos diferentes', 'details': [{'option': 0, 'text': 'add_user_to_group', 'reason': 'Diferente contexto temático', 'question_domains': [('sistemas_informaticos', 'sistemas'), ('programacion', 'lenguajes')], 'option_domains': [('bases_de_datos', 'sql')]}, {'option': 1, 'text': 'add_group_member', 'reason': 'Diferente contexto temático', 'question_domains': [('sistemas_informaticos', 'sistemas'), ('programacion', 'lenguajes')], 'option_domains': [('bases_de_datos', 'sql')]}, {'option': 2, 'text': 'net group', 'reason': 'Diferente contexto temático', 'question_domains': [('sistemas_informaticos', 'sistemas'), ('programacion', 'lenguajes')], 'option_domains': [('bases_de_datos', 'sql')]}]}
+
+📚 bases_de_datos
+
+  Pregunta #14
+  Q: ¿Qué cláusula filtra filas individuales antes de aplicar una agrupación?
+  [0] WHERE ✓
+  [1] ORDER BY
+  [2] HAVING
+  [3] GROUP BY
+  Issue: {'type': 'Opciones de contextos diferentes', 'details': [{'option': 0, 'text': 'WHERE', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'html'), ('lenguaje_de_marcas', 'css'), ('programacion', 'lenguajes')], 'option_domains': [('bases_de_datos', 'sql')]}, {'option': 1, 'text': 'ORDER BY', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'html'), ('lenguaje_de_marcas', 'css'), ('programacion', 'lenguajes')], 'option_domains': [('bases_de_datos', 'sql')]}, {'option': 3, 'text': 'GROUP BY', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'html'), ('lenguaje_de_marcas', 'css'), ('programacion', 'lenguajes')], 'option_domains': [('bases_de_datos', 'sql')]}]}
+
+📚 lenguaje_de_marcas
+
+  Pregunta #60
+  Q: ¿Qué es XML?
+  [0] El sucesor de HTML
+  [1] Lenguaje de marcas extensible para estructura y transporte de datos, con etiquetas personalizables ✓
+  [2] Un protocolo de red
+  [3] Un lenguaje de programación
+  Issue: {'type': 'Opciones de contextos diferentes', 'details': [{'option': 0, 'text': 'El sucesor de HTML', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'xml')], 'option_domains': [('lenguaje_de_marcas', 'html'), ('programacion', 'lenguajes')]}, {'option': 1, 'text': 'Lenguaje de marcas extensible para estructura y transporte de datos, con etiquetas personalizables', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'xml')], 'option_domains': [('programacion', 'datos'), ('programacion', 'lenguajes')]}, {'option': 2, 'text': 'Un protocolo de red', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'xml')], 'option_domains': [('sistemas_informaticos', 'redes'), ('programacion', 'lenguajes')]}, {'option': 3, 'text': 'Un lenguaje de programación', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'xml')], 'option_domains': [('sistemas_informaticos', 'redes'), ('programacion', 'lenguajes')]}]}
+
+  Pregunta #82
+  Q: ¿Qué es el atributo 'meta viewport' y para qué sirve?
+  [0] Controla la escala y el ancho de la ventana en dispositivos móviles para el responsive design ✓
+  [1] Configura la caché del navegador
+  [2] Define el tamaño de la ventana del navegador en escritorio
+  [3] Establece el idioma del documento
+  Issue: {'type': 'Opciones de contextos diferentes', 'details': [{'option': 0, 'text': 'Controla la escala y el ancho de la ventana en dispositivos móviles para el responsive design', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'html'), ('lenguaje_de_marcas', 'xml')], 'option_domains': [('sistemas_informaticos', 'redes'), ('programacion', 'lenguajes')]}, {'option': 1, 'text': 'Configura la caché del navegador', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'html'), ('lenguaje_de_marcas', 'xml')], 'option_domains': [('lenguaje_de_marcas', 'web'), ('programacion', 'lenguajes')]}, {'option': 2, 'text': 'Define el tamaño de la ventana del navegador en escritorio', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'html'), ('lenguaje_de_marcas', 'xml')], 'option_domains': [('lenguaje_de_marcas', 'css'), ('lenguaje_de_marcas', 'web'), ('programacion', 'lenguajes')]}, {'option': 3, 'text': 'Establece el idioma del documento', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'html'), ('lenguaje_de_marcas', 'xml')], 'option_domains': [('lenguaje_de_marcas', 'css'), ('programacion', 'lenguajes')]}]}
+
+  Pregunta #115
+  Q: ¿Quién propuso en 1980 el hipertexto que dio origen al HTML?
+  [0] El Consorcio W3C
+  [1] Tim Berners-Lee mientras trabajaba en el CERN ✓
+  [2] La ISO
+  [3] Combinación de las anteriores
+  Issue: {'type': 'Opciones de contextos diferentes', 'details': [{'option': 0, 'text': 'El Consorcio W3C', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'html'), ('sistemas_informaticos', 'redes')], 'option_domains': [('programacion', 'lenguajes')]}, {'option': 1, 'text': 'Tim Berners-Lee mientras trabajaba en el CERN', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'html'), ('sistemas_informaticos', 'redes')], 'option_domains': [('programacion', 'lenguajes')]}, {'option': 3, 'text': 'Combinación de las anteriores', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'html'), ('sistemas_informaticos', 'redes')], 'option_domains': [('programacion', 'lenguajes')]}]}
+
+  Pregunta #161
+  Q: ¿Por qué es importante validar un feed RSS/Atom?
+  [0] Para mejorar su posición automáticamente en buscadores
+  [1] Para asegurar que cumple estándares W3C, verificar accesibilidad de la URI y ausencia de errores de sintaxis ✓
+  [2] Para registrarse en directorios sin aprobación manual
+  [3] Combinación de las anteriores
+  Issue: {'type': 'Opciones de contextos diferentes', 'details': [{'option': 0, 'text': 'Para mejorar su posición automáticamente en buscadores', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'css')], 'option_domains': [('sistemas_informaticos', 'redes'), ('programacion', 'lenguajes')]}, {'option': 2, 'text': 'Para registrarse en directorios sin aprobación manual', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'css')], 'option_domains': [('programacion', 'lenguajes')]}, {'option': 3, 'text': 'Combinación de las anteriores', 'reason': 'Diferente contexto temático', 'question_domains': [('lenguaje_de_marcas', 'css')], 'option_domains': [('programacion', 'lenguajes')]}]}
+
+📚 entornos_de_desarrollo
+
+  Pregunta #37
+  Q: ¿Qué es el 'Agile Manifesto'?
+  [0] Documento que establece los 4 valores y 12 principios del desarrollo ágil de software ✓
+  [1] Un lenguaje de programación ágil
+  [2] Un framework de gestión de proyectos
+  [3] Un estándar ISO para software
+  Issue: {'type': 'Opciones de contextos diferentes', 'details': [{'option': 0, 'text': 'Documento que establece los 4 valores y 12 principios del desarrollo ágil de software', 'reason': 'Diferente contexto temático', 'question_domains': [('programacion', 'control')], 'option_domains': [('sistemas_informaticos', 'redes'), ('programacion', 'lenguajes')]}, {'option': 1, 'text': 'Un lenguaje de programación ágil', 'reason': 'Diferente contexto temático', 'question_domains': [('programacion', 'control')], 'option_domains': [('sistemas_informaticos', 'redes'), ('programacion', 'lenguajes')]}, {'option': 2, 'text': 'Un framework de gestión de proyectos', 'reason': 'Diferente contexto temático', 'question_domains': [('programacion', 'control')], 'option_domains': [('programacion', 'lenguajes')]}]}
+
+  Pregunta #56
+  Q: ¿Qué es Jenkins?
+  [0] Un servidor de aplicaciones Java
+  [1] Un gestor de repositorios Git
+  [2] Un sistema de monitorización
+  [3] Servidor de automatización open source para implementar pipelines CI/CD ✓
+  Issue: {'type': 'Opciones de contextos diferentes', 'details': [{'option': 0, 'text': 'Un servidor de aplicaciones Java', 'reason': 'Diferente contexto temático', 'question_domains': [('entornos_de_desarrollo', 'devops')], 'option_domains': [('lenguaje_de_marcas', 'css'), ('lenguaje_de_marcas', 'web'), ('cloud_computing', 'infraestructura'), ('programacion', 'lenguajes')]}, {'option': 1, 'text': 'Un gestor de repositorios Git', 'reason': 'Diferente contexto temático', 'question_domains': [('entornos_de_desarrollo', 'devops')], 'option_domains': [('sistemas_informaticos', 'redes'), ('entornos_de_desarrollo', 'git')]}, {'option': 2, 'text': 'Un sistema de monitorización', 'reason': 'Diferente contexto temático', 'question_domains': [('entornos_de_desarrollo', 'devops')], 'option_domains': [('programacion', 'lenguajes')]}]}
+
+📚 cloud_computing
+
+  Pregunta #22
+  Q: ¿Qué es Terraform?
+  [0] Un servicio de monitorización
+  [1] Un sistema de contenedores
+  [2] Herramienta de Infrastructure as Code (IaC) para provisionar recursos cloud de forma declarativa ✓
+  [3] Un gestor de DNS
+  Issue: {'type': 'Opciones de contextos diferentes', 'details': [{'option': 0, 'text': 'Un servicio de monitorización', 'reason': 'Diferente contexto temático', 'question_domains': [('programacion', 'control')], 'option_domains': [('programacion', 'lenguajes')]}, {'option': 1, 'text': 'Un sistema de contenedores', 'reason': 'Diferente contexto temático', 'question_domains': [('programacion', 'control')], 'option_domains': [('entornos_de_desarrollo', 'devops'), ('cloud_computing', 'virtualizacion'), ('programacion', 'lenguajes')]}, {'option': 3, 'text': 'Un gestor de DNS', 'reason': 'Diferente contexto temático', 'question_domains': [('programacion', 'control')], 'option_domains': [('sistemas_informaticos', 'redes')]}]}
+
+  Pregunta #58
+  Q: ¿Qué es el formato YAML y dónde se usa habitualmente?
+  [0] Un lenguaje de programación funcional
+  [1] Lenguaje de serialización de datos legible por humanos, usado en configuraciones (Docker, K8s, CI/CD) ✓
+  [2] Un tipo de base de datos
+  [3] Un protocolo de comunicación web
+  Issue: {'type': 'Opciones de contextos diferentes', 'details': [{'option': 0, 'text': 'Un lenguaje de programación funcional', 'reason': 'Diferente contexto temático', 'question_domains': [('programacion', 'control')], 'option_domains': [('sistemas_informaticos', 'redes'), ('programacion', 'lenguajes')]}, {'option': 1, 'text': 'Lenguaje de serialización de datos legible por humanos, usado en configuraciones (Docker, K8s, CI/CD)', 'reason': 'Diferente contexto temático', 'question_domains': [('programacion', 'control')], 'option_domains': [('entornos_de_desarrollo', 'devops'), ('programacion', 'lenguajes')]}, {'option': 2, 'text': 'Un tipo de base de datos', 'reason': 'Diferente contexto temático', 'question_domains': [('programacion', 'control')], 'option_domains': [('sistemas_informaticos', 'redes'), ('programacion', 'datos')]}, {'option': 3, 'text': 'Un protocolo de comunicación web', 'reason': 'Diferente contexto temático', 'question_domains': [('programacion', 'control')], 'option_domains': [('sistemas_informaticos', 'redes'), ('programacion', 'lenguajes')]}]}
+
+📚 empleabilidad
+
+  Pregunta #30
+  Q: ¿Qué es una ETT (Empresa de Trabajo Temporal)?
+  [0] Una empresa de formación profesional
+  [1] Una empresa de trabajo a distancia
+  [2] Empresa que cede trabajadores a otras empresas de forma temporal ✓
+  [3] Una agencia de empleo del Estado
+  Issue: {'type': 'Opciones de contextos diferentes', 'details': [{'option': 0, 'text': 'Una empresa de formación profesional', 'reason': 'Diferente contexto temático', 'question_domains': [('empleabilidad', 'soft_skills')], 'option_domains': [('sistemas_informaticos', 'redes'), ('empleabilidad', 'profesional'), ('programacion', 'control'), ('programacion', 'lenguajes')]}, {'option': 2, 'text': 'Empresa que cede trabajadores a otras empresas de forma temporal', 'reason': 'Diferente contexto temático', 'question_domains': [('empleabilidad', 'soft_skills')], 'option_domains': [('programacion', 'control'), ('programacion', 'lenguajes')]}, {'option': 3, 'text': 'Una agencia de empleo del Estado', 'reason': 'Diferente contexto temático', 'question_domains': [('empleabilidad', 'soft_skills')], 'option_domains': [('programacion', 'lenguajes')]}]}
+
+  Pregunta #51
+  Q: ¿Qué es una enfermedad profesional?
+  [0] Cualquier enfermedad que se padece siendo trabajador
+  [1] Enfermedad adquirida como consecuencia del trabajo en actividades listadas oficialmente ✓
+  [2] Una baja por enfermedad común
+  [3] Una lesión por accidente en el trabajo
+  Issue: {'type': 'Opciones de contextos diferentes', 'details': [{'option': 0, 'text': 'Cualquier enfermedad que se padece siendo trabajador', 'reason': 'Diferente contexto temático', 'question_domains': [('empleabilidad', 'profesional')], 'option_domains': [('programacion', 'lenguajes')]}, {'option': 1, 'text': 'Enfermedad adquirida como consecuencia del trabajo en actividades listadas oficialmente', 'reason': 'Diferente contexto temático', 'question_domains': [('empleabilidad', 'profesional')], 'option_domains': [('lenguaje_de_marcas', 'css'), ('empleabilidad', 'soft_skills'), ('programacion', 'datos'), ('programacion', 'lenguajes')]}, {'option': 2, 'text': 'Una baja por enfermedad común', 'reason': 'Diferente contexto temático', 'question_domains': [('empleabilidad', 'profesional')], 'option_domains': [('programacion', 'lenguajes')]}, {'option': 3, 'text': 'Una lesión por accidente en el trabajo', 'reason': 'Diferente contexto temático', 'question_domains': [('empleabilidad', 'profesional')], 'option_domains': [('entornos_de_desarrollo', 'ide'), ('lenguaje_de_marcas', 'css'), ('empleabilidad', 'soft_skills'), ('programacion', 'lenguajes')]}]}
+
+✅ Reporte detallado guardado: COHERENCIA_REPORT_V2.json

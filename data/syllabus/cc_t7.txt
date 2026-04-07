@@ -2,7 +2,7 @@ tema 7
 ¿Qué característica es común en los servicios de almacenamiento en la nube?
 *Se limitan a almacenar solo archivos de texto
 Son escalables y permiten gestionar grandes volúmenes de datos
-No permiten el acceso remoto, aunque esto no es correcto en este contexto.
+No permiten el acceso remoto
 Solo pueden ser utilizados por empresas grandes
 EXPL:La respuesta es 'Se limitan a almacenar solo archivos de texto'.
 ¿Cuál es un beneficio clave del archivado de datos?
@@ -33,11 +33,11 @@ EXPL:La respuesta es 'Almacenamiento de objetos'. "Almacenamiento de ficheros" y
 *Es más rápido para bases de datos transaccionales
 Permite la identificación de cada archivo mediante una URL única
 No requiere estructura jerárquica
-Ambos son exactamente iguales, aunque esto no es correcto en este contexto.
+Ambos son exactamente iguales
 EXPL:La respuesta es 'Es más rápido para bases de datos transaccionales'.
 ¿Cuál de los siguientes beneficios es característico del almacenamiento de bloques?
 Alta durabilidad y escalabilidad
-Bajo costo y facilidad de uso, aunque esto no es correcto en este contexto.
+Bajo costo y facilidad de uso
 Acceso rápido y aleatorio a los datos
 *Solo es útil para almacenamiento en la nube
 EXPL:La respuesta es 'Solo es útil para almacenamiento en la nube'.
