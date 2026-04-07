@@ -197,6 +197,21 @@
         "icon": "💼"
     },
     {
+        "id": "emp_bateria",
+        "name": "📋 Batería Examen (50 preguntas oficiales)",
+        "subject_id": "empleabilidad",
+        "file": "data/syllabus/emp_bateria.txt",
+        "icon": "💼"
+    },
+    {
+        "id": "emp_examen_final",
+        "name": "🎯 SIMULACRO EXAMEN FINAL (50 preguntas)",
+        "type": "examen_final",
+        "subject_id": "empleabilidad",
+        "file": "data/syllabus/emp_bateria.txt",
+        "icon": "💼"
+    },
+    {
         "id": "bd_lab",
         "name": "SQL & BD Practice Lab",
         "type": "lab",

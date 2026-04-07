@@ -678,27 +678,64 @@ function startFallosExam(subjectId) {
 // ─── SIMULACRO TEMARIO COMPLETO ─────────────────────────────────
 async function startExamenFinal(subjectId) {
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
-    // Get teoricas (from test bank) and practicas (from si_practicas.txt)
+    const isEmp = subjectId === 'empleabilidad';
+
+    // Empleabilidad: 50 preguntas de la batería oficial, SIN penalización
+    if (isEmp) {
+        const bateriaEntry = APP_STATE.syllabusExams.find(e => e.id === 'emp_bateria');
+        document.getElementById('exam-subject-label').textContent = `⏳ Preparando simulacro...`;
+        showView('exam');
+        document.getElementById('exam-engine-root').innerHTML = `<div style="text-align:center;padding:4rem;color:var(--text-secondary)"><p>Cargando 50 preguntas...</p></div>`;
+        try {
+            const res = await fetch(bateriaEntry.file + '?v=' + Date.now());
+            const text = await res.text();
+            const allQ = shuffleArray(parseTxtExam(text, 'emp_bateria'));
+            APP_STATE.currentExam = { ...subject, id: subjectId, name: 'Empleabilidad — Simulacro Examen Final' };
+            APP_STATE.currentUnit = null;
+            APP_STATE.isSyllabusMode = true;
+            APP_STATE.examMode = 'sin_penalizacion';
+            APP_STATE.examQuestions = allQ;
+            APP_STATE.currentQuestionIndex = 0;
+            APP_STATE.answers = [];
+            APP_STATE.timer = 3600; // 1 hora
+            document.getElementById('exam-subject-label').textContent = `🎯 ${subject.icon} Simulacro Examen Final — ${allQ.length} preguntas · Sin penalización`;
+            renderQuestion(); startTimer();
+        } catch(e) { alert('Error al cargar.'); showView('dashboard'); }
+        return;
+    }
+
+    // Resto de asignaturas: 30 teóricas + 30 prácticas (SI)
     const teoricasPool = QUESTION_POOL[subjectId] || [];
-    const practicasEntry = APP_STATE.syllabusExams.find(e => e.id === `${subjectId.replace('sistemas_informaticos','si')}_practicas` || e.id === 'si_practicas');
+    const practicasEntry = APP_STATE.syllabusExams.find(e => e.id === 'si_practicas');
 
     document.getElementById('exam-subject-label').textContent = `⏳ Preparando examen final...`;
     showView('exam');
     document.getElementById('exam-engine-root').innerHTML = `<div style="text-align:center;padding:4rem;color:var(--text-secondary)"><p>Cargando 60 preguntas...</p></div>`;
 
     try {
-        // 30 teoricas aleatorias del banco
         const teoricas = shuffleArray(teoricasPool).slice(0, 30);
-
-        // 30 practicas del archivo de casos practicos
         let practicas = [];
         if (practicasEntry) {
             const res = await fetch(practicasEntry.file + '?v=' + Date.now());
             const text = await res.text();
             practicas = shuffleArray(parseTxtExam(text, 'si_practicas')).slice(0, 30);
         }
+        const allQ = shuffleArray([...teoricas, ...practicas]);
+        if (allQ.length === 0) { alert('No se pudieron cargar preguntas.'); showView('dashboard'); return; }
 
-        // Combine: shuffle within each group, then interleave
+        APP_STATE.currentExam = { ...subject, id: subjectId, name: 'SI — Simulacro Examen Final' };
+        APP_STATE.currentUnit = null;
+        APP_STATE.isSyllabusMode = true;
+        APP_STATE.examMode = 'normal';
+        APP_STATE.examQuestions = allQ;
+        APP_STATE.currentQuestionIndex = 0;
+        APP_STATE.answers = [];
+        APP_STATE.timer = allQ.length * 90;
+
+        document.getElementById('exam-subject-label').textContent = `🎯 ${subject.icon} Simulacro Examen Final — ${allQ.length} preguntas (30T + ${practicas.length}P)`;
+        renderQuestion(); startTimer();
+    } catch(e) { console.error(e); alert('Error al cargar el examen final.'); showView('dashboard'); }
+}
         const allQ = shuffleArray([...teoricas, ...practicas]);
 
         if (allQ.length === 0) { alert('No se pudieron cargar preguntas.'); showView('dashboard'); return; }
@@ -1008,7 +1045,8 @@ function finishExam() {
         else if (a.selected !== -1) errores++;
     });
     const omitidas = total - APP_STATE.answers.length;
-    const puntuacionBruta = aciertos - errores / (N - 1);
+    const sinPenalizacion = APP_STATE.examMode === 'sin_penalizacion';
+    const puntuacionBruta = sinPenalizacion ? aciertos : aciertos - errores / (N - 1);
     const puntuacionFinal = Math.max(0, puntuacionBruta);
     const calificacion = (puntuacionFinal / total) * 10;
     const passed = calificacion >= 5;
@@ -1059,10 +1097,13 @@ function finishExam() {
                 <div class="stat-item"><span>📉 Penalización</span><strong>-${(errores/(N-1)).toFixed(2)}</strong></div>
             </div>
             <div class="formula-box">
-                <p><strong>Fórmula aplicada (DAW):</strong></p>
-                <p>Puntos = ${aciertos} − ${errores} ÷ ${N-1} = <strong>${puntuacionFinal.toFixed(2)}</strong></p>
-                <p>Nota = ${puntuacionFinal.toFixed(2)} ÷ ${total} × 10 = <strong>${calificacion.toFixed(2)}</strong></p>
-                <small>Blanco = 0 pts | Error = −1/${N-1} pts | Acierto = +1 pto</small>
+                <p><strong>Fórmula aplicada${sinPenalizacion ? ' (sin penalización)' : ' (DAW)'}:</strong></p>
+                ${sinPenalizacion
+                    ? `<p>Nota = ${aciertos} ÷ ${total} × 10 = <strong>${calificacion.toFixed(2)}</strong></p>
+                       <small>Sin penalización — cada acierto suma 1 punto</small>`
+                    : `<p>Puntos = ${aciertos} − ${errores} ÷ ${N-1} = <strong>${puntuacionFinal.toFixed(2)}</strong></p>
+                       <p>Nota = ${puntuacionFinal.toFixed(2)} ÷ ${total} × 10 = <strong>${calificacion.toFixed(2)}</strong></p>
+                       <small>Blanco = 0 pts | Error = −1/${N-1} pts | Acierto = +1 pto</small>`}
             </div>
             <div class="feedback-final">
                 ${passed ? '<h3>¡Enhorabuena! Has aprobado. 🎉</h3>' : '<h3>Necesitas repasar un poco más. 💪</h3>'}
