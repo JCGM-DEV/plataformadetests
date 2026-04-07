@@ -25,6 +25,51 @@ let learningChart = null;
 // ─── STORAGE KEYS ───────────────────────────────────────────────
 const HISTORY_KEY   = 'exam_history_v2';
 const FALLOS_KEY    = 'fallos_v2';
+const SR_KEY        = 'spaced_rep_v1';   // repetición espaciada
+const MASTERY_KEY   = 'mastery_v1';      // preguntas dominadas (3+ aciertos seguidos)
+
+// ─── REPETICIÓN ESPACIADA (SM-2 simplificado) ───────────────────
+function getSR() { return JSON.parse(localStorage.getItem(SR_KEY) || '{}'); }
+
+function updateSR(conceptId, correct) {
+    const sr = getSR();
+    if (!sr[conceptId]) sr[conceptId] = { interval: 1, easiness: 2.5, streak: 0, nextReview: 0 };
+    const card = sr[conceptId];
+    if (correct) {
+        card.streak++;
+        card.interval = card.streak === 1 ? 1 : card.streak === 2 ? 3 : Math.round(card.interval * card.easiness);
+        card.easiness = Math.max(1.3, card.easiness + 0.1);
+    } else {
+        card.streak = 0;
+        card.interval = 1;
+        card.easiness = Math.max(1.3, card.easiness - 0.2);
+    }
+    card.nextReview = Date.now() + card.interval * 24 * 60 * 60 * 1000;
+    localStorage.setItem(SR_KEY, JSON.stringify(sr));
+}
+
+function getSRPriority(conceptId) {
+    const sr = getSR()[conceptId];
+    if (!sr) return 1; // new card = high priority
+    if (Date.now() >= sr.nextReview) return 1; // due for review
+    return 0; // not due yet
+}
+
+// ─── MASTERY (preguntas dominadas) ──────────────────────────────
+function getMastery() { return JSON.parse(localStorage.getItem(MASTERY_KEY) || '{}'); }
+
+function updateMastery(conceptId, correct) {
+    const m = getMastery();
+    if (!m[conceptId]) m[conceptId] = { streak: 0 };
+    if (correct) { m[conceptId].streak++; }
+    else { m[conceptId].streak = 0; }
+    localStorage.setItem(MASTERY_KEY, JSON.stringify(m));
+}
+
+function isMastered(conceptId) {
+    const m = getMastery()[conceptId];
+    return m && m.streak >= 3;
+}
 
 // ─── HISTORY ────────────────────────────────────────────────────
 function getHistory() { return JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]'); }
@@ -127,6 +172,7 @@ function renderSubjects() {
             </div>
             <div class="card-actions-row">
                 <button class="btn-flashcard" onclick="startFlashcard('${subject.id}')">⚡ Flashcards</button>
+                <button class="btn-solo-nosé" onclick="startExam('${subject.id}', null, 'solo_no_se')" title="Solo preguntas no dominadas">🎯 Solo lo que no sé</button>
                 ${fallosCount > 0 ? `<button class="btn-fallos" onclick="startFallosExam('${subject.id}')">❌ Repasar fallos (${fallosCount})</button>` : ''}
             </div>
             ${unitsHTML}
@@ -489,11 +535,27 @@ function renderStats() {
 }
 
 // ─── EXAM ENGINE ────────────────────────────────────────────────
-function startExam(subjectId, unitId = null) {
+function startExam(subjectId, unitId = null, mode = 'normal') {
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
     let pool = QUESTION_POOL[subjectId] || [];
     if (unitId !== null) pool = pool.filter(q => q.unit === unitId);
     if (pool.length === 0) { alert('No hay preguntas disponibles para este tema.'); return; }
+
+    // Mode: 'solo_no_se' — exclude mastered questions
+    if (mode === 'solo_no_se') {
+        const unmastered = pool.filter(q => !isMastered(q.concept_id));
+        if (unmastered.length === 0) {
+            alert('¡Has dominado todas las preguntas de este tema! 🏆\nPrueba el simulacro completo para repasar.');
+            return;
+        }
+        pool = unmastered;
+    }
+
+    // Mode: 'espaciada' — prioritize SR due cards
+    if (mode === 'espaciada') {
+        const due = pool.filter(q => getSRPriority(q.concept_id) === 1);
+        if (due.length >= 5) pool = due;
+    }
 
     const testSize = unitId !== null ? pool.length : Math.min(20, pool.length);
     const lastIds = JSON.parse(localStorage.getItem(`last_test_${subjectId}`) || '[]');
@@ -501,6 +563,7 @@ function startExam(subjectId, unitId = null) {
     APP_STATE.currentExam = subject;
     APP_STATE.currentUnit = unitId;
     APP_STATE.isSyllabusMode = false;
+    APP_STATE.examMode = mode;
     APP_STATE.examQuestions = getSmartRandom(pool, testSize, lastIds);
     APP_STATE.currentQuestionIndex = 0;
     APP_STATE.answers = [];
@@ -508,7 +571,85 @@ function startExam(subjectId, unitId = null) {
 
     localStorage.setItem(`last_test_${subjectId}`, JSON.stringify(APP_STATE.examQuestions.map(q => q.concept_id)));
 
-    document.getElementById('exam-subject-label').textContent = `${subject.icon} ${subject.name}${unitId ? ' — Tema ' + unitId : ''}`;
+    const modeLabel = mode === 'solo_no_se' ? ' — Solo lo que no sé' : mode === 'espaciada' ? ' — Repaso espaciado' : '';
+    document.getElementById('exam-subject-label').textContent = `${subject.icon} ${subject.name}${unitId ? ' — Tema ' + unitId : ''}${modeLabel}`;
+
+    // Show quick-read panel before starting if unit is specified
+    if (unitId !== null && mode === 'normal') {
+        showQuickRead(subjectId, unitId, () => { showView('exam'); renderQuestion(); startTimer(); });
+    } else {
+        showView('exam');
+        renderQuestion();
+        startTimer();
+    }
+}
+
+// ─── LECTURA RÁPIDA (Feature 6) ─────────────────────────────────
+const QUICK_READ_TIPS = {
+    sistemas_informaticos: {
+        1: ['Topologías: bus (cable único), estrella (nodo central), anillo, malla', 'Hardware = físico, Software = lógico', 'Periféricos: entrada (teclado), salida (monitor), mixtos (táctil)', 'Medios guiados (cable) vs no guiados (WiFi)', 'Redes: LAN (local), WAN (amplia), MAN (metropolitana)'],
+        2: ['SO gestiona hardware y software', 'Virtualización: varias VMs en un servidor físico', 'Particionado: dividir disco en secciones lógicas', 'Arquitectura monolítica: simple y eficiente', 'Aplicaciones de seguridad: antivirus, firewall'],
+        3: ['MBR vs GPT: GPT soporta >2TB y más particiones', 'Windows: C:\\Windows, C:\\Users', 'Linux: /, /bin, /etc, /home, /var', 'SSD más resistente a golpes que HDD', 'DVD estándar: 4,7 GB'],
+        4: ['net user: crear/verificar usuarios en Windows', 'net group: gestionar grupos', 'Contraseña segura: mayúsculas + minúsculas + números + símbolos', 'Solo administradores pueden habilitar/deshabilitar cuentas', 'Permisos: controlar acceso a recursos'],
+        5: ['OSPF: protocolo de enrutamiento dinámico', 'WLAN: red inalámbrica de área local', 'IP: identificador único de dispositivo en red', 'route print: ver tabla de enrutamiento', 'Configuración estática: mayor seguridad y control'],
+        6: ['RBAC: control de acceso basado en roles', 'ACL: lista de control de acceso', 'Active Directory: gestión de usuarios Microsoft', 'MFA: dos o más formas de identificación', 'OpenSSL: certificados digitales y claves de cifrado'],
+        7: ['EaseUS: recuperación de datos', 'Microsoft Word: procesador de texto más usado', 'SO: controla hardware y proporciona interfaz', 'IDEs: editor + depurador + compilador integrados', 'Antivirus: detecta y elimina malware'],
+    },
+    programacion: {
+        1: ['Array NO es tipo primitivo (es objeto)', 'Algoritmo → Programa: lógica → implementación', 'Debugger: analiza ejecución paso a paso', 'Algoritmo: finito, determinista, eficaz', 'Estructura iterativa: para repetir instrucciones'],
+        2: ['void: método no devuelve valor', 'Clase = plantilla, Objeto = instancia', 'Constructor: inicializa atributos al crear objeto', 'Encapsulamiento: atributos privados + métodos públicos', 'Composición: partes no existen sin el todo'],
+        3: ['Orden: declarar → inicializar → utilizar', 'Punto y coma: fin de sentencia', 'Cast double→int: truncamiento (no redondeo)', 'Paréntesis: mayor prioridad en expresiones', 'nombreUsuario: identificador válido (camelCase)'],
+    },
+    bases_de_datos: {
+        1: ['CSV: estructura tabular fija', 'Entidad: conjunto de objetos con mismos atributos', 'SQL: lenguaje de la mayoría de BD relacionales', 'NoSQL: datos semiestructurados', 'BD distribuidas: reducen cuellos de botella'],
+        2: ['PK compuesta: más de una columna', 'ROLLBACK: cancela cambios de transacción', 'Vista: virtual, se reconstruye al vuelo', 'DROP TABLE: elimina tabla', 'Roles: grupos de usuarios con mismos privilegios'],
+    }
+};
+
+function showQuickRead(subjectId, unitId, onStart) {
+    const tips = QUICK_READ_TIPS[subjectId]?.[unitId];
+    if (!tips || tips.length === 0) { onStart(); return; }
+
+    const subject = APP_STATE.subjects.find(s => s.id === subjectId);
+    showView('exam');
+    document.getElementById('exam-subject-label').textContent = `📖 Repaso rápido — ${subject?.name} Tema ${unitId}`;
+    document.getElementById('exam-timer').textContent = '';
+
+    document.getElementById('exam-engine-root').innerHTML = `
+        <div class="quickread-container">
+            <div class="quickread-header">
+                <span class="quickread-badge">📖 Lectura rápida</span>
+                <h2>${subject?.icon} ${subject?.name} — Tema ${unitId}</h2>
+                <p>Repasa estos conceptos clave antes de empezar</p>
+            </div>
+            <ul class="quickread-list">
+                ${tips.map(tip => `<li class="quickread-item"><span class="quickread-dot">▸</span>${tip}</li>`).join('')}
+            </ul>
+            <div class="quickread-actions">
+                <button class="next-btn" onclick="(${onStart.toString()})()">¡Empezar examen →</button>
+                <button class="btn-secondary" onclick="(${onStart.toString()})()">Saltar lectura</button>
+            </div>
+        </div>`;
+}
+
+// ─── MODO EXAMEN REAL (Feature 2) ───────────────────────────────
+function startExamReal(subjectId, totalPreguntas = 60) {
+    const subject = APP_STATE.subjects.find(s => s.id === subjectId);
+    const pool = QUESTION_POOL[subjectId] || [];
+    if (pool.length === 0) { alert('No hay preguntas disponibles.'); return; }
+
+    const questions = shuffleArray(pool).slice(0, Math.min(totalPreguntas, pool.length));
+
+    APP_STATE.currentExam = subject;
+    APP_STATE.currentUnit = null;
+    APP_STATE.isSyllabusMode = false;
+    APP_STATE.examMode = 'real';
+    APP_STATE.examQuestions = questions;
+    APP_STATE.currentQuestionIndex = 0;
+    APP_STATE.answers = [];
+    APP_STATE.timer = totalPreguntas * 60; // 1 min por pregunta = tiempo real
+
+    document.getElementById('exam-subject-label').textContent = `🎯 ${subject.icon} EXAMEN REAL — ${questions.length} preguntas · Sin feedback`;
     showView('exam');
     renderQuestion();
     startTimer();
@@ -809,6 +950,12 @@ function handleResponse(index) {
     // Save answer using original correct for history consistency
     APP_STATE.answers.push({ correct: correctIndex, selected: index, question: q });
 
+    // Update spaced repetition and mastery
+    if (q.concept_id) {
+        updateSR(q.concept_id, isCorrect);
+        updateMastery(q.concept_id, isCorrect);
+    }
+
     document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
     document.querySelectorAll('.option-btn')[index].classList.add(isCorrect ? 'correct' : 'incorrect');
     if (!isCorrect) {
@@ -835,6 +982,10 @@ function handleResponse(index) {
     }
     document.getElementById('feedback-area').classList.remove('hidden');
     document.getElementById('next-control').classList.remove('hidden');
+    // In 'real' exam mode, hide explanation and auto-advance after 1s
+    if (APP_STATE.examMode === 'real') {
+        document.getElementById('feedback-area').classList.add('hidden');
+    }
 }
 
 function nextQuestion() {
@@ -868,6 +1019,35 @@ function finishExam() {
 
     saveExamResult(APP_STATE.currentExam.id, examName, calificacion, aciertos, errores, omitidas, total);
 
+    // ── Build post-exam summary (Feature 5) ─────────────────────
+    const failedQuestions = APP_STATE.answers.filter(a => a.selected !== a.correct);
+    const failedByTema = {};
+    failedQuestions.forEach(a => {
+        const tema = a.question.unit || 'General';
+        if (!failedByTema[tema]) failedByTema[tema] = [];
+        failedByTema[tema].push(a.question);
+    });
+
+    const worstTema = Object.entries(failedByTema).sort((a,b) => b[1].length - a[1].length)[0];
+    const pdfInfo = worstTema ? PDF_MAP[APP_STATE.currentExam.id]?.[worstTema[0]] : null;
+
+    const summaryHTML = failedQuestions.length > 0 ? `
+        <div class="post-exam-summary">
+            <h3>📊 Resumen de lo que debes repasar</h3>
+            ${worstTema ? `<div class="worst-tema-summary">
+                <span>⚠️ Tema con más fallos: <strong>Tema ${worstTema[0]}</strong> (${worstTema[1].length} errores)</span>
+                ${pdfInfo ? `<a href="${pdfInfo.path}" target="_blank" class="pdf-link-btn">📄 Abrir PDF Tema ${worstTema[0]} →</a>` : ''}
+            </div>` : ''}
+            <div class="failed-concepts">
+                ${failedQuestions.slice(0, 4).map(a => `
+                    <div class="failed-concept-item">
+                        <span class="failed-q">❌ ${esc(a.question.question.substring(0, 70))}${a.question.question.length > 70 ? '...' : ''}</span>
+                        <span class="failed-correct">✅ ${esc((a.question._shuffledOptions || a.question.options)[a.correct])}</span>
+                    </div>`).join('')}
+                ${failedQuestions.length > 4 ? `<p style="color:var(--text-secondary);font-size:0.8rem;text-align:center">+${failedQuestions.length - 4} más en la sección de Fallos</p>` : ''}
+            </div>
+        </div>` : `<div class="post-exam-summary perfect"><h3>🏆 ¡Perfecto! Sin errores en este examen.</h3></div>`;
+
     document.getElementById('exam-engine-root').innerHTML = `
         <div class="results-container">
             <h2>Resultado del Examen</h2>
@@ -887,9 +1067,11 @@ function finishExam() {
             <div class="feedback-final">
                 ${passed ? '<h3>¡Enhorabuena! Has aprobado. 🎉</h3>' : '<h3>Necesitas repasar un poco más. 💪</h3>'}
             </div>
+            ${summaryHTML}
             <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
                 <button class="next-btn" onclick="exitExamToHome()">🏠 Volver al Inicio</button>
                 <button class="next-btn" style="background:var(--secondary-color)" onclick="startExam('${APP_STATE.currentExam.id}'${APP_STATE.currentUnit ? ', ' + APP_STATE.currentUnit : ''})">🔄 Repetir</button>
+                ${APP_STATE.currentExam.id ? `<button class="next-btn" style="background:#ef4444" onclick="startExam('${APP_STATE.currentExam.id}'${APP_STATE.currentUnit ? ', ' + APP_STATE.currentUnit : ''}, 'solo_no_se')">🎯 Solo lo que no sé</button>` : ''}
             </div>
         </div>`;
 }
