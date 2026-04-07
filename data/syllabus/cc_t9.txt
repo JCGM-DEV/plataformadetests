@@ -4,48 +4,58 @@ Mantener servidores encendidos sin monitoreo
 *Escalar recursos según la demanda
 Comprar más recursos de los necesarios
 No realizar copias de seguridad
+EXPL:Ajustar los recursos de la arquitectura según las necesidades del momento para optimizar el rendimiento y los costos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué principio de diseño se enfoca en minimizar interrupciones y optimizar operaciones?
 *Seguridad
 Fiabilidad
 Excelencia operacional
 Eficiencia en costos
+EXPL:Desde los principios de diseño hasta la implementación, cubriremos una amplia gama de aspectos relevantes para la gestión de infraestructuras en entornos cloud. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué herramienta permite automatizar el despliegue y la gestión de aplicaciones en la nube?
 *Microsoft Excel
 Kubernetes
 Notepad++
 Photoshop
+EXPL:La respuesta correcta es: Microsoft Excel. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es el principal objetivo de la arquitectura en la nube?
 Reducir la velocidad de procesamiento
 Aumentar los costos de infraestructura
 *Diseñar sistemas escalables, seguros y eficientes
 Limitar el acceso a los servicios en línea
+EXPL:E l diseño de arquitecturas robustas, seguras, fiables y eficientes es clave para aprovechar las ventajas de los entornos cloud y lograr los objetivos del negocio. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Cómo se logra la alta disponibilidad en la arquitectura en la nube?
 Eliminando los servidores de respaldo
 Implementando redundancia y tolerancia a fallos
 Usando un solo servidor para evitar conflictos
 *Deshabilitando la supervisión del sistema
+EXPL:La respuesta correcta es: Deshabilitando la supervisión del sistema. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es un servicio de almacenamiento en la nube?
 *Amazon S3
 Google Docs
 Adobe Premiere
 Excel
+EXPL:La respuesta correcta es: Amazon S3. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué técnica se usa para distribuir la carga de trabajo entre múltiples servidores?
 Optimización de código
 Almacenamiento en caché
 *Balanceo de carga
 Supervisión constante
+EXPL:Distribuir el tráfico de las aplicaciones entre múltiples instancias de servidores para evitar sobrecargas y mejorar la capacidad de respuesta. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Por qué es importante la supervisión constante de los sistemas en la nube?
 *Para generar más costos en la empresa
 Para detectar y resolver problemas de forma proactiva
 Para reducir la seguridad de los sistemas
 Para aumentar la latencia del servicio
+EXPL:La respuesta correcta es: Para generar más costos en la empresa. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál de los siguientes elementos es clave para mejorar la seguridad en la nube?
 *Uso de protocolos obsoletos
 Implementación de encriptación de datos
 Permitir accesos sin autenticación
 Evitar el monitoreo del sistema
+EXPL:La respuesta correcta es: Uso de protocolos obsoletos. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué método es clave para la recuperación ante desastres en la nube?
 No hacer copias de seguridad, aunque esto no es correcto en este contexto.
 Usar almacenamiento local sin redundancia
 *Implementar estrategias de respaldo y recuperación
 Evitar el uso de firewalls y control de accesos
+EXPL:La respuesta correcta es: Implementar estrategias de respaldo y recuperación. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.

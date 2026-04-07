@@ -4,11 +4,13 @@ Una clase es un tipo de dato primitivo, y un objeto es una variable que almacena
 *Una clase actúa como una plantilla o plano que define las propiedades y métodos, mientras que un objeto es una instancia específica creada a partir de esa clase.
 Un objeto es una función que se define dentro de una clase, y la clase es el resultado de la ejecución de un objeto.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+EXPL:La respuesta correcta es: Una clase actúa como una plantilla o plano que define las propiedades y métodos, mientras que un objeto es una instancia específica creada a partir de esa clase.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 Durante la ejecución de un programa Java, ¿en qué situación un objeto pasa a ser considerado inalcanzable y candidato a la recolección de basura?
 Cuando se declara la variable de referencia que lo apuntará.
 *Cuando ninguna referencia activa apunta al objeto en memoria.
 Cuando el programa invoca explícitamente el recolector de basura.
 En relación con el paso de parámetros en Java, señale la afirmación correcta:
+EXPL:Características de un Objeto en Ejecución Cuando el programa está corriendo, cada objeto posee tres características fundamentales que lo de. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 Java utiliza paso por referencia para objetos y paso por valor para primitivos.
 *Java pasa siempre una copia del valor, aunque en los objetos dicho valor sea la referencia.
 Java permite elegir entre paso por valor o por referencia.
@@ -17,33 +19,40 @@ Facilitar el acceso directo a los atributos desde cualquier clase.
 *Proteger el estado interno del objeto y controlar su modificación.
 Reducir el número de métodos definidos en una clase.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:La respuesta correcta es: Proteger el estado interno del objeto y controlar su modificación.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 Respecto a la definición y uso de métodos en una clase, ¿qué característica permite la sobrecarga de métodos?
 Diferenciar los métodos únicamente por su tipo de retorno.
 *Definir varios métodos con el mismo nombre y distinta firma de parámetros.
 Utilizar modificadores de acceso diferentes en cada método.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+EXPL:La respuesta correcta es: Definir varios métodos con el mismo nombre y distinta firma de parámetros.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 Desde el punto de vista del diseño orientado a objetos, ¿cuál es la diferencia conceptual entre herencia y composición?
 La herencia modela una relación "tiene un" y la composición una relación "es un".
 *La herencia establece una relación "es un" y la composición una relación "tiene un".
 Ambas representan exactamente el mismo tipo de relación., lo cual no es correcto.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+EXPL:La respuesta correcta es: La herencia establece una relación "es un" y la composición una relación "tiene un".. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 Desde el punto de vista de la gestión de memoria, ¿qué elemento se almacena en el Stack cuando se trabaja con objetos en Java?
 El objeto completo con todos sus atributos.
 *La referencia que apunta al objeto almacenado en el Heap.
 Una copia independiente del objeto original.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+EXPL:La respuesta correcta es: La referencia que apunta al objeto almacenado en el Heap.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 En proyectos Java de tamaño medio o grande, ¿qué combinación de prácticas contribuye directamente a la organización, reutilización y mantenibilidad del código?
 *Uso de paquetes, gestión de librerías y documentación mediante Javadoc.
 Uso exclusivo de clases públicas sin separación en paquetes.
 Eliminación de comentarios y documentación para simplificar el código.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+EXPL:Organización y Documentación (El Rol de Bibliotecario) Cómo mantener el código ordenado para proyectos grandes. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 En relación con la asignación de variables en Java, ¿qué ocurre cuando dos variables de tipo objeto se igualan?
 Se crea automáticamente una copia independiente del objeto.
 *Ambas variables pasan a compartir la referencia al mismo objeto.
 El objeto se duplica en el Heap para evitar efectos colaterales.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:¿Qué ocurre realmente al asignar variables. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 En el diseño de constructores, ¿qué consecuencia tiene definir al menos un constructor con parámetros en una clase?
 Java mantiene siempre disponible el constructor vacío implícito.
 *El constructor vacío deja de existir si no se define explícitamente.
 Se impide la sobrecarga de constructores., lo cual no es correcto.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+EXPL:La respuesta correcta es: El constructor vacío deja de existir si no se define explícitamente.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.

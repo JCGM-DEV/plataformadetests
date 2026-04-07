@@ -4,57 +4,67 @@ SELECT
 *FROM
 WHERE
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+EXPL:FROM Indica la tabla o vista de la que se extraen los datos; en caso de múltiples tablas, se emplean cláusulas JOIN. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 
 ¿Qué operador se utiliza en la cláusula WHERE para filtrar por un rango de valores?
 LIKE
 IN
 *BETWEEN
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:La respuesta correcta es: BETWEEN. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 
 ¿Para qué sirve el modificador DISTINCT en una sentencia SELECT?
 Para ordenar los resultados de forma alfabética.
 *Para eliminar las filas duplicadas en el conjunto de resultados.
 Para filtrar registros que contengan valores nulos.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+EXPL:Consultas para extraer información: La sentencia SELECT 2. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 
 ¿Cuál es la función de agregado que devuelve el valor máximo de una columna?
 SUM()
 *MAX()
 AVG()
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:Consultas de resumen y funciones de agregado Definición Una consulta de resumen en SQL es una consulta que se utiliza para calcular una operación de resumen sobre un conjunto de valores en una o varias columnas de una tabla. Las otras opciones son incorrectas porque describen conceptos diferentes o 
 
 ¿Qué diferencia principal hay entre las cláusulas WHERE y HAVING?
 WHERE se aplica a los grupos y HAVING a las filas individuales., lo cual no es correcto.
 *WHERE filtra registros antes de la agrupación; HAVING filtra grupos después de aplicarse GROUP BY.
 Ambas cláusulas son idénticas y se pueden usar indistintamente., lo cual no es correcto.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:Las funciones de agregado se pueden combinar con otras cláusulas SQL como GROUP BY y HAVING, para realizar cálculos agregados en conjuntos específicos de datos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 
 ¿Qué tipo de JOIN devuelve todos los registros de la tabla de la izquierda, aunque no tengan correspondencia en la derecha?
 INNER JOIN
 *LEFT JOIN
 RIGHT JOIN
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+EXPL:1 Composición externa izquierda En una composición externa izquierda se devuelven todas las filas o registros de la tabla izquierda y solo las filas de la tabla derecha que tienen una coincidencia en la tabla izquierda. Las otras opciones son incorrectas porque describen conceptos diferentes o carac
 
 En una composición interna (INNER JOIN), ¿qué ocurre con las filas de la tabla A que no coinciden con ninguna de la tabla B?
 Aparecen en el resultado con valores NULL.
 *Se excluyen del conjunto de resultados.
 Detienen la ejecución de la consulta por error de integridad.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+EXPL:La respuesta correcta es: Se excluyen del conjunto de resultados.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 
 ¿Qué palabra clave se usa para comprobar si un valor existe dentro de una lista devuelta por una subconsulta?
 LIKE
 EXISTS
 *IN
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+EXPL:La respuesta correcta es: IN. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 
 En Oracle, ¿qué combinación de cláusulas se utiliza para realizar consultas jerárquicas?
 GROUP BY y HAVING.
 *START WITH y CONNECT BY.
 UNION e INTERSECT.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+EXPL:Además de la selección básica de columnas, la sentencia SELECT permite realizar una variedad de operaciones, como la ordenación de resultados, la filtración de datos utilizando cláusulas WHERE, la agrupación de datos utilizando la cláusula GROUP BY, y la realización de cálculos utilizando funciones 
 
 ¿Qué operación de conjuntos combina los resultados de dos consultas eliminando los duplicados automáticamente?
 *UNION
 INTERSECT
 EXCEPT (o MINUS)
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+EXPL:Unión: Una operación que combina dos o más conjuntos de resultados en un solo conjunto de resultados que contiene todas las filas de cada conjunto, eliminando las duplicadas. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntad

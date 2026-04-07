@@ -818,15 +818,20 @@ function handleResponse(index) {
         document.getElementById('feedback-area').innerHTML = `
             <div class="explanation-box">
                 <strong>❌ Incorrecto</strong>
-                <p>Respuesta correcta: <em>${esc(displayOptions[correctIndex])}</em></p>
+                <p>La respuesta correcta es: <em>${esc(displayOptions[correctIndex])}</em></p>
+                ${q.explanation && q.explanation !== 'Pregunta del temario oficial.' ? `
                 <hr style="border-color:rgba(255,255,255,0.07);margin:0.75rem 0">
-                <p>${esc(q.explanation)}</p>
+                <p class="expl-why"><span class="expl-label">¿Por qué?</span> ${esc(q.explanation)}</p>` : ''}
             </div>`;
     } else {
         // Remove from fallos if answered correctly
         if (APP_STATE.currentExam?.id) removeFallo(APP_STATE.currentExam.id, q.concept_id);
         document.getElementById('feedback-area').innerHTML = `
-            <div class="explanation-box correct-box"><strong>✅ ¡Correcto!</strong></div>`;
+            <div class="explanation-box correct-box">
+                <strong>✅ ¡Correcto!</strong>
+                ${q.explanation && q.explanation !== 'Pregunta del temario oficial.' ? `
+                <p class="expl-why" style="margin-top:0.5rem"><span class="expl-label">¿Por qué?</span> ${esc(q.explanation)}</p>` : ''}
+            </div>`;
     }
     document.getElementById('feedback-area').classList.remove('hidden');
     document.getElementById('next-control').classList.remove('hidden');
@@ -910,9 +915,8 @@ function isLikelyQuestion(text) {
            (t.endsWith(':') && t.length > 20);
 }
 
-// ─── TXT PARSER — formato único: pregunta con ?, opciones, *correcta ───────
+// ─── TXT PARSER — formato único: pregunta con ?, opciones, *correcta, EXPL: ──
 function parseTxtExam(text, syllabusId) {
-    // Strip tema headers and normalize line endings
     const lines = text
         .replace(/\r\n/g, '\n')
         .split('\n')
@@ -924,45 +928,37 @@ function parseTxtExam(text, syllabusId) {
 
     while (i < lines.length) {
         const line = lines[i];
-
-        // Only start a question on a line that contains '?'
-        if (!line.includes('?') && !line.startsWith('¿')) {
-            i++; continue;
-        }
+        if (!line.includes('?') && !line.startsWith('¿')) { i++; continue; }
 
         const questionText = line.startsWith('*') ? line.slice(1).trim() : line;
         i++;
 
         const options = [];
         let correctIndex = 0;
+        let explanation = '';
 
         while (i < lines.length && options.length < 4) {
             const opt = lines[i];
-
-            // Stop collecting options if this line is a new question
+            if (opt.startsWith('EXPL:')) { explanation = opt.slice(5).trim(); i++; break; }
             if ((opt.includes('?') || opt.startsWith('¿')) && options.length >= 2) break;
-
-            if (opt.startsWith('*')) {
-                correctIndex = options.length;
-                options.push(opt.slice(1).trim());
-            } else {
-                options.push(opt);
-            }
+            if (opt.startsWith('*')) { correctIndex = options.length; options.push(opt.slice(1).trim()); }
+            else options.push(opt);
             i++;
+        }
+        // Check if next line is explanation
+        if (i < lines.length && lines[i].startsWith('EXPL:')) {
+            explanation = lines[i].slice(5).trim(); i++;
         }
 
         if (options.length >= 2) {
             questions.push({
                 concept_id: `${syllabusId}_q${questions.length}`,
-                question: questionText,
-                options,
-                correct: correctIndex,
-                explanation: 'Pregunta del temario oficial.',
+                question: questionText, options, correct: correctIndex,
+                explanation: explanation || 'Pregunta del temario oficial.',
                 unit: null
             });
         }
     }
-
     return questions;
 }
 

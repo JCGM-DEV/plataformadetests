@@ -4,11 +4,13 @@ Las etiquetas XML no son sensibles a las mayúsculas y minúsculas, lo que permi
 Es posible cerrar una etiqueta exterior antes de que todos los elementos anidados dentro de ella hayan sido cerrados, siempre que el documento tenga un elemento raíz único.
 *Los elementos vacíos pueden representarse mediante una etiqueta de inicio seguida inmediatamente por una de cierre (ej. <hr></hr>), o con una etiqueta única con "/>" al final (ej. <hr />).
 Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
+EXPL:La respuesta correcta es: Los elementos vacíos pueden representarse mediante una etiqueta de inicio seguida inmediatamente por una de cierre (ej. <hr></hr>), o con una etiqueta única con "/>" al final (ej. <hr />).. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué característica debe cumplir un documento XML para ser considerado válido, además de estar bien formado?
 Debe ser compatible con cualquier navegador web sin necesidad de hojas de estilo o transformaciones adicionales para su visualización.
 Debe contener obligatoriamente un prólogo con la declaración XML que incluya la versión, la codificación y el atributo standalone="yes".
 *Debe ajustarse a las restricciones estructurales y de contenido definidas en una Declaración de Tipo de Documento (DTD) o un Esquema XML (XSD) asociado.
 Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
+EXPL:La respuesta correcta es: Debe ajustarse a las restricciones estructurales y de contenido definidas en una Declaración de Tipo de Documento (DTD) o un Esquema XML (XSD) asociado.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál de las siguientes afirmaciones sobre JSON es correcta?
 JSON es un lenguaje de marcado extensible diseñado principalmente para la elaboración de documentos complejos con una estructura jerárquica basada en etiquetas.
 Los documentos JSON suelen ser más difíciles de interpretar y comprender por las personas en comparación con los documentos XML debido a su sintaxis técnica.
@@ -19,6 +21,7 @@ Ninguna de las anteriores opciones es completamente correcta en este contexto.
 <dato-2023>
 *<XML_data>
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+EXPL:Los espacios de nombres se utilizan para evitar conflictos en la identificación de elementos o atributos que tengan el mismo nombre en diferentes vocabularios. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 Al abrir un documento XML directamente en un navegador web sin asociarle ninguna tecnología adicional (como CSS o XSLT), ¿cómo se presentará la información al usuario?
 El navegador intentará aplicar un conjunto de estilos por defecto para hacer el documento visualmente atractivo y navegable.
 Se mostrará un mensaje de error indicando que el documento no tiene un formato de presentación válido y requiere un estilo.

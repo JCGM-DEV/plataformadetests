@@ -4,48 +4,58 @@ Número entero.
 Valor booleano.
 *Array o arreglo.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:1 Definición de lenguaje de programación Un lenguaje de programación es un idioma formal diseñado para comunicar instrucciones a una máquina, particularmente a una computadora. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo pregunt
 Aunque a menudo se confunden, los conceptos de algoritmo y programa no son equivalentes. ¿Cuál de las siguientes afirmaciones describe correctamente la relación entre ambos?
 *El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación.
 El programa es independiente del lenguaje y el algoritmo depende del lenguaje utilizado.
 Ambos conceptos son idénticos y se diferencian solo por el formato en el que se escriben.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:6 Relación entre algoritmo y programa A menudo, los estudiantes principiantes confunden estos dos términos o piensan que son lo mismo. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 Durante el desarrollo de un programa, pueden aparecer errores que no impiden la compilación pero provocan resultados incorrectos. ¿Cuál es la función principal de un depurador (debugger) dentro de un entorno de desarrollo?
 Detectar errores de sintaxis antes de ejecutar el programa.
 Ejecutar el programa de forma más rápida y optimizada.
 *Analizar la ejecución paso a paso para localizar errores lógicos.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:Los procesadores de texto añaden caracteres ocultos de formato que el compilador de Java no entenderá, provocando errores inmediatos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 Antes de escribir un programa, es fundamental diseñar correctamente el algoritmo que resolverá el problema. Para que una secuencia de pasos pueda considerarse un algoritmo válido, debe cumplir una serie de características. ¿Cuál de las siguientes es una de ellas?
 Debe poder ejecutarse directamente por la máquina sin traducción.
 *Debe ser finito y finalizar tras un número limitado de pasos.
 Debe estar escrito obligatoriamente en un lenguaje de programación concreto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:Del mismo modo que los humanos usamos el español o el inglés para comunicarnos entre nosotros, los programadores utilizan estos lenguajes para describir los algoritmos que la máquina debe ejec. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no correspo
 Todo programa informático sigue un modelo básico de funcionamiento que permite transformar datos en información útil. Dentro del modelo Entrada–Proceso–Salida, ¿qué elemento se considera el núcleo del programa?
 Los datos que introduce el usuario mediante dispositivos de entrada.
 *El algoritmo que procesa los datos y aplica la lógica del programa.
 El sistema que muestra el resultado final al usuario.
 Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
+EXPL:El Modelo de Procesamiento de Información (Entrada-Proceso-Salida) El objetivo más básico de un program. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 Las estructuras de control permiten modificar el flujo normal de ejecución de un programa. ¿Qué tipo de estructura se utiliza cuando es necesario repetir varias veces un conjunto de instrucciones mientras se cumpla una condición?
 Estructura secuencial.
 Estructura selectiva.
 *Estructura iterativa.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:Estructuras de Repetición: Para lograr esto, los programas utilizan estructuras de control (bucles) que permiten ejecutar un bloque de instrucciones tantas veces como sea necesario6. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo p
 Los paradigmas de programación ofrecen diferentes formas de organizar y estructurar el software. En el paradigma orientado a objetos, ¿cuál es el elemento central sobre el que se construyen los programas?
 Las funciones matemáticas., aunque esto no es correcto en este contexto.
 *Los objetos que combinan datos y comportamiento.
 Las instrucciones ejecutadas de forma secuencial.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+EXPL:Paradigmas de programación Hasta ahora hemos visto que un algoritmo es una secuencia de pasos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 Java es un lenguaje de programación con un modelo de ejecución particular que combina características de distintos enfoques. ¿Por qué se considera que Java utiliza un sistema híbrido de compilación e interpretación?
 Porque el código se ejecuta directamente como código máquina del sistema operativo.
 *Porque el código se compila a bytecode y se ejecuta mediante la Máquina Virtual de Java.
 Porque no necesita ningún proceso previo para poder ejecutarse.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+EXPL:No se trata de un lenguaje de programación específico, sino de la forma de pensar y resolver problemas que adopta. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 La programación no se limita únicamente a escribir código, sino que engloba varias tareas necesarias para que un programa funcione correctamente a lo largo del tiempo. ¿Cuál de las siguientes opciones define mejor qué es programar?
 Utilizar programas informáticos ya existentes para resolver tareas cotidianas.
 *Diseñar, codificar, depurar y mantener programas que ejecuta un ordenador.
 Ejecutar instrucciones previamente creadas sin necesidad de modificarlas.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:2 Objetivos y propósito de un programa informático Aunque a menudo pensamos en la programación como "escribir código", el código es solo el medio. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 En informática es importante diferenciar entre los conceptos de dato e información, ya que no significan exactamente lo mismo. ¿Cuál de las siguientes afirmaciones es correcta?
 El dato es información interpretada y la información es un dato sin procesar.
 *El dato es un valor aislado y la información es el resultado de procesar datos con un contexto.
 Ambos términos se utilizan indistintamente y no existe diferencia real entre ellos.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:La respuesta correcta es: El dato es un valor aislado y la información es el resultado de procesar datos con un contexto.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.

@@ -4,48 +4,58 @@ Norton.
 McAfee.
 *EaseUS.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:La respuesta correcta es: EaseUS.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué es un procesador de texto?
 *Una herramienta informática que permite la creación, edición y formateo de documentos de texto.
 Un tipo de hoja de cálculo que se utiliza para realizar cálculos y análisis de datos.
 Un programa de edición de imágenes., aunque no es la respuesta adecuada.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:La respuesta correcta es: Una herramienta informática que permite la creación, edición y formateo de documentos de texto.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es el programa que controla y gestiona los recursos del hardware y proporciona una interfaz de usuario para que los usuarios puedan interactuar con la computadora?
 Los sistemas de archivos.
 Los controladores de dispositivos.
 *El sistema operativo.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:El sistema operativo es la parte más importante del software de sistema, ya que es el programa que controla y gestiona los recursos del hardware y proporciona una interfaz de usuario para que los usuarios puedan interactuar con el ordenador. Las otras opciones son incorrectas porque describen concep
 ¿Cuál es una de las características principales de las herramientas de productividad?
 *Automatización de tareas.
 Recuperación de datos.
 Escaneo de archivos.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:1 Herramientas de productividad Las herramientas de productividad son programas y aplicaciones diseñados para ayudar a las personas a ser más eficientes y organizadas en su trabajo diario. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden 
 ¿Qué ventaja ofrece Google Docs en comparación con Microsoft Word?
 Amplia gama de funciones y herramientas avanzadas para crear documentos complejos.
 *Almacenamiento en la nube y acceso en cualquier momento y desde cualquier lugar.
 Es software libre y de pago., aunque esto no es correcto en este contexto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:Este software se incluye en el paquete de Microsoft Office y ofrece una amplia gama de características, incluyendo la capacidad de crear documentos de gran complejidad y personalizar la apariencia del documento mediante el uso de diferentes fuentes, tamaños de letra, colores y estilos. Las otras opc
 ¿Cuál es el procesador de texto más utilizado en el mundo?
 *Microsoft Word.
 Google Docs.
 LibreOffice Writer.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:Microsoft Word es el procesador de texto más utilizado en el mundo, especialmente en entornos empresariales. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué es el software antivirus?
 *Un tipo de software diseñado para detectar, prevenir y eliminar programas maliciosos.
 Un tipo de software diseñado para mejorar la productividad., lo cual no es correcto.
 Un tipo de software diseñado para recuperar datos perdidos., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:La respuesta correcta es: Un tipo de software diseñado para detectar, prevenir y eliminar programas maliciosos.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es la función principal del software de sistema?
 Realizar tareas específicas en la computadora., aunque no es la respuesta adecuada.
 *Controlar y coordinar el funcionamiento del hardware y proporcionar una interfaz entre el usuario y el hardware.
 Escribir, depurar y mantener programas de software., lo cual no es correcto.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:1 Software de sistema El software de sistema es un tipo de software que tiene como función principal controlar y coordinar el funcionamiento del hardware de la computadora y proporcionar una interfaz entre el usuario y el hardware. Las otras opciones son incorrectas porque describen conceptos difere
 ¿Qué son las herramientas de desarrollo integradas?
 Herramientas que permiten al usuario realizar diferentes tareas, como realizar copias de seguridad de datos, optimizar el rendimiento del sistema, o desinstalar programas.
 *Herramientas que incluyen un editor de código, un depurador y un compilador, todos integrados en una única interfaz de usuario.
 Herramientas que permiten al usuario identificar y solucionar problemas en el sistema, como errores de hardware o software.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:El software de programación puede incluir herramientas de desarrollo integradas (IDE), compiladores, depuradores y editores de código. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué significa que las bases de datos sean escalables y flexibles?
 Que tienen una estructura y organización definida., lo cual no es correcto.
 *Que pueden crecer y evolucionar a medida que cambian las necesidades de la organización.
 Que no se pueden integrar con otras aplicaciones informáticas.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:La respuesta correcta es: Que pueden crecer y evolucionar a medida que cambian las necesidades de la organización.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.

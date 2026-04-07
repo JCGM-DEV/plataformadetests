@@ -12,6 +12,7 @@ Es un lenguaje de marcas estructural, utilizado para definir la estructura de do
 Es un lenguaje de marcas jerárquico, organizado en forma de árbol para la presentación de datos en la web., lo cual no es correcto.
 *No es un lenguaje de marcas, sino un lenguaje de estilos encaminado a separar el contenido de su representación o estética, permitiendo adaptar la información según el dispositivo.
 Una ventaja clave de la especificación XML Schema (XSD) sobre la DTD para definir la estructura de documentos XML es:, lo cual no es correcto.
+EXPL:La respuesta correcta es: No es un lenguaje de marcas, sino un lenguaje de estilos encaminado a separar el contenido de su representación o estética, permitiendo adaptar la información según el dispositivo.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 Un menor consumo de recursos para la validación del documento, lo que la hace más eficiente en entornos de alta demanda.
 Una mayor capacidad expresiva, una gramática más sofisticada y la facilidad para la extensión del documento sin dificultad.
 La simplificación de la declaración del tipo de documento a una única variante, lo que eliminó la necesidad de elegir entre diferentes tipos.
@@ -28,6 +29,7 @@ Una etiqueta es un par nombre-valor que indica propiedades asociadas a los eleme
 *Una etiqueta es el texto que va entre los símbolos <nombre>, mientras que un elemento es una estructura básica que organiza el contenido y generalmente tiene una etiqueta de inicio y una de cierre.
 Un elemento siempre se refiere a un contenido vacío que no requiere etiqueta de fin, mientras que una etiqueta siempre encierra contenido explícito.
 Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
+EXPL:Los lenguajes de marcas y los lenguajes de programación son a menudo confundidos, pero en realidad son dos cosas muy diferentes. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 La especificación del W3C para HTML 4.0 contemplaba tres tipos de DTD (Definición de Tipo de Documento). ¿Cuáles eran estas tres variantes?
 Lineal, Jerárquico y de Programación.
 Estructural, de Presentación y de Programación.

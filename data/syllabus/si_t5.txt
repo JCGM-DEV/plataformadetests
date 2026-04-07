@@ -4,23 +4,28 @@ Protocolo de enrutamiento estático.
 *Protocolo OSPF.
 Protocolo de enrutamiento HTTP.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:Tabla de enrutamiento dinámica: es una tabla que se crea automáticamente mediante el uso de protocolos de enrutamiento dinámicos, como OSPF o BGP. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Cuáles son algunas de las ventajas de la configuración estática de redes?
 *Mayor seguridad, estabilidad y control.
 Menor seguridad, estabilidad y control.
 Mayor seguridad, menor estabilidad y menor control.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:Algunas de las ventajas de la configuración estática de redes incluyen: . Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué es una tabla de enrutamiento estática?
 Una tabla en la que las rutas se determinan automáticamente mediante protocolos de enrutamiento.
 Una tabla que se crea automáticamente mediante el uso de protocolos de enrutamiento dinámicos.
 *Una tabla en la que se especifican manualmente las rutas que deben tomar los paquetes de datos para llegar a su destino.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+EXPL:La respuesta correcta es: Una tabla en la que se especifican manualmente las rutas que deben tomar los paquetes de datos para llegar a su destino.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué es una WLAN?
 Una red inalámbrica de largo alcance., lo cual no es correcto.
 *Una red inalámbrica utilizada para conectar dispositivos en un área geográfica limitada.
 Una red cableada de alta velocidad., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:La respuesta correcta es: Una red inalámbrica utilizada para conectar dispositivos en un área geográfica limitada.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué son las direcciones IP?
 *Un número único que identifica a cada dispositivo en una red.
 Un número aleatorio que se asigna a cada dispositivo en una red.
 Una secuencia de letras que identifica a cada dispositivo en una red.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:La respuesta correcta es: Un número único que identifica a cada dispositivo en una red.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.

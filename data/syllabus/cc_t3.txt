@@ -4,48 +4,58 @@ Alta latencia en la transmisión de datos
 *Ancho de banda alto y baja latencia
 Conexiones inestables
 Solo funciona en redes locales
+EXPL:La respuesta correcta es: Ancho de banda alto y baja latencia. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál de las siguientes opciones es una característica de la infraestructura de la nube?
 *Mayor latencia en la transferencia de datos
 Acceso solo desde equipos de escritorio
 Protección de datos mediante encriptación
 Dependencia total de hardware físico
+EXPL:Las opciones de almacenamiento en la nube incluyen almacenamiento en disco, almacenamiento en la nube y almacenamiento de objetos, cada uno con diferentes características y. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado
 ¿Qué permite la infraestructura de la nube en términos de almacenamiento?
 *Un almacenamiento limitado y costoso
 Almacenamiento escalable y accesible
 Solo permite almacenamiento local
 No permite almacenar grandes volúmenes de datos
+EXPL:Infraestructura como servicio (IaaS) IaaS proporciona acceso a recursos de hardware virtualizados, como servidores, almacenamiento y redes. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Cuál es un caso de uso común para la infraestructura de la nube?
 *Desarrollo de software
 Solo almacenamiento de archivos personales
 Exclusivamente para videojuegos
 No tiene aplicaciones en educación
+EXPL:La respuesta correcta es: Desarrollo de software. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué tipo de servicio es Google Docs dentro de la computación en la nube?
 *IaaS
 PaaS
 SaaS
 Nube híbrida
+EXPL:Ejemplos de servicios SaaS son Google Docs, Microsoft Office 365 y Salesforce. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Cuál de las siguientes opciones describe mejor la computación en la nube?
 *Un sistema operativo avanzado para servidores
 Una red de servidores que ofrece servicios informáticos a través de internet
 Un tipo de hardware especializado en redes
 Un protocolo de comunicación entre servidores
+EXPL:La respuesta correcta es: Un sistema operativo avanzado para servidores. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál de los siguientes servicios pertenece a la categoría IaaS?
 *AWS Elastic Beanstalk
 Azure Virtual Machines
 Google Docs
 Microsoft Office 365
+EXPL:La respuesta correcta es: AWS Elastic Beanstalk. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es un beneficio clave de la infraestructura de la nube?
 Mayor consumo de recursos físicos
 Acceso limitado a servidores
 *Escalabilidad flexible
 Solo se puede acceder desde una ubicación fija
+EXPL:Beneficios de la infraestructura de la nube Acceso desde cualquier lugar, en cualquier momento, utilizando cualquier dispositivo. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué caracteriza a una nube híbrida?
 Es operada únicamente por un proveedor público
 *Es una combinación de nube privada y pública
 Solo es accesible dentro de una empresa
 No permite compartir datos entre sistemas
+EXPL:La respuesta correcta es: Es una combinación de nube privada y pública. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál de las siguientes opciones representa un servicio de nube pública?
 Servidores internos de una empresa, aunque no es la respuesta correcta.
 *Microsoft Azure
 Un disco duro externo conectado a una red, lo cual no aplica aquí.
 Un centro de datos privado sin acceso externo, aunque no corresponde.
+EXPL:La respuesta correcta es: Microsoft Azure. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.

@@ -4,48 +4,58 @@ Aumento de costos operativos.
 Dependencia del hardware local.
 *Acceso ubicuo a los datos y aplicaciones.
 Falta de escalabilidad., aunque esto no es correcto en este contexto.
+EXPL:En esta presentación, exploraremos los conceptos fundamentales de la computación en la nube, sus ventaja. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué significa "escalabilidad elástica" en la computación en la nube?
 *Capacidad de aumentar o reducir recursos según la demanda.
 La infraestructura solo se adapta a aumentos de demanda.
 Es un modelo exclusivo para grandes empresas.
 La nube no permite escalabilidad., lo cual no es correcto.
+EXPL:La respuesta correcta es: Capacidad de aumentar o reducir recursos según la demanda.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál de los siguientes es un posible riesgo de la computación en la nube?
 Reducción de costos operativos.
 *Dependencia del proveedor de servicios.
 Mayor control sobre la infraestructura.
 Eliminación total de amenazas cibernéticas.
+EXPL:La respuesta correcta es: Dependencia del proveedor de servicios.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué función cumple la redundancia en la computación en la nube?
 Aumenta los costos operativos., lo cual no es correcto.
 *Garantiza la disponibilidad de los servicios en caso de fallos.
 Limita el acceso a los datos., aunque esto no es correcto en este contexto.
 Reduce la seguridad de la información., lo cual no es correcto.
+EXPL:Redundancia y alta disponibilidad La computación en la nube se basa en la redundancia y la alta disponibilidad para garantizar que los datos y las aplicaciones estén disponibles en todo momento. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresp
 *¿Cuál de los siguientes modelos de implementación permite combinar infraestructura pública y privada?
 Nube privada.
 Nube pública.
 *Nube híbrida.
 Nube comunitaria.
+EXPL:Modelos de implementación de la computación en la nube (pública, privada, híbrida) La implementación de la computación en la nube puede variar según el tipo de entorno de nube que se utiliza. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no correspond
 ¿Qué aspecto es clave al elegir un proveedor de servicios en la nube?
 La disponibilidad de planes gratuitos.
 La ubicación de los servidores en el mismo país.
 *La seguridad, fiabilidad y escalabilidad del servicio.
 Que ofrezca hardware de última generación.
+EXPL:La respuesta correcta es: La seguridad, fiabilidad y escalabilidad del servicio.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál de estos modelos de servicio ofrece aplicaciones completas listas para usar?
 IaaS.
 PaaS.
 *SaaS.
 On-Premise.
+EXPL:Modelos de servicio de la computación en la nube (IaaS, PaaS, SaaS) Los modelos de servicio de la computación en la nube se basan en diferentes niveles de abstracción y control que los proveedores ofrecen a los usuarios. Las otras opciones son incorrectas porque describen conceptos diferentes o cara
 ¿Cuál es la principal característica del modelo de computación en la nube?
 Requiere una gran inversión en hardware propio.
 *Permite acceder a recursos informáticos a través de Internet.
 Solo puede ser utilizado por grandes empresas.
 No ofrece ventajas sobre la infraestructura tradicional.
+EXPL:Principales características de la computación en la nube La computación en la nube se caracteriza por una serie de propiedades distintivas que la diferencian de los enfoques informáticos tradicionales. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no 
 *¿Cuál de las siguientes afirmaciones es correcta sobre la migración a la nube?
 Es un proceso inmediato y sin riesgos., lo cual no es correcto.
 No requiere planificación previa., lo cual no es correcto.
 *Debe incluir evaluación de necesidades, migración de datos y pruebas.
 Solo es recomendable para pequeñas empresas., lo cual no es correcto.
+EXPL:La respuesta correcta es: Debe incluir evaluación de necesidades, migración de datos y pruebas.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué modelo de servicio permite a los desarrolladores crear aplicaciones sin gestionar la infraestructura?
 SaaS.
 *PaaS.
 IaaS.
 VPN.
+EXPL:Definición de la computación en la nube La computación en la nube es un modelo de entrega de servicios informáticos que permite el acceso a recursos informáticos, como servidores, almacenamiento, bases de datos, software y redes, a través de Internet. Las otras opciones son incorrectas porque descri

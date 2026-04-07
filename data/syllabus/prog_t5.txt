@@ -4,6 +4,7 @@ Representan una estructura continua de memoria bidimensional real.
 *Son arrays cuyos elementos son, a su vez, otros arrays.
 Tienen un único valor de longitud para filas y columnas.
 En relación con los índices de un array, señale la afirmación correcta:
+EXPL:La respuesta correcta es: Son arrays cuyos elementos son, a su vez, otros arrays.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 El primer elemento se encuentra en la posición 1.
 El último elemento se encuentra en la posición igual a la longitud del array.
 *Los índices válidos van desde 0 hasta longitud menos uno.
@@ -12,38 +13,46 @@ Es una estructura primitiva que se almacena íntegramente en el Stack.
 *Es un objeto que se almacena en el Heap y se accede mediante una referencia.
 Es una colección dinámica cuyo tamaño puede variar durante la ejecución.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+EXPL:La respuesta correcta es: Es un objeto que se almacena en el Heap y se accede mediante una referencia.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 En el procesamiento de arrays, ¿qué característica distingue al recorrido con for-each frente al for clásico?
 Permite modificar directamente los elementos del array.
 Proporciona acceso al índice y al valor simultáneamente.
 *Está orientado a la lectura secuencial sin acceso a la posición.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:La respuesta correcta es: Está orientado a la lectura secuencial sin acceso a la posición.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es la finalidad principal de la propiedad length en los arrays?
 Modificar el tamaño del array durante la ejecución., lo cual no es correcto.
 *Conocer el número de elementos para acceder y recorrer el array de forma segura.
 Contar únicamente los elementos que han sido inicializados explícitamente.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:length (Longitud) Los arrays en Java son "listos". Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 Desde un enfoque profesional, ¿cuál es la ventaja principal de utilizar los métodos de ordenación proporcionados por Java frente a los algoritmos académicos?
 Son más sencillos conceptualmente que los algoritmos clásicos.
 *Están optimizados y reducen errores en la implementación.
 Permiten mantener el orden original del array automáticamente.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:3 Ordenaciones Existen decenas de algoritmos de ordenación (Burbuja, Inserción, Selección, QuickSort, MergeSort. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 Respecto a los algoritmos de búsqueda, ¿cuál es la condición indispensable para poder aplicar una búsqueda binaria?
 Que el array tenga un tamaño reducido.
 *Que el array esté previamente ordenado.
 Que el array contenga únicamente valores numéricos.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:La respuesta correcta es: Que el array esté previamente ordenado.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué afirmación describe correctamente el tamaño de un array en Java?
 El tamaño puede modificarse añadiendo o eliminando elementos.
 *El tamaño se fija en el momento de su creación y no puede cambiar.
 El tamaño depende del número de elementos inicializados manualmente.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+EXPL:La respuesta correcta es: El tamaño se fija en el momento de su creación y no puede cambiar.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 Al trabajar con cadenas de caracteres en Java, ¿qué significa que la clase String sea inmutable?
 Que no se pueden comparar dos cadenas entre sí.
 *Que una vez creado un texto, no puede modificarse su contenido.
 Que solo puede crearse mediante el operador new.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+EXPL:La respuesta correcta es: Que una vez creado un texto, no puede modificarse su contenido.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es la forma correcta de comparar el contenido de dos cadenas de caracteres en Java?
 Utilizando el operador de igualdad para comprobar las referencias.
 Comparando directamente su longitud., lo cual no es correcto.
 *Utilizando un método que evalúa el contenido textual (equals o compareTo).
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+EXPL:La respuesta correcta es: Utilizando un método que evalúa el contenido textual (equals o compareTo).. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.

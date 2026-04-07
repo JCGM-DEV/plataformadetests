@@ -4,48 +4,58 @@ tema 6
 Una técnica que permite el acceso a todos los recursos del sistema sin restricciones.
 Una técnica que no tiene relación con el acceso a recursos del sistema.
 Con un certificado SSL autofirmado, aunque no es la respuesta correcta.
+EXPL:Control de acceso basado en roles: El control de acceso basado en roles es una técnica de seguridad que restringe el acceso a ciertos recursos del sistema en función del rol del usuario. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a 
 ¿Qué es el cifrado de datos?
 *Una técnica que se utiliza para proteger la confidencialidad de los datos almacenados o transmitidos.
 Una técnica que se utiliza para compartir datos públicamente sin protección.
 Una técnica que no tiene relación con la protección de datos., lo cual no es correcto.
 Con un certificado SSL autofirmado, aunque no es la respuesta correcta.
+EXPL:La respuesta correcta es: Una técnica que se utiliza para proteger la confidencialidad de los datos almacenados o transmitidos.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Para qué se utiliza OpenSSL?
 Para cifrar unidades de almacenamiento como discos duros internos o externos.
 *Para crear y gestionar certificados digitales y claves de cifrado.
 Para enviar y recibir correos electrónicos cifrados.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:La respuesta correcta es: Para crear y gestionar certificados digitales y claves de cifrado.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué son los derechos de usuario en una red?
 *Los permisos que se otorgan a los usuarios para acceder y utilizar los recursos compartidos de la red.
 Los privilegios que se otorgan a los administradores de la red., lo cual no es correcto.
 Los permisos que se otorgan a los usuarios para acceder a Internet., lo cual no es correcto.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:La respuesta correcta es: Los permisos que se otorgan a los usuarios para acceder y utilizar los recursos compartidos de la red.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué es una ACL?
 Un objeto de directiva de seguridad.
 *Una lista de control de acceso.
 Un sistema operativo.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:La respuesta correcta es: Una lista de control de acceso.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es una herramienta de gestión de usuarios y recursos de red de Microsoft?
 Firewall.
 LDAP.
 *Active Directory.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:Active Directory: es una herramienta de gestión de usuarios y recursos de red de Microsoft que permite crear y gestionar usuarios, grupos y permisos en una red. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué es la autenticación multifactorial?
 Una técnica que requiere que los usuarios proporcionen una forma de identificación antes de acceder a una cuenta.
 *Una técnica que requiere que los usuarios proporcionen dos o más formas de identificación antes de acceder a una cuenta.
 Una técnica que permite el acceso a una cuenta sin necesidad de identificación., lo cual no es correcto.
 Con un certificado SSL autofirmado, aunque no es la respuesta correcta.
+EXPL:Autenticación multifactorial: La autenticación multifactorial es una técnica de seguridad que requiere que los usuarios proporcionen dos o más formas de identificación antes de acceder a una cuenta. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no cor
 ¿Para qué se utilizan las directivas de seguridad?
 Para proteger la información confidencial.
 Para garantizar la integridad del sistema.
 *Todas las anteriores.
 Con un certificado SSL autofirmado, aunque no es la respuesta correcta.
+EXPL:Estas directivas se utilizan para establecer políticas de seguridad en sistemas operativos Windows, así como en otros productos d. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué tipo de objetos de directiva de seguridad se utilizan para especificar los requisitos de contraseña?
 Usuarios y grupos.
 *Contraseñas.
 Auditoría.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:Los objetos de directiva se utilizan para especificar los permisos de acceso, restricciones y configurac. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Por qué es importante establecer diferentes niveles de acceso en una red?
 Para que los usuarios tengan acceso completo a todos los recursos de la red., lo cual no es correcto.
 *Para evitar que los usuarios accedan a recursos que no necesitan y reducir el riesgo de violaciones de seguridad.
 Para permitir que todos los usuarios tengan acceso a todos los recursos de la red.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:Derechos de usuarios En el contexto de la gestión de recursos en una red, los derechos de usuario son fundamentales para establecer un control de acceso adecuado y garantizar la seguridad de los recursos compartidos. Las otras opciones son incorrectas porque describen conceptos diferentes o caracter

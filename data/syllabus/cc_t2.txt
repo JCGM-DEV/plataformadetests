@@ -4,48 +4,58 @@ Permite ajustar los recursos en tiempo real según las necesidades
 Bloquea el uso de recursos adicionales para evitar sobrecostes.
 Solo está disponible en modelos de pago fijo.
 *Asegura un descuento automático en el coste de los recursos.
+EXPL:Conclusión y próximos pasos La facturación en la nube ofrece ventajas significativas para las empresas, permitiendo controlar los gastos, optimizar el uso de los recursos y mejorar la eficiencia operativa. Las otras opciones son incorrectas porque describen conceptos diferentes o características que
 ¿Qué aspecto clave de la seguridad se garantiza en los servicios en la nube?
 *Copias de seguridad físicas en todas las oficinas.
 Medidas de seguridad robustas y cumplimiento normativo.
 Control absoluto de los datos por parte del usuario sin intervención del proveedor.
 Eliminación automática de datos después de 30 días.
+EXPL:La respuesta correcta es: Copias de seguridad físicas en todas las oficinas.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál de las siguientes afirmaciones sobre las instancias spot es correcta?
 *Son más costosas que las instancias reservadas.
 Permiten adquirir recursos a menor precio, pero pueden ser interrumpidas.
 No pueden utilizarse en entornos de producción.
 Son el único modelo de precios disponible en la nube.
+EXPL:La respuesta correcta es: Son más costosas que las instancias reservadas.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 *¿Cuál de los siguientes modelos de precios en la nube ofrece descuentos por comprometerse a un uso a largo plazo?
 Pago por uso.
 Instancias reservadas
 Instancias spot.
 *Facturación consolidada.
+EXPL:Para aprovechar al máximo estos beneficios, es crucial comprender los modelos de precios, los servicios de facturación y las herramientas de análisis de costes. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué tipo de herramientas ayudan a analizar los costes en la nube?
 *Plataformas de análisis de datos y predicciones.
 Redes sociales y foros de discusión.
 Servicios de almacenamiento en la nube.
 Programas de ofimática., aunque esto no es correcto en este contexto.
+EXPL:La respuesta correcta es: Plataformas de análisis de datos y predicciones.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es la principal característica del modelo de facturación en la nube?
 *Pago anticipado por los recursos contratados.
 Pago fijo mensual sin importar el uso.
 Pago por uso, donde solo se paga por los recursos consumidos.
 Pago único al inicio del servicio.
+EXPL:Para aprovechar al máximo estos beneficios, es crucial comprender los modelos de precios, los servicios de facturación y las herramientas de análisis de costes. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Cuál es la ventaja principal de utilizar servicios de facturación consolidada?
 Permite pagar menos por los recursos utilizados.
 Facilita la gestión de múltiples cuentas desde una sola plataforma.
 *Evita el pago de impuestos sobre los servicios en la nube.
 Automatiza completamente la contabilidad empresarial
+EXPL:La respuesta correcta es: Evita el pago de impuestos sobre los servicios en la nube.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué elemento NO forma parte del Coste Total de la Propiedad (TCO)?
 Coste de hardware y software.
 Mantenimiento y energía.
 Gastos de transporte de los empleados.
 *Costes operativos en la nube.
+EXPL:La respuesta correcta es: Costes operativos en la nube.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué función tienen los servicios de monitorización de costes?
 Establecer presupuestos y alertar sobre gastos elevados.
 Modificar automáticamente los precios de los servicios en la nube.
 *Cancelar automáticamente servicios que superan el presupuesto.
 Garantizar un precio fijo sin variaciones., lo cual no es correcto.
+EXPL:La respuesta correcta es: Cancelar automáticamente servicios que superan el presupuesto.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es una de las tendencias futuras en la gestión de la facturación en la nube?
 *Uso de inteligencia artificial y aprendizaje automático para optimizar los costes
 Eliminación total de los modelos de pago por uso., lo cual no es correcto.
 Cobro adelantado de todos los servicios en la nube, aunque no aplica en este contexto.
 Prohibición del uso de herramientas de análisis de costes, lo cual no corresponde.
+EXPL:1 Automatización Integración con sistemas de gestión financiera para simplificar la facturación y el control. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.

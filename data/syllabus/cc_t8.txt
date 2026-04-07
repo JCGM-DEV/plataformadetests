@@ -4,43 +4,52 @@ Optimizadas para consultas complejas
 Uso exclusivo en sistemas transaccionales
 Requieren estructuras fijas y rígidas
 *No pueden manejar grandes volúmenes de datos
+EXPL:Características de las bases de datos analíticas Las bases de datos analíticas se caracterizan por:. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué tipo de base de datos NoSQL organiza los datos en pares clave-valor?
 *Documentales
 Graph
 Column-Family
 Key-Value
+EXPL:La respuesta correcta es: Documentales. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué característica es exclusiva de las bases de datos NoSQL?
 *Uso de claves primarias y foráneas
 Escalabilidad horizontal
 Transacciones ACID
 Organización en tablas
+EXPL:La respuesta correcta es: Uso de claves primarias y foráneas. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál de las siguientes es una base de datos relacional?
 *MongoDB
 Cassandra
 MySQL
 Redis
+EXPL:La respuesta correcta es: MongoDB. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es un proveedor de bases de datos NoSQL?
 PostgreSQL
 MongoDB
 *Oracle
 SQL Server
+EXPL:La respuesta correcta es: Oracle. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál de las siguientes NO es una ventaja de los servicios de bases de datos?
 *Mayor eficiencia
 Mejora de la toma de decisiones
 Mayor consumo de recursos
 Seguridad y confiabilidad
+EXPL:E n el contexto actual, los servicios de bases de datos han evolucionado hacia soluciones en la nube, ofreciendo ventajas como la escalabilidad, la flexibilidad y la accesibilidad. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo pre
 ¿Qué lenguaje se utiliza para interactuar con bases de datos relacionales?
 *Python
 SQL
 NoSQL
 XML
+EXPL:Servicios de bases de datos relacionales Las bases de datos relacionales son las más tradicionales y ampliamente utilizadas. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué tipo de base de datos es ideal para analizar grandes conjuntos de datos?
 *Relacionales
 Analíticas
 NoSQL
 Documentales
+EXPL:La respuesta correcta es: Relacionales. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué característica permite que los servicios de bases de datos ajusten su capacidad según la demanda?
 *Seguridad
 Persistencia
 Escalabilidad
 Rendimiento
+EXPL:Los sistemas de gestión de bases de datos (DBMS) son software que permiten crear, gestionar y manipular bases de datos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.

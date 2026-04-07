@@ -4,48 +4,58 @@ tema 5
 Control total sobre la infraestructura
 Menor escalabilidad que una nube pública
 Acceso gratuito para todos los usuarios
+EXPL:En esta presentación, exploraremos los principios básicos de las redes, profundizaremos en las nubes privadas virtuales y su seguridad, y finalmente, descubriremos la importancia de las r. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden 
 ¿Cuál es el propósito principal de una red de computadoras?
 *Mejorar la velocidad de los dispositivos
 Conectar dispositivos para compartir información y recursos
 Reducir el consumo de energía
 Aumentar el almacenamiento de los dispositivos
+EXPL:La respuesta correcta es: Mejorar la velocidad de los dispositivos. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cómo funcionan los servidores DNS en la nube?
 *Almacenan los datos de los usuarios
 Resuelven nombres de dominio en direcciones IP
 Filtran el tráfico no autorizado
 Bloquean los ataques de malware automáticamente
+EXPL:La respuesta correcta es: Almacenan los datos de los usuarios. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es la función principal de la capa de red en la arquitectura de las redes?
 *Gestionar la transmisión de datos dentro de una red local
 Enrutar los datos a través de la red, lo cual no es correcto.
 Definir las especificaciones físicas del cableado
 Permitir que las aplicaciones accedan a la red
+EXPL:La respuesta correcta es: Gestionar la transmisión de datos dentro de una red local. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué ventaja ofrece una CDN (Red de Entrega de Contenidos)?
 *Aumenta la latencia de los contenidos
 Reduce la velocidad de carga de sitios web
 Distribuye los contenidos desde servidores cercanos al usuario
 Bloquea el acceso a contenidos de alta demanda
+EXPL:Redes y Entrega de Contenidos Bienvenidos a esta presentación sobre las redes y la entrega de contenidos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué protocolo es fundamental para la comunicación en Internet?
 *HTTP
 FTP
 TCP/IP
 DHCP
+EXPL:La respuesta correcta es: HTTP. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es una de las principales amenazas a la seguridad en redes?
 *CSS
 DDoS
 HTML
 XML
+EXPL:La respuesta correcta es: CSS. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué medida de seguridad ayuda a proteger los datos en una nube privada virtual?
 *Eliminación de registros de actividad
 Acceso libre sin autenticación
 Cifrado de datos
 Compartición de claves de acceso
+EXPL:En esta presentación, exploraremos los principios básicos de las redes, profundizaremos en las nubes privadas virtuales y su seguridad, y finalmente, descubriremos la importancia de las r. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden 
 ¿Qué tipo de red se utiliza para conectar dispositivos dentro de una oficina o un hogar?
 *WAN
 MAN
 LAN
 VPN
+EXPL:En la era digital, la tecnología de red es fundamental para conectar personas, dispositivos e información. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué protocolo se utiliza para la seguridad en la transmisión de datos?
 *SSL/TLS
 UDP
 RIP
 FTP
+EXPL:La respuesta correcta es: SSL/TLS. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.

@@ -12,11 +12,13 @@ Hash
 *Árbol B
 Compuesto
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+EXPL:Al elegir cuidadosamente los índices adecuados para una tabla, se puede mejorar significativamente el rendimiento de las consultas y el acceso a los datos en la base de datos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo pregunta
 ¿Qué diferencia esencial hay entre una vista y una tabla?
 Una vista almacena datos físicamente
 *Una vista es virtual; se reconstruye al vuelo
 Una vista no admite filtros, aunque esto no es correcto en este contexto.
 Un modelo de datos es una representación:
+EXPL:La respuesta correcta es: Una vista es virtual; se reconstruye al vuelo. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 Física
 Básica
 *Abstracta

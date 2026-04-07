@@ -8,6 +8,7 @@ Evaluar el entorno social y económico de una persona
 *Identificar fortalezas y debilidades, así como amenazas y oportunidades
 Analizar y planificar la gestión de la carrera profesional
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:La respuesta correcta es: Identificar fortalezas y debilidades, así como amenazas y oportunidades. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es la finalidad de un Plan de Acción en el desarrollo profesional?
 Evaluar el rendimiento financiero en la vida laboral
 Describir paso a paso las actividades, metas y plazos para mejorar competencias y aumentar la empleabilidad
@@ -29,6 +30,7 @@ Valoración funcional
 Un formato de CV utilizado solo en España, lo cual no es correcto.
 Un formato de CV utilizado solo en España, lo cual no es correcto.
 En un currículum funcional la información académica y profesional se organiza:
+EXPL:La respuesta correcta es: Un formato de CV común en Europa para facilitar la movilidad laboral. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 *Por sectores o temas
 Por orden cronológico
 De forma interactiva.
@@ -37,6 +39,7 @@ Se centra exclusivamente en la teoría impartida en el aula
 *Combina formación en el centro educativo con experiencia práctica en la empresa
 Ofrece formación online exclusivamente, lo cual no es correcto.
 El currículum vitae:, aunque esto no es correcto en este contexto.
+EXPL:Características personales y profesionales en el plano cognitivo, emocional, de intereses y valores. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 Sustituye a la carta de presentación
 *Complementa la carta de presentación
 Es la forma actual de la carta de presentación

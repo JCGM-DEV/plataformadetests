@@ -14,6 +14,7 @@ Iterar sobre un conjunto de nodos en el documento XML., lo cual no es correcto.
 *Crear variables temporales que representan valores o expresiones para ser usadas en otras cláusulas de la consulta.
 Filtrar los resultados de la consulta utilizando una expresión booleana., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:Las expresiones que se utilizan en XQuery se denominan sentencias FLWOR (For, Let, Where, Order by y Return). Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Cuál es una de las principales desventajas de las bases de datos "XML enabled" en comparación con las bases de datos XML nativas?
 Su incapacidad para procesar documentos XML directamente sin un middleware adicional.
 Su modelo relacional no permite la gestión de transacciones complejas en entornos XML.

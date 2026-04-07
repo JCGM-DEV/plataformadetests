@@ -4,57 +4,67 @@ tema 3
 Elipses
 Rombos
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:Las entidades se representan mediante rectángulos en el diagrama ER y pueden tener nombres descriptivos que reflejen su significado en el sistema. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 
 ¿Cuál es la definición de un atributo derivado?
 Un atributo que se descompone en varios atributos simples.
 Un atributo que puede tener múltiples valores para una misma entidad.
 *Un atributo cuyo valor se calcula a partir de otros atributos del modelo.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+EXPL:Continuando con el mismo ejemplo práctico veamos cómo se definen los atributos y cardinalidades – Definición de atributos y cardinalidades para “FestivalFest” En FestivalFest, el equipo de bases de datos ya ha fijado las entidades y relaciones principales (Concierto – Artista – Asistente – Entrada –
 
 En una relación de cardinalidad 1:N entre "Agentes" y "Clientes", ¿qué se entiende?
 *Un agente gestiona varios clientes, pero un cliente solo es gestionado por un agente.
 Varios agentes pueden gestionar a un solo cliente., lo cual no es correcto.
 Un agente solo puede tener un cliente asignado., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:Por ejemplo, si tenemos una relación entre las entidades "Pedidos" y "Productos", donde un pedido puede contener varios productos y un producto puede estar en varios pedidos, la cardinalidad de la relación sería "N a N". Las otras opciones son incorrectas porque describen conceptos diferentes o cara
 
 ¿Cuál es una característica fundamental de una entidad débil?
 Posee una clave primaria única e independiente., lo cual no es correcto.
 *Carece de identificador autosuficiente y depende de una entidad propietaria.
 Se representa gráficamente con un rectángulo de línea simple.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:Cada entidad puede tener atributos, que son características o propiedades que describen la entidad. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 
 En el modelo E/R ampliado, ¿qué es la generalización?
 El proceso de dividir una entidad en subentidades más específicas.
 *El proceso de agrupar entidades con rasgos comunes en una entidad padre abstracta.
 Una relación donde una entidad se vincula consigo misma., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:La respuesta correcta es: El proceso de agrupar entidades con rasgos comunes en una entidad padre abstracta.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 
 ¿Qué restricción de especialización determina si una instancia del supertipo puede pertenecer a una sola subentidad o a varias?
 Completeness (totalidad/parcialidad).
 *Disjointness (exclusividad/solapamiento).
 Relación recursiva., aunque esto no es correcto en este contexto.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:Determina si todas las instancias de la entidad padre deben pertenecer necesariamente a alguna de las subentidades (especialización total) o si pueden existir ejemplos del supertipo que no encajen en ninguna de las categorías definidas (especialización parcial). Las otras opciones son incorrectas po
 
 Al pasar del modelo E/R al modelo relacional, ¿cuándo se crean normalmente las claves foráneas?
 Al identificar las entidades., aunque esto no es correcto en este contexto.
 *Al establecer las relaciones entre las tablas para vincular registros.
 Únicamente durante el proceso de normalización., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:Paso del modelo E/R al modelo relacional. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 
 ¿Qué requisito debe cumplir una tabla para estar en Primera Forma Normal (1FN)?
 No tener dependencias transitivas., lo cual no es correcto.
 *Que todas las columnas almacenen valores atómicos e indivisibles.
 Que todos los atributos dependan de la clave primaria completa.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+EXPL:1 Primera Forma Normal (1FN) Para que una tabla alcance la Primera Forma Normal debe cumplir dos condiciones fundamentales: 1. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 
 ¿Cuándo se dice que una tabla viola la Segunda Forma Normal (2FN)?
 Cuando existen atributos que pueden tomar varios valores., lo cual no es correcto.
 *Cuando un atributo no clave depende solo de una parte de la clave primaria (dependencia parcial).
 Cuando un atributo no clave depende de otro atributo no clave., lo cual no es correcto.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+EXPL:Normalización de modelos relacionales, formas normales y desnormalización. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 
 ¿Cuál es el objetivo principal de la normalización de modelos relacionales?
 Aumentar la redundancia para facilitar la lectura de datos.
 *Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente.
 Eliminar todas las relaciones entre tablas para simplificar el modelo.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:Normalización de modelos relacionales, formas normales y desnormalización 5. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.

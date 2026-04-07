@@ -4,48 +4,58 @@ Hardware, software, usuarios, seguridad.
 *Hardware, software, datos, usuarios.
 Hardware, software, redes, periféricos.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:En general, se puede dividir en cuatro componentes principales: . Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué tarea crítica del sistema operativo implica la planificación de la ejecución de procesos y supervisar su finalización?
 Controlar y gestionar el uso del hardware del ordenador.
 *Administrar la ejecución de los procesos.
 Controlar el proceso de organización de la información.
 Con el comando fsck para verificar la integridad del sistema de archivos.
+EXPL:La planificación de procesos es una tarea crítica del sistema operativo. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué es necesario hacer antes de actualizar una aplicación a una versión superior?
 Descargar manualmente e instalar la versión superior., lo cual no es correcto.
 Comprobar si la versión superior es compatible con el sistema operativo y la licencia de la aplicación.
 *Realizar una copia de seguridad de los archivos y carpetas asociados a la aplicación.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:1 Requisitos, versiones y licencias Antes de instalar un sistema operativo, es importante verificar si el equipo cumple con los requisitos mínimos necesarios para poder instalar el sistema operativo. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no co
 ¿Qué es la virtualización del hardware?
 La capacidad de ejecutar múltiples sistemas operativos en diferentes servidores físicos.
 *La capacidad de crear varias máquinas virtuales en un solo servidor físico.
 La capacidad de almacenar datos de diferentes sistemas operativos en un solo servidor físico.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:1 Concepto de virtualización del hardware y características de los principales productos software libre y propietario, para el uso de máquinas virtuales. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Cuál es la ventaja principal de la arquitectura monolítica?
 *Su simplicidad y eficiencia.
 Su modularidad y escalabilidad.
 Su capacidad para agregar o eliminar funciones sin tener que recompilar todo el sistema.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:1 Monolítica La estructura monolítica es una de las primeras arquitecturas de sistema informático que se desarrollaron. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Para qué se utiliza la preparación de imágenes del sistema para automatizar la instalación masiva de ordenadores?
 Para verificar si se dispone de la licencia correspondiente.
 Para dividir el disco duro en secciones o particiones lógicas.
 *Para automatizar la instalación del sistema operativo en varios ordenadores.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:La instalación de un sistema operativo puede ser una tarea complicada, pero si se sigue una serie de pasos y se tienen en cuenta los requisitos necesarios, se puede realizar de manera sencilla y efectiva. Las otras opciones son incorrectas porque describen conceptos diferentes o características que 
 ¿Por qué es importante comprobar los requisitos, versiones y licencias antes de instalar una aplicación?
 Para asegurarse de tener suficiente espacio en disco., lo cual no es correcto.
 *Para garantizar el correcto funcionamiento de la aplicación y evitar problemas de licencia.
 Para obtener nuevas funcionalidades y correcciones de errores., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:1 Requisitos, versiones y licencias Antes de instalar una aplicación, es importante comprobar que se cumplen los requisitos mínimos de hardware y software. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 ¿Qué es el particionado del disco duro?
 La instalación de un sistema operativo., lo cual no es correcto.
 *La división del disco duro en secciones o particiones lógicas.
 La verificación de la memoria RAM., lo cual no es correcto.
 Con el comando fsck para verificar la integridad del sistema de archivos.
+EXPL:La respuesta correcta es: La división del disco duro en secciones o particiones lógicas.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué son las aplicaciones de seguridad?
 *Programas que se utilizan para proteger el sistema informático contra virus, malware y otras amenazas de seguridad.
 Programas que se utilizan para la diversión y el entretenimiento., lo cual no es correcto.
 Programas que se utilizan para la comunicación en línea., lo cual no es correcto.
 Con un certificado SSL autofirmado, aunque no es la respuesta correcta.
+EXPL:La respuesta correcta es: Programas que se utilizan para proteger el sistema informático contra virus, malware y otras amenazas de seguridad.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es una de las funciones principales de un sistema operativo?
 Ejecutar aplicaciones., aunque esto no es correcto en este contexto.
 *Gestionar y coordinar el uso de los recursos de hardware y software.
 Proteger el sistema de ataques de virus., lo cual no es correcto.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:Funciones de sistema operativo. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.

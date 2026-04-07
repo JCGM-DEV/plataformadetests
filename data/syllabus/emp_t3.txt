@@ -9,6 +9,7 @@ Ninguna de las anteriores opciones es completamente correcta en este contexto.
 Licenciado, graduado, diplomado, ingeniero, arquitecto o equivalente
 Bachillerato o equivalente, aunque esto no es correcto en este contexto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:La respuesta correcta es: Ciclo de grado superior de Formación Profesional. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Qué son las actitudes?
 La disposición o las tendencias emocionales y mentales que influyen en el comportamiento de las personas en el entorno laboral.
 Las habilidades y capacidades que permiten a una persona realizar tareas o funciones específicas y que están estrechamente relacionadas con los conocimientos técnicos.
@@ -40,8 +41,10 @@ Con un certificado SSL autofirmado, aunque no es la respuesta correcta.
 La capacidad de diseñar y fabricar dispositivos electrónicos avanzados, lo cual no es correcto.
 La habilidad de programar en varios lenguajes de codificación, lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:La respuesta correcta es: La destreza en el manejo de las herramientas de las tecnologías de la información y la comunicación en diversos contextos. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
 ¿Cuál es la principal tendencia del mercado laboral en el sector de la informática?
 *Inteligencia artificial y automatización
 Computación cuántica, aunque esto no es correcto en este contexto.
 Robótica, aunque esto no es correcto en este contexto.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:Tendencias del mercado laboral y oportunidades emergentes. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.

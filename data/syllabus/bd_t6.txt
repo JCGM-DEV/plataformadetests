@@ -4,57 +4,67 @@ VAR mi_variable = 10;
 *SET @mi_variable = 10;
 DECLARE @mi_variable INT DEFAULT 10;
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+EXPL:Las variables de usuario en MySQL se pueden definir utilizando la sintaxis @nombre_variable y se pueden utilizar en cualquier momento dentro de la sesión de conexión actual. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado
 
 ¿Qué palabra clave se utiliza al crear una función para indicar que siempre devuelve el mismo resultado para los mismos parámetros de entrada?
 STABLE
 VOLATILE
 *DETERMINISTIC
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:Una palabra clave utilizada en la sentencia SHOW para listar todas las bases de datos en el servidor MySQL. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 
 ¿Cuál es la función del comando DELIMITER en MySQL?
 Definir el tamaño máximo de una tabla., aunque no es la respuesta adecuada.
 *Cambiar temporalmente el carácter de finalización de comandos para escribir procedimientos complejos.
 Separar los campos de un archivo CSV durante una importación., lo cual no es correcto.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+EXPL:La importancia de la sentencia DELIMITER En MySQL, DELIMITER es una instrucción utilizada para cambiar el delimitador de comandos que se utiliza en una sesión de MySQL. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 
 ¿Qué estructura de iteración se evalúa al final del ciclo, garantizando que el conjunto de instrucciones se ejecute al menos una vez?
 WHILE
 *REPEAT
 LOOP
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:También existe la estructura de iteración REPEAT, que es similar a WHILE pero se evalúa al final del ciclo en lugar de al principio. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 
 Para ejecutar un procedimiento almacenado en MySQL, ¿qué instrucción debe utilizarse?
 EXECUTE
 RUN
 *CALL
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+EXPL:Procedure_name: Es el nombre del procedimiento almacenado. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 
 ¿Qué variable del sistema debe estar en ON para que los eventos programados con CREATE EVENT llegar a ejecutarse?
 *event_scheduler
 system_event_monitor
 timer_running
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:Esto se consigue ajustando la variable de sistema event_scheduler a ON, por ejemplo, ejecutando: SET GLOBAL event_scheduler = ON; Con esta instrucción se activa el demonio interno encargado de lanzar los eventos programados. Las otras opciones son incorrectas porque describen conceptos diferentes o 
 
 ¿Cuál es una diferencia fundamental entre las Funciones y los Procedimientos almacenados?
 *Las funciones siempre devuelven un valor; los procedimientos no devuelven un valor (aunque pueden usar parámetros de salida).
 Los procedimientos solo pueden leer datos; las funciones pueden modificarlos., lo cual no es correcto.
 Las funciones se llaman con CALL y los procedimientos con SELECT., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:3 Diferencia entre funciones y procedimien. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 
 ¿Qué tipo de dato compuesto se utiliza para almacenar uno o varios valores de un conjunto de opciones predefinidas, guardándose internamente como un mapa de bits?
 ENUM
 *SET
 ARRAY
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+EXPL:Además, MySQL permite utilizar variables de sistema y variables de usuario para almacenar información temporal. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
 
 En el tratamiento de excepciones, ¿qué manejador aborta la ejecución del código inmediatamente cuando se produce un error crítico?
 CONTINUE HANDLER
 *EXIT HANDLER
 STOP HANDLER
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
+EXPL:Tratamiento Para manejar estas excepciones, MySQL ofrece la posibilidad de declarar manejadores de excepciones en los procedimientos almacenados y funciones utilizando las sentencias DECLARE CONTINUE HANDLER FOR SQLEXCEPTION o DECLARE EXIT HANDLER FOR SQLEXCEPTION. Las otras opciones son incorrectas
 
 ¿Qué objeto de base de datos se utiliza para recorrer los resultados de una consulta SQL de manera secuencial y fila por fila?
 Trigger
 Index
 *Cursor
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+EXPL: Cursores: son objetos que permiten recorrer y manipular conjuntos de resultados de forma programática. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
