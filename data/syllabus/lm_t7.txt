@@ -4,7 +4,7 @@ En la estructura de un feed RSS 2.0, ¿cuáles son los tres elementos secundario
 <category>, <image>, <language>.
 *<title>, <link>, <description>.
 Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
-EXPL:Cada uno de estos estándares presenta una estructura diferenciada con un número de elementos obligatorios y opcionales que contribuyen a su creación de manera correcta. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es '<title>, <link>, <description>.'. "<item>, <author>, <pubDate>." y "<category>, <image>, <language>." son incorrectos porque describen conceptos diferentes.
 ¿Cuál fue una de las principales motivaciones para el desarrollo del estándar Atom como alternativa a RSS, según el contenido de la unidad?
 La intención de reemplazar por completo a RSS y hacer obsoleto su uso.
 Abordar la confusión y la incompatibilidad surgida por la existencia de varios estándares RSS similares, proporcionando una solución más consistente.
@@ -30,7 +30,7 @@ HTML y CSS.
 JSON y YAML.
 *RSS y Atom.
 Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
-EXPL:Descripción y características de la sindicación de contenidos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'RSS y Atom.'. "HTML y CSS." y "JSON y YAML." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es una diferencia clave entre los "agregadores web" y los "agregadores de escritorio" mencionados en la unidad?
 Los agregadores de escritorio no requieren una conexión a Internet, a diferencia de los agregadores web.
 Los agregadores web están alojados en sitios específicos y se acceden a través de un navegador (ideales para múltiples dispositivos), mientras que los de escritorio son aplicaciones que se instalan localmente en un dispositivo (ideales para un uso fijo).

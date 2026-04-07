@@ -4,67 +4,67 @@ Monitorización del rendimiento en tiempo real y depuración de código., lo cua
 *Generación automática de código a partir de diagramas y la ingeniería inversa para obtener diagramas a partir de código fuente.
 Gestión de versiones del código fuente y pruebas unitarias automatizadas., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:La respuesta correcta es: Generación automática de código a partir de diagramas y la ingeniería inversa para obtener diagramas a partir de código fuente.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:Generación automática de código a partir de diagramas y la ingeniería inversa para obtener diagramas a partir de código ...
 
 En un diagrama de clases UML, ¿cómo se representa una relación de Realización (o implementación) y qué concepto de la programación orientada a objetos refleja?
 Con una línea sólida y una punta de flecha rellena, representando una relación de herencia entre clases., lo cual no es correcto.
 Con una línea punteada que termina en una punta de flecha sólida, indicando el uso de funcionalidad., lo cual no es correcto.
 *Mediante una línea punteada que termina en una punta de flecha hueca (o rellena de color blanco), que va desde la clase hacia la interfaz que implementa.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
-EXPL:Conocer la notación de UML para la realización del diagrama de clases, incluidos elementos básicos como atributos y métodos, así como los distintos tipos de relaciones. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:El diagrama de clases UML muestra la estructura estática del sistema: clases, atributos, métodos y relaciones. Es el diagrama más usado en el diseño orientado a objetos.
 
 ¿Qué información crucial puede indicarse en los extremos de una línea de relación de Asociación en un diagrama de clases UML?
 La prioridad de ejecución de los métodos de las clases relacionadas., lo cual no es correcto.
 *La multiplicidad (cuántas instancias de una clase pueden participar en la relación) y la navegabilidad (si se puede obtener referencia a los objetos del otro extremo).
 El orden en que se deben instanciar los objetos de las clases asociadas., aunque no es la respuesta adecuada.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
-EXPL:Los extremos de la relación pueden contene. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:El diagrama de clases UML muestra la estructura estática del sistema: clases, atributos, métodos y relaciones. Es el diagrama más usado en el diseño orientado a objetos.
 
 ¿Cómo se distinguen visualmente las clases y los métodos abstractos en un diagrama de clases UML de aquellos que no lo son?
 Se representan con un borde punteado.
 Sus nombres se escriben en negrita.
 *Sus nombres se escriben en cursiva.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
-EXPL:La respuesta correcta es: Sus nombres se escriben en cursiva.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:El diagrama de clases UML muestra la estructura estática del sistema: clases, atributos, métodos y relaciones. Es el diagrama más usado en el diseño orientado a objetos.
 
 ¿Cuál es la principal diferencia entre una relación de Composición y una de Agregación en UML, y cómo se representa la Composición?
 La Agregación es una composición fuerte donde las partes no pueden existir sin el todo (diamante sólido), mientras que la Composición es débil (diamante hueco)., lo cual no es correcto.
 *La Composición es una relación fuerte donde las partes no tienen sentido independiente del conjunto y se eliminan con él (diamante sólido), mientras que la Agregación es débil donde las partes conservan su entidad (diamante hueco).
 La Composición se representa con un diamante hueco, y la Agregación con un diamante sólido., lo cual no es correcto.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:6 Relación de agregación La agregación es un tipo de relación de asociación en la que una clase es parte de otra (composición débil). Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La Composición es una relación fuerte donde las partes no tienen sentido independiente del conjunto y se eliminan con él...
 
 En la notación de los diagramas de clases UML, ¿qué significa que un atributo o método esté precedido por el símbolo #?
 Que tiene visibilidad pública.
 Que tiene visibilidad de paquete.
 *Que tiene visibilidad protegida.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
-EXPL:Conocer la notación de UML para la realización del diagrama de clases, incluidos elementos básicos como atributos y métodos, así como los distintos tipos de relaciones. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'Que tiene visibilidad protegida.'. "Que tiene visibilidad pública." y "Que tiene visibilidad de paquete." son incorrectos porque describen conceptos diferentes.
 
 ¿Cuál es el papel principal del diagrama de clases en el diseño de software orientado a objetos según la Unidad 4?
 Representar la secuencia de interacciones entre objetos en tiempo de ejecución., lo cual no es correcto.
 *Reflejar las clases que componen un sistema, incluyendo sus atributos, métodos y las relaciones entre ellas, para permitir a los desarrolladores escribir programas a partir de una especificación formal.
 Describir el comportamiento del sistema desde la perspectiva de los usuarios externos., lo cual no es correcto.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Introducción Teniendo en cuenta que UML permite representar de manera formal diferentes aspectos y perspectivas de un sistema orientado a objetos, el diagrama de clases es, probablemente, el más interesante e importante de los diagramas de que contempla este lenguaje. Las otras opciones son incorrec
+EXPL:Reflejar las clases que componen un sistema, incluyendo sus atributos, métodos y las relaciones entre ellas, para permit...
 
 Si un atributo en una clase UML es estático, ¿cómo se indica esta característica en su representación gráfica dentro del diagrama de clases?
 Su nombre se escribe entre corchetes.
 *Debe ir subrayado.
 Se precede de un asterisco (*).
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
-EXPL:La respuesta correcta es: Debe ir subrayado.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:La respuesta es 'Debe ir subrayado.'. "Su nombre se escribe entre corchetes." y "Se precede de un asterisco (*)." son incorrectos porque describen conceptos diferentes.
 
 ¿Qué tipo de relación UML se representa mediante una línea discontinua rematada en una punta de flecha que apunta a la clase que proporciona la funcionalidad, y qué significado tiene esta relación?
 Relación de agregación, indicando que una clase es parte de otra sin dependencia fuerte.
 Relación de generalización, mostrando que una clase hereda de otra., lo cual no es correcto.
 *Relación de dependencia o de uso, representando que una clase utiliza la funcionalidad proporcionada por otra.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Se representa mediante una línea discontinua remada en una punta de flecha que apunta a la clase que proporciona la funcionalidad. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:Relación de dependencia o de uso, representando que una clase utiliza la funcionalidad proporcionada por otra.
 
 Según la definición de la unidad, ¿en qué consiste el concepto de "ingeniería inversa" aplicado a los diagramas de clases en el contexto del desarrollo de software?
 En el proceso de optimizar el código fuente a partir de un diagrama de clases previamente generado.
 *En la obtención de un diagrama de clases a partir del código fuente ya existente de una aplicación.
 En la transformación de un diagrama de clases en un diagrama de componentes para la implementación.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
-EXPL:Generación de diagramas de clases a partir de código (ingeniería inversa) En general, hacer ingeniería inversa consiste en, a partir de un producto ya creado (físico o lógico), obtener información referente a cómo está diseñado y construido. Las otras opciones son incorrectas porque describen concep
+EXPL:En la obtención de un diagrama de clases a partir del código fuente ya existente de una aplicación.

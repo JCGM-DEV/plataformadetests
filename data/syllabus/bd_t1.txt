@@ -12,7 +12,7 @@ Jerárquicas
 Relacionales
 *Empresariales
 Los tipos de fichero que permiten incorporar medidas de seguridad como contraseñas y encriptación son:
-EXPL:La respuesta correcta es: Empresariales. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:La respuesta es 'Empresariales'. "Jerárquicas" y "Relacionales" son incorrectos porque describen conceptos diferentes.
 Planos
 Ninguna respuesta es correcta
 *Indexados

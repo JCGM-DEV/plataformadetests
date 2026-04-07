@@ -4,58 +4,58 @@ Una cuenta de usuario que solo puede acceder a recursos en línea.
 *Una cuenta de usuario que solo puede acceder a recursos locales en una computadora.
 Una cuenta de usuario que solo puede acceder a recursos en una red local.
 Con el comando fsck para verificar la integridad del sistema de archivos.
-EXPL:Configuración de usuarios y grupos locales La configuración de usuarios y grupos locales es fundamental en la gestión de sistemas operativos, ya que permite controlar el acceso y los permisos de los usuarios a los recursos del sistema. Las otras opciones son incorrectas porque describen conceptos di
+EXPL:Una cuenta de usuario que solo puede acceder a recursos locales en una computadora.
 ¿Qué comando se utiliza para añadir un usuario a un grupo en la consola de comandos de Windows?
 add_group_member.
 *net group.
 add_user_to_group.
 Con el comando fsck para verificar la integridad del sistema de archivos.
-EXPL:Para añadir un usuario a un grupo utilizando la consola de Windows, se debe seguir los siguientes pasos: 1. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'net group.'. "add_group_member." y "add_user_to_group." son incorrectos porque describen conceptos diferentes.
 ¿Por qué es importante la configuración de usuarios y grupos locales en la gestión de sistemas operativos?
 Para personalizar la apariencia del sistema operativo., lo cual no es correcto.
 *Para controlar el acceso y los permisos de los usuarios a los recursos del sistema.
 Para mejorar la velocidad del sistema operativo., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:En esta unidad, aprenderás a configurar y administrar usuarios, grupos, permisos de acceso y otras opciones de seguridad en sistemas operativos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:Para controlar el acceso y los permisos de los usuarios a los recursos del sistema.
 ¿Qué comando se utiliza para crear un nuevo usuario en la consola de comandos de Windows?
 create_user.
 add_user.
 *net user.
 Con el comando fsck para verificar la integridad del sistema de archivos.
-EXPL:Con estos pasos, habrás creado un nuevo usuario en Windows utilizando la consola de comandos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'net user.'. "create_user." y "add_user." son incorrectos porque describen conceptos diferentes.
 ¿Qué beneficios puede tener cambiar la ruta de las carpetas de documentos a otra partición o recurso de red?
 *Liberar espacio en el disco principal y reducir la fragmentación del disco.
 Mejorar la velocidad de Internet., lo cual no es correcto.
 Aumentar el rendimiento del procesador., lo cual no es correcto.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Cambiar la ruta de las carpetas de documentos a otra partición o recurso de red puede ser beneficioso en términos de administración de espacio de almacenamiento y acceso compartido. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo pr
+EXPL:Liberar espacio en el disco principal y reducir la fragmentación del disco.
 ¿Cómo se verifica que un usuario se ha creado correctamente en Windows utilizando la consola de comandos?
 Con el comando "show_user".
 Con el comando "verify_user".
 *Con el comando "net user".
 Con el comando fsck para verificar la integridad del sistema de archivos.
-EXPL:Verificar que el usuario se ha creado: Para verificar que el usuario se ha creado correctamente, puedes utilizar el siguiente comando:. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'Con el comando "net user".'. "Con el comando "show_user"." y "Con el comando "verify_user"." son incorrectos porque describen conceptos diferentes.
 ¿Quién debe tener la capacidad de habilitar o deshabilitar cuentas de usuario?
 Todos los usuarios del sistema., lo cual no es correcto.
 *Solo los usuarios con privilegios de administrador.
 Solo los usuarios que tengan una contraseña segura.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Solo los usuarios con privilegios de administrador deberían tener la capacidad de habilitar o deshabilitar cuentas de usuario. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).
 ¿Por qué es importante tener una correcta gestión de permisos y acceso a recursos en un sistema informático?
 *Para prevenir el acceso no autorizado a datos confidenciales.
 Para mejorar la velocidad de Internet., lo cual no es correcto.
 Para aumentar el rendimiento del procesador.
 Con un certificado SSL autofirmado, aunque no es la respuesta correcta.
-EXPL:Permisos locales El acceso a recursos y los permisos locales son elementos críticos para la seguridad y la gestión de sistemas informáticos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:Para prevenir el acceso no autorizado a datos confidenciales.
 ¿Por qué es importante asignar a un usuario a un grupo en un sistema operativo?
 Para que el usuario tenga acceso a todos los recursos del sistema.
 *Para simplificar la administración de permisos y ahorrar tiempo y esfuerzo.
 Para aumentar el riesgo de que un usuario tenga acceso a recursos que no debería tener.
 Con el comando fsck para verificar la integridad del sistema de archivos.
-EXPL:Usuarios y grupos predeterminados Por lo general, los sistemas operativos vienen con usuarios y grupos predeterminados que tienen diferentes niveles de acceso y permisos en el sistema. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo
+EXPL:Para simplificar la administración de permisos y ahorrar tiempo y esfuerzo.
 ¿Cuáles son algunas normas para crear una contraseña segura?
 La contraseña debe tener menos de ocho caracteres de longitud., lo cual no es correcto.
 *La contraseña debe contener una combinación de letras mayúsculas y minúsculas, números y símbolos.
 La contraseña debe ser una palabra común o una secuencia de caracteres fácilmente reconocible.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Cuando hablamos de una contraseña segura estamos hablando de aquella que no es fácil de adivinar por una persona o por un software de desencriptación, lo que significa que debe cumplir con ciertos requisitos de complejidad. Las otras opciones son incorrectas porque describen conceptos diferentes o c
+EXPL:La contraseña debe contener una combinación de letras mayúsculas y minúsculas, números y símbolos.

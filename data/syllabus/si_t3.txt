@@ -4,52 +4,52 @@ tema 3
 Extendidas.
 Lógicas.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:El esquema MBR tiene limitaciones en el número de particiones que se pueden crear, así como en el tamaño máximo de cada partición. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'Primarias.'. "Extendidas." y "Lógicas." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es la principal ventaja del esquema GPT sobre el esquema MBR?
 Es compatible con una amplia variedad de sistemas operativos y software.
 *Tiene una mejor protección contra la corrupción de datos y soporta discos de más de 2TB.
 Solo permite la creación de particiones primarias., lo cual no es correcto.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:La respuesta correcta es: Tiene una mejor protección contra la corrupción de datos y soporta discos de más de 2TB.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:GPT (GUID Partition Table) soporta discos de más de 2TB y hasta 128 particiones primarias. MBR está limitado a 2TB y 4 particiones primarias.
 ¿Cuál es la estructura de directorios típica de Windows?
 /, /bin, /etc, /home, /usr, /var.
 *C:, C:\Windows, C:\Program Files, C:\Users.
 /, /Applications, /Library, /System, /Users.
 Con el comando fsck para verificar la integridad del sistema de archivos.
-EXPL:NTFS utiliza una estructura de árbol de directorios para organizar y almacenar archivos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'C:, C:\Windows, C:\Program Files, C:\Users.'. "/, /bin, /etc, /home, /usr, /var." y "/, /Applications, /Library, /System, /Users." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es la principal ventaja de los dispositivos de almacenamiento externo?
 Mayor velocidad de transferencia de datos.
 Mayor capacidad de almacenamiento.
 *Mayor flexibilidad y portabilidad.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:El almacenamiento externo es un dispositivo de almacenamiento que se conecta a un ordenador a través de un puerto externo, mientras que el almacenamiento interno se refiere a los dispositivos de almacenamiento que se enc. Las otras opciones son incorrectas porque describen conceptos diferentes o car
+EXPL:La respuesta es 'Mayor flexibilidad y portabilidad.'. "Mayor velocidad de transferencia de datos." y "Mayor capacidad de almacenamiento." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es la principal diferencia entre el almacenamiento interno y externo?
 La velocidad de transferencia de datos.
 *La ubicación física del dispositivo.
 La capacidad de almacenamiento.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Almacenamiento externo e interno El almacenamiento externo y el almacenamiento interno son dos términos clave en la gestión de la información y la tecnología de la computación. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo pregunt
+EXPL:La respuesta es 'La ubicación física del dispositivo.'. "La velocidad de transferencia de datos." y "La capacidad de almacenamiento." son incorrectos porque describen conceptos diferentes.
 ¿Qué comando se utiliza en Linux para mostrar información sobre los procesos que se están ejecutando en el sistema?
 systeminfo.
 *top.
 free.
 Con el comando fsck para verificar la integridad del sistema de archivos.
-EXPL:Hay varias herramientas y comandos que se pueden utilizar para buscar información del sistema. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'top.'. "systeminfo." y "free." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es la capacidad de almacenamiento de un disco DVD estándar?
 Hasta 2,5 GB.
 *Hasta 4,7 GB.
 Hasta 25 GB.
 Con el comando fsck para verificar la integridad del sistema de archivos.
-EXPL:La respuesta correcta es: Hasta 4,7 GB.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).
 ¿Cuáles son los dos esquemas de particiones más comunes?
 FAT y NTFS.
 *MBR y GPT.
 HFS+ y APFS.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Los esquemas de particiones son estructuras lógicas que describen cómo se divide el espacio de almacenamiento de un disco duro. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:GPT (GUID Partition Table) soporta discos de más de 2TB y hasta 128 particiones primarias. MBR está limitado a 2TB y 4 particiones primarias.
 ¿Qué tipo de dispositivo de almacenamiento es más resistente a golpes y vibraciones?
 Disco duro (HDD).
 *Unidad de estado sólido (SSD).
 Tarjeta de memoria.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:A diferencia de los discos duros, las unidades de estado sólido no tienen partes móviles y son más resistentes a golpes y vibraciones. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'Unidad de estado sólido (SSD).'. "Disco duro (HDD)." y "Tarjeta de memoria." son incorrectos porque describen conceptos diferentes.

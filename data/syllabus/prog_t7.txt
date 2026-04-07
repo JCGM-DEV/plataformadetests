@@ -4,58 +4,58 @@ Para lanzar una instancia específica de una excepción en una línea concreta d
 *Para indicar que el método delega la responsabilidad de gestionar ciertas excepciones a quien lo invoque.
 Para obligar al bloque finally a cerrar todos los recursos abiertos de forma manual.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
-EXPL:La respuesta correcta es: Para indicar que el método delega la responsabilidad de gestionar ciertas excepciones a quien lo invoque.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:throws en la firma del método declara que puede lanzar una excepción checked. El llamador debe manejarla con try-catch o propagarla con throws. throw (sin s) lanza la excepción en una línea concreta.
 Al recorrer una colección, ¿en qué caso es indispensable utilizar un Iterator en lugar de un bucle for-each?
 Cuando solo necesitamos leer los datos sin modificarlos., lo cual no es correcto.
 Cuando queremos filtrar la colección mediante un objeto Stream., lo cual no es correcto.
 *Cuando necesitamos eliminar elementos de la colección de forma segura mientras la recorremos.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:La respuesta correcta es: Cuando necesitamos eliminar elementos de la colección de forma segura mientras la recorremos.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:Iterator es necesario cuando se necesita eliminar elementos de una colección durante la iteración. Usar list.remove() en un for-each lanza ConcurrentModificationException. it.remove() es seguro.
 ¿Cuál es el propósito de utilizar Genéricos al declarar una colección como ArrayList<String>?
 Permitir que la lista guarde cualquier tipo de objeto (mezclar enteros, cadenas, etc.).
 *Aportar seguridad de tipos en tiempo de compilación y evitar la necesidad de realizar castings manuales.
 Hacer que la colección sea inmutable y no se puedan añadir más elementos tras su creación.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:La respuesta correcta es: Aportar seguridad de tipos en tiempo de compilación y evitar la necesidad de realizar castings manuales.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:Aportar seguridad de tipos en tiempo de compilación y evitar la necesidad de realizar castings manuales.
 Dentro del Java Collections Framework, ¿qué interfaz debe usarse si se requiere una colección que no permita elementos duplicados?
 List
 *Set
 Queue
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
-EXPL:La respuesta correcta es: Set. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:La respuesta es 'Set'. "List" y "Queue" son incorrectos porque describen conceptos diferentes.
 ¿Cuál es la diferencia principal entre un ArrayList y un HashSet?
 *El ArrayList mantiene el orden de inserción, mientras que el HashSet no garantiza ningún orden.
 El ArrayList no permite duplicados y el HashSet sí., lo cual no es correcto.
 El HashSet es más lento para acceder a elementos que el ArrayList porque usa índices.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Poder del Polimorfismo: Si escribes un método que recibe un Collection<String>, ese método aceptará tanto un ArrayList como un HashSet. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:ArrayList mantiene el orden de inserción y permite duplicados. HashSet no garantiza orden y no permite duplicados. ArrayList es O(1) para acceso por índice; HashSet es O(1) para contains().
 Sobre la interfaz Map, ¿cuál de las siguientes afirmaciones es correcta?
 Hereda directamente de la interfaz Collection., lo cual no es correcto.
 *Almacena elementos en parejas de Clave-Valor y no pertenece a la jerarquía de Collection.
 Es una lista ordenada que permite acceder a los elementos mediante un índice numérico.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:La respuesta correcta es: Almacena elementos en parejas de Clave-Valor y no pertenece a la jerarquía de Collection.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:Map almacena pares clave-valor. No hereda de Collection. HashMap no garantiza orden; TreeMap mantiene orden natural de claves; LinkedHashMap mantiene orden de inserción.
 ¿Cuál es la principal ventaja del "try-with-resources"?
 Permite capturar múltiples excepciones en una sola línea de código., lo cual no es correcto.
 *Gestiona automáticamente el cierre de recursos (como archivos o conexiones) al finalizar el bloque.
 Aumenta la velocidad de ejecución de las colecciones tipo List y Map., lo cual no es correcto.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:La respuesta correcta es: Gestiona automáticamente el cierre de recursos (como archivos o conexiones) al finalizar el bloque.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:try-with-resources cierra automáticamente los recursos (ficheros, conexiones) al salir del bloque, incluso si hay excepción. El recurso debe implementar AutoCloseable. Evita el finally con close() manual.
 Según la jerarquía de excepciones en Java, ¿cuál es la diferencia entre un Error y una Exception?
 Las Exception son fallos graves del sistema (como falta de memoria), mientras que los Error son fallos del programa.
 *Los Error son situaciones irrecuperables de la JVM, mientras que las Exception son condiciones que una aplicación debería capturar.
 No hay diferencia; ambos términos se usan indistintamente para cualquier fallo en tiempo de ejecución.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
-EXPL:Jerarquía de Excepciones en Java. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:Los Error son situaciones irrecuperables de la JVM, mientras que las Exception son condiciones que una aplicación deberí...
 ¿Qué caracteriza a las excepciones de tipo RuntimeException (Unchecked)?
 *El compilador no obliga a capturarlas ni a declararlas en la firma del método.
 Son excepciones que deben ser revisadas obligatoriamente por el programador antes de compilar.
 Son las únicas excepciones que pueden lanzarse mediante la palabra clave throw.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Unchecked Exceptions (Excepciones No Verificadas) Son aquellas que heredan de RuntimeException. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:El compilador no obliga a capturarlas ni a declararlas en la firma del método.
 En una estructura try-catch-finally, ¿cuándo se ejecuta el bloque finally?
 Solo si se produce una excepción y esta es capturada correctamente.
 Solo si no se produce ninguna excepción durante la ejecución del try.
 *Siempre, independientemente de si se lanzó una excepción o si fue capturada.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:La respuesta correcta es: Siempre, independientemente de si se lanzó una excepción o si fue capturada.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:Siempre, independientemente de si se lanzó una excepción o si fue capturada.

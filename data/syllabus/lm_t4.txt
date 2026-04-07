@@ -24,7 +24,7 @@ xs:complexType
 *xs:simpleType
 xs:element
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Para definir un tipo simple nuevo, se usa la siguiente estructura <xs:simpleType>, cuyo atributo name servirá para asignárselo al elemento e. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'xs:simpleType'. "xs:complexType" y "xs:element" son incorrectos porque describen conceptos diferentes.
 En XML Schema, ¿cuál de las siguientes facetas o restricciones se utiliza para especificar un rango de caracteres admitidos o una expresión regular para el valor de un elemento o atributo?
 xs:Enumeration
 xs:MaxLength

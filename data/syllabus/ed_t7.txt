@@ -4,67 +4,67 @@ La creación de un nuevo esquema de base de datos para optimizar las consultas.,
 La redefinición de la interfaz de usuario para mejorar la experiencia del usuario final., lo cual no es correcto.
 *La correcta composición de métodos (creando funciones para encapsular funcionalidad) y la organización de los datos (utilizando objetos y encapsulación).
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:La refactorización se compone de varias técnicas. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La correcta composición de métodos (creando funciones para encapsular funcionalidad) y la organización de los datos (uti...
 
 Según el contenido de la unidad, ¿cuál es la razón fundamental por la que los sistemas de control de versiones son herramientas imprescindibles en la ingeniería de software, especialmente en desarrollos colectivos?
 Permiten generar automáticamente la documentación técnica del proyecto sin intervención manual., lo cual no es correcto.
 *Facilitan el control sobre el código fuente y otros ficheros del sistema, su evolución, y permiten el trabajo en grupo minimizando el impacto de los cambios entre programadores.
 Son herramientas exclusivas para el despliegue automático del software en diferentes entornos de producción., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Control de versiones Los sistemas de control de versiones son herramientas fundamentales dentro del desarrollo y de la ingeniería de software. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:Facilitan el control sobre el código fuente y otros ficheros del sistema, su evolución, y permiten el trabajo en grupo m...
 
 Flujo de Trabajo Básico con Git: Después de realizar modificaciones en los ficheros de un proyecto localmente, ¿cuáles son los dos comandos fundamentales en Git para primero hacer firmes esos cambios localmente y luego subirlos al repositorio remoto?
 git add y luego git clone., pero este concepto no corresponde a lo descrito.
 git push y luego git commit., pero este concepto no corresponde a lo descrito.
 *git commit para consolidar los cambios en el repositorio local y git push para subirlos al servidor remoto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:La respuesta correcta es: git commit para consolidar los cambios en el repositorio local y git push para subirlos al servidor remoto.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:COMMIT confirma permanentemente todos los cambios de la transacción actual. Una vez ejecutado, los cambios son visibles para otros usuarios y no se pueden deshacer con ROLLBACK.
 
 ¿Cuál de las siguientes afirmaciones describe con mayor precisión el propósito de la refactorización en el desarrollo de software?
 La refactorización tiene como objetivo principal añadir nuevas funcionalidades o características a un programa existente., lo cual no es correcto.
 La refactorización se realiza para eliminar errores funcionales o fallos del sistema que impiden su correcto funcionamiento., lo cual no es correcto.
 *La refactorización es un conjunto de técnicas que modifican un programa ya funcional para mejorar su legibilidad, eficiencia, comprensión y mantenimiento, sin alterar su comportamiento externo.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:La respuesta correcta es: La refactorización es un conjunto de técnicas que modifican un programa ya funcional para mejorar su legibilidad, eficiencia, comprensión y mantenimiento, sin alterar su comportamiento externo.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:La refactorización es un conjunto de técnicas que modifican un programa ya funcional para mejorar su legibilidad, eficie...
 
 Herramientas de Ayuda a la Refactorización en IDEs: Los Entornos de Desarrollo Integrado (IDEs) como PyCharm ofrecen herramientas para la refactorización asistida. ¿Qué tipo de acción es un ejemplo de refactorización asistida directamente proporcionada por un IDE?
 La detección y corrección automática de errores de sintaxis en tiempo real., lo cual no es correcto.
 La ejecución de pruebas de rendimiento del código bajo diferentes cargas de trabajo., lo cual no es correcto.
 *El renombrado automático de variables, funciones o clases en todo el proyecto, o la extracción de un bloque de código para crear un nuevo método.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Los entornos de desarrollo proporcionan herramientas para realizar la refactorización de código de manera asistida. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:Un IDE (Integrated Development Environment) integra editor de código, compilador/intérprete, depurador y otras herramientas en una única interfaz. Ejemplos: IntelliJ IDEA, Eclipse, VS Code.
 
 A pesar de que una refactorización de código no implica cambios en su funcionamiento, el manual indica que puede generar errores si se realiza incorrectamente. ¿Qué acciones se deben considerar para mitigar este riesgo?
 Realizar únicamente revisiones de código manuales para identificar posibles fallos visualmente., lo cual no es correcto.
 *Asegurarse de poder deshacer los cambios realizados (preferiblemente con sistemas de control de versiones) y ejecutar pruebas (unitarias, de regresión o de humo) para verificar la correcta funcionalidad del código modificado.
 Implementar un sistema de autenticación de dos factores para el acceso al código fuente., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Una refactorización de código no implica cambios en su funcionamiento, pero si está mal hecha puede generar errores. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:Asegurarse de poder deshacer los cambios realizados (preferiblemente con sistemas de control de versiones) y ejecutar pr...
 
 Restauración de Versiones Anteriores en Git: Si un programador necesita restaurar el estado de su repositorio local en Git a una versión anterior específica (por ejemplo, al estado de un "primer commit"), ¿qué comando debe utilizar y qué información es crucial para ello?
 git merge <nombre_de_rama> para combinar con una rama antigua., lo cual no es correcto.
 git log para ver el historial y luego git revert para deshacer el último cambio.
 *git reset --hard <identificador_del_commit> utilizando el identificador único del commit al que se desea regresar.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Restauración de versiones anteriores. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:COMMIT confirma permanentemente todos los cambios de la transacción actual. Una vez ejecutado, los cambios son visibles para otros usuarios y no se pueden deshacer con ROLLBACK.
 
 Resolución de Conflictos en Sistemas de Control de Versiones: En un escenario de desarrollo colectivo, cuando varios programadores modifican el mismo fchero simultáneamente, pueden surgir confictos. ¿Qué comando de Git se menciona como el adecuado para resolver este tipo de problemas?
 git status para ver el estado de los fcheros.
 git diff para ver las diferencias entre versiones.
 *git merge para integrar cambios y resolver solapamientos.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Es fácil que aparezcan conflictos a la hora de utilizar un sistema de control de versiones, ya que pueden ser muchos los usuarios que trabajen en el mismo proyecto y se puede dar la circunstancia de que estén modificando el mismo fichero. Las otras opciones son incorrectas porque describen conceptos
+EXPL:La respuesta es 'git merge para integrar cambios y resolver solapamientos.'.
 
 En Python, además de los comentarios tradicionales (# o bloques con '''), existe un tipo de comentario formal que se utiliza para documentar funciones, clases y métodos, siendo visible con la función help() y en la ayuda contextual de los IDEs. ¿Cómo se denomina este tipo de comentario?
 Comentario de bloque.
 Comentario de línea.
 *Docstring.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Python, además, admite crear bloques de comentarios formados por varias líneas. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'Docstring.'. "Comentario de bloque." y "Comentario de línea." son incorrectos porque describen conceptos diferentes.
 
 ¿Cuál es la principal distinción entre un sistema de control de versiones centralizado y uno distribuido?
 Los sistemas centralizados son de código cerrado, mientras que los distribuidos son siempre de código abierto., aunque no es la respuesta adecuada.
 Los sistemas centralizados almacenan las copias del proyecto en la máquina local del desarrollador, mientras que los distribuidos lo hacen en un servidor remoto.
 *En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, las copias se almacenan tanto en un servidor como en cada máquina de los integrantes del equipo.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Principalmente, los sistemas de control de versiones se dividen en: . Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, l...

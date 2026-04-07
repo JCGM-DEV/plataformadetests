@@ -4,67 +4,67 @@ Optimizar el código fuente para mejorar su eficiencia sin necesidad de ejecuci�
 *Ejecutar el programa línea a línea, permitiendo observar la ejecución, acceder a la memoria y examinar el valor de las variables en puntos de ruptura, con el fin de detectar errores o comprender el código.
 Generar automáticamente casos de prueba a partir del código fuente para su posterior ejecución manual., aunque no es la respuesta adecuada.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:La respuesta correcta es: Ejecutar el programa línea a línea, permitiendo observar la ejecución, acceder a la memoria y examinar el valor de las variables en puntos de ruptura, con el fin de detectar errores o comprender el código.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:Ejecutar el programa línea a línea, permitiendo observar la ejecución, acceder a la memoria y examinar el valor de las v...
 
 ¿Quién es el principal responsable de realizar las pruebas unitarias y qué objetivo persiguen?
 El equipo del cliente, con el fin de verificar que el sistema cumple con lo acordado en las especicaciones., lo cual no es correcto.
 *Los programadores, con el objetivo de verificar que un elemento mínimo funcional del programa (una función, un método o una clase) funciona correctamente.
 Cualquier actor del desarrollo de manera no exhaustiva para comprobar la funcionalidad principal del sistema.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:3 Uso de herramientas integradas en los entornos de desarrollo para realizar pruebas unitarias. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:Los programadores, con el objetivo de verificar que un elemento mínimo funcional del programa (una función, un método o ...
 
 ¿Cuál es la distinción fundamental entre las pruebas de "caja negra" y las de "caja blanca"?
 Las pruebas de caja negra comprueban el rendimiento bajo carga, mientras que las de caja blanca verifican la usabilidad., aunque no es la respuesta adecuada.
 Las pruebas de caja negra buscan errores de eficiencia interna, y las de caja blanca se centran en la experiencia del usuario., lo cual no es correcto.
 *Las pruebas de caja negra verifican el funcionamiento externo de un componente sin mirar su interior, mientras que las de caja blanca (estructurales) observan la construcción interna buscando problemas de eficiencia o seguridad.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:La respuesta correcta es: Las pruebas de caja negra verifican el funcionamiento externo de un componente sin mirar su interior, mientras que las de caja blanca (estructurales) observan la construcción interna buscando problemas de eficiencia o seguridad.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:Las pruebas de caja negra verifican el funcionamiento externo de un componente sin mirar su interior, mientras que las d...
 
 Según la unidad, ¿cuáles de los siguientes son elementos esenciales que componen un caso de prueba?
 Arquitectura del sistema, diagrama de despliegue y log de errores., lo cual no es correcto.
 Tiempo de ejecución, uso de memoria y carga de la CPU., lo cual no es correcto.
 *Identificador, descripción, precondiciones, datos de prueba, pasos, resultado esperado, resultado obtenido y estado.
 Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
-EXPL:La respuesta correcta es: Identificador, descripción, precondiciones, datos de prueba, pasos, resultado esperado, resultado obtenido y estado.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
 
 ¿Cuál de las siguientes afirmaciones sobre las pruebas de software es la más precisa según el contenido de la unidad?
 Las pruebas solo son necesarias para software de gran complejidad, y siempre eliminan todos los errores., lo cual no es correcto.
 El software sin errores no existe y las pruebas son un gasto innecesario que ralentiza el desarrollo., lo cual no es correcto.
 *Tanto la presencia de errores en el software como el esfuerzo por evitarlos tienen un coste asociado, y las pruebas son fundamentales para minimizar los problemas y asegurar la calidad.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Pruebas en el proceso de desarrollo de software. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:Tanto la presencia de errores en el software como el esfuerzo por evitarlos tienen un coste asociado, y las pruebas son ...
 
 ¿Cuándo se realizan las pruebas de regresión y cuál es su principal propósito?
 Se realizan antes de cualquier cambio en el sistema para establecer una línea base de rendimiento., lo cual no es correcto.
 *Se llevan a cabo después de realizar cambios en el sistema (mejoras o corrección de errores) para comprobar que otras partes del sistema no se han visto afectadas negativamente.
 Son pruebas exhaustivas para detectar todos los posibles fallos en el sistema antes de su despliegue inicial., lo cual no es correcto.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Estas pruebas se realizan después de realizar cambios en el sistema (ya sean mejoras o corrección de errores), para comprobar que otras partes del sistema no se han visto afectadas. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo pr
+EXPL:Se llevan a cabo después de realizar cambios en el sistema (mejoras o corrección de errores) para comprobar que otras pa...
 
 ¿Qué representa el concepto de "cubrimiento" o "cobertura" en el contexto de las pruebas de código?
 El número de errores detectados por el conjunto de pruebas., lo cual no es correcto.
 *El porcentaje del código fuente que ha sido probado, sirviendo como una métrica de la calidad de las pruebas.
 La capacidad de un programa para manejar excepciones y errores de entrada., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:La respuesta correcta es: El porcentaje del código fuente que ha sido probado, sirviendo como una métrica de la calidad de las pruebas.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:El porcentaje del código fuente que ha sido probado, sirviendo como una métrica de la calidad de las pruebas.
 
 ¿Cuál es la diferencia clave entre el análisis estático y el análisis dinámico en las pruebas de código?
 El análisis estático se realiza en entornos de producción, y el dinámico en entornos de desarrollo., lo cual no es correcto.
 El análisis estático busca errores de sintaxis, mientras que el dinámico solo se enfoca en la interfaz de usuario., aunque no es la respuesta adecuada.
 *El análisis estático se realiza sobre el código sin ejecutarlo, buscando ineficiencias o código muerto, mientras que el análisis dinámico comprueba el funcionamiento del código mediante su ejecución en diversos escenarios.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Las pruebas de código se pueden dividir en dos grandes grupos: análisis estático y análisis dinámico. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:El análisis estático se realiza sobre el código sin ejecutarlo, buscando ineficiencias o código muerto, mientras que el ...
 
 Aunque las pruebas unitarias son imprescindibles, ¿por qué son también necesarias las pruebas de integración?
 Las pruebas unitarias solo verifican la lógica de negocio, no la interacción con la interfaz de usuario., lo cual no es correcto.
 *Los programas casi siempre funcionan dentro de sistemas más complejos y se relacionan con otros módulos o sistemas, por lo que las pruebas de integración verifican que el componente funciona correctamente en sus relaciones con estos.
 Las pruebas de integración se enfocan en detectar errores en el rendimiento del sistema bajo altas cargas, algo que las pruebas unitarias no hacen., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Las pruebas unitarias también se conocen como test unitarios: fragmentos de programa que preparan el entorno de. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:Los programas casi siempre funcionan dentro de sistemas más complejos y se relacionan con otros módulos o sistemas, por ...
 
 En el contexto del ciclo de vida del software, ¿qué enfoque para la realización de pruebas se considera correcto y por qué?
 La "fase de pruebas" se realiza únicamente después de la implementación, asumiendo que los errores son solo de codificación.
 *En el ciclo de vida en V, cada fase de construcción lleva asociada una fase de pruebas para detectar errores lo antes posible y evitar arrastrarlos.
 Las pruebas son una tarea puntual que se realiza solo al final del mantenimiento del software., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:En el limitado ciclo de vida en cascada, la “fase de pruebas” o de verificación se desarrollaba inmediatamente después de la “fase de implementación” y justo antes de la “fase de mantenimiento”. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresp
+EXPL:En el ciclo de vida en V, cada fase de construcción lleva asociada una fase de pruebas para detectar errores lo antes po...

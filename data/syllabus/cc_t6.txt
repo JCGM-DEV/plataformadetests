@@ -4,58 +4,58 @@ tema 6
 Permiten delegar la gestión de la infraestructura
 No permiten escalar los recursos
 Exigen la compra de servidores propios
-EXPL:Servicios de cómputo Bienvenidos a esta presentación sobre servicios de cómputo, un área crucial en el desarrollo de aplicaciones y sistemas modernos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'Requieren una mayor inversión inicial'. "Permiten delegar la gestión de la infraestructura" y "No permiten escalar los recursos" son incorrectos porque describen conceptos diferentes.
 ¿Qué aspecto se debe considerar al adoptar servicios administrados de cómputo?
 Seguridad y escalabilidad
 *Solo el coste
 No se requiere considerar ningún aspecto
 No afectan la facilidad de uso
-EXPL:Antes de adoptar servicios administrados de cómputo, es esencial considerar aspectos como la seguridad, los costes, la escala bilidad y la facilidad de uso. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'Solo el coste'. "Seguridad y escalabilidad" y "No se requiere considerar ningún aspecto" son incorrectos porque describen conceptos diferentes.
 ¿Qué tecnología permite ejecutar múltiples sistemas operativos en una misma máquina física?
 *Contenedores
 Máquinas virtuales
 Computación sin servidor
 Servicios SaaS
-EXPL:La respuesta correcta es: Contenedores. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:La respuesta es 'Contenedores'. "Máquinas virtuales" y "Computación sin servidor" son incorrectos porque describen conceptos diferentes.
 ¿Cuál es una de las ventajas de la computación sin servidor?
 *Requiere administración constante de la infraestructura
 Permite escalar automáticamente en función de la demanda
 Obliga a pagar por capacidad reservada, lo cual no es correcto.
 Es más costosa que las VMs, aunque esto no es correcto en este contexto.
-EXPL:La respuesta correcta es: Requiere administración constante de la infraestructura. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:La respuesta es 'Requiere administración constante de la infraestructura'.
 ¿Cuál de las siguientes opciones es un ejemplo de un servicio SaaS?
 *Amazon EC2
 Google App Engine
 Microsoft 365
 Kubernetes
-EXPL:La respuesta correcta es: Amazon EC2. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:SaaS (Software as a Service) proporciona aplicaciones completas listas para usar a través de Internet. El proveedor gestiona todo. Ejemplos: Gmail, Microsoft 365, Salesforce.
 ¿Cuál es uno de los principios clave de los servicios de cómputo?
 *Uso exclusivo de hardware propio
 Pago por una tarifa fija
 Pago por uso
 Falta de flexibilidad
-EXPL:Servicios de cómputo Bienvenidos a esta presentación sobre servicios de cómputo, un área crucial en el desarrollo de aplicaciones y sistemas modernos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'Uso exclusivo de hardware propio'. "Pago por una tarifa fija" y "Pago por uso" son incorrectos porque describen conceptos diferentes.
 ¿Cuál es una de las ventajas de usar máquinas virtuales (VM)?
 *No permiten escalabilidad
 Comparten recursos físicos, optimizando costos
 Son menos eficientes que los servidores físicos
 No ofrecen aislamiento entre aplicaciones
-EXPL:La respuesta correcta es: No permiten escalabilidad. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:La respuesta es 'No permiten escalabilidad'. "Comparten recursos físicos, optimizando costos" y "Son menos eficientes que los servidores físicos" son incorrectos porque describen conceptos diferentes.
 ¿Qué tecnología permite ejecutar código sin preocuparse por la administración de servidores?
 *Computación sin servidor (serverless)
 Máquinas virtuales
 IaaS
 SaaS
-EXPL:La respuesta correcta es: Computación sin servidor (serverless). Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:La respuesta es 'Computación sin servidor (serverless)'. "Máquinas virtuales" y "IaaS" son incorrectos porque describen conceptos diferentes.
 ¿Qué característica distingue a los contenedores de las máquinas virtuales?
 *Son más pesados que las VMs
 No permiten aislamiento entre aplicaciones
 Comparten el sistema operativo del host
 No pueden ejecutarse en múltiples entornos
-EXPL:La respuesta correcta es: Son más pesados que las VMs. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:La respuesta es 'Son más pesados que las VMs'. "No permiten aislamiento entre aplicaciones" y "Comparten el sistema operativo del host" son incorrectos porque describen conceptos diferentes.
 ¿Qué tipo de servicio de cómputo proporciona un entorno completo de desarrollo y despliegue de aplicaciones?
 *IaaS
 PaaS
 SaaS
 Serverless
-EXPL:Los servicios PaaS proporcionan un entorno completo para el desarrollo, despliegue y gestión de aplicaciones, incluyendo bases de datos, servicios de almacenamiento y herramientas de desarrollo. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresp
+EXPL:IaaS (Infrastructure as a Service) proporciona infraestructura virtualizada (VMs, almacenamiento, redes). El usuario gestiona el SO y las aplicaciones. Ejemplo: AWS EC2, Azure VMs.

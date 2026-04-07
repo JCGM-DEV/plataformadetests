@@ -4,67 +4,67 @@ Polimorfismo
 *Herencia de tablas
 Encapsulamiento de tipos
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:Resumen PostgreSQL es un sistema de gestión de bases de datos objeto-relacional que soporta tipos de datos objeto, que permiten definir objetos complejos con atributos y métodos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo pregu
+EXPL:La respuesta es 'Herencia de tablas'. "Polimorfismo" y "Encapsulamiento de tipos" son incorrectos porque describen conceptos diferentes.
 
 Durante la instalación de PostgreSQL, ¿cuál es el puerto de conexión que se asigna por defecto?
 3306
 8080
 *5434
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:Acceso a PostgreSQL Una vez finalizada la instalación, y cada vez que queramos acceder a nuestro SGBD, tendremos que hacerlo mediante pgAdmin4, que es una de las aplicaciones que se instalaron durante el proceso anterior:. Las otras opciones son incorrectas porque describen conceptos diferentes o ca
+EXPL:La respuesta es '5434'. "3306" y "8080" son incorrectos porque describen conceptos diferentes.
 
 ¿Qué cláusula se utiliza en la sentencia CREATE TABLE de PostgreSQL para heredar de otra tabla?
 EXTENDS
 *INHERITS
 FROM
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:Restricciones a la herencia en PostgreSQL En PostgreSQL, existen algunas restricciones a tener en cuenta al utilizar la herencia en tablas: La tabla hija puede heredar de una o varias tablas padre listándolas en la cláusula INHERITS. Las otras opciones son incorrectas porque describen conceptos dife
+EXPL:La respuesta es 'INHERITS'. "EXTENDS" y "FROM" son incorrectos porque describen conceptos diferentes.
 
 ¿Cuál de los siguientes es un tipo de dato nativo geométrico en PostgreSQL?
 *CIRCLE
 SPHERE
 TRIANGLE
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:1 Tipos de datos nativos en PostgreSQL. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
 
 Al ejecutar un SELECT * FROM tabla_padre en PostgreSQL, ¿qué registros se obtienen por defecto?
 Solo los de la tabla padre., aunque esto no es correcto en este contexto.
 Solo los de las tablas hijas., aunque esto no es correcto en este contexto.
 *Los de la tabla padre y todos los de sus tablas hijas relacionadas.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:Si ejecutamos la siguiente consulta: SELECT * FROM personas; Obtendremos todos los registros de la tabla padre personas, así como todos los registros de las tablas hijas estudiantes y profesores. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corres
+EXPL:Los de la tabla padre y todos los de sus tablas hijas relacionadas.
 
 ¿Qué tipo de dato de colección representa un intervalo de valores continuos (como un rango de fechas)?
 ARRAY
 JSONB
 *RANGE
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Ejemplo: CREATE TYPE estado_pedido AS ENUM ('pendiente','enviado','entregado'); - Rangos (RANGE): representan un intervalo contiguo de un tipo base (numérico, fecha, etc. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'RANGE'. "ARRAY" y "JSONB" son incorrectos porque describen conceptos diferentes.
 
 Respecto al borrado de datos en una estructura de herencia en PostgreSQL, ¿cuál es la afirmación correcta?
 Existe un borrado en cascada automático entre padres e hijos., lo cual no es correcto.
 *No hay cascada automática; se debe declarar ON DELETE CASCADE en las claves foráneas si se requiere.
 Si borras un registro en el padre, el hijo se bloquea., lo cual no es correcto.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:1 Tipos de datos nativos en PostgreSQL. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:ON DELETE CASCADE borra automáticamente las filas hijas cuando se borra la fila padre. ON DELETE SET NULL pone NULL en las hijas. ON DELETE RESTRICT impide borrar el padre si tiene hijos.
 
 ¿Cómo se llama el lenguaje procedimental propio de PostgreSQL utilizado para crear funciones avanzadas?
 PL/SQL
 *PL/pgSQL
 T-SQL
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:La respuesta correcta es: PL/pgSQL. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:La respuesta es 'PL/pgSQL'. "PL/SQL" y "T-SQL" son incorrectos porque describen conceptos diferentes.
 
 ¿Qué sentencia estándar de SQL se utiliza en PostgreSQL para definir un tipo de dato personalizado (como un tipo compuesto)?
 *CREATE TYPE
 CREATE OBJECT
 DEFINE DATA
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:Tipos de datos personalizados En PostgreSQL, los usuarios pueden definir tipos de datos personalizados para adaptar el esquema a las necesidades de su aplicación. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'CREATE TYPE'. "CREATE OBJECT" y "DEFINE DATA" son incorrectos porque describen conceptos diferentes.
 
 ¿A qué se refiere la "navegabilidad" en el contexto de bases de datos objeto-relacionales?
 A la velocidad de navegación web de la base de datos., lo cual no es correcto.
 *A la capacidad de seguir las conexiones lógicas o referencias entre objetos.
 Al uso de comandos NEXT y PREV en los cursores., lo cual no es correcto.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
-EXPL:Navegabilidad En el contexto de bases de datos, los identificadores y las referencias son importantes para la navegabilidad de los datos. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).

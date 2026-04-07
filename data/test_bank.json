@@ -10,7 +10,7 @@
         "RISC"
       ],
       "correct": 2,
-      "explanation": "Von Neumann usa un único bus de memoria.",
+      "explanation": "La arquitectura Von Neumann usa una única memoria compartida para datos e instrucciones con un único bus. Harvard las separa físicamente para mayor velocidad de acceso simultáneo.",
       "unit": 0
     },
     {
@@ -23,7 +23,7 @@
         "Harvard"
       ],
       "correct": 3,
-      "explanation": "Harvard separa las memorias para mayor velocidad.",
+      "explanation": "La arquitectura Harvard separa físicamente la memoria de instrucciones y la de datos, permitiendo acceder a ambas simultáneamente. Es más rápida que Von Neumann pero más compleja.",
       "unit": 0
     },
     {
@@ -62,7 +62,7 @@
         "ICMP"
       ],
       "correct": 2,
-      "explanation": "Dynamic Host Configuration Protocol.",
+      "explanation": "DHCP (Dynamic Host Configuration Protocol) asigna automáticamente IP, máscara de subred, puerta de enlace y DNS a los dispositivos. Sin DHCP habría que configurar cada dispositivo manualmente.",
       "unit": 0
     },
     {
@@ -75,7 +75,7 @@
         "FTP"
       ],
       "correct": 0,
-      "explanation": "Domain Name System.",
+      "explanation": "DNS (Domain Name System) traduce nombres de dominio legibles (google.com) a direcciones IP numéricas. Funciona como la \"agenda telefónica\" de Internet.",
       "unit": 0
     },
     {
@@ -88,7 +88,7 @@
         "RAID 5"
       ],
       "correct": 0,
-      "explanation": "RAID 1 es mirroring.",
+      "explanation": "RAID 1 (Mirroring) duplica exactamente los datos en dos discos. Si falla uno, el otro tiene copia completa. Ofrece redundancia total pero no mejora la velocidad de escritura.",
       "unit": 0
     },
     {
@@ -101,7 +101,7 @@
         "RAID 6"
       ],
       "correct": 0,
-      "explanation": "RAID 0 es Striping, sin tolerancia a fallos.",
+      "explanation": "RAID 0 (Striping) distribuye datos entre discos para máxima velocidad, pero sin redundancia. Si falla un disco, se pierden TODOS los datos. No es tolerante a fallos.",
       "unit": 0
     },
     {
@@ -114,7 +114,7 @@
         "RAID 5"
       ],
       "correct": 3,
-      "explanation": "RAID 5 equilibra rendimiento y seguridad.",
+      "explanation": "RAID 5 distribuye datos y paridad entre mínimo 3 discos. Puede recuperarse del fallo de 1 disco. Equilibra rendimiento, capacidad y tolerancia a fallos.",
       "unit": 0
     },
     {
@@ -127,7 +127,7 @@
         "FAT32"
       ],
       "correct": 0,
-      "explanation": "NTFS es el estándar de Windows.",
+      "explanation": "NTFS es el sistema de archivos estándar de Windows. Soporta permisos ACL, cifrado EFS, compresión, journaling y archivos >4GB. FAT32 está limitado a archivos de máximo 4GB.",
       "unit": 0
     },
     {
@@ -166,7 +166,7 @@
         "chmod"
       ],
       "correct": 3,
-      "explanation": "chmod (change mode).",
+      "explanation": "chmod (change mode) cambia los permisos de un archivo en Linux. chown cambia el propietario. Los permisos se expresan en octal (755) o simbólico (u+x).",
       "unit": 0
     },
     {
@@ -192,7 +192,7 @@
         "443"
       ],
       "correct": 1,
-      "explanation": "SSH escucha en el puerto 22.",
+      "explanation": "SSH usa el puerto 22 para conexiones remotas cifradas. HTTP usa 80, HTTPS usa 443, FTP usa 21 (control) y 20 (datos), Telnet usa 23.",
       "unit": 0
     },
     {
@@ -244,7 +244,7 @@
         "SIGTERM (terminación limpia)"
       ],
       "correct": 1,
-      "explanation": "SIGKILL no puede ser ignorada.",
+      "explanation": "SIGKILL (señal 9) termina un proceso de forma inmediata e incondicional, sin que pueda ignorarla. SIGTERM (15) es la terminación \"limpia\" que el proceso puede manejar.",
       "unit": 0
     },
     {
@@ -426,7 +426,7 @@
         "Restablece permisos por defecto, lo cual no es correcto."
       ],
       "correct": 0,
-      "explanation": "-R es recursive.",
+      "explanation": "chmod (change mode) cambia los permisos de un archivo en Linux. chown cambia el propietario. Los permisos se expresan en octal (755) o simbólico (u+x).",
       "unit": 1
     },
     {
@@ -530,7 +530,7 @@
         "Jitter"
       ],
       "correct": 1,
-      "explanation": "El ancho de banda se mide en bps.",
+      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
       "unit": 1
     },
     {
@@ -959,7 +959,7 @@
         "RAID 2"
       ],
       "correct": 1,
-      "explanation": "RAID 10 (1+0): mínimo 4 discos.",
+      "explanation": "RAID 0 (Striping) distribuye datos entre discos para máxima velocidad, pero sin redundancia. Si falla un disco, se pierden TODOS los datos. No es tolerante a fallos.",
       "unit": 2
     },
     {
@@ -1128,7 +1128,7 @@
         "Propietario: rw-, Grupo: rw-, Otros: rw-"
       ],
       "correct": 2,
-      "explanation": "6=rw-, 4=r--, 4=r--.",
+      "explanation": "chmod (change mode) cambia los permisos de un archivo en Linux. chown cambia el propietario. Los permisos se expresan en octal (755) o simbólico (u+x).",
       "unit": 3
     },
     {
@@ -1180,7 +1180,7 @@
         "Asignar IPs dinámicamente"
       ],
       "correct": 2,
-      "explanation": "rDNS: IP → nombre del host.",
+      "explanation": "DNS (Domain Name System) traduce nombres de dominio legibles (google.com) a direcciones IP numéricas. Funciona como la \"agenda telefónica\" de Internet.",
       "unit": 3
     },
     {
@@ -1544,7 +1544,7 @@
         "RAID 0 con paridad, aunque esto no es correcto en este contexto."
       ],
       "correct": 0,
-      "explanation": "RAID 6 necesita mínimo 4 discos.",
+      "explanation": "RAID 5 distribuye datos y paridad entre mínimo 3 discos. Puede recuperarse del fallo de 1 disco. Equilibra rendimiento, capacidad y tolerancia a fallos.",
       "unit": 4
     },
     {
@@ -2129,7 +2129,7 @@
         "Un modelo de computador con CPU, memoria, entrada/salida y bus de datos compartido para instrucciones y datos"
       ],
       "correct": 3,
-      "explanation": "La arquitectura Von Neumann es la base de todos los ordenadores modernos.",
+      "explanation": "La arquitectura Von Neumann usa una única memoria compartida para datos e instrucciones con un único bus. Harvard las separa físicamente para mayor velocidad de acceso simultáneo.",
       "unit": 6
     },
     {
@@ -2324,7 +2324,7 @@
         "YAML"
       ],
       "correct": 1,
-      "explanation": "Un DVD de una capa y una cara almacena hasta 4,7 GB.",
+      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
       "unit": 6
     },
     {
@@ -2521,7 +2521,7 @@
         "Atomicidad"
       ],
       "correct": 3,
-      "explanation": "Todo o nada.",
+      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
       "unit": 0
     },
     {
@@ -2534,7 +2534,7 @@
         "Durabilidad"
       ],
       "correct": 2,
-      "explanation": "Consistencia mantiene las reglas de integridad.",
+      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
       "unit": 0
     },
     {
@@ -2547,7 +2547,7 @@
         "Consistencia"
       ],
       "correct": 1,
-      "explanation": "Durabilidad usa el log de transacciones.",
+      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
       "unit": 0
     },
     {
@@ -2560,7 +2560,7 @@
         "Atomicidad"
       ],
       "correct": 2,
-      "explanation": "Aislamiento evita lecturas sucias.",
+      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
       "unit": 0
     },
     {
@@ -2651,7 +2651,7 @@
         "ROLLBACK"
       ],
       "correct": 3,
-      "explanation": "ROLLBACK deshace los cambios.",
+      "explanation": "ROLLBACK deshace todos los cambios desde el último START TRANSACTION o SAVEPOINT. Es la operación de \"deshacer\" de las transacciones. COMMIT los confirma permanentemente.",
       "unit": 0
     },
     {
@@ -2690,7 +2690,7 @@
         "TRUNCATE TABLE"
       ],
       "correct": 2,
-      "explanation": "DROP elimina la tabla del esquema.",
+      "explanation": "DROP TABLE elimina la tabla completa (estructura + datos). TRUNCATE vacía los datos pero mantiene la estructura. DELETE borra filas con WHERE pero es DML, no DDL.",
       "unit": 0
     },
     {
@@ -2833,7 +2833,7 @@
         "Un índice especial, aunque esto no es correcto en este contexto."
       ],
       "correct": 0,
-      "explanation": "Las vistas simplifican consultas complejas.",
+      "explanation": "Una vista es una consulta almacenada que se ejecuta cada vez que se accede. No ocupa espacio físico de datos; se reconstruye dinámicamente desde las tablas base.",
       "unit": 1
     },
     {
@@ -3379,7 +3379,7 @@
         "Autenticación, Cifrado, Índice, Diccionario"
       ],
       "correct": 0,
-      "explanation": "Las 4 propiedades fundamentales de las transacciones.",
+      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
       "unit": 3
     },
     {
@@ -3470,7 +3470,7 @@
         "Un acrónimo de comandos NoSQL, aunque esto no es correcto en este contexto."
       ],
       "correct": 0,
-      "explanation": "BASE es la contrapartida de ACID en sistemas distribuidos.",
+      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
       "unit": 4
     },
     {
@@ -3730,7 +3730,7 @@
         "Tabla hash"
       ],
       "correct": 1,
-      "explanation": "El B+ Tree permite búsquexas O(log n) y recorridos en orden.",
+      "explanation": "El Árbol B mantiene los datos ordenados, permitiendo recorrer rangos eficientemente (BETWEEN, <, >). El índice Hash solo sirve para igualdad exacta (=), no para rangos.",
       "unit": 5
     },
     {
@@ -4145,7 +4145,7 @@
         "Combinación de las anteriores"
       ],
       "correct": 2,
-      "explanation": "ROLLBACK deshace todos los cambios desde el último COMMIT o SAVEPOINT.",
+      "explanation": "ROLLBACK deshace todos los cambios desde el último START TRANSACTION o SAVEPOINT. Es la operación de \"deshacer\" de las transacciones. COMMIT los confirma permanentemente.",
       "concept_id": "bases_de_datos_img_139",
       "unit": 6
     },
@@ -4369,7 +4369,7 @@
         "run()"
       ],
       "correct": 0,
-      "explanation": "El método main es obligatorio.",
+      "explanation": "void indica que el método realiza una acción pero NO devuelve ningún valor. Si devuelve algo, se especifica el tipo (int, String, etc.). void ≠ \"devuelve vacío\".",
       "unit": 0
     },
     {
@@ -4382,7 +4382,7 @@
         "El miembro es privado, aunque esto no es correcto en este contexto."
       ],
       "correct": 2,
-      "explanation": "static se comparte por todas las instancias.",
+      "explanation": "Un miembro static pertenece a la CLASE, no a los objetos. Se accede con NombreClase.metodo(). No puede acceder a atributos de instancia ni usar this.",
       "unit": 0
     },
     {
@@ -4408,7 +4408,7 @@
         "Tener múltiples constructores, aunque esto no es correcto en este contexto."
       ],
       "correct": 0,
-      "explanation": "El polimorfismo permite el diseño por interfaz.",
+      "explanation": "El polimorfismo permite que el mismo método se comporte diferente según el tipo real del objeto. Requiere @Override en las clases hijas y se activa con enlace dinámico en tiempo de ejecución.",
       "unit": 0
     },
     {
@@ -4421,7 +4421,7 @@
         "Heredar atributos de otra clase, lo cual no es correcto."
       ],
       "correct": 0,
-      "explanation": "Getters y setters son la herramienta clave.",
+      "explanation": "El encapsulamiento protege el estado interno declarando atributos como private y exponiendo solo lo necesario con métodos public. Permite validar datos antes de modificar el estado.",
       "unit": 1
     },
     {
@@ -4603,7 +4603,7 @@
         "Método especial que inicializa el objeto al crearse, sin tipo de retorno"
       ],
       "correct": 3,
-      "explanation": "Tiene el mismo nombre que la clase.",
+      "explanation": "El constructor inicializa los atributos del objeto al crearlo con new. Tiene el mismo nombre que la clase y no tiene tipo de retorno. Si no se define, Java crea uno por defecto sin parámetros.",
       "unit": 1
     },
     {
@@ -4889,7 +4889,7 @@
         "Captura todas las excepciones posibles, lo cual no es correcto."
       ],
       "correct": 1,
-      "explanation": "Elimina la necesidad de finally para cerrar recursos.",
+      "explanation": "try-with-resources cierra automáticamente los recursos al salir del bloque, incluso si hay excepción. El recurso debe implementar AutoCloseable. Evita el finally con close() manual.",
       "unit": 3
     },
     {
@@ -5032,7 +5032,7 @@
         "Lo cierra automáticamente al salir del bloque, incluso si hay excepción"
       ],
       "correct": 3,
-      "explanation": "try (BufferedReader br = ...) { ... } cierra br automáticamente.",
+      "explanation": "try-with-resources cierra automáticamente los recursos al salir del bloque, incluso si hay excepción. El recurso debe implementar AutoCloseable. Evita el finally con close() manual.",
       "unit": 3
     },
     {
@@ -5136,7 +5136,7 @@
         "Consulta SQL precompilada con parámetros '?' que evita inyección SQL y mejora rendimiento"
       ],
       "correct": 3,
-      "explanation": "PreparedStatement ps = conn.prepareStatement('SELECT * FROM users WHERE id=?').",
+      "explanation": "PreparedStatement precompila la consulta SQL y usa parámetros (?) en lugar de concatenar strings. Previene inyección SQL y mejora el rendimiento en consultas repetidas.",
       "unit": 4
     },
     {
@@ -5149,7 +5149,7 @@
         "DataSource"
       ],
       "correct": 1,
-      "explanation": "ResultSet rs = stmt.executeQuery(sql); while(rs.next()) { ... }",
+      "explanation": "ResultSet actúa como un cursor que inicialmente apunta ANTES de la primera fila. next() avanza al siguiente registro y devuelve false cuando no hay más filas.",
       "unit": 4
     },
     {
@@ -5552,7 +5552,7 @@
         "Combinación de las anteriores, aunque esto no es correcto en este contexto."
       ],
       "correct": 0,
-      "explanation": "void indica ausencia de valor de retorno.",
+      "explanation": "void indica que el método realiza una acción pero NO devuelve ningún valor. Si devuelve algo, se especifica el tipo (int, String, etc.). void ≠ \"devuelve vacío\".",
       "unit": 6
     },
     {
@@ -5863,7 +5863,7 @@
         "Combinación de las anteriores"
       ],
       "correct": 1,
-      "explanation": "Atributos privados + getters/setters públicos = encapsulamiento correcto.",
+      "explanation": "El encapsulamiento protege el estado interno declarando atributos como private y exponiendo solo lo necesario con métodos public. Permite validar datos antes de modificar el estado.",
       "concept_id": "programacion_img_134",
       "unit": 7
     },
@@ -6110,7 +6110,7 @@
         "Combinación de las anteriores, aunque esto no es correcto en este contexto."
       ],
       "correct": 1,
-      "explanation": "Encapsulamiento = ocultación de implementación interna + API pública controlada.",
+      "explanation": "El encapsulamiento protege el estado interno declarando atributos como private y exponiendo solo lo necesario con métodos public. Permite validar datos antes de modificar el estado.",
       "concept_id": "programacion_img_172",
       "unit": 9
     },
@@ -6162,7 +6162,7 @@
         "Combinación de las anteriores, aunque esto no es correcto en este contexto."
       ],
       "correct": 1,
-      "explanation": "Si defines Persona(String nombre), pierdes el Persona() gratuito de Java.",
+      "explanation": "El constructor inicializa los atributos del objeto al crearlo con new. Tiene el mismo nombre que la clase y no tiene tipo de retorno. Si no se define, Java crea uno por defecto sin parámetros.",
       "concept_id": "programacion_img_180",
       "unit": 9
     },
@@ -6451,7 +6451,7 @@
         "#id-elemento"
       ],
       "correct": 0,
-      "explanation": ".clase es el selector de clase.",
+      "explanation": "CSS no es un lenguaje de marcas sino un lenguaje de estilos. Separa el contenido (HTML) de la presentación visual. No tiene variables ni funciones aritméticas.",
       "unit": 0
     },
     {
@@ -6464,7 +6464,7 @@
         "*id"
       ],
       "correct": 0,
-      "explanation": "#id es el selector de ID.",
+      "explanation": "CSS no es un lenguaje de marcas sino un lenguaje de estilos. Separa el contenido (HTML) de la presentación visual. No tiene variables ni funciones aritméticas.",
       "unit": 0
     },
     {
@@ -6789,7 +6789,7 @@
         ":visited"
       ],
       "correct": 1,
-      "explanation": "a:hover { color: red; }",
+      "explanation": "CSS no es un lenguaje de marcas sino un lenguaje de estilos. Separa el contenido (HTML) de la presentación visual. No tiene variables ni funciones aritméticas.",
       "unit": 1
     },
     {
@@ -6802,7 +6802,7 @@
         ":first-of-type"
       ],
       "correct": 2,
-      "explanation": "li:first-child { font-weight: bold; }",
+      "explanation": "CSS no es un lenguaje de marcas sino un lenguaje de estilos. Separa el contenido (HTML) de la presentación visual. No tiene variables ni funciones aritméticas.",
       "unit": 1
     },
     {
@@ -6815,7 +6815,7 @@
         "Una función de JavaScript, aunque esto no es correcto en este contexto."
       ],
       "correct": 0,
-      "explanation": "@media (max-width: 768px) { ... }",
+      "explanation": "CSS no es un lenguaje de marcas sino un lenguaje de estilos. Separa el contenido (HTML) de la presentación visual. No tiene variables ni funciones aritméticas.",
       "unit": 1
     },
     {
@@ -6841,7 +6841,7 @@
         "La herencia de propiedades, aunque esto no es correcto en este contexto."
       ],
       "correct": 0,
-      "explanation": "ID > Clase > Elemento.",
+      "explanation": "CSS no es un lenguaje de marcas sino un lenguaje de estilos. Separa el contenido (HTML) de la presentación visual. No tiene variables ni funciones aritméticas.",
       "unit": 1
     },
     {
@@ -7348,7 +7348,7 @@
         "Web Content Accessibility Guidelines: estándar internacional para hacer la web accesible a personas con discapacidad"
       ],
       "correct": 3,
-      "explanation": "WCAG 2.1 define niveles A, AA y AAA.",
+      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
       "unit": 3
     },
     {
@@ -7608,7 +7608,7 @@
         "Combinación de las anteriores"
       ],
       "correct": 1,
-      "explanation": "xs:sequence exige que los elementos aparezcan en el orden exacto especificado.",
+      "explanation": "xs:sequence en XSD indica que los elementos hijos deben aparecer en el orden exacto definido. xs:choice permite solo uno; xs:all permite cualquier orden.",
       "unit": 4
     },
     {
@@ -7673,7 +7673,7 @@
         "Combinación de las anteriores, aunque esto no es correcto en este contexto."
       ],
       "correct": 1,
-      "explanation": "SAX es un parser de evento (streaming) que no carga todo el XML en memoria.",
+      "explanation": "SAX es basado en eventos y no carga todo en memoria → ideal para XML grandes. DOM carga todo en memoria como árbol → permite modificar pero consume más recursos.",
       "unit": 4
     },
     {
@@ -7880,7 +7880,7 @@
         "Un lenguaje de programación de sistemas sin relación con este concepto."
       ],
       "correct": 2,
-      "explanation": "CSS no tiene etiquetas de contenido; define reglas de presentación.",
+      "explanation": "CSS no es un lenguaje de marcas sino un lenguaje de estilos. Separa el contenido (HTML) de la presentación visual. No tiene variables ni funciones aritméticas.",
       "concept_id": "lenguaje_de_marcas_img_125",
       "unit": 5
     },
@@ -7932,7 +7932,7 @@
         "Combinación de las anteriores, aunque esto no es correcto en este contexto."
       ],
       "correct": 1,
-      "explanation": "XHTML es HTML adaptado a las reglas estrictas de XML.",
+      "explanation": "XHTML exige que todas las etiquetas estén cerradas (incluyendo vacías: <br/>), atributos con valor entre comillas y nombres en minúsculas. Es HTML con sintaxis XML estricta.",
       "concept_id": "lenguaje_de_marcas_img_133",
       "unit": 5
     },
@@ -8400,7 +8400,7 @@
         "Combinación de las anteriores, aunque esto no es correcto en este contexto."
       ],
       "correct": 2,
-      "explanation": "Atom usa RFC 3339 para fechas y type='html/text/xhtml' para el contenido.",
+      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
       "concept_id": "lenguaje_de_marcas_img_205",
       "unit": 7
     },
@@ -8595,7 +8595,7 @@
         "Combinación de las anteriores, aunque esto no es correcto en este contexto."
       ],
       "correct": 2,
-      "explanation": "XSD usa sintaxis XML; DTD usa una sintaxis propia no-XML.",
+      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
       "concept_id": "lenguaje_de_marcas_img_235",
       "unit": 7
     },
@@ -10173,7 +10173,7 @@
         "SaaS"
       ],
       "correct": 0,
-      "explanation": "Infrastructure as a Service (ej: AWS EC2).",
+      "explanation": "IaaS proporciona infraestructura virtualizada (VMs, almacenamiento, redes). El usuario gestiona el SO y las aplicaciones. Ejemplos: AWS EC2, Azure VMs.",
       "unit": 0
     },
     {
@@ -10186,7 +10186,7 @@
         "DBaaS"
       ],
       "correct": 1,
-      "explanation": "Platform as a Service (ej: Heroku, Google App Engine).",
+      "explanation": "PaaS proporciona una plataforma completa de desarrollo. El proveedor gestiona la infraestructura; el usuario solo despliega aplicaciones. Ejemplo: Google App Engine.",
       "unit": 0
     },
     {
@@ -10199,7 +10199,7 @@
         "PaaS"
       ],
       "correct": 0,
-      "explanation": "Software as a Service (ej: Gmail, Office 365).",
+      "explanation": "SaaS proporciona aplicaciones completas listas para usar a través de Internet. El proveedor gestiona todo. Ejemplos: Gmail, Microsoft 365, Salesforce.",
       "unit": 0
     },
     {
@@ -10251,7 +10251,7 @@
         "Duplicar el ancho de banda, aunque esto no es correcto en este contexto."
       ],
       "correct": 0,
-      "explanation": "Auto scaling optimiza coste y rendimiento.",
+      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
       "unit": 0
     },
     {
@@ -10303,7 +10303,7 @@
         "Escalabilidad horizontal"
       ],
       "correct": 3,
-      "explanation": "Scale out (horizontal) vs Scale up (vertical).",
+      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
       "unit": 1
     },
     {
@@ -10472,7 +10472,7 @@
         "Capacidad de entender el estado interno del sistema con métricas, logs y trazas"
       ],
       "correct": 3,
-      "explanation": "Observabilidad = Métricas + Logs + Trazas.",
+      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
       "unit": 3
     },
     {
@@ -10511,7 +10511,7 @@
         "Son lo mismo visto desde distinto ángulo, lo cual no es correcto."
       ],
       "correct": 2,
-      "explanation": "Scale up vs Scale out.",
+      "explanation": "El escalado horizontal añade más servidores (scale out). El escalado vertical aumenta la capacidad de un servidor existente (scale up). El horizontal es más flexible y tolerante a fallos.",
       "unit": 3
     },
     {
@@ -11709,7 +11709,7 @@
         "El subsidio de desempleo, aunque esto no es correcto en este contexto."
       ],
       "correct": 1,
-      "explanation": "La IT la gestiona la Seguridad Social o la mutua.",
+      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
       "unit": 2
     },
     {

@@ -4,58 +4,58 @@ Una clave primaria numérica que el programador debe gestionar manualmente., lo 
 *Un identificador único generado por el sistema que es independiente del valor de los atributos del objeto.
 El nombre de la variable que utilizamos en el código Java para referenciar al objeto.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:Sin embargo, la forma en que lo hacen las bases de datos Relacionales (SQL) y las Orientadas a Objetos (BDOO) es radicalmente distinta. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:El OID (Object Identifier) es un identificador único generado automáticamente por el sistema para cada objeto en una BDOO. Es independiente del valor de los atributos, a diferencia de las claves primarias relacionales.
 Al trabajar con un motor como db4o u ObjectDB, ¿cuál es el objeto principal que actúa como "Contenedor de Objetos" y gestiona la sesión?
 *ObjectContainer
 DatabaseManager
 SessionSocket
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Bases de Datos Orientadas a Objetos (BDOO). Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:ObjectContainer es el objeto principal en db4o/ObjectDB que actúa como contenedor de objetos y gestiona la sesión. Es el equivalente a la Connection de JDBC pero para bases de datos orientadas a objetos.
 ¿Qué sucede si se activa la propiedad de "Cascada" (Cascade On Update/Delete)?
 *Las operaciones realizadas sobre un objeto padre se propagan automáticamente a sus objetos hijos relacionados.
 El sistema operativo borra la base de datos si ocurre un error crítico., lo cual no es correcto.
 El objeto se guarda simultáneamente en dos bases de datos distintas para mayor seguridad.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Activación de Cascada (Integridad Referencial) Aquí definimos qué pasa con los objetos relacionados cuando hacemos una operación de escritura (store o delete). Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:Las operaciones realizadas sobre un objeto padre se propagan automáticamente a sus objetos hijos relacionados.
 ¿Qué problema fundamental vienen a solucionar las BDOO en comparación con las bases de datos relacionales?
 La lentitud de los discos duros actuales., lo cual no es correcto.
 *La "Desadaptación de Impedancia", evitando tener que traducir objetos a tablas y filas.
 La imposibilidad de usar SQL en entornos de red., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:El estándar ODMG: El modelo de objetos (OM) y el lenguaje de definición (ODL) A principios de los 90, cuando las bases de datos orientadas a objetos empezaron a proliferar, cada empresa (ObjectStore, Versant, O2) tenía su propia forma de guardar y consultar objetos. Las otras opciones son incorrecta
+EXPL:La "Desadaptación de Impedancia" (Impedance Mismatch) es el problema de traducir objetos Java a tablas relacionales y viceversa. Las BDOO eliminan este problema almacenando objetos directamente.
 ¿Cómo funciona el mecanismo de consulta QBE (Query By Example)?
 Se escribe una sentencia de texto similar a SQL., lo cual no es correcto.
 *Se crea un objeto "prototipo" o plantilla y el sistema busca objetos que coincidan con sus atributos no nulos.
 Se programa un filtro mediante una función lambda de Java., lo cual no es correcto.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:La respuesta correcta es: Se crea un objeto "prototipo" o plantilla y el sistema busca objetos que coincidan con sus atributos no nulos.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:QBE (Query By Example) crea un objeto "prototipo" con los valores que se buscan. El sistema devuelve todos los objetos que coincidan con los atributos no nulos del prototipo. Es más intuitivo que OQL.
 ¿Qué ventaja principal ofrecen las "Native Queries" (Consultas Nativas) frente a otros métodos?
 Son mucho más rápidas que las consultas por OID., lo cual no es correcto.
 *Permiten usar código Java puro para filtrar, proporcionando total seguridad de tipos (Type-Safe).
 No requieren que la base de datos esté abierta para ejecutarse., lo cual no es correcto.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:La interfaz Predicate En db4o (el referente principal de esta tecnología), las consultas nativas se implementan mediante la clase abstracta Predicate. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
 En las consultas OQL, ¿cómo se navega a través de las relaciones entre objetos?
 Mediante el uso de sentencias JOIN complejas como en el modelo relacional.
 *Utilizando la "notación de punto" (ej. p.ciudad.nombre) para seguir los grafos de objetos.
 No se puede navegar entre relaciones; solo se pueden consultar objetos aislados.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:La respuesta correcta es: Utilizando la "notación de punto" (ej. p.ciudad.nombre) para seguir los grafos de objetos.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:Utilizando la "notación de punto" (ej. p.ciudad.nombre) para seguir los grafos de objetos.
 ¿Qué controla el parámetro "Activation Depth" (Profundidad de Activación)?
 El número máximo de usuarios que pueden conectarse a la vez., lo cual no es correcto.
 *El nivel de profundidad del grafo de objetos que se carga en la memoria RAM al recuperar un objeto.
 La cantidad de copias de seguridad que el sistema realiza cada hora., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Profundidad de activación (Activation Depth). Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:Activation Depth controla cuántos niveles del grafo de objetos se cargan en memoria al recuperar un objeto. Un valor bajo mejora el rendimiento; un valor alto carga más objetos relacionados automáticamente.
 En el estándar ODMG, ¿qué lenguaje se utiliza específicamente para definir la estructura de la base de datos?
 OQL (Object Query Language).
 *ODL (Object Definition Language).
 SQL-92.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:El estándar ODMG: El modelo de objetos (OM) y el lenguaje de definición (ODL) A principios de los 90, cuando las bases de datos orientadas a objetos empezaron a proliferar, cada empresa (ObjectStore, Versant, O2) tenía su propia forma de guardar y consultar objetos. Las otras opciones son incorrecta
+EXPL:ODL (Object Definition Language) es el lenguaje del estándar ODMG para definir la estructura de una BDOO. OQL (Object Query Language) es para consultas. SQL-92 es para bases de datos relacionales.
 ¿Cuál es la diferencia principal entre el modo de funcionamiento "Embebido" y el modo "Servidor"?
 El modo Embebido permite múltiples conexiones remotas, mientras que el Servidor es solo para un usuario.
 *El modo Embebido: la base de datos corre en el mismo proceso que la aplicación; el modo Servidor es un proceso independiente.
 El modo Servidor es gratuito y el modo Embebido requiere licencia comercial., lo cual no es correcto.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Modos de funcionamiento: Servidor vs. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:En modo Embebido, la base de datos corre en el mismo proceso JVM que la aplicación (más rápido, un solo usuario). En modo Servidor, es un proceso independiente que acepta múltiples conexiones remotas.

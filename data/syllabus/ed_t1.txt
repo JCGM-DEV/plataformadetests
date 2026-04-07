@@ -4,67 +4,67 @@ Hardware, Firmware y Sistemas Operativos., lo cual no es correcto.
 *Software de sistema, Software de aplicación y Software de programación.
 BIOS, UEFI y Controladores., aunque esto no es correcto en este contexto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:El software se puede categorizar de la siguiente manera, en función de su naturaleza: . Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
 
 Además de las líneas de código con instrucciones, ¿qué otro elemento es frecuentemente necesario para que un programa informático realice sus tareas?
 El hardware del ordenador, que es la única parte física necesaria., lo cual no es correcto.
 El sistema operativo, que es el único intermediario entre el programa y la máquina., lo cual no es correcto.
 *Los datos, que son la información que el programa necesita para operar, como los operandos en una operación aritmética.
 Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
-EXPL:Datos y programas Cuando se habla de un programa informático y de la programación de este, se suele pensar en líneas de código con instrucciones en las que se indica al ordenador qué debe hacer. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresp
+EXPL:Además del código, un programa necesita datos para operar. Los datos son la información que el programa procesa (operandos en una operación, registros de una BD, etc.).
 
 Según el texto, ¿qué proceso realiza un compilador durante la compilación, además de generar el código ejecutable?
 Transforma el bytecode en código máquina para su ejecución., lo cual no es correcto.
 *Verifica que el código fuente esté escrito correctamente desde los puntos de vista léxico, sintáctico y semántico, avisando al programador de posibles errores.
 Une uno o más códigos objeto para construir un programa ejecutable., aunque no es la respuesta adecuada.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Sabías que El proceso de compilación es una sucesión de actividades que tiene como principal objetivo la obtención del programa ejecutable. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:El compilador verifica el código en tres fases: léxica (tokens válidos), sintáctica (estructura gramatical correcta) y semántica (significado coherente). Si hay errores, los reporta al programador.
 
 Respecto a la clasificación de lenguajes por nivel de abstracción y generación, ¿qué es cierto sobre los lenguajes de segunda generación?
 Son lenguajes de alto nivel con sintaxis sencilla, como Java o C#., lo cual no es correcto.
 Implican programación directa en código máquina o binario (ceros y unos)., lo cual no es correcto.
 *Son lenguajes de programación en ensamblador, que utilizan una simbología y códigos legibles por las personas, y son convertidos a código máquina mediante un ensamblador.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:1 Por un nivel de abstracción y generación Agrupan los lenguajes en función de características como el nivel de abstracción y, a partir de este, por generación. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:Los lenguajes de 2ª generación son los lenguajes ensamblador. Usan mnemónicos legibles (MOV, ADD) en lugar de código binario. Se convierten a código máquina mediante un ensamblador.
 
 ¿Cuál es la diferencia fundamental entre el código objeto y el código ejecutable?
 El código objeto es el resultado directo de la escritura del programador, mientras que el código ejecutable es lo que entiende la máquina.
 El código ejecutable es válido para múltiples sistemas operativos sin necesidad de recompilación, a diferencia del código objeto.
 *El código objeto contiene instrucciones comprensibles por la máquina, pero no es directamente ejecutable, requiriendo un proceso de enlazado para convertirse en código ejecutable.
 Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
-EXPL:La respuesta correcta es: El código objeto contiene instrucciones comprensibles por la máquina, pero no es directamente ejecutable, requiriendo un proceso de enlazado para convertirse en código ejecutable.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:El código objeto contiene instrucciones comprensibles por la máquina pero no es directamente ejecutable. El enlazador (linker) combina varios códigos objeto y resuelve referencias externas para crear el ejecutable.
 
 ¿Cuál es la distinción entre un lenguaje de tipado fuerte y uno de tipado débil, y entre tipado estático y tipado dinámico?
 En el tipado fuerte, el tipo de la variable se asigna dinámicamente, mientras que en el tipado débil, se define estáticamente., lo cual no es correcto.
 Un lenguaje de tipado débil no permite hacer uso indiscriminado de las variables sin importar su tipo, lo contrario al tipado fuerte., lo cual no es correcto.
 *Un lenguaje de tipado fuerte restringe las operaciones basándose en el tipo de sus variables, mientras que uno de tipado débil permite un uso más indiscriminado. En el tipado estático, el tipo se vincula a la variable al declararla y no cambia; en el tipado dinámico, el tipo se asigna por el valor y puede cambiar durante la ejecución.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:Por ejemplo, un lenguaje fuertemente tipado no permitirá dividir una variable de tipo alfanumérico entre un valor numérico salvo que disponga de una operación específica para hacer dicho tipo de operaciones. Las otras opciones son incorrectas porque describen conceptos diferentes o características q
+EXPL:Tipado fuerte: restringe operaciones según el tipo (Java, Python). Tipado débil: permite uso más flexible (JavaScript). Tipado estático: el tipo se asigna al declarar (Java). Dinámico: el tipo cambia en ejecución (Python).
 
 ¿Por qué se considera la reutilización de código de máxima importancia en el desarrollo de software?
 Porque implica duplicar bloques de código para asegurar la redundancia y fiabilidad., lo cual no es correcto.
 *Porque ahorra costes de creación y modificación, y reduce la probabilidad de cometer errores al centralizar los cambios en un único lugar.
 Porque permite que el código fuente sea directamente comprensible por el ordenador sin necesidad de compilación o interpretación.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Importancia de la reutilización de código Reutilizar el código consiste en, como su propio nombre indica, utilizar un mismo bloque de código en todas aquellas partes en las que sea necesario. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no correspond
+EXPL:La reutilización de código ahorra costes de creación y modificación, y reduce errores al centralizar los cambios en un único lugar. Es uno de los principios fundamentales de la ingeniería del software.
 
 En las fases tradicionales del ciclo de vida de una aplicación informática, ¿qué actividad caracteriza principalmente la fase de Análisis?
 La creación del código fuente y la ayuda de herramientas de generación de código., lo cual no es correcto.
 La determinación de cómo se va a organizar el proyecto a nivel de software y la definición de las interfaces gráficas.
 *La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:1 Fases del ciclo de vida Las fases tradicionales del ciclo de vida de una aplicación informática son las siguientes: . Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software...
 
 En el contexto de los lenguajes de programación como Java, ¿cuál es uno de los objetivos principales al utilizar máquinas virtuales y bytecode?
 Reducir el tamaño de los programas ejecutables para un almacenamiento más eficiente., aunque no es la respuesta adecuada.
 *Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que tenga instalada la máquina virtual correspondiente.
 Aumentar la velocidad de ejecución de los programas, superando a los lenguajes compilados., lo cual no es correcto.
 Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
-EXPL:La respuesta correcta es: Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que tenga instalada la máquina virtual correspondiente.. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que...
 
 ¿Qué paradigma de programación se caracteriza por estructurar los programas en agrupaciones de código fuente (como funciones o procedimientos) y utilizar estructuras de control para determinar el flujo de ejecución?
 Paradigma Imperativo.
 Paradigma Orientado a Objetos.
 *Paradigma de Programación Estructurada.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Estructura los programas en agrupaciones de código fuente conocidas como funciones o procedimientos, facilitando la organización y la reutilización del código. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:La respuesta es 'Paradigma de Programación Estructurada.'. "Paradigma Imperativo." y "Paradigma Orientado a Objetos." son incorrectos porque describen conceptos diferentes.

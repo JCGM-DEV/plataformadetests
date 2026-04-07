@@ -4,14 +4,14 @@ ADD RECORD
 *INSERT INTO
 UPDATE
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:La sentencia INSERT en MySQL se utiliza para insertar uno o varios registros en una tabla. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:INSERT INTO tabla (col1, col2) VALUES (v1, v2) inserta una fila. INSERT INTO tabla SELECT... inserta múltiples filas desde otra consulta. Es la sentencia DML estándar para insertar datos.
 
 ¿Cómo se insertan datos en una tabla de destino a partir del resultado de otra consulta?
 *Usando la sintaxis INSERT INTO tabla_destino SELECT ...
 Ejecutando un UPDATE con una subconsulta en el SET.
 No es posible realizar esta operación en una sola sentencia.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:En esta consulta: la subconsulta se realiza primero y los resultados se utilizan para insertar los datos en la tabla de destino especificada. Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:INSERT INTO tabla (col1, col2) VALUES (v1, v2) inserta una fila. INSERT INTO tabla SELECT... inserta múltiples filas desde otra consulta. Es la sentencia DML estándar para insertar datos.
 
 ¿Por qué es fundamental incluir la cláusula WHERE en una sentencia UPDATE?
 Porque si se omite, se actualizarán todos los registros de la tabla. *
@@ -24,46 +24,46 @@ ON DELETE SET NULL
 *ON DELETE CASCADE
 ON DELETE RESTRICT
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:MySQL ofrece varias opciones para manejar la integridad referencial en caso de borrado o modificación de datos: . Las otras opciones son incorrectas porque describen conceptos diferentes o características que no corresponden a lo preguntado.
+EXPL:ON DELETE CASCADE borra automáticamente las filas hijas cuando se borra la fila padre. ON DELETE SET NULL pone NULL en las hijas. ON DELETE RESTRICT impide borrar el padre si tiene hijos.
 
 ¿Qué sentencia se utiliza para confirmar y guardar permanentemente todos los cambios de una transacción?
 START TRANSACTION
 ROLLBACK
 *COMMIT
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:La respuesta correcta es: COMMIT. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:COMMIT confirma permanentemente todos los cambios de la transacción actual. Una vez ejecutado, los cambios son visibles para otros usuarios y no se pueden deshacer con ROLLBACK.
 
 ¿Qué acción realiza el comando ROLLBACK?
 Guarda los cambios actuales de forma definitiva., lo cual no es correcto.
 *Deshace todos los cambios realizados en la transacción actual volviendo al estado inicial.
 Bloquea la tabla para impedir ediciones de otros usuarios., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Cuando se ejecuta la sentencia ROLLBACK, todas las operaciones que se realizaron dentro de la transacción se deshacen, es decir, se revierten los cambios realizados y se devuelve la base de datos al estado que tenía antes de que comenzara la transacción. Las otras opciones son incorrectas porque des
+EXPL:ROLLBACK deshace todos los cambios realizados desde el último START TRANSACTION o SAVEPOINT, devolviendo la base de datos al estado anterior. Es la operación de "deshacer" de las transacciones.
 
 ¿Cuál es una ventaja clave de utilizar Common Table Expressions (CTE) o composiciones en órdenes de edición?
 Permiten saltarse las restricciones de integridad referencial., lo cual no es correcto.
 *Mejoran la legibilidad al permitir nombrar subconsultas y reutilizarlas en una única instrucción.
 Cifran los datos antes de insertarlos en la base de datos., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Las composiciones (o Common Table Expressions, CTE) permiten encadenar varias subconsultas nombradas al inicio de una sentencia SQL y luego reutilizarlas en una sola operación de edición (UPDATE, DELETE o INSERT). Las otras opciones son incorrectas porque describen conceptos diferentes o característ
+EXPL:Mejoran la legibilidad al permitir nombrar subconsultas y reutilizarlas en una única instrucción.
 
 ¿En qué consiste el "bloqueo a nivel de registro" (row-level locking)?
 Impide el acceso a toda la tabla mientras un usuario edita una fila., lo cual no es correcto.
 *Bloquea solo la fila específica que se está modificando, permitiendo que otros usuarios trabajen en otras filas.
 Borra el registro si detecta que dos usuarios intentan acceder a él., lo cual no es correcto.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
-EXPL:Políticas de bloqueo: a nivel de registro, a nivel de tabla Las políticas de bloqueo son mecanismos utilizados por los sistemas de bases de datos para controlar el acceso concurrente a los datos y prevenir conflictos y errores de consistencia. Las otras opciones son incorrectas porque describen conc
+EXPL:El bloqueo a nivel de registro (row-level locking) bloquea solo la fila que se está modificando, permitiendo que otros usuarios trabajen en otras filas simultáneamente. Es más eficiente que bloquear toda la tabla.
 
 ¿Qué sintaxis se utiliza en MySQL para bloquear filas seleccionadas para una posterior actualización dentro de una transacción?
 *SELECT * FROM tabla WHERE id=1 FOR UPDATE;
 LOCK TABLES tabla WRITE;, aunque esto no es correcto en este contexto.
 UPDATE tabla SET locked = true;
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:La respuesta correcta es: SELECT * FROM tabla WHERE id=1 FOR UPDATE;. Las demás opciones no corresponden a la definición o comportamiento correcto en este contexto.
+EXPL:SELECT ... FOR UPDATE bloquea las filas seleccionadas para que otros usuarios no puedan modificarlas hasta que se haga COMMIT o ROLLBACK. Es el mecanismo de bloqueo pesimista en MySQL.
 
 En el modo estricto de MySQL (STRICT_ALL_TABLES), ¿qué ocurre si se intenta realizar una operación con datos inválidos?
 Se truncan los valores silenciosamente.
 *Se rechaza la operación y se genera un error.
 Se insertan valores nulos por defecto sin avisar.
 Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
-EXPL:Sentencias de confirmación y deshacer Antes de trabajar con transacciones que dependan de errores de datos (por ejemplo, convertir cadenas no numéricas a números), es recomendable activar el modo estricto para la sesión actual: SET SESSION sql_mode = 'STRICT_ALL_TABLES'; sql_mode es una variable de 
+EXPL:La respuesta es 'Se rechaza la operación y se genera un error.'. "Se truncan los valores silenciosamente." y "Se insertan valores nulos por defecto sin avisar." son incorrectos porque describen conceptos diferentes.
