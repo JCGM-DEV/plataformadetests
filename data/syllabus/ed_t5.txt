@@ -3,48 +3,58 @@ En un diagrama de secuencia, ¿qué representan la "línea de vida" y la "barra 
 La línea de vida representa la duración absoluta de un proceso y la barra de activación el tiempo de respuesta., lo cual no es correcto.
 *La línea de vida es una línea vertical discontinua asociada a cada elemento que indica el orden de los eventos, mientras que la barra de activación representa el periodo de tiempo durante el que el elemento se encuentra activo en la resolución de la actividad.
 La línea de vida muestra la jerarquía de las clases y la barra de activación la herencia de métodos., lo cual no es correcto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 Respecto a la relación de Inclusión (<<include>>) entre casos de uso en UML, ¿cuál de las siguientes afirmaciones es correcta?
 Se representa con una línea discontinua con flecha que apunta al caso de uso "incluyente" y es opcional para la funcionalidad.
 Indica que un caso de uso amplía la funcionalidad de otro de manera condicional., aunque no es la respuesta adecuada.
 *Un caso de uso "incluye" a otro cuando lo utiliza internamente para llevar a cabo su funcionalidad, y la realización de ambos casos de uso es siempre obligatoria.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 ¿Qué tipo de diagrama de comportamiento se utiliza para representar de manera detallada la secuencia de pasos que se van a realizar para una actividad, incluyendo elementos como nodos inicial y final, actividades, decisiones y conexiones?
 El diagrama de secuencia, por su enfoque en la interacción entre objetos.
 *El diagrama de actividad.
 El diagrama de estados, ya que muestra el ciclo de vida de un componente.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 
 ¿Cuál es una característica fundamental de la relación de Extensión (<<extend>>) en los diagramas de casos de uso UML?
 Es una relación fuerte y obligatoria donde la funcionalidad extendida siempre se ejecuta., lo cual no es correcto.
 *Indica que un caso de uso "extiende" o amplía la funcionalidad de otro, añadiendo opcionalmente un punto de extensión para especificar las condiciones.
 Se representa con una línea continua y un diamante hueco, mostrando una relación de "parte-todo"., lo cual no es correcto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 ¿Qué diagrama de comportamiento se considera una alternativa al diagrama de secuencia y se centra en las interacciones que realizan los objetos entre sí mediante el paso de mensajes, incluyendo un número secuencial en cada mensaje?
 El diagrama de actividad, por su capacidad de mostrar flujos detallados.
 El diagrama de tiempos, debido a su enfoque en la evolución de estados.
 *El diagrama de comunicación (conocido como diagrama de colaboración en versiones anteriores de UML).
+Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
 
 En un diagrama de casos de uso UML, ¿qué puede representar un "Actor"?
 Únicamente a una persona física que interactúa con el sistema, como un usuario., aunque no es la respuesta adecuada.
 *Cualquier elemento que se relaciona con el sistema, pudiendo ser una persona física (usuario) como otro sistema o subsistema (un programa informático o un sistema hardware).
 Una función o actividad interna del sistema que no tiene interacción externa., aunque no es la respuesta adecuada.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 ¿Qué se entiende por "Escenario" en el contexto de un diagrama de casos de uso?
 El conjunto completo de actores y casos de uso que componen un sistema., lo cual no es correcto.
 La representación gráfica de una actividad o funcionalidad del sistema como una elipse., lo cual no es correcto.
 *Cada uno de los diferentes caminos que puede tomar un caso de uso, representando una secuencia de eventos posible para completar la interacción.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 Si el objetivo es representar los diferentes estados por los que atraviesa un componente, sistema o subsistema a lo largo de su ciclo de vida, y las transiciones que se producen entre ellos, ¿qué diagrama de comportamiento de UML sería el más adecuado?
 El diagrama general de interacción, que muestra eventos a alto nivel.
 El diagrama de casos de uso, que define las funcionalidades del sistema.
 *El diagrama de estados o de máquina de estados.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 En el contexto de la elaboración de diagramas de comportamiento UML, ¿qué tipo de herramientas suelen proporcionar funcionalidades para su creación y qué ejemplo de plug-in para un Entorno de Desarrollo Integrado (IDE) popular se menciona?
 Solo herramientas de dibujo genéricas; ningún plug-in específico es mencionado., aunque no es la respuesta adecuada.
 *Herramientas CASE están diseñadas para facilitar su creación, y plug-ins integrados en entornos de desarrollo (IDEs) como AmaterasUML para Eclipse también ofrecen soporte.
 Exclusivamente aplicaciones de línea de comandos; no se usan interfaces gráficas., aunque no es la respuesta adecuada.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 
 ¿Cuál es la principal característica que definen los diagramas de comportamiento en UML, diferenciándolos de los diagramas estructurales?
 Muestran la definición y estructura estática de los componentes de un sistema en reposo., lo cual no es correcto.
 *Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y transformación.
 Describen exclusivamente la interacción entre usuarios finales y la interfaz gráfica del sistema.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.

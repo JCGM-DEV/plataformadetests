@@ -3,39 +3,49 @@ tema 8
 Reducir la necesidad de formación del personal al estandarizar interfaces.
 Controlar los procesos de negocio de forma coordinada para la toma de decisiones, reducir costes y aumentar la productividad.
 Permitir que cada departamento mantenga su autonomía total en la gestión de sus datos.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 Antes de proceder a la instalación de cualquier paquete de gestión empresarial (ERP), ¿cuál es un requisito previo fundamental, independientemente del software seleccionado?
 Contratar un servicio de hosting en la nube específico para el ERP.
 Crear previamente la base de datos en el sistema, ya que todo ERP se apoya en una base de datos centralizada.
 Instalar un entorno de desarrollo integrado (IDE) para la personalización futura.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 La proliferación de dispositivos portátiles y la presencia de empleados móviles ha impulsado una necesidad específica en la gestión de flujos de información empresarial. ¿Cuál es esta necesidad?
 Limitar el acceso a la información únicamente desde las oficinas centrales para garantizar la seguridad.
 Encontrar soluciones que integren a estos empleados en los flujos de información de la empresa en tiempo real.
 Reducir la cantidad de información disponible para los empleados móviles para evitar la saturación.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 Más allá de ser una simple lista de contactos, ¿qué función adicional y crucial cumple una plataforma CRM al recopilar e integrar datos?
 Generar automáticamente informes financieros detallados para auditorías externas.
 Mantener a los equipos actualizados con información personalizada sobre los clientes, su historial y sus preferencias de compra.
 Reemplazar completamente las funciones de un sistema de gestión de almacén (WMS).
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 Si bien la exportación de información desde un ERP a suites ofimáticas ofrece muchas ventajas, ¿cuál es el riesgo crítico que se menciona explícitamente y requiere medidas de seguridad?
 La incompatibilidad de formatos entre el ERP y el software ofimático.
 La ralentización del sistema ERP debido a la carga de datos exportados.
 El riesgo de filtrar información confidencial de la empresa hacia el exterior sin el control adecuado.
+Con un certificado SSL autofirmado, aunque no es la respuesta correcta.
 ¿De dónde pueden provenir los módulos complementarios que se integran en una aplicación ERP base?
 Únicamente del fabricante del software base para asegurar la compatibilidad.
 Pueden ser provistos por el fabricante, desarrollados por terceros o incluso ser programas personalizados solicitados por la empresa.
 Solamente de repositorios open source, ya que los módulos propietarios limitan la flexibilidad.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 ¿Cuál es una de las capacidades de configuración que ofrecen los formularios en un sistema ERP al ser completados?
 Generar automáticamente código de programación para nuevas funcionalidades.
 Activar acciones automatizadas como notificar a personas designadas o integrar los datos con otro software como SAP o Salesforce.
 Modificar la estructura de la base de datos central del ERP.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 En un sistema ERP, ¿qué ocurre cuando a un usuario se le asignan múltiples roles y uno de ellos impone restricciones más estrictas que los demás?
 El usuario obtiene la suma de todos los privilegios de los roles asignados.
 Prevalecerá el rol que imponga las restricciones más estrictas para garantizar la seguridad.
 El sistema solicitará al usuario que elija qué rol desea activar en cada sesión.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 ¿Cuál de las siguientes acciones representa un ejemplo de "adaptación" de un sistema ERP, según la definición de la unidad?
 Añadir un campo personalizado en las órdenes de envío para indicar el tipo de embalaje, que no venía por defecto en el sistema.
 Definir que las facturas electrónicas se emitan automáticamente en formato XML-UBL.
 Configurar las reglas de seguridad y las restricciones de acceso para distintos usuarios.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 ¿Qué ventaja clave ofrecen los ERP en la nube en términos de seguridad?
 La seguridad se relaja pasado un tiempo, ya que es más difícil de mantener actualizada.
 Son inherentemente invulnerables a cualquier tipo de ataque informático.
 Implementan las últimas novedades en seguridad de forma inmediata y aplican la seguridad por capas, reduciendo vulnerabilidades.
+Con una instancia reservada de pago anual, aunque no es la opción correcta.

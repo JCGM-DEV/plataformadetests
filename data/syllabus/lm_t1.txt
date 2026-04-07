@@ -27,6 +27,7 @@ En el contexto de los lenguajes de marcas, ¿cuál es la distinción correcta en
 Una etiqueta es un par nombre-valor que indica propiedades asociadas a los elementos, mientras que un elemento es el texto que va entre los símbolos <nombre>.
 *Una etiqueta es el texto que va entre los símbolos <nombre>, mientras que un elemento es una estructura básica que organiza el contenido y generalmente tiene una etiqueta de inicio y una de cierre.
 Un elemento siempre se refiere a un contenido vacío que no requiere etiqueta de fin, mientras que una etiqueta siempre encierra contenido explícito.
+Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
 La especificación del W3C para HTML 4.0 contemplaba tres tipos de DTD (Definición de Tipo de Documento). ¿Cuáles eran estas tres variantes?
 Lineal, Jerárquico y de Programación.
 Estructural, de Presentación y de Programación.

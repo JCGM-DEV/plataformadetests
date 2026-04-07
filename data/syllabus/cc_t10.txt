@@ -42,3 +42,5 @@ Minimizar la cantidad de servidores disponibles
 ¿Cuál es una de las mejores prácticas para una estrategia de escalado automático efectiva?
 No definir métricas de rendimiento para evitar alertas innecesarias.
 *Configurar reglas de escalado precisas y monitorear continuamente la aplicación
+No usar balanceadores de carga para reducir costes, aunque no es correcto.
+Limitar el número de servidores sin importar la demanda, lo cual no aplica.

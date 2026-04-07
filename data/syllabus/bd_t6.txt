@@ -3,48 +3,58 @@ tema 6
 VAR mi_variable = 10;
 *SET @mi_variable = 10;
 DECLARE @mi_variable INT DEFAULT 10;
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 ¿Qué palabra clave se utiliza al crear una función para indicar que siempre devuelve el mismo resultado para los mismos parámetros de entrada?
 STABLE
 VOLATILE
 *DETERMINISTIC
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 ¿Cuál es la función del comando DELIMITER en MySQL?
 Definir el tamaño máximo de una tabla., aunque no es la respuesta adecuada.
 *Cambiar temporalmente el carácter de finalización de comandos para escribir procedimientos complejos.
 Separar los campos de un archivo CSV durante una importación., lo cual no es correcto.
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 ¿Qué estructura de iteración se evalúa al final del ciclo, garantizando que el conjunto de instrucciones se ejecute al menos una vez?
 WHILE
 *REPEAT
 LOOP
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 Para ejecutar un procedimiento almacenado en MySQL, ¿qué instrucción debe utilizarse?
 EXECUTE
 RUN
 *CALL
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 ¿Qué variable del sistema debe estar en ON para que los eventos programados con CREATE EVENT llegar a ejecutarse?
 *event_scheduler
 system_event_monitor
 timer_running
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 ¿Cuál es una diferencia fundamental entre las Funciones y los Procedimientos almacenados?
 *Las funciones siempre devuelven un valor; los procedimientos no devuelven un valor (aunque pueden usar parámetros de salida).
 Los procedimientos solo pueden leer datos; las funciones pueden modificarlos., lo cual no es correcto.
 Las funciones se llaman con CALL y los procedimientos con SELECT., lo cual no es correcto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 ¿Qué tipo de dato compuesto se utiliza para almacenar uno o varios valores de un conjunto de opciones predefinidas, guardándose internamente como un mapa de bits?
 ENUM
 *SET
 ARRAY
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 
 En el tratamiento de excepciones, ¿qué manejador aborta la ejecución del código inmediatamente cuando se produce un error crítico?
 CONTINUE HANDLER
 *EXIT HANDLER
 STOP HANDLER
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 ¿Qué objeto de base de datos se utiliza para recorrer los resultados de una consulta SQL de manera secuencial y fila por fila?
 Trigger
 Index
 *Cursor
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.

@@ -3,14 +3,17 @@ tema 5
 La mejora del sistema de tipos de datos.
 La instrucción xsl:function para definir funciones reutilizables.
 El soporte de streaming para documentos fuente.
+Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
 Según el contenido de la unidad, ¿cuál de los siguientes es un componente fundamental de XSL específicamente orientado a la definición de formatos de presentación para distintos medios (como PDF) y no a la transformación directa a HTML/XML?
 XPath
 XSLT
 XSL-FO
+Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
 Para mostrar el valor de un atributo llamado "identificador" de un elemento actual dentro de una plantilla XSLT, ¿qué expresión XPath se utilizaría correctamente con la instrucción <https://www.google.com/search?q=xsl:value-of select="..." />?
 ../identificador
 identificador
 @identificador
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 Un desarrollador necesita aplicar una lógica condicional en XSLT donde, basándose en el valor de una cantidad, se apliquen diferentes formatos (por ejemplo, colorear de amarillo si la cantidad es superior a 25 y de verde si es igual o inferior). ¿Qué conjunto de instrucciones XSLT es el más adecuado para este escenario?
 <https://www.google.com/search?q=xsl:if test="cantidad>25"/>
 xsl:choose con xsl:when y xsl:otherwise
@@ -23,19 +26,24 @@ Si se desea iterar sobre un conjunto de nodos en un documento XML (por ejemplo, 
 xsl:value-of
 xsl:for-each
 xsl:if
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 En la estructura de una hoja de estilo XSLT, ¿cuál es el propósito principal del atributo match en la etiqueta xsl:template?
 Indica el espacio de nombres (namespace) de la hoja de estilo para asegurar su compatibilidad.
 Define el tipo de documento de salida (por ejemplo, xml, html) que se generará.
 Especifica los elementos del documento XML de entrada a los que se aplicará la plantilla, utilizando una expresión XPath.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 ¿Cuál de las siguientes afirmaciones describe con mayor precisión el rol de XSL en el procesamiento de documentos XML?
 XSL es un lenguaje de programación para crear bases de datos XML y gestionar su almacenamiento.
 XSL es un lenguaje de consulta para extraer datos específicos de documentos XML sin modificarlos.
 XSL es un lenguaje de marcado que define la presentación y la transformación de documentos XML, permitiendo adaptarlos a diversos formatos y sistemas.
+Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
 ¿En qué escenario se recomienda priorizar el uso de SAX (Simple API for XML) sobre DOM para procesar documentos XML?
 Cuando se necesita modificar el documento XML en memoria antes de generar la salida final.
 Cuando el documento XML es de tamaño pequeño o mediano y se requiere acceso aleatorio a los nodos.
 Cuando se procesan documentos XML muy grandes y el bajo consumo de memoria y la velocidad de lectura secuencial son críticos, sin necesidad de modificar el documento.
+Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
 Al enlazar una hoja de estilo XSLT a un documento XML local y abrirlo en Google Chrome directamente desde el explorador de archivos (file://...), ¿qué resultado es probable que observe el usuario?
 Se mostrará el documento XML original con su estructura de etiquetas.
 Se mostrará el documento XML transformado con los estilos aplicados por la hoja de estilo.
 Se mostrará una página en blanco o no se aplicará la transformación, incluso si el documento está bien formado.
+Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.

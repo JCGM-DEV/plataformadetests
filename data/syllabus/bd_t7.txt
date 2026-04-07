@@ -3,48 +3,58 @@ tema 7
 Polimorfismo
 *Herencia de tablas
 Encapsulamiento de tipos
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 Durante la instalación de PostgreSQL, ¿cuál es el puerto de conexión que se asigna por defecto?
 3306
 8080
 *5434
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 ¿Qué cláusula se utiliza en la sentencia CREATE TABLE de PostgreSQL para heredar de otra tabla?
 EXTENDS
 *INHERITS
 FROM
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 ¿Cuál de los siguientes es un tipo de dato nativo geométrico en PostgreSQL?
 *CIRCLE
 SPHERE
 TRIANGLE
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 Al ejecutar un SELECT * FROM tabla_padre en PostgreSQL, ¿qué registros se obtienen por defecto?
 Solo los de la tabla padre., aunque esto no es correcto en este contexto.
 Solo los de las tablas hijas., aunque esto no es correcto en este contexto.
 *Los de la tabla padre y todos los de sus tablas hijas relacionadas.
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 ¿Qué tipo de dato de colección representa un intervalo de valores continuos (como un rango de fechas)?
 ARRAY
 JSONB
 *RANGE
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 
 Respecto al borrado de datos en una estructura de herencia en PostgreSQL, ¿cuál es la afirmación correcta?
 Existe un borrado en cascada automático entre padres e hijos., lo cual no es correcto.
 *No hay cascada automática; se debe declarar ON DELETE CASCADE en las claves foráneas si se requiere.
 Si borras un registro en el padre, el hijo se bloquea., lo cual no es correcto.
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 ¿Cómo se llama el lenguaje procedimental propio de PostgreSQL utilizado para crear funciones avanzadas?
 PL/SQL
 *PL/pgSQL
 T-SQL
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 ¿Qué sentencia estándar de SQL se utiliza en PostgreSQL para definir un tipo de dato personalizado (como un tipo compuesto)?
 *CREATE TYPE
 CREATE OBJECT
 DEFINE DATA
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 ¿A qué se refiere la "navegabilidad" en el contexto de bases de datos objeto-relacionales?
 A la velocidad de navegación web de la base de datos., lo cual no es correcto.
 *A la capacidad de seguir las conexiones lógicas o referencias entre objetos.
 Al uso de comandos NEXT y PREV en los cursores., lo cual no es correcto.
+Mediante una clase abstracta con métodos estáticos, aunque no es correcto.

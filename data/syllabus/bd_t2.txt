@@ -11,6 +11,7 @@ SAVEPOINT TRANSACTION
 Hash
 *Árbol B
 Compuesto
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 ¿Qué diferencia esencial hay entre una vista y una tabla?
 Una vista almacena datos físicamente
 *Una vista es virtual; se reconstruye al vuelo

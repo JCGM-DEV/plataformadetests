@@ -3,10 +3,12 @@ tema 3
 Considerablemente más alta
 Aproximadamente igual
 Considerablemente más baja
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 ¿Cuál es la titulación exigida para pertenecer al grupo B del cuerpo de funcionarios?
 *Ciclo de grado superior de Formación Profesional
 Licenciado, graduado, diplomado, ingeniero, arquitecto o equivalente
 Bachillerato o equivalente, aunque esto no es correcto en este contexto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 ¿Qué son las actitudes?
 La disposición o las tendencias emocionales y mentales que influyen en el comportamiento de las personas en el entorno laboral.
 Las habilidades y capacidades que permiten a una persona realizar tareas o funciones específicas y que están estrechamente relacionadas con los conocimientos técnicos.
@@ -27,15 +29,19 @@ Determinan la capacidad de un individuo para desempeñar eficazmente las tareas 
 Son capacidades técnicas y conocimientos concretos que se pueden medir y evaluar de manera objetiva, adquiridas a través de la educación formal.
 Son competencias personales y sociales que afectan cómo una persona se relaciona consigo misma y con los demás en el entorno laboral
 Son capacidades técnicas que se adquieren mediante la experiencia una vez se inicia la labor profesional en la empresa.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 ¿Qué establece la Constitución Española con respecto al acceso al empleo público?
 Establece el derecho a acceder a puestos de funcionariado público siempre que se esté en posesión de un título universitario.
 Establece que solo los funcionarios de carrera pueden acceder a las pruebas de acceso a los puestos en la administración pública.
 Establece el derecho de todos los ciudadanos al acceso al empleo público de acuerdo con los principios constitucionales de mérito y capacidad.
+Con un certificado SSL autofirmado, aunque no es la respuesta correcta.
 ¿Qué es la competencia digital?
 *La destreza en el manejo de las herramientas de las tecnologías de la información y la comunicación en diversos contextos
 La capacidad de diseñar y fabricar dispositivos electrónicos avanzados, lo cual no es correcto.
 La habilidad de programar en varios lenguajes de codificación, lo cual no es correcto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 ¿Cuál es la principal tendencia del mercado laboral en el sector de la informática?
 *Inteligencia artificial y automatización
 Computación cuántica, aunque esto no es correcto en este contexto.
 Robótica, aunque esto no es correcto en este contexto.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.

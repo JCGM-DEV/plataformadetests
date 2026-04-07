@@ -3,26 +3,31 @@ tema 2
 Los IDE modernos son exclusivamente de código abierto y gratuitos, a diferencia de las herramientas antiguas., lo cual no es correcto.
 Los IDE modernos se enfocan únicamente en la edición de código, mientras que las herramientas antiguas integraban la compilación y el enlazado., lo cual no es correcto.
 *Los IDE modernos integran una amplia gama de herramientas para dar soporte a la mayoría de las actividades de desarrollo de software, incluyendo documentación, control de versiones y pruebas, más allá de la mera escritura y compilación de código.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 
 Al crear un nuevo proyecto en PyCharm para Python, ¿cuál es uno de los elementos clave que deben seleccionarse o configurarse, además de la ubicación del proyecto y la versión de Python a utilizar?
 El tipo específico de interfaz gráfica de usuario (GUI) que se utilizará para la aplicación.
 *La ubicación del entorno virtual, que constituye un entorno de trabajo aislado para el proyecto.
 El compilador predeterminado para C++ o Java, incluso para proyectos Python.
+Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
 
 ¿Cómo gestionan típicamente los Entornos de Desarrollo Integrados (IDEs) la detección y notificación de errores en lenguajes de programación interpretados, como Python, en comparación con los lenguajes compilados?
 En ambos tipos de lenguajes, interpretados y compilados, los errores son detectados y mostrados principalmente durante la fase de compilación por el IDE.
 En los lenguajes interpretados, los errores solo se detectan manualmente por el programador, mientras que los lenguajes compilados tienen detección automatizada.
 *En los lenguajes interpretados, los errores se detectan y muestran durante la fase de ejecución, mientras que en los lenguajes compilados, los errores son revisados y mostrados durante el proceso de compilación.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 Antes de instalar PyCharm, ¿cuál es un paso previo recomendado para asegurar que todas las herramientas necesarias para el desarrollo en Python estén disponibles?
 Instalar el IDE Visual Studio para asegurar el soporte de Python.
 *Descargar e instalar la última versión del intérprete de Python y sus herramientas.
 Configurar las variables de entorno del sistema operativo para que apunten al instalador de PyCharm.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 Basándose en la distinción entre categorías de software, ¿cuál es la característica que define al software libre en contraste con el software propietario?
 El software libre siempre tiene un coste asociado a su uso, mientras que el software propietario es siempre gratuito., lo cual no es correcto.
 El software libre es desarrollado por grandes corporaciones, mientras que el software propietario suele ser creado por desarrolladores independientes., lo cual no es correcto.
 *El software libre permite el acceso a su código fuente para su estudio, comprensión y mejora, mientras que el software propietario restringe el acceso a su código, generalmente solo permitiéndolo a su dueño o creador.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 ¿Cuál es el propósito principal de los "plugins" o "módulos" en un Entorno de Desarrollo Integrado (IDE)?
 Reemplazar las funcionalidades centrales del IDE, requiriendo una reinstalación completa.
@@ -34,18 +39,22 @@ Respecto a la generación de ejecutables, ¿qué se menciona específicamente so
 Python suele generar ejecutables directamente desde el IDE, de manera similar a los lenguajes compilados.
 *Generalmente no se generan archivos ejecutables en Python; en su lugar, los archivos de la aplicación se copian y se ejecutan llamando al intérprete.
 La generación de ejecutables en Python siempre es automatizada por el IDE sin necesidad de herramientas de terceros.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 Según el contenido proporcionado, ¿cuál es una ventaja clave de los editores de código modernos en comparación con los Entornos de Desarrollo Integrados (IDEs)?
 Los editores de código son generalmente más completos y ofrecen más funcionalidades integradas para todas las fases del desarrollo.
 *Los editores de código son más ligeros y consumen menos recursos del sistema, siendo adecuados para tipos específicos de desarrollo como las aplicaciones web de "front-end".
 Los editores de código están dedicados exclusivamente a un único lenguaje de programación, lo que garantiza un rendimiento superior.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 ¿Qué aspectos de la interfaz de un IDE pueden ser típicamente personalizados por el usuario, como se ejemplifica con PyCharm?
 Solo el idioma de los menús y las sugerencias del IDE., aunque no es la respuesta adecuada.
 La lógica fundamental y las funcionalidades principales del propio IDE., lo cual no es correcto.
 *La apariencia de sus elementos, como el tipo y tamaño de letra, la disposición de los paneles y el esquema de color a utilizar.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 Además de la edición y compilación de código, ¿qué actividad de desarrollo moderna soportan los IDEs, lo que indica su papel en proyectos colaborativos?
 Solo el control directo del hardware y la programación de sistemas de bajo nivel.
 *El trabajo en equipo, el control de versiones y el seguimiento de incidencias, entre otras tareas.
 El desarrollo exclusivo de aplicaciones web del lado del servidor (back-end).
+Ninguna de las anteriores opciones es completamente correcta en este contexto.

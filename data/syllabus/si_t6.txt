@@ -3,39 +3,49 @@ tema 6
 *Una técnica que restringe el acceso a ciertos recursos del sistema en función del rol del usuario.
 Una técnica que permite el acceso a todos los recursos del sistema sin restricciones.
 Una técnica que no tiene relación con el acceso a recursos del sistema.
+Con un certificado SSL autofirmado, aunque no es la respuesta correcta.
 ¿Qué es el cifrado de datos?
 *Una técnica que se utiliza para proteger la confidencialidad de los datos almacenados o transmitidos.
 Una técnica que se utiliza para compartir datos públicamente sin protección.
 Una técnica que no tiene relación con la protección de datos., lo cual no es correcto.
+Con un certificado SSL autofirmado, aunque no es la respuesta correcta.
 ¿Para qué se utiliza OpenSSL?
 Para cifrar unidades de almacenamiento como discos duros internos o externos.
 *Para crear y gestionar certificados digitales y claves de cifrado.
 Para enviar y recibir correos electrónicos cifrados.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 ¿Qué son los derechos de usuario en una red?
 *Los permisos que se otorgan a los usuarios para acceder y utilizar los recursos compartidos de la red.
 Los privilegios que se otorgan a los administradores de la red., lo cual no es correcto.
 Los permisos que se otorgan a los usuarios para acceder a Internet., lo cual no es correcto.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 ¿Qué es una ACL?
 Un objeto de directiva de seguridad.
 *Una lista de control de acceso.
 Un sistema operativo.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 ¿Cuál es una herramienta de gestión de usuarios y recursos de red de Microsoft?
 Firewall.
 LDAP.
 *Active Directory.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 ¿Qué es la autenticación multifactorial?
 Una técnica que requiere que los usuarios proporcionen una forma de identificación antes de acceder a una cuenta.
 *Una técnica que requiere que los usuarios proporcionen dos o más formas de identificación antes de acceder a una cuenta.
 Una técnica que permite el acceso a una cuenta sin necesidad de identificación., lo cual no es correcto.
+Con un certificado SSL autofirmado, aunque no es la respuesta correcta.
 ¿Para qué se utilizan las directivas de seguridad?
 Para proteger la información confidencial.
 Para garantizar la integridad del sistema.
 *Todas las anteriores.
+Con un certificado SSL autofirmado, aunque no es la respuesta correcta.
 ¿Qué tipo de objetos de directiva de seguridad se utilizan para especificar los requisitos de contraseña?
 Usuarios y grupos.
 *Contraseñas.
 Auditoría.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 ¿Por qué es importante establecer diferentes niveles de acceso en una red?
 Para que los usuarios tengan acceso completo a todos los recursos de la red., lo cual no es correcto.
 *Para evitar que los usuarios accedan a recursos que no necesitan y reducir el riesgo de violaciones de seguridad.
 Para permitir que todos los usuarios tengan acceso a todos los recursos de la red.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.

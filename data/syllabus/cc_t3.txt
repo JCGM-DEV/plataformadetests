@@ -45,5 +45,7 @@ Es operada únicamente por un proveedor público
 Solo es accesible dentro de una empresa
 No permite compartir datos entre sistemas
 ¿Cuál de las siguientes opciones representa un servicio de nube pública?
-*Servidores internos de una empresa
-Microsoft Azure
+Servidores internos de una empresa, aunque no es la respuesta correcta.
+*Microsoft Azure
+Un disco duro externo conectado a una red, lo cual no aplica aquí.
+Un centro de datos privado sin acceso externo, aunque no corresponde.

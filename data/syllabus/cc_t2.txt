@@ -47,3 +47,5 @@ Garantizar un precio fijo sin variaciones., lo cual no es correcto.
 ¿Cuál es una de las tendencias futuras en la gestión de la facturación en la nube?
 *Uso de inteligencia artificial y aprendizaje automático para optimizar los costes
 Eliminación total de los modelos de pago por uso., lo cual no es correcto.
+Cobro adelantado de todos los servicios en la nube, aunque no aplica en este contexto.
+Prohibición del uso de herramientas de análisis de costes, lo cual no corresponde.

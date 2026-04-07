@@ -3,48 +3,58 @@ tema 4
 SELECT
 *FROM
 WHERE
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 ¿Qué operador se utiliza en la cláusula WHERE para filtrar por un rango de valores?
 LIKE
 IN
 *BETWEEN
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 ¿Para qué sirve el modificador DISTINCT en una sentencia SELECT?
 Para ordenar los resultados de forma alfabética.
 *Para eliminar las filas duplicadas en el conjunto de resultados.
 Para filtrar registros que contengan valores nulos.
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 ¿Cuál es la función de agregado que devuelve el valor máximo de una columna?
 SUM()
 *MAX()
 AVG()
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 ¿Qué diferencia principal hay entre las cláusulas WHERE y HAVING?
 WHERE se aplica a los grupos y HAVING a las filas individuales., lo cual no es correcto.
 *WHERE filtra registros antes de la agrupación; HAVING filtra grupos después de aplicarse GROUP BY.
 Ambas cláusulas son idénticas y se pueden usar indistintamente., lo cual no es correcto.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 
 ¿Qué tipo de JOIN devuelve todos los registros de la tabla de la izquierda, aunque no tengan correspondencia en la derecha?
 INNER JOIN
 *LEFT JOIN
 RIGHT JOIN
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 En una composición interna (INNER JOIN), ¿qué ocurre con las filas de la tabla A que no coinciden con ninguna de la tabla B?
 Aparecen en el resultado con valores NULL.
 *Se excluyen del conjunto de resultados.
 Detienen la ejecución de la consulta por error de integridad.
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 ¿Qué palabra clave se usa para comprobar si un valor existe dentro de una lista devuelta por una subconsulta?
 LIKE
 EXISTS
 *IN
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 En Oracle, ¿qué combinación de cláusulas se utiliza para realizar consultas jerárquicas?
 GROUP BY y HAVING.
 *START WITH y CONNECT BY.
 UNION e INTERSECT.
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 
 ¿Qué operación de conjuntos combina los resultados de dos consultas eliminando los duplicados automáticamente?
 *UNION
 INTERSECT
 EXCEPT (o MINUS)
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.

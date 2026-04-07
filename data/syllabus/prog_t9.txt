@@ -3,39 +3,49 @@ tema 9
 *Traducir las llamadas de la API JDBC al protocolo específico del gestor de base de datos (MySQL, Oracle, etc.).
 Diseñar las tablas de la base de datos automáticamente desde el código Java., lo cual no es correcto.
 Comprobar que el código SQL no tenga errores de sintaxis antes de enviarlo., lo cual no es correcto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 En caso de que una de las operaciones de una transacción falle, ¿qué método se debe invocar para devolver la base de datos a su estado original?
 *conn.rollback()
 conn.reset()
 conn.undo()
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 ¿Qué representan las siglas ACID en el contexto de las transacciones de bases de datos?
 *Un conjunto de propiedades (Atomicidad, Consistencia, Aislamiento y Durabilidad) que garantizan la integridad de las operaciones.
 Un protocolo de cifrado para que las contraseñas de la base de datos viajen seguras., lo cual no es correcto.
 El nombre del driver estándar utilizado para conectar Java con bases de datos SQLite., lo cual no es correcto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 Para gestionar una transacción de forma manual en Java, ¿cuál es el primer paso imprescindible?
 Llamar al método conn.commit().
 *Establecer conn.setAutoCommit(false).
 Cerrar la conexión con el bloque finally.
+Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
 ¿Qué componente de la URL de conexión jdbc:mysql://localhost:3306/empresa indica el puerto donde escucha el servidor?
 jdbc:mysql
 localhost
 *3306
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 ¿Por qué se recomienda el uso de PreparedStatement en lugar de Statement para ejecutar consultas con parámetros?
 Porque Statement no permite ejecutar consultas de tipo SELECT., lo cual no es correcto.
 *Porque PreparedStatement aumenta la seguridad contra ataques de Inyección SQL y mejora el rendimiento mediante la precompilación.
 Porque Statement solo puede usarse con bases de datos locales y no en red., lo cual no es correcto.
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 ¿Cómo funciona el objeto ResultSet al recuperar datos de una consulta?
 Carga todos los datos de la base de datos en una lista estática de forma inmediata.
 *Actúa como un cursor que inicialmente apunta "antes de la primera fila" y requiere el método next() para avanzar.
 Es una interfaz que solo permite leer datos de tipo texto (String)., lo cual no es correcto.
+Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
 ¿Cuál es la forma más profesional y segura de gestionar el cierre de Connection, Statement y ResultSet para evitar fugas de memoria?
 Cerrarlos manualmente uno a uno en el cuerpo principal del código., lo cual no es correcto.
 Confiar en que el Garbage Collector los cerrará cuando el programa termine.
 *Utilizar la estructura try-with-resources para que Java los cierre automáticamente al finalizar el bloque.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 Al ejecutar una sentencia DML (INSERT, UPDATE o DELETE), ¿qué método de PreparedStatement debe utilizarse?
 executeQuery()
 *executeUpdate()
 executeSelect()
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 ¿Qué es JDBC dentro del ecosistema de Java?
 Una base de datos ligera que se integra directamente en el JDK., lo cual no es correcto.
 *Una API que proporciona un conjunto de interfaces estándar para interactuar con bases de datos independientemente del motor usado.
 Un lenguaje de consulta que sustituye al SQL tradicional para mejorar el rendimiento., lo cual no es correcto.
+Mediante una clase abstracta con métodos estáticos, aunque no es correcto.

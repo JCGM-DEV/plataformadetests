@@ -3,39 +3,49 @@ Según las reglas de las etiquetas XML para la buena formación de un documento,
 Las etiquetas XML no son sensibles a las mayúsculas y minúsculas, lo que permite flexibilidad en su escritura para mejorar la legibilidad del código.
 Es posible cerrar una etiqueta exterior antes de que todos los elementos anidados dentro de ella hayan sido cerrados, siempre que el documento tenga un elemento raíz único.
 *Los elementos vacíos pueden representarse mediante una etiqueta de inicio seguida inmediatamente por una de cierre (ej. <hr></hr>), o con una etiqueta única con "/>" al final (ej. <hr />).
+Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
 ¿Qué característica debe cumplir un documento XML para ser considerado válido, además de estar bien formado?
 Debe ser compatible con cualquier navegador web sin necesidad de hojas de estilo o transformaciones adicionales para su visualización.
 Debe contener obligatoriamente un prólogo con la declaración XML que incluya la versión, la codificación y el atributo standalone="yes".
 *Debe ajustarse a las restricciones estructurales y de contenido definidas en una Declaración de Tipo de Documento (DTD) o un Esquema XML (XSD) asociado.
+Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
 ¿Cuál de las siguientes afirmaciones sobre JSON es correcta?
 JSON es un lenguaje de marcado extensible diseñado principalmente para la elaboración de documentos complejos con una estructura jerárquica basada en etiquetas.
 Los documentos JSON suelen ser más difíciles de interpretar y comprender por las personas en comparación con los documentos XML debido a su sintaxis técnica.
 JSON se basa en dos estructuras fundamentales: una colección de pares nombre/valor (objetos) y una lista ordenada de valores (arrays).
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 ¿Cuál de los siguientes nombres de etiqueta o atributo XML es inválido según las reglas de nombres de XML?
 <nombreValido>
 <dato-2023>
 *<XML_data>
+Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
 Al abrir un documento XML directamente en un navegador web sin asociarle ninguna tecnología adicional (como CSS o XSLT), ¿cómo se presentará la información al usuario?
 El navegador intentará aplicar un conjunto de estilos por defecto para hacer el documento visualmente atractivo y navegable.
 Se mostrará un mensaje de error indicando que el documento no tiene un formato de presentación válido y requiere un estilo.
 El navegador simplemente mostrará la jerarquía de etiquetas y el contenido del documento en texto plano, sin aplicar ningún estilo ni formato visual.
+Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
 En la estructura jerárquica de un documento XML, si la etiqueta <carreras> es un hijo de <facultad>, y dentro de <carreras> se encuentra la etiqueta <carrera>, ¿qué relación tiene <carrera> con <facultad>?
 <carrera> es un hijo directo de <facultad>, ya que se encuentra dentro de su ámbito.
 <carrera> es un hermano de <facultad>, dado que ambos descienden del mismo elemento raíz.
 <carrera> es un descendiente de <facultad>, al estar contenida en un elemento que a su vez es hijo de <facultad>.
+Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
 Si en un esquema XML (XSD) se desea restringir el valor de un elemento de tipo xs:string a un conjunto específico y limitado de valores predefinidos (por ejemplo, "conectado", "ocupado" o "ausente"), ¿qué faceta se debe utilizar dentro de xs:restriction?
 La faceta xs:maxLength, para definir la longitud máxima permitida de la cadena de texto.
 La faceta xs:pattern, para establecer una expresión regular que el valor de la cadena debe cumplir.
 La faceta xs:enumeration, que permite listar los valores exactos que el elemento puede tomar.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 ¿Cuál de los siguientes es un inconveniente principal de las Definiciones de Tipo de Documento (DTD) en comparación con los Esquemas XML (XSD)?
 Su sintaxis es demasiado compleja y, a diferencia de XML Schema, no está basada en XML, lo que dificulta su integración.
 Permiten la definición flexible de secuencias no ordenadas de elementos y la creación de claves combinadas a partir de varios atributos o elementos.
 Carecen de soporte para espacios de nombres (namespaces), limitan los elementos terminales a datos textuales y no permiten definir tipos de datos complejos.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 En XML, cuando se declara un espacio de nombres por defecto (sin prefijo, por ejemplo xmlns="URI"), ¿a qué elementos del documento afecta su ámbito de aplicación?
 A todos los elementos y atributos del documento XML, incluyendo los de elementos anidados, de forma global.
 Solo al elemento en el que se declara y a los atributos específicos de ese elemento, excluyendo a sus descendientes.
 Al elemento en el que está declarado y a todos sus elementos descendientes, pero no a sus atributos, los cuales se tratan como atributos regulares.
+Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
 ¿Qué elemento del lenguaje XSD (XML Schema Definition) se utiliza para construir tipos complejos especificando que sus componentes deben aparecer en un orden determinado y fijo?
 El elemento xs:choice, que permite seleccionar uno de varios elementos definidos sin un orden estricto.
 El atributo mixed="true" del elemento xs:complexType, que permite combinar texto con elementos en cualquier orden.
 El elemento xs:sequence, que enumera los componentes de un tipo complejo indicando la secuencia obligatoria en que deben aparecer.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.

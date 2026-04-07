@@ -3,48 +3,58 @@ De las siguientes opciones, ¿cuál representa una de las técnicas o "patrones"
 La creación de un nuevo esquema de base de datos para optimizar las consultas., lo cual no es correcto.
 La redefinición de la interfaz de usuario para mejorar la experiencia del usuario final., lo cual no es correcto.
 *La correcta composición de métodos (creando funciones para encapsular funcionalidad) y la organización de los datos (utilizando objetos y encapsulación).
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 Según el contenido de la unidad, ¿cuál es la razón fundamental por la que los sistemas de control de versiones son herramientas imprescindibles en la ingeniería de software, especialmente en desarrollos colectivos?
 Permiten generar automáticamente la documentación técnica del proyecto sin intervención manual., lo cual no es correcto.
 *Facilitan el control sobre el código fuente y otros ficheros del sistema, su evolución, y permiten el trabajo en grupo minimizando el impacto de los cambios entre programadores.
 Son herramientas exclusivas para el despliegue automático del software en diferentes entornos de producción., lo cual no es correcto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 Flujo de Trabajo Básico con Git: Después de realizar modificaciones en los ficheros de un proyecto localmente, ¿cuáles son los dos comandos fundamentales en Git para primero hacer firmes esos cambios localmente y luego subirlos al repositorio remoto?
 git add y luego git clone., pero este concepto no corresponde a lo descrito.
 git push y luego git commit., pero este concepto no corresponde a lo descrito.
 *git commit para consolidar los cambios en el repositorio local y git push para subirlos al servidor remoto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 ¿Cuál de las siguientes afirmaciones describe con mayor precisión el propósito de la refactorización en el desarrollo de software?
 La refactorización tiene como objetivo principal añadir nuevas funcionalidades o características a un programa existente., lo cual no es correcto.
 La refactorización se realiza para eliminar errores funcionales o fallos del sistema que impiden su correcto funcionamiento., lo cual no es correcto.
 *La refactorización es un conjunto de técnicas que modifican un programa ya funcional para mejorar su legibilidad, eficiencia, comprensión y mantenimiento, sin alterar su comportamiento externo.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 Herramientas de Ayuda a la Refactorización en IDEs: Los Entornos de Desarrollo Integrado (IDEs) como PyCharm ofrecen herramientas para la refactorización asistida. ¿Qué tipo de acción es un ejemplo de refactorización asistida directamente proporcionada por un IDE?
 La detección y corrección automática de errores de sintaxis en tiempo real., lo cual no es correcto.
 La ejecución de pruebas de rendimiento del código bajo diferentes cargas de trabajo., lo cual no es correcto.
 *El renombrado automático de variables, funciones o clases en todo el proyecto, o la extracción de un bloque de código para crear un nuevo método.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 
 A pesar de que una refactorización de código no implica cambios en su funcionamiento, el manual indica que puede generar errores si se realiza incorrectamente. ¿Qué acciones se deben considerar para mitigar este riesgo?
 Realizar únicamente revisiones de código manuales para identificar posibles fallos visualmente., lo cual no es correcto.
 *Asegurarse de poder deshacer los cambios realizados (preferiblemente con sistemas de control de versiones) y ejecutar pruebas (unitarias, de regresión o de humo) para verificar la correcta funcionalidad del código modificado.
 Implementar un sistema de autenticación de dos factores para el acceso al código fuente., lo cual no es correcto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 Restauración de Versiones Anteriores en Git: Si un programador necesita restaurar el estado de su repositorio local en Git a una versión anterior específica (por ejemplo, al estado de un "primer commit"), ¿qué comando debe utilizar y qué información es crucial para ello?
 git merge <nombre_de_rama> para combinar con una rama antigua., lo cual no es correcto.
 git log para ver el historial y luego git revert para deshacer el último cambio.
 *git reset --hard <identificador_del_commit> utilizando el identificador único del commit al que se desea regresar.
+Ninguna de las anteriores opciones es completamente correcta en este contexto.
 
 Resolución de Conflictos en Sistemas de Control de Versiones: En un escenario de desarrollo colectivo, cuando varios programadores modifican el mismo fchero simultáneamente, pueden surgir confictos. ¿Qué comando de Git se menciona como el adecuado para resolver este tipo de problemas?
 git status para ver el estado de los fcheros.
 git diff para ver las diferencias entre versiones.
 *git merge para integrar cambios y resolver solapamientos.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 
 En Python, además de los comentarios tradicionales (# o bloques con '''), existe un tipo de comentario formal que se utiliza para documentar funciones, clases y métodos, siendo visible con la función help() y en la ayuda contextual de los IDEs. ¿Cómo se denomina este tipo de comentario?
 Comentario de bloque.
 Comentario de línea.
 *Docstring.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
 
 ¿Cuál es la principal distinción entre un sistema de control de versiones centralizado y uno distribuido?
 Los sistemas centralizados son de código cerrado, mientras que los distribuidos son siempre de código abierto., aunque no es la respuesta adecuada.
 Los sistemas centralizados almacenan las copias del proyecto en la máquina local del desarrollador, mientras que los distribuidos lo hacen en un servidor remoto.
 *En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, las copias se almacenan tanto en un servidor como en cada máquina de los integrantes del equipo.
+Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
