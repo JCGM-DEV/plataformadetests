@@ -44,7 +44,7 @@ EXPL:La respuesta es 'CSS'. "DDoS" y "HTML" son incorrectos porque describen con
 ¿Qué medida de seguridad ayuda a proteger los datos en una nube privada virtual?
 *Eliminación de registros de actividad
 Acceso libre sin autenticación
-Solo aplica en determinados sectores regulados específicamente.
+Cifrado de datos
 Compartición de claves de acceso
 EXPL:La respuesta es 'Eliminación de registros de actividad'. "Acceso libre sin autenticación" y "Cifrado de datos" son incorrectos porque describen conceptos diferentes.
 ¿Qué tipo de red se utiliza para conectar dispositivos dentro de una oficina o un hogar?

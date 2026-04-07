@@ -48,9 +48,9 @@ No permite la extinción del contrato durante ese tiempo.
 Su duración es siempre de 6 meses en todos los casos.
 EXPL:El periodo de prueba es voluntario y debe pactarse expresamente (normalmente por escrito). Durante él, cualquiera de las partes puede extinguir el contrato sin preaviso ni indemnización. Su duración máxima depende del convenio y la categoría profesional.
 La normativa laboral establece límites a la jornada de trabajo con el objetivo de proteger la salud del trabajador. ¿Cuál es la duración máxima de la jornada ordinaria semanal?
-Solo aplica a trabajadores con contrato indefinido a tiempo completo.
+35 horas semanales.
 *40 horas semanales de promedio anual.
-Solo aplica a trabajadores con contrato indefinido a tiempo completo.
+45 horas semanales.
 48 horas semanales incluyendo horas extra.
 EXPL:El Estatuto de los Trabajadores fija la jornada máxima en 40 horas semanales de trabajo efectivo de promedio en cómputo anual. Esto permite flexibilidad semanal siempre que el promedio anual no supere ese límite.
 Las horas extraordinarias pueden realizarse en determinadas circunstancias, pero no siempre son obligatorias. ¿Cuál de las siguientes afirmaciones es correcta?
@@ -114,7 +114,7 @@ Régimen fiscal.
 Régimen mercantil.
 EXPL:Los regímenes principales de la Seguridad Social son el Régimen General (trabajadores por cuenta ajena) y los Regímenes Especiales (autónomos, agrario, del mar, minería del carbón, empleados del hogar). No existen regímenes comercial ni fiscal.
 La afiliación a la Seguridad Social es un requisito imprescindible para trabajar legalmente. Esto significa que?
-Solo la paga el trabajador mediante descuento en nómina.
+Es voluntaria.
 *Es obligatoria para trabajadores y empresas.
 Solo afecta a funcionarios.
 Solo es obligatoria para contratos indefinidos.
@@ -138,7 +138,7 @@ Es siempre obligatorio.
 Solo puede celebrarse por escrito.
 EXPL:El contrato indefinido no tiene fecha de finalización predeterminada. Puede extinguirse por causas legales (despido, baja voluntaria, jubilación, etc.) pero no por el mero transcurso del tiempo. Es la modalidad que más estabilidad ofrece al trabajador.
 Un contrato temporal se caracteriza principalmente porque?
-Solo aplica a trabajadores con contrato indefinido a tiempo completo.
+No tiene causa.
 *Tiene una duración limitada en el tiempo.
 Es igual que el indefinido.
 No puede convertirse en indefinido.
@@ -176,7 +176,7 @@ EXPL:La Ley de Prevención de Riesgos Laborales (LPRL) tiene como objetivo princ
 Un riesgo laboral se puede definir como?
 Una ventaja económica.
 *Una situación que puede provocar daño al trabajador.
-Solo aplica a trabajadores con contrato indefinido a tiempo completo.
+Un derecho laboral.
 Una obligación del empresario.
 EXPL:Un riesgo laboral es la posibilidad de que un trabajador sufra un daño derivado del trabajo. Los daños pueden ser enfermedades, patologías o lesiones. La evaluación de riesgos es el primer paso de la acción preventiva.
 Se considera accidente de trabajo aquel que?
@@ -188,7 +188,7 @@ EXPL:El accidente de trabajo es toda lesión corporal que sufre el trabajador co
 La enfermedad profesional es aquella que?
 No tiene relación con el trabajo.
 *Está causada por la actividad laboral.
-Solo es obligatoria en empresas con más de 50 trabajadores.
+Es siempre leve.
 Solo afecta a trabajadores manuales.
 EXPL:La enfermedad profesional está causada por agentes físicos, químicos o biológicos presentes en el trabajo y está recogida en el cuadro de enfermedades profesionales. Se diferencia del accidente de trabajo en que su aparición es gradual, no súbita.
 El empresario, en materia de prevención, tiene la obligación de?
