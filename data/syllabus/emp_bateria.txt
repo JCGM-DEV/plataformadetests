@@ -29,7 +29,7 @@ El objeto del contrato (la prestación laboral).
 *La nacionalidad del trabajador.
 La causa del contrato.
 EXPL:Los elementos esenciales del contrato son: consentimiento, objeto y causa. La nacionalidad del trabajador no es un elemento esencial del contrato; cualquier persona puede trabajar legalmente con independencia de su nacionalidad si tiene los permisos correspondientes.
-Cuando en una nómina aparece el salario base, este concepto hace referencia a:
+Cuando en una nómina aparece el salario base, este concepto hace referencia a?
 La suma de todos los ingresos del trabajador.
 *La cantidad fija que se percibe por el trabajo realizado, sin incluir complementos.
 Solo a las pagas extraordinarias.
@@ -41,7 +41,7 @@ Las dietas por desplazamiento.
 *Las pagas extraordinarias.
 Los gastos de transporte al trabajo.
 EXPL:Las pagas extraordinarias son salario diferido. Las indemnizaciones y dietas son conceptos extrasalariales: compensan gastos o daños pero no retribuyen el trabajo. Los gastos de transporte tampoco son salario.
-El periodo de prueba permite a ambas partes comprobar si la relación laboral funciona correctamente. Para que sea válido:
+El periodo de prueba permite a ambas partes comprobar si la relación laboral funciona correctamente. Para que sea válido?
 *Debe acordarse expresamente, normalmente por escrito.
 Es obligatorio en todos los contratos.
 No permite la extinción del contrato durante ese tiempo.
@@ -65,7 +65,7 @@ Entre una jornada laboral y la siguiente debe existir un tiempo mínimo de desca
 *12 horas.
 6 horas.
 EXPL:El ET establece un descanso mínimo de 12 horas entre el final de una jornada y el inicio de la siguiente. Esto garantiza la recuperación física y mental del trabajador y es un derecho irrenunciable.
-El derecho a vacaciones anuales retribuidas es irrenunciable. Según la legislación española, su duración mínima es:
+El derecho a vacaciones anuales retribuidas es irrenunciable. Según la legislación española, su duración mínima es?
 15 días naturales.
 *30 días naturales.
 20 días laborables obligatorios.
@@ -83,25 +83,25 @@ La baja voluntaria.
 *La incapacidad temporal.
 La jubilación del trabajador.
 EXPL:La incapacidad temporal (IT) es una causa de suspensión del contrato: el trabajador no puede trabajar por enfermedad o accidente, pero el contrato no se extingue. El despido y la baja voluntaria son causas de extinción, no de suspensión.
-El despido disciplinario se produce cuando el empresario decide extinguir el contrato debido a:
+El despido disciplinario se produce cuando el empresario decide extinguir el contrato debido a?
 Problemas económicos de la empresa.
 *Un incumplimiento grave y culpable del trabajador.
 La finalización del contrato temporal.
 Una reducción de la plantilla por causas organizativas.
 EXPL:El despido disciplinario sanciona conductas del trabajador que constituyen un incumplimiento grave y culpable de sus obligaciones laborales (faltas repetidas, desobediencia, acoso, etc.). No requiere indemnización si se declara procedente.
-Cuando un trabajador decide dejar su empleo por iniciativa propia, estamos ante una situación de:
+Cuando un trabajador decide dejar su empleo por iniciativa propia, estamos ante una situación de?
 Despido improcedente.
 *Baja voluntaria o dimisión.
 Suspensión del contrato.
 Extinción por mutuo acuerdo.
 EXPL:La baja voluntaria o dimisión es la extinción del contrato por decisión unilateral del trabajador. No genera derecho a indemnización ni a prestación por desempleo, salvo que sea por causas imputables al empresario (despido indirecto).
-Al finalizar la relación laboral, el trabajador recibe el finiquito. Este documento incluye:
+Al finalizar la relación laboral, el trabajador recibe el finiquito. Este documento incluye?
 Solo el salario pendiente del último mes.
 *Todas las cantidades pendientes, como vacaciones no disfrutadas o pagas extra.
 Únicamente la indemnización.
 Solo las cotizaciones a la Seguridad Social pendientes.
 EXPL:El finiquito liquida todas las cantidades pendientes al finalizar la relación laboral: salarios pendientes, parte proporcional de pagas extra, vacaciones no disfrutadas e indemnización si corresponde. Es un documento que debe firmarse con cautela.
-El sistema de Seguridad Social tiene un papel fundamental en el Estado del bienestar. Su objetivo principal es:
+El sistema de Seguridad Social tiene un papel fundamental en el Estado del bienestar. Su objetivo principal es?
 Regular contratos de trabajo.
 *Proteger a los ciudadanos ante determinadas situaciones (desempleo, enfermedad, jubilación…).
 Controlar las empresas.
@@ -113,31 +113,31 @@ Régimen comercial.
 Régimen fiscal.
 Régimen mercantil.
 EXPL:Los regímenes principales de la Seguridad Social son el Régimen General (trabajadores por cuenta ajena) y los Regímenes Especiales (autónomos, agrario, del mar, minería del carbón, empleados del hogar). No existen regímenes comercial ni fiscal.
-La afiliación a la Seguridad Social es un requisito imprescindible para trabajar legalmente. Esto significa que:
+La afiliación a la Seguridad Social es un requisito imprescindible para trabajar legalmente. Esto significa que?
 Es voluntaria.
 *Es obligatoria para trabajadores y empresas.
 Solo afecta a funcionarios.
 Solo es obligatoria para contratos indefinidos.
 EXPL:La afiliación a la Seguridad Social es obligatoria, única y vitalicia. El empresario tiene la obligación de afiliar al trabajador antes de que comience a trabajar. No hacerlo constituye una infracción grave.
-La cotización a la Seguridad Social se caracteriza porque:
+La cotización a la Seguridad Social se caracteriza porque?
 Solo la paga el trabajador.
 Solo la paga la empresa.
 *Se reparte entre trabajador y empresa.
 La paga íntegramente el Estado.
 EXPL:La cotización se reparte entre empresa y trabajador, aunque la empresa paga la mayor parte. El empresario ingresa ambas cuotas en la Seguridad Social: la suya propia y la del trabajador (que descuenta de la nómina).
-Para poder acceder a la prestación por desempleo es necesario cumplir ciertos requisitos. Uno de los más importantes es:
+Para poder acceder a la prestación por desempleo es necesario cumplir ciertos requisitos. Uno de los más importantes es?
 No haber trabajado nunca.
 *Haber cotizado un periodo mínimo.
 Tener contrato indefinido.
 Haber sido despedido disciplinariamente.
 EXPL:Para acceder al paro es necesario haber cotizado al menos 360 días en los últimos 6 años, estar en situación legal de desempleo (no baja voluntaria), estar inscrito como demandante de empleo y no tener rentas superiores al SMI.
-El contrato indefinido se diferencia de otros tipos de contrato porque:
+El contrato indefinido se diferencia de otros tipos de contrato porque?
 Tiene una duración concreta.
 *No establece un límite temporal de finalización.
 Es siempre obligatorio.
 Solo puede celebrarse por escrito.
 EXPL:El contrato indefinido no tiene fecha de finalización predeterminada. Puede extinguirse por causas legales (despido, baja voluntaria, jubilación, etc.) pero no por el mero transcurso del tiempo. Es la modalidad que más estabilidad ofrece al trabajador.
-Un contrato temporal se caracteriza principalmente porque:
+Un contrato temporal se caracteriza principalmente porque?
 No tiene causa.
 *Tiene una duración limitada en el tiempo.
 Es igual que el indefinido.
@@ -149,157 +149,151 @@ Sustituir las leyes.
 Aplicarse solo a una persona.
 Fijar los impuestos que pagan los trabajadores.
 EXPL:El convenio colectivo es el acuerdo negociado entre representantes de trabajadores y empresarios que regula condiciones de trabajo (salarios, jornada, vacaciones, etc.) para un sector o empresa. Mejora las condiciones mínimas legales pero no puede empeorarlas.
-La negociación colectiva es el proceso mediante el cual:
+La negociación colectiva es el proceso mediante el cual?
 El Estado fija los salarios.
 *Empresarios y representantes de los trabajadores acuerdan condiciones laborales.
 Solo negocian los trabajadores.
 El Gobierno establece los convenios colectivos.
 EXPL:La negociación colectiva es el diálogo entre sindicatos (representantes de trabajadores) y asociaciones empresariales para acordar condiciones de trabajo mediante convenios colectivos. Es un derecho constitucional reconocido en el artículo 37 de la CE.
-El derecho de huelga está reconocido en la Constitución española como:
+El derecho de huelga está reconocido en la Constitución española como?
 *Un derecho fundamental.
 Una obligación.
 Un delito.
 Un derecho solo para funcionarios.
 EXPL:El derecho de huelga está reconocido en el artículo 28.2 de la Constitución española como derecho fundamental. Permite a los trabajadores cesar colectivamente en su actividad para presionar en la negociación de sus condiciones laborales.
-El comité de empresa tiene como función principal:
+El comité de empresa tiene como función principal?
 Representar a la empresa.
 *Representar a los trabajadores.
 Representar al Estado.
 Negociar los contratos individuales.
 EXPL:El comité de empresa es el órgano representativo y colegiado de los trabajadores en empresas de 50 o más trabajadores. Tiene funciones de información, consulta y negociación con la empresa sobre condiciones laborales.
-La prevención de riesgos laborales tiene como objetivo principal:
+La prevención de riesgos laborales tiene como objetivo principal?
 Reducir costes empresariales.
 *Evitar accidentes de trabajo y enfermedades profesionales.
 Aumentar la productividad.
 Controlar el absentismo laboral.
 EXPL:La Ley de Prevención de Riesgos Laborales (LPRL) tiene como objetivo principal promover la seguridad y salud de los trabajadores mediante la prevención de riesgos derivados del trabajo, evitando accidentes y enfermedades profesionales.
-Un riesgo laboral se puede definir como:
+Un riesgo laboral se puede definir como?
 Una ventaja económica.
 *Una situación que puede provocar daño al trabajador.
 Un derecho laboral.
 Una obligación del empresario.
 EXPL:Un riesgo laboral es la posibilidad de que un trabajador sufra un daño derivado del trabajo. Los daños pueden ser enfermedades, patologías o lesiones. La evaluación de riesgos es el primer paso de la acción preventiva.
-Se considera accidente de trabajo aquel que:
+Se considera accidente de trabajo aquel que?
 Ocurre solo en el domicilio.
 *Se produce con ocasión o como consecuencia del trabajo.
 Ocurre en vacaciones.
 Solo ocurre dentro de las instalaciones de la empresa.
 EXPL:El accidente de trabajo es toda lesión corporal que sufre el trabajador con ocasión o por consecuencia del trabajo. Incluye el accidente in itinere (en el trayecto al trabajo), los ocurridos en misión y los cardiovasculares durante el trabajo.
-La enfermedad profesional es aquella que:
+La enfermedad profesional es aquella que?
 No tiene relación con el trabajo.
 *Está causada por la actividad laboral.
 Es siempre leve.
 Solo afecta a trabajadores manuales.
 EXPL:La enfermedad profesional está causada por agentes físicos, químicos o biológicos presentes en el trabajo y está recogida en el cuadro de enfermedades profesionales. Se diferencia del accidente de trabajo en que su aparición es gradual, no súbita.
-El empresario, en materia de prevención, tiene la obligación de:
+El empresario, en materia de prevención, tiene la obligación de?
 Ignorar los riesgos.
 *Garantizar la seguridad y salud de los trabajadores.
 Delegar toda responsabilidad.
 Solo actuar cuando ocurre un accidente.
 EXPL:El empresario tiene la obligación legal de garantizar la seguridad y salud de sus trabajadores mediante la evaluación de riesgos, la planificación preventiva, la formación e información, la vigilancia de la salud y la dotación de EPIs.
-El trabajador también tiene obligaciones en prevención. Entre ellas:
+El trabajador también tiene obligaciones en prevención. Entre ellas?
 *Cumplir las medidas de seguridad.
 Ignorar las normas.
 No participar en formación.
 Decidir por sí mismo qué medidas aplicar.
 EXPL:Los trabajadores tienen la obligación de usar correctamente los equipos de protección, seguir las instrucciones del empresario en materia de seguridad, informar de situaciones de riesgo y participar en la formación preventiva.
-La formación en prevención de riesgos laborales:
-Es opcional.
-*Es obligatoria.
-No es necesaria.
-Solo es obligatoria en empresas de más de 50 trabajadores.
-EXPL:La formación en prevención de riesgos laborales es obligatoria para el empresario (debe proporcionarla) y para el trabajador (debe recibirla). Debe ser suficiente, adecuada al puesto y actualizarse cuando cambien las condiciones de trabajo.
-La formación en materia de prevención de riesgos laborales es un elemento clave dentro de la empresa. En este sentido, dicha formación:
+La formación en materia de prevención de riesgos laborales es un elemento clave dentro de la empresa. En este sentido, dicha formación?
 Es opcional y depende únicamente del interés del trabajador por formarse.
 *Es obligatoria y debe ser proporcionada por la empresa de manera suficiente y adecuada.
 Solo es necesaria en trabajos considerados peligrosos.
 Solo se imparte una vez al inicio de la relación laboral.
 EXPL:La LPRL obliga al empresario a proporcionar formación teórica y práctica, suficiente y adecuada, en materia preventiva. Debe impartirse al inicio, cuando cambien las condiciones del puesto y cuando se detecten nuevos riesgos.
-El salario mínimo interprofesional (SMI) actúa como una referencia básica en el ámbito laboral español. Teniendo en cuenta su función, podemos afirmar que:
+El salario mínimo interprofesional (SMI) actúa como una referencia básica en el ámbito laboral español. Teniendo en cuenta su función, podemos afirmar que?
 Es una cantidad que fija libremente cada empresa en función de su situación económica.
 *Es un límite mínimo legal de retribución que fija el Gobierno y que debe respetarse en todos los casos.
 Solo se aplica a trabajadores con contrato indefinido.
 Lo fija el convenio colectivo de cada sector.
 EXPL:El SMI es fijado anualmente por el Gobierno mediante Real Decreto, previa consulta con sindicatos y patronal. Es el salario mínimo que debe percibir cualquier trabajador por cuenta ajena, independientemente del sector, tipo de contrato o jornada.
-La nómina es un documento fundamental en la relación laboral, ya que refleja de manera detallada la retribución del trabajador. En ella se incluyen:
+La nómina es un documento fundamental en la relación laboral, ya que refleja de manera detallada la retribución del trabajador. En ella se incluyen?
 Únicamente las percepciones salariales sin ningún tipo de descuento.
 *Tanto los ingresos (salario base y complementos) como las deducciones (cotizaciones, impuestos, etc.).
 Exclusivamente los impuestos que debe pagar el trabajador.
 Solo el salario base y las pagas extraordinarias.
 EXPL:La nómina tiene dos partes: devengos (salario base + complementos salariales + percepciones extrasalariales) y deducciones (cotización a la SS del trabajador + IRPF + otras). El resultado es el líquido a percibir (salario neto).
-Dentro de las deducciones que aparecen en la nómina, el IRPF tiene una especial relevancia. Este concepto corresponde a:
+Dentro de las deducciones que aparecen en la nómina, el IRPF tiene una especial relevancia. Este concepto corresponde a?
 Una cantidad adicional que recibe el trabajador por su rendimiento.
 *Una retención que se descuenta del salario como adelanto del impuesto sobre la renta.
 Un complemento salarial obligatorio.
 Una cotización a la Seguridad Social.
 EXPL:El IRPF (Impuesto sobre la Renta de las Personas Físicas) se retiene mensualmente del salario como pago anticipado del impuesto anual. El porcentaje de retención depende del salario y las circunstancias personales del trabajador.
-En el sistema de Seguridad Social, las contingencias comunes cubren determinadas situaciones que pueden afectar al trabajador. Entre ellas se encuentran:
+En el sistema de Seguridad Social, las contingencias comunes cubren determinadas situaciones que pueden afectar al trabajador. Entre ellas se encuentran?
 Los accidentes de trabajo ocurridos en la empresa.
 *Las enfermedades comunes y los accidentes no laborales.
 Las sanciones administrativas.
 Las enfermedades profesionales.
 EXPL:Las contingencias comunes cubren situaciones no relacionadas con el trabajo: enfermedad común, accidente no laboral, maternidad/paternidad y jubilación. Las contingencias profesionales cubren accidentes de trabajo y enfermedades profesionales.
-Por otro lado, las contingencias profesionales están directamente relacionadas con la actividad laboral del trabajador. Estas incluyen:
+Por otro lado, las contingencias profesionales están directamente relacionadas con la actividad laboral del trabajador. Estas incluyen?
 Las vacaciones y permisos retribuidos.
 *Los accidentes de trabajo y las enfermedades profesionales.
 Las bajas voluntarias del trabajador.
 Las enfermedades comunes.
 EXPL:Las contingencias profesionales cubren los riesgos derivados directamente del trabajo: accidentes de trabajo (incluido el in itinere) y enfermedades profesionales. Tienen una cobertura más favorable que las contingencias comunes.
-El contrato en prácticas es una modalidad contractual que tiene como objetivo facilitar la inserción laboral de determinadas personas. Este tipo de contrato está dirigido principalmente a:
+El contrato en prácticas es una modalidad contractual que tiene como objetivo facilitar la inserción laboral de determinadas personas. Este tipo de contrato está dirigido principalmente a?
 Personas que no han finalizado ningún tipo de estudios.
 *Personas que han obtenido recientemente una titulación y buscan adquirir experiencia profesional.
 Trabajadores con amplia experiencia laboral.
 Personas mayores de 45 años en situación de desempleo.
 EXPL:El contrato en prácticas (ahora contrato formativo para la obtención de práctica profesional) está dirigido a quienes tienen un título universitario, FP o certificado de profesionalidad, para que adquieran experiencia práctica en su campo de formación.
-El contrato para la formación y el aprendizaje tiene una finalidad claramente formativa. Por ello, se caracteriza porque:
+El contrato para la formación y el aprendizaje tiene una finalidad claramente formativa. Por ello, se caracteriza porque?
 Se basa exclusivamente en la realización de trabajo sin formación adicional.
 *Combina la actividad laboral retribuida con un proceso de formación teórica relacionada con el puesto.
 Solo incluye formación sin prestación laboral.
 Es exclusivo para titulados universitarios.
 EXPL:El contrato de formación en alternancia combina trabajo retribuido con formación teórica (mínimo 25% del tiempo). Está dirigido a jóvenes sin cualificación profesional. La retribución mínima es proporcional al tiempo trabajado respecto al SMI.
-El despido objetivo es una forma de extinción del contrato que no depende de la conducta del trabajador. Este tipo de despido se produce cuando:
+El despido objetivo es una forma de extinción del contrato que no depende de la conducta del trabajador. Este tipo de despido se produce cuando?
 El trabajador incumple gravemente sus obligaciones.
 *Existen causas económicas, técnicas, organizativas o de producción en la empresa.
 El trabajador decide abandonar su puesto.
 El contrato temporal llega a su fin.
 EXPL:El despido objetivo (art. 52 ET) se basa en causas ajenas al trabajador: económicas (pérdidas), técnicas (cambios tecnológicos), organizativas (reorganización) o de producción (cambios en la demanda). Requiere preaviso de 15 días e indemnización de 20 días/año.
-Se considera que un despido es improcedente cuando, tras ser impugnado, se comprueba que:
+Se considera que un despido es improcedente cuando, tras ser impugnado, se comprueba que?
 Está perfectamente justificado conforme a la ley.
 *No cumple los requisitos formales o no queda acreditada la causa alegada.
 Ha sido solicitado por el trabajador.
 El trabajador lleva menos de un año en la empresa.
 EXPL:El despido improcedente ocurre cuando no se acredita la causa o no se cumplen los requisitos formales. El empresario puede optar entre readmitir al trabajador o pagarle una indemnización de 33 días/año (45 días para contratos anteriores a 2012).
-En caso de despido, la indemnización que puede corresponder al trabajador:
+En caso de despido, la indemnización que puede corresponder al trabajador?
 Es siempre la misma con independencia del tipo de despido.
 *Depende del tipo de despido y de las circunstancias concretas del trabajador.
 No existe en ningún caso.
 Solo corresponde si el trabajador lleva más de 5 años en la empresa.
 EXPL:La indemnización varía según el tipo de despido: objetivo = 20 días/año (máx. 12 mensualidades), improcedente = 33 días/año (máx. 24 mensualidades), disciplinario procedente = 0. También depende del salario y la antigüedad del trabajador.
-El contrato a tiempo parcial es una modalidad cada vez más utilizada en el mercado laboral. Se caracteriza porque:
+El contrato a tiempo parcial es una modalidad cada vez más utilizada en el mercado laboral. Se caracteriza porque?
 El trabajador realiza la misma jornada que en un contrato a tiempo completo.
 *La jornada de trabajo es inferior a la de un trabajador a tiempo completo comparable.
 No existe un horario definido.
 No puede convertirse en contrato a tiempo completo.
 EXPL:El contrato a tiempo parcial implica una jornada inferior a la ordinaria a tiempo completo. El trabajador tiene los mismos derechos que un trabajador a tiempo completo, pero en proporción a su jornada (principio de proporcionalidad).
-El empresario dispone de un poder disciplinario dentro de la empresa que le permite actuar ante determinadas conductas del trabajador. Este poder implica que:
+El empresario dispone de un poder disciplinario dentro de la empresa que le permite actuar ante determinadas conductas del trabajador. Este poder implica que?
 *Puede sancionar los incumplimientos del trabajador respetando lo establecido en la ley y el convenio colectivo.
 Puede despedir libremente sin necesidad de justificar su decisión.
 No puede imponer ningún tipo de sanción.
 Puede imponer cualquier sanción sin límite.
 EXPL:El poder disciplinario del empresario está limitado por la ley y el convenio colectivo. Las sanciones deben ser proporcionales a la falta (leve, grave o muy grave), comunicarse por escrito y respetarse los plazos de prescripción.
-Las sanciones que puede imponer el empresario deben cumplir una serie de requisitos para ser válidas. Entre ellos, destaca que:
+Las sanciones que puede imponer el empresario deben cumplir una serie de requisitos para ser válidas. Entre ellos, destaca que?
 Pueden imponerse de forma arbitraria sin necesidad de justificación.
 *Deben ajustarse a lo establecido en la normativa laboral y en el convenio colectivo aplicable.
 Deben comunicarse únicamente de forma verbal.
 No pueden ser impugnadas por el trabajador.
 EXPL:Las sanciones deben ser proporcionales a la gravedad de la falta, estar tipificadas en el convenio colectivo, comunicarse por escrito con fecha y hechos, y respetar los plazos de prescripción. El trabajador puede impugnarlas ante el juzgado de lo social.
-El Estatuto de los Trabajadores es una norma clave dentro del Derecho Laboral español. Su importancia radica en que:
+El Estatuto de los Trabajadores es una norma clave dentro del Derecho Laboral español. Su importancia radica en que?
 *Es la norma básica que regula los derechos y deberes de trabajadores y empresarios.
 Es un acuerdo privado entre empresas.
 Solo se aplica a determinados sectores.
 Es una norma de carácter voluntario.
 EXPL:El Estatuto de los Trabajadores (ET) es la norma legal básica del Derecho Laboral español. Regula los derechos y obligaciones de trabajadores y empresarios, los contratos, la jornada, el salario, la representación colectiva y la extinción del contrato.
-En cuanto a la forma del contrato de trabajo, la legislación permite cierta flexibilidad. En este sentido:
+En cuanto a la forma del contrato de trabajo, la legislación permite cierta flexibilidad. En este sentido?
 Todos los contratos deben formalizarse obligatoriamente por escrito.
 *Pueden celebrarse tanto de forma verbal como por escrito, aunque algunos casos exigen forma escrita.
 Solo tienen validez si se firman ante notario.
