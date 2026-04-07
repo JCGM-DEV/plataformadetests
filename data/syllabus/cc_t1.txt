@@ -3,22 +3,22 @@ tema 1
 Aumento de costos operativos.
 Dependencia del hardware local.
 *Acceso ubicuo a los datos y aplicaciones.
-Falta de escalabilidad.
+Falta de escalabilidad., aunque esto no es correcto en este contexto.
 ¿Qué significa "escalabilidad elástica" en la computación en la nube?
 *Capacidad de aumentar o reducir recursos según la demanda.
 La infraestructura solo se adapta a aumentos de demanda.
 Es un modelo exclusivo para grandes empresas.
-La nube no permite escalabilidad.
+La nube no permite escalabilidad., lo cual no es correcto.
 ¿Cuál de los siguientes es un posible riesgo de la computación en la nube?
 Reducción de costos operativos.
 *Dependencia del proveedor de servicios.
 Mayor control sobre la infraestructura.
 Eliminación total de amenazas cibernéticas.
 ¿Qué función cumple la redundancia en la computación en la nube?
-Aumenta los costos operativos.
+Aumenta los costos operativos., lo cual no es correcto.
 *Garantiza la disponibilidad de los servicios en caso de fallos.
-Limita el acceso a los datos.
-Reduce la seguridad de la información.
+Limita el acceso a los datos., aunque esto no es correcto en este contexto.
+Reduce la seguridad de la información., lo cual no es correcto.
 *¿Cuál de los siguientes modelos de implementación permite combinar infraestructura pública y privada?
 Nube privada.
 Nube pública.
@@ -40,10 +40,10 @@ Requiere una gran inversión en hardware propio.
 Solo puede ser utilizado por grandes empresas.
 No ofrece ventajas sobre la infraestructura tradicional.
 *¿Cuál de las siguientes afirmaciones es correcta sobre la migración a la nube?
-Es un proceso inmediato y sin riesgos.
-No requiere planificación previa.
+Es un proceso inmediato y sin riesgos., lo cual no es correcto.
+No requiere planificación previa., lo cual no es correcto.
 *Debe incluir evaluación de necesidades, migración de datos y pruebas.
-Solo es recomendable para pequeñas empresas.
+Solo es recomendable para pequeñas empresas., lo cual no es correcto.
 ¿Qué modelo de servicio permite a los desarrolladores crear aplicaciones sin gestionar la infraestructura?
 SaaS.
 *PaaS.

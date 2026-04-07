@@ -33,7 +33,7 @@ Un protocolo de comunicación entre servidores
 *AWS Elastic Beanstalk
 Azure Virtual Machines
 Google Docs
-*Microsoft Office 365
+Microsoft Office 365
 ¿Cuál es un beneficio clave de la infraestructura de la nube?
 Mayor consumo de recursos físicos
 Acceso limitado a servidores

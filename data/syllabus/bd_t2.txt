@@ -14,7 +14,7 @@ Compuesto
 ¿Qué diferencia esencial hay entre una vista y una tabla?
 Una vista almacena datos físicamente
 *Una vista es virtual; se reconstruye al vuelo
-Una vista no admite filtros
+Una vista no admite filtros, aunque esto no es correcto en este contexto.
 Un modelo de datos es una representación:
 Física
 Básica

@@ -20,9 +20,9 @@ SUM()
 AVG()
 
 ¿Qué diferencia principal hay entre las cláusulas WHERE y HAVING?
-WHERE se aplica a los grupos y HAVING a las filas individuales.
+WHERE se aplica a los grupos y HAVING a las filas individuales., lo cual no es correcto.
 *WHERE filtra registros antes de la agrupación; HAVING filtra grupos después de aplicarse GROUP BY.
-Ambas cláusulas son idénticas y se pueden usar indistintamente.
+Ambas cláusulas son idénticas y se pueden usar indistintamente., lo cual no es correcto.
 
 ¿Qué tipo de JOIN devuelve todos los registros de la tabla de la izquierda, aunque no tengan correspondencia en la derecha?
 INNER JOIN

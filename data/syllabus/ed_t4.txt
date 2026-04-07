@@ -1,18 +1,18 @@
 tema 4
 Además de la ayuda en la construcción visual de diagramas, ¿qué dos funcionalidades avanzadas y complementarias suelen ofrecer las herramientas CASE con soporte UML para mejorar la eficiencia del desarrollo de software?
-Monitorización del rendimiento en tiempo real y depuración de código.
+Monitorización del rendimiento en tiempo real y depuración de código., lo cual no es correcto.
 *Generación automática de código a partir de diagramas y la ingeniería inversa para obtener diagramas a partir de código fuente.
-Gestión de versiones del código fuente y pruebas unitarias automatizadas.
+Gestión de versiones del código fuente y pruebas unitarias automatizadas., lo cual no es correcto.
 
 En un diagrama de clases UML, ¿cómo se representa una relación de Realización (o implementación) y qué concepto de la programación orientada a objetos refleja?
-Con una línea sólida y una punta de flecha rellena, representando una relación de herencia entre clases.
-Con una línea punteada que termina en una punta de flecha sólida, indicando el uso de funcionalidad.
+Con una línea sólida y una punta de flecha rellena, representando una relación de herencia entre clases., lo cual no es correcto.
+Con una línea punteada que termina en una punta de flecha sólida, indicando el uso de funcionalidad., lo cual no es correcto.
 *Mediante una línea punteada que termina en una punta de flecha hueca (o rellena de color blanco), que va desde la clase hacia la interfaz que implementa.
 
 ¿Qué información crucial puede indicarse en los extremos de una línea de relación de Asociación en un diagrama de clases UML?
-La prioridad de ejecución de los métodos de las clases relacionadas.
+La prioridad de ejecución de los métodos de las clases relacionadas., lo cual no es correcto.
 *La multiplicidad (cuántas instancias de una clase pueden participar en la relación) y la navegabilidad (si se puede obtener referencia a los objetos del otro extremo).
-El orden en que se deben instanciar los objetos de las clases asociadas.
+El orden en que se deben instanciar los objetos de las clases asociadas., aunque no es la respuesta adecuada.
 
 ¿Cómo se distinguen visualmente las clases y los métodos abstractos en un diagrama de clases UML de aquellos que no lo son?
 Se representan con un borde punteado.
@@ -20,9 +20,9 @@ Sus nombres se escriben en negrita.
 *Sus nombres se escriben en cursiva.
 
 ¿Cuál es la principal diferencia entre una relación de Composición y una de Agregación en UML, y cómo se representa la Composición?
-La Agregación es una composición fuerte donde las partes no pueden existir sin el todo (diamante sólido), mientras que la Composición es débil (diamante hueco).
+La Agregación es una composición fuerte donde las partes no pueden existir sin el todo (diamante sólido), mientras que la Composición es débil (diamante hueco)., lo cual no es correcto.
 *La Composición es una relación fuerte donde las partes no tienen sentido independiente del conjunto y se eliminan con él (diamante sólido), mientras que la Agregación es débil donde las partes conservan su entidad (diamante hueco).
-La Composición se representa con un diamante hueco, y la Agregación con un diamante sólido.
+La Composición se representa con un diamante hueco, y la Agregación con un diamante sólido., lo cual no es correcto.
 
 En la notación de los diagramas de clases UML, ¿qué significa que un atributo o método esté precedido por el símbolo #?
 Que tiene visibilidad pública.
@@ -30,9 +30,9 @@ Que tiene visibilidad de paquete.
 *Que tiene visibilidad protegida.
 
 ¿Cuál es el papel principal del diagrama de clases en el diseño de software orientado a objetos según la Unidad 4?
-Representar la secuencia de interacciones entre objetos en tiempo de ejecución.
+Representar la secuencia de interacciones entre objetos en tiempo de ejecución., lo cual no es correcto.
 *Reflejar las clases que componen un sistema, incluyendo sus atributos, métodos y las relaciones entre ellas, para permitir a los desarrolladores escribir programas a partir de una especificación formal.
-Describir el comportamiento del sistema desde la perspectiva de los usuarios externos.
+Describir el comportamiento del sistema desde la perspectiva de los usuarios externos., lo cual no es correcto.
 
 Si un atributo en una clase UML es estático, ¿cómo se indica esta característica en su representación gráfica dentro del diagrama de clases?
 Su nombre se escribe entre corchetes.
@@ -41,7 +41,7 @@ Se precede de un asterisco (*).
 
 ¿Qué tipo de relación UML se representa mediante una línea discontinua rematada en una punta de flecha que apunta a la clase que proporciona la funcionalidad, y qué significado tiene esta relación?
 Relación de agregación, indicando que una clase es parte de otra sin dependencia fuerte.
-Relación de generalización, mostrando que una clase hereda de otra.
+Relación de generalización, mostrando que una clase hereda de otra., lo cual no es correcto.
 *Relación de dependencia o de uso, representando que una clase utiliza la funcionalidad proporcionada por otra.
 
 Según la definición de la unidad, ¿en qué consiste el concepto de "ingeniería inversa" aplicado a los diagramas de clases en el contexto del desarrollo de software?

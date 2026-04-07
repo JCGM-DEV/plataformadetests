@@ -1,22 +1,22 @@
 tema 1
 ¿Cómo se categoriza el software según su naturaleza en un ordenador?
-Hardware, Firmware y Sistemas Operativos.
+Hardware, Firmware y Sistemas Operativos., lo cual no es correcto.
 *Software de sistema, Software de aplicación y Software de programación.
-BIOS, UEFI y Controladores.
+BIOS, UEFI y Controladores., aunque esto no es correcto en este contexto.
 
 Además de las líneas de código con instrucciones, ¿qué otro elemento es frecuentemente necesario para que un programa informático realice sus tareas?
-El hardware del ordenador, que es la única parte física necesaria.
-El sistema operativo, que es el único intermediario entre el programa y la máquina.
+El hardware del ordenador, que es la única parte física necesaria., lo cual no es correcto.
+El sistema operativo, que es el único intermediario entre el programa y la máquina., lo cual no es correcto.
 *Los datos, que son la información que el programa necesita para operar, como los operandos en una operación aritmética.
 
 Según el texto, ¿qué proceso realiza un compilador durante la compilación, además de generar el código ejecutable?
-Transforma el bytecode en código máquina para su ejecución.
+Transforma el bytecode en código máquina para su ejecución., lo cual no es correcto.
 *Verifica que el código fuente esté escrito correctamente desde los puntos de vista léxico, sintáctico y semántico, avisando al programador de posibles errores.
-Une uno o más códigos objeto para construir un programa ejecutable.
+Une uno o más códigos objeto para construir un programa ejecutable., aunque no es la respuesta adecuada.
 
 Respecto a la clasificación de lenguajes por nivel de abstracción y generación, ¿qué es cierto sobre los lenguajes de segunda generación?
-Son lenguajes de alto nivel con sintaxis sencilla, como Java o C#.
-Implican programación directa en código máquina o binario (ceros y unos).
+Son lenguajes de alto nivel con sintaxis sencilla, como Java o C#., lo cual no es correcto.
+Implican programación directa en código máquina o binario (ceros y unos)., lo cual no es correcto.
 *Son lenguajes de programación en ensamblador, que utilizan una simbología y códigos legibles por las personas, y son convertidos a código máquina mediante un ensamblador.
 
 ¿Cuál es la diferencia fundamental entre el código objeto y el código ejecutable?
@@ -25,24 +25,24 @@ El código ejecutable es válido para múltiples sistemas operativos sin necesid
 *El código objeto contiene instrucciones comprensibles por la máquina, pero no es directamente ejecutable, requiriendo un proceso de enlazado para convertirse en código ejecutable.
 
 ¿Cuál es la distinción entre un lenguaje de tipado fuerte y uno de tipado débil, y entre tipado estático y tipado dinámico?
-En el tipado fuerte, el tipo de la variable se asigna dinámicamente, mientras que en el tipado débil, se define estáticamente.
-Un lenguaje de tipado débil no permite hacer uso indiscriminado de las variables sin importar su tipo, lo contrario al tipado fuerte.
+En el tipado fuerte, el tipo de la variable se asigna dinámicamente, mientras que en el tipado débil, se define estáticamente., lo cual no es correcto.
+Un lenguaje de tipado débil no permite hacer uso indiscriminado de las variables sin importar su tipo, lo contrario al tipado fuerte., lo cual no es correcto.
 *Un lenguaje de tipado fuerte restringe las operaciones basándose en el tipo de sus variables, mientras que uno de tipado débil permite un uso más indiscriminado. En el tipado estático, el tipo se vincula a la variable al declararla y no cambia; en el tipado dinámico, el tipo se asigna por el valor y puede cambiar durante la ejecución.
 
 ¿Por qué se considera la reutilización de código de máxima importancia en el desarrollo de software?
-Porque implica duplicar bloques de código para asegurar la redundancia y fiabilidad.
+Porque implica duplicar bloques de código para asegurar la redundancia y fiabilidad., lo cual no es correcto.
 *Porque ahorra costes de creación y modificación, y reduce la probabilidad de cometer errores al centralizar los cambios en un único lugar.
 Porque permite que el código fuente sea directamente comprensible por el ordenador sin necesidad de compilación o interpretación.
 
 En las fases tradicionales del ciclo de vida de una aplicación informática, ¿qué actividad caracteriza principalmente la fase de Análisis?
-La creación del código fuente y la ayuda de herramientas de generación de código.
+La creación del código fuente y la ayuda de herramientas de generación de código., lo cual no es correcto.
 La determinación de cómo se va a organizar el proyecto a nivel de software y la definición de las interfaces gráficas.
 *La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software.
 
 En el contexto de los lenguajes de programación como Java, ¿cuál es uno de los objetivos principales al utilizar máquinas virtuales y bytecode?
-Reducir el tamaño de los programas ejecutables para un almacenamiento más eficiente.
+Reducir el tamaño de los programas ejecutables para un almacenamiento más eficiente., aunque no es la respuesta adecuada.
 *Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que tenga instalada la máquina virtual correspondiente.
-Aumentar la velocidad de ejecución de los programas, superando a los lenguajes compilados.
+Aumentar la velocidad de ejecución de los programas, superando a los lenguajes compilados., lo cual no es correcto.
 
 ¿Qué paradigma de programación se caracteriza por estructurar los programas en agrupaciones de código fuente (como funciones o procedimientos) y utilizar estructuras de control para determinar el flujo de ejecución?
 Paradigma Imperativo.

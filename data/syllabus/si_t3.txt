@@ -6,7 +6,7 @@ Lógicas.
 ¿Cuál es la principal ventaja del esquema GPT sobre el esquema MBR?
 Es compatible con una amplia variedad de sistemas operativos y software.
 *Tiene una mejor protección contra la corrupción de datos y soporta discos de más de 2TB.
-Solo permite la creación de particiones primarias.
+Solo permite la creación de particiones primarias., lo cual no es correcto.
 ¿Cuál es la estructura de directorios típica de Windows?
 /, /bin, /etc, /home, /usr, /var.
 *C:, C:\Windows, C:\Program Files, C:\Users.

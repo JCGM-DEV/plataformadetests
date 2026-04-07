@@ -24,7 +24,7 @@ Estructura secuencial.
 Estructura selectiva.
 *Estructura iterativa.
 Los paradigmas de programación ofrecen diferentes formas de organizar y estructurar el software. En el paradigma orientado a objetos, ¿cuál es el elemento central sobre el que se construyen los programas?
-Las funciones matemáticas.
+Las funciones matemáticas., aunque esto no es correcto en este contexto.
 *Los objetos que combinan datos y comportamiento.
 Las instrucciones ejecutadas de forma secuencial.
 Java es un lenguaje de programación con un modelo de ejecución particular que combina características de distintos enfoques. ¿Por qué se considera que Java utiliza un sistema híbrido de compilación e interpretación?

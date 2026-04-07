@@ -7,8 +7,8 @@ Control de acceso abierto
 ¿Cuál es una de las principales ventajas de la gestión de identidades federada?
 *Permite a los usuarios acceder a múltiples sistemas sin necesidad de múltiples credenciales
 Requiere la creación de una nueva cuenta para cada sistema diferente
-Elimina la necesidad de autenticación en sistemas externos
-Impide el acceso desde dispositivos móviles
+Elimina la necesidad de autenticación en sistemas externos, lo cual no es correcto.
+Impide el acceso desde dispositivos móviles, lo cual no es correcto.
 ¿Qué método de autenticación añade una capa adicional de seguridad al requerir dos formas de verificación?
 Contraseña segura
 *Autenticación de dos factores (2FA)
@@ -21,8 +21,8 @@ Acceso abierto a todos los archivos en la nube
 Compartir contraseñas con todos los miembros del equipo
 ¿Cuál es la principal función de los respaldos regulares de datos?
 *Asegurar que los datos puedan recuperarse en caso de un desastre o ataque
-Reducir el uso de almacenamiento en la nube
-Evitar la autenticación de usuarios en la nube
+Reducir el uso de almacenamiento en la nube, lo cual no es correcto.
+Evitar la autenticación de usuarios en la nube, lo cual no es correcto.
 Permitir que los usuarios accedan a los datos sin autenticación
 ¿Cuál de los siguientes es un control técnico de seguridad en la nube?
 *Políticas de seguridad
@@ -43,7 +43,7 @@ GDPR
 *Administrar las credenciales de acceso de los clientes
 Garantizar la seguridad de la infraestructura física y la plataforma subyacente
 Cifrar los datos almacenados por los usuarios
-*Gestionar las políticas de seguridad internas de las empresas
+Gestionar las políticas de seguridad internas de las empresas
 ¿Por qué es importante establecer políticas de contraseñas fuertes?
 Para dificultar el acceso de los propios usuarios
 *Para evitar que los empleados olviden sus contraseñas

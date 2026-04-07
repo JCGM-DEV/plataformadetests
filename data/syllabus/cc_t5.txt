@@ -16,7 +16,7 @@ Filtran el tráfico no autorizado
 Bloquean los ataques de malware automáticamente
 ¿Cuál es la función principal de la capa de red en la arquitectura de las redes?
 *Gestionar la transmisión de datos dentro de una red local
-Enrutar los datos a través de la red
+Enrutar los datos a través de la red, lo cual no es correcto.
 Definir las especificaciones físicas del cableado
 Permitir que las aplicaciones accedan a la red
 ¿Qué ventaja ofrece una CDN (Red de Entrega de Contenidos)?
@@ -48,4 +48,4 @@ VPN
 *SSL/TLS
 UDP
 RIP
-*FTP
+FTP

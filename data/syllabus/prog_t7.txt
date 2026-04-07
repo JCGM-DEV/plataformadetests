@@ -4,8 +4,8 @@ Para lanzar una instancia específica de una excepción en una línea concreta d
 *Para indicar que el método delega la responsabilidad de gestionar ciertas excepciones a quien lo invoque.
 Para obligar al bloque finally a cerrar todos los recursos abiertos de forma manual.
 Al recorrer una colección, ¿en qué caso es indispensable utilizar un Iterator en lugar de un bucle for-each?
-Cuando solo necesitamos leer los datos sin modificarlos.
-Cuando queremos filtrar la colección mediante un objeto Stream.
+Cuando solo necesitamos leer los datos sin modificarlos., lo cual no es correcto.
+Cuando queremos filtrar la colección mediante un objeto Stream., lo cual no es correcto.
 *Cuando necesitamos eliminar elementos de la colección de forma segura mientras la recorremos.
 ¿Cuál es el propósito de utilizar Genéricos al declarar una colección como ArrayList<String>?
 Permitir que la lista guarde cualquier tipo de objeto (mezclar enteros, cadenas, etc.).
@@ -17,16 +17,16 @@ List
 Queue
 ¿Cuál es la diferencia principal entre un ArrayList y un HashSet?
 *El ArrayList mantiene el orden de inserción, mientras que el HashSet no garantiza ningún orden.
-El ArrayList no permite duplicados y el HashSet sí.
+El ArrayList no permite duplicados y el HashSet sí., lo cual no es correcto.
 El HashSet es más lento para acceder a elementos que el ArrayList porque usa índices.
 Sobre la interfaz Map, ¿cuál de las siguientes afirmaciones es correcta?
-Hereda directamente de la interfaz Collection.
+Hereda directamente de la interfaz Collection., lo cual no es correcto.
 *Almacena elementos en parejas de Clave-Valor y no pertenece a la jerarquía de Collection.
 Es una lista ordenada que permite acceder a los elementos mediante un índice numérico.
 ¿Cuál es la principal ventaja del "try-with-resources"?
-Permite capturar múltiples excepciones en una sola línea de código.
+Permite capturar múltiples excepciones en una sola línea de código., lo cual no es correcto.
 *Gestiona automáticamente el cierre de recursos (como archivos o conexiones) al finalizar el bloque.
-Aumenta la velocidad de ejecución de las colecciones tipo List y Map.
+Aumenta la velocidad de ejecución de las colecciones tipo List y Map., lo cual no es correcto.
 Según la jerarquía de excepciones en Java, ¿cuál es la diferencia entre un Error y una Exception?
 Las Exception son fallos graves del sistema (como falta de memoria), mientras que los Error son fallos del programa.
 *Los Error son situaciones irrecuperables de la JVM, mientras que las Exception son condiciones que una aplicación debería capturar.

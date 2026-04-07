@@ -1,6 +1,6 @@
 tema 4
 ¿Cuál de las siguientes afirmaciones describe correctamente la relación entre una clase y un objeto?
-Una clase es un tipo de dato primitivo, y un objeto es una variable que almacena ese tipo de dato.
+Una clase es un tipo de dato primitivo, y un objeto es una variable que almacena ese tipo de dato., lo cual no es correcto.
 *Una clase actúa como una plantilla o plano que define las propiedades y métodos, mientras que un objeto es una instancia específica creada a partir de esa clase.
 Un objeto es una función que se define dentro de una clase, y la clase es el resultado de la ejecución de un objeto.
 Durante la ejecución de un programa Java, ¿en qué situación un objeto pasa a ser considerado inalcanzable y candidato a la recolección de basura?
@@ -22,7 +22,7 @@ Utilizar modificadores de acceso diferentes en cada método.
 Desde el punto de vista del diseño orientado a objetos, ¿cuál es la diferencia conceptual entre herencia y composición?
 La herencia modela una relación "tiene un" y la composición una relación "es un".
 *La herencia establece una relación "es un" y la composición una relación "tiene un".
-Ambas representan exactamente el mismo tipo de relación.
+Ambas representan exactamente el mismo tipo de relación., lo cual no es correcto.
 Desde el punto de vista de la gestión de memoria, ¿qué elemento se almacena en el Stack cuando se trabaja con objetos en Java?
 El objeto completo con todos sus atributos.
 *La referencia que apunta al objeto almacenado en el Heap.
@@ -38,4 +38,4 @@ El objeto se duplica en el Heap para evitar efectos colaterales.
 En el diseño de constructores, ¿qué consecuencia tiene definir al menos un constructor con parámetros en una clase?
 Java mantiene siempre disponible el constructor vacío implícito.
 *El constructor vacío deja de existir si no se define explícitamente.
-Se impide la sobrecarga de constructores.
+Se impide la sobrecarga de constructores., lo cual no es correcto.

@@ -18,7 +18,7 @@ Organización en tablas
 *MongoDB
 Cassandra
 MySQL
-*Redis
+Redis
 ¿Cuál es un proveedor de bases de datos NoSQL?
 PostgreSQL
 MongoDB
@@ -43,4 +43,4 @@ Documentales
 *Seguridad
 Persistencia
 Escalabilidad
-*Rendimiento
+Rendimiento

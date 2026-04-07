@@ -3,22 +3,22 @@ tema 10
 El escalado horizontal agrega más servidores, mientras que el vertical aumenta la capacidad de un servidor existente.
 *El escalado vertical es más eficiente que el horizontal.
 El escalado horizontal solo funciona en servidores físicos.
-Ambos términos significan lo mismo.
+Ambos términos significan lo mismo., lo cual no es correcto.
 ¿Cuál de las siguientes NO es una ventaja del escalado automático?
 *Mejora el rendimiento de la aplicación
 Reduce los costes operativos.
 Disminuye la cantidad de usuarios en la plataforma
 Aumenta la disponibilidad de la aplicación.
 ¿Qué función cumple un balanceador de carga en el escalado automático?
-Almacenar los datos de los usuarios.
+Almacenar los datos de los usuarios., lo cual no es correcto.
 *Distribuir las solicitudes de usuarios entre varios servidores.
-Reducir el tráfico de red.
-Cerrar conexiones inactivas.
+Reducir el tráfico de red., aunque esto no es correcto en este contexto.
+Cerrar conexiones inactivas., aunque esto no es correcto en este contexto.
 ¿Cuál de las siguientes afirmaciones sobre la monitorización es correcta?
 *Solo es útil cuando la aplicación presenta fallos.
 Permite recopilar datos sobre el estado y rendimiento de la aplicación.
 No puede generar alertas en tiempo real.
-*Es un proceso opcional en aplicaciones en la nube.
+Es un proceso opcional en aplicaciones en la nube.
 ¿Qué tipo de regla puede desencadenar el escalado automático?
 Cuando el uso de CPU supera un umbral definido.
 Cuando el usuario cambia su contraseña.

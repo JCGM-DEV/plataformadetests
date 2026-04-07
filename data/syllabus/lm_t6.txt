@@ -8,9 +8,9 @@ Un entorno de desarrollo como Apache o Nginx preinstalado.
 Tener Java 1.7 o una versión posterior instalada en el sistema operativo.
 Un mínimo de 2048 MB de memoria RAM dedicados exclusivamente al servicio.
 ¿Cuál es el propósito fundamental de la cláusula Let en una expresión FLWOR de XQuery?
-Iterar sobre un conjunto de nodos en el documento XML.
+Iterar sobre un conjunto de nodos en el documento XML., lo cual no es correcto.
 *Crear variables temporales que representan valores o expresiones para ser usadas en otras cláusulas de la consulta.
-Filtrar los resultados de la consulta utilizando una expresión booleana.
+Filtrar los resultados de la consulta utilizando una expresión booleana., lo cual no es correcto.
 ¿Cuál es una de las principales desventajas de las bases de datos "XML enabled" en comparación con las bases de datos XML nativas?
 Su incapacidad para procesar documentos XML directamente sin un middleware adicional.
 Su modelo relacional no permite la gestión de transacciones complejas en entornos XML.

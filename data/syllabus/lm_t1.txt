@@ -8,10 +8,10 @@ Establecer normas internacionales para garantizar la calidad, la seguridad y la 
 *Desarrollar y promover estándares y tecnologías web abiertas para garantizar el crecimiento a largo plazo y la interoperabilidad de la World Wide Web.
 Lanzar nuevas versiones de lenguajes de programación del lado del cliente como JavaScript para mejorar la interactividad web.
 ¿Cómo se clasifica CSS (Cascading Style Sheets) en relación con los lenguajes de marcas como HTML o XML?
-Es un lenguaje de marcas estructural, utilizado para definir la estructura de documentos web y de datos.
-Es un lenguaje de marcas jerárquico, organizado en forma de árbol para la presentación de datos en la web.
+Es un lenguaje de marcas estructural, utilizado para definir la estructura de documentos web y de datos., lo cual no es correcto.
+Es un lenguaje de marcas jerárquico, organizado en forma de árbol para la presentación de datos en la web., lo cual no es correcto.
 *No es un lenguaje de marcas, sino un lenguaje de estilos encaminado a separar el contenido de su representación o estética, permitiendo adaptar la información según el dispositivo.
-Una ventaja clave de la especificación XML Schema (XSD) sobre la DTD para definir la estructura de documentos XML es:
+Una ventaja clave de la especificación XML Schema (XSD) sobre la DTD para definir la estructura de documentos XML es:, lo cual no es correcto.
 Un menor consumo de recursos para la validación del documento, lo que la hace más eficiente en entornos de alta demanda.
 Una mayor capacidad expresiva, una gramática más sofisticada y la facilidad para la extensión del documento sin dificultad.
 La simplificación de la declaración del tipo de documento a una única variante, lo que eliminó la necesidad de elegir entre diferentes tipos.

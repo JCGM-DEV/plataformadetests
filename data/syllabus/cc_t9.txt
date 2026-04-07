@@ -13,7 +13,7 @@ Eficiencia en costos
 *Microsoft Excel
 Kubernetes
 Notepad++
-*Photoshop
+Photoshop
 ¿Cuál es el principal objetivo de la arquitectura en la nube?
 Reducir la velocidad de procesamiento
 Aumentar los costos de infraestructura
@@ -43,9 +43,9 @@ Para aumentar la latencia del servicio
 *Uso de protocolos obsoletos
 Implementación de encriptación de datos
 Permitir accesos sin autenticación
-*Evitar el monitoreo del sistema
+Evitar el monitoreo del sistema
 ¿Qué método es clave para la recuperación ante desastres en la nube?
-No hacer copias de seguridad
+No hacer copias de seguridad, aunque esto no es correcto en este contexto.
 Usar almacenamiento local sin redundancia
 *Implementar estrategias de respaldo y recuperación
 Evitar el uso de firewalls y control de accesos

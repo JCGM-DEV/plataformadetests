@@ -1,7 +1,7 @@
 tema 2
 ¿Cuál es la característica principal que distingue a un Entorno de Desarrollo Integrado (IDE) moderno de las herramientas de programación más antiguas, como los editores simples de texto?
-Los IDE modernos son exclusivamente de código abierto y gratuitos, a diferencia de las herramientas antiguas.
-Los IDE modernos se enfocan únicamente en la edición de código, mientras que las herramientas antiguas integraban la compilación y el enlazado.
+Los IDE modernos son exclusivamente de código abierto y gratuitos, a diferencia de las herramientas antiguas., lo cual no es correcto.
+Los IDE modernos se enfocan únicamente en la edición de código, mientras que las herramientas antiguas integraban la compilación y el enlazado., lo cual no es correcto.
 *Los IDE modernos integran una amplia gama de herramientas para dar soporte a la mayoría de las actividades de desarrollo de software, incluyendo documentación, control de versiones y pruebas, más allá de la mera escritura y compilación de código.
 
 Al crear un nuevo proyecto en PyCharm para Python, ¿cuál es uno de los elementos clave que deben seleccionarse o configurarse, además de la ubicación del proyecto y la versión de Python a utilizar?
@@ -20,15 +20,15 @@ Instalar el IDE Visual Studio para asegurar el soporte de Python.
 Configurar las variables de entorno del sistema operativo para que apunten al instalador de PyCharm.
 
 Basándose en la distinción entre categorías de software, ¿cuál es la característica que define al software libre en contraste con el software propietario?
-El software libre siempre tiene un coste asociado a su uso, mientras que el software propietario es siempre gratuito.
-El software libre es desarrollado por grandes corporaciones, mientras que el software propietario suele ser creado por desarrolladores independientes.
+El software libre siempre tiene un coste asociado a su uso, mientras que el software propietario es siempre gratuito., lo cual no es correcto.
+El software libre es desarrollado por grandes corporaciones, mientras que el software propietario suele ser creado por desarrolladores independientes., lo cual no es correcto.
 *El software libre permite el acceso a su código fuente para su estudio, comprensión y mejora, mientras que el software propietario restringe el acceso a su código, generalmente solo permitiéndolo a su dueño o creador.
 
 ¿Cuál es el propósito principal de los "plugins" o "módulos" en un Entorno de Desarrollo Integrado (IDE)?
 Reemplazar las funcionalidades centrales del IDE, requiriendo una reinstalación completa.
 Permitir que el IDE se ejecute en diferentes sistemas operativos sin necesidad de recompilación.
 *Permitir que el IDE se ejecute en diferentes sistemas operativos sin necesidad de recompilación.
-*Extender o mejorar las características y funcionalidades del IDE, actuando como complementos opcionales.
+Extender o mejorar las características y funcionalidades del IDE, actuando como complementos opcionales.
 
 Respecto a la generación de ejecutables, ¿qué se menciona específicamente sobre Python dentro de los entornos de desarrollo?
 Python suele generar ejecutables directamente desde el IDE, de manera similar a los lenguajes compilados.
@@ -41,8 +41,8 @@ Los editores de código son generalmente más completos y ofrecen más funcional
 Los editores de código están dedicados exclusivamente a un único lenguaje de programación, lo que garantiza un rendimiento superior.
 
 ¿Qué aspectos de la interfaz de un IDE pueden ser típicamente personalizados por el usuario, como se ejemplifica con PyCharm?
-Solo el idioma de los menús y las sugerencias del IDE.
-La lógica fundamental y las funcionalidades principales del propio IDE.
+Solo el idioma de los menús y las sugerencias del IDE., aunque no es la respuesta adecuada.
+La lógica fundamental y las funcionalidades principales del propio IDE., lo cual no es correcto.
 *La apariencia de sus elementos, como el tipo y tamaño de letra, la disposición de los paneles y el esquema de color a utilizar.
 
 Además de la edición y compilación de código, ¿qué actividad de desarrollo moderna soportan los IDEs, lo que indica su papel en proyectos colaborativos?

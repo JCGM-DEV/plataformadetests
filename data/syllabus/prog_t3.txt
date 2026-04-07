@@ -8,11 +8,11 @@ El final lógico de un bloque de código.
 *El final de una sentencia para el compilador.
 El final de una línea de texto para el programador.
 Cuando se realiza una conversión explícita de un tipo de dato mayor a uno menor, como de double a int, ¿qué efecto se produce?
-El valor se redondea automáticamente.
+El valor se redondea automáticamente., lo cual no es correcto.
 *Se produce un truncamiento y posible pérdida de información.
 Java lanza siempre una excepción en tiempo de ejecución.
 Las llaves { } juegan un papel fundamental en la organización del código Java y afectan directamente a la visibilidad de las variables. ¿Qué función principal cumplen las llaves dentro de un programa?
-Indicar el final de cada instrucción.
+Indicar el final de cada instrucción., lo cual no es correcto.
 *Definir bloques de código y el ámbito de las variables.
 Separar visualmente el código para mejorar su legibilidad.
 Las expresiones pueden combinar varios operadores, y Java sigue una jerarquía estricta para evaluarlas. ¿Qué operador tiene mayor prioridad en una expresión compleja?
@@ -20,7 +20,7 @@ Los operadores aritméticos de suma y resta.
 Los operadores de asignación.
 *Los paréntesis.
 Al trabajar con constantes en Java se utiliza la palabra reservada final. ¿Cuál es la principal ventaja de usar constantes frente a valores literales repetidos en el código?
-Aumentan el rendimiento del programa.
+Aumentan el rendimiento del programa., lo cual no es correcto.
 Permiten cambiar su valor en tiempo de ejecución.
 *Mejoran la legibilidad y facilitan el mantenimiento del código.
 Dentro de las estructuras de control de flujo, las sentencias break, continue y return tienen efectos distintos. ¿Qué ocurre cuando se ejecuta una sentencia return dentro de un bucle?
@@ -38,4 +38,4 @@ Método, Clase, Paquete, Sentencias.
 Java distingue claramente entre tipos de datos primitivos y tipos de referencia. ¿Cuál de las siguientes afirmaciones es correcta respecto a los tipos primitivos?
 Son objetos y disponen de métodos propios.
 *Almacenan directamente el valor en memoria y no son objetos.
-Siempre se almacenan en el Heap.
+Siempre se almacenan en el Heap., lo cual no es correcto.

@@ -10,9 +10,9 @@ VOLATILE
 *DETERMINISTIC
 
 ¿Cuál es la función del comando DELIMITER en MySQL?
-Definir el tamaño máximo de una tabla.
+Definir el tamaño máximo de una tabla., aunque no es la respuesta adecuada.
 *Cambiar temporalmente el carácter de finalización de comandos para escribir procedimientos complejos.
-Separar los campos de un archivo CSV durante una importación.
+Separar los campos de un archivo CSV durante una importación., lo cual no es correcto.
 
 ¿Qué estructura de iteración se evalúa al final del ciclo, garantizando que el conjunto de instrucciones se ejecute al menos una vez?
 WHILE
@@ -31,8 +31,8 @@ timer_running
 
 ¿Cuál es una diferencia fundamental entre las Funciones y los Procedimientos almacenados?
 *Las funciones siempre devuelven un valor; los procedimientos no devuelven un valor (aunque pueden usar parámetros de salida).
-Los procedimientos solo pueden leer datos; las funciones pueden modificarlos.
-Las funciones se llaman con CALL y los procedimientos con SELECT.
+Los procedimientos solo pueden leer datos; las funciones pueden modificarlos., lo cual no es correcto.
+Las funciones se llaman con CALL y los procedimientos con SELECT., lo cual no es correcto.
 
 ¿Qué tipo de dato compuesto se utiliza para almacenar uno o varios valores de un conjunto de opciones predefinidas, guardándose internamente como un mapa de bits?
 ENUM

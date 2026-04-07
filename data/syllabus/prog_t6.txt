@@ -4,7 +4,7 @@ tema 6
 Las Interfaces permiten guardar variables de estado mutables y las Clases Abstractas no.
 Las Clases Abstractas permiten herencia múltiple y las Interfaces solo herencia simple.
 ¿Qué característica define al modificador de acceso protected?
-Hace que el miembro sea visible solo para la clase actual y nadie más.
+Hace que el miembro sea visible solo para la clase actual y nadie más., lo cual no es correcto.
 *Permite el acceso a cualquier clase del mismo paquete y a cualquier subclase, incluso en paquetes distintos.
 Es exactamente igual al acceso public, pero solo funciona con métodos static.
 En Java, ¿cuál es la jerarquía máxima de la que heredan implícitamente todas las clases, incluidos los arrays y Strings?

@@ -12,9 +12,9 @@ Una tabla en la que las rutas se determinan automáticamente mediante protocolos
 Una tabla que se crea automáticamente mediante el uso de protocolos de enrutamiento dinámicos.
 *Una tabla en la que se especifican manualmente las rutas que deben tomar los paquetes de datos para llegar a su destino.
 ¿Qué es una WLAN?
-Una red inalámbrica de largo alcance.
+Una red inalámbrica de largo alcance., lo cual no es correcto.
 *Una red inalámbrica utilizada para conectar dispositivos en un área geográfica limitada.
-Una red cableada de alta velocidad.
+Una red cableada de alta velocidad., lo cual no es correcto.
 ¿Qué son las direcciones IP?
 *Un número único que identifica a cada dispositivo en una red.
 Un número aleatorio que se asigna a cada dispositivo en una red.

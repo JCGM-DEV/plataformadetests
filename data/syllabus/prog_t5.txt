@@ -16,7 +16,7 @@ Permite modificar directamente los elementos del array.
 Proporciona acceso al índice y al valor simultáneamente.
 *Está orientado a la lectura secuencial sin acceso a la posición.
 ¿Cuál es la finalidad principal de la propiedad length en los arrays?
-Modificar el tamaño del array durante la ejecución.
+Modificar el tamaño del array durante la ejecución., lo cual no es correcto.
 *Conocer el número de elementos para acceder y recorrer el array de forma segura.
 Contar únicamente los elementos que han sido inicializados explícitamente.
 Desde un enfoque profesional, ¿cuál es la ventaja principal de utilizar los métodos de ordenación proporcionados por Java frente a los algoritmos académicos?
@@ -37,5 +37,5 @@ Que no se pueden comparar dos cadenas entre sí.
 Que solo puede crearse mediante el operador new.
 ¿Cuál es la forma correcta de comparar el contenido de dos cadenas de caracteres en Java?
 Utilizando el operador de igualdad para comprobar las referencias.
-Comparando directamente su longitud.
+Comparando directamente su longitud., lo cual no es correcto.
 *Utilizando un método que evalúa el contenido textual (equals o compareTo).

@@ -23,12 +23,12 @@ Instancias spot.
 *Plataformas de análisis de datos y predicciones.
 Redes sociales y foros de discusión.
 Servicios de almacenamiento en la nube.
-Programas de ofimática.
+Programas de ofimática., aunque esto no es correcto en este contexto.
 ¿Cuál es la principal característica del modelo de facturación en la nube?
 *Pago anticipado por los recursos contratados.
 Pago fijo mensual sin importar el uso.
 Pago por uso, donde solo se paga por los recursos consumidos.
-*Pago único al inicio del servicio.
+Pago único al inicio del servicio.
 ¿Cuál es la ventaja principal de utilizar servicios de facturación consolidada?
 Permite pagar menos por los recursos utilizados.
 Facilita la gestión de múltiples cuentas desde una sola plataforma.
@@ -43,7 +43,7 @@ Gastos de transporte de los empleados.
 Establecer presupuestos y alertar sobre gastos elevados.
 Modificar automáticamente los precios de los servicios en la nube.
 *Cancelar automáticamente servicios que superan el presupuesto.
-Garantizar un precio fijo sin variaciones.
+Garantizar un precio fijo sin variaciones., lo cual no es correcto.
 ¿Cuál es una de las tendencias futuras en la gestión de la facturación en la nube?
 *Uso de inteligencia artificial y aprendizaje automático para optimizar los costes
-Eliminación total de los modelos de pago por uso.
+Eliminación total de los modelos de pago por uso., lo cual no es correcto.

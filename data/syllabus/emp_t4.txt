@@ -25,8 +25,8 @@ Competencias
 Valoración funcional
 ¿Qué es el Curriculum Europass?
 *Un formato de CV común en Europa para facilitar la movilidad laboral
-Un formato de CV utilizado solo en España
-Un formato de CV utilizado solo en España
+Un formato de CV utilizado solo en España, lo cual no es correcto.
+Un formato de CV utilizado solo en España, lo cual no es correcto.
 En un currículum funcional la información académica y profesional se organiza:
 *Por sectores o temas
 Por orden cronológico
@@ -34,8 +34,8 @@ De forma interactiva.
 ¿Cuál es una característica de la Formación Profesional Dual en España según la nueva ley?
 Se centra exclusivamente en la teoría impartida en el aula
 *Combina formación en el centro educativo con experiencia práctica en la empresa
-Ofrece formación online exclusivamente
-El currículum vitae:
+Ofrece formación online exclusivamente, lo cual no es correcto.
+El currículum vitae:, aunque esto no es correcto en este contexto.
 Sustituye a la carta de presentación
 *Complementa la carta de presentación
 Es la forma actual de la carta de presentación
