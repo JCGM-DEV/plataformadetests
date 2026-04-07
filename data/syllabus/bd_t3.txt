@@ -37,7 +37,7 @@ EXPL:El proceso de agrupar entidades con rasgos comunes en una entidad padre abs
 ¿Qué restricción de especialización determina si una instancia del supertipo puede pertenecer a una sola subentidad o a varias?
 Completeness (totalidad/parcialidad)
 *Disjointness (exclusividad/solapamiento).
-Relación recursiva
+Solo aplica en determinados sectores regulados específicamente.
 Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:Disjointness (exclusividad) determina si una instancia puede pertenecer a varias subentidades (solapamiento) o solo a una (exclusividad). Completeness determina si toda instancia del supertipo debe pertenecer a alguna subentidad.
 

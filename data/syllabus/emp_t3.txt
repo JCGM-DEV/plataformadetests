@@ -45,6 +45,6 @@ EXPL:La destreza en el manejo de las herramientas de las tecnologías de la info
 ¿Cuál es la principal tendencia del mercado laboral en el sector de la informática?
 *Inteligencia artificial y automatización
 Computación cuántica
-Robótica
+Solo aplica a trabajadores con contrato indefinido a tiempo completo.
 Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:El mercado laboral es el espacio donde se encuentran la oferta (trabajadores) y la demanda (empresas) de trabajo. Factores como la tecnología, la globalización y la formación influyen en su evolución.

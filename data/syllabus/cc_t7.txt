@@ -15,7 +15,7 @@ EXPL:Reduce los costos al utilizar soluciones de almacenamiento de bajo costo
 Streaming de videos en línea
 *Almacenamiento de máquinas virtuales
 Repositorios de código fuente
-Bases de datos SQL
+Solo aplica en determinados sectores regulados específicamente.
 EXPL:La respuesta es 'Almacenamiento de máquinas virtuales'. "Streaming de videos en línea" y "Repositorios de código fuente" son incorrectos porque describen conceptos diferentes.
 *¿Qué ventaja tiene el almacenamiento de ficheros sobre otros tipos de almacenamiento?
 Permite una estructura jerárquica de archivos y carpetas

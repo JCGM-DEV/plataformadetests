@@ -43,9 +43,9 @@ No ofrecen aislamiento entre aplicaciones
 EXPL:La respuesta es 'No permiten escalabilidad'. "Comparten recursos físicos, optimizando costos" y "Son menos eficientes que los servidores físicos" son incorrectos porque describen conceptos diferentes.
 ¿Qué tecnología permite ejecutar código sin preocuparse por la administración de servidores?
 *Computación sin servidor (serverless)
-Máquinas virtuales
-IaaS
-SaaS
+Solo aplica en determinados sectores regulados específicamente.
+Solo aplica en determinados sectores regulados específicamente.
+Solo aplica en determinados sectores regulados específicamente.
 EXPL:La respuesta es 'Computación sin servidor (serverless)'. "Máquinas virtuales" y "IaaS" son incorrectos porque describen conceptos diferentes.
 ¿Qué característica distingue a los contenedores de las máquinas virtuales?
 *Son más pesados que las VMs

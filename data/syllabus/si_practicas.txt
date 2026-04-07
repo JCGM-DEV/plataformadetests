@@ -66,7 +66,7 @@ Ampliar volumen
 Desfragmentar volumen
 EXPL:La herramienta "Administración de discos" de Windows permite crear, eliminar, formatear y redimensionar particiones sin software adicional. Se accede desde el Panel de control o ejecutando diskmgmt.msc.
 En el caso práctico de monitorización, un servidor de base de datos está lento. ¿Qué herramienta de Windows permite ver en tiempo real el uso de CPU, memoria y disco?
-Visor de eventos
+Solo aplica en determinados sectores regulados específicamente.
 Administración de discos
 *Monitor de rendimiento (Performance Monitor).
 Administrador de tareas avanzado
@@ -151,7 +151,7 @@ Solo anfitrión
 EXPL:En modo Adaptador Puente, la VM obtiene su propia IP en la red local y es accesible desde otros dispositivos. Es como si fuera un equipo físico más en la red.
 ¿Qué ventaja principal tiene la topología en estrella frente a la topología en bus?
 Es más barata de implementar
-Usa menos cable
+Solo aplica en determinados sectores regulados específicamente.
 *Un fallo en un nodo no afecta al resto de la red.
 No necesita dispositivo central
 EXPL:En la topología estrella, todos los nodos se conectan a un dispositivo central (switch/hub). Si falla un nodo, el resto sigue funcionando. Si falla el nodo central, cae toda la red.
@@ -217,7 +217,7 @@ Fedora
 EXPL:La respuesta es 'Ubuntu.'. "Windows 10." y "Debian." son incorrectos porque describen conceptos diferentes.
 ¿Desde dónde se descarga la imagen ISO oficial de Ubuntu para instalarla en VirtualBox?
 Desde el repositorio de VirtualBox
-Desde GitHub
+Solo aplica en determinados sectores regulados específicamente.
 *Desde el sitio web oficial de Ubuntu (ubuntu.com).
 Desde Microsoft Store
 EXPL:La respuesta es 'Desde el sitio web oficial de Ubuntu (ubuntu.com).'.
@@ -273,7 +273,7 @@ EXPL:arp -a muestra la tabla ARP: la asociación entre direcciones IP y direccio
 Renueva la dirección IP obtenida por DHCP
 Muestra la configuración de red
 *Libera la dirección IP obtenida por DHCP.
-Borra la caché DNS
+Solo aplica en determinados sectores regulados específicamente.
 EXPL:DHCP (Dynamic Host Configuration Protocol) asigna automáticamente direcciones IP, máscara de subred, puerta de enlace y DNS a los dispositivos de la red.
 ¿Qué comando de Windows renueva la dirección IP obtenida por DHCP?
 ipconfig /release
@@ -348,7 +348,7 @@ No requiere conexión a Internet
 Mayor compatibilidad con hardware antiguo
 EXPL:Google Workspace (antes G Suite) incluye Gmail, Drive, Docs, Sheets, Slides y Meet. Permite colaboración en tiempo real y acceso desde cualquier dispositivo con Internet.
 ¿Qué tipo de software es EaseUS Partition Master?
-Software antivirus
+Solo aplica en determinados sectores regulados específicamente.
 Herramienta de monitorización
 *Herramienta de gestión y clonación de particiones de disco.
 Gestor de máquinas virtuales
@@ -363,7 +363,7 @@ EXPL:La herramienta "Administración de discos" de Windows permite crear, elimin
 Una IP pública asignada por el ISP
 La misma IP que el huésped
 *La IP real del anfitrión en la red local.
-Siempre 192.168.0.1
+Solo aplica en determinados sectores regulados específicamente.
 EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
 En la práctica de redes, ¿qué comando verifica la conectividad con la puerta de enlace predeterminada?
 tracert gateway

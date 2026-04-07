@@ -420,7 +420,7 @@
       "concept_id": "sistemas_informaticos_32",
       "question": "¿Qué significa el flag '-R' en el comando 'chmod -R'?",
       "options": [
-        "Aplica los permisos de forma recursiva a subdirectorios",
+        "Aplica los permisos de forma recursiva a",
         "Solo aplica a archivos de lectura",
         "Requiere permisos de root",
         "Restablece permisos por defecto"
@@ -462,7 +462,7 @@
         "Lista los archivos del directorio",
         "Cambia los permisos de disco",
         "Muestra los procesos activos",
-        "Muestra el espacio libre de los discos en formato legible"
+        "Muestra el espacio libre de los discos en"
       ],
       "correct": 3,
       "explanation": "df (disk free), -h es human-readable.",
@@ -538,7 +538,7 @@
       "question": "¿Qué es la latencia de red?",
       "options": [
         "El número de saltos de red",
-        "El tiempo de retardo en la transmisión de un paquete",
+        "El tiempo de retardo en la transmisión de",
         "La velocidad de descarga máxima",
         "La cantidad de datos enviados"
       ],
@@ -617,7 +617,7 @@
       "options": [
         "El sistema de archivos principal",
         "El gestor de paquetes",
-        "El núcleo que gestiona el hardware y los recursos",
+        "El núcleo que gestiona el hardware",
         "La interfaz gráfica del SO"
       ],
       "correct": 2,
@@ -628,7 +628,7 @@
       "concept_id": "sistemas_informaticos_48",
       "question": "¿Qué es la memoria Swap en Linux?",
       "options": [
-        "Espacio en disco que actúa como RAM cuando ésta se agota",
+        "Espacio en disco que actúa como RAM cuando ésta",
         "Una partición de arranque del sistema",
         "Un tipo de caché de CPU",
         "La memoria de la tarjeta gráfica"
@@ -667,7 +667,7 @@
       "concept_id": "sistemas_informaticos_51",
       "question": "¿Qué hace el comando 'ps aux' en Linux?",
       "options": [
-        "Muestra todos los procesos del sistema con detalle",
+        "Muestra todos los procesos del",
         "Muestra el uso de la CPU",
         "Cambia el proceso actual",
         "Para todos los procesos"
@@ -746,7 +746,7 @@
       "question": "¿Qué es un firewall?",
       "options": [
         "Un servidor de archivos",
-        "Sistema que filtra el tráfico de red según reglas de seguridad",
+        "Sistema que filtra el tráfico de red según",
         "Un tipo de router inalámbrico",
         "Un antivirus de disco"
       ],
@@ -862,7 +862,7 @@
       "concept_id": "sistemas_informaticos_exp_66",
       "question": "¿Qué significa TTL en un paquete de red?",
       "options": [
-        "Time To Live: contador de saltos antes de descartar el paquete",
+        "Time To Live: contador de saltos antes",
         "Time To Load",
         "Tipo de Terminal Linux",
         "Total Transfer Latency"
@@ -876,7 +876,7 @@
       "question": "¿Qué es una dirección MAC?",
       "options": [
         "La IP privada de un dispositivo",
-        "Identificador físico único de una interfaz de red de 48 bits",
+        "Identificador físico único de una",
         "El nombre del host en la red",
         "La máscara de subred"
       ],
@@ -916,7 +916,7 @@
       "options": [
         "Borra el archivo de log",
         "Copia el log a otro fichero",
-        "Muestra las últimas líneas del log en tiempo real",
+        "Muestra las últimas líneas del log en",
         "Lista los procesos del sistema"
       ],
       "correct": 2,
@@ -928,7 +928,7 @@
       "question": "¿Cuál es la función del directorio /var en Linux?",
       "options": [
         "Aloja los directorios de usuario",
-        "Almacena archivos variables: logs, colas de impresión, bases de datos temporales",
+        "Almacena archivos variables: logs",
         "Guarda la configuración",
         "Contiene los binarios del sistema"
       ],
@@ -941,9 +941,9 @@
       "question": "¿Qué es GRUB?",
       "options": [
         "Un sistema de copias de seguridad",
-        "Un protocolo de red",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Un sistema de archivos de Linux",
-        "Gestor de arranque que permite elegir el sistema operativo al inicio"
+        "Gestor de arranque que permite elegir el sistema"
       ],
       "correct": 3,
       "explanation": "Grand Unified Bootloader.",
@@ -982,7 +982,7 @@
         "Lista las particiones del disco",
         "Crea una nueva partición",
         "Formatea una partición",
-        "Asocia un dispositivo de almacenamiento a un directorio del árbol de ficheros"
+        "Asocia un dispositivo de almacenamiento a un"
       ],
       "correct": 3,
       "explanation": "mount /dev/sdb1 /mnt/disco.",
@@ -1008,7 +1008,7 @@
         "Un proceso sin permisos",
         "Un proceso en estado de espera de I/O",
         "Un proceso que consume el 100% de CPU",
-        "Un proceso que ha terminado pero cuya entrada en la tabla de procesos aún no fue eliminada por el padre"
+        "Un proceso que ha terminado pero cuya entrada en"
       ],
       "correct": 3,
       "explanation": "El padre debe hacer wait() para eliminarlo.",
@@ -1033,7 +1033,7 @@
       "options": [
         "Protocolo de monitorización",
         "Protocolo de transferencia de archivos",
-        "Protocolo para acceder y mantener directorios de usuarios en red",
+        "Protocolo para acceder y mantener directorios de",
         "Protocolo de envío de correo"
       ],
       "correct": 2,
@@ -1058,7 +1058,7 @@
       "question": "¿Qué es un ataque DoS?",
       "options": [
         "Instalación de software malicioso",
-        "Denegación de Servicio: saturar un servidor para dejarlo inaccesible",
+        "Denegación de Servicio: saturar un servidor",
         "Robo de contraseñas mediante engaño",
         "Intercepción del tráfico de red"
       ],
@@ -1083,9 +1083,9 @@
       "concept_id": "sistemas_informaticos_exp_83",
       "question": "¿Qué es el cifrado asimétrico?",
       "options": [
-        "Usa un par de claves: pública para cifrar y privada para descifrar",
+        "Usa un par de claves: pública para cifrar y privada para",
         "Usa la misma clave para cifrar y descifrar",
-        "Solo se usa en WiFi",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Cifra solo archivos de texto"
       ],
       "correct": 0,
@@ -1097,9 +1097,9 @@
       "question": "¿Qué es una VPN?",
       "options": [
         "Un protocolo de enrutamiento",
-        "Red privada virtual que cifra el tráfico a través de una red pública",
+        "Red privada virtual que cifra el tráfico a",
         "Un sistema de backup",
-        "Un tipo de VLAN"
+        "Depende exclusivamente de la configuración del sistema operativo."
       ],
       "correct": 1,
       "explanation": "Virtual Private Network.",
@@ -1136,9 +1136,9 @@
       "question": "¿Qué diferencia hay entre un proceso y un hilo (thread)?",
       "options": [
         "Los procesos son más rápidos",
-        "Un proceso tiene su propio espacio de memoria; los hilos comparten el del proceso",
+        "Un proceso tiene su propio espacio de memoria",
         "Un hilo ocupa más recursos que un proceso",
-        "Son sinónimos"
+        "Depende exclusivamente de la configuración del sistema operativo."
       ],
       "correct": 1,
       "explanation": "Los hilos son más ligeros.",
@@ -1149,7 +1149,7 @@
       "question": "¿Qué es la virtualización?",
       "options": [
         "El uso de la nube",
-        "Crear recursos lógicos (máquinas virtuales) sobre hardware físico compartido",
+        "Crear recursos lógicos",
         "El uso de contenedores Docker",
         "La emulación de hardware antiguo"
       ],
@@ -1164,7 +1164,7 @@
         "Se instala sobre un SO existente",
         "Es un emulador de CPU",
         "Es solo para contenedores",
-        "Se ejecuta directamente sobre el hardware sin SO anfitrión (bare metal)"
+        "Se ejecuta directamente sobre el hardware"
       ],
       "correct": 3,
       "explanation": "VMware ESXi y Hyper-V son tipo 1.",
@@ -1213,7 +1213,7 @@
       "concept_id": "sistemas_informaticos_exp_93",
       "question": "¿Qué es el direccionamiento CIDR?",
       "options": [
-        "Notación que indica la máscara de red con /prefijo (ej: 192.168.1.0/24)",
+        "Notación que indica la máscara de red con",
         "Un tipo de dirección MAC",
         "Un protocolo de enrutamiento dinámico",
         "Un estándar de cables de red"
@@ -1242,7 +1242,7 @@
         "El nombre de la red (SSID)",
         "La dirección MAC del punto de acceso (router WiFi)",
         "La contraseña de la red",
-        "La IP del router"
+        "UDP garantiza la entrega ordenada de todos los paquetes enviados."
       ],
       "correct": 1,
       "explanation": "Basic Service Set Identifier.",
@@ -1384,7 +1384,7 @@
       "options": [
         "La resta en numeración hexadecimal",
         "El inverso de los bits sin más",
-        "Sistema para representar números negativos en binario",
+        "Sistema para representar números negativos",
         "Un tipo de suma binaria"
       ],
       "correct": 2,
@@ -1462,8 +1462,8 @@
       "options": [
         "Tiempo bloqueado en I/O",
         "Tiempo total de vida del proceso",
-        "Tiempo de CPU usado",
-        "Tiempo que el proceso pasa en la cola de listos sin ejecutarse"
+        "Depende exclusivamente de la configuración del sistema operativo.",
+        "Tiempo que el proceso pasa en la cola de listos"
       ],
       "correct": 3,
       "explanation": "Waiting time = Turnaround - Burst time.",
@@ -1475,7 +1475,7 @@
       "options": [
         "Un proceso consume el 100% de CPU",
         "El SO se queda sin memoria",
-        "Un proceso de baja prioridad nunca llega a ejecutarse porque siempre hay otros con mayor prioridad",
+        "Un proceso de baja prioridad nunca llega a",
         "El disco duro se llena"
       ],
       "correct": 2,
@@ -1515,7 +1515,7 @@
         "Un firewall de Windows",
         "Un protocolo de enrutamiento",
         "Un sistema de archivos de red",
-        "Servicio de directorio de Microsoft para gestionar usuarios, equipos y políticas en una red Windows"
+        "Servicio de directorio de Microsoft para"
       ],
       "correct": 3,
       "explanation": "AD usa LDAP y Kerberos para autenticación.",
@@ -1525,7 +1525,7 @@
       "concept_id": "sistemas_informaticos_exp2_117",
       "question": "¿Qué es un controlador de dominio en Windows Server?",
       "options": [
-        "Servidor que gestiona la autenticación y autorización de todos los equipos del dominio",
+        "Servidor que gestiona la autenticación",
         "Un servidor de archivos",
         "Un servidor web IIS",
         "Un hub de red"
@@ -1538,7 +1538,7 @@
       "concept_id": "sistemas_informaticos_exp2_118",
       "question": "¿Qué es RAID 6?",
       "options": [
-        "Como RAID 5 pero con doble paridad, soporta el fallo de 2 discos simultáneos",
+        "Como RAID 5 pero con doble paridad",
         "RAID 1 con 6 discos",
         "RAID 5 con un disco adicional de caché",
         "RAID 0 con paridad"
@@ -1551,7 +1551,7 @@
       "concept_id": "sistemas_informaticos_exp2_119",
       "question": "¿Qué es LVM (Logical Volume Manager)?",
       "options": [
-        "Sistema que permite redimensionar particiones lógicas dinámicamente sin formatear",
+        "Sistema que permite redimensionar particiones",
         "Un tipo de RAID por software",
         "Un protocolo de red de almacenamiento",
         "Un formato de sistema de archivos"
@@ -1566,7 +1566,7 @@
       "options": [
         "Un grupo de volúmenes",
         "Un volumen lógico asignado a un directorio",
-        "Un snapshot de LVM",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Un disco o partición física incorporada al sistema LVM"
       ],
       "correct": 3,
@@ -1577,7 +1577,7 @@
       "concept_id": "sistemas_informaticos_exp2_121",
       "question": "¿Qué es el phishing?",
       "options": [
-        "Técnica de engaño para que la víctima revele credenciales mediante webs o correos falsos",
+        "Técnica de engaño para que la víctima revele",
         "Un ataque de denegación de servicio",
         "Una escucha pasiva del tráfico de red",
         "Un virus que cifra los ficheros"
@@ -1590,9 +1590,9 @@
       "concept_id": "sistemas_informaticos_exp2_122",
       "question": "¿Qué es el ransomware?",
       "options": [
-        "Un troyano bancario",
-        "Un gusano de red",
-        "Malware que cifra los archivos de la víctima y pide un rescate para recuperarlos",
+        "Depende exclusivamente de la configuración del sistema operativo.",
+        "Depende exclusivamente de la configuración del sistema operativo.",
+        "Malware que cifra los archivos de la víctima",
         "Un virus que muestra anuncios"
       ],
       "correct": 2,
@@ -1605,7 +1605,7 @@
       "options": [
         "Cambiar la contraseña cada mes",
         "Usar contraseñas distintas en cada servicio",
-        "Verificar la identidad usando dos o más factores: algo que sabes, tienes o eres",
+        "Verificar la identidad usando dos o más factores: algo",
         "Usar contraseñas muy largas"
       ],
       "correct": 2,
@@ -1617,7 +1617,7 @@
       "question": "¿Qué significa 'HTTPS' y qué garantiza?",
       "options": [
         "HTTP con compresión gzip",
-        "HTTP sobre TLS/SSL, garantiza cifrado y autenticidad del servidor",
+        "HTTP sobre TLS/SSL",
         "HTTP sobre UDP",
         "HTTP con cookies seguras"
       ],
@@ -1631,7 +1631,7 @@
       "options": [
         "Un tipo de cookie segura",
         "Un protocolo de red",
-        "Archivo que autentica la identidad de un servidor y habilita el cifrado",
+        "Archivo que autentica la identidad de un",
         "Una contraseña de servidor"
       ],
       "correct": 2,
@@ -1670,8 +1670,8 @@
       "options": [
         "Solo una mejora de nombre sin cambios técnicos",
         "DDR5 solo se usa en servidores",
-        "DDR5 es más lenta",
-        "Estándar más reciente con mayor ancho de banda y menor consumo (voltaje 1.1V vs 1.2V)"
+        "Depende exclusivamente de la configuración del sistema operativo.",
+        "Estándar más reciente con mayor ancho de banda y menor consumo"
       ],
       "correct": 3,
       "explanation": "DDR5 duplica el ancho de banda frente a DDR4.",
@@ -1681,7 +1681,7 @@
       "concept_id": "sistemas_informaticos_exp3_129",
       "question": "¿Qué es la latencia CAS en la memoria RAM?",
       "options": [
-        "Número de ciclos de reloj que tarda en responder tras recibir una solicitud de columna",
+        "Número de ciclos de reloj que tarda en responder",
         "La capacidad máxima del módulo de RAM",
         "El tiempo de acceso al disco",
         "La velocidad en MHz de la RAM"
@@ -1694,9 +1694,9 @@
       "concept_id": "sistemas_informaticos_exp3_130",
       "question": "¿Qué es el bus PCIe?",
       "options": [
-        "Un protocolo de red",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "El bus de datos entre CPU y RAM",
-        "Interfaz de expansión de alta velocidad para tarjetas gráficas, SSD NVMe y otras tarjetas",
+        "Interfaz de expansión de alta velocidad para",
         "Un formato de disco duro"
       ],
       "correct": 2,
@@ -1710,7 +1710,7 @@
         "Almacena energía de emergencia para el sistema",
         "Regula la velocidad de la CPU",
         "Gestiona la distribución de RAM entre procesos",
-        "Convierte la corriente alterna (AC) de la red en corriente continua (DC) para los componentes"
+        "Convierte la corriente alterna"
       ],
       "correct": 3,
       "explanation": "La PSU debe tener potencia suficiente para todos los componentes.",
@@ -1723,7 +1723,7 @@
         "La secuencia de GRUB",
         "El arranque del sistema operativo",
         "Un tipo de protocolo de red",
-        "Proceso de autocomprobación del hardware que realiza la BIOS/UEFI al encenderse el equipo"
+        "Proceso de autocomprobación del hardware que"
       ],
       "correct": 3,
       "explanation": "Si el POST falla, emite pitidos (beep codes) indicando el error.",
@@ -1736,7 +1736,7 @@
         "Actualizar el firmware de la BIOS",
         "Limpiar la caché del procesador",
         "Reducir el consumo energético del procesador",
-        "Aumentar la frecuencia de reloj de la CPU o RAM por encima de sus especificaciones de fábrica"
+        "Aumentar la frecuencia de reloj de la CPU o RAM por"
       ],
       "correct": 3,
       "explanation": "El overclocking aumenta el rendimiento pero también el calor y el riesgo.",
@@ -1749,7 +1749,7 @@
         "Memoria caché de nivel 3",
         "Memoria de solo lectura para la BIOS",
         "Memoria de alta velocidad para GPU",
-        "Tipo de RAM que detecta y corrige automáticamente errores de un bit, usada en servidores"
+        "Tipo de RAM que detecta"
       ],
       "correct": 3,
       "explanation": "ECC es fundamental en servidores y estaciones de trabajo críticas.",
@@ -1773,7 +1773,7 @@
       "question": "¿Qué es Wake-on-LAN (WOL)?",
       "options": [
         "Un protocolo de transferencia de archivos en red local",
-        "Funcionalidad que permite encender un equipo remotamente enviando un 'magic packet' por red",
+        "Funcionalidad que permite encender un equipo remotamente enviando un",
         "Un servicio de DNS especial",
         "Un tipo de actualización de firmware remota"
       ],
@@ -1785,10 +1785,10 @@
       "concept_id": "sistemas_informaticos_exp3_137",
       "question": "¿Qué es una interrupción (IRQ) en sistemas informáticos?",
       "options": [
-        "Una señal de red",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Un error del sistema operativo",
         "Un tipo de instrucción ensamblador",
-        "Señal que envía un dispositivo al procesador para solicitar atención inmediata"
+        "Señal que envía un dispositivo al procesador para"
       ],
       "correct": 3,
       "explanation": "Los IRQ permiten la comunicación asíncrona entre hardware y CPU.",
@@ -1799,7 +1799,7 @@
       "question": "¿Qué es un certificado autofirmado (self-signed)?",
       "options": [
         "Un tipo de contraseña cifrada",
-        "Certificado SSL/TLS creado y firmado por el propio servidor, no por una CA reconocida",
+        "Certificado SSL/TLS creado y firmado por el",
         "Un certificado de dominio wildcard",
         "El certificado más seguro del mercado"
       ],
@@ -1812,9 +1812,9 @@
       "question": "¿Qué es un ataque XSS (Cross-Site Scripting)?",
       "options": [
         "Un ataque de interceptación de tráfico",
-        "Un DDOS distribuido",
+        "UDP garantiza la entrega ordenada de todos los paquetes enviados.",
         "Un ataque de fuerza bruta a contraseñas",
-        "Inyección de código JavaScript malicioso en una web que se ejecuta en el navegador de la víctima"
+        "Inyección de código JavaScript malicioso en una web que se"
       ],
       "correct": 3,
       "explanation": "XSS explota la falta de sanitización de entrada en aplicaciones web.",
@@ -1826,7 +1826,7 @@
       "options": [
         "Un virus que cifra las tablas de la BD",
         "Un ataque de denegación de servicio a un servidor MySQL",
-        "Insertar código SQL malicioso en campos de formulario para manipular la base de datos",
+        "Insertar código SQL malicioso en campos de formulario para manipular",
         "Un error de sintaxis SQL"
       ],
       "correct": 2,
@@ -1889,7 +1889,7 @@
       "concept_id": "sistemas_informaticos_basic_145",
       "question": "¿Qué es un periférico de salida?",
       "options": [
-        "Dispositivo que el ordenador usa para comunicar resultados al exterior",
+        "Dispositivo que el ordenador usa para comunicar",
         "Dispositivo de almacenamiento",
         "Dispositivo de procesamiento",
         "Dispositivo que recibe datos del usuario"
@@ -1929,7 +1929,7 @@
       "question": "¿Qué significa que la RAM es volátil?",
       "options": [
         "Que necesita refrigeración activa",
-        "Que es muy rápida",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Que pierde su contenido al apagar el ordenador",
         "Que no se puede ampliar"
       ],
@@ -1943,7 +1943,7 @@
       "options": [
         "Mostrar imágenes en el monitor",
         "Gestionar la red local",
-        "Procesar y ejecutar instrucciones del programa",
+        "Procesar y ejecutar instrucciones del",
         "Almacenar datos permanentemente"
       ],
       "correct": 2,
@@ -1954,7 +1954,7 @@
       "concept_id": "sistemas_informaticos_basic_150",
       "question": "¿Qué es la placa base (motherboard)?",
       "options": [
-        "El circuito principal que interconecta todos los componentes del ordenador",
+        "El circuito principal que interconecta",
         "La fuente de alimentación",
         "El disco duro principal",
         "La tarjeta gráfica"
@@ -2007,7 +2007,7 @@
       "question": "¿Qué significa que las redes informáticas permitan la comunicación entre dispositivos conectados?",
       "options": [
         "Que los usuarios deben tener los mismos recursos",
-        "Los usuarios pueden enviar y recibir información de manera rápida y eficiente",
+        "Los usuarios pueden enviar y recibir información de manera rápida y",
         "Que deben estar disponibles en todo momento",
         "Que deben estar clasificadas para proteger la información"
       ],
@@ -2126,7 +2126,7 @@
         "Un tipo de procesador RISC",
         "El primer sistema operativo de la historia",
         "Una red de ordenadores en malla",
-        "Un modelo de computador con CPU, memoria, entrada/salida y bus de datos compartido para instrucciones y datos"
+        "Un modelo de computador con CPU"
       ],
       "correct": 3,
       "explanation": "La arquitectura Von Neumann usa una única memoria compartida para datos e instrucciones con un único bus. Harvard las separa físicamente para mayor velocidad de acceso simultáneo.",
@@ -2136,7 +2136,7 @@
       "concept_id": "sistemas_informaticos_basic_164",
       "question": "¿Qué es el software de sistema?",
       "options": [
-        "Programas que gestionan el hardware y los recursos del ordenador (SO, drivers)",
+        "Programas que gestionan el hardware y los",
         "Los videojuegos y multimedia",
         "Las aplicaciones de ofimática",
         "Los programas de diseño gráfico"
@@ -2150,7 +2150,7 @@
       "question": "¿Cuál es la diferencia entre software libre y software propietario?",
       "options": [
         "El software propietario es siempre gratuito",
-        "El software libre permite ver, modificar y distribuir el código fuente; el propietario no",
+        "El software libre permite ver, modificar y distribuir",
         "No hay diferencia técnica",
         "El software libre cuesta menos"
       ],
@@ -2162,9 +2162,9 @@
       "concept_id": "sistemas_informaticos_basic_166",
       "question": "¿Qué es el firmware?",
       "options": [
-        "Software grabado en memoria ROM de un dispositivo hardware que controla su funcionamiento básico",
+        "Software grabado en memoria ROM de un dispositivo",
         "Un sistema operativo ligero",
-        "Un tipo de virus",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Un controlador de dispositivo externo"
       ],
       "correct": 0,
@@ -2177,7 +2177,7 @@
       "options": [
         "Proteger el sistema de ataques de virus",
         "Ejecutar aplicaciones",
-        "Gestionar y coordinar el uso de los recursos de hardware y software",
+        "Gestionar y coordinar el uso de los recursos de",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -2188,7 +2188,7 @@
       "concept_id": "sistemas_informaticos_real_169",
       "question": "¿Qué es necesario hacer antes de actualizar una aplicación a una versión superior?",
       "options": [
-        "Comprobar si la versión superior es compatible con el sistema operativo y la licencia",
+        "Comprobar si la versión superior es compatible con el sistema operativo",
         "Realizar una copia de seguridad de los archivos asociados",
         "Descargar manualmente e instalar la versión superior",
         "Combinación de las anteriores"
@@ -2293,7 +2293,7 @@
       "question": "La interfaz de transferencia PATA utiliza:",
       "options": [
         "Un bus en serie para transferir datos",
-        "Un cable plano con 40 u 80 conductores para transferir datos de forma paralela",
+        "Un cable plano con 40 u 80 conductores para transferir datos de",
         "Un solo cable para transferir datos de forma serial",
         "Combinación de las anteriores"
       ],
@@ -2305,7 +2305,7 @@
       "concept_id": "sistemas_informaticos_real_178",
       "question": "¿Cuál es la principal ventaja del esquema GPT sobre el esquema MBR?",
       "options": [
-        "Tiene una mejor protección contra la corrupción de datos",
+        "Tiene una mejor protección contra la corrupción de",
         "Solo permite particiones primarias",
         "Es compatible con más sistemas operativos",
         "Combinación de las anteriores"
@@ -2333,7 +2333,7 @@
       "options": [
         "Para aumentar el rendimiento del procesador",
         "Para mejorar la velocidad de Internet",
-        "Para prevenir el acceso no autorizado a datos confidenciales",
+        "Para prevenir el acceso no autorizado a datos",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -2384,7 +2384,7 @@
       "question": "¿Qué es una máscara de subred?",
       "options": [
         "Una herramienta para bloquear el tráfico",
-        "Una herramienta para identificar qué parte de la IP identifica la red y qué parte el dispositivo",
+        "Una herramienta para identificar qué parte de la IP identifica",
         "Un código para identificar el dispositivo en red",
         "Combinación de las anteriores"
       ],
@@ -2397,7 +2397,7 @@
       "question": "¿Qué es una WLAN?",
       "options": [
         "Una red inalámbrica de corto alcance",
-        "Una red inalámbrica para conectar dispositivos en un área geográfica limitada",
+        "Una red inalámbrica para conectar dispositivos",
         "Una red inalámbrica de largo alcance",
         "Combinación de las anteriores"
       ],
@@ -2410,7 +2410,7 @@
       "question": "¿Qué es una tabla de enrutamiento estática?",
       "options": [
         "Una tabla creada mediante protocolos dinámicos",
-        "Una tabla donde se especifican manualmente las rutas que deben tomar los paquetes",
+        "Una tabla donde se especifican manualmente las rutas que deben tomar los",
         "Una tabla en la que las rutas se determinan automáticamente",
         "Combinación de las anteriores"
       ],
@@ -2435,7 +2435,7 @@
       "concept_id": "sistemas_informaticos_real_188",
       "question": "¿Para qué se utiliza OpenSSL?",
       "options": [
-        "Para crear y gestionar certificados digitales y claves de cifrado",
+        "Para crear y gestionar certificados digitales",
         "Para enviar correos electrónicos cifrados",
         "Para cifrar unidades de almacenamiento",
         "Combinación de las anteriores"
@@ -2487,10 +2487,10 @@
       "concept_id": "sistemas_informaticos_real_192",
       "question": "¿Qué son las herramientas de desarrollo integradas (IDEs)?",
       "options": [
-        "Herramientas con editor de código, depurador y compilador integrados en una interfaz",
+        "Herramientas con editor de código, depurador y compilador integrados en una",
         "Herramientas para copias de seguridad y optimización del sistema",
         "Herramientas para identificar problemas de hardware",
-        "Docker"
+        "Depende exclusivamente de la configuración del sistema operativo."
       ],
       "correct": 0,
       "explanation": "Un IDE integra editor, compilador, depurador y otras herramientas en un solo entorno.",
@@ -2500,7 +2500,7 @@
       "concept_id": "sistemas_informaticos_real_193",
       "question": "¿Cuál es la función principal del software de sistema?",
       "options": [
-        "Controlar y coordinar el hardware y proporcionar interfaz entre el usuario y el hardware",
+        "Controlar y coordinar el hardware y proporcionar interfaz entre",
         "Escribir, depurar y mantener programas de software",
         "Realizar tareas específicas en la computadora",
         "Combinación de las anteriores"
@@ -2765,7 +2765,7 @@
         "UNION ALL solo funciona con texto",
         "No hay diferencia práctica",
         "UNION es más lento por definición",
-        "UNION elimina duplicados, UNION ALL los conserva"
+        "UNION elimina duplicados"
       ],
       "correct": 3,
       "explanation": "UNION aplica DISTINCT internamente.",
@@ -2830,7 +2830,7 @@
         "Una consulta SELECT almacenada que actúa como tabla virtual",
         "Una copia física de los datos",
         "Una tabla temporal en disco",
-        "Un índice especial"
+        "FileReader puede leer archivos binarios directamente sin conversión."
       ],
       "correct": 0,
       "explanation": "Una vista es una consulta almacenada que se ejecuta cada vez que se accede. No ocupa espacio físico de datos; se reconstruye dinámicamente desde las tablas base.",
@@ -2840,7 +2840,7 @@
       "concept_id": "bases_de_datos_25",
       "question": "¿Qué es un índice en una base de datos?",
       "options": [
-        "Un tipo de trigger",
+        "Statement es más seguro que PreparedStatement contra inyección SQL.",
         "Una restricción de clave",
         "Estructura que acelera la búsqueda de registros",
         "Una copia de seguridad"
@@ -2931,8 +2931,8 @@
       "concept_id": "bases_de_datos_32",
       "question": "¿Cuál es la diferencia entre DELETE y TRUNCATE?",
       "options": [
-        "Son equivalentes",
-        "DELETE puede filtrar con WHERE y registra en el log; TRUNCATE no",
+        "Depende exclusivamente de la configuración del sistema operativo.",
+        "DELETE puede filtrar con WHERE y registra en el log",
         "TRUNCATE es más lento",
         "DELETE borra la estructura"
       ],
@@ -2957,7 +2957,7 @@
       "concept_id": "bases_de_datos_34",
       "question": "¿Qué es un SAVEPOINT?",
       "options": [
-        "Un punto de restauración intermedio dentro de una transacción",
+        "Un punto de restauración intermedio dentro de",
         "El final de un procedimiento",
         "Una copia de seguridad completa",
         "El inicio de una transacción"
@@ -2972,7 +2972,7 @@
       "options": [
         "Un error de sintaxis SQL",
         "Un timeout de conexión",
-        "Bloqueo mutuo entre transacciones que se esperan entre sí indefinidamente",
+        "Bloqueo mutuo entre transacciones que",
         "Una corrupción de índice"
       ],
       "correct": 2,
@@ -2983,7 +2983,7 @@
       "concept_id": "bases_de_datos_36",
       "question": "¿Qué significa que una clave sea 'Primaria' (Primary Key)?",
       "options": [
-        "Identifica de forma única y no nula cada fila de la tabla",
+        "Identifica de forma única y no nula cada",
         "Puede tener valores nulos",
         "Se usa para ordenar la tabla",
         "Es la clave más grande de la tabla"
@@ -2996,7 +2996,7 @@
       "concept_id": "bases_de_datos_37",
       "question": "¿Qué es una clave foránea (Foreign Key)?",
       "options": [
-        "Atributo que referencia la clave primaria de otra tabla",
+        "Atributo que referencia la clave",
         "El nombre de la base de datos",
         "Una clave de cifrado de datos",
         "Un índice de texto completo"
@@ -3011,7 +3011,7 @@
       "options": [
         "Que los backups están actualizados",
         "Que los datos están cifrados",
-        "Que los valores de una FK siempre apuntan a una PK válida existente",
+        "Que los valores de una FK siempre apuntan a",
         "Que la tabla tiene índices"
       ],
       "correct": 2,
@@ -3036,7 +3036,7 @@
       "question": "¿Qué es PL/SQL?",
       "options": [
         "Un protocolo de backup",
-        "Extensión procedimental de SQL para Oracle que permite lógica (IF, bucles)",
+        "Extensión procedimental de SQL para",
         "Un tipo de base de datos NoSQL",
         "Un lenguaje de marcas"
       ],
@@ -3049,7 +3049,7 @@
       "question": "¿Qué es un Stored Procedure?",
       "options": [
         "Un tipo de índice",
-        "Bloque de código SQL almacenado en el servidor y reutilizable",
+        "Bloque de código SQL almacenado en el",
         "Un trigger especial",
         "Una consulta SELECT guardada"
       ],
@@ -3113,7 +3113,7 @@
       "concept_id": "bases_de_datos_exp_46",
       "question": "¿Qué es una subconsulta correlacionada?",
       "options": [
-        "Una subconsulta que hace referencia a columnas de la consulta exterior",
+        "Una subconsulta que hace referencia a columnas de la",
         "Una subconsulta independiente",
         "Un JOIN escrito con subquery",
         "Una consulta que devuelve múltiples columnas"
@@ -3152,7 +3152,7 @@
       "concept_id": "bases_de_datos_exp_49",
       "question": "¿Qué es la desnormalización?",
       "options": [
-        "Introducir redundancia deliberada para mejorar el rendimiento de lectura",
+        "Introducir redundancia deliberada para",
         "Aplicar 3FN a todas las tablas",
         "Eliminar tablas del esquema",
         "Cifrar los datos sensibles"
@@ -3180,7 +3180,7 @@
       "options": [
         "El archivo de configuración",
         "El nombre del servidor",
-        "Conjunto de objetos (tablas, vistas, procedimientos) dentro de una BD",
+        "Conjunto de objetos (tablas",
         "El usuario administrador"
       ],
       "correct": 2,
@@ -3191,7 +3191,7 @@
       "concept_id": "bases_de_datos_exp_52",
       "question": "¿Cuál es la diferencia entre PRIMARY KEY y UNIQUE?",
       "options": [
-        "PRIMARY KEY no permite nulos; UNIQUE sí puede tenerlos",
+        "PRIMARY KEY no permite nulos",
         "Son completamente iguales",
         "PRIMARY KEY puede repetirse",
         "UNIQUE no sirve para relaciones"
@@ -3205,7 +3205,7 @@
       "question": "¿Qué es un modelo OLAP?",
       "options": [
         "Un protocolo de replicación",
-        "Procesamiento analítico en línea: optimizado para consultas complejas y agregaciones",
+        "Procesamiento analítico en línea: optimizado para",
         "Procesamiento transaccional en tiempo real",
         "Un tipo de base de datos NoSQL"
       ],
@@ -3217,7 +3217,7 @@
       "concept_id": "bases_de_datos_exp_54",
       "question": "¿Qué es la replicación en bases de datos?",
       "options": [
-        "Copiar y sincronizar datos entre varios servidores",
+        "Copiar y sincronizar datos entre varios",
         "Cifrar la comunicación entre BD",
         "Hacer un backup completo",
         "Fragmentar la tabla en particiones"
@@ -3233,7 +3233,7 @@
         "Crear índices en todas las columnas",
         "Replicar los datos en espejo",
         "Comprimir las tablas grandes",
-        "Dividir horizontalmente los datos entre múltiples servidores"
+        "Dividir horizontalmente los datos entre"
       ],
       "correct": 3,
       "explanation": "Sharding escala horizontalmente.",
@@ -3271,7 +3271,7 @@
       "options": [
         "Convierte un tipo de dato",
         "Concatena cadenas de texto",
-        "Devuelve el primer valor no nulo de la lista de argumentos",
+        "Devuelve el primer valor no nulo de",
         "Redondea un número decimal"
       ],
       "correct": 2,
@@ -3283,9 +3283,9 @@
       "question": "¿Qué hace CAST en SQL?",
       "options": [
         "Convierte un valor de un tipo de dato a otro",
-        "Filtra nulos",
-        "Agrupa registros",
-        "Ordena el resultado"
+        "Statement es más seguro que PreparedStatement contra inyección SQL.",
+        "Statement es más seguro que PreparedStatement contra inyección SQL.",
+        "Statement es más seguro que PreparedStatement contra inyección SQL."
       ],
       "correct": 0,
       "explanation": "CAST(precio AS INT).",
@@ -3298,7 +3298,7 @@
         "Tabla de configuración",
         "Tabla que almacena dimensiones de tiempo",
         "Tabla de usuarios del sistema",
-        "Tabla central que contiene las métricas cuantitativas del negocio"
+        "Tabla central que contiene las métricas cuantitativas"
       ],
       "correct": 3,
       "explanation": "Las tablas de hechos se conectan a dimensiones (esquema estrella).",
@@ -3337,7 +3337,7 @@
         "Un gestor de colas de mensajes",
         "Un sistema de archivos distribuido",
         "Una base de datos relacional de Oracle",
-        "Base de datos NoSQL clave-valor en memoria, usada para caché y sesiones"
+        "Base de datos NoSQL clave-valor en memoria"
       ],
       "correct": 3,
       "explanation": "Redis es extremadamente rápido al operar en RAM.",
@@ -3350,7 +3350,7 @@
         "Impide borrar el padre si tiene hijos",
         "Al borrar un hijo, se borra el padre",
         "Solo funciona en claves primarias",
-        "Al borrar un registro padre, se borran automáticamente sus hijos"
+        "Al borrar un registro padre"
       ],
       "correct": 3,
       "explanation": "Mantiene la integridad referencial automáticamente.",
@@ -3362,7 +3362,7 @@
       "options": [
         "Un tipo de índice",
         "Un objeto de conexión a la BD",
-        "Mecanismo para procesar fila por fila el resultado de una consulta",
+        "Mecanismo para procesar fila por fila el",
         "Una variable de texto"
       ],
       "correct": 2,
@@ -3386,9 +3386,9 @@
       "concept_id": "bases_de_datos_exp_67",
       "question": "¿Qué hace la sentencia MERGE en SQL?",
       "options": [
-        "Combina INSERT, UPDATE y DELETE en una sola operación según condiciones",
+        "Combina INSERT, UPDATE y DELETE en una sola",
         "Fusiona dos tablas en una sola",
-        "Renombra una tabla",
+        "Statement es más seguro que PreparedStatement contra inyección SQL.",
         "Hace un backup de la tabla"
       ],
       "correct": 0,
@@ -3400,7 +3400,7 @@
       "question": "¿Qué es el plan de ejecución de una consulta SQL?",
       "options": [
         "El historial de transacciones",
-        "La ruta que sigue el SGBD para resolver una consulta de forma eficiente",
+        "La ruta que sigue el SGBD para resolver una",
         "La lista de índices de la tabla",
         "El esquema de la base de datos"
       ],
@@ -3428,7 +3428,7 @@
         "Que NoSQL no puede ser consistente",
         "Que toda BD debe cumplir ACID",
         "Que SQL siempre es más rápido que NoSQL",
-        "Un sistema distribuido solo puede garantizar 2 de 3: Consistencia, Disponibilidad y Tolerancia a particiones"
+        "Un sistema distribuido solo puede garantizar 2 de"
       ],
       "correct": 3,
       "explanation": "CAP: Consistency, Availability, Partition Tolerance.",
@@ -3438,7 +3438,7 @@
       "concept_id": "bases_de_datos_exp2_71",
       "question": "¿Qué tipo de consistencia prioriza Cassandra según el Teorema CAP?",
       "options": [
-        "Las tres a la vez",
+        "FileReader puede leer archivos binarios directamente sin conversión.",
         "Disponibilidad y Tolerancia a particiones (AP)",
         "Consistencia y Disponibilidad (CA)",
         "Consistencia y Tolerancia (CP)"
@@ -3464,7 +3464,7 @@
       "concept_id": "bases_de_datos_exp2_73",
       "question": "¿Qué es BASE en sistemas NoSQL?",
       "options": [
-        "Basically Available, Soft state, Eventually consistent (alternativa a ACID)",
+        "Basically Available",
         "Un nivel de aislamiento",
         "Un tipo de índice",
         "Un acrónimo de comandos NoSQL"
@@ -3478,7 +3478,7 @@
       "question": "¿Qué es la consistencia eventual?",
       "options": [
         "Un nivel de aislamiento ACID",
-        "Los datos serán consistentes en todos los nodos tras un período de tiempo",
+        "Los datos serán consistentes en todos los nodos tras un",
         "Los datos nunca son consistentes",
         "Los datos son siempre consistentes al instante"
       ],
@@ -3491,8 +3491,8 @@
       "question": "¿Qué es la Forma Normal de Boyce-Codd (BCNF)?",
       "options": [
         "Una forma normal solo para claves compuestas",
-        "Igual a la 3FN",
-        "Extensión estricta de 3FN donde toda dependencia funcional X→Y requiere que X sea superclave",
+        "Depende exclusivamente de la configuración del sistema operativo.",
+        "Extensión estricta de 3FN donde toda dependencia funcional X→Y",
         "La última forma normal posible"
       ],
       "correct": 2,
@@ -3506,7 +3506,7 @@
         "Un índice compuesto",
         "Un trigger de actualización",
         "Una restricción FK",
-        "Relación donde el valor de un atributo determina el valor de otro: A→B"
+        "Relación donde el valor de un atributo"
       ],
       "correct": 3,
       "explanation": "El DNI determina el nombre: DNI→Nombre.",
@@ -3529,7 +3529,7 @@
       "concept_id": "bases_de_datos_exp2_78",
       "question": "¿Qué hace EXPLAIN en una consulta SQL?",
       "options": [
-        "Muestra el plan de ejecución para entender si se usan índices y el coste estimado",
+        "Muestra el plan de ejecución para entender si se",
         "Muestra las restricciones activas",
         "Ejecuta la consulta y muestra el tiempo",
         "Describe la estructura de la tabla"
@@ -3543,7 +3543,7 @@
       "question": "¿Qué es un índice compuesto?",
       "options": [
         "Un índice que abarca varias columnas a la vez",
-        "Un índice único",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Un índice con varios registros iguales",
         "Un índice de texto completo"
       ],
@@ -3568,7 +3568,7 @@
       "concept_id": "bases_de_datos_exp2_81",
       "question": "¿Qué es una entidad débil en el modelo ER?",
       "options": [
-        "Entidad que no tiene clave propia y depende de otra entidad para su identificación",
+        "Entidad que no tiene clave propia",
         "Una entidad con un solo atributo",
         "Una entidad sin relaciones",
         "Una entidad con pocos atributos"
@@ -3582,7 +3582,7 @@
       "question": "¿Qué es la especialización en el modelo ER?",
       "options": [
         "Normalizar una entidad",
-        "Proceso de definir subtipos de una entidad con atributos propios (herencia ER)",
+        "Proceso de definir subtipos de una entidad",
         "Añadir más atributos a una entidad",
         "Crear una tabla intermedia"
       ],
@@ -3608,7 +3608,7 @@
       "question": "¿Qué hace la función RANK() en SQL?",
       "options": [
         "Calcula el percentil",
-        "Asigna un rango a cada fila dentro de una partición, con saltos en caso de empate",
+        "Asigna un rango a cada fila dentro de una partición",
         "Numera filas consecutivamente sin saltos",
         "Ordena los registros"
       ],
@@ -3620,7 +3620,7 @@
       "concept_id": "bases_de_datos_exp2_85",
       "question": "¿Qué son las Window Functions (funciones de ventana) en SQL?",
       "options": [
-        "Funciones que calculan valores sobre un conjunto de filas relacionadas sin agruparlas (OVER/PARTITION)",
+        "Funciones que calculan valores sobre",
         "Funciones de texto",
         "Funciones de cifrado",
         "Tipos de vistas"
@@ -3633,7 +3633,7 @@
       "concept_id": "bases_de_datos_exp2_86",
       "question": "¿Qué hace CTE (Common Table Expression) con la cláusula WITH?",
       "options": [
-        "Define una consulta temporal con nombre reutilizable dentro de otra consulta",
+        "Define una consulta temporal con nombre",
         "Importa datos de otro esquema",
         "Crea una tabla temporal en disco",
         "Crea una vista permanente"
@@ -3646,7 +3646,7 @@
       "concept_id": "bases_de_datos_exp2_87",
       "question": "¿Qué es la integridad de dominio?",
       "options": [
-        "Restricción sobre los valores válidos de una columna (tipo de dato, CHECK, NOT NULL)",
+        "Restricción sobre los valores válidos de una",
         "El uso de transacciones ACID",
         "La coherencia entre tablas relacionadas",
         "La obligación de tener PK"
@@ -3659,7 +3659,7 @@
       "concept_id": "bases_de_datos_exp2_88",
       "question": "¿Qué es un tablespace en Oracle/PostgreSQL?",
       "options": [
-        "Ubicación física de almacenamiento donde se guardan los objetos de la BD",
+        "Ubicación física de almacenamiento donde se",
         "Un espacio de nombres lógico",
         "Un grupo de usuarios",
         "Una partición de datos"
@@ -3672,7 +3672,7 @@
       "concept_id": "bases_de_datos_exp2_89",
       "question": "¿Qué hace la sentencia UPSERT?",
       "options": [
-        "Inserta un registro si no existe, o lo actualiza si ya existe",
+        "Inserta un registro si no existe",
         "Solo funciona con claves únicas compuestas",
         "Es equivalente a INSERT INTO",
         "Actualiza todos los registros de la tabla"
@@ -3688,7 +3688,7 @@
         "Todos los servidores aceptan escrituras",
         "Es solo para MongoDB",
         "Los esclavos replican al maestro",
-        "El servidor maestro acepta escrituras y las replica a los esclavos que sirven lecturas"
+        "El servidor maestro acepta escrituras"
       ],
       "correct": 3,
       "explanation": "Mejora el rendimiento de lectura y la disponibilidad.",
@@ -3737,7 +3737,7 @@
       "concept_id": "bases_de_datos_exp3_94",
       "question": "¿Qué es la fragmentación de un índice?",
       "options": [
-        "Desorganización del índice que reduce su rendimiento al insertarse/borrarse muchos registros",
+        "Desorganización del índice que reduce su rendimiento al",
         "La división de un índice entre varios discos",
         "El tamaño excesivo de un índice",
         "La compresión de un índice"
@@ -3751,7 +3751,7 @@
       "question": "¿Qué es el particionado de tablas (Table Partitioning)?",
       "options": [
         "Crear una copia de la tabla",
-        "Dividir físicamente una tabla muy grande en partes según un criterio (fecha, región...)",
+        "Dividir físicamente una tabla muy grande en partes según",
         "Comprimir las filas de una tabla",
         "Separar una tabla en varias por normalización"
       ],
@@ -3763,7 +3763,7 @@
       "concept_id": "bases_de_datos_exp3_96",
       "question": "¿Qué hace la función ROW_NUMBER() en SQL?",
       "options": [
-        "Asigna un número de fila secuencial único dentro de cada partición, sin saltos",
+        "Asigna un número de fila secuencial único dentro",
         "Asigna un rango con saltos en empates",
         "Numera solo las filas seleccionadas",
         "Cuenta el número de filas del resultado"
@@ -3779,7 +3779,7 @@
         "Ordena por densidad de datos",
         "Igual que RANK() con huecos",
         "Igual que ROW_NUMBER()",
-        "Asigna rangos sin huecos: si hay empate, el siguiente rango es inmediatamente el siguiente"
+        "Asigna rangos sin huecos: si hay empate"
       ],
       "correct": 3,
       "explanation": "1,2,2,3 (DENSE_RANK) vs 1,2,2,4 (RANK).",
@@ -3789,7 +3789,7 @@
       "concept_id": "bases_de_datos_exp3_98",
       "question": "¿Qué hace la cláusula PARTITION BY en funciones de ventana?",
       "options": [
-        "Divide el resultado en grupos para calcular la función por separado en cada grupo",
+        "Divide el resultado en grupos para calcular la",
         "Crea índices por partición",
         "Separa los datos en distintos esquemas",
         "Divide la tabla en particiones físicas"
@@ -3802,7 +3802,7 @@
       "concept_id": "bases_de_datos_exp3_99",
       "question": "¿Para qué sirve la función LEAD() en SQL?",
       "options": [
-        "Accede al valor de la fila siguiente dentro de la misma partición",
+        "Accede al valor de la fila siguiente dentro de la misma",
         "Desplaza todas las filas una posición",
         "Calcula la diferencia entre filas consecutivas",
         "Accede al valor de la fila anterior"
@@ -3818,7 +3818,7 @@
         "Un procedimiento almacenado sin parámetros",
         "Una función que devuelve una tabla",
         "Una vista parametrizada",
-        "Función que recibe parámetros y devuelve un único valor (no una tabla)"
+        "Función que recibe parámetros"
       ],
       "correct": 3,
       "explanation": "CREATE FUNCTION calcularIVA(@precio DECIMAL) RETURNS DECIMAL.",
@@ -3828,7 +3828,7 @@
       "concept_id": "bases_de_datos_exp3_101",
       "question": "¿Qué es Apache Cassandra?",
       "options": [
-        "BD NoSQL columnar distribuida diseñada para alta disponibilidad y escalabilidad masiva",
+        "BD NoSQL columnar distribuida diseñada para alta disponibilidad",
         "Una herramienta de backup de MongoDB",
         "Un motor de búsqueda de texto",
         "Un servidor de base de datos relacional de Apache"
@@ -3841,7 +3841,7 @@
       "concept_id": "bases_de_datos_exp3_102",
       "question": "¿Qué es Neo4j?",
       "options": [
-        "Base de datos de grafos que almacena nodos y relaciones de forma nativa",
+        "Base de datos de grafos que almacena nodos",
         "Un motor de búsqueda de texto completo",
         "Una BD relacional de código abierto",
         "Una base de datos documental"
@@ -3855,7 +3855,7 @@
       "question": "¿Qué es Elasticsearch?",
       "options": [
         "Una base de datos relacional elástica",
-        "Motor de búsqueda y análisis distribuido, orientado a texto completo y logs",
+        "Motor de búsqueda y análisis distribuido",
         "Un servidor de caché distribuido",
         "Un sistema de cola de mensajes"
       ],
@@ -3946,9 +3946,9 @@
       "question": "¿Cómo se implementa una relación N:M en el modelo relacional?",
       "options": [
         "Con dos vistas materializadas",
-        "Creando una tabla intermedia cuya clave primaria es la combinación de las PK de las dos tablas",
+        "Creando una tabla intermedia cuya clave primaria es la combinación de las PK de las",
         "Una única tabla con clave artificial y atributos duplicados",
-        "Blockchain"
+        "FileReader puede leer archivos binarios directamente sin conversión."
       ],
       "correct": 1,
       "explanation": "La tabla intermedia (tabla de unión) resuelve las relaciones muchos a muchos.",
@@ -4192,7 +4192,7 @@
       "question": "¿Qué diferencia esencial hay entre una vista y una tabla?",
       "options": [
         "Una vista almacena datos físicamente",
-        "Una vista es virtual; se reconstruye al vuelo a partir de la consulta SQL que la define",
+        "Una vista es virtual; se reconstruye al vuelo a",
         "Una vista no admite filtros",
         "Combinación de las anteriores"
       ],
@@ -4378,7 +4378,7 @@
       "options": [
         "El miembro es inmutable",
         "El miembro solo existe una vez por JVM",
-        "El miembro pertenece a la clase, no a la instancia",
+        "El miembro pertenece a la clase",
         "El miembro es privado"
       ],
       "correct": 2,
@@ -4389,7 +4389,7 @@
       "concept_id": "programacion_14",
       "question": "¿Qué hace la palabra clave 'final' en una variable en Java?",
       "options": [
-        "La hace privada",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "La elimina al salir del método",
         "La convierte en una constante que no puede reasignarse",
         "La comparte entre hilos"
@@ -4402,7 +4402,7 @@
       "concept_id": "programacion_15",
       "question": "¿Qué es el Polimorfismo en POO?",
       "options": [
-        "La capacidad de un objeto de tomar distintas formas según el contexto",
+        "La capacidad de un objeto de tomar distintas",
         "La herencia múltiple",
         "La copia de un objeto",
         "Tener múltiples constructores"
@@ -4415,7 +4415,7 @@
       "concept_id": "programacion_16",
       "question": "¿Qué es el Encapsulamiento en POO?",
       "options": [
-        "Ocultar el estado interno y exponer solo lo necesario mediante métodos",
+        "Ocultar el estado interno y exponer solo lo",
         "Crear múltiples instancias",
         "Implementar interfaces",
         "Heredar atributos de otra clase"
@@ -4428,7 +4428,7 @@
       "concept_id": "programacion_17",
       "question": "¿Para qué sirve el bloque 'finally' en un try-catch?",
       "options": [
-        "Se ejecuta siempre, haya o no excepción, para liberar recursos",
+        "Se ejecuta siempre, haya o no excepción",
         "Relanza la excepción capturada",
         "Solo se ejecuta si no hay excepción",
         "Solo se ejecuta si hay excepción"
@@ -4457,7 +4457,7 @@
         "El gestor de memoria de Windows",
         "La interfaz gráfica de Java",
         "El compilador de Java",
-        "Máquina virtual que interpreta el bytecode y lo hace multiplataforma"
+        "Máquina virtual que interpreta el bytecode"
       ],
       "correct": 3,
       "explanation": "Java Virtual Machine: Write Once, Run Anywhere.",
@@ -4467,7 +4467,7 @@
       "concept_id": "programacion_20",
       "question": "¿Qué es el Garbage Collector en Java?",
       "options": [
-        "Proceso automático que libera la memoria de objetos sin referencias",
+        "Proceso automático que libera la memoria de",
         "Un tipo de bucle eficiente",
         "Una clase para gestionar archivos",
         "Una herramienta de depuración"
@@ -4482,7 +4482,7 @@
       "options": [
         "No hay diferencia práctica",
         "La abstracta no se puede heredar",
-        "La clase abstracta puede tener código implementado; la interfaz solo define contratos (antes de Java 8)",
+        "La clase abstracta puede tener código implementado",
         "La interfaz puede tener atributos de estado"
       ],
       "correct": 2,
@@ -4493,7 +4493,7 @@
       "concept_id": "programacion_22",
       "question": "¿Qué es la 'Sobrecarga' (overloading) de métodos?",
       "options": [
-        "Definir varios métodos con el mismo nombre pero distintos parámetros en la misma clase",
+        "Definir varios métodos con el mismo nombre pero",
         "Llamar a un método de la clase padre",
         "Cambiar el cuerpo de un método heredado",
         "Definir un método abstracto"
@@ -4506,10 +4506,10 @@
       "concept_id": "programacion_23",
       "question": "¿Qué es la 'Sobrescritura' (overriding) de métodos?",
       "options": [
-        "Usar @Deprecated",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Definir varios métodos con el mismo nombre",
-        "Redefinir en la subclase un método heredado de la clase padre",
-        "Llamar a super()"
+        "Redefinir en la subclase un método heredado de la clase",
+        "Depende exclusivamente de la configuración del sistema operativo."
       ],
       "correct": 2,
       "explanation": "Se usa @Override para marcarla explícitamente.",
@@ -4546,7 +4546,7 @@
       "question": "¿Qué es la Recursividad?",
       "options": [
         "El uso de múltiples hilos",
-        "Un bucle infinito",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "La herencia en cadena",
         "Un método que se llama a sí mismo con un caso base de parada"
       ],
@@ -4600,7 +4600,7 @@
         "Un método que devuelve una copia del objeto",
         "Un método estático de clase",
         "Un bloque de código final",
-        "Método especial que inicializa el objeto al crearse, sin tipo de retorno"
+        "Método especial que inicializa el objeto al crearse"
       ],
       "correct": 3,
       "explanation": "El constructor inicializa los atributos del objeto al crearlo con new. Tiene el mismo nombre que la clase y no tiene tipo de retorno. Si no se define, Java crea uno por defecto sin parámetros.",
@@ -4650,9 +4650,9 @@
       "question": "¿Qué hace 'continue' dentro de un bucle?",
       "options": [
         "Reinicia el bucle desde cero",
-        "Sale del bucle",
-        "Lanza una excepción",
-        "Salta a la siguiente iteración sin ejecutar el resto del cuerpo"
+        "Depende exclusivamente de la configuración del sistema operativo.",
+        "Depende exclusivamente de la configuración del sistema operativo.",
+        "Salta a la siguiente iteración sin ejecutar"
       ],
       "correct": 3,
       "explanation": "continue es el salto de iteración.",
@@ -4676,7 +4676,7 @@
       "question": "¿Qué es una expresión Lambda en Java 8+?",
       "options": [
         "Un método de la clase Object",
-        "Función anónima que implementa una interfaz funcional de forma compacta",
+        "Función anónima que implementa una interfaz",
         "Un tipo de bucle avanzado",
         "Un operador ternario extendido"
       ],
@@ -4691,7 +4691,7 @@
         "Una librería de red Java",
         "Una clase para leer ficheros",
         "Un tipo de colección",
-        "Permite procesar colecciones de forma funcional (filter, map, reduce) sin bucles explícitos"
+        "Permite procesar colecciones de forma"
       ],
       "correct": 3,
       "explanation": "list.stream().filter(...).collect(Collectors.toList()).",
@@ -4717,7 +4717,7 @@
         "Crea un nuevo objeto",
         "Accede a atributos estáticos",
         "Llama al constructor padre",
-        "Referencia a un método existente como si fuera una lambda"
+        "Referencia a un método existente como"
       ],
       "correct": 3,
       "explanation": "String::toUpperCase equivale a s -> s.toUpperCase().",
@@ -4728,7 +4728,7 @@
       "question": "¿Qué es un Optional en Java?",
       "options": [
         "Un tipo de excepción",
-        "Contenedor que puede o no contener un valor, evitando NullPointerException",
+        "Contenedor que puede o no contener un valor",
         "Un modificador de acceso",
         "Una colección de un solo elemento"
       ],
@@ -4779,9 +4779,9 @@
       "concept_id": "programacion_exp_44",
       "question": "¿Qué es la interfaz Comparable en Java?",
       "options": [
-        "Interfaz de streams",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Interfaz para clonar objetos",
-        "Interfaz que define el método compareTo() para el ordenamiento natural",
+        "Interfaz que define el método compareTo()",
         "Interfaz de colec­ciones"
       ],
       "correct": 2,
@@ -4794,7 +4794,7 @@
       "options": [
         "Son idénticos en rendimiento",
         "LinkedList es más rápida en todo",
-        "ArrayList usa array dinámico (acceso O(1)); LinkedList usa nodos enlazados (inserción O(1))",
+        "ArrayList usa array dinámico (acceso O(1))",
         "ArrayList no permite duplicados"
       ],
       "correct": 2,
@@ -4807,7 +4807,7 @@
       "options": [
         "Programación funcional con lambdas",
         "Programación en tiempo real",
-        "El flujo del programa lo determinan eventos del usuario o del sistema",
+        "El flujo del programa lo determinan eventos",
         "Programación sin bucles"
       ],
       "correct": 2,
@@ -4818,7 +4818,7 @@
       "concept_id": "programacion_exp_47",
       "question": "¿Qué es la herencia múltiple y por qué Java no la permite en clases?",
       "options": [
-        "Una clase hereda de varias a la vez; Java la evita para prevenir el 'diamante de la muerte'",
+        "Una clase hereda de varias a la vez",
         "La herencia múltiple es obligatoria en Java",
         "Java no soporta herencia de ningún tipo",
         "Java la permite usando extends múltiple"
@@ -4834,7 +4834,7 @@
         "Separación del front y el back",
         "Sincronización de hilos",
         "Seguridad en el acceso a datos",
-        "Single Responsibility: una clase debe tener un solo motivo para cambiar"
+        "Single Responsibility: una clase debe"
       ],
       "correct": 3,
       "explanation": "Principio de Responsabilidad Única.",
@@ -4846,7 +4846,7 @@
       "options": [
         "Opciones de herencia",
         "Orden de constructores",
-        "Open/Closed: abierto para extensión, cerrado para modificación",
+        "Open/Closed: abierto para extensión",
         "Orientación a objetos obligatoria"
       ],
       "correct": 2,
@@ -4871,9 +4871,9 @@
       "question": "¿Qué es una clase genérica en Java?",
       "options": [
         "Una clase que hereda de Object",
-        "Una clase parametrizada por tipo: List<T> puede ser List<String> o List<Integer>",
+        "Una clase parametrizada por tipo: List<T> puede",
         "Una clase sin atributos",
-        "Una clase abstracta"
+        "Un objeto es la plantilla y la clase es la instancia creada en memoria."
       ],
       "correct": 1,
       "explanation": "Los genéricos aportan seguridad de tipos en tiempo de compilación.",
@@ -4884,7 +4884,7 @@
       "question": "¿Qué hace 'try-with-resources' en Java?",
       "options": [
         "Crea un pool de conexiones",
-        "Cierra automáticamente recursos que implementan AutoCloseable al salir del bloque",
+        "Cierra automáticamente recursos que implementan",
         "Lanza una excepción chequeada",
         "Captura todas las excepciones posibles"
       ],
@@ -4897,7 +4897,7 @@
       "question": "¿Qué es la serialización en Java?",
       "options": [
         "Comprimir un fichero",
-        "Convertir un objeto a bytes para guardarlo o enviarlo por red",
+        "Convertir un objeto a bytes para",
         "Ordenar una colección",
         "Cifrar datos sensibles"
       ],
@@ -4925,7 +4925,7 @@
         "Una variable de clase inmutable",
         "Un constructor privado",
         "Un método sin retorno",
-        "Código que se ejecuta una sola vez cuando la clase se carga por primera vez"
+        "Código que se ejecuta una sola vez cuando la"
       ],
       "correct": 3,
       "explanation": "static { ... } inicializa la clase.",
@@ -4937,7 +4937,7 @@
       "options": [
         "Usar múltiples clases en un mismo paquete",
         "Tener varios constructores",
-        "Ejecutar múltiples hilos (threads) simultáneamente para mejorar el rendimiento",
+        "Ejecutar múltiples hilos (threads) simultáneamente",
         "Compilar varios proyectos a la vez"
       ],
       "correct": 2,
@@ -4948,7 +4948,7 @@
       "concept_id": "programacion_exp_57",
       "question": "¿Qué hace la palabra reservada 'synchronized' en Java?",
       "options": [
-        "Garantiza que solo un hilo a la vez puede ejecutar ese método o bloque",
+        "Garantiza que solo un hilo a la vez puede ejecutar",
         "Crea una copia del objeto para cada hilo",
         "Hace el método más rápido",
         "Lanza una excepción si hay concurrencia"
@@ -5029,7 +5029,7 @@
         "Crea un buffer automático",
         "Serializa el objeto al cerrarlo",
         "Evita que se lancen excepciones I/O",
-        "Lo cierra automáticamente al salir del bloque, incluso si hay excepción"
+        "Lo cierra automáticamente al salir del bloque"
       ],
       "correct": 3,
       "explanation": "try-with-resources cierra automáticamente los recursos al salir del bloque, incluso si hay excepción. El recurso debe implementar AutoCloseable. Evita el finally con close() manual.",
@@ -5106,7 +5106,7 @@
       "options": [
         "Un ORM para mapeo objeto-relacional",
         "Un framework web de Java",
-        "API de Java para conectar y ejecutar consultas en bases de datos relacionales",
+        "API de Java para conectar",
         "Un servidor de base de datos"
       ],
       "correct": 2,
@@ -5120,7 +5120,7 @@
         "Crear Statement → conectar → ejecutar → cerrar driver",
         "Conectar → ejecutar → crear Statement → cerrar",
         "Solo crear Connection y ejecutar directamente",
-        "Cargar driver → obtener Connection → crear Statement → ejecutar → cerrar"
+        "Cargar driver → obtener Connection → crear Statement → ejecutar →"
       ],
       "correct": 3,
       "explanation": "El flujo JDBC es siempre Connection → Statement → ResultSet.",
@@ -5133,7 +5133,7 @@
         "Un Statement normal con validación adicional",
         "Una conexión segura a la BD",
         "Un tipo de ResultSet",
-        "Consulta SQL precompilada con parámetros '?' que evita inyección SQL y mejora rendimiento"
+        "Consulta SQL precompilada con parámetros '?' que evita"
       ],
       "correct": 3,
       "explanation": "PreparedStatement precompila la consulta SQL y usa parámetros (?) en lugar de concatenar strings. Previene inyección SQL y mejora el rendimiento en consultas repetidas.",
@@ -5156,7 +5156,7 @@
       "concept_id": "programacion_exp2_73",
       "question": "¿Qué es ExecutorService en Java?",
       "options": [
-        "Framework que gestiona un pool de hilos para ejecutar tareas de forma eficiente",
+        "Framework que gestiona un pool de hilos para",
         "Un hilo de alta prioridad",
         "Un monitor de rendimiento de la JVM",
         "Una clase para sincronizar hilos"
@@ -5169,7 +5169,7 @@
       "concept_id": "programacion_exp2_74",
       "question": "¿Qué devuelve el método submit() de ExecutorService?",
       "options": [
-        "Un nuevo hilo",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "La prioridad de la tarea",
         "El resultado directo de la tarea",
         "Un objeto Future<T> con el resultado futuro de la tarea"
@@ -5184,7 +5184,7 @@
       "options": [
         "Un error de compilación en código multihilo",
         "Un hilo que acaba antes que otro",
-        "Cuando dos hilos acceden y modifican datos compartidos simultáneamente dando resultados inesperados",
+        "Cuando dos hilos acceden y modifican datos compartidos",
         "Un deadlock entre dos hilos"
       ],
       "correct": 2,
@@ -5211,7 +5211,7 @@
         "Data Redundancy Yielding",
         "Dynamic Reuse Yourself",
         "Design Right the first Year",
-        "Don't Repeat Yourself: evitar duplicar lógica en el código"
+        "Don't Repeat Yourself: evitar"
       ],
       "correct": 3,
       "explanation": "DRY reduce el mantenimiento y los errores.",
@@ -5223,7 +5223,7 @@
       "options": [
         "Knowledge Is Shared Software",
         "Keep Interfaces Stable and Safe",
-        "Keep It Simple, Stupid: preferir soluciones simples a complejas",
+        "Keep It Simple, Stupid: preferir soluciones",
         "Key Integration Support System"
       ],
       "correct": 2,
@@ -5234,9 +5234,9 @@
       "concept_id": "programacion_exp2_79",
       "question": "¿Qué es la inyección de dependencias (Dependency Injection)?",
       "options": [
-        "Principio donde las dependencias de una clase se pasan desde fuera en lugar de crearlas internamente",
+        "Principio donde las dependencias de una clase se pasan desde fuera en",
         "La búsqueda automática de clases en el classpath",
-        "Un tipo de herencia",
+        "FileReader puede leer archivos binarios directamente sin conversión.",
         "La inyección de código en tiempo de ejecución"
       ],
       "correct": 0,
@@ -5249,7 +5249,7 @@
       "options": [
         "Una clase sin atributos",
         "Una clase con método privado",
-        "Clase sin nombre definida e instanciada en una sola expresión",
+        "Clase sin nombre definida e instanciada en",
         "Una clase interna estática"
       ],
       "correct": 2,
@@ -5286,7 +5286,7 @@
       "concept_id": "programacion_exp3_83",
       "question": "¿Qué hace String.split() en Java?",
       "options": [
-        "Divide la cadena por un delimitador y devuelve un array de Strings",
+        "Divide la cadena por un delimitador",
         "Busca un patrón en la cadena",
         "Une varios strings con un separador",
         "Elimina espacios de la cadena"
@@ -5313,7 +5313,7 @@
       "question": "¿Cuál es la diferencia entre StringBuilder y StringBuffer?",
       "options": [
         "StringBuilder no existe en Java antiguo",
-        "StringBuilder no es thread-safe pero es más rápido; StringBuffer es synchronized",
+        "StringBuilder no es thread-safe pero es más rápido",
         "StringBuffer es más moderno",
         "Son idénticos en todo"
       ],
@@ -5339,7 +5339,7 @@
       "question": "¿Qué es la interfaz Comparator en Java?",
       "options": [
         "La interfaz para calcular igualdad",
-        "Interfaz funcional para definir un criterio de ordenación externo a la clase",
+        "Interfaz funcional para definir un criterio de",
         "La interfaz que permite clonar objetos",
         "La interfaz de las colecciones ordenadas"
       ],
@@ -5354,7 +5354,7 @@
         "Comparator está dentro de la clase; Comparable es externo",
         "Son la misma interfaz con diferente nombre",
         "Solo Comparator funciona con Lambda",
-        "Comparable define el orden natural dentro de la clase; Comparator es un criterio externo reutilizable"
+        "Comparable define el orden natural dentro de la clase"
       ],
       "correct": 3,
       "explanation": "Una clase solo puede implementar Comparable una vez; puede haber varios Comparator.",
@@ -5364,7 +5364,7 @@
       "concept_id": "programacion_exp3_89",
       "question": "¿Qué es un Enum en Java?",
       "options": [
-        "Tipo especial de clase que define un conjunto fijo de constantes nombradas",
+        "Tipo especial de clase que define un conjunto fijo de",
         "Un tipo de excepción catalogada",
         "Una variable de tipo entero con nombre",
         "Una clase abstracta con valores constantes"
@@ -5377,7 +5377,7 @@
       "concept_id": "programacion_exp3_90",
       "question": "¿Qué es una clase interna (inner class) en Java?",
       "options": [
-        "Clase definida dentro de otra clase, con acceso a los miembros de la clase exterior",
+        "Clase definida dentro de otra clase",
         "Una clase en otro paquete",
         "Una clase que hereda de otra",
         "Una clase abstracta"
@@ -5393,7 +5393,7 @@
         "Una forma de serializar objetos",
         "Un tipo de interfaz sellada",
         "Una colección especial de Java 16",
-        "Clases inmutables declaradas de forma compacta con constructor, getters y equals automáticos"
+        "Clases inmutables declaradas de forma"
       ],
       "correct": 3,
       "explanation": "record Punto(int x, int y) {} genera automáticamente constructor, getters, equals y hashCode.",
@@ -5416,7 +5416,7 @@
       "concept_id": "programacion_exp3_93",
       "question": "¿Qué es el operador instanceof mejorado (Pattern Matching, Java 16+)?",
       "options": [
-        "Comprueba el tipo y lo asigna directamente a una variable en una sola expresión",
+        "Comprueba el tipo y lo asigna directamente a",
         "Solo funciona con interfaces",
         "Solo funciona en switch",
         "Es igual al instanceof clásico"
@@ -5432,7 +5432,7 @@
         "Declara una variable de tipo variante genérica",
         "Crea una variable mutable compartida entre hilos",
         "Declara una variable global",
-        "Permite la inferencia de tipo local, el compilador deduce el tipo automáticamente"
+        "Permite la inferencia de tipo local"
       ],
       "correct": 3,
       "explanation": "var lista = new ArrayList<String>(); // el compilador infiere ArrayList<String>.",
@@ -5471,7 +5471,7 @@
         "El procesamiento de datos",
         "Los datos del sistema",
         "Los objetos que combinan datos y comportamiento",
-        "Blockchain"
+        "CSS es un lenguaje de marcas que define la estructura del documento."
       ],
       "correct": 2,
       "explanation": "En OOP los objetos encapsulan estado (atributos) y comportamiento (métodos).",
@@ -5484,7 +5484,7 @@
         "Puede ejecutarse indefinidamente",
         "Debe ser finito: termina en un número limitado de pasos",
         "Debe estar implementado en un lenguaje de programación",
-        "Greedy"
+        "El programa define la lógica y el algoritmo es su traducción al lenguaje."
       ],
       "correct": 1,
       "explanation": "Un algoritmo tiene que terminar; si no termina, no es un algoritmo sino un proceso.",
@@ -5496,7 +5496,7 @@
       "options": [
         "Optimizar el código para mayor eficiencia",
         "Generar documentación automáticamente",
-        "Analizar la ejecución paso a paso para encontrar errores lógicos",
+        "Analizar la ejecución paso a paso para encontrar",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -5508,9 +5508,9 @@
       "question": "¿Cómo funciona el modelo híbrido de Java (bytecode + JVM)?",
       "options": [
         "Compila directamente a código nativo de la CPU",
-        "Compila a bytecode independiente de la plataforma y lo ejecuta en la JVM",
+        "Compila a bytecode independiente de la plataforma y lo ejecuta en",
         "Solo interpreta el código sin compilar",
-        "Blockchain"
+        "FileReader puede leer archivos binarios directamente sin conversión."
       ],
       "correct": 1,
       "explanation": "Java = compilado a bytecode (.class) + interpretado por la JVM. Lo mejor de ambos mundos.",
@@ -5521,7 +5521,7 @@
       "question": "¿Cuál es la regla de encapsulación en POO?",
       "options": [
         "Atributos públicos y métodos privados",
-        "Atributos privados y métodos públicos (getters/setters)",
+        "Atributos privados y métodos públicos",
         "Todo público para facilitar el acceso",
         "Combinación de las anteriores"
       ],
@@ -5533,7 +5533,7 @@
       "concept_id": "programacion_real_102",
       "question": "¿Qué es una relación de Composición en POO?",
       "options": [
-        "Relación fuerte parte-todo donde las partes no pueden existir sin el objeto contenedor",
+        "Relación fuerte parte-todo donde las partes no pueden existir sin el objeto",
         "Relación débil donde las partes pueden existir sin el todo",
         "Relación de herencia entre clases",
         "Combinación de las anteriores"
@@ -5559,7 +5559,7 @@
       "concept_id": "programacion_real_104",
       "question": "¿Qué ventaja tiene usar un setter en lugar de acceso directo al atributo?",
       "options": [
-        "Permite validar los datos antes de modificar el estado del objeto",
+        "Permite validar los datos antes de modificar",
         "No hay diferencia funcional",
         "Es más rápido que el acceso directo",
         "Combinación de las anteriores"
@@ -5652,7 +5652,7 @@
       "options": [
         "Usar el mismo método en varias clases",
         "Redefinir un método de la clase padre en la clase hija",
-        "Definir métodos con el mismo nombre pero distintos parámetros en la misma clase",
+        "Definir métodos con el mismo nombre pero distintos parámetros en la",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -5689,8 +5689,8 @@
       "concept_id": "programacion_real_114",
       "question": "¿Dónde se almacenan los objetos y dónde las referencias en Java?",
       "options": [
-        "Todo en el Heap",
-        "Todo en el Stack",
+        "Un objeto es la plantilla y la clase es la instancia creada en memoria.",
+        "Un objeto es la plantilla y la clase es la instancia creada en memoria.",
         "Referencias en el Stack; objetos en el Heap",
         "Combinación de las anteriores"
       ],
@@ -5728,7 +5728,7 @@
       "concept_id": "programacion_real_117",
       "question": "¿Cómo se deben comparar dos Strings en Java?",
       "options": [
-        "Con el método .equals() para comparar contenido textual",
+        "Con el método .equals() para comparar contenido",
         "Con el operador === como en JavaScript",
         "Con el operador == para comparar contenido",
         "Combinación de las anteriores"
@@ -5769,7 +5769,7 @@
         "Los datos que introduce el usuario mediante dispositivos de entrada",
         "El algoritmo que procesa los datos y aplica la lógica del programa",
         "El sistema que muestra el resultado final al usuario",
-        "Blockchain"
+        "El programa define la lógica y el algoritmo es su traducción al lenguaje."
       ],
       "correct": 1,
       "explanation": "El algoritmo es el corazón del programa: transforma entradas en salidas útiles.",
@@ -5831,10 +5831,10 @@
     {
       "question": "¿Cuál es la relación correcta entre algoritmo y programa?",
       "options": [
-        "El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación",
+        "El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de",
         "El programa es independiente del lenguaje y el algoritmo depende del lenguaje",
         "Ambos son idénticos y solo se diferencian por el formato",
-        "Greedy"
+        "El programa define la lógica y el algoritmo es su traducción al lenguaje."
       ],
       "correct": 0,
       "explanation": "Algoritmo = solución abstracta independiente del lenguaje. Programa = algoritmo codificado.",
@@ -5845,7 +5845,7 @@
       "question": "¿Cuál es la regla obligatoria cuando se define una clase pública en Java?",
       "options": [
         "El nombre de la clase debe escribirse en minúsculas",
-        "El archivo debe llamarse igual que la clase pública y tener extensión .java",
+        "El archivo debe llamarse igual que la clase pública",
         "La clase debe contener al menos un método main",
         "Combinación de las anteriores"
       ],
@@ -5898,7 +5898,7 @@
       "options": [
         "Que el método devuelve un valor vacío",
         "Que el método no realiza ninguna acción",
-        "Que el método realiza una acción pero no devuelve ningún valor",
+        "Que el método realiza una acción pero no devuelve",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -5923,7 +5923,7 @@
       "question": "¿Qué requisito técnico es necesario para que el polimorfismo funcione en Java?",
       "options": [
         "El uso exclusivo de atributos protected",
-        "La sobrescritura (@Override) de métodos en las clases hijas",
+        "La sobrescritura (@Override) de métodos en las",
         "La creación de múltiples constructores",
         "Combinación de las anteriores"
       ],
@@ -6014,7 +6014,7 @@
       "question": "¿Cuál es correcta sobre los tipos primitivos en Java?",
       "options": [
         "Son objetos y disponen de métodos propios",
-        "Almacenan directamente el valor en memoria y no son objetos",
+        "Almacenan directamente el valor en memoria",
         "Siempre se almacenan en el heap",
         "Combinación de las anteriores"
       ],
@@ -6092,7 +6092,7 @@
       "question": "¿Qué característica permite la sobrecarga de métodos (overloading) en Java?",
       "options": [
         "Diferenciar métodos únicamente por su tipo de retorno",
-        "Definir varios métodos con el mismo nombre y distinta firma de parámetros",
+        "Definir varios métodos con el mismo nombre y distinta firma de",
         "Usar modificadores de acceso diferentes en cada método",
         "Combinación de las anteriores"
       ],
@@ -6196,7 +6196,7 @@
       "question": "¿Qué elemento se almacena en el Stack cuando se trabaja con objetos en Java?",
       "options": [
         "El objeto completo con todos sus atributos",
-        "La referencia que apunta al objeto almacenado en el Heap",
+        "La referencia que apunta al objeto almacenado en el",
         "Una copia independiente del objeto original",
         "Combinación de las anteriores"
       ],
@@ -6209,7 +6209,7 @@
       "question": "¿Qué significa que la clase String sea inmutable en Java?",
       "options": [
         "Que no se pueden comparar dos cadenas entre sí",
-        "Que una vez creado un texto, no puede modificarse su contenido",
+        "Que una vez creado un texto, no puede modificarse su",
         "Que solo puede crearse mediante el operador new",
         "Combinación de las anteriores"
       ],
@@ -6236,7 +6236,7 @@
       "options": [
         "Con == para comprobar referencias",
         "Comparando directamente su longitud",
-        "Con el método equals() que evalúa el contenido textual",
+        "Con el método equals() que evalúa el",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -6302,7 +6302,7 @@
         "Son más sencillos conceptualmente que los algoritmos clásicos",
         "Están optimizados (TimSort) y reducen errores en la implementación",
         "Permiten mantener el orden original del array automáticamente",
-        "Greedy"
+        "El programa define la lógica y el algoritmo es su traducción al lenguaje."
       ],
       "correct": 1,
       "explanation": "Arrays.sort() usa TimSort; Collections.sort() también. Eficiente y libre de bugs.",
@@ -6313,7 +6313,7 @@
       "question": "¿Cuál es la finalidad principal de la propiedad length en los arrays?",
       "options": [
         "Modificar el tamaño del array durante la ejecución",
-        "Conocer el número de elementos para acceder y recorrer el array de forma segura",
+        "Conocer el número de elementos para acceder",
         "Contar solo los elementos inicializados explícitamente",
         "Combinación de las anteriores"
       ],
@@ -6342,7 +6342,7 @@
       "question": "¿Cuál es la función del elemento <head> en un documento HTML?",
       "options": [
         "Vincula a otros documentos HTML",
-        "Contiene metadatos del documento no visibles en la página",
+        "Contiene metadatos del documento no visibles en la",
         "Agrupa los elementos del menú",
         "Define el encabezado visual de la página"
       ],
@@ -6354,9 +6354,9 @@
       "concept_id": "lenguaje_de_marcas_1",
       "question": "¿Qué atributo HTML hace que un formulario envíe datos sin recargar la página?",
       "options": [
-        "action='none'",
-        "method='post'",
-        "type='ajax'",
+        "FileReader puede leer archivos binarios directamente sin conversión.",
+        "FileReader puede leer archivos binarios directamente sin conversión.",
+        "FileReader puede leer archivos binarios directamente sin conversión.",
         "No es HTML, es JavaScript (preventDefault)"
       ],
       "correct": 3,
@@ -6510,7 +6510,7 @@
       "concept_id": "lenguaje_de_marcas_13",
       "question": "¿Cuál es la diferencia entre <strong> y <b> en HTML5?",
       "options": [
-        "<strong> indica importancia semántica; <b> es solo negrita visual",
+        "<strong> indica importancia semántica",
         "<b> es correcto en HTML5",
         "Son idénticos",
         "<strong> no tiene efecto visual"
@@ -6538,7 +6538,7 @@
       "options": [
         "El layout de una cuadrícula",
         "La forma en que se heredan las propiedades",
-        "Describe el espacio de un elemento: content, padding, border y margin",
+        "Describe el espacio de un elemento: content",
         "El modelo de renderizado de la GPU"
       ],
       "correct": 2,
@@ -6578,7 +6578,7 @@
         "Que es case sensitive",
         "Que se compila antes de usarse",
         "Que requiere servidor para funcionar",
-        "Usa etiquetas para estructurar y dar significado al contenido"
+        "Usa etiquetas para estructurar"
       ],
       "correct": 3,
       "explanation": "HyperText Markup Language.",
@@ -6771,9 +6771,9 @@
       "question": "¿Qué propiedad CSS define las columnas y filas de un grid?",
       "options": [
         "grid-template-columns / grid-template-rows",
-        "column-count",
-        "flex-direction",
-        "display"
+        "CSS es un lenguaje de marcas que define la estructura del documento.",
+        "CSS es un lenguaje de marcas que define la estructura del documento.",
+        "CSS es un lenguaje de marcas que define la estructura del documento."
       ],
       "correct": 0,
       "explanation": "grid-template-columns: 1fr 2fr 1fr;",
@@ -6809,7 +6809,7 @@
       "concept_id": "lenguaje_de_marcas_exp_36",
       "question": "¿Qué es una Media Query en CSS?",
       "options": [
-        "Regla CSS que aplica estilos según características del dispositivo (ancho, resolución)",
+        "Regla CSS que aplica estilos según",
         "Un tipo de selector avanzado",
         "Una API del navegador",
         "Una función de JavaScript"
@@ -6825,7 +6825,7 @@
         "Solo aplica el border sin padding",
         "Excluye el margin del modelo de caja",
         "Resetea todos los estilos",
-        "Incluye padding y border dentro del ancho/alto declarado del elemento"
+        "Incluye padding y border dentro del ancho/alto"
       ],
       "correct": 3,
       "explanation": "Hace el diseño más predecible.",
@@ -6835,7 +6835,7 @@
       "concept_id": "lenguaje_de_marcas_exp_38",
       "question": "¿Qué es la especificidad en CSS?",
       "options": [
-        "La prioridad que tiene un selector para aplicar sus estilos sobre otros",
+        "La prioridad que tiene un selector para aplicar",
         "El orden en que se cargan los estilos",
         "El peso del archivo CSS",
         "La herencia de propiedades"
@@ -6887,9 +6887,9 @@
       "concept_id": "lenguaje_de_marcas_exp_42",
       "question": "¿Para qué sirve el atributo 'colspan' en una celda de tabla?",
       "options": [
-        "Fusiona filas",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Permite que la celda ocupe múltiples columnas",
-        "Alinea el contenido",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Define el ancho de la celda"
       ],
       "correct": 1,
@@ -6915,7 +6915,7 @@
       "options": [
         "Propiedades heredadas automáticamente",
         "Selectores avanzados de atributo",
-        "Variables declaradas con '--nombre' y usadas con 'var(--nombre)'",
+        "Variables declaradas con '--nombre' y usadas con",
         "Clases dinámicas generadas con JavaScript"
       ],
       "correct": 2,
@@ -6928,7 +6928,7 @@
       "options": [
         "El sistema de caché del navegador",
         "El protocolo de comunicación entre HTML y CSS",
-        "Document Object Model: representación en árbol del documento HTML que JS puede manipular",
+        "Document Object Model: representación en árbol del",
         "Un tipo de base de datos del navegador"
       ],
       "correct": 2,
@@ -6939,7 +6939,7 @@
       "concept_id": "lenguaje_de_marcas_exp_46",
       "question": "¿Qué hace 'localStorage' en JavaScript?",
       "options": [
-        "Almacena datos en el navegador de forma persistente (no se borra al cerrar)",
+        "Almacena datos en el navegador de forma",
         "Envía datos al servidor",
         "Cifra los datos del formulario",
         "Guarda datos solo durante la sesión"
@@ -6952,10 +6952,10 @@
       "concept_id": "lenguaje_de_marcas_exp_47",
       "question": "¿Qué hace 'sessionStorage' en JavaScript?",
       "options": [
-        "Establece cookies",
+        "FileReader puede leer archivos binarios directamente sin conversión.",
         "Almacena datos permanentemente",
-        "Almacena datos solo durante la sesión activa del navegador (se borra al cerrar)",
-        "Comunica con la API"
+        "Almacena datos solo durante la sesión activa del navegador",
+        "FileReader puede leer archivos binarios directamente sin conversión."
       ],
       "correct": 2,
       "explanation": "sessionStorage vs localStorage: duración de vida.",
@@ -6965,9 +6965,9 @@
       "concept_id": "lenguaje_de_marcas_exp_48",
       "question": "¿Qué es JSON?",
       "options": [
-        "Formato ligero de intercambio de datos basado en texto, legible por humanos",
+        "Formato ligero de intercambio de datos basado en texto",
         "Un tipo de base de datos",
-        "Un protocolo de red",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "JavaScript Object Notation: solo para webs"
       ],
       "correct": 0,
@@ -6980,7 +6980,7 @@
       "options": [
         "Añade scroll automático",
         "Borra el elemento desbordado",
-        "Oculta el contenido que sobrepasa los límites del contenedor",
+        "Oculta el contenido que sobrepasa los",
         "Fuerza una media query"
       ],
       "correct": 2,
@@ -7046,7 +7046,7 @@
         "Verifica la conexión a Internet",
         "Obtiene datos del localStorage",
         "Descarga archivos automáticamente",
-        "Realiza peticiones HTTP asíncronas (GET, POST...) de forma nativa sin librerías externas"
+        "Realiza peticiones HTTP asíncronas (GET"
       ],
       "correct": 3,
       "explanation": "fetch(url).then(r => r.json()).then(data => console.log(data))",
@@ -7057,7 +7057,7 @@
       "question": "¿Qué es una Promesa (Promise) en JavaScript?",
       "options": [
         "Una variable global asíncrona",
-        "Objeto que representa el resultado futuro de una operación asíncrona (pendiente, resuelta o rechazada)",
+        "Objeto que representa el resultado futuro de",
         "Una función que devuelve null",
         "Un tipo de callback anidado"
       ],
@@ -7069,7 +7069,7 @@
       "concept_id": "lenguaje_de_marcas_exp2_56",
       "question": "¿Qué hace 'async/await' en JavaScript?",
       "options": [
-        "Permite escribir código asíncrono con sintaxis síncrona usando Promesas internamente",
+        "Permite escribir código asíncrono con",
         "Crea hilos de ejecución paralela",
         "Sustituye a los bucles for",
         "Bloquea el hilo principal de JS"
@@ -7122,7 +7122,7 @@
       "question": "¿Qué es XML?",
       "options": [
         "El sucesor de HTML",
-        "Lenguaje de marcas extensible para estructura y transporte de datos, con etiquetas personalizables",
+        "Lenguaje de marcas extensible para",
         "Un protocolo de red",
         "Un lenguaje de programación"
       ],
@@ -7134,7 +7134,7 @@
       "concept_id": "lenguaje_de_marcas_exp2_61",
       "question": "¿Qué es un DTD en XML?",
       "options": [
-        "Document Type Definition: define la estructura válida del documento XML",
+        "Document Type Definition: define la estructura",
         "Un tipo de dato de XML",
         "La declaración inicial del fichero XML",
         "Un espacio de nombres XML"
@@ -7148,7 +7148,7 @@
       "question": "¿Qué es XSD en XML?",
       "options": [
         "Un estándar de cifrado XML",
-        "XML Schema Definition: descripción más potente y tipada que DTD para validar XML",
+        "XML Schema Definition: descripción más",
         "Una extensión de DTD",
         "Un tipo de consulta XML"
       ],
@@ -7160,8 +7160,8 @@
       "concept_id": "lenguaje_de_marcas_exp2_63",
       "question": "¿Qué es XSLT?",
       "options": [
-        "Un tipo de DTD",
-        "Lenguaje para transformar documentos XML en otros formatos (HTML, PDF, otro XML)",
+        "Un documento XML puede tener múltiples elementos raíz simultáneamente.",
+        "Lenguaje para transformar documentos XML en otros formatos",
         "Un lenguaje de consulta XML",
         "Un protocolo de transferencia XML"
       ],
@@ -7176,7 +7176,7 @@
         "Una extensión de CSS para XML",
         "Un tipo de esquema XML",
         "Un protocolo de red basado en XML",
-        "Lenguaje para seleccionar nodos dentro de un documento XML"
+        "Lenguaje para seleccionar nodos dentro de"
       ],
       "correct": 3,
       "explanation": "//libro/titulo selecciona todos los títulos de libros.",
@@ -7251,7 +7251,7 @@
       "concept_id": "lenguaje_de_marcas_exp2_70",
       "question": "¿Qué hace 'will-change' en CSS?",
       "options": [
-        "Avisa al navegador de qué propiedades cambiarán para que optimice el renderizado",
+        "Avisa al navegador de qué propiedades cambiarán",
         "Aplica cambios antes de que ocurran",
         "Invalida el caché de estilos",
         "Define una animación futura"
@@ -7305,7 +7305,7 @@
       "options": [
         "Una extensión de CSS para formas",
         "Un tipo de imagen rasterizada de alta resolución",
-        "Scalable Vector Graphics: formato de imagen vectorial basado en XML que escala sin perder calidad",
+        "Scalable Vector Graphics: formato de imagen vectorial basado",
         "Un protocolo de transferencia de gráficos"
       ],
       "correct": 2,
@@ -7329,7 +7329,7 @@
       "concept_id": "lenguaje_de_marcas_exp3_76",
       "question": "¿Cuál es la diferencia principal entre SVG y Canvas?",
       "options": [
-        "SVG es vectorial y declarativo (DOM); Canvas es rasterizado y controlado por JS",
+        "SVG es vectorial y declarativo (DOM)",
         "Son equivalentes técnicamente",
         "SVG no escala; Canvas sí",
         "Canvas es vectorial; SVG es de mapa de bits"
@@ -7345,7 +7345,7 @@
         "Un estándar de responsive design",
         "Un protocolo de cifrado web",
         "Un lenguaje de programación accesible",
-        "Web Content Accessibility Guidelines: estándar internacional para hacer la web accesible a personas con discapacidad"
+        "Web Content Accessibility Guidelines: estándar"
       ],
       "correct": 3,
       "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
@@ -7369,9 +7369,9 @@
       "question": "¿Qué significa 'aria-hidden=\"true\"' en HTML?",
       "options": [
         "Oculta el elemento visualmente",
-        "Oculta el elemento a los lectores de pantalla sin quitarlo visualmente",
+        "Oculta el elemento a los lectores de pantalla",
         "Lo convierte en no interactivo",
-        "Lo excluye del DOM"
+        "CSS es un lenguaje de marcas que define la estructura del documento."
       ],
       "correct": 1,
       "explanation": "Útil para iconos decorativos que no aportan información.",
@@ -7382,7 +7382,7 @@
       "question": "¿Qué hace el atributo 'srcset' en una etiqueta <img>?",
       "options": [
         "Define múltiples fuentes de vídeo",
-        "Permite definir varias versiones de la imagen para distintas resoluciones y densidades de pantalla",
+        "Permite definir varias versiones de la imagen para distintas",
         "Comprime automáticamente la imagen",
         "Establece un fallback para navegadores antiguos"
       ],
@@ -7395,7 +7395,7 @@
       "question": "¿Qué hace el elemento <picture> en HTML5?",
       "options": [
         "Optimiza automáticamente las imágenes",
-        "Permite servir imágenes diferentes según el dispositivo usando <source> con media queries",
+        "Permite servir imágenes diferentes según el dispositivo",
         "Define el copyright de la imagen",
         "Es un contenedor para varias etiquetas <img>"
       ],
@@ -7407,7 +7407,7 @@
       "concept_id": "lenguaje_de_marcas_exp3_82",
       "question": "¿Qué es el atributo 'meta viewport' y para qué sirve?",
       "options": [
-        "Controla la escala y el ancho de la ventana en dispositivos móviles para el responsive design",
+        "Controla la escala y el ancho de la ventana en dispositivos móviles para el",
         "Configura la caché del navegador",
         "Define el tamaño de la ventana del navegador en escritorio",
         "Establece el idioma del documento"
@@ -7423,7 +7423,7 @@
         "Etiquetas de Schema.org para datos estructurados",
         "Etiquetas de control de caché",
         "Meta tags de SEO para motores de búsqueda",
-        "Meta tags que controlan cómo se previsualiza un enlace al compartirlo en redes sociales"
+        "Meta tags que controlan cómo se previsualiza un enlace al"
       ],
       "correct": 3,
       "explanation": "<meta property='og:title' content='Mi artículo'>",
@@ -7462,7 +7462,7 @@
         "El tipo de selector: gana el más genérico",
         "No hay reglas fijas para especificidad",
         "El orden en el archivo CSS: gana el último",
-        "Peso de cada selector: ID(100) > Clase/Atributo(10) > Elemento(1). Gana el mayor peso total"
+        "Peso de cada selector: ID(100) > Clase/Atributo(10) >"
       ],
       "correct": 3,
       "explanation": "#id .clase div tiene especificidad (1,1,1) = 111 puntos.",
@@ -7487,7 +7487,7 @@
       "options": [
         "La ruta de los archivos JavaScript",
         "El proceso de minificación de CSS",
-        "Secuencia de pasos para renderizar la página: HTML→DOM, CSS→CSSOM, merge→Render Tree→Layout→Paint",
+        "Secuencia de pasos para renderizar la página: HTML→DOM",
         "El recorrido del puntero del ratón en la página"
       ],
       "correct": 2,
@@ -7498,7 +7498,7 @@
       "concept_id": "lenguaje_de_marcas_real_89",
       "question": "¿Cuál es la característica principal de XML respecto al diseño?",
       "options": [
-        "Es exclusivamente estructural, sin información de diseño, usado para describir datos",
+        "Es exclusivamente estructural, sin información de diseño",
         "Contiene información de diseño y estructura",
         "Es un lenguaje de programación para manipular datos",
         "Combinación de las anteriores"
@@ -7525,7 +7525,7 @@
       "question": "¿Qué ventaja tiene XSD sobre DTD en XML?",
       "options": [
         "Son equivalentes en capacidades",
-        "XSD ofrece mayor capacidad expresiva, gramática sofisticada y fácil extensión",
+        "XSD ofrece mayor capacidad expresiva",
         "DTD tiene mayor capacidad expresiva",
         "Combinación de las anteriores"
       ],
@@ -7539,7 +7539,7 @@
       "options": [
         "Aplica a cualquier span dentro de un p",
         "Aplica solo al primer span de cada párrafo",
-        "No aplica a un span dentro de un a que está dentro de un p",
+        "No aplica a un span dentro de un a que está dentro de",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -7577,7 +7577,7 @@
       "question": "¿Cuál es el objetivo de la especificación DOM?",
       "options": [
         "Mejorar la velocidad de carga de páginas web",
-        "Permitir a programas (JS) acceder y modificar dinámicamente contenido, estructura y estilo",
+        "Permitir a programas (JS) acceder",
         "Definir la apariencia visual de elementos HTML",
         "Combinación de las anteriores"
       ],
@@ -7590,7 +7590,7 @@
       "question": "¿Qué inconveniente principal tiene DTD frente a XSD?",
       "options": [
         "No es compatible con XML",
-        "Falta de soporte para namespaces y tipos de datos limitados",
+        "Falta de soporte para namespaces y",
         "No permite definir elementos",
         "Combinación de las anteriores"
       ],
@@ -7628,7 +7628,7 @@
       "concept_id": "lenguaje_de_marcas_real_99",
       "question": "¿Qué define JSON como estructura de datos?",
       "options": [
-        "Basado en pares (objetos) y listas ordenadas (arrays)",
+        "Basado en pares (objetos) y listas ordenadas",
         "Solo objetos, no arrays",
         "Pares de valores sin estructura definida",
         "Combinación de las anteriores"
@@ -7642,7 +7642,7 @@
       "question": "¿Qué hace maxOccurs='unbounded' en XSD?",
       "options": [
         "Define el elemento como opcional",
-        "Permite que el elemento aparezca un número ilimitado de veces",
+        "Permite que el elemento aparezca un número ilimitado",
         "Limita el elemento a una sola ocurrencia",
         "Combinación de las anteriores"
       ],
@@ -7682,7 +7682,7 @@
       "options": [
         "Ordena los nodos de un conjunto",
         "Copia nodos del XML origen al resultado",
-        "Implementa lógica condicional compleja con xsl:when y xsl:otherwise",
+        "Implementa lógica condicional compleja con xsl:when",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -7706,7 +7706,7 @@
       "concept_id": "lenguaje_de_marcas_real_105",
       "question": "¿Qué hace el operador | en XPath?",
       "options": [
-        "Une múltiples rutas (unión de conjuntos de nodos)",
+        "Une múltiples rutas",
         "Filtra nodos por condición",
         "Navega al nodo padre",
         "Combinación de las anteriores"
@@ -7734,7 +7734,7 @@
       "options": [
         "Define la estructura de un elemento complejo",
         "Define un tipo con elementos hijo",
-        "Define un tipo personalizado simple basado en restricciones de tipos existentes",
+        "Define un tipo personalizado simple basado en",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -7745,7 +7745,7 @@
       "concept_id": "lenguaje_de_marcas_real_108",
       "question": "¿Puede un documento XML ser bien formado pero no válido?",
       "options": [
-        "Sí, puede estar bien formado pero romper las reglas de su DTD o XSD asociado",
+        "Sí, puede estar bien formado pero romper las reglas de su DTD o XSD",
         "No, si es bien formado siempre es válido",
         "No, la validación y la buena formación son equivalentes",
         "Combinación de las anteriores"
@@ -7758,7 +7758,7 @@
       "concept_id": "lenguaje_de_marcas_real_109",
       "question": "¿Para qué sirve un sistema ERP?",
       "options": [
-        "Para coordinar procesos empresariales facilitando la toma de decisiones y productividad",
+        "Para coordinar procesos empresariales facilitando la toma",
         "Solo para gestión de recursos humanos",
         "Solo para gestión de relaciones con clientes",
         "Combinación de las anteriores"
@@ -7772,7 +7772,7 @@
       "question": "¿Qué riesgo existe al exportar datos de un ERP?",
       "options": [
         "Que los datos pierdan formato",
-        "Filtrar información confidencial fuera de la empresa",
+        "Filtrar información confidencial fuera de la",
         "Que el sistema ERP deje de funcionar",
         "Combinación de las anteriores"
       ],
@@ -7823,7 +7823,7 @@
       "question": "¿Cuál es la distinción correcta entre 'etiqueta' y 'elemento' en lenguajes de marcas?",
       "options": [
         "Una etiqueta es el par nombre-valor que indica propiedades asociadas a los elementos",
-        "Una etiqueta es el texto entre los símbolos <nombre>; un elemento tiene etiqueta de inicio y cierre y organiza el contenido",
+        "Una etiqueta es el texto entre los símbolos <nombre>; un elemento tiene etiqueta de inicio",
         "Un elemento siempre se refiere a contenido vacío sin etiqueta de fin",
         "Un lenguaje de programación de sistemas sin relación con este concepto"
       ],
@@ -7835,9 +7835,9 @@
     {
       "question": "¿Quién propuso en 1980 el hipertexto que dio origen al HTML?",
       "options": [
-        "El Consorcio W3C",
+        "FileReader puede leer archivos binarios directamente sin conversión.",
         "Tim Berners-Lee mientras trabajaba en el CERN",
-        "La ISO",
+        "FileReader puede leer archivos binarios directamente sin conversión.",
         "Combinación de las anteriores"
       ],
       "correct": 1,
@@ -7862,7 +7862,7 @@
       "question": "¿Cómo se define principalmente un lenguaje de marcas?",
       "options": [
         "Método de codificación que usa variables y funciones aritméticas",
-        "Método de codificación donde texto se combina con etiquetas para indicar estructura o estilo",
+        "Método de codificación donde texto se combina con etiquetas para indicar estructura o",
         "Lenguaje de programación para crear aplicaciones web interactivas",
         "Un lenguaje de programación de sistemas sin relación con este concepto"
       ],
@@ -7876,7 +7876,7 @@
       "options": [
         "Es un lenguaje de marcas estructural",
         "Es un lenguaje de marcas jerárquico",
-        "No es un lenguaje de marcas, sino un lenguaje de estilos que separa contenido de presentación",
+        "No es un lenguaje de marcas, sino un lenguaje de estilos que separa contenido de",
         "Un lenguaje de programación de sistemas sin relación con este concepto"
       ],
       "correct": 2,
@@ -7915,7 +7915,7 @@
       "options": [
         "Enlace a CSS externo mediante <link> en el <head>",
         "CSS mediante <style> en el <head>",
-        "CSS en línea (inline) con el atributo style='...' en la etiqueta HTML",
+        "CSS en línea (inline) con el atributo style='...' en la",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -7980,7 +7980,7 @@
       "options": [
         "Establecer la estructura del contenido web",
         "Definir cómo se almacenan los documentos en el servidor",
-        "Permitir que programas (JS) accedan y modifiquen dinámicamente el contenido, estructura y estilo",
+        "Permitir que programas (JS) accedan y modifiquen dinámicamente el",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -8019,7 +8019,7 @@
       "options": [
         "Su sintaxis es demasiado compleja y no está basada en XML",
         "Permite definición de secuencias no ordenadas y claves combinadas",
-        "Carece de soporte para namespaces y limita los elementos terminales a datos textuales",
+        "Carece de soporte para namespaces y limita los elementos terminales a datos",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -8032,7 +8032,7 @@
       "options": [
         "<alumno> es hijo directo de <facultad>",
         "No tienen relación de descendencia",
-        "<alumno> es descendiente de <facultad>, al estar en un hijo de <facultad>",
+        "<alumno> es descendiente de <facultad>",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -8058,7 +8058,7 @@
       "options": [
         "xs:maxLength para longitud máxima",
         "xs:pattern para expresión regular",
-        "xs:enumeration que lista los valores exactos permitidos",
+        "xs:enumeration que lista los valores",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -8071,7 +8071,7 @@
       "options": [
         "JSON es un lenguaje de marcas con estructura jerárquica de etiquetas",
         "Los documentos JSON son más difíciles de interpretar que XML",
-        "JSON se basa en dos estructuras: objetos (pares nombre/valor) y arrays (lista ordenada de valores)",
+        "JSON se basa en dos estructuras: objetos (pares nombre/valor) y arrays",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -8201,7 +8201,7 @@
       "options": [
         "Indica el namespace de la hoja de estilos",
         "Define el tipo de documento de salida (html, xml)",
-        "Especifica los elementos XML de entrada a los que aplica la plantilla, usando XPath",
+        "Especifica los elementos XML de entrada a los que aplica la",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -8225,7 +8225,7 @@
     {
       "question": "¿Qué instrucción XSLT implementa lógica condicional compleja con múltiples ramas?",
       "options": [
-        "xsl:if con test",
+        "FileReader puede leer archivos binarios directamente sin conversión.",
         "<xsl:choose> con <xsl:when> y <xsl:otherwise>",
         "xsl:for-each con select",
         "Combinación de las anteriores"
@@ -8239,7 +8239,7 @@
       "question": "¿Qué distingue a las bases de datos XML nativas?",
       "options": [
         "Usan SQL para todas las operaciones",
-        "Almacenan el XML en su forma original sin alterarlo, aprovechando su modelo jerárquico",
+        "Almacenan el XML en su forma original sin alterarlo",
         "Convierten el XML a esquema relacional optimizado",
         "Las bases de datos NoSQL, que no aplican este concepto"
       ],
@@ -8265,7 +8265,7 @@
       "question": "La herramienta IMPORTXML de Google Sheets, ¿para qué sirve?",
       "options": [
         "Transformar documentos XML a JSON o PDF",
-        "Importar datos de formatos estructurados (XML, HTML, CSV) desde una URL aplicando XPath",
+        "Importar datos de formatos estructurados (XML",
         "Crear documentos XML nuevos desde datos de una hoja de cálculo",
         "Combinación de las anteriores"
       ],
@@ -8279,7 +8279,7 @@
       "options": [
         "No pueden procesar XML sin middleware adicional",
         "No permiten gestión de transacciones en entornos XML",
-        "No pueden restaurar el XML original sin alterarlo; tienen diferencia de filosofía con la naturaleza jerárquica del XML",
+        "No pueden restaurar el XML original sin alterarlo",
         "Las bases de datos NoSQL, que no aplican este concepto"
       ],
       "correct": 2,
@@ -8330,7 +8330,7 @@
       "question": "¿Qué afirmación sobre XQuery es correcta?",
       "options": [
         "No permite acceso a múltiples documentos en una consulta",
-        "Ofrece transformación: no solo recupera datos sino que devuelve nuevas estructuras",
+        "Ofrece transformación: no solo recupera datos sino que devuelve nuevas",
         "Carece de funciones para cadenas, números o fechas",
         "Combinación de las anteriores"
       ],
@@ -8356,7 +8356,7 @@
       "question": "Si un CMS genera RSS y HTML del mismo contenido, ¿qué proceso técnico subyace?",
       "options": [
         "Creación manual separada por el webmaster",
-        "Transformación del contenido almacenado en repositorio para adaptarlo al formato RSS",
+        "Transformación del contenido almacenado en repositorio para adaptarlo",
         "Almacenamiento directo en formato RSS sin transformación",
         "Combinación de las anteriores"
       ],
@@ -8369,7 +8369,7 @@
       "question": "¿Cuál es la función esencial de un 'agregador' de canales RSS/Atom?",
       "options": [
         "Crear nuevos artículos y publicarlos en sitios web",
-        "Suscribirse a fuentes RSS/Atom y notificar al usuario sobre actualizaciones desde la última lectura",
+        "Suscribirse a fuentes RSS/Atom y notificar al usuario sobre actualizaciones desde la última",
         "Validar la sintaxis de feeds para asegurar compatibilidad con estándares",
         "Combinación de las anteriores"
       ],
@@ -8382,7 +8382,7 @@
       "question": "¿Por qué se desarrolló Atom como alternativa a RSS?",
       "options": [
         "Para reemplazar completamente a RSS y hacerlo obsoleto",
-        "Para abordar la confusión por múltiples estándares RSS incompatibles, dando solución más consistente",
+        "Para abordar la confusión por múltiples estándares RSS incompatibles",
         "Para crear feeds sin usar XML como base",
         "Combinación de las anteriores"
       ],
@@ -8396,7 +8396,7 @@
       "options": [
         "Más popularidad y soporte universal",
         "Menos elementos obligatorios para crear un feed",
-        "Capacidad de indicar el tipo de contenido (texto, HTML, multimedia) y usar fecha estándar ISO",
+        "Capacidad de indicar el tipo de contenido (texto",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -8421,7 +8421,7 @@
       "question": "¿Cuál es el propósito principal de la sindicación de contenidos (redifusión web)?",
       "options": [
         "Almacenar información de sitios web en base de datos centralizada",
-        "Permitir que un sitio acceda a contenidos de otro, distribuyendo automáticamente info actualizada a suscriptores",
+        "Permitir que un sitio acceda a contenidos de otro",
         "Convertir XML a formatos no-marcas para visualización en navegadores",
         "Combinación de las anteriores"
       ],
@@ -8434,7 +8434,7 @@
       "question": "¿Por qué es importante validar un feed RSS/Atom?",
       "options": [
         "Para mejorar su posición automáticamente en buscadores",
-        "Para asegurar que cumple estándares W3C, verificar accesibilidad de la URI y ausencia de errores de sintaxis",
+        "Para asegurar que cumple estándares W3C",
         "Para registrarse en directorios sin aprobación manual",
         "Combinación de las anteriores"
       ],
@@ -8460,7 +8460,7 @@
       "question": "¿Cuál es la diferencia clave entre agregadores web y de escritorio?",
       "options": [
         "Los de escritorio no requieren conexión a Internet",
-        "Los web se alojan en sitios y se acceden por navegador (multi-dispositivo); los de escritorio se instalan localmente",
+        "Los web se alojan en sitios y se acceden por navegador",
         "Los web no sincronizan la lectura entre dispositivos",
         "Combinación de las anteriores"
       ],
@@ -8486,7 +8486,7 @@
       "question": "¿Por qué los dispositivos portátiles y empleados móviles impulsan necesidades en la gestión empresarial?",
       "options": [
         "Para limitar el acceso solo desde oficinas centrales",
-        "Para encontrar soluciones que integren a empleados móviles en los flujos de información en tiempo real",
+        "Para encontrar soluciones que integren a empleados móviles en los flujos de",
         "Para reducir la información disponible a empleados móviles",
         "Combinación de las anteriores"
       ],
@@ -8499,7 +8499,7 @@
       "question": "¿De dónde pueden provenir los módulos complementarios de un ERP?",
       "options": [
         "Solo del fabricante del software base para asegurar compatibilidad",
-        "Del fabricante, de terceros o como programas personalizados solicitados por la empresa",
+        "Del fabricante, de terceros o como programas personalizados solicitados por la",
         "Solo de repositorios open source",
         "Combinación de las anteriores"
       ],
@@ -8512,7 +8512,7 @@
       "question": "¿Cuál es el objetivo de un ERP unificado frente a aplicaciones por departamento?",
       "options": [
         "Reducir la formación del personal estandarizando interfaces",
-        "Controlar procesos de negocio coordinadamente para toma de decisiones, reducir costes y aumentar productividad",
+        "Controlar procesos de negocio coordinadamente para toma de decisiones",
         "Permitir que cada departamento mantenga autonomía total en sus datos",
         "Combinación de las anteriores"
       ],
@@ -8525,7 +8525,7 @@
       "question": "¿Cuál es un requisito previo fundamental antes de instalar cualquier ERP?",
       "options": [
         "Contratar hosting cloud específico para el ERP",
-        "Crear previamente la base de datos, ya que todo ERP se apoya en una BD centralizada",
+        "Crear previamente la base de datos",
         "Instalar un IDE para la personalización futura",
         "Combinación de las anteriores"
       ],
@@ -8538,7 +8538,7 @@
       "question": "¿Qué función adicional cumple un CRM más allá de ser una lista de contactos?",
       "options": [
         "Generar automáticamente informes financieros para auditorías externas",
-        "Mantener equipos actualizados con información personalizada sobre clientes, historial y preferencias",
+        "Mantener equipos actualizados con información personalizada sobre clientes",
         "Reemplazar completamente las funciones de un sistema de gestión de almacén",
         "Combinación de las anteriores"
       ],
@@ -8552,7 +8552,7 @@
       "options": [
         "Incompatibilidad de formatos entre ERP y ofimática",
         "Ralentización del sistema ERP por la carga de datos exportados",
-        "Filtrar información confidencial de la empresa hacia el exterior sin control adecuado",
+        "Filtrar información confidencial de la empresa hacia el exterior sin control",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -8564,7 +8564,7 @@
       "question": "En un ERP con múltiples roles asignados a un usuario donde uno impone restricciones más estrictas, ¿qué ocurre?",
       "options": [
         "El usuario obtiene la suma de todos los privilegios",
-        "Prevalece el rol que impone las restricciones más estrictas para garantizar la seguridad",
+        "Prevalece el rol que impone las restricciones más estrictas para garantizar la",
         "El sistema pide al usuario que elija qué rol activar cada sesión",
         "Combinación de las anteriores"
       ],
@@ -8591,7 +8591,7 @@
       "options": [
         "XSD se centra solo en sintaxis de etiquetas sin tipos de datos ni restricciones",
         "XSD está escrito en un lenguaje diferente al XML que requiere analizadores distintos",
-        "XSD define estructura de documentos XML incluyendo tipos de datos, orden, ocurrencias y valores por defecto, mejorando las capacidades de DTD",
+        "XSD define estructura de documentos XML incluyendo tipos de datos",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -8656,7 +8656,7 @@
       "options": [
         "Facilidad para combinarse con otras DTD y soporte nativo para namespaces XML",
         "Soporte robusto para tipos de datos complejos y especificación del elemento raíz",
-        "Ausencia de tipos de datos, dificultad para ordenar elementos y limitada compatibilidad con namespaces XML",
+        "Ausencia de tipos de datos, dificultad para ordenar elementos y limitada compatibilidad con namespaces",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -8723,7 +8723,7 @@
       "question": "¿Qué hace 'git init' en un directorio?",
       "options": [
         "Configura el usuario de Git",
-        "Inicializa un nuevo repositorio Git local vacío",
+        "Inicializa un nuevo repositorio Git local",
         "Hace un primer commit",
         "Descarga un repositorio remoto"
       ],
@@ -8737,7 +8737,7 @@
       "options": [
         "Confirma los cambios locales",
         "Sube cambios al servidor",
-        "Crea una rama nueva",
+        "git push descarga los cambios del repositorio remoto al local.",
         "Descarga una copia completa de un repositorio remoto"
       ],
       "correct": 3,
@@ -8751,7 +8751,7 @@
         "Fusiona dos ramas",
         "Sube los cambios a remoto",
         "Muestra el historial de commits",
-        "Muestra los archivos modificados, preparados y sin seguimiento"
+        "Muestra los archivos modificados"
       ],
       "correct": 3,
       "explanation": "git status es el comando más usado del día a día.",
@@ -8761,10 +8761,10 @@
       "concept_id": "entornos_de_desarrollo_3",
       "question": "¿Qué hace 'git add .'?",
       "options": [
-        "Hace el commit",
-        "Crea una rama",
+        "git push descarga los cambios del repositorio remoto al local.",
+        "git push descarga los cambios del repositorio remoto al local.",
         "Elimina archivos del control de versiones",
-        "Prepara todos los cambios del directorio actual para el próximo commit"
+        "Prepara todos los cambios del directorio actual para el"
       ],
       "correct": 3,
       "explanation": "git add pasa cambios al staging area.",
@@ -8775,7 +8775,7 @@
       "question": "¿Qué hace 'git commit -m \"mensaje\"'?",
       "options": [
         "Fusiona ramas",
-        "Guarda los cambios preparados en el historial local con un mensaje",
+        "Guarda los cambios preparados en el",
         "Descarta los cambios",
         "Sube los cambios a remote"
       ],
@@ -8788,9 +8788,9 @@
       "question": "¿Qué hace 'git push'?",
       "options": [
         "Descarga cambios del remoto",
-        "Crea un tag",
+        "git push descarga los cambios del repositorio remoto al local.",
         "Envía los commits locales al repositorio remoto",
-        "Fusiona ramas"
+        "git push descarga los cambios del repositorio remoto al local."
       ],
       "correct": 2,
       "explanation": "push sincroniza local → remoto.",
@@ -8800,10 +8800,10 @@
       "concept_id": "entornos_de_desarrollo_6",
       "question": "¿Qué hace 'git pull'?",
       "options": [
-        "Sube cambios",
+        "git push descarga los cambios del repositorio remoto al local.",
         "Borra la rama remota",
         "Descarga y fusiona los cambios del remoto en la rama local",
-        "Muestra el log"
+        "git push descarga los cambios del repositorio remoto al local."
       ],
       "correct": 2,
       "explanation": "pull = fetch + merge.",
@@ -8813,7 +8813,7 @@
       "concept_id": "entornos_de_desarrollo_7",
       "question": "¿Qué es una 'rama' (branch) en Git?",
       "options": [
-        "Una línea de desarrollo paralela e independiente del proyecto",
+        "Una línea de desarrollo paralela e",
         "Un repositorio secundario",
         "Una copia de seguridad",
         "Un colaborador del proyecto"
@@ -8829,7 +8829,7 @@
         "Sube la rama a remoto",
         "Fusiona los cambios de la rama indicada en la rama actual",
         "Crea una copia de la rama",
-        "Borra la rama"
+        "git push descarga los cambios del repositorio remoto al local."
       ],
       "correct": 1,
       "explanation": "merge integra cambios de una rama a otra.",
@@ -8842,7 +8842,7 @@
         "Muestra los archivos modificados",
         "Muestra el historial de commits del repositorio",
         "Muestra las ramas remotas",
-        "Muestra los stashes"
+        "git push descarga los cambios del repositorio remoto al local."
       ],
       "correct": 1,
       "explanation": "git log --oneline es más legible.",
@@ -8852,7 +8852,7 @@
       "concept_id": "entornos_de_desarrollo_10",
       "question": "¿Qué es el 'staging area' o índice en Git?",
       "options": [
-        "Zona intermedia donde se preparan los cambios antes del commit",
+        "Zona intermedia donde se preparan los",
         "El directorio de trabajo",
         "La caché de Git",
         "El repositorio remoto"
@@ -8893,7 +8893,7 @@
       "options": [
         "Probar la aplicación",
         "Tomar decisiones de negocio",
-        "Facilitar el proceso Scrum y eliminar impedimentos del equipo",
+        "Facilitar el proceso Scrum y eliminar",
         "Escribir el código"
       ],
       "correct": 2,
@@ -8907,7 +8907,7 @@
         "El sprint final del proyecto",
         "Una reunión de revisión",
         "La lista de tareas pendientes",
-        "Iteración de duración fija (1-4 semanas) para entregar un incremento"
+        "Iteración de duración fija"
       ],
       "correct": 3,
       "explanation": "Cada sprint produce software potencialmente entregable.",
@@ -8933,7 +8933,7 @@
         "Hacer los tests al final del desarrollo",
         "No hacer tests en código simple",
         "Tests automáticos en producción",
-        "Escribir primero el test que falla y luego el código que lo pasa"
+        "Escribir primero el test que falla"
       ],
       "correct": 3,
       "explanation": "Red → Green → Refactor.",
@@ -8970,9 +8970,9 @@
       "question": "¿Qué es el refactoring de código?",
       "options": [
         "Añadir nuevas funcionalidades",
-        "Corregir bugs",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Optimizar la base de datos",
-        "Mejorar la estructura interna del código sin cambiar su comportamiento externo"
+        "Mejorar la estructura interna del código sin"
       ],
       "correct": 3,
       "explanation": "Refactoring mejora la mantenibilidad.",
@@ -8985,7 +8985,7 @@
         "Un gestor de dependencias",
         "Un sistema de control de versiones",
         "Un servidor de aplicaciones",
-        "Entorno de Desarrollo Integrado con editor, depurador y compilador"
+        "Entorno de Desarrollo Integrado con editor"
       ],
       "correct": 3,
       "explanation": "IntelliJ IDEA, Eclipse, VS Code son IDEs.",
@@ -9022,9 +9022,9 @@
       "question": "¿Qué hace 'git stash'?",
       "options": [
         "Borra los cambios no guardados",
-        "Crea una nueva rama",
+        "git push descarga los cambios del repositorio remoto al local.",
         "Sube los cambios al remoto",
-        "Guarda temporalmente los cambios no confirmados sin hacer commit"
+        "Guarda temporalmente los cambios no confirmados"
       ],
       "correct": 3,
       "explanation": "git stash pop recupera los cambios guardados.",
@@ -9034,10 +9034,10 @@
       "concept_id": "entornos_de_desarrollo_exp_24",
       "question": "¿Qué hace 'git rebase'?",
       "options": [
-        "Reaplica los commits de una rama sobre otra, reescribiendo el historial",
+        "Reaplica los commits de una rama sobre otra",
         "Descarga cambios remotos",
         "Borra el historial de commits",
-        "Fusiona dos ramas"
+        "git push descarga los cambios del repositorio remoto al local."
       ],
       "correct": 0,
       "explanation": "Rebase crea un historial lineal.",
@@ -9049,7 +9049,7 @@
       "options": [
         "Hace un merge selectivo",
         "Aplica un commit específico de otra rama en la rama actual",
-        "Borra un commit",
+        "git push descarga los cambios del repositorio remoto al local.",
         "Copia una rama completa"
       ],
       "correct": 1,
@@ -9063,7 +9063,7 @@
         "Un tipo de commit",
         "Un comando Git",
         "Una petición HTTP",
-        "Solicitud de revisión y fusión de código de una rama a otra en plataformas como GitHub"
+        "Solicitud de revisión y fusión de"
       ],
       "correct": 3,
       "explanation": "Los PR habilitan la revisión de código en equipo.",
@@ -9074,7 +9074,7 @@
       "question": "¿Qué es un 'conflicto de merge' en Git?",
       "options": [
         "Un error de red al hacer push",
-        "Ocurre cuando dos ramas modificaron las mismas líneas y Git no puede fusionarlas automáticamente",
+        "Ocurre cuando dos ramas modificaron las",
         "Un commit duplicado",
         "Una rama huérfana"
       ],
@@ -9089,7 +9089,7 @@
         "El historial de commits",
         "La configuración de ramas remotas",
         "Un log de errores de Git",
-        "Archivo que lista los ficheros y directorios que Git debe ignorar"
+        "Archivo que lista los ficheros"
       ],
       "correct": 3,
       "explanation": "node_modules/ y .env suelen estar en .gitignore.",
@@ -9112,7 +9112,7 @@
       "concept_id": "entornos_de_desarrollo_exp_30",
       "question": "¿Qué son las pruebas de regresión?",
       "options": [
-        "Verifican que los cambios nuevos no rompieron funcionalidad existente",
+        "Verifican que los cambios nuevos no rompieron",
         "Prueban la interfaz de usuario",
         "Prueban el rendimiento bajo carga",
         "Prueban la seguridad de la aplicación"
@@ -9126,7 +9126,7 @@
       "question": "¿Qué es el 'coverage' de pruebas?",
       "options": [
         "La velocidad de los tests",
-        "Porcentaje de líneas de código ejecutadas por los tests",
+        "Porcentaje de líneas de código ejecutadas por los",
         "El resultado de los tests automáticos",
         "El número total de tests"
       ],
@@ -9154,7 +9154,7 @@
         "Un gestor de dependencias",
         "Un formateador de bases de datos",
         "Un depurador de memoria",
-        "Herramienta que analiza el código fuente para detectar errores de estilo y posibles bugs"
+        "Herramienta que analiza el código fuente para"
       ],
       "correct": 3,
       "explanation": "ESLint para JS, Checkstyle para Java.",
@@ -9164,10 +9164,10 @@
       "concept_id": "entornos_de_desarrollo_exp_34",
       "question": "¿Qué significa 'código legacy'?",
       "options": [
-        "Código de terceros",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Código en un lenguaje obsoleto",
         "Código antiguo, difícil de mantener, generalmente sin tests",
-        "Código comentado"
+        "Depende exclusivamente de la configuración del sistema operativo."
       ],
       "correct": 2,
       "explanation": "El legacy es el mayor reto de la ingeniería de software.",
@@ -9177,7 +9177,7 @@
       "concept_id": "entornos_de_desarrollo_exp_35",
       "question": "¿Qué es el pair programming?",
       "options": [
-        "Dos programadores trabajando juntos en el mismo código simultáneamente",
+        "Dos programadores trabajando juntos en el mismo",
         "Hacer dos versiones del mismo módulo",
         "Trabajar en dos ramas distintas",
         "Programar en dos lenguajes a la vez"
@@ -9190,7 +9190,7 @@
       "concept_id": "entornos_de_desarrollo_exp_36",
       "question": "¿Qué es un 'code review'?",
       "options": [
-        "Revisión del código por otro desarrollador antes de integrarlo",
+        "Revisión del código por otro desarrollador",
         "La ejecución automática de tests",
         "La documentación del código",
         "El análisis de rendimiento"
@@ -9203,7 +9203,7 @@
       "concept_id": "entornos_de_desarrollo_exp_37",
       "question": "¿Qué es el 'Agile Manifesto'?",
       "options": [
-        "Documento que establece los 4 valores y 12 principios del desarrollo ágil de software",
+        "Documento que establece los 4 valores",
         "Un lenguaje de programación ágil",
         "Un framework de gestión de proyectos",
         "Un estándar ISO para software"
@@ -9216,7 +9216,7 @@
       "concept_id": "entornos_de_desarrollo_exp_38",
       "question": "¿Qué es el 'Product Backlog' en Scrum?",
       "options": [
-        "Lista priorizada de todas las funcionalidades y mejoras pendientes del producto",
+        "Lista priorizada de todas las funcionalidades",
         "El plan de sprints completados",
         "El registro de errores del software",
         "El documento de requisitos técnicos"
@@ -9229,7 +9229,7 @@
       "concept_id": "entornos_de_desarrollo_exp_39",
       "question": "¿Qué es la velocidad (velocity) en Scrum?",
       "options": [
-        "Cantidad de trabajo (story points) completada en un Sprint",
+        "Cantidad de trabajo (story points) completada",
         "El número de commits por día",
         "La rapidez del servidor",
         "El rendimiento de la CPU del equipo"
@@ -9258,7 +9258,7 @@
         "Un estado del sistema",
         "Un método de una clase",
         "Una clase del sistema",
-        "Entidad externa (persona, sistema) que interactúa con el sistema"
+        "Entidad externa (persona"
       ],
       "correct": 3,
       "explanation": "Los actores están fuera del sistema.",
@@ -9336,7 +9336,7 @@
         "Una herramienta de CI/CD",
         "Un generador de datos de prueba",
         "Un framework de testing funcional",
-        "Framework de Java para crear objetos simulados (mocks) en pruebas unitarias"
+        "Framework de Java para crear objetos"
       ],
       "correct": 3,
       "explanation": "when(mock.metodo()).thenReturn(valor)",
@@ -9349,7 +9349,7 @@
         "Una copia exacta del objeto real",
         "Un objeto genérico sin métodos",
         "Un objeto de la clase padre",
-        "Objeto simulado que imita el comportamiento de una dependencia real en un test"
+        "Objeto simulado que imita el comportamiento"
       ],
       "correct": 3,
       "explanation": "Los mocks aíslan la unidad bajo prueba.",
@@ -9359,7 +9359,7 @@
       "concept_id": "entornos_de_desarrollo_exp2_49",
       "question": "¿Qué es BDD (Behavior Driven Development)?",
       "options": [
-        "Metodología que escribe tests en lenguaje natural (Given/When/Then) entendible por negocio",
+        "Metodología que escribe tests en lenguaje natural",
         "Tests automáticos en producción",
         "Un framework de integración continua",
         "Una variante de TDD solo para frontend"
@@ -9375,7 +9375,7 @@
         "Una prueba unitaria automatizada",
         "Una prueba de carga y rendimiento",
         "Una prueba de seguridad",
-        "Verifica que el sistema cumple los requisitos del cliente desde su perspectiva"
+        "Verifica que el sistema cumple los"
       ],
       "correct": 3,
       "explanation": "Las pruebas de aceptación validan el valor de negocio.",
@@ -9385,7 +9385,7 @@
       "concept_id": "entornos_de_desarrollo_exp2_51",
       "question": "¿Qué es Selenium?",
       "options": [
-        "Herramienta para automatizar pruebas de interfaz web (E2E) en navegadores",
+        "Herramienta para automatizar pruebas de",
         "Un gestor de dependencias",
         "Un servidor de CI/CD",
         "Un framework de testing unitario"
@@ -9400,7 +9400,7 @@
       "options": [
         "La planificación del siguiente Sprint",
         "La retrospectiva del equipo",
-        "Reunión al final del Sprint donde el equipo presenta el incremento a los stakeholders",
+        "Reunión al final del Sprint donde el equipo",
         "El daily standup del viernes"
       ],
       "correct": 2,
@@ -9413,7 +9413,7 @@
       "options": [
         "El daily standup del lunes",
         "Reunión de planificación del Sprint",
-        "Reunión del equipo para analizar qué salió bien, qué mejorar y cómo en el próximo Sprint",
+        "Reunión del equipo para analizar qué salió",
         "Revisión del producto con el cliente"
       ],
       "correct": 2,
@@ -9425,7 +9425,7 @@
       "question": "¿Qué es la Definición de Hecho (Definition of Done)?",
       "options": [
         "La descripción de una historia de usuario",
-        "Conjunto de criterios acordados que debe cumplir todo incremento para considerarse terminado",
+        "Conjunto de criterios acordados que debe cumplir todo",
         "El criterio de aceptación de un Sprint",
         "Los requisitos del Product Backlog"
       ],
@@ -9439,7 +9439,7 @@
       "options": [
         "Un caso de uso UML",
         "Un commit de Git",
-        "Descripción breve de una funcionalidad desde la perspectiva del usuario: Como [rol] quiero [acción] para [beneficio]",
+        "Descripción breve de una funcionalidad",
         "Un informe de bug"
       ],
       "correct": 2,
@@ -9453,7 +9453,7 @@
         "Un servidor de aplicaciones Java",
         "Un gestor de repositorios Git",
         "Un sistema de monitorización",
-        "Servidor de automatización open source para implementar pipelines CI/CD"
+        "Servidor de automatización open source para"
       ],
       "correct": 3,
       "explanation": "Jenkins automatiza build, test y deploy.",
@@ -9466,7 +9466,7 @@
         "Una rama especial de Git",
         "Un servidor de pruebas",
         "Una herramienta de versionado",
-        "Secuencia automatizada de etapas (build, test, deploy) que el código atraviesa automáticamente"
+        "Secuencia automatizada de etapas (build"
       ],
       "correct": 3,
       "explanation": "Los pipelines garantizan calidad continua.",
@@ -9479,7 +9479,7 @@
         "Un cliente de escritorio de Git",
         "Una extensión del IDE para GitHub",
         "Un servicio de hosting de imágenes Docker",
-        "Plataforma de CI/CD integrada en GitHub que ejecuta workflows definidos en YAML"
+        "Plataforma de CI/CD integrada en GitHub que ejecuta"
       ],
       "correct": 3,
       "explanation": "Los workflows se definen en .github/workflows/*.yml.",
@@ -9490,8 +9490,8 @@
       "question": "¿Qué es un artefacto en el contexto de CI/CD?",
       "options": [
         "Un registro de log del pipeline",
-        "Una rama de Git",
-        "El resultado compilado del proceso de build (JAR, WAR, Docker image, APK)",
+        "Depende exclusivamente de la configuración del sistema operativo.",
+        "El resultado compilado del proceso de build (JAR",
         "Una variable de entorno del servidor"
       ],
       "correct": 2,
@@ -9504,7 +9504,7 @@
       "options": [
         "Crea una copia de seguridad del repositorio",
         "Sube el commit al servidor con ese nombre",
-        "Crea una etiqueta (tag) que marca un commit específico, usada para versiones de lanzamiento",
+        "Crea una etiqueta (tag) que marca un commit específico",
         "Crea una rama llamada v1.0.0"
       ],
       "correct": 2,
@@ -9516,7 +9516,7 @@
       "question": "¿Qué hace 'git bisect'?",
       "options": [
         "Divide el repositorio en dos partes",
-        "Realiza una búsqueda binaria en el historial para encontrar el commit que introdujo un bug",
+        "Realiza una búsqueda binaria en el historial",
         "Compara dos ramas automáticamente",
         "Elimina commits duplicados"
       ],
@@ -9530,7 +9530,7 @@
       "options": [
         "Muestra todos los cambios en el archivo",
         "Borra el historial del archivo",
-        "Muestra quién escribió cada línea del archivo y en qué commit",
+        "Muestra quién escribió cada línea del archivo",
         "Culpa a un colaborador de un error"
       ],
       "correct": 2,
@@ -9542,7 +9542,7 @@
       "question": "¿Qué son los Git Hooks?",
       "options": [
         "Plugins de autenticación de GitHub",
-        "Scripts que se ejecutan automáticamente antes o después de acciones Git (commit, push, merge)",
+        "Scripts que se ejecutan automáticamente antes",
         "Webhooks de GitHub Actions",
         "Ramas protegidas del repositorio"
       ],
@@ -9556,7 +9556,7 @@
       "options": [
         "Un repositorio privado de un solo desarrollador",
         "Un repositorio con una sola rama",
-        "Repositorio Git único que contiene múltiples proyectos o servicios relacionados",
+        "Repositorio Git único que contiene múltiples proyectos o",
         "Un repositorio muy grande"
       ],
       "correct": 2,
@@ -9594,7 +9594,7 @@
       "question": "¿Qué es la deuda técnica?",
       "options": [
         "El coste del hardware del proyecto",
-        "Costo acumulado de decisiones técnicas rápidas que habrá que corregir en el futuro",
+        "Costo acumulado de decisiones técnicas rápidas que habrá",
         "El coste del licenciamiento del software",
         "Los errores sin resolver de la Sprint anterior"
       ],
@@ -9607,7 +9607,7 @@
       "question": "¿Qué es SonarQube?",
       "options": [
         "Un gestor de dependencias",
-        "Plataforma de análisis y medición continua de la calidad y seguridad del código fuente",
+        "Plataforma de análisis",
         "Un IDE orientado a métricas",
         "Un servidor de integración continua"
       ],
@@ -9619,7 +9619,7 @@
       "concept_id": "entornos_de_desarrollo_exp3_69",
       "question": "¿Qué es un 'code smell'?",
       "options": [
-        "Indicio en el código de un problema de diseño que dificulta el mantenimiento (sin ser un bug)",
+        "Indicio en el código de un problema de diseño",
         "Un error de compilación",
         "Un bug oculto en el código",
         "Una vulnerabilidad de seguridad"
@@ -9634,7 +9634,7 @@
       "options": [
         "Un plugin de Maven para tests",
         "Un generador de diagramas UML",
-        "Herramienta que genera documentación HTML a partir de comentarios /** */ en el código Java",
+        "Herramienta que genera documentación HTML a",
         "La documentación oficial de Oracle"
       ],
       "correct": 2,
@@ -9671,7 +9671,7 @@
       "concept_id": "entornos_de_desarrollo_exp3_73",
       "question": "¿Qué es npm?",
       "options": [
-        "Gestor de paquetes de Node.js para instalar y gestionar dependencias JavaScript",
+        "Gestor de paquetes de Node.js para instalar y",
         "Un framework JavaScript",
         "Un servidor web de Node.js",
         "Un transpilador de TypeScript"
@@ -9697,8 +9697,8 @@
       "concept_id": "entornos_de_desarrollo_exp3_75",
       "question": "¿Qué es Webpack?",
       "options": [
-        "Un framework CSS",
-        "Empaquetador de módulos que agrupa archivos JS, CSS e imágenes en bundles optimizados",
+        "Depende exclusivamente de la configuración del sistema operativo.",
+        "Empaquetador de módulos que agrupa archivos JS",
         "Un servidor de desarrollo JavaScript",
         "Un transpilador de JavaScript"
       ],
@@ -9710,7 +9710,7 @@
       "concept_id": "entornos_de_desarrollo_real_76",
       "question": "¿Cuál es la distinción entre tipado fuerte y débil, y entre estático y dinámico?",
       "options": [
-        "El tipado fuerte restringe operaciones por tipo; el estático vincula el tipo al declarar la variable",
+        "El tipado fuerte restringe operaciones por tipo",
         "El tipado débil no permite uso indiscriminado de variables",
         "En tipado fuerte el tipo se asigna dinámicamente",
         "Combinación de las anteriores"
@@ -9738,7 +9738,7 @@
       "options": [
         "Transforma bytecode en código máquina",
         "Une códigos objeto para construir un ejecutable",
-        "Verifica el código léxica, sintáctica y semánticamente, avisando de errores",
+        "Verifica el código léxica, sintáctica y semánticamente",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -9749,7 +9749,7 @@
       "concept_id": "entornos_de_desarrollo_real_79",
       "question": "¿Qué son los lenguajes de segunda generación?",
       "options": [
-        "Lenguajes ensamblador con simbología legible, convertidos a código máquina mediante un ensamblador",
+        "Lenguajes ensamblador con simbología legible, convertidos a código máquina mediante un",
         "Lenguajes de alto nivel como Java o C#",
         "Lenguajes binarios de código máquina",
         "Un lenguaje de programación de sistemas sin relación con este concepto"
@@ -9762,7 +9762,7 @@
       "concept_id": "entornos_de_desarrollo_real_80",
       "question": "¿Cómo se categoriza el software según su naturaleza?",
       "options": [
-        "Software de sistema, Software de aplicación y Software de programación",
+        "Software de sistema, Software de aplicación",
         "BIOS, UEFI y Controladores",
         "Hardware, Firmware y Sistemas Operativos",
         "Combinación de las anteriores"
@@ -9842,7 +9842,7 @@
       "options": [
         "Reemplazar funcionalidades centrales del IDE",
         "Permitir que el IDE se ejecute en diferentes SO",
-        "Extender o mejorar las características y funcionalidades del IDE",
+        "Extender o mejorar las características y funcionalidades del",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -9854,7 +9854,7 @@
       "question": "¿Cómo gestionan los IDEs la detección de errores en lenguajes interpretados como Python?",
       "options": [
         "En ambos tipos los errores se muestran durante la compilación",
-        "En interpretados los errores se detectan durante la ejecución; en compilados durante la compilación",
+        "En interpretados los errores se detectan durante la ejecución",
         "En interpretados solo el programador detecta errores manualmente",
         "Un lenguaje de programación de sistemas sin relación con este concepto"
       ],
@@ -9894,7 +9894,7 @@
       "options": [
         "Proporcionar un lenguaje de programación de alto nivel",
         "Estandarizar interfaces entre lenguajes de programación",
-        "Ofrecer herramientas para representación gráfica de un sistema informático con orientación a objetos",
+        "Ofrecer herramientas para representación gráfica de un sistema",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -9919,7 +9919,7 @@
       "question": "¿Qué capacidad valiosa ofrecen las herramientas CASE para documentar proyectos existentes?",
       "options": [
         "Optimizar automáticamente el rendimiento del código",
-        "La ingeniería inversa: generar diagramas de clase a partir del código fuente",
+        "La ingeniería inversa: generar diagramas de clase a partir del",
         "Migrar bases de datos entre sistemas",
         "Combinación de las anteriores"
       ],
@@ -9984,7 +9984,7 @@
       "question": "¿Cuál es la diferencia entre Composición y Agregación en UML?",
       "options": [
         "La Composición se representa con diamante hueco y la Agregación con diamante sólido",
-        "La Composición es fuerte y las partes se eliminan con el todo (diamante sólido); la Agregación es débil (diamante hueco)",
+        "La Composición es fuerte y las partes se eliminan con el todo (diamante sólido)",
         "La Agregación es fuerte (diamante sólido); la Composición es débil (diamante hueco)",
         "Combinación de las anteriores"
       ],
@@ -9997,7 +9997,7 @@
       "question": "¿Qué diagrama representa los estados de un componente y las transiciones entre ellos?",
       "options": [
         "El diagrama de casos de uso",
-        "El diagrama de estados o de máquina de estados",
+        "El diagrama de estados o de máquina de",
         "El diagrama general de interacción",
         "Combinación de las anteriores"
       ],
@@ -10009,7 +10009,7 @@
       "concept_id": "entornos_de_desarrollo_real_99",
       "question": "¿Un Actor en un diagrama de casos de uso puede ser?",
       "options": [
-        "Cualquier elemento que se relaciona con el sistema: persona, otro sistema o hardware",
+        "Cualquier elemento que se relaciona con el sistema: persona",
         "Solo una función interna del sistema",
         "Únicamente una persona física que interactúa con el sistema",
         "Combinación de las anteriores"
@@ -10024,7 +10024,7 @@
       "options": [
         "Es opcional para la funcionalidad del caso base",
         "Un caso de uso amplía opcionalmente a otro",
-        "Un caso de uso incluye a otro siempre de forma obligatoria para realizar su funcionalidad",
+        "Un caso de uso incluye a otro siempre de forma obligatoria",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -10035,7 +10035,7 @@
       "concept_id": "entornos_de_desarrollo_real_101",
       "question": "¿Qué representa la 'línea de vida' en un diagrama de secuencia?",
       "options": [
-        "Una línea vertical discontinua que indica el orden de los eventos asociados a cada elemento",
+        "Una línea vertical discontinua que indica el",
         "La duración absoluta de un proceso",
         "La jerarquía de las clases",
         "Combinación de las anteriores"
@@ -10050,7 +10050,7 @@
       "options": [
         "El equipo del cliente",
         "Cualquier actor del desarrollo de modo no exhaustivo",
-        "Los programadores, para verificar que funciones, métodos o clases funcionan correctamente",
+        "Los programadores, para verificar que funciones",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -10074,7 +10074,7 @@
       "concept_id": "entornos_de_desarrollo_real_104",
       "question": "¿Cuál es la distinción entre pruebas de caja negra y caja blanca?",
       "options": [
-        "Caja negra verifica funcionamiento externo sin ver el interior; caja blanca observa la construcción interna",
+        "Caja negra verifica funcionamiento externo sin ver el interior",
         "Caja negra comprueba rendimiento bajo carga; caja blanca verifica usabilidad",
         "Caja negra busca errores internos; caja blanca se centra en experiencia de usuario",
         "Combinación de las anteriores"
@@ -10087,7 +10087,7 @@
       "concept_id": "entornos_de_desarrollo_real_105",
       "question": "¿Cuándo se realizan las pruebas de regresión y cuál es su propósito?",
       "options": [
-        "Después de realizar cambios para comprobar que otras partes no se han visto afectadas negativamente",
+        "Después de realizar cambios para comprobar que otras partes no se han",
         "Solo antes del despliegue inicial",
         "Antes de cualquier cambio para establecer una línea base",
         "Combinación de las anteriores"
@@ -10100,7 +10100,7 @@
       "concept_id": "entornos_de_desarrollo_real_106",
       "question": "¿Cuál es la diferencia entre análisis estático y dinámico en pruebas de código?",
       "options": [
-        "El estático analiza el código sin ejecutarlo; el dinámico comprueba el funcionamiento ejecutándolo",
+        "El estático analiza el código sin ejecutarlo",
         "El estático busca sintaxis; el dinámico solo la interfaz",
         "El estático se realiza en producción; el dinámico en desarrollo",
         "Combinación de las anteriores"
@@ -10115,8 +10115,8 @@
       "options": [
         "Eliminar errores funcionales del sistema",
         "Añadir nuevas funcionalidades o características al programa",
-        "Técnicas que modifican un programa funcional para mejorar legibilidad y mantenimiento sin alterar su comportamiento",
-        "Docker"
+        "Técnicas que modifican un programa funcional para mejorar legibilidad y",
+        "Depende exclusivamente de la configuración del sistema operativo."
       ],
       "correct": 2,
       "explanation": "Refactorizar mejora la calidad interna del código sin cambiar lo que hace externamente.",
@@ -10141,7 +10141,7 @@
       "options": [
         "Los centralizados almacenan en local; los distribuidos en servidor remoto",
         "Los centralizados son de código cerrado; los distribuidos son open source",
-        "En centralizados las copias están en un servidor único; en distribuidos en el servidor y en cada máquina del equipo",
+        "En centralizados las copias están en un servidor único",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -10219,7 +10219,7 @@
       "concept_id": "cloud_computing_4",
       "question": "¿Qué es Amazon S3?",
       "options": [
-        "Un servicio de DNS",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Servicio de almacenamiento de objetos en la nube de AWS",
         "Una base de datos relacional",
         "Un servidor virtual de cómputo"
@@ -10245,7 +10245,7 @@
       "concept_id": "cloud_computing_6",
       "question": "¿Qué es el 'escalado automático' (auto scaling) en la nube?",
       "options": [
-        "Ajustar automáticamente la capacidad de recursos según la demanda",
+        "Ajustar automáticamente la capacidad de recursos",
         "Ampliar el storage manualmente",
         "Reiniciar servidores automáticamente",
         "Duplicar el ancho de banda"
@@ -10258,10 +10258,10 @@
       "concept_id": "cloud_computing_7",
       "question": "¿Qué es un contenedor en el contexto de cloud computing?",
       "options": [
-        "Un servidor físico",
+        "IaaS proporciona aplicaciones completas listas para usar en el navegador.",
         "Una máquina virtual completa",
         "Una cuenta de usuario cloud",
-        "Unidad ligera y portable que empaqueta una app con sus dependencias"
+        "Unidad ligera y portable que empaqueta una"
       ],
       "correct": 3,
       "explanation": "Docker es la tecnología de contenedores más usada.",
@@ -10285,7 +10285,7 @@
       "question": "¿Qué es serverless computing?",
       "options": [
         "Servidores sin sistema operativo",
-        "Ejecutar código sin gestionar servidores (el proveedor los gestiona)",
+        "Ejecutar código sin gestionar servidores",
         "Cloud sin acceso a internet",
         "Computación local sin red"
       ],
@@ -10310,9 +10310,9 @@
       "concept_id": "cloud_computing_11",
       "question": "¿Qué es la Alta Disponibilidad (HA) en cloud?",
       "options": [
-        "Diseño que minimiza el tiempo de inactividad distribuyendo recursos",
-        "Un tipo de backup",
-        "Una región de AWS",
+        "Diseño que minimiza el tiempo de inactividad",
+        "IaaS proporciona aplicaciones completas listas para usar en el navegador.",
+        "IaaS proporciona aplicaciones completas listas para usar en el navegador.",
         "Tener muchos usuarios simultáneos"
       ],
       "correct": 0,
@@ -10325,7 +10325,7 @@
       "options": [
         "Central Data Node",
         "Content Definition Node",
-        "Content Delivery Network: red de servidores que distribuye contenido globalmente cerca del usuario",
+        "Content Delivery Network: red de",
         "Cloud Data Network"
       ],
       "correct": 2,
@@ -10336,8 +10336,8 @@
       "concept_id": "cloud_computing_13",
       "question": "¿Qué es DevOps?",
       "options": [
-        "Cultura y prácticas que unen desarrollo y operaciones para acelerar entregas",
-        "Un proveedor cloud",
+        "Cultura y prácticas que unen desarrollo y",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Un tipo de base de datos cloud",
         "Un lenguaje de programación"
       ],
@@ -10352,7 +10352,7 @@
         "Configuración Inicial de Clúster y Despliegue",
         "Control de Instancias Cloud/Datos",
         "Código Interno / Código Distribuido",
-        "Integración Continua y Entrega/Despliegue Continuos: automatizar pruebas y despliegues"
+        "Integración Continua y Entrega/Despliegue Continuos:"
       ],
       "correct": 3,
       "explanation": "Jenkins, GitHub Actions y GitLab CI son herramientas CI/CD.",
@@ -10363,7 +10363,7 @@
       "question": "¿Qué es la nube híbrida?",
       "options": [
         "Una red local con VPN",
-        "Combinación de nube pública y privada interconectadas",
+        "Combinación de nube pública y privada",
         "Solo servicios de AWS y Azure",
         "Un tipo de VLAN en la nube"
       ],
@@ -10376,7 +10376,7 @@
       "question": "¿Qué es el SLA en cloud computing?",
       "options": [
         "El contrato de confidencialidad",
-        "Acuerdo de niveau de servicio que garantiza disponibilidad y rendimiento mínimos",
+        "Acuerdo de niveau de servicio que garantiza",
         "El precio del servicio cloud",
         "El plan de backup del proveedor"
       ],
@@ -10390,7 +10390,7 @@
       "options": [
         "Solo aplica a IaaS",
         "Todo lo gestiona el cliente",
-        "El proveedor gestiona la infraestructura; el cliente gestiona sus datos y aplicaciones",
+        "El proveedor gestiona la infraestructura",
         "Todo lo gestiona el proveedor"
       ],
       "correct": 2,
@@ -10402,7 +10402,7 @@
       "question": "¿Qué es Google Cloud Functions?",
       "options": [
         "Una base de datos de Google",
-        "Servicio serverless de Google Cloud para ejecutar código sin gestionar servidores",
+        "Servicio serverless de Google Cloud para",
         "Una herramienta de CI/CD",
         "Un servicio de DNS de Google"
       ],
@@ -10417,7 +10417,7 @@
         "Un servidor virtual de Microsoft",
         "Un sistema de archivos cloud",
         "Un servicio de monitorización",
-        "Servicio de identidad y acceso (IAM) de Microsoft en la nube"
+        "Servicio de identidad y acceso"
       ],
       "correct": 3,
       "explanation": "Gestiona identidades, autenticación y permisos.",
@@ -10430,7 +10430,7 @@
         "Usar siempre autenticación multifactor",
         "Dar acceso total a los administradores",
         "Cifrar todos los datos en reposo",
-        "Dar a cada usuario o servicio solo los permisos mínimos necesarios para su función"
+        "Dar a cada usuario o servicio solo los permisos"
       ],
       "correct": 3,
       "explanation": "Minimiza el impacto de una brecha de seguridad.",
@@ -10455,7 +10455,7 @@
       "options": [
         "Un servicio de monitorización",
         "Un sistema de contenedores",
-        "Herramienta de Infrastructure as Code (IaC) para provisionar recursos cloud de forma declarativa",
+        "Herramienta de Infrastructure as Code",
         "Un gestor de DNS"
       ],
       "correct": 2,
@@ -10467,9 +10467,9 @@
       "question": "¿Qué es la observabilidad en cloud?",
       "options": [
         "El uso de CPU del servidor",
-        "El SLA contratado",
+        "IaaS proporciona aplicaciones completas listas para usar en el navegador.",
         "El número de usuarios conectados",
-        "Capacidad de entender el estado interno del sistema con métricas, logs y trazas"
+        "Capacidad de entender el estado interno del"
       ],
       "correct": 3,
       "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
@@ -10482,7 +10482,7 @@
         "Cloud computing especial para dispositivos móviles",
         "Un tipo de red WiFi de baja latencia",
         "Una región adicional de AWS",
-        "Procesar datos cerca del origen (dispositivo/sensor) en lugar de en un datacenter central"
+        "Procesar datos cerca del origen (dispositivo/sensor) en lugar de"
       ],
       "correct": 3,
       "explanation": "Reduce latencia para IoT y aplicaciones en tiempo real.",
@@ -10493,7 +10493,7 @@
       "question": "¿Qué es un 'bucket' en Amazon S3?",
       "options": [
         "Una zona de disponibilidad",
-        "Contenedor lógico para almacenar objetos (archivos) en S3",
+        "Contenedor lógico para almacenar objetos",
         "Una instancia virtual EC2",
         "Una base de datos de clave-valor"
       ],
@@ -10507,7 +10507,7 @@
       "options": [
         "Vertical es más barato",
         "Horizontal no aplica en cloud",
-        "Vertical: añadir más potencia a un servidor; Horizontal: añadir más servidores",
+        "Vertical: añadir más potencia a un servidor",
         "Son lo mismo visto desde distinto ángulo"
       ],
       "correct": 2,
@@ -10519,7 +10519,7 @@
       "question": "¿Qué es un grupo de autoescalado (Auto Scaling Group) en AWS?",
       "options": [
         "Una VPC privada",
-        "Conjunto de instancias EC2 que escalan automáticamente según la demanda",
+        "Conjunto de instancias EC2 que escalan",
         "Un cluster de Kubernetes",
         "Un grupo de usuarios con permisos"
       ],
@@ -10531,9 +10531,9 @@
       "concept_id": "cloud_computing_exp_28",
       "question": "¿Qué es IAM en AWS?",
       "options": [
-        "Un firewall de AWS",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Un servicio de almacenamiento",
-        "Identity and Access Management: gestiona usuarios, roles y permisos en AWS",
+        "Identity and Access Management: gestiona usuarios",
         "Una base de datos de identidades"
       ],
       "correct": 2,
@@ -10546,7 +10546,7 @@
       "options": [
         "Una región geográfica de AWS",
         "Datacenter físico independiente dentro de una región de AWS",
-        "Una VLAN de AWS",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "Un grupo de servidores del mismo tipo"
       ],
       "correct": 1,
@@ -10558,7 +10558,7 @@
       "question": "¿Qué es Azure Blob Storage?",
       "options": [
         "Una base de datos relacional de Azure",
-        "Servicio de almacenamiento de objetos no estructurados en Microsoft Azure",
+        "Servicio de almacenamiento de objetos no",
         "Un servicio de DNS de Microsoft",
         "Un servidor virtual de Azure"
       ],
@@ -10570,7 +10570,7 @@
       "concept_id": "cloud_computing_exp2_31",
       "question": "¿Qué es Google Kubernetes Engine (GKE)?",
       "options": [
-        "Servicio gestionado de Kubernetes en Google Cloud Platform",
+        "Servicio gestionado de Kubernetes en",
         "Un servicio serverless de Google",
         "Una base de datos de Google",
         "Una red privada virtual de GCP"
@@ -10585,7 +10585,7 @@
       "options": [
         "Un tipo de facturación cloud",
         "Una herramienta de monitorización de costes",
-        "Práctica de gestión financiera del cloud para optimizar costes sin perder rendimiento",
+        "Práctica de gestión financiera del cloud para optimizar",
         "Un modelo de disponibilidad cloud"
       ],
       "correct": 2,
@@ -10596,7 +10596,7 @@
       "concept_id": "cloud_computing_exp2_33",
       "question": "¿Qué es RPO (Recovery Point Objective) en disaster recovery?",
       "options": [
-        "Máxima cantidad de datos que se puede perder medida en tiempo antes de un desastre",
+        "Máxima cantidad de datos que se puede perder medida en",
         "El coste de la recuperación",
         "El número de réplicas necesarias",
         "Tiempo máximo de recuperación del servicio"
@@ -10612,7 +10612,7 @@
         "El número de zonas de disponibilidad",
         "El coste de la interrupción",
         "Cantidad máxima de datos perdidos",
-        "Tiempo máximo aceptable para restaurar el servicio tras un fallo"
+        "Tiempo máximo aceptable para restaurar el"
       ],
       "correct": 3,
       "explanation": "RTO define cuánto tiempo puede estar el servicio caído.",
@@ -10623,7 +10623,7 @@
       "question": "¿Qué es una VPC (Virtual Private Cloud)?",
       "options": [
         "Una VPN de alta velocidad",
-        "Red privada virtual aislada dentro de la infraestructura de un proveedor cloud",
+        "Red privada virtual aislada dentro de la",
         "Un servidor virtual privado",
         "Una VLAN de datacenter físico"
       ],
@@ -10637,7 +10637,7 @@
       "options": [
         "Grupos de usuarios con permisos IAM",
         "Políticas de cifrado de datos",
-        "Firewalls virtuales que controlan el tráfico de entrada y salida de instancias EC2",
+        "Firewalls virtuales que controlan el tráfico",
         "VLANs dentro de la VPC"
       ],
       "correct": 2,
@@ -10648,7 +10648,7 @@
       "concept_id": "cloud_computing_exp2_37",
       "question": "¿Qué es un Load Balancer en cloud?",
       "options": [
-        "Distribuye el tráfico entrante entre múltiples instancias para evitar sobrecarga",
+        "Distribuye el tráfico entrante entre",
         "Un sistema de caché",
         "Un router de alta velocidad",
         "Un servidor de DNS"
@@ -10664,7 +10664,7 @@
         "Documentar todos los posibles fallos",
         "Usar hardware de máxima calidad",
         "Probar el sistema hasta que falle",
-        "Asumir que cualquier componente puede fallar y diseñar el sistema para que siga funcionando"
+        "Asumir que cualquier componente puede fallar"
       ],
       "correct": 3,
       "explanation": "Netflix Chaos Monkey implementa este principio deliberadamente.",
@@ -10676,7 +10676,7 @@
       "options": [
         "Una fotografía de la interfaz de usuario",
         "Una imagen de contenedor Docker",
-        "Captura del estado de un disco o volumen en un momento concreto, usada para backup",
+        "Captura del estado de un disco o volumen en un",
         "Una copia del código fuente"
       ],
       "correct": 2,
@@ -10689,7 +10689,7 @@
       "options": [
         "Nube privada con múltiples servidores",
         "Cloud en varios centros de datos del mismo proveedor",
-        "Usar servicios de varios proveedores cloud a la vez (AWS + Azure + GCP)",
+        "Usar servicios de varios proveedores cloud a la vez",
         "Tener múltiples cuentas en un mismo proveedor"
       ],
       "correct": 2,
@@ -10700,7 +10700,7 @@
       "concept_id": "cloud_computing_exp2_41",
       "question": "¿Qué es el vendor lock-in en cloud?",
       "options": [
-        "Dependencia excesiva de un proveedor cloud que dificulta migrar a otro",
+        "Dependencia excesiva de un proveedor cloud que",
         "El contrato mínimo de un proveedor cloud",
         "Los costes de egreso de datos",
         "Las restricciones de uso de un servicio"
@@ -10716,7 +10716,7 @@
         "Un tipo de firewall cloud",
         "Un servicio de IAM externo",
         "Un agente de monitorización",
-        "Software intermediario que aplica políticas de seguridad entre usuarios y proveedores cloud"
+        "Software intermediario que aplica políticas"
       ],
       "correct": 3,
       "explanation": "Los CASB dan visibilidad y control sobre el uso del cloud.",
@@ -10728,7 +10728,7 @@
       "options": [
         "Cifrar los datos mientras viajan por la red",
         "Cifrar el tráfico entre microservicios",
-        "Cifrar los datos almacenados en disco para protegerlos si hay acceso físico no autorizado",
+        "Cifrar los datos almacenados en disco para protegerlos",
         "Cifrar las contraseñas de acceso"
       ],
       "correct": 2,
@@ -10740,9 +10740,9 @@
       "question": "¿Qué es el cifrado en tránsito (encryption in transit)?",
       "options": [
         "Cifrar la base de datos en reposo",
-        "Cifrar los backups",
+        "FileReader puede leer archivos binarios directamente sin conversión.",
         "Cifrar los discos del servidor",
-        "Cifrar los datos mientras viajan entre sistemas mediante TLS/SSL"
+        "Cifrar los datos mientras viajan entre sistemas"
       ],
       "correct": 3,
       "explanation": "HTTPS usa TLS para cifrar el tráfico en tránsito.",
@@ -10753,7 +10753,7 @@
       "question": "¿Qué es Amazon CloudWatch?",
       "options": [
         "El servicio de DNS de AWS",
-        "Servicio de monitorización de métricas, logs y alarmas para recursos de AWS",
+        "Servicio de monitorización de métricas",
         "La consola de administración de AWS",
         "Un servicio de almacenamiento de logs"
       ],
@@ -10767,7 +10767,7 @@
       "options": [
         "El historial de facturación de AWS",
         "Una herramienta de depuración de Lambda",
-        "Servicio que registra todas las llamadas a la API de AWS para auditoría y cumplimiento",
+        "Servicio que registra todas las llamadas a la API",
         "El log de acceso de S3"
       ],
       "correct": 2,
@@ -10781,7 +10781,7 @@
         "Instancias de máxima disponibilidad garantizada",
         "Instancias para desarrollo y pruebas",
         "Instancias reservadas con contrato anual",
-        "Instancias EC2 con hasta 90% de descuento sobre el precio bajo demanda, que AWS puede interrumpir"
+        "Instancias EC2 con hasta 90% de descuento sobre el precio"
       ],
       "correct": 3,
       "explanation": "Las Spot Instances son ideales para cargas tolerantes a interrupciones.",
@@ -10791,7 +10791,7 @@
       "concept_id": "cloud_computing_exp3_48",
       "question": "¿Qué es Amazon SQS?",
       "options": [
-        "Servicio de colas de mensajes gestionado para desacoplar componentes de aplicaciones",
+        "Servicio de colas de mensajes gestionado para desacoplar",
         "Un servicio de streaming de datos en tiempo real",
         "Una base de datos de colas",
         "Un servicio de envío de notificaciones push"
@@ -10804,7 +10804,7 @@
       "concept_id": "cloud_computing_exp3_49",
       "question": "¿Qué es Amazon SNS?",
       "options": [
-        "Servicio de mensajería pub/sub que envía notificaciones a múltiples suscriptores a la vez",
+        "Servicio de mensajería pub/sub que envía",
         "Un servicio de correo electrónico",
         "Un sistema de cola punto a punto",
         "Una base de datos de series temporales"
@@ -10820,7 +10820,7 @@
         "Un acelerador de CDN de AWS",
         "Una base de datos elástica de AWS",
         "Un servicio de almacenamiento de objetos",
-        "Servicio gestionado de caché en memoria (Redis o Memcached) para acelerar aplicaciones"
+        "Servicio gestionado de caché en memoria"
       ],
       "correct": 3,
       "explanation": "ElastiCache reduce la carga sobre la base de datos principal.",
@@ -10831,7 +10831,7 @@
       "question": "¿Qué es Amazon API Gateway?",
       "options": [
         "Un proxy inverso de AWS",
-        "Servicio para crear, publicar y gestionar APIs REST, HTTP y WebSocket de forma escalable",
+        "Servicio para crear, publicar",
         "Un servicio de autenticación de APIs",
         "Un balanceador de carga de AWS"
       ],
@@ -10846,7 +10846,7 @@
         "Un patrón de base de datos distribuida",
         "Un framework de desarrollo rápido",
         "Una aplicación monolítica optimizada",
-        "División de una aplicación en servicios pequeños e independientes que se comunican por API"
+        "División de una aplicación en servicios pequeños"
       ],
       "correct": 3,
       "explanation": "Netflix, Spotify y Amazon usan microservicios.",
@@ -10858,7 +10858,7 @@
       "options": [
         "GraphQL es solo para bases de datos de grafos",
         "GraphQL no puede hacer mutaciones (escrituras)",
-        "REST usa endpoints fijos; GraphQL usa un único endpoint donde el cliente especifica exactamente qué datos quiere",
+        "REST usa endpoints fijos; GraphQL usa un único endpoint",
         "REST es más moderno que GraphQL"
       ],
       "correct": 2,
@@ -10872,7 +10872,7 @@
         "Una base de datos temporal",
         "Una cola de prioridad de CPU",
         "Un tipo de cache distribuida",
-        "Mecanismo de comunicación asíncrona entre servicios para desacoplarlos y absorber picos de carga"
+        "Mecanismo de comunicación asíncrona entre"
       ],
       "correct": 3,
       "explanation": "RabbitMQ, Kafka y SQS son sistemas de colas de mensajes.",
@@ -10884,7 +10884,7 @@
       "options": [
         "Un servidor de base de datos",
         "Un framework de microservicios",
-        "Plataforma de streaming distribuido para procesar millones de eventos por segundo en tiempo real",
+        "Plataforma de streaming distribuido para",
         "Un servidor de aplicaciones Java"
       ],
       "correct": 2,
@@ -10895,7 +10895,7 @@
       "concept_id": "cloud_computing_exp3_56",
       "question": "¿Qué es el patrón Circuit Breaker en microservicios?",
       "options": [
-        "Mecanismo que detecta fallos en un servicio y cortocircuita las llamadas para evitar cascadas de errores",
+        "Mecanismo que detecta fallos en un servicio",
         "Una estrategia de reintento automático",
         "Un patrón de autenticación entre servicios",
         "Un tipo de balanceo de carga"
@@ -10908,7 +10908,7 @@
       "concept_id": "cloud_computing_exp3_57",
       "question": "¿Qué es la computación sin servidor (serverless)?",
       "options": [
-        "Modelo donde el proveedor gestiona la infraestructura y el desarrollador solo escribe funciones",
+        "Modelo donde el proveedor gestiona la infraestructura",
         "Cloud sin acceso a la configuración",
         "Servidores físicos sin sistema operativo",
         "Computación en local sin internet"
@@ -10922,7 +10922,7 @@
       "question": "¿Qué es el formato YAML y dónde se usa habitualmente?",
       "options": [
         "Un lenguaje de programación funcional",
-        "Lenguaje de serialización de datos legible por humanos, usado en configuraciones (Docker, K8s, CI/CD)",
+        "Lenguaje de serialización de datos legible por",
         "Un tipo de base de datos",
         "Un protocolo de comunicación web"
       ],
@@ -10934,7 +10934,7 @@
       "concept_id": "cloud_computing_exp3_59",
       "question": "¿Qué es Docker Compose?",
       "options": [
-        "Herramienta para definir y ejecutar aplicaciones multi-contenedor con un archivo YAML (docker-compose.yml)",
+        "Herramienta para definir y ejecutar aplicaciones multi-contenedor con un",
         "Un registro de imágenes Docker privado",
         "Un orquestador de producción para contenedores",
         "La CLI de Docker para gestionar contenedores individuales"
@@ -10974,7 +10974,7 @@
       "question": "¿Cuál describe mejor la computación en la nube?",
       "options": [
         "Un tipo de hardware especializado en redes",
-        "Una red de servidores que ofrece servicios informáticos a través de Internet",
+        "Una red de servidores que ofrece servicios informáticos a",
         "Un protocolo de comunicación entre servidores",
         "Un sistema operativo avanzado para servidores"
       ],
@@ -11026,7 +11026,7 @@
       "question": "¿Cuál es la principal característica del modelo de facturación en la nube?",
       "options": [
         "Pago anticipado por recursos contratados",
-        "Pago por uso: solo se paga por los recursos consumidos",
+        "Pago por uso: solo se paga por los recursos",
         "Pago fijo mensual sin importar el uso",
         "Pago único al inicio del servicio"
       ],
@@ -11120,7 +11120,7 @@
       "options": [
         "El salario más alto de la empresa",
         "El salario del sector público",
-        "La retribución mínima legal que un trabajador puede percibir",
+        "La retribución mínima legal que un",
         "El importe neto de la nómina"
       ],
       "correct": 2,
@@ -11131,7 +11131,7 @@
       "concept_id": "empleabilidad_2",
       "question": "¿Qué es el IRPF?",
       "options": [
-        "Impuesto sobre la Renta de las Personas Físicas, retenido en nómina",
+        "Impuesto sobre la Renta de las Personas",
         "El seguro de los autónomos",
         "La cotización a la SS del empresario",
         "El impuesto de sociedades"
@@ -11145,7 +11145,7 @@
       "question": "¿Qué es el finiquito?",
       "options": [
         "El preaviso de despido",
-        "Documento de liquidación económica de los haberes pendientes al terminar el contrato",
+        "Documento de liquidación económica de",
         "La baja médica",
         "El certificado de empresa"
       ],
@@ -11157,9 +11157,9 @@
       "concept_id": "empleabilidad_4",
       "question": "¿Qué es un Convenio Colectivo?",
       "options": [
-        "La nómina mensual",
+        "FileReader puede leer archivos binarios directamente sin conversión.",
         "El contrato individual",
-        "Acuerdo entre sindicatos y empresas de un sector que regula condiciones laborales",
+        "Acuerdo entre sindicatos y empresas de un sector",
         "El Estatuto de los Trabajadores"
       ],
       "correct": 2,
@@ -11184,7 +11184,7 @@
       "question": "¿Qué es el período de prueba en un contrato laboral?",
       "options": [
         "El tiempo de espera antes de cobrar",
-        "Tiempo inicial en que cualquiera de las partes puede rescindir sin preaviso ni indemnización",
+        "Tiempo inicial en que cualquiera de las partes",
         "El período de baja médica",
         "Los primeros 3 meses de cotización"
       ],
@@ -11196,9 +11196,9 @@
       "concept_id": "empleabilidad_7",
       "question": "¿Qué organismo público gestiona las prestaciones por desempleo y las ofertas de empleo?",
       "options": [
-        "Seguridad Social",
+        "FileReader puede leer archivos binarios directamente sin conversión.",
         "SEPE (Servicio Público de Empleo Estatal)",
-        "AEAT",
+        "FileReader puede leer archivos binarios directamente sin conversión.",
         "Ministerio de Hacienda"
       ],
       "correct": 1,
@@ -11235,8 +11235,8 @@
       "concept_id": "empleabilidad_10",
       "question": "¿Qué es una nómina?",
       "options": [
-        "Un contrato laboral",
-        "Documento justificativo del pago del salario que desglosá devengos y deducciones",
+        "Depende exclusivamente de la configuración del sistema operativo.",
+        "Documento justificativo del pago del salario",
         "Un recibo de autónomo",
         "Un certificado de cotización"
       ],
@@ -11249,8 +11249,8 @@
       "question": "¿Qué es la 'Seguridad Social' en España?",
       "options": [
         "El sistema de pensiones de empresa",
-        "Un banco público",
-        "Sistema público de protección ante situaciones de necesidad (enfermedad, paro, jubilación)",
+        "Depende exclusivamente de la configuración del sistema operativo.",
+        "Sistema público de protección ante situaciones de necesidad",
         "Una empresa de seguros privada"
       ],
       "correct": 2,
@@ -11290,7 +11290,7 @@
         "Un permiso retribuido",
         "Una reducción de jornada",
         "Un tipo de despido",
-        "Suspensión temporal del contrato con derecho a reserva del puesto (en ciertos casos)"
+        "Suspensión temporal del contrato con"
       ],
       "correct": 3,
       "explanation": "La excedencia voluntaria no es siempre retribuida.",
@@ -11313,7 +11313,7 @@
       "concept_id": "empleabilidad_16",
       "question": "¿Qué es el 'salario bruto'?",
       "options": [
-        "El salario total antes de aplicar deducciones (IRPF, SS)",
+        "El salario total antes de aplicar deducciones",
         "El salario que entra en cuenta",
         "El salario con complementos incluidos",
         "El salario mínimo legal"
@@ -11342,7 +11342,7 @@
         "Un contrato en prácticas para universitarios",
         "Un contrato subvencionado por la AEAT",
         "Un contrato a tiempo parcial",
-        "Contrato para jóvenes sin cualificación que alterna trabajo y formación profesional"
+        "Contrato para jóvenes sin cualificación que alterna"
       ],
       "correct": 3,
       "explanation": "Dirigido a menores de 25-30 años sin FP del puesto.",
@@ -11354,7 +11354,7 @@
       "options": [
         "Un becario no remunerado",
         "Un contrato de formación sin cualificación",
-        "Contrato para titulados que permite aplicar su formación en un entorno laboral real",
+        "Contrato para titulados que permite aplicar su",
         "Un contrato indefinido a prueba"
       ],
       "correct": 2,
@@ -11367,7 +11367,7 @@
       "options": [
         "Despido sin causa que da 33 días por año",
         "Despido pactado de mutuo acuerdo",
-        "Despido con causa justificada que no da derecho a indemnización por despido",
+        "Despido con causa justificada que no da derecho a",
         "Despido por cierre de empresa"
       ],
       "correct": 2,
@@ -11378,7 +11378,7 @@
       "concept_id": "empleabilidad_exp_21",
       "question": "¿Qué es el despido improcedente?",
       "options": [
-        "Despido sin causa justificada: da derecho a 33 días de salario por año trabajado",
+        "Despido sin causa justificada: da derecho a 33",
         "Suspensión del contrato",
         "Despido procedente sin indemnización",
         "Reducción de jornada forzosa"
@@ -11391,7 +11391,7 @@
       "concept_id": "empleabilidad_exp_22",
       "question": "¿Qué son las pagas extraordinarias?",
       "options": [
-        "Retribución adicional (habitualmente 2 al año) que completan el salario anual",
+        "Retribución adicional",
         "Las horas extra remuneradas",
         "La parte variable del salario",
         "Bonus discrecional del empresario"
@@ -11404,7 +11404,7 @@
       "concept_id": "empleabilidad_exp_23",
       "question": "¿Qué es el salario neto?",
       "options": [
-        "El importe que el trabajador recibe tras descontar IRPF y cotizaciones a la SS",
+        "El importe que el trabajador recibe tras",
         "El salario pactado en convenio",
         "El salario antes de deducciones",
         "El salario más las pagas extra"
@@ -11418,7 +11418,7 @@
       "question": "¿Qué es una ERE (Expediente de Regulación de Empleo)?",
       "options": [
         "Un tipo de contrato temporal",
-        "Procedimiento colectivo para suspender contratos, reducir jornadas o despedir colectivamente",
+        "Procedimiento colectivo para suspender contratos",
         "Una sanción administrativa a la empresa",
         "Una baja médica colectiva"
       ],
@@ -11430,9 +11430,9 @@
       "concept_id": "empleabilidad_exp_25",
       "question": "¿Qué es el curriculum vitae (CV) cronológico inverso?",
       "options": [
-        "CV sin fechas",
+        "Depende exclusivamente de la configuración del sistema operativo.",
         "CV ordenado desde el primer trabajo",
-        "CV que lista la experiencia desde la más reciente a la más antigua",
+        "CV que lista la experiencia desde la más reciente a",
         "CV funcional por habilidades"
       ],
       "correct": 2,
@@ -11443,7 +11443,7 @@
       "concept_id": "empleabilidad_exp_26",
       "question": "¿Qué es el perfil de LinkedIn?",
       "options": [
-        "Red social profesional para mostrar experiencia, formación y conectar con empresas",
+        "Red social profesional para mostrar",
         "Una bolsa de trabajo gubernamental",
         "Un CV en papel digitalizado",
         "Un formulario de inscripción al SEPE"
@@ -11458,7 +11458,7 @@
       "options": [
         "Una prueba escrita de conocimientos",
         "Una entrevista técnica de programación",
-        "Tipo de entrevista donde se piden ejemplos reales de situaciones pasadas para evaluar habilidades",
+        "Tipo de entrevista donde se piden ejemplos reales",
         "Una entrevista grupal de selección"
       ],
       "correct": 2,
@@ -11471,7 +11471,7 @@
       "options": [
         "Los días de vacaciones adicionales",
         "Las horas sindicales",
-        "Medidas que permiten compatibilizar el trabajo con las responsabilidades familiares (reducción jornada, permisos)",
+        "Medidas que permiten compatibilizar el trabajo",
         "Los permisos por enfermedad"
       ],
       "correct": 2,
@@ -11485,7 +11485,7 @@
         "Trabajo en el sector público",
         "Trabajo temporal a través de ETT",
         "Trabajo sin contrato",
-        "Régimen Especial de Trabajadores Autónomos: trabajo por cuenta propia con cotización propia"
+        "Régimen Especial de Trabajadores Autónomos:"
       ],
       "correct": 3,
       "explanation": "Los autónomos pagan su propia cuota a la SS.",
@@ -11497,7 +11497,7 @@
       "options": [
         "Una empresa de formación profesional",
         "Una empresa de trabajo a distancia",
-        "Empresa que cede trabajadores a otras empresas de forma temporal",
+        "Empresa que cede trabajadores a otras empresas",
         "Una agencia de empleo del Estado"
       ],
       "correct": 2,
@@ -11509,7 +11509,7 @@
       "question": "¿Qué son las horas extra y cuál es su límite legal?",
       "options": [
         "No tienen regulación específica",
-        "Horas trabajadas sobre la jornada ordinaria; límite legal de 80 horas/año",
+        "Horas trabajadas sobre la jornada ordinaria",
         "Solo aplican a contratos a tiempo parcial",
         "Horas pagadas doble sin límite"
       ],
@@ -11521,7 +11521,7 @@
       "concept_id": "empleabilidad_exp2_32",
       "question": "¿Qué establece la Ley 31/1995 de Prevención de Riesgos Laborales?",
       "options": [
-        "Las obligaciones de empresas y trabajadores para garantizar la seguridad y salud en el trabajo",
+        "Las obligaciones de empresas y trabajadores para garantizar la",
         "Los tipos de contratos laborales",
         "El régimen de cotizaciones a la Seguridad Social",
         "La duración de la jornada laboral"
@@ -11537,7 +11537,7 @@
         "El estudio del mercado laboral",
         "El análisis de la productividad del equipo",
         "La revisión médica anual del trabajador",
-        "Proceso para identificar peligros en el trabajo y valorar el riesgo para tomar medidas preventivas"
+        "Proceso para identificar peligros en el trabajo"
       ],
       "correct": 3,
       "explanation": "Es obligatoria para todas las empresas.",
@@ -11547,7 +11547,7 @@
       "concept_id": "empleabilidad_exp2_34",
       "question": "¿Qué es un Delegado de Prevención?",
       "options": [
-        "Representante de los trabajadores con funciones específicas en materia de prevención de riesgos",
+        "Representante de los trabajadores con",
         "El médico de empresa",
         "El responsable de RRHH",
         "El inspector de trabajo"
@@ -11560,7 +11560,7 @@
       "concept_id": "empleabilidad_exp2_35",
       "question": "¿Qué es el Servicio de Prevención de Riesgos Laborales?",
       "options": [
-        "Conjunto de medios humanos y materiales de la empresa para asesorar y apoyar en prevención",
+        "Conjunto de medios humanos",
         "La inspección de trabajo externa",
         "La mutua de accidentes",
         "El departamento médico de la empresa"
@@ -11573,8 +11573,8 @@
       "concept_id": "empleabilidad_exp2_36",
       "question": "¿Qué es un EPI (Equipo de Protección Individual)?",
       "options": [
-        "El carné de empresa",
-        "Dispositivo destinado a ser llevado por el trabajador para protegerle de riesgos (casco, guantes, gafas)",
+        "UDP garantiza la entrega ordenada de todos los paquetes enviados.",
+        "Dispositivo destinado a ser llevado por el trabajador",
         "La ropa de trabajo estándar",
         "El seguro de enfermedad del trabajador"
       ],
@@ -11587,7 +11587,7 @@
       "question": "¿Qué establece la Ley Orgánica 3/2007 de Igualdad Efectiva?",
       "options": [
         "El régimen de permisos de maternidad exclusivamente",
-        "La igualdad de trato y oportunidades entre mujeres y hombres en el ámbito laboral y social",
+        "La igualdad de trato y oportunidades entre mujeres",
         "Las cuotas de representación sindical",
         "Los derechos de los menores en el trabajo"
       ],
@@ -11602,7 +11602,7 @@
         "La diferencia entre SMI y salario real",
         "La diferencia entre salario bruto y neto",
         "La diferencia entre pagas fijas y variables",
-        "Diferencia porcentual entre el salario medio de hombres y mujeres en el mercado laboral"
+        "Diferencia porcentual entre el salario medio de hombres"
       ],
       "correct": 3,
       "explanation": "Es uno de los indicadores clave del Plan de Igualdad.",
@@ -11652,7 +11652,7 @@
       "question": "¿Qué es la movilidad geográfica?",
       "options": [
         "El teletrabajo desde otro municipio",
-        "Traslado del trabajador a un centro de trabajo diferente que requiere cambio de residencia",
+        "Traslado del trabajador a un centro de trabajo",
         "Un desplazamiento temporal a otra ciudad",
         "Un cambio de turno de trabajo"
       ],
@@ -11665,7 +11665,7 @@
       "question": "¿Qué es una modificación sustancial de condiciones de trabajo?",
       "options": [
         "Un cambio de turno puntual",
-        "Cambio significativo en jornada, horario, salario, funciones o lugar de trabajo impuesto por la empresa",
+        "Cambio significativo en jornada",
         "Un ascenso del trabajador",
         "Una mejora voluntaria del convenio"
       ],
@@ -11679,7 +11679,7 @@
       "options": [
         "El trabajo por turnos en industria",
         "El trabajo nocturno regulado por el ET",
-        "Trabajo a distancia realizado principalmente desde casa, regulado por la Ley 10/2021",
+        "Trabajo a distancia realizado principalmente desde",
         "El trabajo autónomo desde casa"
       ],
       "correct": 2,
@@ -11692,7 +11692,7 @@
       "options": [
         "La desconexión de internet durante la jornada",
         "El derecho a no usar ordenador en el trabajo",
-        "Derecho del trabajador a no responder comunicaciones laborales fuera de su horario de trabajo",
+        "Derecho del trabajador a no responder comunicaciones",
         "El derecho a tomar pausas para el móvil"
       ],
       "correct": 2,
@@ -11704,7 +11704,7 @@
       "question": "¿Qué es la prestación por IT (Incapacidad Temporal)?",
       "options": [
         "La baja voluntaria del trabajador",
-        "Subsidio económico para trabajadores que no pueden trabajar temporalmente por enfermedad o accidente",
+        "Subsidio económico para trabajadores que no",
         "La pensión de jubilación parcial",
         "El subsidio de desempleo"
       ],
@@ -11732,7 +11732,7 @@
         "Directos e indirectos",
         "Físicos, químicos, biológicos, ergonómicos y psicosociales",
         "Graves, leves y muy graves",
-        "Internos y externos"
+        "UDP garantiza la entrega ordenada de todos los paquetes enviados."
       ],
       "correct": 1,
       "explanation": "La clasificación es por el agente que genera el riesgo.",
@@ -11742,7 +11742,7 @@
       "concept_id": "empleabilidad_exp3_49",
       "question": "¿Qué es un accidente de trabajo?",
       "options": [
-        "Lesión corporal sufrida por el trabajador a causa del trabajo por cuenta ajena",
+        "Lesión corporal sufrida por el trabajador a causa del",
         "Cualquier daño material en la empresa",
         "Una enfermedad crónica por exposición laboral",
         "Un incidente sin consecuencias físicas"
@@ -11755,7 +11755,7 @@
       "concept_id": "empleabilidad_exp3_50",
       "question": "¿Qué es un accidente in itinere?",
       "options": [
-        "Accidente ocurrido en el trayecto de ida o vuelta entre el domicilio y el trabajo",
+        "Accidente ocurrido en el trayecto de ida o vuelta entre el domicilio",
         "Accidente dentro de las instalaciones de la empresa",
         "Accidente durante un viaje de empresa",
         "Accidente durante una reunión de trabajo"
@@ -11769,7 +11769,7 @@
       "question": "¿Qué es una enfermedad profesional?",
       "options": [
         "Cualquier enfermedad que se padece siendo trabajador",
-        "Enfermedad adquirida como consecuencia del trabajo en actividades listadas oficialmente",
+        "Enfermedad adquirida como consecuencia del trabajo en actividades",
         "Una baja por enfermedad común",
         "Una lesión por accidente en el trabajo"
       ],
@@ -11783,7 +11783,7 @@
       "options": [
         "El manual de empleado",
         "Los carteles informativos de la empresa",
-        "Señales visuales, acústicas o luminosas que advierten de riesgos y orientan en emergencias",
+        "Señales visuales, acústicas o luminosas que advierten",
         "Los rótulos de las salidas de la empresa"
       ],
       "correct": 2,
@@ -11795,7 +11795,7 @@
       "question": "¿Cuándo es obligatorio el uso de EPIs?",
       "options": [
         "Solo en obras de construcción",
-        "Cuando los riesgos no se pueden eliminar o proteger suficientemente con medidas colectivas",
+        "Cuando los riesgos no se pueden eliminar o",
         "Solo para trabajos de altura",
         "Siempre que el trabajador lo solicite"
       ],
@@ -11810,7 +11810,7 @@
         "El protocolo de acoso laboral",
         "El calendario de formación preventiva",
         "El plan de riesgos laborales anual",
-        "Documento que define cómo actuar ante incendio, evacuación u otras emergencias"
+        "Documento que define cómo actuar ante incendio"
       ],
       "correct": 3,
       "explanation": "Incluye rutas de evacuación, puntos de encuentro y responsables.",
@@ -11820,7 +11820,7 @@
       "concept_id": "empleabilidad_exp3_55",
       "question": "¿Qué es la Inspección de Trabajo y Seguridad Social?",
       "options": [
-        "Organismo que vigila el cumplimiento de la normativa laboral y de seguridad social",
+        "Organismo que vigila el cumplimiento de la normativa",
         "El tribunal que juzga conflictos laborales",
         "El sindicato representativo del sector",
         "El departamento de RRHH de la empresa"
@@ -11848,7 +11848,7 @@
       "options": [
         "La política de conciliación familiar",
         "El plan de diversidad étnica de la empresa",
-        "Conjunto de medidas para alcanzar la igualdad entre hombres y mujeres en la empresa",
+        "Conjunto de medidas para alcanzar la igualdad entre",
         "Un programa de formación en valores"
       ],
       "correct": 2,
@@ -11861,7 +11861,7 @@
       "options": [
         "El reglamento de disciplina de la empresa",
         "El plan de prevención de riesgos",
-        "Procedimiento interno para prevenir, detectar y actuar ante situaciones de acoso en el trabajo",
+        "Procedimiento interno para prevenir",
         "El convenio colectivo del sector"
       ],
       "correct": 2,
@@ -11872,7 +11872,7 @@
       "concept_id": "empleabilidad_exp3_59",
       "question": "¿Qué es el 'acoso sexual' en el ámbito laboral?",
       "options": [
-        "Conducta de naturaleza sexual no deseada que atenta contra la dignidad del trabajador",
+        "Conducta de naturaleza sexual no deseada que atenta contra la",
         "Una conducta sancionada solo en empresas grandes",
         "Una discriminación salarial por sexo",
         "Un conflicto interpersonal entre compañeros"
@@ -11963,7 +11963,7 @@
       "concept_id": "empleabilidad_real_66",
       "question": "¿Cómo se define la Prevención de Riesgos Laborales?",
       "options": [
-        "El conjunto de medidas destinadas a evitar o disminuir los riesgos derivados del trabajo",
+        "El conjunto de medidas destinadas a evitar o",
         "El riesgo laboral asociado a cada puesto",
         "Los daños derivados del trabajo",
         "Combinación de las anteriores"
@@ -12030,7 +12030,7 @@
       "options": [
         "Los títulos académicos que una persona posee",
         "Conocimientos técnicos aprendidos en un curso específico",
-        "Una combinación de conocimientos, habilidades y actitudes para desempeñar eficazmente una actividad profesional",
+        "Una combinación de conocimientos, habilidades",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -12043,7 +12043,7 @@
       "options": [
         "Capacidades técnicas adquiridas mediante la experiencia profesional",
         "Capacidades técnicas medibles objetivamente adquiridas en educación formal",
-        "Competencias personales y sociales que afectan cómo una persona se relaciona en el entorno laboral",
+        "Competencias personales y sociales que afectan cómo una persona se relaciona en el entorno",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -12069,7 +12069,7 @@
       "options": [
         "Licenciado, graduado o equivalente",
         "Bachillerato o equivalente",
-        "Ciclo de grado superior de formación profesional",
+        "Ciclo de grado superior de formación",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -12105,7 +12105,7 @@
     {
       "question": "¿Qué es el Currículum Europass?",
       "options": [
-        "Un formato de CV común en Europa para facilitar la movilidad laboral",
+        "Un formato de CV común en Europa para facilitar la movilidad",
         "Un formato de CV utilizado solo en España",
         "Un diploma europeo de competencias profesionales",
         "Combinación de las anteriores"
@@ -12119,7 +12119,7 @@
       "question": "¿Cuál es la finalidad de un Plan de Acción en el desarrollo profesional?",
       "options": [
         "Evaluar el rendimiento financiero en la vida laboral",
-        "Describir paso a paso actividades, metas y plazos para mejorar competencias y aumentar empleabilidad",
+        "Describir paso a paso actividades",
         "Elegir el plan formativo más adecuado a largo plazo",
         "Docker"
       ],
@@ -12144,7 +12144,7 @@
     {
       "question": "¿Por qué es importante reflexionar sobre competencias e intereses profesionales en el sector TIC?",
       "options": [
-        "Para encontrar equilibrio entre habilidades/aspiraciones y lo que busca el mercado laboral",
+        "Para encontrar equilibrio entre habilidades/aspiraciones",
         "Para decidir cambiar de sector profesional",
         "Para seleccionar cursos online que amplíen conocimientos",
         "Combinación de las anteriores"
@@ -12159,7 +12159,7 @@
       "options": [
         "Sustituye al currículum vitae",
         "Solo opera en búsqueda de empleo por internet",
-        "Muestra el interés por participar en un proceso de selección",
+        "Muestra el interés por participar en un proceso de",
         "Combinación de las anteriores"
       ],
       "correct": 2,
@@ -12184,7 +12184,7 @@
       "question": "¿Cuál es una característica de la Formación Profesional Dual según la nueva ley española?",
       "options": [
         "Se centra exclusivamente en teoría impartida en el aula",
-        "Combina formación en el centro educativo con experiencia práctica en la empresa",
+        "Combina formación en el centro educativo con experiencia práctica en la",
         "Ofrece formación online exclusivamente",
         "Combinación de las anteriores"
       ],
