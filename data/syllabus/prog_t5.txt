@@ -12,7 +12,7 @@ Desde el punto de vista de la memoria en Java, ¿cuál es la característica fun
 Es una estructura primitiva que se almacena íntegramente en el Stack.
 *Es un objeto que se almacena en el Heap y se accede mediante una referencia.
 Es una colección dinámica cuyo tamaño puede variar durante la ejecución.
-Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+Mediante una clase abstracta con métodos estáticos
 EXPL:Es un objeto que se almacena en el Heap y se accede mediante una referencia.
 En el procesamiento de arrays, ¿qué característica distingue al recorrido con for-each frente al for clásico?
 Permite modificar directamente los elementos del array.
@@ -21,16 +21,16 @@ Proporciona acceso al índice y al valor simultáneamente.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Está orientado a la lectura secuencial sin acceso a la posición.
 ¿Cuál es la finalidad principal de la propiedad length en los arrays?
-Modificar el tamaño del array durante la ejecución., lo cual no es correcto.
+Modificar el tamaño del array durante la ejecución
 *Conocer el número de elementos para acceder y recorrer el array de forma segura.
 Contar únicamente los elementos que han sido inicializados explícitamente.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:Conocer el número de elementos para acceder y recorrer el array de forma segura.
 Desde un enfoque profesional, ¿cuál es la ventaja principal de utilizar los métodos de ordenación proporcionados por Java frente a los algoritmos académicos?
 Son más sencillos conceptualmente que los algoritmos clásicos.
 *Están optimizados y reducen errores en la implementación.
 Permiten mantener el orden original del array automáticamente.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Están optimizados y reducen errores en la implementación.'.
 Respecto a los algoritmos de búsqueda, ¿cuál es la condición indispensable para poder aplicar una búsqueda binaria?
 Que el array tenga un tamaño reducido.
@@ -42,17 +42,17 @@ EXPL:La respuesta es 'Que el array esté previamente ordenado.'.
 El tamaño puede modificarse añadiendo o eliminando elementos.
 *El tamaño se fija en el momento de su creación y no puede cambiar.
 El tamaño depende del número de elementos inicializados manualmente.
-Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+Mediante una clase abstracta con métodos estáticos
 EXPL:El tamaño se fija en el momento de su creación y no puede cambiar.
 Al trabajar con cadenas de caracteres en Java, ¿qué significa que la clase String sea inmutable?
 Que no se pueden comparar dos cadenas entre sí.
 *Que una vez creado un texto, no puede modificarse su contenido.
 Que solo puede crearse mediante el operador new.
-Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+Mediante una clase abstracta con métodos estáticos
 EXPL:Que una vez creado un texto, no puede modificarse su contenido.
 ¿Cuál es la forma correcta de comparar el contenido de dos cadenas de caracteres en Java?
 Utilizando el operador de igualdad para comprobar las referencias.
-Comparando directamente su longitud., lo cual no es correcto.
+Comparando directamente su longitud
 *Utilizando un método que evalúa el contenido textual (equals o compareTo).
-Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+Mediante una clase abstracta con métodos estáticos
 EXPL:Utilizando un método que evalúa el contenido textual (equals o compareTo).

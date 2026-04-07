@@ -8,7 +8,7 @@ EXPL:La respuesta es 'EaseUS.'. "Norton." y "McAfee." son incorrectos porque des
 ¿Qué es un procesador de texto?
 *Una herramienta informática que permite la creación, edición y formateo de documentos de texto.
 Un tipo de hoja de cálculo que se utiliza para realizar cálculos y análisis de datos.
-Un programa de edición de imágenes., aunque no es la respuesta adecuada.
+Un programa de edición de imágenes
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Una herramienta informática que permite la creación, edición y formateo de documentos de texto.
 ¿Cuál es el programa que controla y gestiona los recursos del hardware y proporciona una interfaz de usuario para que los usuarios puedan interactuar con la computadora?
@@ -21,7 +21,7 @@ EXPL:La respuesta es 'El sistema operativo.'. "Los sistemas de archivos." y "Los
 *Automatización de tareas.
 Recuperación de datos.
 Escaneo de archivos.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Automatización de tareas.'. "Recuperación de datos." y "Escaneo de archivos." son incorrectos porque describen conceptos diferentes.
 ¿Qué ventaja ofrece Google Docs en comparación con Microsoft Word?
 Amplia gama de funciones y herramientas avanzadas para crear documentos complejos.
@@ -37,15 +37,15 @@ Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:La respuesta es 'Microsoft Word.'. "Google Docs." y "LibreOffice Writer." son incorrectos porque describen conceptos diferentes.
 ¿Qué es el software antivirus?
 *Un tipo de software diseñado para detectar, prevenir y eliminar programas maliciosos.
-Un tipo de software diseñado para mejorar la productividad., lo cual no es correcto.
-Un tipo de software diseñado para recuperar datos perdidos., lo cual no es correcto.
+Un tipo de software diseñado para mejorar la productividad
+Un tipo de software diseñado para recuperar datos perdidos
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Un tipo de software diseñado para detectar, prevenir y eliminar programas maliciosos.
 ¿Cuál es la función principal del software de sistema?
-Realizar tareas específicas en la computadora., aunque no es la respuesta adecuada.
+Realizar tareas específicas en la computadora
 *Controlar y coordinar el funcionamiento del hardware y proporcionar una interfaz entre el usuario y el hardware.
-Escribir, depurar y mantener programas de software., lo cual no es correcto.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Escribir, depurar y mantener programas de software
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:Controlar y coordinar el funcionamiento del hardware y proporcionar una interfaz entre el usuario y el hardware.
 ¿Qué son las herramientas de desarrollo integradas?
 Herramientas que permiten al usuario realizar diferentes tareas, como realizar copias de seguridad de datos, optimizar el rendimiento del sistema, o desinstalar programas.
@@ -54,7 +54,7 @@ Herramientas que permiten al usuario identificar y solucionar problemas en el si
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Herramientas que incluyen un editor de código, un depurador y un compilador, todos integrados en una única interfaz de u...
 ¿Qué significa que las bases de datos sean escalables y flexibles?
-Que tienen una estructura y organización definida., lo cual no es correcto.
+Que tienen una estructura y organización definida
 *Que pueden crecer y evolucionar a medida que cambian las necesidades de la organización.
 Que no se pueden integrar con otras aplicaciones informáticas.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.

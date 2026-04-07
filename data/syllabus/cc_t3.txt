@@ -54,8 +54,8 @@ Solo es accesible dentro de una empresa
 No permite compartir datos entre sistemas
 EXPL:La nube híbrida combina infraestructura pública y privada, permitiendo mover cargas de trabajo entre ambas según necesidades de seguridad, coste o rendimiento.
 ¿Cuál de las siguientes opciones representa un servicio de nube pública?
-Servidores internos de una empresa, aunque no es la respuesta correcta.
+Servidores internos de una empresa
 *Microsoft Azure
-Un disco duro externo conectado a una red, lo cual no aplica aquí.
-Un centro de datos privado sin acceso externo, aunque no corresponde.
+Un disco duro externo conectado a una red
+Un centro de datos privado sin acceso externo
 EXPL:La respuesta es 'Microsoft Azure'.

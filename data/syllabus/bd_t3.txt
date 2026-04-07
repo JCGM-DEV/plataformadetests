@@ -10,18 +10,18 @@ EXPL:La respuesta es 'Rectángulos'. "Elipses" y "Rombos" son incorrectos porque
 Un atributo que se descompone en varios atributos simples.
 Un atributo que puede tener múltiples valores para una misma entidad.
 *Un atributo cuyo valor se calcula a partir de otros atributos del modelo.
-Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+Mediante una clase abstracta con métodos estáticos
 EXPL:Un atributo derivado se calcula a partir de otros atributos (ej: edad a partir de fecha_nacimiento). Se representa con elipse de línea punteada. No se almacena físicamente.
 
 En una relación de cardinalidad 1:N entre "Agentes" y "Clientes", ¿qué se entiende?
 *Un agente gestiona varios clientes, pero un cliente solo es gestionado por un agente.
-Varios agentes pueden gestionar a un solo cliente., lo cual no es correcto.
-Un agente solo puede tener un cliente asignado., lo cual no es correcto.
+Varios agentes pueden gestionar a un solo cliente
+Un agente solo puede tener un cliente asignado
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:En 1:N, un registro de la tabla "1" puede relacionarse con muchos de la tabla "N", pero cada registro de "N" solo se relaciona con uno de "1". La clave foránea va en el lado N.
 
 ¿Cuál es una característica fundamental de una entidad débil?
-Posee una clave primaria única e independiente., lo cual no es correcto.
+Posee una clave primaria única e independiente
 *Carece de identificador autosuficiente y depende de una entidad propietaria.
 Se representa gráficamente con un rectángulo de línea simple.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
@@ -30,7 +30,7 @@ EXPL:Una entidad débil no tiene atributos suficientes para identificarse por s�
 En el modelo E/R ampliado, ¿qué es la generalización?
 El proceso de dividir una entidad en subentidades más específicas.
 *El proceso de agrupar entidades con rasgos comunes en una entidad padre abstracta.
-Una relación donde una entidad se vincula consigo misma., lo cual no es correcto.
+Una relación donde una entidad se vincula consigo misma
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:El proceso de agrupar entidades con rasgos comunes en una entidad padre abstracta.
 
@@ -38,33 +38,33 @@ EXPL:El proceso de agrupar entidades con rasgos comunes en una entidad padre abs
 Completeness (totalidad/parcialidad).
 *Disjointness (exclusividad/solapamiento).
 Relación recursiva., aunque esto no es correcto en este contexto.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:Disjointness (exclusividad) determina si una instancia puede pertenecer a varias subentidades (solapamiento) o solo a una (exclusividad). Completeness determina si toda instancia del supertipo debe pertenecer a alguna subentidad.
 
 Al pasar del modelo E/R al modelo relacional, ¿cuándo se crean normalmente las claves foráneas?
 Al identificar las entidades., aunque esto no es correcto en este contexto.
 *Al establecer las relaciones entre las tablas para vincular registros.
-Únicamente durante el proceso de normalización., lo cual no es correcto.
+Únicamente durante el proceso de normalización
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
 
 ¿Qué requisito debe cumplir una tabla para estar en Primera Forma Normal (1FN)?
-No tener dependencias transitivas., lo cual no es correcto.
+No tener dependencias transitivas
 *Que todas las columnas almacenen valores atómicos e indivisibles.
 Que todos los atributos dependan de la clave primaria completa.
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:La 1FN exige que todos los valores sean atómicos (indivisibles). No puede haber listas, conjuntos ni grupos repetitivos en una columna. Es el requisito mínimo de normalización.
 
 ¿Cuándo se dice que una tabla viola la Segunda Forma Normal (2FN)?
-Cuando existen atributos que pueden tomar varios valores., lo cual no es correcto.
+Cuando existen atributos que pueden tomar varios valores
 *Cuando un atributo no clave depende solo de una parte de la clave primaria (dependencia parcial).
-Cuando un atributo no clave depende de otro atributo no clave., lo cual no es correcto.
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Cuando un atributo no clave depende de otro atributo no clave
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:La 2FN requiere que todos los atributos no clave dependan de la clave primaria COMPLETA. Si hay dependencia parcial (depende solo de parte de la PK compuesta), viola la 2FN.
 
 ¿Cuál es el objetivo principal de la normalización de modelos relacionales?
 Aumentar la redundancia para facilitar la lectura de datos.
 *Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente.
 Eliminar todas las relaciones entre tablas para simplificar el modelo.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente.

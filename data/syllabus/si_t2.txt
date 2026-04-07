@@ -3,7 +3,7 @@ tema 2
 Hardware, software, usuarios, seguridad.
 *Hardware, software, datos, usuarios.
 Hardware, software, redes, periféricos.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Hardware, software, datos, usuarios.'. "Hardware, software, usuarios, seguridad." y "Hardware, software, redes, periféricos." son incorrectos porque describen conceptos diferentes.
 ¿Qué tarea crítica del sistema operativo implica la planificación de la ejecución de procesos y supervisar su finalización?
 Controlar y gestionar el uso del hardware del ordenador.
@@ -12,7 +12,7 @@ Controlar el proceso de organización de la información.
 Con el comando fsck para verificar la integridad del sistema de archivos.
 EXPL:La respuesta es 'Administrar la ejecución de los procesos.'.
 ¿Qué es necesario hacer antes de actualizar una aplicación a una versión superior?
-Descargar manualmente e instalar la versión superior., lo cual no es correcto.
+Descargar manualmente e instalar la versión superior
 Comprobar si la versión superior es compatible con el sistema operativo y la licencia de la aplicación.
 *Realizar una copia de seguridad de los archivos y carpetas asociados a la aplicación.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
@@ -27,7 +27,7 @@ EXPL:ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado váli
 *Su simplicidad y eficiencia.
 Su modularidad y escalabilidad.
 Su capacidad para agregar o eliminar funciones sin tener que recompilar todo el sistema.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Su simplicidad y eficiencia.'.
 ¿Para qué se utiliza la preparación de imágenes del sistema para automatizar la instalación masiva de ordenadores?
 Para verificar si se dispone de la licencia correspondiente.
@@ -36,26 +36,26 @@ Para dividir el disco duro en secciones o particiones lógicas.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Para automatizar la instalación del sistema operativo en varios ordenadores.
 ¿Por qué es importante comprobar los requisitos, versiones y licencias antes de instalar una aplicación?
-Para asegurarse de tener suficiente espacio en disco., lo cual no es correcto.
+Para asegurarse de tener suficiente espacio en disco
 *Para garantizar el correcto funcionamiento de la aplicación y evitar problemas de licencia.
-Para obtener nuevas funcionalidades y correcciones de errores., lo cual no es correcto.
+Para obtener nuevas funcionalidades y correcciones de errores
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Para garantizar el correcto funcionamiento de la aplicación y evitar problemas de licencia.
 ¿Qué es el particionado del disco duro?
-La instalación de un sistema operativo., lo cual no es correcto.
+La instalación de un sistema operativo
 *La división del disco duro en secciones o particiones lógicas.
-La verificación de la memoria RAM., lo cual no es correcto.
+La verificación de la memoria RAM
 Con el comando fsck para verificar la integridad del sistema de archivos.
 EXPL:La división del disco duro en secciones o particiones lógicas.
 ¿Qué son las aplicaciones de seguridad?
 *Programas que se utilizan para proteger el sistema informático contra virus, malware y otras amenazas de seguridad.
-Programas que se utilizan para la diversión y el entretenimiento., lo cual no es correcto.
-Programas que se utilizan para la comunicación en línea., lo cual no es correcto.
-Con un certificado SSL autofirmado, aunque no es la respuesta correcta.
+Programas que se utilizan para la diversión y el entretenimiento
+Programas que se utilizan para la comunicación en línea
+Con un certificado SSL autofirmado
 EXPL:Programas que se utilizan para proteger el sistema informático contra virus, malware y otras amenazas de seguridad.
 ¿Cuál es una de las funciones principales de un sistema operativo?
 Ejecutar aplicaciones., aunque esto no es correcto en este contexto.
 *Gestionar y coordinar el uso de los recursos de hardware y software.
-Proteger el sistema de ataques de virus., lo cual no es correcto.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Proteger el sistema de ataques de virus
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:Gestionar y coordinar el uso de los recursos de hardware y software.

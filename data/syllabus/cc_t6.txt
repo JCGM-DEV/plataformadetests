@@ -20,7 +20,7 @@ EXPL:La respuesta es 'Contenedores'. "Máquinas virtuales" y "Computación sin s
 ¿Cuál es una de las ventajas de la computación sin servidor?
 *Requiere administración constante de la infraestructura
 Permite escalar automáticamente en función de la demanda
-Obliga a pagar por capacidad reservada, lo cual no es correcto.
+Obliga a pagar por capacidad reservada
 Es más costosa que las VMs, aunque esto no es correcto en este contexto.
 EXPL:La respuesta es 'Requiere administración constante de la infraestructura'.
 ¿Cuál de las siguientes opciones es un ejemplo de un servicio SaaS?

@@ -3,14 +3,14 @@ tema 5
 ADD RECORD
 *INSERT INTO
 UPDATE
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:INSERT INTO tabla (col1, col2) VALUES (v1, v2) inserta una fila. INSERT INTO tabla SELECT... inserta múltiples filas desde otra consulta. Es la sentencia DML estándar para insertar datos.
 
 ¿Cómo se insertan datos en una tabla de destino a partir del resultado de otra consulta?
 *Usando la sintaxis INSERT INTO tabla_destino SELECT ...
 Ejecutando un UPDATE con una subconsulta en el SET.
 No es posible realizar esta operación en una sola sentencia.
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:INSERT INTO tabla (col1, col2) VALUES (v1, v2) inserta una fila. INSERT INTO tabla SELECT... inserta múltiples filas desde otra consulta. Es la sentencia DML estándar para insertar datos.
 
 ¿Por qué es fundamental incluir la cláusula WHERE en una sentencia UPDATE?
@@ -34,23 +34,23 @@ Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:COMMIT confirma permanentemente todos los cambios de la transacción actual. Una vez ejecutado, los cambios son visibles para otros usuarios y no se pueden deshacer con ROLLBACK.
 
 ¿Qué acción realiza el comando ROLLBACK?
-Guarda los cambios actuales de forma definitiva., lo cual no es correcto.
+Guarda los cambios actuales de forma definitiva
 *Deshace todos los cambios realizados en la transacción actual volviendo al estado inicial.
-Bloquea la tabla para impedir ediciones de otros usuarios., lo cual no es correcto.
+Bloquea la tabla para impedir ediciones de otros usuarios
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:ROLLBACK deshace todos los cambios realizados desde el último START TRANSACTION o SAVEPOINT, devolviendo la base de datos al estado anterior. Es la operación de "deshacer" de las transacciones.
 
 ¿Cuál es una ventaja clave de utilizar Common Table Expressions (CTE) o composiciones en órdenes de edición?
-Permiten saltarse las restricciones de integridad referencial., lo cual no es correcto.
+Permiten saltarse las restricciones de integridad referencial
 *Mejoran la legibilidad al permitir nombrar subconsultas y reutilizarlas en una única instrucción.
-Cifran los datos antes de insertarlos en la base de datos., lo cual no es correcto.
+Cifran los datos antes de insertarlos en la base de datos
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Mejoran la legibilidad al permitir nombrar subconsultas y reutilizarlas en una única instrucción.
 
 ¿En qué consiste el "bloqueo a nivel de registro" (row-level locking)?
-Impide el acceso a toda la tabla mientras un usuario edita una fila., lo cual no es correcto.
+Impide el acceso a toda la tabla mientras un usuario edita una fila
 *Bloquea solo la fila específica que se está modificando, permitiendo que otros usuarios trabajen en otras filas.
-Borra el registro si detecta que dos usuarios intentan acceder a él., lo cual no es correcto.
+Borra el registro si detecta que dos usuarios intentan acceder a él
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:El bloqueo a nivel de registro (row-level locking) bloquea solo la fila que se está modificando, permitiendo que otros usuarios trabajen en otras filas simultáneamente. Es más eficiente que bloquear toda la tabla.
 
@@ -58,12 +58,12 @@ EXPL:El bloqueo a nivel de registro (row-level locking) bloquea solo la fila que
 *SELECT * FROM tabla WHERE id=1 FOR UPDATE;
 LOCK TABLES tabla WRITE;, aunque esto no es correcto en este contexto.
 UPDATE tabla SET locked = true;
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:SELECT ... FOR UPDATE bloquea las filas seleccionadas para que otros usuarios no puedan modificarlas hasta que se haga COMMIT o ROLLBACK. Es el mecanismo de bloqueo pesimista en MySQL.
 
 En el modo estricto de MySQL (STRICT_ALL_TABLES), ¿qué ocurre si se intenta realizar una operación con datos inválidos?
 Se truncan los valores silenciosamente.
 *Se rechaza la operación y se genera un error.
 Se insertan valores nulos por defecto sin avisar.
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:La respuesta es 'Se rechaza la operación y se genera un error.'. "Se truncan los valores silenciosamente." y "Se insertan valores nulos por defecto sin avisar." son incorrectos porque describen conceptos diferentes.

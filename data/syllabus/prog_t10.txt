@@ -1,61 +1,61 @@
 tema 10
 ¿Qué es el OID (Object Identifier) en una base de datos orientada a objetos?
-Una clave primaria numérica que el programador debe gestionar manualmente., lo cual no es correcto.
+Una clave primaria numérica que el programador debe gestionar manualmente
 *Un identificador único generado por el sistema que es independiente del valor de los atributos del objeto.
 El nombre de la variable que utilizamos en el código Java para referenciar al objeto.
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:El OID (Object Identifier) es un identificador único generado automáticamente por el sistema para cada objeto en una BDOO. Es independiente del valor de los atributos, a diferencia de las claves primarias relacionales.
 Al trabajar con un motor como db4o u ObjectDB, ¿cuál es el objeto principal que actúa como "Contenedor de Objetos" y gestiona la sesión?
 *ObjectContainer
 DatabaseManager
 SessionSocket
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:ObjectContainer es el objeto principal en db4o/ObjectDB que actúa como contenedor de objetos y gestiona la sesión. Es el equivalente a la Connection de JDBC pero para bases de datos orientadas a objetos.
 ¿Qué sucede si se activa la propiedad de "Cascada" (Cascade On Update/Delete)?
 *Las operaciones realizadas sobre un objeto padre se propagan automáticamente a sus objetos hijos relacionados.
-El sistema operativo borra la base de datos si ocurre un error crítico., lo cual no es correcto.
+El sistema operativo borra la base de datos si ocurre un error crítico
 El objeto se guarda simultáneamente en dos bases de datos distintas para mayor seguridad.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Las operaciones realizadas sobre un objeto padre se propagan automáticamente a sus objetos hijos relacionados.
 ¿Qué problema fundamental vienen a solucionar las BDOO en comparación con las bases de datos relacionales?
-La lentitud de los discos duros actuales., lo cual no es correcto.
+La lentitud de los discos duros actuales
 *La "Desadaptación de Impedancia", evitando tener que traducir objetos a tablas y filas.
-La imposibilidad de usar SQL en entornos de red., lo cual no es correcto.
+La imposibilidad de usar SQL en entornos de red
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:La "Desadaptación de Impedancia" (Impedance Mismatch) es el problema de traducir objetos Java a tablas relacionales y viceversa. Las BDOO eliminan este problema almacenando objetos directamente.
 ¿Cómo funciona el mecanismo de consulta QBE (Query By Example)?
-Se escribe una sentencia de texto similar a SQL., lo cual no es correcto.
+Se escribe una sentencia de texto similar a SQL
 *Se crea un objeto "prototipo" o plantilla y el sistema busca objetos que coincidan con sus atributos no nulos.
-Se programa un filtro mediante una función lambda de Java., lo cual no es correcto.
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Se programa un filtro mediante una función lambda de Java
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:QBE (Query By Example) crea un objeto "prototipo" con los valores que se buscan. El sistema devuelve todos los objetos que coincidan con los atributos no nulos del prototipo. Es más intuitivo que OQL.
 ¿Qué ventaja principal ofrecen las "Native Queries" (Consultas Nativas) frente a otros métodos?
-Son mucho más rápidas que las consultas por OID., lo cual no es correcto.
+Son mucho más rápidas que las consultas por OID
 *Permiten usar código Java puro para filtrar, proporcionando total seguridad de tipos (Type-Safe).
-No requieren que la base de datos esté abierta para ejecutarse., lo cual no es correcto.
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+No requieren que la base de datos esté abierta para ejecutarse
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
 En las consultas OQL, ¿cómo se navega a través de las relaciones entre objetos?
 Mediante el uso de sentencias JOIN complejas como en el modelo relacional.
 *Utilizando la "notación de punto" (ej. p.ciudad.nombre) para seguir los grafos de objetos.
 No se puede navegar entre relaciones; solo se pueden consultar objetos aislados.
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:Utilizando la "notación de punto" (ej. p.ciudad.nombre) para seguir los grafos de objetos.
 ¿Qué controla el parámetro "Activation Depth" (Profundidad de Activación)?
-El número máximo de usuarios que pueden conectarse a la vez., lo cual no es correcto.
+El número máximo de usuarios que pueden conectarse a la vez
 *El nivel de profundidad del grafo de objetos que se carga en la memoria RAM al recuperar un objeto.
-La cantidad de copias de seguridad que el sistema realiza cada hora., lo cual no es correcto.
+La cantidad de copias de seguridad que el sistema realiza cada hora
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Activation Depth controla cuántos niveles del grafo de objetos se cargan en memoria al recuperar un objeto. Un valor bajo mejora el rendimiento; un valor alto carga más objetos relacionados automáticamente.
 En el estándar ODMG, ¿qué lenguaje se utiliza específicamente para definir la estructura de la base de datos?
 OQL (Object Query Language).
 *ODL (Object Definition Language).
 SQL-92.
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:ODL (Object Definition Language) es el lenguaje del estándar ODMG para definir la estructura de una BDOO. OQL (Object Query Language) es para consultas. SQL-92 es para bases de datos relacionales.
 ¿Cuál es la diferencia principal entre el modo de funcionamiento "Embebido" y el modo "Servidor"?
 El modo Embebido permite múltiples conexiones remotas, mientras que el Servidor es solo para un usuario.
 *El modo Embebido: la base de datos corre en el mismo proceso que la aplicación; el modo Servidor es un proceso independiente.
-El modo Servidor es gratuito y el modo Embebido requiere licencia comercial., lo cual no es correcto.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+El modo Servidor es gratuito y el modo Embebido requiere licencia comercial
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:En modo Embebido, la base de datos corre en el mismo proceso JVM que la aplicación (más rápido, un solo usuario). En modo Servidor, es un proceso independiente que acepta múltiples conexiones remotas.

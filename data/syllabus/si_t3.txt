@@ -3,13 +3,13 @@ tema 3
 *Primarias.
 Extendidas.
 Lógicas.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Primarias.'. "Extendidas." y "Lógicas." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es la principal ventaja del esquema GPT sobre el esquema MBR?
 Es compatible con una amplia variedad de sistemas operativos y software.
 *Tiene una mejor protección contra la corrupción de datos y soporta discos de más de 2TB.
-Solo permite la creación de particiones primarias., lo cual no es correcto.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Solo permite la creación de particiones primarias
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:GPT (GUID Partition Table) soporta discos de más de 2TB y hasta 128 particiones primarias. MBR está limitado a 2TB y 4 particiones primarias.
 ¿Cuál es la estructura de directorios típica de Windows?
 /, /bin, /etc, /home, /usr, /var.
@@ -21,13 +21,13 @@ EXPL:La respuesta es 'C:, C:\Windows, C:\Program Files, C:\Users.'. "/, /bin, /e
 Mayor velocidad de transferencia de datos.
 Mayor capacidad de almacenamiento.
 *Mayor flexibilidad y portabilidad.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Mayor flexibilidad y portabilidad.'. "Mayor velocidad de transferencia de datos." y "Mayor capacidad de almacenamiento." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es la principal diferencia entre el almacenamiento interno y externo?
 La velocidad de transferencia de datos.
 *La ubicación física del dispositivo.
 La capacidad de almacenamiento.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'La ubicación física del dispositivo.'. "La velocidad de transferencia de datos." y "La capacidad de almacenamiento." son incorrectos porque describen conceptos diferentes.
 ¿Qué comando se utiliza en Linux para mostrar información sobre los procesos que se están ejecutando en el sistema?
 systeminfo.
@@ -51,5 +51,5 @@ EXPL:GPT (GUID Partition Table) soporta discos de más de 2TB y hasta 128 partic
 Disco duro (HDD).
 *Unidad de estado sólido (SSD).
 Tarjeta de memoria.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Unidad de estado sólido (SSD).'. "Disco duro (HDD)." y "Tarjeta de memoria." son incorrectos porque describen conceptos diferentes.

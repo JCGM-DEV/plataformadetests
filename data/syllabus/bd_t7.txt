@@ -3,68 +3,68 @@ tema 7
 Polimorfismo
 *Herencia de tablas
 Encapsulamiento de tipos
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:La respuesta es 'Herencia de tablas'. "Polimorfismo" y "Encapsulamiento de tipos" son incorrectos porque describen conceptos diferentes.
 
 Durante la instalación de PostgreSQL, ¿cuál es el puerto de conexión que se asigna por defecto?
 3306
 8080
 *5434
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:La respuesta es '5434'. "3306" y "8080" son incorrectos porque describen conceptos diferentes.
 
 ¿Qué cláusula se utiliza en la sentencia CREATE TABLE de PostgreSQL para heredar de otra tabla?
 EXTENDS
 *INHERITS
 FROM
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:La respuesta es 'INHERITS'. "EXTENDS" y "FROM" son incorrectos porque describen conceptos diferentes.
 
 ¿Cuál de los siguientes es un tipo de dato nativo geométrico en PostgreSQL?
 *CIRCLE
 SPHERE
 TRIANGLE
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
 
 Al ejecutar un SELECT * FROM tabla_padre en PostgreSQL, ¿qué registros se obtienen por defecto?
 Solo los de la tabla padre., aunque esto no es correcto en este contexto.
 Solo los de las tablas hijas., aunque esto no es correcto en este contexto.
 *Los de la tabla padre y todos los de sus tablas hijas relacionadas.
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:Los de la tabla padre y todos los de sus tablas hijas relacionadas.
 
 ¿Qué tipo de dato de colección representa un intervalo de valores continuos (como un rango de fechas)?
 ARRAY
 JSONB
 *RANGE
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'RANGE'. "ARRAY" y "JSONB" son incorrectos porque describen conceptos diferentes.
 
 Respecto al borrado de datos en una estructura de herencia en PostgreSQL, ¿cuál es la afirmación correcta?
-Existe un borrado en cascada automático entre padres e hijos., lo cual no es correcto.
+Existe un borrado en cascada automático entre padres e hijos
 *No hay cascada automática; se debe declarar ON DELETE CASCADE en las claves foráneas si se requiere.
-Si borras un registro en el padre, el hijo se bloquea., lo cual no es correcto.
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Si borras un registro en el padre, el hijo se bloquea
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:ON DELETE CASCADE borra automáticamente las filas hijas cuando se borra la fila padre. ON DELETE SET NULL pone NULL en las hijas. ON DELETE RESTRICT impide borrar el padre si tiene hijos.
 
 ¿Cómo se llama el lenguaje procedimental propio de PostgreSQL utilizado para crear funciones avanzadas?
 PL/SQL
 *PL/pgSQL
 T-SQL
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:La respuesta es 'PL/pgSQL'. "PL/SQL" y "T-SQL" son incorrectos porque describen conceptos diferentes.
 
 ¿Qué sentencia estándar de SQL se utiliza en PostgreSQL para definir un tipo de dato personalizado (como un tipo compuesto)?
 *CREATE TYPE
 CREATE OBJECT
 DEFINE DATA
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:La respuesta es 'CREATE TYPE'. "CREATE OBJECT" y "DEFINE DATA" son incorrectos porque describen conceptos diferentes.
 
 ¿A qué se refiere la "navegabilidad" en el contexto de bases de datos objeto-relacionales?
-A la velocidad de navegación web de la base de datos., lo cual no es correcto.
+A la velocidad de navegación web de la base de datos
 *A la capacidad de seguir las conexiones lógicas o referencias entre objetos.
-Al uso de comandos NEXT y PREV en los cursores., lo cual no es correcto.
-Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+Al uso de comandos NEXT y PREV en los cursores
+Mediante una clase abstracta con métodos estáticos
 EXPL:ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).

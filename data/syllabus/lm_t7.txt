@@ -3,13 +3,13 @@ En la estructura de un feed RSS 2.0, ¿cuáles son los tres elementos secundario
 <item>, <author>, <pubDate>.
 <category>, <image>, <language>.
 *<title>, <link>, <description>.
-Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
+Con el atributo xmlns:xsi en el elemento raíz
 EXPL:La respuesta es '<title>, <link>, <description>.'. "<item>, <author>, <pubDate>." y "<category>, <image>, <language>." son incorrectos porque describen conceptos diferentes.
 ¿Cuál fue una de las principales motivaciones para el desarrollo del estándar Atom como alternativa a RSS, según el contenido de la unidad?
 La intención de reemplazar por completo a RSS y hacer obsoleto su uso.
 Abordar la confusión y la incompatibilidad surgida por la existencia de varios estándares RSS similares, proporcionando una solución más consistente.
 Permitir la creación de feeds sin necesidad de utilizar el lenguaje XML como base.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 Para evitar problemas con caracteres acentuados o la letra "ñ" al sindicar un canal, ¿qué práctica se recomienda en la codificación?
 Convertir todos los caracteres especiales a sus equivalentes en el alfabeto inglés.
 Utilizar la codificación UTF-8 y las entidades XML correspondientes (por ejemplo, á en lugar de á).
@@ -19,17 +19,17 @@ Ninguna de las anteriores opciones es completamente correcta en este contexto.
 Almacenar de forma segura la información de un sitio web en una base de datos centralizada para evitar pérdidas.
 Permitir que un sitio web acceda a los servicios y contenidos de otro sitio web a través de una licencia, distribuyendo automáticamente información actualizada a los usuarios interesados.
 Convertir documentos XML a formatos no basados en lenguajes de marcas para una mejor visualización en navegadores.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 Si un Sistema de Gestión de Contenidos (CMS) permite generar tanto archivos HTML como canales RSS a partir del mismo contenido, ¿qué proceso técnico subyace a la creación de los canales RSS en este contexto?
 La creación manual y separada de cada archivo RSS por parte del webmaster.
 Un proceso de transformación del contenido almacenado en un repositorio para adaptarlo al formato RSS.
 El almacenamiento directo del contenido en formato RSS en el repositorio, sin necesidad de transformación.
-Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
+Con el atributo xmlns:xsi en el elemento raíz
 ¿Cuáles son los dos estándares o formatos más utilizados para la sindicación de contenidos, ambos basados en tecnología XML?
 HTML y CSS.
 JSON y YAML.
 *RSS y Atom.
-Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
+Con el atributo xmlns:xsi en el elemento raíz
 EXPL:La respuesta es 'RSS y Atom.'. "HTML y CSS." y "JSON y YAML." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es una diferencia clave entre los "agregadores web" y los "agregadores de escritorio" mencionados en la unidad?
 Los agregadores de escritorio no requieren una conexión a Internet, a diferencia de los agregadores web.

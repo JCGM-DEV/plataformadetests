@@ -8,8 +8,8 @@ EXPL:La respuesta es 'Control de acceso discrecional (DAC)'. "Control de acceso 
 ¿Cuál es una de las principales ventajas de la gestión de identidades federada?
 *Permite a los usuarios acceder a múltiples sistemas sin necesidad de múltiples credenciales
 Requiere la creación de una nueva cuenta para cada sistema diferente
-Elimina la necesidad de autenticación en sistemas externos, lo cual no es correcto.
-Impide el acceso desde dispositivos móviles, lo cual no es correcto.
+Elimina la necesidad de autenticación en sistemas externos
+Impide el acceso desde dispositivos móviles
 EXPL:Permite a los usuarios acceder a múltiples sistemas sin necesidad de múltiples credenciales
 ¿Qué método de autenticación añade una capa adicional de seguridad al requerir dos formas de verificación?
 Contraseña segura
@@ -25,8 +25,8 @@ Compartir contraseñas con todos los miembros del equipo
 EXPL:La respuesta es 'Uso exclusivo de contraseñas largas'.
 ¿Cuál es la principal función de los respaldos regulares de datos?
 *Asegurar que los datos puedan recuperarse en caso de un desastre o ataque
-Reducir el uso de almacenamiento en la nube, lo cual no es correcto.
-Evitar la autenticación de usuarios en la nube, lo cual no es correcto.
+Reducir el uso de almacenamiento en la nube
+Evitar la autenticación de usuarios en la nube
 Permitir que los usuarios accedan a los datos sin autenticación
 EXPL:Asegurar que los datos puedan recuperarse en caso de un desastre o ataque
 ¿Cuál de los siguientes es un control técnico de seguridad en la nube?

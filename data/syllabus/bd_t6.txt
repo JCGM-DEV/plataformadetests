@@ -3,7 +3,7 @@ tema 6
 VAR mi_variable = 10;
 *SET @mi_variable = 10;
 DECLARE @mi_variable INT DEFAULT 10;
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:SET @variable = valor define una variable de sesión de usuario en MySQL. Las variables de sesión persisten durante la conexión. DECLARE se usa para variables locales dentro de procedimientos.
 
 ¿Qué palabra clave se utiliza al crear una función para indicar que siempre devuelve el mismo resultado para los mismos parámetros de entrada?
@@ -14,10 +14,10 @@ Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:DETERMINISTIC indica que la función siempre devuelve el mismo resultado para los mismos parámetros. Permite al optimizador cachear el resultado y mejorar el rendimiento.
 
 ¿Cuál es la función del comando DELIMITER en MySQL?
-Definir el tamaño máximo de una tabla., aunque no es la respuesta adecuada.
+Definir el tamaño máximo de una tabla
 *Cambiar temporalmente el carácter de finalización de comandos para escribir procedimientos complejos.
-Separar los campos de un archivo CSV durante una importación., lo cual no es correcto.
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Separar los campos de un archivo CSV durante una importación
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:DELIMITER cambia el carácter de fin de comando (por defecto ;) para poder escribir procedimientos que contienen ; internamente sin que MySQL los ejecute prematuramente.
 
 ¿Qué estructura de iteración se evalúa al final del ciclo, garantizando que el conjunto de instrucciones se ejecute al menos una vez?
@@ -31,7 +31,7 @@ Para ejecutar un procedimiento almacenado en MySQL, ¿qué instrucción debe uti
 EXECUTE
 RUN
 *CALL
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:Un procedimiento almacenado es código SQL precompilado que se ejecuta con CALL. Puede tener parámetros IN (entrada), OUT (salida) e INOUT. No devuelve valor directamente.
 
 ¿Qué variable del sistema debe estar en ON para que los eventos programados con CREATE EVENT llegar a ejecutarse?
@@ -43,8 +43,8 @@ EXPL:event_scheduler = ON activa el planificador de eventos de MySQL. Sin esto, 
 
 ¿Cuál es una diferencia fundamental entre las Funciones y los Procedimientos almacenados?
 *Las funciones siempre devuelven un valor; los procedimientos no devuelven un valor (aunque pueden usar parámetros de salida).
-Los procedimientos solo pueden leer datos; las funciones pueden modificarlos., lo cual no es correcto.
-Las funciones se llaman con CALL y los procedimientos con SELECT., lo cual no es correcto.
+Los procedimientos solo pueden leer datos; las funciones pueden modificarlos
+Las funciones se llaman con CALL y los procedimientos con SELECT
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Las funciones siempre devuelven un valor; los procedimientos no devuelven un valor (aunque pueden usar parámetros de sal...
 
@@ -52,7 +52,7 @@ EXPL:Las funciones siempre devuelven un valor; los procedimientos no devuelven u
 ENUM
 *SET
 ARRAY
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'SET'. "ENUM" y "ARRAY" son incorrectos porque describen conceptos diferentes.
 
 En el tratamiento de excepciones, ¿qué manejador aborta la ejecución del código inmediatamente cuando se produce un error crítico?
@@ -66,5 +66,5 @@ EXPL:EXIT HANDLER aborta la ejecución del procedimiento inmediatamente cuando o
 Trigger
 Index
 *Cursor
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:Un cursor permite procesar el resultado de una SELECT fila a fila dentro de un procedimiento. Pasos: DECLARE → OPEN → FETCH (bucle) → CLOSE. El handler NOT FOUND detecta el fin.

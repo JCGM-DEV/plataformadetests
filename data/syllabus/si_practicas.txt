@@ -108,10 +108,10 @@ netstat -r
 route trace
 EXPL:tracert (traceroute en Linux) muestra la ruta que sigue un paquete hasta el destino, incluyendo cada router intermedio (salto) y la latencia en cada uno. Útil para localizar dónde se produce un problema de red.
 En sistemas de archivos, ¿qué son los permisos efectivos?
-Los permisos que el administrador asigna globalmente., aunque no es la respuesta adecuada.
-Los permisos del grupo al que pertenece el usuario., aunque no es la respuesta adecuada.
+Los permisos que el administrador asigna globalmente
+Los permisos del grupo al que pertenece el usuario
 *Los permisos resultantes de combinar los permisos del usuario y los de sus grupos, aplicando las restricciones de denegación.
-Los permisos heredados del directorio raíz., lo cual no es correcto.
+Los permisos heredados del directorio raíz
 EXPL:Los permisos efectivos son el resultado de combinar los permisos del usuario con los de todos sus grupos, aplicando las denegaciones explícitas. Una denegación siempre tiene prioridad sobre un permiso.
 En Linux, ¿qué comando asigna permisos de lectura, escritura y ejecución al propietario, y solo lectura al grupo y otros?
 chmod 777 archivo
@@ -127,9 +127,9 @@ Slack.
 EXPL:Google Workspace (antes G Suite) incluye Gmail, Drive, Docs, Sheets, Slides y Meet. Permite colaboración en tiempo real y acceso desde cualquier dispositivo con Internet.
 ¿Para qué se utiliza principalmente Slack en un entorno de trabajo?
 Gestión de proyectos con tableros Kanban.
-Almacenamiento de archivos en la nube., lo cual no es correcto.
+Almacenamiento de archivos en la nube
 *Comunicación en tiempo real mediante canales y mensajes.
-Creación de documentos colaborativos., lo cual no es correcto.
+Creación de documentos colaborativos
 EXPL:Slack es una plataforma de comunicación empresarial en tiempo real. Organiza las conversaciones en canales temáticos, permite mensajes directos, compartir archivos e integrarse con otras herramientas.
 ¿Qué software antivirus se menciona en los casos prácticos para realizar un análisis de amenazas?
 Kaspersky.
@@ -138,10 +138,10 @@ Norton.
 Malwarebytes.
 EXPL:La respuesta es 'Avast.'. "Kaspersky." y "Norton." son incorrectos porque describen conceptos diferentes.
 ¿Para qué sirve EaseUS Data Recovery Wizard?
-Clonar particiones del disco duro., lo cual no es correcto.
+Clonar particiones del disco duro
 Monitorizar el rendimiento del sistema.
 *Recuperar archivos perdidos o eliminados del ordenador.
-Gestionar usuarios y permisos., lo cual no es correcto.
+Gestionar usuarios y permisos
 EXPL:EaseUS Data Recovery Wizard recupera archivos eliminados, formateados o perdidos por fallos del sistema. Escanea el disco en busca de datos recuperables aunque la papelera esté vacía.
 En VirtualBox, ¿qué modo de red permite que la máquina virtual tenga su propia IP en la red local y sea accesible desde otros dispositivos?
 NAT.
@@ -153,7 +153,7 @@ EXPL:En modo Adaptador Puente, la VM obtiene su propia IP en la red local y es a
 Es más barata de implementar., aunque esto no es correcto en este contexto.
 Usa menos cable., aunque esto no es correcto en este contexto.
 *Un fallo en un nodo no afecta al resto de la red.
-No necesita dispositivo central., lo cual no es correcto.
+No necesita dispositivo central
 EXPL:En la topología estrella, todos los nodos se conectan a un dispositivo central (switch/hub). Si falla un nodo, el resto sigue funcionando. Si falla el nodo central, cae toda la red.
 En la práctica de particiones, ¿qué ocurre con los datos al eliminar un volumen en "Administración de discos"?
 Los datos se mueven automáticamente a otra partición.
@@ -183,7 +183,7 @@ EXPL:La respuesta es '20 GB.'. "10 GB." y "15 GB." son incorrectos porque descri
 Necesita un dispositivo central caro.
 Es difícil de instalar., aunque esto no es correcto en este contexto.
 *Un fallo en el cable principal afecta a toda la red.
-No permite compartir recursos., lo cual no es correcto.
+No permite compartir recursos
 EXPL:En la topología bus, todos los nodos comparten un único cable. Es barata pero si el cable principal falla, toda la red cae. Además, las colisiones son frecuentes.
 ¿Qué topología de red conecta cada nodo directamente con todos los demás?
 Estrella.
@@ -234,10 +234,10 @@ Almacenamiento.
 Pantalla.
 EXPL:La respuesta es 'Sistema → Procesador.'. "Red." y "Almacenamiento." son incorrectos porque describen conceptos diferentes.
 ¿Qué significa "instantánea" (snapshot) en el contexto de VirtualBox?
-Una copia del disco duro físico del anfitrión., lo cual no es correcto.
-Una captura de pantalla de la máquina virtual., lo cual no es correcto.
+Una copia del disco duro físico del anfitrión
+Una captura de pantalla de la máquina virtual
 *Un punto de restauración del estado completo de la máquina virtual en un momento dado.
-Un archivo de configuración exportado., lo cual no es correcto.
+Un archivo de configuración exportado
 EXPL:Un snapshot (instantánea) en VirtualBox guarda el estado completo de la VM en un momento dado. Permite volver a ese estado si algo sale mal. Es como un punto de restauración del sistema.
 ¿Qué herramienta de Windows permite ver los registros de eventos del sistema para diagnosticar errores?
 Monitor de rendimiento.
@@ -253,9 +253,9 @@ Network\Bytes Total/sec.
 EXPL:El Monitor de rendimiento (perfmon) de Windows permite ver en tiempo real contadores de CPU, memoria, disco y red. Es más detallado que el Administrador de tareas y permite registrar datos históricos.
 En el caso práctico de monitorización, ¿qué indica una cola de disco (Disk Queue Length) muy alta?
 Que la CPU está saturada., aunque esto no es correcto en este contexto.
-Que la red está congestionada., lo cual no es correcto.
+Que la red está congestionada
 *Que el disco duro es el cuello de botella del sistema.
-Que la memoria RAM es insuficiente., lo cual no es correcto.
+Que la memoria RAM es insuficiente
 EXPL:La respuesta es 'Que el disco duro es el cuello de botella del sistema.'.
 ¿Qué comando de Windows muestra información detallada de la configuración de red incluyendo la dirección MAC?
 ipconfig
@@ -294,8 +294,8 @@ netstat -p 80 [IP]
 tracert [IP] 80
 EXPL:La respuesta es 'telnet [IP] 80'. "ping [IP] -p 80" y "netstat -p 80 [IP]" son incorrectos porque describen conceptos diferentes.
 ¿Qué significa que un puerto aparezca en estado "LISTENING" en la salida de netstat?
-Que el puerto está bloqueado por el firewall., lo cual no es correcto.
-Que hay una conexión activa en ese puerto., lo cual no es correcto.
+Que el puerto está bloqueado por el firewall
+Que hay una conexión activa en ese puerto
 *Que hay un servicio esperando conexiones entrantes en ese puerto.
 Que el puerto está cerrado., aunque esto no es correcto en este contexto.
 EXPL:Que hay un servicio esperando conexiones entrantes en ese puerto.
@@ -324,10 +324,10 @@ Explícito.
 De grupo.
 EXPL:NTFS es el sistema de archivos estándar de Windows. Soporta permisos ACL, cifrado (EFS), compresión, journaling y archivos de más de 4GB. FAT32 no soporta archivos >4GB.
 ¿Qué es la "delegación de permisos" en sistemas operativos?
-Asignar todos los permisos a un usuario estándar., lo cual no es correcto.
-Eliminar permisos de administrador., aunque no es la respuesta adecuada.
+Asignar todos los permisos a un usuario estándar
+Eliminar permisos de administrador
 *Permitir que un usuario o grupo gestione permisos sobre recursos específicos sin ser administrador global.
-Copiar los permisos de un archivo a otro., aunque no es la respuesta adecuada.
+Copiar los permisos de un archivo a otro
 EXPL:Permitir que un usuario o grupo gestione permisos sobre recursos específicos sin ser administrador global.
 ¿Qué herramienta de gestión de proyectos se menciona en los casos prácticos para asignar tareas?
 Trello.
@@ -336,28 +336,28 @@ Asana.
 Jira.
 EXPL:La respuesta es 'Notion.'. "Trello." y "Asana." son incorrectos porque describen conceptos diferentes.
 ¿Qué tipo de análisis realiza Avast en la práctica de herramientas de productividad?
-Análisis de rendimiento del sistema., lo cual no es correcto.
-Análisis de particiones del disco., lo cual no es correcto.
+Análisis de rendimiento del sistema
+Análisis de particiones del disco
 *Análisis de amenazas (virus, malware) en el ordenador.
 Análisis de la red local., aunque esto no es correcto en este contexto.
 EXPL:La respuesta es 'Análisis de amenazas (virus, malware) en el ordenador.'.
 ¿Qué ventaja principal ofrece Google Workspace frente a software de escritorio tradicional?
-Mayor velocidad de procesamiento., lo cual no es correcto.
-No requiere conexión a Internet., lo cual no es correcto.
+Mayor velocidad de procesamiento
+No requiere conexión a Internet
 *Colaboración en tiempo real y acceso desde cualquier dispositivo con Internet.
-Mayor compatibilidad con hardware antiguo., lo cual no es correcto.
+Mayor compatibilidad con hardware antiguo
 EXPL:Google Workspace (antes G Suite) incluye Gmail, Drive, Docs, Sheets, Slides y Meet. Permite colaboración en tiempo real y acceso desde cualquier dispositivo con Internet.
 ¿Qué tipo de software es EaseUS Partition Master?
 Software antivirus., aunque esto no es correcto en este contexto.
-Herramienta de monitorización., lo cual no es correcto.
+Herramienta de monitorización
 *Herramienta de gestión y clonación de particiones de disco.
 Gestor de máquinas virtuales., aunque esto no es correcto en este contexto.
 EXPL:EaseUS Partition Master es una herramienta de gestión de particiones que permite clonar, redimensionar, mover y convertir particiones. La clonación crea una copia exacta de una partición en otra ubicación.
 ¿Cuál es la diferencia entre "Reducir volumen" y "Eliminar volumen" en Administración de discos de Windows?
-No hay diferencia, ambas borran los datos., aunque no es la respuesta adecuada.
-Reducir volumen borra los datos; eliminar volumen los conserva., lo cual no es correcto.
+No hay diferencia, ambas borran los datos
+Reducir volumen borra los datos; eliminar volumen los conserva
 *Reducir volumen disminuye el tamaño conservando los datos; eliminar volumen borra la partición y sus datos.
-Eliminar volumen solo funciona en discos externos., lo cual no es correcto.
+Eliminar volumen solo funciona en discos externos
 EXPL:La herramienta "Administración de discos" de Windows permite crear, eliminar, formatear y redimensionar particiones sin software adicional. Se accede desde el Panel de control o ejecutando diskmgmt.msc.
 ¿Qué tipo de dirección IP usa la configuración NAT de VirtualBox para el adaptador de red del anfitrión?
 Una IP pública asignada por el ISP.
@@ -372,10 +372,10 @@ netstat -r
 route print gateway
 EXPL:La respuesta es 'ping [IP de la puerta de enlace]'. "tracert gateway" y "netstat -r" son incorrectos porque describen conceptos diferentes.
 ¿Qué información proporciona el comando tracert además de verificar la conectividad?
-El ancho de banda disponible en cada salto., lo cual no es correcto.
-Los puertos abiertos en cada router., lo cual no es correcto.
+El ancho de banda disponible en cada salto
+Los puertos abiertos en cada router
 *Los routers intermedios (saltos) y la latencia en cada uno hasta el destino.
-La dirección MAC de cada dispositivo en la ruta., lo cual no es correcto.
+La dirección MAC de cada dispositivo en la ruta
 EXPL:El router opera en la Capa 3 (Red) del modelo OSI y enruta paquetes IP entre redes diferentes. El switch opera en Capa 2 y conmuta tramas MAC dentro de la misma red.
 ¿Qué ocurre si se intenta ampliar un volumen en Windows y no hay espacio no asignado contiguo?
 Windows crea automáticamente espacio no asignado.

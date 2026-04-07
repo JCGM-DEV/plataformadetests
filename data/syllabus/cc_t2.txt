@@ -51,11 +51,11 @@ EXPL:La respuesta es 'Costes operativos en la nube.'. "Coste de hardware y softw
 Establecer presupuestos y alertar sobre gastos elevados.
 Modificar automáticamente los precios de los servicios en la nube.
 *Cancelar automáticamente servicios que superan el presupuesto.
-Garantizar un precio fijo sin variaciones., lo cual no es correcto.
+Garantizar un precio fijo sin variaciones
 EXPL:Cancelar automáticamente servicios que superan el presupuesto.
 ¿Cuál es una de las tendencias futuras en la gestión de la facturación en la nube?
 *Uso de inteligencia artificial y aprendizaje automático para optimizar los costes
-Eliminación total de los modelos de pago por uso., lo cual no es correcto.
-Cobro adelantado de todos los servicios en la nube, aunque no aplica en este contexto.
-Prohibición del uso de herramientas de análisis de costes, lo cual no corresponde.
+Eliminación total de los modelos de pago por uso
+Cobro adelantado de todos los servicios en la nube
+Prohibición del uso de herramientas de análisis de costes
 EXPL:Uso de inteligencia artificial y aprendizaje automático para optimizar los costes

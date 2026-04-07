@@ -1,9 +1,9 @@
 tema 3
 En el contexto de las metodologías de desarrollo orientado a objetos, ¿cómo se posiciona UML?
-UML es una metodología de desarrollo completa y prescriptiva que debe ser adoptada en todos los proyectos orientados a objetos., lo cual no es correcto.
-UML define un conjunto estricto de reglas que restringen las metodologías de desarrollo a unas pocas opciones compatibles., lo cual no es correcto.
+UML es una metodología de desarrollo completa y prescriptiva que debe ser adoptada en todos los proyectos orientados a objetos
+UML define un conjunto estricto de reglas que restringen las metodologías de desarrollo a unas pocas opciones compatibles
 *UML no sigue ninguna metodología en concreto, sino que proporciona herramientas para aplicar en estas, permitiendo representar las diferentes partes estáticas o dinámicas del sistema como parte del trabajo metodológico.
-Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+Mediante una clase abstracta con métodos estáticos
 EXPL:UML no sigue ninguna metodología en concreto, sino que proporciona herramientas para aplicar en estas, permitiendo repre...
 
 ¿Qué organismo internacional aprobó el lenguaje UML como estándar a partir del año 2004?
@@ -14,9 +14,9 @@ Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
 
 ¿Cuál es el objetivo fundamental del Lenguaje Unificado de Modelado (UML) según la introducción de la unidad?
-Proporcionar un lenguaje de programación de alto nivel para el desarrollo de aplicaciones empresariales., lo cual no es correcto.
+Proporcionar un lenguaje de programación de alto nivel para el desarrollo de aplicaciones empresariales
 *Ofrecer herramientas para la representación gráfica y textual de un sistema informático, especialmente cuando se utiliza el paradigma de la orientación a objetos.
-Estandarizar las interfaces de comunicación entre diferentes lenguajes de programación y sistemas operativos., lo cual no es correcto.
+Estandarizar las interfaces de comunicación entre diferentes lenguajes de programación y sistemas operativos
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Ofrecer herramientas para la representación gráfica y textual de un sistema informático, especialmente cuando se utiliza...
 
@@ -24,26 +24,26 @@ Dentro de los diagramas estructurales, ¿cuál de ellos permite representar no s
 El diagrama de componentes, que muestra la relación entre subsistemas.
 El diagrama de clases, que modela la estructura estática del sistema.
 *El diagrama de lanzamiento o despliegue.
-Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
+Con el atributo xmlns:xsi en el elemento raíz
 EXPL:La respuesta es 'El diagrama de lanzamiento o despliegue.'.
 
 ¿Cuál es la característica principal de las herramientas CASE (Computer Aided Software Engineering) con soporte UML, en contraste con herramientas de dibujo genéricas?
-Son exclusivamente gratuitas y de código abierto., lo cual no es correcto.
-Se centran únicamente en la generación automática de interfaces de usuario., aunque no es la respuesta adecuada.
+Son exclusivamente gratuitas y de código abierto
+Se centran únicamente en la generación automática de interfaces de usuario
 *Están diseñadas y construidas específicamente para ayudar en diferentes fases del proceso de creación de software, proporcionando soporte específico para UML.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:Están diseñadas y construidas específicamente para ayudar en diferentes fases del proceso de creación de software, propo...
 
 Según la unidad, ¿cuál es probablemente el diagrama más habitual y útil de UML, que permite representar las clases del sistema, incluyendo sus atributos, métodos y las reglas entre ellas?
 El diagrama de casos de uso, que describe la interacción de los actores con el sistema.
 El diagrama de actividad, que detalla la secuencia de pasos de una tarea.
 *El diagrama de clases.
-Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+Mediante una clase abstracta con métodos estáticos
 EXPL:La respuesta es 'El diagrama de clases.'.
 
 Más allá de la generación de código a partir de diagramas, ¿qué otra capacidad valiosa suelen ofrecer las herramientas CASE con soporte UML para la documentación de proyectos existentes?
 La capacidad de optimizar automáticamente el rendimiento del código generado sin intervención del desarrollador.
-La posibilidad de migrar bases de datos entre diferentes sistemas de gestión., lo cual no es correcto.
+La posibilidad de migrar bases de datos entre diferentes sistemas de gestión
 *La ingeniería inversa, que permite generar diagramas de clase u otros a partir del código fuente ya programado.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).
@@ -52,7 +52,7 @@ Según el glosario de la unidad, ¿cómo se define un "Objeto" en el contexto de
 La representación genérica de un elemento del sistema, sin atributos ni métodos específicos.
 Una característica o propiedad de una clase que describe su estado.
 *La concreción de una clase, también conocida como instancia.
-Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+Mediante una clase abstracta con métodos estáticos
 EXPL:La respuesta es 'La concreción de una clase, también conocida como instancia.'.
 
 ¿Cuál de los diagramas de comportamiento se utiliza para representar de manera más detallada la secuencia de pasos que se van a realizar para una actividad, siendo más específico que un diagrama de caso de uso?
@@ -66,5 +66,5 @@ Los múltiples diagramas de UML, diseñados para cubrir diversas perspectivas de
 Diagramas de diseño y diagramas de implementación.
 *Diagramas estructurales y diagramas de comportamiento.
 Diagramas de requisitos y diagramas de arquitectura.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Diagramas estructurales y diagramas de comportamiento.'.

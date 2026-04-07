@@ -11,7 +11,7 @@ SAVEPOINT TRANSACTION
 Hash
 *Árbol B
 Compuesto
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:El Árbol B mantiene los datos ordenados, lo que permite recorrer rangos eficientemente (BETWEEN, <, >). El índice Hash solo sirve para igualdad exacta (=), no para rangos.
 ¿Qué diferencia esencial hay entre una vista y una tabla?
 Una vista almacena datos físicamente

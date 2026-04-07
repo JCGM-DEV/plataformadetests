@@ -3,7 +3,7 @@ Los lenguajes de programación utilizan distintos tipos de datos para representa
 Número entero.
 Valor booleano.
 *Array o arreglo.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Array o arreglo.'. "Número entero." y "Valor booleano." son incorrectos porque describen conceptos diferentes.
 Aunque a menudo se confunden, los conceptos de algoritmo y programa no son equivalentes. ¿Cuál de las siguientes afirmaciones describe correctamente la relación entre ambos?
 *El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación.
@@ -15,7 +15,7 @@ Durante el desarrollo de un programa, pueden aparecer errores que no impiden la 
 Detectar errores de sintaxis antes de ejecutar el programa.
 Ejecutar el programa de forma más rápida y optimizada.
 *Analizar la ejecución paso a paso para localizar errores lógicos.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
 Antes de escribir un programa, es fundamental diseñar correctamente el algoritmo que resolverá el problema. Para que una secuencia de pasos pueda considerarse un algoritmo válido, debe cumplir una serie de características. ¿Cuál de las siguientes es una de ellas?
 Debe poder ejecutarse directamente por la máquina sin traducción.
@@ -27,25 +27,25 @@ Todo programa informático sigue un modelo básico de funcionamiento que permite
 Los datos que introduce el usuario mediante dispositivos de entrada.
 *El algoritmo que procesa los datos y aplica la lógica del programa.
 El sistema que muestra el resultado final al usuario.
-Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
+Con el atributo xmlns:xsi en el elemento raíz
 EXPL:Además del código, un programa necesita datos para operar. Los datos son la información que el programa procesa (operandos en una operación, registros de una BD, etc.).
 Las estructuras de control permiten modificar el flujo normal de ejecución de un programa. ¿Qué tipo de estructura se utiliza cuando es necesario repetir varias veces un conjunto de instrucciones mientras se cumpla una condición?
 Estructura secuencial.
 Estructura selectiva.
 *Estructura iterativa.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Estructura iterativa.'. "Estructura secuencial." y "Estructura selectiva." son incorrectos porque describen conceptos diferentes.
 Los paradigmas de programación ofrecen diferentes formas de organizar y estructurar el software. En el paradigma orientado a objetos, ¿cuál es el elemento central sobre el que se construyen los programas?
 Las funciones matemáticas., aunque esto no es correcto en este contexto.
 *Los objetos que combinan datos y comportamiento.
 Las instrucciones ejecutadas de forma secuencial.
-Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+Mediante una clase abstracta con métodos estáticos
 EXPL:La respuesta es 'Los objetos que combinan datos y comportamiento.'.
 Java es un lenguaje de programación con un modelo de ejecución particular que combina características de distintos enfoques. ¿Por qué se considera que Java utiliza un sistema híbrido de compilación e interpretación?
 Porque el código se ejecuta directamente como código máquina del sistema operativo.
 *Porque el código se compila a bytecode y se ejecuta mediante la Máquina Virtual de Java.
 Porque no necesita ningún proceso previo para poder ejecutarse.
-Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+Mediante una clase abstracta con métodos estáticos
 EXPL:Porque el código se compila a bytecode y se ejecuta mediante la Máquina Virtual de Java.
 La programación no se limita únicamente a escribir código, sino que engloba varias tareas necesarias para que un programa funcione correctamente a lo largo del tiempo. ¿Cuál de las siguientes opciones define mejor qué es programar?
 Utilizar programas informáticos ya existentes para resolver tareas cotidianas.

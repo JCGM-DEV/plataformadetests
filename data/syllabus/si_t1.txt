@@ -9,25 +9,25 @@ EXPL:Un tipo de ordenador que se basa en el uso de una cinta infinita y extensib
 Proteger la información y los recursos de posibles amenazas.
 *Adaptarse a las necesidades crecientes de la organización.
 Ser fiables y estar disponibles en todo momento.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Adaptarse a las necesidades crecientes de la organización.'.
 ¿Qué deben ser las redes informáticas para proteger la privacidad y la integridad de los datos?
 Fiables y estar disponibles en todo momento.
 Escalables.
 *Seguras.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).
 ¿Qué significa que las redes informáticas permitan la comunicación entre los dispositivos conectados?
 Los usuarios deben ser capaces de acceder a los mismos recursos de manera simultánea.
 *Los usuarios pueden enviar y recibir información de manera rápida y eficiente.
 Deben estar diseñadas para proteger la información y los recursos de posibles amenazas.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:Los usuarios pueden enviar y recibir información de manera rápida y eficiente.
 ¿Cuál es una de las principales características de las redes informáticas?
 Proteger la privacidad y la integridad de los datos.
 *Permitir la comunicación entre los dispositivos conectados.
 Adquirir una copia independiente para cada usuario.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Permitir la comunicación entre los dispositivos conectados.'.
 ¿Qué dispositivo permite la reproducción de sonido en el ordenador?
 Ratón.
@@ -39,7 +39,7 @@ EXPL:La respuesta es 'Altavoces.'. "Ratón." y "Impresora." son incorrectos porq
 Mantener una buena organización de cables.
 *Realizar copias de seguridad periódicas.
 No proteger dispositivos móviles.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Realizar copias de seguridad periódicas.'. "Mantener una buena organización de cables." y "No proteger dispositivos móviles." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es el componente físico del sistema informático?
 Software.
@@ -51,7 +51,7 @@ EXPL:La respuesta es 'Hardware.'. "Software." y "Componente humano." son incorre
 *Guiados.
 No guiados.
 Ambos.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'Guiados.'. "No guiados." y "Ambos." son incorrectos porque describen conceptos diferentes.
 ¿Qué periférico permite ingresar texto y comandos en el ordenador?
 Escáner.

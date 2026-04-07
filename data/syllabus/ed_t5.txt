@@ -1,14 +1,14 @@
 tema 5
 En un diagrama de secuencia, ¿qué representan la "línea de vida" y la "barra de activación" respectivamente?
-La línea de vida representa la duración absoluta de un proceso y la barra de activación el tiempo de respuesta., lo cual no es correcto.
+La línea de vida representa la duración absoluta de un proceso y la barra de activación el tiempo de respuesta
 *La línea de vida es una línea vertical discontinua asociada a cada elemento que indica el orden de los eventos, mientras que la barra de activación representa el periodo de tiempo durante el que el elemento se encuentra activo en la resolución de la actividad.
-La línea de vida muestra la jerarquía de las clases y la barra de activación la herencia de métodos., lo cual no es correcto.
+La línea de vida muestra la jerarquía de las clases y la barra de activación la herencia de métodos
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:La línea de vida es una línea vertical discontinua asociada a cada elemento que indica el orden de los eventos, mientras...
 
 Respecto a la relación de Inclusión (<<include>>) entre casos de uso en UML, ¿cuál de las siguientes afirmaciones es correcta?
 Se representa con una línea discontinua con flecha que apunta al caso de uso "incluyente" y es opcional para la funcionalidad.
-Indica que un caso de uso amplía la funcionalidad de otro de manera condicional., aunque no es la respuesta adecuada.
+Indica que un caso de uso amplía la funcionalidad de otro de manera condicional
 *Un caso de uso "incluye" a otro cuando lo utiliza internamente para llevar a cabo su funcionalidad, y la realización de ambos casos de uso es siempre obligatoria.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Un caso de uso "incluye" a otro cuando lo utiliza internamente para llevar a cabo su funcionalidad, y la realización de ...
@@ -17,13 +17,13 @@ EXPL:Un caso de uso "incluye" a otro cuando lo utiliza internamente para llevar 
 El diagrama de secuencia, por su enfoque en la interacción entre objetos.
 *El diagrama de actividad.
 El diagrama de estados, ya que muestra el ciclo de vida de un componente.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
 
 ¿Cuál es una característica fundamental de la relación de Extensión (<<extend>>) en los diagramas de casos de uso UML?
-Es una relación fuerte y obligatoria donde la funcionalidad extendida siempre se ejecuta., lo cual no es correcto.
+Es una relación fuerte y obligatoria donde la funcionalidad extendida siempre se ejecuta
 *Indica que un caso de uso "extiende" o amplía la funcionalidad de otro, añadiendo opcionalmente un punto de extensión para especificar las condiciones.
-Se representa con una línea continua y un diamante hueco, mostrando una relación de "parte-todo"., lo cual no es correcto.
+Se representa con una línea continua y un diamante hueco, mostrando una relación de "parte-todo"
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Indica que un caso de uso "extiende" o amplía la funcionalidad de otro, añadiendo opcionalmente un punto de extensión pa...
 
@@ -31,19 +31,19 @@ EXPL:Indica que un caso de uso "extiende" o amplía la funcionalidad de otro, a�
 El diagrama de actividad, por su capacidad de mostrar flujos detallados.
 El diagrama de tiempos, debido a su enfoque en la evolución de estados.
 *El diagrama de comunicación (conocido como diagrama de colaboración en versiones anteriores de UML).
-Mediante una clase abstracta con métodos estáticos, aunque no es correcto.
+Mediante una clase abstracta con métodos estáticos
 EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
 
 En un diagrama de casos de uso UML, ¿qué puede representar un "Actor"?
-Únicamente a una persona física que interactúa con el sistema, como un usuario., aunque no es la respuesta adecuada.
+Únicamente a una persona física que interactúa con el sistema, como un usuario
 *Cualquier elemento que se relaciona con el sistema, pudiendo ser una persona física (usuario) como otro sistema o subsistema (un programa informático o un sistema hardware).
-Una función o actividad interna del sistema que no tiene interacción externa., aunque no es la respuesta adecuada.
+Una función o actividad interna del sistema que no tiene interacción externa
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Cualquier elemento que se relaciona con el sistema, pudiendo ser una persona física (usuario) como otro sistema o subsis...
 
 ¿Qué se entiende por "Escenario" en el contexto de un diagrama de casos de uso?
-El conjunto completo de actores y casos de uso que componen un sistema., lo cual no es correcto.
-La representación gráfica de una actividad o funcionalidad del sistema como una elipse., lo cual no es correcto.
+El conjunto completo de actores y casos de uso que componen un sistema
+La representación gráfica de una actividad o funcionalidad del sistema como una elipse
 *Cada uno de los diferentes caminos que puede tomar un caso de uso, representando una secuencia de eventos posible para completar la interacción.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Cada uno de los diferentes caminos que puede tomar un caso de uso, representando una secuencia de eventos posible para c...
@@ -56,15 +56,15 @@ Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:La respuesta es 'El diagrama de estados o de máquina de estados.'.
 
 En el contexto de la elaboración de diagramas de comportamiento UML, ¿qué tipo de herramientas suelen proporcionar funcionalidades para su creación y qué ejemplo de plug-in para un Entorno de Desarrollo Integrado (IDE) popular se menciona?
-Solo herramientas de dibujo genéricas; ningún plug-in específico es mencionado., aunque no es la respuesta adecuada.
+Solo herramientas de dibujo genéricas; ningún plug-in específico es mencionado
 *Herramientas CASE están diseñadas para facilitar su creación, y plug-ins integrados en entornos de desarrollo (IDEs) como AmaterasUML para Eclipse también ofrecen soporte.
-Exclusivamente aplicaciones de línea de comandos; no se usan interfaces gráficas., aunque no es la respuesta adecuada.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Exclusivamente aplicaciones de línea de comandos; no se usan interfaces gráficas
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:Un IDE (Integrated Development Environment) integra editor de código, compilador/intérprete, depurador y otras herramientas en una única interfaz. Ejemplos: IntelliJ IDEA, Eclipse, VS Code.
 
 ¿Cuál es la principal característica que definen los diagramas de comportamiento en UML, diferenciándolos de los diagramas estructurales?
-Muestran la definición y estructura estática de los componentes de un sistema en reposo., lo cual no es correcto.
+Muestran la definición y estructura estática de los componentes de un sistema en reposo
 *Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y transformación.
 Describen exclusivamente la interacción entre usuarios finales y la interfaz gráfica del sistema.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y t...

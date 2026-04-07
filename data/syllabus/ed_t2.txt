@@ -1,16 +1,16 @@
 tema 2
 ¿Cuál es la característica principal que distingue a un Entorno de Desarrollo Integrado (IDE) moderno de las herramientas de programación más antiguas, como los editores simples de texto?
-Los IDE modernos son exclusivamente de código abierto y gratuitos, a diferencia de las herramientas antiguas., lo cual no es correcto.
-Los IDE modernos se enfocan únicamente en la edición de código, mientras que las herramientas antiguas integraban la compilación y el enlazado., lo cual no es correcto.
+Los IDE modernos son exclusivamente de código abierto y gratuitos, a diferencia de las herramientas antiguas
+Los IDE modernos se enfocan únicamente en la edición de código, mientras que las herramientas antiguas integraban la compilación y el enlazado
 *Los IDE modernos integran una amplia gama de herramientas para dar soporte a la mayoría de las actividades de desarrollo de software, incluyendo documentación, control de versiones y pruebas, más allá de la mera escritura y compilación de código.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:Los IDE modernos integran una amplia gama de herramientas para dar soporte a la mayoría de las actividades de desarrollo...
 
 Al crear un nuevo proyecto en PyCharm para Python, ¿cuál es uno de los elementos clave que deben seleccionarse o configurarse, además de la ubicación del proyecto y la versión de Python a utilizar?
 El tipo específico de interfaz gráfica de usuario (GUI) que se utilizará para la aplicación.
 *La ubicación del entorno virtual, que constituye un entorno de trabajo aislado para el proyecto.
 El compilador predeterminado para C++ o Java, incluso para proyectos Python.
-Con el atributo xmlns:xsi en el elemento raíz, aunque no aplica aquí.
+Con el atributo xmlns:xsi en el elemento raíz
 EXPL:La ubicación del entorno virtual, que constituye un entorno de trabajo aislado para el proyecto.
 
 ¿Cómo gestionan típicamente los Entornos de Desarrollo Integrados (IDEs) la detección y notificación de errores en lenguajes de programación interpretados, como Python, en comparación con los lenguajes compilados?
@@ -28,8 +28,8 @@ Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
 
 Basándose en la distinción entre categorías de software, ¿cuál es la característica que define al software libre en contraste con el software propietario?
-El software libre siempre tiene un coste asociado a su uso, mientras que el software propietario es siempre gratuito., lo cual no es correcto.
-El software libre es desarrollado por grandes corporaciones, mientras que el software propietario suele ser creado por desarrolladores independientes., lo cual no es correcto.
+El software libre siempre tiene un coste asociado a su uso, mientras que el software propietario es siempre gratuito
+El software libre es desarrollado por grandes corporaciones, mientras que el software propietario suele ser creado por desarrolladores independientes
 *El software libre permite el acceso a su código fuente para su estudio, comprensión y mejora, mientras que el software propietario restringe el acceso a su código, generalmente solo permitiéndolo a su dueño o creador.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:El software libre permite el acceso a su código fuente para su estudio, comprensión y mejora, mientras que el software p...
@@ -56,8 +56,8 @@ Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:Los editores de código son más ligeros y consumen menos recursos del sistema, siendo adecuados para tipos específicos de...
 
 ¿Qué aspectos de la interfaz de un IDE pueden ser típicamente personalizados por el usuario, como se ejemplifica con PyCharm?
-Solo el idioma de los menús y las sugerencias del IDE., aunque no es la respuesta adecuada.
-La lógica fundamental y las funcionalidades principales del propio IDE., lo cual no es correcto.
+Solo el idioma de los menús y las sugerencias del IDE
+La lógica fundamental y las funcionalidades principales del propio IDE
 *La apariencia de sus elementos, como el tipo y tamaño de letra, la disposición de los paneles y el esquema de color a utilizar.
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:La apariencia de sus elementos, como el tipo y tamaño de letra, la disposición de los paneles y el esquema de color a ut...

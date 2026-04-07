@@ -35,16 +35,16 @@ Ninguna de las anteriores opciones es completamente correcta en este contexto.
 Establece el derecho a acceder a puestos de funcionariado público siempre que se esté en posesión de un título universitario.
 Establece que solo los funcionarios de carrera pueden acceder a las pruebas de acceso a los puestos en la administración pública.
 Establece el derecho de todos los ciudadanos al acceso al empleo público de acuerdo con los principios constitucionales de mérito y capacidad.
-Con un certificado SSL autofirmado, aunque no es la respuesta correcta.
+Con un certificado SSL autofirmado
 ¿Qué es la competencia digital?
 *La destreza en el manejo de las herramientas de las tecnologías de la información y la comunicación en diversos contextos
-La capacidad de diseñar y fabricar dispositivos electrónicos avanzados, lo cual no es correcto.
-La habilidad de programar en varios lenguajes de codificación, lo cual no es correcto.
+La capacidad de diseñar y fabricar dispositivos electrónicos avanzados
+La habilidad de programar en varios lenguajes de codificación
 Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:La destreza en el manejo de las herramientas de las tecnologías de la información y la comunicación en diversos contexto...
 ¿Cuál es la principal tendencia del mercado laboral en el sector de la informática?
 *Inteligencia artificial y automatización
 Computación cuántica, aunque esto no es correcto en este contexto.
 Robótica, aunque esto no es correcto en este contexto.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:El mercado laboral es el espacio donde se encuentran la oferta (trabajadores) y la demanda (empresas) de trabajo. Factores como la tecnología, la globalización y la formación influyen en su evolución.

@@ -3,7 +3,7 @@ tema 4
 SELECT
 *FROM
 WHERE
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:La respuesta es 'FROM'. "SELECT" y "WHERE" son incorrectos porque describen conceptos diferentes.
 
 ¿Qué operador se utiliza en la cláusula WHERE para filtrar por un rango de valores?
@@ -17,7 +17,7 @@ EXPL:BETWEEN a AND b es equivalente a col >= a AND col <= b. Incluye ambos extre
 Para ordenar los resultados de forma alfabética.
 *Para eliminar las filas duplicadas en el conjunto de resultados.
 Para filtrar registros que contengan valores nulos.
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:DISTINCT elimina filas duplicadas del resultado. Se aplica sobre todas las columnas del SELECT. Tiene un coste de rendimiento porque requiere ordenar o hashear los resultados.
 
 ¿Cuál es la función de agregado que devuelve el valor máximo de una columna?
@@ -28,43 +28,43 @@ Ninguna de las anteriores opciones es completamente correcta en este contexto.
 EXPL:MAX() devuelve el valor máximo de una columna. MIN() el mínimo, SUM() la suma, AVG() la media, COUNT() el número de filas. Son funciones de agregado que operan sobre grupos de filas.
 
 ¿Qué diferencia principal hay entre las cláusulas WHERE y HAVING?
-WHERE se aplica a los grupos y HAVING a las filas individuales., lo cual no es correcto.
+WHERE se aplica a los grupos y HAVING a las filas individuales
 *WHERE filtra registros antes de la agrupación; HAVING filtra grupos después de aplicarse GROUP BY.
-Ambas cláusulas son idénticas y se pueden usar indistintamente., lo cual no es correcto.
-Mediante el protocolo OSPF de enrutamiento dinámico, aunque no corresponde.
+Ambas cláusulas son idénticas y se pueden usar indistintamente
+Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:GROUP BY agrupa filas con el mismo valor en las columnas especificadas. Se usa con funciones de agregado (COUNT, SUM, AVG). HAVING filtra los grupos resultantes.
 
 ¿Qué tipo de JOIN devuelve todos los registros de la tabla de la izquierda, aunque no tengan correspondencia en la derecha?
 INNER JOIN
 *LEFT JOIN
 RIGHT JOIN
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:LEFT JOIN devuelve TODAS las filas de la tabla izquierda, más las coincidentes de la derecha. Las filas sin pareja en la derecha aparecen con NULL. Útil para "todos los X aunque no tengan Y".
 
 En una composición interna (INNER JOIN), ¿qué ocurre con las filas de la tabla A que no coinciden con ninguna de la tabla B?
 Aparecen en el resultado con valores NULL.
 *Se excluyen del conjunto de resultados.
 Detienen la ejecución de la consulta por error de integridad.
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:INNER JOIN devuelve solo las filas que tienen coincidencia en AMBAS tablas. Las filas sin pareja se excluyen del resultado. Es el JOIN más restrictivo.
 
 ¿Qué palabra clave se usa para comprobar si un valor existe dentro de una lista devuelta por una subconsulta?
 LIKE
 EXISTS
 *IN
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:La respuesta es 'IN'. "LIKE" y "EXISTS" son incorrectos porque describen conceptos diferentes.
 
 En Oracle, ¿qué combinación de cláusulas se utiliza para realizar consultas jerárquicas?
 GROUP BY y HAVING.
 *START WITH y CONNECT BY.
 UNION e INTERSECT.
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:START WITH define el nodo raíz de la jerarquía y CONNECT BY define la relación padre-hijo. Son cláusulas específicas de Oracle para consultas jerárquicas (árboles organizativos, categorías anidadas).
 
 ¿Qué operación de conjuntos combina los resultados de dos consultas eliminando los duplicados automáticamente?
 *UNION
 INTERSECT
 EXCEPT (o MINUS)
-Mediante una subconsulta correlacionada con EXISTS, aunque no es la opción correcta.
+Mediante una subconsulta correlacionada con EXISTS
 EXPL:La respuesta es 'UNION'. "INTERSECT" y "EXCEPT (o MINUS)" son incorrectos porque describen conceptos diferentes.

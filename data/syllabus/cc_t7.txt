@@ -9,7 +9,7 @@ EXPL:La respuesta es 'Se limitan a almacenar solo archivos de texto'.
 Permite un acceso instantáneo a la información en todo momento
 *Reduce los costos al utilizar soluciones de almacenamiento de bajo costo
 Es la mejor opción para servidores de bases de datos
-No permite la recuperación de datos, lo cual no es correcto.
+No permite la recuperación de datos
 EXPL:Reduce los costos al utilizar soluciones de almacenamiento de bajo costo
 ¿Cuál es una de las principales aplicaciones del almacenamiento de ficheros?
 Streaming de videos en línea
@@ -32,7 +32,7 @@ EXPL:La respuesta es 'Almacenamiento de objetos'. "Almacenamiento de ficheros" y
 ¿Cuál es una ventaja del almacenamiento de objetos sobre el almacenamiento de bloques?
 *Es más rápido para bases de datos transaccionales
 Permite la identificación de cada archivo mediante una URL única
-No requiere estructura jerárquica, lo cual no es correcto.
+No requiere estructura jerárquica
 Ambos son exactamente iguales, aunque esto no es correcto en este contexto.
 EXPL:La respuesta es 'Es más rápido para bases de datos transaccionales'.
 ¿Cuál de los siguientes beneficios es característico del almacenamiento de bloques?
