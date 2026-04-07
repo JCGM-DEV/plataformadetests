@@ -736,27 +736,6 @@ async function startExamenFinal(subjectId) {
         renderQuestion(); startTimer();
     } catch(e) { console.error(e); alert('Error al cargar el examen final.'); showView('dashboard'); }
 }
-        const allQ = shuffleArray([...teoricas, ...practicas]);
-
-        if (allQ.length === 0) { alert('No se pudieron cargar preguntas.'); showView('dashboard'); return; }
-
-        APP_STATE.currentExam = { ...subject, id: subjectId, name: 'SI — Simulacro Examen Final' };
-        APP_STATE.currentUnit = null;
-        APP_STATE.isSyllabusMode = true;
-        APP_STATE.examQuestions = allQ;
-        APP_STATE.currentQuestionIndex = 0;
-        APP_STATE.answers = [];
-        APP_STATE.timer = allQ.length * 90; // ~90min for 60 questions
-
-        document.getElementById('exam-subject-label').textContent = `🎯 ${subject.icon} Simulacro Examen Final — ${allQ.length} preguntas (30T + ${practicas.length}P)`;
-        renderQuestion();
-        startTimer();
-    } catch(e) {
-        console.error(e);
-        alert('Error al cargar el examen final.');
-        showView('dashboard');
-    }
-}
 
 async function startSyllabusFlashcard(subjectId) {
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
