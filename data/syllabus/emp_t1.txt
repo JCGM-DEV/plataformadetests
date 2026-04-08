@@ -1,41 +1,61 @@
 tema 1
-El moobing se incluye entre los riesgos laborales:
+¿Entre qué tipo de riesgos laborales se incluye el mobbing?
 Biológicos
-*Psicosociales
 Ergonómicos
-El organismo encargado de vigilar el cumplimiento de las normas en materia laboral es:
-La Fundación Estatal para la Prevención de los Riesgos Laborales
-El Instituto Nacional de Seguridad y Salud en el Trabajo
-La Inspección de Trabajo y Seguridad Social
-El conjunto de medidas destinadas a evitar o disminuir los riesgos derivados del trabajo se denomina
-Daños derivados del trabajo
-Prevención de riesgos laborales
-Riesgo Laboral
-El local de primeros auxilios es obligatorio:
-En todas las empresas
-*En empresas de más de 50 trabajadores/as, en todo caso
-En empresas de más de 25 trabajadores/as, en todo caso
-El accidente de trabajo
-Es una lesión corporal que debe aparecer en el listado de accidentes profesionales, e incluye el accidente “in itinere”
-Es una lesión corporal que el trabajador sufre como consecuencia del trabajo, y no incluye el accidente “in itinere”
-Es una lesión corporal que el trabajador sufre como consecuencia del trabajo, e incluye el accidente “in itinere”
-Una situación en la que es preciso, para controlar la emergencia, recurrir a servicios externos es:
-*Una emergencia general
-Un conato de emergencia
-Una emergencia parcial
-¿Cuál de las siguientes es la secuencia correcta?
-Identificar los riesgos, evitarlos, evaluar los que no se pueden evitar
-Evaluar los riesgos, identificarlos y evitarlos
-*Evaluar los riesgos que no se pueden evitar, evitar los riesgos y planificarlos
-La aprobación del Plan de Prevención corresponde:
-Al Servicio de Prevención
-*A la empresa
-A los representantes de los/as trabajadores/as
-En la reanimación cardiopulmonar :
-Realizamos compresiones torácicas a un ritmo de entre 100 y 120 por minuto
-Realizamos compresiones torácicas a un ritmo de 60 por minuto
-Realizamos compresiones torácicas a un ritmo de entre 60 y 80 por minuto
-El protocolo PAS ante una situación de emergencia consiste en:
-Proteger, Avisar y Supervisar
-Proteger, Atender y Socorrer
-*Proteger, Avisar y Socorrer
+Físicos
+*Psicosociales
+EXPL:El mobbing (acoso laboral) es un riesgo psicosocial porque afecta a la salud mental y emocional del trabajador. Los riesgos biológicos son virus/bacterias, los ergonómicos son posturas incorrectas, y los físicos son ruido/temperatura.
+¿Qué organismo es el encargado de vigilar el cumplimiento de las normas en materia laboral?
+La Fundación Estatal para la Prevención de los Riesgos Laborales.
+El Instituto Nacional de Seguridad y Salud en el Trabajo.
+El Ministerio de Sanidad y Consumo.
+*La Inspección de Trabajo y Seguridad Social.
+EXPL:La Inspección de Trabajo y Seguridad Social es el organismo que vigila el cumplimiento de la normativa laboral y puede imponer sanciones. El INSST es un organismo técnico de investigación y asesoramiento, no de vigilancia.
+¿Cómo se denomina el conjunto de medidas destinadas a evitar o disminuir los riesgos derivados del trabajo?
+Daños derivados del trabajo.
+Riesgo laboral.
+Evaluación de riesgos.
+*Prevención de riesgos laborales.
+EXPL:La prevención de riesgos laborales es el conjunto de actividades o medidas adoptadas para evitar o disminuir los riesgos derivados del trabajo. Está regulada por la Ley 31/1995 de Prevención de Riesgos Laborales.
+¿En qué tipo de empresas es obligatorio el local de primeros auxilios?
+En todas las empresas sin excepción.
+En empresas de más de 25 trabajadores/as, en todo caso.
+Solo en empresas con actividades de especial peligrosidad.
+*En empresas de más de 50 trabajadores/as, en todo caso.
+EXPL:Según la normativa de prevención, el local de primeros auxilios es obligatorio en empresas de más de 50 trabajadores. En empresas menores, basta con un botiquín portátil adecuadamente equipado.
+¿Qué es el accidente de trabajo según la legislación española?
+Una lesión corporal que debe aparecer en el listado de accidentes profesionales y no incluye el accidente in itinere.
+Una lesión corporal que el trabajador sufre como consecuencia del trabajo, y no incluye el accidente in itinere.
+Cualquier lesión que sufra el trabajador, independientemente de si ocurre durante el trabajo o fuera de él.
+*Una lesión corporal que el trabajador sufre como consecuencia del trabajo, e incluye el accidente in itinere.
+EXPL:El accidente de trabajo incluye el accidente in itinere (en el trayecto al trabajo o de vuelta). La definición legal abarca toda lesión corporal sufrida con ocasión o por consecuencia del trabajo, incluyendo los ocurridos en misión.
+¿Qué tipo de emergencia requiere recurrir a servicios externos para controlarla?
+Un conato de emergencia.
+Una emergencia parcial.
+Una emergencia sectorial.
+*Una emergencia general.
+EXPL:La emergencia general requiere la evacuación total y la intervención de servicios externos (bomberos, ambulancias). El conato es un inicio de emergencia que se controla internamente. La emergencia parcial afecta a una zona y se controla con medios propios.
+¿Cuál es la secuencia correcta de actuación en prevención de riesgos laborales?
+Identificar los riesgos, evitarlos, evaluar los que no se pueden evitar.
+Evaluar los riesgos, identificarlos y evitarlos.
+Planificar la prevención, evaluar los riesgos e identificarlos.
+*Identificar los riesgos, evaluar los que no se pueden evitar, evitarlos y planificar la acción preventiva.
+EXPL:La secuencia correcta según la LPRL es: 1) Identificar los riesgos, 2) Evaluar los que no se pueden evitar, 3) Evitar los riesgos cuando sea posible, 4) Planificar la acción preventiva para los que no se pueden evitar.
+¿A quién corresponde la aprobación del Plan de Prevención de Riesgos Laborales?
+Al Servicio de Prevención.
+A los representantes de los/as trabajadores/as.
+Al Comité de Seguridad y Salud.
+*A la empresa (dirección).
+EXPL:El Plan de Prevención debe ser aprobado por la dirección de la empresa e implantado en todos los niveles jerárquicos. Los trabajadores participan en su elaboración pero la responsabilidad y aprobación final es de la empresa.
+¿A qué ritmo se realizan las compresiones torácicas en la reanimación cardiopulmonar (RCP)?
+A un ritmo de 60 por minuto.
+A un ritmo de entre 60 y 80 por minuto.
+A un ritmo de 80 por minuto con una profundidad de 3 cm.
+*A un ritmo de entre 100 y 120 por minuto, con una profundidad de 5-6 cm.
+EXPL:Las guías internacionales de RCP establecen compresiones torácicas a 100-120 por minuto con una profundidad de 5-6 cm. La relación compresiones/ventilaciones es 30:2 en adultos con un solo reanimador.
+¿En qué consiste el protocolo PAS ante una situación de emergencia?
+Proteger, Avisar y Supervisar.
+Proteger, Atender y Socorrer.
+Prevenir, Actuar y Supervisar.
+*Proteger, Avisar y Socorrer.
+EXPL:PAS: Proteger (asegurar la zona para evitar más víctimas), Avisar (llamar al 112 u otros servicios de emergencia), Socorrer (prestar primeros auxilios). El orden es fundamental: primero proteger para no crear más víctimas.

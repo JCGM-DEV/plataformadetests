@@ -1,44 +1,61 @@
 tema 2
-Una clave primaria que incluye más de una columna de una tabla se denomina:
-*Compuesta
+¿Cómo se denomina una clave primaria que incluye más de una columna de una tabla?
 Heterogénea
 Simple
-El comando DML que permite cancelar los cambios realizados durante una transacción se denomina:
+Foránea
+*Compuesta
+EXPL:Una clave primaria compuesta usa dos o más columnas juntas para identificar unívocamente cada fila. Se usa cuando ninguna columna individual es suficiente como identificador único (ej: alumno_id + asignatura_id en matrículas).
+¿Qué comando DML permite cancelar los cambios realizados durante una transacción?
 COMMIT TRANSACTION
 SAVEPOINT TRANSACTION
+START TRANSACTION
 *ROLLBACK TRANSACTION
+EXPL:ROLLBACK deshace todos los cambios realizados desde el último START TRANSACTION o SAVEPOINT, devolviendo la base de datos al estado anterior. COMMIT confirma los cambios permanentemente.
 ¿Qué tipo de índice es más adecuado para consultas por rangos de valores?
 Hash
-*Árbol B
 Compuesto
-Mediante una subconsulta correlacionada con EXISTS
-EXPL:El Árbol B mantiene los datos ordenados, lo que permite recorrer rangos eficientemente (BETWEEN, <, >). El índice Hash solo sirve para igualdad exacta (=), no para rangos.
+Bitmap
+*Árbol B
+EXPL:El Árbol B mantiene los datos ordenados, lo que permite recorrer rangos eficientemente (BETWEEN, <, >). El índice Hash solo sirve para igualdad exacta (=), no para rangos, porque los valores no están ordenados.
 ¿Qué diferencia esencial hay entre una vista y una tabla?
-Una vista almacena datos físicamente
-*Una vista es virtual; se reconstruye al vuelo
-Una vista no admite filtros
-Un modelo de datos es una representación:
-EXPL:Una vista es una consulta almacenada que se ejecuta cada vez que se accede a ella. No ocupa espacio físico de datos; se reconstruye dinámicamente desde las tablas base.
-Física
-Básica
-*Abstracta
-El valor representativo de “verdadero” o “falso” encaja con un tipo de dato:
-*Booleano
+Una vista almacena datos físicamente en el disco.
+Una vista no admite filtros ni condiciones WHERE.
+Una vista siempre es más lenta que una tabla equivalente.
+*Una vista es virtual y se reconstruye al vuelo desde las tablas base.
+EXPL:Una vista es una consulta almacenada que se ejecuta cada vez que se accede a ella. No ocupa espacio físico de datos; se reconstruye dinámicamente desde las tablas base. Permite simplificar consultas complejas y controlar el acceso.
+¿Qué tipo de representación es un modelo de datos?
+Física de cómo se almacenan los datos en el disco duro.
+Básica de los requisitos funcionales del sistema.
+Visual del interfaz de usuario de la aplicación.
+*Abstracta de la estructura y relaciones de los datos.
+EXPL:Un modelo de datos es una representación abstracta que describe la estructura, las relaciones y las restricciones de los datos, independientemente de cómo se implementen físicamente en el sistema de almacenamiento.
+¿Con qué tipo de dato encaja el valor representativo de verdadero o falso?
 Fecha y hora
 Cadena de caracteres
-Las relaciones entre tablas se establecen utilizando:
-*Claves primarias y foráneas
-Índices Árbol b
+Entero
+*Booleano
+EXPL:El tipo de dato booleano (BOOLEAN en SQL) almacena valores de verdad: TRUE o FALSE. Es el tipo adecuado para campos como "activo", "verificado" o "disponible".
+¿Mediante qué elementos se establecen las relaciones entre tablas en el modelo relacional?
+Índices de tipo Árbol B
 Índices Hash
-A los grupos de usuarios que comparten privilegios y responsabilidades, se les denomina:
+Vistas materializadas
+*Claves primarias y foráneas
+EXPL:Las relaciones entre tablas se establecen mediante claves foráneas (FOREIGN KEY) que referencian la clave primaria de otra tabla. Esto garantiza la integridad referencial: no puede existir un registro hijo sin su registro padre.
+¿Cómo se denominan los grupos de usuarios que comparten privilegios y responsabilidades en una base de datos?
 Privilegiados
 Grupos
+Perfiles
 *Roles
-La matrícula de un vehículo encaja con el concepto de:
+EXPL:En bases de datos, los roles son conjuntos de privilegios que se asignan a usuarios. Facilitan la administración: en lugar de asignar permisos uno a uno, se crea un rol con los permisos necesarios y se asigna a los usuarios.
+¿Con qué concepto del modelo E-R encaja la matrícula de un vehículo?
 Relación
-*Atributo
 Tupla
-El comando DDL que sirve para eliminar una tabla se denomina:
+Entidad
+*Atributo
+EXPL:Un atributo es una propiedad o característica de una entidad. La matrícula es un atributo de la entidad VEHÍCULO. Una entidad es el objeto (VEHÍCULO), una tupla es una fila de la tabla, y una relación es la asociación entre entidades.
+¿Qué comando DDL sirve para eliminar una tabla completamente?
 ALTER TABLE
+DELETE TABLE
+TRUNCATE TABLE
 *DROP TABLE
-Todas las respuestas son ciertas
+EXPL:DROP TABLE elimina la tabla completa: estructura y datos. ALTER TABLE modifica la estructura. DELETE borra filas (DML). TRUNCATE vacía los datos pero mantiene la estructura. Solo DROP TABLE elimina la tabla definitivamente.

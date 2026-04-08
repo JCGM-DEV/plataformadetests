@@ -1,45 +1,61 @@
 tema 4
-El Portal Europeo de Movilidad Profesional se denomina:
-*EURES
+¿Cómo se denomina el Portal Europeo de Movilidad Profesional?
 Europass
 Erasmus
+EPSO (European Personnel Selection Office)
+*EURES (European Employment Services)
+EXPL:EURES es el portal europeo de movilidad laboral que facilita la búsqueda de empleo en los países de la UE. Europass es el portfolio de documentos para presentar competencias. Erasmus es un programa de intercambio educativo.
 ¿Cuál es el propósito principal del análisis DAFO en el contexto del empleo?
-Evaluar el entorno social y económico de una persona
-*Identificar fortalezas y debilidades, así como amenazas y oportunidades
-Analizar y planificar la gestión de la carrera profesional
-Mediante el protocolo OSPF de enrutamiento dinámico
-EXPL:Identificar fortalezas y debilidades, así como amenazas y oportunidades
+Evaluar el entorno social y económico de una persona de forma general.
+Analizar y planificar la gestión de la carrera profesional a largo plazo.
+Comparar el perfil profesional propio con el de otros candidatos del sector.
+*Identificar fortalezas y debilidades personales, así como amenazas y oportunidades del entorno laboral.
+EXPL:El análisis DAFO (Debilidades, Amenazas, Fortalezas, Oportunidades) aplicado al empleo permite conocer los puntos fuertes y débiles propios (internos) y las oportunidades y amenazas del mercado laboral (externos).
 ¿Cuál es la finalidad de un Plan de Acción en el desarrollo profesional?
-Evaluar el rendimiento financiero en la vida laboral
-*Describir paso a paso las actividades, metas y plazos para mejorar competencias y aumentar la empleabilidad
-Elegir el plan formativo más adecuado a nuestros intereses profesionales a largo plazo
-La Carta de motivación:
-Sustituye al currículum vitae
-Sólo opera en la búsqueda de empleo a través de internet
-*Muestra el interés por participar en procesos de selección
+Evaluar el rendimiento financiero en la vida laboral.
+Elegir el plan formativo más adecuado a los intereses profesionales a largo plazo.
+Establecer los objetivos salariales para los próximos cinco años.
+*Describir paso a paso las actividades, metas y plazos para mejorar competencias y aumentar la empleabilidad.
+EXPL:Un Plan de Acción es un documento que detalla qué acciones concretas se van a realizar, en qué plazo y con qué recursos, para alcanzar los objetivos de desarrollo profesional definidos en el Plan de Desarrollo Personal.
+¿Para qué sirve la Carta de motivación o de presentación?
+Sustituye al currículum vitae en los procesos de selección modernos.
+Solo opera en la búsqueda de empleo a través de internet.
+Es obligatoria en todos los procesos de selección de personal.
+*Muestra el interés por participar en un proceso de selección y complementa el CV destacando la motivación del candidato.
+EXPL:La carta de motivación acompaña al CV y permite al candidato expresar su interés por el puesto, destacar sus puntos fuertes más relevantes y mostrar que conoce la empresa. No sustituye al CV sino que lo complementa.
 ¿Por qué es importante reflexionar sobre las competencias e intereses profesionales en el sector de la informática?
-Para encontrar el equilibrio entre nuestras habilidades y aspiraciones y lo que busca el mercado laboral
-Para decidir si cambiar de sector profesional
-Para seleccionar cursos online que amplíen nuestros conocimientos
-*Las pruebas de evaluación en los procesos de selección de personal tratan de valorar los elementos que integran uno de los conceptos siguientes:
-Desempeño
-Competencias
-Valoración funcional
+Para decidir si cambiar de sector profesional.
+Para seleccionar cursos online que amplíen los conocimientos técnicos.
+Para determinar el salario mínimo que se debe exigir en una entrevista.
+*Para encontrar el equilibrio entre las habilidades y aspiraciones propias y lo que busca el mercado laboral.
+EXPL:Conocer las propias competencias e intereses permite orientar la búsqueda de empleo hacia puestos donde se puede aportar más valor y donde se estará más motivado, aumentando las posibilidades de éxito y satisfacción laboral.
+¿Qué tratan de valorar las pruebas de evaluación en los procesos de selección de personal?
+El desempeño histórico del candidato en puestos anteriores.
+La valoración funcional del puesto de trabajo ofertado.
+Exclusivamente los conocimientos técnicos mediante pruebas escritas.
+*Las competencias del candidato: conocimientos, habilidades y actitudes relevantes para el puesto.
+EXPL:Las pruebas de selección (tests psicotécnicos, pruebas técnicas, dinámicas de grupo, entrevistas) evalúan las competencias del candidato: sus conocimientos (saber), habilidades (saber hacer) y actitudes (saber ser/estar).
 ¿Qué es el Curriculum Europass?
-*Un formato de CV común en Europa para facilitar la movilidad laboral
-Un formato de CV utilizado solo en España
-Un formato de CV utilizado solo en España
-En un currículum funcional la información académica y profesional se organiza:
-EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
-*Por sectores o temas
-Por orden cronológico
-De forma interactiva
-¿Cuál es una característica de la Formación Profesional Dual en España según la nueva ley?
-Se centra exclusivamente en la teoría impartida en el aula
-*Combina formación en el centro educativo con experiencia práctica en la empresa
-Ofrece formación online exclusivamente
-El currículum vitae:
-EXPL:Combina formación en el centro educativo con experiencia práctica en la empresa
-Sustituye a la carta de presentación
-*Complementa la carta de presentación
-Es la forma actual de la carta de presentación
+Un formato de CV utilizado solo en España para acceder a la función pública.
+Un formato de CV utilizado exclusivamente para solicitar becas Erasmus.
+Un certificado de competencias digitales reconocido en toda la Unión Europea.
+*Un formato de CV común en Europa que facilita la movilidad laboral y educativa entre países.
+EXPL:El Curriculum Vitae Europass es un formato estándar europeo que facilita la presentación de competencias y cualificaciones de forma clara y comprensible en toda Europa. Forma parte del portfolio Europass junto al Pasaporte de Lenguas y otros documentos.
+¿Cómo se organiza la información en un currículum funcional?
+Por orden cronológico inverso (de lo más reciente a lo más antiguo).
+De forma interactiva con enlaces a proyectos y trabajos realizados.
+Por orden de importancia según el puesto al que se opta.
+*Por sectores o áreas de competencia, destacando habilidades y logros independientemente del orden temporal.
+EXPL:El CV funcional organiza la información por competencias o áreas temáticas en lugar de por orden cronológico. Es útil para candidatos con poca experiencia, cambios de sector o periodos de inactividad laboral que no quieren destacar.
+¿Qué caracteriza a la Formación Profesional Dual en España según la nueva ley?
+Se centra exclusivamente en la teoría impartida en el aula.
+Ofrece formación online exclusivamente sin presencia en empresa.
+Solo está disponible para ciclos formativos de grado superior.
+*Combina formación en el centro educativo con experiencia práctica en la empresa de forma simultánea.
+EXPL:La FP Dual (regulada por la Ley Orgánica 3/2022) combina la formación en el centro educativo con la actividad formativa en la empresa. El alumno alterna períodos en ambos entornos, obteniendo experiencia real mientras estudia.
+¿Cuál es la relación entre el currículum vitae y la carta de presentación?
+El CV sustituye a la carta de presentación en los procesos modernos de selección.
+La carta de presentación es la forma actual del CV en formato digital.
+El CV es menos importante que la carta de presentación para los reclutadores.
+*El CV y la carta se complementan: el CV detalla la trayectoria y la carta explica la motivación.
+EXPL:El CV es un resumen estructurado de la trayectoria académica y profesional. La carta de presentación explica la motivación, destaca los puntos más relevantes del CV y personaliza la candidatura. Son documentos complementarios.

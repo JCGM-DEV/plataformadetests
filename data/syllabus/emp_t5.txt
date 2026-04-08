@@ -1,49 +1,61 @@
 tema 5
-¿Qué pueden representar comentarios inapropiados o publicaciones controvertidas en línea?
-*Una disminución en la interacción con los seguidores
-Un riesgo para la reputación personal y profesional
-Una mejora en la visibilidad online
-Ninguna de las anteriores opciones es completamente correcta en este contexto
-¿Cuál es el primer paso para crear un entorno personal de aprendizaje?
-*Seleccionar las herramientas digitales a utilizar
-Definir las metodologías de estudio a aplicar
-Identificar las necesidades de aprendizaje
-Ninguna de las anteriores opciones es completamente correcta en este contexto
+¿Qué pueden representar comentarios inapropiados o publicaciones controvertidas en línea para un profesional?
+Una disminución en la interacción con los seguidores de las redes sociales.
+Una mejora en la visibilidad online al generar debate y engagement.
+*Un riesgo para la reputación personal y profesional que puede afectar a la empleabilidad.
+Una oportunidad para demostrar autenticidad y transparencia ante los empleadores.
+EXPL:La huella digital es permanente. Comentarios inapropiados o publicaciones controvertidas pueden ser encontrados por reclutadores y afectar negativamente a la imagen profesional, dificultando el acceso a oportunidades laborales.
+¿Cuál es el primer paso para crear un entorno personal de aprendizaje (PLE)?
+Seleccionar las herramientas digitales a utilizar para el aprendizaje.
+Definir las metodologías de estudio a aplicar en el proceso formativo.
+*Identificar las necesidades de aprendizaje y los objetivos que se quieren alcanzar.
+Buscar comunidades de práctica y redes de aprendizaje en línea.
+EXPL:El primer paso para crear un PLE es identificar qué necesitas aprender y por qué. A partir de ahí se seleccionan las herramientas, fuentes y conexiones más adecuadas para cubrir esas necesidades de aprendizaje.
 ¿Qué implica el concepto de identidad digital?
-La representación visual de los perfiles en redes sociales
-El conjunto de actividades y contenidos compartidos en línea por una persona
-*La frecuencia con la que se actualiza la información en plataformas digitales
-Ninguna de las anteriores opciones es completamente correcta en este contexto
+La representación visual de los perfiles en redes sociales (foto, diseño, colores).
+La frecuencia con la que se actualiza la información en plataformas digitales.
+*El conjunto de información, actividades y contenidos que una persona genera y comparte en el entorno digital, configurando su imagen online.
+Exclusivamente los datos personales almacenados en bases de datos de empresas.
+EXPL:La identidad digital es la huella que dejamos en internet: perfiles en redes sociales, comentarios, publicaciones, fotos, etc. Es importante gestionarla activamente para proyectar una imagen profesional coherente con los objetivos laborales.
 ¿Qué es importante hacer periódicamente en un Plan de Desarrollo Personal (PDP)?
-Cambiar completamente los objetivos
-*Evaluar el progreso y hacer ajustes necesarios
-Revisar los recursos utilizados
-Ninguna de las anteriores opciones es completamente correcta en este contexto
+Cambiar completamente los objetivos para adaptarse a las nuevas tendencias del mercado.
+Revisar los recursos utilizados y sustituirlos por otros más modernos.
+*Evaluar el progreso alcanzado y hacer los ajustes necesarios en objetivos y acciones.
+Compartir el plan con mentores y compañeros para obtener retroalimentación externa.
+EXPL:Un PDP es un documento vivo que debe revisarse periódicamente. La evaluación del progreso permite identificar qué está funcionando, qué hay que mejorar y si los objetivos siguen siendo relevantes o necesitan actualizarse.
 ¿Qué es un entorno personal de aprendizaje (PLE)?
-Un software especializado en gestión de cursos en línea
-*El conjunto de herramientas, fuentes de información, conexiones y actividades que una persona utiliza para aprender de forma autónoma
-Una plataforma educativa que ofrece recursos para el aprendizaje basado en proyectos
-Ninguna de las anteriores opciones es completamente correcta en este contexto
+Un software especializado en gestión de cursos en línea (LMS).
+Una plataforma educativa que ofrece recursos para el aprendizaje basado en proyectos.
+*El conjunto de herramientas, fuentes de información, conexiones y actividades que una persona utiliza para aprender de forma autónoma y continua.
+Un espacio físico o virtual proporcionado por la empresa para la formación de sus empleados.
+EXPL:Un PLE (Personal Learning Environment) es el ecosistema de aprendizaje personal que cada individuo construye: blogs, podcasts, redes sociales profesionales, cursos online, comunidades de práctica, etc. Es autogestionado y personalizado.
 ¿Qué impacto positivo puede tener la participación activa en redes sociales profesionales en la empleabilidad?
-Incrementa la cantidad de publicidad dirigida que recibes
-*Mejora la visibilidad y conexión con profesionales y empleadores del sector
-Disminuye la necesidad de actualizar regularmente el perfil profesional
-Mediante el protocolo OSPF de enrutamiento dinámico
-¿Qué es la suplantación de identidad?
-Actualizar información en un perfil profesional
-*Acto de hacerse pasar por otra persona en el entorno digital para cometer fraude o robar información
-Compartir información privada en plataformas públicas
-Ninguna de las anteriores opciones es completamente correcta en este contexto
+Incrementa la cantidad de publicidad dirigida que recibes en tu perfil.
+Disminuye la necesidad de actualizar regularmente el perfil profesional.
+*Mejora la visibilidad ante profesionales y empleadores del sector, facilitando el acceso a oportunidades laborales.
+Garantiza automáticamente el acceso a ofertas de empleo exclusivas no publicadas.
+EXPL:LinkedIn y otras redes profesionales permiten mostrar el perfil a reclutadores, conectar con profesionales del sector, participar en grupos temáticos y acceder al mercado oculto de empleo (ofertas no publicadas). El networking digital es clave en la búsqueda de empleo.
+¿Qué es la suplantación de identidad digital?
+Actualizar información en un perfil profesional de otra persona con su permiso.
+Compartir información privada de otra persona en plataformas públicas sin su consentimiento.
+*Hacerse pasar por otra persona en el entorno digital para cometer fraude, robar información o dañar su reputación.
+Crear un perfil falso en redes sociales para proteger la privacidad personal.
+EXPL:La suplantación de identidad digital es un delito tipificado en el Código Penal. Consiste en usar la identidad de otra persona en internet sin su consentimiento para obtener beneficios, cometer fraude o dañar su imagen.
 ¿Qué es un Plan de Desarrollo Personal (PDP)?
-Una estrategia para establecer metas profesionales y financieras
-*Un documento que detalla los objetivos y acciones para el desarrollo personal y profesional
-Un plan de formación para integrar nuevas tecnologías en la educación
+Una estrategia para establecer metas profesionales y financieras a corto plazo.
+Un plan de formación para integrar nuevas tecnologías en la educación.
+*Un documento que detalla los objetivos de desarrollo personal y profesional, las acciones para alcanzarlos y los plazos establecidos.
+Un informe de evaluación del desempeño elaborado por el responsable de RRHH.
+EXPL:Un PDP es una herramienta de autogestión del aprendizaje y el desarrollo. Incluye el análisis de la situación actual, los objetivos a alcanzar, las acciones concretas, los recursos necesarios y los indicadores para medir el progreso.
 Los objetivos SMART deben ser:
-Sustantivos, Mensurables, Alcanzables, Razonables y Temporales
-Esfuerzos, Metas, Actuaciones, Resultados y Tiempos
-Específicos, Medibles, Alcanzables, Relevantes y Limitados en el tiempo
-¿Cuál de las siguientes es una ventaja de tener una red personal de aprendizaje?
-Mejorar las habilidades de investigación colaborativa
-*Facilitar el intercambio de conocimiento con otros profesionales y estudiantes
-Acceder a certificaciones académicas exclusivas
-Mediante el protocolo OSPF de enrutamiento dinámico
+Sustantivos, Mensurables, Alcanzables, Razonables y Temporales.
+Esfuerzos, Metas, Actuaciones, Resultados y Tiempos.
+*Específicos, Medibles, Alcanzables, Relevantes y Limitados en el tiempo.
+Simples, Motivadores, Ambiciosos, Realistas y Técnicos.
+EXPL:SMART es un acrónimo para definir objetivos de calidad: Specific (específico), Measurable (medible), Achievable (alcanzable), Relevant (relevante) y Time-bound (con plazo definido). Aplicar este criterio aumenta la probabilidad de alcanzar los objetivos.
+¿Cuál de las siguientes es una ventaja de tener una red personal de aprendizaje (PLN)?
+Mejorar las habilidades de investigación colaborativa de forma exclusiva.
+Acceder a certificaciones académicas exclusivas no disponibles de otra forma.
+*Facilitar el intercambio de conocimiento con otros profesionales y estudiantes, ampliando perspectivas y recursos de aprendizaje.
+Sustituir la formación reglada por el aprendizaje informal en comunidades digitales.
+EXPL:Una PLN (Personal Learning Network) es la red de personas con las que intercambiamos conocimiento y aprendemos. Incluye mentores, compañeros, expertos del sector y comunidades de práctica. Amplía el acceso a información actualizada y perspectivas diversas.

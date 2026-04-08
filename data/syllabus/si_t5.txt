@@ -1,31 +1,61 @@
 tema 5
 ¿Cuál es un ejemplo de protocolo de enrutamiento dinámico?
 Protocolo de enrutamiento estático
-*Protocolo OSPF.
-Protocolo de enrutamiento HTTP
-Mediante el protocolo OSPF de enrutamiento dinámico
-EXPL:La respuesta es 'Protocolo OSPF.'. "Protocolo de enrutamiento estático." y "Protocolo de enrutamiento HTTP." son incorrectos porque describen conceptos diferentes.
-¿Cuáles son algunas de las ventajas de la configuración estática de redes?
-*Mayor seguridad, estabilidad y control.
-Menor seguridad, estabilidad y control
-Mayor seguridad, menor estabilidad y menor control
-Mediante el protocolo OSPF de enrutamiento dinámico
-EXPL:La respuesta es 'Mayor seguridad, estabilidad y control.'.
+Protocolo HTTP de transferencia web
+Protocolo FTP de transferencia de ficheros
+*Protocolo OSPF (Open Shortest Path First)
+EXPL:OSPF es un protocolo de enrutamiento dinámico de estado de enlace que calcula automáticamente las rutas óptimas. El enrutamiento estático requiere configuración manual. HTTP y FTP son protocolos de aplicación, no de enrutamiento.
+¿Cuáles son las ventajas de la configuración estática de redes frente a la dinámica?
+Menor seguridad, estabilidad y control.
+Mayor seguridad pero menor estabilidad y control.
+Configuración automática sin intervención del administrador.
+*Mayor seguridad, estabilidad y control sobre el tráfico de red.
+EXPL:La configuración estática ofrece mayor seguridad (no hay intercambio de información de enrutamiento), mayor estabilidad (las rutas no cambian automáticamente) y mayor control (el administrador decide exactamente las rutas).
 ¿Qué es una tabla de enrutamiento estática?
-Una tabla en la que las rutas se determinan automáticamente mediante protocolos de enrutamiento
-Una tabla que se crea automáticamente mediante el uso de protocolos de enrutamiento dinámicos
+Una tabla en la que las rutas se determinan automáticamente mediante protocolos de enrutamiento.
+Una tabla que se actualiza en tiempo real según el estado de la red.
+Una tabla generada por el protocolo OSPF para optimizar rutas.
 *Una tabla en la que se especifican manualmente las rutas que deben tomar los paquetes de datos para llegar a su destino.
-Mediante una subconsulta correlacionada con EXISTS
-EXPL:Una tabla en la que se especifican manualmente las rutas que deben tomar los paquetes de datos para llegar a su destino.
+EXPL:En el enrutamiento estático, el administrador configura manualmente cada ruta en la tabla de enrutamiento. Es más seguro y predecible que el dinámico, pero requiere más mantenimiento cuando cambia la topología de la red.
 ¿Qué es una WLAN?
-Una red inalámbrica de largo alcance
-*Una red inalámbrica utilizada para conectar dispositivos en un área geográfica limitada.
-Una red cableada de alta velocidad
-Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:Una red inalámbrica utilizada para conectar dispositivos en un área geográfica limitada.
+Una red de área amplia que conecta ciudades o países mediante fibra óptica.
+Una red cableada de alta velocidad para centros de datos.
+Una red privada virtual que cifra el tráfico entre dos puntos.
+*Una red inalámbrica de área local que conecta dispositivos en un área geográfica limitada.
+EXPL:WLAN (Wireless Local Area Network) es una red de área local que usa ondas de radio en lugar de cables. El estándar más común es IEEE 802.11 (WiFi). Conecta dispositivos en un área limitada como una oficina o edificio.
 ¿Qué son las direcciones IP?
-*Un número único que identifica a cada dispositivo en una red.
-Un número aleatorio que se asigna a cada dispositivo en una red
-Una secuencia de letras que identifica a cada dispositivo en una red
-Mediante el protocolo OSPF de enrutamiento dinámico
-EXPL:Un número único que identifica a cada dispositivo en una red.
+Un número aleatorio que se asigna a cada dispositivo en una red.
+Una secuencia de letras que identifica a cada dispositivo en una red.
+El nombre de dominio asociado a cada dispositivo conectado a Internet.
+*Un número único que identifica a cada dispositivo en una red para permitir la comunicación.
+EXPL:Una dirección IP (Internet Protocol) es un identificador numérico único asignado a cada dispositivo en una red. IPv4 usa 32 bits (ej: 192.168.1.1) e IPv6 usa 128 bits. Permite el enrutamiento de paquetes entre dispositivos.
+¿Qué es una máscara de subred?
+Una herramienta para bloquear el tráfico no autorizado en la red.
+Un código para identificar el dispositivo dentro de la red local.
+El identificador único del router en la red de área local.
+*Una herramienta que indica qué parte de una dirección IP identifica la red y qué parte identifica el dispositivo.
+EXPL:La máscara de subred (ej: 255.255.255.0 o /24) divide la dirección IP en dos partes: la parte de red (igual para todos los dispositivos de la misma red) y la parte de host (única para cada dispositivo).
+¿Qué protocolo se utiliza para asignar automáticamente direcciones IP a los dispositivos de una red?
+DNS (Domain Name System)
+ARP (Address Resolution Protocol)
+ICMP (Internet Control Message Protocol)
+*DHCP (Dynamic Host Configuration Protocol)
+EXPL:DHCP asigna automáticamente direcciones IP, máscara de subred, puerta de enlace y DNS a los dispositivos cuando se conectan a la red. Sin DHCP, habría que configurar manualmente cada dispositivo.
+¿Qué comando de Windows muestra la tabla de enrutamiento actual?
+ipconfig /all
+netstat -an
+tracert [destino]
+*route print
+EXPL:route print muestra la tabla de enrutamiento de Windows: las rutas que sigue el tráfico de red. route add añade una ruta estática; route delete la elimina. En Linux el equivalente es "ip route" o "netstat -r".
+¿Qué es el protocolo DNS?
+Un protocolo para asignar direcciones IP automáticamente a los dispositivos.
+Un protocolo para cifrar las comunicaciones entre cliente y servidor.
+Un protocolo para transferir ficheros entre equipos de la red.
+*Un protocolo que traduce nombres de dominio legibles (como google.com) a direcciones IP numéricas.
+EXPL:DNS (Domain Name System) funciona como la "agenda telefónica" de Internet: traduce nombres de dominio (google.com) a direcciones IP (142.250.185.46). Sin DNS habría que memorizar IPs para acceder a cada sitio web.
+¿Qué tipo de red abarca un área geográfica amplia como un país o continente?
+LAN (Local Area Network)
+MAN (Metropolitan Area Network)
+WLAN (Wireless Local Area Network)
+*WAN (Wide Area Network)
+EXPL:WAN (Wide Area Network) es una red de área amplia que conecta redes LAN separadas geográficamente. Internet es la WAN más grande del mundo. MAN cubre una ciudad; LAN cubre un edificio o campus; WLAN es la versión inalámbrica de LAN.

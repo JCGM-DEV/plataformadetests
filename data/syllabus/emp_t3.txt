@@ -1,50 +1,61 @@
 tema 3
 ¿Cuál es la tasa de paro en el sector de las TIC en España en comparación con la tasa general de desempleo del país?
-*Considerablemente más alta
-Aproximadamente igual
-Considerablemente más baja
-Ninguna de las anteriores opciones es completamente correcta en este contexto
+Considerablemente más alta.
+Aproximadamente igual.
+*Considerablemente más baja.
+Ligeramente superior a la media nacional.
+EXPL:El sector TIC tiene una tasa de desempleo muy inferior a la media nacional. La demanda de profesionales digitales supera la oferta, lo que convierte al sector en uno de los más dinámicos del mercado laboral español.
 ¿Cuál es la titulación exigida para pertenecer al grupo B del cuerpo de funcionarios?
-*Ciclo de grado superior de Formación Profesional
-Licenciado, graduado, diplomado, ingeniero, arquitecto o equivalente
-Bachillerato o equivalente
-Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:La respuesta es 'Ciclo de grado superior de Formación Profesional'.
-¿Qué son las actitudes?
-La disposición o las tendencias emocionales y mentales que influyen en el comportamiento de las personas en el entorno laboral
-*Las habilidades y capacidades que permiten a una persona realizar tareas o funciones específicas y que están estrechamente relacionadas con los conocimientos técnicos
-Los conocimientos técnicos que se adquieren mediante la educación reglada
-Uno de los requisitos para el ingreso en la administración pública es…
-Poseer la titulación exigida en la convocatoria para cada puesto
-Haber trabajado previamente en una administración del Estado
-Contar con al menos 4 años de experiencia laboral demostrable
+Licenciado, graduado, diplomado, ingeniero, arquitecto o equivalente.
+Bachillerato o equivalente.
+*Ciclo de grado superior de Formación Profesional o equivalente.
+Ciclo de grado medio de Formación Profesional.
+EXPL:El grupo B de funcionarios requiere título de Técnico Superior (FP de grado superior) o equivalente. El grupo A1 requiere título universitario de grado, el grupo A2 diplomatura, y el grupo C1 bachillerato.
+¿Qué son las actitudes en el contexto laboral?
+Las habilidades y capacidades técnicas que permiten realizar tareas específicas.
+Los conocimientos técnicos adquiridos mediante la educación reglada.
+*La disposición o tendencias emocionales y mentales que influyen en el comportamiento de las personas en el entorno laboral.
+Los títulos académicos que acreditan la formación de una persona.
+EXPL:Las actitudes son predisposiciones aprendidas para responder de forma favorable o desfavorable ante situaciones, personas o ideas. En el trabajo incluyen la proactividad, la responsabilidad, la empatía y la orientación al cliente.
+Uno de los requisitos para el ingreso en la administración pública es:
+Haber trabajado previamente en una administración del Estado.
+Contar con al menos 4 años de experiencia laboral demostrable.
+*Poseer la titulación exigida en la convocatoria para cada puesto.
+Ser ciudadano de la Unión Europea sin excepción.
+EXPL:Los requisitos generales para acceder a la función pública son: ser español (o ciudadano UE en algunos casos), tener la titulación exigida, no haber sido separado del servicio público, y no estar inhabilitado para el ejercicio de funciones públicas.
 ¿Qué son las competencias profesionales?
-Son los títulos académicos que una persona posee
-Son una combinación de conocimientos, habilidades y actitudes que permiten desempeñar eficazmente una actividad profesional
-*Son el conjunto de conocimientos técnicos que se pueden aprender en un curso específico y que son demandados por las empresas
-Las aptitudes profesionales son esenciales para la empleabilidad porque…
-Sustituyen a la experiencia profesional
-Favorecen las competencias sociales como trabajo en equipo y comunicación efectiva
-Determinan la capacidad de un individuo para desempeñar eficazmente las tareas y responsabilidades de un puesto de trabajo
+Son los títulos académicos que una persona posee.
+Son el conjunto de conocimientos técnicos que se pueden aprender en un curso específico.
+*Son una combinación de conocimientos, habilidades y actitudes que permiten desempeñar eficazmente una actividad profesional.
+Son exclusivamente las habilidades prácticas adquiridas mediante la experiencia laboral.
+EXPL:Las competencias profesionales integran el saber (conocimientos), el saber hacer (habilidades) y el saber ser (actitudes). Son la base del sistema de Formación Profesional y de los procesos de selección de personal.
+Las aptitudes profesionales son esenciales para la empleabilidad porque:
+Sustituyen a la experiencia profesional en los procesos de selección.
+Favorecen exclusivamente las competencias sociales como trabajo en equipo.
+*Determinan la capacidad de un individuo para desempeñar eficazmente las tareas y responsabilidades de un puesto de trabajo.
+Son el único factor que valoran las empresas en los procesos de selección.
+EXPL:Las aptitudes son capacidades naturales o adquiridas que determinan el potencial de una persona para realizar determinadas tareas. Son esenciales porque permiten predecir el rendimiento laboral futuro.
 ¿Qué son las soft skills o habilidades blandas?
-*Son capacidades técnicas y conocimientos concretos que se pueden medir y evaluar de manera objetiva, adquiridas a través de la educación formal
-Son competencias personales y sociales que afectan cómo una persona se relaciona consigo misma y con los demás en el entorno laboral
-Son capacidades técnicas que se adquieren mediante la experiencia una vez se inicia la labor profesional en la empresa
-Ninguna de las anteriores opciones es completamente correcta en este contexto
+Son capacidades técnicas y conocimientos concretos que se pueden medir y evaluar de manera objetiva.
+Son capacidades técnicas que se adquieren mediante la experiencia laboral en la empresa.
+*Son competencias personales y sociales que afectan cómo una persona se relaciona consigo misma y con los demás en el entorno laboral.
+Son certificaciones profesionales reconocidas internacionalmente.
+EXPL:Las soft skills (comunicación, trabajo en equipo, liderazgo, resolución de problemas, adaptabilidad) son cada vez más valoradas por las empresas. Se diferencian de las hard skills (conocimientos técnicos) en que son más difíciles de medir.
 ¿Qué establece la Constitución Española con respecto al acceso al empleo público?
-Establece el derecho a acceder a puestos de funcionariado público siempre que se esté en posesión de un título universitario
-Establece que solo los funcionarios de carrera pueden acceder a las pruebas de acceso a los puestos en la administración pública
-*Establece el derecho de todos los ciudadanos al acceso al empleo público de acuerdo con los principios constitucionales de mérito y capacidad
-Con un certificado SSL autofirmado
+Establece el derecho a acceder a puestos de funcionariado público siempre que se esté en posesión de un título universitario.
+Establece que solo los funcionarios de carrera pueden acceder a las pruebas de acceso a la administración pública.
+*Establece el derecho de todos los ciudadanos al acceso al empleo público de acuerdo con los principios constitucionales de mérito y capacidad.
+Establece que el acceso al empleo público es libre y sin requisitos de titulación.
+EXPL:El artículo 23.2 de la Constitución Española reconoce el derecho de los ciudadanos a acceder en condiciones de igualdad a las funciones y cargos públicos, con los requisitos que señalen las leyes, según los principios de mérito y capacidad.
 ¿Qué es la competencia digital?
-*La destreza en el manejo de las herramientas de las tecnologías de la información y la comunicación en diversos contextos
-La capacidad de diseñar y fabricar dispositivos electrónicos avanzados
-La habilidad de programar en varios lenguajes de codificación
-Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:La destreza en el manejo de las herramientas de las tecnologías de la información y la comunicación en diversos contexto...
+La capacidad de diseñar y fabricar dispositivos electrónicos avanzados.
+La habilidad de programar en varios lenguajes de codificación.
+*La destreza en el manejo de las herramientas de las tecnologías de la información y la comunicación en diversos contextos.
+El conocimiento teórico de los fundamentos de la informática y las telecomunicaciones.
+EXPL:La competencia digital es una de las ocho competencias clave del Marco Europeo de Referencia. Incluye el uso seguro y crítico de las TIC para el trabajo, el ocio y la comunicación, así como la resolución de problemas en entornos digitales.
 ¿Cuál es la principal tendencia del mercado laboral en el sector de la informática?
-*Inteligencia artificial y automatización
-Computación cuántica
-Robótica
-Mediante el protocolo OSPF de enrutamiento dinámico
-EXPL:El mercado laboral es el espacio donde se encuentran la oferta (trabajadores) y la demanda (empresas) de trabajo. Factores como la tecnología, la globalización y la formación influyen en su evolución.
+Computación cuántica como tecnología dominante en todos los sectores.
+Robótica industrial como principal área de crecimiento.
+*Inteligencia artificial y automatización como motores de transformación del mercado laboral.
+Realidad virtual como tecnología más demandada por las empresas.
+EXPL:La IA y la automatización están transformando el mercado laboral TIC: crean nuevos perfiles (ingenieros de ML, especialistas en datos) y modifican los existentes. Es la tendencia más relevante para los próximos años según todos los informes del sector.

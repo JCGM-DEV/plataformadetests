@@ -1,42 +1,61 @@
 tema 1
-Indique cuál de los siguientes formatos de archivo representa la información en una estructura tabular fija (filas y columnas), es decir, estrictamente estructurada:
-*CSV
+¿Cuál de los siguientes formatos de archivo representa la información en una estructura tabular fija de filas y columnas?
 JSON
-Ambos
-En el modelo Entidad-Relación, el conjunto de objetos del mundo real que comparten los mismos atributos y se identifican con un nombre común se denomina:
-*Entidad
+XML
+*CSV
+Fichero de texto plano sin formato
+EXPL:CSV (Comma-Separated Values) organiza los datos en filas y columnas con un separador fijo. JSON y XML son semiestructurados y jerárquicos. Un fichero de texto plano no tiene estructura definida.
+En el modelo Entidad-Relación, el conjunto de objetos del mundo real que comparten los mismos atributos y se identifican con un nombre común se denomina?
 Relación
 Atributo
-Según la clasificación de bases de datos basada en su modelo lógico (jerárquico, en red, relacional, orientado a objetos), ¿cuál de las siguientes opciones NO pertenece a dicha clasificación?:
+Tupla
+*Entidad
+EXPL:Una entidad representa un objeto del mundo real con existencia propia (CLIENTE, PRODUCTO). Una relación es la asociación entre entidades. Un atributo es una propiedad de la entidad. Una tupla es una fila de una tabla relacional.
+Según la clasificación de bases de datos basada en su modelo lógico, ¿cuál de las siguientes opciones NO pertenece a dicha clasificación?
 Jerárquicas
 Relacionales
+Orientadas a objetos
 *Empresariales
-Los tipos de fichero que permiten incorporar medidas de seguridad como contraseñas y encriptación son:
-EXPL:La respuesta es 'Empresariales'. "Jerárquicas" y "Relacionales" son incorrectos porque describen conceptos diferentes.
+EXPL:Las clasificaciones por modelo lógico son: jerárquicas, en red, relacionales y orientadas a objetos. "Empresariales" no es una categoría del modelo lógico sino un ámbito de uso o sector de aplicación.
+¿Qué tipos de fichero permiten incorporar medidas de seguridad como contraseñas y encriptación?
 Planos
-Ninguna respuesta es correcta
+Secuenciales
+Multimedia
 *Indexados
-Entre los tipos de bases de datos que permiten almacenar datos semiestructurados se encuentran:
+EXPL:Los ficheros indexados permiten incorporar medidas de seguridad como contraseñas y encriptación, además de acceso directo a registros. Los ficheros planos son simples secuencias de texto sin estas capacidades.
+¿Entre qué tipos de bases de datos se encuentran las que permiten almacenar datos semiestructurados?
 Relacionales
-*NoSQL
-Ninguna respuesta es correcta
-Las bases de datos que permiten incluir herencia en su diseño son las:
 Jerárquicas
-*Orientadas a objetos
+Distribuidas
+*NoSQL
+EXPL:Las bases de datos NoSQL (MongoDB, Cassandra, Redis) están diseñadas para datos semiestructurados o no estructurados. Las relacionales requieren esquema fijo. Las jerárquicas tienen estructura de árbol rígida.
+¿Qué tipo de bases de datos permiten incluir herencia en su diseño?
+Jerárquicas
 Relacionales
-El lenguaje que habitualmente usan inmensa mayoría de bases de datos relacionales es:
+Distribuidas
+*Orientadas a objetos
+EXPL:Las bases de datos orientadas a objetos permiten herencia entre clases de objetos, igual que en la programación orientada a objetos. Las relacionales no tienen herencia nativa; las jerárquicas tienen estructura padre-hijo pero no herencia.
+¿Qué lenguaje usa la inmensa mayoría de bases de datos relacionales?
 C++
 Java
+Python
 *SQL
-Los tipos de bases de datos que permiten reducir los cuellos de botella y aumentar la disponibilidad de los datos, son:
+EXPL:SQL (Structured Query Language) es el lenguaje estándar para gestionar bases de datos relacionales. Permite definir estructuras (DDL), manipular datos (DML) y controlar accesos (DCL).
+¿Qué tipos de bases de datos permiten reducir los cuellos de botella y aumentar la disponibilidad de los datos?
 Centralizadas
-*Distribuidas
 Jerárquicas
-La palabra informática, tiene su origen en la palabra francesa “informatique”, que acuñó en 1962
+Relacionales
+*Distribuidas
+EXPL:Las bases de datos distribuidas reparten los datos entre múltiples nodos, lo que reduce los cuellos de botella y aumenta la disponibilidad. Si falla un nodo, los demás siguen funcionando.
+¿Quién acuñó la palabra "informatique" en 1962, de la que deriva el término informática?
 Philippe Doumar
-*Philippe Dreyfus
 Philippe Chason
-Un fichero DBASE puede considerarse de tipo
+Charles Babbage
+*Philippe Dreyfus
+EXPL:Philippe Dreyfus acuñó el término "informatique" en 1962 como contracción de "information automatique". En español se adoptó como "informática". Charles Babbage fue el inventor de la máquina analítica en el siglo XIX.
+¿De qué tipo es un fichero dBASE?
 Plano
-*Indexado
 Multimedia
+Secuencial
+*Indexado
+EXPL:Los ficheros dBASE (.dbf) son ficheros de base de datos con índices que permiten acceso directo a registros. Son ficheros indexados, no planos ni multimedia.

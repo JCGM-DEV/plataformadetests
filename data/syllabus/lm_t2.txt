@@ -1,51 +1,61 @@
 tema 2
 ¿Cuál es el objetivo principal del DOM (Modelo de Objetos de Documentos)?
-Establecer la estructura y el significado del contenido en línea o web
-Definir la forma en que los documentos HTML, XHTML y XML son almacenados en el servidor
-*Permitir que los programas (por ejemplo, JavaScript) puedan acceder y modificar dinámicamente el contenido, la estructura y el estilo de los documentos HTML y XML
-Mediante el protocolo OSPF de enrutamiento dinámico
-Dentro de los atributos HTML, ¿cuál de los siguientes es considerado un atributo específico de ciertos elementos (como <img> o <a>), y no un atributo global que se pueda usar en la mayoría de las etiquetas?
+Establecer la estructura y el significado del contenido en línea o web.
+Definir la forma en que los documentos HTML, XHTML y XML son almacenados en el servidor.
+*Permitir que los programas (por ejemplo, JavaScript) puedan acceder y modificar dinámicamente el contenido, la estructura y el estilo de los documentos HTML y XML.
+Gestionar la comunicación entre el servidor web y el navegador del cliente.
+EXPL:El DOM representa el documento HTML/XML como un árbol de objetos en memoria. JavaScript puede acceder y modificar cualquier nodo del árbol dinámicamente, lo que permite crear páginas web interactivas.
+Dentro de los atributos HTML, ¿cuál de los siguientes es considerado un atributo específico de ciertos elementos (como img o a), y no un atributo global que se pueda usar en la mayoría de las etiquetas?
 class
 id
 *src
-Mediante una clase abstracta con métodos estáticos
+style
+EXPL:src es un atributo específico de elementos como img, script, iframe y audio/video. Los atributos globales (id, class, style, title, lang, data-*) pueden usarse en cualquier elemento HTML.
 De las siguientes formas de incluir CSS en una página web, ¿cuál es considerada la menos recomendable porque mezcla contenido y presentación, dificultando el mantenimiento del código?
-Enlace a CSS externo mediante la etiqueta <link> en el <head>
-CSS en el HTML mediante la etiqueta <style> en el <head>
-*CSS en línea (inline) a través del atributo style="..." directamente en la etiqueta HTML
-Con el atributo xmlns:xsi en el elemento raíz
-Según las restricciones básicas de XHTML, si en HTML se permite la minimización de atributos (ej. <input checked>), ¿cómo debe manejarse este tipo de atributo en XHTML?
-El atributo debe omitirse completamente, ya que no es compatible con la sintaxis XML
-*El atributo debe llevar siempre un valor, como, por ejemplo, checked="checked"
-El atributo se puede usar tal cual
-Mediante el protocolo OSPF de enrutamiento dinámico
-En HTML5, ¿qué etiqueta semántica se utiliza para representar una sección de una página que contiene información relacionada con el contenido principal, pero que no es tan relevante o importante, como una barra lateral?
-<header>
-<section>
-*<aside>
-Mediante el protocolo OSPF de enrutamiento dinámico
-Dado el siguiente fragmento de HTML: <p><a href="#"><span>Texto del enlace</span></a></p>, ¿qué selector CSS NO aplicaría estilos directamente al elemento <span> en este caso?
+Enlace a CSS externo mediante la etiqueta link en el head.
+CSS en el HTML mediante la etiqueta style en el head.
+*CSS en línea (inline) a través del atributo style directamente en la etiqueta HTML.
+Importar el CSS con @import dentro de otro archivo CSS.
+EXPL:El CSS inline mezcla contenido y presentación, tiene la mayor especificidad (difícil de sobreescribir), no se puede reutilizar y dificulta el mantenimiento. La mejor práctica es usar un archivo CSS externo.
+Según las restricciones básicas de XHTML, si en HTML se permite la minimización de atributos (ej. input checked), ¿cómo debe manejarse este tipo de atributo en XHTML?
+El atributo debe omitirse completamente, ya que no es compatible con la sintaxis XML.
+*El atributo debe llevar siempre un valor, como por ejemplo checked="checked".
+El atributo se puede usar tal cual, sin necesidad de asignarle un valor explícito.
+El atributo debe escribirse en mayúsculas para indicar que es booleano.
+EXPL:XHTML es HTML con sintaxis XML estricta. XML no permite atributos sin valor, por lo que los atributos booleanos deben escribirse con su propio nombre como valor: checked="checked", disabled="disabled", selected="selected".
+En HTML5, ¿qué etiqueta semántica se utiliza para representar una sección de una página que contiene información relacionada con el contenido principal, pero que no es tan relevante, como una barra lateral?
+header
+section
+*aside
+nav
+EXPL:aside representa contenido relacionado pero no esencial para el contenido principal, como barras laterales, publicidad o notas al margen. section es una sección temática; header es la cabecera; nav contiene enlaces de navegación.
+Dado el fragmento HTML: p > a > span, ¿qué selector CSS NO aplicaría estilos directamente al elemento span?
 p span
 a span
 *p > span
-Mediante una subconsulta correlacionada con EXISTS
+a > span
+EXPL:p > span selecciona solo los span que son hijos DIRECTOS de p. En este caso, span es hijo de a, que a su vez es hijo de p. Por tanto, p > span no aplica. El selector p span (sin >) sí aplicaría porque span es descendiente de p.
 ¿Cuál de las siguientes afirmaciones sobre las diferencias entre HTML y XHTML es correcta?
-En XHTML, los nombres de etiquetas y atributos pueden escribirse indistintamente en mayúsculas o minúsculas
-*XHTML exige el cierre de todas las etiquetas, incluidas las vacías, y que todos los atributos tengan un valor y estén entre comillas
-HTML permite la integración de otros lenguajes basados en XML como MathML o SVG, mientras que XHTML no
-Con el atributo xmlns:xsi en el elemento raíz
-Para una tabla HTML, ¿qué conjunto de etiquetas se utiliza para agrupar semánticamente las filas del encabezado, el cuerpo y el pie, respectivamente, lo cual es útil para tablas muy largas que ocupan varias páginas?
-<table>, <tr>, <td>
-<caption>, <thead>, <tfoot>
-*<thead>, <tbody>, <tfoot>
-Mediante una subconsulta correlacionada con EXISTS
-¿Cuál de las siguientes etiquetas HTML es explícitamente mencionada como obsoleta (deprecated) en el contenido, recomendándose que su funcionalidad de estilo sea manejada por CSS en HTML5?
-<p>
-<h1>
-*<font>
-Con el atributo xmlns:xsi en el elemento raíz
-Al utilizar la etiqueta <form> con el atributo method="post", ¿qué atributo es el encargado de indicar el tipo de contenido utilizado para enviar los datos, siendo esencial, por ejemplo, para la subida de archivos?
+En XHTML, los nombres de etiquetas y atributos pueden escribirse indistintamente en mayúsculas o minúsculas.
+*XHTML exige el cierre de todas las etiquetas, incluidas las vacías, y que todos los atributos tengan un valor y estén entre comillas.
+HTML permite la integración de otros lenguajes basados en XML como MathML o SVG, mientras que XHTML no.
+XHTML no requiere un DOCTYPE al inicio del documento, a diferencia de HTML.
+EXPL:XHTML es HTML reformulado como XML. Sus reglas estrictas incluyen: todas las etiquetas en minúsculas, todas cerradas (br/), todos los atributos con valor entre comillas, y un único elemento raíz.
+Para una tabla HTML, ¿qué conjunto de etiquetas agrupa semánticamente las filas del encabezado, el cuerpo y el pie?
+table, tr, td
+caption, thead, tfoot
+*thead, tbody, tfoot
+colgroup, col, caption
+EXPL:thead agrupa las filas de cabecera, tbody el cuerpo de datos y tfoot el pie. Esta estructura semántica mejora la accesibilidad, permite estilos diferenciados y en tablas largas el navegador puede repetir el encabezado en cada página impresa.
+¿Cuál de las siguientes etiquetas HTML es explícitamente obsoleta (deprecated) en HTML5, recomendándose que su funcionalidad sea manejada por CSS?
+p
+h1
+*font
+span
+EXPL:La etiqueta font está obsoleta en HTML5 porque mezcla presentación con contenido. También están obsoletas center, b (usar strong), i (usar em), u, strike. En HTML5 el estilo tipográfico debe manejarse con CSS.
+Al utilizar la etiqueta form con el atributo method="post", ¿qué atributo indica el tipo de contenido utilizado para enviar los datos, siendo esencial para la subida de archivos?
 action
 target
 *enctype
-Mediante el protocolo OSPF de enrutamiento dinámico
+method
+EXPL:enctype="multipart/form-data" es obligatorio para subir archivos en formularios HTML. Sin este atributo, el archivo no se envía correctamente. action indica la URL destino; method indica GET o POST; target indica dónde mostrar la respuesta.
