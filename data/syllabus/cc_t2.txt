@@ -1,28 +1,28 @@
 tema 2
 ¿Qué ventaja ofrece la escalabilidad en la nube?
-Permite ajustar los recursos en tiempo real según las necesidades
+*Permite ajustar los recursos en tiempo real según las necesidades
 Bloquea el uso de recursos adicionales para evitar sobrecostes
 Solo está disponible en modelos de pago fijo
-*Asegura un descuento automático en el coste de los recursos.
-EXPL:La respuesta es 'Asegura un descuento automático en el coste de los recursos.'.
+Asegura un descuento automático en el coste de los recursos.
+EXPL:La escalabilidad en la nube permite ajustar los recursos en tiempo real según las necesidades del momento, aumentando o reduciendo capacidad de forma dinámica.
 ¿Qué aspecto clave de la seguridad se garantiza en los servicios en la nube?
-*Copias de seguridad físicas en todas las oficinas.
-Medidas de seguridad robustas y cumplimiento normativo
+Copias de seguridad físicas en todas las oficinas.
+*Medidas de seguridad robustas y cumplimiento normativo
 Control absoluto de los datos por parte del usuario sin intervención del proveedor
 Eliminación automática de datos después de 30 días
-EXPL:La respuesta es 'Copias de seguridad físicas en todas las oficinas.'.
+EXPL:Los proveedores de nube garantizan medidas de seguridad robustas y cumplimiento normativo (ISO 27001, SOC 2, GDPR), incluyendo cifrado, control de acceso y auditorías.
 ¿Cuál de las siguientes afirmaciones sobre las instancias spot es correcta?
-*Son más costosas que las instancias reservadas.
-Permiten adquirir recursos a menor precio
+Son más costosas que las instancias reservadas.
+*Permiten adquirir recursos a menor precio
 No pueden utilizarse en entornos de producción
 Son el único modelo de precios disponible en la nube
-EXPL:Las instancias reservadas ofrecen descuentos significativos (hasta 75%) a cambio de comprometerse a usar el recurso durante 1 o 3 años. Ideal para cargas de trabajo predecibles y estables.
+EXPL:Las instancias spot permiten adquirir capacidad de cómputo no utilizada a precios significativamente más bajos que las instancias bajo demanda, aunque pueden ser interrumpidas por el proveedor.
 *¿Cuál de los siguientes modelos de precios en la nube ofrece descuentos por comprometerse a un uso a largo plazo?
 Pago por uso
-Instancias reservadas
+*Instancias reservadas
 Instancias spot
-*Facturación consolidada.
-EXPL:La respuesta es 'Facturación consolidada.'. "Pago por uso." y "Instancias reservadas" son incorrectos porque describen conceptos diferentes.
+Facturación consolidada.
+EXPL:Las instancias reservadas ofrecen descuentos significativos (hasta 75%) a cambio de comprometerse a usar el recurso durante 1 o 3 años. Ideal para cargas de trabajo predecibles y estables.
 ¿Qué tipo de herramientas ayudan a analizar los costes en la nube?
 *Plataformas de análisis de datos y predicciones.
 Redes sociales y foros de discusión
@@ -30,29 +30,29 @@ Servicios de almacenamiento en la nube
 Programas de ofimática
 EXPL:La respuesta es 'Plataformas de análisis de datos y predicciones.'. "Redes sociales y foros de discusión." y "Servicios de almacenamiento en la nube." son incorrectos porque describen conceptos diferentes.
 ¿Cuál es la principal característica del modelo de facturación en la nube?
-*Pago anticipado por los recursos contratados.
+Pago anticipado por los recursos contratados.
 Pago fijo mensual sin importar el uso
-Pago por uso, donde solo se paga por los recursos consumidos
+*Pago por uso, donde solo se paga por los recursos consumidos
 Pago único al inicio del servicio
-EXPL:La respuesta es 'Pago anticipado por los recursos contratados.'.
+EXPL:El modelo de facturación en la nube se basa en el pago por uso (pay-as-you-go): solo se paga por los recursos efectivamente consumidos, sin compromisos de pago anticipado.
 ¿Cuál es la ventaja principal de utilizar servicios de facturación consolidada?
 Permite pagar menos por los recursos utilizados
-Facilita la gestión de múltiples cuentas desde una sola plataforma
-*Evita el pago de impuestos sobre los servicios en la nube.
+*Facilita la gestión de múltiples cuentas desde una sola plataforma
+Evita el pago de impuestos sobre los servicios en la nube.
 Automatiza completamente la contabilidad empresarial
-EXPL:La respuesta es 'Evita el pago de impuestos sobre los servicios en la nube.'.
+EXPL:La facturación consolidada permite gestionar múltiples cuentas desde una sola plataforma, simplificando la administración y pudiendo obtener descuentos por volumen agregado.
 ¿Qué elemento NO forma parte del Coste Total de la Propiedad (TCO)?
 Coste de hardware y software
 Mantenimiento y energía
-Gastos de transporte de los empleados
-*Costes operativos en la nube.
-EXPL:La respuesta es 'Costes operativos en la nube.'. "Coste de hardware y software." y "Mantenimiento y energía." son incorrectos porque describen conceptos diferentes.
+*Gastos de transporte de los empleados
+Costes operativos en la nube.
+EXPL:El TCO (Total Cost of Ownership) incluye hardware, software, mantenimiento, energía y costes operativos. Los gastos de transporte de empleados no forman parte del TCO de infraestructura tecnológica.
 ¿Qué función tienen los servicios de monitorización de costes?
-Establecer presupuestos y alertar sobre gastos elevados
+*Establecer presupuestos y alertar sobre gastos elevados
 Modificar automáticamente los precios de los servicios en la nube
-*Cancelar automáticamente servicios que superan el presupuesto.
+Cancelar automáticamente servicios que superan el presupuesto.
 Garantizar un precio fijo sin variaciones
-EXPL:Cancelar automáticamente servicios que superan el presupuesto.
+EXPL:Los servicios de monitorización de costes permiten establecer presupuestos, crear alertas cuando se superan umbrales y analizar el gasto para optimizarlo.
 ¿Cuál es una de las tendencias futuras en la gestión de la facturación en la nube?
 *Uso de inteligencia artificial y aprendizaje automático para optimizar los costes
 Eliminación total de los modelos de pago por uso

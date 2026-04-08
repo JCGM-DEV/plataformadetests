@@ -1,10 +1,10 @@
 tema 7
 ¿Qué característica es común en los servicios de almacenamiento en la nube?
-*Se limitan a almacenar solo archivos de texto
-Son escalables y permiten gestionar grandes volúmenes de datos
+Se limitan a almacenar solo archivos de texto
+*Son escalables y permiten gestionar grandes volúmenes de datos
 No permiten el acceso remoto
 Solo pueden ser utilizados por empresas grandes
-EXPL:La respuesta es 'Se limitan a almacenar solo archivos de texto'.
+EXPL:Los servicios de almacenamiento en la nube son escalables y permiten gestionar grandes volúmenes de datos, accesibles desde cualquier lugar con conexión a internet.
 ¿Cuál es un beneficio clave del archivado de datos?
 Permite un acceso instantáneo a la información en todo momento
 *Reduce los costos al utilizar soluciones de almacenamiento de bajo costo
@@ -13,49 +13,49 @@ No permite la recuperación de datos
 EXPL:Reduce los costos al utilizar soluciones de almacenamiento de bajo costo
 ¿Cuál es una de las principales aplicaciones del almacenamiento de ficheros?
 Streaming de videos en línea
-*Almacenamiento de máquinas virtuales
-Repositorios de código fuente
+Almacenamiento de máquinas virtuales
+*Repositorios de código fuente
 Bases de datos SQL
-EXPL:La respuesta es 'Almacenamiento de máquinas virtuales'. "Streaming de videos en línea" y "Repositorios de código fuente" son incorrectos porque describen conceptos diferentes.
+EXPL:El almacenamiento de ficheros (file storage) es ideal para repositorios de código fuente, documentos compartidos y sistemas de archivos colaborativos gracias a su estructura jerárquica.
 *¿Qué ventaja tiene el almacenamiento de ficheros sobre otros tipos de almacenamiento?
-Permite una estructura jerárquica de archivos y carpetas
+*Permite una estructura jerárquica de archivos y carpetas
 Es el más rápido para bases de datos transaccionales
-*Es más barato que el almacenamiento en cinta
+Es más barato que el almacenamiento en cinta
 No permite el control de versiones
-EXPL:La respuesta es 'Es más barato que el almacenamiento en cinta'.
+EXPL:El almacenamiento de ficheros permite una estructura jerárquica de archivos y carpetas, facilitando la organización y el acceso a los datos de forma intuitiva.
 ¿Qué tipo de almacenamiento se recomienda para datos históricos o con baja frecuencia de acceso?
-*Almacenamiento de objetos
+Almacenamiento de objetos
 Almacenamiento de ficheros
-Archivado de datos
+*Archivado de datos
 Almacenamiento de bloques
-EXPL:La respuesta es 'Almacenamiento de objetos'. "Almacenamiento de ficheros" y "Archivado de datos" son incorrectos porque describen conceptos diferentes.
+EXPL:El archivado de datos es la solución recomendada para datos históricos o con baja frecuencia de acceso, ya que ofrece el menor coste de almacenamiento a cambio de mayor latencia de acceso.
 ¿Cuál es una ventaja del almacenamiento de objetos sobre el almacenamiento de bloques?
-*Es más rápido para bases de datos transaccionales
-Permite la identificación de cada archivo mediante una URL única
+Es más rápido para bases de datos transaccionales
+*Permite la identificación de cada archivo mediante una URL única
 No requiere estructura jerárquica
 Ambos son exactamente iguales
-EXPL:La respuesta es 'Es más rápido para bases de datos transaccionales'.
+EXPL:El almacenamiento de objetos permite identificar cada archivo mediante una URL única, facilitando el acceso directo y la distribución de contenido a través de internet.
 ¿Cuál de los siguientes beneficios es característico del almacenamiento de bloques?
 Alta durabilidad y escalabilidad
 Bajo costo y facilidad de uso
-Acceso rápido y aleatorio a los datos
-*Solo es útil para almacenamiento en la nube
-EXPL:La respuesta es 'Solo es útil para almacenamiento en la nube'.
+*Acceso rápido y aleatorio a los datos
+Solo es útil para almacenamiento en la nube
+EXPL:El almacenamiento de bloques ofrece acceso rápido y aleatorio a los datos, siendo ideal para bases de datos transaccionales y aplicaciones que requieren baja latencia.
 ¿Cuál de los siguientes es un caso de uso común del almacenamiento de objetos?
-*Bases de datos relacionales
-Almacenamiento de contenido multimedia para streaming
+Bases de datos relacionales
+*Almacenamiento de contenido multimedia para streaming
 Gestión de documentos empresariales
 Máquinas virtuales
-EXPL:La respuesta es 'Bases de datos relacionales'.
+EXPL:El almacenamiento de objetos es ideal para contenido multimedia (imágenes, vídeos) para streaming, backups y datos estáticos accesibles mediante URL. Ejemplo: Amazon S3.
 ¿Cuál es la principal característica del almacenamiento de bloques?
-*Se basa en la organización de archivos en carpetas
+Se basa en la organización de archivos en carpetas
 Permite almacenar datos en objetos individuales con URL
-Se accede a los datos en bloques de tamaño fijo
+*Se accede a los datos en bloques de tamaño fijo
 Se utiliza solo para copias de seguridad
-EXPL:La respuesta es 'Se basa en la organización de archivos en carpetas'.
+EXPL:El almacenamiento de bloques divide los datos en bloques de tamaño fijo, cada uno con su propio identificador. Es la base de los discos duros virtuales y bases de datos de alto rendimiento.
 ¿Cuál de los siguientes servicios de almacenamiento es más adecuado para aplicaciones de análisis de datos?
-*Almacenamiento de bloques
-Almacenamiento de objetos
+Almacenamiento de bloques
+*Almacenamiento de objetos
 Archivado de datos
 Almacenamiento en papel
-EXPL:La respuesta es 'Almacenamiento de bloques'. "Almacenamiento de objetos" y "Archivado de datos" son incorrectos porque describen conceptos diferentes.
+EXPL:El almacenamiento de objetos es más adecuado para análisis de datos a gran escala (data lakes), ya que permite almacenar grandes volúmenes de datos no estructurados accesibles mediante APIs.

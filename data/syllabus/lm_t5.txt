@@ -10,9 +10,9 @@ XSLT
 *XSL-FO
 Con el atributo xmlns:xsi en el elemento raíz
 Para mostrar el valor de un atributo llamado "identificador" de un elemento actual dentro de una plantilla XSLT, ¿qué expresión XPath se utilizaría correctamente con la instrucción <https://www.google.com/search?q=xsl:value-of select="..." />?
-*../identificador
+../identificador
 identificador
-@identificador
+*@identificador
 Mediante una subconsulta correlacionada con EXISTS
 Un desarrollador necesita aplicar una lógica condicional en XSLT donde, basándose en el valor de una cantidad, se apliquen diferentes formatos (por ejemplo, colorear de amarillo si la cantidad es superior a 25 y de verde si es igual o inferior). ¿Qué conjunto de instrucciones XSLT es el más adecuado para este escenario?
 xsl:if con una sola condición, sin rama alternativa para el otro caso.
@@ -25,8 +25,8 @@ Es una API basada en eventos, ideal para documentos XML muy grandes debido a su 
 *Carga todo el documento XML en memoria, construyendo un árbol de objetos que permite la manipulación y modificación dinámica de sus nodos
 No permite modificar el documento XML, solo leerlo de forma secuencial
 Si se desea iterar sobre un conjunto de nodos en un documento XML (por ejemplo, todos los elementos <producto>) y aplicar una transformación a cada uno de ellos, ¿qué instrucción XSLT se debe utilizar junto con una expresión XPath en su atributo select?
-*xsl:value-of
-xsl:for-each
+xsl:value-of
+*xsl:for-each
 xsl:if
 Mediante una subconsulta correlacionada con EXISTS
 En la estructura de una hoja de estilo XSLT, ¿cuál es el propósito principal del atributo match en la etiqueta xsl:template?

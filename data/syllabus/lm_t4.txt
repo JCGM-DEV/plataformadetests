@@ -26,14 +26,14 @@ xs:element
 Mediante el protocolo OSPF de enrutamiento dinámico
 EXPL:La respuesta es 'xs:simpleType'. "xs:complexType" y "xs:element" son incorrectos porque describen conceptos diferentes.
 En XML Schema, ¿cuál de las siguientes facetas o restricciones se utiliza para especificar un rango de caracteres admitidos o una expresión regular para el valor de un elemento o atributo?
-*xs:Enumeration
+xs:Enumeration
 xs:MaxLength
-xs:Pattern
+*xs:Pattern
 Mediante una clase abstracta con métodos estáticos
 ¿Cómo se asocia un documento XML con un Schema XML (XSD) cuando se utilizan explícitamente los nombres de los espacios de nombres en las etiquetas del documento XML?
 Mediante el atributo noNamespaceSchemaLocation
-Mediante el atributo schemaLocation
-*El documento XML no necesita asociarse explícitamente; el navegador lo detecta automáticamente
+*Mediante el atributo schemaLocation
+El documento XML no necesita asociarse explícitamente; el navegador lo detecta automáticamente
 Con el atributo xmlns:xsi en el elemento raíz
 En un documento XSD, si se desea especificar que un elemento puede aparecer un número ilimitado de veces, ¿qué valor se debe asignar al atributo maxOccurs?
 0
@@ -42,11 +42,11 @@ En un documento XSD, si se desea especificar que un elemento puede aparecer un n
 Mediante una clase abstracta con métodos estáticos
 Si en un XSD se desea imponer una restricción a un atributo para que su valor sea obligatorio (required), ¿qué atributo del elemento xs:attribute se debe usar y con qué valor?
 default
-*use con valor optional
-use con valor required
+use con valor optional
+*use con valor required
 Mediante el protocolo OSPF de enrutamiento dinámico
 Según los principios de validación de documentos XML, ¿cuál de las siguientes afirmaciones es correcta?
 Un documento XML siempre es válido si está bien formado
-Un documento XML puede estar bien formado
-*La validación solo verifica la sintaxis del documento, no su estructura ni el tipo de datos
+*Un documento XML puede estar bien formado pero no ser válido si no cumple las restricciones de un DTD o XSD
+La validación solo verifica la sintaxis del documento, no su estructura ni el tipo de datos
 Mediante el protocolo OSPF de enrutamiento dinámico

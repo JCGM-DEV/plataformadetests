@@ -6,17 +6,17 @@ Comprar más recursos de los necesarios
 No realizar copias de seguridad
 EXPL:La respuesta es 'Escalar recursos según la demanda'. "Mantener servidores encendidos sin monitoreo" y "Comprar más recursos de los necesarios" son incorrectos porque describen conceptos diferentes.
 ¿Qué principio de diseño se enfoca en minimizar interrupciones y optimizar operaciones?
-*Seguridad
+Seguridad
 Fiabilidad
-Excelencia operacional
+*Excelencia operacional
 Eficiencia en costos
-EXPL:La respuesta es 'Seguridad'. "Fiabilidad" y "Excelencia operacional" son incorrectos porque describen conceptos diferentes.
+EXPL:La excelencia operacional es el pilar del Well-Architected Framework que se enfoca en minimizar interrupciones, optimizar operaciones y mejorar continuamente los procesos.
 ¿Qué herramienta permite automatizar el despliegue y la gestión de aplicaciones en la nube?
-*Microsoft Excel
-Kubernetes
+Microsoft Excel
+*Kubernetes
 Notepad++
 Photoshop
-EXPL:La respuesta es 'Microsoft Excel'. "Kubernetes" y "Notepad++" son incorrectos porque describen conceptos diferentes.
+EXPL:Kubernetes es una plataforma de orquestación de contenedores que automatiza el despliegue, escalado y gestión de aplicaciones en la nube.
 ¿Cuál es el principal objetivo de la arquitectura en la nube?
 Reducir la velocidad de procesamiento
 Aumentar los costos de infraestructura
@@ -25,10 +25,10 @@ Limitar el acceso a los servicios en línea
 EXPL:La respuesta es 'Diseñar sistemas escalables, seguros y eficientes'. "Reducir la velocidad de procesamiento" y "Aumentar los costos de infraestructura" son incorrectos porque describen conceptos diferentes.
 ¿Cómo se logra la alta disponibilidad en la arquitectura en la nube?
 Eliminando los servidores de respaldo
-Implementando redundancia y tolerancia a fallos
+*Implementando redundancia y tolerancia a fallos
 Usando un solo servidor para evitar conflictos
-*Deshabilitando la supervisión del sistema
-EXPL:La respuesta es 'Deshabilitando la supervisión del sistema'. "Eliminando los servidores de respaldo" y "Implementando redundancia y tolerancia a fallos" son incorrectos porque describen conceptos diferentes.
+Deshabilitando la supervisión del sistema
+EXPL:La alta disponibilidad se logra implementando redundancia (múltiples instancias) y tolerancia a fallos (failover automático), garantizando que el servicio continúe aunque fallen componentes individuales.
 ¿Cuál es un servicio de almacenamiento en la nube?
 *Amazon S3
 Google Docs
@@ -42,17 +42,17 @@ Almacenamiento en caché
 Supervisión constante
 EXPL:El balanceo de carga distribuye las solicitudes entre múltiples servidores para evitar que uno se sature. Mejora la disponibilidad y el rendimiento. Least Connections envía al servidor con menos conexiones activas.
 ¿Por qué es importante la supervisión constante de los sistemas en la nube?
-*Para generar más costos en la empresa
-Para detectar y resolver problemas de forma proactiva
+Para generar más costos en la empresa
+*Para detectar y resolver problemas de forma proactiva
 Para reducir la seguridad de los sistemas
 Para aumentar la latencia del servicio
-EXPL:La respuesta es 'Para generar más costos en la empresa'.
+EXPL:La supervisión constante permite detectar y resolver problemas de forma proactiva antes de que afecten a los usuarios, optimizar el rendimiento y controlar los costes.
 ¿Cuál de los siguientes elementos es clave para mejorar la seguridad en la nube?
-*Uso de protocolos obsoletos
-Implementación de encriptación de datos
+Uso de protocolos obsoletos
+*Implementación de encriptación de datos
 Permitir accesos sin autenticación
 Evitar el monitoreo del sistema
-EXPL:La respuesta es 'Uso de protocolos obsoletos'. "Implementación de encriptación de datos" y "Permitir accesos sin autenticación" son incorrectos porque describen conceptos diferentes.
+EXPL:La implementación de encriptación de datos es clave para mejorar la seguridad en la nube, protegiendo la confidencialidad de los datos tanto en tránsito como en reposo.
 ¿Qué método es clave para la recuperación ante desastres en la nube?
 No hacer copias de seguridad
 Usar almacenamiento local sin redundancia

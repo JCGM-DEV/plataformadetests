@@ -14,9 +14,9 @@ Mediante una subconsulta correlacionada con EXISTS
 EXPL:INSERT INTO tabla (col1, col2) VALUES (v1, v2) inserta una fila. INSERT INTO tabla SELECT... inserta múltiples filas desde otra consulta. Es la sentencia DML estándar para insertar datos.
 
 ¿Por qué es fundamental incluir la cláusula WHERE en una sentencia UPDATE?
-Porque si se omite, se actualizarán todos los registros de la tabla. *
+*Porque si se omite, se actualizarán todos los registros de la tabla.
 Porque es necesaria para definir qué columnas se van a modificar
-*Porque sin ella, el motor de la base de datos devolverá un error de sintaxis siempre
+Porque sin ella, el motor de la base de datos devolverá un error de sintaxis siempre
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 
 ¿Qué opción de integridad referencial borra automáticamente las filas hijas cuando se borra la fila padre?

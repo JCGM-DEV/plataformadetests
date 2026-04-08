@@ -6,11 +6,11 @@ El escalado horizontal solo funciona en servidores físicos
 Ambos términos significan lo mismo
 EXPL:El escalado horizontal añade más servidores (scale out). El escalado vertical aumenta la capacidad de un servidor existente (scale up). El horizontal es más flexible y tolerante a fallos.
 ¿Cuál de las siguientes NO es una ventaja del escalado automático?
-*Mejora el rendimiento de la aplicación
+Mejora el rendimiento de la aplicación
 Reduce los costes operativos
-Disminuye la cantidad de usuarios en la plataforma
+*Disminuye la cantidad de usuarios en la plataforma
 Aumenta la disponibilidad de la aplicación
-EXPL:La respuesta es 'Mejora el rendimiento de la aplicación'.
+EXPL:Disminuir la cantidad de usuarios NO es una ventaja del escalado automático. Sus ventajas reales son: reducir costes, mejorar disponibilidad y adaptar recursos a la demanda.
 ¿Qué función cumple un balanceador de carga en el escalado automático?
 Almacenar los datos de los usuarios
 *Distribuir las solicitudes de usuarios entre varios servidores.
@@ -18,17 +18,17 @@ Reducir el tráfico de red
 Cerrar conexiones inactivas
 EXPL:Distribuir las solicitudes de usuarios entre varios servidores.
 ¿Cuál de las siguientes afirmaciones sobre la monitorización es correcta?
-*Solo es útil cuando la aplicación presenta fallos.
-Permite recopilar datos sobre el estado y rendimiento de la aplicación
+Solo es útil cuando la aplicación presenta fallos.
+*Permite recopilar datos sobre el estado y rendimiento de la aplicación
 No puede generar alertas en tiempo real
 Es un proceso opcional en aplicaciones en la nube
-EXPL:La respuesta es 'Solo es útil cuando la aplicación presenta fallos.'.
+EXPL:La monitorización permite recopilar datos continuamente sobre el estado y rendimiento de la aplicación, generando alertas en tiempo real y facilitando la detección proactiva de problemas.
 ¿Qué tipo de regla puede desencadenar el escalado automático?
-Cuando el uso de CPU supera un umbral definido
+*Cuando el uso de CPU supera un umbral definido
 Cuando el usuario cambia su contraseña
 Cuando un servidor está en mantenimiento
-*Cuando la aplicación recibe menos tráfico.
-EXPL:La respuesta es 'Cuando la aplicación recibe menos tráfico.'. "Cuando el uso de CPU supera un umbral definido." y "Cuando el usuario cambia su contraseña." son incorrectos porque describen conceptos diferentes.
+Cuando la aplicación recibe menos tráfico.
+EXPL:El escalado automático se desencadena típicamente cuando el uso de CPU supera un umbral definido, cuando la memoria está al límite, o cuando el número de solicitudes supera cierto nivel.
 ¿Qué métrica NO es clave para la monitorización de una aplicación?
 *Uso de CPU
 Consumo de memoria

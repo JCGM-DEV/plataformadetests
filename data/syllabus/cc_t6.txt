@@ -1,46 +1,46 @@
 tema 6
 ¿Cuál es una de las principales ventajas de los servicios de cómputo en comparación con la computación tradicional?
-*Requieren una mayor inversión inicial
-Permiten delegar la gestión de la infraestructura
+Requieren una mayor inversión inicial
+*Permiten delegar la gestión de la infraestructura
 No permiten escalar los recursos
 Exigen la compra de servidores propios
-EXPL:La respuesta es 'Requieren una mayor inversión inicial'. "Permiten delegar la gestión de la infraestructura" y "No permiten escalar los recursos" son incorrectos porque describen conceptos diferentes.
+EXPL:Los servicios de cómputo en la nube permiten delegar la gestión de la infraestructura al proveedor, reduciendo costes operativos y permitiendo al equipo centrarse en el desarrollo.
 ¿Qué aspecto se debe considerar al adoptar servicios administrados de cómputo?
-Seguridad y escalabilidad
-*Solo el coste
+*Seguridad y escalabilidad
+Solo el coste
 No se requiere considerar ningún aspecto
 No afectan la facilidad de uso
-EXPL:La respuesta es 'Solo el coste'. "Seguridad y escalabilidad" y "No se requiere considerar ningún aspecto" son incorrectos porque describen conceptos diferentes.
+EXPL:Al adoptar servicios administrados de cómputo se deben considerar múltiples aspectos: seguridad, escalabilidad, coste, disponibilidad, cumplimiento normativo y facilidad de uso.
 ¿Qué tecnología permite ejecutar múltiples sistemas operativos en una misma máquina física?
-*Contenedores
-Máquinas virtuales
+Contenedores
+*Máquinas virtuales
 Computación sin servidor
 Servicios SaaS
-EXPL:La respuesta es 'Contenedores'. "Máquinas virtuales" y "Computación sin servidor" son incorrectos porque describen conceptos diferentes.
+EXPL:Las máquinas virtuales (VMs) permiten ejecutar múltiples sistemas operativos completos en una misma máquina física mediante un hipervisor. Los contenedores comparten el SO del host.
 ¿Cuál es una de las ventajas de la computación sin servidor?
-*Requiere administración constante de la infraestructura
-Permite escalar automáticamente en función de la demanda
+Requiere administración constante de la infraestructura
+*Permite escalar automáticamente en función de la demanda
 Obliga a pagar por capacidad reservada
 Es más costosa que las VMs
-EXPL:La respuesta es 'Requiere administración constante de la infraestructura'.
+EXPL:La computación sin servidor (serverless) permite escalar automáticamente en función de la demanda sin necesidad de gestionar servidores, pagando solo por el tiempo de ejecución real.
 ¿Cuál de las siguientes opciones es un ejemplo de un servicio SaaS?
-*Amazon EC2
+Amazon EC2
 Google App Engine
-Microsoft 365
+*Microsoft 365
 Kubernetes
-EXPL:SaaS (Software as a Service) proporciona aplicaciones completas listas para usar a través de Internet. El proveedor gestiona todo. Ejemplos: Gmail, Microsoft 365, Salesforce.
+EXPL:SaaS (Software as a Service) proporciona aplicaciones completas listas para usar a través de Internet. Microsoft 365 es SaaS. Amazon EC2 es IaaS. Google App Engine es PaaS. Kubernetes es una plataforma de orquestación de contenedores.
 ¿Cuál es uno de los principios clave de los servicios de cómputo?
-*Uso exclusivo de hardware propio
+Uso exclusivo de hardware propio
 Pago por una tarifa fija
-Pago por uso
+*Pago por uso
 Falta de flexibilidad
-EXPL:La respuesta es 'Uso exclusivo de hardware propio'. "Pago por una tarifa fija" y "Pago por uso" son incorrectos porque describen conceptos diferentes.
+EXPL:El pago por uso (pay-as-you-go) es uno de los principios clave de los servicios de cómputo en la nube: solo se paga por los recursos efectivamente consumidos.
 ¿Cuál es una de las ventajas de usar máquinas virtuales (VM)?
-*No permiten escalabilidad
-Comparten recursos físicos, optimizando costos
+No permiten escalabilidad
+*Comparten recursos físicos, optimizando costos
 Son menos eficientes que los servidores físicos
 No ofrecen aislamiento entre aplicaciones
-EXPL:La respuesta es 'No permiten escalabilidad'. "Comparten recursos físicos, optimizando costos" y "Son menos eficientes que los servidores físicos" son incorrectos porque describen conceptos diferentes.
+EXPL:Las máquinas virtuales comparten los recursos físicos del servidor host mediante un hipervisor, optimizando costos al consolidar múltiples cargas de trabajo en menos hardware físico.
 ¿Qué tecnología permite ejecutar código sin preocuparse por la administración de servidores?
 *Computación sin servidor (serverless)
 Máquinas virtuales
@@ -48,14 +48,14 @@ IaaS
 SaaS
 EXPL:La respuesta es 'Computación sin servidor (serverless)'. "Máquinas virtuales" y "IaaS" son incorrectos porque describen conceptos diferentes.
 ¿Qué característica distingue a los contenedores de las máquinas virtuales?
-*Son más pesados que las VMs
+Son más pesados que las VMs
 No permiten aislamiento entre aplicaciones
-Comparten el sistema operativo del host
+*Comparten el sistema operativo del host
 No pueden ejecutarse en múltiples entornos
-EXPL:La respuesta es 'Son más pesados que las VMs'. "No permiten aislamiento entre aplicaciones" y "Comparten el sistema operativo del host" son incorrectos porque describen conceptos diferentes.
+EXPL:Los contenedores comparten el sistema operativo del host, lo que los hace más ligeros y rápidos que las VMs. Las VMs incluyen un SO completo por cada instancia.
 ¿Qué tipo de servicio de cómputo proporciona un entorno completo de desarrollo y despliegue de aplicaciones?
-*IaaS
-PaaS
+IaaS
+*PaaS
 SaaS
 Serverless
-EXPL:IaaS (Infrastructure as a Service) proporciona infraestructura virtualizada (VMs, almacenamiento, redes). El usuario gestiona el SO y las aplicaciones. Ejemplo: AWS EC2, Azure VMs.
+EXPL:PaaS (Platform as a Service) proporciona un entorno completo de desarrollo y despliegue de aplicaciones. El proveedor gestiona la infraestructura; el usuario solo despliega aplicaciones. Ejemplo: Google App Engine.

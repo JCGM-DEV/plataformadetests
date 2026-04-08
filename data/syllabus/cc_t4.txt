@@ -1,10 +1,10 @@
 tema 4
 ¿Cuál de los siguientes métodos de control de acceso permite asignar permisos específicos según la función del usuario en la empresa?
-*Control de acceso discrecional (DAC)
-Control de acceso basado en roles (RBAC)
+Control de acceso discrecional (DAC)
+*Control de acceso basado en roles (RBAC)
 Control de acceso basado en identidad
 Control de acceso abierto
-EXPL:La respuesta es 'Control de acceso discrecional (DAC)'. "Control de acceso basado en roles (RBAC)" y "Control de acceso basado en identidad" son incorrectos porque describen conceptos diferentes.
+EXPL:RBAC (Role-Based Access Control) asigna permisos según el rol del usuario en la organización. DAC (Discretionary Access Control) permite al propietario del recurso decidir quién accede.
 ¿Cuál es una de las principales ventajas de la gestión de identidades federada?
 *Permite a los usuarios acceder a múltiples sistemas sin necesidad de múltiples credenciales
 Requiere la creación de una nueva cuenta para cada sistema diferente
@@ -18,11 +18,11 @@ Token de seguridad único
 Pregunta de seguridad
 EXPL:La respuesta es 'Autenticación de dos factores (2FA)'. "Contraseña segura" y "Token de seguridad único" son incorrectos porque describen conceptos diferentes.
 ¿Qué práctica ayuda a evitar la fuga de información confidencial desde la red corporativa?
-*Uso exclusivo de contraseñas largas
-Implementación de soluciones de prevención de pérdida de datos (DLP)
+Uso exclusivo de contraseñas largas
+*Implementación de soluciones de prevención de pérdida de datos (DLP)
 Acceso abierto a todos los archivos en la nube
 Compartir contraseñas con todos los miembros del equipo
-EXPL:La respuesta es 'Uso exclusivo de contraseñas largas'.
+EXPL:Las soluciones DLP (Data Loss Prevention) monitorizan y controlan el flujo de datos para evitar que información confidencial salga de la red corporativa sin autorización.
 ¿Cuál es la principal función de los respaldos regulares de datos?
 *Asegurar que los datos puedan recuperarse en caso de un desastre o ataque
 Reducir el uso de almacenamiento en la nube
@@ -30,32 +30,32 @@ Evitar la autenticación de usuarios en la nube
 Permitir que los usuarios accedan a los datos sin autenticación
 EXPL:Asegurar que los datos puedan recuperarse en caso de un desastre o ataque
 ¿Cuál de los siguientes es un control técnico de seguridad en la nube?
-*Políticas de seguridad
+Políticas de seguridad
 Programas de capacitación para empleados
-Cortafuegos y sistemas de prevención de intrusiones
+*Cortafuegos y sistemas de prevención de intrusiones
 Procedimientos de gestión de riesgos
-EXPL:La respuesta es 'Políticas de seguridad'.
+EXPL:Los controles técnicos de seguridad incluyen cortafuegos, sistemas de prevención de intrusiones (IPS), cifrado y autenticación. Las políticas y la capacitación son controles administrativos.
 ¿Qué tipo de cifrado protege los datos durante su transmisión entre la red del cliente y la nube?
-*Cifrado en reposo
-Cifrado en tránsito
+Cifrado en reposo
+*Cifrado en tránsito
 Cifrado de doble clave
 Cifrado basado en hardware
-EXPL:La respuesta es 'Cifrado en reposo'. "Cifrado en tránsito" y "Cifrado de doble clave" son incorrectos porque describen conceptos diferentes.
+EXPL:El cifrado en tránsito (TLS/SSL) protege los datos mientras se transmiten entre el cliente y la nube. El cifrado en reposo protege los datos almacenados.
 ¿Qué regulación deben cumplir las empresas de la industria financiera para garantizar la seguridad de los datos?
-*HIPAA
-PCI DSS
+HIPAA
+*PCI DSS
 ISO 9001
 GDPR
-EXPL:La respuesta es 'HIPAA'. "PCI DSS" y "ISO 9001" son incorrectos porque describen conceptos diferentes.
+EXPL:PCI DSS (Payment Card Industry Data Security Standard) es la normativa de seguridad para empresas que procesan pagos con tarjeta. HIPAA es para datos sanitarios en EE.UU. GDPR es para protección de datos en Europa.
 ¿Cuál es la principal responsabilidad del proveedor de servicios en la nube?
-*Administrar las credenciales de acceso de los clientes
-Garantizar la seguridad de la infraestructura física y la plataforma subyacente
+Administrar las credenciales de acceso de los clientes
+*Garantizar la seguridad de la infraestructura física y la plataforma subyacente
 Cifrar los datos almacenados por los usuarios
 Gestionar las políticas de seguridad internas de las empresas
-EXPL:La respuesta es 'Administrar las credenciales de acceso de los clientes'.
+EXPL:Según el modelo de responsabilidad compartida, el proveedor de nube es responsable de la seguridad de la infraestructura física y la plataforma. El cliente es responsable de sus datos y configuraciones.
 ¿Por qué es importante establecer políticas de contraseñas fuertes?
 Para dificultar el acceso de los propios usuarios
-*Para evitar que los empleados olviden sus contraseñas
-Para mejorar la seguridad de las cuentas y reducir el riesgo de ataques
+Para evitar que los empleados olviden sus contraseñas
+*Para mejorar la seguridad de las cuentas y reducir el riesgo de ataques
 Para facilitar el acceso a los sistemas en la nube
-EXPL:La respuesta es 'Para evitar que los empleados olviden sus contraseñas'.
+EXPL:Las políticas de contraseñas fuertes mejoran la seguridad de las cuentas y reducen el riesgo de ataques de fuerza bruta, diccionario y accesos no autorizados.

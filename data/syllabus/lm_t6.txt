@@ -31,9 +31,9 @@ No permite el acceso a múltiples documentos XML en una misma consulta, a difere
 Carece de funciones integradas para trabajar con tipos de datos como cadenas, números o fechas
 Mediante una subconsulta correlacionada con EXISTS
 Si tenemos el siguiente fragmento XML: <concesionario><coche id="1"><marca>Volkswagen</marca></coche><coche id="2"><marca>Audi</marca></coche></concesionario>, ¿qué expresión XPath devolvería el elemento <coche> con el atributo id igual a "2"?
-*/concesionario/coche[position()=2]
+/concesionario/coche[position()=2]
 //coche[id="2"]
-/concesionario/coche[@id="2"]
+*/concesionario/coche[@id="2"]
 Mediante una clase abstracta con métodos estáticos
 La herramienta IMPORTXML de Google Sheets, ¿para qué se utiliza principalmente?
 Para transformar documentos XML a otros formatos como JSON o PDF
@@ -41,9 +41,9 @@ Para transformar documentos XML a otros formatos como JSON o PDF
 Para crear documentos XML nuevos a partir de datos estructurados en una hoja de cálculo
 Mediante el protocolo OSPF de enrutamiento dinámico
 En XPath, si se necesita seleccionar la marca y el modelo de todos los coches en un documento XML dentro de una misma expresión de ruta, ¿qué operador se debe utilizar para unir ambas rutas?
-*AND
+AND
 +
-|
+*|
 Con el atributo xmlns:xsi en el elemento raíz
 ¿Cuál es la principal diferencia funcional entre XPath y XQuery según los materiales de la unidad?
 XPath es un lenguaje para generar nuevos documentos XML, mientras que XQuery es solo para búsquedas

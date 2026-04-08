@@ -6,17 +6,17 @@ Conexiones inestables
 Solo funciona en redes locales
 EXPL:La respuesta es 'Ancho de banda alto y baja latencia'. "Alta latencia en la transmisión de datos" y "Conexiones inestables" son incorrectos porque describen conceptos diferentes.
 ¿Cuál de las siguientes opciones es una característica de la infraestructura de la nube?
-*Mayor latencia en la transferencia de datos
+Mayor latencia en la transferencia de datos
 Acceso solo desde equipos de escritorio
-Protección de datos mediante encriptación
+*Protección de datos mediante encriptación
 Dependencia total de hardware físico
-EXPL:La respuesta es 'Mayor latencia en la transferencia de datos'. "Acceso solo desde equipos de escritorio" y "Protección de datos mediante encriptación" son incorrectos porque describen conceptos diferentes.
+EXPL:La infraestructura de la nube ofrece protección de datos mediante encriptación, alta disponibilidad, escalabilidad y acceso desde cualquier dispositivo.
 ¿Qué permite la infraestructura de la nube en términos de almacenamiento?
-*Un almacenamiento limitado y costoso
-Almacenamiento escalable y accesible
+Un almacenamiento limitado y costoso
+*Almacenamiento escalable y accesible
 Solo permite almacenamiento local
 No permite almacenar grandes volúmenes de datos
-EXPL:La respuesta es 'Un almacenamiento limitado y costoso'. "Almacenamiento escalable y accesible" y "Solo permite almacenamiento local" son incorrectos porque describen conceptos diferentes.
+EXPL:La infraestructura de la nube permite almacenamiento escalable y accesible, pudiendo crecer según las necesidades sin inversión en hardware físico.
 ¿Cuál es un caso de uso común para la infraestructura de la nube?
 *Desarrollo de software
 Solo almacenamiento de archivos personales
@@ -24,23 +24,23 @@ Exclusivamente para videojuegos
 No tiene aplicaciones en educación
 EXPL:La respuesta es 'Desarrollo de software'. "Solo almacenamiento de archivos personales" y "Exclusivamente para videojuegos" son incorrectos porque describen conceptos diferentes.
 ¿Qué tipo de servicio es Google Docs dentro de la computación en la nube?
-*IaaS
+IaaS
 PaaS
-SaaS
+*SaaS
 Nube híbrida
-EXPL:IaaS (Infrastructure as a Service) proporciona infraestructura virtualizada (VMs, almacenamiento, redes). El usuario gestiona el SO y las aplicaciones. Ejemplo: AWS EC2, Azure VMs.
+EXPL:Google Docs es un ejemplo de SaaS (Software as a Service): una aplicación completa lista para usar a través del navegador, sin necesidad de instalar ni gestionar infraestructura.
 ¿Cuál de las siguientes opciones describe mejor la computación en la nube?
-*Un sistema operativo avanzado para servidores
-Una red de servidores que ofrece servicios informáticos a través de internet
+Un sistema operativo avanzado para servidores
+*Una red de servidores que ofrece servicios informáticos a través de internet
 Un tipo de hardware especializado en redes
 Un protocolo de comunicación entre servidores
-EXPL:La respuesta es 'Un sistema operativo avanzado para servidores'.
+EXPL:La computación en la nube es una red de servidores remotos que ofrece servicios informáticos (cómputo, almacenamiento, bases de datos, etc.) a través de internet bajo demanda.
 ¿Cuál de los siguientes servicios pertenece a la categoría IaaS?
-*AWS Elastic Beanstalk
-Azure Virtual Machines
+AWS Elastic Beanstalk
+*Azure Virtual Machines
 Google Docs
 Microsoft Office 365
-EXPL:IaaS (Infrastructure as a Service) proporciona infraestructura virtualizada (VMs, almacenamiento, redes). El usuario gestiona el SO y las aplicaciones. Ejemplo: AWS EC2, Azure VMs.
+EXPL:IaaS (Infrastructure as a Service) proporciona infraestructura virtualizada (VMs, almacenamiento, redes). Azure Virtual Machines es IaaS. AWS Elastic Beanstalk es PaaS. Google Docs y Microsoft Office 365 son SaaS.
 ¿Cuál es un beneficio clave de la infraestructura de la nube?
 Mayor consumo de recursos físicos
 Acceso limitado a servidores

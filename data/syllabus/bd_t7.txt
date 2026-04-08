@@ -9,9 +9,9 @@ EXPL:La respuesta es 'Herencia de tablas'. "Polimorfismo" y "Encapsulamiento de 
 Durante la instalación de PostgreSQL, ¿cuál es el puerto de conexión que se asigna por defecto?
 3306
 8080
-*5434
+*5432
 Mediante una subconsulta correlacionada con EXISTS
-EXPL:La respuesta es '5434'. "3306" y "8080" son incorrectos porque describen conceptos diferentes.
+EXPL:El puerto por defecto de PostgreSQL es 5432. MySQL usa 3306. El puerto 8080 es común para servidores web alternativos.
 
 ¿Qué cláusula se utiliza en la sentencia CREATE TABLE de PostgreSQL para heredar de otra tabla?
 EXTENDS

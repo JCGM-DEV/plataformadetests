@@ -1,55 +1,55 @@
 tema 8
 ¿Cuál de las siguientes es una característica de las bases de datos analíticas?
-Optimizadas para consultas complejas
+*Optimizadas para consultas complejas
 Uso exclusivo en sistemas transaccionales
 Requieren estructuras fijas y rígidas
-*No pueden manejar grandes volúmenes de datos
-EXPL:La respuesta es 'No pueden manejar grandes volúmenes de datos'. "Optimizadas para consultas complejas" y "Uso exclusivo en sistemas transaccionales" son incorrectos porque describen conceptos diferentes.
+No pueden manejar grandes volúmenes de datos
+EXPL:Las bases de datos analíticas están optimizadas para consultas complejas sobre grandes volúmenes de datos históricos, usando técnicas como almacenamiento columnar y procesamiento paralelo.
 ¿Qué tipo de base de datos NoSQL organiza los datos en pares clave-valor?
-*Documentales
+Documentales
 Graph
 Column-Family
-Key-Value
-EXPL:La respuesta es 'Documentales'. "Graph" y "Column-Family" son incorrectos porque describen conceptos diferentes.
+*Key-Value
+EXPL:Las bases de datos Key-Value (clave-valor) organizan los datos en pares clave-valor. Ejemplos: Redis, DynamoDB. Son las más simples y rápidas para acceso por clave.
 ¿Qué característica es exclusiva de las bases de datos NoSQL?
-*Uso de claves primarias y foráneas
-Escalabilidad horizontal
+Uso de claves primarias y foráneas
+*Escalabilidad horizontal
 Transacciones ACID
 Organización en tablas
-EXPL:La respuesta es 'Uso de claves primarias y foráneas'. "Escalabilidad horizontal" y "Transacciones ACID" son incorrectos porque describen conceptos diferentes.
+EXPL:La escalabilidad horizontal (añadir más nodos) es característica de las bases de datos NoSQL. Las relacionales usan principalmente escalabilidad vertical. Las claves foráneas y ACID son propias de las relacionales.
 ¿Cuál de las siguientes es una base de datos relacional?
-*MongoDB
+MongoDB
 Cassandra
-MySQL
+*MySQL
 Redis
-EXPL:La respuesta es 'MongoDB'. "Cassandra" y "MySQL" son incorrectos porque describen conceptos diferentes.
+EXPL:MySQL es una base de datos relacional que usa SQL y organiza los datos en tablas. MongoDB es documental NoSQL, Cassandra es column-family NoSQL, Redis es key-value NoSQL.
 ¿Cuál es un proveedor de bases de datos NoSQL?
 PostgreSQL
-MongoDB
-*Oracle
+*MongoDB
+Oracle
 SQL Server
-EXPL:La respuesta es 'Oracle'. "PostgreSQL" y "MongoDB" son incorrectos porque describen conceptos diferentes.
+EXPL:MongoDB es un proveedor de bases de datos NoSQL documental. PostgreSQL, Oracle y SQL Server son bases de datos relacionales.
 ¿Cuál de las siguientes NO es una ventaja de los servicios de bases de datos?
-*Mayor eficiencia
+Mayor eficiencia
 Mejora de la toma de decisiones
-Mayor consumo de recursos
+*Mayor consumo de recursos
 Seguridad y confiabilidad
-EXPL:La respuesta es 'Mayor eficiencia'. "Mejora de la toma de decisiones" y "Mayor consumo de recursos" son incorrectos porque describen conceptos diferentes.
+EXPL:El mayor consumo de recursos NO es una ventaja de los servicios de bases de datos. Las ventajas incluyen mayor eficiencia, mejora de la toma de decisiones, seguridad y confiabilidad.
 ¿Qué lenguaje se utiliza para interactuar con bases de datos relacionales?
-*Python
-SQL
+Python
+*SQL
 NoSQL
 XML
-EXPL:La respuesta es 'Python'. "SQL" y "NoSQL" son incorrectos porque describen conceptos diferentes.
+EXPL:SQL (Structured Query Language) es el lenguaje estándar para interactuar con bases de datos relacionales. Python es un lenguaje de programación, NoSQL es un tipo de BD, XML es un formato de datos.
 ¿Qué tipo de base de datos es ideal para analizar grandes conjuntos de datos?
-*Relacionales
-Analíticas
+Relacionales
+*Analíticas
 NoSQL
 Documentales
-EXPL:La respuesta es 'Relacionales'. "Analíticas" y "NoSQL" son incorrectos porque describen conceptos diferentes.
+EXPL:Las bases de datos analíticas (OLAP) están diseñadas específicamente para analizar grandes conjuntos de datos históricos con consultas complejas, a diferencia de las OLTP que son para transacciones.
 ¿Qué característica permite que los servicios de bases de datos ajusten su capacidad según la demanda?
-*Seguridad
+Seguridad
 Persistencia
-Escalabilidad
+*Escalabilidad
 Rendimiento
-EXPL:ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).
+EXPL:La escalabilidad permite que los servicios de bases de datos ajusten su capacidad según la demanda, aumentando o reduciendo recursos de forma dinámica.

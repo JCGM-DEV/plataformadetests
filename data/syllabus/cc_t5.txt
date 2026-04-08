@@ -1,16 +1,16 @@
 tema 5
 ¿Cuál de los siguientes es un beneficio clave de una nube privada virtual (VPC)?
-*Menos seguridad que las redes públicas
-Control total sobre la infraestructura
+Menos seguridad que las redes públicas
+*Control total sobre la infraestructura
 Menor escalabilidad que una nube pública
 Acceso gratuito para todos los usuarios
-EXPL:La respuesta es 'Menos seguridad que las redes públicas'. "Control total sobre la infraestructura" y "Menor escalabilidad que una nube pública" son incorrectos porque describen conceptos diferentes.
+EXPL:Una VPC (Virtual Private Cloud) ofrece control total sobre la infraestructura de red virtual, incluyendo selección de rangos IP, creación de subredes y configuración de tablas de enrutamiento.
 ¿Cuál es el propósito principal de una red de computadoras?
-*Mejorar la velocidad de los dispositivos
-Conectar dispositivos para compartir información y recursos
+Mejorar la velocidad de los dispositivos
+*Conectar dispositivos para compartir información y recursos
 Reducir el consumo de energía
 Aumentar el almacenamiento de los dispositivos
-EXPL:La respuesta es 'Mejorar la velocidad de los dispositivos'.
+EXPL:El propósito principal de una red de computadoras es conectar dispositivos para compartir información y recursos como archivos, impresoras, conexión a internet, etc.
 ¿Cómo funcionan los servidores DNS en la nube?
 *Almacenan los datos de los usuarios
 Resuelven nombres de dominio en direcciones IP
@@ -18,41 +18,41 @@ Filtran el tráfico no autorizado
 Bloquean los ataques de malware automáticamente
 EXPL:DNS (Domain Name System) traduce nombres de dominio legibles (google.com) a direcciones IP numéricas. Sin DNS habría que memorizar IPs para acceder a cada sitio.
 ¿Cuál es la función principal de la capa de red en la arquitectura de las redes?
-*Gestionar la transmisión de datos dentro de una red local
-Enrutar los datos a través de la red
+Gestionar la transmisión de datos dentro de una red local
+*Enrutar los datos a través de la red
 Definir las especificaciones físicas del cableado
 Permitir que las aplicaciones accedan a la red
-EXPL:La respuesta es 'Gestionar la transmisión de datos dentro de una red local'.
+EXPL:La capa de red (capa 3 del modelo OSI) es responsable del enrutamiento de paquetes de datos entre redes diferentes, determinando la mejor ruta para llegar al destino.
 ¿Qué ventaja ofrece una CDN (Red de Entrega de Contenidos)?
-*Aumenta la latencia de los contenidos
+Aumenta la latencia de los contenidos
 Reduce la velocidad de carga de sitios web
-Distribuye los contenidos desde servidores cercanos al usuario
+*Distribuye los contenidos desde servidores cercanos al usuario
 Bloquea el acceso a contenidos de alta demanda
 EXPL:Una CDN (Content Delivery Network) distribuye el contenido desde servidores geográficamente cercanos al usuario, reduciendo la latencia y mejorando la velocidad de carga.
 ¿Qué protocolo es fundamental para la comunicación en Internet?
-*HTTP
+HTTP
 FTP
-TCP/IP
+*TCP/IP
 DHCP
-EXPL:La respuesta es 'HTTP'. "FTP" y "TCP/IP" son incorrectos porque describen conceptos diferentes.
+EXPL:TCP/IP es el protocolo fundamental de Internet. TCP garantiza la entrega fiable de datos y IP gestiona el direccionamiento y enrutamiento. HTTP funciona sobre TCP/IP.
 ¿Cuál es una de las principales amenazas a la seguridad en redes?
-*CSS
-DDoS
+CSS
+*DDoS
 HTML
 XML
-EXPL:La respuesta es 'CSS'. "DDoS" y "HTML" son incorrectos porque describen conceptos diferentes.
+EXPL:DDoS (Distributed Denial of Service) es una de las principales amenazas a la seguridad en redes, inundando un servidor con tráfico para dejarlo inaccesible. CSS, HTML y XML son tecnologías web, no amenazas.
 ¿Qué medida de seguridad ayuda a proteger los datos en una nube privada virtual?
-*Eliminación de registros de actividad
+Eliminación de registros de actividad
 Acceso libre sin autenticación
-Cifrado de datos
+*Cifrado de datos
 Compartición de claves de acceso
-EXPL:La respuesta es 'Eliminación de registros de actividad'. "Acceso libre sin autenticación" y "Cifrado de datos" son incorrectos porque describen conceptos diferentes.
+EXPL:El cifrado de datos es una medida fundamental de seguridad en una VPC, protegiendo la confidencialidad de los datos tanto en tránsito como en reposo.
 ¿Qué tipo de red se utiliza para conectar dispositivos dentro de una oficina o un hogar?
-*WAN
+WAN
 MAN
-LAN
+*LAN
 VPN
-EXPL:La respuesta es 'WAN'. "MAN" y "LAN" son incorrectos porque describen conceptos diferentes.
+EXPL:LAN (Local Area Network) es el tipo de red que conecta dispositivos dentro de un área geográfica limitada como una oficina o un hogar. WAN conecta redes geográficamente dispersas.
 ¿Qué protocolo se utiliza para la seguridad en la transmisión de datos?
 *SSL/TLS
 UDP

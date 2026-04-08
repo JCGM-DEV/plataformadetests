@@ -5,9 +5,9 @@ Definir la forma en que los documentos HTML, XHTML y XML son almacenados en el s
 *Permitir que los programas (por ejemplo, JavaScript) puedan acceder y modificar dinámicamente el contenido, la estructura y el estilo de los documentos HTML y XML
 Mediante el protocolo OSPF de enrutamiento dinámico
 Dentro de los atributos HTML, ¿cuál de los siguientes es considerado un atributo específico de ciertos elementos (como <img> o <a>), y no un atributo global que se pueda usar en la mayoría de las etiquetas?
-*class
+class
 id
-src
+*src
 Mediante una clase abstracta con métodos estáticos
 De las siguientes formas de incluir CSS en una página web, ¿cuál es considerada la menos recomendable porque mezcla contenido y presentación, dificultando el mantenimiento del código?
 Enlace a CSS externo mediante la etiqueta <link> en el <head>
@@ -15,14 +15,14 @@ CSS en el HTML mediante la etiqueta <style> en el <head>
 *CSS en línea (inline) a través del atributo style="..." directamente en la etiqueta HTML
 Con el atributo xmlns:xsi en el elemento raíz
 Según las restricciones básicas de XHTML, si en HTML se permite la minimización de atributos (ej. <input checked>), ¿cómo debe manejarse este tipo de atributo en XHTML?
-*El atributo debe omitirse completamente, ya que no es compatible con la sintaxis XML
-El atributo debe llevar siempre un valor, como, por ejemplo, checked="checked"
+El atributo debe omitirse completamente, ya que no es compatible con la sintaxis XML
+*El atributo debe llevar siempre un valor, como, por ejemplo, checked="checked"
 El atributo se puede usar tal cual
 Mediante el protocolo OSPF de enrutamiento dinámico
 En HTML5, ¿qué etiqueta semántica se utiliza para representar una sección de una página que contiene información relacionada con el contenido principal, pero que no es tan relevante o importante, como una barra lateral?
 <header>
-*<section>
-<aside>
+<section>
+*<aside>
 Mediante el protocolo OSPF de enrutamiento dinámico
 Dado el siguiente fragmento de HTML: <p><a href="#"><span>Texto del enlace</span></a></p>, ¿qué selector CSS NO aplicaría estilos directamente al elemento <span> en este caso?
 p span
@@ -36,8 +36,8 @@ HTML permite la integración de otros lenguajes basados en XML como MathML o SVG
 Con el atributo xmlns:xsi en el elemento raíz
 Para una tabla HTML, ¿qué conjunto de etiquetas se utiliza para agrupar semánticamente las filas del encabezado, el cuerpo y el pie, respectivamente, lo cual es útil para tablas muy largas que ocupan varias páginas?
 <table>, <tr>, <td>
-*<caption>, <thead>, <tfoot>
-<thead>, <tbody>, <tfoot>
+<caption>, <thead>, <tfoot>
+*<thead>, <tbody>, <tfoot>
 Mediante una subconsulta correlacionada con EXISTS
 ¿Cuál de las siguientes etiquetas HTML es explícitamente mencionada como obsoleta (deprecated) en el contenido, recomendándose que su funcionalidad de estilo sea manejada por CSS en HTML5?
 <p>
