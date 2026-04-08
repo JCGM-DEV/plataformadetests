@@ -139,6 +139,7 @@ async function init() {
         renderSyllabusExams();
         renderProgress();
         renderFallosSection();
+        renderStudyGuide();
     } catch (err) {
         console.error('Error loading app data:', err);
     }
@@ -160,8 +161,13 @@ function renderSubjects() {
         }
         unitsHTML += '</div>';
 
+        // Mark today's subjects
+        const todaySubjects = getDailySubjects()?.subjects || [];
+        const isToday = todaySubjects.includes(subject.id);
+
         const card = document.createElement('div');
-        card.className = 'subject-card';
+        card.className = `subject-card${isToday ? ' subject-card-today' : ''}`;
+        card.setAttribute('data-subject-id', subject.id);
         card.style.setProperty('--card-color', subject.color || '#6366f1');
         card.innerHTML = `
             <div class="card-icon">${subject.icon}</div>
@@ -978,13 +984,19 @@ function handleResponse(index) {
         document.querySelectorAll('.option-btn')[correctIndex].classList.add('correct');
         // Save to fallos — store with original correct for consistency
         if (APP_STATE.currentExam?.id) saveFallo(APP_STATE.currentExam.id, q);
+        const subjectId = APP_STATE.currentExam?.id || '';
+        const correctAnswerText = displayOptions[correctIndex];
         document.getElementById('feedback-area').innerHTML = `
             <div class="explanation-box">
                 <strong>❌ Incorrecto</strong>
-                <p>La respuesta correcta es: <em>${esc(displayOptions[correctIndex])}</em></p>
+                <p>La respuesta correcta es: <em>${esc(correctAnswerText)}</em></p>
                 ${q.explanation && q.explanation !== 'Pregunta del temario oficial.' ? `
                 <hr style="border-color:rgba(255,255,255,0.07);margin:0.75rem 0">
                 <p class="expl-why"><span class="expl-label">¿Por qué?</span> ${esc(q.explanation)}</p>` : ''}
+                <div id="libreta-inline-area"></div>
+                <button class="btn-libreta-inline" onclick="showLibretaInput('${esc(q.concept_id)}','${subjectId}',${JSON.stringify(q.question)},${JSON.stringify(correctAnswerText)})">
+                    📓 Anotar en libreta de errores
+                </button>
             </div>`;
     } else {
         // Remove from fallos if answered correctly
@@ -1094,6 +1106,8 @@ function finishExam() {
                 <button class="next-btn" onclick="exitExamToHome()">🏠 Volver al Inicio</button>
                 <button class="next-btn" style="background:var(--secondary-color)" onclick="startExam('${APP_STATE.currentExam.id}'${APP_STATE.currentUnit ? ', ' + APP_STATE.currentUnit : ''})">🔄 Repetir</button>
                 ${APP_STATE.currentExam.id ? `<button class="next-btn" style="background:#ef4444" onclick="startExam('${APP_STATE.currentExam.id}'${APP_STATE.currentUnit ? ', ' + APP_STATE.currentUnit : ''}, 'solo_no_se')">🎯 Solo lo que no sé</button>` : ''}
+                <button class="next-btn" style="background:#7c3aed" onclick="openLibreta()">📓 Mi Libreta de Errores</button>
+                ${(() => { const lib = getLibreta(); const cnt = Object.values(lib).reduce((s,a)=>s+a.length,0); return cnt > 0 ? `<button class="next-btn" style="background:#059669" onclick="exportarLibreta()">⬇️ Exportar Libreta (${cnt})</button>` : ''; })()}
             </div>
         </div>`;
 }
@@ -1296,3 +1310,281 @@ function exitFlashcard() {
 
 // ─── BOOT ───────────────────────────────────────────────────────
 init();
+
+// ═══════════════════════════════════════════════════════════════
+//  GUÍA ESTRATÉGICA DE ESTUDIO — 3 Fases hacia el 16 de mayo
+// ═══════════════════════════════════════════════════════════════
+
+const EXAM_DATE = new Date('2026-05-16T09:00:00');
+const STUDY_START = new Date('2026-04-08T00:00:00');
+
+const STUDY_PHASES = [
+    {
+        id: 1, name: 'Fase 1 — Teoría',
+        color: '#3b82f6', colorSoft: 'rgba(59,130,246,0.1)',
+        start: new Date('2026-04-08'), end: new Date('2026-04-24'),
+        desc: 'Rotación diaria de 2 asignaturas · Teoría profunda · Mini-tests',
+        icon: '📖'
+    },
+    {
+        id: 2, name: 'Fase 2 — Tests',
+        color: '#f97316', colorSoft: 'rgba(249,115,22,0.1)',
+        start: new Date('2026-04-25'), end: new Date('2026-05-08'),
+        desc: '2h teoría + 2h tests + 1h análisis de fallos diario',
+        icon: '🎯'
+    },
+    {
+        id: 3, name: 'Fase 3 — Simulacros',
+        color: '#ef4444', colorSoft: 'rgba(239,68,68,0.1)',
+        start: new Date('2026-05-09'), end: new Date('2026-05-16'),
+        desc: 'Simulacros completos como el examen real · Corrección crítica',
+        icon: '🔴'
+    }
+];
+
+const DAILY_ROTATION = [
+    { day: 1, subjects: ['programacion', 'sistemas_informaticos'],    labels: ['Programación', 'Sistemas'] },
+    { day: 2, subjects: ['bases_de_datos', 'lenguaje_de_marcas'],     labels: ['Bases de Datos', 'Lenguajes de Marcas'] },
+    { day: 3, subjects: ['entornos_de_desarrollo', 'cloud_computing'], labels: ['Entornos', 'Cloud Computing'] },
+    { day: 4, subjects: ['empleabilidad'],                             labels: ['Empleabilidad + Repaso Global'] },
+];
+
+const PHASE3_ROTATION = [
+    { day: 1, subjects: ['programacion', 'bases_de_datos'],            labels: ['Programación', 'Bases de Datos'] },
+    { day: 2, subjects: ['sistemas_informaticos', 'lenguaje_de_marcas'],labels: ['Sistemas', 'Lenguajes de Marcas'] },
+    { day: 3, subjects: ['entornos_de_desarrollo', 'cloud_computing'],  labels: ['Entornos', 'Cloud Computing'] },
+    { day: 4, subjects: ['empleabilidad'],                              labels: ['Empleabilidad + Repaso Global'] },
+];
+
+function getCurrentPhase() {
+    const now = new Date();
+    return STUDY_PHASES.find(p => now >= p.start && now <= p.end) || STUDY_PHASES[2];
+}
+
+function getDailySubjects() {
+    const now = new Date();
+    const daysSinceStart = Math.floor((now - STUDY_START) / (1000 * 60 * 60 * 24));
+    const phase = getCurrentPhase();
+    const rotation = phase.id === 3 ? PHASE3_ROTATION : DAILY_ROTATION;
+    return rotation[daysSinceStart % rotation.length];
+}
+
+function getDaysToExam() {
+    const now = new Date();
+    const diff = EXAM_DATE - now;
+    return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+}
+
+function renderStudyGuide() {
+    const container = document.getElementById('study-guide-banner');
+    if (!container) return;
+
+    const phase = getCurrentPhase();
+    const todaySlot = getDailySubjects();
+    const daysLeft = getDaysToExam();
+
+    const urgencyColor = daysLeft <= 7 ? '#ef4444' : daysLeft <= 21 ? '#f97316' : '#3b82f6';
+    const urgencyText = daysLeft <= 7 ? '¡ÚLTIMA SEMANA!' : daysLeft <= 14 ? '¡SPRINT FINAL!' : 'Quedan';
+
+    const libreta = getLibreta();
+    const libretaCount = Object.values(libreta).reduce((sum, arr) => sum + arr.length, 0);
+
+    container.innerHTML = `
+        <div class="study-guide-wrap">
+            <!-- Countdown -->
+            <div class="study-countdown" style="--urgency:${urgencyColor}">
+                <div class="countdown-num">${daysLeft}</div>
+                <div class="countdown-label">${urgencyText}<br><span>días al examen</span></div>
+                <div class="countdown-date">16 Mayo 2026</div>
+            </div>
+
+            <!-- Phase -->
+            <div class="study-phase-badge" style="--phase-color:${phase.color};background:${phase.colorSoft};border-color:${phase.color}40">
+                <span class="phase-icon">${phase.icon}</span>
+                <div>
+                    <div class="phase-name">${phase.name}</div>
+                    <div class="phase-desc">${phase.desc}</div>
+                </div>
+            </div>
+
+            <!-- Today's subjects -->
+            <div class="study-today">
+                <div class="study-today-label">📅 HOY TOCA</div>
+                <div class="study-today-subjects">
+                    ${todaySlot.labels.map((l, i) => `
+                        <button class="study-subject-chip" onclick="scrollToSubject('${todaySlot.subjects[i] || ''}')">
+                            ${l}
+                        </button>`).join('')}
+                </div>
+            </div>
+
+            <!-- Libreta button -->
+            <div class="study-libreta-btn-wrap">
+                <button class="btn-libreta" onclick="openLibreta()">
+                    📓 Mi Libreta de Errores
+                    ${libretaCount > 0 ? `<span class="libreta-count">${libretaCount}</span>` : ''}
+                </button>
+                ${libretaCount > 0 ? `<button class="btn-libreta-export" onclick="exportarLibreta()" title="Descargar como archivo">⬇️ Exportar</button>` : ''}
+            </div>
+        </div>`;
+}
+
+function scrollToSubject(subjectId) {
+    if (!subjectId) return;
+    const card = document.querySelector(`[data-subject-id="${subjectId}"]`);
+    if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  LIBRETA DE ERRORES — Método de Errores ("El Oro")
+// ═══════════════════════════════════════════════════════════════
+
+const LIBRETA_KEY = 'libreta_errores_v1';
+
+function getLibreta() {
+    return JSON.parse(localStorage.getItem(LIBRETA_KEY) || '{}');
+}
+
+function saveLibretaNota(conceptId, subjectId, question, correctAnswer, nota) {
+    const lib = getLibreta();
+    if (!lib[subjectId]) lib[subjectId] = [];
+    // Update existing or add new
+    const existing = lib[subjectId].findIndex(e => e.conceptId === conceptId);
+    const entry = { conceptId, question, correctAnswer, nota, date: new Date().toISOString() };
+    if (existing >= 0) lib[subjectId][existing] = entry;
+    else lib[subjectId].push(entry);
+    localStorage.setItem(LIBRETA_KEY, JSON.stringify(lib));
+    renderStudyGuide(); // update count badge
+}
+
+function openLibreta() {
+    const lib = getLibreta();
+    const allEntries = Object.entries(lib).flatMap(([sid, entries]) =>
+        entries.map(e => ({ ...e, subjectId: sid }))
+    ).sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    const modal = document.getElementById('libreta-modal');
+    const content = document.getElementById('libreta-content');
+
+    if (allEntries.length === 0) {
+        content.innerHTML = `
+            <div style="text-align:center;padding:3rem;color:var(--text-secondary)">
+                <div style="font-size:3rem;margin-bottom:1rem">📓</div>
+                <p>Aún no tienes notas en tu libreta.</p>
+                <p style="font-size:0.85rem;margin-top:0.5rem">Cuando falles una pregunta, pulsa <strong>"📝 Anotar en libreta"</strong> para apuntar por qué fallaste.</p>
+            </div>`;
+    } else {
+        content.innerHTML = `
+            <div class="libreta-entries">
+                ${allEntries.map(e => `
+                    <div class="libreta-entry" data-concept="${esc(e.conceptId)}" data-subject="${esc(e.subjectId)}">
+                        <div class="libreta-entry-q">❌ ${esc(e.question.substring(0, 120))}${e.question.length > 120 ? '...' : ''}</div>
+                        <div class="libreta-entry-a">✅ <em>${esc(e.correctAnswer)}</em></div>
+                        <div class="libreta-entry-nota">
+                            <span class="nota-icon">🧠</span>
+                            <div class="nota-text" contenteditable="true" onblur="updateLibretaNota('${esc(e.conceptId)}','${esc(e.subjectId)}',this.textContent)">${esc(e.nota || 'Haz clic para añadir tu explicación...')}</div>
+                        </div>
+                        <div class="libreta-entry-date">${new Date(e.date).toLocaleDateString('es-ES')}</div>
+                        <button class="libreta-del-btn" onclick="deleteLibretaEntry('${esc(e.conceptId)}','${esc(e.subjectId)}')" title="Eliminar">✕</button>
+                    </div>`).join('')}
+            </div>`;
+    }
+    modal.classList.remove('hidden');
+}
+
+function closeLibreta() {
+    document.getElementById('libreta-modal').classList.add('hidden');
+}
+
+function updateLibretaNota(conceptId, subjectId, newNota) {
+    const lib = getLibreta();
+    if (lib[subjectId]) {
+        const entry = lib[subjectId].find(e => e.conceptId === conceptId);
+        if (entry) {
+            entry.nota = newNota;
+            localStorage.setItem(LIBRETA_KEY, JSON.stringify(lib));
+        }
+    }
+}
+
+function deleteLibretaEntry(conceptId, subjectId) {
+    const lib = getLibreta();
+    if (lib[subjectId]) {
+        lib[subjectId] = lib[subjectId].filter(e => e.conceptId !== conceptId);
+        localStorage.setItem(LIBRETA_KEY, JSON.stringify(lib));
+        openLibreta(); // refresh
+        renderStudyGuide();
+    }
+}
+
+function showLibretaInput(conceptId, subjectId, question, correctAnswer) {
+    const area = document.getElementById('libreta-inline-area');
+    if (!area) return;
+    area.innerHTML = `
+        <div class="libreta-inline">
+            <div class="libreta-inline-label">📓 ¿Por qué fallaste? <span style="color:var(--text-secondary);font-size:0.8rem">(opcional pero muy recomendado)</span></div>
+            <textarea id="libreta-nota-input" class="libreta-nota-textarea" placeholder="Ej: Confundí abstract class con interface. Abstract puede tener métodos con cuerpo, interface no."></textarea>
+            <div style="display:flex;gap:0.5rem;margin-top:0.5rem;flex-wrap:wrap">
+                <button class="btn-save-nota" onclick="guardarNota('${esc(conceptId)}','${esc(subjectId)}',${JSON.stringify(question).replace(/'/g,"'")} ,${JSON.stringify(correctAnswer).replace(/'/g,"'")})">
+                    💾 Guardar en libreta
+                </button>
+                <button class="btn-skip-nota" onclick="document.getElementById('libreta-inline-area').innerHTML=''">
+                    Ahora no
+                </button>
+            </div>
+        </div>`;
+    area.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function guardarNota(conceptId, subjectId, question, correctAnswer) {
+    const nota = document.getElementById('libreta-nota-input')?.value?.trim() || '';
+    saveLibretaNota(conceptId, subjectId, question, correctAnswer, nota);
+    const area = document.getElementById('libreta-inline-area');
+    if (area) area.innerHTML = `<div class="libreta-saved-confirm">✅ Guardado en tu libreta de errores</div>`;
+}
+
+function exportarLibreta() {
+    const lib = getLibreta();
+    const subjectNames = {
+        sistemas_informaticos: 'Sistemas Informáticos',
+        bases_de_datos: 'Bases de Datos',
+        programacion: 'Programación',
+        lenguaje_de_marcas: 'Lenguaje de Marcas',
+        entornos_de_desarrollo: 'Entornos de Desarrollo',
+        cloud_computing: 'Cloud Computing',
+        empleabilidad: 'Empleabilidad',
+    };
+
+    let md = `# 📓 Mi Libreta de Errores — DAW 2026\n`;
+    md += `> Generado: ${new Date().toLocaleDateString('es-ES', { day: '2-digit', month: 'long', year: 'numeric' })}\n\n`;
+    md += `---\n\n`;
+
+    let totalEntries = 0;
+    for (const [sid, entries] of Object.entries(lib)) {
+        if (entries.length === 0) continue;
+        md += `## ${subjectNames[sid] || sid} (${entries.length} errores)\n\n`;
+        entries.forEach((e, i) => {
+            totalEntries++;
+            md += `### ${i + 1}. ❌ ${e.question}\n\n`;
+            md += `**✅ Respuesta correcta:** ${e.correctAnswer}\n\n`;
+            md += `**🧠 Por qué fallé:** ${e.nota || '_(Sin anotación)_'}\n\n`;
+            md += `---\n\n`;
+        });
+    }
+
+    if (totalEntries === 0) {
+        alert('Tu libreta está vacía. Añade notas cuando falles una pregunta.');
+        return;
+    }
+
+    md += `\n> **Total de errores anotados:** ${totalEntries}\n`;
+    md += `> \n> *Repasa este documento los últimos 3 días antes del examen.*\n`;
+
+    const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `libreta_errores_DAW_${new Date().toISOString().slice(0,10)}.md`;
+    a.click();
+    URL.revokeObjectURL(url);
+}

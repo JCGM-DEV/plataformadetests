@@ -45,6 +45,9 @@
                     <p>Repaso Examenes 1º DAW 2026 — Tech Hub Euroformac. Prepárate para el éxito.</p>
                 </section>
 
+                <!-- Study Guide Banner -->
+                <div id="study-guide-banner"></div>
+
                 <!-- Subject Grid -->
                 <div id="subject-grid" class="grid-container">
                     <div class="skeleton-card"></div>
@@ -128,6 +131,23 @@
         </div>
         <div class="exam-body" style="padding:2rem;">
             <div id="stats-root"></div>
+        </div>
+    </div>
+
+    <!-- ── LIBRETA DE ERRORES MODAL ──────────────────────────────── -->
+    <div id="libreta-modal" class="modal hidden">
+        <div class="modal-content libreta-modal-content">
+            <div class="libreta-modal-header">
+                <div>
+                    <h2>📓 Mi Libreta de Errores</h2>
+                    <p class="libreta-modal-sub">Pregunta fallada · Respuesta correcta · Por qué fallé — ¡este documento es ORO para los últimos 3 días!</p>
+                </div>
+                <div style="display:flex;gap:0.5rem;align-items:flex-start">
+                    <button class="btn-libreta-export" onclick="exportarLibreta()" title="Exportar a archivo .md">⬇️ Exportar</button>
+                    <button class="close-btn" onclick="closeLibreta()">&times;</button>
+                </div>
+            </div>
+            <div id="libreta-content" style="flex:1;overflow-y:auto;padding:1.5rem 0;"></div>
         </div>
     </div>
 
