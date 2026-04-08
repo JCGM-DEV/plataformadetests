@@ -103,12 +103,13 @@ function renderTutorAprendizaje(session) {
           <!-- Encabezado del papel -->
           <div class="paper-header">
             <div class="paper-header-left">
-              <div class="paper-title">✏️ Tarea guiada</div>
+              <div class="paper-title">${paso.fase === 'diseno' ? '🎨 Diseño y Modelado (Esquema)' : '✏️ Tarea guiada'}</div>
               <div class="paper-instruccion">${paso.tareaGuiada.instruccion}</div>
             </div>
             <div class="paper-logo">PROG</div>
           </div>
           <div class="paper-margin-line"></div>
+          ${paso.fase === 'diseno' ? '<div class="diseno-hint">💡 Define aquí las Clases, Atributos y su Relación. Usa un formato de lista o esquema.</div>' : ''}
 
           <!-- Área de escritura -->
           <textarea
@@ -230,7 +231,8 @@ function renderTutorExamen(session) {
           <div class="tutor-session-sub">${examen.titulo}</div>
         </div>
       </div>
-      <div class="exam-timer-badge">⏱ ${examen.tiempo}</div>
+      </div>
+      <div id="exam-timer-display" class="exam-timer-badge">⏱ 60:00</div>
     </div>
 
     <!-- CUERPO DEL EXAMEN -->
@@ -301,9 +303,30 @@ function renderTutorExamen(session) {
 
     </div>
   `;
+  startExamTimer(60 * 60); // 1 hour
+}
+
+function startExamTimer(seconds) {
+    let remain = seconds;
+    const el = document.getElementById('exam-timer-display');
+    if (tutorState.examInterval) clearInterval(tutorState.examInterval);
+    
+    tutorState.examInterval = setInterval(() => {
+        remain--;
+        const m = Math.floor(remain / 60);
+        const s = remain % 60;
+        if (el) el.textContent = `⏱ ${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+        if (remain <= 0) {
+            clearInterval(tutorState.examInterval);
+            if (el) el.style.color = '#ef4444';
+            alert('¡El tiempo ha terminado! Se procederá a la corrección del examen.');
+            corregirExamenTutor();
+        }
+    }, 1000);
 }
 
 function corregirExamenTutor() {
+  if (tutorState.examInterval) clearInterval(tutorState.examInterval);
   const session = TUTOR_SESSIONS.find(s => s.id === tutorState.sessionId);
   const code = document.getElementById('exam-code-input')?.value || '';
   tutorState.examenInput = code;

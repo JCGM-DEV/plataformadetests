@@ -487,5 +487,126 @@ Y el método que la lanza: <code>public void metodo() throws MiExcepcion { if (.
         { desc: 'try-catch en el main', key: 'try_catch', test: c => /try\s*\{[\s\S]*\}\s*catch/i.test(c) },
       ]
     }
+  },
+
+  {
+    id: 'tutor_biblioteca',
+    titulo: 'Simulacro: Sistema de Biblioteca',
+    subtitulo: 'Ejercicio completo tipo examen: Modelado, Herencia e Interfaces',
+    temas: ['Diseño de Clases', 'Herencia', 'Interfaces', 'Excepciones', 'Colecciones'],
+    duracion: '~40 min',
+    icono: '📚',
+    color: '#8b5cf6',
+
+    pasos: [
+      {
+        id: 'bib_diseno',
+        titulo: 'Fase de Diseño: El mapa mental',
+        fase: 'diseno',
+        concepto: 'MODELADO POO',
+        explicacion: `Antes de tocar una sola tecla, en el examen de papel debes <strong>identificar tus piezas</strong>. 
+        Un sistema de biblioteca necesita:
+        1. <strong>Libro</strong>: La entidad básica.
+        2. <strong>Usuario</strong>: Quien alquila.
+        3. <strong>Prestable</strong>: La interfaz que define el comportamiento.
+        4. <strong>Biblioteca</strong>: La clase gestora con la colección.`,
+        consejo: `💡 <strong>Consejo del profesor:</strong> En papel, dibuja flechas. 'Usuario es una Persona' (Herencia), 'Libro es Prestable' (Interfaz). Si no tienes claro el diseño, el código será un desastre.`,
+        ejemplo: `// ESQUEMA DE DISEÑO SUGERIDO:
+- Clase Libro: id, titulo, autor, disponible (boolean)
+- Clase Usuario (Abstracta): nombre, idUsuario
+- Clase UsuarioSocio (Hereda de Usuario): maxLibros
+- Interfaz Prestable: prestar(), devolver()
+- Clase Biblioteca: ArrayList<Libro>, ArrayList<Usuario>`,
+        tareaGuiada: {
+          instruccion: 'Define el esquema de clases para este sistema. Indica qué clases habrá, cuáles heredan de otras y qué interfaz usarás.',
+          placeholder: 'Define las clases y sus relaciones...\nEj: Clase X hereda de Y...',
+          checks: [
+            { desc: 'Menciona la clase Libro', test: c => /Libro/i.test(c) },
+            { desc: 'Menciona la clase Usuario', test: c => /Usuario/i.test(c) },
+            { desc: 'Propone Herencia para Usuario (Premium/Socio)', test: c => /hereda|extends|subclase|hijo/i.test(c) },
+            { desc: 'Identifica la interfaz Prestable', test: c => /Prestable|Interfaz/i.test(c) },
+          ]
+        }
+      },
+      {
+        id: 'bib_clases',
+        titulo: 'Implementación: La base y la Interfaz',
+        concepto: 'ESTRUCTURA BASE',
+        explicacion: `Vamos a crear la interfaz <code>Prestable</code> con los métodos <code>prestar()</code> y <code>devolver()</code>. 
+        Luego, la clase <code>Libro</code> que la implemente.`,
+        consejo: `💡 <strong>Pista del examen:</strong> Si un método de la interfaz no se puede cumplir (ej: prestar un libro ya prestado), ¡lanza una excepción!`,
+        ejemplo: `interface Prestable {
+    void prestar() throws Exception;
+    void devolver();
+}
+
+class Libro implements Prestable {
+    private String titulo;
+    private boolean prestado = false;
+    // ... constructor y métodos
+}`,
+        tareaGuiada: {
+          instruccion: 'Define la interfaz <code>Prestable</code> y la clase <code>Libro</code> implementándola.',
+          placeholder: 'interface Prestable { ... }\nclass Libro implements Prestable { ... }',
+          checks: [
+            { desc: 'Interfaz Prestable definida', test: c => /interface\s+Prestable/i.test(c) },
+            { desc: 'Libro implements Prestable', test: c => /class\s+Libro\s+implements\s+Prestable/i.test(c) },
+            { desc: 'Atributo boolean prestado/disponible', test: c => /boolean\s+(prestado|disponible)/i.test(c) },
+          ]
+        }
+      },
+      {
+        id: 'bib_herencia',
+        titulo: 'Herencia y Especialización',
+        concepto: 'HERENCIA COMPLEJA',
+        explicacion: `En la biblioteca hay usuarios normales y socios. El socio puede sacar más libros. 
+        Usa una clase abstracta <code>Usuario</code> y subclases.`,
+        consejo: `💡 <strong>Pista del examen:</strong> Usa <code>protected</code> si quieres que las subclases accedan a un atributo del padre directamente, aunque <code>private</code> con getters es más profesional.`,
+        ejemplo: `abstract class Usuario {
+    private String nombre;
+    public Usuario(String n) { this.nombre = n; }
+    public abstract int getMaxLibros();
+}
+class Socio extends Usuario {
+    @Override public int getMaxLibros() { return 10; }
+}`,
+        tareaGuiada: {
+          instruccion: 'Crea la estructura de herencia para <code>Usuario</code> y <code>Socio</code>.',
+          placeholder: 'abstract class Usuario { ... }\nclass Socio extends Usuario { ... }',
+          checks: [
+            { desc: 'Clase abstracta Usuario', test: c => /abstract\s+class\s+Usuario/i.test(c) },
+            { desc: 'Socio extends Usuario', test: c => /class\s+Socio\s+extends\s+Usuario/i.test(c) },
+            { desc: 'Constructor usa super()', test: c => /super\s*\(/i.test(c) },
+          ]
+        }
+      }
+    ],
+
+    examen: {
+      titulo: 'EXAMEN FINAL: Gestión Integral de Biblioteca',
+      instrucciones: 'Simulacro REAL de 1h. Papel en blanco. Diseña y programa el sistema completo.',
+      tiempo: '60 min',
+      enunciado: `Diseña un sistema para una Biblioteca Municipal. Debes incluir:
+      1. <strong>Interfaz <code>Prestable</code></strong> con métodos para prestar/devolver.
+      2. <strong>Clase <code>Libro</code></strong> que implemente <code>Prestable</code>. Atributos: titulo, autor, isbn.
+      3. <strong>Excepción <code>LibroNoDisponibleException</code></strong> (propietaria).
+      4. <strong>Sistema de Usuarios</strong>: Clase abstracta <code>Usuario</code> y subclase <code>Socio</code>.
+      5. <strong>Clase <code>Biblioteca</code></strong>: 
+         - Atributo <code>ArrayList&lt;Libro&gt;</code>.
+         - Método <code>agregarLibro(Libro l)</code>.
+         - Método <code>realizarPrestamo(String isbn)</code>: busca el libro y llama a <code>prestar()</code>. 
+         - Si no existe o ya está prestado, lanza la excepción.
+      6. <strong>Main</strong>: Crea la biblioteca, añade libros, intenta un préstamo válido y uno que falle (usando try-catch).`,
+
+      criterios: [
+        { desc: 'Diseño correcto de la Interfaz Prestable', key: 'interfaz', test: c => /interface\s+Prestable/i.test(c) },
+        { desc: 'Clase Libro con implementación de la interfaz', key: 'clase_libro', test: c => /class\s+Libro\s+implements\s+Prestable/i.test(c) },
+        { desc: 'Jerarquía de Usuarios (Abstracta + Clase)', key: 'herencia', test: c => /abstract\s+class\s+Usuario/i.test(c) && /extends\s+Usuario/i.test(c) },
+        { desc: 'Excepción personalizada LibroNoDisponibleException', key: 'excepcion', test: c => /class\s+LibroNoDisponibleException\s+extends\s+Exception/i.test(c) },
+        { desc: 'Clase Biblioteca con ArrayList<Libro>', key: 'colecciones', test: c => /ArrayList\s*<\s*Libro\s*>/i.test(c) },
+        { desc: 'Método realizarPrestamo con lógica de búsqueda', test: c => /realizarPrestamo/i.test(c) && /for|stream/i.test(c) },
+        { desc: 'Bloque try-catch para gestionar el préstamo', key: 'try_catch', test: c => /try\s*\{[\s\S]*\}\s*catch/i.test(c) },
+      ]
+    }
   }
 ];
