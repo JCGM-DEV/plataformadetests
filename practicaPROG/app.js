@@ -49,10 +49,12 @@ function openSection(section) {
   else if (section.type === 'quiz') showQuiz(section.quizId);
   else if (section.type === 'drag') showDrag(section.dragId);
   else if (section.type === 'code') showCodeLab(section.codeId);
+  else if (section.type === 'ejercicio') showEjercicio(section.ejercicioId);
+  else if (section.type === 'tutor') renderTutorSplash();
 }
 
 function hideAllViews() {
-  ['lesson-view','quiz-view','drag-view','code-view','welcome-panel'].forEach(id => {
+  ['lesson-view','quiz-view','drag-view','code-view','ejercicio-view','tutor-view','welcome-panel'].forEach(id => {
     const el = document.getElementById(id); if (el) el.classList.add('hidden');
   });
 }
@@ -344,3 +346,149 @@ function showToast(msg, type = 'info') {
 }
 
 function closeModal() { document.getElementById('modal-overlay').classList.add('hidden'); }
+
+// ── EJERCICIOS PRÁCTICOS ─────────────────────────────────────────
+let ejercicioState = { showPistas: false, showSolucion: false };
+
+function showEjercicio(ejercicioId) {
+  const ej = EJERCICIOS.find(e => e.id === ejercicioId);
+  if (!ej) return;
+  ejercicioState = { showPistas: false, showSolucion: false };
+  renderEjercicio(ej);
+}
+
+function renderEjercicio(ej) {
+  const view = document.getElementById('ejercicio-view');
+  view.classList.remove('hidden');
+
+  view.innerHTML = `
+    <div class="ej-paper">
+      <div class="ej-header">
+        <div class="ej-meta">
+          <span class="ej-badge">${ej.nivel} ${ej.temas.join(' · ')}</span>
+          <span class="ej-tiempo">⏱ ${ej.tiempo}</span>
+        </div>
+        <h2 class="ej-titulo">${ej.titulo}</h2>
+        <p class="ej-subtitulo">Ejercicio tipo examen — en papel, sin IDE, sin errores de sintaxis</p>
+      </div>
+
+      <div class="ej-enunciado">
+        <h3>📋 Enunciado</h3>
+        <div class="ej-enunciado-text">${ej.enunciado}</div>
+      </div>
+
+      <div class="ej-workspace">
+        <div class="ej-pane-label">✏️ Tu solución (escribe aquí como si fuera papel)</div>
+        <textarea class="ej-textarea" id="ej-input" placeholder="Escribe tu código Java aquí...
+// No te preocupes por la sintaxis exacta
+// Lo importante es la lógica y la estructura
+// Usa comentarios para explicar tu razonamiento"></textarea>
+        <div class="ej-actions">
+          <button class="btn-primary" onclick="checkEjercicio('${ej.id}')">✅ Verificar criterios</button>
+          <button class="btn-secondary" onclick="togglePistas('${ej.id}')" id="btn-pistas">
+            💡 ${ejercicioState.showPistas ? 'Ocultar pistas' : 'Ver pistas'}
+          </button>
+          <button class="btn-secondary" onclick="toggleSolucion('${ej.id}')" id="btn-solucion">
+            👁 ${ejercicioState.showSolucion ? 'Ocultar solución' : 'Ver solución'}
+          </button>
+        </div>
+        <div id="ej-feedback"></div>
+      </div>
+
+      <div id="pistas-panel" class="ej-pistas ${ejercicioState.showPistas ? '' : 'hidden'}">
+        <h3>💡 Pistas</h3>
+        <ul class="pistas-list">
+          ${ej.pistas.map(p => `<li>${p}</li>`).join('')}
+        </ul>
+      </div>
+
+      <div id="solucion-panel" class="ej-solucion ${ejercicioState.showSolucion ? '' : 'hidden'}">
+        <h3>✅ Solución de referencia</h3>
+        <div class="info-box warning" style="margin-bottom:1rem">⚠️ Intenta resolverlo antes de ver la solución. En el examen no la tendrás.</div>
+        <div class="code-block">${ej.solucion}</div>
+      </div>
+
+      <div class="ej-criterios">
+        <h3>📊 Criterios de evaluación</h3>
+        <ul class="criterios-list" id="criterios-list">
+          ${ej.criterios.map((c, i) => `<li id="criterio-${i}" class="criterio-item">⬜ ${c}</li>`).join('')}
+        </ul>
+      </div>
+    </div>`;
+}
+
+function togglePistas(ejId) {
+  ejercicioState.showPistas = !ejercicioState.showPistas;
+  const panel = document.getElementById('pistas-panel');
+  const btn = document.getElementById('btn-pistas');
+  if (panel) panel.classList.toggle('hidden', !ejercicioState.showPistas);
+  if (btn) btn.textContent = ejercicioState.showPistas ? '💡 Ocultar pistas' : '💡 Ver pistas';
+}
+
+function toggleSolucion(ejId) {
+  ejercicioState.showSolucion = !ejercicioState.showSolucion;
+  const panel = document.getElementById('solucion-panel');
+  const btn = document.getElementById('btn-solucion');
+  if (panel) panel.classList.toggle('hidden', !ejercicioState.showSolucion);
+  if (btn) btn.textContent = ejercicioState.showSolucion ? '👁 Ocultar solución' : '👁 Ver solución';
+}
+
+function checkEjercicio(ejId) {
+  const ej = EJERCICIOS.find(e => e.id === ejId);
+  const code = document.getElementById('ej-input')?.value || '';
+  if (!code.trim()) { showToast('Escribe tu solución primero', 'info'); return; }
+
+  const codeLower = code.toLowerCase();
+  let passed = 0;
+
+  // Check each criterion against the code
+  const checks = {
+    'ej1': [
+      () => /abstract\s+class\s+persona/i.test(code),
+      () => /extends\s+persona/i.test(code) && /super\s*\(/i.test(code),
+      () => /class\s+directivo/i.test(code) && /calcularbonus/i.test(code),
+      () => /interface\s+gestionable/i.test(code) && /implements\s+gestionable/i.test(code),
+      () => /arraylist\s*<\s*persona/i.test(code),
+      () => /throw\s+new/i.test(code) && /exception/i.test(code),
+    ],
+    'ej2': [
+      () => /class\s+\w+\s+extends\s+exception/i.test(code),
+      () => /interface\s+conducible/i.test(code),
+      () => /abstract\s+class\s+vehiculo/i.test(code) && /implements\s+conducible/i.test(code),
+      () => /class\s+coche/i.test(code) || /class\s+moto/i.test(code),
+      () => /hashmap\s*</i.test(code),
+      () => /throws\s+\w+exception/i.test(code),
+    ],
+    'ej3': [
+      () => /class\s+\w+\s+extends\s+exception/i.test(code),
+      () => /interface\s+prestable/i.test(code),
+      () => /abstract\s+class\s+elemento/i.test(code) && /implements\s+prestable/i.test(code),
+      () => /class\s+libro/i.test(code) || /class\s+revista/i.test(code),
+      () => /arraylist\s*</i.test(code),
+      () => /throw\s+new/i.test(code),
+    ],
+  };
+
+  const ejChecks = checks[ejId] || [];
+  ejChecks.forEach((check, i) => {
+    const el = document.getElementById(`criterio-${i}`);
+    if (el) {
+      const ok = check();
+      el.textContent = (ok ? '✅' : '❌') + ' ' + ej.criterios[i];
+      el.className = `criterio-item ${ok ? 'criterio-ok' : 'criterio-fail'}`;
+      if (ok) passed++;
+    }
+  });
+
+  const pct = Math.round((passed / ejChecks.length) * 100);
+  const fb = document.getElementById('ej-feedback');
+  if (fb) {
+    fb.innerHTML = `<div class="ej-result ${pct >= 80 ? 'ok' : pct >= 50 ? 'partial' : 'fail'}">
+      ${pct >= 80 ? '🎉 ¡Muy bien! ' : pct >= 50 ? '💪 Vas por buen camino. ' : '📚 Sigue practicando. '}
+      ${passed}/${ejChecks.length} criterios cumplidos (${pct}%)
+      ${pct < 100 ? '<br><small>Revisa las pistas para los criterios que faltan.</small>' : ''}
+    </div>`;
+  }
+  score.correct += passed;
+  document.querySelector('#score-correct span').textContent = score.correct;
+}

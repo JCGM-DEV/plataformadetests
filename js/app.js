@@ -1017,7 +1017,9 @@ function nextQuestion() {
 function finishExam() {
     clearInterval(APP_STATE.timerInterval);
     const total = APP_STATE.examQuestions.length;
-    const N = 4;
+    // Penalización: Programación = -1/2 (2 errores cancelan 1); resto = -1/3
+    const isProg = APP_STATE.currentExam?.id === 'programacion';
+    const N = isProg ? 3 : 4;
     let aciertos = 0, errores = 0;
     APP_STATE.answers.forEach(a => {
         if (a.selected === a.correct) aciertos++;

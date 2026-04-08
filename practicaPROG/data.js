@@ -34,6 +34,15 @@ const UNITS = {
       { id: 'fich-drag1', icon: '🎯', label: 'Ejercicio: Clasifica clases I/O', type: 'drag', dragId: 'clases_io' },
       { id: 'fich-code', icon: '⌨️', label: 'Lab: Analiza código de hilos', type: 'code', codeId: 'hilos_lab' },
     ]
+  },
+  practicas: {
+    label: 'EXAMEN', title: 'Prácticas Examen',
+    sections: [
+      { id: 'prac-tutor', icon: '🎓', label: '🎓 Tutor Interactivo', type: 'tutor' },
+      { id: 'prac-ej1', icon: '📝', label: 'Ejercicio 1: Gestión Empleados', type: 'ejercicio', ejercicioId: 'ej1' },
+      { id: 'prac-ej2', icon: '📝', label: 'Ejercicio 2: Sistema Vehículos', type: 'ejercicio', ejercicioId: 'ej2' },
+      { id: 'prac-ej3', icon: '📝', label: 'Ejercicio 3: Biblioteca', type: 'ejercicio', ejercicioId: 'ej3' },
+    ]
   }
 };
 
