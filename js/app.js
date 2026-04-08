@@ -1331,22 +1331,35 @@ const STUDY_PHASES = [
         id: 1, name: 'Fase 1 — Teoría',
         color: '#3b82f6', colorSoft: 'rgba(59,130,246,0.1)',
         start: new Date('2026-04-08'), end: new Date('2026-04-24'),
-        desc: 'Rotación diaria de 2 asignaturas · Teoría profunda · Mini-tests',
-        icon: '📖'
+        desc: 'Rotación diaria de 2 asignaturas · Teoría profunda',
+        icon: '📖',
+        dailyTasks: [
+            '2-3h Teoría profunda por asignatura',
+            'Realizar mini-tests tras cada tema'
+        ]
     },
     {
         id: 2, name: 'Fase 2 — Tests',
         color: '#f97316', colorSoft: 'rgba(249,115,22,0.1)',
         start: new Date('2026-04-25'), end: new Date('2026-05-08'),
-        desc: '2h teoría + 2h tests + 1h análisis de fallos diario',
-        icon: '🎯'
+        desc: 'Combinación de teoría y tests intensivos',
+        icon: '🎯',
+        dailyTasks: [
+            '2h Teoría (Refuerzo)',
+            '2h Tests a tope (Simulación)',
+            '1h Análisis de Fallos (Libreta)'
+        ]
     },
     {
         id: 3, name: 'Fase 3 — Simulacros',
         color: '#ef4444', colorSoft: 'rgba(239,68,68,0.1)',
         start: new Date('2026-05-09'), end: new Date('2026-05-16'),
-        desc: 'Simulacros completos como el examen real · Corrección crítica',
-        icon: '🔴'
+        desc: 'Inmersión total en ambiente de examen',
+        icon: '🔴',
+        dailyTasks: [
+            '2-3 Simulacros completos al día',
+            'Repaso intensivo de la Libreta de Errores'
+        ]
     }
 ];
 
@@ -1427,6 +1440,9 @@ function renderStudyGuide() {
                         <button class="study-subject-chip" onclick="scrollToSubject('${todaySlot.subjects[i] || ''}')">
                             ${l}
                         </button>`).join('')}
+                </div>
+                <div class="study-tasks-list">
+                    ${phase.dailyTasks.map(t => `<div>• ${t}</div>`).join('')}
                 </div>
             </div>
 
