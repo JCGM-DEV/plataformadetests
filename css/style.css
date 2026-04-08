@@ -195,7 +195,14 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
 .btn-secondary:hover { background: rgba(255,255,255,0.1); }
 
 /* ── UNIT SELECTOR ──────────────────────────────────────────── */
-.unit-selector { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.unit-selector { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+.unit-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
 
 .unit-btn {
   background: var(--glass);
@@ -211,6 +218,18 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   border-color: rgba(255,255,255,0.2);
 }
 .unit-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+.pdf-link-mini {
+    font-size: 0.85rem;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: all 0.2s;
+    line-height: 1;
+}
+.pdf-link-mini:hover {
+    opacity: 1;
+    transform: scale(1.3);
+}
 
 /* ── EXAM SELECTOR LARGE ────────────────────────────────────── */
 .exam-selector-large { margin-top: 0.25rem; }

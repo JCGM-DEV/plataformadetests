@@ -157,7 +157,13 @@ function renderSubjects() {
         let unitsHTML = '<div class="unit-selector">';
         for (let i = 1; i <= subject.units_count; i++) {
             const unitPool = pool.filter(q => q.unit === i);
-            unitsHTML += `<button class="unit-btn" onclick="startExam('${subject.id}',${i})" ${unitPool.length === 0 ? 'disabled title="Sin preguntas"' : ''}>T${i}</button>`;
+            const pdfPath = THEORY_PDFS[subject.id]?.[i];
+            
+            unitsHTML += `
+                <div class="unit-group">
+                    <button class="unit-btn" onclick="startExam('${subject.id}',${i})" ${unitPool.length === 0 ? 'disabled title="Sin preguntas"' : ''}>T${i}</button>
+                    ${pdfPath ? `<a href="${pdfPath}" target="_blank" class="pdf-link-mini" title="Ver teoría PDF">📄</a>` : ''}
+                </div>`;
         }
         unitsHTML += '</div>';
 
@@ -1474,6 +1480,76 @@ function scrollToSubject(subjectId) {
 // ═══════════════════════════════════════════════════════════════
 
 const LIBRETA_KEY = 'libreta_errores_v1';
+
+const THEORY_PDFS = {
+  "programacion": {
+    "1": "Programacion/TemasPDF/TEMA%201.pdf",
+    "2": "Programacion/TemasPDF/TEMA%202.pdf",
+    "3": "Programacion/TemasPDF/TEMA%203_act.pdf",
+    "4": "Programacion/TemasPDF/TEMA%204.pdf",
+    "5": "Programacion/TemasPDF/TEMA%205.pdf",
+    "6": "Programacion/TemasPDF/TEMA%206.pdf",
+    "7": "Programacion/TemasPDF/TEMA%207.pdf",
+    "8": "Programacion/TemasPDF/TEMA%208.pdf",
+    "9": "Programacion/TemasPDF/TEMA%209.pdf",
+    "10": "Programacion/TemasPDF/TEMA%2010.pdf"
+  },
+  "sistemas_informaticos": {
+    "1": "Sistemas%20informaticos/TemasPDF/DAW_SI_UD1_1.pdf",
+    "2": "Sistemas%20informaticos/TemasPDF/DAW_SI_UD2.pdf",
+    "3": "Sistemas%20informaticos/TemasPDF/DAW_SI_UD3.pdf",
+    "4": "Sistemas%20informaticos/TemasPDF/DAW_SI_UD4.pdf",
+    "5": "Sistemas%20informaticos/TemasPDF/DAW_SI_UD5.pdf",
+    "6": "Sistemas%20informaticos/TemasPDF/DAW_SI_UD6_1.pdf",
+    "7": "Sistemas%20informaticos/TemasPDF/DAW_SI_UD7_1.pdf"
+  },
+  "bases_de_datos": {
+    "1": "Bases%20de%20datos/TemasPDF/DAW_BD_UD1.pdf",
+    "2": "Bases%20de%20datos/TemasPDF/DAW_BD_UD2.pdf",
+    "3": "Bases%20de%20datos/TemasPDF/DAW_BD_UD3.pdf",
+    "4": "Bases%20de%20datos/TemasPDF/DAW_BD_UD4%20(1).pdf",
+    "5": "Bases%20de%20datos/TemasPDF/DAW_BD_UD5.pdf",
+    "6": "Bases%20de%20datos/TemasPDF/DAW_BD_UD6.pdf",
+    "7": "Bases%20de%20datos/TemasPDF/DAW_BD_UD7.pdf"
+  },
+  "entornos_de_desarrollo": {
+    "1": "Entornos%20de%20desarrollo/TemasPDF/DAW_ED_UD1_PORTADANUEVA_1.pdf",
+    "2": "Entornos%20de%20desarrollo/TemasPDF/DAW_ED_UD2_PORTADANUEVA_1.pdf",
+    "3": "Entornos%20de%20desarrollo/TemasPDF/DAW_ED_UD3_PORTADANUEVA.pdf",
+    "4": "Entornos%20de%20desarrollo/TemasPDF/DAW_ED_UD4_PORTADANUEVA_1.pdf",
+    "5": "Entornos%20de%20desarrollo/TemasPDF/DAW_ED_UD5_PORTADANUEVA_1.pdf",
+    "6": "Entornos%20de%20desarrollo/TemasPDF/DAW_ED_UD6_PORTADANUEVA_1.pdf"
+  },
+  "lenguaje_de_marcas": {
+    "1": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD1_1%20(1).pdf",
+    "2": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD2_1.pdf",
+    "3": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD3_1.pdf",
+    "4": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD4_1.pdf",
+    "5": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD5_1.pdf",
+    "6": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD6_1.pdf",
+    "7": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD7_1.pdf",
+    "8": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD8_1.pdf"
+  },
+  "empleabilidad": {
+    "1": "Empleabilidad/TemasPDF/UD1_EI_PORTADANUEVA.pdf",
+    "2": "Empleabilidad/TemasPDF/UD2_EI_PORTADANUEVA.pdf",
+    "3": "Empleabilidad/TemasPDF/UD3_EI_PORTADANUEVA.pdf",
+    "4": "Empleabilidad/TemasPDF/UD4_EI_PORTADANUEVA.pdf",
+    "5": "Empleabilidad/TemasPDF/UD5_EI_PORTADANUEVA.pdf"
+  },
+  "cloud_computing": {
+    "1": "Cloud%20Computing/TemasPDF/Modulo-1-Conceptos-de-la-computacion-en-la-nube.pdf",
+    "2": "Cloud%20Computing/TemasPDF/Modulo-2-Economia-y-facturacion-en-la-nube.pdf",
+    "3": "Cloud%20Computing/TemasPDF/Modulo-3-Infraestructura-de-la-nube.pdf",
+    "4": "Cloud%20Computing/TemasPDF/Modulo-4-Seguridad-en-la-nube.pdf",
+    "5": "Cloud%20Computing/TemasPDF/Modulo-5-Redes-y-Entrega-de-Contenidos.pdf",
+    "6": "Cloud%20Computing/TemasPDF/Modulo-6-Servicios-de-computo.pdf",
+    "7": "Cloud%20Computing/TemasPDF/Modulo-7-Servicios-de-almacenamiento.pdf",
+    "8": "Cloud%20Computing/TemasPDF/Modulo-8-Servicios-de-bases-de-datos.pdf",
+    "9": "Cloud%20Computing/TemasPDF/Modulo-9-Arquitectura-en-la-nube.pdf",
+    "10": "Cloud%20Computing/TemasPDF/Modulo-10-Escalado-automatico-y-monitorizacion.pdf"
+  }
+};
 
 function getLibreta() {
     return JSON.parse(localStorage.getItem(LIBRETA_KEY) || '{}');
