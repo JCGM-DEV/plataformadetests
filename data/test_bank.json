@@ -2742,7 +2742,7 @@
         "AVG()"
       ],
       "correct": 3,
-      "explanation": "Average.",
+      "explanation": "La respuesta correcta es: AVG().",
       "unit": 0
     },
     {
@@ -2755,7 +2755,7 @@
         "UPPER()"
       ],
       "correct": 0,
-      "explanation": "MAX().",
+      "explanation": "La respuesta correcta es: MAX().",
       "unit": 1
     },
     {

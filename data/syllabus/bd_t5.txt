@@ -18,6 +18,7 @@ EXPL:INSERT INTO tabla (col1, col2) VALUES (v1, v2) inserta una fila. INSERT INT
 Porque es necesaria para definir qué columnas se van a modificar
 Porque sin ella, el motor de la base de datos devolverá un error de sintaxis siempre
 Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:Porque si se omite, se actualizarán todos los registros de la tabla. es la respuesta correcta para esta pregunta del temario oficial.
 
 ¿Qué opción de integridad referencial borra automáticamente las filas hijas cuando se borra la fila padre?
 ON DELETE SET NULL

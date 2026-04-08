@@ -49,11 +49,11 @@ Mediante una subconsulta correlacionada con EXISTS
 EXPL:INNER JOIN devuelve solo las filas que tienen coincidencia en AMBAS tablas. Las filas sin pareja se excluyen del resultado. Es el JOIN más restrictivo.
 
 ¿Qué palabra clave se usa para comprobar si un valor existe dentro de una lista devuelta por una subconsulta?
-LIKE
-EXISTS
-*IN
-Mediante una subconsulta correlacionada con EXISTS
-EXPL:La respuesta es 'IN'. "LIKE" y "EXISTS" son incorrectos porque describen conceptos diferentes.
+LIKE (para búsqueda de patrones con comodines)
+EXISTS (comprueba si la subconsulta devuelve alguna fila)
+BETWEEN (para rangos de valores numéricos o de fecha)
+*IN (comprueba si el valor está en la lista devuelta por la subconsulta)
+EXPL:IN comprueba si un valor existe en una lista o en el resultado de una subconsulta. EXISTS comprueba si la subconsulta devuelve al menos una fila. LIKE busca patrones con % y _. BETWEEN comprueba rangos.
 
 En Oracle, ¿qué combinación de cláusulas se utiliza para realizar consultas jerárquicas?
 GROUP BY y HAVING
