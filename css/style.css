@@ -1257,6 +1257,26 @@ footer { margin-top: 4rem; padding-bottom: 2rem; }
 }
 .btn-libreta-export:hover { background: rgba(5,150,105,0.22); }
 
+/* Strategic Tip Bar */
+.study-tip-bar {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: rgba(59,130,246,0.08);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0 0 14px 14px;
+}
+.tip-icon { font-size: 1.1rem; }
+.tip-text { 
+  font-size: 0.8rem; 
+  color: var(--text-secondary); 
+  line-height: 1.4;
+}
+.tip-text b { color: #60a5fa; }
+
 /* Today's card highlight */
 .subject-card-today {
   border-color: rgba(59,130,246,0.5) !important;

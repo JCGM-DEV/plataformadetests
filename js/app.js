@@ -1318,6 +1318,14 @@ init();
 const EXAM_DATE = new Date('2026-05-16T09:00:00');
 const STUDY_START = new Date('2026-04-08T00:00:00');
 
+const STRATEGIC_TIPS = [
+    { icon: '🎯', text: '<b>Precisión > Velocidad</b>: 2 mal restan 1 bien. Si no estás seguro en el test, mejor deja en blanco.' },
+    { icon: '📝', text: '<b>Foco Práctico</b>: En el examen de papel no importa la sintaxis exacta, importa que tu lógica POO sea impecable.' },
+    { icon: '📓', text: '<b>Método de Errores</b>: Todo lo que anotes hoy en tu Libreta de Errores es lo que te hará aprobar mañana.' },
+    { icon: '⏱️', text: '<b>Gestión de Tiempo</b>: Entrena con cronómetro. 30 min para tests y 1 hora para desarrollo POO.' },
+    { icon: '👑', text: '<b>Relaciones POO</b>: Si sabes diseñar la jerarquía de clases (Herencia/Interfaces), tienes el 70% de la nota.' }
+];
+
 const STUDY_PHASES = [
     {
         id: 1, name: 'Fase 1 — Teoría',
@@ -1382,6 +1390,10 @@ function renderStudyGuide() {
     const phase = getCurrentPhase();
     const todaySlot = getDailySubjects();
     const daysLeft = getDaysToExam();
+    
+    // Pick tip of the day
+    const daysSinceStart = Math.floor((new Date() - STUDY_START) / (1000 * 60 * 60 * 24));
+    const tip = STRATEGIC_TIPS[daysSinceStart % STRATEGIC_TIPS.length];
 
     const urgencyColor = daysLeft <= 7 ? '#ef4444' : daysLeft <= 21 ? '#f97316' : '#3b82f6';
     const urgencyText = daysLeft <= 7 ? '¡ÚLTIMA SEMANA!' : daysLeft <= 14 ? '¡SPRINT FINAL!' : 'Quedan';
@@ -1425,6 +1437,12 @@ function renderStudyGuide() {
                     ${libretaCount > 0 ? `<span class="libreta-count">${libretaCount}</span>` : ''}
                 </button>
                 ${libretaCount > 0 ? `<button class="btn-libreta-export" onclick="exportarLibreta()" title="Descargar como archivo">⬇️ Exportar</button>` : ''}
+            </div>
+
+            <!-- Strategic Tip (Full Width Bottom) -->
+            <div class="study-tip-bar">
+                <span class="tip-icon">${tip.icon}</span>
+                <span class="tip-text">${tip.text}</span>
             </div>
         </div>`;
 }
