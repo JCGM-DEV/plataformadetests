@@ -1117,46 +1117,63 @@ function isLikelyQuestion(text) {
            (t.endsWith(':') && t.length > 20);
 }
 
-// ─── TXT PARSER — formato único: pregunta con ?, opciones, *correcta, EXPL: ──
+// ─── TXT PARSER — formato único: pregunta, opciones (*correcta), EXPL: ──────
 function parseTxtExam(text, syllabusId) {
-    const lines = text
+    const rawLines = text
         .replace(/\r\n/g, '\n')
         .split('\n')
         .map(l => l.trim())
         .filter(l => l !== '' && !l.match(/^tema\s+\d+$/i) && !l.includes('( 1.00 puntos )'));
 
+    // ── Paso 1: agrupar en bloques separados por EXPL: ───────────────────────
+    // Cada bloque es: [pregunta, opcion1, opcion2, ..., EXPL:...]
+    const blocks = [];
+    let current = [];
+    for (const line of rawLines) {
+        current.push(line);
+        if (line.startsWith('EXPL:')) {
+            blocks.push(current);
+            current = [];
+        }
+    }
+    // Bloque final sin EXPL (si lo hubiera)
+    if (current.length >= 3) blocks.push(current);
+
+    // ── Paso 2: parsear cada bloque ──────────────────────────────────────────
     const questions = [];
-    let i = 0;
+    for (const block of blocks) {
+        if (block.length < 3) continue; // mínimo: pregunta + 2 opciones
 
-    while (i < lines.length) {
-        const line = lines[i];
-        if (!line.includes('?') && !line.startsWith('¿')) { i++; continue; }
-
-        const questionText = line.startsWith('*') ? line.slice(1).trim() : line;
-        i++;
+        const questionText = block[0].startsWith('*')
+            ? block[0].slice(1).trim()
+            : block[0];
 
         const options = [];
         let correctIndex = 0;
-        let explanation = '';
+        let explanation = 'Pregunta del temario oficial.';
 
-        while (i < lines.length && options.length < 4) {
-            const opt = lines[i];
-            if (opt.startsWith('EXPL:')) { explanation = opt.slice(5).trim(); i++; break; }
-            if ((opt.includes('?') || opt.startsWith('¿')) && options.length >= 2) break;
-            if (opt.startsWith('*')) { correctIndex = options.length; options.push(opt.slice(1).trim()); }
-            else options.push(opt);
-            i++;
-        }
-        // Check if next line is explanation
-        if (i < lines.length && lines[i].startsWith('EXPL:')) {
-            explanation = lines[i].slice(5).trim(); i++;
+        for (let j = 1; j < block.length; j++) {
+            const l = block[j];
+            if (l.startsWith('EXPL:')) {
+                explanation = l.slice(5).trim();
+                break;
+            }
+            if (options.length >= 4) break;
+            if (l.startsWith('*')) {
+                correctIndex = options.length;
+                options.push(l.slice(1).trim());
+            } else {
+                options.push(l);
+            }
         }
 
         if (options.length >= 2) {
             questions.push({
                 concept_id: `${syllabusId}_q${questions.length}`,
-                question: questionText, options, correct: correctIndex,
-                explanation: explanation || 'Pregunta del temario oficial.',
+                question: questionText,
+                options,
+                correct: correctIndex,
+                explanation,
                 unit: null
             });
         }
