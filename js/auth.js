@@ -7,12 +7,12 @@ const Auth = {
     // 🔥 CONFIGURACIÓN DE FIREBASE
     // El usuario debe reemplazar esto con su propia configuración de la consola de Firebase
     config: {
-        apiKey: "YOUR_API_KEY",
-        authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-        projectId: "YOUR_PROJECT_ID",
-        storageBucket: "YOUR_PROJECT_ID.appspot.com",
-        messagingSenderId: "YOUR_SENDER_ID",
-        appId: "YOUR_APP_ID"
+        apiKey: "AIzaSyBnevCDXEbV7TdPtsW-gaO3XabkQUsAKi0",
+        authDomain: "techhub-examenes.firebaseapp.com",
+        projectId: "techhub-examenes",
+        storageBucket: "techhub-examenes.firebasestorage.app",
+        messagingSenderId: "255739838703",
+        appId: "1:255739838703:web:512555d95445e14f821b1a"
     },
 
     auth: null,
