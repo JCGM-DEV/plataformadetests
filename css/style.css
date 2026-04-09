@@ -2281,3 +2281,87 @@ footer { margin-top: 4rem; padding-bottom: 2rem; }
 @media (max-width: 500px) {
     .planner-card { min-width: 280px; flex: 0 0 90%; }
 }
+
+/* 📝 SUMMARY FEATURE ───────────────────────────────────────── */
+.summary-link-mini {
+    text-decoration: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    filter: grayscale(0.2);
+}
+
+.summary-link-mini:hover {
+    transform: scale(1.3);
+    filter: grayscale(0);
+}
+
+.summary-modal-content {
+    max-width: 650px;
+    border-radius: 24px !important;
+    padding: 2.5rem !important;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+    border: 1px solid rgba(255,193,7,0.2) !important;
+}
+
+.summary-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-icon {
+    font-size: 2rem;
+    background: rgba(255,193,7,0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.summary-body {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 1rem;
+    scrollbar-width: thin;
+}
+
+.summary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.summary-point {
+    display: flex;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 16px;
+    border: 1px solid rgba(255,193,7,0.05);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.point-bullet {
+    color: #ffc107;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.summary-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: flex-end;
+}

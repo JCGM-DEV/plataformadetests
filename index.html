@@ -28,6 +28,7 @@
     <script src="data/subjects.js"></script>
     <script src="data/test_bank.js"></script>
     <script src="data/syllabus_registry.js"></script>
+    <script src="data/study_summaries.js"></script>
 </head>
 <body class="dark-theme">
 
@@ -178,6 +179,25 @@
                 </div>
             </div>
             <div id="libreta-content" style="flex:1;overflow-y:auto;padding:1.5rem 0;"></div>
+        </div>
+    </div>
+
+    <!-- ── SUMMARY MODAL (Specific Unit) ────────────────────────── -->
+    <div id="summary-modal" class="modal hidden">
+        <div class="modal-content summary-modal-content">
+            <div class="summary-modal-header">
+                <div class="title-with-icon">
+                    <span class="header-icon">📝</span>
+                    <h2 id="summary-title">Resumen del Tema</h2>
+                </div>
+                <button class="close-btn" onclick="closeSummary()">&times;</button>
+            </div>
+            <div id="summary-body" class="summary-body">
+                <div id="summary-points" class="summary-list"></div>
+            </div>
+            <div class="summary-footer">
+                <button class="primary-btn" onclick="closeSummary()">Entendido</button>
+            </div>
         </div>
     </div>
 

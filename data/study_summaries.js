@@ -1,4 +1,4 @@
-{
+const STUDY_SUMMARIES_DATA = {
   "bd_tema_1": {
     "name": "Tema 1: Conceptos",
     "points": [
@@ -485,4 +485,4 @@
       "**Cuál es la principal diferencia entre el escalado horizontal y vertical**: Configurar reglas de escalado precisas y monitorear continuamente la aplicación. *Configurar reglas de escalado precisas y monitorear continuamente la aplicación*"
     ]
   }
-}
+};

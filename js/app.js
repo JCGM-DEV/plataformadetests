@@ -13,6 +13,8 @@ const APP_STATE = {
     answers: [],
     timer: 3600,
     timerInterval: null,
+    summaries: {},
+    isReviewing: false,
     // flashcard
     fcQuestions: [],
     fcIndex: 0,
@@ -130,6 +132,7 @@ async function init() {
         if (typeof SUBJECTS_DATA !== 'undefined') APP_STATE.subjects = SUBJECTS_DATA;
         if (typeof TEST_BANK_DATA !== 'undefined') QUESTION_POOL = TEST_BANK_DATA;
         if (typeof SYLLABUS_REGISTRY_DATA !== 'undefined') APP_STATE.syllabusExams = SYLLABUS_REGISTRY_DATA;
+        if (typeof STUDY_SUMMARIES_DATA !== 'undefined') APP_STATE.summaries = STUDY_SUMMARIES_DATA;
 
         // Fallback or data integrity check
         if (APP_STATE.subjects.length === 0) {
@@ -138,7 +141,8 @@ async function init() {
             const [subRes, qRes, sylRes] = await Promise.all([
                 fetch('data/subjects.json' + v).catch(() => null),
                 fetch('data/test_bank.json' + v).catch(() => null),
-                fetch('data/syllabus_registry.json' + v).catch(() => null)
+                fetch('data/syllabus_registry.json' + v).catch(() => null),
+                fetch('data/study_summaries.json' + v).then(r => r.json()).then(d => APP_STATE.summaries = d).catch(() => {})
             ]);
             
             if (subRes && subRes.ok) APP_STATE.subjects = await subRes.json();
@@ -191,6 +195,7 @@ function renderSubjects() {
                     <button class="unit-btn" onclick="startExam('${subject.id}',${i})" ${unitPool.length === 0 ? 'disabled title="Sin preguntas"' : ''}>T${i}</button>
                     <div style="display:flex; gap:0.4rem; justify-content:center; margin-top:0.2rem;">
                         ${pdfPath ? `<a href="${pdfPath}" target="_blank" class="pdf-link-mini" title="Ver teoría PDF" onclick="logTheory('${subject.name}', ${i})">📄</a>` : ''}
+                        ${hasSummary(subject.id, i) ? `<a href="javascript:void(0)" onclick="openSummary('${subject.id}', ${i})" class="summary-link-mini" title="Ver Resumen del Tema">📝</a>` : ''}
                         ${videoPath ? `<a href="javascript:void(0)" onclick="openVideo('${videoPath}')" class="video-link-mini" title="Ver video de repaso">🎬</a>` : ''}
                     </div>
                 </div>`;
@@ -2064,4 +2069,53 @@ function exportarLibreta() {
     a.download = `libreta_errores_DAW_${new Date().toISOString().slice(0,10)}.md`;
     a.click();
     URL.revokeObjectURL(url);
+}
+
+function hasSummary(subjectId, unit) {
+    if (!APP_STATE.summaries) return false;
+    const key = `${getSubjectPrefix(subjectId)}_tema_${unit}`;
+    return !!APP_STATE.summaries[key];
+}
+
+function getSubjectPrefix(subjectId) {
+    const map = {
+        'basidatos': 'bd',
+        'entornosdedesarrollo': 'ed',
+        'lenguajesdemarcas': 'lm',
+        'empleabilidad': 'emp',
+        'programacion': 'prog',
+        'sistemasinformaticos': 'si',
+        'cloudcomputing': 'cc'
+    };
+    return map[subjectId] || subjectId;
+}
+
+function openSummary(subjectId, unit) {
+    const key = `${getSubjectPrefix(subjectId)}_tema_${unit}`;
+    const summary = APP_STATE.summaries[key];
+    if (!summary) return;
+
+    const modal = document.getElementById('summary-modal');
+    const title = document.getElementById('summary-title');
+    const pointsContainer = document.getElementById('summary-points');
+
+    title.innerText = summary.name || `Resumen Tema ${unit}`;
+    pointsContainer.innerHTML = summary.points.map(p => `
+        <div class="summary-point">
+            <span class="point-bullet">✦</span>
+            <div class="point-text">${formatSummaryPoint(p)}</div>
+        </div>
+    `).join('');
+
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function formatSummaryPoint(text) {
+    return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+}
+
+function closeSummary() {
+    document.getElementById('summary-modal').classList.add('hidden');
+    document.body.style.overflow = 'auto';
 }
