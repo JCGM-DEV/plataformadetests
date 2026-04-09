@@ -2079,13 +2079,13 @@ function hasSummary(subjectId, unit) {
 
 function getSubjectPrefix(subjectId) {
     const map = {
-        'basidatos': 'bd',
-        'entornosdedesarrollo': 'ed',
-        'lenguajesdemarcas': 'lm',
+        'bases_de_datos': 'bd',
+        'entornos_de_desarrollo': 'ed',
+        'lenguaje_de_marcas': 'lm',
         'empleabilidad': 'emp',
         'programacion': 'prog',
-        'sistemasinformaticos': 'si',
-        'cloudcomputing': 'cc'
+        'sistemas_informaticos': 'si',
+        'cloud_computing': 'cc'
     };
     return map[subjectId] || subjectId;
 }

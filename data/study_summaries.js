@@ -1,488 +1,1352 @@
 const STUDY_SUMMARIES_DATA = {
-  "bd_tema_1": {
-    "name": "Tema 1: Conceptos",
-    "points": [
-      "**Cuál de los siguientes formatos de archivo representa la información en una estructura tabular fija de filas y columnas**: Indexado. *Los ficheros dBASE (.dbf) son ficheros de base de datos con índices que permiten acceso directo a registros. Son ficheros indexados, no planos ni multimedia.*"
-    ]
-  },
-  "bd_tema_2": {
-    "name": "Tema 2: SQL y DDL",
-    "points": [
-      "**Cómo se denomina una clave primaria que incluye más de una columna de una tabla**: DROP TABLE. *DROP TABLE elimina la tabla completa: estructura y datos. ALTER TABLE modifica la estructura. DELETE borra filas (DML). TRUNCATE vacía los datos pero mantiene la estructura. Solo DROP TABLE elimina la tabla definitivamente.*"
-    ]
-  },
-  "bd_tema_3": {
-    "name": "Tema 3: Diagramas E-R",
-    "points": [
-      "**Qué símbolo se utiliza para representar las entidades en un diagrama ER**: Rectángulos.",
-      "**Cuál es la definición de un atributo derivado**: Un atributo cuyo valor se calcula a partir de otros atributos del modelo.. *Un atributo derivado se calcula a partir de otros atributos (ej: edad a partir de fecha_nacimiento). Se representa con elipse de línea punteada. No se almacena físicamente.*",
-      "**En una relación de cardinalidad 1:N entre \"Agentes\" y \"Clientes\", ¿qué se entiende**: Un agente gestiona varios clientes, pero un cliente solo es gestionado por un agente.. *En 1:N, un registro de la tabla \"1\" puede relacionarse con muchos de la tabla \"N\", pero cada registro de \"N\" solo se relaciona con uno de \"1\". La clave foránea va en el lado N.*",
-      "**Cuál es una característica fundamental de una entidad débil**: Carece de identificador autosuficiente y depende de una entidad propietaria.. *Una entidad débil no tiene atributos suficientes para identificarse por sí sola. Depende de una entidad propietaria (fuerte) y se representa con doble rectángulo en el diagrama E-R.*",
-      "**En el modelo E/R ampliado, ¿qué es la generalización**: El proceso de agrupar entidades con rasgos comunes en una entidad padre abstracta.. *El proceso de agrupar entidades con rasgos comunes en una entidad padre abstracta.*",
-      "**Qué restricción de especialización determina si una instancia del supertipo puede pertenecer a una sola subentidad o a varias**: Disjointness (exclusividad/solapamiento).. *Disjointness (exclusividad) determina si una instancia puede pertenecer a varias subentidades (solapamiento) o solo a una (exclusividad). Completeness determina si toda instancia del supertipo debe pertenecer a alguna subentidad.*",
-      "**Al pasar del modelo E/R al modelo relacional, ¿cuándo se crean normalmente las claves foráneas**: Al establecer las relaciones entre las tablas para vincular registros.. *El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.*",
-      "**Qué requisito debe cumplir una tabla para estar en Primera Forma Normal (1FN)**: Que todas las columnas almacenen valores atómicos e indivisibles.. *La 1FN exige que todos los valores sean atómicos (indivisibles). No puede haber listas, conjuntos ni grupos repetitivos en una columna. Es el requisito mínimo de normalización.*",
-      "**Cuándo se dice que una tabla viola la Segunda Forma Normal (2FN)**: Cuando un atributo no clave depende solo de una parte de la clave primaria (dependencia parcial).. *La 2FN requiere que todos los atributos no clave dependan de la clave primaria COMPLETA. Si hay dependencia parcial (depende solo de parte de la PK compuesta), viola la 2FN.*",
-      "**Cuál es el objetivo principal de la normalización de modelos relacionales**: Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente.. *Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente.*"
-    ]
-  },
-  "bd_tema_4": {
-    "name": "Tema 4: Consultas SQL",
-    "points": [
-      "**Cuál es la cláusula necesaria para especificar la tabla de la que se extraen los datos**: FROM.",
-      "**Qué operador se utiliza en la cláusula WHERE para filtrar por un rango de valores**: BETWEEN. *BETWEEN a AND b es equivalente a col >= a AND col <= b. Incluye ambos extremos. Es más legible que escribir las dos condiciones por separado.*",
-      "**Para qué sirve el modificador DISTINCT en una sentencia SELECT**: Para eliminar las filas duplicadas en el conjunto de resultados.. *DISTINCT elimina filas duplicadas del resultado. Se aplica sobre todas las columnas del SELECT. Tiene un coste de rendimiento porque requiere ordenar o hashear los resultados.*",
-      "**Cuál es la función de agregado que devuelve el valor máximo de una columna**: MAX(). *MAX() devuelve el valor máximo de una columna. MIN() el mínimo, SUM() la suma, AVG() la media, COUNT() el número de filas. Son funciones de agregado que operan sobre grupos de filas.*",
-      "**Qué diferencia principal hay entre las cláusulas WHERE y HAVING**: WHERE filtra registros antes de la agrupación; HAVING filtra grupos después de aplicarse GROUP BY.. *GROUP BY agrupa filas con el mismo valor en las columnas especificadas. Se usa con funciones de agregado (COUNT, SUM, AVG). HAVING filtra los grupos resultantes.*",
-      "**Qué tipo de JOIN devuelve todos los registros de la tabla de la izquierda, aunque no tengan correspondencia en la derecha**: LEFT JOIN. *LEFT JOIN devuelve TODAS las filas de la tabla izquierda, más las coincidentes de la derecha. Las filas sin pareja en la derecha aparecen con NULL. Útil para \"todos los X aunque no tengan Y\".*",
-      "**En una composición interna (INNER JOIN), ¿qué ocurre con las filas de la tabla A que no coinciden con ninguna de la tabla B**: Se excluyen del conjunto de resultados.. *INNER JOIN devuelve solo las filas que tienen coincidencia en AMBAS tablas. Las filas sin pareja se excluyen del resultado. Es el JOIN más restrictivo.*",
-      "**Qué palabra clave se usa para comprobar si un valor existe dentro de una lista devuelta por una subconsulta**: IN (comprueba si el valor está en la lista devuelta por la subconsulta). *IN comprueba si un valor existe en una lista o en el resultado de una subconsulta. EXISTS comprueba si la subconsulta devuelve al menos una fila. LIKE busca patrones con % y _. BETWEEN comprueba rangos.*",
-      "**En Oracle, ¿qué combinación de cláusulas se utiliza para realizar consultas jerárquicas**: START WITH y CONNECT BY.. *START WITH define el nodo raíz de la jerarquía y CONNECT BY define la relación padre-hijo. Son cláusulas específicas de Oracle para consultas jerárquicas (árboles organizativos, categorías anidadas).*",
-      "**Qué operación de conjuntos combina los resultados de dos consultas eliminando los duplicados automáticamente**: UNION."
-    ]
-  },
-  "bd_tema_5": {
-    "name": "Tema 5: Tratamiento Datos",
-    "points": [
-      "**Cuál es la sentencia SQL estándar para insertar nuevos registros en una tabla**: INSERT INTO. *INSERT INTO tabla (col1, col2) VALUES (v1, v2) inserta una fila. INSERT INTO tabla SELECT... inserta múltiples filas desde otra consulta. Es la sentencia DML estándar para insertar datos.*",
-      "**Cómo se insertan datos en una tabla de destino a partir del resultado de otra consulta**: Usando la sintaxis INSERT INTO tabla_destino SELECT .... *INSERT INTO tabla (col1, col2) VALUES (v1, v2) inserta una fila. INSERT INTO tabla SELECT... inserta múltiples filas desde otra consulta. Es la sentencia DML estándar para insertar datos.*",
-      "**Por qué es fundamental incluir la cláusula WHERE en una sentencia UPDATE**: Porque si se omite, se actualizarán todos los registros de la tabla.. *Porque si se omite, se actualizarán todos los registros de la tabla. es la respuesta correcta para esta pregunta del temario oficial.*",
-      "**Qué opción de integridad referencial borra automáticamente las filas hijas cuando se borra la fila padre**: ON DELETE CASCADE. *ON DELETE CASCADE borra automáticamente las filas hijas cuando se borra la fila padre. ON DELETE SET NULL pone NULL en las hijas. ON DELETE RESTRICT impide borrar el padre si tiene hijos.*",
-      "**Qué sentencia se utiliza para confirmar y guardar permanentemente todos los cambios de una transacción**: COMMIT. *COMMIT confirma permanentemente todos los cambios de la transacción actual. Una vez ejecutado, los cambios son visibles para otros usuarios y no se pueden deshacer con ROLLBACK.*",
-      "**Qué acción realiza el comando ROLLBACK**: Deshace todos los cambios realizados en la transacción actual volviendo al estado inicial.. *ROLLBACK deshace todos los cambios realizados desde el último START TRANSACTION o SAVEPOINT, devolviendo la base de datos al estado anterior. Es la operación de \"deshacer\" de las transacciones.*",
-      "**Cuál es una ventaja clave de utilizar Common Table Expressions (CTE) o composiciones en órdenes de edición**: Mejoran la legibilidad al permitir nombrar subconsultas y reutilizarlas en una única instrucción.. *Mejoran la legibilidad al permitir nombrar subconsultas y reutilizarlas en una única instrucción.*",
-      "**En qué consiste el \"bloqueo a nivel de registro\" (row-level locking)**: Bloquea solo la fila específica que se está modificando, permitiendo que otros usuarios trabajen en otras filas.. *El bloqueo a nivel de registro (row-level locking) bloquea solo la fila que se está modificando, permitiendo que otros usuarios trabajen en otras filas simultáneamente. Es más eficiente que bloquear toda la tabla.*",
-      "**Qué sintaxis se utiliza en MySQL para bloquear filas seleccionadas para una posterior actualización dentro de una transacción**: SELECT  FROM tabla WHERE id=1 FOR UPDATE;. *SELECT ... FOR UPDATE bloquea las filas seleccionadas para que otros usuarios no puedan modificarlas hasta que se haga COMMIT o ROLLBACK. Es el mecanismo de bloqueo pesimista en MySQL.*",
-      "**En el modo estricto de MySQL (STRICT_ALL_TABLES), ¿qué ocurre si se intenta realizar una operación con datos inválidos**: Se rechaza la operación y se genera un error.."
-    ]
-  },
-  "bd_tema_6": {
-    "name": "Tema 6: Programación",
-    "points": [
-      "**Cuál es la sintaxis correcta para definir una variable de usuario en MySQL que almacene información temporal en una sesión**: SET @mi_variable = 10;. *SET @variable = valor define una variable de sesión de usuario en MySQL. Las variables de sesión persisten durante la conexión. DECLARE se usa para variables locales dentro de procedimientos.*",
-      "**Qué palabra clave se utiliza al crear una función para indicar que siempre devuelve el mismo resultado para los mismos parámetros de entrada**: DETERMINISTIC. *DETERMINISTIC indica que la función siempre devuelve el mismo resultado para los mismos parámetros. Permite al optimizador cachear el resultado y mejorar el rendimiento.*",
-      "**Cuál es la función del comando DELIMITER en MySQL**: Cambiar temporalmente el carácter de finalización de comandos para escribir procedimientos complejos.. *DELIMITER cambia el carácter de fin de comando (por defecto ;) para poder escribir procedimientos que contienen ; internamente sin que MySQL los ejecute prematuramente.*",
-      "**Qué estructura de iteración se evalúa al final del ciclo, garantizando que el conjunto de instrucciones se ejecute al menos una vez**: REPEAT.",
-      "**Para ejecutar un procedimiento almacenado en MySQL, ¿qué instrucción debe utilizarse**: CALL. *Un procedimiento almacenado es código SQL precompilado que se ejecuta con CALL. Puede tener parámetros IN (entrada), OUT (salida) e INOUT. No devuelve valor directamente.*",
-      "**Qué variable del sistema debe estar en ON para que los eventos programados con CREATE EVENT llegar a ejecutarse**: event_scheduler. *event_scheduler = ON activa el planificador de eventos de MySQL. Sin esto, los eventos creados con CREATE EVENT no se ejecutarán aunque estén correctamente definidos.*",
-      "**Cuál es una diferencia fundamental entre las Funciones y los Procedimientos almacenados**: Las funciones siempre devuelven un valor; los procedimientos no devuelven un valor (aunque pueden usar parámetros de salida).. *Las funciones siempre devuelven un valor; los procedimientos no devuelven un valor (aunque pueden usar parámetros de sal...*",
-      "**Qué tipo de dato compuesto se utiliza para almacenar uno o varios valores de un conjunto de opciones predefinidas, guardándose internamente como un mapa de bits**: SET.",
-      "**En el tratamiento de excepciones, ¿qué manejador aborta la ejecución del código inmediatamente cuando se produce un error crítico**: EXIT HANDLER. *EXIT HANDLER aborta la ejecución del procedimiento inmediatamente cuando ocurre el error. CONTINUE HANDLER continúa la ejecución después del error. Se usan para gestionar excepciones en MySQL.*",
-      "**Qué objeto de base de datos se utiliza para recorrer los resultados de una consulta SQL de manera secuencial y fila por fila**: Cursor. *Un cursor permite procesar el resultado de una SELECT fila a fila dentro de un procedimiento. Pasos: DECLARE → OPEN → FETCH (bucle) → CLOSE. El handler NOT FOUND detecta el fin.*"
-    ]
-  },
-  "bd_tema_7": {
-    "name": "Tema 7: Objeto-Relacional",
-    "points": [
-      "**Qué característica de un ORDBMS permite definir una tabla \"hija\" que incluya automáticamente las columnas y restricciones de una tabla \"padre\"**: Herencia de tablas.",
-      "**Durante la instalación de PostgreSQL, ¿cuál es el puerto de conexión que se asigna por defecto**: 5432. *El puerto por defecto de PostgreSQL es 5432. MySQL usa 3306. El puerto 8080 es común para servidores web alternativos.*",
-      "**Qué cláusula se utiliza en la sentencia CREATE TABLE de PostgreSQL para heredar de otra tabla**: INHERITS.",
-      "**Cuál de los siguientes es un tipo de dato nativo geométrico en PostgreSQL**: CIRCLE. *NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.*",
-      "**Al ejecutar un SELECT * FROM tabla_padre en PostgreSQL, ¿qué registros se obtienen por defecto**: Los de la tabla padre y todos los de sus tablas hijas relacionadas.. *Los de la tabla padre y todos los de sus tablas hijas relacionadas.*",
-      "**Qué tipo de dato de colección representa un intervalo de valores continuos (como un rango de fechas)**: RANGE.",
-      "**Respecto al borrado de datos en una estructura de herencia en PostgreSQL, ¿cuál es la afirmación correcta**: No hay cascada automática; se debe declarar ON DELETE CASCADE en las claves foráneas si se requiere.. *ON DELETE CASCADE borra automáticamente las filas hijas cuando se borra la fila padre. ON DELETE SET NULL pone NULL en las hijas. ON DELETE RESTRICT impide borrar el padre si tiene hijos.*",
-      "**Cómo se llama el lenguaje procedimental propio de PostgreSQL utilizado para crear funciones avanzadas**: PL/pgSQL.",
-      "**Qué sentencia estándar de SQL se utiliza en PostgreSQL para definir un tipo de dato personalizado (como un tipo compuesto)**: CREATE TYPE.",
-      "**A qué se refiere la \"navegabilidad\" en el contexto de bases de datos objeto-relacionales**: A la capacidad de seguir las conexiones lógicas o referencias entre objetos.. *ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).*"
-    ]
-  },
-  "ed_tema_1": {
-    "name": "Tema 1: Conceptos Software",
-    "points": [
-      "**Cómo se categoriza el software según su naturaleza en un ordenador**: Software de sistema, Software de aplicación y Software de programación.. *NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.*",
-      "**Además de las líneas de código con instrucciones, ¿qué otro elemento es frecuentemente necesario para que un programa informático realice sus tareas**: Los datos, que son la información que el programa necesita para operar, como los operandos en una operación aritmética.. *Además del código, un programa necesita datos para operar. Los datos son la información que el programa procesa (operandos en una operación, registros de una BD, etc.).*",
-      "**Según el texto, ¿qué proceso realiza un compilador durante la compilación, además de generar el código ejecutable**: Verifica que el código fuente esté escrito correctamente desde los puntos de vista léxico, sintáctico y semántico, avisando al programador de posibles errores.. *El compilador verifica el código en tres fases: léxica (tokens válidos), sintáctica (estructura gramatical correcta) y semántica (significado coherente). Si hay errores, los reporta al programador.*",
-      "**Respecto a la clasificación de lenguajes por nivel de abstracción y generación, ¿qué es cierto sobre los lenguajes de segunda generación**: Son lenguajes de programación en ensamblador, que utilizan una simbología y códigos legibles por las personas, y son convertidos a código máquina mediante un ensamblador.. *Los lenguajes de 2ª generación son los lenguajes ensamblador. Usan mnemónicos legibles (MOV, ADD) en lugar de código binario. Se convierten a código máquina mediante un ensamblador.*",
-      "**Cuál es la diferencia fundamental entre el código objeto y el código ejecutable**: El código objeto contiene instrucciones comprensibles por la máquina, pero no es directamente ejecutable, requiriendo un proceso de enlazado para convertirse en código ejecutable.. *El código objeto contiene instrucciones comprensibles por la máquina pero no es directamente ejecutable. El enlazador (linker) combina varios códigos objeto y resuelve referencias externas para crear el ejecutable.*",
-      "**Cuál es la distinción entre un lenguaje de tipado fuerte y uno de tipado débil, y entre tipado estático y tipado dinámico**: Un lenguaje de tipado fuerte restringe las operaciones basándose en el tipo de sus variables, mientras que uno de tipado débil permite un uso más indiscriminado. En el tipado estático, el tipo se vincula a la variable al declararla y no cambia; en el tipado dinámico, el tipo se asigna por el valor y puede cambiar durante la ejecución.. *Tipado fuerte: restringe operaciones según el tipo (Java, Python). Tipado débil: permite uso más flexible (JavaScript). Tipado estático: el tipo se asigna al declarar (Java). Dinámico: el tipo cambia en ejecución (Python).*",
-      "**Por qué se considera la reutilización de código de máxima importancia en el desarrollo de software**: Porque ahorra costes de creación y modificación, y reduce la probabilidad de cometer errores al centralizar los cambios en un único lugar.. *La reutilización de código ahorra costes de creación y modificación, y reduce errores al centralizar los cambios en un único lugar. Es uno de los principios fundamentales de la ingeniería del software.*",
-      "**En las fases tradicionales del ciclo de vida de una aplicación informática, ¿qué actividad caracteriza principalmente la fase de Análisis**: La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software.. *La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software...*",
-      "**En el contexto de los lenguajes de programación como Java, ¿cuál es uno de los objetivos principales al utilizar máquinas virtuales y bytecode**: Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que tenga instalada la máquina virtual correspondiente.. *Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que...*",
-      "**Qué paradigma de programación se caracteriza por estructurar los programas en agrupaciones de código fuente (como funciones o procedimientos) y utilizar estructuras de control para determinar el flujo de ejecución**: Paradigma de Programación Estructurada.."
-    ]
-  },
-  "ed_tema_2": {
-    "name": "Tema 2: El IDE",
-    "points": [
-      "**Cuál es la característica principal que distingue a un Entorno de Desarrollo Integrado (IDE) moderno de las herramientas de programación más antiguas, como los editores simples de texto**: Los IDE modernos integran una amplia gama de herramientas para dar soporte a la mayoría de las actividades de desarrollo de software, incluyendo documentación, control de versiones y pruebas, más allá de la mera escritura y compilación de código.. *Los IDE modernos integran una amplia gama de herramientas para dar soporte a la mayoría de las actividades de desarrollo...*",
-      "**Al crear un nuevo proyecto en PyCharm para Python, ¿cuál es uno de los elementos clave que deben seleccionarse o configurarse, además de la ubicación del proyecto y la versión de Python a utilizar**: La ubicación del entorno virtual, que constituye un entorno de trabajo aislado para el proyecto.. *La ubicación del entorno virtual, que constituye un entorno de trabajo aislado para el proyecto.*",
-      "**Cómo gestionan típicamente los Entornos de Desarrollo Integrados (IDEs) la detección y notificación de errores en lenguajes de programación interpretados, como Python, en comparación con los lenguajes compilados**: En los lenguajes interpretados, los errores se detectan y muestran durante la fase de ejecución, mientras que en los lenguajes compilados, los errores son revisados y mostrados durante el proceso de compilación.. *En los lenguajes interpretados, los errores se detectan y muestran durante la fase de ejecución, mientras que en los len...*",
-      "**Antes de instalar PyCharm, ¿cuál es un paso previo recomendado para asegurar que todas las herramientas necesarias para el desarrollo en Python estén disponibles**: Descargar e instalar la última versión del intérprete de Python y sus herramientas.. *El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.*",
-      "**Basándose en la distinción entre categorías de software, ¿cuál es la característica que define al software libre en contraste con el software propietario**: El software libre permite el acceso a su código fuente para su estudio, comprensión y mejora, mientras que el software propietario restringe el acceso a su código, generalmente solo permitiéndolo a su dueño o creador.. *El software libre permite el acceso a su código fuente para su estudio, comprensión y mejora, mientras que el software p...*",
-      "**Cuál es el propósito principal de los \"plugins\" o \"módulos\" en un Entorno de Desarrollo Integrado (IDE)**: Permitir que el IDE se ejecute en diferentes sistemas operativos sin necesidad de recompilación.. *Permitir que el IDE se ejecute en diferentes sistemas operativos sin necesidad de recompilación.*",
-      "**Respecto a la generación de ejecutables, ¿qué se menciona específicamente sobre Python dentro de los entornos de desarrollo**: Generalmente no se generan archivos ejecutables en Python; en su lugar, los archivos de la aplicación se copian y se ejecutan llamando al intérprete.. *Generalmente no se generan archivos ejecutables en Python; en su lugar, los archivos de la aplicación se copian y se eje...*",
-      "**Según el contenido proporcionado, ¿cuál es una ventaja clave de los editores de código modernos en comparación con los Entornos de Desarrollo Integrados (IDEs)**: Los editores de código son más ligeros y consumen menos recursos del sistema, siendo adecuados para tipos específicos de desarrollo como las aplicaciones web de \"front-end\".. *Los editores de código son más ligeros y consumen menos recursos del sistema, siendo adecuados para tipos específicos de...*",
-      "**Qué aspectos de la interfaz de un IDE pueden ser típicamente personalizados por el usuario, como se ejemplifica con PyCharm**: La apariencia de sus elementos, como el tipo y tamaño de letra, la disposición de los paneles y el esquema de color a utilizar.. *La apariencia de sus elementos, como el tipo y tamaño de letra, la disposición de los paneles y el esquema de color a ut...*",
-      "**Además de la edición y compilación de código, ¿qué actividad de desarrollo moderna soportan los IDEs, lo que indica su papel en proyectos colaborativos**: El trabajo en equipo, el control de versiones y el seguimiento de incidencias, entre otras tareas.. *El trabajo en equipo, el control de versiones y el seguimiento de incidencias, entre otras tareas.*"
-    ]
-  },
-  "ed_tema_3": {
-    "name": "Tema 3: Introducción UML",
-    "points": [
-      "**En el contexto de las metodologías de desarrollo orientado a objetos, ¿cómo se posiciona UML**: UML no sigue ninguna metodología en concreto, sino que proporciona herramientas para aplicar en estas, permitiendo representar las diferentes partes estáticas o dinámicas del sistema como parte del trabajo metodológico.. *UML no sigue ninguna metodología en concreto, sino que proporciona herramientas para aplicar en estas, permitiendo repre...*",
-      "**Qué organismo internacional aprobó el lenguaje UML como estándar a partir del año 2004**: La Organización Internacional de Estandarización (ISO, International Organization for Standardization).. *NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.*",
-      "**Cuál es el objetivo fundamental del Lenguaje Unificado de Modelado (UML) según la introducción de la unidad**: Ofrecer herramientas para la representación gráfica y textual de un sistema informático, especialmente cuando se utiliza el paradigma de la orientación a objetos.. *Ofrecer herramientas para la representación gráfica y textual de un sistema informático, especialmente cuando se utiliza...*",
-      "**Dentro de los diagramas estructurales, ¿cuál de ellos permite representar no solo elementos software sino también el hardware del sistema, con el fin de documentar la explotación o ejecución de una aplicación**: El diagrama de lanzamiento o despliegue..",
-      "**Cuál es la característica principal de las herramientas CASE (Computer Aided Software Engineering) con soporte UML, en contraste con herramientas de dibujo genéricas**: Están diseñadas y construidas específicamente para ayudar en diferentes fases del proceso de creación de software, proporcionando soporte específico para UML.. *Están diseñadas y construidas específicamente para ayudar en diferentes fases del proceso de creación de software, propo...*",
-      "**Según la unidad, ¿cuál es probablemente el diagrama más habitual y útil de UML, que permite representar las clases del sistema, incluyendo sus atributos, métodos y las reglas entre ellas**: El diagrama de clases..",
-      "**Más allá de la generación de código a partir de diagramas, ¿qué otra capacidad valiosa suelen ofrecer las herramientas CASE con soporte UML para la documentación de proyectos existentes**: La ingeniería inversa, que permite generar diagramas de clase u otros a partir del código fuente ya programado.. *ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).*",
-      "**Según el glosario de la unidad, ¿cómo se define un \"Objeto\" en el contexto de la programación orientada a objetos y UML**: La concreción de una clase, también conocida como instancia.. *La respuesta es 'La concreción de una clase, también conocida como instancia.'.*",
-      "**Cuál de los diagramas de comportamiento se utiliza para representar de manera más detallada la secuencia de pasos que se van a realizar para una actividad, siendo más específico que un diagrama de caso de uso**: El diagrama de actividad.. *El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.*",
-      "**Los múltiples diagramas de UML, diseñados para cubrir diversas perspectivas de un sistema software, se agrupan en dos grandes categorías principales. ¿Cuáles son estas categorías**: Diagramas estructurales y diagramas de comportamiento.. *La respuesta es 'Diagramas estructurales y diagramas de comportamiento.'.*"
-    ]
-  },
-  "ed_tema_4": {
-    "name": "Tema 4: Diag. Estructurales",
-    "points": [
-      "**Además de la ayuda en la construcción visual de diagramas, ¿qué dos funcionalidades avanzadas y complementarias suelen ofrecer las herramientas CASE con soporte UML para mejorar la eficiencia del desarrollo de software**: Generación automática de código a partir de diagramas y la ingeniería inversa para obtener diagramas a partir de código fuente.. *Generación automática de código a partir de diagramas y la ingeniería inversa para obtener diagramas a partir de código ...*",
-      "**En un diagrama de clases UML, ¿cómo se representa una relación de Realización (o implementación) y qué concepto de la programación orientada a objetos refleja**: Mediante una línea punteada que termina en una punta de flecha hueca (o rellena de color blanco), que va desde la clase hacia la interfaz que implementa.. *El diagrama de clases UML muestra la estructura estática del sistema: clases, atributos, métodos y relaciones. Es el diagrama más usado en el diseño orientado a objetos.*",
-      "**Qué información crucial puede indicarse en los extremos de una línea de relación de Asociación en un diagrama de clases UML**: La multiplicidad (cuántas instancias de una clase pueden participar en la relación) y la navegabilidad (si se puede obtener referencia a los objetos del otro extremo).. *El diagrama de clases UML muestra la estructura estática del sistema: clases, atributos, métodos y relaciones. Es el diagrama más usado en el diseño orientado a objetos.*",
-      "**Cómo se distinguen visualmente las clases y los métodos abstractos en un diagrama de clases UML de aquellos que no lo son**: Sus nombres se escriben en cursiva.. *El diagrama de clases UML muestra la estructura estática del sistema: clases, atributos, métodos y relaciones. Es el diagrama más usado en el diseño orientado a objetos.*",
-      "**Cuál es la principal diferencia entre una relación de Composición y una de Agregación en UML, y cómo se representa la Composición**: La Composición es una relación fuerte donde las partes no tienen sentido independiente del conjunto y se eliminan con él (diamante sólido), mientras que la Agregación es débil donde las partes conservan su entidad (diamante hueco).. *La Composición es una relación fuerte donde las partes no tienen sentido independiente del conjunto y se eliminan con él...*",
-      "**En la notación de los diagramas de clases UML, ¿qué significa que un atributo o método esté precedido por el símbolo #**: Que tiene visibilidad protegida..",
-      "**Cuál es el papel principal del diagrama de clases en el diseño de software orientado a objetos según la Unidad 4**: Reflejar las clases que componen un sistema, incluyendo sus atributos, métodos y las relaciones entre ellas, para permitir a los desarrolladores escribir programas a partir de una especificación formal.. *Reflejar las clases que componen un sistema, incluyendo sus atributos, métodos y las relaciones entre ellas, para permit...*",
-      "**Si un atributo en una clase UML es estático, ¿cómo se indica esta característica en su representación gráfica dentro del diagrama de clases**: Debe ir subrayado..",
-      "**Qué tipo de relación UML se representa mediante una línea discontinua rematada en una punta de flecha que apunta a la clase que proporciona la funcionalidad, y qué significado tiene esta relación**: Relación de dependencia o de uso, representando que una clase utiliza la funcionalidad proporcionada por otra.. *Relación de dependencia o de uso, representando que una clase utiliza la funcionalidad proporcionada por otra.*",
-      "**Según la definición de la unidad, ¿en qué consiste el concepto de \"ingeniería inversa\" aplicado a los diagramas de clases en el contexto del desarrollo de software**: En la obtención de un diagrama de clases a partir del código fuente ya existente de una aplicación.. *En la obtención de un diagrama de clases a partir del código fuente ya existente de una aplicación.*"
-    ]
-  },
-  "ed_tema_5": {
-    "name": "Tema 5: Diag. Comportamiento",
-    "points": [
-      "**En un diagrama de secuencia, ¿qué representan la \"línea de vida\" y la \"barra de activación\" respectivamente**: La línea de vida es una línea vertical discontinua asociada a cada elemento que indica el orden de los eventos, mientras que la barra de activación representa el periodo de tiempo durante el que el elemento se encuentra activo en la resolución de la actividad.. *La línea de vida es una línea vertical discontinua asociada a cada elemento que indica el orden de los eventos, mientras...*",
-      "**Respecto a la relación de Inclusión (<<include>>) entre casos de uso en UML, ¿cuál de las siguientes afirmaciones es correcta**: Un caso de uso \"incluye\" a otro cuando lo utiliza internamente para llevar a cabo su funcionalidad, y la realización de ambos casos de uso es siempre obligatoria.. *Un caso de uso \"incluye\" a otro cuando lo utiliza internamente para llevar a cabo su funcionalidad, y la realización de ...*",
-      "**Qué tipo de diagrama de comportamiento se utiliza para representar de manera detallada la secuencia de pasos que se van a realizar para una actividad, incluyendo elementos como nodos inicial y final, actividades, decisiones y conexiones**: El diagrama de actividad.. *El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.*",
-      "**Cuál es una característica fundamental de la relación de Extensión (<<extend>>) en los diagramas de casos de uso UML**: Indica que un caso de uso \"extiende\" o amplía la funcionalidad de otro, añadiendo opcionalmente un punto de extensión para especificar las condiciones.. *Indica que un caso de uso \"extiende\" o amplía la funcionalidad de otro, añadiendo opcionalmente un punto de extensión pa...*",
-      "**Qué diagrama de comportamiento se considera una alternativa al diagrama de secuencia y se centra en las interacciones que realizan los objetos entre sí mediante el paso de mensajes, incluyendo un número secuencial en cada mensaje**: El diagrama de comunicación (conocido como diagrama de colaboración en versiones anteriores de UML).. *NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.*",
-      "**En un diagrama de casos de uso UML, ¿qué puede representar un \"Actor\"**: Cualquier elemento que se relaciona con el sistema, pudiendo ser una persona física (usuario) como otro sistema o subsistema (un programa informático o un sistema hardware).. *Cualquier elemento que se relaciona con el sistema, pudiendo ser una persona física (usuario) como otro sistema o subsis...*",
-      "**Qué se entiende por \"Escenario\" en el contexto de un diagrama de casos de uso**: Cada uno de los diferentes caminos que puede tomar un caso de uso, representando una secuencia de eventos posible para completar la interacción.. *Cada uno de los diferentes caminos que puede tomar un caso de uso, representando una secuencia de eventos posible para c...*",
-      "**Si el objetivo es representar los diferentes estados por los que atraviesa un componente, sistema o subsistema a lo largo de su ciclo de vida, y las transiciones que se producen entre ellos, ¿qué diagrama de comportamiento de UML sería el más adecuado**: El diagrama de estados o de máquina de estados.. *La respuesta es 'El diagrama de estados o de máquina de estados.'.*",
-      "**En el contexto de la elaboración de diagramas de comportamiento UML, ¿qué tipo de herramientas suelen proporcionar funcionalidades para su creación y qué ejemplo de plug-in para un Entorno de Desarrollo Integrado (IDE) popular se menciona**: Herramientas CASE están diseñadas para facilitar su creación, y plug-ins integrados en entornos de desarrollo (IDEs) como AmaterasUML para Eclipse también ofrecen soporte.. *Un IDE (Integrated Development Environment) integra editor de código, compilador/intérprete, depurador y otras herramientas en una única interfaz. Ejemplos: IntelliJ IDEA, Eclipse, VS Code.*",
-      "**Cuál es la principal característica que definen los diagramas de comportamiento en UML, diferenciándolos de los diagramas estructurales**: Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y transformación.. *Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y t...*"
-    ]
-  },
-  "ed_tema_6": {
-    "name": "Tema 6: Pruebas y Depuración",
-    "points": [
-      "**Cuál es el propósito principal de un depurador (debugger) y qué herramientas clave proporciona para lograrlo**: Ejecutar el programa línea a línea, permitiendo observar la ejecución, acceder a la memoria y examinar el valor de las variables en puntos de ruptura, con el fin de detectar errores o comprender el código.. *Ejecutar el programa línea a línea, permitiendo observar la ejecución, acceder a la memoria y examinar el valor de las v...*",
-      "**Quién es el principal responsable de realizar las pruebas unitarias y qué objetivo persiguen**: Los programadores, con el objetivo de verificar que un elemento mínimo funcional del programa (una función, un método o una clase) funciona correctamente.. *Los programadores, con el objetivo de verificar que un elemento mínimo funcional del programa (una función, un método o ...*",
-      "**Cuál es la distinción fundamental entre las pruebas de \"caja negra\" y las de \"caja blanca\"**: Las pruebas de caja negra verifican el funcionamiento externo de un componente sin mirar su interior, mientras que las de caja blanca (estructurales) observan la construcción interna buscando problemas de eficiencia o seguridad.. *Las pruebas de caja negra verifican el funcionamiento externo de un componente sin mirar su interior, mientras que las d...*",
-      "**Según la unidad, ¿cuáles de los siguientes son elementos esenciales que componen un caso de prueba**: Identificador, descripción, precondiciones, datos de prueba, pasos, resultado esperado, resultado obtenido y estado.. *El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.*",
-      "**Cuál de las siguientes afirmaciones sobre las pruebas de software es la más precisa según el contenido de la unidad**: Tanto la presencia de errores en el software como el esfuerzo por evitarlos tienen un coste asociado, y las pruebas son fundamentales para minimizar los problemas y asegurar la calidad.. *Tanto la presencia de errores en el software como el esfuerzo por evitarlos tienen un coste asociado, y las pruebas son ...*",
-      "**Cuándo se realizan las pruebas de regresión y cuál es su principal propósito**: Se llevan a cabo después de realizar cambios en el sistema (mejoras o corrección de errores) para comprobar que otras partes del sistema no se han visto afectadas negativamente.. *Se llevan a cabo después de realizar cambios en el sistema (mejoras o corrección de errores) para comprobar que otras pa...*",
-      "**Qué representa el concepto de \"cubrimiento\" o \"cobertura\" en el contexto de las pruebas de código**: El porcentaje del código fuente que ha sido probado, sirviendo como una métrica de la calidad de las pruebas.. *El porcentaje del código fuente que ha sido probado, sirviendo como una métrica de la calidad de las pruebas.*",
-      "**Cuál es la diferencia clave entre el análisis estático y el análisis dinámico en las pruebas de código**: El análisis estático se realiza sobre el código sin ejecutarlo, buscando ineficiencias o código muerto, mientras que el análisis dinámico comprueba el funcionamiento del código mediante su ejecución en diversos escenarios.. *El análisis estático se realiza sobre el código sin ejecutarlo, buscando ineficiencias o código muerto, mientras que el ...*",
-      "**Aunque las pruebas unitarias son imprescindibles, ¿por qué son también necesarias las pruebas de integración**: Los programas casi siempre funcionan dentro de sistemas más complejos y se relacionan con otros módulos o sistemas, por lo que las pruebas de integración verifican que el componente funciona correctamente en sus relaciones con estos.. *Los programas casi siempre funcionan dentro de sistemas más complejos y se relacionan con otros módulos o sistemas, por ...*",
-      "**En el contexto del ciclo de vida del software, ¿qué enfoque para la realización de pruebas se considera correcto y por qué**: En el ciclo de vida en V, cada fase de construcción lleva asociada una fase de pruebas para detectar errores lo antes posible y evitar arrastrarlos.. *En el ciclo de vida en V, cada fase de construcción lleva asociada una fase de pruebas para detectar errores lo antes po...*"
-    ]
-  },
-  "ed_tema_7": {
-    "name": "Tema 7: Optimización y Git",
-    "points": [
-      "**De las siguientes opciones, ¿cuál representa una de las técnicas o \"patrones\" de refactorización más usuales mencionados en la unidad**: La correcta composición de métodos (creando funciones para encapsular funcionalidad) y la organización de los datos (utilizando objetos y encapsulación).. *La correcta composición de métodos (creando funciones para encapsular funcionalidad) y la organización de los datos (uti...*",
-      "**Según el contenido de la unidad, ¿cuál es la razón fundamental por la que los sistemas de control de versiones son herramientas imprescindibles en la ingeniería de software, especialmente en desarrollos colectivos**: Facilitan el control sobre el código fuente y otros ficheros del sistema, su evolución, y permiten el trabajo en grupo minimizando el impacto de los cambios entre programadores.. *Facilitan el control sobre el código fuente y otros ficheros del sistema, su evolución, y permiten el trabajo en grupo m...*",
-      "**Flujo de Trabajo Básico con Git: Después de realizar modificaciones en los ficheros de un proyecto localmente, ¿cuáles son los dos comandos fundamentales en Git para primero hacer firmes esos cambios localmente y luego subirlos al repositorio remoto**: git commit para consolidar los cambios en el repositorio local y git push para subirlos al servidor remoto.. *COMMIT confirma permanentemente todos los cambios de la transacción actual. Una vez ejecutado, los cambios son visibles para otros usuarios y no se pueden deshacer con ROLLBACK.*",
-      "**Cuál de las siguientes afirmaciones describe con mayor precisión el propósito de la refactorización en el desarrollo de software**: La refactorización es un conjunto de técnicas que modifican un programa ya funcional para mejorar su legibilidad, eficiencia, comprensión y mantenimiento, sin alterar su comportamiento externo.. *La refactorización es un conjunto de técnicas que modifican un programa ya funcional para mejorar su legibilidad, eficie...*",
-      "**Herramientas de Ayuda a la Refactorización en IDEs: Los Entornos de Desarrollo Integrado (IDEs) como PyCharm ofrecen herramientas para la refactorización asistida. ¿Qué tipo de acción es un ejemplo de refactorización asistida directamente proporcionada por un IDE**: El renombrado automático de variables, funciones o clases en todo el proyecto, o la extracción de un bloque de código para crear un nuevo método.. *Un IDE (Integrated Development Environment) integra editor de código, compilador/intérprete, depurador y otras herramientas en una única interfaz. Ejemplos: IntelliJ IDEA, Eclipse, VS Code.*",
-      "**A pesar de que una refactorización de código no implica cambios en su funcionamiento, el manual indica que puede generar errores si se realiza incorrectamente. ¿Qué acciones se deben considerar para mitigar este riesgo**: Asegurarse de poder deshacer los cambios realizados (preferiblemente con sistemas de control de versiones) y ejecutar pruebas (unitarias, de regresión o de humo) para verificar la correcta funcionalidad del código modificado.. *Asegurarse de poder deshacer los cambios realizados (preferiblemente con sistemas de control de versiones) y ejecutar pr...*",
-      "**Restauración de Versiones Anteriores en Git: Si un programador necesita restaurar el estado de su repositorio local en Git a una versión anterior específica (por ejemplo, al estado de un \"primer commit\"), ¿qué comando debe utilizar y qué información es crucial para ello**: git reset --hard <identificador_del_commit> utilizando el identificador único del commit al que se desea regresar.. *COMMIT confirma permanentemente todos los cambios de la transacción actual. Una vez ejecutado, los cambios son visibles para otros usuarios y no se pueden deshacer con ROLLBACK.*",
-      "**Resolución de Conflictos en Sistemas de Control de Versiones: En un escenario de desarrollo colectivo, cuando varios programadores modifican el mismo fchero simultáneamente, pueden surgir confictos. ¿Qué comando de Git se menciona como el adecuado para resolver este tipo de problemas**: git merge para integrar cambios y resolver solapamientos.. *La respuesta es 'git merge para integrar cambios y resolver solapamientos.'.*",
-      "**En Python, además de los comentarios tradicionales (# o bloques con '''), existe un tipo de comentario formal que se utiliza para documentar funciones, clases y métodos, siendo visible con la función help() y en la ayuda contextual de los IDEs. ¿Cómo se denomina este tipo de comentario**: Docstring..",
-      "**Cuál es la principal distinción entre un sistema de control de versiones centralizado y uno distribuido**: En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, las copias se almacenan tanto en un servidor como en cada máquina de los integrantes del equipo.. *En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, l...*"
-    ]
-  },
-  "lm_tema_1": {
-    "name": "LM Tema 1: Introd. Marcas",
-    "points": [
-      "**Quién propuso la creación de un nuevo sistema de \"hipertexto\" en 1980 con el objetivo de facilitar el intercambio de documentos entre diferentes usuarios, lo que eventualmente dio origen a HTML**: Ser exclusivamente estructural, sin contener ninguna información relacionada con el diseño, y se utiliza para describir información y definir la estructura de datos de un documento.. *XML es un metalenguaje extensible y puramente estructural: no define cómo se presenta la información, solo su estructura y significado. HTML mezcla estructura y presentación. XML se usa para intercambio de datos entre sistemas.*"
-    ]
-  },
-  "lm_tema_2": {
-    "name": "LM Tema 2: HTML y CSS",
-    "points": [
-      "**Cuál es el objetivo principal del DOM (Modelo de Objetos de Documentos)**: enctype. *enctype=\"multipart/form-data\" es obligatorio para subir archivos en formularios HTML. Sin este atributo, el archivo no se envía correctamente. action indica la URL destino; method indica GET o POST; target indica dónde mostrar la respuesta.*"
-    ]
-  },
-  "lm_tema_3": {
-    "name": "LM Tema 3: XML y XSD",
-    "points": [
-      "**Según las reglas de las etiquetas XML para la buena formación de un documento, ¿cuál de las siguientes afirmaciones es correcta**: El elemento xs:sequence, que enumera los componentes de un tipo complejo indicando la secuencia obligatoria en que deben aparecer. *xs:sequence indica que los elementos hijos deben aparecer en el orden exacto definido. xs:choice permite solo uno de los elementos. xs:all permite cualquier orden.*"
-    ]
-  },
-  "lm_tema_4": {
-    "name": "LM Tema 4: Almacenamiento",
-    "points": [
-      "**Qué elemento se utiliza en un Schema XML (XSD) para definir tipos complejos que contienen otros elementos o atributos, y que permite especificar la secuencia u orden de aparición de sus hijos**: Un documento XML puede estar bien formado pero no ser válido si no cumple las restricciones de un DTD o XSD. *Un documento XML bien formado cumple las reglas sintácticas: un elemento raíz, todas las etiquetas cerradas, anidamiento correcto, atributos entre comillas y sensibilidad a mayúsculas.*"
-    ]
-  },
-  "lm_tema_5": {
-    "name": "LM Tema 5: XPath y XSLT",
-    "points": [
-      "**Qué característica clave introducida en XSLT 2.0 permite procesar documentos XML de gran tamaño sin cargar todo el documento en memoria**: Se mostrará una página en blanco o no se aplicará la transformación, incluso si el documento está bien formado.. *Chrome bloquea las transformaciones XSLT cuando se abre desde file:// por restricciones de seguridad CORS. La solución es usar un servidor web local. Este comportamiento es específico de Chrome; otros navegadores pueden comportarse diferente.*"
-    ]
-  },
-  "lm_tema_6": {
-    "name": "LM Tema 6: XQuery y BD-XML",
-    "points": [
-      "**Qué característica distingue a las bases de datos XML nativas y las hace especialmente eficientes para trabajar con documentos XML grandes y complejos**: XPath es un lenguaje para seleccionar nodos en documentos XML, mientras que XQuery, además de incluir XPath, es un lenguaje completo de consulta y transformación con sintaxis FLWOR. *XPath es un lenguaje para seleccionar nodos en documentos XML, mientras que XQuery, además de incluir XPath, es un lenguaje completo de consulta y transformación con sintaxis FLWOR es la respuesta correcta para esta pregunta del temario oficial.*"
-    ]
-  },
-  "lm_tema_7": {
-    "name": "LM Tema 7: RSS y Atom",
-    "points": [
-      "**En la estructura de un feed RSS 2.0, ¿cuáles son los tres elementos secundarios obligatorios que debe contener el elemento <channel>**: Suscribirse a fuentes de noticias en formatos RSS o Atom y notificar al usuario sobre las actualizaciones de contenido desde la última lectura. *Suscribirse a fuentes de noticias en formatos RSS o Atom y notificar al usuario sobre las actualizaciones de contenido desde la última lectura es la respuesta correcta para esta pregunta del temario oficial.*"
-    ]
-  },
-  "lm_tema_8": {
-    "name": "LM Tema 8: ERP y CRM",
-    "points": [
-      "**Cuál es el objetivo principal que persigue el uso de un software ERP unificado en una empresa en contraste con el uso de aplicaciones distintas por departamento**: Implementan las últimas novedades en seguridad de forma inmediata y aplican la seguridad por capas, reduciendo vulnerabilidades. *Implementan las últimas novedades en seguridad de forma inmediata y aplican la seguridad por capas, reduciendo vulnerabilidades es la respuesta correcta para esta pregunta del temario oficial.*"
-    ]
-  },
-  "emp_tema_1": {
-    "name": "UD1: Prevención de Riesgos I",
-    "points": [
-      "**Concepto de Salud (OMS)**: Bienestar físico, mental y social completo, no solo ausencia de afecciones.",
-      "**Condición de Trabajo**: Cualquier característica del trabajo que pueda tener una influencia significativa en la generación de riesgos para la seguridad y la salud.",
-      "**Daños Derivados**: Diferencia clave entre Accidente de Trabajo (lesión súbita con ocasión del trabajo, incluye *in itinere*) y Enfermedad Profesional (producida por exposición prolongada a agentes del listado oficial).",
-      "**LPRL 31/1995**: Marco normativo básico nacional derivado de las directivas europeas en materia de seguridad.",
-      "**Derechos del Trabajador**: Protección eficaz, información, formación, vigilancia periódica de la salud y paralización de actividad ante riesgo grave.",
-      "**Deberes del Trabajador**: Velar por su seguridad y la de sus compañeros, usar correctamente máquinas y equipos de protección, informar de riesgos inmediatos.",
-      "**Principios de Acción Preventiva**: Evitar riesgos, evaluar inevitables, combatir en origen y anteponer la protección colectiva a la individual.",
-      "**Patologías Psicosociales**: Fatiga, estrés laboral, Mobbing (acoso laboral) y Burnout (síndrome del trabajador quemado)."
-    ]
-  },
-  "emp_tema_2": {
-    "name": "UD2: Derechos y Deberes Laborales",
-    "points": [
-      "**Derecho del Trabajo**: Conjunto de normas que regulan la relación laboral por cuenta ajena y dependiente.",
-      "**Fuentes Laborales**: Constitución, Ley (Estatuto de los Trabajadores), Reglamentos, Convenios Colectivos y Contrato de Trabajo.",
-      "**El Contrato de Trabajo**: Acuerdo donde el trabajador presta servicios voluntarios, retribuidos y bajo la organización del empresario.",
-      "**Periodo de Prueba**: Tiempo para verificar aptitudes; permite rescindir el contrato sin preaviso ni indemnización.",
-      "**Jornada y Descansos**: Máximo 40h semanales de media anual. Descanso mínimo de 12h entre jornadas y 1,5 días semanales.",
-      "**El Salario**: Total de percepciones económicas por la prestación de servicios. Incluye salario base y complementos.",
-      "**Modificación del Contrato**: Movilidad funcional (cambio de tareas), geográfica (traslado/desplazamiento) y modificaciones sustanciales de condiciones.",
-      "**Causas de Extinción**: Despido (objetivo, disciplinario, colectivo), dimisión del trabajador, fin de contrato temporal o mutuo acuerdo.",
-      "**La Seguridad Social**: Sistema de protección pública ante contingencias (baja por enfermedad, maternidad, jubilación, desempleo)."
-    ]
-  },
-  "emp_tema_3": {
-    "name": "UD3: El Sector de la Informática",
-    "points": [
-      "**Estructura del Sector**: Sector tecnológico con alta tasa de empleabilidad y dinamismo constante en España y Europa.",
-      "**Perfiles DAW/DAM**: Desarrolladores, analistas, técnicos de soporte y especialistas en integración de aplicaciones.",
-      "**IA y Automatización**: Principales motores de cambio que están creando nuevos puestos y transformando las tareas de programación y gestión de datos.",
-      "**Soft Skills**: Creatividad, pensamiento crítico, trabajo en equipo y capacidad de comunicación son tan valoradas como las habilidades técnicas.",
-      "**Formación Continua**: Concepto de *Long-life learning*; dada la obsolescencia técnica, el aprendizaje debe ser constante durante toda la carrera.",
-      "**Relación Laboral Especial**: Posibilidad de teletrabajo regulado, flexibilización de horarios y organización por objetivos en el sector IT."
-    ]
-  },
-  "emp_tema_4": {
-    "name": "UD4: Autoconocimiento y Empleo",
-    "points": [
-      "**Análisis DAFO**: Técnica para evaluar Debilidades (internas), Amenazas (externas), Fortalezas (internas) y Oportunidades (externas).",
-      "**Itinerarios Formativos**: Opciones tras el ciclo (Grado Superior especializado, Certificaciones de fabricantes, Acceso a Universidad).",
-      "**Marca Personal**: Gestión de nuestra huella digital para proyectar una imagen profesional coherente en redes como GitHub o LinkedIn.",
-      "**Documentos de Búsqueda**: El CV debe ser claro y adaptado; la Carta de Motivación debe personalizar la candidatura a la empresa.",
-      "**Canales de Empleo**: Portales especializados (InfoJobs, TicJob), redes de contactos, agencias de colocación y ofertas de Europa (Europass).",
-      "**Entrevista de Trabajo**: Proceso de selección fundamental donde se evalúa la adecuación al puesto y las competencias sociales."
-    ]
-  },
-  "emp_tema_5": {
-    "name": "UD5: Entorno Personal de Aprendizaje",
-    "points": [
-      "**Concepto de PLE**: Entorno Personal de Aprendizaje (herramientas, servicios y conexiones que usamos para aprender autónomamente).",
-      "**Detección de Necesidades**: Proceso de autoevaluación para identificar carencias de conocimientos técnicos o transversales.",
-      "**Fuentes de Información**: Uso de MOOCs, documentación técnica oficial, repositorios (GitHub) y bibliotecas digitales académicas.",
-      "**Herramientas de Gestión**: Apps de notas (Notion, Evernote), marcadores (Pocket) y repositorios de contenido técnico.",
-      "**Plan de Desarrollo Personal (PDP)**: Documento estratégico para marcar metas profesionales y los pasos concretos para lograrlas.",
-      "**Identidad Digital**: Importancia de la privacidad y el comportamiento ético en la red para proteger nuestra reputación laboral."
-    ]
-  },
-  "emp_bateria": {
-    "name": "📋 Batería Examen (50 preguntas oficiales)",
-    "points": [
-      "**Cuando hablamos del Derecho del Trabajo dentro del sistema jurídico español, nos referimos a un conjunto de normas que no solo regulan la prestación de servicios, sino que también buscan corregir ciertos desequilibrios. ¿Cuál es su finalidad principal**: Pueden celebrarse tanto de forma verbal como por escrito, aunque algunos casos exigen forma escrita.. *El ET permite que los contratos se celebren verbalmente o por escrito. Sin embargo, algunos contratos deben formalizarse por escrito obligatoriamente (prácticas, formación, a tiempo parcial, fijos discontinuos, etc.). Si no se formaliza por escrito cuando es obligatorio, se presume indefinido.*"
-    ]
-  },
-  "emp_examen_final": {
-    "name": "🎯 SIMULACRO EXAMEN FINAL (50 preguntas)",
-    "points": [
-      "**Cuando hablamos del Derecho del Trabajo dentro del sistema jurídico español, nos referimos a un conjunto de normas que no solo regulan la prestación de servicios, sino que también buscan corregir ciertos desequilibrios. ¿Cuál es su finalidad principal**: Pueden celebrarse tanto de forma verbal como por escrito, aunque algunos casos exigen forma escrita.. *El ET permite que los contratos se celebren verbalmente o por escrito. Sin embargo, algunos contratos deben formalizarse por escrito obligatoriamente (prácticas, formación, a tiempo parcial, fijos discontinuos, etc.). Si no se formaliza por escrito cuando es obligatorio, se presume indefinido.*"
-    ]
-  },
-  "prog_tema_1": {
-    "name": "Tema 1: Fundamentos",
-    "points": [
-      "**Los lenguajes de programación utilizan distintos tipos de datos para representar la información y gestionar la memoria de forma adecuada. ¿Cuál de los siguientes no pertenece a los tipos de datos básicos o primitivos**: El dato es un valor aislado y la información es el resultado de procesar datos con un contexto.. *El dato es un valor aislado y la información es el resultado de procesar datos con un contexto.*"
-    ]
-  },
-  "prog_tema_2": {
-    "name": "Tema 2: Clases y Objetos",
-    "points": [
-      "**Los métodos permiten definir el comportamiento de los objetos y pueden devolver o no un valor. ¿Qué indica que un método tenga como tipo de retorno la palabra clave void**: El archivo debe llamarse igual que la clase pública y tener extensión .java.. *El archivo debe llamarse igual que la clase pública y tener extensión .java.*"
-    ]
-  },
-  "prog_tema_3": {
-    "name": "Tema 3: Variables y Control",
-    "points": [
-      "**Las variables en Java tienen un ciclo de vida y un proceso de uso muy definido. ¿Cuál es el orden correcto para poder utilizar una variable sin provocar un error de compilación**: Almacenan directamente el valor en memoria y no son objetos.. *La respuesta es 'Almacenan directamente el valor en memoria y no son objetos.'.*"
-    ]
-  },
-  "prog_tema_4": {
-    "name": "Tema 4: POO Avanzada",
-    "points": [
-      "**Cuál de las siguientes afirmaciones describe correctamente la relación entre una clase y un objeto**: El constructor vacío deja de existir si no se define explícitamente.. *El constructor inicializa los atributos del objeto en el momento de su creación con new. Tiene el mismo nombre que la clase y no tiene tipo de retorno. Si no se define, Java crea uno por defecto.*"
-    ]
-  },
-  "prog_tema_5": {
-    "name": "Tema 5: Arrays y Strings",
-    "points": [
-      "**En relación con los arrays multidimensionales en Java, ¿cuál de las siguientes afirmaciones es correcta**: Utilizando un método que evalúa el contenido textual (equals o compareTo).. *Utilizando un método que evalúa el contenido textual (equals o compareTo).*"
-    ]
-  },
-  "prog_tema_6": {
-    "name": "Tema 6: Herencia e Interfaces",
-    "points": [
-      "**Cuál es la diferencia fundamental de diseño entre una Clase Abstracta y una Interfaz**: Los padres siempre se inicializan antes que los hijos, empezando desde la clase Object.. *El constructor inicializa los atributos del objeto en el momento de su creación con new. Tiene el mismo nombre que la clase y no tiene tipo de retorno. Si no se define, Java crea uno por defecto.*"
-    ]
-  },
-  "prog_tema_7": {
-    "name": "Tema 7: Colecciones y Excepciones",
-    "points": [
-      "**Para qué se utiliza la palabra clave throws (en plural) en la firma de un método**: Siempre, independientemente de si se lanzó una excepción o si fue capturada.. *Siempre, independientemente de si se lanzó una excepción o si fue capturada.*"
-    ]
-  },
-  "prog_tema_8": {
-    "name": "Tema 8: Ficheros y Streams",
-    "points": [
-      "**Si un atributo de una clase se marca con la palabra clave transient, ¿qué ocurre durante la serialización**: Debe implementar la interfaz Serializable, que actúa como una \"interfaz de marcado\".. *Serializable es una interfaz marcadora (sin métodos) que indica que los objetos de esa clase pueden convertirse en bytes para almacenarse o enviarse por red. serialVersionUID controla la compatibilidad de versiones.*"
-    ]
-  },
-  "prog_tema_9": {
-    "name": "Tema 9: JDBC y Bases de Datos",
-    "points": [
-      "**Cuál es la función del \"Driver\" (Controlador) en una conexión JDBC**: Una API que proporciona un conjunto de interfaces estándar para interactuar con bases de datos independientemente del motor usado.. *JDBC (Java Database Connectivity) es la API estándar de Java para conectarse a bases de datos. El Driver traduce las llamadas JDBC al protocolo específico de cada SGBD (MySQL, Oracle, etc.).*"
-    ]
-  },
-  "prog_tema_10": {
-    "name": "Tema 10: BD Orientada a Objetos",
-    "points": [
-      "**Qué es el OID (Object Identifier) en una base de datos orientada a objetos**: El modo Embebido: la base de datos corre en el mismo proceso que la aplicación; el modo Servidor es un proceso independiente.. *En modo Embebido, la base de datos corre en el mismo proceso JVM que la aplicación (más rápido, un solo usuario). En modo Servidor, es un proceso independiente que acepta múltiples conexiones remotas.*"
-    ]
-  },
-  "si_tema_1": {
-    "name": "Tema 1: Redes y Hardware",
-    "points": [
-      "**Qué es una máquina de Turing**: Teclado.."
-    ]
-  },
-  "si_tema_2": {
-    "name": "Tema 2: Sistemas Operativos",
-    "points": [
-      "**Cuáles son los cuatro componentes principales de un sistema informático**: Gestionar y coordinar el uso de los recursos de hardware y software.. *Gestionar y coordinar el uso de los recursos de hardware y software.*"
-    ]
-  },
-  "si_tema_3": {
-    "name": "Tema 3: Almacenamiento",
-    "points": [
-      "**Qué tipo de particiones solo se pueden crear en un esquema MBR**: Unidad de estado sólido (SSD).."
-    ]
-  },
-  "si_tema_4": {
-    "name": "Tema 4: Usuarios y Permisos",
-    "points": [
-      "**Qué es un perfil de usuario local en Windows**: La contraseña debe contener una combinación de letras mayúsculas y minúsculas, números y símbolos.. *La contraseña debe contener una combinación de letras mayúsculas y minúsculas, números y símbolos.*"
-    ]
-  },
-  "si_tema_5": {
-    "name": "Tema 5: Redes TCP/IP",
-    "points": [
-      "**Cuál es un ejemplo de protocolo de enrutamiento dinámico**: WAN (Wide Area Network). *WAN (Wide Area Network) es una red de área amplia que conecta redes LAN separadas geográficamente. Internet es la WAN más grande del mundo. MAN cubre una ciudad; LAN cubre un edificio o campus; WLAN es la versión inalámbrica de LAN.*"
-    ]
-  },
-  "si_tema_6": {
-    "name": "Tema 6: Seguridad",
-    "points": [
-      "**Qué es el control de acceso basado en roles**: Para evitar que los usuarios accedan a recursos que no necesitan y reducir el riesgo de violaciones de seguridad.. *Para evitar que los usuarios accedan a recursos que no necesitan y reducir el riesgo de violaciones de seguridad.*"
-    ]
-  },
-  "si_tema_7": {
-    "name": "Tema 7: Software y Herramientas",
-    "points": [
-      "**Cuál es un ejemplo de software de recuperación de datos**: Que pueden crecer y evolucionar a medida que cambian las necesidades de la organización.. *Que pueden crecer y evolucionar a medida que cambian las necesidades de la organización.*"
-    ]
-  },
-  "si_practicas": {
-    "name": "🔧 Casos Prácticos (Examen Mayo)",
-    "points": [
-      "**En la empresa TodoEsGratis se necesita una topología que permita que si un cable falla, el resto de la red siga funcionando. ¿Qué topología cumple mejor este requisito**: Caso 3 (Particiones).. *La herramienta \"Administración de discos\" de Windows permite crear, eliminar, formatear y redimensionar particiones sin software adicional. Se accede desde el Panel de control o ejecutando diskmgmt.msc.*"
-    ]
-  },
-  "si_examen_final": {
-    "name": "🎯 SIMULACRO EXAMEN FINAL (60 preguntas)",
-    "points": [
-      "**En la empresa TodoEsGratis se necesita una topología que permita que si un cable falla, el resto de la red siga funcionando. ¿Qué topología cumple mejor este requisito**: Caso 3 (Particiones).. *La herramienta \"Administración de discos\" de Windows permite crear, eliminar, formatear y redimensionar particiones sin software adicional. Se accede desde el Panel de control o ejecutando diskmgmt.msc.*"
-    ]
-  },
   "cc_tema_1": {
-    "name": "Tema 1: Conceptos Cloud",
+    "name": "Tema 1: Conceptos Cloud (Extendido)",
     "points": [
-      "**Cuál de las siguientes es una ventaja de la computación en la nube**: PaaS.. *PaaS (Platform as a Service) proporciona una plataforma completa de desarrollo y despliegue. El proveedor gestiona la infraestructura; el usuario solo despliega aplicaciones. Ejemplo: Google App Engine.*"
+      "**Ventajas Cloud**: Acceso ubicuo, reducción de costes operativos y eliminación de la dependencia del hardware local.",
+      "**Escalabilidad Elástica**: Capacidad de aumentar o reducir recursos automáticamente según la demanda en tiempo real.",
+      "**Riesgos**: Dependencia del proveedor (Vendor Lock-in) y necesidad de conexión constante a Internet.",
+      "**Redundancia**: Garantiza la disponibilidad de los servicios replicando datos en diferentes zonas en caso de fallos.",
+      "**Modelos de Implementación**: Nube Pública (abierta), Privada (exclusiva) e Híbrida (combinación de ambas).",
+      "**Modelos de Servicio**: IaaS (Infraestructura), PaaS (Plataforma para devs) y SaaS (Software listo para usar).",
+      "**Migración**: Proceso que requiere evaluación de necesidades, planificación de datos y pruebas rigurosas.",
+      "**Pago por Uso**: Modelo financiero donde solo se factura lo que realmente se consume (OPEX vs CAPEX).",
+      "**Agilidad**: Permite desplegar recursos en cuestión de minutos en lugar de semanas de adquisición física.",
+      "**Actualización Continua**: El proveedor mantiene el hardware y parchea el software de infraestructura.",
+      "**Seguridad Física**: Los centros de datos cloud tienen medidas de seguridad extremas (biometría, vigilancia 24/7).",
+      "**Economía de Escala**: Los grandes proveedores compran hardware masivamente, reduciendo el precio final.",
+      "**API-Driven**: Toda la infraestructura se puede gestionar mediante código (Infrastructure as Code).",
+      "**Globalización**: Despliegue de aplicaciones cerca de los usuarios finales en segundos.",
+      "**Resiliencia**: Capacidad de recuperarse rápidamente de desastres mediante backups y replicación.",
+      "**Multitenancy**: Múltiples clientes comparten los mismos recursos físicos de forma segura y aislada.",
+      "**Abstracción**: El usuario no necesita conocer los detalles técnicos del hardware subyacente.",
+      "**Time-to-Market**: Reduce drásticamente el tiempo necesario para lanzar nuevos productos al mercado.",
+      "**Sostenibilidad**: Los servidores en la nube suelen ser más eficientes energéticamente que los locales.",
+      "**Foco en el Negocio**: Permite que las empresas se centren en su producto en lugar de en mantener servidores."
     ]
   },
   "cc_tema_2": {
-    "name": "Tema 2: Economía y Facturación",
+    "name": "Tema 2: Economía y Facturación (Extendido)",
     "points": [
-      "**Qué ventaja ofrece la escalabilidad en la nube**: Uso de inteligencia artificial y aprendizaje automático para optimizar los costes. *Uso de inteligencia artificial y aprendizaje automático para optimizar los costes*"
+      "**Facturación Bajo Demanda**: Recursos facturados por segundos o minutos, ideal para picos de tráfico impredecibles.",
+      "**Instancias Reservadas**: Descuentos de hasta el 75% a cambio de un compromiso de 1 o 3 años.",
+      "**Instancias Spot**: Uso de capacidad sobrante del proveedor con grandes descuentos, pero pueden ser interrumpidas.",
+      "**Facturación Consolidada**: Gestión de múltiples cuentas desde una sola plataforma para obtener descuentos por volumen.",
+      "**TCO (Total Cost of Ownership)**: Análisis comparativo que incluye hardware, energía, personal y costes de nube.",
+      "**Monitoreo de Costes**: Herramientas que analizan tendencias y envían alertas antes de superar presupuestos.",
+      "**Etiquetado (Tagging)**: Asignar metadatos a recursos para identificar qué departamento o proyecto genera el gasto.",
+      "**Soporte**: Diferentes niveles (Básico, Developer, Business, Enterprise) según el tiempo de respuesta requerido.",
+      "**Costes Directos vs Indirectos**: La nube elimina costes de electricidad, espacio y mantenimiento físico.",
+      "**CAPEX a OPEX**: Cambio de grandes inversiones iniciales a gastos operativos variables y predecibles.",
+      "**Optimization Advisor**: Herramientas que sugieren apagar recursos infrautilizados para ahorrar dinero.",
+      "**Free Tier**: Capas gratuitas limitadas para que los nuevos usuarios prueben servicios sin coste.",
+      "**Coste de Transferencia de Datos**: Generalmente gratuito para entrada, pero facturable para salida de la red del proveedor.",
+      "**Budgeting**: Establecer límites de gasto mensuales con acciones automáticas (como detener instancias).",
+      "**Marketplace**: Compra de software de terceros directamente integrado y facturado en la cuenta cloud.",
+      "**Cost Explorer**: Herramienta visual para analizar patrones de consumo históricos y futuros.",
+      "**Descuentos por Uso Continuado**: Rebajas automáticas por mantener recursos encendidos durante la mayor parte del mes.",
+      "**Serverless Pricing**: Pago estricto por ejecución; si nadie usa la app, el coste es exactamente cero.",
+      "**Savings Plans**: Compromisos flexibles de gasto por hora que cubren múltiples tipos de cómputo.",
+      "**Calculadoras de Costes**: Herramientas oficiales para estimar presupuestos antes de realizar cualquier despliegue."
     ]
   },
   "cc_tema_3": {
-    "name": "Tema 3: Infraestructura",
+    "name": "Tema 3: Infraestructura Global (Extendido)",
     "points": [
-      "**Cuál es una ventaja de las redes de fibra óptica en la nube**: Microsoft Azure."
+      "**Regiones**: Áreas geográficas aisladas que contienen múltiples zonas de disponibilidad para baja latencia.",
+      "**Zonas de Disponibilidad (AZ)**: Centros de datos físicamente separados dentro de una región para alta disponibilidad.",
+      "**Puntos de Presencia (Edge Locations)**: Ubicaciones que cachean contenido cerca de los usuarios finales (CDN).",
+      "**Centros de Datos**: Instalaciones con miles de servidores físicos, refrigeración y redundancia eléctrica extrema.",
+      "**Red Global**: Fibra óptica privada de alta velocidad que conecta todas las regiones del proveedor.",
+      "**Sostenibilidad**: Compromiso de los proveedores para usar energía 100% renovable en sus centros de datos.",
+      "**Arquitectura Multiregión**: Estrategia para desplegar apps globalmente y cumplir con leyes de residencia de datos.",
+      "**Aislamiento de Recursos**: Garantía de que los fallos en una zona no afecten a las demás.",
+      "**Baja Latencia**: El objetivo de tener centros de datos en todo el mundo es reducir el tiempo de respuesta.",
+      "**Conectividad Inter-Región**: Transferencia de datos segura entre regiones sin pasar por el internet público.",
+      "**Zonas Locales**: Extensiones de regiones para colocar recursos muy cerca de grandes núcleos de población.",
+      "**Wavelength**: Integración de infraestructura cloud en redes 5G para aplicaciones móviles ultra-rápidas.",
+      "**Outposts**: Hardware del proveedor instalado físicamente en el centro de datos del propio cliente.",
+      "**Resiliencia de Desastres**: Copias de seguridad automáticas en regiones distantes ante catástrofes naturales.",
+      "**Cumplimiento Geográfico**: Permite elegir dónde se guardan los datos para cumplir con el RGPD.",
+      "**Infraestructura como Código (IaC)**: Definir toda esta red mediante archivos de configuración (Terraform/CloudFormation).",
+      "**Monitoreo de Infraestructura**: Herramientas que informan en tiempo real de caídas globales de servicios.",
+      "**Hardware Personalizado**: Los proveedores diseñan sus propios chips (ej: Graviton) para mayor eficiencia.",
+      "**Zonas de Seguridad**: Capas de red aisladas para proteger la infraestructura crítica.",
+      "**Escalabilidad Infinita**: La percepción de que siempre hay recursos disponibles sin importar cuánto crezcamos."
     ]
   },
   "cc_tema_4": {
-    "name": "Tema 4: Seguridad en la Nube",
+    "name": "Tema 4: Seguridad y Cumplimiento (Extendido)",
     "points": [
-      "**Cuál de los siguientes métodos de control de acceso permite asignar permisos específicos según la función del usuario en la empresa**: Para mejorar la seguridad de las cuentas y reducir el riesgo de ataques. *Las políticas de contraseñas fuertes mejoran la seguridad de las cuentas y reducen el riesgo de ataques de fuerza bruta, diccionario y accesos no autorizados.*"
+      "**Modelo de Responsabilidad Compartida**: El proveedor asegura la infraestructura; el cliente asegura sus datos y apps.",
+      "**IAM (Gestión de Identidades)**: Control fino de quién puede acceder a qué recurso (Usuarios, Grupos, Roles).",
+      "**Principio de Menor Privilegio**: Asignar solo los permisos mínimos necesarios para realizar una tarea.",
+      "**VPC (Nube Privada Virtual)**: Red virtual aislada donde el cliente define IPs, subredes y tablas de ruteo.",
+      "**Grupos de Seguridad**: Firewalls virtuales a nivel de instancia que controlan el tráfico entrante y saliente.",
+      "**Cifrado**: Protección de datos en reposo (almacenados) y en tránsito (mientras viajan por la red).",
+      "**MFA (Autenticación Multifactor)**: Añade una capa extra de seguridad obligando a usar un segundo dispositivo.",
+      "**Cumplimiento Normativo**: Certificaciones (ISO, SOC, RGPD) que aseguran que el proveedor cumple leyes internacionales.",
+      "**Protección contra DDoS**: Servicios automáticos que filtran ataques de denegación de servicio masivos.",
+      "**Key Management Service (KMS)**: Gestión centralizada de claves criptográficas para el cifrado de datos.",
+      "**Auditoría (Logging)**: Registro detallado de todas las llamadas a la API y cambios en la infraestructura.",
+      "**WAF (Firewall de Aplicaciones Web)**: Protege contra ataques comunes como SQL Injection o Cross-Site Scripting.",
+      "**Escaneo de Vulnerabilidades**: Herramientas que detectan configuraciones inseguras de forma automática.",
+      "**Aislamiento de Red**: Uso de subredes privadas para bases de datos sin acceso directo desde internet.",
+      "**Certificados SSL/TLS**: Gestión automatizada de certificados para conexiones HTTPS seguras.",
+      "**Políticas de Contraseñas**: Obligar a rotaciones periódicas y requisitos mínimos de complejidad.",
+      "**Protección de Datos**: Herramientas para descubrir y clasificar datos sensibles (DNI, tarjetas de crédito).",
+      "**Respuesta ante Incidentes**: Planes automatizados para aislar recursos comprometidos en segundos.",
+      "**Hardware Security Module (HSM)**: Dispositivos físicos dedicados para el almacenamiento de claves de máxima seguridad.",
+      "**Trust Advisor**: Panel de control que alerta sobre riesgos de seguridad y ahorros potenciales."
     ]
   },
   "cc_tema_5": {
-    "name": "Tema 5: Redes y CDN",
+    "name": "Tema 5: Redes y Entrega de Contenidos (Extendido)",
     "points": [
-      "**Cuál de los siguientes es un beneficio clave de una nube privada virtual (VPC)**: SSL/TLS."
+      "**DNS en Cloud**: Traduce nombres de dominio a IPs y puede dirigir tráfico según salud o cercanía.",
+      "**CDN (Content Delivery Network)**: Red que distribuye contenido estático (imágenes/video) para carga ultra-rápida.",
+      "**Balanceo de Carga (ELB)**: Distribuye el tráfico entrante entre varios servidores para evitar saturaciones.",
+      "**VPN**: Conexión cifrada segura entre la red local de la empresa y la infraestructura en la nube.",
+      "**Direct Connect**: Conexión física dedicada entre el on-premise y el cloud (sin pasar por el internet público).",
+      "**Subredes Públicas vs Privadas**: Las públicas tienen acceso directo a internet; las privadas no (por seguridad).",
+      "**Gateways**: Puertas de enlace que permiten a los recursos privados actualizarse sin ser accesibles desde fuera.",
+      "**Reglas de Ruteo**: Definen el camino que siguen los paquetes de datos dentro de la red virtual.",
+      "**IPv4 e IPv6**: Soporte para ambos protocolos de direccionamiento IP en la infraestructura cloud.",
+      "**Tráfico Unicast y Anycast**: Técnicas para dirigir a los usuarios al punto de red más cercano.",
+      "**Latencia de Red**: Minimización de retardos mediante el uso de la red privada del proveedor.",
+      "**Aceleración Global**: Uso de la red troncal del proveedor para saltar sobre el internet público inestable.",
+      "**Caché de Borde**: Almacenamiento temporal de datos en ubicaciones físicas cercanas al usuario.",
+      "**Protección de Origen**: Ocultar la IP real de los servidores tras un balanceador o una red de contenido.",
+      "**Enrutamiento Basado en Latencia**: Enviar al usuario a la región que le responda más rápido.",
+      "**Failover de DNS**: Cambiar automáticamente la IP del dominio si el servidor principal falla.",
+      "**VPC Peering**: Conexión directa y privada entre dos redes virtuales diferentes (incluso de distintas cuentas).",
+      "**Transit Gateway**: Hub central para conectar miles de VPCs y redes locales de forma simplificada.",
+      "**NAT Gateway**: Permite a instancias en subredes privadas salir a internet pero impide que internet entre a ellas.",
+      "**Internet Gateway**: El componente que permite la comunicación entre la VPC e internet."
     ]
   },
   "cc_tema_6": {
-    "name": "Tema 6: Servicios de Cómputo",
+    "name": "Tema 6: Servicios de Cómputo (Extendido)",
     "points": [
-      "**Cuál es una de las principales ventajas de los servicios de cómputo en comparación con la computación tradicional**: PaaS. *PaaS (Platform as a Service) proporciona un entorno completo de desarrollo y despliegue de aplicaciones. El proveedor gestiona la infraestructura; el usuario solo despliega aplicaciones. Ejemplo: Google App Engine.*"
+      "**Máquinas Virtuales (VM)**: Alquiler de potencia de cálculo completa con elección de SO y recursos fijos.",
+      "**Contenedores**: Empaquetado ligero que incluye la app y sus dependencias (comparte el kernel del host).",
+      "**Serverless (FaaS)**: Ejecución de código sin gestionar servidores; solo pagas por milisegundo de ejecución.",
+      "**Orquestación (Kubernetes)**: Herramientas para gestionar, escalar y desplegar miles de contenedores automáticamente.",
+      "**Auto-Scaling**: Servicio que añade o quita servidores automáticamente según el uso de CPU o RAM.",
+      "**Optimización de Cómputo**: Elegir el tipo de procesador (General, Memoria, GPU) según la carga de trabajo.",
+      "**Imágenes de Máquina (AMI)**: Plantillas preconfiguradas con SO y software para lanzar nuevas instancias rápido.",
+      "**Ciclo de Vida de Instancia**: Estados de Pendiente, Ejecución, Parada, Reinicio y Terminación.",
+      "**Batch Processing**: Ejecución masiva de tareas de cómputo en segundo plano de forma eficiente.",
+      "**Computación en el Borde (Edge)**: Ejecutar pequeña lógica de código en las ubicaciones de la CDN.",
+      "**Tipos de Instancia**: Micro (pruebas), Compute Optimized (IA), Memory Optimized (BD), GPU (Video/ML).",
+      "**Elasticidad**: Capacidad de redimensionar una instancia o añadir más según la demanda.",
+      "**Despliegue Green/Blue**: Técnica para actualizar apps sin tiempo de caída cambiando el tráfico entre versiones.",
+      "**Monitoreo de Salud**: Reiniciar automáticamente una instancia si el hardware subyacente falla.",
+      "**Logs de Aplicación**: Centralizar todos los registros de los servidores en un solo lugar para depuración.",
+      "**Elastic Beanstalk**: Servicio que despliega y escala automáticamente aplicaciones web sin configurar servidores.",
+      "**Lightsail**: Servidores virtuales VPS simplificados para proyectos pequeños con precio fijo mensual.",
+      "**App Runner**: Despliegue directo de contenedores desde el código fuente sin gestionar infraestructura.",
+      "**Fargate**: Ejecución de contenedores serverless (olvídate de gestionar los clusters de servidores).",
+      "**GPU v2**: Instancias con potentes tarjetas gráficas para entrenamiento de modelos de Inteligencia Artificial."
     ]
   },
   "cc_tema_7": {
-    "name": "Tema 7: Almacenamiento",
+    "name": "Tema 7: Servicios de Almacenamiento (Extendido)",
     "points": [
-      "**Qué característica es común en los servicios de almacenamiento en la nube**: Almacenamiento de objetos. *El almacenamiento de objetos es más adecuado para análisis de datos a gran escala (data lakes), ya que permite almacenar grandes volúmenes de datos no estructurados accesibles mediante APIs.*"
+      "**Almacenamiento de Objetos (S3)**: Almacén infinito para archivos, accesible vía web y con durabilidad extrema.",
+      "**Almacenamiento de Bloque (EBS)**: Discos duros virtuales de alto rendimiento conectados a las VMs.",
+      "**Almacenamiento de Archivos (EFS/NFS)**: Sistemas de ficheros compartidos por múltiples servidores a la vez.",
+      "**Clases de Almacenamiento**: Estándar (frecuente), Infrequent Access (ahorro) y Glacier (archivo largo plazo).",
+      "**Durabilidad vs Disponibilidad**: Durabilidad (no perder el dato) vs Disponibilidad (poder acceder a él ahora).",
+      "**Versionado**: Permite recuperar versiones anteriores de un archivo tras un borrado o edición accidental.",
+      "**Políticas de Ciclo de Vida**: Mover automáticamente archivos a opciones más baratas tras X días sin uso.",
+      "**Transferencia de Datos**: Herramientas para subir Terabytes o Petabytes de datos de forma física o por red.",
+      "**Snapshots**: Copias de seguridad instantáneas de discos EBS que se pueden restaurar en segundos.",
+      "**Cifrado de Datos**: Encriptación automática de archivos al guardarlos para cumplir con la seguridad.",
+      "**Réplica Multi-Región**: Copiar datos automáticamente a otra parte del mundo para máxima seguridad.",
+      "**Almacenamiento en Memoria**: Discos efímeros de muy alta velocidad para datos temporales (Caché).",
+      "**Storage Gateway**: Conecta el almacenamiento local con la nube de forma transparente.",
+      "**Consistencia de Datos**: Garantía de que los datos escritos se leen correctamente de forma inmediata o eventual.",
+      "**Acceso Vía API**: S3 permite subir y bajar archivos mediante llamadas HTTP simples.",
+      "**Integridad de Datos**: Comprobaciones automáticas de que los archivos no se han corrompido.",
+      "**Políticas de Bucket**: Control granular de quién puede ver o subir archivos a una carpeta.",
+      "**S3 Transfer Acceleration**: Usa la red global de borde para subir archivos pesados mucho más rápido.",
+      "**Intelligent Tiering**: IA que mueve tus archivos entre capas de precio según la frecuencia real de uso.",
+      "**NFS/SMB en Cloud**: Protocolos estándar para que las apps antiguas usen almacenamiento en la nube."
     ]
   },
   "cc_tema_8": {
-    "name": "Tema 8: Bases de Datos Cloud",
+    "name": "Tema 8: Servicios de Bases de Datos (Extendido)",
     "points": [
-      "**Cuál de las siguientes es una característica de las bases de datos analíticas**: Escalabilidad. *La escalabilidad permite que los servicios de bases de datos ajusten su capacidad según la demanda, aumentando o reduciendo recursos de forma dinámica.*"
+      "**Bases de Datos Relacionales (RDS)**: Servicios gestionados para SQL (MySQL, PostgreSQL, Oracle, SQL Server).",
+      "**Bases de Datos NoSQL**: Optimizadas para grandes volúmenes, esquemas flexibles y baja latencia (Key-Value).",
+      "**Data Warehousing (Redshift)**: Bases de datos analíticas para procesar Terabytes de datos históricos complejos.",
+      "**Bases de Datos In-Memory**: Almacenamiento en RAM (Redis) para respuestas en microsegundos (caché).",
+      "**Migración de BD (DMS)**: Herramientas para mover bases de datos al cloud con el mínimo tiempo de inactividad.",
+      "**Multi-AZ Deployment**: Réplica síncrona de la base de datos en otra zona para failover automático.",
+      "**Read Replicas**: Copias sólo de lectura para descargar de trabajo al servidor de base de datos principal.",
+      "**Backups Automatizados**: Copias de seguridad diarias y registros de transacciones para recuperar cualquier minuto.",
+      "**Parcheo Automático**: El proveedor aplica actualizaciones de seguridad al motor de la base de datos.",
+      "**Escalabilidad de Almacenamiento**: Aumentar el tamaño del disco de la BD sin apagar el servicio.",
+      "**Aurora**: Base de datos relacional diseñada para el cloud, 5 veces más rápida que MySQL estándar.",
+      "**DynamoDB**: Base de datos NoSQL serverless que escala a millones de peticiones por segundo sin esfuerzo.",
+      "**DocumentDB**: Base de datos gestionada compatible con MongoDB para aplicaciones de contenido.",
+      "**Neptune**: Base de datos de grafos para redes sociales o sistemas de recomendación complejos.",
+      "**ElastiCache**: Servicio de gestión de caché en memoria para acelerar aplicaciones web.",
+      "**Bases de Datos de Series Temporales**: Optimizadas para datos de sensores (IoT) e historial de métricas.",
+      "**Seguridad de Red**: Las bases de datos deben estar en subredes privadas, inaccesibles desde internet.",
+      "**Instantáneas de BD**: Permiten crear clones exactos de una base de datos de producción para pruebas.",
+      "**Puntos de Recuperación (PITR)**: Posibilidad de restaurar la BD a cualquier segundo exacto de los últimos 35 días.",
+      "**Serverless Database**: La base de datos se enciende y apaga sola según las consultas recibidas."
     ]
   },
   "cc_tema_9": {
-    "name": "Tema 9: Arquitectura Cloud",
+    "name": "Tema 9: Arquitectura en la Nube (Extendido)",
     "points": [
-      "**Cuál de estas estrategias ayuda a optimizar el costo de los recursos en la nube**: Implementar estrategias de respaldo y recuperación. *La respuesta es 'Implementar estrategias de respaldo y recuperación'.*"
+      "**Bien Arquitecturado (Well-Architected)**: Marco de trabajo con 5 pilares: Excelencia, Seguridad, Fiabilidad, Rendimiento y Coste.",
+      "**Alta Disponibilidad**: Diseñar sistemas para que sigan funcionando aunque falle un centro de datos entero.",
+      "**Tolerance a Fallos**: Capacidad de un sistema de seguir operando a pesar de la pérdida de componentes.",
+      "**Acoplamiento Débil (Loose Coupling)**: Diseñar componentes independientes para que el fallo de uno no hunda el sistema.",
+      "**Microservicios**: Dividir una aplicación grande en piezas pequeñas que se comunican por red.",
+      "**Despliegue Multi-Capa**: Separar Web, App y Base de Datos en capas de seguridad diferentes.",
+      "**Arquitectura Conducida por Eventos**: Las acciones se disparan por cambios de estado (ej: subir un archivo).",
+      "**Recuperación ante Desastres (DR)**: Planes para restaurar todo el negocio en otra región en caso de catástrofe.",
+      "**RTO (Recovery Time Objective)**: Tiempo máximo que el negocio puede estar parado tras un fallo.",
+      "**RPO (Recovery Point Objective)**: Cantidad máxima de datos en tiempo que el negocio puede permitirse perder.",
+      "**Escalado Predictivo**: Usar IA para encender servidores antes de que llegue el tráfico esperado.",
+      "**Almacenamiento de Estado Externo**: Guardar las sesiones de usuario en una BD para que los servidores sean intercambiables.",
+      "**Seguridad por Diseño**: Integrar firewalls y cifrado desde el primer minuto de la arquitectura.",
+      "**Optimización de Costes**: Reemplazar servicios caros por opciones serverless o instancias reservadas.",
+      "**Sistemas Distribuidos**: Uso de colas de mensajes (SQS) para que las tareas no se pierdan si un servidor cae.",
+      "**Piloto Automático**: Automatizar la respuesta a fallos comunes sin intervención humana.",
+      "**Caché en Todas las Capas**: Usar CDN, ElastiCache y DaX para que la BD trabaje lo mínimo posible.",
+      "**Infraestructura Inmutable**: No arreglar servidores; reemplazarlos por versiones nuevas ya configuradas.",
+      "**Pruebas de Caos**: Forzar fallos en producción para verificar que la arquitectura es realmente resiliente.",
+      "**Residencia de Datos**: Asegurar que los datos de clientes europeos no salen nunca de regiones de la UE."
     ]
   },
   "cc_tema_10": {
-    "name": "Tema 10: Escalado y Monitorización",
+    "name": "Tema 10: Escalado y Monitorización (Extendido)",
     "points": [
-      "**Cuál es la principal diferencia entre el escalado horizontal y vertical**: Configurar reglas de escalado precisas y monitorear continuamente la aplicación. *Configurar reglas de escalado precisas y monitorear continuamente la aplicación*"
+      "**CloudWatch / Monitor**: Servicio central para ver métricas de CPU, RAM, Red y Disco en tiempo real.",
+      "**Métricas Personalizadas**: Posibilidad de enviar datos propios de la app (ej: 'usuarios conectados').",
+      "**Alarmas de Monitorización**: Acciones automáticas disparadas cuando una métrica cruza un umbral (ej: enviar email).",
+      "**CloudTrail / Auditoría**: Registro de quién hizo qué, cuándo y desde dónde en el panel de control cloud.",
+      "**Auto Scaling Groups**: Define cuántas instancias debe haber como mínimo y máximo para una aplicación.",
+      "**Políticas de Escalado**: Reglas como 'añade 2 servidores si la CPU supera el 70% durante 5 minutos'.",
+      "**Escalado Vertical**: Aumentar la potencia (CPU/RAM) de un servidor existente (requiere reinicio).",
+      "**Escalado Horizontal**: Añadir más servidores idénticos para repartir la carga (sin tiempo de caída).",
+      "**Dashboards de Monitorización**: Paneles visuales para que el equipo vea la salud del sistema de un vistazo.",
+      "**Retención de Logs**: Guardar los registros de errores durante meses para análisis forense o legal.",
+      "**Análisis de Rendimiento (Insights)**: Búsquedas ultra-rápidas en millones de líneas de log para hallar errores.",
+      "**Monitorización de Aplicación (APM)**: Ver exactamente qué línea de código está haciendo lenta la web.",
+      "**Sintéticos / Canarios**: Scripts que simulan usuarios reales 24/7 para detectar caídas antes que el cliente.",
+      "**Análisis de Costes en Monitorización**: Ver cuánto dinero está costando cada servicio en tiempo real.",
+      "**Agentes de Monitorización**: Pequeño software instalado en el servidor para ver métricas internas profundas.",
+      "**Seguimiento de Peticiones (Tracing)**: Rastrear una petición desde la web hasta la base de datos cruzando servicios.",
+      "**Eventos Programados**: Ejecutar tareas (como backups) de forma automática usando cron en la nube.",
+      "**Notificaciones Push/SMS**: Alertas inmediatas a los técnicos cuando ocurre un error crítico detectado.",
+      "**Salud de Recursos**: Ver avisos del proveedor sobre mantenimientos programados del hardware físico.",
+      "**Optimización de Recursos**: Recomendaciones automáticas para cambiar tipos de instancia basándose en métricas reales."
+    ]
+  },
+  "prog_tema_1": {
+    "name": "Tema 1: Fundamentos de Programación",
+    "points": [
+      "**Algoritmo**: Secuencia finita, ordenada y clara de pasos para resolver un problema específico.",
+      "**Programa**: Implementación práctica de un algoritmo mediante un lenguaje de programación.",
+      "**Paradigma Imperativo**: Se basa en dar instrucciones detalladas al ordenador sobre cómo cambiar su estado.",
+      "**Paradigma Declarativo**: Se describe el resultado deseado (el 'qué') en lugar del proceso detallado (el 'cómo').",
+      "**Tipos de Datos Primitivos**: Elementos básicos como int (enteros), boolean (verdadero/falso) y char (carácter).",
+      "**Variables**: Espacios reservados en memoria con un nombre y un tipo para almacenar datos que pueden cambiar.",
+      "**Constantes**: Valores que no cambian durante toda la ejecución del programa (usar `final` en Java).",
+      "**Compilación**: Proceso de traducir el código fuente humano a código máquina ejecutable.",
+      "**Interpretación**: Ejecución directa del código fuente línea a línea sin traducción previa a archivo ejecutable.",
+      "**Bytecode**: Código intermedio (ej: Java) independiente de la plataforma que se ejecuta en una máquina virtual.",
+      "**IDE (Entorno de Desarrollo)**: Herramienta que integra editor, compilador y depurador (ej: IntelliJ, Eclipse).",
+      "**Depuración (Debugging)**: Proceso de localizar y corregir errores lógicos mediante la ejecución paso a paso.",
+      "**Estructura Secuencial**: Las instrucciones se ejecutan una tras otra en el orden en que aparecen.",
+      "**Estructuras Selectivas**: Permiten tomar decisiones (if, switch) según el cumplimiento de una condición.",
+      "**Estructuras Iterativas**: Bucles (for, while) que repiten un bloque de código mientras se cumpla una condición.",
+      "**Modularidad**: Dividir un programa complejo en partes más pequeñas y manejables (métodos o funciones).",
+      "**Abstracción**: Ocultar los detalles complejos y mostrar solo la funcionalidad esencial al usuario.",
+      "**Entrada/Salida (I/O)**: Interacción del programa con el mundo exterior (teclado, pantalla, archivos).",
+      "**Análisis de Requisitos**: Fase inicial donde se define qué debe hacer el software antes de empezar a programar.",
+      "**Mantenimiento**: Actualización y corrección del software una vez que ya está en uso por los usuarios."
+    ]
+  },
+  "prog_tema_2": {
+    "name": "Tema 2: Variables y Estructuras",
+    "points": [
+      "**Identificadores**: Nombres de variables y métodos; deben ser descriptivos y seguir reglas (como camelCase).",
+      "**Operadores Aritméticos**: Símbolos para cálculos básicos: `+`, `-`, `*`, `/` y `%` (módulo o resto).",
+      "**Operadores Lógicos**: Permiten combinar condiciones: `&&` (Y), `||` (O) y `!` (NO).",
+      "**Operadores de Comparación**: `==` (igualdad), `!=` (desigualdad), `<`, `>`, `<=`, `>=`.",
+      "**Asignación**: El operador `=` guarda un valor en una variable. No confundir con la igualdad `==`.",
+      "**Conversión de Tipos (Casting)**: Transformar un dato de un tipo a otro (ej: de double a int).",
+      "**Bucle For**: Ideal cuando conocemos de antemano el número de repeticiones que necesitamos.",
+      "**Bucle While**: Repite el código mientras la condición sea verdadera; puede no ejecutarse nunca.",
+      "**Bucle Do-While**: Garantiza que el código se ejecute al menos una vez antes de comprobar la condición.",
+      "**Sentencia Switch**: Alternativa elegante a múltiples `if-else` cuando comparamos una variable con varios valores.",
+      "**Break**: Palabra clave para salir inmediatamente de un bucle o un bloque switch.",
+      "**Continue**: Salta el resto de la iteración actual y pasa directamente a la siguiente comprobación del bucle.",
+      "**Ámbito de Variable (Scope)**: Define en qué parte del código es visible y utilizable una variable.",
+      "**Acumuladores**: Variables que guardan resultados parciales (ej: `suma = suma + valor`).",
+      "**Contadores**: Variables que incrementan su valor en cada iteración (ej: `i++`).",
+      "**Banderas (Flags)**: Variables booleanas que indican si ha ocurrido un evento específico.",
+      "**Comentarios**: Texto ignorado por el compilador usado para explicar la lógica (`//` o `/* ... */`).",
+      "**Indentación**: Sangrado del código vital para la legibilidad humana, aunque el ordenador lo ignore.",
+      "**Prioridad de Operadores**: Reglas que determinan qué cálculo se hace primero (los paréntesis tienen máxima prioridad).",
+      "**Errores de Ejecución**: Fallos que ocurren mientras el programa corre (ej: dividir por cero)."
+    ]
+  },
+  "prog_tema_3": {
+    "name": "Tema 3: Arrays y Cadenas",
+    "points": [
+      "**Arrays (Arreglos)**: Estructuras que almacenan múltiples elementos del mismo tipo en posiciones contiguas.",
+      "**Índice de Array**: Posición de un elemento. IMPORTANTE: En la mayoría de lenguajes empieza por 0.",
+      "**Tamaño Fijo**: En Java, una vez creado un array, su capacidad no puede cambiarse.",
+      "**Arrays Multidimensionales**: Tablas o matrices (arrays de arrays) accesibles mediante dos o más índices.",
+      "**Recorrido de Arrays**: Uso de bucles (especialmente `for`) para procesar cada elemento de la lista.",
+      "**Bucle For-Each**: Sintaxis simplificada para leer todos los elementos de una colección sin usar índices.",
+      "**Accesos Fuera de Rango**: Intentar acceder a un índice inexistente provoca un error crítico (`ArrayIndexOutOfBoundsException`).",
+      "**Strings (Cadenas)**: Objetos que representan secuencias de caracteres para manejar texto.",
+      "**Inmutabilidad de String**: En Java, cada vez que modificamos un String, se crea un objeto nuevo en memoria.",
+      "**Método `length()`**: Devuelve la cantidad de caracteres de una cadena o elementos de un array.",
+      "**Método `equals()`**: Forma correcta de comparar el contenido de dos cadenas. NO usar `==`.",
+      "**Concatenación**: Unir dos o más cadenas usando el operador `+` o el método `concat()`.",
+      "**Búsqueda en Cadenas**: Métodos como `indexOf()` o `contains()` para encontrar subcadenas.",
+      "**Extracción**: `substring(inicio, fin)` permite obtener una parte específica de un texto.",
+      "**Conversión de Mayúsculas**: `toUpperCase()` y `toLowerCase()` para normalizar texto.",
+      "**Eliminación de Espacios**: `trim()` quita los espacios en blanco sobrantes al principio y al final.",
+      "**StringBuilder**: Clase eficiente para construir y modificar cadenas grandes sin crear objetos intermedios.",
+      "**Split**: Permite dividir una cadena en un array basándose en un separador (ej: una coma).",
+      "**Búsqueda Binaria**: Algoritmo eficiente para encontrar elementos en un array que ya está ordenado.",
+      "**Ordenación de Arrays**: Uso de `Arrays.sort()` para organizar elementos de forma automática."
+    ]
+  },
+  "prog_tema_4": {
+    "name": "Tema 4: Introducción a la POO",
+    "points": [
+      "**Clase**: Plano o plantilla que define los atributos y comportamientos de un tipo de objeto.",
+      "**Objeto**: Instancia física de una clase con valores concretos en sus atributos.",
+      "**Atributos**: Propiedades o datos que definen el estado de un objeto (variables de instancia).",
+      "**Métodos**: Acciones o comportamientos que un objeto puede realizar (funciones dentro de la clase).",
+      "**Encapsulamiento**: Ocultar el estado interno y obligar al acceso mediante métodos controlados.",
+      "**Modificadores de Acceso**: `private` (solo la clase), `public` (todos), `protected` (hijos).",
+      "**Constructor**: Método especial que se ejecuta automáticamente al crear (`new`) un objeto.",
+      "**Sobrecarga de Constructores**: Tener varios constructores con distintos parámetros en la misma clase.",
+      "**Palabra clave `this`**: Referencia al propio objeto actual para evitar ambigüedades con parámetros.",
+      "**Getters y Setters**: Métodos estándar para leer (`get`) y modificar (`set`) atributos privados de forma segura.",
+      "**Estado de un Objeto**: Conjunto de valores actuales de todos sus atributos en un momento dado.",
+      "**Instanciación**: El proceso de crear un objeto en memoria usando la palabra clave `new`.",
+      "**Garbage Collector**: Sistema automático de Java que libera la memoria de los objetos que ya no se usan.",
+      "**Miembros Estáticos (`static`)**: Atributos o métodos que pertenecen a la clase, no a un objeto concreto.",
+      "**Paso por Valor vs Referencia**: Java siempre pasa primitivos por valor y objetos por referencia a la memoria.",
+      "**UML (Clases)**: Diagramas visuales para representar la estructura de clases y sus relaciones.",
+      "**Paquetes (`package`)**: Carpetas para organizar clases relacionadas y evitar conflictos de nombres.",
+      "**Visibilidad de Paquete**: Por defecto (sin modificador), la clase solo es visible dentro de su carpeta.",
+      "**Método `toString()`**: Método estándar para obtener una representación en texto del objeto.",
+      "**Documentación Javadoc**: Comentarios especiales (`/** ... */`) para generar manuales técnicos automáticos."
+    ]
+  },
+  "prog_tema_5": {
+    "name": "Tema 5: Objetos y Clases de Uso General",
+    "points": [
+      "**Clase Wrapper (Envoltorio)**: Versiones objeto de tipos primitivos (ej: Integer para int, Double para double).",
+      "**Autoboxing**: Conversión automática que hace Java de primitivo a objeto Wrapper y viceversa.",
+      "**Clase Math**: Proporciona métodos estáticos para cálculos avanzados (`pow`, `sqrt`, `random`, `sin`).",
+      "**Clase Random**: Generador de números aleatorios más flexible que `Math.random()`.",
+      "**Manejo de Fechas**: Uso de las clases modernas `LocalDate`, `LocalTime` y `LocalDateTime`.",
+      "**Clase Period y Duration**: Para calcular el tiempo exacto transcurrido entre dos fechas o momentos.",
+      "**Formateo de Fechas**: `DateTimeFormatter` permite mostrar fechas en cualquier formato humano deseado.",
+      "**Clase Scanner**: Herramienta estándar para leer datos introducidos por el usuario desde la consola.",
+      "**Enumerados (`enum`)**: Tipo especial para definir un conjunto fijo de constantes (ej: Días de la semana).",
+      "**Colecciones Básicas**: Introducción a `ArrayList`, que permite listas de tamaño dinámico (a diferencia del array).",
+      "**Método `equals()` en Objetos**: Debe sobrescribirse para definir cuándo dos objetos son 'iguales' lógicamente.",
+      "**Método `hashCode()`**: Genera un número único para el objeto; vital cuando se usan colecciones tipo Set o Map.",
+      "**Clase System**: Permite interactuar con el sistema operativo (ej: `currentTimeMillis()`, `exit()`).",
+      "**Entrada Estándar (`System.in`)**: Flujo de datos que viene normalmente del teclado.",
+      "**Salida Estándar (`System.out`)**: Flujo para mostrar mensajes en la consola del usuario.",
+      "**Salida de Error (`System.err`)**: Flujo específico para mensajes de fallo independientes de la salida normal.",
+      "**Inmutabilidad**: Concepto de clases cuyos objetos no pueden cambiar tras ser creados (ej: String, LocalDate).",
+      "**Comparación de Objetos**: `Comparable` y `Comparator` para definir el orden natural de una lista de objetos.",
+      "**RegEx (Expresiones Regulares)**: Patrones de texto para validar formatos como emails o teléfonos.",
+      "**Clase Arrays (Utilidades)**: Métodos estáticos para copiar, buscar y comparar arrays completos."
+    ]
+  },
+  "prog_tema_6": {
+    "name": "Tema 6: Herencia y Polimorfismo",
+    "points": [
+      "**Herencia**: Mecanismo para crear clases nuevas (hijas) basadas en clases existentes (padres).",
+      "**Reutilización**: La clase hija hereda automáticamente todos los atributos y métodos no privados del padre.",
+      "**Palabra clave `extends`**: Se usa en la declaración de la clase para indicar de quién hereda.",
+      "**Súper Clase**: La clase padre de la que se hereda la funcionalidad.",
+      "**Subclase**: La clase hija que extiende y puede añadir o modificar funcionalidad.",
+      "**Sobrescritura (`@Override`)**: Modificar en la clase hija el comportamiento de un método heredado.",
+      "**Palabra clave `super`**: Referencia al padre; se usa para llamar a constructores o métodos de la súper clase.",
+      "**Herencia Simple**: En Java, una clase solo puede tener un padre directo (no hay herencia múltiple de clases).",
+      "**Clase Object**: La raíz de toda la jerarquía en Java; todas las clases heredan de ella implícitamente.",
+      "**Polimorfismo**: Capacidad de tratar objetos de diferentes clases hijas como si fueran del tipo padre común.",
+      "**Ligadura Dinámica**: El sistema decide qué método ejecutar en tiempo de ejecución según el objeto real.",
+      "**Casting de Objetos**: Transformar una referencia de tipo padre a tipo hijo (`Downcasting`) de forma explícita.",
+      "**Operador `instanceof`**: Permite comprobar si un objeto pertenece a una clase específica antes de hacer un cast.",
+      "**Clases Abstractas (`abstract`)**: Clases que no se pueden instanciar; sirven solo como base para otras.",
+      "**Métodos Abstractos**: Definidos en el padre sin implementación; las hijas están OBLIGADAS a programarlos.",
+      "**Interfaces**: Contratos que definen qué debe hacer una clase, pero no cómo (solo métodos abstractos).",
+      "**Implementación de Interfaces**: Una clase puede implementar múltiples interfaces (solución a la herencia múltiple).",
+      "**Palabra clave `final`**: Aplicada a una clase, impide que nadie herede de ella. Aplicada a un método, impide sobrescribirlo.",
+      "**Clases Anónimas**: Definición de una clase e instanciación en un solo paso, útil para eventos puntuales.",
+      "**Relación IS-A**: La herencia representa que una clase 'ES UN' tipo de la otra (ej: Un Coche 'ES UN' Vehículo)."
+    ]
+  },
+  "prog_tema_7": {
+    "name": "Tema 7: Excepciones y Colecciones",
+    "points": [
+      "**Excepción**: Evento inesperado que interrumpe el flujo normal del programa (ej: archivo no encontrado).",
+      "**Bloque Try-Catch**: Estructura para intentar un código peligroso y capturar el posible error sin que la app muera.",
+      "**Bloque Finally**: Código que se ejecuta SIEMPRE, haya habido error o no (ideal para cerrar archivos).",
+      "**Propagación (`throws`)**: Indicar que un método puede lanzar un error y delegar su gestión al que lo llame.",
+      "**Throw**: Instrucción para lanzar manualmente una excepción cuando detectamos una situación inválida.",
+      "**Excepciones Verificadas (Checked)**: El compilador obliga a gestionarlas (ej: errores de archivos o red).",
+      "**Excepciones de Tiempo de Ejecución (Unchecked)**: Errores de lógica del programador (ej: `NullPointerException`).",
+      "**Jerarquía de Throwable**: `Error` (problema grave del sistema) vs `Exception` (problema gestionable de la app).",
+      "**Custom Exceptions**: Crear nuestras propias clases de error para lógicas de negocio específicas.",
+      "**Collection Framework**: Conjunto de interfaces y clases para manejar grupos de objetos de forma eficiente.",
+      "**ArrayList**: Lista dinámica basada en array; rápida para acceder por posición pero lenta para insertar al inicio.",
+      "**LinkedList**: Lista basada en nodos; rápida para insertar/borrar pero lenta para acceder a posiciones azarosas.",
+      "**HashSet**: Colección que NO permite duplicados y no mantiene orden; muy rápida para búsquedas.",
+      "**TreeSet**: Colección sin duplicados que mantiene los elementos ordenados automáticamente.",
+      "**HashMap**: Diccionario que almacena pares Clave-Valor; permite buscar un valor instantáneamente usando su clave.",
+      "**Iterator**: Objeto para recorrer colecciones de forma segura, permitiendo borrar elementos mientras se itera.",
+      "**Tipos Genéricos (`<T>`)**: Permiten que las colecciones sean seguras, indicando con qué tipo de objeto van a trabajar.",
+      "**Queue (Colas)**: Colecciones seguidas por el principio FIFO (El primero que entra es el primero que sale).",
+      "**Stack (Pilas)**: Colecciones basadas en LIFO (El último que entra es el primero que sale).",
+      "**Algoritmos de Colecciones**: Uso de `Collections.shuffle()`, `reverse()`, `max()`, etc., para procesar listas."
+    ]
+  },
+  "prog_tema_8": {
+    "name": "Tema 8: Flujos de Datos (Archivos)",
+    "points": [
+      "**Stream (Flujo)**: Canal de comunicación para leer o escribir datos de forma secuencial.",
+      "**Archivos de Texto**: Almacenan caracteres legibles por humanos (extensiones .txt, .csv, .xml).",
+      "**Archivos Binarios**: Almacenan datos en formato máquina (imágenes, ejecutables, objetos serializados).",
+      "**Clase File**: Representa la ruta de un archivo o directorio en el disco duro, no su contenido.",
+      "**FileReader / FileWriter**: Clases básicas para leer y escribir caracteres uno a uno (poco eficientes solos).",
+      "**BufferedReader / BufferedWriter**: Usan un búfer (memoria intermedia) para leer/escribir líneas completas rápido.",
+      "**Scanner para Archivos**: Forma sencilla de leer datos estructurados de un fichero de texto.",
+      "**PrintWriter**: Clase cómoda para escribir texto formateado en archivos (similar a `System.out.println`).",
+      "**Flujos de Bytes**: `FileInputStream` y `FileOutputStream` para manejar datos binarios puros.",
+      "**Serialización**: Proceso de convertir un objeto vivo en memoria a una secuencia de bytes para guardarlo en disco.",
+      "**Interfaz `Serializable`**: Marca obligatoria para que una clase pueda ser guardada como objeto en un archivo.",
+      "**Palabra clave `transient`**: Se aplica a atributos que NO queremos que se guarden al serializar (ej: contraseñas).",
+      "**ObjectInputStream / ObjectOutputStream**: Permiten leer y escribir objetos completos en archivos binarios.",
+      "**Try-with-resources**: Sintaxis moderna de Java que cierra automáticamente los archivos al terminar, evitando fugas.",
+      "**Archivos de Acceso Aleatorio**: Permiten leer o escribir en cualquier posición del archivo sin ir en orden.",
+      "**Rutas Absolutas vs Relativas**: Desde la raíz del disco vs desde la carpeta donde se ejecuta el programa.",
+      "**Permisos**: Comprobar si tenemos derecho de lectura o escritura antes de intentar operar con un archivo.",
+      "**Directorios**: Métodos para crear (`mkdir`), borrar o listar todos los archivos de una carpeta.",
+      "**Codificación (Encoding)**: Importancia de usar UTF-8 para evitar problemas con tildes y eñes.",
+      "**Persistencia**: Concepto de que los datos sobrevivan al cierre del programa guardándolos en almacenamiento no volátil."
+    ]
+  },
+  "prog_tema_9": {
+    "name": "Tema 9: Programación de BD (JDBC)",
+    "points": [
+      "**JDBC (Java Database Connectivity)**: API estándar de Java para conectar y ejecutar sentencias en cualquier base de datos.",
+      "**Driver (Controlador)**: Archivo JAR específico de cada fabricante (MySQL, Oracle) que permite la conexión.",
+      "**Connection**: Objeto que representa el enlace físico abierto entre nuestra app y el servidor de BD.",
+      "**URL de Conexión**: Cadena que indica protocolo, servidor, puerto y base de datos (ej: `jdbc:mysql://localhost:3306/tienda`).",
+      "**Statement**: Objeto para enviar sentencias SQL sencillas a la base de datos.",
+      "**PreparedStatement**: SQL precompilado con parámetros; mucho más seguro y rápido que el Statement normal.",
+      "**Inyección SQL**: Ataque de seguridad que se evita siempre usando `PreparedStatements` con `?` en lugar de concatenar texto.",
+      "**ResultSet**: Tabla virtual que contiene los resultados de una consulta `SELECT` ejecutada.",
+      "**Cursor de ResultSet**: Puntero invisible que movemos con `next()` para leer los datos fila por fila.",
+      "**Métodos Getter de ResultSet**: `getInt()`, `getString()`, `getDouble()` para extraer datos de las columnas actuales.",
+      "**ExecuteUpdate**: Método para ejecutar sentencias que modifican datos (`INSERT`, `UPDATE`, `DELETE`).",
+      "**ExecuteQuery**: Método específico para lanzar consultas `SELECT` que devuelven datos.",
+      "**Gestión de Transacciones**: Capacidad de agrupar varias operaciones para que se cumplan todas o ninguna.",
+      "**Commit**: Confirmar permanentemente todos los cambios realizados en la transacción actual.",
+      "**Rollback**: Deshacer todos los cambios de la transacción actual si ha ocurrido algún error.",
+      "**Auto-Commit**: Modo por defecto donde cada sentencia se guarda al instante. Debe desactivarse para transacciones manuales.",
+      "**Cerrar Recursos**: Es crítico cerrar siempre ResultSet, Statement y Connection para no bloquear la base de datos.",
+      "**Patrón DAO (Data Access Object)**: Diseño que separa la lógica de acceso a datos de la lógica de negocio de la app.",
+      "**Pool de Conexiones**: Técnica para reutilizar conexiones abiertas y mejorar drásticamente el rendimiento.",
+      "**Metadatos de BD**: Información sobre la propia estructura de la base de datos (tablas, columnas, tipos)."
+    ]
+  },
+  "prog_tema_10": {
+    "name": "Tema 10: Interfaces Gráficas (Swing)",
+    "points": [
+      "**GUI (Graphic User Interface)**: Interfaz visual basada en ventanas, botones y menús para el usuario.",
+      "**Desktop Applications**: Programas que se ejecutan localmente con su propia ventana de sistema operativo.",
+      "**Librería Swing**: Framework estándar de Java para crear interfaces gráficas multiplataforma.",
+      "**Contenedores**: Componentes que albergan a otros, como el `JFrame` (ventana) o el `JPanel` (panel).",
+      "**Componentes Básicos**: `JButton` (botón), `JLabel` (texto/imagen), `JTextField` (entrada de una línea).",
+      "**Componentes de Selección**: `JCheckBox` (varias opciones), `JRadioButton` (una opción entre varias), `JComboBox` (lista).",
+      "**Layout Managers**: Gestores que deciden cómo se posicionan los botones automáticamente al redimensionar la ventana.",
+      "**BorderLayout**: Divide la ventana en 5 zonas: Norte, Sur, Este, Oeste y Centro (la más grande).",
+      "**FlowLayout**: Coloca los elementos uno tras otro en una fila, saltando de línea si no caben.",
+      "**GridLayout**: Organiza la ventana en una rejilla perfecta de filas y columnas del mismo tamaño.",
+      "**Programación por Eventos**: La app no sigue un orden fijo, sino que reacciona a los clics o teclas del usuario.",
+      "**ActionEventListener**: Interfaz para detectar y responder cuando el usuario pulsa un botón.",
+      "**Clases Adaptadoras**: Versiones simplificadas de los Listeners para no tener que programar todos sus métodos.",
+      "**JFrame**: La clase base para crear la ventana principal de cualquier aplicación Java.",
+      "**Método `setVisible(true)`**: Imprescindible para que la ventana sea realmente mostrada al usuario.",
+      "**Método `pack()`**: Ajusta automáticamente el tamaño de la ventana al contenido que tiene dentro.",
+      "**Tablas e Hilado**: `JTable` para mostrar datos y `JScrollPane` para permitir el desplazamiento.",
+      "**Look and Feel**: Permite que la app cambie de apariencia para parecerse a Windows, Mac o Linux.",
+      "**SwingUtilities.invokeLater**: Forma segura de iniciar la interfaz gráfica desde el hilo de eventos de Java.",
+      "**Ventanas de Diálogo**: `JOptionPane` para mostrar mensajes rápidos de alerta, confirmación o entrada de datos."
+    ]
+  },
+  "si_tema_1": {
+    "name": "Tema 1: Hardware y Sistemas",
+    "points": [
+      "**Sistema Informático**: Combinación de Hardware (físico), Software (lógico) y Humanware (usuario).",
+      "**Arquitectura de Von Neumann**: Modelo básico con CPU, Memoria Principal y Unidades de Entrada/Salida.",
+      "**CPU (Procesador)**: El 'cerebro' que ejecuta instrucciones, compuesto por ALU (cálculo) y UC (control).",
+      "**Memoria RAM**: Memoria volátil de acceso rápido para los programas y datos que se están usando en ese momento.",
+      "**Memoria ROM/BIOS**: Memoria de solo lectura que contiene las instrucciones para el arranque del equipo.",
+      "**Placa Base (Motherboard)**: Circuito impreso donde se conectan todos los componentes del sistema.",
+      "**Buses de Datos**: Canales por los que viaja la información entre los distintos componentes hardware.",
+      "**Almacenamiento Secundario**: Dispositivos no volátiles como HDD (mecánicos) o SSD (electrónicos ultra-rápidos).",
+      "**Unidades de Medida**: Bit (mínimo), Byte (8 bits), KB, MB, GB, TB (cada uno x1024 del anterior).",
+      "**Periféricos de Entrada**: Dispositivos para introducir datos (teclado, ratón, escáner).",
+      "**Periféricos de Salida**: Dispositivos para mostrar resultados (monitor, impresora, altavoces).",
+      "**Periféricos de Almacenamiento**: Unidades externas, pendrives o tarjetas de memoria.",
+      "**Formas de Transmisión**: Serie (bit a bit) vs Paralelo (varios bits simultáneos).",
+      "**Sistema Operativo (SO)**: Software maestro que gestiona el hardware y permite correr aplicaciones.",
+      "**Gestión de Procesos**: El SO reparte el tiempo de CPU entre todos los programas abiertos.",
+      "**Gestión de Memoria**: El SO asegura que cada programa tenga su espacio sin interferir con otros.",
+      "**Sistemas de Archivos**: Forma en que el SO organiza los datos en el disco (NTFS, EXT4, FAT32).",
+      "**Interfaz de Usuario**: Puede ser CLI (consola de comandos) o GUI (entorno gráfico con ventanas).",
+      "**Firmware**: Software de muy bajo nivel grabado en el hardware (como la BIOS o UEFI).",
+      "**Mantenimiento Preventivo**: Limpieza y revisión de componentes para evitar fallos futuros por calor o polvo."
+    ]
+  },
+  "si_tema_2": {
+    "name": "Tema 2: Instalación de Sistemas",
+    "points": [
+      "**Requisitos de Hardware**: Especificaciones mínimas (RAM, CPU, Disco) necesarias para que un SO funcione.",
+      "**Arquitecturas de CPU**: 32 bits (x86, máximo 4GB RAM) vs 64 bits (x64, soporta mucha más memoria).",
+      "**Particionado de Disco**: Dividir un disco físico en varias unidades lógicas independientes.",
+      "**Partición Primaria**: Donde normalmente se instala el Sistema Operativo y arranca el equipo.",
+      "**Partición Extendida/Lógica**: Se usa para superar el límite antiguo de 4 particiones por disco.",
+      "**MBR (Master Boot Record)**: Estándar de arranque antiguo, limitado a discos de menos de 2TB.",
+      "**GPT (GUID Partition Table)**: Estándar moderno que soporta discos inmensos y más seguridad.",
+      "**Formateo**: Proceso de preparar la superficie del disco con un sistema de archivos específico.",
+      "**Instalación Limpia**: Formatear el disco e instalar el SO desde cero, eliminando todo lo anterior.",
+      "**Actualización (Upgrade)**: Instalar una versión nueva del SO manteniendo los archivos y apps del usuario.",
+      "**Dual Boot**: Configuración que permite elegir entre dos sistemas operativos instalados al encender el PC.",
+      "**Drivers/Controladores**: Software que enseña al SO cómo comunicarse con una tarjeta específica (gráfica, red).",
+      "**Gestores de Arranque**: Programas como GRUB (Linux) o Windows Boot Manager que inician el SO.",
+      "**Post-instalación**: Tareas como actualizar el sistema, instalar antivirus y configurar copias de seguridad.",
+      "**Licenciamiento**: Diferencia entre software propietario (pago) y sistemas libres (como la mayoría de Linux).",
+      "**Imagen de Sistema**: Copia exacta de un disco configurado para clonarlo en muchos PCs rápidos.",
+      "**Virtualización**: Ejecutar un SO dentro de otro como si fuera una aplicación (ej: VirtualBox).",
+      "**Snapshot**: Captura del estado actual de una máquina virtual para poder volver atrás si algo falla.",
+      "**Repositorios**: Servidores en Linux de donde se descarga e instala software de forma segura.",
+      "**Logs de Instalación**: Archivos de texto donde el instalador anota errores si el proceso falla."
+    ]
+  },
+  "si_tema_3": {
+    "name": "Tema 3: Gestión de Archivos y SO",
+    "points": [
+      "**Estructura Jerárquica**: Organización de los archivos en forma de árbol (carpetas y subcarpetas).",
+      "**Rutas de Acceso**: Camino para llegar a un archivo (ej: `C:\\Users\\Doc\\examen.pdf` en Windows).",
+      "**Extensiones**: Sufijos que indican el tipo de archivo y con qué app abrirlo (.pdf, .exe, .jpg).",
+      "**Atributos de Archivo**: Propiedades como Solo lectura, Oculto, Sistema o Comprimido.",
+      "**Permisos de Seguridad**: Reglas que dicen quién puede Leer, Escribir o Ejecutar un archivo.",
+      "**Propiedad de Archivos**: Cada archivo pertenece a un usuario que tiene el control total sobre sus permisos.",
+      "**Fragmentación**: Los archivos se guardan en trozos separados por el disco, ralentizando la lectura.",
+      "**Desfragmentador**: Herramienta de Windows para volver a juntar los trozos de los archivos (solo para HDDs).",
+      "**Papelera de Reciclaje**: Almacén temporal de archivos borrados que permite su recuperación.",
+      "**Accesos Directos**: Archivos pequeños que apuntan al archivo real ubicado en otra carpeta.",
+      "**Compresión (.zip, .rar)**: Técnica para reducir el tamaño de los archivos antes de enviarlos o guardarlos.",
+      "**Búsquedas Indexadas**: El SO crea una base de datos de los nombres de archivos para hallarlos al instante.",
+      "**CLI (Línea de Comandos)**: Gestión de archivos mediante texto (ej: `dir`, `copy`, `del` en Windows; `ls`, `cp`, `rm` en Linux).",
+      "**Wildcards (Comodines)**: Símbolos como `*` (todo) o `?` (un carácter) para referirse a muchos archivos a la vez.",
+      "**Enlaces Simbólicos**: Nombres de archivo que 'engañan' al sistema apuntando a otra carpeta o disco.",
+      "**Cuotas de Disco**: Limitar la cantidad máxima de megabytes que un usuario puede guardar en el servidor.",
+      "**Recuperación de Datos**: Software especial para intentar leer archivos borrados de la papelera.",
+      "**Sincronización en la Nube**: Copia automática de archivos locales en servidores remotos (ej: OneDrive, Google Drive).",
+      "**Explorador de Archivos**: Aplicación visual principal para navegar por las unidades de disco.",
+      "**Montaje de Discos**: Proceso de asignar una letra o carpeta a una nueva unidad de disco para usarla."
+    ]
+  },
+  "si_tema_4": {
+    "name": "Tema 4: Configuración y Usuarios",
+    "points": [
+      "**Cuenta de Usuario**: Perfil personal que separa tus archivos y ajustes de los de otros usuarios.",
+      "**Administrador / Root**: Usuario con superpoderes para cambiar cualquier ajuste e instalar software.",
+      "**Usuario Estándar**: Cuenta limitada para uso diario con menos riesgos de seguridad.",
+      "**Perfil de Usuario**: Carpeta personal que contiene Documentos, Imágenes, Escritorio y ajustes de apps.",
+      "**Grupos de Usuarios**: Conjuntos de cuentas que comparten los mismos permisos de acceso rápida.",
+      "**Contraseñas**: Primera línea de defensa; deben ser robustas y no compartirse nunca.",
+      "**UAC (Control de Cuentas)**: Aviso de Windows que pide permiso antes de realizar cambios críticos.",
+      "**Panel de Control / Configuración**: Centro principal para cambiar el idioma, la hora, el fondo, etc.",
+      "**Variables de Entorno**: Ajustes del sistema que indican a las apps dónde están ciertas carpetas (como el PATH).",
+      "**Editor de Registro (Windows)**: Base de datos inmensa con todos los ajustes de bajo nivel del SO.",
+      "**Servicios del Sistema**: Programas que corren en segundo plano sin ventana (ej: cola de impresión).",
+      "**Administrador de Tareas**: Herramienta para ver qué programas consumen mucha CPU y cerrarlos si se cuelgan.",
+      "**Programador de Tareas**: Permite automatizar ejecuciones de programas a horas fijas o eventos.",
+      "**Actualizaciones de Seguridad**: Parches que corrigen fallos descubiertos para evitar ataques de virus.",
+      "**Directivas de Grupo (GPO)**: Reglas impuestas por el administrador a todos los PCs de una red de empresa.",
+      "**MFA / 2FA**: Pedir un código al móvil además de la contraseña para iniciar sesión.",
+      "**Biometría**: Uso de huella dactilar o reconocimiento facial para entrar al sistema (Windows Hello).",
+      "**Cuentas de Invitado**: Perfiles temporales que borran sus datos al cerrar sesión.",
+      "**Personalización Visual**: Cambiar temas, colores y protectores de pantalla para comodidad del usuario.",
+      "**Accesibilidad**: Ajustes para personas con dificultades (lector de pantalla, alto contraste, lupa)."
+    ]
+  },
+  "si_tema_5": {
+    "name": "Tema 5: Redes y Conectividad",
+    "points": [
+      "**Red Informática**: Conjunto de dispositivos conectados para compartir información y recursos.",
+      "**Protocolo TCP/IP**: El lenguaje universal que permite que todos los ordenadores se entiendan en Internet.",
+      "**Dirección IP**: Identificador único de un dispositivo en la red (ej: `192.168.1.15`).",
+      "**Máscara de Subred**: Define qué parte de la IP identifica a la red y qué parte al dispositivo.",
+      "**Puerta de Enlace (Gateway)**: Dirección del router que nos permite salir de nuestra red local a Internet.",
+      "**DNS**: Sistema que traduce nombres de dominio (`google.com`) en direcciones IP numéricas.",
+      "**DHCP**: Servicio del router que asigna IPs automáticas a los dispositivos que se conectan.",
+      "**LAN (Red de Área Local)**: Red que cubre un espacio pequeño como una casa o una oficina.",
+      "**WLAN**: Variante inalámbrica (WiFi) de la red de área local.",
+      "**MAC Address**: Dirección física grabada de fábrica en la tarjeta de red; nunca cambia.",
+      "**Switch**: Dispositivo central que conecta varios PCs por cable en una red local.",
+      "**Router**: Dispositivo que une dos redes diferentes (ej: tu casa con Internet).",
+      "**Modelo OSI**: Estándar de 7 capas que explica cómo viajan los datos por la red.",
+      "**Cable Ethernet (RJ45)**: El cable estándar para conectar ordenadores a la red local.",
+      "**Ping**: Comando para comprobar si un dispositivo de la red está encendido y responde.",
+      "**Traducción de Direcciones (NAT)**: Técnica del router para que muchos PCs usen una sola IP pública.",
+      "**Firewall / Cortafuegos**: Filtro que bloquea conexiones no deseadas que vienen de fuera.",
+      "**Velocidad de Red**: Medida en Megabits por segundo (Mbps); no confundir con Megabytes de descarga.",
+      "**Compartición de Recursos**: Permitir que otros PCs usen tu impresora o vean una carpeta tuya.",
+      "**VPN (Red Privada Virtual)**: Túnel seguro para navegar como si estuvieras en otra red remota."
+    ]
+  },
+  "si_tema_6": {
+    "name": "Tema 6: Linux y Servidores",
+    "points": [
+      "**Linux**: Sistema operativo de código abierto, gratuito y muy estable, base de casi todos los servidores.",
+      "**Kernel**: El núcleo del sistema que gestiona directamente el procesador y la memoria.",
+      "**Distribución (Distro)**: Versión de Linux con software añadido (ej: Ubuntu, Debian, CentOS, Kali).",
+      "**Terminal / Shell**: Ventana de comandos donde se controla todo el sistema mediante texto.",
+      "**Comando `ls`**: Lista el contenido de la carpeta actual.",
+      "**Comando `cd`**: Cambia de directorio para navegar por las carpetas.",
+      "**Comando `sudo`**: Permite ejecutar comandos con permisos de administrador temporalmente.",
+      "**Sistema de Archivos `/` (Raíz)**: En Linux no hay letras de unidad (C:), todo empieza desde la raíz `/`.",
+      "**Carpeta `/home`**: Lugar donde se guardan los datos personales de todos los usuarios.",
+      "**Carpeta `/etc`**: Contiene casi todos los archivos de configuración del sistema.",
+      "**Permisos Linux (rwx)**: Lectura (r), Escritura (w) y Ejecución (x) para Dueño, Grupo y Otros.",
+      "**Comando `chmod`**: Se usa para cambiar los permisos de un archivo (ej: `chmod 777 archivo`).",
+      "**SSH**: Protocolo para controlar un servidor remoto de forma segura mediante la terminal.",
+      "**APT / YUM**: Gestores de paquetes para instalar, borrar y actualizar programas fácilmente.",
+      "**Servidor Web (Apache/Nginx)**: Software para hospedar páginas web y servirlas al mundo.",
+      "**Servidor de Archivos (Samba)**: Permite que Linux comparta carpetas con ordenadores Windows.",
+      "**Procesos en Linux**: Se ven con el comando `top` o `htop` (similar al admin de tareas).",
+      "**Scripts Bash**: Archivos con órdenes que se ejecutan solas para automatizar tareas pesadas.",
+      "**Montaje de Discos**: Usar el comando `mount` para que un pendrive sea visible en una carpeta.",
+      "**Actualización de Sistema**: Se hace con `sudo apt update && sudo apt upgrade` en segundos."
+    ]
+  },
+  "si_tema_7": {
+    "name": "Tema 7: Seguridad y Mantenimiento",
+    "points": [
+      "**Seguridad de la Información**: Proteger la Confidencialidad, Integridad y Disponibilidad (C.I.D.).",
+      "**Malware**: Software malicioso diseñado para dañar o espiar (Virus, Troyanos, Spyware).",
+      "**Ransomware**: Secuestra tus archivos cifrándolos y pide un rescate económico por ellos.",
+      "**Phishing**: Correos o mensajes falsos que intentan robarte contraseñas o datos bancarios.",
+      "**Antivirus**: Programa que detecta virus comparándolos con una base de datos de firmas.",
+      "**Cifrado de Disco (BitLocker)**: Protege los datos del portátil si te lo roban físicamente.",
+      "**Backup (Copia de Seguridad)**: Vital; debe seguir la regla 3-2-1 (3 copias, 2 medios distintos, 1 fuera de casa).",
+      "**Actualizaciones de Parche**: Instalar los arreglos que el fabricante saca cada mes.",
+      "**Ingeniería Social**: Engañar a las personas para que revelen secretos sin usar tecnología.",
+      "**SAI (UPS)**: Batería externa que mantiene el PC encendido si se va el suministro eléctrico.",
+      "**Punto de Restauración**: Estado guardado del sistema al que puedes volver si una instalación sale mal.",
+      "**Auditoría de Seguridad**: Revisar quién ha entrado al sistema y qué cambios se han hecho.",
+      "**Políticas de Contraseñas Fuertes**: Mínimo 12 caracteres, mezclando números y símbolos.",
+      "**VPN para Trabajo Remoto**: Única forma segura de entrar a la red de la empresa desde casa.",
+      "**Borrado Seguro**: Técnicas para que los archivos borrados no se puedan recuperar nunca.",
+      "**Firma Digital**: Asegura que un documento no ha sido modificado y que el autor es quien dice ser.",
+      "**Certificados Digitales**: Identifican a personas o servidores en Internet de forma oficial.",
+      "**Gestión de Logs de Seguridad**: Revisar mensajes de error sospechosos de forma periódica.",
+      "**Simulacros de Desastre**: Probar que las copias de seguridad realmente funcionan antes de necesitarlas.",
+      "**Concienciación del Usuario**: El eslabón más débil; educar en no pinchar en enlaces extraños."
+    ]
+  },
+  "bd_tema_1": {
+    "name": "Tema 1: Fundamentos de Bases de Datos",
+    "points": [
+      "**Base de Datos**: Conjunto de datos relacionados almacenados sistemáticamente para su uso posterior.",
+      "**SGBD (Sistema Gestor)**: Software que permite crear, gestionar y consultar la base de datos (ej: MySQL).",
+      "**Dato vs Información**: El dato es el valor crudo; la información es el dato procesado con significado.",
+      "**Independencia de Datos**: Los cambios en el almacenamiento físico no afectan a cómo los programas ven los datos.",
+      "**Redundancia Controlada**: Evitar repetir el mismo dato en varios sitios para ahorrar espacio y errores.",
+      "**Integridad de Datos**: Reglas que aseguran que la información sea correcta y consistente siempre.",
+      "**Modelo Jerárquico**: Estructura de árbol donde cada hijo tiene un solo padre; muy rápido pero rígido.",
+      "**Modelo en Red**: Similar al jerárquico pero un hijo puede tener varios padres (grafos).",
+      "**Modelo Relacional**: Los datos se organizan en tablas (relaciones); el más usado actualmente.",
+      "**Abstracción de Datos**: Tres niveles: Físico (cómo se guarda), Conceptual (qué hay) y Externo (qué ve el usuario).",
+      "**Administrador de BD (DBA)**: Persona responsable de la seguridad, rendimiento y backups de la base de datos.",
+      "**Ventajas del SGBD**: Consultas rápidas, seguridad centralizada y acceso simultáneo de muchos usuarios.",
+      "**Ficheros Planos**: Antecesores de las BD; difíciles de mantener y buscar cuando crecen.",
+      "**Metadatos**: 'Datos sobre los datos' que describen la estructura y restricciones de la base de datos.",
+      "**Concurrencia**: Capacidad de que varios usuarios graben datos a la vez sin que se corrompan.",
+      "**Seguridad**: Control de quién puede ver, editar o borrar cada tabla específica.",
+      "**Persistencia**: Garantía de que los datos no se pierdan al apagar el ordenador o cerrar el programa.",
+      "**Escalabilidad**: Capacidad de la base de datos para crecer en volumen de datos sin perder velocidad.",
+      "**Diccionario de Datos**: Repositorio donde el SGBD guarda toda la definición del sistema.",
+      "**Lenguaje de Definición (DDL)**: Comandos para crear la estructura (CREATE, ALTER, DROP)."
+    ]
+  },
+  "bd_tema_2": {
+    "name": "Tema 2: El Modelo Relacional",
+    "points": [
+      "**Relación (Tabla)**: Estructura bidimensional de filas y columnas que almacena datos de un tipo.",
+      "**Tupla (Fila)**: Registro concreto que contiene la información de un elemento único (ej: un cliente).",
+      "**Atributo (Columna)**: Campo que describe una característica de la entidad (ej: Nombre, Edad).",
+      "**Domino**: Conjunto de valores válidos que puede tomar un atributo (ej: un número entre 0 y 100).",
+      "**Clave Primaria (PK)**: Atributo único que identifica de forma inequívoca a cada fila (ej: el DNI).",
+      "**Clave Foránea (FK)**: Atributo en una tabla que apunta a la Clave Primaria de otra tabla para relacionarlas.",
+      "**Clave Candidata**: Cualquier atributo o conjunto de ellos que podría ser Clave Primaria.",
+      "**Integridad de Entidad**: Norma que dice que ninguna Clave Primaria puede ser nula (vacía).",
+      "**Integridad Referencial**: Asegura que si una FK apunta a una PK, esa PK debe existir realmente.",
+      "**Nulo (NULL)**: Valor especial que indica que el dato es desconocido o no aplica, no es cero ni vacío.",
+      "**Esquema de la Relación**: Definición del nombre de la tabla y todos sus campos con sus tipos.",
+      "**Estado de la Relación**: Los datos reales que hay metidos en las carpetas en un momento dado.",
+      "**Grado de una Relación**: Número de columnas (atributos) que tiene la tabla.",
+      "**Cardinalidad**: Número de filas (tuplas) que tiene la tabla en la actualidad.",
+      "**Propiedades de las Tablas**: No hay filas duplicadas, el orden de filas y columnas no importa.",
+      "**Restricción de Verificación (CHECK)**: Regla personalizada (ej: 'sueldo > 1000') aplicada a un campo.",
+      "**Transformación**: Proceso de convertir un diagrama visual E-R en tablas reales con claves.",
+      "**Álgebra Relacional**: Operaciones matemáticas teóricas para manipular tablas (Selección, Proyección, Unión).",
+      "**Unión de Tablas (JOIN)**: Operación para combinar datos de dos tablas relacionadas en una sola consulta.",
+      "**Vistas**: Tablas virtuales resultantes de una consulta que no guardan datos propios, solo los muestran."
+    ]
+  },
+  "bd_tema_3": {
+    "name": "Tema 3: Diseño Entidad-Relación",
+    "points": [
+      "**Modelo E-R**: Técnica de diseño visual para representar los datos antes de crear las tablas en el ordenador.",
+      "**Entidad**: Objeto o concepto del mundo real con existencia propia (se dibuja con un rectángulo).",
+      "**Atributo**: Característica de una entidad (se dibuja con un elipse o burbuja).",
+      "**Atributo Clave**: El que identificará a la entidad (se dibuja subrayado).",
+      "**Relación**: Asociación entre dos o más entidades (se dibuja con un rombo).",
+      "**Cardinalidad 1:1**: Un elemento de A se relaciona con máximo uno de B (ej: Marido y Mujer).",
+      "**Cardinalidad 1:N**: Un elemento de A puede tener muchos de B (ej: Un Cliente y sus Facturas).",
+      "**Cardinalidad N:M**: Muchos de A se relacionan con muchos de B (ej: Estudiantes y Asignaturas).",
+      "**Entidad Débil**: Aquella que no existe sin su entidad padre (ej: Las líneas de una factura si no hay factura).",
+      "**Atributo Multivaluado**: Campo que puede tener varios valores a la vez (ej: Teléfonos de contacto).",
+      "**Atributo Derivado**: Valor que se calcula a partir de otros (ej: la Edad se calcula con la Fecha de Nacimiento).",
+      "**Atributo Compuesto**: Campo formado por varios sub-campos (ej: la Dirección tiene Calle, CP y Ciudad).",
+      "**Participación Total**: Obligatoria; todos los elementos deben estar en la relación (línea doble).",
+      "**Participación Parcial**: Opcional; algunos elementos pueden no estar relacionados (línea simple).",
+      "**E-R Extendido**: Incluye conceptos avanzados como jerarquías y especializaciones.",
+      "**Especialización (ISA)**: Crear subtipos a partir de un tipo general (ej: Empleado es el padre, Técnico el hijo).",
+      "**Generalización**: Proceso inverso; agrupar entidades comunes en una categoría superior.",
+      "**Restricción de Disyunción**: Un elemento solo puede pertenecer a un hijo o a varios a la vez.",
+      "**Restricción de Completitud**: Indica si todo elemento del padre debe obligatoriamente ser de algún hijo.",
+      "**Diagramas Crow's Foot**: Estilo de dibujo alternativo muy usado en la industria profesional."
+    ]
+  },
+  "bd_tema_4": {
+    "name": "Tema 4: SQL I - Creación y Datos (DML/DDL)",
+    "points": [
+      "**SQL**: Estándar universal para hablar con bases de datos relacionales mediante texto.",
+      "**CREATE TABLE**: Comando para definir el nombre de la tabla, columnas y sus tipos de datos.",
+      "**Tipos de Datos SQL**: `INT` (números), `VARCHAR` (texto variable), `DATE` (fechas), `DECIMAL` (precios).",
+      "**NOT NULL**: Restricción que obliga a que un campo siempre tenga un valor.",
+      "**PRIMARY KEY**: Define la columna que identifica de forma única cada fila de la tabla.",
+      "**FOREIGN KEY... REFERENCES**: Define el enlace con otra tabla para mantener la integridad.",
+      "**ALTER TABLE**: Comando para cambiar la estructura de una tabla ya creada (añadir/borrar columnas).",
+      "**DROP TABLE**: Elimina la tabla de la base de datos para siempre, incluyendo todos sus datos.",
+      "**TRUNCATE TABLE**: Vacía todos los datos de la tabla pero mantiene la estructura vacía.",
+      "**INSERT INTO**: Comando para añadir filas nuevas de datos a una tabla existente.",
+      "**UPDATE**: Comando para modificar valores de filas que ya están en la base de datos.",
+      "**DELETE FROM**: Comando para borrar filas específicas de una tabla.",
+      "**Cláusula WHERE**: Filtro FUNDAMENTAL para que UPDATE y DELETE no afecten a toda la tabla sin querer.",
+      "**DEFAULT**: Valor que se asigna automáticamente a un campo si el usuario no introduce nada.",
+      "**CHECK**: Regla que valida el contenido del campo (ej: `CHECK (edad >= 18)`).",
+      "**UNIQUE**: Asegura que no se repitan valores en una columna, aunque no sea la clave primaria.",
+      "**AUTO_INCREMENT**: Indica que el valor del ID subirá solo (1, 2, 3...) en cada inserción nueva.",
+      "**Scripts SQL**: Archivos de texto (.sql) que contienen muchas órdenes para ejecutarse de golpe.",
+      "**Comentarios SQL**: Líneas que empiezan con `--` (en una línea) o `/* ... */` (bloque) para explicar el código.",
+      "**Sensibilidad**: SQL no suele distinguir mayúsculas de minúsculas en los comandos, pero sí en los datos de texto."
+    ]
+  },
+  "bd_tema_5": {
+    "name": "Tema 5: SQL II - Consultas (DQL)",
+    "points": [
+      "**SELECT**: El comando más usado; sirve para pedir y recuperar información de las tablas.",
+      "**SELECT * **: Selecciona todas las columnas de la tabla (práctico pero lento en tablas grandes).",
+      "**DISTINCT**: Elimina las filas repetidas de los resultados para que el listado sea único.",
+      "**Alias (`AS`)**: Nombre temporal que damos a una columna o tabla para que se lea mejor el resultado.",
+      "**ORDER BY**: Ordena los resultados por una columna (uso de `ASC` para ascendente o `DESC` para descendente).",
+      "**Operadores Lógicos (`AND`, `OR`, `NOT`)**: Combinan filtros en la cláusula WHERE.",
+      "**BETWEEN**: Filtra valores dentro de un rango inclusivo (ej: `WHERE precio BETWEEN 10 AND 50`).",
+      "**IN**: Comprueba si un valor está dentro de una lista específica (ej: `WHERE ciudad IN ('Jaén', 'Granada')`).",
+      "**LIKE**: Para búsquedas con texto parcial usando `%` (cualquier texto) o `_` (un carácter).",
+      "**Funciones de Agregado**: Calculan un único valor sobre muchas filas (`SUM`, `AVG`, `MAX`, `MIN`, `COUNT`).",
+      "**GROUP BY**: Agrupa filas que tienen el mismo valor en una columna para hacer cálculos por grupos.",
+      "**HAVING**: Filtro similar al WHERE pero que se aplica DESPUÉS de agrupar y hacer cálculos.",
+      "**Subconsultas**: Poner una consulta SELECT dentro de otra para usar su resultado como filtro.",
+      "**INNER JOIN**: Combina filas de dos tablas solo si tienen una coincidencia en el campo común.",
+      "**LEFT JOIN**: Devuelve todas las filas de la tabla izquierda, aunque no tengan pareja en la derecha.",
+      "**RIGHT JOIN**: Devuelve todas las filas de la tabla derecha, aunque no tengan pareja en la izquierda.",
+      "**LIMIT / FETCH**: Restringe el número de filas devueltas (útil para paginación de webs).",
+      "**Consultas Multitabla**: Se pueden unir muchísimas tablas si están bien relacionadas con claves ajenas.",
+      "**Concatenación de Columnas**: Unir nombre y apellidos en una sola columna de resultado.",
+      "**Operaciones Aritméticas**: SQL permite calcular `precio * 1.21` directamente en el SELECT para mostrar el IVA."
+    ]
+  },
+  "bd_tema_6": {
+    "name": "Tema 6: Bases de Datos NoSQL",
+    "points": [
+      "**NoSQL (Not Only SQL)**: Bases de datos diseñadas para esquemas flexibles, velocidad extrema y grandes volúmenes.",
+      "**Escalado Horizontal**: Capacidad de añadir más servidores baratos para repartir la carga de datos.",
+      "**Esquema Flexible (Schemaless)**: No hace falta definir las columnas antes; cada fila puede tener campos distintos.",
+      "**Base de Datos de Documentos**: Guarda los datos como archivos JSON o BSON (ej: MongoDB).",
+      "**Base de Datos Clave-Valor**: Diccionarios ultra-rápidos para guardar ajustes o sesiones (ej: Redis).",
+      "**Base de Datos de Grafos**: Enfocada en las relaciones complejas entre nodos (ej: Redes Sociales, Neo4j).",
+      "**Base de Datos de Columnas**: Optimizada para leer inmensas cantidades de datos estadísticos (ej: Cassandra).",
+      "**Teorema de CAP**: Dice que solo puedes tener 2 de 3: Consistencia, Disponibilidad o Particionado.",
+      "**Consistencia Eventual**: Aceptamos que los datos tarden unos segundos en estar iguales en todos los servidores.",
+      "**Alta Disponibilidad**: Diseñadas para que si un servidor explota, los demás sigan funcionando sin que el usuario lo note.",
+      "**Sharding**: Técnica de partir la base de datos en trozos y repartirlos por diferentes máquinas.",
+      "**Réplica**: Tener copias exactas de los datos en varios sitios para seguridad y lecturas rápidas.",
+      "**Indexación**: Vital también en NoSQL para no tener que leer todo el disco en cada búsqueda.",
+      "**Baja Latencia**: Ideal para apps de mensajería, juegos online o carritos de la compra en tiempo real.",
+      "**Colecciones y Documentos**: Nombres que usa MongoDB para 'Tablas' y 'Filas' respectivamente.",
+      "**MapReduce**: Técnica para procesar Terabytes de datos repartiendo la tarea entre miles de servidores.",
+      "**In-Memory DB**: Guardar todo en la RAM en lugar del disco para respuestas en microsegundos.",
+      "**Drivers NoSQL**: Bibliotecas para conectar Java o Python con estos motores no relacionales.",
+      "**JSON**: Formato estándar de intercambio de datos muy usado en el mundo NoSQL.",
+      "**Migración Relacional a NoSQL**: No siempre es buena idea; se elige solo si el volumen o la flexibilidad lo exigen."
+    ]
+  },
+  "bd_tema_7": {
+    "name": "Tema 7: Seguridad y Administración de BD",
+    "points": [
+      "**Seguridad de Acceso**: Controlar quién puede entrar al servidor de base de datos y desde qué IP.",
+      "**Privilegios**: Permisos específicos (SELECT, INSERT, UPDATE, DELETE) asignados a cada usuario.",
+      "**Roles**: Grupos de permisos predefinidos (ej: un rol 'Lector' solo puede hacer SELECT).",
+      "**Comando GRANT**: Otorga permisos o roles a un usuario específico.",
+      "**Comando REVOKE**: Quita permisos que habían sido otorgados anteriormente.",
+      "**Aislamiento de Red**: El servidor de BD nunca debe tener una IP pública accesible desde Internet.",
+      "**Cifrado de Datos**: Encriptar la información guardada en el disco para que no sea legible si roban los archivos.",
+      "**Cifrado en Tránsito (SSL/TLS)**: Asegurar que los datos viajan seguros entre el programa y la base de datos.",
+      "**Logs de Errores**: Archivos que registran fallos técnicos del servidor para su depuración.",
+      "**Logs de Auditoría**: Registran cada acción de cada usuario para saber quién borró qué dato crítico.",
+      "**Backup Físico**: Copia de los archivos reales del motor de base de datos en frío.",
+      "**Backup Lógico (Export/Dump)**: Generar un archivo gigante de texto con todos los comandos `INSERT` necesarios.",
+      "**Punto de Recuperación**: Posibilidad de restaurar la BD a un momento exacto del pasado tras un error.",
+      "**Monitorización**: Vigilar el uso de CPU y RAM del servidor para evitar saturaciones.",
+      "**Optimización de Consultas**: Corregir SQLs lentos para que el programa responda más rápido al usuario.",
+      "**Uso de Índices**: Crear índices en columnas que se buscan mucho para acelerar las respuestas.",
+      "**Reglas de Negocio**: Disparadores (Triggers) que ejecutan código automático cuando ocurre un cambio.",
+      "**Procedimientos Almacenados**: Funciones guardadas dentro de la BD para lógicas de datos complejas.",
+      "**Actualización del SGBD**: Instalar parches de seguridad del fabricante para evitar hackeos.",
+      "**Integridad Referencial**: Obligar a que las claves ajenas siempre apunten a datos válidos mediante restricciones."
+    ]
+  },
+  "ed_tema_1": {
+    "name": "Tema 1: Desarrollo de Software",
+    "points": [
+      "**Ciclo de Vida (SDLC)**: Conjunto de fases que recorre el software desde la idea hasta que se jubila.",
+      "**Análisis de Requisitos**: Fase crítica para entender qué necesita el cliente y qué debe hacer el programa.",
+      "**Fase de Diseño**: Definir la arquitectura, las bases de datos y la interfaz antes de escribir código.",
+      "**Codificación (Implementación)**: La fase donde los programadores escriben el código fuente.",
+      "**Pruebas (Testing)**: Verificar que no hay fallos y que el sistema cumple con lo que pidió el cliente.",
+      "**Despliegue**: Poner el software en manos del usuario real (producción).",
+      "**Mantenimiento**: Corregir errores descubiertos y añadir nuevas funciones con el tiempo.",
+      "**Modelo en Cascada**: Metodología rígida donde no se pasa de fase hasta terminar la anterior.",
+      "**Modelos Ágiles (Agile)**: Desarrollo rápido en ciclos cortos (Sprints) que se adaptan al cambio.",
+      "**Metodología SCRUM**: El equipo se reúne a diario; foco en el trabajo colaborativo e incremental.",
+      "**Kanban**: Sistema visual basado en tarjetas para ver el flujo de tareas (To Do, Doing, Done).",
+      "**Versión Alpha**: Primera versión funcional pero con muchos errores, solo para pruebas internas.",
+      "**Versión Beta**: Versión casi lista que se lanza a un grupo de usuarios para que la prueben.",
+      "**QA (Aseguramiento de Calidad)**: Departamento enfocado en garantizar un producto sin fallos.",
+      "**Especificaciones Funcionales**: Documento técnico que describe cada función del sistema.",
+      "**Entorno de Desarrollo**: PC del programador donde el código es inestable y se hacen pruebas sucias.",
+      "**Entorno de Pre-producción (Staging)**: Copia exacta del servidor real para probar el despliegue final.",
+      "**Entorno de Producción**: El lugar real donde los usuarios usan el software; debe ser sagrado.",
+      "**Deuda Técnica**: El coste de hacer las cosas rápido y mal ahora, lo cual obligará a arreglarlo más caro luego.",
+      "**Prototipado**: Crear una versión muy básica y visual para que el cliente valide la idea rápido."
+    ]
+  },
+  "ed_tema_2": {
+    "name": "Tema 2: Instalación de Entornos",
+    "points": [
+      "**IDE (Integrated Development Environment)**: Herramienta que une Editor, Compilador y Depurador en uno.",
+      "**Editor de Texto Avanzado**: Ligero, rápido y extensible (ej: VS Code, Sublime Text).",
+      "**Compilador**: Traduce tu código de golpe a un archivo ejecutable (ej: `javac` para Java).",
+      "**Intérprete**: Ejecuta tu código línea a línea en el momento (ej: intérprete de Python o JS).",
+      "**Variables de Entorno**: Ajustes del SO fundamentales para que el IDE halle el compilador (ej: PATH).",
+      "**JDK (Java Development Kit)**: Kit completo necesario para crear aplicaciones en Java.",
+      "**JRE (Java Runtime Environment)**: Solo permite ejecutar programas Java, no crearlos.",
+      "**Extensiones/Plugins**: Pequeños añadidos que dan superpoderes al IDE (ej: soporte para otros lenguajes).",
+      "**Auto-completado (IntelliSense)**: El IDE te sugiere qué escribir, ahorrando tiempo y evitando erratas.",
+      "**Depurador (Debugger)**: Herramienta vital para parar el tiempo en tu código y ver qué valen las variables.",
+      "**Puntos de Interrupción (Breakpoints)**: Marcas en el código donde queremos que el programa se detenga.",
+      "**Consola de Salida**: Ventana donde vemos los mensajes que lanza nuestro programa al ejecutarse.",
+      "**Gestión de Dependencias**: Herramientas que descargan solas las bibliotecas externas (ej: Maven, Gradle).",
+      "**SDK (Software Development Kit)**: Conjunto de herramientas específico para una plataforma (ej: Android SDK).",
+      "**Configuración de Idioma**: Asegurar que el entorno usa UTF-8 para no tener problemas con acentos.",
+      "**Temas de Apariencia**: Modo oscuro vs Modo claro; importante para la fatiga visual del programador.",
+      "**Control de Versiones Integrado**: El IDE permite hacer commits y subidas a Git sin salir del programa.",
+      "**Formateo Automático**: Botón que ordena el código (sangrías, llaves) para que se vea limpio al instante.",
+      "**Refactorización**: Opciones del IDE para mover o renombrar cosas en todo el proyecto de forma segura.",
+      "**Actualización del Entorno**: Mantener el IDE al día para tener las últimas mejoras de rendimiento y seguridad."
+    ]
+  },
+  "ed_tema_3": {
+    "name": "Tema 3: Diseño con UML",
+    "points": [
+      "**UML (Unified Modeling Language)**: El estándar universal de dibujos técnicos para software.",
+      "**Diagrama de Clases**: El más importante; muestra la estructura estática (atributos y métodos).",
+      "**Relación de Asociación**: Representa una conexión simple entre dos clases (línea continua).",
+      "**Relación de Agregación**: Relación 'todo-parte' débil (un coche y su radio; pueden existir separados).",
+      "**Relación de Composición**: Relación 'todo-parte' fuerte (un humano y su corazón; no pueden separarse).",
+      "**Relación de Generalización**: Representa la Herencia (línea con flecha blanca apuntando al padre).",
+      "**Diagrama de Casos de Uso**: Muestra QUÉ hace el sistema desde el punto de vista del usuario (Actores).",
+      "**Actor**: Persona o sistema externo que interactúa con nuestra aplicación (dibujado como muñeco de palo).",
+      "**Extend (`<<extend>>`)**: Funcionalidad opcional que solo ocurre en ciertos casos especiales.",
+      "**Include (`<<include>>`)**: Funcionalidad obligatoria que se repite en varios casos de uso.",
+      "**Diagrama de Secuencia**: Muestra cómo intercambian mensajes los objetos a lo largo del tiempo.",
+      "**Diagrama de Estados**: Muestra el comportamiento de un objeto complejo (ej: un pedido que pasa de 'Pendiente' a 'Enviado').",
+      "**Visibilidad UML**: `+` para público, `-` para privado y `#` para protegido.",
+      "**Multiplicidad**: Indica cuántos objetos participan en la relación (ej: `1..*` significa de uno a muchos).",
+      "**Clasificadores**: Conceptos como Clases, Interfaces o Tipos de Datos representados en el diagrama.",
+      "**Paquetes UML**: Representan cómo se agrupan las clases en carpetas lógicas.",
+      "**Interfaz UML**: Se representa con un círculo ('lollipop') o el estereotipo `<<interface>>`.",
+      "**Notas**: Rectángulos con una esquina doblada para añadir aclaraciones de texto al dibujo.",
+      "**Modelado**: Crear estos dibujos ayuda a detectar errores de lógica antes de tocar una sola línea de código.",
+      "**Herramientas CASE**: Software especializado para dibujar estos diagramas (Visual Paradigm, Draw.io, StarUML)."
+    ]
+  },
+  "ed_tema_4": {
+    "name": "Tema 4: Control de Versiones (Git)",
+    "points": [
+      "**Git**: Sistema de control de versiones distribuido; guarda el historial completo de cambios de tu código.",
+      "**Repositorio**: Localización (carpeta) donde Git guarda todos los archivos y su historial.",
+      "**Commit**: Instantánea de los cambios actuales con un mensaje descriptivo (ej: 'Añadida validación email').",
+      "**Branch (Rama)**: Línea de desarrollo paralela para probar funciones nuevas sin romper la principal (`master`/`main`).",
+      "**Merge**: Operación de fusionar los cambios de una rama secundaria dentro de la rama principal.",
+      "**Conflicto**: Ocurre cuando dos personas editan la misma línea del mismo archivo; debe resolverse a mano.",
+      "**Clone**: Descargar una copia completa de un repositorio remoto a tu ordenador local.",
+      "**Pull**: Traer y fusionar los últimos cambios del servidor remoto a tu máquina local.",
+      "**Push**: Subir tus cambios guardados (commits) localmente al servidor remoto (ej: GitHub, GitLab).",
+      "**Staging Area (Index)**: Zona intermedia donde preparas qué archivos quieres incluir en el siguiente commit.",
+      "**Checkout / Switch**: Cambiar de una rama a otra para trabajar en diferentes partes del proyecto.",
+      "**Git Log**: Lista cronológica de todos los cambios realizados, quién los hizo y cuándo.",
+      "**GitHub/GitLab**: Plataformas en la web para alojar tus repositorios de Git y colaborar con otros.",
+      "**Pull Request (PR)**: Petición oficial para que tus cambios en una rama sean revisados y aceptados en la principal.",
+      "**Ignore (`.gitignore`)**: Archivo que dice a Git qué carpetas o ficheros no debe rastrear nunca (ej: compilados).",
+      "**Diff**: Herramienta visual para ver exactamente qué letras han cambiado entre dos versiones de un archivo.",
+      "**Fork**: Copia de un proyecto ajeno a tu cuenta personal para hacer tus propias modificaciones.",
+      "**Rebase**: Alternativa al merge para mantener un historial de commits lineal y más limpio.",
+      "**Cherry-pick**: Traer un commit específico de una rama a otra sin traer todos los demás cambios.",
+      "**SSH Keys**: Sistema de llaves seguras para identificarte en GitHub sin escribir contraseña cada vez."
+    ]
+  },
+  "ed_tema_5": {
+    "name": "Tema 5: Pruebas de Software (Testing)",
+    "points": [
+      "**Pruebas Unitarias**: Verifican que una sola función o método pequeño funciona perfectamente por separado.",
+      "**JUnit**: El framework estándar en Java para automatizar la ejecución de pruebas unitarias.",
+      "**Aserción (`assert`)**: Comprobación que dice: 'Espero que el resultado sea X'. Si no es X, la prueba falla.",
+      "**Pruebas de Integración**: Verifican que varios módulos funcionan bien cuando se juntan y se comunican.",
+      "**Pruebas de Sistema**: Pruebas completas de toda la aplicación como un todo antes de entregarla.",
+      "**Pruebas de Aceptación (UAT)**: Realizadas por el cliente final para dar el visto bueno al producto.",
+      "**Pruebas de Regresión**: Volver a pasar los tests tras un cambio para asegurar que no hemos roto cosas viejas.",
+      "**Caja Negra**: Probamos qué hace el programa sin saber cómo está escrito por dentro (foco en entrada/salida).",
+      "**Caja Blanca**: Probamos basándonos en el conocimiento del código fuente (foco en caminos lógicos).",
+      "**TDD (Test Driven Development)**: Metodología donde escribes primero la prueba y luego el código necesario para pasarla.",
+      "**Mocking**: Crear objetos 'falsos' que simulan comportamientos (ej: fingir una base de datos lenta).",
+      "**Bug (Bicho)**: Error de programación que provoca un comportamiento incorrecto o no deseado.",
+      "**Cobertura de Código**: Porcentaje de líneas de tu programa que están siendo verificadas por los tests.",
+      "**Pruebas de Carga**: Poner el sistema al límite de usuarios para ver cuándo se colapsa.",
+      "**Pruebas de Seguridad**: Intentar hackear o saltarse las reglas del sistema para hallar agujeros.",
+      "**Pruebas de Estrés**: Seter el sistema bajo condiciones extremas de hardware (poca RAM, poco disco).",
+      "**Test Automatizado**: Script que corre solo y nos avisa de fallos, ideal para proyectos grandes.",
+      "**Gestión de Defectos**: Uso de herramientas (Jira, GitHub Issues) para listar y priorizar los fallos a arreglar.",
+      "**Ciclo de un Bug**: Detectado → Asignado → Arreglado → Verificado → Cerrado.",
+      "**QA Tester**: Profesional dedicado exclusivamente a buscar fallos y asegurar la calidad del software."
+    ]
+  },
+  "ed_tema_6": {
+    "name": "Tema 6: Calidad y Optimización",
+    "points": [
+      "**Código Limpio (Clean Code)**: Código fácil de leer, entender y mantener por cualquier persona.",
+      "**Nombres Descriptivos**: Las variables deben llamarse `diasVacaciones` en lugar de simplemente `d` o `v`.",
+      "**Funciones Pequeñas**: Un método debe hacer una sola cosa y hacerla bien; si es muy largo, hay que dividirlo.",
+      "**Refactorización**: Mejorar el diseño interno del código sin cambiar lo que hace por fuera.",
+      "**Código Duplicado**: El pecado capital; si copias y pegas, debes crear un método común (Principio DRY).",
+      "**Principio DRY (Don't Repeat Yourself)**: No te repitas; centraliza la lógica para que los cambios sean fáciles.",
+      "**Principio KISS (Keep It Simple)**: Mantén las soluciones lo más sencillas posible; evita la sobre-ingeniería.",
+      "**Comentarios Útiles**: Solo comentar el 'por qué' hacemos algo raro, el 'qué' debe ser obvio por el nombre del código.",
+      "**Complejidad Ciclomática**: Medida de cuántos caminos posibles tiene un método; cuanta más, más difícil de testear.",
+      "**Optimización Prematura**: Error de intentar que el código sea ultra-rápido antes de que funcione correctamente.",
+      "**Análisis Estático**: Herramientas que leen tu código y hallan fallos sin ejecutarlo (ej: SonarQube, Lint).",
+      "**Acoplamiento Fuerte**: Malo; las clases dependen demasiado unas de otras y no puedes mover una sin la otra.",
+      "**Cohesión Alta**: Bueno; cada clase se enfoca en una tarea específica y todos sus métodos tienen sentido juntos.",
+      "**Refactoring Tooling**: Uso de las opciones del IDE para extraer métodos o mover variables de forma automática.",
+      "**Seguridad en el Código**: Evitar dejar contraseñas escritas o usar funciones que sabemos que son vulnerables.",
+      "**Documentación Técnica**: Manual para otros desarrolladores sobre cómo funciona el interior del proyecto.",
+      "**Estándares de Codificación**: Reglas de estilo acordadas por el equipo (ej: dónde poner las llaves `{`).",
+      "**Revisión de Código (Code Review)**: Leer el código de un compañero para aprender y pillar errores antes del merge.",
+      "**Escalabilidad del Código**: Diseñar para que añadir nuevas funciones no obligue a reescribir todo el sistema.",
+      "**Mantenibilidad**: Facilidad con la que un nuevo programador puede entender y arreglar el software meses después."
+    ]
+  },
+  "ed_tema_7": {
+    "name": "Tema 7: Despliegue de software",
+    "points": [
+      "**Empaquetado**: Unir todos los archivos necesarios en un solo paquete instalable (ej: .JAR en Java, .EXE en Windows).",
+      "**Artefacto**: El archivo final generado tras la compilación y empaquetado listo para ser usado.",
+      "**CI/CD (Integración y Despliegue Continuo)**: Automatizar todo el proceso desde el commit hasta que la app está online.",
+      "**Pipeline**: El camino automático que sigue el código: Compilar → Testear → Empaquetar → Desplegar.",
+      "**GitHub Actions / Jenkins**: Herramientas populares para crear estos flujos automáticos de trabajo.",
+      "**Entorno de Producción**: El servidor final donde corren las aplicaciones para los clientes reales.",
+      "**Despliegue Manual**: Copiar los archivos a mano al servidor; peligroso y propenso a errores humanos.",
+      "**Documentación de Usuario**: Manual de instrucciones que explica a la persona común cómo usar el programa.",
+      "**Licencia de Software**: Acuerdo legal que dice qué puede hacer el usuario con el programa (GPL, MIT, Propietaria).",
+      "**Control de Versiones del Producto**: Numeración oficial (v1.0, v2.1.4) para saber qué se ha entregado.",
+      "**SemVer (Versionado Semántico)**: Regla X.Y.Z: X (cambios grandes), Y (funciones nuevas), Z (parches de errores).",
+      "**Instalador**: Programa encargado de copiar archivos y configurar el registro en el PC del cliente.",
+      "**Rollback de Despliegue**: Capacidad de volver a la versión anterior en segundos si el nuevo despliegue falla catastróficamente.",
+      "**Gestión de Configuración**: Manejar credenciales de BD y claves de API de forma distinta para cada entorno.",
+      "**Contenerización (Docker)**: Meter la app en una caja virtual que asegura que funcione igual en cualquier servidor.",
+      "**Script de Despliegue**: Pequeño programa (Bash/Python) que borra la versión vieja y pone la nueva automáticamente.",
+      "**Registro de Cambios (Changelog)**: Documento que lista las novedades de cada nueva versión lanzada.",
+      "**Soporte Post-Lanzamiento**: Atender quejas y errores de los usuarios en los primeros días tras el estreno.",
+      "**Hitos (Milestones)**: Fechas clave en el calendario de desarrollo para entregar partes del sistema.",
+      "**Checklist de Despliegue**: Lista de verificación final para asegurar que no nos olvidamos de nada antes de pulsar el botón."
+    ]
+  },
+  "lm_tema_1": {
+    "name": "Tema 1: XML y Estructuras de Datos",
+    "points": [
+      "**XML**: Metalenguaje basado en etiquetas para almacenar y transportar datos de forma estructurada e independiente.",
+      "**Texto Plano**: XML es legible por humanos y máquinas, lo que facilita el intercambio entre sistemas distintos.",
+      "**Documento Bien Formado**: Un XML que cumple todas las reglas sintácticas (etiquetas cerradas, un solo raíz, etc.).",
+      "**Elemento Raíz**: El contenedor principal único que debe envolver absolutamente todo lo demás en el archivo.",
+      "**Etiquetas**: Identificadores encerrados entre `<` y `>`. Distinguen mayúsculas de minúsculas (`Case Sensitive`).",
+      "**Atributos**: Información adicional metida dentro de la etiqueta de apertura (ej: `<persona id='001'>`).",
+      "**Anidamiento**: Las etiquetas deben cerrarse en orden inverso al que se abrieron (jerarquía perfecta).",
+      "**Prólogo XML**: La primera línea opcional que indica la versión y la codificación (ej: UTF-8).",
+      "**Entidades Predefinidas**: Caracteres prohibidos que deben escaparse: `<` (`&lt;`), `>` (`&gt;`), `&` (`&amp;`).",
+      "**Secciones CDATA**: Bloques donde el procesador XML ignorará todo lo que haya dentro, útil para meter código.",
+      "**Espacios de Nombres (Namespaces)**: Resuelven conflictos cuando dos vocabularios usan la misma etiqueta (ej: `libro:título` vs `persona:título`).",
+      "**Uso de XML**: Base de protocolos web (SOAP), sindicación (RSS), gráficos (SVG) y configuración de apps.",
+      "**Ventajas**: Extensible, estándar mundial, soporta cualquier idioma mediante Unicode/UTF-8.",
+      "**Estructura Jerárquica**: XML se puede ver como un árbol de nodos (padres, hijos y hermanos).",
+      "**Comentarios XML**: Se escriben entre `<!--` y `-->`. No pueden meterse dentro de las etiquetas.",
+      "**Validación**: Diferencia entre 'bien formado' (sintaxis) y 'válido' (cumple una estructura específica).",
+      "**Sistemas de Marcado**: Evolución desde SGML hasta llegar al XML simplificado y potente que usamos hoy.",
+      "**Interoperabilidad**: Capacidad de que un sistema Windows mande datos XML a un sistema Linux y se entiendan.",
+      "**Software XML**: Editores especializados que colorean y validan la estructura en tiempo real.",
+      "**XML vs JSON**: XML es más descriptivo y formal; JSON es más ligero y popular en aplicaciones web modernas."
+    ]
+  },
+  "lm_tema_2": {
+    "name": "Tema 2: HTML y CSS",
+    "points": [
+      "**HTML5**: El estándar actual para definir la estructura y el contenido de las páginas web.",
+      "**Semántica**: Usar etiquetas que dicen qué son (`<nav>`, `<article>`, `<footer>`) en lugar de simples `<div>`.",
+      "**Etiqueta `<a>`**: Crea hipervínculos; el atributo `href` es el alma de la Web al conectar documentos.",
+      "**Etiqueta `<img>`**: Incrusta imágenes; el atributo `alt` es vital para la accesibilidad y el SEO.",
+      "**Formularios**: Elementos `<form>`, `<input>`, `<select>` y `<button>` para captar datos del usuario.",
+      "**Tablas**: Estructura rígida mediante `<table>`, `<tr>` (filas), `<th>` (cabeceras) y `<td>` (celdas).",
+      "**Listas**: `<ul>` (bolitos), `<ol>` (números) y `<li>` para cada elemento de la lista.",
+      "**Metadatos**: Etiquetas dentro de `<head>` que dan instrucciones al navegador o buscadores (título, descripción).",
+      "**CSS**: Lenguaje de estilos encargado de que el HTML feo se vea elegante y moderno.",
+      "**Selectores**: Formas de elegir a qué etiquetas dar estilo (por nombre de etiqueta, por `.clase` o por `#id`).",
+      "**Modelo de Caja (Box Model)**: Todo en CSS es una caja con Contenido, Padding, Borde y Margen.",
+      "**Colores**: Definibles por nombre, Hexadecimal (`#FF0000`) o formato funcional `rgb(255,0,0)`.",
+      "**Fuentes**: Propiedades `font-family`, `font-size` y `font-weight` para controlar la tipografía.",
+      "**Posicionamiento**: `relative`, `absolute` y `fixed` para mover elementos fuera del flujo normal.",
+      "**Flexbox**: Sistema moderno para alinear elementos en filas o columnas de forma dinámica y sencilla.",
+      "**CSS Grid**: El sistema más potente para crear rejillas de diseño complejas en dos dimensiones.",
+      "**Media Queries**: La base del 'Responsive Design'; permiten cambiar los estilos según el tamaño de la pantalla.",
+      "**Cascada**: Regla que decide qué estilo gana cuando hay varios que afectan al mismo elemento.",
+      "**Pseudoclases**: Estilos para estados especiales como pasar el ratón por encima (`:hover`).",
+      "**Reset CSS**: Hoja de estilos inicial para que todos los navegadores partan del mismo punto visual base."
+    ]
+  },
+  "lm_tema_3": {
+    "name": "Tema 3: Validación (DTD y XSD)",
+    "points": [
+      "**Documento Válido**: XML que es 'bien formado' y además cumple las reglas de un esquema definido.",
+      "**DTD (Document Type Definition)**: El sistema de validación original, sencillo pero limitado.",
+      "**Declaración de Elementos**: Define qué hijos puede tener una etiqueta y su orden exacto.",
+      "**Cardinalidad DTD**: `?` (0 o 1), `*` (0 o más), `+` (1 o más). Sin símbolo = exactamente 1.",
+      "**Atributos en DTD**: Se definen con `ATTLIST`, indicando el tipo (CDATA, ID) y si es obligatorio (#REQUIRED).",
+      "**XSD (XML Schema Definition)**: Sistema moderno basado en XML, mucho más potente y detallado que DTD.",
+      "**Tipos de Datos XSD**: Permite validar si un valor es fecha, número, booleano o texto específico.",
+      "**Tipos Simples**: Restricciones sobre datos básicos (ej: 'el sueldo debe estar entre 1000 y 3000').",
+      "**Tipos Complejos**: Definen elementos que contienen atributos u otros elementos hijos.",
+      "**Patrones (facets)**: Permiten usar expresiones regulares para validar formatos como DNI o teléfonos.",
+      "**Secuencia (`xs:sequence`)**: Obliga a que los elementos hijos aparezcan en un orden predefinido.",
+      "**Elección (`xs:choice`)**: Permite que aparezca uno u otro elemento de una lista, pero no ambos.",
+      "**Frecuencia en XSD**: Controlada con los atributos `minOccurs` y `maxOccurs` (infinito = 'unbounded').",
+      "**Atributos XSD**: Se declaran con `xs:attribute` y suelen ir al final de la definición del tipo complejo.",
+      "**Namespace en XSD**: Permite validar documentos que mezclan etiquetas de diferentes orígenes.",
+      "**Anotaciones**: Etiquetas `xs:documentation` para que el esquema sea autodescriptivo para humanos.",
+      "**Inclusión y Redefinición**: Capacidad de usar un archivo XSD dentro de otro para reutilizar tipos.",
+      "**Validadores**: Herramientas que comparan tu XML contra el XSD y dan una lista detallada de errores.",
+      "**Ventajas de XSD**: Sintaxis XML (se edita igual), soporte total de tipos y mayor control que DTD.",
+      "**Uso Real**: Imprescindible en facturación electrónica y comunicación entre grandes empresas (servicios web)."
+    ]
+  },
+  "lm_tema_4": {
+    "name": "Tema 4: Consultas con XPath",
+    "points": [
+      "**XPath**: Lenguaje de rutas para navegar por el árbol de un XML y seleccionar partes específicas.",
+      "**Nodo**: Cada elemento, atributo o texto del XML se considera un nodo con padre e hijos.",
+      "**Ruta Absoluta**: Empieza por `/` desde la raíz (ej: `/tienda/cliente/nombre`).",
+      "**Ruta Relativa**: No empieza por `/`, busca a partir de donde estemos ahora mismo.",
+      "**Doble Barra `//`**: Busca elementos en cualquier nivel de profundidad de todo el documento.",
+      "**Punto `.` y punto-punto `..`**: Se refieren al nodo actual y al nodo padre respectivamente.",
+      "**Selección de Atributos**: Se usa el prefijo `@` para elegir atributos (ej: `//producto/@referencia`).",
+      "**Predicados `[...]`**: Condiciones para filtrar nodos (ej: `//empleado[edad > 30]`).",
+      "**Funciones de Posición**: `last()` (selecciona el último elemento) y `position()` (selecciona por orden).",
+      "**Operadores Lógicos**: `and`, `or`, `not` para crear filtros de búsqueda complejos.",
+      "**Operadores Aritméticos**: `+`, `-`, `*`, `div` (división) y `mod` (resto).",
+      "**Funciones de Texto**: `contains()`, `starts-with()` y `string-length()` para buscar dentro del texto.",
+      "**Selección de Texto**: El nodo `text()` devuelve el contenido escrito dentro de una etiqueta.",
+      "**Ejes (Axes)**: Direcciones de búsqueda avanzadas como `ancestor`, `descendant` o `sibling` (hermanos).",
+      "**Comodín `*`**: Selecciona CUALQUIER etiqueta del nivel actual.",
+      "**Unión `|`**: Permite unir dos rutas diferentes en una sola búsqueda (ej: `//libros | //discos`).",
+      "**Funciones Numéricas**: `sum()`, `round()` y `count()` para procesar datos estadísticos básicos.",
+      "**Importancia**: XPath es la base fundamental para usar XSLT y XQuery con soltura.",
+      "**Versiones**: XPath 1.0 es el más compatible; versiones 2.0+ añaden tipos de datos y mucha más potencia.",
+      "**Testing**: Se usa muchísimo en herramientas como Selenium para localizar botones y campos en webs."
+    ]
+  },
+  "lm_tema_5": {
+    "name": "Tema 5: Transformación con XSLT",
+    "points": [
+      "**XSLT**: Lenguaje para transformar documentos XML a otros formatos (especialmente HTML).",
+      "**Plantilla (`xsl:template`)**: Regla que dice: 'Cuando encuentres este nodo, haz este código'.",
+      "**Atributo `match`**: Usa XPath para decidir sobre qué nodos del XML se va a aplicar la regla.",
+      "**xsl:apply-templates**: Indica al procesador que siga buscando reglas para los hijos del nodo actual.",
+      "**xsl:value-of**: Extrae el contenido de un nodo y lo pega directamente en el documento de salida.",
+      "**xsl:for-each**: Bucle para repetir un trozo de código por cada elemento que encontremos.",
+      "**xsl:sort**: Permite ordenar los elementos alfabéticamente o por número antes de mostrarlos.",
+      "**xsl:if**: Estructura condicional para añadir algo solo si se cumple una prueba.",
+      "**xsl:choose / when**: Alternativa a múltiples ifs para elegir entre varias opciones excluyentes.",
+      "**Variables XSLT**: Permiten guardar valores, pero son constantes (no pueden cambiar una vez creadas).",
+      "**xsl:output**: Configura el formato del archivo final (indica si es html, xml o texto plano).",
+      "**Literal Result Elements**: Las etiquetas HTML normales (`div`, `b`, `h1`) se escriben tal cual en el XSL.",
+      "**AVT (Attribute Value Templates)**: Meter XPath dentro de un atributo usando llaves `{...}`.",
+      "**xsl:attribute**: Permite generar atributos HTML de forma dinámica desde los datos del XML.",
+      "**Separación de Conceptos**: Los datos están en el XML y el diseño en el XSLT; podemos cambiar la web sin tocar los datos.",
+      "**Versatilidad**: Con un solo XML puedes generar una web, un PDF y un archivo de texto diferente.",
+      "**Ejecución en Navegador**: El navegador puede hacer la transformación solo con añadir una línea al XML.",
+      "**Modularidad**: Capacidad de importar hojas de estilo XSLT dentro de otras para no repetir código.",
+      "**XSL-FO**: Variante avanzada enfocada exclusivamente a generar archivos PDF profesionales.",
+      "**Depuración**: Es difícil de depurar; los errores suelen dar como resultado una página en blanco."
+    ]
+  },
+  "lm_tema_6": {
+    "name": "Tema 6: XQuery y Bases de Datos XML",
+    "points": [
+      "**XQuery**: Lenguaje de consulta para XML; es a XML lo que SQL es a las bases de datos relacionales.",
+      "**FLWOR**: Acrónimo del corazón de XQuery: For, Let, Where, Order by, Return.",
+      "**Cláusula `for`**: Inicia un bucle que recorre una secuencia de nodos.",
+      "**Cláusula `let`**: Crea una variable y le asigna un valor (ej: un cálculo o una subconsulta).",
+      "**Cláusula `where`**: Filtra los elementos basándose en una condición lógica.",
+      "**Cláusula `order by`**: Ordena los resultados antes de ser devueltos al usuario.",
+      "**Cláusula `return`**: Construye el resultado final; aquí se suelen poner las etiquetas de salida.",
+      "**Función `doc()`**: Se usa para cargar un archivo XML externo desde el disco duro o una URL.",
+      "**Función `collection()`**: Permite consultar todos los archivos XML de una carpeta de una sola vez.",
+      "**Constructores Directos**: Posibilidad de escribir etiquetas XML directamente dentro del código XQuery.",
+      "**Llaves `{ }`**: Se usan para meter expresiones de código vivo dentro de las etiquetas de texto.",
+      "**BD Nativa XML**: Software que guarda los XML tal cual (nodos) en lugar de en tablas (ej: BaseX, eXist-db).",
+      "**Consultas Multidocumento**: XQuery es excelente para buscar datos cruzando miles de archivos XML distintos.",
+      "**Cuantificadores**: `every` y `some` para comprobar si algo se cumple en toda la lista o al menos en un elemento.",
+      "**Joins en XQuery**: Unir datos de dos fuentes distintas vinculando variables en el `where`.",
+      "**Transformación**: XQuery también puede transformar XML a HTML, siendo a veces más intuitivo que XSLT.",
+      "**Actualización de Datos**: Extensión 'XQuery Update' que permite insertar o borrar nodos de forma permanente.",
+      "**Rendimiento**: Mucho más rápido que XSLT para buscar un dato puntual en archivos inmensos (Gigabytes).",
+      "**Funciones Propias**: Permite al programador crear sus propias funciones para reutilizarlas en muchas consultas.",
+      "**Uso Profesional**: Muy usado en gestión documental, archivos históricos digitales y transparencia pública."
+    ]
+  },
+  "lm_tema_7": {
+    "name": "Tema 7: Sindicación y RSS",
+    "points": [
+      "**Sindicación**: Proceso de compartir contenido web para que se lea automáticamente en otras apps.",
+      "**Feed**: Archivo XML con la lista de novedades de un blog o periódico digital.",
+      "**RSS**: El formato más antiguo y popular de sindicación; simple pero muy efectivo.",
+      "**Estructura RSS**: Elemento raíz `<rss>`, seguido de un `<channel>` que engloba a varios `<item>`.",
+      "**Item**: Representa una noticia individual; contiene título, enlace, descripción y fecha.",
+      "**Enclosure**: Etiqueta especial de RSS para incluir archivos adjuntos (audio, video); base del Podcast.",
+      "**Atom**: Formato más moderno y seguro que nació para superar las limitaciones técnicas del viejo RSS.",
+      "**Diferencia RSS vs Atom**: Atom maneja mejor las fechas y permite meter contenido HTML completo dentro de él.",
+      "**Agregador/Lector**: Aplicación que lee tus feeds favoritos y te muestra las noticias juntas (ej: Feedly).",
+      "**Auto-descubrimiento**: Etiqueta `<link>` en el HTML que dice al navegador: 'Tengo un RSS disponible'.",
+      "**Actualización**: El lector consulta el archivo XML periódicamente para avisarte de noticias nuevas.",
+      "**Metadatos de Canal**: Título del sitio, descripción, idioma y última fecha de actualización.",
+      "**GUID**: Identificador único global obligatorio para que el lector sepa si una noticia es nueva o ya la leyó.",
+      "**Ventajas SEO**: Los buscadores indexan mucho más rápido las páginas que tienen un feed activo.",
+      "**Centralización**: Permite al usuario estar al día de 50 webs sin tener que visitarlas una por una.",
+      "**Validación de Feeds**: W3C ofrece herramientas para asegurar que tu RSS cumple con el estándar y no tiene errores.",
+      "**Podcast**: Es básicamente un canal RSS donde cada item tiene un archivo MP3 en la etiqueta `enclosure`.",
+      "**OPML**: Archivo XML usado para exportar/importar tu lista de suscripciones entre distintos lectores.",
+      "**Resumen vs Completo**: Decisión del dueño de la web de poner solo un párrafo o el artículo entero en el feed.",
+      "**Futuro**: Aunque las redes sociales han bajado su popularidad, sigue siendo la forma más libre de seguir webs."
+    ]
+  },
+  "lm_tema_8": {
+    "name": "Tema 8: ERP y CRM (Sistemas de Gestión)",
+    "points": [
+      "**SGE (Sistemas de Gestión Empresarial)**: Software central que controla todos los departamentos de un negocio.",
+      "**ERP (Enterprise Resource Planning)**: Sistema que unifica Ventas, Compras, Almacén, Contabilidad y RRHH.",
+      "**Base de Datos Única**: Todos los módulos leen y guardan en el mismo sitio; no hay datos repetidos ni perdidos.",
+      "**Módulos**: El ERP se divide en piezas; la empresa compra solo las que necesita (ej: módulo de Almacén).",
+      "**CRM (Customer Relationship Management)**: Software para gestionar la relación, ventas y soporte con los clientes.",
+      "**Función del CRM**: Guardar cada llamada, email o queja para ofrecer un trato personalizado y vender más.",
+      "**ERP Propietario**: Software de pago con soporte de grandes empresas (ej: SAP, Microsoft Dynamics).",
+      "**ERP Libre/Open Source**: Software gratuito (el código) que puedes modificar a tu gusto (ej: Odoo, Dolibarr).",
+      "**Implantación**: Proceso largo y difícil de instalar y configurar el sistema según la forma de trabajar del cliente.",
+      "**Migración de Datos**: Traer los datos viejos de Excel o papel al nuevo ERP de forma estructurada.",
+      "**Formación**: Enseñar a los empleados a usar el nuevo sistema; vital para que el proyecto no fracase.",
+      "**Business Intelligence (BI)**: Herramientas del ERP para analizar datos y ayudar a los jefes a tomar decisiones.",
+      "**Cuadro de Mando (Dashboard)**: Ventana visual con gráficos que muestran el estado real de la empresa hoy.",
+      "**Data Mining**: Buscar patrones ocultos en los datos históricos (ej: 'qué productos se venden más en otoño').",
+      "**XML en ERP**: El estándar XML se usa para enviarse facturas y pedidos automáticamente entre empresas (EDI).",
+      "**Seguridad**: Muy alta; el ERP contiene los secretos de la empresa y datos privados de los empleados.",
+      "**Mantenimiento**: El ERP debe actualizarse según cambien las leyes (IVA, protección de datos, nóminas).",
+      "**Escalabilidad**: El sistema debe poder crecer si la empresa contrata más gente o abre más tiendas.",
+      "**Automatización**: Tareas que se hacen solas (ej: avisar al proveedor si queda poca mercancía en el almacén).",
+      "**Retorno de Inversión (ROI)**: Tiempo que tarda la empresa en recuperar lo que costó el ERP gracias al ahorro."
+    ]
+  },
+  "emp_tema_1": {
+    "name": "Tema 1: Prevención de Riesgos (PRL)",
+    "points": [
+      "**PRL**: Conjunto de medidas para evitar o disminuir los daños derivados del trabajo.",
+      "**Ley 31/1995**: Normativa fundamental en España que regula la salud y seguridad de los trabajadores.",
+      "**Salud (OMS)**: Estado completo de bienestar físico, mental y social; no solo la ausencia de enfermedad.",
+      "**Riesgo Laboral**: Posibilidad de que un trabajador sufra un daño derivado de sus tareas.",
+      "**Condición de Trabajo**: Cualquier característica técnica (máquinas, ambiente, carga) que pueda dar lugar a riesgos.",
+      "**Accidente de Trabajo**: Lesión corporal sufrida con ocasión o por consecuencia del trabajo.",
+      "**Accidente 'in itinere'**: El que ocurre al ir o volver del lugar de trabajo por el trayecto habitual.",
+      "**Enfermedad Profesional**: La contraída por el trabajo y que figura en el listado oficial del Gobierno.",
+      "**Riesgos Físicos**: Ruido extremado, vibraciones, iluminación deficiente o temperaturas molestas.",
+      "**Riesgos Químicos**: Sustancias que pueden inhalarse, absorberse o ingerirse (polvos, gases, vapores).",
+      "**Riesgos Biológicos**: Exposición a virus, bacterias, hongos o parásitos en el entorno laboral.",
+      "**Riesgos Ergonómicos**: Posturas forzadas, manipulación de cargas pesadas o movimientos repetitivos.",
+      "**Riesgos Psicosociales**: Estrés, fatiga mental, agotamiento (Burnout) o acoso laboral (Mobbing).",
+      "**EPI (Equipo de Protección Individual)**: Última barrera de seguridad (cascos, guantes, botas) cuando el riesgo no se quita.",
+      "**Señalización de Seguridad**: Colores (Rojo=Prohibido, Azul=Obligación, Amarillo=Advertencia, Verde=Socorro).",
+      "**Evaluación de Riesgos**: Proceso para identificar peligros y decidir si el riesgo es tolerable o no.",
+      "**Delegado de Prevención**: Representante de los trabajadores con funciones específicas en seguridad laboral.",
+      "**Primeros Auxilios**: Medidas urgentes hasta que llega la asistencia médica (técnica PAS).",
+      "**Técnica PAS**: Proteger (asegurar zona), Avisar (llamar al 112) y Socorrer (atender víctimas).",
+      "**Inspección de Trabajo**: Organismo que vigila que las empresas cumplan con la seguridad y sanciona si no lo hacen."
+    ]
+  },
+  "emp_tema_2": {
+    "name": "Tema 2: Factores de Riesgo y Daños",
+    "points": [
+      "**Carga de Trabajo**: Esfuerzo físico y mental necesario para realizar las tareas asignadas.",
+      "**Fatiga Física**: Cansancio muscular por esfuerzos intensos o malas posturas prolongadas.",
+      "**Fatiga Mental**: Agotamiento por exceso de información, responsabilidad o tareas monótonas.",
+      "**Pantallas de Visualización (PVD)**: Riesgos específicos de oficina: vista cansada, dolores de espalda y estrés.",
+      "**Lugar de Trabajo**: Debe tener dimensiones adecuadas, limpieza, orden e iluminación suficiente.",
+      "**Seguridad en Máquinas**: Deben tener marcado CE, protecciones fijas y botones de parada de emergencia.",
+      "**Riesgo Eléctrico**: Contacto directo (tocar cables) o indirecto (tocar carcasa con corriente) y riesgo de incendio.",
+      "**Incendio (Triángulo del Fuego)**: Requiere Combustible, Comburente (oxígeno) y Energía de activación (calor).",
+      "**Extintores**: Deben ser adecuados al tipo de fuego (A: sólidos, B: líquidos, C: gases).",
+      "**Evacuación**: Salir del edificio de forma ordenada siguiendo las señales luminosas de salida.",
+      "**Riesgo Químico**: Etiquetas obligatorias con pictogramas (Calavera=Tóxico, Llama=Inflamable).",
+      "**Sordera Profesional**: Daño irreversible por exposición continua a niveles de ruido mayores a 80-85 decibelios.",
+      "**Iluminación**: La falta de luz provoca fatiga visual; el exceso provoca reflejos y deslumbramientos peligrosos.",
+      "**Temperatura**: El confort ideal en oficinas está entre 17°C y 27°C según la ley.",
+      "**Vibraciones**: Producen hormigueo, dolores articulares y problemas vasculares en manos y brazos.",
+      "**Estrés Laboral**: Desequilibrio entre lo que se nos pide y nuestra capacidad de respuesta.",
+      "**Burnout**: Síndrome del 'quemado'; agotamiento emocional total respecto al trabajo habitual.",
+      "**Turnicidad y Nocturnidad**: Alteran los ritmos biológicos y pueden provocar problemas de sueño y salud.",
+      "**Envejecimiento Prematuro**: Desgaste excesivo del cuerpo por condiciones de trabajo extremadamente duras.",
+      "**Insatisfacción Laboral**: Diferencia negativa entre las expectativas del trabajador y la realidad de su empleo."
+    ]
+  },
+  "emp_tema_3": {
+    "name": "Tema 3: Gestión de la Prevención",
+    "points": [
+      "**Organización de la Prevención**: La empresa debe elegir un modelo (asumirlo el jefe, designar empleados o contratar fuera).",
+      "**Servicio de Prevención Ajeno (SPA)**: Empresa externa especializada que contrata la pyme para gestionar su seguridad.",
+      "**Servicio de Prevención Propio (SPP)**: Obligatorio en empresas muy grandes (más de 500 trabajadores) o peligrosas.",
+      "**Plan de Prevención**: El documento maestro que define cómo se integra la seguridad en toda la empresa.",
+      "**Comité de Seguridad y Salud**: Órgano paritario para consulta y participación en empresas de 50 o más empleados.",
+      "**Investigación de Accidentes**: Analizar por qué ocurrió un daño para evitar que se repita (nunca para buscar culpables).",
+      "**Vigilancia de la Salud**: Reconocimientos médicos periódicos obligatorios para la empresa pero voluntarios para el trabajador.",
+      "**Formación e Información**: El trabajador tiene derecho a saber qué peligros tiene su puesto y cómo evitarlos.",
+      "**Planes de Emergencia**: Protocolos escritos sobre qué debe hacer cada persona si hay un fuego o catástrofe.",
+      "**Plan de Autoprotección**: Documento más complejo exigido a ciertas actividades de especial peligrosidad.",
+      "**Emergencia General**: Situación grave que requiere evacuar todo el centro y llamar a servicios externos.",
+      "**Emergencia Parcial**: Se puede controlar con los medios de una zona sin evacuar todo el edificio.",
+      "**Conato de Emergencia**: Incendio pequeño que se puede apagar rápidamente con los extintores de la zona.",
+      "**Equipo de Alarma y Evacuación (EAE)**: Trabajadores formados para dirigir la salida de sus compañeros.",
+      "**Equipo de Primeros Auxilios (EPA)**: Trabajadores con formación básica sanitaria para atender heridos leves.",
+      "**Punto de Reunión**: Lugar seguro en el exterior donde todos los empleados deben juntarse tras ser evacuados.",
+      "**Auditoría de Prevención**: Examen externo obligatorio para comprobar que el sistema de seguridad funciona.",
+      "**Cultura Preventiva**: Conseguir que la seguridad sea algo natural y valorado por todos, no solo una norma.",
+      "**Responsabilidad Civil/Penal**: Consecuencias legales graves para el empresario si no cumple las normas de PRL.",
+      "**Recargo de Prestaciones**: Multa del 30% al 50% en la pensión del trabajador que debe pagar el jefe si hubo falta de seguridad."
+    ]
+  },
+  "emp_tema_4": {
+    "name": "Tema 4: Derecho del Trabajo",
+    "points": [
+      "**Derecho del Trabajo**: Rama jurídica que regula la relación entre empresarios y trabajadores.",
+      "**Estatuto de los Trabajadores (ET)**: La 'Constitución' laboral en España; ley básica para todos.",
+      "**Fuentes del Derecho**: Orden de importancia: UE, Constitución, Leyes, Convenios, Contrato de trabajo.",
+      "**Convenio Colectivo**: Acuerdo negociado entre sindicatos y patronales para un sector específico (ej: Hostelería).",
+      "**Contrato de Trabajo**: Acuerdo por el cual el trabajador presta servicios a cambio de un salario.",
+      "**Características del Contrato**: Voluntario, por cuenta ajena, retribuido y bajo dependencia (jerarquía).",
+      "**SMI (Salario Mínimo Interprofesional)**: La cantidad mínima legal que cualquier trabajador debe cobrar al mes.",
+      "**Periodo de Prueba**: Tiempo al inicio donde cualquiera puede romper el contrato sin dar explicaciones ni pagar multa.",
+      "**Jornada Laboral**: Tiempo dedicado al trabajo; máxima de 40 horas semanales de media al año.",
+      "**Descanso Semanal**: Mínimo de un día y medio ininterrumpido a la semana.",
+      "**Vacaciones**: Mínimo legal de 30 días naturales (o 22 laborables) pagados al año.",
+      "**Permisos Retribuidos**: Días libres pagados por causas justificadas (matrimonio, mudanza, muerte familiar).",
+      "**Horas Extraordinarias**: Trabajo realizado fuera de la jornada normal; voluntarias y con límite de 80 al año.",
+      "**Tipos de Contratos**: Indefinido (fijo), Temporal (por circunstancias de producción) y Formativos.",
+      "**Modificación del Contrato**: Cambios decididos por el jefe en funciones, horario o lugar de trabajo.",
+      "**Excedencia**: Pausa en el contrato por cuidado de hijos, familiares o por decisión propia.",
+      "**Despido Disciplinario**: Expulsión por culpa grave del trabajador; no hay indemnización.",
+      "**Despido Objetivo**: Por causas económicas o técnicas de la empresa; conlleva indemnización de 20 días/año.",
+      "**Despido Improcedente**: Cuando el juez dice que no había causa justa; indemnización de 33 días/año.",
+      "**Finiquito**: Documento de liquidación final al irse de la empresa (salario pendiente, vacaciones no disfrutadas)."
+    ]
+  },
+  "emp_tema_5": {
+    "name": "Tema 5: Seguridad Social y Nóminas",
+    "points": [
+      "**Seguridad Social**: Sistema público que protege a los ciudadanos ante situaciones de necesidad (salud, paro).",
+      "**Régimen General**: Donde están la mayoría de trabajadores por cuenta ajena.",
+      "**RETA**: Régimen Especial de Trabajadores Autónomos para quienes trabajan para sí mismos.",
+      "**Afiliación y Alta**: Trámites obligatorios al empezar a trabajar para estar cubierto legalmente.",
+      "**Cotización**: Dinero que trabajador y empresa pagan cada mes a la Seguridad Social (Cuotas).",
+      "**IT (Incapacidad Temporal)**: La 'baja médica'; subsidio que cobras mientras no puedes trabajar por salud.",
+      "**Contingencias Comunes**: Enfermedades normales o accidentes fuera del trabajo.",
+      "**Contingencias Profesionales**: Accidentes ocurridos trabajando o enfermedades del oficio.",
+      "**Pensión de Jubilación**: Sueldo de por vida que paga el Estado tras terminar la vida laboral.",
+      "**Nómina**: Documento que justifica el pago del salario y los descuentos legales realizados.",
+      "**Salario Base**: Cantidad fija pactada según el puesto o convenio.",
+      "**Complementos Salariales**: Plus por antigüedad, nocturnidad, peligrosidad o idiomas.",
+      "**Devengos**: Total de conceptos que sumas en el mes (Salario Bruto).",
+      "**Deducciones**: Lo que te quitan de la nómina para la Seguridad Social y el IRPF (Hacienda).",
+      "**IRPF**: Impuesto personal que pagamos todos los trabajadores según lo que ganamos.",
+      "**Base de Cotización**: Cantidad sobre la que se calculan los porcentajes que van a la Seguridad Social.",
+      "**Salario Neto (Líquido a percibir)**: Lo que realmente te ingresan en la cuenta bancaria al final.",
+      "**Fogasa**: Fondo estatal que paga los salarios si la empresa quiebra y no tiene dinero.",
+      "**Desempleo (Paro)**: Prestación que cobras si has cotizado suficiente y pierdes el trabajo sin querer.",
+      "**IPREM**: Índice usado para calcular ayudas y subsidios en lugar del salario mínimo."
     ]
   }
 };
