@@ -1662,6 +1662,12 @@ function getDailySubjects(offsetDays = 0) {
     if (offsetDays !== 0) {
         now.setDate(now.getDate() + offsetDays);
     }
+
+    // Domingo = Descanso
+    if (now.getDay() === 0) {
+        return { isRest: true, subjects: [], labels: ['Descanso'] };
+    }
+
     const daysSinceStart = Math.floor((now - STUDY_START) / (1000 * 60 * 60 * 24));
     const phase = getCurrentPhase();
     const rotation = phase.id === 3 ? PHASE3_ROTATION : DAILY_ROTATION;
@@ -1710,7 +1716,13 @@ function renderAcademicPlanner() {
                             <span class="day-date">${dateStr}</span>
                         </div>
                         <div class="planner-subjects">
-                            ${day.slot.subjects.map((subId, idx) => {
+                            ${day.slot.isRest ? `
+                                <div class="planner-rest-content">
+                                    <span style="font-size: 2rem;">🧘</span>
+                                    <p style="font-size: 0.8rem; font-weight: 600; color: var(--accent-color)">Día de Descanso</p>
+                                    <p style="font-size: 0.7rem; color: var(--text-secondary)">¡Recarga pilas para mañana!</p>
+                                </div>
+                            ` : day.slot.subjects.map((subId, idx) => {
                                 const sub = APP_STATE.subjects.find(s => s.id === subId);
                                 if (!sub) return '';
                                 return `
@@ -1721,9 +1733,13 @@ function renderAcademicPlanner() {
                             }).join('')}
                         </div>
                         <div class="planner-actions">
-                            <button class="planner-go-btn" onclick="scrollToSubject('${day.slot.subjects[0]}')">
-                                Ver Objetivos →
-                            </button>
+                            ${day.slot.isRest ? `
+                                <button class="planner-go-btn" onclick="showView('dashboard')">Ver Estadísticas →</button>
+                            ` : `
+                                <button class="planner-go-btn" onclick="scrollToSubject('${day.slot.subjects[0]}')">
+                                    Ver Objetivos →
+                                </button>
+                            `}
                         </div>
                     </div>`;
                 }).join('')}
