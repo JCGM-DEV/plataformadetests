@@ -1,0 +1,491 @@
+Batería preguntas profesora 9abril
+En una empresa forestal, el encargado detecta que varios trabajadores adoptan posturas forzadas durante largas jornadas al utilizar herramientas manuales. Este tipo de situación puede derivar en:
+Riesgos químicos por exposición a sustancias
+*Riesgos ergonómicos relacionados con la postura
+Riesgos biológicos por contacto con organismos
+Riesgos eléctricos por uso de maquinaria
+EXPL:Respuesta correcta: B
+
+Durante una jornada laboral, un trabajador empieza a mostrar síntomas de agotamiento físico y dificultad para concentrarse tras varias horas de trabajo continuo. Este fenómeno se conoce como:
+Estrés laboral exclusivamente
+*Fatiga laboral, que puede ser física y mental
+Accidente de trabajo
+Enfermedad profesional
+EXPL:Respuesta correcta: B
+
+Una empresa decide implantar pausas periódicas y rotación de tareas para reducir la monotonía y el cansancio. Estas medidas actúan principalmente sobre:
+El origen del riesgo físico
+*La organización del trabajo
+El uso de equipos de protección
+La eliminación de sustancias peligrosas
+EXPL:Respuesta correcta: B
+
+En una situación de emergencia, un trabajador decide evacuar el lugar sin seguir las indicaciones establecidas en el plan de autoprotección. Esta conducta:
+Es adecuada si no hay daños
+Mejora la rapidez de evacuación
+*Puede poner en peligro a otras personas
+Es irrelevante en emergencias
+EXPL:Respuesta correcta: C
+
+En relación con la búsqueda de empleo, una persona que utiliza redes profesionales para establecer contactos y conocer oportunidades laborales está desarrollando:
+Formación continua
+*Networking
+Autoempleo
+Evaluación profesional
+EXPL:Respuesta correcta: B
+
+Un trabajador recibe comentarios constructivos sobre su desempeño por parte de su superior con el objetivo de mejorar su rendimiento. Este proceso se denomina:
+Motivación extrínseca
+*Feedback o retroalimentación
+Evaluación sumativa
+Supervisión directa
+EXPL:Respuesta correcta: B
+
+En una empresa, los trabajadores colaboran activamente, comparten información y persiguen objetivos comunes. Esta situación refleja:
+Competencia interna
+*Trabajo en equipo
+Liderazgo autoritario
+Individualismo laboral
+EXPL:Respuesta correcta: B
+
+Una empresa introduce nuevas tecnologías para mejorar sus procesos productivos y adaptarse al mercado. Esta acción está relacionada con:
+Reducción de costes exclusivamente
+*Innovación empresarial
+Eliminación de personal
+Subcontratación
+EXPL:Respuesta correcta: B
+
+El organigrama de una empresa permite conocer:
+Los beneficios económicos
+*La estructura jerárquica y funcional
+El volumen de producción
+Los salarios de los trabajadores
+EXPL:Respuesta correcta: B
+
+Un emprendedor analiza si su idea de negocio será rentable antes de ponerla en marcha. Para ello utiliza:
+Un contrato de trabajo
+*Un plan de empresa
+Un organigrama
+Un currículum
+EXPL:Respuesta correcta: B
+
+En una empresa, los costes que no varían aunque aumente o disminuya la producción se denominan:
+Costes variables
+*Costes fijos
+Costes directos
+Costes marginales
+EXPL:Respuesta correcta: B
+
+El punto muerto o umbral de rentabilidad es aquel nivel de producción en el que:
+Se obtienen máximos beneficios
+*Los ingresos igualan a los costes
+Se producen pérdidas
+Se inicia la actividad
+EXPL:Respuesta correcta: B
+
+Un trabajador que es capaz de adaptarse a cambios, superar dificultades y mantener una actitud positiva está demostrando:
+Productividad
+*Resiliencia
+Competitividad
+Especialización
+EXPL:Respuesta correcta: B
+
+En el ámbito laboral, la inteligencia emocional permite:
+Ignorar las emociones propias
+*Gestionar adecuadamente emociones y relaciones
+Evitar la toma de decisiones
+Reducir la comunicación
+EXPL:Respuesta correcta: B
+
+Un conflicto entre compañeros puede resolverse de manera positiva si:
+Se ignora el problema
+*Se utiliza el diálogo y la negociación
+Se impone una decisión
+Se evita la comunicación
+EXPL:Respuesta correcta: B
+
+La formación continua es clave en el mercado laboral actual porque:
+Evita cambios en el empleo
+*Permite adaptarse a nuevas demandas
+Reduce la empleabilidad
+Sustituye la experiencia
+EXPL:Respuesta correcta: B
+
+El teletrabajo se caracteriza por:
+Realizar el trabajo exclusivamente en la empresa
+*Desarrollar la actividad a distancia mediante tecnologías
+No tener horario laboral
+Carecer de supervisión
+EXPL:Respuesta correcta: B
+
+Una empresa que adopta medidas para reducir su impacto ambiental está aplicando:
+Productividad
+*Responsabilidad social corporativa
+Marketing
+Externalización
+EXPL:Respuesta correcta: B
+
+La toma de decisiones en el ámbito profesional implica:
+Actuar sin información
+*Elegir entre distintas alternativas
+Evitar responsabilidades
+Delegar siempre
+EXPL:Respuesta correcta: B
+
+El clima laboral de una empresa influye directamente en:
+Solo en la dirección
+*El bienestar y rendimiento de los trabajadores
+Únicamente en los beneficios
+La maquinaria
+EXPL:Respuesta correcta: B
+
+Un desarrollador junior desea mejorar su empleabilidad en el sector IT creando un entorno personal de aprendizaje (PLE). ¿Cuál de las siguientes acciones refleja mejor un uso eficaz de este entorno?
+Memorizar documentación técnica sin aplicarla
+*Combinar cursos online, comunidades técnicas y herramientas de gestión del conocimiento
+Limitarse a la formación reglada del ciclo
+Centrarse únicamente en redes sociales personales
+EXPL:Respuesta correcta: B
+
+En el sector tecnológico, la identificación de necesidades de aprendizaje es clave debido a:
+La estabilidad de los conocimientos técnicos
+*La rápida obsolescencia de las competencias digitales
+La baja competencia profesional
+La escasa innovación
+EXPL:Respuesta correcta: B
+
+¿Cuál de las siguientes herramientas sería más adecuada para organizar documentación técnica y apuntes en proyectos de programación?
+Instagram
+*Microsoft OneNote
+TikTok
+WhatsApp
+EXPL:Respuesta correcta: B
+
+Un profesional IT utiliza GitHub, foros técnicos y LinkedIn para compartir conocimiento. Esto forma parte de:
+Currículum oculto
+*Red personal de aprendizaje
+Evaluación del desempeño
+Formación reglada
+EXPL:Respuesta correcta: B
+
+En el desarrollo de software, un Plan de Desarrollo Personal (PDP) permite:
+Eliminar la necesidad de formación continua
+*Establecer objetivos profesionales y acciones concretas para lograrlos
+Sustituir la experiencia laboral
+Garantizar automáticamente un empleo
+EXPL:Respuesta correcta: B
+
+¿Cuál de las siguientes opciones refleja mejor un objetivo SMART en el ámbito IT?
+Mejorar en programación
+Aprender cosas nuevas
+*Completar un curso de Python en 3 meses con certificación
+Estudiar más adelante
+EXPL:Respuesta correcta: C
+
+La identidad digital de un programador influye en su empleabilidad porque:
+Solo importa el currículum físico
+*Los reclutadores analizan la presencia online y proyectos visibles
+No tiene impacto en el sector IT
+Es irrelevante frente a la experiencia
+EXPL:Respuesta correcta: B
+
+¿Cuál de los siguientes es un riesgo asociado a una mala gestión de la identidad digital en el sector tecnológico?
+Mejora del networking
+Incremento de oportunidades laborales
+*Pérdida de reputación profesional
+Aumento de visibilidad positiva
+EXPL:Respuesta correcta: C
+
+El phishing en entornos IT consiste en:
+Optimizar sistemas
+*Robar información mediante engaño
+Programar algoritmos
+Diseñar interfaces
+EXPL:Respuesta correcta: B
+
+¿Cuál de las siguientes medidas es más eficaz para proteger cuentas profesionales en entornos digitales?
+Usar la misma contraseña
+Desactivar antivirus
+*Activar autenticación en dos factores
+Compartir credenciales
+EXPL:Respuesta correcta: C
+
+El análisis del potencial profesional en el sector IT incluye:
+Solo habilidades técnicas
+Solo experiencia laboral
+*Habilidades técnicas y blandas
+Solo formación académica
+EXPL:Respuesta correcta: C
+
+Un análisis DAFO aplicado a un desarrollador identifica como oportunidad:
+Falta de experiencia
+*Alta demanda de programadores
+Escasas habilidades sociales
+Bajo nivel de inglés
+EXPL:Respuesta correcta: B
+
+¿Cuál de las siguientes opciones representa una debilidad en un perfil IT?
+Capacidad de trabajo en equipo
+Dominio de lenguajes de programación
+*Falta de experiencia práctica
+Alta adaptabilidad
+EXPL:Respuesta correcta: C
+
+El autoconocimiento en el ámbito profesional permite:
+Evitar decisiones laborales
+*Identificar intereses y orientar la carrera profesional
+Sustituir la formación
+Eliminar errores
+EXPL:Respuesta correcta: B
+
+La inteligencia emocional en equipos de desarrollo software favorece:
+Conflictos constantes
+*Mejora del trabajo en equipo
+Aislamiento profesional
+Reducción de productividad
+EXPL:Respuesta correcta: B
+
+Una mentalidad de crecimiento en el sector IT implica:
+Evitar retos
+Creer que las habilidades son fijas
+*Mejorar mediante esfuerzo y aprendizaje continuo
+No aceptar errores
+EXPL:Respuesta correcta: C
+
+En relación con el sector productivo IT, una característica clave es:
+Estabilidad tecnológica
+*Evolución constante
+Baja innovación
+Escasa digitalización
+EXPL:Respuesta correcta: B
+
+El equilibrio entre competencias personales y demandas del mercado implica:
+Ignorar el mercado laboral
+*Adaptar habilidades a necesidades del sector
+Elegir solo por vocación
+Evitar formación
+EXPL:Respuesta correcta: B
+
+Un itinerario formativo tras un ciclo de informática puede incluir:
+Solo empleo
+Solo universidad
+*Formación, especialización o empleo
+Ninguna opción
+EXPL:Respuesta correcta: C
+
+La Formación Profesional Dual en el sector IT se caracteriza por:
+Formación teórica exclusivamente
+*Formación combinada con práctica en empresa
+Eliminación de prácticas
+Formación online únicamente
+EXPL:Respuesta correcta: B
+
+Un curso de especialización en ciberseguridad permite:
+Reducir empleabilidad
+*Acceder a perfiles altamente demandados
+Evitar formación continua
+Sustituir experiencia
+EXPL:Respuesta correcta: B
+
+En un plan de acción profesional en IT, los recursos incluyen:
+Solo dinero
+*Formación, herramientas y contactos
+Solo tiempo
+Solo experiencia
+EXPL:Respuesta correcta: B
+
+Desde la perspectiva de PRL en oficinas IT, un riesgo común es:
+Caídas en altura
+*Fatiga visual por pantallas
+Explosiones industriales
+Exposición química
+EXPL:Respuesta correcta: B
+
+Una función del nivel básico en PRL en el sector IT es:
+Diseñar software
+*Identificar riesgos laborales
+Programar aplicaciones
+Gestionar redes
+EXPL:Respuesta correcta: B
+
+La adopción de medidas preventivas en entornos informáticos tiene como objetivo:
+Reducir productividad
+*Mejorar bienestar y evitar riesgos laborales
+Aumentar errores
+EXPL:Respuesta correcta: B
+
+Un desarrollador backend decide mejorar su aprendizaje autónomo creando un entorno personal de aprendizaje (PLE). Para ello combina cursos online, repositorios de código, blogs técnicos y herramientas de organización. Sin embargo, tras varios meses no percibe mejora significativa en sus competencias. ¿Cuál sería la causa más probable de esta situación?
+Uso de demasiadas fuentes de información
+*Falta de planificación, objetivos y evaluación del aprendizaje
+Exceso de formación reglada
+Uso exclusivo de herramientas digitales
+EXPL:Respuesta correcta: B
+
+En el contexto del sector IT, la autoevaluación de competencias resulta clave para la empleabilidad. ¿Qué aspecto diferencia principalmente una autoevaluación eficaz de una ineficaz?
+Se basa únicamente en percepciones subjetivas
+*Incluye contraste con requerimientos del mercado y evidencia objetiva
+Evita analizar debilidades
+Se realiza una sola vez
+EXPL:Respuesta correcta: B
+
+Un profesional de desarrollo web detecta que el mercado demanda conocimientos en frameworks modernos que él no domina. Según el enfoque del Plan de Desarrollo Personal (PDP), ¿qué acción sería más adecuada?
+Ignorar la tendencia
+*Establecer objetivos formativos concretos y planificar su adquisición
+Cambiar de sector profesional
+Centrarse solo en su experiencia previa
+EXPL:Respuesta correcta: B
+
+En relación con la identidad digital en el sector tecnológico, un candidato publica contenido técnico en redes profesionales, pero también comentarios polémicos en redes personales. ¿Qué implicación tiene esto en su empleabilidad?
+No tiene impacto si son redes distintas
+*Puede afectar negativamente a su reputación profesional
+Solo influye la experiencia laboral
+Es irrelevante para reclutadores
+EXPL:Respuesta correcta: B
+
+Un analista de datos comparte habitualmente código y proyectos en plataformas públicas. ¿Qué ventaja competitiva le proporciona esta práctica en procesos de selección?
+Reduce la necesidad de entrevistas
+*Permite evidenciar competencias reales y marca personal
+Sustituye el currículum
+Evita la formación continua
+EXPL:Respuesta correcta: B
+
+En el análisis DAFO de un perfil IT, ¿cuál de las siguientes situaciones se consideraría una amenaza externa?
+Falta de experiencia en un lenguaje
+Baja autoestima profesional
+*Alta competencia en el mercado tecnológico
+Falta de habilidades sociales
+EXPL:Respuesta correcta: C
+
+Un técnico informático presenta alta capacidad analítica pero dificultades en comunicación. ¿Cómo se clasificaría esta situación en términos de potencial profesional?
+Solo fortaleza
+Solo oportunidad
+*Combinación de fortaleza técnica y debilidad transversal
+Amenaza externa
+EXPL:Respuesta correcta: C
+
+La adaptación continua en el sector IT implica que los profesionales deben:
+Mantener conocimientos estables
+*Actualizar competencias de forma permanente
+Evitar especialización
+Depender exclusivamente de la empresa
+EXPL:Respuesta correcta: B
+
+En el diseño de un itinerario formativo en informática, ¿qué factor es más relevante para garantizar la empleabilidad futura?
+Elegir el camino más corto
+*Adaptarse a las tendencias tecnológicas del mercado
+Evitar cambios formativos
+Seguir únicamente preferencias personales
+EXPL:Respuesta correcta: B
+
+Un estudiante de DAM duda entre trabajar o seguir formándose. Desde la perspectiva del sistema de FP actual, ¿qué opción es más adecuada?
+Solo trabajar
+Solo estudiar
+*Combinar formación continua y experiencia profesional
+Abandonar formación
+EXPL:Respuesta correcta: C
+
+En el sector IT, el uso de herramientas de inteligencia artificial en el autoconocimiento permite:
+Sustituir la reflexión personal
+*Analizar patrones y recomendar desarrollo profesional
+Eliminar la formación
+Reducir la empleabilidad
+EXPL:Respuesta correcta: B
+
+Dentro de un plan de acción profesional, el establecimiento de plazos tiene como finalidad:
+Reducir flexibilidad
+*Controlar el progreso y evitar la procrastinación
+Eliminar objetivos
+Sustituir la evaluación
+EXPL:Respuesta correcta: B
+
+En un entorno de trabajo IT, el riesgo ergonómico más habitual se relaciona con:
+Manipulación de cargas pesadas
+*Uso prolongado de pantallas y posturas inadecuadas
+Riesgos químicos
+Exposición a ruido extremo
+EXPL:Respuesta correcta: B
+
+Desde el nivel básico de PRL, ¿qué actuación es prioritaria en un entorno de oficina tecnológica?
+Programar sistemas de seguridad
+*Identificar riesgos y proponer medidas preventivas
+Diseñar software
+Gestionar redes
+EXPL:Respuesta correcta: B
+
+La prevención de riesgos laborales en el sector IT contribuye a:
+Disminuir la productividad
+*Mejorar la salud, el bienestar y el rendimiento profesional
+Aumentar el estrés
+Reducir la innovación
+EXPL:Respuesta correcta: B
+
+Clara, desarrolladora junior, se ha inscrito en varios cursos de programación, sigue canales técnicos y guarda artículos en diferentes plataformas. Sin embargo, siente que no progresa porque no logra consolidar conocimientos ni aplicarlos en proyectos reales. ¿Qué medida sería más adecuada para mejorar su aprendizaje autónomo?
+Seguir acumulando más cursos y recursos
+*Organizar un plan estructurado con objetivos y práctica aplicada
+Abandonar el aprendizaje online
+EXPL:Respuesta correcta: B
+
+Mario utiliza diversas herramientas digitales (notas, repositorios, calendarios) para su aprendizaje en ciberseguridad, pero no revisa su progreso ni ajusta su planificación. ¿Qué elemento clave de su entorno personal de aprendizaje está fallando?
+Uso de herramientas digitales
+*Evaluación y seguimiento del aprendizaje
+Acceso a fuentes de información
+EXPL:Respuesta correcta: B
+
+Lucía, analista de datos, identifica que tiene gran capacidad técnica pero dificultades para trabajar en equipo. En su análisis DAFO, ¿cómo debería clasificar esta situación?
+Fortaleza global
+*Debilidad interna en competencias transversales
+Amenaza externa
+EXPL:Respuesta correcta: B
+
+Carlos quiere orientar su carrera en desarrollo de IA, pero no está seguro de sus capacidades. Decide realizar test de competencias, analizar su experiencia previa y reflexionar sobre sus intereses. ¿Qué proceso está aplicando?
+Formación reglada
+*Autoconocimiento profesional
+Evaluación externa del mercado
+EXPL:Respuesta correcta: B
+
+Una empresa tecnológica busca desarrolladores con conocimientos en cloud y trabajo colaborativo. Ana tiene alta formación técnica pero no experiencia en herramientas colaborativas. ¿Qué debería hacer para mejorar su empleabilidad?
+Mantener su perfil actual
+*Adaptar sus competencias a las demandas del sector
+Cambiar de sector
+EXPL:Respuesta correcta: B
+
+Pedro finaliza un ciclo de DAM y duda entre trabajar o realizar un curso de especialización en ciberseguridad. Analiza el mercado y detecta alta demanda en este ámbito. ¿Cuál sería la decisión más estratégica?
+Elegir sin analizar el mercado
+*Continuar formándose en un área con alta demanda
+Evitar especialización
+EXPL:Respuesta correcta: B
+
+Laura establece como objetivo “mejorar en programación”, pero no define plazos ni criterios de evaluación. Tras meses, no percibe avances. ¿Cuál es el problema principal?
+Falta de recursos
+*Objetivo mal definido (no es SMART)
+Exceso de formación
+EXPL:Respuesta correcta: B
+
+Un técnico IT diseña un plan de acción donde identifica carencias, establece metas, recursos y plazos, pero no revisa resultados. ¿Qué fase está omitiendo?
+Definición de objetivos
+*Seguimiento y evaluación
+Identificación de recursos
+EXPL:Respuesta correcta: B
+
+Un programador trabaja más de 8 horas frente al ordenador sin pausas, presentando fatiga visual y dolores musculares. ¿Qué tipo de riesgo laboral está presente?
+Riesgo químico
+*Riesgo ergonómico
+Riesgo eléctrico
+EXPL:Respuesta correcta: B
+
+En una empresa tecnológica, un trabajador detecta mala iluminación y posturas inadecuadas en el equipo. Como nivel básico en PRL, ¿qué debería hacer?
+Ignorar la situación
+*Comunicar el riesgo y proponer medidas preventivas
+Resolverlo sin informar
+EXPL:Respuesta correcta: B
+
+Una empresa tecnológica contrata a un desarrollador mediante contrato indefinido. Tras 10 meses de trabajo, la empresa decide extinguir el contrato alegando “bajo rendimiento”, sin aportar pruebas objetivas ni haber realizado advertencias previas ni evaluación del desempeño. El trabajador impugna el despido. ¿Cómo sería calificada previsiblemente esta extinción?
+Despido procedente, por facultad organizativa empresarial
+*Despido improcedente, por falta de acreditación suficiente de la causa
+Despido nulo, por vulneración automática de derechos fundamentales
+EXPL:Respuesta correcta: B
+
+Una empresa IT implanta un sistema de control de actividad mediante software que registra pulsaciones de teclado y capturas de pantalla periódicas sin informar previamente a los trabajadores. Uno de ellos impugna la medida. Desde el punto de vista del Derecho Laboral y la protección de derechos fundamentales, ¿cuál es la opción más correcta?
+Es válida por el poder de dirección empresarial sin limitaciones
+Es válida solo si mejora la productividad
+*Puede ser ilícita por vulnerar el derecho a la intimidad y falta de información previa
+EXPL:Respuesta correcta: C

@@ -212,6 +212,13 @@ const SYLLABUS_REGISTRY_DATA = [
         "icon": "💼"
     },
     {
+        "id": "emp_profesora_9abril",
+        "name": "📋 Batería preguntas profesora (9 abril)",
+        "subject_id": "empleabilidad",
+        "file": "data/syllabus/emp_profesora_9abril.txt",
+        "icon": "💼"
+    },
+    {
         "id": "bd_lab",
         "name": "SQL & BD Practice Lab",
         "type": "lab",
