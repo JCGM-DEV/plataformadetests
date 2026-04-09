@@ -1221,7 +1221,7 @@ function finishExam() {
     const calificacion = (puntuacionFinal / total) * 10;
     const passed = calificacion >= 5;
 
-    saveExamResult(APP_STATE.currentExam.id, examName, calificacion, aciertos, errores, omitidas, total);
+    saveExamResult(APP_STATE.currentExam.id, APP_STATE.currentExam.name || 'Examen', calificacion, aciertos, errores, omitidas, total);
 
     // Log Activity
     const sub = APP_STATE.subjects.find(s => s.id === APP_STATE.currentExam.id);
