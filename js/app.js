@@ -1295,6 +1295,16 @@ function finishExam() {
                 ${(() => { const lib = getLibreta(); const cnt = Object.values(lib).reduce((s,a)=>s+a.length,0); return cnt > 0 ? `<button class="next-btn" style="background:#059669" onclick="exportarLibreta()">⬇️ Exportar Libreta (${cnt})</button>` : ''; })()}
             </div>
         </div>`;
+    } catch (error) {
+        console.error('Error in finishExam:', error);
+        document.getElementById('exam-engine-root').innerHTML = `
+            <div class="results-container">
+                <h2>Ocurrió un error al procesar el resultado</h2>
+                <p>Por favor, inténtalo de nuevo o contacta con soporte técnico si el error persiste.</p>
+                <p style="color:red; font-size:0.8rem;">${error.message}</p>
+                <button class="next-btn" onclick="exitExamToHome()">🏠 Volver al Inicio</button>
+            </div>`;
+    }
 }
 
 function exitExamToHome() {
