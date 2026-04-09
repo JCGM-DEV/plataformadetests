@@ -759,6 +759,9 @@ function renderActivityLog(showAll = false) {
                         </div>
                         <div class="activity-time">${new Date(e.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
                     </div>
+                `).join('')}
+            </div>
+        </div>
     `).join('');
 
     container.innerHTML = htmlGroups;
