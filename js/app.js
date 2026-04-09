@@ -158,7 +158,7 @@ function renderSubjects() {
         for (let i = 1; i <= subject.units_count; i++) {
             const unitPool = pool.filter(q => q.unit === i);
             const pdfPath = THEORY_PDFS[subject.id]?.[i];
-            const videoPath = PROGRAMACION_VIDEOS[subject.id]?.[i];
+            const videoPath = SUBJECT_VIDEOS[subject.id]?.[i];
             
             unitsHTML += `
                 <div class="unit-group">
@@ -646,7 +646,7 @@ const QUICK_READ_TIPS = {
     }
 };
 
-const PROGRAMACION_VIDEOS = {
+const SUBJECT_VIDEOS = {
     "programacion": {
         "1": "Programacion/videos/Desmitificando_la_programación.mp4",
         "2": "Programacion/videos/La_gramática_del_código.mp4",
@@ -658,6 +658,14 @@ const PROGRAMACION_VIDEOS = {
         "8": "Programacion/videos/Desmitificando_la_E_S_en_Java.mp4",
         "9": "Programacion/videos/Bases_de_datos_orientadas_a_objetos.mp4",
         "10": "Programacion/videos/JDBC__El_Traductor_Universal.mp4"
+    },
+    "bases_de_datos": {
+        "1": "Bases%20de%20datos/videos/La_Biblioteca_Invisible.mp4",
+        "2": "Bases%20de%20datos/videos/Bases_de_Datos_Relacionales.mp4",
+        "3": "Bases%20de%20datos/videos/Diagramas_Entidad-Relación.mp4",
+        "4": "Bases%20de%20datos/videos/Introducción_a_SQL__Cómo_Preguntar_a_los_Datos.mp4",
+        "5": "Bases%20de%20datos/videos/Tratamiento_de_Datos.mp4",
+        "6": "Bases%20de%20datos/videos/Programación_de_BBDD.mp4"
     }
 };
 
