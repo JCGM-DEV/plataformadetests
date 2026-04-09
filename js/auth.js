@@ -16,8 +16,8 @@ const Auth = {
     },
 
     auth: null,
-    db: null,
     currentUser: null,
+    isAppInitialized: false,
 
     async init() {
         // Initialize Firebase
@@ -47,13 +47,14 @@ const Auth = {
                 this.updateUserUI();
                 
                 // Initialize the main app if not already
-                if (typeof init === 'function') {
-                    // Note: init() in app.js uses localStorage, which is now updated by Sync.pullAll()
-                    // We might need to refresh the dashboard if it's already rendered
+                if (typeof init === 'function' && !this.isAppInitialized) {
+                    console.log('First time initializing app from Auth...');
+                    this.isAppInitialized = true;
                     init(); 
                 }
             } else {
                 this.currentUser = null;
+                this.isAppInitialized = false; // Reset on logout
                 console.log('No user signed in.');
                 this.showAuthModal();
                 this.clearUserUI();

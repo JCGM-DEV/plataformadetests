@@ -23,6 +23,11 @@
     <!-- Auth & Sync -->
     <script src="js/sync.js"></script>
     <script src="js/auth.js"></script>
+
+    <!-- Global Data (to avoid CORS/File protocol issues) -->
+    <script src="data/subjects.js"></script>
+    <script src="data/test_bank.js"></script>
+    <script src="data/syllabus_registry.js"></script>
 </head>
 <body class="dark-theme">
 
@@ -36,7 +41,7 @@
                 </div>
                 <nav class="main-nav">
                     <a href="#subject-grid" class="nav-link">🎯 Simulacros</a>
-                    <a href="#labs-container" class="nav-link">🧪 Labs</a>
+                    <a href="#labs-container" class="nav-link" onclick="goToLabs(); return false;">🧪 Labs</a>
                     <a href="#syllabus-container" class="nav-link">📚 Temario</a>
                     <a href="#progress-section" class="nav-link">📈 Progreso</a>
                     <a href="#" class="nav-link" onclick="openLibreta(); return false;">📓 Libreta</a>
@@ -223,8 +228,7 @@
         </div>
     </div>
 
-    <script src="js/app.js?v=3"></script>
-
-    <script src="js/assistant.js?v=1"></script>
+    <script src="js/app.js?v=4"></script>
+    <script src="js/assistant.js?v=2"></script>
 </body>
 </html>

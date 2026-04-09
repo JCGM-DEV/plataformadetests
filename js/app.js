@@ -123,17 +123,28 @@ function showView(name) {
 }
 
 // ─── INIT ────────────────────────────────────────────────────────
+// ─── INIT ────────────────────────────────────────────────────────
 async function init() {
     try {
-        const v = '?v=' + Date.now();
-        const [subRes, qRes, sylRes] = await Promise.all([
-            fetch('data/subjects.json' + v),
-            fetch('data/test_bank.json' + v),
-            fetch('data/syllabus_registry.json' + v).catch(() => null)
-        ]);
-        APP_STATE.subjects = await subRes.json();
-        QUESTION_POOL = await qRes.json();
-        if (sylRes && sylRes.ok) APP_STATE.syllabusExams = await sylRes.json();
+        // Use Global Data (loaded via script tags in index.html to avoid CORS/Local File issues)
+        if (typeof SUBJECTS_DATA !== 'undefined') APP_STATE.subjects = SUBJECTS_DATA;
+        if (typeof TEST_BANK_DATA !== 'undefined') QUESTION_POOL = TEST_BANK_DATA;
+        if (typeof SYLLABUS_REGISTRY_DATA !== 'undefined') APP_STATE.syllabusExams = SYLLABUS_REGISTRY_DATA;
+
+        // Fallback or data integrity check
+        if (APP_STATE.subjects.length === 0) {
+            console.warn('Data not found in global variables, attempting fallback fetch...');
+            const v = '?v=' + Date.now();
+            const [subRes, qRes, sylRes] = await Promise.all([
+                fetch('data/subjects.json' + v).catch(() => null),
+                fetch('data/test_bank.json' + v).catch(() => null),
+                fetch('data/syllabus_registry.json' + v).catch(() => null)
+            ]);
+            
+            if (subRes && subRes.ok) APP_STATE.subjects = await subRes.json();
+            if (qRes && qRes.ok) QUESTION_POOL = await qRes.json();
+            if (sylRes && sylRes.ok) APP_STATE.syllabusExams = await sylRes.json();
+        }
 
         renderSubjects();
         renderSyllabusExams();
@@ -141,8 +152,21 @@ async function init() {
         renderFallosSection();
         renderActivityLog();
         renderStudyGuide();
+        console.log('App initialized successfully | Data loaded from:', (typeof SUBJECTS_DATA !== 'undefined' ? 'Global JS' : 'Fetch API'));
     } catch (err) {
         console.error('Error loading app data:', err);
+        // Fallback: render at least what we have
+        renderSubjects();
+        renderProgress();
+    }
+}
+
+function goToLabs() {
+    const labsContainer = document.getElementById('labs-container');
+    if (labsContainer) {
+        labsContainer.style.display = 'block';
+        labsContainer.scrollIntoView({ behavior: 'smooth' });
+        logActivity('system', 'Navegación', 'Accediendo a Laboratorios');
     }
 }
 
@@ -1419,6 +1443,7 @@ function startLab(syllabusId) {
     const examInfo = APP_STATE.syllabusExams.find(e => e.id === syllabusId);
     if (!examInfo) {
         console.error('Lab not found:', syllabusId);
+        alert('Error: No se ha podido encontrar la información del laboratorio.');
         return;
     }
     
@@ -1429,11 +1454,29 @@ function startLab(syllabusId) {
     const root = document.getElementById('lab-root');
     
     if (modal && root) {
-        root.innerHTML = `<iframe src="${examInfo.file}" style="width:100%;height:100%;border:none;border-radius:12px;"></iframe>`;
+        // Clear previous content
+        root.innerHTML = '';
+        
+        // Create iframe with error handling
+        const iframe = document.createElement('iframe');
+        iframe.src = examInfo.file;
+        iframe.style.cssText = 'width:100%;height:100%;border:none;border-radius:12px;display:block;';
+        iframe.onerror = () => {
+            console.error('Iframe failed to load:', examInfo.file);
+            alert('El laboratorio no pudo cargarse en el modal. Se abrirá en una pestaña nueva.');
+            window.open(examInfo.file, '_blank');
+            closeLab();
+        };
+        
+        root.appendChild(iframe);
         modal.classList.remove('hidden');
+        
+        // Extra fallback: click anywhere outside to close
+        modal.onclick = (e) => {
+            if (e.target === modal) closeLab();
+        };
     } else {
         console.error('Lab modal or root not found in DOM');
-        // Fallback: open in new tab
         window.open(examInfo.file, '_blank');
     }
 }

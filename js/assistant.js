@@ -21,7 +21,7 @@ const ASSISTANT_KNOWLEDGE = {
     "labs": {
         keywords: ["lab", "laboratorio", "práctica", "interactivo", "java", "sql", "uml"],
         answer: "Los <b>Laboratorios</b> son entornos prácticos donde puedes probar código Java, consultas SQL o diagramas UML de forma interactiva con corrección inmediata.",
-        actions: [{ label: "Abrir Labs", cmd: "showView('dashboard'); document.getElementById('labs-container').scrollIntoView()" }]
+        actions: [{ label: "Abrir Labs", cmd: "goToLabs()" }]
     },
     "saltar": {
         keywords: ["saltar", "omitir", "pregunta", "no sé"],

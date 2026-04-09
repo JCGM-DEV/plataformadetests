@@ -1,0 +1,51 @@
+const SUBJECTS_DATA = [
+    {
+        "id": "sistemas_informaticos",
+        "name": "Sistemas Informáticos",
+        "units_count": 7,
+        "icon": "🖥️",
+        "color": "#6366f1"
+    },
+    {
+        "id": "bases_de_datos",
+        "name": "Bases de Datos",
+        "units_count": 7,
+        "icon": "🗄️",
+        "color": "#22d3ee"
+    },
+    {
+        "id": "programacion",
+        "name": "Programación",
+        "units_count": 10,
+        "icon": "💻",
+        "color": "#a855f7"
+    },
+    {
+        "id": "lenguaje_de_marcas",
+        "name": "Lenguaje de Marcas",
+        "units_count": 8,
+        "icon": "🏷️",
+        "color": "#f59e0b"
+    },
+    {
+        "id": "entornos_de_desarrollo",
+        "name": "Entornos de Desarrollo",
+        "units_count": 7,
+        "icon": "🛠️",
+        "color": "#10b981"
+    },
+    {
+        "id": "cloud_computing",
+        "name": "Cloud Computing",
+        "units_count": 10,
+        "icon": "☁️",
+        "color": "#3b82f6"
+    },
+    {
+        "id": "empleabilidad",
+        "name": "Empleabilidad",
+        "units_count": 5,
+        "icon": "💼",
+        "color": "#ec4899"
+    }
+];
