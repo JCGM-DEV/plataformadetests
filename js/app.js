@@ -581,7 +581,7 @@ function startExam(subjectId, unitId = null, mode = 'normal') {
     }
 
     const testSize = unitId !== null ? pool.length : Math.min(20, pool.length);
-    const lastIds = JSON.parse(localStorage.getItem(`last_test_${subjectId}`) || '[]');
+    const lastIds = Sync.get(`last_test_${subjectId}`, []);
 
     APP_STATE.currentExam = subject;
     APP_STATE.currentUnit = unitId;
@@ -610,7 +610,7 @@ function startExam(subjectId, unitId = null, mode = 'normal') {
     APP_STATE.timer = testSize * 90;
     
     // Use the original question set for result logging
-    localStorage.setItem(`last_test_${subjectId}`, JSON.stringify(selected.map(q => q.concept_id)));
+    Sync.set(`last_test_${subjectId}`, selected.map(q => q.concept_id));
 
     const modeLabel = mode === 'solo_no_se' ? ' — Solo lo que no sé' : mode === 'espaciada' ? ' — Repaso espaciado' : '';
     document.getElementById('exam-subject-label').textContent = `${subject.icon} ${subject.name}${unitId ? ' — Tema ' + unitId : ''}${modeLabel}`;
@@ -745,7 +745,7 @@ function renderActivityLog() {
                             <div class="activity-title">${e.title}</div>
                             <div class="activity-detail">${e.detail}</div>
                         </div>
-                        <div class="activity-time">${new Date(e.timestamp).toLocaleTimeString([], {hour: '2bit', minute:'2bit'})}</div>
+                        <div class="activity-time">${new Date(e.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
                     </div>
                 `).join('')}
             </div>
@@ -1201,7 +1201,8 @@ function nextQuestion() {
 
 // ─── FINISH EXAM ────────────────────────────────────────────────
 function finishExam() {
-    clearInterval(APP_STATE.timerInterval);
+    try {
+        clearInterval(APP_STATE.timerInterval);
     const total = APP_STATE.examQuestions.length;
     // Penalización: Programación = -1/2 (2 errores cancelan 1); resto = -1/3
     const isProg = APP_STATE.currentExam?.id === 'programacion';

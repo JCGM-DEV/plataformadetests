@@ -50,7 +50,13 @@ const Sync = {
      */
     get(key, defaultValue = null) {
         const local = localStorage.getItem(key);
-        return local ? JSON.parse(local) : defaultValue;
+        if (!local) return defaultValue;
+        try {
+            return JSON.parse(local);
+        } catch (error) {
+            console.error(`Error parsing localStorage key "${key}":`, error);
+            return defaultValue;
+        }
     },
 
     /**
