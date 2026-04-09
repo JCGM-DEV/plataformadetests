@@ -111,7 +111,10 @@ function renderQuestion() {
       </div>
       <div class="explanation-box" id="explanation"></div>
     </div>
-    <div class="quiz-actions"><button class="btn-check" id="btn-next" onclick="nextQuestion()" style="display:none">Siguiente →</button></div>`;
+    <div class="quiz-actions" style="display:flex;justify-content:space-between;align-items:center;width:100%">
+      <button class="btn-secondary" id="skip-btn" onclick="skipQuizQuestion()" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:0.6rem 1.2rem;border-radius:8px;color:var(--text-secondary);cursor:pointer;">⏭️ Saltar</button>
+      <button class="btn-check" id="btn-next" onclick="nextQuestion()" style="display:none">Siguiente →</button>
+    </div>`;
   quizState.answered = false;
 }
 
@@ -131,6 +134,13 @@ function selectAnswer(idx) {
   if (isCorrect) { score.correct++; document.querySelector('#score-correct span').textContent = score.correct; showToast('¡Correcto! 🎉','success'); }
   else { score.wrong++; document.querySelector('#score-wrong span').textContent = score.wrong; showToast('Incorrecto','error'); }
   document.getElementById('btn-next').style.display = 'inline-flex';
+  const skipBtn = document.getElementById('skip-btn');
+  if (skipBtn) skipBtn.style.display = 'none';
+}
+
+function skipQuizQuestion() {
+  quizState.current++;
+  renderQuestion();
 }
 
 function nextQuestion() { quizState.current++; renderQuestion(); }

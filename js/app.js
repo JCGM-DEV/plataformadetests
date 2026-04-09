@@ -550,8 +550,14 @@ function renderStats() {
 function startExam(subjectId, unitId = null, mode = 'normal') {
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
     let pool = QUESTION_POOL[subjectId] || [];
+    
+    // Filter by unit
     if (unitId !== null) pool = pool.filter(q => q.unit === unitId);
-    if (pool.length === 0) { alert('No hay preguntas disponibles para este tema.'); return; }
+    
+    // Quality Filter (Feature Req: 4 options minimum)
+    pool = pool.filter(q => q.options && q.options.length >= 4);
+
+    if (pool.length === 0) { alert('No hay preguntas con calidad suficiente (4 opciones) disponibles para este tema.'); return; }
 
     // Mode: 'solo_no_se' — exclude mastered questions
     if (mode === 'solo_no_se') {
@@ -576,12 +582,30 @@ function startExam(subjectId, unitId = null, mode = 'normal') {
     APP_STATE.currentUnit = unitId;
     APP_STATE.isSyllabusMode = false;
     APP_STATE.examMode = mode;
-    APP_STATE.examQuestions = getSmartRandom(pool, testSize, lastIds);
+    
+    // Get smart random questions
+    const selected = getSmartRandom(pool, testSize, lastIds);
+    
+    // Shuffle options for each question to avoid pattern bias (The "C" problem)
+    APP_STATE.examQuestions = selected.map(q => {
+        const indices = q.options.map((_, i) => i);
+        for (let i = indices.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [indices[i], indices[j]] = [indices[j], indices[i]];
+        }
+        return {
+            ...q,
+            _shuffledOptions: indices.map(i => q.options[i]),
+            _shuffledCorrect: indices.indexOf(q.correct)
+        };
+    });
+
     APP_STATE.currentQuestionIndex = 0;
     APP_STATE.answers = [];
     APP_STATE.timer = testSize * 90;
-
-    localStorage.setItem(`last_test_${subjectId}`, JSON.stringify(APP_STATE.examQuestions.map(q => q.concept_id)));
+    
+    // Use the original question set for result logging
+    localStorage.setItem(`last_test_${subjectId}`, JSON.stringify(selected.map(q => q.concept_id)));
 
     const modeLabel = mode === 'solo_no_se' ? ' — Solo lo que no sé' : mode === 'espaciada' ? ' — Repaso espaciado' : '';
     document.getElementById('exam-subject-label').textContent = `${subject.icon} ${subject.name}${unitId ? ' — Tema ' + unitId : ''}${modeLabel}`;
@@ -928,17 +952,8 @@ function renderQuestion() {
     const total = APP_STATE.examQuestions.length;
     const pct = (APP_STATE.currentQuestionIndex / total) * 100;
 
-    // Shuffle options but track where the correct answer ends up
-    const indices = [0, 1, 2, 3].slice(0, q.options.length);
-    for (let i = indices.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [indices[i], indices[j]] = [indices[j], indices[i]];
-    }
-    const shuffledOptions = indices.map(i => q.options[i]);
-    const newCorrectIndex = indices.indexOf(q.correct);
-    // Store shuffled mapping on the question for handleResponse
-    q._shuffledCorrect = newCorrectIndex;
-    q._shuffledOptions = shuffledOptions;
+    // Options are pre-shuffled in startExam to avoid positional bias
+    const displayOptions = q._shuffledOptions || q.options;
 
     document.getElementById('exam-engine-root').innerHTML = `
         <div class="question-container">
@@ -951,7 +966,7 @@ function renderQuestion() {
             </div>
             <p class="question-text">${esc(q.question)}</p>
             <div id="options-grid" class="options-grid">
-                ${shuffledOptions.map((opt, i) => `
+                ${displayOptions.map((opt, i) => `
                     <button class="option-btn" onclick="handleResponse(${i})">
                         <span class="opt-letter">${String.fromCharCode(65+i)}</span>
                         <span>${esc(opt)}</span>
@@ -959,10 +974,15 @@ function renderQuestion() {
                 `).join('')}
             </div>
             <div id="feedback-area" class="feedback-area hidden"></div>
-            <div id="next-control" class="hidden" style="margin-top:1.5rem;text-align:right;">
-                <button class="next-btn" onclick="nextQuestion()">
-                    ${APP_STATE.currentQuestionIndex + 1 < total ? 'Siguiente →' : 'Ver Resultado'}
+            <div id="quiz-actions" style="margin-top:1.5rem;display:flex;justify-content:space-between;align-items:center;">
+                <button class="btn-secondary" id="skip-btn" onclick="skipQuestion()" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:0.6rem 1.2rem;border-radius:8px;color:var(--text-secondary);display:flex;align-items:center;gap:0.5rem;cursor:pointer;">
+                    ⏭️ Saltar pregunta
                 </button>
+                <div id="next-control" class="hidden">
+                    <button class="next-btn" onclick="nextQuestion()">
+                        ${APP_STATE.currentQuestionIndex + 1 < total ? 'Siguiente →' : 'Ver Resultado'}
+                    </button>
+                </div>
             </div>
         </div>`;
     updateTimerUI();
@@ -989,7 +1009,16 @@ function handleResponse(index) {
     if (!isCorrect) {
         document.querySelectorAll('.option-btn')[correctIndex].classList.add('correct');
         // Save to fallos — store with original correct for consistency
-        if (APP_STATE.currentExam?.id) saveFallo(APP_STATE.currentExam.id, q);
+        if (APP_STATE.currentExam?.id) {
+            saveFallo(APP_STATE.currentExam.id, q);
+            // AUTO-SAVE to LIBRETA if not already exists with a note
+            const lib = getLibreta();
+            const subjectId = APP_STATE.currentExam.id;
+            const existing = lib[subjectId]?.find(e => e.conceptId === q.concept_id);
+            if (!existing) {
+                saveLibretaNota(q.concept_id, subjectId, q.question, displayOptions[correctIndex], "♻️ Guardado automático tras fallo.");
+            }
+        }
         const subjectId = APP_STATE.currentExam?.id || '';
         const correctAnswerText = displayOptions[correctIndex];
         document.getElementById('feedback-area').innerHTML = `
@@ -1020,6 +1049,16 @@ function handleResponse(index) {
     if (APP_STATE.examMode === 'real') {
         document.getElementById('feedback-area').classList.add('hidden');
     }
+    // Hide skip button after responding
+    const skipBtn = document.getElementById('skip-btn');
+    if (skipBtn) skipBtn.style.display = 'none';
+}
+
+function skipQuestion() {
+    const q = APP_STATE.examQuestions[APP_STATE.currentQuestionIndex];
+    // Save as skipped
+    APP_STATE.answers.push({ correct: (q._shuffledCorrect !== undefined ? q._shuffledCorrect : q.correct), selected: -1, question: q });
+    nextQuestion();
 }
 
 function nextQuestion() {
@@ -1040,12 +1079,15 @@ function finishExam() {
     const N = isProg ? 3 : 4;
     let aciertos = 0, errores = 0;
     APP_STATE.answers.forEach(a => {
+        // Use the shuffled correct index for comparison
         if (a.selected === a.correct) aciertos++;
         else if (a.selected !== -1) errores++;
     });
     const omitidas = total - APP_STATE.answers.length;
     const sinPenalizacion = APP_STATE.examMode === 'sin_penalizacion';
-    const puntuacionBruta = sinPenalizacion ? aciertos : aciertos - errores / (N - 1);
+    
+    // Apply Professor Rule: 2 mal = -1 bien -> penalty is 0.5 per error
+    const puntuacionBruta = sinPenalizacion ? aciertos : aciertos - (errores * 0.5);
     const puntuacionFinal = Math.max(0, puntuacionBruta);
     const calificacion = (puntuacionFinal / total) * 10;
     const passed = calificacion >= 5;
@@ -1093,10 +1135,17 @@ function finishExam() {
                 <div class="stat-item"><span>✅ Aciertos</span><strong>${aciertos}</strong></div>
                 <div class="stat-item"><span>❌ Errores</span><strong>${errores}</strong></div>
                 <div class="stat-item"><span>⬜ Omitidas</span><strong>${omitidas}</strong></div>
-                <div class="stat-item"><span>📉 Penalización</span><strong>-${(errores/(N-1)).toFixed(2)}</strong></div>
+                <div class="stat-item"><span>📉 Penalización</span><strong>-${(errores * 0.5).toFixed(2)}</strong></div>
             </div>
             <div class="formula-box">
-                <p><strong>Fórmula aplicada${sinPenalizacion ? ' (sin penalización)' : ' (DAW)'}:</strong></p>
+                <p><strong>Fórmula aplicada:</strong></p>
+                <div class="formula-text">
+                    ${sinPenalizacion ? 'Aciertos / Total * 10' : '<b>(Aciertos - Errores * 0.5)</b> / Total * 10'}
+                </div>
+                <p style="font-size:0.75rem; color:var(--text-secondary); margin-top:0.4rem;">
+                    * Norma: 2 mal restan 1 bien (Penalización DAW Real)
+                </p>
+            </div>
                 ${sinPenalizacion
                     ? `<p>Nota = ${aciertos} ÷ ${total} × 10 = <strong>${calificacion.toFixed(2)}</strong></p>
                        <small>Sin penalización — cada acierto suma 1 punto</small>`
