@@ -139,6 +139,7 @@ async function init() {
         renderSyllabusExams();
         renderProgress();
         renderFallosSection();
+        renderActivityLog();
         renderStudyGuide();
     } catch (err) {
         console.error('Error loading app data:', err);
@@ -164,7 +165,7 @@ function renderSubjects() {
                 <div class="unit-group">
                     <button class="unit-btn" onclick="startExam('${subject.id}',${i})" ${unitPool.length === 0 ? 'disabled title="Sin preguntas"' : ''}>T${i}</button>
                     <div style="display:flex; gap:0.4rem; justify-content:center; margin-top:0.2rem;">
-                        ${pdfPath ? `<a href="${pdfPath}" target="_blank" class="pdf-link-mini" title="Ver teoría PDF">📄</a>` : ''}
+                        ${pdfPath ? `<a href="${pdfPath}" target="_blank" class="pdf-link-mini" title="Ver teoría PDF" onclick="logTheory('${subject.name}', ${i})">📄</a>` : ''}
                         ${videoPath ? `<a href="javascript:void(0)" onclick="openVideo('${videoPath}')" class="video-link-mini" title="Ver video de repaso">🎬</a>` : ''}
                     </div>
                 </div>`;
@@ -676,6 +677,8 @@ function openVideo(path) {
         player.src = path;
         modal.classList.remove('hidden');
         player.play().catch(() => {}); // Intentar auto-play
+        const subjectName = APP_STATE.subjects.find(s => path.includes(s.name) || (s.id === 'programacion' && path.includes('Programacion')) || (s.id === 'bases_de_datos' && path.includes('Bases')) )?.name || 'Asignatura';
+        logActivity('video', 'Video: ' + subjectName, 'Viendo vídeo de repaso');
     }
 }
 
@@ -689,6 +692,67 @@ function closeVideo() {
     }
 }
 
+// ── DAILY ACTIVITY LOG ──────────────────────────────────────────
+const ACTIVITY_LOG_KEY = 'daily_activity_v1';
+
+function getActivityLog() {
+    return JSON.parse(localStorage.getItem(ACTIVITY_LOG_KEY) || '[]');
+}
+
+function logActivity(type, title, detail, metadata = {}) {
+    const log = getActivityLog();
+    const entry = {
+        id: Date.now(),
+        timestamp: new Date().toISOString(),
+        date: new Date().toLocaleDateString('es-ES'),
+        type, // 'exam' | 'video' | 'lab' | 'theory'
+        title,
+        detail,
+        metadata
+    };
+    log.unshift(entry);
+    localStorage.setItem(ACTIVITY_LOG_KEY, JSON.stringify(log.slice(0, 50))); // Guardar últimos 50
+    renderActivityLog();
+}
+
+function renderActivityLog() {
+    const container = document.getElementById('activity-log-content');
+    if (!container) return;
+
+    const log = getActivityLog();
+    if (log.length === 0) {
+        container.innerHTML = '<div style="color:var(--text-secondary);font-size:0.9rem;padding:1rem;text-align:center;">No hay actividad reciente. ¡Empieza a estudiar! 🚀</div>';
+        return;
+    }
+
+    // Agrupar por fecha
+    const groups = {};
+    log.forEach(entry => {
+        if (!groups[entry.date]) groups[entry.date] = [];
+        groups[entry.date].push(entry);
+    });
+
+    const icons = { exam: '📝', video: '🎬', lab: '🧪', theory: '📄' };
+
+    container.innerHTML = Object.entries(groups).slice(0, 3).map(([date, entries]) => `
+        <div class="activity-day">
+            <div class="activity-date-header">${date === new Date().toLocaleDateString('es-ES') ? 'Hoy' : date}</div>
+            <div class="activity-items">
+                ${entries.map(e => `
+                    <div class="activity-item">
+                        <span class="activity-icon">${icons[e.type] || '📌'}</span>
+                        <div class="activity-info">
+                            <div class="activity-title">${e.title}</div>
+                            <div class="activity-detail">${e.detail}</div>
+                        </div>
+                        <div class="activity-time">${new Date(e.timestamp).toLocaleTimeString([], {hour: '2bit', minute:'2bit'})}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `).join('');
+}
+
 // Cerrar con tecla Escape
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
@@ -698,6 +762,14 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+
+function logTheory(subjectName, unit) {
+    logActivity('theory', `Teoría: ${subjectName}`, `Repasando Tema ${unit}`);
+}
+
+function startLab(labId, title) {
+    logActivity('lab', `Lab: ${title}`, 'Practicando en laboratorio interactivo');
+}
 
 function showQuickRead(subjectId, unitId, onStart) {
     const tips = QUICK_READ_TIPS[subjectId]?.[unitId];
@@ -1149,11 +1221,11 @@ function finishExam() {
     const calificacion = (puntuacionFinal / total) * 10;
     const passed = calificacion >= 5;
 
-    const examName = APP_STATE.currentUnit
-        ? `${APP_STATE.currentExam.name} (T${APP_STATE.currentUnit})`
-        : APP_STATE.currentExam.name;
-
     saveExamResult(APP_STATE.currentExam.id, examName, calificacion, aciertos, errores, omitidas, total);
+
+    // Log Activity
+    const sub = APP_STATE.subjects.find(s => s.id === APP_STATE.currentExam.id);
+    logActivity('exam', sub ? sub.name : 'Examen', `Completado con nota: ${calificacion.toFixed(2)}`, { score: calificacion });
 
     // ── Build post-exam summary (Feature 5) ─────────────────────
     const failedQuestions = APP_STATE.answers.filter(a => a.selected !== a.correct);

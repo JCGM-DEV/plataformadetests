@@ -54,6 +54,16 @@ function showInitialSummary() {
         let summary = `<b>📋 Resumen de Hoy:</b><br>`;
         summary += `• Quedan <b>${days} días</b> para el examen (16 Mayo).<br>`;
         summary += `• Tienes <b>${libCount} fallos</b> en tu libreta por repasar.<br>`;
+        
+        // Cargar última actividad
+        if (typeof getActivityLog === 'function') {
+            const log = getActivityLog();
+            if (log.length > 0) {
+                const last = log[0];
+                summary += `• Último paso: <b>${last.title}</b> (${last.detail})<br>`;
+            }
+        }
+
         if (today) summary += `• Hoy toca: <b>${today.labels.join(', ')}</b>.`;
         
         addMessage("system", summary);
