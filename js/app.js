@@ -701,28 +701,40 @@ function getActivityLog() {
 
 function logActivity(type, title, detail, metadata = {}) {
     const log = getActivityLog();
+    
+    // Evitar duplicados rápidos (si el último es igual en tipo y título en menos de 5 segundos)
+    if (log.length > 0 && log[0].type === type && log[0].title === title && (Date.now() - new Date(log[0].timestamp).getTime() < 5000)) {
+        return; 
+    }
+
     const entry = {
         id: Date.now(),
         timestamp: new Date().toISOString(),
         date: new Date().toLocaleDateString('es-ES'),
-        type, // 'exam' | 'video' | 'lab' | 'theory'
+        type, 
         title,
         detail,
         metadata
     };
     log.unshift(entry);
-    Sync.set(ACTIVITY_LOG_KEY, log.slice(0, 50)); // Guardar últimos 50
+    Sync.set(ACTIVITY_LOG_KEY, log.slice(0, 50)); 
     renderActivityLog();
 }
 
-function renderActivityLog() {
+function renderActivityLog(showAll = false) {
     const container = document.getElementById('activity-log-content');
     if (!container) return;
 
-    const log = getActivityLog();
+    let log = getActivityLog();
     if (log.length === 0) {
         container.innerHTML = '<div style="color:var(--text-secondary);font-size:0.9rem;padding:1rem;text-align:center;">No hay actividad reciente. ¡Empieza a estudiar! 🚀</div>';
         return;
+    }
+
+    // Limitar a los 5 más recientes si no se pide ver todo
+    const hasMore = log.length > 5;
+    if (!showAll && hasMore) {
+        log = log.slice(0, 5);
     }
 
     // Agrupar por fecha
@@ -734,7 +746,7 @@ function renderActivityLog() {
 
     const icons = { exam: '📝', video: '🎬', lab: '🧪', theory: '📄' };
 
-    container.innerHTML = Object.entries(groups).slice(0, 3).map(([date, entries]) => `
+    const htmlGroups = Object.entries(groups).map(([date, entries]) => `
         <div class="activity-day">
             <div class="activity-date-header">${date === new Date().toLocaleDateString('es-ES') ? 'Hoy' : date}</div>
             <div class="activity-items">
@@ -747,10 +759,17 @@ function renderActivityLog() {
                         </div>
                         <div class="activity-time">${new Date(e.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
                     </div>
-                `).join('')}
-            </div>
-        </div>
     `).join('');
+
+    container.innerHTML = htmlGroups;
+
+    if (hasMore && !showAll) {
+        const moreBtn = document.createElement('button');
+        moreBtn.className = 'view-more-activity';
+        moreBtn.innerHTML = 'Ver actividad anterior ⬇️';
+        moreBtn.onclick = () => renderActivityLog(true);
+        container.appendChild(moreBtn);
+    }
 }
 
 // Cerrar con tecla Escape
