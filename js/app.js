@@ -152,6 +152,7 @@ async function init() {
         renderFallosSection();
         renderActivityLog();
         renderStudyGuide();
+        renderAcademicPlanner();
         console.log('App initialized successfully | Data loaded from:', (typeof SUBJECTS_DATA !== 'undefined' ? 'Global JS' : 'Fetch API'));
     } catch (err) {
         console.error('Error loading app data:', err);
@@ -1656,12 +1657,94 @@ function getCurrentPhase() {
     return STUDY_PHASES.find(p => now >= p.start && now <= p.end) || STUDY_PHASES[2];
 }
 
-function getDailySubjects() {
+function getDailySubjects(offsetDays = 0) {
     const now = new Date();
+    if (offsetDays !== 0) {
+        now.setDate(now.getDate() + offsetDays);
+    }
     const daysSinceStart = Math.floor((now - STUDY_START) / (1000 * 60 * 60 * 24));
     const phase = getCurrentPhase();
     const rotation = phase.id === 3 ? PHASE3_ROTATION : DAILY_ROTATION;
-    return rotation[daysSinceStart % rotation.length];
+    
+    // Safety check for rotation index
+    const index = ((daysSinceStart % rotation.length) + rotation.length) % rotation.length;
+    return rotation[index];
+}
+
+function renderAcademicPlanner() {
+    const container = document.getElementById('academic-planner-section');
+    if (!container) return;
+
+    const phase = getCurrentPhase();
+    const days = [];
+    const now = new Date();
+
+    for (let i = 0; i < 7; i++) {
+        const date = new Date(now);
+        date.setDate(now.getDate() + i);
+        const slot = getDailySubjects(i);
+        days.push({
+            date: date,
+            slot: slot,
+            isToday: i === 0,
+            label: i === 0 ? 'Hoy' : i === 1 ? 'Mañana' : date.toLocaleDateString('es-ES', { weekday: 'long' })
+        });
+    }
+
+    container.style.display = 'block';
+    container.innerHTML = `
+        <div class="planner-container">
+            <div class="planner-header">
+                <h3>📅 Planificador Académico</h3>
+                <div class="planner-phase-tag" style="--phase-bg: ${phase.colorSoft}; --phase-color: ${phase.color}">
+                    ${phase.name}
+                </div>
+            </div>
+            <div class="planner-grid">
+                ${days.map(day => {
+                    const dateStr = day.date.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
+                    return `
+                    <div class="planner-card ${day.isToday ? 'is-today' : ''}">
+                        <div class="planner-date">
+                            <span class="day-name">${day.label}</span>
+                            <span class="day-date">${dateStr}</span>
+                        </div>
+                        <div class="planner-subjects">
+                            ${day.slot.subjects.map((subId, idx) => {
+                                const sub = APP_STATE.subjects.find(s => s.id === subId);
+                                if (!sub) return '';
+                                return `
+                                <div class="planner-subject-tag" style="--subj-color: ${sub.color}">
+                                    <span class="tag-icon">${sub.icon}</span>
+                                    <span>${sub.name}</span>
+                                </div>`;
+                            }).join('')}
+                        </div>
+                        <div class="planner-actions">
+                            <button class="planner-go-btn" onclick="scrollToSubject('${day.slot.subjects[0]}')">
+                                Ver Objetivos →
+                            </button>
+                        </div>
+                    </div>`;
+                }).join('')}
+            </div>
+        </div>`;
+}
+
+function scrollToSubject(id) {
+    const el = document.querySelector(`[data-subject-id="${id}"]`);
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.classList.add('highlight-momentary');
+        setTimeout(() => el.classList.remove('highlight-momentary'), 2000);
+    } else {
+        showView('dashboard');
+        // Wait for render if it was hidden
+        setTimeout(() => {
+             const el2 = document.querySelector(`[data-subject-id="${id}"]`);
+             if (el2) el2.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+    }
 }
 
 function getDaysToExam() {
