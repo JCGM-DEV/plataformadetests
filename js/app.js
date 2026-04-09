@@ -158,11 +158,15 @@ function renderSubjects() {
         for (let i = 1; i <= subject.units_count; i++) {
             const unitPool = pool.filter(q => q.unit === i);
             const pdfPath = THEORY_PDFS[subject.id]?.[i];
+            const videoPath = PROGRAMACION_VIDEOS[subject.id]?.[i];
             
             unitsHTML += `
                 <div class="unit-group">
                     <button class="unit-btn" onclick="startExam('${subject.id}',${i})" ${unitPool.length === 0 ? 'disabled title="Sin preguntas"' : ''}>T${i}</button>
-                    ${pdfPath ? `<a href="${pdfPath}" target="_blank" class="pdf-link-mini" title="Ver teoría PDF">📄</a>` : ''}
+                    <div style="display:flex; gap:0.4rem; justify-content:center; margin-top:0.2rem;">
+                        ${pdfPath ? `<a href="${pdfPath}" target="_blank" class="pdf-link-mini" title="Ver teoría PDF">📄</a>` : ''}
+                        ${videoPath ? `<a href="javascript:void(0)" onclick="openVideo('${videoPath}')" class="video-link-mini" title="Ver video de repaso">🎬</a>` : ''}
+                    </div>
                 </div>`;
         }
         unitsHTML += '</div>';
@@ -641,6 +645,41 @@ const QUICK_READ_TIPS = {
         2: ['PK compuesta: más de una columna', 'ROLLBACK: cancela cambios de transacción', 'Vista: virtual, se reconstruye al vuelo', 'DROP TABLE: elimina tabla', 'Roles: grupos de usuarios con mismos privilegios'],
     }
 };
+
+const PROGRAMACION_VIDEOS = {
+    "programacion": {
+        "1": "Programacion/videos/Desmitificando_la_programación.mp4",
+        "2": "Programacion/videos/La_gramática_del_código.mp4",
+        "3": "Programacion/videos/Bloques_de_Java__Arrays_y_Strings.mp4",
+        "4": "Programacion/videos/POO__De_planos_a_edificios.mp4",
+        "5": "Programacion/videos/La_Vida_de_un_Objeto.mp4",
+        "6": "Programacion/videos/POO_Avanzada__Superpoderes.mp4",
+        "7": "Programacion/videos/Del_Caos_al_Control__Excepciones_y_Colecciones_en_Java.mp4",
+        "8": "Programacion/videos/Desmitificando_la_E_S_en_Java.mp4",
+        "9": "Programacion/videos/Bases_de_datos_orientadas_a_objetos.mp4",
+        "10": "Programacion/videos/JDBC__El_Traductor_Universal.mp4"
+    }
+};
+
+function openVideo(path) {
+    const modal = document.getElementById('video-modal');
+    const player = document.getElementById('main-video-player');
+    if (modal && player) {
+        player.src = path;
+        modal.classList.remove('hidden');
+        player.play().catch(() => {}); // Intentar auto-play
+    }
+}
+
+function closeVideo() {
+    const modal = document.getElementById('video-modal');
+    const player = document.getElementById('main-video-player');
+    if (modal && player) {
+        player.pause();
+        player.src = "";
+        modal.classList.add('hidden');
+    }
+}
 
 function showQuickRead(subjectId, unitId, onStart) {
     const tips = QUICK_READ_TIPS[subjectId]?.[unitId];

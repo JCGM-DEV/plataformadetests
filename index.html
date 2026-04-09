@@ -152,17 +152,45 @@
         </div>
     </div>
 
-    <!-- ── LAB MODAL ──────────────────────────────────────────────── -->
-    <div id="lab-modal" class="modal hidden">
-        <div class="modal-content lab-modal-content">
-            <button class="close-btn" onclick="closeLab()">&times;</button>
-            <div id="lab-root" style="flex:1;display:flex;flex-direction:column;min-height:0;"></div>
+    <!-- ── VIDEO MODAL ────────────────────────────────────────── -->
+    <div id="video-modal" class="modal hidden">
+        <div class="modal-content video-modal-content">
+            <button class="close-btn" onclick="closeVideo()">&times;</button>
+            <div id="video-container" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+                <video id="main-video-player" controls style="width:100%;max-height:100%;border-radius:8px;">
+                    Su navegador no soporta video.
+                </video>
+            </div>
         </div>
     </div>
 
     <div class="bg-blur-1"></div>
     <div class="bg-blur-2"></div>
 
+    <!-- ── ASISTENTE INTELIGENTE ────────────────────────────────── -->
+    <div id="assistant-container" class="assistant-window hidden">
+        <div class="assistant-header">
+            <div class="assistant-title">
+                <span class="assistant-status-dot"></span>
+                <span>TechAssistant IA</span>
+            </div>
+            <button class="assistant-close" onclick="toggleAssistant()">&times;</button>
+        </div>
+        <div id="assistant-messages" class="assistant-messages">
+            <!-- Mensajes aquí -->
+        </div>
+        <div class="assistant-input-area">
+            <input type="text" id="assistant-input" placeholder="Hazme una pregunta sobre la app..." onkeypress="if(event.key==='Enter') sendAssistantMessage()">
+            <button onclick="sendAssistantMessage()">🚀</button>
+        </div>
+    </div>
+
+    <button id="assistant-fab" class="assistant-fab" onclick="toggleAssistant()" title="Hablar con el asistente">
+        <span class="fab-icon">🤖</span>
+        <span class="fab-label">¿Dudas?</span>
+    </button>
+
     <script src="js/app.js?v=3"></script>
+    <script src="js/assistant.js?v=1"></script>
 </body>
 </html>
