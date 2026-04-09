@@ -681,6 +681,16 @@ function closeVideo() {
     }
 }
 
+// Cerrar con tecla Escape
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const videoModal = document.getElementById('video-modal');
+        if (videoModal && !videoModal.classList.contains('hidden')) {
+            closeVideo();
+        }
+    }
+});
+
 function showQuickRead(subjectId, unitId, onStart) {
     const tips = QUICK_READ_TIPS[subjectId]?.[unitId];
     if (!tips || tips.length === 0) { onStart(); return; }
