@@ -789,9 +789,8 @@ function logTheory(subjectName, unit) {
     logActivity('theory', `Teoría: ${subjectName}`, `Repasando Tema ${unit}`);
 }
 
-function startLab(labId, title) {
-    logActivity('lab', `Lab: ${title}`, 'Practicando en laboratorio interactivo');
-}
+ // Deleted redundant startLab function
+
 
 function showQuickRead(subjectId, unitId, onStart) {
     const tips = QUICK_READ_TIPS[subjectId]?.[unitId];
@@ -1418,11 +1417,25 @@ function parseTxtExam(text, syllabusId) {
 
 function startLab(syllabusId) {
     const examInfo = APP_STATE.syllabusExams.find(e => e.id === syllabusId);
-    if (!examInfo) return;
+    if (!examInfo) {
+        console.error('Lab not found:', syllabusId);
+        return;
+    }
+    
+    // Log activity
+    logActivity('lab', `Lab: ${examInfo.name}`, 'Practicando en laboratorio interactivo');
+
     const modal = document.getElementById('lab-modal');
-    document.getElementById('lab-root').innerHTML = `
-        <iframe src="${examInfo.file}" style="width:100%;height:100%;border:none;border-radius:12px;"></iframe>`;
-    modal.classList.remove('hidden');
+    const root = document.getElementById('lab-root');
+    
+    if (modal && root) {
+        root.innerHTML = `<iframe src="${examInfo.file}" style="width:100%;height:100%;border:none;border-radius:12px;"></iframe>`;
+        modal.classList.remove('hidden');
+    } else {
+        console.error('Lab modal or root not found in DOM');
+        // Fallback: open in new tab
+        window.open(examInfo.file, '_blank');
+    }
 }
 
 function closeLab() {
