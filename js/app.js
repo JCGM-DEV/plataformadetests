@@ -29,7 +29,7 @@ const SR_KEY        = 'spaced_rep_v1';   // repetición espaciada
 const MASTERY_KEY   = 'mastery_v1';      // preguntas dominadas (3+ aciertos seguidos)
 
 // ─── REPETICIÓN ESPACIADA (SM-2 simplificado) ───────────────────
-function getSR() { return JSON.parse(localStorage.getItem(SR_KEY) || '{}'); }
+function getSR() { return Sync.get(SR_KEY, {}); }
 
 function updateSR(conceptId, correct) {
     const sr = getSR();
@@ -45,7 +45,7 @@ function updateSR(conceptId, correct) {
         card.easiness = Math.max(1.3, card.easiness - 0.2);
     }
     card.nextReview = Date.now() + card.interval * 24 * 60 * 60 * 1000;
-    localStorage.setItem(SR_KEY, JSON.stringify(sr));
+    Sync.set(SR_KEY, sr);
 }
 
 function getSRPriority(conceptId) {
@@ -56,14 +56,14 @@ function getSRPriority(conceptId) {
 }
 
 // ─── MASTERY (preguntas dominadas) ──────────────────────────────
-function getMastery() { return JSON.parse(localStorage.getItem(MASTERY_KEY) || '{}'); }
+function getMastery() { return Sync.get(MASTERY_KEY, {}); }
 
 function updateMastery(conceptId, correct) {
     const m = getMastery();
     if (!m[conceptId]) m[conceptId] = { streak: 0 };
     if (correct) { m[conceptId].streak++; }
     else { m[conceptId].streak = 0; }
-    localStorage.setItem(MASTERY_KEY, JSON.stringify(m));
+    Sync.set(MASTERY_KEY, m);
 }
 
 function isMastered(conceptId) {
@@ -72,19 +72,19 @@ function isMastered(conceptId) {
 }
 
 // ─── HISTORY ────────────────────────────────────────────────────
-function getHistory() { return JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]'); }
+function getHistory() { return Sync.get(HISTORY_KEY, []); }
 
 function saveExamResult(subjectId, subjectName, score, aciertos, errores, omitidas, total) {
     const h = getHistory();
     h.push({ id: Date.now(), date: new Date().toISOString(), subjectId, subjectName,
              score: parseFloat(score.toFixed(2)), aciertos, errores, omitidas, total });
-    localStorage.setItem(HISTORY_KEY, JSON.stringify(h));
+    Sync.set(HISTORY_KEY, h);
 }
 
 function clearHistory() {
     if (!confirm('¿Borrar todo el historial de exámenes?')) return;
-    localStorage.removeItem(HISTORY_KEY);
-    localStorage.removeItem(FALLOS_KEY);
+    Sync.remove(HISTORY_KEY);
+    Sync.remove(FALLOS_KEY);
     if (learningChart) { learningChart.destroy(); learningChart = null; }
     document.getElementById('progress-section').style.display = 'none';
     document.getElementById('fallos-section').style.display = 'none';
@@ -93,7 +93,7 @@ function clearHistory() {
 }
 
 // ─── FALLOS ─────────────────────────────────────────────────────
-function getFallos() { return JSON.parse(localStorage.getItem(FALLOS_KEY) || '{}'); }
+function getFallos() { return Sync.get(FALLOS_KEY, {}); }
 
 function saveFallo(subjectId, question) {
     const f = getFallos();
@@ -103,13 +103,13 @@ function saveFallo(subjectId, question) {
         f[subjectId][key] = { ...question, failCount: 0 };
     }
     f[subjectId][key].failCount++;
-    localStorage.setItem(FALLOS_KEY, JSON.stringify(f));
+    Sync.set(FALLOS_KEY, f);
 }
 
 function removeFallo(subjectId, conceptId) {
     const f = getFallos();
     if (f[subjectId]) delete f[subjectId][conceptId];
-    localStorage.setItem(FALLOS_KEY, JSON.stringify(f));
+    Sync.set(FALLOS_KEY, f);
 }
 
 // ─── VIEW ROUTER ────────────────────────────────────────────────
@@ -696,7 +696,7 @@ function closeVideo() {
 const ACTIVITY_LOG_KEY = 'daily_activity_v1';
 
 function getActivityLog() {
-    return JSON.parse(localStorage.getItem(ACTIVITY_LOG_KEY) || '[]');
+    return Sync.get(ACTIVITY_LOG_KEY, []);
 }
 
 function logActivity(type, title, detail, metadata = {}) {
@@ -711,7 +711,7 @@ function logActivity(type, title, detail, metadata = {}) {
         metadata
     };
     log.unshift(entry);
-    localStorage.setItem(ACTIVITY_LOG_KEY, JSON.stringify(log.slice(0, 50))); // Guardar últimos 50
+    Sync.set(ACTIVITY_LOG_KEY, log.slice(0, 50)); // Guardar últimos 50
     renderActivityLog();
 }
 
@@ -1493,7 +1493,8 @@ function exitFlashcard() {
 }
 
 // ─── BOOT ───────────────────────────────────────────────────────
-init();
+// Boot handled by Auth.init() to ensure synchronization
+// init();
 
 // ═══════════════════════════════════════════════════════════════
 //  GUÍA ESTRATÉGICA DE ESTUDIO — 3 Fases hacia el 16 de mayo
@@ -1730,7 +1731,7 @@ const THEORY_PDFS = {
 };
 
 function getLibreta() {
-    return JSON.parse(localStorage.getItem(LIBRETA_KEY) || '{}');
+    return Sync.get(LIBRETA_KEY, {});
 }
 
 function saveLibretaNota(conceptId, subjectId, question, correctAnswer, nota) {
@@ -1741,7 +1742,7 @@ function saveLibretaNota(conceptId, subjectId, question, correctAnswer, nota) {
     const entry = { conceptId, question, correctAnswer, nota, date: new Date().toISOString() };
     if (existing >= 0) lib[subjectId][existing] = entry;
     else lib[subjectId].push(entry);
-    localStorage.setItem(LIBRETA_KEY, JSON.stringify(lib));
+    Sync.set(LIBRETA_KEY, lib);
     renderStudyGuide(); // update count badge
 }
 
@@ -1790,7 +1791,7 @@ function updateLibretaNota(conceptId, subjectId, newNota) {
         const entry = lib[subjectId].find(e => e.conceptId === conceptId);
         if (entry) {
             entry.nota = newNota;
-            localStorage.setItem(LIBRETA_KEY, JSON.stringify(lib));
+            Sync.set(LIBRETA_KEY, lib);
         }
     }
 }
@@ -1799,7 +1800,7 @@ function deleteLibretaEntry(conceptId, subjectId) {
     const lib = getLibreta();
     if (lib[subjectId]) {
         lib[subjectId] = lib[subjectId].filter(e => e.conceptId !== conceptId);
-        localStorage.setItem(LIBRETA_KEY, JSON.stringify(lib));
+        Sync.set(LIBRETA_KEY, lib);
         openLibreta(); // refresh
         renderStudyGuide();
     }
