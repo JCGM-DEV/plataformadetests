@@ -2149,18 +2149,15 @@ function renderAcademicPlanner() {
                     <div class="methodology-card">
                         <h5>🗓️ Rutina del Día</h5>
                         <ul>
-                            ${phase.dailyTasks.map(t => {
-                                let key = 'theory';
-                                if (t.toLowerCase().includes('test') || t.toLowerCase().includes('simulacro')) key = 'tests';
-                                if (t.toLowerCase().includes('laboratorio') || t.toLowerCase().includes('práctica')) key = 'labs';
-                                
-                                const progress = getTutorProgress();
-                                const isDone = progress[key];
+                            ${getTasksForPhase().map(t => {
+                                const isDone = progress[t.key];
+                                const isDuoKey = (t.baseKey === 'theory' || t.baseKey === 'labs');
                                 
                                 return `
-                                <li class="planner-task-item ${isDone ? 'done' : ''}" onclick="updateTutorProgress('${key}', ${!isDone})">
+                                <li class="planner-task-item ${isDone ? 'done' : ''}" 
+                                    onclick="${isDuoKey ? `alert('Para esta tarea debes usar el cronómetro del Robot.')` : `updateTutorProgress('${t.key}', ${!isDone})`}">
                                     <div class="task-check">${isDone ? '✓' : ''}</div>
-                                    <span>${t}</span>
+                                    <span>${t.label}</span>
                                 </li>`;
                             }).join('')}
                         </ul>
@@ -2290,11 +2287,15 @@ function getTutorProgress() {
     return all[today];
 }
 
-function updateTutorProgress(task, status = true) {
+function updateTutorProgress(task, status = true, subjectId = null) {
     const today = new Date().toLocaleDateString('es-ES');
     const all = Sync.get(TUTOR_PROGRESS_KEY, {});
-    if (!all[today]) all[today] = { theory: false, tests: false, labs: false };
-    all[today][task] = status;
+    if (!all[today]) all[today] = {};
+    
+    // For theory and labs, we require subject-specific tracking if subjectId is provided
+    const key = (subjectId && (task === 'theory' || task === 'labs')) ? `${task}_${subjectId}` : task;
+    
+    all[today][key] = status;
     Sync.set(TUTOR_PROGRESS_KEY, all);
     renderTutorMessage();
     renderAcademicPlanner();
@@ -2302,13 +2303,32 @@ function updateTutorProgress(task, status = true) {
 
 function getTasksForPhase() {
     const phase = getCurrentPhase();
-    return phase.dailyTasks.map(t => {
+    const todaySlot = getDailySubjects();
+    const subjects = todaySlot.subjects || [];
+    
+    const tasks = [];
+    phase.dailyTasks.forEach(t => {
         let key = 'theory';
         if (t.toLowerCase().includes('test') || t.toLowerCase().includes('simulacro')) key = 'tests';
         if (t.toLowerCase().includes('laboratorio') || t.toLowerCase().includes('práctica')) key = 'labs';
-        if (t.toLowerCase().includes('fallos') || t.toLowerCase().includes('libreta')) key = 'tests'; // Reviewing errors counts as test/practice
-        return { label: t, key: key };
+        if (t.toLowerCase().includes('fallos') || t.toLowerCase().includes('libreta')) key = 'tests';
+
+        // If it's theory or labs, we split it by subject if today is a multi-subject day
+        if (key === 'theory' || key === 'labs') {
+            subjects.forEach((sid, i) => {
+                tasks.push({ 
+                    label: `${t} (${todaySlot.labels[i]})`, 
+                    key: `${key}_${sid}`, 
+                    baseKey: key, 
+                    subjectId: sid,
+                    subjectLabel: todaySlot.labels[i] 
+                });
+            });
+        } else {
+            tasks.push({ label: t, key: key, baseKey: key });
+        }
     });
+    return tasks;
 }
 
 function renderTutorMessage() {
@@ -2334,45 +2354,33 @@ function renderTutorMessage() {
     let guidanceHTML = '';
     let message = '';
 
-    const todaySlot = getDailySubjects();
-    const subjects = todaySlot.subjects || [];
-    const labels = todaySlot.labels || [];
-
     if (!nextTask) {
         message = "¡Protocolo completado! Has destruido todos los objetivos de hoy. El sistema está optimizado al 100%. 🤖✨";
         mood = 'encouraging';
     } else {
-        if (nextTask.key === 'theory') {
-            const isDuo = subjects.length > 1;
-            message = isDuo 
-                ? `Fase de Concepto dual detectada. Debes procesar la **teoría** de **${labels.join(' e ')}**. ¿Por cuál empezamos el escaneo? 🤖📖`
-                : `Iniciando Fase de Concepto. Debes procesar la **teoría** de **${labels[0]}**. No intentes correr antes de saber caminar. 🤖📖`;
-            
-            guidanceHTML = `<div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">`;
-            subjects.forEach((sid, i) => {
-                guidanceHTML += `
+        const key = nextTask.baseKey;
+        const subLabel = nextTask.subjectLabel || 'la asignatura';
+        const sid = nextTask.subjectId;
+
+        if (key === 'theory') {
+            message = `Iniciando Fase de Concepto. Debes procesar la **teoría** de **${subLabel}**. No intentes correr antes de saber caminar. 🤖📖`;
+            guidanceHTML = `
+                <div style="margin-top: 1rem;">
                     <button class="planner-go-btn" style="background:var(--primary-color); padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="scrollToSubject('${sid}')">
-                        ⚡ Teoría: ${labels[i]}
-                    </button>`;
-            });
-            guidanceHTML += `</div>`;
-
-        } else if (nextTask.key === 'tests') {
-            message = `Teoría procesada. Ahora a por el **entrenamiento de tests**. Vamos a ver si realmente has entendido algo o solo has mirado los dibujos. 🤖🎯`;
-            guidanceHTML = `<div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">`;
-            subjects.forEach((sid, i) => {
-                guidanceHTML += `
+                        ⚡ Abrir Teoría de ${subLabel}
+                    </button>
+                </div>`;
+        } else if (key === 'tests') {
+            message = `Base teórica suficiente para **${subLabel}** detectada. Ahora a por el **entrenamiento de tests**. 🤖🎯`;
+            guidanceHTML = `
+                <div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
                     <button class="planner-go-btn" style="background:#f97316; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="showView('dashboard'); switchDash('simulacros'); setTimeout(()=>scrollToSubject('${sid}'),150)">
-                        🔥 Test: ${labels[i]}
-                    </button>`;
-            });
-            if (getCurrentPhase().id === 2) {
-                guidanceHTML += `<button onclick="showView('dashboard'); switchDash('fallos')" style="background:#6366f1; padding: 0.6rem 1.2rem; font-size: 0.85rem;" class="planner-go-btn">📓 Repasar Fallos</button>`;
-            }
-            guidanceHTML += `</div>`;
-
-        } else if (nextTask.key === 'labs') {
-            message = `Protocolo de práctica activado. Es hora de mancharse las manos en el **laboratorio**. La teoría es bonita, pero el código es la realidad. 🤖🔧`;
+                        🔥 Test: ${subLabel}
+                    </button>
+                    ${getCurrentPhase().id === 2 ? `<button onclick="showView('dashboard'); switchDash('fallos')" style="background:#6366f1; padding: 0.6rem 1.2rem; font-size: 0.85rem;" class="planner-go-btn">📓 Repasar Fallos</button>` : ''}
+                </div>`;
+        } else if (key === 'labs') {
+            message = `Protocolo de práctica activado para **${subLabel}**. Es hora de mancharse las manos. 🤖🔧`;
             guidanceHTML = `
                 <div style="margin-top: 1rem;">
                     <button class="planner-go-btn" style="background:#10b981; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="showView('dashboard'); switchDash('labs')">
@@ -2387,8 +2395,8 @@ function renderTutorMessage() {
             <div class="tutor-avatar">${avatar}</div>
             <div class="tutor-content">
                 <div class="tutor-title">
-                    <span>Robot de Entrenamiento — Guía de Pasos</span>
-                    <span>${tasksDone}/${totalTasks} TAREAS HOY</span>
+                    <span>Robot de Entrenamiento — Guía Estricta</span>
+                    <span>${tasksDone}/${totalTasks} OBJETIVOS</span>
                 </div>
                 <div class="tutor-message">${message}</div>
                 <div class="tutor-progress-mini">
@@ -2464,7 +2472,7 @@ function completeStudySession() {
         if (!confirm('¿Tan poco tiempo? El Robot espera al menos 1 minuto para procesar la sesión. ¿Seguro que has terminado?')) return;
     }
 
-    updateTutorProgress('theory', true);
+    updateTutorProgress('theory', true, APP_STATE.studySession.subjectId);
     logActivity('theory', `Sesión de Estudio: ${APP_STATE.studySession.subjectName}`, `Tiempo invertido: ${mins} minutos`);
     
     alert(`¡Buen trabajo! Has registrado ${mins} minutos de estudio profundo de ${APP_STATE.studySession.subjectName}.`);
