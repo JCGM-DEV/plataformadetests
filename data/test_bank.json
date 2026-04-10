@@ -8489,6 +8489,929 @@
       "unit": null
     },
     {
+      "concept_id": "ipe_pdf_custom_q0",
+      "question": "En una empresa forestal, el encargado detecta que varios trabajadores adoptan posturas forzadas durante largas jornadas al utilizar herramientas manuales. Este tipo de situación puede derivar en:",
+      "options": [
+        "Riesgos químicos por exposición a sustancias",
+        "Riesgos ergonómicos relacionados con la postura",
+        "Riesgos biológicos por contacto con organismos",
+        "Riesgos eléctricos por uso de maquinaria"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q1",
+      "question": "Durante una jornada laboral, un trabajador empieza a mostrar síntomas de agotamiento físico y dificultad para concentrarse tras varias horas de trabajo continuo. Este fenómeno se conoce como:",
+      "options": [
+        "Estrés laboral exclusivamente",
+        "Fatiga laboral, que puede ser física y mental",
+        "Accidente de trabajo",
+        "Enfermedad profesional"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q2",
+      "question": "Una empresa decide implantar pausas periódicas y rotación de tareas para reducir la monotonía y el cansancio. Estas medidas actúan principalmente sobre:",
+      "options": [
+        "El origen del riesgo físico",
+        "La organización del trabajo",
+        "El uso de equipos de protección",
+        "La eliminación de sustancias peligrosas"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q3",
+      "question": "En una situación de emergencia, un trabajador decide evacuar el lugar sin seguir las indicaciones establecidas en el plan de autoprotección. Esta conducta:",
+      "options": [
+        "Es adecuada si no hay daños",
+        "Mejora la rapidez de evacuación",
+        "Puede poner en peligro a otras personas",
+        "Es irrelevante en emergencias"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q4",
+      "question": "En relación con la búsqueda de empleo, una persona que utiliza redes profesionales para establecer contactos y conocer oportunidades laborales está desarrollando:",
+      "options": [
+        "Formación continua",
+        "Networking",
+        "Autoempleo",
+        "Evaluación profesional"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q5",
+      "question": "Un trabajador recibe comentarios constructivos sobre su desempeño por parte de su superior con el objetivo de mejorar su rendimiento. Este proceso se denomina:",
+      "options": [
+        "Motivación extrínseca",
+        "Feedback o retroalimentación",
+        "Evaluación sumativa",
+        "Supervisión directa"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q6",
+      "question": "En una empresa, los trabajadores colaboran activamente, comparten información y persiguen objetivos comunes. Esta situación refleja:",
+      "options": [
+        "Competencia interna",
+        "Trabajo en equipo",
+        "Liderazgo autoritario",
+        "Individualismo laboral"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q7",
+      "question": "Una empresa introduce nuevas tecnologías para mejorar sus procesos productivos y adaptarse al mercado. Esta acción está relacionada con:",
+      "options": [
+        "Reducción de costes exclusivamente",
+        "Innovación empresarial",
+        "Eliminación de personal",
+        "Subcontratación"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q8",
+      "question": "El organigrama de una empresa permite conocer:",
+      "options": [
+        "Los beneficios económicos",
+        "La estructura jerárquica y funcional",
+        "El volumen de producción",
+        "Los salarios de los trabajadores"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q9",
+      "question": "Un emprendedor analiza si su idea de negocio será rentable antes de ponerla en marcha. Para ello utiliza:",
+      "options": [
+        "Un contrato de trabajo",
+        "Un plan de empresa",
+        "Un organigrama",
+        "Un currículum"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q10",
+      "question": "En una empresa, los costes que no varían aunque aumente o disminuya la producción se denominan:",
+      "options": [
+        "Costes variables",
+        "Costes fijos",
+        "Costes directos",
+        "Costes marginales"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q11",
+      "question": "El punto muerto o umbral de rentabilidad es aquel nivel de producción en el que:",
+      "options": [
+        "Se obtienen máximos beneficios",
+        "Los ingresos igualan a los costes",
+        "Se producen pérdidas",
+        "Se inicia la actividad"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q12",
+      "question": "Un trabajador que es capaz de adaptarse a cambios, superar dificultades y mantener una actitud positiva está demostrando:",
+      "options": [
+        "Productividad",
+        "Resiliencia",
+        "Competitividad",
+        "Especialización"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q13",
+      "question": "En el ámbito laboral, la inteligencia emocional permite:",
+      "options": [
+        "Ignorar las emociones propias",
+        "Gestionar adecuadamente emociones y relaciones",
+        "Evitar la toma de decisiones",
+        "Reducir la comunicación"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q14",
+      "question": "Un conflicto entre compañeros puede resolverse de manera positiva si:",
+      "options": [
+        "Se ignora el problema",
+        "Se utiliza el diálogo y la negociación",
+        "Se impone una decisión",
+        "Se evita la comunicación"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q15",
+      "question": "La formación continua es clave en el mercado laboral actual porque:",
+      "options": [
+        "Evita cambios en el empleo",
+        "Permite adaptarse a nuevas demandas",
+        "Reduce la empleabilidad",
+        "Sustituye la experiencia"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q16",
+      "question": "El teletrabajo se caracteriza por:",
+      "options": [
+        "Realizar el trabajo exclusivamente en la empresa",
+        "Desarrollar la actividad a distancia mediante tecnologías",
+        "No tener horario laboral",
+        "Carecer de supervisión"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q17",
+      "question": "Una empresa que adopta medidas para reducir su impacto ambiental está aplicando:",
+      "options": [
+        "Productividad",
+        "Responsabilidad social corporativa",
+        "Marketing",
+        "Externalización"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q18",
+      "question": "La toma de decisiones en el ámbito profesional implica:",
+      "options": [
+        "Actuar sin información",
+        "Elegir entre distintas alternativas",
+        "Evitar responsabilidades",
+        "Delegar siempre"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q19",
+      "question": "El clima laboral de una empresa influye directamente en:",
+      "options": [
+        "Solo en la dirección",
+        "El bienestar y rendimiento de los trabajadores",
+        "Únicamente en los beneficios",
+        "La maquinaria"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q20",
+      "question": "Un desarrollador junior desea mejorar su empleabilidad en el sector IT creando un entorno personal de aprendizaje (PLE). ¿Cuál de las siguientes acciones refleja mejor un uso eficaz de este entorno?",
+      "options": [
+        "Memorizar documentación técnica sin aplicarla",
+        "Combinar cursos online, comunidades técnicas y herramientas de gestión del conocimiento",
+        "Limitarse a la formación reglada del ciclo",
+        "Centrarse únicamente en redes sociales personales"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q21",
+      "question": "En el sector tecnológico, la identificación de necesidades de aprendizaje es clave debido a:",
+      "options": [
+        "La estabilidad de los conocimientos técnicos",
+        "La rápida obsolescencia de las competencias digitales",
+        "La baja competencia profesional",
+        "La escasa innovación"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q22",
+      "question": "¿Cuál de las siguientes herramientas sería más adecuada para organizar documentación técnica y apuntes en proyectos de programación?",
+      "options": [
+        "Instagram",
+        "Microsoft OneNote",
+        "TikTok",
+        "WhatsApp"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q23",
+      "question": "Un profesional IT utiliza GitHub, foros técnicos y LinkedIn para compartir conocimiento. Esto forma parte de:",
+      "options": [
+        "Currículum oculto",
+        "Red personal de aprendizaje",
+        "Evaluación del desempeño",
+        "Formación reglada"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q24",
+      "question": "En el desarrollo de software, un Plan de Desarrollo Personal (PDP) permite:",
+      "options": [
+        "Eliminar la necesidad de formación continua",
+        "Establecer objetivos profesionales y acciones concretas para lograrlos",
+        "Sustituir la experiencia laboral",
+        "Garantizar automáticamente un empleo"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q25",
+      "question": "¿Cuál de las siguientes opciones refleja mejor un objetivo SMART en el ámbito IT?",
+      "options": [
+        "Mejorar en programación",
+        "Aprender cosas nuevas",
+        "Completar un curso de Python en 3 meses con certificación",
+        "Estudiar más adelante"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q26",
+      "question": "La identidad digital de un programador influye en su empleabilidad porque:",
+      "options": [
+        "Solo importa el currículum físico",
+        "Los reclutadores analizan la presencia online y proyectos visibles",
+        "No tiene impacto en el sector IT",
+        "Es irrelevante frente a la experiencia"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q27",
+      "question": "¿Cuál de los siguientes es un riesgo asociado a una mala gestión de la identidad digital en el sector tecnológico?",
+      "options": [
+        "Mejora del networking",
+        "Incremento de oportunidades laborales",
+        "Pérdida de reputación profesional",
+        "Aumento de visibilidad positiva"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q28",
+      "question": "El phishing en entornos IT consiste en:",
+      "options": [
+        "Optimizar sistemas",
+        "Robar información mediante engaño",
+        "Programar algoritmos",
+        "Diseñar interfaces"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q29",
+      "question": "¿Cuál de las siguientes medidas es más eficaz para proteger cuentas profesionales en entornos digitales?",
+      "options": [
+        "Usar la misma contraseña",
+        "Desactivar antivirus",
+        "Activar autenticación en dos factores",
+        "Compartir credenciales"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q30",
+      "question": "El análisis del potencial profesional en el sector IT incluye:",
+      "options": [
+        "Solo habilidades técnicas",
+        "Solo experiencia laboral",
+        "Habilidades técnicas y blandas",
+        "Solo formación académica"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q31",
+      "question": "Un análisis DAFO aplicado a un desarrollador identifica como oportunidad:",
+      "options": [
+        "Falta de experiencia",
+        "Alta demanda de programadores",
+        "Escasas habilidades sociales",
+        "Bajo nivel de inglés"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q32",
+      "question": "¿Cuál de las siguientes opciones representa una debilidad en un perfil IT?",
+      "options": [
+        "Capacidad de trabajo en equipo",
+        "Dominio de lenguajes de programación",
+        "Falta de experiencia práctica",
+        "Alta adaptabilidad"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q33",
+      "question": "El autoconocimiento en el ámbito profesional permite:",
+      "options": [
+        "Evitar decisiones laborales",
+        "Identificar intereses y orientar la carrera profesional",
+        "Sustituir la formación",
+        "Eliminar errores"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q34",
+      "question": "La inteligencia emocional en equipos de desarrollo software favorece:",
+      "options": [
+        "Conflictos constantes",
+        "Mejora del trabajo en equipo",
+        "Aislamiento profesional",
+        "Reducción de productividad"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q35",
+      "question": "Una mentalidad de crecimiento en el sector IT implica:",
+      "options": [
+        "Evitar retos",
+        "Creer que las habilidades son fijas",
+        "Mejorar mediante esfuerzo y aprendizaje continuo",
+        "No aceptar errores"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q36",
+      "question": "En relación con el sector productivo IT, una característica clave es:",
+      "options": [
+        "Estabilidad tecnológica",
+        "Evolución constante",
+        "Baja innovación",
+        "Escasa digitalización"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q37",
+      "question": "El equilibrio entre competencias personales y demandas del mercado implica:",
+      "options": [
+        "Ignorar el mercado laboral",
+        "Adaptar habilidades a necesidades del sector",
+        "Elegir solo por vocación",
+        "Evitar formación"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q38",
+      "question": "Un itinerario formativo tras un ciclo de informática puede incluir:",
+      "options": [
+        "Solo empleo",
+        "Solo universidad",
+        "Formación, especialización o empleo",
+        "Ninguna opción"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q39",
+      "question": "La Formación Profesional Dual en el sector IT se caracteriza por:",
+      "options": [
+        "Formación teórica exclusivamente",
+        "Formación combinada con práctica en empresa",
+        "Eliminación de prácticas",
+        "Formación online únicamente"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q40",
+      "question": "Un curso de especialización en ciberseguridad permite:",
+      "options": [
+        "Reducir empleabilidad",
+        "Acceder a perfiles altamente demandados",
+        "Evitar formación continua",
+        "Sustituir experiencia"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q41",
+      "question": "En un plan de acción profesional en IT, los recursos incluyen:",
+      "options": [
+        "Solo dinero",
+        "Formación, herramientas y contactos",
+        "Solo tiempo",
+        "Solo experiencia"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q42",
+      "question": "Desde la perspectiva de PRL en oficinas IT, un riesgo común es:",
+      "options": [
+        "Caídas en altura",
+        "Fatiga visual por pantallas",
+        "Explosiones industriales",
+        "Exposición química"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q43",
+      "question": "Una función del nivel básico en PRL en el sector IT es:",
+      "options": [
+        "Diseñar software",
+        "Identificar riesgos laborales",
+        "Programar aplicaciones",
+        "Gestionar redes"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q44",
+      "question": "La adopción de medidas preventivas en entornos informáticos tiene como objetivo:",
+      "options": [
+        "Reducir productividad",
+        "Mejorar bienestar y evitar riesgos laborales",
+        "Aumentar errores"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q45",
+      "question": "Un desarrollador backend decide mejorar su aprendizaje autónomo creando un entorno personal de aprendizaje (PLE). Para ello combina cursos online, repositorios de código, blogs técnicos y herramientas de organización. Sin embargo, tras varios meses no percibe mejora significativa en sus competencias. ¿Cuál sería la causa más probable de esta situación?",
+      "options": [
+        "Uso de demasiadas fuentes de información",
+        "Falta de planificación, objetivos y evaluación del aprendizaje",
+        "Exceso de formación reglada",
+        "Uso exclusivo de herramientas digitales"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q46",
+      "question": "En el contexto del sector IT, la autoevaluación de competencias resulta clave para la empleabilidad. ¿Qué aspecto diferencia principalmente una autoevaluación eficaz de una ineficaz?",
+      "options": [
+        "Se basa únicamente en percepciones subjetivas",
+        "Incluye contraste con requerimientos del mercado y evidencia objetiva",
+        "Evita analizar debilidades",
+        "Se realiza una sola vez"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q47",
+      "question": "Un profesional de desarrollo web detecta que el mercado demanda conocimientos en frameworks modernos que él no domina. Según el enfoque del Plan de Desarrollo Personal (PDP), ¿qué acción sería más adecuada?",
+      "options": [
+        "Ignorar la tendencia",
+        "Establecer objetivos formativos concretos y planificar su adquisición",
+        "Cambiar de sector profesional",
+        "Centrarse solo en su experiencia previa"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q48",
+      "question": "En relación con la identidad digital en el sector tecnológico, un candidato publica contenido técnico en redes profesionales, pero también comentarios polémicos en redes personales. ¿Qué implicación tiene esto en su empleabilidad?",
+      "options": [
+        "No tiene impacto si son redes distintas",
+        "Puede afectar negativamente a su reputación profesional",
+        "Solo influye la experiencia laboral",
+        "Es irrelevante para reclutadores"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q49",
+      "question": "Un analista de datos comparte habitualmente código y proyectos en plataformas públicas. ¿Qué ventaja competitiva le proporciona esta práctica en procesos de selección?",
+      "options": [
+        "Reduce la necesidad de entrevistas",
+        "Permite evidenciar competencias reales y marca personal",
+        "Sustituye el currículum",
+        "Evita la formación continua"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q50",
+      "question": "En el análisis DAFO de un perfil IT, ¿cuál de las siguientes situaciones se consideraría una amenaza externa?",
+      "options": [
+        "Falta de experiencia en un lenguaje",
+        "Baja autoestima profesional",
+        "Alta competencia en el mercado tecnológico",
+        "Falta de habilidades sociales"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q51",
+      "question": "Un técnico informático presenta alta capacidad analítica pero dificultades en comunicación. ¿Cómo se clasificaría esta situación en términos de potencial profesional?",
+      "options": [
+        "Solo fortaleza",
+        "Solo oportunidad",
+        "Combinación de fortaleza técnica y debilidad transversal",
+        "Amenaza externa"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q52",
+      "question": "La adaptación continua en el sector IT implica que los profesionales deben:",
+      "options": [
+        "Mantener conocimientos estables",
+        "Actualizar competencias de forma permanente",
+        "Evitar especialización",
+        "Depender exclusivamente de la empresa"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q53",
+      "question": "En el diseño de un itinerario formativo en informática, ¿qué factor es más relevante para garantizar la empleabilidad futura?",
+      "options": [
+        "Elegir el camino más corto",
+        "Adaptarse a las tendencias tecnológicas del mercado",
+        "Evitar cambios formativos",
+        "Seguir únicamente preferencias personales"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q54",
+      "question": "Un estudiante de DAM duda entre trabajar o seguir formándose. Desde la perspectiva del sistema de FP actual, ¿qué opción es más adecuada?",
+      "options": [
+        "Solo trabajar",
+        "Solo estudiar",
+        "Combinar formación continua y experiencia profesional",
+        "Abandonar formación"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q55",
+      "question": "En el sector IT, el uso de herramientas de inteligencia artificial en el autoconocimiento permite:",
+      "options": [
+        "Sustituir la reflexión personal",
+        "Analizar patrones y recomendar desarrollo profesional",
+        "Eliminar la formación",
+        "Reducir la empleabilidad"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q56",
+      "question": "Dentro de un plan de acción profesional, el establecimiento de plazos tiene como finalidad:",
+      "options": [
+        "Reducir flexibilidad",
+        "Controlar el progreso y evitar la procrastinación",
+        "Eliminar objetivos",
+        "Sustituir la evaluación"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q57",
+      "question": "En un entorno de trabajo IT, el riesgo ergonómico más habitual se relaciona con:",
+      "options": [
+        "Manipulación de cargas pesadas",
+        "Uso prolongado de pantallas y posturas inadecuadas",
+        "Riesgos químicos",
+        "Exposición a ruido extremo"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q58",
+      "question": "Desde el nivel básico de PRL, ¿qué actuación es prioritaria en un entorno de oficina tecnológica?",
+      "options": [
+        "Programar sistemas de seguridad",
+        "Identificar riesgos y proponer medidas preventivas",
+        "Diseñar software",
+        "Gestionar redes"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q59",
+      "question": "La prevención de riesgos laborales en el sector IT contribuye a:",
+      "options": [
+        "Disminuir la productividad",
+        "Mejorar la salud, el bienestar y el rendimiento profesional",
+        "Aumentar el estrés",
+        "Reducir la innovación"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q60",
+      "question": "Clara, desarrolladora junior, se ha inscrito en varios cursos de programación, sigue canales técnicos y guarda artículos en diferentes plataformas. Sin embargo, siente que no progresa porque no logra consolidar conocimientos ni aplicarlos en proyectos reales. ¿Qué medida sería más adecuada para mejorar su aprendizaje autónomo?",
+      "options": [
+        "Seguir acumulando más cursos y recursos",
+        "Organizar un plan estructurado con objetivos y práctica aplicada",
+        "Abandonar el aprendizaje online"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q61",
+      "question": "Mario utiliza diversas herramientas digitales (notas, repositorios, calendarios) para su aprendizaje en ciberseguridad, pero no revisa su progreso ni ajusta su planificación. ¿Qué elemento clave de su entorno personal de aprendizaje está fallando?",
+      "options": [
+        "Uso de herramientas digitales",
+        "Evaluación y seguimiento del aprendizaje",
+        "Acceso a fuentes de información"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q62",
+      "question": "Lucía, analista de datos, identifica que tiene gran capacidad técnica pero dificultades para trabajar en equipo. En su análisis DAFO, ¿cómo debería clasificar esta situación?",
+      "options": [
+        "Fortaleza global",
+        "Debilidad interna en competencias transversales",
+        "Amenaza externa"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q63",
+      "question": "Carlos quiere orientar su carrera en desarrollo de IA, pero no está seguro de sus capacidades. Decide realizar test de competencias, analizar su experiencia previa y reflexionar sobre sus intereses. ¿Qué proceso está aplicando?",
+      "options": [
+        "Formación reglada",
+        "Autoconocimiento profesional",
+        "Evaluación externa del mercado"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q64",
+      "question": "Una empresa tecnológica busca desarrolladores con conocimientos en cloud y trabajo colaborativo. Ana tiene alta formación técnica pero no experiencia en herramientas colaborativas. ¿Qué debería hacer para mejorar su empleabilidad?",
+      "options": [
+        "Mantener su perfil actual",
+        "Adaptar sus competencias a las demandas del sector",
+        "Cambiar de sector"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q65",
+      "question": "Pedro finaliza un ciclo de DAM y duda entre trabajar o realizar un curso de especialización en ciberseguridad. Analiza el mercado y detecta alta demanda en este ámbito. ¿Cuál sería la decisión más estratégica?",
+      "options": [
+        "Elegir sin analizar el mercado",
+        "Continuar formándose en un área con alta demanda",
+        "Evitar especialización"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q66",
+      "question": "Laura establece como objetivo “mejorar en programación”, pero no define plazos ni criterios de evaluación. Tras meses, no percibe avances. ¿Cuál es el problema principal?",
+      "options": [
+        "Falta de recursos",
+        "Objetivo mal definido (no es SMART)",
+        "Exceso de formación"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q67",
+      "question": "Un técnico IT diseña un plan de acción donde identifica carencias, establece metas, recursos y plazos, pero no revisa resultados. ¿Qué fase está omitiendo?",
+      "options": [
+        "Definición de objetivos",
+        "Seguimiento y evaluación",
+        "Identificación de recursos"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q68",
+      "question": "Un programador trabaja más de 8 horas frente al ordenador sin pausas, presentando fatiga visual y dolores musculares. ¿Qué tipo de riesgo laboral está presente?",
+      "options": [
+        "Riesgo químico",
+        "Riesgo ergonómico",
+        "Riesgo eléctrico"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q69",
+      "question": "En una empresa tecnológica, un trabajador detecta mala iluminación y posturas inadecuadas en el equipo. Como nivel básico en PRL, ¿qué debería hacer?",
+      "options": [
+        "Ignorar la situación",
+        "Comunicar el riesgo y proponer medidas preventivas",
+        "Resolverlo sin informar"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q70",
+      "question": "Una empresa tecnológica contrata a un desarrollador mediante contrato indefinido. Tras 10 meses de trabajo, la empresa decide extinguir el contrato alegando “bajo rendimiento”, sin aportar pruebas objetivas ni haber realizado advertencias previas ni evaluación del desempeño. El trabajador impugna el despido. ¿Cómo sería calificada previsiblemente esta extinción?",
+      "options": [
+        "Despido procedente, por facultad organizativa empresarial",
+        "Despido improcedente, por falta de acreditación suficiente de la causa",
+        "Despido nulo, por vulneración automática de derechos fundamentales"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
+      "concept_id": "ipe_pdf_custom_q71",
+      "question": "Una empresa IT implanta un sistema de control de actividad mediante software que registra pulsaciones de teclado y capturas de pantalla periódicas sin informar previamente a los trabajadores. Uno de ellos impugna la medida. Desde el punto de vista del Derecho Laboral y la protección de derechos fundamentales, ¿cuál es la opción más correcta?",
+      "options": [
+        "Es válida por el poder de dirección empresarial sin limitaciones",
+        "Es válida solo si mejora la productividad",
+        "Puede ser ilícita por vulnerar el derecho a la intimidad y falta de información previa"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta oficial extraída del PDF de Empleabilidad.",
+      "unit": 1
+    },
+    {
       "concept_id": "ipe_i_bateria_q0",
       "question": "1. Cuando hablamos del Derecho del Trabajo dentro del sistema jurídico español, nos referimos a un conjunto de normas que no solo regulan la prestación de servicios, sino que también buscan corregir ciertos desequilibrios. ¿Cuál es su finalidad principal?",
       "options": [

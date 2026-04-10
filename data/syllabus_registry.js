@@ -1,469 +1,478 @@
 const SYLLABUS_REGISTRY_DATA = [
-    {
-        "id": "bd_tema_1",
-        "name": "Tema 1: Conceptos",
-        "subject_id": "bases_de_datos",
-        "file": "data/syllabus/bd_t1.txt",
-        "icon": "🗄️",
-        "unit": 1
-    },
-    {
-        "id": "bd_tema_2",
-        "name": "Tema 2: SQL y DDL",
-        "subject_id": "bases_de_datos",
-        "file": "data/syllabus/bd_t2.txt",
-        "icon": "🗄️",
-        "unit": 2
-    },
-    {
-        "id": "bd_tema_3",
-        "name": "Tema 3: Diagramas E-R",
-        "subject_id": "bases_de_datos",
-        "file": "data/syllabus/bd_t3.txt",
-        "icon": "🗄️",
-        "unit": 3
-    },
-    {
-        "id": "bd_tema_4",
-        "name": "Tema 4: Consultas SQL",
-        "subject_id": "bases_de_datos",
-        "file": "data/syllabus/bd_t4.txt",
-        "icon": "🗄️",
-        "unit": 4
-    },
-    {
-        "id": "bd_tema_5",
-        "name": "Tema 5: Tratamiento Datos",
-        "subject_id": "bases_de_datos",
-        "file": "data/syllabus/bd_t5.txt",
-        "icon": "🗄️",
-        "unit": 5
-    },
-    {
-        "id": "bd_tema_6",
-        "name": "Tema 6: Programación",
-        "subject_id": "bases_de_datos",
-        "file": "data/syllabus/bd_t6.txt",
-        "icon": "🗄️",
-        "unit": 6
-    },
-    {
-        "id": "bd_tema_7",
-        "name": "Tema 7: Objeto-Relacional",
-        "subject_id": "bases_de_datos",
-        "file": "data/syllabus/bd_t7.txt",
-        "icon": "🗄️",
-        "unit": 7
-    },
-    {
-        "id": "ed_tema_1",
-        "name": "Tema 1: Conceptos Software",
-        "subject_id": "entornos_de_desarrollo",
-        "file": "data/syllabus/ed_t1.txt",
-        "icon": "🛠️"
-    },
-    {
-        "id": "ed_tema_2",
-        "name": "Tema 2: El IDE",
-        "subject_id": "entornos_de_desarrollo",
-        "file": "data/syllabus/ed_t2.txt",
-        "icon": "🛠️"
-    },
-    {
-        "id": "ed_tema_3",
-        "name": "Tema 3: Introducción UML",
-        "subject_id": "entornos_de_desarrollo",
-        "file": "data/syllabus/ed_t3.txt",
-        "icon": "🛠️"
-    },
-    {
-        "id": "ed_tema_4",
-        "name": "Tema 4: Diag. Estructurales",
-        "subject_id": "entornos_de_desarrollo",
-        "file": "data/syllabus/ed_t4.txt",
-        "icon": "🛠️"
-    },
-    {
-        "id": "ed_tema_5",
-        "name": "Tema 5: Diag. Comportamiento",
-        "subject_id": "entornos_de_desarrollo",
-        "file": "data/syllabus/ed_t5.txt",
-        "icon": "🛠️"
-    },
-    {
-        "id": "ed_tema_6",
-        "name": "Tema 6: Pruebas y Depuración",
-        "subject_id": "entornos_de_desarrollo",
-        "file": "data/syllabus/ed_t6.txt",
-        "icon": "🛠️"
-    },
-    {
-        "id": "ed_tema_7",
-        "name": "Tema 7: Optimización y Git",
-        "subject_id": "entornos_de_desarrollo",
-        "file": "data/syllabus/ed_t7.txt",
-        "icon": "🛠️"
-    },
-    {
-        "id": "ed_lab_uml",
-        "name": "Práctica: UML Practice Lab",
-        "type": "lab",
-        "subject_id": "entornos_de_desarrollo",
-        "file": "practicaED/index.html",
-        "icon": "⬡"
-    },
-    {
-        "id": "lm_tema_1",
-        "name": "LM Tema 1: Introd. Marcas",
-        "subject_id": "lenguaje_de_marcas",
-        "file": "data/syllabus/lm_t1.txt",
-        "icon": "📝"
-    },
-    {
-        "id": "lm_tema_2",
-        "name": "LM Tema 2: HTML y CSS",
-        "subject_id": "lenguaje_de_marcas",
-        "file": "data/syllabus/lm_t2.txt",
-        "icon": "📝"
-    },
-    {
-        "id": "lm_tema_3",
-        "name": "LM Tema 3: XML y XSD",
-        "subject_id": "lenguaje_de_marcas",
-        "file": "data/syllabus/lm_t3.txt",
-        "icon": "📝"
-    },
-    {
-        "id": "lm_tema_4",
-        "name": "LM Tema 4: Almacenamiento",
-        "subject_id": "lenguaje_de_marcas",
-        "file": "data/syllabus/lm_t4.txt",
-        "icon": "📝"
-    },
-    {
-        "id": "lm_tema_5",
-        "name": "LM Tema 5: XPath y XSLT",
-        "subject_id": "lenguaje_de_marcas",
-        "file": "data/syllabus/lm_t5.txt",
-        "icon": "📝"
-    },
-    {
-        "id": "lm_tema_6",
-        "name": "LM Tema 6: XQuery y BD-XML",
-        "subject_id": "lenguaje_de_marcas",
-        "file": "data/syllabus/lm_t6.txt",
-        "icon": "📝"
-    },
-    {
-        "id": "lm_tema_7",
-        "name": "LM Tema 7: RSS y Atom",
-        "subject_id": "lenguaje_de_marcas",
-        "file": "data/syllabus/lm_t7.txt",
-        "icon": "📝"
-    },
-    {
-        "id": "lm_tema_8",
-        "name": "LM Tema 8: ERP y CRM",
-        "subject_id": "lenguaje_de_marcas",
-        "file": "data/syllabus/lm_t8.txt",
-        "icon": "📝"
-    },
-    {
-        "id": "emp_tema_1",
-        "name": "EMP Tema 1: Prevención Riscos",
-        "subject_id": "empleabilidad",
-        "file": "data/syllabus/emp_t1.txt",
-        "icon": "💼",
-        "unit": 1
-    },
-    {
-        "id": "emp_tema_2",
-        "name": "EMP Tema 2: Seguridad y RCP",
-        "subject_id": "empleabilidad",
-        "file": "data/syllabus/emp_t2.txt",
-        "icon": "💼",
-        "unit": 2
-    },
-    {
-        "id": "emp_tema_3",
-        "name": "EMP Tema 3: Competencias",
-        "subject_id": "empleabilidad",
-        "file": "data/syllabus/emp_t3.txt",
-        "icon": "💼",
-        "unit": 3
-    },
-    {
-        "id": "emp_tema_4",
-        "name": "EMP Tema 4: Mercado Laboral",
-        "subject_id": "empleabilidad",
-        "file": "data/syllabus/emp_t4.txt",
-        "icon": "💼",
-        "unit": 4
-    },
-    {
-        "id": "emp_tema_5",
-        "name": "EMP Tema 5: Acción y FP Dual",
-        "subject_id": "empleabilidad",
-        "file": "data/syllabus/emp_t5.txt",
-        "icon": "💼",
-        "unit": 5
-    },
-    {
-        "id": "emp_bateria",
-        "name": "📋 Batería Examen (50 preguntas oficiales)",
-        "subject_id": "empleabilidad",
-        "file": "data/syllabus/emp_bateria.txt",
-        "icon": "💼"
-    },
-    {
-        "id": "emp_examen_final",
-        "name": "🎯 SIMULACRO EXAMEN FINAL (50 preguntas)",
-        "type": "examen_final",
-        "subject_id": "empleabilidad",
-        "file": "data/syllabus/emp_bateria.txt",
-        "icon": "💼"
-    },
-    {
-        "id": "emp_profesora_9abril",
-        "name": "📋 Batería preguntas profesora (9 abril)",
-        "subject_id": "empleabilidad",
-        "file": "data/syllabus/emp_profesora_9abril.txt",
-        "icon": "💼"
-    },
-    {
-        "id": "bd_lab",
-        "name": "SQL & BD Practice Lab",
-        "type": "lab",
-        "subject_id": "bases_de_datos",
-        "file": "practicaBD/index.html",
-        "icon": "🗄️"
-    },
-    {
-        "id": "lm_lab",
-        "name": "HTML/XML Practice Lab",
-        "type": "lab",
-        "subject_id": "lenguaje_de_marcas",
-        "file": "practicaLM/index.html",
-        "icon": "🏷️"
-    },
-    {
-        "id": "prog_lab",
-        "name": "Java POO Practice Lab",
-        "type": "lab",
-        "subject_id": "programacion",
-        "file": "practicaPROG/index.html",
-        "icon": "💻"
-    },
-    {
-        "id": "prog_tema_1",
-        "name": "Tema 1: Fundamentos",
-        "subject_id": "programacion",
-        "file": "data/syllabus/prog_t1.txt",
-        "icon": "💻"
-    },
-    {
-        "id": "prog_tema_2",
-        "name": "Tema 2: Clases y Objetos",
-        "subject_id": "programacion",
-        "file": "data/syllabus/prog_t2.txt",
-        "icon": "💻"
-    },
-    {
-        "id": "prog_tema_3",
-        "name": "Tema 3: Variables y Control",
-        "subject_id": "programacion",
-        "file": "data/syllabus/prog_t3.txt",
-        "icon": "💻"
-    },
-    {
-        "id": "prog_tema_4",
-        "name": "Tema 4: POO Avanzada",
-        "subject_id": "programacion",
-        "file": "data/syllabus/prog_t4.txt",
-        "icon": "💻"
-    },
-    {
-        "id": "prog_tema_5",
-        "name": "Tema 5: Arrays y Strings",
-        "subject_id": "programacion",
-        "file": "data/syllabus/prog_t5.txt",
-        "icon": "💻"
-    },
-    {
-        "id": "prog_tema_6",
-        "name": "Tema 6: Herencia e Interfaces",
-        "subject_id": "programacion",
-        "file": "data/syllabus/prog_t6.txt",
-        "icon": "💻"
-    },
-    {
-        "id": "prog_tema_7",
-        "name": "Tema 7: Colecciones y Excepciones",
-        "subject_id": "programacion",
-        "file": "data/syllabus/prog_t7.txt",
-        "icon": "💻"
-    },
-    {
-        "id": "prog_tema_8",
-        "name": "Tema 8: Ficheros y Streams",
-        "subject_id": "programacion",
-        "file": "data/syllabus/prog_t8.txt",
-        "icon": "💻"
-    },
-    {
-        "id": "prog_tema_9",
-        "name": "Tema 9: JDBC y Bases de Datos",
-        "subject_id": "programacion",
-        "file": "data/syllabus/prog_t9.txt",
-        "icon": "💻"
-    },
-    {
-        "id": "prog_tema_10",
-        "name": "Tema 10: BD Orientada a Objetos",
-        "subject_id": "programacion",
-        "file": "data/syllabus/prog_t10.txt",
-        "icon": "💻"
-    },
-    {
-        "id": "si_tema_1",
-        "name": "Tema 1: Redes y Hardware",
-        "subject_id": "sistemas_informaticos",
-        "file": "data/syllabus/si_t1.txt",
-        "icon": "🖥️"
-    },
-    {
-        "id": "si_tema_2",
-        "name": "Tema 2: Sistemas Operativos",
-        "subject_id": "sistemas_informaticos",
-        "file": "data/syllabus/si_t2.txt",
-        "icon": "🖥️"
-    },
-    {
-        "id": "si_tema_3",
-        "name": "Tema 3: Almacenamiento",
-        "subject_id": "sistemas_informaticos",
-        "file": "data/syllabus/si_t3.txt",
-        "icon": "🖥️"
-    },
-    {
-        "id": "si_tema_4",
-        "name": "Tema 4: Usuarios y Permisos",
-        "subject_id": "sistemas_informaticos",
-        "file": "data/syllabus/si_t4.txt",
-        "icon": "🖥️"
-    },
-    {
-        "id": "si_tema_5",
-        "name": "Tema 5: Redes TCP/IP",
-        "subject_id": "sistemas_informaticos",
-        "file": "data/syllabus/si_t5.txt",
-        "icon": "🖥️"
-    },
-    {
-        "id": "si_tema_6",
-        "name": "Tema 6: Seguridad",
-        "subject_id": "sistemas_informaticos",
-        "file": "data/syllabus/si_t6.txt",
-        "icon": "🖥️"
-    },
-    {
-        "id": "si_tema_7",
-        "name": "Tema 7: Software y Herramientas",
-        "subject_id": "sistemas_informaticos",
-        "file": "data/syllabus/si_t7.txt",
-        "icon": "🖥️"
-    },
-    {
-        "id": "si_practicas",
-        "name": "🔧 Casos Prácticos (Examen Mayo)",
-        "subject_id": "sistemas_informaticos",
-        "file": "data/syllabus/si_practicas.txt",
-        "icon": "🖥️"
-    },
-    {
-        "id": "si_examen_final",
-        "name": "🎯 SIMULACRO EXAMEN FINAL (60 preguntas)",
-        "type": "examen_final",
-        "subject_id": "sistemas_informaticos",
-        "file": "data/syllabus/si_practicas.txt",
-        "icon": "🖥️"
-    },
-    {
-        "id": "si_lab",
-        "name": "CLI & Systems Practice Lab",
-        "type": "lab",
-        "subject_id": "sistemas_informaticos",
-        "file": "practicaSI/index.html",
-        "icon": "🐚"
-    },
-    {
-        "id": "cc_tema_1",
-        "name": "Tema 1: Conceptos Cloud",
-        "subject_id": "cloud_computing",
-        "file": "data/syllabus/cc_t1.txt",
-        "icon": "☁️"
-    },
-    {
-        "id": "cc_tema_2",
-        "name": "Tema 2: Economía y Facturación",
-        "subject_id": "cloud_computing",
-        "file": "data/syllabus/cc_t2.txt",
-        "icon": "☁️"
-    },
-    {
-        "id": "cc_tema_3",
-        "name": "Tema 3: Infraestructura",
-        "subject_id": "cloud_computing",
-        "file": "data/syllabus/cc_t3.txt",
-        "icon": "☁️"
-    },
-    {
-        "id": "cc_tema_4",
-        "name": "Tema 4: Seguridad en la Nube",
-        "subject_id": "cloud_computing",
-        "file": "data/syllabus/cc_t4.txt",
-        "icon": "☁️"
-    },
-    {
-        "id": "cc_tema_5",
-        "name": "Tema 5: Redes y CDN",
-        "subject_id": "cloud_computing",
-        "file": "data/syllabus/cc_t5.txt",
-        "icon": "☁️"
-    },
-    {
-        "id": "cc_tema_6",
-        "name": "Tema 6: Servicios de Cómputo",
-        "subject_id": "cloud_computing",
-        "file": "data/syllabus/cc_t6.txt",
-        "icon": "☁️"
-    },
-    {
-        "id": "cc_tema_7",
-        "name": "Tema 7: Almacenamiento",
-        "subject_id": "cloud_computing",
-        "file": "data/syllabus/cc_t7.txt",
-        "icon": "☁️"
-    },
-    {
-        "id": "cc_tema_8",
-        "name": "Tema 8: Bases de Datos Cloud",
-        "subject_id": "cloud_computing",
-        "file": "data/syllabus/cc_t8.txt",
-        "icon": "☁️"
-    },
-    {
-        "id": "cc_tema_9",
-        "name": "Tema 9: Arquitectura Cloud",
-        "subject_id": "cloud_computing",
-        "file": "data/syllabus/cc_t9.txt",
-        "icon": "☁️"
-    },
-    {
-        "id": "cc_tema_10",
-        "name": "Tema 10: Escalado y Monitorización",
-        "subject_id": "cloud_computing",
-        "file": "data/syllabus/cc_t10.txt",
-        "icon": "☁️"
-    }
+  {
+    "id": "bd_tema_1",
+    "name": "Tema 1: Conceptos",
+    "subject_id": "bases_de_datos",
+    "file": "data/syllabus/bd_t1.txt",
+    "icon": "🗄️",
+    "unit": 1
+  },
+  {
+    "id": "bd_tema_2",
+    "name": "Tema 2: SQL y DDL",
+    "subject_id": "bases_de_datos",
+    "file": "data/syllabus/bd_t2.txt",
+    "icon": "🗄️",
+    "unit": 2
+  },
+  {
+    "id": "bd_tema_3",
+    "name": "Tema 3: Diagramas E-R",
+    "subject_id": "bases_de_datos",
+    "file": "data/syllabus/bd_t3.txt",
+    "icon": "🗄️",
+    "unit": 3
+  },
+  {
+    "id": "bd_tema_4",
+    "name": "Tema 4: Consultas SQL",
+    "subject_id": "bases_de_datos",
+    "file": "data/syllabus/bd_t4.txt",
+    "icon": "🗄️",
+    "unit": 4
+  },
+  {
+    "id": "bd_tema_5",
+    "name": "Tema 5: Tratamiento Datos",
+    "subject_id": "bases_de_datos",
+    "file": "data/syllabus/bd_t5.txt",
+    "icon": "🗄️",
+    "unit": 5
+  },
+  {
+    "id": "bd_tema_6",
+    "name": "Tema 6: Programación",
+    "subject_id": "bases_de_datos",
+    "file": "data/syllabus/bd_t6.txt",
+    "icon": "🗄️",
+    "unit": 6
+  },
+  {
+    "id": "bd_tema_7",
+    "name": "Tema 7: Objeto-Relacional",
+    "subject_id": "bases_de_datos",
+    "file": "data/syllabus/bd_t7.txt",
+    "icon": "🗄️",
+    "unit": 7
+  },
+  {
+    "id": "ed_tema_1",
+    "name": "Tema 1: Conceptos Software",
+    "subject_id": "entornos_de_desarrollo",
+    "file": "data/syllabus/ed_t1.txt",
+    "icon": "🛠️"
+  },
+  {
+    "id": "ed_tema_2",
+    "name": "Tema 2: El IDE",
+    "subject_id": "entornos_de_desarrollo",
+    "file": "data/syllabus/ed_t2.txt",
+    "icon": "🛠️"
+  },
+  {
+    "id": "ed_tema_3",
+    "name": "Tema 3: Introducción UML",
+    "subject_id": "entornos_de_desarrollo",
+    "file": "data/syllabus/ed_t3.txt",
+    "icon": "🛠️"
+  },
+  {
+    "id": "ed_tema_4",
+    "name": "Tema 4: Diag. Estructurales",
+    "subject_id": "entornos_de_desarrollo",
+    "file": "data/syllabus/ed_t4.txt",
+    "icon": "🛠️"
+  },
+  {
+    "id": "ed_tema_5",
+    "name": "Tema 5: Diag. Comportamiento",
+    "subject_id": "entornos_de_desarrollo",
+    "file": "data/syllabus/ed_t5.txt",
+    "icon": "🛠️"
+  },
+  {
+    "id": "ed_tema_6",
+    "name": "Tema 6: Pruebas y Depuración",
+    "subject_id": "entornos_de_desarrollo",
+    "file": "data/syllabus/ed_t6.txt",
+    "icon": "🛠️"
+  },
+  {
+    "id": "ed_tema_7",
+    "name": "Tema 7: Optimización y Git",
+    "subject_id": "entornos_de_desarrollo",
+    "file": "data/syllabus/ed_t7.txt",
+    "icon": "🛠️"
+  },
+  {
+    "id": "ed_lab_uml",
+    "name": "Práctica: UML Practice Lab",
+    "type": "lab",
+    "subject_id": "entornos_de_desarrollo",
+    "file": "practicaED/index.html",
+    "icon": "⬡"
+  },
+  {
+    "id": "lm_tema_1",
+    "name": "LM Tema 1: Introd. Marcas",
+    "subject_id": "lenguaje_de_marcas",
+    "file": "data/syllabus/lm_t1.txt",
+    "icon": "📝"
+  },
+  {
+    "id": "lm_tema_2",
+    "name": "LM Tema 2: HTML y CSS",
+    "subject_id": "lenguaje_de_marcas",
+    "file": "data/syllabus/lm_t2.txt",
+    "icon": "📝"
+  },
+  {
+    "id": "lm_tema_3",
+    "name": "LM Tema 3: XML y XSD",
+    "subject_id": "lenguaje_de_marcas",
+    "file": "data/syllabus/lm_t3.txt",
+    "icon": "📝"
+  },
+  {
+    "id": "lm_tema_4",
+    "name": "LM Tema 4: Almacenamiento",
+    "subject_id": "lenguaje_de_marcas",
+    "file": "data/syllabus/lm_t4.txt",
+    "icon": "📝"
+  },
+  {
+    "id": "lm_tema_5",
+    "name": "LM Tema 5: XPath y XSLT",
+    "subject_id": "lenguaje_de_marcas",
+    "file": "data/syllabus/lm_t5.txt",
+    "icon": "📝"
+  },
+  {
+    "id": "lm_tema_6",
+    "name": "LM Tema 6: XQuery y BD-XML",
+    "subject_id": "lenguaje_de_marcas",
+    "file": "data/syllabus/lm_t6.txt",
+    "icon": "📝"
+  },
+  {
+    "id": "lm_tema_7",
+    "name": "LM Tema 7: RSS y Atom",
+    "subject_id": "lenguaje_de_marcas",
+    "file": "data/syllabus/lm_t7.txt",
+    "icon": "📝"
+  },
+  {
+    "id": "lm_tema_8",
+    "name": "LM Tema 8: ERP y CRM",
+    "subject_id": "lenguaje_de_marcas",
+    "file": "data/syllabus/lm_t8.txt",
+    "icon": "📝"
+  },
+  {
+    "id": "emp_tema_1",
+    "name": "EMP Tema 1: Prevención Riscos",
+    "subject_id": "empleabilidad",
+    "file": "data/syllabus/emp_t1.txt",
+    "icon": "💼",
+    "unit": 1
+  },
+  {
+    "id": "emp_tema_2",
+    "name": "EMP Tema 2: Seguridad y RCP",
+    "subject_id": "empleabilidad",
+    "file": "data/syllabus/emp_t2.txt",
+    "icon": "💼",
+    "unit": 2
+  },
+  {
+    "id": "emp_tema_3",
+    "name": "EMP Tema 3: Competencias",
+    "subject_id": "empleabilidad",
+    "file": "data/syllabus/emp_t3.txt",
+    "icon": "💼",
+    "unit": 3
+  },
+  {
+    "id": "emp_tema_4",
+    "name": "EMP Tema 4: Mercado Laboral",
+    "subject_id": "empleabilidad",
+    "file": "data/syllabus/emp_t4.txt",
+    "icon": "💼",
+    "unit": 4
+  },
+  {
+    "id": "emp_tema_5",
+    "name": "EMP Tema 5: Acción y FP Dual",
+    "subject_id": "empleabilidad",
+    "file": "data/syllabus/emp_t5.txt",
+    "icon": "💼",
+    "unit": 5
+  },
+  {
+    "id": "emp_bateria",
+    "name": "📋 Batería Examen (50 preguntas oficiales)",
+    "subject_id": "empleabilidad",
+    "file": "data/syllabus/emp_bateria.txt",
+    "icon": "💼"
+  },
+  {
+    "id": "ipe_pdf_custom",
+    "name": "📋 IPE - Preguntas de Casos Reales (72)",
+    "subject_id": "empleabilidad",
+    "file": "data/syllabus/ipe_pdf_questions.txt",
+    "icon": "💼",
+    "unit": 1
+  },
+  {
+    "id": "ipe_i_bateria",
+    "name": "📋 IPE I - Batería 1 (50 preguntas)",
+    "subject_id": "empleabilidad",
+    "file": "data/syllabus/ipe_i_bateria.txt",
+    "icon": "💼",
+    "unit": 1
+  },
+  {
+    "id": "emp_examen_final",
+    "name": "🎯 SIMULACRO EXAMEN FINAL (50 preguntas)",
+    "type": "examen_final",
+    "subject_id": "empleabilidad",
+    "file": "data/syllabus/emp_bateria.txt",
+    "icon": "💼"
+  },
+  {
+    "id": "bd_lab",
+    "name": "SQL & BD Practice Lab",
+    "type": "lab",
+    "subject_id": "bases_de_datos",
+    "file": "practicaBD/index.html",
+    "icon": "🗄️"
+  },
+  {
+    "id": "lm_lab",
+    "name": "HTML/XML Practice Lab",
+    "type": "lab",
+    "subject_id": "lenguaje_de_marcas",
+    "file": "practicaLM/index.html",
+    "icon": "🏷️"
+  },
+  {
+    "id": "prog_lab",
+    "name": "Java POO Practice Lab",
+    "type": "lab",
+    "subject_id": "programacion",
+    "file": "practicaPROG/index.html",
+    "icon": "💻"
+  },
+  {
+    "id": "prog_tema_1",
+    "name": "Tema 1: Fundamentos",
+    "subject_id": "programacion",
+    "file": "data/syllabus/prog_t1.txt",
+    "icon": "💻"
+  },
+  {
+    "id": "prog_tema_2",
+    "name": "Tema 2: Clases y Objetos",
+    "subject_id": "programacion",
+    "file": "data/syllabus/prog_t2.txt",
+    "icon": "💻"
+  },
+  {
+    "id": "prog_tema_3",
+    "name": "Tema 3: Variables y Control",
+    "subject_id": "programacion",
+    "file": "data/syllabus/prog_t3.txt",
+    "icon": "💻"
+  },
+  {
+    "id": "prog_tema_4",
+    "name": "Tema 4: POO Avanzada",
+    "subject_id": "programacion",
+    "file": "data/syllabus/prog_t4.txt",
+    "icon": "💻"
+  },
+  {
+    "id": "prog_tema_5",
+    "name": "Tema 5: Arrays y Strings",
+    "subject_id": "programacion",
+    "file": "data/syllabus/prog_t5.txt",
+    "icon": "💻"
+  },
+  {
+    "id": "prog_tema_6",
+    "name": "Tema 6: Herencia e Interfaces",
+    "subject_id": "programacion",
+    "file": "data/syllabus/prog_t6.txt",
+    "icon": "💻"
+  },
+  {
+    "id": "prog_tema_7",
+    "name": "Tema 7: Colecciones y Excepciones",
+    "subject_id": "programacion",
+    "file": "data/syllabus/prog_t7.txt",
+    "icon": "💻"
+  },
+  {
+    "id": "prog_tema_8",
+    "name": "Tema 8: Ficheros y Streams",
+    "subject_id": "programacion",
+    "file": "data/syllabus/prog_t8.txt",
+    "icon": "💻"
+  },
+  {
+    "id": "prog_tema_9",
+    "name": "Tema 9: JDBC y Bases de Datos",
+    "subject_id": "programacion",
+    "file": "data/syllabus/prog_t9.txt",
+    "icon": "💻"
+  },
+  {
+    "id": "prog_tema_10",
+    "name": "Tema 10: BD Orientada a Objetos",
+    "subject_id": "programacion",
+    "file": "data/syllabus/prog_t10.txt",
+    "icon": "💻"
+  },
+  {
+    "id": "si_tema_1",
+    "name": "Tema 1: Redes y Hardware",
+    "subject_id": "sistemas_informaticos",
+    "file": "data/syllabus/si_t1.txt",
+    "icon": "🖥️"
+  },
+  {
+    "id": "si_tema_2",
+    "name": "Tema 2: Sistemas Operativos",
+    "subject_id": "sistemas_informaticos",
+    "file": "data/syllabus/si_t2.txt",
+    "icon": "🖥️"
+  },
+  {
+    "id": "si_tema_3",
+    "name": "Tema 3: Almacenamiento",
+    "subject_id": "sistemas_informaticos",
+    "file": "data/syllabus/si_t3.txt",
+    "icon": "🖥️"
+  },
+  {
+    "id": "si_tema_4",
+    "name": "Tema 4: Usuarios y Permisos",
+    "subject_id": "sistemas_informaticos",
+    "file": "data/syllabus/si_t4.txt",
+    "icon": "🖥️"
+  },
+  {
+    "id": "si_tema_5",
+    "name": "Tema 5: Redes TCP/IP",
+    "subject_id": "sistemas_informaticos",
+    "file": "data/syllabus/si_t5.txt",
+    "icon": "🖥️"
+  },
+  {
+    "id": "si_tema_6",
+    "name": "Tema 6: Seguridad",
+    "subject_id": "sistemas_informaticos",
+    "file": "data/syllabus/si_t6.txt",
+    "icon": "🖥️"
+  },
+  {
+    "id": "si_tema_7",
+    "name": "Tema 7: Software y Herramientas",
+    "subject_id": "sistemas_informaticos",
+    "file": "data/syllabus/si_t7.txt",
+    "icon": "🖥️"
+  },
+  {
+    "id": "si_practicas",
+    "name": "🔧 Casos Prácticos (Examen Mayo)",
+    "subject_id": "sistemas_informaticos",
+    "file": "data/syllabus/si_practicas.txt",
+    "icon": "🖥️"
+  },
+  {
+    "id": "si_examen_final",
+    "name": "🎯 SIMULACRO EXAMEN FINAL (60 preguntas)",
+    "type": "examen_final",
+    "subject_id": "sistemas_informaticos",
+    "file": "data/syllabus/si_practicas.txt",
+    "icon": "🖥️"
+  },
+  {
+    "id": "si_lab",
+    "name": "CLI & Systems Practice Lab",
+    "type": "lab",
+    "subject_id": "sistemas_informaticos",
+    "file": "practicaSI/index.html",
+    "icon": "🐚"
+  },
+  {
+    "id": "cc_tema_1",
+    "name": "Tema 1: Conceptos Cloud",
+    "subject_id": "cloud_computing",
+    "file": "data/syllabus/cc_t1.txt",
+    "icon": "☁️"
+  },
+  {
+    "id": "cc_tema_2",
+    "name": "Tema 2: Economía y Facturación",
+    "subject_id": "cloud_computing",
+    "file": "data/syllabus/cc_t2.txt",
+    "icon": "☁️"
+  },
+  {
+    "id": "cc_tema_3",
+    "name": "Tema 3: Infraestructura",
+    "subject_id": "cloud_computing",
+    "file": "data/syllabus/cc_t3.txt",
+    "icon": "☁️"
+  },
+  {
+    "id": "cc_tema_4",
+    "name": "Tema 4: Seguridad en la Nube",
+    "subject_id": "cloud_computing",
+    "file": "data/syllabus/cc_t4.txt",
+    "icon": "☁️"
+  },
+  {
+    "id": "cc_tema_5",
+    "name": "Tema 5: Redes y CDN",
+    "subject_id": "cloud_computing",
+    "file": "data/syllabus/cc_t5.txt",
+    "icon": "☁️"
+  },
+  {
+    "id": "cc_tema_6",
+    "name": "Tema 6: Servicios de Cómputo",
+    "subject_id": "cloud_computing",
+    "file": "data/syllabus/cc_t6.txt",
+    "icon": "☁️"
+  },
+  {
+    "id": "cc_tema_7",
+    "name": "Tema 7: Almacenamiento",
+    "subject_id": "cloud_computing",
+    "file": "data/syllabus/cc_t7.txt",
+    "icon": "☁️"
+  },
+  {
+    "id": "cc_tema_8",
+    "name": "Tema 8: Bases de Datos Cloud",
+    "subject_id": "cloud_computing",
+    "file": "data/syllabus/cc_t8.txt",
+    "icon": "☁️"
+  },
+  {
+    "id": "cc_tema_9",
+    "name": "Tema 9: Arquitectura Cloud",
+    "subject_id": "cloud_computing",
+    "file": "data/syllabus/cc_t9.txt",
+    "icon": "☁️"
+  },
+  {
+    "id": "cc_tema_10",
+    "name": "Tema 10: Escalado y Monitorización",
+    "subject_id": "cloud_computing",
+    "file": "data/syllabus/cc_t10.txt",
+    "icon": "☁️"
+  }
 ];
