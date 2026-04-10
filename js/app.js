@@ -382,6 +382,7 @@ async function init() {
 
         renderProgress();
         renderAcademicPlanner();
+        renderTutorMessage();
         switchDash('overview');
         console.log('App initialized successfully | Data loaded from:', (typeof SUBJECTS_DATA !== 'undefined' ? 'Global JS' : 'Fetch API'));
     } catch (err) {
