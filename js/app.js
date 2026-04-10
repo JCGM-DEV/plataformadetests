@@ -332,6 +332,7 @@ function renderSyllabusExams() {
     if (!grid) return;
 
     const syllabusExams = APP_STATE.syllabusExams.filter(e => e.type !== 'lab');
+    const history = getHistory(); // Get full history to count attempts
 
     if (syllabusExams.length === 0) {
         grid.innerHTML = `
@@ -373,12 +374,17 @@ function renderSyllabusExams() {
                 </div>
             </div>
             <div class="grid-container syllabus-grid">
-                ${grouped[subjectId].map(exam => `
+                ${grouped[subjectId].map(exam => {
+                    const attempts = history.filter(h => h.subjectId === exam.id).length;
+                    return `
                     <div class="subject-card syllabus-card ${exam.type === 'examen_final' ? 'examen-final-card' : ''}">
                         <div class="card-icon">${exam.icon || '📖'}</div>
-                        ${exam.type === 'examen_final'
-                            ? `<div class="badge-examen-final">EXAMEN FINAL</div>`
-                            : `<div class="badge-oficial">TEMARIO OFICIAL</div>`}
+                        <div class="card-badges">
+                            ${exam.type === 'examen_final'
+                                ? `<div class="badge-examen-final">EXAMEN FINAL</div>`
+                                : `<div class="badge-oficial">TEMARIO OFICIAL</div>`}
+                            ${attempts > 0 ? `<div class="badge-attempts">🔄 Repetido: ${attempts}</div>` : ''}
+                        </div>
                         <h3>${exam.name}</h3>
                         <div class="exam-selector-large">
                             ${exam.type === 'examen_final'
@@ -387,7 +393,7 @@ function renderSyllabusExams() {
                         </div>
                         ${exam.type === 'examen_final' ? `<p style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.5rem">30 teóricas + 30 prácticas · Penalización -1/3</p>` : ''}
                     </div>
-                `).join('')}
+                `}).join('')}
             </div>
         `;
         grid.appendChild(groupEl);

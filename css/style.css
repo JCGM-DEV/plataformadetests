@@ -468,11 +468,34 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   background: linear-gradient(to right, #f59e0b, #d97706);
   box-shadow: 0 4px 15px rgba(245,158,11,0.2);
 }
+.card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
 .badge-oficial {
-  background: #f59e0b; color: white;
-  font-size: 0.6rem; padding: 2px 6px;
-  border-radius: 4px; width: fit-content;
-  font-weight: bold; letter-spacing: 0.05em;
+  background: #f59e0b;
+  color: white;
+  font-size: 0.6rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  width: fit-content;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.badge-attempts {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.6rem;
+  font-weight: bold;
+  border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 .syllabus-group { margin-bottom: 3rem; animation: fadeIn 0.5s ease forwards; grid-column: 1 / -1; }
