@@ -697,6 +697,15 @@ const SUBJECT_VIDEOS = {
         "4": "Bases%20de%20datos/videos/Introducción_a_SQL__Cómo_Preguntar_a_los_Datos.mp4",
         "5": "Bases%20de%20datos/videos/Tratamiento_de_Datos.mp4",
         "6": "Bases%20de%20datos/videos/Programación_de_BBDD.mp4"
+    },
+    "entornos_de_desarrollo": {
+        "1": "Entornos%20de%20desarrollo/videos/Entornos_de_Desarrollo.mp4",
+        "2": "Entornos%20de%20desarrollo/videos/De_la_Idea_al_Programa.mp4",
+        "3": "Entornos%20de%20desarrollo/videos/El_Plano_del_Software__UML.mp4",
+        "4": "Entornos%20de%20desarrollo/videos/Los_Planos_del_Código__UML.mp4",
+        "5": "Entornos%20de%20desarrollo/videos/Diagramas_de_Comportamiento.mp4",
+        "6": "Entornos%20de%20desarrollo/videos/El_Mundo_Oculto_de_las_Pruebas_de_Software.mp4",
+        "7": "Entornos%20de%20desarrollo/videos/Optimización_y_documentación.mp4"
     }
 };
 
@@ -707,7 +716,12 @@ function openVideo(path) {
         player.src = path;
         modal.classList.remove('hidden');
         player.play().catch(() => {}); // Intentar auto-play
-        const subjectName = APP_STATE.subjects.find(s => path.includes(s.name) || (s.id === 'programacion' && path.includes('Programacion')) || (s.id === 'bases_de_datos' && path.includes('Bases')) )?.name || 'Asignatura';
+        const subjectName = APP_STATE.subjects.find(s => 
+            path.includes(s.name) || 
+            (s.id === 'programacion' && path.includes('Programacion')) || 
+            (s.id === 'bases_de_datos' && path.includes('Bases')) ||
+            (s.id === 'entornos_de_desarrollo' && path.includes('Entornos'))
+        )?.name || 'Asignatura';
         logActivity('video', 'Video: ' + subjectName, 'Viendo vídeo de repaso');
     }
 }
