@@ -60,7 +60,7 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   flex-direction: column;
   flex-shrink: 0;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 100;
+  z-index: 1000; /* Increased to stay above overlay */
 }
 
 .sidebar-header {
@@ -126,7 +126,7 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px);
-    z-index: 95;
+    z-index: 990; /* Just below sidebar */
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
@@ -176,7 +176,10 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
         left: -260px;
         top: 0;
         bottom: 0;
+        background: #0f172a; /* Solid background on mobile to avoid "turbidity" */
         box-shadow: 20px 0 50px rgba(0,0,0,0.5);
+        backface-visibility: hidden; /* Sharpness fix */
+        transform: translateZ(0); /* Sharpness fix */
     }
     .sidebar.open {
         left: 0;
