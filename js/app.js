@@ -2317,13 +2317,15 @@ function renderTutorMessage() {
 
     const messages = TUTOR_DATA[mood];
     const message = messages[Math.floor(Math.random() * messages.length)];
+    const todaySlot = getDailySubjects();
+    const firstSub = todaySlot.subjects[0];
 
     container.innerHTML = `
         <div class="tutor-card ${mood}">
             <div class="tutor-avatar">${avatar}</div>
             <div class="tutor-content">
                 <div class="tutor-title">
-                    <span>Tutor de Rendimiento</span>
+                    <span>Robot de Entrenamiento — Monitor de Rendimiento</span>
                     <span>${tasksDone}/3 tareas hoy</span>
                 </div>
                 <div class="tutor-message">${message}</div>
@@ -2332,6 +2334,12 @@ function renderTutorMessage() {
                     <div class="task-dot ${progress.tests ? 'done' : ''}" title="Tests"></div>
                     <div class="task-dot ${progress.labs ? 'done' : ''}" title="Laboratorio"></div>
                 </div>
+                ${!progress.theory && firstSub ? `
+                <div style="margin-top: 1rem;">
+                    <button class="planner-go-btn" style="background:var(--primary-color); padding: 0.5rem 1rem; font-size: 0.8rem;" onclick="scrollToSubject('${firstSub}')">
+                        ⚡ Empezar con el primer tema de hoy
+                    </button>
+                </div>` : ''}
             </div>
         </div>
     `;
