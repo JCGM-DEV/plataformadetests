@@ -183,7 +183,7 @@ function switchDash(sectionId) {
     if (sectionId === 'temario') renderSyllabusExams();
     if (sectionId === 'planner') renderAcademicPlanner();
     if (sectionId === 'progreso') renderProgress();
-    if (sectionId === 'fallos') renderFallos();
+    if (sectionId === 'fallos') renderFallosSection();
 }
 
 // ─── INIT ────────────────────────────────────────────────────────
@@ -278,55 +278,69 @@ function renderSubjects() {
 }
 
 // ─── RENDER SYLLABUS ────────────────────────────────────────────
-function renderSyllabusExams() {
-    const container = document.getElementById('syllabus-container');
-    const grid = document.getElementById('syllabus-grid');
+function renderLabs() {
     const labsContainer = document.getElementById('labs-container');
     const labsGrid = document.getElementById('labs-grid');
 
-    if (!container) return;
+    if (!labsGrid) return;
 
     // Separate labs from syllabus exams
     const labs = APP_STATE.syllabusExams.filter(e => e.type === 'lab');
-    const syllabusExams = APP_STATE.syllabusExams.filter(e => e.type !== 'lab');
 
-    // ── RENDER LABS ──────────────────────────────────────────────
-    if (labs.length > 0) {
-        labsContainer.style.display = 'block';
-        labsGrid.innerHTML = '';
-
-        const labColors = {
-            bases_de_datos:         { color: '#06b6d4', bg: 'rgba(6,182,212,0.08)', border: 'rgba(6,182,212,0.3)' },
-            lenguaje_de_marcas:     { color: '#84cc16', bg: 'rgba(132,204,22,0.08)', border: 'rgba(132,204,22,0.3)' },
-            programacion:           { color: '#f97316', bg: 'rgba(249,115,22,0.08)', border: 'rgba(249,115,22,0.3)' },
-            entornos_de_desarrollo: { color: '#a855f7', bg: 'rgba(168,85,247,0.08)', border: 'rgba(168,85,247,0.3)' },
-        };
-
-        labs.forEach(lab => {
-            const subject = APP_STATE.subjects.find(s => s.id === lab.subject_id);
-            const theme = labColors[lab.subject_id] || { color: '#6366f1', bg: 'rgba(99,102,241,0.08)', border: 'rgba(99,102,241,0.3)' };
-            const card = document.createElement('div');
-            card.className = 'lab-card';
-            card.style.cssText = `--lab-color:${theme.color};--lab-bg:${theme.bg};--lab-border:${theme.border}`;
-            card.innerHTML = `
-                <div class="lab-card-icon">${lab.icon || '🧪'}</div>
-                <div class="lab-card-body">
-                    <div class="lab-card-subject">${subject ? subject.name : lab.subject_id}</div>
-                    <h3 class="lab-card-title">${lab.name}</h3>
-                    <p class="lab-card-desc">${getLabDescription(lab.id)}</p>
-                </div>
-                <button class="lab-card-btn" onclick="startLab('${lab.id}')">
-                    Abrir Lab →
-                </button>
-            `;
-            labsGrid.appendChild(card);
-        });
+    if (labs.length === 0) {
+        labsGrid.innerHTML = `
+            <div class="empty-state">
+                <div class="empty-icon">🧪</div>
+                <p>No hay laboratorios interactivos disponibles en este momento.</p>
+            </div>`;
+        return;
     }
 
-    // ── RENDER SYLLABUS EXAMS ────────────────────────────────────
-    if (syllabusExams.length === 0) return;
-    container.style.display = 'block';
-    grid.innerHTML = '';
+    labsGrid.innerHTML = '';
+
+    const labColors = {
+        bases_de_datos:         { color: '#06b6d4', bg: 'rgba(6,182,212,0.08)', border: 'rgba(6,182,212,0.3)' },
+        lenguaje_de_marcas:     { color: '#84cc16', bg: 'rgba(132,204,22,0.08)', border: 'rgba(132,204,22,0.3)' },
+        programacion:           { color: '#f97316', bg: 'rgba(249,115,22,0.08)', border: 'rgba(249,115,22,0.3)' },
+        entornos_de_desarrollo: { color: '#a855f7', bg: 'rgba(168,85,247,0.08)', border: 'rgba(168,85,247,0.3)' },
+    };
+
+    labs.forEach(lab => {
+        const subject = APP_STATE.subjects.find(s => s.id === lab.subject_id);
+        const theme = labColors[lab.subject_id] || { color: '#6366f1', bg: 'rgba(99,102,241,0.08)', border: 'rgba(99,102,241,0.3)' };
+        const card = document.createElement('div');
+        card.className = 'lab-card';
+        card.style.cssText = `--lab-color:${theme.color};--lab-bg:${theme.bg};--lab-border:${theme.border}`;
+        card.innerHTML = `
+            <div class="lab-card-icon">${lab.icon || '🧪'}</div>
+            <div class="lab-card-body">
+                <div class="lab-card-subject">${subject ? subject.name : lab.subject_id}</div>
+                <h3 class="lab-card-title">${lab.name}</h3>
+                <p class="lab-card-desc">${typeof getLabDescription === 'function' ? getLabDescription(lab.id) : lab.name}</p>
+            </div>
+            <button class="lab-card-btn" onclick="startLab('${lab.id}')">
+                Abrir Lab →
+            </button>
+        `;
+        labsGrid.appendChild(card);
+    });
+}
+
+function renderSyllabusExams() {
+    const grid = document.getElementById('syllabus-grid');
+
+    if (!grid) return;
+
+    const syllabusExams = APP_STATE.syllabusExams.filter(e => e.type !== 'lab');
+
+    if (syllabusExams.length === 0) {
+        grid.innerHTML = `
+            <div class="empty-state">
+                <div class="empty-icon">📚</div>
+                <p>No se han encontrado exámenes del temario oficial.</p>
+            </div>`;
+        return;
+    }
 
     const grouped = {};
     syllabusExams.forEach(e => {
@@ -392,13 +406,22 @@ function getLabDescription(labId) {
 
 // ─── RENDER FALLOS SECTION ──────────────────────────────────────
 function renderFallosSection() {
-    const section = document.getElementById('fallos-section');
     const grid = document.getElementById('fallos-grid');
+    if (!grid) return;
+
     const fallos = getFallos();
     const subjects = Object.keys(fallos).filter(k => Object.keys(fallos[k]).length > 0);
 
-    if (subjects.length === 0) { section.style.display = 'none'; return; }
-    section.style.display = 'block';
+    if (subjects.length === 0) {
+        grid.innerHTML = `
+            <div class="empty-state">
+                <div class="empty-icon">❌</div>
+                <p>¡Buen trabajo! No tienes fallos acumulados en este momento.</p>
+                <button class="btn-secondary" onclick="switchDash('simulacros')" style="margin-top:1rem">Ir a Simulacros</button>
+            </div>`;
+        return;
+    }
+
     grid.innerHTML = '';
 
     subjects.forEach(subjectId => {
