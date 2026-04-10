@@ -2456,6 +2456,26 @@ function restoreStudySession() {
     }
 }
 
+function renderStudySessionBar() {
+    const bar = document.getElementById('study-session-bar');
+    if (!bar) return;
+
+    bar.innerHTML = `
+        <div class="session-info">
+            <div class="session-timer">00:00</div>
+            <div>
+                <div style="font-size:0.7rem; color:var(--text-secondary); text-transform:uppercase; letter-spacing:1px;">Estudiando</div>
+                <div class="session-subject">${APP_STATE.studySession.subjectName}</div>
+            </div>
+        </div>
+        <div class="session-actions">
+            <button class="btn-session-cancel" onclick="cancelStudySession()">Cancelar</button>
+            <button class="btn-session-complete" onclick="completeStudySession()">He terminado de estudiar ✅</button>
+        </div>
+    `;
+    bar.classList.remove('hidden');
+}
+
 function updateStudyTimer() {
     const elapsedMs = Date.now() - APP_STATE.studySession.startTime;
     APP_STATE.studySession.elapsed = Math.floor(elapsedMs / 1000);
