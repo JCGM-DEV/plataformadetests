@@ -118,15 +118,16 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   flex-direction: column;
   background: radial-gradient(circle at top right, rgba(99,102,241,0.05), transparent 40%);
   overflow-y: auto;
+  position: relative;
+  z-index: 1; /* Keep content below overlay */
 }
 
 /* ── SIDEBAR OVERLAY ────────────────────────────────────────── */
 .sidebar-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    z-index: 990; /* Just below sidebar */
+    background: rgba(0, 0, 0, 0.7); /* Darker solid background, no blur */
+    z-index: 990; /* Just below sidebar (1000) */
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
