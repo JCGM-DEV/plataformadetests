@@ -30,6 +30,7 @@ const HISTORY_KEY   = 'exam_history_v2';
 const FALLOS_KEY    = 'fallos_v2';
 const SR_KEY        = 'spaced_rep_v1';   // repetición espaciada
 const MASTERY_KEY   = 'mastery_v1';      // preguntas dominadas (3+ aciertos seguidos)
+const TUTOR_PROGRESS_KEY = 'tutor_progress_v1';
 
 // ─── RESOURCE DEFINITIONS ───────────────────────────────────────
 const THEORY_PDFS = {
@@ -288,6 +289,7 @@ function showView(name) {
     });
     if (name === 'dashboard') {
         renderProgress();
+        renderTutorMessage();
         // Always ensure we have a section visible
         if (!document.querySelector('.dash-section:not(.hidden)')) {
             switchDash('overview');
@@ -1160,6 +1162,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 function logTheory(subjectName, unit) {
+    updateTutorProgress('theory', true);
     logActivity('theory', `Teoría: ${subjectName}`, `Repasando Tema ${unit}`);
 }
 
@@ -1602,11 +1605,12 @@ function nextQuestion() {
 
 // ─── FINISH EXAM ────────────────────────────────────────────────
 function finishExam() {
-    if (APP_STATE.isFinishing) return;
+    APP_STATE.isFinishing = true;
+    updateTutorProgress('tests', true);
+    if (APP_STATE.timerInterval) clearInterval(APP_STATE.timerInterval);
     APP_STATE.isFinishing = true;
 
     try {
-        clearInterval(APP_STATE.timerInterval);
     const total = APP_STATE.examQuestions.length;
     // Penalización: Programación = -1/2 (2 errores cancelan 1); resto = -1/3
     const isProg = APP_STATE.currentExam?.id === 'programacion';
@@ -2137,7 +2141,20 @@ function renderAcademicPlanner() {
                     <div class="methodology-card">
                         <h5>🗓️ Rutina del Día</h5>
                         <ul>
-                            ${phase.dailyTasks.map(t => `<li>${t}</li>`).join('')}
+                            ${phase.dailyTasks.map(t => {
+                                let key = 'theory';
+                                if (t.toLowerCase().includes('test') || t.toLowerCase().includes('simulacro')) key = 'tests';
+                                if (t.toLowerCase().includes('laboratorio') || t.toLowerCase().includes('práctica')) key = 'labs';
+                                
+                                const progress = getTutorProgress();
+                                const isDone = progress[key];
+                                
+                                return `
+                                <li class="planner-task-item ${isDone ? 'done' : ''}" onclick="updateTutorProgress('${key}', ${!isDone})">
+                                    <div class="task-check">${isDone ? '✓' : ''}</div>
+                                    <span>${t}</span>
+                                </li>`;
+                            }).join('')}
                         </ul>
                     </div>
                 </div>
@@ -2234,10 +2251,89 @@ function renderStudyGuide() {
         </div>`;
 }
 
-function scrollToSubject(subjectId) {
-    if (!subjectId) return;
-    const card = document.querySelector(`[data-subject-id="${subjectId}"]`);
-    if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+// ─── MOTIVATIONAL TUTOR ─────────────────────────────────────────
+const TUTOR_DATA = {
+    scolding: [
+        "Vaya... me esperaba que hoy te lo tomaras en serio. El examen no va a esperar a que dejes de procrastinar. 🤖📉",
+        "Me decepciona ver que el planificador sigue vacío a estas horas. ¿De verdad quieres ese título? 😑🦾",
+        "Pensaba que éramos un equipo, pero veo que me dejas solo con el temario. Ponte las pilas. 🔧⚡",
+        "Otro día que se escapa y tus objetivos siguen en rojo. Mañana no te servirá de nada lamentarte. 🤖🚫"
+    ],
+    encouraging: [
+        "Sistemas operativos al 100%. Así se entrena un profesional. ¡Buen trabajo! 🤖✅",
+        "Objetivos del día procesados con éxito. Tu eficiencia es digna de una IA. 🚀🦾",
+        "¡Excelente! Vas camino a optimizar tu rendimiento al máximo nivel. No pares. 💎🎮",
+        "Protocolo de estudio completado antes de tiempo. Eres el mejor hardware que este software podría desear. 🤖✨"
+    ],
+    nudge: [
+        "Iniciando protocolo de estudio diario. ¿Cargamos el primer resumen de la mañana? 🤖☀️",
+        "Buenos días, recluta. El sistema está listo para tu entrenamiento. ¿Por dónde empezamos? 🦾☕",
+        "Nueva jornada detectada. Optimizamos el tiempo si empezamos ahora mismo. ⏳🤖"
+    ]
+};
+
+function getTutorProgress() {
+    const today = new Date().toLocaleDateString('es-ES');
+    const all = Sync.get(TUTOR_PROGRESS_KEY, {});
+    if (!all[today]) {
+        all[today] = { theory: false, tests: false, labs: false };
+        Sync.set(TUTOR_PROGRESS_KEY, all);
+    }
+    return all[today];
+}
+
+function updateTutorProgress(task, status = true) {
+    const today = new Date().toLocaleDateString('es-ES');
+    const all = Sync.get(TUTOR_PROGRESS_KEY, {});
+    if (!all[today]) all[today] = { theory: false, tests: false, labs: false };
+    all[today][task] = status;
+    Sync.set(TUTOR_PROGRESS_KEY, all);
+    renderTutorMessage();
+    renderAcademicPlanner();
+}
+
+function renderTutorMessage() {
+    const container = document.getElementById('tutor-motivational-root');
+    if (!container) return;
+
+    const progress = getTutorProgress();
+    const tasksDone = Object.values(progress).filter(v => v).length;
+    const hour = new Date().getHours();
+    
+    let mood = 'nudge';
+    let avatar = '🤖'; // Robot de entrenamiento base
+    
+    if (tasksDone === 3) {
+        mood = 'encouraging';
+        avatar = '🤖🦾';
+    } else if (tasksDone > 0) {
+        mood = (hour > 20) ? 'scolding' : 'encouraging';
+        avatar = (hour > 20) ? '🤖📉' : '🤖⚡';
+    } else {
+        mood = (hour > 17) ? 'scolding' : 'nudge';
+        avatar = (hour > 17) ? '🤖🚫' : '🤖☀️';
+    }
+
+    const messages = TUTOR_DATA[mood];
+    const message = messages[Math.floor(Math.random() * messages.length)];
+
+    container.innerHTML = `
+        <div class="tutor-card ${mood}">
+            <div class="tutor-avatar">${avatar}</div>
+            <div class="tutor-content">
+                <div class="tutor-title">
+                    <span>Tutor de Rendimiento</span>
+                    <span>${tasksDone}/3 tareas hoy</span>
+                </div>
+                <div class="tutor-message">${message}</div>
+                <div class="tutor-progress-mini">
+                    <div class="task-dot ${progress.theory ? 'done' : ''}" title="Teoría"></div>
+                    <div class="task-dot ${progress.tests ? 'done' : ''}" title="Tests"></div>
+                    <div class="task-dot ${progress.labs ? 'done' : ''}" title="Laboratorio"></div>
+                </div>
+            </div>
+        </div>
+    `;
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -2245,10 +2341,6 @@ function scrollToSubject(subjectId) {
 // ═══════════════════════════════════════════════════════════════
 
 const LIBRETA_KEY = 'libreta_errores_v1';
-
-
-
-
 
 function getLibreta() {
     return Sync.get(LIBRETA_KEY, {});
@@ -2418,6 +2510,7 @@ function getSubjectPrefix(subjectId) {
 }
 
 function openSummary(subjectId, unit) {
+    updateTutorProgress('theory', true);
     const key = `${getSubjectPrefix(subjectId)}_tema_${unit}`;
     const summary = APP_STATE.summaries[key];
     if (!summary) return;
@@ -2445,4 +2538,18 @@ function formatSummaryPoint(text) {
 function closeSummary() {
     document.getElementById('summary-modal').classList.add('hidden');
     document.body.style.overflow = 'auto';
+}
+function scrollToSubject(id) {
+    const el = document.querySelector(`[data-subject-id="${id}"]`);
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.classList.add('highlight-momentary');
+        setTimeout(() => el.classList.remove('highlight-momentary'), 2000);
+    } else {
+        showView('dashboard');
+        setTimeout(() => {
+             const el2 = document.querySelector(`[data-subject-id="${id}"]`);
+             if (el2) el2.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+    }
 }
