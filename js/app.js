@@ -706,6 +706,18 @@ const SUBJECT_VIDEOS = {
         "5": "Entornos%20de%20desarrollo/videos/Diagramas_de_Comportamiento.mp4",
         "6": "Entornos%20de%20desarrollo/videos/El_Mundo_Oculto_de_las_Pruebas_de_Software.mp4",
         "7": "Entornos%20de%20desarrollo/videos/Optimización_y_documentación.mp4"
+    },
+    "cloud_computing": {
+        "1": "Cloud%20Computing/videos/Desmitificando_La_Nube.mp4",
+        "2": "Cloud%20Computing/videos/Economía_y_Facturación_Cloud.mp4",
+        "3": "Cloud%20Computing/videos/Infraestructura_de_la_Nube.mp4",
+        "4": "Cloud%20Computing/videos/Seguridad_en_la_nube.mp4",
+        "5": "Cloud%20Computing/videos/Redes_y_Entrega_de_Contenidos.mp4",
+        "6": "Cloud%20Computing/videos/Servicios_de_computación.mp4",
+        "7": "Cloud%20Computing/videos/Las_bibliotecas_invisibles.mp4",
+        "8": "Cloud%20Computing/videos/Servicios_de_BBDD__El_Corazón_Invisible_del_Mundo_Digital.mp4",
+        "9": "Cloud%20Computing/videos/Arquitectura_en_la_nube.mp4",
+        "10": "Cloud%20Computing/videos/Escalado_y_Monitorización.mp4"
     }
 };
 
@@ -720,7 +732,8 @@ function openVideo(path) {
             path.includes(s.name) || 
             (s.id === 'programacion' && path.includes('Programacion')) || 
             (s.id === 'bases_de_datos' && path.includes('Bases')) ||
-            (s.id === 'entornos_de_desarrollo' && path.includes('Entornos'))
+            (s.id === 'entornos_de_desarrollo' && path.includes('Entornos')) ||
+            (s.id === 'cloud_computing' && path.includes('Cloud'))
         )?.name || 'Asignatura';
         logActivity('video', 'Video: ' + subjectName, 'Viendo vídeo de repaso');
     }
