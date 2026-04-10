@@ -31,7 +31,7 @@ EXPL:El diagrama de clases UML muestra la estructura estática del sistema: clas
 La Agregación es una composición fuerte donde las partes no pueden existir sin el todo (diamante sólido), mientras que la Composición es débil (diamante hueco)
 *La Composición es una relación fuerte donde las partes no tienen sentido independiente del conjunto y se eliminan con él (diamante sólido), mientras que la Agregación es débil donde las partes conservan su entidad (diamante hueco).
 La Composición se representa con un diamante hueco, y la Agregación con un diamante sólido
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La Composición es una relación fuerte donde las partes no tienen sentido independiente del conjunto y se eliminan con él...
 
 En la notación de los diagramas de clases UML, ¿qué significa que un atributo o método esté precedido por el símbolo #?
@@ -45,7 +45,7 @@ EXPL:La respuesta es 'Que tiene visibilidad protegida.'. "Que tiene visibilidad 
 Representar la secuencia de interacciones entre objetos en tiempo de ejecución
 *Reflejar las clases que componen un sistema, incluyendo sus atributos, métodos y las relaciones entre ellas, para permitir a los desarrolladores escribir programas a partir de una especificación formal.
 Describir el comportamiento del sistema desde la perspectiva de los usuarios externos
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Reflejar las clases que componen un sistema, incluyendo sus atributos, métodos y las relaciones entre ellas, para permit...
 
 Si un atributo en una clase UML es estático, ¿cómo se indica esta característica en su representación gráfica dentro del diagrama de clases?
@@ -59,7 +59,7 @@ EXPL:La respuesta es 'Debe ir subrayado.'. "Su nombre se escribe entre corchetes
 Relación de agregación, indicando que una clase es parte de otra sin dependencia fuerte
 Relación de generalización, mostrando que una clase hereda de otra
 *Relación de dependencia o de uso, representando que una clase utiliza la funcionalidad proporcionada por otra.
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Relación de dependencia o de uso, representando que una clase utiliza la funcionalidad proporcionada por otra.
 
 Según la definición de la unidad, ¿en qué consiste el concepto de "ingeniería inversa" aplicado a los diagramas de clases en el contexto del desarrollo de software?

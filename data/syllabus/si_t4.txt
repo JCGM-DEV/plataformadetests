@@ -3,13 +3,13 @@ tema 4
 Una cuenta de usuario que solo puede acceder a recursos en línea
 *Una cuenta de usuario que solo puede acceder a recursos locales en una computadora.
 Una cuenta de usuario que solo puede acceder a recursos en una red local
-Con el comando fsck para verificar la integridad del sistema de archivos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Una cuenta de usuario que solo puede acceder a recursos locales en una computadora.
 ¿Qué comando se utiliza para añadir un usuario a un grupo en la consola de comandos de Windows?
 add_group_member
 *net group.
 add_user_to_group
-Con el comando fsck para verificar la integridad del sistema de archivos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'net group.'. "add_group_member." y "add_user_to_group." son incorrectos porque describen conceptos diferentes.
 ¿Por qué es importante la configuración de usuarios y grupos locales en la gestión de sistemas operativos?
 Para personalizar la apariencia del sistema operativo
@@ -21,26 +21,26 @@ EXPL:Para controlar el acceso y los permisos de los usuarios a los recursos del 
 create_user
 add_user
 *net user.
-Con el comando fsck para verificar la integridad del sistema de archivos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'net user.'. "create_user." y "add_user." son incorrectos porque describen conceptos diferentes.
 ¿Qué beneficios puede tener cambiar la ruta de las carpetas de documentos a otra partición o recurso de red?
 *Liberar espacio en el disco principal y reducir la fragmentación del disco.
 Mejorar la velocidad de Internet
 Aumentar el rendimiento del procesador
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Liberar espacio en el disco principal y reducir la fragmentación del disco.
 ¿Cómo se verifica que un usuario se ha creado correctamente en Windows utilizando la consola de comandos?
 Con el comando "show_user"
 Con el comando "verify_user"
 *Con el comando "net user".
-Con el comando fsck para verificar la integridad del sistema de archivos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Con el comando "net user".'. "Con el comando "show_user"." y "Con el comando "verify_user"." son incorrectos porque describen conceptos diferentes.
 ¿Quién debe tener la capacidad de habilitar o deshabilitar cuentas de usuario?
 Todos los usuarios del sistema
 *Solo los usuarios con privilegios de administrador.
 Solo los usuarios que tengan una contraseña segura
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).
+EXPL:La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.
 ¿Por qué es importante tener una correcta gestión de permisos y acceso a recursos en un sistema informático?
 *Para prevenir el acceso no autorizado a datos confidenciales.
 Para mejorar la velocidad de Internet
@@ -51,7 +51,7 @@ EXPL:Para prevenir el acceso no autorizado a datos confidenciales.
 Para que el usuario tenga acceso a todos los recursos del sistema
 *Para simplificar la administración de permisos y ahorrar tiempo y esfuerzo.
 Para aumentar el riesgo de que un usuario tenga acceso a recursos que no debería tener
-Con el comando fsck para verificar la integridad del sistema de archivos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Para simplificar la administración de permisos y ahorrar tiempo y esfuerzo.
 ¿Cuáles son algunas normas para crear una contraseña segura?
 La contraseña debe tener menos de ocho caracteres de longitud

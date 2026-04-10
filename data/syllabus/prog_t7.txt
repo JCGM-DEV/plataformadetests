@@ -27,7 +27,7 @@ EXPL:La respuesta es 'Set'. "List" y "Queue" son incorrectos porque describen co
 *El ArrayList mantiene el orden de inserción, mientras que el HashSet no garantiza ningún orden.
 El ArrayList no permite duplicados y el HashSet sí
 El HashSet es más lento para acceder a elementos que el ArrayList porque usa índices
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:ArrayList mantiene el orden de inserción y permite duplicados. HashSet no garantiza orden y no permite duplicados. ArrayList es O(1) para acceso por índice; HashSet es O(1) para contains().
 Sobre la interfaz Map, ¿cuál de las siguientes afirmaciones es correcta?
 Hereda directamente de la interfaz Collection
@@ -39,7 +39,7 @@ EXPL:Map almacena pares clave-valor. No hereda de Collection. HashMap no garanti
 Permite capturar múltiples excepciones en una sola línea de código
 *Gestiona automáticamente el cierre de recursos (como archivos o conexiones) al finalizar el bloque.
 Aumenta la velocidad de ejecución de las colecciones tipo List y Map
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:try-with-resources cierra automáticamente los recursos (ficheros, conexiones) al salir del bloque, incluso si hay excepción. El recurso debe implementar AutoCloseable. Evita el finally con close() manual.
 Según la jerarquía de excepciones en Java, ¿cuál es la diferencia entre un Error y una Exception?
 Las Exception son fallos graves del sistema (como falta de memoria), mientras que los Error son fallos del programa
@@ -51,7 +51,7 @@ EXPL:Los Error son situaciones irrecuperables de la JVM, mientras que las Except
 *El compilador no obliga a capturarlas ni a declararlas en la firma del método.
 Son excepciones que deben ser revisadas obligatoriamente por el programador antes de compilar
 Son las únicas excepciones que pueden lanzarse mediante la palabra clave throw
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El compilador no obliga a capturarlas ni a declararlas en la firma del método.
 En una estructura try-catch-finally, ¿cuándo se ejecuta el bloque finally?
 Solo si se produce una excepción y esta es capturada correctamente

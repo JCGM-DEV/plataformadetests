@@ -38,7 +38,7 @@ EXPL:Los de la tabla padre y todos los de sus tablas hijas relacionadas.
 ARRAY
 JSONB
 *RANGE
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'RANGE'. "ARRAY" y "JSONB" son incorrectos porque describen conceptos diferentes.
 
 Respecto al borrado de datos en una estructura de herencia en PostgreSQL, ¿cuál es la afirmación correcta?

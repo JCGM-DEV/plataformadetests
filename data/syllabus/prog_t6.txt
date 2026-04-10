@@ -15,19 +15,19 @@ En Java, ¿cuál es la jerarquía máxima de la que heredan implícitamente toda
 *La clase java.lang.Object.
 La clase Super
 No existe una jerarquía común; cada clase es independiente a menos que use extends
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'La clase java.lang.Object.'.
 ¿Por qué Java prohíbe la herencia múltiple de clases (heredar de dos padres a la vez)?
 *Para evitar el "Problema del Diamante" y la ambigüedad en la ejecución de métodos.
 Porque consumiría demasiada memoria en el Heap al duplicar los constructores
 Porque todas las clases deben ser obligatoriamente final para ser seguras
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El Problema del Diamante ocurre en herencia múltiple cuando dos clases padre tienen el mismo método y la clase hija no sabe cuál usar. Java lo evita prohibiendo la herencia múltiple de clases.
 ¿Cuál es la función principal de la anotación @Override en la sobreescritura de métodos?
 Obligar al método a ser final para que no pueda volver a cambiarse
 *Actuar como un control de calidad que avisa al compilador si el método no existe en el padre.
 Permitir que el método cambie su lista de parámetros (Sobrecarga)
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:@Override indica que el método sobreescribe uno de la superclase. El compilador verifica que el método realmente existe en el padre. Sin @Override, si hay un error tipográfico, se crearía un método nuevo sin avisar.
 Sobre las clases abstractas, ¿cuál es la "Regla de Hierro"?
 Deben tener obligatoriamente todos sus métodos vacíos
@@ -45,7 +45,7 @@ Al decidir entre Herencia y Composición, ¿qué principio de diseño de softwar
 Priorizar siempre la Herencia para maximizar la reutilización de código
 *Favorecer la Composición sobre la Herencia para obtener un acoplamiento más bajo y flexible.
 Usar la Herencia para relaciones "Tiene-Un" y la Composición para relaciones "Es-Un"
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Herencia = relación "es un" (Perro es un Animal). Composición = relación "tiene un" (Casa tiene Habitaciones). Se recomienda favorecer la composición sobre la herencia para menor acoplamiento.
 Si un método es declarado como static, ¿cuál de las siguientes afirmaciones es CORRECTA?
 *Pertenece a la clase y no puede acceder a variables de instancia ni usar this.

@@ -3,7 +3,7 @@ Los métodos permiten definir el comportamiento de los objetos y pueden devolver
 Que el método devuelve un valor vacío
 Que el método no realiza ninguna acción
 *Que el método realiza una acción pero no devuelve ningún valor.
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:void indica que el método realiza una acción pero NO devuelve ningún valor. Si un método devuelve algo, se especifica el tipo (int, String, etc.). void ≠ "devuelve vacío".
 Los atributos de una clase representan el estado de los objetos creados a partir de ella. ¿Cuál de las siguientes afirmaciones sobre los atributos es correcta?
 Los atributos se declaran dentro de los métodos
@@ -15,7 +15,7 @@ El constructor es un elemento fundamental dentro de una clase en Java y cumple u
 Ejecutar la lógica principal del programa
 *Inicializar los atributos del objeto en el momento de su creación.
 Definir el comportamiento común de todas las clases
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El constructor inicializa los atributos del objeto en el momento de su creación con new. Tiene el mismo nombre que la clase y no tiene tipo de retorno. Si no se define, Java crea uno por defecto.
 En programación orientada a objetos, una clase no representa directamente un objeto real, sino una definición abstracta que sirve como base para crear instancias. ¿Cuál de las siguientes afirmaciones describe correctamente el concepto de clase?
 Es una estructura que contiene únicamente métodos sin datos asociados
@@ -33,19 +33,19 @@ Cuando una clase tiene una relación fuerte de "todo-parte" con otra y la parte 
 Dependencia
 Agregación
 *Composición.
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Composición.'. "Dependencia." y "Agregación." son incorrectos porque describen conceptos diferentes.
 Los métodos getter y setter se utilizan para controlar el acceso a los atributos privados de una clase. ¿Cuál es una de las principales ventajas de usar setters en lugar de hacer públicos los atributos?
 Permiten acceder directamente a la memoria del objeto
 *Permiten validar los datos antes de modificar el estado del objeto.
 Eliminan la necesidad de constructores
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Permiten validar los datos antes de modificar el estado del objeto.
 El encapsulamiento es uno de los principios clave de la programación orientada a objetos y se apoya en los modificadores de acceso. ¿Cuál es la regla de oro más habitual en Java para aplicar correctamente el encapsulamiento?
 Atributos públicos y métodos privados
 *Atributos privados y métodos públicos.
 Atributos y métodos siempre protected
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El encapsulamiento protege el estado interno del objeto declarando los atributos como private y exponiendo solo lo necesario mediante métodos public (getters/setters). Permite validar antes de modificar.
 El polimorfismo permite que un mismo mensaje provoque comportamientos distintos según el objeto que lo reciba. ¿Qué requisito técnico es necesario para que el polimorfismo funcione correctamente en Java?
 El uso exclusivo de atributos protected

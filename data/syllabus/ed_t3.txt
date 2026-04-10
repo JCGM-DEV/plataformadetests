@@ -31,7 +31,7 @@ EXPL:La respuesta es 'El diagrama de lanzamiento o despliegue.'.
 Son exclusivamente gratuitas y de código abierto
 Se centran únicamente en la generación automática de interfaces de usuario
 *Están diseñadas y construidas específicamente para ayudar en diferentes fases del proceso de creación de software, proporcionando soporte específico para UML.
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Están diseñadas y construidas específicamente para ayudar en diferentes fases del proceso de creación de software, propo...
 
 Según la unidad, ¿cuál es probablemente el diagrama más habitual y útil de UML, que permite representar las clases del sistema, incluyendo sus atributos, métodos y las reglas entre ellas?
@@ -46,7 +46,7 @@ La capacidad de optimizar automáticamente el rendimiento del código generado s
 La posibilidad de migrar bases de datos entre diferentes sistemas de gestión
 *La ingeniería inversa, que permite generar diagramas de clase u otros a partir del código fuente ya programado.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).
+EXPL:La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.
 
 Según el glosario de la unidad, ¿cómo se define un "Objeto" en el contexto de la programación orientada a objetos y UML?
 La representación genérica de un elemento del sistema, sin atributos ni métodos específicos
@@ -66,5 +66,5 @@ Los múltiples diagramas de UML, diseñados para cubrir diversas perspectivas de
 Diagramas de diseño y diagramas de implementación
 *Diagramas estructurales y diagramas de comportamiento.
 Diagramas de requisitos y diagramas de arquitectura
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Diagramas estructurales y diagramas de comportamiento.'.

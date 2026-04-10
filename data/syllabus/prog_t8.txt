@@ -9,13 +9,13 @@ EXPL:transient marca un atributo para que sea ignorado durante la serialización
 *Los de Bytes procesan datos de 8 bits (imágenes, audio), mientras que los de Caracteres procesan datos de 16 bits usando Unicode (texto).
 Los flujos de Bytes son solo para lectura y los de Caracteres solo para escritura
 No hay diferencia técnica; Java decide cuál usar automáticamente según el tamaño del archivo
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Los de Bytes procesan datos de 8 bits (imágenes, audio), mientras que los de Caracteres procesan datos de 16 bits usando...
 Al trabajar con archivos de texto, ¿qué sucede si se abre un FileWriter con el parámetro append en true?
 El archivo se borra completamente antes de empezar a escribir
 *El nuevo contenido se añade al final del archivo sin borrar lo que ya existía.
 El archivo se bloquea para que otros programas no puedan leerlo mientras se escribe
-Con el comando fsck para verificar la integridad del sistema de archivos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:new FileWriter("f.txt", true) abre el fichero en modo append: el nuevo contenido se añade al final sin borrar lo existente. Sin el parámetro true (o con false), sobreescribe el fichero.
 ¿Qué método de la clase Scanner es el más adecuado para leer una frase completa que contenga espacios?
 next()

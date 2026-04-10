@@ -9,7 +9,7 @@ Al trabajar con un motor como db4o u ObjectDB, ¿cuál es el objeto principal qu
 *ObjectContainer
 DatabaseManager
 SessionSocket
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:ObjectContainer es el objeto principal en db4o/ObjectDB que actúa como contenedor de objetos y gestiona la sesión. Es el equivalente a la Connection de JDBC pero para bases de datos orientadas a objetos.
 ¿Qué sucede si se activa la propiedad de "Cascada" (Cascade On Update/Delete)?
 *Las operaciones realizadas sobre un objeto padre se propagan automáticamente a sus objetos hijos relacionados.
@@ -57,5 +57,5 @@ EXPL:ODL (Object Definition Language) es el lenguaje del estándar ODMG para def
 El modo Embebido permite múltiples conexiones remotas, mientras que el Servidor es solo para un usuario
 *El modo Embebido: la base de datos corre en el mismo proceso que la aplicación; el modo Servidor es un proceso independiente.
 El modo Servidor es gratuito y el modo Embebido requiere licencia comercial
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:En modo Embebido, la base de datos corre en el mismo proceso JVM que la aplicación (más rápido, un solo usuario). En modo Servidor, es un proceso independiente que acepta múltiples conexiones remotas.

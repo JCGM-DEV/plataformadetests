@@ -3,13 +3,13 @@ tema 2
 Hardware, software, usuarios, seguridad
 *Hardware, software, datos, usuarios.
 Hardware, software, redes, periféricos
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Hardware, software, datos, usuarios.'. "Hardware, software, usuarios, seguridad." y "Hardware, software, redes, periféricos." son incorrectos porque describen conceptos diferentes.
 ¿Qué tarea crítica del sistema operativo implica la planificación de la ejecución de procesos y supervisar su finalización?
 Controlar y gestionar el uso del hardware del ordenador
 *Administrar la ejecución de los procesos.
 Controlar el proceso de organización de la información
-Con el comando fsck para verificar la integridad del sistema de archivos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Administrar la ejecución de los procesos.'.
 ¿Qué es necesario hacer antes de actualizar una aplicación a una versión superior?
 Descargar manualmente e instalar la versión superior
@@ -22,12 +22,12 @@ La capacidad de ejecutar múltiples sistemas operativos en diferentes servidores
 *La capacidad de crear varias máquinas virtuales en un solo servidor físico.
 La capacidad de almacenar datos de diferentes sistemas operativos en un solo servidor físico
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).
+EXPL:La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.
 ¿Cuál es la ventaja principal de la arquitectura monolítica?
 *Su simplicidad y eficiencia.
 Su modularidad y escalabilidad
 Su capacidad para agregar o eliminar funciones sin tener que recompilar todo el sistema
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Su simplicidad y eficiencia.'.
 ¿Para qué se utiliza la preparación de imágenes del sistema para automatizar la instalación masiva de ordenadores?
 Para verificar si se dispone de la licencia correspondiente
@@ -45,7 +45,7 @@ EXPL:Para garantizar el correcto funcionamiento de la aplicación y evitar probl
 La instalación de un sistema operativo
 *La división del disco duro en secciones o particiones lógicas.
 La verificación de la memoria RAM
-Con el comando fsck para verificar la integridad del sistema de archivos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La división del disco duro en secciones o particiones lógicas.
 ¿Qué son las aplicaciones de seguridad?
 *Programas que se utilizan para proteger el sistema informático contra virus, malware y otras amenazas de seguridad.
@@ -57,5 +57,5 @@ EXPL:Programas que se utilizan para proteger el sistema informático contra viru
 Ejecutar aplicaciones
 *Gestionar y coordinar el uso de los recursos de hardware y software.
 Proteger el sistema de ataques de virus
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Gestionar y coordinar el uso de los recursos de hardware y software.

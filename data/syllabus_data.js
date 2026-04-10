@@ -336,7 +336,7 @@ const SYLLABUS_RAW_DATA = {
         "Completeness (totalidad/parcialidad)",
         "Disjointness (exclusividad/solapamiento).",
         "Relación recursiva",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Disjointness (exclusividad) determina si una instancia puede pertenecer a varias subentidades (solapamiento) o solo a una (exclusividad). Completeness determina si toda instancia del supertipo debe pertenecer a alguna subentidad.",
@@ -388,7 +388,7 @@ const SYLLABUS_RAW_DATA = {
         "Aumentar la redundancia para facilitar la lectura de datos",
         "Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente.",
         "Eliminar todas las relaciones entre tablas para simplificar el modelo",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente.",
@@ -455,7 +455,7 @@ const SYLLABUS_RAW_DATA = {
         "WHERE se aplica a los grupos y HAVING a las filas individuales",
         "WHERE filtra registros antes de la agrupación; HAVING filtra grupos después de aplicarse GROUP BY.",
         "Ambas cláusulas son idénticas y se pueden usar indistintamente",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "GROUP BY agrupa filas con el mismo valor en las columnas especificadas. Se usa con funciones de agregado (COUNT, SUM, AVG). HAVING filtra los grupos resultantes.",
@@ -758,7 +758,7 @@ const SYLLABUS_RAW_DATA = {
         "ENUM",
         "SET",
         "ARRAY",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'SET'. \"ENUM\" y \"ARRAY\" son incorrectos porque describen conceptos diferentes.",
@@ -864,7 +864,7 @@ const SYLLABUS_RAW_DATA = {
         "ARRAY",
         "JSONB",
         "RANGE",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "La respuesta es 'RANGE'. \"ARRAY\" y \"JSONB\" son incorrectos porque describen conceptos diferentes.",
@@ -996,7 +996,7 @@ const SYLLABUS_RAW_DATA = {
         "En el tipado fuerte, el tipo de la variable se asigna dinámicamente, mientras que en el tipado débil, se define estáticamente",
         "Un lenguaje de tipado débil no permite hacer uso indiscriminado de las variables sin importar su tipo, lo contrario al tipado fuerte",
         "Un lenguaje de tipado fuerte restringe las operaciones basándose en el tipo de sus variables, mientras que uno de tipado débil permite un uso más indiscriminado. En el tipado estático, el tipo se vincula a la variable al declararla y no cambia; en el tipado dinámico, el tipo se asigna por el valor y puede cambiar durante la ejecución.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "Tipado fuerte: restringe operaciones según el tipo (Java, Python). Tipado débil: permite uso más flexible (JavaScript). Tipado estático: el tipo se asigna al declarar (Java). Dinámico: el tipo cambia en ejecución (Python).",
@@ -1022,7 +1022,7 @@ const SYLLABUS_RAW_DATA = {
         "La creación del código fuente y la ayuda de herramientas de generación de código",
         "La determinación de cómo se va a organizar el proyecto a nivel de software y la definición de las interfaces gráficas",
         "La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software...",
@@ -1035,7 +1035,7 @@ const SYLLABUS_RAW_DATA = {
         "Reducir el tamaño de los programas ejecutables para un almacenamiento más eficiente",
         "Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que tenga instalada la máquina virtual correspondiente.",
         "Aumentar la velocidad de ejecución de los programas, superando a los lenguajes compilados",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que...",
@@ -1063,7 +1063,7 @@ const SYLLABUS_RAW_DATA = {
         "Los IDE modernos son exclusivamente de código abierto y gratuitos, a diferencia de las herramientas antiguas",
         "Los IDE modernos se enfocan únicamente en la edición de código, mientras que las herramientas antiguas integraban la compilación y el enlazado",
         "Los IDE modernos integran una amplia gama de herramientas para dar soporte a la mayoría de las actividades de desarrollo de software, incluyendo documentación, control de versiones y pruebas, más allá de la mera escritura y compilación de código.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "Los IDE modernos integran una amplia gama de herramientas para dar soporte a la mayoría de las actividades de desarrollo...",
@@ -1247,7 +1247,7 @@ const SYLLABUS_RAW_DATA = {
         "Son exclusivamente gratuitas y de código abierto",
         "Se centran únicamente en la generación automática de interfaces de usuario",
         "Están diseñadas y construidas específicamente para ayudar en diferentes fases del proceso de creación de software, proporcionando soporte específico para UML.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "Están diseñadas y construidas específicamente para ayudar en diferentes fases del proceso de creación de software, propo...",
@@ -1276,7 +1276,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).",
+      "explanation": "La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.",
       "unit": null
     },
     {
@@ -1312,7 +1312,7 @@ const SYLLABUS_RAW_DATA = {
         "Diagramas de diseño y diagramas de implementación",
         "Diagramas estructurales y diagramas de comportamiento.",
         "Diagramas de requisitos y diagramas de arquitectura",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Diagramas estructurales y diagramas de comportamiento.'.",
@@ -1379,7 +1379,7 @@ const SYLLABUS_RAW_DATA = {
         "La Agregación es una composición fuerte donde las partes no pueden existir sin el todo (diamante sólido), mientras que la Composición es débil (diamante hueco)",
         "La Composición es una relación fuerte donde las partes no tienen sentido independiente del conjunto y se eliminan con él (diamante sólido), mientras que la Agregación es débil donde las partes conservan su entidad (diamante hueco).",
         "La Composición se representa con un diamante hueco, y la Agregación con un diamante sólido",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La Composición es una relación fuerte donde las partes no tienen sentido independiente del conjunto y se eliminan con él...",
@@ -1405,7 +1405,7 @@ const SYLLABUS_RAW_DATA = {
         "Representar la secuencia de interacciones entre objetos en tiempo de ejecución",
         "Reflejar las clases que componen un sistema, incluyendo sus atributos, métodos y las relaciones entre ellas, para permitir a los desarrolladores escribir programas a partir de una especificación formal.",
         "Describir el comportamiento del sistema desde la perspectiva de los usuarios externos",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Reflejar las clases que componen un sistema, incluyendo sus atributos, métodos y las relaciones entre ellas, para permit...",
@@ -1431,7 +1431,7 @@ const SYLLABUS_RAW_DATA = {
         "Relación de agregación, indicando que una clase es parte de otra sin dependencia fuerte",
         "Relación de generalización, mostrando que una clase hereda de otra",
         "Relación de dependencia o de uso, representando que una clase utiliza la funcionalidad proporcionada por otra.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "Relación de dependencia o de uso, representando que una clase utiliza la funcionalidad proporcionada por otra.",
@@ -1485,7 +1485,7 @@ const SYLLABUS_RAW_DATA = {
         "El diagrama de secuencia, por su enfoque en la interacción entre objetos",
         "El diagrama de actividad.",
         "El diagrama de estados, ya que muestra el ciclo de vida de un componente",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.",
@@ -1563,7 +1563,7 @@ const SYLLABUS_RAW_DATA = {
         "Solo herramientas de dibujo genéricas; ningún plug-in específico es mencionado",
         "Herramientas CASE están diseñadas para facilitar su creación, y plug-ins integrados en entornos de desarrollo (IDEs) como AmaterasUML para Eclipse también ofrecen soporte.",
         "Exclusivamente aplicaciones de línea de comandos; no se usan interfaces gráficas",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Un IDE (Integrated Development Environment) integra editor de código, compilador/intérprete, depurador y otras herramientas en una única interfaz. Ejemplos: IntelliJ IDEA, Eclipse, VS Code.",
@@ -1576,7 +1576,7 @@ const SYLLABUS_RAW_DATA = {
         "Muestran la definición y estructura estática de los componentes de un sistema en reposo",
         "Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y transformación.",
         "Describen exclusivamente la interacción entre usuarios finales y la interfaz gráfica del sistema",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y t...",
@@ -1591,7 +1591,7 @@ const SYLLABUS_RAW_DATA = {
         "Optimizar el código fuente para mejorar su eficiencia sin necesidad de ejecución",
         "Ejecutar el programa línea a línea, permitiendo observar la ejecución, acceder a la memoria y examinar el valor de las variables en puntos de ruptura, con el fin de detectar errores o comprender el código.",
         "Generar automáticamente casos de prueba a partir del código fuente para su posterior ejecución manual",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Ejecutar el programa línea a línea, permitiendo observar la ejecución, acceder a la memoria y examinar el valor de las v...",
@@ -1604,7 +1604,7 @@ const SYLLABUS_RAW_DATA = {
         "El equipo del cliente, con el fin de verificar que el sistema cumple con lo acordado en las especicaciones",
         "Los programadores, con el objetivo de verificar que un elemento mínimo funcional del programa (una función, un método o una clase) funciona correctamente.",
         "Cualquier actor del desarrollo de manera no exhaustiva para comprobar la funcionalidad principal del sistema",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Los programadores, con el objetivo de verificar que un elemento mínimo funcional del programa (una función, un método o ...",
@@ -1656,7 +1656,7 @@ const SYLLABUS_RAW_DATA = {
         "Se realizan antes de cualquier cambio en el sistema para establecer una línea base de rendimiento",
         "Se llevan a cabo después de realizar cambios en el sistema (mejoras o corrección de errores) para comprobar que otras partes del sistema no se han visto afectadas negativamente.",
         "Son pruebas exhaustivas para detectar todos los posibles fallos en el sistema antes de su despliegue inicial",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Se llevan a cabo después de realizar cambios en el sistema (mejoras o corrección de errores) para comprobar que otras pa...",
@@ -1775,7 +1775,7 @@ const SYLLABUS_RAW_DATA = {
         "La detección y corrección automática de errores de sintaxis en tiempo real",
         "La ejecución de pruebas de rendimiento del código bajo diferentes cargas de trabajo",
         "El renombrado automático de variables, funciones o clases en todo el proyecto, o la extracción de un bloque de código para crear un nuevo método.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "Un IDE (Integrated Development Environment) integra editor de código, compilador/intérprete, depurador y otras herramientas en una única interfaz. Ejemplos: IntelliJ IDEA, Eclipse, VS Code.",
@@ -1814,7 +1814,7 @@ const SYLLABUS_RAW_DATA = {
         "git status para ver el estado de los fcheros",
         "git diff para ver las diferencias entre versiones",
         "git merge para integrar cambios y resolver solapamientos.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "La respuesta es 'git merge para integrar cambios y resolver solapamientos.'.",
@@ -1827,7 +1827,7 @@ const SYLLABUS_RAW_DATA = {
         "Comentario de bloque",
         "Comentario de línea",
         "Docstring.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Docstring.'. \"Comentario de bloque.\" y \"Comentario de línea.\" son incorrectos porque describen conceptos diferentes.",
@@ -1840,7 +1840,7 @@ const SYLLABUS_RAW_DATA = {
         "Los sistemas centralizados son de código cerrado, mientras que los distribuidos son siempre de código abierto",
         "Los sistemas centralizados almacenan las copias del proyecto en la máquina local del desarrollador, mientras que los distribuidos lo hacen en un servidor remoto",
         "En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, las copias se almacenan tanto en un servidor como en cada máquina de los integrantes del equipo.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, l...",
@@ -2554,7 +2554,7 @@ const SYLLABUS_RAW_DATA = {
         "Su incapacidad para procesar documentos XML directamente sin un middleware adicional",
         "Su modelo relacional no permite la gestión de transacciones complejas en entornos XML",
         "No pueden restaurar el documento XML original sin alterarlo y tienen una diferencia de filosofía con la naturaleza jerárquica de XML",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "No pueden restaurar el documento XML original sin alterarlo y tienen una diferencia de filosofía con la naturaleza jerárquica de XML es la respuesta correcta para esta pregunta del temario oficial.",
@@ -2606,7 +2606,7 @@ const SYLLABUS_RAW_DATA = {
         "Para transformar documentos XML a otros formatos como JSON o PDF",
         "Para importar datos de formatos estructurados (como XML, HTML, CSV) desde una URL específica, aplicando una consulta XPath",
         "Para crear documentos XML nuevos a partir de datos estructurados en una hoja de cálculo",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Para importar datos de formatos estructurados (como XML, HTML, CSV) desde una URL específica, aplicando una consulta XPath es la respuesta correcta para esta pregunta del temario oficial.",
@@ -2632,7 +2632,7 @@ const SYLLABUS_RAW_DATA = {
         "XPath es un lenguaje para generar nuevos documentos XML, mientras que XQuery es solo para búsquedas",
         "Ambos sirven para lo mismo",
         "XPath es un lenguaje para seleccionar nodos en documentos XML, mientras que XQuery, además de incluir XPath, es un lenguaje completo de consulta y transformación con sintaxis FLWOR",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "XPath es un lenguaje para seleccionar nodos en documentos XML, mientras que XQuery, además de incluir XPath, es un lenguaje completo de consulta y transformación con sintaxis FLWOR es la respuesta correcta para esta pregunta del temario oficial.",
@@ -2660,7 +2660,7 @@ const SYLLABUS_RAW_DATA = {
         "La intención de reemplazar por completo a RSS y hacer obsoleto su uso",
         "Abordar la confusión y la incompatibilidad surgida por la existencia de varios estándares RSS similares, proporcionando una solución más consistente",
         "Permitir la creación de feeds sin necesidad de utilizar el lenguaje XML como base",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Abordar la confusión y la incompatibilidad surgida por la existencia de varios estándares RSS similares, proporcionando una solución más consistente es la respuesta correcta para esta pregunta del temario oficial.",
@@ -2686,7 +2686,7 @@ const SYLLABUS_RAW_DATA = {
         "Almacenar de forma segura la información de un sitio web en una base de datos centralizada para evitar pérdidas",
         "Permitir que un sitio web acceda a los servicios y contenidos de otro sitio web a través de una licencia, distribuyendo automáticamente información actualizada a los usuarios interesados",
         "Convertir documentos XML a formatos no basados en lenguajes de marcas para una mejor visualización en navegadores",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Permitir que un sitio web acceda a los servicios y contenidos de otro sitio web a través de una licencia, distribuyendo automáticamente información actualizada a los usuarios interesados es la respuesta correcta para esta pregunta del temario oficial.",
@@ -2753,7 +2753,7 @@ const SYLLABUS_RAW_DATA = {
         "Reducir la necesidad de formación del personal al estandarizar interfaces",
         "Controlar los procesos de negocio de forma coordinada para la toma de decisiones, reducir costes y aumentar la productividad",
         "Permitir que cada departamento mantenga su autonomía total en la gestión de sus datos",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Controlar los procesos de negocio de forma coordinada para la toma de decisiones, reducir costes y aumentar la productividad es la respuesta correcta para esta pregunta del temario oficial.",
@@ -2844,7 +2844,7 @@ const SYLLABUS_RAW_DATA = {
         "El usuario obtiene la suma de todos los privilegios de los roles asignados",
         "Prevalecerá el rol que imponga las restricciones más estrictas para garantizar la seguridad",
         "El sistema solicitará al usuario que elija qué rol desea activar en cada sesión",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Prevalecerá el rol que imponga las restricciones más estrictas para garantizar la seguridad es la respuesta correcta para esta pregunta del temario oficial.",
@@ -5451,7 +5451,7 @@ const SYLLABUS_RAW_DATA = {
         "Número entero",
         "Valor booleano",
         "Array o arreglo.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Array o arreglo.'. \"Número entero.\" y \"Valor booleano.\" son incorrectos porque describen conceptos diferentes.",
@@ -5477,7 +5477,7 @@ const SYLLABUS_RAW_DATA = {
         "Detectar errores de sintaxis antes de ejecutar el programa",
         "Ejecutar el programa de forma más rápida y optimizada",
         "Analizar la ejecución paso a paso para localizar errores lógicos.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.",
@@ -5516,7 +5516,7 @@ const SYLLABUS_RAW_DATA = {
         "Estructura secuencial",
         "Estructura selectiva",
         "Estructura iterativa.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Estructura iterativa.'. \"Estructura secuencial.\" y \"Estructura selectiva.\" son incorrectos porque describen conceptos diferentes.",
@@ -5583,7 +5583,7 @@ const SYLLABUS_RAW_DATA = {
         "Que el método devuelve un valor vacío",
         "Que el método no realiza ninguna acción",
         "Que el método realiza una acción pero no devuelve ningún valor.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "void indica que el método realiza una acción pero NO devuelve ningún valor. Si un método devuelve algo, se especifica el tipo (int, String, etc.). void ≠ \"devuelve vacío\".",
@@ -5609,7 +5609,7 @@ const SYLLABUS_RAW_DATA = {
         "Ejecutar la lógica principal del programa",
         "Inicializar los atributos del objeto en el momento de su creación.",
         "Definir el comportamiento común de todas las clases",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "El constructor inicializa los atributos del objeto en el momento de su creación con new. Tiene el mismo nombre que la clase y no tiene tipo de retorno. Si no se define, Java crea uno por defecto.",
@@ -5648,7 +5648,7 @@ const SYLLABUS_RAW_DATA = {
         "Dependencia",
         "Agregación",
         "Composición.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Composición.'. \"Dependencia.\" y \"Agregación.\" son incorrectos porque describen conceptos diferentes.",
@@ -5661,7 +5661,7 @@ const SYLLABUS_RAW_DATA = {
         "Permiten acceder directamente a la memoria del objeto",
         "Permiten validar los datos antes de modificar el estado del objeto.",
         "Eliminan la necesidad de constructores",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Permiten validar los datos antes de modificar el estado del objeto.",
@@ -5674,7 +5674,7 @@ const SYLLABUS_RAW_DATA = {
         "Atributos públicos y métodos privados",
         "Atributos privados y métodos públicos.",
         "Atributos y métodos siempre protected",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "El encapsulamiento protege el estado interno del objeto declarando los atributos como private y exponiendo solo lo necesario mediante métodos public (getters/setters). Permite validar antes de modificar.",
@@ -5741,7 +5741,7 @@ const SYLLABUS_RAW_DATA = {
         "El valor se redondea automáticamente",
         "Se produce un truncamiento y posible pérdida de información.",
         "Java lanza siempre una excepción en tiempo de ejecución",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Se produce un truncamiento y posible pérdida de información.'.",
@@ -5754,7 +5754,7 @@ const SYLLABUS_RAW_DATA = {
         "Indicar el final de cada instrucción",
         "Definir bloques de código y el ámbito de las variables.",
         "Separar visualmente el código para mejorar su legibilidad",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Definir bloques de código y el ámbito de las variables.'.",
@@ -5780,7 +5780,7 @@ const SYLLABUS_RAW_DATA = {
         "Aumentan el rendimiento del programa",
         "Permiten cambiar su valor en tiempo de ejecución",
         "Mejoran la legibilidad y facilitan el mantenimiento del código.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "Mejoran la legibilidad y facilitan el mantenimiento del código.",
@@ -5832,7 +5832,7 @@ const SYLLABUS_RAW_DATA = {
         "Son objetos y disponen de métodos propios",
         "Almacenan directamente el valor en memoria y no son objetos.",
         "Siempre se almacenan en el Heap",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Almacenan directamente el valor en memoria y no son objetos.'.",
@@ -5938,7 +5938,7 @@ const SYLLABUS_RAW_DATA = {
         "Se crea automáticamente una copia independiente del objeto",
         "Ambas variables pasan a compartir la referencia al mismo objeto.",
         "El objeto se duplica en el Heap para evitar efectos colaterales",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.",
@@ -6005,7 +6005,7 @@ const SYLLABUS_RAW_DATA = {
         "Modificar el tamaño del array durante la ejecución",
         "Conocer el número de elementos para acceder y recorrer el array de forma segura.",
         "Contar únicamente los elementos que han sido inicializados explícitamente",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Conocer el número de elementos para acceder y recorrer el array de forma segura.",
@@ -6018,7 +6018,7 @@ const SYLLABUS_RAW_DATA = {
         "Son más sencillos conceptualmente que los algoritmos clásicos",
         "Están optimizados y reducen errores en la implementación.",
         "Permiten mantener el orden original del array automáticamente",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Están optimizados y reducen errores en la implementación.'.",
@@ -6111,7 +6111,7 @@ const SYLLABUS_RAW_DATA = {
         "La clase java.lang.Object.",
         "La clase Super",
         "No existe una jerarquía común; cada clase es independiente a menos que use extends",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
       "explanation": "La respuesta es 'La clase java.lang.Object.'.",
@@ -6124,7 +6124,7 @@ const SYLLABUS_RAW_DATA = {
         "Para evitar el \"Problema del Diamante\" y la ambigüedad en la ejecución de métodos.",
         "Porque consumiría demasiada memoria en el Heap al duplicar los constructores",
         "Porque todas las clases deben ser obligatoriamente final para ser seguras",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
       "explanation": "El Problema del Diamante ocurre en herencia múltiple cuando dos clases padre tienen el mismo método y la clase hija no sabe cuál usar. Java lo evita prohibiendo la herencia múltiple de clases.",
@@ -6137,7 +6137,7 @@ const SYLLABUS_RAW_DATA = {
         "Obligar al método a ser final para que no pueda volver a cambiarse",
         "Actuar como un control de calidad que avisa al compilador si el método no existe en el padre.",
         "Permitir que el método cambie su lista de parámetros (Sobrecarga)",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "@Override indica que el método sobreescribe uno de la superclase. El compilador verifica que el método realmente existe en el padre. Sin @Override, si hay un error tipográfico, se crearía un método nuevo sin avisar.",
@@ -6176,7 +6176,7 @@ const SYLLABUS_RAW_DATA = {
         "Priorizar siempre la Herencia para maximizar la reutilización de código",
         "Favorecer la Composición sobre la Herencia para obtener un acoplamiento más bajo y flexible.",
         "Usar la Herencia para relaciones \"Tiene-Un\" y la Composición para relaciones \"Es-Un\"",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Herencia = relación \"es un\" (Perro es un Animal). Composición = relación \"tiene un\" (Casa tiene Habitaciones). Se recomienda favorecer la composición sobre la herencia para menor acoplamiento.",
@@ -6269,7 +6269,7 @@ const SYLLABUS_RAW_DATA = {
         "El ArrayList mantiene el orden de inserción, mientras que el HashSet no garantiza ningún orden.",
         "El ArrayList no permite duplicados y el HashSet sí",
         "El HashSet es más lento para acceder a elementos que el ArrayList porque usa índices",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
       "explanation": "ArrayList mantiene el orden de inserción y permite duplicados. HashSet no garantiza orden y no permite duplicados. ArrayList es O(1) para acceso por índice; HashSet es O(1) para contains().",
@@ -6295,7 +6295,7 @@ const SYLLABUS_RAW_DATA = {
         "Permite capturar múltiples excepciones en una sola línea de código",
         "Gestiona automáticamente el cierre de recursos (como archivos o conexiones) al finalizar el bloque.",
         "Aumenta la velocidad de ejecución de las colecciones tipo List y Map",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "try-with-resources cierra automáticamente los recursos (ficheros, conexiones) al salir del bloque, incluso si hay excepción. El recurso debe implementar AutoCloseable. Evita el finally con close() manual.",
@@ -6321,7 +6321,7 @@ const SYLLABUS_RAW_DATA = {
         "El compilador no obliga a capturarlas ni a declararlas en la firma del método.",
         "Son excepciones que deben ser revisadas obligatoriamente por el programador antes de compilar",
         "Son las únicas excepciones que pueden lanzarse mediante la palabra clave throw",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
       "explanation": "El compilador no obliga a capturarlas ni a declararlas en la firma del método.",
@@ -6362,7 +6362,7 @@ const SYLLABUS_RAW_DATA = {
         "Los de Bytes procesan datos de 8 bits (imágenes, audio), mientras que los de Caracteres procesan datos de 16 bits usando Unicode (texto).",
         "Los flujos de Bytes son solo para lectura y los de Caracteres solo para escritura",
         "No hay diferencia técnica; Java decide cuál usar automáticamente según el tamaño del archivo",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
       "explanation": "Los de Bytes procesan datos de 8 bits (imágenes, audio), mientras que los de Caracteres procesan datos de 16 bits usando...",
@@ -6375,7 +6375,7 @@ const SYLLABUS_RAW_DATA = {
         "El archivo se borra completamente antes de empezar a escribir",
         "El nuevo contenido se añade al final del archivo sin borrar lo que ya existía.",
         "El archivo se bloquea para que otros programas no puedan leerlo mientras se escribe",
-        "Con el comando fsck para verificar la integridad del sistema de archivos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "new FileWriter(\"f.txt\", true) abre el fichero en modo append: el nuevo contenido se añade al final sin borrar lo existente. Sin el parámetro true (o con false), sobreescribe el fichero.",
@@ -6510,7 +6510,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).",
+      "explanation": "La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.",
       "unit": null
     },
     {
@@ -6585,7 +6585,7 @@ const SYLLABUS_RAW_DATA = {
         "executeQuery()",
         "executeUpdate()",
         "executeSelect()",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "PreparedStatement precompila la consulta SQL y usa parámetros (?) en lugar de concatenar strings. Previene inyección SQL y mejora el rendimiento en consultas repetidas.",
@@ -6626,7 +6626,7 @@ const SYLLABUS_RAW_DATA = {
         "ObjectContainer",
         "DatabaseManager",
         "SessionSocket",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
       "explanation": "ObjectContainer es el objeto principal en db4o/ObjectDB que actúa como contenedor de objetos y gestiona la sesión. Es el equivalente a la Connection de JDBC pero para bases de datos orientadas a objetos.",
@@ -6730,7 +6730,7 @@ const SYLLABUS_RAW_DATA = {
         "El modo Embebido permite múltiples conexiones remotas, mientras que el Servidor es solo para un usuario",
         "El modo Embebido: la base de datos corre en el mismo proceso que la aplicación; el modo Servidor es un proceso independiente.",
         "El modo Servidor es gratuito y el modo Embebido requiere licencia comercial",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "En modo Embebido, la base de datos corre en el mismo proceso JVM que la aplicación (más rápido, un solo usuario). En modo Servidor, es un proceso independiente que acepta múltiples conexiones remotas.",
@@ -6758,7 +6758,7 @@ const SYLLABUS_RAW_DATA = {
         "Proteger la información y los recursos de posibles amenazas",
         "Adaptarse a las necesidades crecientes de la organización.",
         "Ser fiables y estar disponibles en todo momento",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Adaptarse a las necesidades crecientes de la organización.'.",
@@ -6771,10 +6771,10 @@ const SYLLABUS_RAW_DATA = {
         "Fiables y estar disponibles en todo momento",
         "Escalables",
         "Seguras.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).",
+      "explanation": "La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.",
       "unit": null
     },
     {
@@ -6784,7 +6784,7 @@ const SYLLABUS_RAW_DATA = {
         "Los usuarios deben ser capaces de acceder a los mismos recursos de manera simultánea",
         "Los usuarios pueden enviar y recibir información de manera rápida y eficiente.",
         "Deben estar diseñadas para proteger la información y los recursos de posibles amenazas",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Los usuarios pueden enviar y recibir información de manera rápida y eficiente.",
@@ -6797,7 +6797,7 @@ const SYLLABUS_RAW_DATA = {
         "Proteger la privacidad y la integridad de los datos",
         "Permitir la comunicación entre los dispositivos conectados.",
         "Adquirir una copia independiente para cada usuario",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Permitir la comunicación entre los dispositivos conectados.'.",
@@ -6823,7 +6823,7 @@ const SYLLABUS_RAW_DATA = {
         "Mantener una buena organización de cables",
         "Realizar copias de seguridad periódicas.",
         "No proteger dispositivos móviles",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Realizar copias de seguridad periódicas.'. \"Mantener una buena organización de cables.\" y \"No proteger dispositivos móviles.\" son incorrectos porque describen conceptos diferentes.",
@@ -6849,7 +6849,7 @@ const SYLLABUS_RAW_DATA = {
         "Guiados.",
         "No guiados",
         "Ambos",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
       "explanation": "La respuesta es 'Guiados.'. \"No guiados.\" y \"Ambos.\" son incorrectos porque describen conceptos diferentes.",
@@ -6877,7 +6877,7 @@ const SYLLABUS_RAW_DATA = {
         "Hardware, software, usuarios, seguridad",
         "Hardware, software, datos, usuarios.",
         "Hardware, software, redes, periféricos",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Hardware, software, datos, usuarios.'. \"Hardware, software, usuarios, seguridad.\" y \"Hardware, software, redes, periféricos.\" son incorrectos porque describen conceptos diferentes.",
@@ -6890,7 +6890,7 @@ const SYLLABUS_RAW_DATA = {
         "Controlar y gestionar el uso del hardware del ordenador",
         "Administrar la ejecución de los procesos.",
         "Controlar el proceso de organización de la información",
-        "Con el comando fsck para verificar la integridad del sistema de archivos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Administrar la ejecución de los procesos.'.",
@@ -6919,7 +6919,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).",
+      "explanation": "La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.",
       "unit": null
     },
     {
@@ -6929,7 +6929,7 @@ const SYLLABUS_RAW_DATA = {
         "Su simplicidad y eficiencia.",
         "Su modularidad y escalabilidad",
         "Su capacidad para agregar o eliminar funciones sin tener que recompilar todo el sistema",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
       "explanation": "La respuesta es 'Su simplicidad y eficiencia.'.",
@@ -6968,7 +6968,7 @@ const SYLLABUS_RAW_DATA = {
         "La instalación de un sistema operativo",
         "La división del disco duro en secciones o particiones lógicas.",
         "La verificación de la memoria RAM",
-        "Con el comando fsck para verificar la integridad del sistema de archivos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La división del disco duro en secciones o particiones lógicas.",
@@ -6994,7 +6994,7 @@ const SYLLABUS_RAW_DATA = {
         "Ejecutar aplicaciones",
         "Gestionar y coordinar el uso de los recursos de hardware y software.",
         "Proteger el sistema de ataques de virus",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Gestionar y coordinar el uso de los recursos de hardware y software.",
@@ -7009,7 +7009,7 @@ const SYLLABUS_RAW_DATA = {
         "Primarias.",
         "Extendidas",
         "Lógicas",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
       "explanation": "La respuesta es 'Primarias.'. \"Extendidas.\" y \"Lógicas.\" son incorrectos porque describen conceptos diferentes.",
@@ -7022,7 +7022,7 @@ const SYLLABUS_RAW_DATA = {
         "Es compatible con una amplia variedad de sistemas operativos y software",
         "Tiene una mejor protección contra la corrupción de datos y soporta discos de más de 2TB.",
         "Solo permite la creación de particiones primarias",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "GPT (GUID Partition Table) soporta discos de más de 2TB y hasta 128 particiones primarias. MBR está limitado a 2TB y 4 particiones primarias.",
@@ -7035,7 +7035,7 @@ const SYLLABUS_RAW_DATA = {
         "/, /bin, /etc, /home, /usr, /var",
         "C:, C:\\Windows, C:\\Program Files, C:\\Users.",
         "/, /Applications, /Library, /System, /Users",
-        "Con el comando fsck para verificar la integridad del sistema de archivos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'C:, C:\\Windows, C:\\Program Files, C:\\Users.'. \"/, /bin, /etc, /home, /usr, /var.\" y \"/, /Applications, /Library, /System, /Users.\" son incorrectos porque describen conceptos diferentes.",
@@ -7048,7 +7048,7 @@ const SYLLABUS_RAW_DATA = {
         "Mayor velocidad de transferencia de datos",
         "Mayor capacidad de almacenamiento",
         "Mayor flexibilidad y portabilidad.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Mayor flexibilidad y portabilidad.'. \"Mayor velocidad de transferencia de datos.\" y \"Mayor capacidad de almacenamiento.\" son incorrectos porque describen conceptos diferentes.",
@@ -7061,7 +7061,7 @@ const SYLLABUS_RAW_DATA = {
         "La velocidad de transferencia de datos",
         "La ubicación física del dispositivo.",
         "La capacidad de almacenamiento",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'La ubicación física del dispositivo.'. \"La velocidad de transferencia de datos.\" y \"La capacidad de almacenamiento.\" son incorrectos porque describen conceptos diferentes.",
@@ -7074,7 +7074,7 @@ const SYLLABUS_RAW_DATA = {
         "systeminfo",
         "top.",
         "free",
-        "Con el comando fsck para verificar la integridad del sistema de archivos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'top.'. \"systeminfo.\" y \"free.\" son incorrectos porque describen conceptos diferentes.",
@@ -7087,10 +7087,10 @@ const SYLLABUS_RAW_DATA = {
         "Hasta 2,5 GB",
         "Hasta 4,7 GB.",
         "Hasta 25 GB",
-        "Con el comando fsck para verificar la integridad del sistema de archivos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).",
+      "explanation": "La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.",
       "unit": null
     },
     {
@@ -7113,7 +7113,7 @@ const SYLLABUS_RAW_DATA = {
         "Disco duro (HDD)",
         "Unidad de estado sólido (SSD).",
         "Tarjeta de memoria",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Unidad de estado sólido (SSD).'. \"Disco duro (HDD).\" y \"Tarjeta de memoria.\" son incorrectos porque describen conceptos diferentes.",
@@ -7128,7 +7128,7 @@ const SYLLABUS_RAW_DATA = {
         "Una cuenta de usuario que solo puede acceder a recursos en línea",
         "Una cuenta de usuario que solo puede acceder a recursos locales en una computadora.",
         "Una cuenta de usuario que solo puede acceder a recursos en una red local",
-        "Con el comando fsck para verificar la integridad del sistema de archivos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Una cuenta de usuario que solo puede acceder a recursos locales en una computadora.",
@@ -7141,7 +7141,7 @@ const SYLLABUS_RAW_DATA = {
         "add_group_member",
         "net group.",
         "add_user_to_group",
-        "Con el comando fsck para verificar la integridad del sistema de archivos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'net group.'. \"add_group_member.\" y \"add_user_to_group.\" son incorrectos porque describen conceptos diferentes.",
@@ -7167,7 +7167,7 @@ const SYLLABUS_RAW_DATA = {
         "create_user",
         "add_user",
         "net user.",
-        "Con el comando fsck para verificar la integridad del sistema de archivos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "La respuesta es 'net user.'. \"create_user.\" y \"add_user.\" son incorrectos porque describen conceptos diferentes.",
@@ -7180,7 +7180,7 @@ const SYLLABUS_RAW_DATA = {
         "Liberar espacio en el disco principal y reducir la fragmentación del disco.",
         "Mejorar la velocidad de Internet",
         "Aumentar el rendimiento del procesador",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
       "explanation": "Liberar espacio en el disco principal y reducir la fragmentación del disco.",
@@ -7193,7 +7193,7 @@ const SYLLABUS_RAW_DATA = {
         "Con el comando \"show_user\"",
         "Con el comando \"verify_user\"",
         "Con el comando \"net user\".",
-        "Con el comando fsck para verificar la integridad del sistema de archivos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Con el comando \"net user\".'. \"Con el comando \"show_user\".\" y \"Con el comando \"verify_user\".\" son incorrectos porque describen conceptos diferentes.",
@@ -7209,7 +7209,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).",
+      "explanation": "La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.",
       "unit": null
     },
     {
@@ -7232,7 +7232,7 @@ const SYLLABUS_RAW_DATA = {
         "Para que el usuario tenga acceso a todos los recursos del sistema",
         "Para simplificar la administración de permisos y ahorrar tiempo y esfuerzo.",
         "Para aumentar el riesgo de que un usuario tenga acceso a recursos que no debería tener",
-        "Con el comando fsck para verificar la integridad del sistema de archivos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Para simplificar la administración de permisos y ahorrar tiempo y esfuerzo.",
@@ -7431,7 +7431,7 @@ const SYLLABUS_RAW_DATA = {
         "Los permisos que se otorgan a los usuarios para acceder y utilizar los recursos compartidos de la red.",
         "Los privilegios que se otorgan a los administradores de la red",
         "Los permisos que se otorgan a los usuarios para acceder a Internet",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
       "explanation": "Los permisos que se otorgan a los usuarios para acceder y utilizar los recursos compartidos de la red.",
@@ -7457,7 +7457,7 @@ const SYLLABUS_RAW_DATA = {
         "Firewall",
         "LDAP",
         "Active Directory.",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Active Directory.'. \"Firewall.\" y \"LDAP.\" son incorrectos porque describen conceptos diferentes.",
@@ -7496,7 +7496,7 @@ const SYLLABUS_RAW_DATA = {
         "Usuarios y grupos",
         "Contraseñas.",
         "Auditoría",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Contraseñas.'. \"Usuarios y grupos.\" y \"Auditoría.\" son incorrectos porque describen conceptos diferentes.",
@@ -7509,7 +7509,7 @@ const SYLLABUS_RAW_DATA = {
         "Para que los usuarios tengan acceso completo a todos los recursos de la red",
         "Para evitar que los usuarios accedan a recursos que no necesitan y reducir el riesgo de violaciones de seguridad.",
         "Para permitir que todos los usuarios tengan acceso a todos los recursos de la red",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Para evitar que los usuarios accedan a recursos que no necesitan y reducir el riesgo de violaciones de seguridad.",
@@ -7563,7 +7563,7 @@ const SYLLABUS_RAW_DATA = {
         "Automatización de tareas.",
         "Recuperación de datos",
         "Escaneo de archivos",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
       "explanation": "La respuesta es 'Automatización de tareas.'. \"Recuperación de datos.\" y \"Escaneo de archivos.\" son incorrectos porque describen conceptos diferentes.",
@@ -7615,7 +7615,7 @@ const SYLLABUS_RAW_DATA = {
         "Realizar tareas específicas en la computadora",
         "Controlar y coordinar el funcionamiento del hardware y proporcionar una interfaz entre el usuario y el hardware.",
         "Escribir, depurar y mantener programas de software",
-        "Mediante el protocolo OSPF de enrutamiento dinámico"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
       "explanation": "Controlar y coordinar el funcionamiento del hardware y proporcionar una interfaz entre el usuario y el hardware.",

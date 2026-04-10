@@ -24,13 +24,13 @@ EXPL:Está orientado a la lectura secuencial sin acceso a la posición.
 Modificar el tamaño del array durante la ejecución
 *Conocer el número de elementos para acceder y recorrer el array de forma segura.
 Contar únicamente los elementos que han sido inicializados explícitamente
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Conocer el número de elementos para acceder y recorrer el array de forma segura.
 Desde un enfoque profesional, ¿cuál es la ventaja principal de utilizar los métodos de ordenación proporcionados por Java frente a los algoritmos académicos?
 Son más sencillos conceptualmente que los algoritmos clásicos
 *Están optimizados y reducen errores en la implementación.
 Permiten mantener el orden original del array automáticamente
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Están optimizados y reducen errores en la implementación.'.
 Respecto a los algoritmos de búsqueda, ¿cuál es la condición indispensable para poder aplicar una búsqueda binaria?
 Que el array tenga un tamaño reducido

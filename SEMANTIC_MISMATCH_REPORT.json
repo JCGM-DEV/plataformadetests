@@ -1,0 +1,372 @@
+[
+  {
+    "subject": "sistemas_informaticos",
+    "index": 7,
+    "concept_id": "si_tema_1_q7",
+    "question": "¿Cuál es el componente físico del sistema informático?",
+    "explanation": "La respuesta es 'Hardware.'. \"Software.\" y \"Componente humano.\" son incorrectos porque describen conceptos diferentes.",
+    "marked_correct": {
+      "index": 1,
+      "text": "Hardware."
+    },
+    "found_in_explanation": [
+      {
+        "index": 0,
+        "text": "Software"
+      },
+      {
+        "index": 2,
+        "text": "Componente humano"
+      }
+    ],
+    "confidence": "MEDIUM"
+  },
+  {
+    "subject": "sistemas_informaticos",
+    "index": 8,
+    "concept_id": "si_tema_1_q8",
+    "question": "¿Qué tipo de medios de transmisión requiere un canal físico para transmitir los datos?",
+    "explanation": "La respuesta es 'Guiados.'. \"No guiados.\" y \"Ambos.\" son incorrectos porque describen conceptos diferentes.",
+    "marked_correct": {
+      "index": 0,
+      "text": "Guiados."
+    },
+    "found_in_explanation": [
+      {
+        "index": 1,
+        "text": "No guiados"
+      }
+    ],
+    "confidence": "HIGH"
+  },
+  {
+    "subject": "sistemas_informaticos",
+    "index": 9,
+    "concept_id": "si_tema_1_q9",
+    "question": "¿Qué periférico permite ingresar texto y comandos en el ordenador?",
+    "explanation": "La respuesta es 'Teclado.'. \"Escáner.\" y \"Cámara web.\" son incorrectos porque describen conceptos diferentes.",
+    "marked_correct": {
+      "index": 1,
+      "text": "Teclado."
+    },
+    "found_in_explanation": [
+      {
+        "index": 2,
+        "text": "Cámara web"
+      }
+    ],
+    "confidence": "HIGH"
+  },
+  {
+    "subject": "sistemas_informaticos",
+    "index": 25,
+    "concept_id": "si_tema_3_q5",
+    "question": "¿Qué comando se utiliza en Linux para mostrar información sobre los procesos que se están ejecutando en el sistema?",
+    "explanation": "La respuesta es 'top.'. \"systeminfo.\" y \"free.\" son incorrectos porque describen conceptos diferentes.",
+    "marked_correct": {
+      "index": 1,
+      "text": "top."
+    },
+    "found_in_explanation": [
+      {
+        "index": 0,
+        "text": "systeminfo"
+      }
+    ],
+    "confidence": "HIGH"
+  },
+  {
+    "subject": "sistemas_informaticos",
+    "index": 32,
+    "concept_id": "si_tema_4_q3",
+    "question": "¿Qué comando se utiliza para crear un nuevo usuario en la consola de comandos de Windows?",
+    "explanation": "La respuesta es 'net user.'. \"create_user.\" y \"add_user.\" son incorrectos porque describen conceptos diferentes.",
+    "marked_correct": {
+      "index": 2,
+      "text": "net user."
+    },
+    "found_in_explanation": [
+      {
+        "index": 0,
+        "text": "create_user"
+      },
+      {
+        "index": 1,
+        "text": "add_user"
+      }
+    ],
+    "confidence": "MEDIUM"
+  },
+  {
+    "subject": "sistemas_informaticos",
+    "index": 90,
+    "concept_id": "si_practicas_q22",
+    "question": "¿Qué software antivirus se menciona en los casos prácticos para realizar un análisis de amenazas?",
+    "explanation": "La respuesta es 'Avast.'. \"Kaspersky.\" y \"Norton.\" son incorrectos porque describen conceptos diferentes.",
+    "marked_correct": {
+      "index": 2,
+      "text": "Avast."
+    },
+    "found_in_explanation": [
+      {
+        "index": 0,
+        "text": "Kaspersky"
+      }
+    ],
+    "confidence": "HIGH"
+  },
+  {
+    "subject": "sistemas_informaticos",
+    "index": 103,
+    "concept_id": "si_practicas_q35",
+    "question": "¿Qué sistema operativo invitado se instala en la práctica de VirtualBox?",
+    "explanation": "La respuesta es 'Ubuntu.'. \"Windows 10.\" y \"Debian.\" son incorrectos porque describen conceptos diferentes.",
+    "marked_correct": {
+      "index": 2,
+      "text": "Ubuntu."
+    },
+    "found_in_explanation": [
+      {
+        "index": 0,
+        "text": "Windows 10"
+      }
+    ],
+    "confidence": "HIGH"
+  },
+  {
+    "subject": "bases_de_datos",
+    "index": 1,
+    "concept_id": "bd_tema_1_q1",
+    "question": "En el modelo Entidad-Relación, el conjunto de objetos del mundo real que comparten los mismos atributos y se identifican con un nombre común se denomina?",
+    "explanation": "Una entidad representa un objeto del mundo real con existencia propia (CLIENTE, PRODUCTO). Una relación es la asociación entre entidades. Un atributo es una propiedad de la entidad. Una tupla es una fila de una tabla relacional.",
+    "marked_correct": {
+      "index": 3,
+      "text": "Entidad"
+    },
+    "found_in_explanation": [
+      {
+        "index": 0,
+        "text": "Relación"
+      },
+      {
+        "index": 1,
+        "text": "Atributo"
+      }
+    ],
+    "confidence": "MEDIUM"
+  },
+  {
+    "subject": "bases_de_datos",
+    "index": 4,
+    "concept_id": "bd_tema_1_q4",
+    "question": "¿Entre qué tipos de bases de datos se encuentran las que permiten almacenar datos semiestructurados?",
+    "explanation": "Las bases de datos NoSQL (MongoDB, Cassandra, Redis) están diseñadas para datos semiestructurados o no estructurados. Las relacionales requieren esquema fijo. Las jerárquicas tienen estructura de árbol rígida.",
+    "marked_correct": {
+      "index": 3,
+      "text": "NoSQL"
+    },
+    "found_in_explanation": [
+      {
+        "index": 0,
+        "text": "Relacionales"
+      },
+      {
+        "index": 1,
+        "text": "Jerárquicas"
+      }
+    ],
+    "confidence": "MEDIUM"
+  },
+  {
+    "subject": "bases_de_datos",
+    "index": 9,
+    "concept_id": "bd_tema_1_q9",
+    "question": "¿De qué tipo es un fichero dBASE?",
+    "explanation": "Los ficheros dBASE (.dbf) son ficheros de base de datos con índices que permiten acceso directo a registros. Son ficheros indexados, no planos ni multimedia.",
+    "marked_correct": {
+      "index": 3,
+      "text": "Indexado"
+    },
+    "found_in_explanation": [
+      {
+        "index": 1,
+        "text": "Multimedia"
+      }
+    ],
+    "confidence": "HIGH"
+  },
+  {
+    "subject": "bases_de_datos",
+    "index": 11,
+    "concept_id": "bd_tema_2_q1",
+    "question": "¿Qué comando DML permite cancelar los cambios realizados durante una transacción?",
+    "explanation": "ROLLBACK deshace todos los cambios realizados desde el último START TRANSACTION o SAVEPOINT, devolviendo la base de datos al estado anterior. COMMIT confirma los cambios permanentemente.",
+    "marked_correct": {
+      "index": 3,
+      "text": "ROLLBACK TRANSACTION"
+    },
+    "found_in_explanation": [
+      {
+        "index": 2,
+        "text": "START TRANSACTION"
+      }
+    ],
+    "confidence": "HIGH"
+  },
+  {
+    "subject": "bases_de_datos",
+    "index": 18,
+    "concept_id": "bd_tema_2_q8",
+    "question": "¿Con qué concepto del modelo E-R encaja la matrícula de un vehículo?",
+    "explanation": "Un atributo es una propiedad o característica de una entidad. La matrícula es un atributo de la entidad VEHÍCULO. Una entidad es el objeto (VEHÍCULO), una tupla es una fila de la tabla, y una relación es la asociación entre entidades.",
+    "marked_correct": {
+      "index": 3,
+      "text": "Atributo"
+    },
+    "found_in_explanation": [
+      {
+        "index": 0,
+        "text": "Relación"
+      }
+    ],
+    "confidence": "HIGH"
+  },
+  {
+    "subject": "bases_de_datos",
+    "index": 39,
+    "concept_id": "bd_tema_4_q9",
+    "question": "¿Qué operación de conjuntos combina los resultados de dos consultas eliminando los duplicados automáticamente?",
+    "explanation": "La respuesta es 'UNION'. \"INTERSECT\" y \"EXCEPT (o MINUS)\" son incorrectos porque describen conceptos diferentes.",
+    "marked_correct": {
+      "index": 0,
+      "text": "UNION"
+    },
+    "found_in_explanation": [
+      {
+        "index": 1,
+        "text": "INTERSECT"
+      },
+      {
+        "index": 2,
+        "text": "EXCEPT (o MINUS)"
+      }
+    ],
+    "confidence": "MEDIUM"
+  },
+  {
+    "subject": "bases_de_datos",
+    "index": 44,
+    "concept_id": "bd_tema_5_q4",
+    "question": "¿Qué sentencia se utiliza para confirmar y guardar permanentemente todos los cambios de una transacción?",
+    "explanation": "COMMIT confirma permanentemente todos los cambios de la transacción actual. Una vez ejecutado, los cambios son visibles para otros usuarios y no se pueden deshacer con ROLLBACK.",
+    "marked_correct": {
+      "index": 2,
+      "text": "COMMIT"
+    },
+    "found_in_explanation": [
+      {
+        "index": 1,
+        "text": "ROLLBACK"
+      }
+    ],
+    "confidence": "HIGH"
+  },
+  {
+    "subject": "cloud_computing",
+    "index": 73,
+    "concept_id": "cc_tema_8_q3",
+    "question": "¿Cuál de las siguientes es una base de datos relacional?",
+    "explanation": "MySQL es una base de datos relacional que usa SQL y organiza los datos en tablas. MongoDB es documental NoSQL, Cassandra es column-family NoSQL, Redis es key-value NoSQL.",
+    "marked_correct": {
+      "index": 2,
+      "text": "MySQL"
+    },
+    "found_in_explanation": [
+      {
+        "index": 1,
+        "text": "Cassandra"
+      }
+    ],
+    "confidence": "HIGH"
+  },
+  {
+    "subject": "cloud_computing",
+    "index": 74,
+    "concept_id": "cc_tema_8_q4",
+    "question": "¿Cuál es un proveedor de bases de datos NoSQL?",
+    "explanation": "MongoDB es un proveedor de bases de datos NoSQL documental. PostgreSQL, Oracle y SQL Server son bases de datos relacionales.",
+    "marked_correct": {
+      "index": 1,
+      "text": "MongoDB"
+    },
+    "found_in_explanation": [
+      {
+        "index": 0,
+        "text": "PostgreSQL"
+      },
+      {
+        "index": 3,
+        "text": "SQL Server"
+      }
+    ],
+    "confidence": "MEDIUM"
+  },
+  {
+    "subject": "empleabilidad",
+    "index": 0,
+    "concept_id": "emp_tema_1_q0",
+    "question": "¿Entre qué tipo de riesgos laborales se incluye el mobbing?",
+    "explanation": "El mobbing (acoso laboral) es un riesgo psicosocial porque afecta a la salud mental y emocional del trabajador. Los riesgos biológicos son virus/bacterias, los ergonómicos son posturas incorrectas, y los físicos son ruido/temperatura.",
+    "marked_correct": {
+      "index": 3,
+      "text": "Psicosociales"
+    },
+    "found_in_explanation": [
+      {
+        "index": 0,
+        "text": "Biológicos"
+      },
+      {
+        "index": 1,
+        "text": "Ergonómicos"
+      }
+    ],
+    "confidence": "MEDIUM"
+  },
+  {
+    "subject": "empleabilidad",
+    "index": 16,
+    "concept_id": "emp_tema_2_q6",
+    "question": "¿Qué NO exige la movilidad funcional de un trabajador a otro grupo profesional?",
+    "explanation": "La movilidad funcional entre grupos profesionales distintos requiere: razones técnicas u organizativas, que sea por el tiempo imprescindible y comunicación a los representantes de los trabajadores. No tiene que ser permanente.",
+    "marked_correct": {
+      "index": 3,
+      "text": "Que sea permanente y definitiva."
+    },
+    "found_in_explanation": [
+      {
+        "index": 2,
+        "text": "Razones técnicas u organizativas."
+      }
+    ],
+    "confidence": "HIGH"
+  },
+  {
+    "subject": "empleabilidad",
+    "index": 30,
+    "concept_id": "emp_tema_4_q0",
+    "question": "¿Cómo se denomina el Portal Europeo de Movilidad Profesional?",
+    "explanation": "EURES es el portal europeo de movilidad laboral que facilita la búsqueda de empleo en los países de la UE. Europass es el portfolio de documentos para presentar competencias. Erasmus es un programa de intercambio educativo.",
+    "marked_correct": {
+      "index": 3,
+      "text": "EURES (European Employment Services)"
+    },
+    "found_in_explanation": [
+      {
+        "index": 0,
+        "text": "Europass"
+      }
+    ],
+    "confidence": "HIGH"
+  }
+]

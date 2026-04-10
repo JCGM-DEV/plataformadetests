@@ -17,7 +17,7 @@ EXPL:Un caso de uso "incluye" a otro cuando lo utiliza internamente para llevar 
 El diagrama de secuencia, por su enfoque en la interacción entre objetos
 *El diagrama de actividad.
 El diagrama de estados, ya que muestra el ciclo de vida de un componente
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
 
 ¿Cuál es una característica fundamental de la relación de Extensión (<<extend>>) en los diagramas de casos de uso UML?
@@ -59,12 +59,12 @@ En el contexto de la elaboración de diagramas de comportamiento UML, ¿qué tip
 Solo herramientas de dibujo genéricas; ningún plug-in específico es mencionado
 *Herramientas CASE están diseñadas para facilitar su creación, y plug-ins integrados en entornos de desarrollo (IDEs) como AmaterasUML para Eclipse también ofrecen soporte.
 Exclusivamente aplicaciones de línea de comandos; no se usan interfaces gráficas
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Un IDE (Integrated Development Environment) integra editor de código, compilador/intérprete, depurador y otras herramientas en una única interfaz. Ejemplos: IntelliJ IDEA, Eclipse, VS Code.
 
 ¿Cuál es la principal característica que definen los diagramas de comportamiento en UML, diferenciándolos de los diagramas estructurales?
 Muestran la definición y estructura estática de los componentes de un sistema en reposo
 *Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y transformación.
 Describen exclusivamente la interacción entre usuarios finales y la interfaz gráfica del sistema
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y t...

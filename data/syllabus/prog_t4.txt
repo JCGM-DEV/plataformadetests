@@ -18,7 +18,7 @@ En el uso profesional de la Programación Orientada a Objetos, ¿cuál es la fin
 Facilitar el acceso directo a los atributos desde cualquier clase
 *Proteger el estado interno del objeto y controlar su modificación.
 Reducir el número de métodos definidos en una clase
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El encapsulamiento protege el estado interno del objeto declarando los atributos como private y exponiendo solo lo necesario mediante métodos public (getters/setters). Permite validar antes de modificar.
 Respecto a la definición y uso de métodos en una clase, ¿qué característica permite la sobrecarga de métodos?
 Diferenciar los métodos únicamente por su tipo de retorno
@@ -48,7 +48,7 @@ En relación con la asignación de variables en Java, ¿qué ocurre cuando dos v
 Se crea automáticamente una copia independiente del objeto
 *Ambas variables pasan a compartir la referencia al mismo objeto.
 El objeto se duplica en el Heap para evitar efectos colaterales
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
 En el diseño de constructores, ¿qué consecuencia tiene definir al menos un constructor con parámetros en una clase?
 Java mantiene siempre disponible el constructor vacío implícito

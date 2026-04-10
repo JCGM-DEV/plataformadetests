@@ -38,7 +38,7 @@ EXPL:El código objeto contiene instrucciones comprensibles por la máquina pero
 En el tipado fuerte, el tipo de la variable se asigna dinámicamente, mientras que en el tipado débil, se define estáticamente
 Un lenguaje de tipado débil no permite hacer uso indiscriminado de las variables sin importar su tipo, lo contrario al tipado fuerte
 *Un lenguaje de tipado fuerte restringe las operaciones basándose en el tipo de sus variables, mientras que uno de tipado débil permite un uso más indiscriminado. En el tipado estático, el tipo se vincula a la variable al declararla y no cambia; en el tipado dinámico, el tipo se asigna por el valor y puede cambiar durante la ejecución.
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Tipado fuerte: restringe operaciones según el tipo (Java, Python). Tipado débil: permite uso más flexible (JavaScript). Tipado estático: el tipo se asigna al declarar (Java). Dinámico: el tipo cambia en ejecución (Python).
 
 ¿Por qué se considera la reutilización de código de máxima importancia en el desarrollo de software?
@@ -52,14 +52,14 @@ En las fases tradicionales del ciclo de vida de una aplicación informática, ¿
 La creación del código fuente y la ayuda de herramientas de generación de código
 La determinación de cómo se va a organizar el proyecto a nivel de software y la definición de las interfaces gráficas
 *La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software.
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software...
 
 En el contexto de los lenguajes de programación como Java, ¿cuál es uno de los objetivos principales al utilizar máquinas virtuales y bytecode?
 Reducir el tamaño de los programas ejecutables para un almacenamiento más eficiente
 *Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que tenga instalada la máquina virtual correspondiente.
 Aumentar la velocidad de ejecución de los programas, superando a los lenguajes compilados
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que...
 
 ¿Qué paradigma de programación se caracteriza por estructurar los programas en agrupaciones de código fuente (como funciones o procedimientos) y utilizar estructuras de control para determinar el flujo de ejecución?

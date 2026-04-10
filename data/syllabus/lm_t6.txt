@@ -21,7 +21,7 @@ EXPL:Crear variables temporales que representan valores o expresiones para ser u
 Su incapacidad para procesar documentos XML directamente sin un middleware adicional
 Su modelo relacional no permite la gestión de transacciones complejas en entornos XML
 *No pueden restaurar el documento XML original sin alterarlo y tienen una diferencia de filosofía con la naturaleza jerárquica de XML
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:No pueden restaurar el documento XML original sin alterarlo y tienen una diferencia de filosofía con la naturaleza jerárquica de XML es la respuesta correcta para esta pregunta del temario oficial.
 Si en un documento XML queremos seleccionar todos los nodos elemento hijos directos de cada elemento <coche> que esté bajo <concesionario>, sin especificar los nombres de esos hijos, ¿qué comodín o expresión XPath se usaría correctamente?
 //coche/node()
@@ -45,7 +45,7 @@ La herramienta IMPORTXML de Google Sheets, ¿para qué se utiliza principalmente
 Para transformar documentos XML a otros formatos como JSON o PDF
 *Para importar datos de formatos estructurados (como XML, HTML, CSV) desde una URL específica, aplicando una consulta XPath
 Para crear documentos XML nuevos a partir de datos estructurados en una hoja de cálculo
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Para importar datos de formatos estructurados (como XML, HTML, CSV) desde una URL específica, aplicando una consulta XPath es la respuesta correcta para esta pregunta del temario oficial.
 En XPath, si se necesita seleccionar la marca y el modelo de todos los coches en un documento XML dentro de una misma expresión de ruta, ¿qué operador se debe utilizar para unir ambas rutas?
 AND (operador lógico para condiciones en predicados)
@@ -57,5 +57,5 @@ EXPL:El operador | (pipe) en XPath une dos conjuntos de nodos: //coche/marca | /
 XPath es un lenguaje para generar nuevos documentos XML, mientras que XQuery es solo para búsquedas
 Ambos sirven para lo mismo
 *XPath es un lenguaje para seleccionar nodos en documentos XML, mientras que XQuery, además de incluir XPath, es un lenguaje completo de consulta y transformación con sintaxis FLWOR
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:XPath es un lenguaje para seleccionar nodos en documentos XML, mientras que XQuery, además de incluir XPath, es un lenguaje completo de consulta y transformación con sintaxis FLWOR es la respuesta correcta para esta pregunta del temario oficial.

@@ -3,7 +3,7 @@ tema 8
 Reducir la necesidad de formación del personal al estandarizar interfaces
 *Controlar los procesos de negocio de forma coordinada para la toma de decisiones, reducir costes y aumentar la productividad
 Permitir que cada departamento mantenga su autonomía total en la gestión de sus datos
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Controlar los procesos de negocio de forma coordinada para la toma de decisiones, reducir costes y aumentar la productividad es la respuesta correcta para esta pregunta del temario oficial.
 Antes de proceder a la instalación de cualquier paquete de gestión empresarial (ERP), ¿cuál es un requisito previo fundamental, independientemente del software seleccionado?
 Contratar un servicio de hosting en la nube específico para el ERP
@@ -45,7 +45,7 @@ En un sistema ERP, ¿qué ocurre cuando a un usuario se le asignan múltiples ro
 El usuario obtiene la suma de todos los privilegios de los roles asignados
 *Prevalecerá el rol que imponga las restricciones más estrictas para garantizar la seguridad
 El sistema solicitará al usuario que elija qué rol desea activar en cada sesión
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Prevalecerá el rol que imponga las restricciones más estrictas para garantizar la seguridad es la respuesta correcta para esta pregunta del temario oficial.
 ¿Cuál de las siguientes acciones representa un ejemplo de "adaptación" de un sistema ERP, según la definición de la unidad?
 *Añadir un campo personalizado en las órdenes de envío para indicar el tipo de embalaje, que no venía por defecto en el sistema

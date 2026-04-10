@@ -38,7 +38,7 @@ EXPL:El proceso de agrupar entidades con rasgos comunes en una entidad padre abs
 Completeness (totalidad/parcialidad)
 *Disjointness (exclusividad/solapamiento).
 Relación recursiva
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Disjointness (exclusividad) determina si una instancia puede pertenecer a varias subentidades (solapamiento) o solo a una (exclusividad). Completeness determina si toda instancia del supertipo debe pertenecer a alguna subentidad.
 
 Al pasar del modelo E/R al modelo relacional, ¿cuándo se crean normalmente las claves foráneas?
@@ -66,5 +66,5 @@ EXPL:La 2FN requiere que todos los atributos no clave dependan de la clave prima
 Aumentar la redundancia para facilitar la lectura de datos
 *Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente.
 Eliminar todas las relaciones entre tablas para simplificar el modelo
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente.

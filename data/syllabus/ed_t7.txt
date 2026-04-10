@@ -31,7 +31,7 @@ Herramientas de Ayuda a la Refactorización en IDEs: Los Entornos de Desarrollo 
 La detección y corrección automática de errores de sintaxis en tiempo real
 La ejecución de pruebas de rendimiento del código bajo diferentes cargas de trabajo
 *El renombrado automático de variables, funciones o clases en todo el proyecto, o la extracción de un bloque de código para crear un nuevo método.
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Un IDE (Integrated Development Environment) integra editor de código, compilador/intérprete, depurador y otras herramientas en una única interfaz. Ejemplos: IntelliJ IDEA, Eclipse, VS Code.
 
 A pesar de que una refactorización de código no implica cambios en su funcionamiento, el manual indica que puede generar errores si se realiza incorrectamente. ¿Qué acciones se deben considerar para mitigar este riesgo?
@@ -52,19 +52,19 @@ Resolución de Conflictos en Sistemas de Control de Versiones: En un escenario d
 git status para ver el estado de los fcheros
 git diff para ver las diferencias entre versiones
 *git merge para integrar cambios y resolver solapamientos.
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'git merge para integrar cambios y resolver solapamientos.'.
 
 En Python, además de los comentarios tradicionales (# o bloques con '''), existe un tipo de comentario formal que se utiliza para documentar funciones, clases y métodos, siendo visible con la función help() y en la ayuda contextual de los IDEs. ¿Cómo se denomina este tipo de comentario?
 Comentario de bloque
 Comentario de línea
 *Docstring.
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Docstring.'. "Comentario de bloque." y "Comentario de línea." son incorrectos porque describen conceptos diferentes.
 
 ¿Cuál es la principal distinción entre un sistema de control de versiones centralizado y uno distribuido?
 Los sistemas centralizados son de código cerrado, mientras que los distribuidos son siempre de código abierto
 Los sistemas centralizados almacenan las copias del proyecto en la máquina local del desarrollador, mientras que los distribuidos lo hacen en un servidor remoto
 *En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, las copias se almacenan tanto en un servidor como en cada máquina de los integrantes del equipo.
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, l...

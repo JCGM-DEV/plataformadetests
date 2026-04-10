@@ -16,7 +16,7 @@ EXPL:ROLLBACK deshace todos los cambios realizados desde el último START TRANSA
 Un protocolo de cifrado para que las contraseñas de la base de datos viajen seguras
 El nombre del driver estándar utilizado para conectar Java con bases de datos SQLite
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).
+EXPL:La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.
 Para gestionar una transacción de forma manual en Java, ¿cuál es el primer paso imprescindible?
 Llamar al método conn.commit()
 *Establecer conn.setAutoCommit(false).
@@ -51,7 +51,7 @@ Al ejecutar una sentencia DML (INSERT, UPDATE o DELETE), ¿qué método de Prepa
 executeQuery()
 *executeUpdate()
 executeSelect()
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:PreparedStatement precompila la consulta SQL y usa parámetros (?) en lugar de concatenar strings. Previene inyección SQL y mejora el rendimiento en consultas repetidas.
 ¿Qué es JDBC dentro del ecosistema de Java?
 Una base de datos ligera que se integra directamente en el JDK

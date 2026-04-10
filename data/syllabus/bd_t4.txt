@@ -31,7 +31,7 @@ EXPL:MAX() devuelve el valor máximo de una columna. MIN() el mínimo, SUM() la 
 WHERE se aplica a los grupos y HAVING a las filas individuales
 *WHERE filtra registros antes de la agrupación; HAVING filtra grupos después de aplicarse GROUP BY.
 Ambas cláusulas son idénticas y se pueden usar indistintamente
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:GROUP BY agrupa filas con el mismo valor en las columnas especificadas. Se usa con funciones de agregado (COUNT, SUM, AVG). HAVING filtra los grupos resultantes.
 
 ¿Qué tipo de JOIN devuelve todos los registros de la tabla de la izquierda, aunque no tengan correspondencia en la derecha?

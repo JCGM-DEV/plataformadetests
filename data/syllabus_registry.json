@@ -216,6 +216,14 @@
         "icon": "💼"
     },
     {
+        "id": "ipe_pdf_custom",
+        "name": "📋 IPE - Preguntas de Casos Reales (72)",
+        "subject_id": "empleabilidad",
+        "file": "data/syllabus/ipe_pdf_questions.txt",
+        "icon": "💼",
+        "unit": 1
+    },
+    {
         "id": "ipe_i_bateria",
         "name": "📋 IPE I - Batería 1 (50 preguntas)",
         "subject_id": "empleabilidad",

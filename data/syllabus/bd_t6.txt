@@ -52,7 +52,7 @@ EXPL:Las funciones siempre devuelven un valor; los procedimientos no devuelven u
 ENUM
 *SET
 ARRAY
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'SET'. "ENUM" y "ARRAY" son incorrectos porque describen conceptos diferentes.
 
 En el tratamiento de excepciones, ¿qué manejador aborta la ejecución del código inmediatamente cuando se produce un error crítico?

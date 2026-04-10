@@ -3,7 +3,7 @@ Los lenguajes de programación utilizan distintos tipos de datos para representa
 Número entero
 Valor booleano
 *Array o arreglo.
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Array o arreglo.'. "Número entero." y "Valor booleano." son incorrectos porque describen conceptos diferentes.
 Aunque a menudo se confunden, los conceptos de algoritmo y programa no son equivalentes. ¿Cuál de las siguientes afirmaciones describe correctamente la relación entre ambos?
 *El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación.
@@ -15,7 +15,7 @@ Durante el desarrollo de un programa, pueden aparecer errores que no impiden la 
 Detectar errores de sintaxis antes de ejecutar el programa
 Ejecutar el programa de forma más rápida y optimizada
 *Analizar la ejecución paso a paso para localizar errores lógicos.
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
 Antes de escribir un programa, es fundamental diseñar correctamente el algoritmo que resolverá el problema. Para que una secuencia de pasos pueda considerarse un algoritmo válido, debe cumplir una serie de características. ¿Cuál de las siguientes es una de ellas?
 Debe poder ejecutarse directamente por la máquina sin traducción
@@ -33,7 +33,7 @@ Las estructuras de control permiten modificar el flujo normal de ejecución de u
 Estructura secuencial
 Estructura selectiva
 *Estructura iterativa.
-Mediante el protocolo OSPF de enrutamiento dinámico
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Estructura iterativa.'. "Estructura secuencial." y "Estructura selectiva." son incorrectos porque describen conceptos diferentes.
 Los paradigmas de programación ofrecen diferentes formas de organizar y estructurar el software. En el paradigma orientado a objetos, ¿cuál es el elemento central sobre el que se construyen los programas?
 Las funciones matemáticas
