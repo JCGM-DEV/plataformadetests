@@ -204,6 +204,13 @@
         "icon": "💼"
     },
     {
+        "id": "ipe_i_bateria",
+        "name": "📋 IPE I - Batería 1 (50 preguntas)",
+        "subject_id": "empleabilidad",
+        "file": "data/syllabus/ipe_i_bateria.txt",
+        "icon": "💼"
+    },
+    {
         "id": "emp_examen_final",
         "name": "🎯 SIMULACRO EXAMEN FINAL (50 preguntas)",
         "type": "examen_final",

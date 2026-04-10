@@ -4189,6 +4189,608 @@ const SYLLABUS_RAW_DATA = {
       "unit": null
     }
   ],
+  "ipe_i_bateria": [
+    {
+      "concept_id": "ipe_i_bateria_q0",
+      "question": "1. Cuando hablamos del Derecho del Trabajo dentro del sistema jurídico español, nos referimos a un conjunto de normas que no solo regulan la prestación de servicios, sino que también buscan corregir ciertos desequilibrios. ¿Cuál es su finalidad principal?",
+      "options": [
+        "Regular exclusivamente la actividad económica de las empresas",
+        "Equilibrar la relación entre trabajador y empresario, protegiendo especialmente al trabajador",
+        "Organizar el comercio entre empresas privadas"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q1",
+      "question": "2. Para que una actividad pueda considerarse una relación laboral y quede dentro del ámbito del Derecho del Trabajo, debe cumplir una serie de características básicas. ¿Cuál de las siguientes opciones recoge correctamente esas características?",
+      "options": [
+        "Actividad ocasional, voluntaria y sin remuneración",
+        "Actividad voluntaria, retribuida, por cuenta ajena y bajo la organización de un empresario",
+        "Actividad autónoma realizada sin dependencia"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q2",
+      "question": "3. Dentro de las fuentes del Derecho del Trabajo existe una jerarquía normativa que determina qué norma prevalece sobre otra en caso de conflicto. ¿Cuál de las siguientes tiene mayor rango?",
+      "options": [
+        "El convenio colectivo",
+        "El contrato de trabajo",
+        "La ley, como el Estatuto de los Trabajadores"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q3",
+      "question": "4. El principio de norma más favorable es uno de los pilares del Derecho Laboral. ¿Qué implica exactamente este principio en la práctica?",
+      "options": [
+        "Que siempre se aplica la norma más reciente",
+        "Que se aplicará aquella norma que resulte más beneficiosa para el trabajador en su conjunto",
+        "Que se aplica únicamente lo pactado en el contrato"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q4",
+      "question": "5. Para que exista un contrato de trabajo válido deben darse ciertos elementos esenciales. ¿Cuál de los siguientes NO es uno de ellos?",
+      "options": [
+        "El consentimiento de las partes",
+        "El objeto del contrato (la prestación laboral)",
+        "La nacionalidad del trabajador"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q5",
+      "question": "6. Cuando en una nómina aparece el salario base, este concepto hace referencia a:",
+      "options": [
+        "La suma de todos los ingresos del trabajador",
+        "La cantidad fija que se percibe por el trabajo realizado, sin incluir complementos",
+        "Solo a las pagas extraordinarias"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q6",
+      "question": "7. En relación con los conceptos salariales y extrasalariales, ¿cuál de los siguientes se considera salario?",
+      "options": [
+        "Una indemnización por despido",
+        "Las dietas por desplazamiento",
+        "Las pagas extraordinarias"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q7",
+      "question": "8. El periodo de prueba permite a ambas partes comprobar si la relación laboral funciona correctamente. Para que sea válido:",
+      "options": [
+        "Debe acordarse expresamente, normalmente por escrito",
+        "Es obligatorio en todos los contratos",
+        "No permite la extinción del contrato durante ese tiempo"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q8",
+      "question": "9. La normativa laboral establece límites a la jornada de trabajo con el objetivo de proteger la salud del trabajador. ¿Cuál es la duración máxima de la jornada ordinaria semanal?",
+      "options": [
+        "35 horas semanales",
+        "40 horas semanales de promedio anual",
+        "45 horas semanales"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q9",
+      "question": "10. Las horas extraordinarias pueden realizarse en determinadas circunstancias, pero no siempre son obligatorias. ¿Cuál de las siguientes afirmaciones es correcta?",
+      "options": [
+        "Son obligatorias en todos los casos",
+        "Solo pueden compensarse con dinero",
+        "Son voluntarias salvo pacto en contrario"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q10",
+      "question": "11. Entre una jornada laboral y la siguiente debe existir un tiempo mínimo de descanso para garantizar la recuperación del trabajador. ¿Cuál es ese descanso mínimo?",
+      "options": [
+        "8 horas",
+        "10 horas",
+        "12 horas"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q11",
+      "question": "12. El derecho a vacaciones anuales retribuidas es irrenunciable. Según la legislación española, su duración mínima es:",
+      "options": [
+        "15 días naturales",
+        "30 días naturales",
+        "20 días laborables obligatorios"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q12",
+      "question": "13. La suspensión del contrato de trabajo implica una situación particular en la relación laboral. ¿Cuál es su principal característica?",
+      "options": [
+        "Se rompe definitivamente el vínculo laboral",
+        "Se mantiene la relación, pero se interrumpen temporalmente las obligaciones de trabajar y pagar salario",
+        "El trabajador pierde todos sus derechos"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q13",
+      "question": "14. Existen diversas causas que pueden dar lugar a la suspensión del contrato. ¿Cuál de las siguientes es una de ellas?",
+      "options": [
+        "El despido disciplinario",
+        "La baja voluntaria",
+        "La incapacidad temporal"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q14",
+      "question": "15. El despido disciplinario se produce cuando el empresario decide extinguir el contrato debido a:",
+      "options": [
+        "Problemas económicos de la empresa",
+        "Un incumplimiento grave y culpable del trabajador",
+        "La finalización del contrato temporal"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q15",
+      "question": "16. Cuando un trabajador decide dejar su empleo por iniciativa propia, estamos ante una situación de:",
+      "options": [
+        "Despido improcedente",
+        "Baja voluntaria o dimisión",
+        "Suspensión del contrato"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q16",
+      "question": "17. Al finalizar la relación laboral, el trabajador recibe el finiquito. Este documento incluye:",
+      "options": [
+        "Solo el salario pendiente del último mes",
+        "Todas las cantidades pendientes, como vacaciones no disfrutadas o pagas extra",
+        "Únicamente la indemnización"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q17",
+      "question": "18. El sistema de Seguridad Social tiene un papel fundamental en el Estado del bienestar. Su objetivo principal es:",
+      "options": [
+        "Regular contratos de trabajo",
+        "Proteger a los ciudadanos ante determinadas situaciones (desempleo, enfermedad, jubilación…)",
+        "Controlar las empresas"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q18",
+      "question": "19. Dentro de la estructura de la Seguridad Social en España, ¿cuál de los siguientes es uno de sus regímenes principales?",
+      "options": [
+        "Régimen general",
+        "Régimen comercial",
+        "Régimen fiscal"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q19",
+      "question": "20. La afiliación a la Seguridad Social es un requisito imprescindible para trabajar legalmente. Esto significa que:",
+      "options": [
+        "Es voluntaria",
+        "Es obligatoria para trabajadores y empresas",
+        "Solo afecta a funcionarios"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q20",
+      "question": "21. La cotización a la Seguridad Social se caracteriza porque:",
+      "options": [
+        "Solo la paga el trabajador",
+        "Solo la paga la empresa",
+        "Se reparte entre trabajador y empresa"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q21",
+      "question": "22. Para poder acceder a la prestación por desempleo es necesario cumplir ciertos requisitos. Uno de los más importantes es:",
+      "options": [
+        "No haber trabajado nunca",
+        "Haber cotizado un periodo mínimo",
+        "Tener contrato indefinido"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q22",
+      "question": "23. El contrato indefinido se diferencia de otros tipos de contrato porque:",
+      "options": [
+        "Tiene una duración concreta",
+        "No establece un límite temporal de finalización",
+        "Es siempre obligatorio"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q23",
+      "question": "24. Un contrato temporal se caracteriza principalmente porque:",
+      "options": [
+        "No tiene causa",
+        "Tiene una duración limitada en el tiempo",
+        "Es igual que el indefinido"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q24",
+      "question": "25. El convenio colectivo es una herramienta fundamental en el ámbito laboral. ¿Cuál es su función?",
+      "options": [
+        "Regular condiciones laborales de forma colectiva",
+        "Sustituir las leyes",
+        "Aplicarse solo a una persona"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q25",
+      "question": "26. La negociación colectiva es el proceso mediante el cual:",
+      "options": [
+        "El Estado fija los salarios",
+        "Empresarios y representantes de los trabajadores acuerdan condiciones laborales",
+        "Solo negocian los trabajadores"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q26",
+      "question": "27. El derecho de huelga está reconocido en la Constitución española como:",
+      "options": [
+        "Un derecho fundamental",
+        "Una obligación",
+        "Un delito"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q27",
+      "question": "28. El comité de empresa tiene como función principal:",
+      "options": [
+        "Representar a la empresa",
+        "Representar a los trabajadores",
+        "Representar al Estado"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q28",
+      "question": "29. La prevención de riesgos laborales tiene como objetivo principal:",
+      "options": [
+        "Reducir costes empresariales",
+        "Evitar accidentes de trabajo y enfermedades profesionales",
+        "Aumentar la productividad"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q29",
+      "question": "30. Un riesgo laboral se puede definir como:",
+      "options": [
+        "Una ventaja económica",
+        "Una situación que puede provocar daño al trabajador",
+        "Un derecho laboral"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q30",
+      "question": "31. Se considera accidente de trabajo aquel que:",
+      "options": [
+        "Ocurre solo en el domicilio",
+        "Se produce con ocasión o como consecuencia del trabajo",
+        "Ocurre en vacaciones"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q31",
+      "question": "32. La enfermedad profesional es aquella que:",
+      "options": [
+        "No tiene relación con el trabajo",
+        "Está causada por la actividad laboral",
+        "Es siempre leve"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q32",
+      "question": "33. El empresario, en materia de prevención, tiene la obligación de:",
+      "options": [
+        "Ignorar los riesgos",
+        "Garantizar la seguridad y salud de los trabajadores",
+        "Delegar toda responsabilidad"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q33",
+      "question": "34. El trabajador también tiene obligaciones en prevención. Entre ellas:",
+      "options": [
+        "Cumplir las medidas de seguridad",
+        "Ignorar las normas",
+        "No participar en formación"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q34",
+      "question": "35. La formación en materia de prevención de riesgos laborales es un elemento clave dentro de la empresa, ya que permite que los trabajadores conozcan los riesgos asociados a su puesto y las medidas para evitarlos. En este sentido, dicha formación:",
+      "options": [
+        "Es opcional y depende únicamente del interés del trabajador por formarse",
+        "Es obligatoria y debe ser proporcionada por la empresa de manera suficiente y adecuada",
+        "Solo es necesaria en trabajos considerados peligrosos"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q35",
+      "question": "36. El salario mínimo interprofesional (SMI) actúa como una referencia básica en el ámbito laboral español. Teniendo en cuenta su función, podemos afirmar que:",
+      "options": [
+        "Es una cantidad que fija libremente cada empresa en función de su situación económica",
+        "Es un límite mínimo legal de retribución que fija el Gobierno y que debe respetarse en todos los casos",
+        "Solo se aplica a trabajadores con contrato indefinido"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q36",
+      "question": "37. La nómina es un documento fundamental en la relación laboral, ya que refleja de manera detallada la retribución del trabajador. En ella se incluyen:",
+      "options": [
+        "Únicamente las percepciones salariales sin ningún tipo de descuento",
+        "Tanto los ingresos (salario base y complementos) como las deducciones (cotizaciones, impuestos, etc.)",
+        "Exclusivamente los impuestos que debe pagar el trabajador"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q37",
+      "question": "38. Dentro de las deducciones que aparecen en la nómina, el IRPF tiene una especial relevancia. Este concepto corresponde a:",
+      "options": [
+        "Una cantidad adicional que recibe el trabajador por su rendimiento",
+        "Una retención que se descuenta del salario como adelanto del impuesto sobre la renta",
+        "Un complemento salarial obligatorio"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q38",
+      "question": "39. En el sistema de Seguridad Social, las contingencias comunes cubren determinadas situaciones que pueden afectar al trabajador. Entre ellas se encuentran:",
+      "options": [
+        "Los accidentes de trabajo ocurridos en la empresa",
+        "Las enfermedades comunes y los accidentes no laborales",
+        "Las sanciones administrativas"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q39",
+      "question": "40. Por otro lado, las contingencias profesionales están directamente relacionadas con la actividad laboral del trabajador. Estas incluyen:",
+      "options": [
+        "Las vacaciones y permisos retribuidos",
+        "Los accidentes de trabajo y las enfermedades profesionales",
+        "Las bajas voluntarias del trabajador"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q40",
+      "question": "41. El contrato en prácticas es una modalidad contractual que tiene como objetivo facilitar la inserción laboral de determinadas personas. Este tipo de contrato está dirigido principalmente a:",
+      "options": [
+        "Personas que no han finalizado ningún tipo de estudios",
+        "Personas que han obtenido recientemente una titulación y buscan adquirir experiencia profesional",
+        "Trabajadores con amplia experiencia laboral"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q41",
+      "question": "42. El contrato para la formación y el aprendizaje tiene una finalidad claramente formativa. Por ello, se caracteriza porque:",
+      "options": [
+        "Se basa exclusivamente en la realización de trabajo sin formación adicional",
+        "Combina la actividad laboral retribuida con un proceso de formación teórica relacionada con el puesto",
+        "Solo incluye formación sin prestación laboral"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q42",
+      "question": "43. El despido objetivo es una forma de extinción del contrato que no depende de la conducta del trabajador. Este tipo de despido se produce cuando:",
+      "options": [
+        "El trabajador incumple gravemente sus obligaciones",
+        "Existen causas económicas, técnicas, organizativas o de producción en la empresa",
+        "El trabajador decide abandonar su puesto"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q43",
+      "question": "44. Se considera que un despido es improcedente cuando, tras ser impugnado, se comprueba que:",
+      "options": [
+        "Está perfectamente justificado conforme a la ley",
+        "No cumple los requisitos formales o no queda acreditada la causa alegada",
+        "Ha sido solicitado por el trabajador"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q44",
+      "question": "45. En caso de despido, la indemnización que puede corresponder al trabajador:",
+      "options": [
+        "Es siempre la misma con independencia del tipo de despido",
+        "Depende del tipo de despido y de las circunstancias concretas del trabajador",
+        "No existe en ningún caso"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q45",
+      "question": "46. El contrato a tiempo parcial es una modalidad cada vez más utilizada en el mercado laboral. Se caracteriza porque:",
+      "options": [
+        "El trabajador realiza la misma jornada que en un contrato a tiempo completo",
+        "La jornada de trabajo es inferior a la de un trabajador a tiempo completo comparable",
+        "No existe un horario definido"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q46",
+      "question": "47. El empresario dispone de un poder disciplinario dentro de la empresa que le permite actuar ante determinadas conductas del trabajador. Este poder implica que:",
+      "options": [
+        "Puede sancionar los incumplimientos del trabajador respetando lo establecido en la ley y el convenio colectivo",
+        "Puede despedir libremente sin necesidad de justificar su decisión",
+        "No puede imponer ningún tipo de sanción"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q47",
+      "question": "48. Las sanciones que puede imponer el empresario deben cumplir una serie de requisitos para ser válidas. Entre ellos, destaca que:",
+      "options": [
+        "Pueden imponerse de forma arbitraria sin necesidad de justificación",
+        "Deben ajustarse a lo establecido en la normativa laboral y en el convenio colectivo aplicable",
+        "Deben comunicarse únicamente de forma verbal"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q48",
+      "question": "49. El Estatuto de los Trabajadores es una norma clave dentro del Derecho Laboral español. Su importancia radica en que:",
+      "options": [
+        "Es la norma básica que regula los derechos y deberes de trabajadores y empresarios",
+        "Es un acuerdo privado entre empresas",
+        "Solo se aplica a determinados sectores"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "ipe_i_bateria_q49",
+      "question": "50. En cuanto a la forma del contrato de trabajo, la legislación permite cierta flexibilidad. En este sentido:",
+      "options": [
+        "Todos los contratos deben formalizarse obligatoriamente por escrito",
+        "Pueden celebrarse tanto de forma verbal como por escrito, aunque algunos casos exigen forma escrita",
+        "Solo tienen validez si se firman ante notario"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    }
+  ],
   "emp_examen_final": [
     {
       "concept_id": "emp_examen_final_q0",
