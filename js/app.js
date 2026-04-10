@@ -2293,53 +2293,91 @@ function updateTutorProgress(task, status = true) {
     renderAcademicPlanner();
 }
 
+function getTasksForPhase() {
+    const phase = getCurrentPhase();
+    return phase.dailyTasks.map(t => {
+        let key = 'theory';
+        if (t.toLowerCase().includes('test') || t.toLowerCase().includes('simulacro')) key = 'tests';
+        if (t.toLowerCase().includes('laboratorio') || t.toLowerCase().includes('práctica')) key = 'labs';
+        if (t.toLowerCase().includes('fallos') || t.toLowerCase().includes('libreta')) key = 'tests'; // Reviewing errors counts as test/practice
+        return { label: t, key: key };
+    });
+}
+
 function renderTutorMessage() {
     const container = document.getElementById('tutor-motivational-root');
     if (!container) return;
 
+    const phaseTasks = getTasksForPhase();
     const progress = getTutorProgress();
-    const tasksDone = Object.values(progress).filter(v => v).length;
+    
+    // Find first pending task
+    const nextTask = phaseTasks.find(t => !progress[t.key]);
+    const tasksDone = phaseTasks.filter(t => progress[t.key]).length;
+    const totalTasks = phaseTasks.length;
+    
     const hour = new Date().getHours();
-    
-    let mood = 'nudge';
-    let avatar = '🤖'; // Robot de entrenamiento base
-    
-    if (tasksDone === 3) {
-        mood = 'encouraging';
-        avatar = '🤖🦾';
-    } else if (tasksDone > 0) {
-        mood = (hour > 20) ? 'scolding' : 'encouraging';
-        avatar = (hour > 20) ? '🤖📉' : '🤖⚡';
-    } else {
-        mood = (hour > 17) ? 'scolding' : 'nudge';
-        avatar = (hour > 17) ? '🤖🚫' : '🤖☀️';
-    }
+    let mood = (tasksDone === totalTasks) ? 'encouraging' : (hour > 18 && tasksDone === 0) ? 'scolding' : 'nudge';
+    let avatar = '🤖'; 
 
-    const messages = TUTOR_DATA[mood];
-    const message = messages[Math.floor(Math.random() * messages.length)];
+    if (tasksDone === totalTasks) avatar = '🤖🦾';
+    else if (mood === 'scolding') avatar = '🤖📉';
+    else avatar = '🤖☀️';
+
+    let guidanceHTML = '';
+    let message = '';
+
     const todaySlot = getDailySubjects();
     const firstSub = todaySlot.subjects[0];
+    const subLabel = todaySlot.labels[0] || 'asignatura';
+
+    if (!nextTask) {
+        message = "¡Protocolo completado! Has destruido todos los objetivos de hoy. El sistema está optimizado al 100%. 🤖✨";
+        mood = 'encouraging';
+    } else {
+        if (nextTask.key === 'theory') {
+            message = `Iniciando Fase de Concepto. Debes procesar la **teoría** de **${subLabel}**. No intentes correr antes de saber caminar. 🤖📖`;
+            guidanceHTML = `
+                <div style="margin-top: 1rem;">
+                    <button class="planner-go-btn" style="background:var(--primary-color); padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="scrollToSubject('${firstSub}')">
+                        ⚡ Abrir Teoría de ${subLabel}
+                    </button>
+                </div>`;
+        } else if (nextTask.key === 'tests') {
+            message = `Teoría procesada. Ahora a por el **entrenamiento de tests**. Vamos a ver si realmente has entendido algo o solo has mirado los dibujos. 🤖🎯`;
+            guidanceHTML = `
+                <div style="margin-top: 1rem;">
+                    <button class="planner-go-btn" style="background:#f97316; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="showView('dashboard'); switchDash('simulacros'); setTimeout(()=>scrollToSubject('${firstSub}'),100)">
+                        🔥 Ir a los Tests de ${subLabel}
+                    </button>
+                    ${getCurrentPhase().id === 2 ? `<button onclick="showView('dashboard'); switchDash('fallos')" style="margin-left:0.5rem; background:#6366f1; padding: 0.6rem 1.2rem; font-size: 0.85rem;" class="planner-go-btn">📓 Repasar Fallos</button>` : ''}
+                </div>`;
+        } else if (nextTask.key === 'labs') {
+            message = `Protocolo de práctica activado. Es hora de mancharse las manos en el **laboratorio**. La teoría es bonita, pero el código es la realidad. 🤖🔧`;
+            guidanceHTML = `
+                <div style="margin-top: 1rem;">
+                    <button class="planner-go-btn" style="background:#10b981; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="showView('dashboard'); switchDash('labs')">
+                        🧪 Entrar al Laboratorio
+                    </button>
+                </div>`;
+        }
+    }
 
     container.innerHTML = `
         <div class="tutor-card ${mood}">
             <div class="tutor-avatar">${avatar}</div>
             <div class="tutor-content">
                 <div class="tutor-title">
-                    <span>Robot de Entrenamiento — Monitor de Rendimiento</span>
-                    <span>${tasksDone}/3 tareas hoy</span>
+                    <span>Robot de Entrenamiento — Guía de Pasos</span>
+                    <span>${tasksDone}/${totalTasks} TAREAS HOY</span>
                 </div>
                 <div class="tutor-message">${message}</div>
                 <div class="tutor-progress-mini">
-                    <div class="task-dot ${progress.theory ? 'done' : ''}" title="Teoría"></div>
-                    <div class="task-dot ${progress.tests ? 'done' : ''}" title="Tests"></div>
-                    <div class="task-dot ${progress.labs ? 'done' : ''}" title="Laboratorio"></div>
+                    ${phaseTasks.map(t => `
+                        <div class="task-dot ${progress[t.key] ? 'done' : ''}" title="${t.label}"></div>
+                    `).join('')}
                 </div>
-                ${!progress.theory && firstSub ? `
-                <div style="margin-top: 1rem;">
-                    <button class="planner-go-btn" style="background:var(--primary-color); padding: 0.5rem 1rem; font-size: 0.8rem;" onclick="scrollToSubject('${firstSub}')">
-                        ⚡ Empezar con el primer tema de hoy
-                    </button>
-                </div>` : ''}
+                ${guidanceHTML}
             </div>
         </div>
     `;
