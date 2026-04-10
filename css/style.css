@@ -539,6 +539,7 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+.res-link-labeled.report { color: #5eead4; }
 .res-link-labeled.infographic { color: #d8b4fe; }
 
 /* ── EXAM SELECTOR LARGE ────────────────────────────────────── */

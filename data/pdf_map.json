@@ -4,61 +4,81 @@
       "path": "Programacion/TemasPDF/TEMA 1.pdf",
       "name": "Tema 1",
       "total_pages": 45,
-      "exists": true
+      "exists": true,
+      "report": "Blueprint_to_Console.pdf",
+      "infographic": "unnamed.png"
     },
     "2": {
       "path": "Programacion/TemasPDF/TEMA 2.pdf",
       "name": "Tema 2",
       "total_pages": 39,
-      "exists": true
+      "exists": true,
+      "report": "Java_Code_Blueprint.pdf",
+      "infographic": "unnamed (1).png"
     },
     "3": {
       "path": "Programacion/TemasPDF/TEMA 3_act.pdf",
       "name": "Tema 3",
       "total_pages": 28,
-      "exists": true
+      "exists": true,
+      "report": "Java_Data_Architecture.pdf",
+      "infographic": "unnamed (2).png"
     },
     "4": {
       "path": "Programacion/TemasPDF/TEMA 4.pdf",
       "name": "Tema 4",
       "total_pages": 40,
-      "exists": true
+      "exists": true,
+      "report": "Digital_Architecture_Mastery.pdf",
+      "infographic": "unnamed (3).png"
     },
     "5": {
       "path": "Programacion/TemasPDF/TEMA 5.pdf",
       "name": "Tema 5",
       "total_pages": 25,
-      "exists": true
+      "exists": true,
+      "report": "Java_Architecture_Blueprint.pdf",
+      "infographic": "unnamed (4).png"
     },
     "6": {
       "path": "Programacion/TemasPDF/TEMA 6.pdf",
       "name": "Tema 6",
       "total_pages": 37,
-      "exists": true
+      "exists": true,
+      "report": "Java_Object_Mastery.pdf",
+      "infographic": "unnamed (5).png"
     },
     "7": {
       "path": "Programacion/TemasPDF/TEMA 7.pdf",
       "name": "Tema 7",
       "total_pages": 29,
-      "exists": true
+      "exists": true,
+      "report": "Java_Exceptions_and_Collections.pdf",
+      "infographic": "unnamed (6).png"
     },
     "8": {
       "path": "Programacion/TemasPDF/TEMA 8.pdf",
       "name": "Tema 8",
       "total_pages": 43,
-      "exists": true
+      "exists": true,
+      "report": "Java_Data_Logistics.pdf",
+      "infographic": "unnamed (7).png"
     },
     "9": {
       "path": "Programacion/TemasPDF/TEMA 9.pdf",
       "name": "Tema 9",
       "total_pages": 36,
-      "exists": true
+      "exists": true,
+      "report": "The_JDBC_Blueprint.pdf",
+      "infographic": "unnamed (8).png"
     },
     "10": {
       "path": "Programacion/TemasPDF/TEMA 10.pdf",
       "name": "Tema 10",
       "total_pages": 62,
-      "exists": true
+      "exists": true,
+      "report": "Native_Object_Databases.pdf",
+      "infographic": "unnamed (9).png"
     }
   },
   "sistemas_informaticos": {
@@ -310,31 +330,41 @@
       "path": "Empleabilidad/TemasPDF/UD1_EI_PORTADANUEVA.pdf",
       "name": "UD1",
       "total_pages": 47,
-      "exists": true
+      "exists": true,
+      "report": "Guía_de_Derechos_Laborales.pdf",
+      "infographic": "unnamed.png"
     },
     "2": {
       "path": "Empleabilidad/TemasPDF/UD2_EI_PORTADANUEVA.pdf",
       "name": "UD2",
       "total_pages": 53,
-      "exists": true
+      "exists": true,
+      "report": "IT_Safety_Blueprint.pdf",
+      "infographic": "unnamed (1).png"
     },
     "3": {
       "path": "Empleabilidad/TemasPDF/UD3_EI_PORTADANUEVA.pdf",
       "name": "UD3",
       "total_pages": 25,
-      "exists": true
+      "exists": true,
+      "report": "Professional_Career_Dashboard.pdf",
+      "infographic": "unnamed (2).png"
     },
     "4": {
       "path": "Empleabilidad/TemasPDF/UD4_EI_PORTADANUEVA.pdf",
       "name": "UD4",
       "total_pages": 31,
-      "exists": true
+      "exists": true,
+      "report": "IT_Career_Blueprint.pdf",
+      "infographic": "unnamed (3).png"
     },
     "5": {
       "path": "Empleabilidad/TemasPDF/UD5_EI_PORTADANUEVA.pdf",
       "name": "UD5",
       "total_pages": 19,
-      "exists": true
+      "exists": true,
+      "report": "The_IT_Career_Code.pdf",
+      "infographic": "unnamed (4).png"
     }
   }
 }

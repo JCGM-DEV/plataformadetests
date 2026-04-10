@@ -31,6 +31,122 @@ const FALLOS_KEY    = 'fallos_v2';
 const SR_KEY        = 'spaced_rep_v1';   // repetición espaciada
 const MASTERY_KEY   = 'mastery_v1';      // preguntas dominadas (3+ aciertos seguidos)
 
+// ─── RESOURCE DEFINITIONS ───────────────────────────────────────
+const THEORY_PDFS = {
+  "programacion": {
+    "1": "Programacion/TemasPDF/TEMA%201.pdf",
+    "2": "Programacion/TemasPDF/TEMA%202.pdf",
+    "3": "Programacion/TemasPDF/TEMA%203_act.pdf",
+    "4": "Programacion/TemasPDF/TEMA%204.pdf",
+    "5": "Programacion/TemasPDF/TEMA%205.pdf",
+    "6": "Programacion/TemasPDF/TEMA%206.pdf",
+    "7": "Programacion/TemasPDF/TEMA%207.pdf",
+    "8": "Programacion/TemasPDF/TEMA%208.pdf",
+    "9": "Programacion/TemasPDF/TEMA%209.pdf",
+    "10": "Programacion/TemasPDF/TEMA%2010.pdf"
+  },
+  "sistemas_informaticos": {
+    "1": "Sistemas%20informaticos/TemasPDF/DAW_SI_UD1_1.pdf",
+    "2": "Sistemas%20informaticos/TemasPDF/DAW_SI_UD2.pdf",
+    "3": "Sistemas%20informaticos/TemasPDF/DAW_SI_UD3.pdf",
+    "4": "Sistemas%20informaticos/TemasPDF/DAW_SI_UD4.pdf",
+    "5": "Sistemas%20informaticos/TemasPDF/DAW_SI_UD5.pdf",
+    "6": "Sistemas%20informaticos/TemasPDF/DAW_SI_UD6_1.pdf",
+    "7": "Sistemas%20informaticos/TemasPDF/DAW_SI_UD7_1.pdf"
+  },
+  "bases_de_datos": {
+    "1": "Bases%20de%20datos/TemasPDF/DAW_BD_UD1.pdf",
+    "2": "Bases%20de%20datos/TemasPDF/DAW_BD_UD2.pdf",
+    "3": "Bases%20de%20datos/TemasPDF/DAW_BD_UD3.pdf",
+    "4": "Bases%20de%20datos/TemasPDF/DAW_BD_UD4%20(1).pdf",
+    "5": "Bases%20de%20datos/TemasPDF/DAW_BD_UD5.pdf",
+    "6": "Bases%20de%20datos/TemasPDF/DAW_BD_UD6.pdf",
+    "7": "Bases%20de%20datos/TemasPDF/DAW_BD_UD7.pdf"
+  },
+  "lenguaje_de_marcas": {
+    "1": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD1_1%20(1).pdf",
+    "2": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD2_1.pdf",
+    "3": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD3_1.pdf",
+    "4": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD4_1.pdf",
+    "5": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD5_1.pdf",
+    "6": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD6_1.pdf",
+    "7": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD7_1.pdf",
+    "8": "Lenguaje%20de%20marcas/TemasPDF/DAW_LM_UD8_1.pdf"
+  },
+  "entornos_de_desarrollo": {
+    "1": "Entornos%20de%20desarrollo/TemasPDF/DAW_ED_UD1_PORTADANUEVA_1.pdf",
+    "2": "Entornos%20de%20desarrollo/TemasPDF/DAW_ED_UD2_PORTADANUEVA_1.pdf",
+    "3": "Entornos%20de%20desarrollo/TemasPDF/DAW_ED_UD3_PORTADANUEVA.pdf",
+    "4": "Entornos%20de%20desarrollo/TemasPDF/DAW_ED_UD4_PORTADANUEVA_1.pdf",
+    "5": "Entornos%20de%20desarrollo/TemasPDF/DAW_ED_UD5_PORTADANUEVA_1.pdf",
+    "6": "Entornos%20de%20desarrollo/TemasPDF/DAW_ED_UD6_PORTADANUEVA_1.pdf",
+    "7": "Entornos%20de%20desarrollo/TemasPDF/DAW_ED_UD7_PORTADANUEVA_1.pdf"
+  },
+  "cloud_computing": {
+    "1": "Cloud%20Computing/TemasPDF/Modulo-1-Conceptos-de-la-computacion-en-la-nube.pdf",
+    "2": "Cloud%20Computing/TemasPDF/Modulo-2-Economia-y-facturacion-en-la-nube.pdf",
+    "3": "Cloud%20Computing/TemasPDF/Modulo-3-Infraestructura-de-la-nube.pdf",
+    "4": "Cloud%20Computing/TemasPDF/Modulo-4-Seguridad-en-la-nube.pdf",
+    "5": "Cloud%20Computing/TemasPDF/Modulo-5-Redes-y-Entrega-de-Contenidos.pdf",
+    "6": "Cloud%20Computing/TemasPDF/Modulo-6-Servicios-de-computo.pdf",
+    "7": "Cloud%20Computing/TemasPDF/Modulo-7-Servicios-de-almacenamiento.pdf",
+    "8": "Cloud%20Computing/TemasPDF/Modulo-8-Servicios-de-bases-de-datos.pdf",
+    "9": "Cloud%20Computing/TemasPDF/Modulo-9-Arquitectura-en-la-nube.pdf",
+    "10": "Cloud%20Computing/TemasPDF/Modulo-10-Escalado-automatico-y-monitorizacion.pdf"
+  },
+  "empleabilidad": {
+    "1": "Empleabilidad/TemasPDF/UD1_EI_PORTADANUEVA.pdf",
+    "2": "Empleabilidad/TemasPDF/UD2_EI_PORTADANUEVA.pdf",
+    "3": "Empleabilidad/TemasPDF/UD3_EI_PORTADANUEVA.pdf",
+    "4": "Empleabilidad/TemasPDF/UD4_EI_PORTADANUEVA.pdf",
+    "5": "Empleabilidad/TemasPDF/UD5_EI_PORTADANUEVA.pdf"
+  }
+};
+
+const THEORY_INFOGRAPHICS = {
+    "empleabilidad": {
+        "1": "Empleabilidad/informe%20e%20infografia/unnamed.png",
+        "2": "Empleabilidad/informe%20e%20infografia/unnamed%20(1).png",
+        "3": "Empleabilidad/informe%20e%20infografia/unnamed%20(2).png",
+        "4": "Empleabilidad/informe%20e%20infografia/unnamed%20(3).png",
+        "5": "Empleabilidad/informe%20e%20infografia/unnamed%20(4).png"
+    },
+    "programacion": {
+        "1": "Programacion/informes%20y%20presentaciones/unnamed.png",
+        "2": "Programacion/informes%20y%20presentaciones/unnamed%20(1).png",
+        "3": "Programacion/informes%20y%20presentaciones/unnamed%20(2).png",
+        "4": "Programacion/informes%20y%20presentaciones/unnamed%20(3).png",
+        "5": "Programacion/informes%20y%20presentaciones/unnamed%20(4).png",
+        "6": "Programacion/informes%20y%20presentaciones/unnamed%20(5).png",
+        "7": "Programacion/informes%20y%20presentaciones/unnamed%20(6).png",
+        "8": "Programacion/informes%20y%20presentaciones/unnamed%20(7).png",
+        "9": "Programacion/informes%20y%20presentaciones/unnamed%20(8).png",
+        "10": "Programacion/informes%20y%20presentaciones/unnamed%20(9).png"
+    }
+};
+
+const THEORY_REPORTS = {
+    "empleabilidad": {
+        "1": "Empleabilidad/informe%20e%20infografia/Guía_de_Derechos_Laborales.pdf",
+        "2": "Empleabilidad/informe%20e%20infografia/IT_Safety_Blueprint.pdf",
+        "3": "Empleabilidad/informe%20e%20infografia/Professional_Career_Dashboard.pdf",
+        "4": "Empleabilidad/informe%20e%20infografia/IT_Career_Blueprint.pdf",
+        "5": "Empleabilidad/informe%20e%20infografia/The_IT_Career_Code.pdf"
+    },
+    "programacion": {
+        "1": "Programacion/informes%20y%20presentaciones/Blueprint_to_Console.pdf",
+        "2": "Programacion/informes%20y%20presentaciones/Java_Code_Blueprint.pdf",
+        "3": "Programacion/informes%20y%20presentaciones/Java_Data_Architecture.pdf",
+        "4": "Programacion/informes%20y%20presentaciones/Digital_Architecture_Mastery.pdf",
+        "5": "Programacion/informes%20y%20presentaciones/Java_Architecture_Blueprint.pdf",
+        "6": "Programacion/informes%20y%20presentaciones/Java_Object_Mastery.pdf",
+        "7": "Programacion/informes%20y%20presentaciones/Java_Exceptions_and_Collections.pdf",
+        "8": "Programacion/informes%20y%20presentaciones/Java_Data_Logistics.pdf",
+        "9": "Programacion/informes%20y%20presentaciones/The_JDBC_Blueprint.pdf",
+        "10": "Programacion/informes%20y%20presentaciones/Native_Object_Databases.pdf"
+    }
+};
+
 // ─── REPETICIÓN ESPACIADA (SM-2 simplificado) ───────────────────
 function getSR() { return Sync.get(SR_KEY, {}); }
 
@@ -2158,6 +2274,18 @@ const THEORY_INFOGRAPHICS = {
         "3": "Empleabilidad/informe%20e%20infografia/unnamed%20(2).png",
         "4": "Empleabilidad/informe%20e%20infografia/unnamed%20(3).png",
         "5": "Empleabilidad/informe%20e%20infografia/unnamed%20(4).png"
+    },
+    "programacion": {
+        "1": "Programacion/informes%20y%20presentaciones/unnamed.png",
+        "2": "Programacion/informes%20y%20presentaciones/unnamed%20(1).png",
+        "3": "Programacion/informes%20y%20presentaciones/unnamed%20(2).png",
+        "4": "Programacion/informes%20y%20presentaciones/unnamed%20(3).png",
+        "5": "Programacion/informes%20y%20presentaciones/unnamed%20(4).png",
+        "6": "Programacion/informes%20y%20presentaciones/unnamed%20(5).png",
+        "7": "Programacion/informes%20y%20presentaciones/unnamed%20(6).png",
+        "8": "Programacion/informes%20y%20presentaciones/unnamed%20(7).png",
+        "9": "Programacion/informes%20y%20presentaciones/unnamed%20(8).png",
+        "10": "Programacion/informes%20y%20presentaciones/unnamed%20(9).png"
     }
 };
 
@@ -2168,6 +2296,18 @@ const THEORY_REPORTS = {
         "3": "Empleabilidad/informe%20e%20infografia/Professional_Career_Dashboard.pdf",
         "4": "Empleabilidad/informe%20e%20infografia/IT_Career_Blueprint.pdf",
         "5": "Empleabilidad/informe%20e%20infografia/The_IT_Career_Code.pdf"
+    },
+    "programacion": {
+        "1": "Programacion/informes%20y%20presentaciones/Blueprint_to_Console.pdf",
+        "2": "Programacion/informes%20y%20presentaciones/Java_Code_Blueprint.pdf",
+        "3": "Programacion/informes%20y%20presentaciones/Java_Data_Architecture.pdf",
+        "4": "Programacion/informes%20y%20presentaciones/Digital_Architecture_Mastery.pdf",
+        "5": "Programacion/informes%20y%20presentaciones/Java_Architecture_Blueprint.pdf",
+        "6": "Programacion/informes%20y%20presentaciones/Java_Object_Mastery.pdf",
+        "7": "Programacion/informes%20y%20presentaciones/Java_Exceptions_and_Collections.pdf",
+        "8": "Programacion/informes%20y%20presentaciones/Java_Data_Logistics.pdf",
+        "9": "Programacion/informes%20y%20presentaciones/The_JDBC_Blueprint.pdf",
+        "10": "Programacion/informes%20y%20presentaciones/Native_Object_Databases.pdf"
     }
 };
 
