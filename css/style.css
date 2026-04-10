@@ -451,12 +451,36 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
     color: var(--text-secondary);
     letter-spacing: 0.05em;
     transition: all 0.2s ease;
+    position: relative;
+}
+
+.topic-title {
+    transition: all 0.3s ease;
+}
+
+.topic-play-icon {
+    position: absolute;
+    right: 12px;
+    opacity: 0;
+    transform: translateX(10px) scale(0.5);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 0.9rem;
+    pointer-events: none;
 }
 
 .topic-frame:hover:not(.disabled) .topic-header {
     background: color-mix(in srgb, var(--card-color) 30%, transparent);
     color: #fff;
     border-bottom-color: rgba(255,255,255,0.2);
+}
+
+.topic-frame:hover:not(.disabled) .topic-title {
+    transform: translateX(-10px);
+}
+
+.topic-frame:hover:not(.disabled) .topic-play-icon {
+    opacity: 1;
+    transform: translateX(0) scale(1.2);
 }
 
 .topic-badge {

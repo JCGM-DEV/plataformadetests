@@ -266,10 +266,11 @@ function renderSubjects() {
             unitsHTML += `
                 <div class="topic-frame ${unitPool.length === 0 ? 'disabled' : ''}" 
                      onclick="${unitPool.length > 0 ? `startExam('${subject.id}',${i})` : ''}"
-                     ${unitPool.length === 0 ? 'title="Sin preguntas"' : ''}>
+                     title="${unitPool.length > 0 ? `Hacer test del Tema ${i}` : 'Sin preguntas'}">
                     <div class="topic-header">
-                        <span>TEMA ${i}</span>
+                        <span class="topic-title">TEMA ${i}</span>
                         ${unitAttempts > 0 ? `<span class="topic-badge">${unitAttempts}</span>` : ''}
+                        <span class="topic-play-icon">🎯</span>
                     </div>
                     <div class="topic-content" onclick="event.stopPropagation()">
                         ${hasPDF ? `<a href="${pdfPath}" target="_blank" class="res-link-labeled pdf" title="Ver teoría PDF" onclick="logTheory('${subject.name}', ${i})">📄<span>PDF</span></a>` : ''}
