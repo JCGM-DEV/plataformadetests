@@ -513,9 +513,35 @@ fetch('data/pdf_map.json?v=' + Date.now())
 // ─── PROGRESS / CHART ───────────────────────────────────────────
 function renderProgress() {
     const history = getHistory();
-    const section = document.getElementById('progress-section');
-    if (history.length === 0) { section.style.display = 'none'; return; }
-    section.style.display = 'block';
+    const grid = document.getElementById('progress-section');
+    if (!grid) return;
+
+    if (history.length === 0) {
+        grid.innerHTML = `
+            <div class="empty-state">
+                <div class="empty-icon">📈</div>
+                <p>Aún no hay datos de progreso. Realiza tu primer simulacro para empezar a ver tus estadísticas.</p>
+                <button class="btn-secondary" onclick="switchDash('simulacros')" style="margin-top:1rem">Empezar a practicar</button>
+            </div>`;
+        return;
+    }
+
+    // Ensure the main layout is present if history exists
+    grid.innerHTML = `
+        <div class="progress-section-header">
+            <h2>📈 Curva de Aprendizaje</h2>
+            <div style="display:flex;gap:0.75rem;align-items:center;">
+                <button class="btn-secondary" onclick="showView('stats')">📊 Estadísticas Detalladas</button>
+                <button class="clear-history-btn" onclick="clearHistory()">🗑️ Borrar Historial</button>
+            </div>
+        </div>
+        <div class="progress-layout">
+            <div class="chart-card"><canvas id="learningChart"></canvas></div>
+            <div class="history-table-card">
+                <h3>Últimos exámenes</h3>
+                <div id="history-table-container"></div>
+            </div>
+        </div>`;
 
     const globalAvg = history.reduce((s, e) => s + e.score, 0) / history.length;
     document.getElementById('global-progress-fill').style.width = Math.min(100, (globalAvg / 10) * 100) + '%';
