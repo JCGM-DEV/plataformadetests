@@ -34,98 +34,141 @@
 
     <!-- ── DASHBOARD VIEW ─────────────────────────────────────────── -->
     <div id="view-dashboard">
-        <div id="app">
-            <header class="main-header">
-                <div class="logo">
-                    <span class="logo-icon">🎓</span>
-                    <h1>TechHub<span>Euroformac</span></h1>
+        <div class="dashboard-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <div class="logo">
+                        <span class="logo-icon">🎓</span>
+                        <h1>TechHub<span>Euroformac</span></h1>
+                    </div>
                 </div>
-                <nav class="main-nav">
-                    <a href="#subject-grid" class="nav-link">🎯 Simulacros</a>
-                    <a href="#labs-container" class="nav-link" onclick="goToLabs(); return false;">🧪 Labs</a>
-                    <a href="#syllabus-container" class="nav-link">📚 Temario</a>
-                    <a href="#progress-section" class="nav-link">📈 Progreso</a>
-                    <a href="#" class="nav-link" onclick="openLibreta(); return false;">📓 Libreta</a>
-                    <a href="#fallos-section" class="nav-link">❌ Fallos</a>
+                
+                <nav class="sidebar-nav">
+                    <a href="javascript:void(0)" onclick="switchDash('overview')" class="side-link active" data-section="overview">
+                        <span class="side-icon">🏠</span> Resumen
+                    </a>
+                    <a href="javascript:void(0)" onclick="switchDash('simulacros')" class="side-link" data-section="simulacros">
+                        <span class="side-icon">🎯</span> Simulacros
+                    </a>
+                    <a href="javascript:void(0)" onclick="switchDash('labs')" class="side-link" data-section="labs">
+                        <span class="side-icon">🧪</span> Laboratorios
+                    </a>
+                    <a href="javascript:void(0)" onclick="switchDash('temario')" class="side-link" data-section="temario">
+                        <span class="side-icon">📚</span> Temario Oficial
+                    </a>
+                    <a href="javascript:void(0)" onclick="switchDash('planner')" class="side-link" data-section="planner">
+                        <span class="side-icon">📅</span> Planificador
+                    </a>
+                    <a href="javascript:void(0)" onclick="switchDash('progreso')" class="side-link" data-section="progreso">
+                        <span class="side-icon">📈</span> Mi Progreso
+                    </a>
+                    <a href="javascript:void(0)" onclick="openLibreta()" class="side-link">
+                        <span class="side-icon">📓</span> Libreta Errores
+                    </a>
+                    <a href="javascript:void(0)" onclick="switchDash('fallos')" class="side-link" data-section="fallos">
+                        <span class="side-icon">❌</span> Repasar Fallos
+                    </a>
                 </nav>
-                <nav class="user-nav">
-                    <div class="progress-info">
-                        <span class="label" id="global-avg-label">Media General</span>
-                        <div class="progress-bar-small"><div class="fill" id="global-progress-fill" style="width:0%"></div></div>
-                    </div>
-                </nav>
-            </header>
 
-            <main id="main-container">
-                <section class="hero">
-                    <h2>Centro de Alto Rendimiento Académico</h2>
-                    <p>Repaso Examenes 1º DAW 2026 — Tech Hub Euroformac. Prepárate para el éxito.</p>
-                </section>
-
-                <!-- Study Guide Banner -->
-                <div id="study-guide-banner"></div>
-
-                <!-- Academic Planner Section -->
-                <section class="planner-section" id="academic-planner-section" style="display:none;"></section>
-
-                <!-- Activity Log Section -->
-                <section id="activity-log-section" class="activity-log-card">
-                    <div class="activity-header">
-                        <h3>📅 Tu Actividad Reciente</h3>
-                        <span style="font-size:0.8rem; color:var(--text-secondary)">Lo que has hecho últimamente</span>
-                    </div>
-                    <div id="activity-log-content">
-                        <!-- Se llena dinámicamente -->
-                    </div>
-                </section>
-
-                <!-- Subject Grid -->
-                <div id="subject-grid" class="grid-container">
-                    <div class="skeleton-card"></div>
-                    <div class="skeleton-card"></div>
-                    <div class="skeleton-card"></div>
+                <div class="sidebar-footer">
+                    <p class="footer-small">&copy; 2026 JCGM.DEV</p>
                 </div>
+            </aside>
 
-                <!-- Labs Interactivos Section -->
-                <section id="labs-container" style="display:none;">
-                    <div class="section-divider"><span>🧪 LABORATORIOS INTERACTIVOS</span></div>
-                    <div id="labs-grid" class="grid-container labs-grid"></div>
-                </section>
-
-                <!-- Syllabus Exams Section -->
-                <section class="syllabus-section" id="syllabus-container" style="display:none;">
-                    <div class="section-divider"><span>📚 EXÁMENES DEL TEMARIO (OFICIALES)</span></div>
-                    <div id="syllabus-grid" class="grid-container syllabus-grid"></div>
-                </section>
-
-                <!-- Progress & Learning Curve -->
-                <section class="progress-section" id="progress-section" style="display:none;">
-                    <div class="progress-section-header">
-                        <h2>📈 Curva de Aprendizaje</h2>
-                        <div style="display:flex;gap:0.75rem;align-items:center;">
-                            <button class="btn-secondary" onclick="showView('stats')">📊 Estadísticas por Tema</button>
-                            <button class="clear-history-btn" onclick="clearHistory()">🗑️ Borrar historial</button>
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <header class="top-bar">
+                    <div class="top-bar-left">
+                        <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+                        <h2 id="current-section-title">Resumen Académico</h2>
+                    </div>
+                    <div class="top-bar-actions">
+                        <div class="progress-info">
+                            <span class="label" id="global-avg-label">Media General</span>
+                            <div class="progress-bar-small"><div class="fill" id="global-progress-fill" style="width:0%"></div></div>
                         </div>
                     </div>
-                    <div class="progress-layout">
-                        <div class="chart-card"><canvas id="learningChart"></canvas></div>
-                        <div class="history-table-card">
-                            <h3>Últimos exámenes</h3>
-                            <div id="history-table-container"></div>
+                </header>
+
+                <main id="main-container">
+                    <!-- Dashboard Home/Overview -->
+                    <div id="dash-section-overview" class="dash-section">
+                        <section class="hero">
+                            <h2>Centro de Alto Rendimiento Académico</h2>
+                            <p>DAW 2026 — Prepárate para el éxito.</p>
+                        </section>
+
+                        <div id="study-guide-banner"></div>
+
+                        <section id="activity-log-section" class="activity-log-card">
+                            <div class="activity-header">
+                                <h3>📅 Tu Actividad Reciente</h3>
+                            </div>
+                            <div id="activity-log-content"></div>
+                        </section>
+                    </div>
+
+                    <!-- Simulacros Section -->
+                    <div id="dash-section-simulacros" class="dash-section hidden">
+                        <div class="section-header-simple">
+                            <h3>🎯 Simulacros de Examen</h3>
+                            <p>Practica con preguntas por asignatura y tema.</p>
+                        </div>
+                        <div id="subject-grid" class="grid-container">
+                            <div class="skeleton-card"></div>
+                            <div class="skeleton-card"></div>
+                            <div class="skeleton-card"></div>
                         </div>
                     </div>
-                </section>
 
-                <!-- Fallos Section -->
-                <section id="fallos-section" style="display:none;">
-                    <div class="section-divider"><span>❌ REPASO DE FALLOS</span></div>
-                    <div id="fallos-grid" class="grid-container"></div>
-                </section>
-            </main>
+                    <!-- Labs Section -->
+                    <div id="dash-section-labs" class="dash-section hidden">
+                        <section id="labs-container">
+                            <div id="labs-grid" class="grid-container labs-grid"></div>
+                        </section>
+                    </div>
 
-            <footer>
-                <p class="footer2">&copy; 2026 <a href="https://JCGM.dev" target="_blank">JCGM.DEV</a> — Elevando tu aprendizaje</p>
-            </footer>
+                    <!-- Temario Section -->
+                    <div id="dash-section-temario" class="dash-section hidden">
+                        <section id="syllabus-container">
+                            <div id="syllabus-grid" class="grid-container syllabus-grid"></div>
+                        </section>
+                    </div>
+
+                    <!-- Planner Section -->
+                    <div id="dash-section-planner" class="dash-section hidden">
+                        <section id="academic-planner-section" class="planner-section"></section>
+                    </div>
+
+                    <!-- Progreso Section -->
+                    <div id="dash-section-progreso" class="dash-section hidden">
+                        <section id="progress-section">
+                            <div class="progress-section-header">
+                                <h2>📈 Curva de Aprendizaje</h2>
+                                <div style="display:flex;gap:0.75rem;align-items:center;">
+                                    <button class="btn-secondary" onclick="showView('stats')">📊 Estadísticas Detalladas</button>
+                                    <button class="clear-history-btn" onclick="clearHistory()">🗑️ Borrar Historial</button>
+                                </div>
+                            </div>
+                            <div class="progress-layout">
+                                <div class="chart-card"><canvas id="learningChart"></canvas></div>
+                                <div class="history-table-card">
+                                    <h3>Últimos exámenes</h3>
+                                    <div id="history-table-container"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Fallos Section -->
+                    <div id="dash-section-fallos" class="dash-section hidden">
+                        <section id="fallos-section">
+                            <div id="fallos-grid" class="grid-container"></div>
+                        </section>
+                    </div>
+                </main>
+            </div>
         </div>
     </div>
 

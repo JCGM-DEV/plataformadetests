@@ -120,8 +120,66 @@ function showView(name) {
         const el = document.getElementById(`view-${v}`);
         if (el) el.classList.toggle('hidden', v !== name);
     });
-    if (name === 'dashboard') renderProgress();
+    if (name === 'dashboard') {
+        renderProgress();
+        // Always ensure we have a section visible
+        if (!document.querySelector('.dash-section:not(.hidden)')) {
+            switchDash('overview');
+        }
+    }
     if (name === 'stats') renderStats();
+}
+
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebar) sidebar.classList.toggle('open');
+}
+
+function switchDash(sectionId) {
+    // Toggle active link
+    document.querySelectorAll('.side-link').forEach(link => {
+        link.classList.toggle('active', link.getAttribute('data-section') === sectionId);
+    });
+
+    // Toggle sections
+    document.querySelectorAll('.dash-section').forEach(sec => {
+        sec.classList.toggle('hidden', sec.id !== `dash-section-${sectionId}`);
+    });
+
+    // Update Top Bar Title
+    const titles = {
+        'overview': 'Resumen Académico',
+        'simulacros': 'Simulacros de Examen',
+        'labs': 'Laboratorios Interactivos',
+        'temario': 'Temario Oficial',
+        'planner': 'Planificador de Estudio',
+        'progreso': 'Mi Análisis de Progreso',
+        'fallos': 'Repaso de Errores'
+    };
+    const titleEl = document.getElementById('current-section-title');
+    if (titleEl) titleEl.textContent = titles[sectionId] || 'Dashboard';
+
+    // Close sidebar on mobile after selection
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebar && sidebar.classList.contains('open')) {
+        sidebar.classList.remove('open');
+    }
+
+    // Auto-scroll to top of main content
+    const mainContent = document.querySelector('.main-content');
+    if (mainContent) mainContent.scrollTop = 0;
+
+    // Special renders
+    if (sectionId === 'overview') {
+        renderStudyGuide();
+        renderActivityLog();
+    }
+    if (sectionId === 'simulacros') renderSubjects();
+    if (sectionId === 'labs') renderLabs();
+    if (sectionId === 'temario') renderSyllabusExams();
+    if (sectionId === 'planner') renderAcademicPlanner();
+    if (sectionId === 'progreso') renderProgress();
+    if (sectionId === 'fallos') renderFallos();
 }
 
 // ─── INIT ────────────────────────────────────────────────────────
@@ -150,30 +208,17 @@ async function init() {
             if (sylRes && sylRes.ok) APP_STATE.syllabusExams = await sylRes.json();
         }
 
-        renderSubjects();
-        renderSyllabusExams();
         renderProgress();
-        renderFallosSection();
-        renderActivityLog();
-        renderStudyGuide();
         renderAcademicPlanner();
+        switchDash('overview');
         console.log('App initialized successfully | Data loaded from:', (typeof SUBJECTS_DATA !== 'undefined' ? 'Global JS' : 'Fetch API'));
     } catch (err) {
         console.error('Error loading app data:', err);
-        // Fallback: render at least what we have
-        renderSubjects();
-        renderProgress();
+        switchDash('overview');
     }
 }
 
-function goToLabs() {
-    const labsContainer = document.getElementById('labs-container');
-    if (labsContainer) {
-        labsContainer.style.display = 'block';
-        labsContainer.scrollIntoView({ behavior: 'smooth' });
-        logActivity('system', 'Navegación', 'Accediendo a Laboratorios');
-    }
-}
+
 
 // ─── RENDER SUBJECTS ────────────────────────────────────────────
 function renderSubjects() {
