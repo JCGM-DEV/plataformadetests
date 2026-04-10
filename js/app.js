@@ -1643,7 +1643,12 @@ const STUDY_PHASES = [
         dailyTasks: [
             '2-3h Teoría profunda por asignatura',
             'Realizar mini-tests tras cada tema'
-        ]
+        ],
+        methodology: {
+            objective: 'Cimentar conocimientos base y entender la lógica de cada asignatura.',
+            keyFactor: 'Comprensión profunda over memorización.',
+            materials: ['PDFs oficiales', 'Resúmenes 20 puntos', 'Libreta de apuntes']
+        }
     },
     {
         id: 2, name: 'Fase 2 — Tests',
@@ -1655,7 +1660,12 @@ const STUDY_PHASES = [
             '2h Teoría (Refuerzo)',
             '2h Tests a tope (Simulación)',
             '1h Análisis de Fallos (Libreta)'
-        ]
+        ],
+        methodology: {
+            objective: 'Detectar patrones de error y familiarizarse con el formato de examen.',
+            keyFactor: 'Análisis minucioso de cada fallo.',
+            materials: ['Banco de preguntas', 'Libreta de Errores', 'Flashcards']
+        }
     },
     {
         id: 3, name: 'Fase 3 — Simulacros',
@@ -1666,7 +1676,12 @@ const STUDY_PHASES = [
         dailyTasks: [
             '2-3 Simulacros completos al día',
             'Repaso intensivo de la Libreta de Errores'
-        ]
+        ],
+        methodology: {
+            objective: 'Entrenar el tiempo y la resistencia mental bajo presión.',
+            keyFactor: 'Gestión del tiempo y control de nervios.',
+            materials: ['Cronómetro', 'Exámenes de años anteriores', 'Entorno sin distracciones']
+        }
     }
 ];
 
@@ -1775,6 +1790,31 @@ function renderAcademicPlanner() {
                         </div>
                     </div>`;
                 }).join('')}
+            </div>
+
+            <div class="planner-methodology">
+                <div class="methodology-header">
+                    <h4>💡 Metodología Estratégica — ${phase.name}</h4>
+                    <p>${phase.methodology.objective}</p>
+                </div>
+                <div class="methodology-grid">
+                    <div class="methodology-card">
+                        <h5>🎯 Factor Clave</h5>
+                        <p>${phase.methodology.keyFactor}</p>
+                    </div>
+                    <div class="methodology-card">
+                        <h5>🛠️ Material Necesario</h5>
+                        <ul>
+                            ${phase.methodology.materials.map(m => `<li>${m}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="methodology-card">
+                        <h5>🗓️ Rutina del Día</h5>
+                        <ul>
+                            ${phase.dailyTasks.map(t => `<li>${t}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>`;
 }

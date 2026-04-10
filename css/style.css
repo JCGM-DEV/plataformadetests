@@ -2282,6 +2282,85 @@ footer { margin-top: 4rem; padding-bottom: 2rem; }
     .planner-card { min-width: 280px; flex: 0 0 90%; }
 }
 
+/* ── PLANNER METHODOLOGY ────────────────────────────────────── */
+.planner-methodology {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    animation: fadeIn 0.6s ease;
+}
+
+.methodology-header {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 1rem;
+}
+
+.methodology-header h4 {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    margin-bottom: 0.25rem;
+}
+
+.methodology-header p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.methodology-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .methodology-grid { grid-template-columns: 1fr; }
+}
+
+.methodology-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.methodology-card h5 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+    opacity: 0.8;
+}
+
+.methodology-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.methodology-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.methodology-card li {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.methodology-card li::before {
+    content: "•";
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+
 /* 📝 SUMMARY FEATURE ───────────────────────────────────────── */
 .summary-link-mini {
     text-decoration: none;
