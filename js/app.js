@@ -76,10 +76,10 @@ function isMastered(conceptId) {
 // ─── HISTORY ────────────────────────────────────────────────────
 function getHistory() { return Sync.get(HISTORY_KEY, []); }
 
-function saveExamResult(subjectId, subjectName, score, aciertos, errores, omitidas, total) {
+function saveExamResult(subjectId, subjectName, score, aciertos, errores, omitidas, total, unitId = null) {
     const h = getHistory();
     h.push({ id: Date.now(), date: new Date().toISOString(), subjectId, subjectName,
-             score: parseFloat(score.toFixed(2)), aciertos, errores, omitidas, total });
+             score: parseFloat(score.toFixed(2)), aciertos, errores, omitidas, total, unitId });
     Sync.set(HISTORY_KEY, h);
 }
 
@@ -228,20 +228,31 @@ async function init() {
 function renderSubjects() {
     const grid = document.getElementById('subject-grid');
     grid.innerHTML = '';
+    const history = getHistory();
+
     APP_STATE.subjects.forEach(subject => {
         const pool = QUESTION_POOL[subject.id] || [];
         const fallos = getFallos()[subject.id] || {};
         const fallosCount = Object.keys(fallos).length;
+
+        // Subject-wide attempts (where unitId is null)
+        const subjectAttempts = history.filter(h => h.subjectId === subject.id && !h.unitId).length;
 
         let unitsHTML = '<div class="unit-selector">';
         for (let i = 1; i <= subject.units_count; i++) {
             const unitPool = pool.filter(q => q.unit === i);
             const pdfPath = THEORY_PDFS[subject.id]?.[i];
             const videoPath = SUBJECT_VIDEOS[subject.id]?.[i];
+            const unitAttempts = history.filter(h => h.subjectId === subject.id && h.unitId === i).length;
             
             unitsHTML += `
                 <div class="unit-group">
-                    <button class="unit-btn" onclick="startExam('${subject.id}',${i})" ${unitPool.length === 0 ? 'disabled title="Sin preguntas"' : ''}>T${i}</button>
+                    <div class="unit-btn-wrapper">
+                        <button class="unit-btn" onclick="startExam('${subject.id}',${i})" ${unitPool.length === 0 ? 'disabled title="Sin preguntas"' : ''}>
+                            T${i}
+                        </button>
+                        ${unitAttempts > 0 ? `<span class="unit-counter-badge">${unitAttempts}</span>` : ''}
+                    </div>
                     <div style="display:flex; gap:0.4rem; justify-content:center; margin-top:0.2rem;">
                         ${pdfPath ? `<a href="${pdfPath}" target="_blank" class="pdf-link-mini" title="Ver teoría PDF" onclick="logTheory('${subject.name}', ${i})">📄</a>` : ''}
                         ${hasSummary(subject.id, i) ? `<a href="javascript:void(0)" onclick="openSummary('${subject.id}', ${i})" class="summary-link-mini" title="Ver Resumen del Tema">📝</a>` : ''}
@@ -262,7 +273,10 @@ function renderSubjects() {
         card.innerHTML = `
             <div class="card-icon">${subject.icon}</div>
             <h3>${subject.name}</h3>
-            <div class="card-pool-badge">${pool.length} preguntas</div>
+            <div class="card-badges">
+                <div class="card-pool-badge">${pool.length} preguntas</div>
+                ${subjectAttempts > 0 ? `<div class="badge-attempts">🔄 Repetido: ${subjectAttempts}</div>` : ''}
+            </div>
             <div class="exam-selector-large">
                 <button onclick="startExam('${subject.id}')">🎯 Simulacro Completo</button>
             </div>
@@ -1404,7 +1418,7 @@ function finishExam() {
     const calificacion = (puntuacionFinal / total) * 10;
     const passed = calificacion >= 5;
 
-    saveExamResult(APP_STATE.currentExam.id, APP_STATE.currentExam.name || 'Examen', calificacion, aciertos, errores, omitidas, total);
+    saveExamResult(APP_STATE.currentExam.id, APP_STATE.currentExam.name || 'Examen', calificacion, aciertos, errores, omitidas, total, APP_STATE.currentUnit);
 
     // Log Activity
     const sub = APP_STATE.subjects.find(s => s.id === APP_STATE.currentExam.id);

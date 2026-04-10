@@ -394,9 +394,11 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   background: var(--glass);
   border: 1px solid var(--glass-border);
   color: var(--text-secondary);
-  border-radius: 6px; padding: 0.35rem 0.65rem;
-  font-size: 0.78rem; font-family: inherit; font-weight: 500;
+  border-radius: 6px; padding: 0.4rem 0.7rem;
+  min-width: 36px;
+  font-size: 0.78rem; font-family: inherit; font-weight: 600;
   cursor: pointer; transition: all 0.2s ease;
+  display: flex; align-items: center; justify-content: center;
 }
 .unit-btn:hover:not(:disabled) {
   background: rgba(255,255,255,0.08);
@@ -404,6 +406,32 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   border-color: rgba(255,255,255,0.2);
 }
 .unit-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+.unit-btn-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.unit-counter-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #10b981;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 800;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #0f172a;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  pointer-events: none;
+  z-index: 2;
+}
 
 .pdf-link-mini {
     font-size: 0.85rem;
