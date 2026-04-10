@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLI & Systems Practice Lab — Sistemas Informáticos DAW</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- SPLASH / SELECTOR -->
+    <div id="splash" class="splash">
+        <div class="splash-content">
+            <div class="splash-icon">🐚</div>
+            <h1 class="splash-title">CLI & Systems Practice Lab</h1>
+            <p class="splash-subtitle">Sistemas Informáticos · DAW 2026</p>
+            <div class="splash-units">
+                <div class="unit-card" onclick="selectUnit('linux')">
+                    <div class="unit-badge">GNU/Linux</div>
+                    <h3>Bash Terminal</h3>
+                    <p>Practica comandos de consola Linux, gestión de archivos, permisos, rutas y tuberías.</p>
+                    <div class="unit-topics"><span>ls</span><span>mkdir</span><span>chmod</span><span>grep</span></div>
+                    <button class="btn-primary">Practicar Linux →</button>
+                </div>
+                <div class="unit-card" onclick="selectUnit('windows')">
+                    <div class="unit-badge">Windows</div>
+                    <h3>CMD / PowerShell</h3>
+                    <p>Domina el símbolo del sistema de Windows: navegación, gestión de atributos y jerarquías.</p>
+                    <div class="unit-topics"><span>dir</span><span>attrib</span><span>cls</span><span>move</span></div>
+                    <button class="btn-primary">Practicar Windows →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN APP -->
+    <div id="app" class="app hidden">
+        <header class="topbar">
+            <button class="back-btn" onclick="goHome()">← Inicio</button>
+            <div class="topbar-center">
+                <span id="topbar-unit" class="topbar-unit"></span>
+                <span id="topbar-title" class="topbar-title">CLI Simulator</span>
+            </div>
+            <div class="topbar-right">
+                <span id="timer" class="timer">00:00</span>
+                <button class="reset-btn" onclick="resetCurrentChallenge()" title="Reiniciar desafío actual">🔄</button>
+            </div>
+        </header>
+
+        <div class="layout">
+            <!-- Sidebar: Challenges -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h3>Desafíos <span id="challenge-count">0/0</span></h3>
+                </div>
+                <nav id="sidebar-nav" class="sidebar-nav"></nav>
+                <div class="sidebar-footer">
+                    <div class="progress-bar-wrap"><div id="progress-bar" class="progress-bar-fill"></div></div>
+                </div>
+            </aside>
+
+            <!-- Main: Terminal & Info -->
+            <main class="content">
+                <div class="challenge-info" id="challenge-info">
+                    <div class="info-header">
+                        <span class="difficulty-badge" id="challenge-diff">Media</span>
+                        <h2 id="challenge-title">Selecciona un desafío</h2>
+                    </div>
+                    <p id="challenge-desc">Elige un ejercicio del menú lateral para empezar a practicar en la terminal.</p>
+                    <div id="challenge-hint" class="hint-box hidden">
+                        <strong>💡 Sugerencia:</strong> <span id="hint-text"></span>
+                    </div>
+                </div>
+
+                <div class="terminal-container">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">bash — user@virtual-daw</div>
+                    </div>
+                    <div id="terminal-body" class="terminal-body">
+                        <div id="terminal-output"></div>
+                        <div class="terminal-prompt-line">
+                            <span class="prompt" id="prompt-string">user@virtual-daw:~$</span>
+                            <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" autofocus>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

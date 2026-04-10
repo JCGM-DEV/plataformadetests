@@ -326,6 +326,7 @@ function renderLabs() {
         lenguaje_de_marcas:     { color: '#84cc16', bg: 'rgba(132,204,22,0.08)', border: 'rgba(132,204,22,0.3)' },
         programacion:           { color: '#f97316', bg: 'rgba(249,115,22,0.08)', border: 'rgba(249,115,22,0.3)' },
         entornos_de_desarrollo: { color: '#a855f7', bg: 'rgba(168,85,247,0.08)', border: 'rgba(168,85,247,0.3)' },
+        sistemas_informaticos:  { color: '#10b981', bg: 'rgba(16,185,129,0.08)', border: 'rgba(16,185,129,0.3)' },
     };
 
     labs.forEach(lab => {
@@ -1022,6 +1023,7 @@ function startExamReal(subjectId, totalPreguntas = 60) {
 
     const questions = shuffleArray(pool).slice(0, Math.min(totalPreguntas, pool.length));
 
+    APP_STATE.isFinishing = false;
     APP_STATE.currentExam = subject;
     APP_STATE.currentUnit = null;
     APP_STATE.isSyllabusMode = false;
@@ -1043,6 +1045,7 @@ function startFallosExam(subjectId) {
     const pool = Object.values(fallos);
     if (pool.length === 0) { alert('No hay fallos registrados para esta asignatura.'); return; }
 
+    APP_STATE.isFinishing = false;
     APP_STATE.currentExam = subject;
     APP_STATE.currentUnit = null;
     APP_STATE.isSyllabusMode = false;

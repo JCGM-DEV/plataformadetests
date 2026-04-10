@@ -49,10 +49,11 @@ function openSection(section) {
   else if (section.type === 'quiz') showQuiz(section.quizId);
   else if (section.type === 'drag') showDrag(section.dragId);
   else if (section.type === 'editor') showEditor(section.editorId);
+  else if (section.type === 'xpath') showXPath(section.xpathId);
 }
 
 function hideAllViews() {
-  ['lesson-view','quiz-view','drag-view','editor-view','welcome-panel'].forEach(id => {
+  ['lesson-view','quiz-view','drag-view','editor-view','xpath-view','welcome-panel'].forEach(id => {
     const el = document.getElementById(id); if (el) el.classList.add('hidden');
   });
 }
@@ -347,6 +348,73 @@ function nextEditorEx() {
     renderEditorExercise(EDITOR_LABS[sec.editorId]);
   }
 }
+
+// ── XPATH ────────────────────────────────────────────────────────
+function showXPath(xpathId) {
+  const data = XPATH_LABS[xpathId];
+  const view = document.getElementById('xpath-view');
+  view.classList.remove('hidden');
+  document.getElementById('xpath-xml-input').value = data.xml.trim();
+  document.getElementById('xpath-query').value = '';
+  document.getElementById('xpath-results').innerHTML = '<div class="xpath-no-match">Escribe una consulta y pulsa "Evaluar"</div>';
+}
+
+function evaluateXPath() {
+  const xmlStr = document.getElementById('xpath-xml-input').value;
+  const query = document.getElementById('xpath-query').value.trim();
+  const resultsArea = document.getElementById('xpath-results');
+  
+  if (!query) { showToast('Introduce una consulta XPath', 'info'); return; }
+  
+  try {
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xmlStr, "application/xml");
+    
+    const parseError = xmlDoc.querySelector('parsererror');
+    if (parseError) throw new Error('Error en el XML original');
+
+    const result = xmlDoc.evaluate(query, xmlDoc, null, XPathResult.ANY_TYPE, null);
+    let output = '';
+    let matches = [];
+    
+    if (result.resultType === 4 || result.resultType === 5) {
+      let node = result.iterateNext();
+      while (node) {
+        matches.push(node);
+        node = result.iterateNext();
+      }
+    } else if (result.resultType === 1) {
+      output = `<div class="out-line">Num: <strong>${result.numberValue}</strong></div>`;
+    } else if (result.resultType === 2) {
+      output = `<div class="out-line">Str: <strong>${result.stringValue}</strong></div>`;
+    } else if (result.resultType === 3) {
+      output = `<div class="out-line">Bool: <strong>${result.booleanValue}</strong></div>`;
+    }
+
+    if (matches.length > 0) {
+      output = matches.map(m => {
+        const text = m.outerHTML || m.textContent;
+        return `<div class="out-line"><span class="xpath-match">${escapeHTML(text)}</span></div>`;
+      }).join('');
+    }
+
+    resultsArea.innerHTML = output || '<div class="xpath-no-match">No se encontraron coincidencias.</div>';
+    if (output) {
+       score.correct++; document.querySelector('#score-correct span').textContent = score.correct;
+       showToast('¡Consulta exitosa!', 'success');
+    }
+  } catch (err) {
+    resultsArea.innerHTML = `<div class="sql-msg error">❌ Error en la consulta: ${err.message}</div>`;
+    score.wrong++; document.querySelector('#score-wrong span').textContent = score.wrong;
+  }
+}
+
+function escapeHTML(str) {
+  const p = document.createElement('p');
+  p.textContent = str;
+  return p.innerHTML;
+}
+
 
 // ── PROGRESS & TOAST ─────────────────────────────────────────────
 function updateProgress() {

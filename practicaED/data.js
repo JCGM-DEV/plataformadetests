@@ -31,6 +31,15 @@ const UNITS = {
       { id: 'ud5-diagram', icon: '📐', label: 'Diagramas Guiados', type: 'diagram', diagId: 'ud5_diag' },
       { id: 'ud5-lab', icon: '🧪', label: 'Laboratorio: Flujogramas', type: 'lab' },
     ]
+  },
+  ud7: {
+    label: 'UD7',
+    title: 'Optimización y Control de Versiones',
+    sections: [
+      { id: 'ud7-teoria', icon: '📖', label: 'Teoría: Git (Fundamentos)', type: 'lesson', lessonId: 'git_teoria' },
+      { id: 'ud7-quiz', icon: '🧠', label: 'Quiz: Comandos Git', type: 'quiz', quizId: 'git_quiz' },
+      { id: 'ud7-lab', icon: '🧪', label: 'Simulador Git Visual', type: 'git' },
+    ]
   }
 };
 
@@ -676,3 +685,34 @@ const LAB_EXERCISES = {
     }
   ]
 };
+
+const GIT_CHALLENGES = [
+  {
+    id: 'git-ex1',
+    title: 'Primeros pasos',
+    scenario: 'Inicializa el repositorio y realiza tu primer commit con el mensaje "Initial commit".',
+    validate: (state) => state.initialized && state.commits.length > 0 && state.commits[0].msg.toLowerCase().includes('initial'),
+    hint: 'Usa "git init", luego "git add ." y finalmente "git commit -m \'Initial commit\'"'
+  },
+  {
+    id: 'git-ex2',
+    title: 'Trabajando con ramas',
+    scenario: 'Crea una nueva rama llamada "desarrollo" (sin cambiarte a ella aún).',
+    validate: (state) => state.branches['desarrollo'] !== undefined,
+    hint: 'Usa "git branch desarrollo"'
+  },
+  {
+    id: 'git-ex3',
+    title: 'Navegación entre ramas',
+    scenario: 'Cámbiate a la rama "desarrollo".',
+    validate: (state) => state.head === 'desarrollo',
+    hint: 'Usa "git checkout desarrollo"'
+  },
+  {
+    id: 'git-ex4',
+    title: 'Commit en rama secundaria',
+    scenario: 'Estando en la rama "desarrollo", realiza un commit con el mensaje "Feature 1".',
+    validate: (state) => state.head === 'desarrollo' && state.commits.some(c => c.msg.toLowerCase().includes('feature')),
+    hint: 'Asegúrate de estar en "desarrollo", añade archivos y haz commit.'
+  }
+];

@@ -309,3 +309,24 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 .exercise-desc h4 { font-size: .9rem; font-weight: 600; color: var(--accent3); margin-bottom: .4rem; }
 .exercise-desc p { font-size: .85rem; color: var(--text2); line-height: 1.5; }
 .exercise-desc .hint { font-size: .78rem; color: var(--yellow); margin-top: .5rem; font-style: italic; }
+
+/* XPATH VIEW */
+.xpath-view { padding: 1.5rem; width: 100%; max-width: 1200px; margin: 0 auto; }
+.xpath-container { display: flex; flex-direction: column; gap: 1.5rem; background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+.xpath-header h3 { font-size: 1.4rem; color: var(--accent); margin-bottom: .25rem; font-family: 'Outfit', sans-serif; }
+.xpath-header p { font-size: .85rem; color: var(--text2); }
+.xpath-editor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; height: 400px; }
+@media(max-width: 900px) { .xpath-editor-grid { grid-template-columns: 1fr; height: auto; } }
+.xpath-pane { display: flex; flex-direction: column; gap: .5rem; height: 100%; }
+.xpath-pane label { font-size: .7rem; font-weight: 700; color: var(--text2); text-transform: uppercase; }
+#xpath-xml-input { flex: 1; background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: 'JetBrains Mono', monospace; font-size: .8rem; padding: 1rem; resize: none; overflow: auto; }
+.results-area { flex: 1; background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; font-family: 'JetBrains Mono', monospace; font-size: .8rem; overflow: auto; line-height: 1.6; }
+.xpath-input-bar { display: flex; align-items: center; gap: .75rem; background: var(--surface); border: 1px solid var(--accent); border-radius: 12px; padding: .75rem 1rem; }
+.xpath-prefix { color: var(--accent); font-weight: 800; font-family: 'JetBrains Mono', monospace; }
+#xpath-query { flex: 1; background: none; border: none; color: #fff; font-family: 'JetBrains Mono', monospace; font-size: 1rem; outline: none; }
+.xpath-input-bar button { background: var(--accent); color: #000; border: none; padding: .5rem 1.25rem; border-radius: 8px; font-weight: 700; cursor: pointer; transition: var(--transition); }
+.xpath-input-bar button:hover { transform: scale(1.05); box-shadow: 0 0 15px var(--accent); }
+
+.xpath-match { background: rgba(132, 204, 22, 0.2); border-radius: 2px; box-shadow: 0 0 0 1px var(--accent); color: var(--accent3) !important; font-weight: bold; }
+.xpath-no-match { color: var(--text2); font-style: italic; }
+

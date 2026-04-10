@@ -66,6 +66,29 @@
         <div id="quiz-view" class="quiz-view hidden"></div>
         <div id="drag-view" class="drag-view hidden"></div>
         <div id="editor-view" class="editor-view hidden"></div>
+        <div id="xpath-view" class="xpath-view hidden">
+          <div class="xpath-container">
+            <div class="xpath-header">
+              <h3>Evaluador XPath Interactivo</h3>
+              <p>Escribe tu consulta XPath para filtrar el XML de la izquierda.</p>
+            </div>
+            <div class="xpath-editor-grid">
+              <div class="xpath-pane">
+                <label>XML de Entrada</label>
+                <textarea id="xpath-xml-input" spellcheck="false" readonly></textarea>
+              </div>
+              <div class="xpath-pane">
+                <label>Resultado / Nodos Encontrados</label>
+                <div id="xpath-results" class="results-area"></div>
+              </div>
+            </div>
+            <div class="xpath-input-bar">
+              <span class="xpath-prefix">XPath:</span>
+              <input type="text" id="xpath-query" placeholder="Ej: /tienda/libro[precio < 20]/titulo" spellcheck="false">
+              <button onclick="evaluateXPath()">Evaluar</button>
+            </div>
+          </div>
+        </div>
         <div id="welcome-panel" class="welcome-panel">
           <div class="welcome-icon">🏷️</div>
           <h2>Selecciona un tema del menú</h2>

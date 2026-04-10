@@ -389,6 +389,14 @@ const SYLLABUS_REGISTRY_DATA = [
         "icon": "🖥️"
     },
     {
+        "id": "si_lab",
+        "name": "CLI & Systems Practice Lab",
+        "type": "lab",
+        "subject_id": "sistemas_informaticos",
+        "file": "practicaSI/index.html",
+        "icon": "🐚"
+    },
+    {
         "id": "cc_tema_1",
         "name": "Tema 1: Conceptos Cloud",
         "subject_id": "cloud_computing",

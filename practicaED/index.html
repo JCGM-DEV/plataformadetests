@@ -74,6 +74,27 @@
         <div id="drag-view" class="drag-view hidden"></div>
         <div id="diagram-view" class="diagram-view hidden"></div>
         <div id="lab-view" class="lab-view hidden"></div>
+        <div id="git-view" class="git-view hidden">
+          <div class="git-container">
+            <div class="git-header">
+              <h3>Git Visual Simulator</h3>
+              <p>Domina el control de versiones practicando ramas, commits y fusiones.</p>
+            </div>
+            <div class="git-workspace">
+              <div class="git-viz" id="git-canvas">
+                <div class="viz-placeholder">Inicia un repositorio con "git init"</div>
+              </div>
+              <div class="git-terminal">
+                <div class="git-terminal-header">git bash</div>
+                <div id="git-output" class="git-output"></div>
+                <div class="git-prompt">
+                  <span class="prompt">$</span>
+                  <input type="text" id="git-input" placeholder="Escribe un comando git..." autocomplete="off" spellcheck="false">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div id="welcome-panel" class="welcome-panel">
           <div class="welcome-icon">📚</div>
           <h2>Selecciona un tema del menú</h2>
@@ -97,6 +118,7 @@
   <script src="data.js"></script>
   <script src="diagrams.js"></script>
   <script src="lab.js"></script>
+  <script src="git_lab.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

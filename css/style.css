@@ -68,6 +68,30 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.logo h1 span {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 2px;
+}
+
 .sidebar-nav {
   flex: 1;
   padding: 1.5rem 0.75rem;

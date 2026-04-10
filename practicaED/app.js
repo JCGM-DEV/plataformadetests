@@ -65,10 +65,11 @@ function openSection(section) {
   else if (section.type === 'drag') showDrag(section.dragId);
   else if (section.type === 'diagram') showDiagrams(section.diagId);
   else if (section.type === 'lab') showLab();
+  else if (section.type === 'git') showGitLab();
 }
 
 function hideAllViews() {
-  ['lesson-view','quiz-view','drag-view','diagram-view','lab-view','welcome-panel'].forEach(id => {
+  ['lesson-view','quiz-view','drag-view','diagram-view','lab-view','git-view','welcome-panel'].forEach(id => {
     document.getElementById(id).classList.add('hidden');
   });
 }

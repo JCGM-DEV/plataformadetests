@@ -31,7 +31,40 @@ const UNITS = {
       { id: 'xslt-teoria2', icon: '📖', label: 'Teoría: XSLT', type: 'lesson', lessonId: 'xslt_teoria' },
       { id: 'xslt-quiz1', icon: '🧠', label: 'Quiz: XPath y XSLT', type: 'quiz', quizId: 'xslt_quiz' },
       { id: 'xslt-drag1', icon: '🎯', label: 'Ejercicio: Instrucciones XSLT', type: 'drag', dragId: 'xslt_instr' },
+      { id: 'xslt-xpath', icon: '🧪', label: 'Evaluador XPath Interactivo', type: 'xpath', xpathId: 'xpath_main' },
     ]
+  }
+};
+
+const XPATH_LABS = {
+  xpath_main: {
+    xml: `<?xml version="1.0" encoding="UTF-8"?>
+<tienda nombre="DAW Books">
+  <libro categoria="PROGRAMACION" id="101">
+    <titulo lang="es">Java a fondo</titulo>
+    <autor>Pérez, Juan</autor>
+    <precio moneda="EUR">29.95</precio>
+    <stock>12</stock>
+  </libro>
+  <libro categoria="PROGRAMACION" id="102">
+    <titulo lang="en">Thinking in Java</titulo>
+    <autor>Eckel, Bruce</autor>
+    <precio moneda="EUR">45.00</precio>
+    <stock>5</stock>
+  </libro>
+  <libro categoria="SISTEMAS" id="201">
+    <titulo lang="es">Linux System Administration</titulo>
+    <autor>Nemeth, Evi</autor>
+    <precio moneda="EUR">39.50</precio>
+    <stock>8</stock>
+  </libro>
+  <libro categoria="CINE" id="301">
+    <titulo lang="es">Historia del Cine</vic>
+    <autor>Gourdet, Jean</autor>
+    <precio moneda="EUR">15.20</precio>
+    <stock>0</stock>
+  </libro>
+</tienda>`
   }
 };
 
