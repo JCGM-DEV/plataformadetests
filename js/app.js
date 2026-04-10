@@ -264,14 +264,14 @@ function renderSubjects() {
             const hasRepos = !!reportPath;
 
             unitsHTML += `
-                <div class="unit-group">
-                    <div class="unit-btn-wrapper">
-                        <button class="unit-btn" onclick="startExam('${subject.id}',${i})" ${unitPool.length === 0 ? 'disabled title="Sin preguntas"' : ''}>
-                            T${i}
-                        </button>
-                        ${unitAttempts > 0 ? `<span class="unit-counter-badge">${unitAttempts}</span>` : ''}
+                <div class="topic-frame ${unitPool.length === 0 ? 'disabled' : ''}" 
+                     onclick="${unitPool.length > 0 ? `startExam('${subject.id}',${i})` : ''}"
+                     ${unitPool.length === 0 ? 'title="Sin preguntas"' : ''}>
+                    <div class="topic-header">
+                        <span>TEMA ${i}</span>
+                        ${unitAttempts > 0 ? `<span class="topic-badge">${unitAttempts}</span>` : ''}
                     </div>
-                    <div class="resource-links-container">
+                    <div class="topic-content" onclick="event.stopPropagation()">
                         ${hasPDF ? `<a href="${pdfPath}" target="_blank" class="res-link-labeled pdf" title="Ver teoría PDF" onclick="logTheory('${subject.name}', ${i})">📄<span>PDF</span></a>` : ''}
                         ${hasSumm ? `<a href="javascript:void(0)" onclick="openSummary('${subject.id}', ${i})" class="res-link-labeled summary" title="Ver Resumen del Tema">📝<span>SMRY</span></a>` : ''}
                         ${hasVideo ? `<a href="javascript:void(0)" onclick="openVideo('${videoPath}')" class="res-link-labeled video" title="Ver video de repaso">🎬<span>VIDEO</span></a>` : ''}
