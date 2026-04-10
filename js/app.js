@@ -2549,16 +2549,19 @@ function closeSummary() {
     document.body.style.overflow = 'auto';
 }
 function scrollToSubject(id) {
-    const el = document.querySelector(`[data-subject-id="${id}"]`);
-    if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        el.classList.add('highlight-momentary');
-        setTimeout(() => el.classList.remove('highlight-momentary'), 2000);
-    } else {
-        showView('dashboard');
-        setTimeout(() => {
-             const el2 = document.querySelector(`[data-subject-id="${id}"]`);
-             if (el2) el2.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 100);
-    }
+    if (!id) return;
+    
+    // Ensure we are in the dashboard and specifically in the mocks/theory section
+    showView('dashboard');
+    switchDash('simulacros');
+    
+    // Wait a bit for the layout to settle/render
+    setTimeout(() => {
+        const el = document.querySelector(`[data-subject-id="${id}"]`);
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            el.classList.add('highlight-momentary');
+            setTimeout(() => el.classList.remove('highlight-momentary'), 2000);
+        }
+    }, 150);
 }
