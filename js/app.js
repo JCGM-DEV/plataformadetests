@@ -132,7 +132,9 @@ function showView(name) {
 
 function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
     if (sidebar) sidebar.classList.toggle('open');
+    if (overlay) overlay.classList.toggle('open');
 }
 
 function switchDash(sectionId) {
@@ -161,8 +163,10 @@ function switchDash(sectionId) {
 
     // Close sidebar on mobile after selection
     const sidebar = document.querySelector('.sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
     if (sidebar && sidebar.classList.contains('open')) {
         sidebar.classList.remove('open');
+        if (overlay) overlay.classList.remove('open');
     }
 
     // Auto-scroll to top of main content
