@@ -3540,14 +3540,14 @@ const SYLLABUS_RAW_DATA = {
   "emp_bateria": [
     {
       "concept_id": "emp_bateria_q0",
-      "question": "tema bateria",
+      "question": "Cuando hablamos del Derecho del Trabajo dentro del sistema jurídico español, nos referimos a un conjunto de normas que no solo regulan la prestación de servicios, sino que también buscan corregir ciertos desequilibrios. ¿Cuál es su finalidad principal?",
       "options": [
-        "Cuando hablamos del Derecho del Trabajo dentro del sistema jurídico español, nos referimos a un conjunto de normas que no solo regulan la prestación de servicios, sino que también buscan corregir ciertos desequilibrios. ¿Cuál es su finalidad principal?",
         "Regular exclusivamente la actividad económica de las empresas.",
         "Equilibrar la relación entre trabajador y empresario, protegiendo especialmente al trabajador.",
-        "Organizar el comercio entre empresas privadas."
+        "Organizar el comercio entre empresas privadas.",
+        "Ninguna de las anteriores describe correctamente su finalidad."
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "El Derecho del Trabajo busca equilibrar la relación laboral, que es desigual por naturaleza: el trabajador depende económicamente del empresario. Por eso protege especialmente al trabajador mediante normas mínimas irrenunciables.",
       "unit": null
     },
@@ -4794,14 +4794,14 @@ const SYLLABUS_RAW_DATA = {
   "emp_examen_final": [
     {
       "concept_id": "emp_examen_final_q0",
-      "question": "tema bateria",
+      "question": "Cuando hablamos del Derecho del Trabajo dentro del sistema jurídico español, nos referimos a un conjunto de normas que no solo regulan la prestación de servicios, sino que también buscan corregir ciertos desequilibrios. ¿Cuál es su finalidad principal?",
       "options": [
-        "Cuando hablamos del Derecho del Trabajo dentro del sistema jurídico español, nos referimos a un conjunto de normas que no solo regulan la prestación de servicios, sino que también buscan corregir ciertos desequilibrios. ¿Cuál es su finalidad principal?",
         "Regular exclusivamente la actividad económica de las empresas.",
         "Equilibrar la relación entre trabajador y empresario, protegiendo especialmente al trabajador.",
-        "Organizar el comercio entre empresas privadas."
+        "Organizar el comercio entre empresas privadas.",
+        "Ninguna de las anteriores describe correctamente su finalidad."
       ],
-      "correct": 2,
+      "correct": 1,
       "explanation": "El Derecho del Trabajo busca equilibrar la relación laboral, que es desigual por naturaleza: el trabajador depende económicamente del empresario. Por eso protege especialmente al trabajador mediante normas mínimas irrenunciables.",
       "unit": null
     },
@@ -7651,14 +7651,14 @@ const SYLLABUS_RAW_DATA = {
   "si_practicas": [
     {
       "concept_id": "si_practicas_q0",
-      "question": "tema practicas",
+      "question": "En la empresa TodoEsGratis se necesita una topología que permita que si un cable falla, el resto de la red siga funcionando. ¿Qué topología cumple mejor este requisito?",
       "options": [
-        "En la empresa TodoEsGratis se necesita una topología que permita que si un cable falla, el resto de la red siga funcionando. ¿Qué topología cumple mejor este requisito?",
         "Topología en bus",
         "Topología en estrella",
-        "Topología en anillo o malla."
+        "Topología en anillo o malla.",
+        "Topología lineal"
       ],
-      "correct": 3,
+      "correct": 2,
       "explanation": "En la topología en anillo, los datos viajan en una dirección (o ambas en anillo doble). Si un nodo falla, puede interrumpir toda la red (en anillo simple). Es más ordenada que el bus.",
       "unit": null
     },
@@ -8563,14 +8563,14 @@ const SYLLABUS_RAW_DATA = {
   "si_examen_final": [
     {
       "concept_id": "si_examen_final_q0",
-      "question": "tema practicas",
+      "question": "En la empresa TodoEsGratis se necesita una topología que permita que si un cable falla, el resto de la red siga funcionando. ¿Qué topología cumple mejor este requisito?",
       "options": [
-        "En la empresa TodoEsGratis se necesita una topología que permita que si un cable falla, el resto de la red siga funcionando. ¿Qué topología cumple mejor este requisito?",
         "Topología en bus",
         "Topología en estrella",
-        "Topología en anillo o malla."
+        "Topología en anillo o malla.",
+        "Topología lineal"
       ],
-      "correct": 3,
+      "correct": 2,
       "explanation": "En la topología en anillo, los datos viajan en una dirección (o ambas en anillo doble). Si un nodo falla, puede interrumpir toda la red (en anillo simple). Es más ordenada que el bus.",
       "unit": null
     },

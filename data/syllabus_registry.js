@@ -4,49 +4,56 @@ const SYLLABUS_REGISTRY_DATA = [
         "name": "Tema 1: Conceptos",
         "subject_id": "bases_de_datos",
         "file": "data/syllabus/bd_t1.txt",
-        "icon": "🗄️"
+        "icon": "🗄️",
+        "unit": 1
     },
     {
         "id": "bd_tema_2",
         "name": "Tema 2: SQL y DDL",
         "subject_id": "bases_de_datos",
         "file": "data/syllabus/bd_t2.txt",
-        "icon": "🗄️"
+        "icon": "🗄️",
+        "unit": 2
     },
     {
         "id": "bd_tema_3",
         "name": "Tema 3: Diagramas E-R",
         "subject_id": "bases_de_datos",
         "file": "data/syllabus/bd_t3.txt",
-        "icon": "🗄️"
+        "icon": "🗄️",
+        "unit": 3
     },
     {
         "id": "bd_tema_4",
         "name": "Tema 4: Consultas SQL",
         "subject_id": "bases_de_datos",
         "file": "data/syllabus/bd_t4.txt",
-        "icon": "🗄️"
+        "icon": "🗄️",
+        "unit": 4
     },
     {
         "id": "bd_tema_5",
         "name": "Tema 5: Tratamiento Datos",
         "subject_id": "bases_de_datos",
         "file": "data/syllabus/bd_t5.txt",
-        "icon": "🗄️"
+        "icon": "🗄️",
+        "unit": 5
     },
     {
         "id": "bd_tema_6",
         "name": "Tema 6: Programación",
         "subject_id": "bases_de_datos",
         "file": "data/syllabus/bd_t6.txt",
-        "icon": "🗄️"
+        "icon": "🗄️",
+        "unit": 6
     },
     {
         "id": "bd_tema_7",
         "name": "Tema 7: Objeto-Relacional",
         "subject_id": "bases_de_datos",
         "file": "data/syllabus/bd_t7.txt",
-        "icon": "🗄️"
+        "icon": "🗄️",
+        "unit": 7
     },
     {
         "id": "ed_tema_1",
@@ -166,35 +173,40 @@ const SYLLABUS_REGISTRY_DATA = [
         "name": "EMP Tema 1: Prevención Riscos",
         "subject_id": "empleabilidad",
         "file": "data/syllabus/emp_t1.txt",
-        "icon": "💼"
+        "icon": "💼",
+        "unit": 1
     },
     {
         "id": "emp_tema_2",
         "name": "EMP Tema 2: Seguridad y RCP",
         "subject_id": "empleabilidad",
         "file": "data/syllabus/emp_t2.txt",
-        "icon": "💼"
+        "icon": "💼",
+        "unit": 2
     },
     {
         "id": "emp_tema_3",
         "name": "EMP Tema 3: Competencias",
         "subject_id": "empleabilidad",
         "file": "data/syllabus/emp_t3.txt",
-        "icon": "💼"
+        "icon": "💼",
+        "unit": 3
     },
     {
         "id": "emp_tema_4",
         "name": "EMP Tema 4: Mercado Laboral",
         "subject_id": "empleabilidad",
         "file": "data/syllabus/emp_t4.txt",
-        "icon": "💼"
+        "icon": "💼",
+        "unit": 4
     },
     {
         "id": "emp_tema_5",
         "name": "EMP Tema 5: Acción y FP Dual",
         "subject_id": "empleabilidad",
         "file": "data/syllabus/emp_t5.txt",
-        "icon": "💼"
+        "icon": "💼",
+        "unit": 5
     },
     {
         "id": "emp_bateria",

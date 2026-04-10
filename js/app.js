@@ -243,7 +243,15 @@ function renderSubjects() {
             const unitPool = pool.filter(q => q.unit === i);
             const pdfPath = THEORY_PDFS[subject.id]?.[i];
             const videoPath = SUBJECT_VIDEOS[subject.id]?.[i];
-            const unitAttempts = history.filter(h => h.subjectId === subject.id && h.unitId === i).length;
+            
+            // Unified count: Interactive attempts + Syllabus (PDF) attempts for this unit
+            const relatedSyllabusIds = APP_STATE.syllabusExams
+                .filter(e => e.subject_id === subject.id && e.unit === i)
+                .map(e => e.id);
+            const unitAttempts = history.filter(h => 
+                (h.subjectId === subject.id && h.unitId === i) || 
+                (relatedSyllabusIds.includes(h.subjectId))
+            ).length;
             
             unitsHTML += `
                 <div class="unit-group">
@@ -275,7 +283,7 @@ function renderSubjects() {
             <h3>${subject.name}</h3>
             <div class="card-badges">
                 <div class="card-pool-badge">${pool.length} preguntas</div>
-                ${subjectAttempts > 0 ? `<div class="badge-attempts">🔄 Repetido: ${subjectAttempts}</div>` : ''}
+                ${subjectAttempts > 0 ? `<div class="badge-attempts">🎯 Simulacros: ${subjectAttempts}</div>` : ''}
             </div>
             <div class="exam-selector-large">
                 <button onclick="startExam('${subject.id}')">🎯 Simulacro Completo</button>
@@ -389,7 +397,17 @@ function renderSyllabusExams() {
             </div>
             <div class="grid-container syllabus-grid">
                 ${grouped[subjectId].map(exam => {
-                    const attempts = history.filter(h => h.subjectId === exam.id).length;
+                    // Unified count for PDF cards too
+                    const unitId = exam.unit;
+                    const relatedSyllabusIds = APP_STATE.syllabusExams
+                        .filter(e => e.subject_id === exam.subject_id && e.unit === unitId && unitId !== undefined)
+                        .map(e => e.id);
+                    
+                    const attempts = history.filter(h => 
+                        (h.subjectId === exam.id) || 
+                        (unitId !== undefined && h.subjectId === exam.subject_id && h.unitId === unitId) ||
+                        (unitId !== undefined && relatedSyllabusIds.includes(h.subjectId))
+                    ).length;
                     return `
                     <div class="subject-card syllabus-card ${exam.type === 'examen_final' ? 'examen-final-card' : ''}">
                         <div class="card-icon">${exam.icon || '📖'}</div>
@@ -1199,6 +1217,7 @@ async function startSyllabusExam(syllabusId) {
         if (questions.length === 0) { alert('No se han podido extraer preguntas del archivo.'); return; }
 
         APP_STATE.currentExam = { ...examInfo, id: syllabusId };
+        APP_STATE.currentUnit = examInfo.unit || null; // Set unit to sync counting
         APP_STATE.isSyllabusMode = true;
         APP_STATE.examQuestions = questions;
         APP_STATE.currentQuestionIndex = 0;
@@ -1530,7 +1549,7 @@ function parseTxtExam(text, syllabusId) {
         .replace(/\r\n/g, '\n')
         .split('\n')
         .map(l => l.trim())
-        .filter(l => l !== '' && !l.match(/^tema\s+\d+$/i) && !l.includes('( 1.00 puntos )'));
+        .filter(l => l !== '' && !l.toLowerCase().startsWith('tema ') && !l.includes('( 1.00 puntos )'));
 
     // ── Paso 1: agrupar en bloques separados por EXPL: ───────────────────────
     // Cada bloque es: [pregunta, opcion1, opcion2, ..., EXPL:...]
