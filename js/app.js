@@ -36,6 +36,7 @@ const FALLOS_KEY    = 'fallos_v2';
 const SR_KEY        = 'spaced_rep_v1';   // repetición espaciada
 const MASTERY_KEY   = 'mastery_v1';      // preguntas dominadas (3+ aciertos seguidos)
 const TUTOR_PROGRESS_KEY = 'tutor_progress_v1';
+const SESSION_SYNC_KEY = 'study_session_v1';
 
 // ─── RESOURCE DEFINITIONS ───────────────────────────────────────
 const THEORY_PDFS = {
@@ -388,6 +389,7 @@ async function init() {
         renderProgress();
         renderAcademicPlanner();
         renderTutorMessage();
+        restoreStudySession();
         switchDash('overview');
         console.log('App initialized successfully | Data loaded from:', (typeof SUBJECTS_DATA !== 'undefined' ? 'Global JS' : 'Fetch API'));
     } catch (err) {
@@ -2414,7 +2416,7 @@ function renderTutorMessage() {
 function startStudySession(subjectId) {
     if (APP_STATE.studySession.active) {
         if (!confirm('Ya tienes una sesión activa. ¿Deseas cancelarla y empezar una nueva?')) return;
-        cancelStudySession();
+        cancelStudySession(false);
     }
 
     const subject = APP_STATE.subjects.find(s => s.id === subjectId) || { name: subjectId };
@@ -2428,13 +2430,41 @@ function startStudySession(subjectId) {
         timerInterval: setInterval(updateStudyTimer, 1000)
     };
 
+    saveSessionSync();
     renderStudySessionBar();
+}
+
+function saveSessionSync() {
+    Sync.set(SESSION_SYNC_KEY, {
+        active: APP_STATE.studySession.active,
+        subjectId: APP_STATE.studySession.subjectId,
+        subjectName: APP_STATE.studySession.subjectName,
+        startTime: APP_STATE.studySession.startTime
+    });
+}
+
+function restoreStudySession() {
+    const saved = Sync.get(SESSION_SYNC_KEY, null);
+    if (saved && saved.active) {
+        APP_STATE.studySession = {
+            ...saved,
+            elapsed: Math.floor((Date.now() - saved.startTime) / 1000),
+            timerInterval: setInterval(updateStudyTimer, 1000)
+        };
+        renderStudySessionBar();
+    }
 }
 
 function updateStudyTimer() {
     const elapsedMs = Date.now() - APP_STATE.studySession.startTime;
     APP_STATE.studySession.elapsed = Math.floor(elapsedMs / 1000);
     
+    // Scolding Heavy (cada 10 min de estudio)
+    if (APP_STATE.studySession.elapsed > 0 && APP_STATE.studySession.elapsed % 600 === 0) {
+        console.log("Robot: Nudge detectado");
+        showRobotNudge();
+    }
+
     const bar = document.getElementById('study-session-bar');
     if (bar) {
         const timerEl = bar.querySelector('.session-timer');
@@ -2442,42 +2472,41 @@ function updateStudyTimer() {
             const mins = Math.floor(APP_STATE.studySession.elapsed / 60);
             const secs = APP_STATE.studySession.elapsed % 60;
             timerEl.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            
+            // Visual feedback for the 5-min threshold
+            if (mins >= 5) {
+                timerEl.style.color = '#10b981'; // Green when ready
+            }
         }
     }
 }
 
-function renderStudySessionBar() {
-    const bar = document.getElementById('study-session-bar');
-    if (!bar) return;
-
-    bar.innerHTML = `
-        <div class="session-info">
-            <div class="session-timer">00:00</div>
-            <div>
-                <div style="font-size:0.7rem; color:var(--text-secondary); text-transform:uppercase; letter-spacing:1px;">Estudiando</div>
-                <div class="session-subject">${APP_STATE.studySession.subjectName}</div>
-            </div>
-        </div>
-        <div class="session-actions">
-            <button class="btn-session-cancel" onclick="cancelStudySession()">Cancelar</button>
-            <button class="btn-session-complete" onclick="completeStudySession()">He terminado de estudiar ✅</button>
-        </div>
-    `;
-    bar.classList.remove('hidden');
+function showRobotNudge() {
+    const nudges = [
+        "¿Sigues ahí? El tiempo corre y tu cerebro necesita oxígeno. ¡No te distraigas! 🤖⚡",
+        "Monitorizando ondas cerebrales... detecto una bajada de ritmo. ¡Aumenta la frecuencia de estudio! 🦾📉",
+        "El examen no se va a aprobar solo. Sigue procesando esos datos. 🤖📖"
+    ];
+    const msg = nudges[Math.floor(Math.random() * nudges.length)];
+    // Simple notification in UI if possible or just log/alert
+    console.log("ROBOT NUDGE:", msg);
 }
 
 function completeStudySession() {
     const mins = Math.floor(APP_STATE.studySession.elapsed / 60);
-    if (mins < 1) {
-        if (!confirm('¿Tan poco tiempo? El Robot espera al menos 1 minuto para procesar la sesión. ¿Seguro que has terminado?')) return;
+    const MIN_MINUTES = 5;
+
+    if (mins < MIN_MINUTES) {
+        alert(`❌ ACCESO DENEGADO. El Robot exige al menos ${MIN_MINUTES} minutos de estudio profundo para validar esta sesión. Llevas ${mins} min. ¡Sigue trabajando! 🤖🚫`);
+        return;
     }
 
     updateTutorProgress('theory', true, APP_STATE.studySession.subjectId);
     logActivity('theory', `Sesión de Estudio: ${APP_STATE.studySession.subjectName}`, `Tiempo invertido: ${mins} minutos`);
     
-    alert(`¡Buen trabajo! Has registrado ${mins} minutos de estudio profundo de ${APP_STATE.studySession.subjectName}.`);
+    alert(`¡OBJETIVO ALCANZADO! Has registrado ${mins} minutos de estudio Real de ${APP_STATE.studySession.subjectName}. El sistema está orgulloso. 🤖🦾✨`);
     
-    cancelStudySession(false); // Cleanup without logging cancellation
+    cancelStudySession(false); 
 }
 
 function cancelStudySession(shouldAsk = true) {
@@ -2485,6 +2514,7 @@ function cancelStudySession(shouldAsk = true) {
     
     clearInterval(APP_STATE.studySession.timerInterval);
     APP_STATE.studySession = { active: false, subjectId: null, startTime: null, elapsed: 0, timerInterval: null };
+    Sync.set(SESSION_SYNC_KEY, null);
     
     const bar = document.getElementById('study-session-bar');
     if (bar) bar.classList.add('hidden');
