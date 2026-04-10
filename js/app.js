@@ -2152,6 +2152,7 @@ function renderAcademicPlanner() {
                         <h5>🗓️ Rutina del Día</h5>
                         <ul>
                             ${getTasksForPhase().map(t => {
+                                const progress = getTutorProgress();
                                 const isDone = progress[t.key];
                                 const isDuoKey = (t.baseKey === 'theory' || t.baseKey === 'labs');
                                 
