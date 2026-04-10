@@ -457,17 +457,51 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   z-index: 2;
 }
 
-.pdf-link-mini {
-    font-size: 0.85rem;
+.resource-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.res-link-labeled {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
     text-decoration: none;
-    opacity: 0.5;
-    transition: all 0.2s;
-    line-height: 1;
+    color: var(--text-secondary);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.4rem 0.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--glass-border);
+    min-width: 48px;
+    flex: 1; /* Match sizes */
 }
-.pdf-link-mini:hover {
-    opacity: 1;
-    transform: scale(1.3);
+
+.res-link-labeled span {
+    font-size: 0.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
 }
+
+.res-link-labeled:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.res-link-labeled.pdf { color: #fca5a5; }
+.res-link-labeled.summary { color: #fde047; }
+.res-link-labeled.video { color: #a5b4fc; }
+.res-link-labeled.report { color: #5eead4; }
+.res-link-labeled.infographic { color: #d8b4fe; }
 
 /* ── EXAM SELECTOR LARGE ────────────────────────────────────── */
 .exam-selector-large { margin-top: 0.25rem; }

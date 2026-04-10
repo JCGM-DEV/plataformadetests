@@ -244,6 +244,8 @@ function renderSubjects() {
             const unitPool = pool.filter(q => q.unit === i);
             const pdfPath = THEORY_PDFS[subject.id]?.[i];
             const videoPath = SUBJECT_VIDEOS[subject.id]?.[i];
+            const infoPath = THEORY_INFOGRAPHICS[subject.id]?.[i];
+            const reportPath = THEORY_REPORTS[subject.id]?.[i];
             
             // Unified count: Interactive attempts + Syllabus (PDF) attempts for this unit
             const relatedSyllabusIds = APP_STATE.syllabusExams
@@ -254,6 +256,13 @@ function renderSubjects() {
                 (relatedSyllabusIds.includes(h.subjectId))
             ).length;
             
+            // Resource flags
+            const hasPDF = !!pdfPath;
+            const hasSumm = hasSummary(subject.id, i);
+            const hasVideo = !!videoPath;
+            const hasInfo = !!infoPath;
+            const hasRepos = !!reportPath;
+
             unitsHTML += `
                 <div class="unit-group">
                     <div class="unit-btn-wrapper">
@@ -262,10 +271,12 @@ function renderSubjects() {
                         </button>
                         ${unitAttempts > 0 ? `<span class="unit-counter-badge">${unitAttempts}</span>` : ''}
                     </div>
-                    <div style="display:flex; gap:0.4rem; justify-content:center; margin-top:0.2rem;">
-                        ${pdfPath ? `<a href="${pdfPath}" target="_blank" class="pdf-link-mini" title="Ver teoría PDF" onclick="logTheory('${subject.name}', ${i})">📄</a>` : ''}
-                        ${hasSummary(subject.id, i) ? `<a href="javascript:void(0)" onclick="openSummary('${subject.id}', ${i})" class="summary-link-mini" title="Ver Resumen del Tema">📝</a>` : ''}
-                        ${videoPath ? `<a href="javascript:void(0)" onclick="openVideo('${videoPath}')" class="video-link-mini" title="Ver video de repaso">🎬</a>` : ''}
+                    <div class="resource-links-container">
+                        ${hasPDF ? `<a href="${pdfPath}" target="_blank" class="res-link-labeled pdf" title="Ver teoría PDF" onclick="logTheory('${subject.name}', ${i})">📄<span>PDF</span></a>` : ''}
+                        ${hasSumm ? `<a href="javascript:void(0)" onclick="openSummary('${subject.id}', ${i})" class="res-link-labeled summary" title="Ver Resumen del Tema">📝<span>SMRY</span></a>` : ''}
+                        ${hasVideo ? `<a href="javascript:void(0)" onclick="openVideo('${videoPath}')" class="res-link-labeled video" title="Ver video de repaso">🎬<span>VIDEO</span></a>` : ''}
+                        ${hasRepos ? `<a href="${reportPath}" target="_blank" class="res-link-labeled report" title="Ver Informe Detallado">📊<span>INFO</span></a>` : ''}
+                        ${hasInfo ? `<a href="${infoPath}" target="_blank" class="res-link-labeled infographic" title="Ver Infografía">🖼️<span>MAPA</span></a>` : ''}
                     </div>
                 </div>`;
         }
@@ -2137,6 +2148,26 @@ const THEORY_PDFS = {
     "9": "Cloud%20Computing/TemasPDF/Modulo-9-Arquitectura-en-la-nube.pdf",
     "10": "Cloud%20Computing/TemasPDF/Modulo-10-Escalado-automatico-y-monitorizacion.pdf"
   }
+};
+
+const THEORY_INFOGRAPHICS = {
+    "empleabilidad": {
+        "1": "Empleabilidad/informe%20e%20infografia/unnamed.png",
+        "2": "Empleabilidad/informe%20e%20infografia/unnamed%20(1).png",
+        "3": "Empleabilidad/informe%20e%20infografia/unnamed%20(2).png",
+        "4": "Empleabilidad/informe%20e%20infografia/unnamed%20(3).png",
+        "5": "Empleabilidad/informe%20e%20infografia/unnamed%20(4).png"
+    }
+};
+
+const THEORY_REPORTS = {
+    "empleabilidad": {
+        "1": "Empleabilidad/informe%20e%20infografia/Guía_de_Derechos_Laborales.pdf",
+        "2": "Empleabilidad/informe%20e%20infografia/IT_Safety_Blueprint.pdf",
+        "3": "Empleabilidad/informe%20e%20infografia/Professional_Career_Dashboard.pdf",
+        "4": "Empleabilidad/informe%20e%20infografia/IT_Career_Blueprint.pdf",
+        "5": "Empleabilidad/informe%20e%20infografia/The_IT_Career_Code.pdf"
+    }
 };
 
 function getLibreta() {
