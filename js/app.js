@@ -16,10 +16,15 @@ const APP_STATE = {
     summaries: {},
     isReviewing: false,
     // flashcard
-    fcQuestions: [],
-    fcIndex: 0,
     fcFlipped: false,
-    isFinishing: false
+    isFinishing: false,
+    studySession: { 
+        active: false, 
+        subjectId: null, 
+        startTime: null, 
+        elapsed: 0, 
+        timerInterval: null 
+    }
 };
 
 let QUESTION_POOL = {};
@@ -441,7 +446,7 @@ function renderSubjects() {
                         <span class="topic-play-icon">🎯</span>
                     </div>
                     <div class="topic-content" onclick="event.stopPropagation()">
-                        ${hasPDF ? `<a href="${pdfPath}" target="_blank" class="res-link-labeled pdf" title="Ver teoría PDF" onclick="logTheory('${subject.name}', ${i})">📄<span>PDF</span></a>` : ''}
+                        ${hasPDF ? `<a href="${pdfPath}" target="_blank" class="res-link-labeled pdf" title="Ver teoría PDF" onclick="logTheory('${subject.name}', ${i}, '${subject.id}')">📄<span>PDF</span></a>` : ''}
                         ${hasSumm ? `<a href="javascript:void(0)" onclick="openSummary('${subject.id}', ${i})" class="res-link-labeled summary" title="Ver Resumen del Tema">📝<span>SMRY</span></a>` : ''}
                         ${hasVideo ? `<a href="javascript:void(0)" onclick="openVideo('${videoPath}')" class="res-link-labeled video" title="Ver video de repaso">🎬<span>VIDEO</span></a>` : ''}
                         ${hasRepos ? `<a href="${reportPath}" target="_blank" class="res-link-labeled report" title="Ver Informe Detallado">📊<span>INFO</span></a>` : ''}
@@ -1162,8 +1167,10 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-function logTheory(subjectName, unit) {
-    updateTutorProgress('theory', true);
+function logTheory(subjectName, unit, subjectId = null) {
+    if (!APP_STATE.studySession.active) {
+        startStudySession(subjectId || subjectName);
+    }
     logActivity('theory', `Teoría: ${subjectName}`, `Repasando Tema ${unit}`);
 }
 
@@ -2328,30 +2335,42 @@ function renderTutorMessage() {
     let message = '';
 
     const todaySlot = getDailySubjects();
-    const firstSub = todaySlot.subjects[0];
-    const subLabel = todaySlot.labels[0] || 'asignatura';
+    const subjects = todaySlot.subjects || [];
+    const labels = todaySlot.labels || [];
 
     if (!nextTask) {
         message = "¡Protocolo completado! Has destruido todos los objetivos de hoy. El sistema está optimizado al 100%. 🤖✨";
         mood = 'encouraging';
     } else {
         if (nextTask.key === 'theory') {
-            message = `Iniciando Fase de Concepto. Debes procesar la **teoría** de **${subLabel}**. No intentes correr antes de saber caminar. 🤖📖`;
-            guidanceHTML = `
-                <div style="margin-top: 1rem;">
-                    <button class="planner-go-btn" style="background:var(--primary-color); padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="scrollToSubject('${firstSub}')">
-                        ⚡ Abrir Teoría de ${subLabel}
-                    </button>
-                </div>`;
+            const isDuo = subjects.length > 1;
+            message = isDuo 
+                ? `Fase de Concepto dual detectada. Debes procesar la **teoría** de **${labels.join(' e ')}**. ¿Por cuál empezamos el escaneo? 🤖📖`
+                : `Iniciando Fase de Concepto. Debes procesar la **teoría** de **${labels[0]}**. No intentes correr antes de saber caminar. 🤖📖`;
+            
+            guidanceHTML = `<div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">`;
+            subjects.forEach((sid, i) => {
+                guidanceHTML += `
+                    <button class="planner-go-btn" style="background:var(--primary-color); padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="scrollToSubject('${sid}')">
+                        ⚡ Teoría: ${labels[i]}
+                    </button>`;
+            });
+            guidanceHTML += `</div>`;
+
         } else if (nextTask.key === 'tests') {
             message = `Teoría procesada. Ahora a por el **entrenamiento de tests**. Vamos a ver si realmente has entendido algo o solo has mirado los dibujos. 🤖🎯`;
-            guidanceHTML = `
-                <div style="margin-top: 1rem;">
-                    <button class="planner-go-btn" style="background:#f97316; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="showView('dashboard'); switchDash('simulacros'); setTimeout(()=>scrollToSubject('${firstSub}'),100)">
-                        🔥 Ir a los Tests de ${subLabel}
-                    </button>
-                    ${getCurrentPhase().id === 2 ? `<button onclick="showView('dashboard'); switchDash('fallos')" style="margin-left:0.5rem; background:#6366f1; padding: 0.6rem 1.2rem; font-size: 0.85rem;" class="planner-go-btn">📓 Repasar Fallos</button>` : ''}
-                </div>`;
+            guidanceHTML = `<div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">`;
+            subjects.forEach((sid, i) => {
+                guidanceHTML += `
+                    <button class="planner-go-btn" style="background:#f97316; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="showView('dashboard'); switchDash('simulacros'); setTimeout(()=>scrollToSubject('${sid}'),150)">
+                        🔥 Test: ${labels[i]}
+                    </button>`;
+            });
+            if (getCurrentPhase().id === 2) {
+                guidanceHTML += `<button onclick="showView('dashboard'); switchDash('fallos')" style="background:#6366f1; padding: 0.6rem 1.2rem; font-size: 0.85rem;" class="planner-go-btn">📓 Repasar Fallos</button>`;
+            }
+            guidanceHTML += `</div>`;
+
         } else if (nextTask.key === 'labs') {
             message = `Protocolo de práctica activado. Es hora de mancharse las manos en el **laboratorio**. La teoría es bonita, pero el código es la realidad. 🤖🔧`;
             guidanceHTML = `
@@ -2381,6 +2400,86 @@ function renderTutorMessage() {
             </div>
         </div>
     `;
+}
+
+// ─── STUDY SESSION MANAGER ──────────────────────────────────────
+function startStudySession(subjectId) {
+    if (APP_STATE.studySession.active) {
+        if (!confirm('Ya tienes una sesión activa. ¿Deseas cancelarla y empezar una nueva?')) return;
+        cancelStudySession();
+    }
+
+    const subject = APP_STATE.subjects.find(s => s.id === subjectId) || { name: subjectId };
+    
+    APP_STATE.studySession = {
+        active: true,
+        subjectId: subjectId,
+        subjectName: subject.name,
+        startTime: Date.now(),
+        elapsed: 0,
+        timerInterval: setInterval(updateStudyTimer, 1000)
+    };
+
+    renderStudySessionBar();
+}
+
+function updateStudyTimer() {
+    const elapsedMs = Date.now() - APP_STATE.studySession.startTime;
+    APP_STATE.studySession.elapsed = Math.floor(elapsedMs / 1000);
+    
+    const bar = document.getElementById('study-session-bar');
+    if (bar) {
+        const timerEl = bar.querySelector('.session-timer');
+        if (timerEl) {
+            const mins = Math.floor(APP_STATE.studySession.elapsed / 60);
+            const secs = APP_STATE.studySession.elapsed % 60;
+            timerEl.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+    }
+}
+
+function renderStudySessionBar() {
+    const bar = document.getElementById('study-session-bar');
+    if (!bar) return;
+
+    bar.innerHTML = `
+        <div class="session-info">
+            <div class="session-timer">00:00</div>
+            <div>
+                <div style="font-size:0.7rem; color:var(--text-secondary); text-transform:uppercase; letter-spacing:1px;">Estudiando</div>
+                <div class="session-subject">${APP_STATE.studySession.subjectName}</div>
+            </div>
+        </div>
+        <div class="session-actions">
+            <button class="btn-session-cancel" onclick="cancelStudySession()">Cancelar</button>
+            <button class="btn-session-complete" onclick="completeStudySession()">He terminado de estudiar ✅</button>
+        </div>
+    `;
+    bar.classList.remove('hidden');
+}
+
+function completeStudySession() {
+    const mins = Math.floor(APP_STATE.studySession.elapsed / 60);
+    if (mins < 1) {
+        if (!confirm('¿Tan poco tiempo? El Robot espera al menos 1 minuto para procesar la sesión. ¿Seguro que has terminado?')) return;
+    }
+
+    updateTutorProgress('theory', true);
+    logActivity('theory', `Sesión de Estudio: ${APP_STATE.studySession.subjectName}`, `Tiempo invertido: ${mins} minutos`);
+    
+    alert(`¡Buen trabajo! Has registrado ${mins} minutos de estudio profundo de ${APP_STATE.studySession.subjectName}.`);
+    
+    cancelStudySession(false); // Cleanup without logging cancellation
+}
+
+function cancelStudySession(shouldAsk = true) {
+    if (shouldAsk && !confirm('¿Seguro que quieres cancelar la sesión? No se guardará el progreso.')) return;
+    
+    clearInterval(APP_STATE.studySession.timerInterval);
+    APP_STATE.studySession = { active: false, subjectId: null, startTime: null, elapsed: 0, timerInterval: null };
+    
+    const bar = document.getElementById('study-session-bar');
+    if (bar) bar.classList.add('hidden');
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -2557,7 +2656,9 @@ function getSubjectPrefix(subjectId) {
 }
 
 function openSummary(subjectId, unit) {
-    updateTutorProgress('theory', true);
+    if (!APP_STATE.studySession.active) {
+        startStudySession(subjectId);
+    }
     const key = `${getSubjectPrefix(subjectId)}_tema_${unit}`;
     const summary = APP_STATE.summaries[key];
     if (!summary) return;

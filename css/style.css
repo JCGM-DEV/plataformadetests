@@ -2964,3 +2964,84 @@ footer { margin-top: 4rem; padding-bottom: 2rem; }
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 15px 30px rgba(255, 193, 7, 0.3);
 }
+
+/* ── STUDY SESSION BAR ───────────────────────────────────────── */
+.study-session-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--primary-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
+  animation: slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.study-session-bar.hidden {
+  display: none;
+}
+
+.session-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.session-timer {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  background: rgba(99,102,241,0.1);
+  padding: 0.2rem 0.8rem;
+  border-radius: 8px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.session-subject {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.session-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-session-complete {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-session-complete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99,102,241,0.4);
+}
+
+.btn-session-cancel {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
