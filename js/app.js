@@ -149,9 +149,9 @@ function switchDash(sectionId) {
     // Update Top Bar Title
     const titles = {
         'overview': 'Resumen Académico',
-        'simulacros': 'Simulacros de Examen',
+        'simulacros': 'Simulacros y Teoría',
         'labs': 'Laboratorios Interactivos',
-        'temario': 'Temario Oficial',
+        'temario': 'Tests del temario oficial (Los que hemos hecho en cada tema)',
         'planner': 'Planificador de Estudio',
         'progreso': 'Mi Análisis de Progreso',
         'fallos': 'Repaso de Errores'
