@@ -18,7 +18,8 @@ const APP_STATE = {
     // flashcard
     fcQuestions: [],
     fcIndex: 0,
-    fcFlipped: false
+    fcFlipped: false,
+    isFinishing: false
 };
 
 let QUESTION_POOL = {};
@@ -722,6 +723,8 @@ function startExam(subjectId, unitId = null, mode = 'normal') {
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
     let pool = QUESTION_POOL[subjectId] || [];
     
+    APP_STATE.isFinishing = false;
+    
     // Filter by unit
     if (unitId !== null) pool = pool.filter(q => q.unit === unitId);
     
@@ -1056,6 +1059,7 @@ function startFallosExam(subjectId) {
 
 // ─── SIMULACRO TEMARIO COMPLETO ─────────────────────────────────
 async function startExamenFinal(subjectId) {
+    APP_STATE.isFinishing = false;
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
     const isEmp = subjectId === 'empleabilidad';
 
@@ -1142,6 +1146,7 @@ async function startSyllabusFlashcard(subjectId) {
 }
 
 async function startSimulacroTemario(subjectId) {
+    APP_STATE.isFinishing = false;
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
     const temas = APP_STATE.syllabusExams.filter(e => e.subject_id === subjectId && e.type !== 'lab');
 
@@ -1208,6 +1213,7 @@ async function startSimulacroTemario(subjectId) {
 }
 
 async function startSyllabusExam(syllabusId) {
+    APP_STATE.isFinishing = false;
     const examInfo = APP_STATE.syllabusExams.find(e => e.id === syllabusId);
     if (!examInfo) return;
     try {
@@ -1416,6 +1422,9 @@ function nextQuestion() {
 
 // ─── FINISH EXAM ────────────────────────────────────────────────
 function finishExam() {
+    if (APP_STATE.isFinishing) return;
+    APP_STATE.isFinishing = true;
+
     try {
         clearInterval(APP_STATE.timerInterval);
     const total = APP_STATE.examQuestions.length;
