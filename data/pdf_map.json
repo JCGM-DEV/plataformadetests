@@ -86,43 +86,50 @@
       "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD1_1.pdf",
       "name": "UD1",
       "total_pages": 44,
-      "exists": true
+      "exists": true,
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_1.png"
     },
     "2": {
       "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD2.pdf",
       "name": "UD2",
       "total_pages": 61,
-      "exists": true
+      "exists": true,
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_2.png"
     },
     "3": {
       "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD3.pdf",
       "name": "UD3",
       "total_pages": 47,
-      "exists": true
+      "exists": true,
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_3.png"
     },
     "4": {
       "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD4.pdf",
       "name": "UD4",
       "total_pages": 43,
-      "exists": true
+      "exists": true,
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_4.png"
     },
     "5": {
       "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD5.pdf",
       "name": "UD5",
       "total_pages": 46,
-      "exists": true
+      "exists": true,
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_5.png"
     },
     "6": {
       "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD6_1.pdf",
       "name": "UD6",
       "total_pages": 39,
-      "exists": true
+      "exists": true,
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_6.png"
     },
     "7": {
       "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD7_1.pdf",
       "name": "UD7",
       "total_pages": 45,
-      "exists": true
+      "exists": true,
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_7.png"
     }
   },
   "bases_de_datos": {
@@ -130,37 +137,43 @@
       "path": "Bases de datos/TemasPDF/DAW_BD_UD1.pdf",
       "name": "UD1",
       "total_pages": 36,
-      "exists": true
+      "exists": true,
+      "infographic": "Bases de datos/informes y presentaciones/infografia_tema_1.png"
     },
     "2": {
       "path": "Bases de datos/TemasPDF/DAW_BD_UD2.pdf",
       "name": "UD2",
       "total_pages": 81,
-      "exists": true
+      "exists": true,
+      "infographic": "Bases de datos/informes y presentaciones/infografia_tema_2.png"
     },
     "3": {
       "path": "Bases de datos/TemasPDF/DAW_BD_UD3.pdf",
       "name": "UD3",
       "total_pages": 71,
-      "exists": true
+      "exists": true,
+      "infographic": "Bases de datos/informes y presentaciones/infografia_tema_3.png"
     },
     "4": {
       "path": "Bases de datos/TemasPDF/DAW_BD_UD4 (1).pdf",
       "name": "UD4",
       "total_pages": 81,
-      "exists": true
+      "exists": true,
+      "infographic": "Bases de datos/informes y presentaciones/infografia_tema_4.png"
     },
     "5": {
       "path": "Bases de datos/TemasPDF/DAW_BD_UD5.pdf",
       "name": "UD5",
       "total_pages": 50,
-      "exists": true
+      "exists": true,
+      "infographic": "Bases de datos/informes y presentaciones/infografia_tema_5.png"
     },
     "6": {
       "path": "Bases de datos/TemasPDF/DAW_BD_UD6.pdf",
       "name": "UD6",
       "total_pages": 98,
-      "exists": true
+      "exists": true,
+      "infographic": "Bases de datos/informes y presentaciones/infografia_tema_6.png"
     },
     "7": {
       "path": "Bases de datos/TemasPDF/DAW_BD_UD7.pdf",
@@ -174,49 +187,57 @@
       "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD1_1 (1).pdf",
       "name": "UD1",
       "total_pages": 24,
-      "exists": true
+      "exists": true,
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_1.png"
     },
     "2": {
       "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD2_1.pdf",
       "name": "UD2",
       "total_pages": 86,
-      "exists": true
+      "exists": true,
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_2.png"
     },
     "3": {
       "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD3_1.pdf",
       "name": "UD3",
       "total_pages": 46,
-      "exists": true
+      "exists": true,
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_3.png"
     },
     "4": {
       "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD4_1.pdf",
       "name": "UD4",
       "total_pages": 26,
-      "exists": true
+      "exists": true,
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_4.png"
     },
     "5": {
       "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD5_1.pdf",
       "name": "UD5",
       "total_pages": 32,
-      "exists": true
+      "exists": true,
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_5.png"
     },
     "6": {
       "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD6_1.pdf",
       "name": "UD6",
       "total_pages": 36,
-      "exists": true
+      "exists": true,
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_6.png"
     },
     "7": {
       "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD7_1.pdf",
       "name": "UD7",
       "total_pages": 30,
-      "exists": true
+      "exists": true,
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_7.png"
     },
     "8": {
       "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD8_1.pdf",
       "name": "UD8",
       "total_pages": 32,
-      "exists": true
+      "exists": true,
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_8.png"
     }
   },
   "entornos_de_desarrollo": {
@@ -224,43 +245,50 @@
       "path": "Entornos de desarrollo/TemasPDF/DAW_ED_UD1_PORTADANUEVA_1.pdf",
       "name": "UD1",
       "total_pages": 41,
-      "exists": true
+      "exists": true,
+      "infographic": "Entornos de desarrollo/informes y presentaciones/infografia_tema_1.png"
     },
     "2": {
       "path": "Entornos de desarrollo/TemasPDF/DAW_ED_UD2_PORTADANUEVA_1.pdf",
       "name": "UD2",
       "total_pages": 21,
-      "exists": true
+      "exists": true,
+      "infographic": "Entornos de desarrollo/informes y presentaciones/infografia_tema_2.png"
     },
     "3": {
       "path": "Entornos de desarrollo/TemasPDF/DAW_ED_UD3_PORTADANUEVA.pdf",
       "name": "UD3",
       "total_pages": 16,
-      "exists": true
+      "exists": true,
+      "infographic": "Entornos de desarrollo/informes y presentaciones/infografia_tema_3.png"
     },
     "4": {
       "path": "Entornos de desarrollo/TemasPDF/DAW_ED_UD4_PORTADANUEVA_1.pdf",
       "name": "UD4",
       "total_pages": 24,
-      "exists": true
+      "exists": true,
+      "infographic": "Entornos de desarrollo/informes y presentaciones/infografia_tema_4.png"
     },
     "5": {
       "path": "Entornos de desarrollo/TemasPDF/DAW_ED_UD5_PORTADANUEVA_1.pdf",
       "name": "UD5",
       "total_pages": 24,
-      "exists": true
+      "exists": true,
+      "infographic": "Entornos de desarrollo/informes y presentaciones/infografia_tema_5.png"
     },
     "6": {
       "path": "Entornos de desarrollo/TemasPDF/DAW_ED_UD6_PORTADANUEVA_1.pdf",
       "name": "UD6",
       "total_pages": 22,
-      "exists": true
+      "exists": true,
+      "infographic": "Entornos de desarrollo/informes y presentaciones/infografia_tema_6.png"
     },
     "7": {
       "path": "Entornos de desarrollo/TemasPDF/DAW_ED_UD7_PORTADANUEVA_1.pdf",
       "name": "UD7",
       "total_pages": 24,
-      "exists": true
+      "exists": true,
+      "infographic": "Entornos de desarrollo/informes y presentaciones/infografia_tema_7.png"
     }
   },
   "cloud_computing": {
@@ -268,61 +296,71 @@
       "path": "Cloud Computing/TemasPDF/Modulo-1-Conceptos-de-la-computacion-en-la-nube.pdf",
       "name": "Módulo 1",
       "total_pages": 16,
-      "exists": true
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_1.png"
     },
     "2": {
       "path": "Cloud Computing/TemasPDF/Modulo-2-Economia-y-facturacion-en-la-nube.pdf",
       "name": "Módulo 2",
       "total_pages": 15,
-      "exists": true
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_2.png"
     },
     "3": {
       "path": "Cloud Computing/TemasPDF/Modulo-3-Infraestructura-de-la-nube.pdf",
       "name": "Módulo 3",
       "total_pages": 15,
-      "exists": true
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_3.png"
     },
     "4": {
       "path": "Cloud Computing/TemasPDF/Modulo-4-Seguridad-en-la-nube.pdf",
       "name": "Módulo 4",
       "total_pages": 15,
-      "exists": true
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_4.png"
     },
     "5": {
       "path": "Cloud Computing/TemasPDF/Modulo-5-Redes-y-Entrega-de-Contenidos.pdf",
       "name": "Módulo 5",
       "total_pages": 15,
-      "exists": true
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_5.png"
     },
     "6": {
       "path": "Cloud Computing/TemasPDF/Modulo-6-Servicios-de-computo.pdf",
       "name": "Módulo 6",
       "total_pages": 15,
-      "exists": true
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_6.png"
     },
     "7": {
       "path": "Cloud Computing/TemasPDF/Modulo-7-Servicios-de-almacenamiento.pdf",
       "name": "Módulo 7",
       "total_pages": 15,
-      "exists": true
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_7.png"
     },
     "8": {
       "path": "Cloud Computing/TemasPDF/Modulo-8-Servicios-de-bases-de-datos.pdf",
       "name": "Módulo 8",
       "total_pages": 16,
-      "exists": true
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_8.png"
     },
     "9": {
       "path": "Cloud Computing/TemasPDF/Modulo-9-Arquitectura-en-la-nube.pdf",
       "name": "Módulo 9",
       "total_pages": 17,
-      "exists": true
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_9.png"
     },
     "10": {
       "path": "Cloud Computing/TemasPDF/Modulo-10-Escalado-automatico-y-monitorizacion.pdf",
       "name": "Módulo 10",
       "total_pages": 17,
-      "exists": true
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_10.png"
     }
   },
   "empleabilidad": {

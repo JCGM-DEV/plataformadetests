@@ -116,9 +116,9 @@ function processCommand(raw) {
   // Basic Logic
   if (cmd === 'help') {
     if (currentMode === 'linux') {
-      writeLine('Comandos: ls, cd, mkdir, rm, chmod, grep, pwd, clear, hint');
+      writeLine('Comandos: ls, cd, mkdir, rm, chmod, grep, cat, echo, ps, ifconfig, pwd, clear, hint');
     } else {
-      writeLine('Comandos: dir, cd, md, rd, attrib, cls, type, hint');
+      writeLine('Comandos: dir, cd, md, rd, del, attrib, type, echo, tasklist, ipconfig, cls, hint');
     }
     return;
   }
@@ -216,6 +216,67 @@ function handleCoreCommands(cmd, args) {
       if (flag === '+r') state.fs[fullPath].attrs.push('R');
       writeLine(`Atributos actualizados.`);
     } else throw new Error('Archivo no encontrado.');
+    return;
+  }
+
+  // CAT / TYPE
+  if (cmd === 'cat' || cmd === 'type') {
+    const file = args[0];
+    if (!file) throw new Error('Nombre de archivo requerido.');
+    let fullPath = state.cwd + (state.cwd.endsWith(sep) ? '' : sep) + file;
+    if (state.fs[fullPath] && state.fs[fullPath].type !== 'dir') {
+      writeLine(state.fs[fullPath].content || '[Archivo vacío]');
+    } else throw new Error('Archivo no encontrado o es un directorio.');
+    return;
+  }
+
+  // ECHO (Simple implementation with redirection support)
+  if (cmd === 'echo') {
+    const redirectIdx = args.indexOf('>');
+    if (redirectIdx !== -1) {
+      const content = args.slice(0, redirectIdx).join(' ');
+      const fileName = args[redirectIdx + 1];
+      if (!fileName) throw new Error('Nombre de archivo requerido para redirección.');
+      let fullPath = state.cwd + (state.cwd.endsWith(sep) ? '' : sep) + fileName;
+      state.fs[fullPath] = { type: 'file', content: content };
+      writeLine(`Redirigido a: ${fileName}`);
+    } else {
+      writeLine(args.join(' '));
+    }
+    return;
+  }
+
+  // RM / DEL
+  if (cmd === 'rm' || cmd === 'del') {
+    const file = args[0];
+    if (!file) throw new Error('Nombre de archivo requerido.');
+    let fullPath = state.cwd + (state.cwd.endsWith(sep) ? '' : sep) + file;
+    if (state.fs[fullPath]) {
+      delete state.fs[fullPath];
+      writeLine(`Eliminado: ${file}`);
+    } else throw new Error('Archivo no encontrado.');
+    return;
+  }
+
+  // PS / TASKLIST
+  if (cmd === 'ps' || cmd === 'tasklist') {
+    writeLine(currentMode === 'linux' ? '  PID TTY          TIME CMD' : 'Nombre de la imagen            PID Nombre de sesió Núm. de ses Uso de memoria');
+    writeLine(currentMode === 'linux' ? '    1 ?        00:00:01 init' : 'System Idle Process              0 Services                   0          8 KB');
+    writeLine(currentMode === 'linux' ? '   42 ?        00:00:05 bash' : 'System                           4 Services                   0        124 KB');
+    writeLine(currentMode === 'linux' ? '  128 ?        00:00:00 ps'   : 'svchost.exe                   1224 Services                   0     15,420 KB');
+    return;
+  }
+
+  // IFCONFIG / IPCONFIG
+  if (cmd === 'ifconfig' || cmd === 'ipconfig') {
+    if (currentMode === 'linux') {
+      writeLine('eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500');
+      writeLine('      inet 192.168.1.15  netmask 255.255.255.0  broadcast 192.168.1.255');
+    } else {
+      writeLine('Adaptador de Ethernet Ethernet:');
+      writeLine('   Dirección IPv4. . . . . . . . . . . . . . : 192.168.1.10');
+      writeLine('   Máscara de subred . . . . . . . . . . . . : 255.255.255.0');
+    }
     return;
   }
 

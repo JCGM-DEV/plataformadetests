@@ -46,14 +46,62 @@ const DATA = {
         hint: 'ls | grep txt',
         validate: (state, cmd) => cmd.includes('|') && cmd.includes('ls') && cmd.includes('grep'),
         successMsg: 'Dominas las tuberías. ¡Eficiencia pura!'
+      },
+      {
+        id: 'lin-6',
+        title: 'Monitorización de Procesos',
+        desc: 'Usa el comando <code>ps</code> para visualizar los procesos que se están ejecutando actualmente en el sistema.',
+        difficulty: 'Básica',
+        hint: 'ps',
+        validate: (state, cmd) => cmd.trim() === 'ps',
+        successMsg: 'Visualización de procesos completada.'
+      },
+      {
+        id: 'lin-7',
+        title: 'Redirección de Salida',
+        desc: 'Crea un archivo llamado <code>saludo.txt</code> que contenga el texto "Hola Mundo" usando redirección <code>></code>.',
+        difficulty: 'Media',
+        hint: 'echo Hola Mundo > saludo.txt',
+        validate: (state) => state.fs['/saludo.txt'] && state.fs['/saludo.txt'].content.includes('Hola Mundo'),
+        successMsg: 'Archivo creado mediante redirección exitosamente.'
+      },
+      {
+        id: 'lin-8',
+        title: 'Consulta de Usuarios',
+        desc: 'El archivo <code>/etc/passwd</code> contiene los usuarios. Úsalo para ver la lista de cuentas del sistema.',
+        difficulty: 'Básica',
+        hint: 'cat /etc/passwd',
+        validate: (state, cmd) => cmd.includes('cat') && cmd.includes('/etc/passwd'),
+        successMsg: 'Has consultado la base de datos de usuarios.'
+      },
+      {
+        id: 'lin-9',
+        title: 'Configuración de Red',
+        desc: 'Verifica la dirección IP de tu interfaz de red <code>eth0</code>.',
+        difficulty: 'Básica',
+        hint: 'ifconfig',
+        validate: (state, cmd) => cmd === 'ifconfig',
+        successMsg: 'Configuración de red verificada.'
+      },
+      {
+        id: 'lin-10',
+        title: 'Eliminación de Archivos',
+        desc: 'Elimina el archivo temporal <code>cache.old</code> del directorio raíz.',
+        difficulty: 'Básica',
+        hint: 'rm cache.old',
+        validate: (state) => !state.fs['/cache.old'],
+        successMsg: 'Limpieza del sistema completada.'
       }
     ],
     initialFS: {
       '/': { type: 'dir' },
       '/documentos': { type: 'dir' },
+      '/etc': { type: 'dir' },
+      '/etc/passwd': { type: 'file', content: 'root:x:0:0:root:/root:/bin/bash\nuser:x:1000:1000:user:/home/user:/bin/bash' },
       '/documentos/notas.txt': { type: 'file', content: 'Estudiar para el examen de mayo.' },
       '/secreto.txt': { type: 'file', content: 'Contraseña: 1234', permissions: '644' },
-      '/log.txt': { type: 'file', content: 'INFO: Todo ok\nERROR: Fallo en disco\nINFO: Reinicio' }
+      '/log.txt': { type: 'file', content: 'INFO: Todo ok\nERROR: Fallo en disco\nINFO: Reinicio' },
+      '/cache.old': { type: 'file', content: 'Datos obsoletos' }
     }
   },
   windows: {
@@ -85,13 +133,50 @@ const DATA = {
         hint: 'md Backup\\Enero',
         validate: (state) => state.fs['\\Backup\\Enero'],
         successMsg: 'Directorios creados al estilo Windows.'
+      },
+      {
+        id: 'win-4',
+        title: 'Configuración de Red',
+        desc: 'Muestra la dirección IPv4 y otros detalles de red del equipo.',
+        difficulty: 'Básica',
+        hint: 'ipconfig',
+        validate: (state, cmd) => cmd === 'ipconfig',
+        successMsg: 'Información de red obtenida.'
+      },
+      {
+        id: 'win-5',
+        title: 'Administrador de Tareas',
+        desc: 'Lista todos los procesos que se están ejecutando en Windows.',
+        difficulty: 'Media',
+        hint: 'tasklist',
+        validate: (state, cmd) => cmd === 'tasklist',
+        successMsg: 'Lista de procesos visualizada.'
+      },
+      {
+        id: 'win-6',
+        title: 'Lectura de Archivos',
+        desc: 'Lee el contenido del archivo de configuración <code>config.ini</code>.',
+        difficulty: 'Básica',
+        hint: 'type config.ini',
+        validate: (state, cmd) => cmd.includes('type') && cmd.includes('config.ini'),
+        successMsg: 'Configuración leída correctamente.'
+      },
+      {
+        id: 'win-7',
+        title: 'Eliminación selectiva',
+        desc: 'Elimina el archivo temporal <code>temp.tmp</code>.',
+        difficulty: 'Básica',
+        hint: 'del temp.tmp',
+        validate: (state) => !state.fs['\\temp.tmp'],
+        successMsg: 'Archivo temporal eliminado.'
       }
     ],
     initialFS: {
       '\\': { type: 'dir' },
       '\\Users': { type: 'dir' },
-      '\\config.ini': { type: 'file', attrs: [] },
-      '\\autoexec.bat': { type: 'file' }
+      '\\config.ini': { type: 'file', attrs: [], content: '[Settings]\nTheme=Dark\nAutoSave=True' },
+      '\\autoexec.bat': { type: 'file' },
+      '\\temp.tmp': { type: 'file', content: 'temporary data' }
     }
   }
 };
