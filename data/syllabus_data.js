@@ -10036,7 +10036,7 @@ const SYLLABUS_RAW_DATA = {
         "Filtran el tráfico no autorizado",
         "Bloquean los ataques de malware automáticamente"
       ],
-      "correct": 0,
+      "correct": 1,
       "explanation": "DNS (Domain Name System) traduce nombres de dominio legibles (google.com) a direcciones IP numéricas. Sin DNS habría que memorizar IPs para acceder a cada sitio.",
       "unit": null
     },

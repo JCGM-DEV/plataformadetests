@@ -12,8 +12,8 @@ Reducir el consumo de energía
 Aumentar el almacenamiento de los dispositivos
 EXPL:El propósito principal de una red de computadoras es conectar dispositivos para compartir información y recursos como archivos, impresoras, conexión a internet, etc.
 ¿Cómo funcionan los servidores DNS en la nube?
-*Almacenan los datos de los usuarios
-Resuelven nombres de dominio en direcciones IP
+Almacenan los datos de los usuarios
+*Resuelven nombres de dominio en direcciones IP
 Filtran el tráfico no autorizado
 Bloquean los ataques de malware automáticamente
 EXPL:DNS (Domain Name System) traduce nombres de dominio legibles (google.com) a direcciones IP numéricas. Sin DNS habría que memorizar IPs para acceder a cada sitio.
