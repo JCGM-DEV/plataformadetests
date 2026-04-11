@@ -541,6 +541,7 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
 
 .res-link-labeled.report { color: #5eead4; }
 .res-link-labeled.infographic { color: #d8b4fe; }
+.res-link-labeled.video { color: #60a5fa; }
 
 /* ── EXAM SELECTOR LARGE ────────────────────────────────────── */
 .exam-selector-large { margin-top: 0.25rem; }
@@ -2981,6 +2982,11 @@ footer { margin-top: 4rem; padding-bottom: 2rem; }
   z-index: 10000;
   box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
   animation: slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.has-active-session .main-content,
+body.has-active-session .exam-body {
+    padding-bottom: 100px !important;
 }
 
 .study-session-bar.hidden {

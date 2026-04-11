@@ -1045,6 +1045,31 @@ const SUBJECT_VIDEOS = {
         "8": "Cloud%20Computing/videos/Servicios_de_BBDD__El_Corazón_Invisible_del_Mundo_Digital.mp4",
         "9": "Cloud%20Computing/videos/Arquitectura_en_la_nube.mp4",
         "10": "Cloud%20Computing/videos/Escalado_y_Monitorización.mp4"
+    },
+    "sistemas_informaticos": {
+        "1": "Sistemas%20informaticos/videos/El_plano_del_ordenador.mp4",
+        "2": "Sistemas%20informaticos/videos/Instalación_de_Sistemas_Operativos.mp4",
+        "3": "Sistemas%20informaticos/videos/Gestión_de_la_Información.mp4",
+        "4": "Sistemas%20informaticos/videos/Configuración__Del_Caos_al_Control.mp4",
+        "5": "Sistemas%20informaticos/videos/El_viaje_de_un_clic.mp4",
+        "6": "Sistemas%20informaticos/videos/La_Arquitectura_de_Seguridad.mp4",
+        "7": "Sistemas%20informaticos/videos/El_software_que_mueve_tu_mundo.mp4"
+    },
+    "lenguaje_de_marcas": {
+        "1": "Lenguaje%20de%20marcas/videos/Los_Cimientos_de_la_Web.mp4",
+        "2": "Lenguaje%20de%20marcas/videos/El_lenguaje_oculto_de_la_web.mp4",
+        "3": "Lenguaje%20de%20marcas/videos/Esquemas_y_Vocabularios_XML.mp4",
+        "4": "Lenguaje%20de%20marcas/videos/Almacenar_y_Consultar_XML.mp4",
+        "5": "Lenguaje%20de%20marcas/videos/Conversión_y_Adaptación_de_XML.mp4",
+        "6": "Lenguaje%20de%20marcas/videos/XML_vs.mp4",
+        "7": "Lenguaje%20de%20marcas/videos/Sindicación_de_Contenidos.mp4",
+        "8": "Lenguaje%20de%20marcas/videos/Sistemas_de_Gestión__ERP.mp4"
+    },
+    "empleabilidad": {
+        "1": "Empleabilidad/videos/Prevención_de_Riesgos_Laborales.mp4",
+        "3": "Empleabilidad/videos/El_Aprendizaje_Autónomo.mp4",
+        "4": "Empleabilidad/videos/Tu_primer_contrato,_explicado.mp4",
+        "5": "Empleabilidad/videos/El_potencial_profesional.mp4"
     }
 };
 
@@ -2474,6 +2499,7 @@ function renderStudySessionBar() {
         </div>
     `;
     bar.classList.remove('hidden');
+    document.body.classList.add('has-active-session');
 }
 
 function updateStudyTimer() {
@@ -2537,8 +2563,10 @@ function cancelStudySession(shouldAsk = true) {
     APP_STATE.studySession = { active: false, subjectId: null, startTime: null, elapsed: 0, timerInterval: null };
     Sync.set(SESSION_SYNC_KEY, null);
     
-    const bar = document.getElementById('study-session-bar');
-    if (bar) bar.classList.add('hidden');
+    if (bar) {
+        bar.classList.add('hidden');
+        document.body.classList.remove('has-active-session');
+    }
 }
 
 // ═══════════════════════════════════════════════════════════════

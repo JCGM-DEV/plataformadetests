@@ -87,49 +87,56 @@
       "name": "UD1",
       "total_pages": 44,
       "exists": true,
-      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_1.png"
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_1.png",
+      "video": "Sistemas informaticos/videos/El_plano_del_ordenador.mp4"
     },
     "2": {
       "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD2.pdf",
       "name": "UD2",
       "total_pages": 61,
       "exists": true,
-      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_2.png"
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_2.png",
+      "video": "Sistemas informaticos/videos/Instalación_de_Sistemas_Operativos.mp4"
     },
     "3": {
       "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD3.pdf",
       "name": "UD3",
       "total_pages": 47,
       "exists": true,
-      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_3.png"
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_3.png",
+      "video": "Sistemas informaticos/videos/Gestión_de_la_Información.mp4"
     },
     "4": {
       "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD4.pdf",
       "name": "UD4",
       "total_pages": 43,
       "exists": true,
-      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_4.png"
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_4.png",
+      "video": "Sistemas informaticos/videos/Configuración__Del_Caos_al_Control.mp4"
     },
     "5": {
       "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD5.pdf",
       "name": "UD5",
       "total_pages": 46,
       "exists": true,
-      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_5.png"
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_5.png",
+      "video": "Sistemas informaticos/videos/El_viaje_de_un_clic.mp4"
     },
     "6": {
       "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD6_1.pdf",
       "name": "UD6",
       "total_pages": 39,
       "exists": true,
-      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_6.png"
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_6.png",
+      "video": "Sistemas informaticos/videos/La_Arquitectura_de_Seguridad.mp4"
     },
     "7": {
       "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD7_1.pdf",
       "name": "UD7",
       "total_pages": 45,
       "exists": true,
-      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_7.png"
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_7.png",
+      "video": "Sistemas informaticos/videos/El_software_que_mueve_tu_mundo.mp4"
     }
   },
   "bases_de_datos": {
@@ -188,56 +195,64 @@
       "name": "UD1",
       "total_pages": 24,
       "exists": true,
-      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_1.png"
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_1.png",
+      "video": "Lenguaje de marcas/videos/Los_Cimientos_de_la_Web.mp4"
     },
     "2": {
       "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD2_1.pdf",
       "name": "UD2",
       "total_pages": 86,
       "exists": true,
-      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_2.png"
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_2.png",
+      "video": "Lenguaje de marcas/videos/El_lenguaje_oculto_de_la_web.mp4"
     },
     "3": {
       "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD3_1.pdf",
       "name": "UD3",
       "total_pages": 46,
       "exists": true,
-      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_3.png"
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_3.png",
+      "video": "Lenguaje de marcas/videos/Esquemas_y_Vocabularios_XML.mp4"
     },
     "4": {
       "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD4_1.pdf",
       "name": "UD4",
       "total_pages": 26,
       "exists": true,
-      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_4.png"
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_4.png",
+      "video": "Lenguaje de marcas/videos/Almacenar_y_Consultar_XML.mp4"
     },
     "5": {
       "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD5_1.pdf",
       "name": "UD5",
       "total_pages": 32,
       "exists": true,
-      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_5.png"
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_5.png",
+      "video": "Lenguaje de marcas/videos/Conversión_y_Adaptación_de_XML.mp4"
     },
     "6": {
       "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD6_1.pdf",
       "name": "UD6",
       "total_pages": 36,
       "exists": true,
-      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_6.png"
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_6.png",
+      "video": "Lenguaje de marcas/videos/XML_vs.mp4"
     },
     "7": {
       "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD7_1.pdf",
       "name": "UD7",
       "total_pages": 30,
       "exists": true,
-      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_7.png"
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_7.png",
+      "video": "Lenguaje de marcas/videos/Sindicación_de_Contenidos.mp4"
     },
     "8": {
       "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD8_1.pdf",
       "name": "UD8",
       "total_pages": 32,
       "exists": true,
-      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_8.png"
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_8.png",
+      "video": "Lenguaje de marcas/videos/Sistemas_de_Gestión__ERP.mp4"
     }
   },
   "entornos_de_desarrollo": {
@@ -370,7 +385,8 @@
       "total_pages": 47,
       "exists": true,
       "report": "Guía_de_Derechos_Laborales.pdf",
-      "infographic": "unnamed.png"
+      "infographic": "unnamed.png",
+      "video": "Empleabilidad/videos/Prevención_de_Riesgos_Laborales.mp4"
     },
     "2": {
       "path": "Empleabilidad/TemasPDF/UD2_EI_PORTADANUEVA.pdf",
@@ -386,7 +402,8 @@
       "total_pages": 25,
       "exists": true,
       "report": "Professional_Career_Dashboard.pdf",
-      "infographic": "unnamed (2).png"
+      "infographic": "unnamed (2).png",
+      "video": "Empleabilidad/videos/El_Aprendizaje_Autónomo.mp4"
     },
     "4": {
       "path": "Empleabilidad/TemasPDF/UD4_EI_PORTADANUEVA.pdf",
@@ -394,7 +411,8 @@
       "total_pages": 31,
       "exists": true,
       "report": "IT_Career_Blueprint.pdf",
-      "infographic": "unnamed (3).png"
+      "infographic": "unnamed (3).png",
+      "video": "Empleabilidad/videos/Tu_primer_contrato,_explicado.mp4"
     },
     "5": {
       "path": "Empleabilidad/TemasPDF/UD5_EI_PORTADANUEVA.pdf",
@@ -402,7 +420,8 @@
       "total_pages": 19,
       "exists": true,
       "report": "The_IT_Career_Code.pdf",
-      "infographic": "unnamed (4).png"
+      "infographic": "unnamed (4).png",
+      "video": "Empleabilidad/videos/El_potencial_profesional.mp4"
     }
   }
 }
