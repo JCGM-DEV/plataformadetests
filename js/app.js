@@ -907,6 +907,28 @@ function renderStats() {
 }
 
 // ─── EXAM ENGINE ────────────────────────────────────────────────
+function prepareQuestion(q) {
+    if (!q.options || q.options.length === 0) return q;
+    
+    // Create an array of indices [0, 1, 2, 3...]
+    const indices = q.options.map((_, i) => i);
+    
+    // Shuffle the indices (Fisher-Yates)
+    for (let i = indices.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [indices[i], indices[j]] = [indices[j], indices[i]];
+    }
+    
+    // Map existing correct index to its new position
+    const shuffledCorrect = indices.indexOf(q.correct);
+    
+    return {
+        ...q,
+        _shuffledOptions: indices.map(i => q.options[i]),
+        _shuffledCorrect: shuffledCorrect
+    };
+}
+
 function startExam(subjectId, unitId = null, mode = 'normal') {
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
     let pool = QUESTION_POOL[subjectId] || [];
@@ -948,19 +970,8 @@ function startExam(subjectId, unitId = null, mode = 'normal') {
     // Get smart random questions
     const selected = getSmartRandom(pool, testSize, lastIds);
     
-    // Shuffle options for each question to avoid pattern bias (The "C" problem)
-    APP_STATE.examQuestions = selected.map(q => {
-        const indices = q.options.map((_, i) => i);
-        for (let i = indices.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [indices[i], indices[j]] = [indices[j], indices[i]];
-        }
-        return {
-            ...q,
-            _shuffledOptions: indices.map(i => q.options[i]),
-            _shuffledCorrect: indices.indexOf(q.correct)
-        };
-    });
+    // Shuffle options for each question to avoid pattern bias
+    APP_STATE.examQuestions = selected.map(prepareQuestion);
 
     APP_STATE.currentQuestionIndex = 0;
     APP_STATE.answers = [];
@@ -1243,7 +1254,7 @@ function startExamReal(subjectId, totalPreguntas = 60) {
     APP_STATE.currentUnit = null;
     APP_STATE.isSyllabusMode = false;
     APP_STATE.examMode = 'real';
-    APP_STATE.examQuestions = questions;
+    APP_STATE.examQuestions = questions.map(prepareQuestion);
     APP_STATE.currentQuestionIndex = 0;
     APP_STATE.answers = [];
     APP_STATE.timer = totalPreguntas * 60; // 1 min por pregunta = tiempo real
@@ -1290,7 +1301,7 @@ async function startExamenFinal(subjectId) {
         try {
             const res = await fetch(bateriaEntry.file + '?v=' + Date.now());
             const text = await res.text();
-            const allQ = shuffleArray(parseTxtExam(text, 'emp_bateria'));
+            const allQ = shuffleArray(parseTxtExam(text, 'emp_bateria')).map(prepareQuestion);
             APP_STATE.currentExam = { ...subject, id: subjectId, name: 'Empleabilidad — Simulacro Examen Final' };
             APP_STATE.currentUnit = null;
             APP_STATE.isSyllabusMode = true;
@@ -1328,7 +1339,7 @@ async function startExamenFinal(subjectId) {
         APP_STATE.currentUnit = null;
         APP_STATE.isSyllabusMode = true;
         APP_STATE.examMode = 'normal';
-        APP_STATE.examQuestions = allQ;
+        APP_STATE.examQuestions = allQ.map(prepareQuestion);
         APP_STATE.currentQuestionIndex = 0;
         APP_STATE.answers = [];
         APP_STATE.timer = allQ.length * 90;
@@ -1354,7 +1365,7 @@ async function startSyllabusFlashcard(subjectId) {
         const pool = shuffleArray(allArrays.flat());
         if (pool.length === 0) { alert('No se pudieron cargar preguntas.'); showView('dashboard'); return; }
 
-        APP_STATE.fcQuestions = pool;
+        APP_STATE.fcQuestions = pool.map(prepareQuestion);
         APP_STATE.fcIndex = 0;
         APP_STATE.fcFlipped = false;
         APP_STATE.currentExam = { ...subject, id: subjectId };
@@ -1414,7 +1425,7 @@ async function startSimulacroTemario(subjectId) {
         APP_STATE.currentExam = { ...subject, id: subjectId };
         APP_STATE.currentUnit = null;
         APP_STATE.isSyllabusMode = true;
-        APP_STATE.examQuestions = selected;
+        APP_STATE.examQuestions = selected.map(prepareQuestion);
         APP_STATE.currentQuestionIndex = 0;
         APP_STATE.answers = [];
         APP_STATE.timer = selected.length * 90; // 90s per question = 60min for 40q
@@ -1443,7 +1454,7 @@ async function startSyllabusExam(syllabusId) {
         APP_STATE.currentExam = { ...examInfo, id: syllabusId };
         APP_STATE.currentUnit = examInfo.unit || null; // Set unit to sync counting
         APP_STATE.isSyllabusMode = true;
-        APP_STATE.examQuestions = questions;
+        APP_STATE.examQuestions = questions.map(prepareQuestion);
         APP_STATE.currentQuestionIndex = 0;
         APP_STATE.answers = [];
         APP_STATE.timer = questions.length * 90;
