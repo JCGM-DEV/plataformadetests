@@ -112,23 +112,23 @@ const THEORY_PDFS = {
 
 const THEORY_INFOGRAPHICS = {
     "empleabilidad": {
-        "1": "Empleabilidad/informe%20e%20infografia/unnamed.png",
-        "2": "Empleabilidad/informe%20e%20infografia/unnamed%20(1).png",
-        "3": "Empleabilidad/informe%20e%20infografia/unnamed%20(2).png",
-        "4": "Empleabilidad/informe%20e%20infografia/unnamed%20(3).png",
-        "5": "Empleabilidad/informe%20e%20infografia/unnamed%20(4).png"
+        "1": "Empleabilidad/informe%20e%20infografia/infografia_emp_1_2.png",
+        "2": "Empleabilidad/informe%20e%20infografia/infografia_emp_1_2.png",
+        "3": "Empleabilidad/informe%20e%20infografia/infografia_emp_3.png",
+        "4": "Empleabilidad/informe%20e%20infografia/infografia_emp_4.png",
+        "5": "Empleabilidad/informe%20e%20infografia/infografia_emp_5.png"
     },
     "programacion": {
-        "1": "Programacion/informes%20y%20presentaciones/unnamed.png",
-        "2": "Programacion/informes%20y%20presentaciones/unnamed%20(1).png",
-        "3": "Programacion/informes%20y%20presentaciones/unnamed%20(2).png",
-        "4": "Programacion/informes%20y%20presentaciones/unnamed%20(3).png",
-        "5": "Programacion/informes%20y%20presentaciones/unnamed%20(4).png",
-        "6": "Programacion/informes%20y%20presentaciones/unnamed%20(5).png",
-        "7": "Programacion/informes%20y%20presentaciones/unnamed%20(6).png",
-        "8": "Programacion/informes%20y%20presentaciones/unnamed%20(7).png",
-        "9": "Programacion/informes%20y%20presentaciones/unnamed%20(8).png",
-        "10": "Programacion/informes%20y%20presentaciones/unnamed%20(9).png"
+        "1": "Programacion/informes%20y%20presentaciones/infografia_prog_1.png",
+        "2": "Programacion/informes%20y%20presentaciones/infografia_prog_2.png",
+        "3": "Programacion/informes%20y%20presentaciones/infografia_prog_3.png",
+        "4": "Programacion/informes%20y%20presentaciones/infografia_prog_4.png",
+        "5": "Programacion/informes%20y%20presentaciones/infografia_prog_5.png",
+        "6": "Programacion/informes%20y%20presentaciones/infografia_prog_6.png",
+        "7": "Programacion/informes%20y%20presentaciones/infografia_prog_7.png",
+        "8": "Programacion/informes%20y%20presentaciones/infografia_prog_8.png",
+        "9": "Programacion/informes%20y%20presentaciones/infografia_prog_9.png",
+        "10": "Programacion/informes%20y%20presentaciones/infografia_prog_10.png"
     },
     "sistemas_informaticos": {
         "1": "Sistemas%20informaticos/informes%20y%20presentaciones/infografia_tema_1.png",
@@ -1034,7 +1034,8 @@ const SUBJECT_VIDEOS = {
         "3": "Bases%20de%20datos/videos/Diagramas_Entidad-Relación.mp4",
         "4": "Bases%20de%20datos/videos/Introducción_a_SQL__Cómo_Preguntar_a_los_Datos.mp4",
         "5": "Bases%20de%20datos/videos/Tratamiento_de_Datos.mp4",
-        "6": "Bases%20de%20datos/videos/Programación_de_BBDD.mp4"
+        "6": "Bases%20de%20datos/videos/Programación_de_BBDD.mp4",
+        "7": "Programacion/videos/Bases_de_datos_orientadas_a_objetos.mp4"
     },
     "entornos_de_desarrollo": {
         "1": "Entornos%20de%20desarrollo/videos/Entornos_de_Desarrollo.mp4",
