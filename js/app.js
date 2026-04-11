@@ -2459,6 +2459,8 @@ function startStudySession(subjectId) {
 
     const subject = APP_STATE.subjects.find(s => s.id === subjectId) || { name: subjectId };
     
+    if (APP_STATE.studySession.timerInterval) clearInterval(APP_STATE.studySession.timerInterval);
+    
     APP_STATE.studySession = {
         active: true,
         subjectId: subjectId,
@@ -2484,6 +2486,8 @@ function saveSessionSync() {
 function restoreStudySession() {
     const saved = Sync.get(SESSION_SYNC_KEY, null);
     if (saved && saved.active) {
+        if (APP_STATE.studySession.timerInterval) clearInterval(APP_STATE.studySession.timerInterval);
+        
         APP_STATE.studySession = {
             ...saved,
             elapsed: Math.floor((Date.now() - saved.startTime) / 1000),
@@ -2563,9 +2567,8 @@ function completeStudySession() {
     updateTutorProgress('theory', true, APP_STATE.studySession.subjectId);
     logActivity('theory', `Sesión de Estudio: ${APP_STATE.studySession.subjectName}`, `Tiempo invertido: ${mins} minutos`);
     
-    alert(`¡OBJETIVO ALCANZADO! Has registrado ${mins} minutos de estudio Real de ${APP_STATE.studySession.subjectName}. El sistema está orgulloso. 🤖🦾✨`);
-    
     cancelStudySession(false); 
+    alert(`¡OBJETIVO ALCANZADO! Has registrado ${mins} minutos de estudio Real de ${APP_STATE.studySession.subjectName}. El sistema está orgulloso. 🤖🦾✨`);
 }
 
 function cancelStudySession(shouldAsk = true) {
@@ -2575,6 +2578,7 @@ function cancelStudySession(shouldAsk = true) {
     APP_STATE.studySession = { active: false, subjectId: null, startTime: null, elapsed: 0, timerInterval: null };
     Sync.set(SESSION_SYNC_KEY, null);
     
+    const bar = document.getElementById('study-session-bar');
     if (bar) {
         bar.classList.add('hidden');
         document.body.classList.remove('has-active-session');
