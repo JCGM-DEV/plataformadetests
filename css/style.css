@@ -674,9 +674,15 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   flex: 1;
   overflow-y: auto;
   padding: 2rem;
-  display: flex;
-  justify-content: center;
+  /* El display:flex se ha quitado para evitar el bug de padding-bottom en contenedores flex con overflow */
 }
+
+#exam-engine-root, #flashcard-root, #stats-root {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
 
 /* ── QUESTION CONTAINER ─────────────────────────────────────── */
 .question-container {
@@ -3039,12 +3045,14 @@ body.has-active-session .exam-body {
     padding-bottom: 120px !important;
 }
 
-body.has-active-session #exam-engine-root {
-    padding-bottom: 120px;
+body.has-active-session #exam-engine-root,
+body.has-active-session #flashcard-root {
+    padding-bottom: 140px;
 }
 
 body.has-active-session .results-container {
-    padding-bottom: 120px;
+    padding-bottom: 140px;
+    margin-bottom: 2rem;
 }
 
 body.has-active-session .assistant-fab {
