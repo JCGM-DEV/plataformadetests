@@ -2087,17 +2087,25 @@ function getDailySubjects(offsetDays = 0) {
         now.setDate(now.getDate() + offsetDays);
     }
 
-    // Domingo = Descanso
-    if (now.getDay() === 0) {
+    const dayOfWeek = now.getDay();
+    if (dayOfWeek === 0) {
         return { isRest: true, subjects: [], labels: ['Descanso'] };
     }
 
-    const daysSinceStart = Math.floor((now - STUDY_START) / (1000 * 60 * 60 * 24));
     const phase = getCurrentPhase();
     const rotation = phase.id === 3 ? PHASE3_ROTATION : DAILY_ROTATION;
     
-    // Safety check for rotation index
-    const index = ((daysSinceStart % rotation.length) + rotation.length) % rotation.length;
+    // Fixed weekly schedule instead of rolling
+    let index = 0;
+    switch(dayOfWeek) {
+        case 1: index = 1; break; // Lunes -> Bases, Lenguajes (2 asig)
+        case 2: index = 3; break; // Martes -> Empleabilidad (1 asig - poco tiempo)
+        case 3: index = 2; break; // Miércoles -> Entornos, Cloud (2 asig)
+        case 4: index = 0; break; // Jueves -> Programación, Sistemas (2 asig)
+        case 5: index = 1; break; // Viernes -> Bases, Lenguajes
+        case 6: index = 0; break; // Sábado -> Programación, Sistemas
+    }
+    
     return rotation[index];
 }
 
