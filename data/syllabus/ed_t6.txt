@@ -25,7 +25,7 @@ Arquitectura del sistema, diagrama de despliegue y log de errores
 Tiempo de ejecución, uso de memoria y carga de la CPU
 *Identificador, descripción, precondiciones, datos de prueba, pasos, resultado esperado, resultado obtenido y estado.
 Con el atributo xmlns:xsi en el elemento raíz
-EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
+EXPL:La opción seleccionada es la correcta según la teoría técnica.
 
 ¿Cuál de las siguientes afirmaciones sobre las pruebas de software es la más precisa según el contenido de la unidad?
 Las pruebas solo son necesarias para software de gran complejidad, y siempre eliminan todos los errores

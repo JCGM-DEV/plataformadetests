@@ -46,7 +46,7 @@ Al identificar las entidades
 *Al establecer las relaciones entre las tablas para vincular registros.
 Únicamente durante el proceso de normalización
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
+EXPL:La opción seleccionada es la correcta según la teoría técnica.
 
 ¿Qué requisito debe cumplir una tabla para estar en Primera Forma Normal (1FN)?
 No tener dependencias transitivas

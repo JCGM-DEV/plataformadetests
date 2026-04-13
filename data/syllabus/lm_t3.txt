@@ -28,13 +28,13 @@ El navegador intentará aplicar un conjunto de estilos por defecto para hacer el
 Se mostrará un mensaje de error indicando que el documento no tiene un formato de presentación válido y requiere un estilo
 *El navegador simplemente mostrará la jerarquía de etiquetas y el contenido del documento en texto plano, sin aplicar ningún estilo ni formato visual
 El navegador aplicará automáticamente estilos CSS predeterminados al documento XML.
-EXPL:El navegador simplemente mostrará la jerarquía de etiquetas y el contenido del documento en texto plano, sin aplicar ningún estilo ni formato visual es la respuesta correcta para esta pregunta del temario oficial.
+EXPL:La opción correcta es El navegador simplemente mostrará la jerarquía de etiquetas y el contenido del documento en texto plano, sin aplicar ningún estilo ni formato visual.
 En la estructura jerárquica de un documento XML, si la etiqueta <carreras> es un hijo de <facultad>, y dentro de <carreras> se encuentra la etiqueta <carrera>, ¿qué relación tiene <carrera> con <facultad>?
 <carrera> es un hijo directo de <facultad>, ya que se encuentra dentro de su ámbito
 <carrera> es un hermano de <facultad>, dado que ambos descienden del mismo elemento raíz
 *<carrera> es un descendiente de <facultad>, al estar contenida en un elemento que a su vez es hijo de <facultad>
 carrera es un hermano de facultad porque ambos están en el mismo nivel del árbol.
-EXPL:<carrera> es un descendiente de <facultad>, al estar contenida en un elemento que a su vez es hijo de <facultad> es la respuesta correcta para esta pregunta del temario oficial.
+EXPL:La opción correcta es <carrera> es un descendiente de <facultad>, al estar contenida en un elemento que a su vez es hijo de <facultad>.
 Si en un esquema XML (XSD) se desea restringir el valor de un elemento de tipo xs:string a un conjunto específico y limitado de valores predefinidos (por ejemplo, "conectado", "ocupado" o "ausente"), ¿qué faceta se debe utilizar dentro de xs:restriction?
 La faceta xs:maxLength, para definir la longitud máxima permitida de la cadena de texto
 La faceta xs:pattern, para establecer una expresión regular que el valor de la cadena debe cumplir

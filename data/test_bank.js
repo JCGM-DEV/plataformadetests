@@ -2763,7 +2763,7 @@ const TEST_BANK_DATA = {
       "question": "¿Cuál es la diferencia entre UNION y UNION ALL?",
       "options": [
         "UNION ALL solo funciona con texto",
-        "No hay diferencia práctica en el modelo relacional de bases de datos.",
+        "No hay diferencia práctica",
         "UNION es más lento por definición",
         "UNION elimina duplicados, UNION ALL los conserva"
       ],
@@ -2828,9 +2828,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué es una Vista en una base de datos relacional?",
       "options": [
         "Una consulta SELECT almacenada que actúa como tabla virtual",
-        "Una copia física de los datos según la sintaxis estándar del lenguaje SQL.",
-        "Una tabla temporal en disco para la gestión eficiente de los datos.",
-        "Un índice especial en el contexto del diseño de bases de datos."
+        "Una copia física de los datos",
+        "Una tabla temporal en disco",
+        "Un índice especial"
       ],
       "correct": 0,
       "explanation": "Una vista es una consulta almacenada que se ejecuta cada vez que se accede. No ocupa espacio físico de datos; se reconstruye dinámicamente desde las tablas base.",
@@ -2840,10 +2840,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_25",
       "question": "¿Qué es un índice en una base de datos?",
       "options": [
-        "Un tipo de trigger según las reglas de normalización aplicables.",
-        "Una restricción de clave en el modelo relacional de bases de datos.",
+        "Un tipo de trigger",
+        "Una restricción de clave",
         "Estructura que acelera la búsqueda de registros",
-        "Una copia de seguridad según la sintaxis estándar del lenguaje SQL."
+        "Una copia de seguridad"
       ],
       "correct": 2,
       "explanation": "Los índices mejoran el rendimiento de las consultas.",
@@ -2931,10 +2931,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_32",
       "question": "¿Cuál es la diferencia entre DELETE y TRUNCATE?",
       "options": [
-        "Son equivalentes para la gestión eficiente de los datos.",
+        "Son equivalentes",
         "DELETE puede filtrar con WHERE y registra en el log; TRUNCATE no",
-        "TRUNCATE es más lento en el contexto del diseño de bases de datos.",
-        "DELETE borra la estructura según las reglas de normalización aplicables."
+        "TRUNCATE es más lento",
+        "DELETE borra la estructura"
       ],
       "correct": 1,
       "explanation": "DELETE es fila a fila, TRUNCATE es masivo.",
@@ -2958,9 +2958,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué es un SAVEPOINT?",
       "options": [
         "Un punto de restauración intermedio dentro de una transacción",
-        "El final de un procedimiento en el modelo relacional de bases de datos.",
-        "Una copia de seguridad completa según la sintaxis estándar del lenguaje SQL.",
-        "El inicio de una transacción para la gestión eficiente de los datos."
+        "El final de un procedimiento",
+        "Una copia de seguridad completa",
+        "El inicio de una transacción"
       ],
       "correct": 0,
       "explanation": "SAVEPOINT permite rollbacks parciales.",
@@ -2970,10 +2970,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_35",
       "question": "¿Qué es un Deadlock en bases de datos?",
       "options": [
-        "Un error de sintaxis SQL en el contexto del diseño de bases de datos.",
-        "Un timeout de conexión según las reglas de normalización aplicables.",
+        "Un error de sintaxis SQL",
+        "Un timeout de conexión",
         "Bloqueo mutuo entre transacciones que se esperan entre sí indefinidamente",
-        "Una corrupción de índice en el modelo relacional de bases de datos."
+        "Una corrupción de índice"
       ],
       "correct": 2,
       "explanation": "El SGBD detecta y resuelve deadlocks automáticamente.",
@@ -2984,9 +2984,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué significa que una clave sea 'Primaria' (Primary Key)?",
       "options": [
         "Identifica de forma única y no nula cada fila de la tabla",
-        "Puede tener valores nulos según la sintaxis estándar del lenguaje SQL.",
-        "Se usa para ordenar la tabla para la gestión eficiente de los datos.",
-        "Es la clave más grande de la tabla en el contexto del diseño de bases de datos."
+        "Puede tener valores nulos",
+        "Se usa para ordenar la tabla",
+        "Es la clave más grande de la tabla"
       ],
       "correct": 0,
       "explanation": "PK = Único + No Nulo.",
@@ -2997,9 +2997,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué es una clave foránea (Foreign Key)?",
       "options": [
         "Atributo que referencia la clave primaria de otra tabla",
-        "El nombre de la base de datos según las reglas de normalización aplicables.",
-        "Una clave de cifrado de datos en el modelo relacional de bases de datos.",
-        "Un índice de texto completo según la sintaxis estándar del lenguaje SQL."
+        "El nombre de la base de datos",
+        "Una clave de cifrado de datos",
+        "Un índice de texto completo"
       ],
       "correct": 0,
       "explanation": "FK garantiza la integridad referencial.",
@@ -3009,10 +3009,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_38",
       "question": "¿Qué significa 'integridad referencial'?",
       "options": [
-        "Que los backups están actualizados para la gestión eficiente de los datos.",
-        "Que los datos están cifrados en el contexto del diseño de bases de datos.",
+        "Que los backups están actualizados",
+        "Que los datos están cifrados",
         "Que los valores de una FK siempre apuntan a una PK válida existente",
-        "Que la tabla tiene índices según las reglas de normalización aplicables."
+        "Que la tabla tiene índices"
       ],
       "correct": 2,
       "explanation": "Sin integridad referencial habría registros huérfanos.",
@@ -3035,10 +3035,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_40",
       "question": "¿Qué es PL/SQL?",
       "options": [
-        "Un protocolo de backup en el modelo relacional de bases de datos.",
+        "Un protocolo de backup",
         "Extensión procedimental de SQL para Oracle que permite lógica (IF, bucles)",
-        "Un tipo de base de datos NoSQL según la sintaxis estándar del lenguaje SQL.",
-        "Un lenguaje de marcas para la gestión eficiente de los datos."
+        "Un tipo de base de datos NoSQL",
+        "Un lenguaje de marcas"
       ],
       "correct": 1,
       "explanation": "Procedural Language / SQL.",
@@ -3048,10 +3048,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_41",
       "question": "¿Qué es un Stored Procedure?",
       "options": [
-        "Un tipo de índice en el contexto del diseño de bases de datos.",
+        "Un tipo de índice",
         "Bloque de código SQL almacenado en el servidor y reutilizable",
-        "Un trigger especial según las reglas de normalización aplicables.",
-        "Una consulta SELECT guardada en el modelo relacional de bases de datos."
+        "Un trigger especial",
+        "Una consulta SELECT guardada"
       ],
       "correct": 1,
       "explanation": "Los procedimientos almacenados mejoran el rendimiento.",
@@ -3114,9 +3114,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué es una subconsulta correlacionada?",
       "options": [
         "Una subconsulta que hace referencia a columnas de la consulta exterior",
-        "Una subconsulta independiente según la sintaxis estándar del lenguaje SQL.",
-        "Un JOIN escrito con subquery para la gestión eficiente de los datos.",
-        "Una consulta que devuelve múltiples columnas en el contexto del diseño de bases de datos."
+        "Una subconsulta independiente",
+        "Un JOIN escrito con subquery",
+        "Una consulta que devuelve múltiples columnas"
       ],
       "correct": 0,
       "explanation": "Se evalúa una vez por cada fila de la consulta exterior.",
@@ -3153,9 +3153,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué es la desnormalización?",
       "options": [
         "Introducir redundancia deliberada para mejorar el rendimiento de lectura",
-        "Aplicar 3FN a todas las tablas según las reglas de normalización aplicables.",
-        "Eliminar tablas del esquema en el modelo relacional de bases de datos.",
-        "Cifrar los datos sensibles según la sintaxis estándar del lenguaje SQL."
+        "Aplicar 3FN a todas las tablas",
+        "Eliminar tablas del esquema",
+        "Cifrar los datos sensibles"
       ],
       "correct": 0,
       "explanation": "Es una optimización para OLAP y reportes.",
@@ -3178,10 +3178,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp_51",
       "question": "¿Qué es un esquema en una base de datos relacional?",
       "options": [
-        "El archivo de configuración para la gestión eficiente de los datos.",
-        "El nombre del servidor en el contexto del diseño de bases de datos.",
+        "El archivo de configuración",
+        "El nombre del servidor",
         "Conjunto de objetos (tablas, vistas, procedimientos) dentro de una BD",
-        "El usuario administrador según las reglas de normalización aplicables."
+        "El usuario administrador"
       ],
       "correct": 2,
       "explanation": "Schema agrupa objetos lógicamente.",
@@ -3192,9 +3192,9 @@ const TEST_BANK_DATA = {
       "question": "¿Cuál es la diferencia entre PRIMARY KEY y UNIQUE?",
       "options": [
         "PRIMARY KEY no permite nulos; UNIQUE sí puede tenerlos",
-        "Son completamente iguales en el modelo relacional de bases de datos.",
-        "PRIMARY KEY puede repetirse según la sintaxis estándar del lenguaje SQL.",
-        "UNIQUE no sirve para relaciones para la gestión eficiente de los datos."
+        "Son completamente iguales",
+        "PRIMARY KEY puede repetirse",
+        "UNIQUE no sirve para relaciones"
       ],
       "correct": 0,
       "explanation": "Solo puede haber una PK por tabla pero varias UNIQUE.",
@@ -3204,10 +3204,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp_53",
       "question": "¿Qué es un modelo OLAP?",
       "options": [
-        "Un protocolo de replicación en el contexto del diseño de bases de datos.",
+        "Un protocolo de replicación",
         "Procesamiento analítico en línea: optimizado para consultas complejas y agregaciones",
-        "Procesamiento transaccional en tiempo real según las reglas de normalización aplicables.",
-        "Un tipo de base de datos NoSQL en el modelo relacional de bases de datos."
+        "Procesamiento transaccional en tiempo real",
+        "Un tipo de base de datos NoSQL"
       ],
       "correct": 1,
       "explanation": "OLAP vs OLTP: análisis vs transacciones.",
@@ -3218,8 +3218,8 @@ const TEST_BANK_DATA = {
       "question": "¿Qué es la replicación en bases de datos?",
       "options": [
         "Copiar y sincronizar datos entre varios servidores",
-        "Cifrar la comunicación entre BD según la sintaxis estándar del lenguaje SQL.",
-        "Hacer un backup completo para la gestión eficiente de los datos.",
+        "Cifrar la comunicación entre BD",
+        "Hacer un backup completo",
         "Fragmentar la tabla en particiones"
       ],
       "correct": 0,
@@ -3230,9 +3230,9 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp_55",
       "question": "¿Qué significa 'sharding' en bases de datos?",
       "options": [
-        "Crear índices en todas las columnas en el contexto del diseño de bases de datos.",
-        "Replicar los datos en espejo según las reglas de normalización aplicables.",
-        "Comprimir las tablas grandes en el modelo relacional de bases de datos.",
+        "Crear índices en todas las columnas",
+        "Replicar los datos en espejo",
+        "Comprimir las tablas grandes",
         "Dividir horizontalmente los datos entre múltiples servidores"
       ],
       "correct": 3,
@@ -3269,10 +3269,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp_58",
       "question": "¿Qué hace la función COALESCE en SQL?",
       "options": [
-        "Convierte un tipo de dato según la sintaxis estándar del lenguaje SQL.",
-        "Concatena cadenas de texto para la gestión eficiente de los datos.",
+        "Convierte un tipo de dato",
+        "Concatena cadenas de texto",
         "Devuelve el primer valor no nulo de la lista de argumentos",
-        "Redondea un número decimal en el contexto del diseño de bases de datos."
+        "Redondea un número decimal"
       ],
       "correct": 2,
       "explanation": "COALESCE(col1, col2, 'default').",
@@ -3283,9 +3283,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué hace CAST en SQL?",
       "options": [
         "Convierte un valor de un tipo de dato a otro",
-        "Filtra nulos según las reglas de normalización aplicables.",
-        "Agrupa registros en el modelo relacional de bases de datos.",
-        "Ordena el resultado según la sintaxis estándar del lenguaje SQL."
+        "Filtra nulos",
+        "Agrupa registros",
+        "Ordena el resultado"
       ],
       "correct": 0,
       "explanation": "CAST(precio AS INT).",
@@ -3295,9 +3295,9 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp_60",
       "question": "¿Qué es una tabla de hechos en un Data Warehouse?",
       "options": [
-        "Tabla de configuración para la gestión eficiente de los datos.",
-        "Tabla que almacena dimensiones de tiempo en el contexto del diseño de bases de datos.",
-        "Tabla de usuarios del sistema según las reglas de normalización aplicables.",
+        "Tabla de configuración",
+        "Tabla que almacena dimensiones de tiempo",
+        "Tabla de usuarios del sistema",
         "Tabla central que contiene las métricas cuantitativas del negocio"
       ],
       "correct": 3,
@@ -3334,9 +3334,9 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp_63",
       "question": "¿Qué es Redis?",
       "options": [
-        "Un gestor de colas de mensajes en el modelo relacional de bases de datos.",
-        "Un sistema de archivos distribuido según la sintaxis estándar del lenguaje SQL.",
-        "Una base de datos relacional de Oracle para la gestión eficiente de los datos.",
+        "Un gestor de colas de mensajes",
+        "Un sistema de archivos distribuido",
+        "Una base de datos relacional de Oracle",
         "Base de datos NoSQL clave-valor en memoria, usada para caché y sesiones"
       ],
       "correct": 3,
@@ -3347,9 +3347,9 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp_64",
       "question": "¿Qué garantiza la cláusula ON DELETE CASCADE en una FK?",
       "options": [
-        "Impide borrar el padre si tiene hijos en el contexto del diseño de bases de datos.",
-        "Al borrar un hijo, se borra el padre según las reglas de normalización aplicables.",
-        "Solo funciona en claves primarias en el modelo relacional de bases de datos.",
+        "Impide borrar el padre si tiene hijos",
+        "Al borrar un hijo, se borra el padre",
+        "Solo funciona en claves primarias",
         "Al borrar un registro padre, se borran automáticamente sus hijos"
       ],
       "correct": 3,
@@ -3360,10 +3360,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp_65",
       "question": "¿Qué es un cursor en SQL?",
       "options": [
-        "Un tipo de índice según la sintaxis estándar del lenguaje SQL.",
-        "Un objeto de conexión a la BD para la gestión eficiente de los datos.",
+        "Un tipo de índice",
+        "Un objeto de conexión a la BD",
         "Mecanismo para procesar fila por fila el resultado de una consulta",
-        "Una variable de texto en el contexto del diseño de bases de datos."
+        "Una variable de texto"
       ],
       "correct": 2,
       "explanation": "Los cursores se usan en procedimientos almacenados.",
@@ -3387,9 +3387,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué hace la sentencia MERGE en SQL?",
       "options": [
         "Combina INSERT, UPDATE y DELETE en una sola operación según condiciones",
-        "Fusiona dos tablas en una sola según las reglas de normalización aplicables.",
-        "Renombra una tabla en el modelo relacional de bases de datos.",
-        "Hace un backup de la tabla según la sintaxis estándar del lenguaje SQL."
+        "Fusiona dos tablas en una sola",
+        "Renombra una tabla",
+        "Hace un backup de la tabla"
       ],
       "correct": 0,
       "explanation": "MERGE es útil para sincronizar tablas.",
@@ -3399,10 +3399,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp_68",
       "question": "¿Qué es el plan de ejecución de una consulta SQL?",
       "options": [
-        "El historial de transacciones para la gestión eficiente de los datos.",
+        "El historial de transacciones",
         "La ruta que sigue el SGBD para resolver una consulta de forma eficiente",
-        "La lista de índices de la tabla en el contexto del diseño de bases de datos.",
-        "El esquema de la base de datos según las reglas de normalización aplicables."
+        "La lista de índices de la tabla",
+        "El esquema de la base de datos"
       ],
       "correct": 1,
       "explanation": "EXPLAIN PLAN muestra si se usan índices.",
@@ -3425,9 +3425,9 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp2_70",
       "question": "¿Qué establece el Teorema CAP?",
       "options": [
-        "Que NoSQL no puede ser consistente en el modelo relacional de bases de datos.",
-        "Que toda BD debe cumplir ACID según la sintaxis estándar del lenguaje SQL.",
-        "Que SQL siempre es más rápido que NoSQL para la gestión eficiente de los datos.",
+        "Que NoSQL no puede ser consistente",
+        "Que toda BD debe cumplir ACID",
+        "Que SQL siempre es más rápido que NoSQL",
         "Un sistema distribuido solo puede garantizar 2 de 3: Consistencia, Disponibilidad y Tolerancia a particiones"
       ],
       "correct": 3,
@@ -3438,7 +3438,7 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp2_71",
       "question": "¿Qué tipo de consistencia prioriza Cassandra según el Teorema CAP?",
       "options": [
-        "Las tres a la vez en el contexto del diseño de bases de datos.",
+        "Las tres a la vez",
         "Disponibilidad y Tolerancia a particiones (AP)",
         "Consistencia y Disponibilidad (CA)",
         "Consistencia y Tolerancia (CP)"
@@ -3465,9 +3465,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué es BASE en sistemas NoSQL?",
       "options": [
         "Basically Available, Soft state, Eventually consistent (alternativa a ACID)",
-        "Un nivel de aislamiento según las reglas de normalización aplicables.",
-        "Un tipo de índice en el modelo relacional de bases de datos.",
-        "Un acrónimo de comandos NoSQL según la sintaxis estándar del lenguaje SQL."
+        "Un nivel de aislamiento",
+        "Un tipo de índice",
+        "Un acrónimo de comandos NoSQL"
       ],
       "correct": 0,
       "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
@@ -3477,10 +3477,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp2_74",
       "question": "¿Qué es la consistencia eventual?",
       "options": [
-        "Un nivel de aislamiento ACID para la gestión eficiente de los datos.",
+        "Un nivel de aislamiento ACID",
         "Los datos serán consistentes en todos los nodos tras un período de tiempo",
-        "Los datos nunca son consistentes en el contexto del diseño de bases de datos.",
-        "Los datos son siempre consistentes al instante según las reglas de normalización aplicables."
+        "Los datos nunca son consistentes",
+        "Los datos son siempre consistentes al instante"
       ],
       "correct": 1,
       "explanation": "DNS es un ejemplo de consistencia eventual.",
@@ -3490,10 +3490,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp2_75",
       "question": "¿Qué es la Forma Normal de Boyce-Codd (BCNF)?",
       "options": [
-        "Una forma normal solo para claves compuestas en el modelo relacional de bases de datos.",
-        "Igual a la 3FN según la sintaxis estándar del lenguaje SQL.",
+        "Una forma normal solo para claves compuestas",
+        "Igual a la 3FN",
         "Extensión estricta de 3FN donde toda dependencia funcional X→Y requiere que X sea superclave",
-        "La última forma normal posible para la gestión eficiente de los datos."
+        "La última forma normal posible"
       ],
       "correct": 2,
       "explanation": "BCNF resuelve anomalías que 3FN no cubre.",
@@ -3503,9 +3503,9 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp2_76",
       "question": "¿Qué es una dependencia funcional?",
       "options": [
-        "Un índice compuesto en el contexto del diseño de bases de datos.",
-        "Un trigger de actualización según las reglas de normalización aplicables.",
-        "Una restricción FK en el modelo relacional de bases de datos.",
+        "Un índice compuesto",
+        "Un trigger de actualización",
+        "Una restricción FK",
         "Relación donde el valor de un atributo determina el valor de otro: A→B"
       ],
       "correct": 3,
@@ -3517,9 +3517,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué es una dependencia transitiva?",
       "options": [
         "Una dependencia dentro de una clave compuesta",
-        "Una FK que referencia otra FK según la sintaxis estándar del lenguaje SQL.",
+        "Una FK que referencia otra FK",
         "A→B y B→C implica A→C, donde B no es clave candidata",
-        "Un índice que referencia a otro para la gestión eficiente de los datos."
+        "Un índice que referencia a otro"
       ],
       "correct": 2,
       "explanation": "La 3FN elimina dependencias transitivas.",
@@ -3530,9 +3530,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué hace EXPLAIN en una consulta SQL?",
       "options": [
         "Muestra el plan de ejecución para entender si se usan índices y el coste estimado",
-        "Muestra las restricciones activas en el contexto del diseño de bases de datos.",
-        "Ejecuta la consulta y muestra el tiempo según las reglas de normalización aplicables.",
-        "Describe la estructura de la tabla en el modelo relacional de bases de datos."
+        "Muestra las restricciones activas",
+        "Ejecuta la consulta y muestra el tiempo",
+        "Describe la estructura de la tabla"
       ],
       "correct": 0,
       "explanation": "EXPLAIN ANALYZE muestra el tiempo real en PostgreSQL.",
@@ -3543,9 +3543,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué es un índice compuesto?",
       "options": [
         "Un índice que abarca varias columnas a la vez",
-        "Un índice único según la sintaxis estándar del lenguaje SQL.",
+        "Un índice único",
         "Un índice con varios registros iguales",
-        "Un índice de texto completo para la gestión eficiente de los datos."
+        "Un índice de texto completo"
       ],
       "correct": 0,
       "explanation": "CREATE INDEX idx ON tabla(col1, col2).",
@@ -3569,9 +3569,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué es una entidad débil en el modelo ER?",
       "options": [
         "Entidad que no tiene clave propia y depende de otra entidad para su identificación",
-        "Una entidad con un solo atributo en el contexto del diseño de bases de datos.",
-        "Una entidad sin relaciones según las reglas de normalización aplicables.",
-        "Una entidad con pocos atributos en el modelo relacional de bases de datos."
+        "Una entidad con un solo atributo",
+        "Una entidad sin relaciones",
+        "Una entidad con pocos atributos"
       ],
       "correct": 0,
       "explanation": "La entidad débil usa la PK de la entidad fuerte más un discriminante.",
@@ -3581,10 +3581,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp2_82",
       "question": "¿Qué es la especialización en el modelo ER?",
       "options": [
-        "Normalizar una entidad según la sintaxis estándar del lenguaje SQL.",
+        "Normalizar una entidad",
         "Proceso de definir subtipos de una entidad con atributos propios (herencia ER)",
-        "Añadir más atributos a una entidad para la gestión eficiente de los datos.",
-        "Crear una tabla intermedia en el contexto del diseño de bases de datos."
+        "Añadir más atributos a una entidad",
+        "Crear una tabla intermedia"
       ],
       "correct": 1,
       "explanation": "Ej: EMPLEADO se especializa en PROGRAMADOR y DISEÑADOR.",
@@ -3594,9 +3594,9 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp2_83",
       "question": "¿Qué es la generalización en el modelo ER?",
       "options": [
-        "Unir todas las tablas en una según las reglas de normalización aplicables.",
+        "Unir todas las tablas en una",
         "El proceso inverso a la especialización... que es lo mismo visto al revés",
-        "Crear una vista de varias tablas en el modelo relacional de bases de datos.",
+        "Crear una vista de varias tablas",
         "Proceso de agrupar entidades con características comunes en una superentidad"
       ],
       "correct": 3,
@@ -3607,10 +3607,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp2_84",
       "question": "¿Qué hace la función RANK() en SQL?",
       "options": [
-        "Calcula el percentil según la sintaxis estándar del lenguaje SQL.",
+        "Calcula el percentil",
         "Asigna un rango a cada fila dentro de una partición, con saltos en caso de empate",
-        "Numera filas consecutivamente sin saltos para la gestión eficiente de los datos.",
-        "Ordena los registros en el contexto del diseño de bases de datos."
+        "Numera filas consecutivamente sin saltos",
+        "Ordena los registros"
       ],
       "correct": 1,
       "explanation": "RANK() vs ROW_NUMBER() vs DENSE_RANK().",
@@ -3621,9 +3621,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué son las Window Functions (funciones de ventana) en SQL?",
       "options": [
         "Funciones que calculan valores sobre un conjunto de filas relacionadas sin agruparlas (OVER/PARTITION)",
-        "Funciones de texto según las reglas de normalización aplicables.",
-        "Funciones de cifrado en el modelo relacional de bases de datos.",
-        "Tipos de vistas según la sintaxis estándar del lenguaje SQL."
+        "Funciones de texto",
+        "Funciones de cifrado",
+        "Tipos de vistas"
       ],
       "correct": 0,
       "explanation": "SELECT salario, AVG(salario) OVER (PARTITION BY dept).",
@@ -3634,9 +3634,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué hace CTE (Common Table Expression) con la cláusula WITH?",
       "options": [
         "Define una consulta temporal con nombre reutilizable dentro de otra consulta",
-        "Importa datos de otro esquema para la gestión eficiente de los datos.",
-        "Crea una tabla temporal en disco en el contexto del diseño de bases de datos.",
-        "Crea una vista permanente según las reglas de normalización aplicables."
+        "Importa datos de otro esquema",
+        "Crea una tabla temporal en disco",
+        "Crea una vista permanente"
       ],
       "correct": 0,
       "explanation": "WITH empleados_madrid AS (SELECT ...) SELECT * FROM empleados_madrid.",
@@ -3647,9 +3647,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué es la integridad de dominio?",
       "options": [
         "Restricción sobre los valores válidos de una columna (tipo de dato, CHECK, NOT NULL)",
-        "El uso de transacciones ACID en el modelo relacional de bases de datos.",
-        "La coherencia entre tablas relacionadas según la sintaxis estándar del lenguaje SQL.",
-        "La obligación de tener PK para la gestión eficiente de los datos."
+        "El uso de transacciones ACID",
+        "La coherencia entre tablas relacionadas",
+        "La obligación de tener PK"
       ],
       "correct": 0,
       "explanation": "El tipo de dato y CHECK definen el dominio.",
@@ -3660,9 +3660,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué es un tablespace en Oracle/PostgreSQL?",
       "options": [
         "Ubicación física de almacenamiento donde se guardan los objetos de la BD",
-        "Un espacio de nombres lógico en el contexto del diseño de bases de datos.",
-        "Un grupo de usuarios según las reglas de normalización aplicables.",
-        "Una partición de datos en el modelo relacional de bases de datos."
+        "Un espacio de nombres lógico",
+        "Un grupo de usuarios",
+        "Una partición de datos"
       ],
       "correct": 0,
       "explanation": "Permite controlar dónde se almacenan físicamente las tablas.",
@@ -3674,7 +3674,7 @@ const TEST_BANK_DATA = {
       "options": [
         "Inserta un registro si no existe, o lo actualiza si ya existe",
         "Solo funciona con claves únicas compuestas",
-        "Es equivalente a INSERT INTO según la sintaxis estándar del lenguaje SQL.",
+        "Es equivalente a INSERT INTO",
         "Actualiza todos los registros de la tabla"
       ],
       "correct": 0,
@@ -3685,9 +3685,9 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp2_90",
       "question": "¿Qué es la replicación maestro-esclavo?",
       "options": [
-        "Todos los servidores aceptan escrituras para la gestión eficiente de los datos.",
-        "Es solo para MongoDB en el contexto del diseño de bases de datos.",
-        "Los esclavos replican al maestro según las reglas de normalización aplicables.",
+        "Todos los servidores aceptan escrituras",
+        "Es solo para MongoDB",
+        "Los esclavos replican al maestro",
         "El servidor maestro acepta escrituras y las replica a los esclavos que sirven lecturas"
       ],
       "correct": 3,
@@ -3738,9 +3738,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué es la fragmentación de un índice?",
       "options": [
         "Desorganización del índice que reduce su rendimiento al insertarse/borrarse muchos registros",
-        "La división de un índice entre varios discos en el modelo relacional de bases de datos.",
-        "El tamaño excesivo de un índice según la sintaxis estándar del lenguaje SQL.",
-        "La compresión de un índice para la gestión eficiente de los datos."
+        "La división de un índice entre varios discos",
+        "El tamaño excesivo de un índice",
+        "La compresión de un índice"
       ],
       "correct": 0,
       "explanation": "REBUILD o REORGANIZE del índice eliminan la fragmentación.",
@@ -3750,10 +3750,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp3_95",
       "question": "¿Qué es el particionado de tablas (Table Partitioning)?",
       "options": [
-        "Crear una copia de la tabla en el contexto del diseño de bases de datos.",
+        "Crear una copia de la tabla",
         "Dividir físicamente una tabla muy grande en partes según un criterio (fecha, región...)",
-        "Comprimir las filas de una tabla según las reglas de normalización aplicables.",
-        "Separar una tabla en varias por normalización en el modelo relacional de bases de datos."
+        "Comprimir las filas de una tabla",
+        "Separar una tabla en varias por normalización"
       ],
       "correct": 1,
       "explanation": "El particionado mejora el rendimiento de consultas sobre tablas grandes.",
@@ -3764,9 +3764,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué hace la función ROW_NUMBER() en SQL?",
       "options": [
         "Asigna un número de fila secuencial único dentro de cada partición, sin saltos",
-        "Asigna un rango con saltos en empates según la sintaxis estándar del lenguaje SQL.",
-        "Numera solo las filas seleccionadas para la gestión eficiente de los datos.",
-        "Cuenta el número de filas del resultado en el contexto del diseño de bases de datos."
+        "Asigna un rango con saltos en empates",
+        "Numera solo las filas seleccionadas",
+        "Cuenta el número de filas del resultado"
       ],
       "correct": 0,
       "explanation": "ROW_NUMBER() no repite valores; RANK() sí puede tener saltos.",
@@ -3776,9 +3776,9 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp3_97",
       "question": "¿Qué hace DENSE_RANK() en SQL?",
       "options": [
-        "Ordena por densidad de datos según las reglas de normalización aplicables.",
-        "Igual que RANK() con huecos en el modelo relacional de bases de datos.",
-        "Igual que ROW_NUMBER() según la sintaxis estándar del lenguaje SQL.",
+        "Ordena por densidad de datos",
+        "Igual que RANK() con huecos",
+        "Igual que ROW_NUMBER()",
         "Asigna rangos sin huecos: si hay empate, el siguiente rango es inmediatamente el siguiente"
       ],
       "correct": 3,
@@ -3790,9 +3790,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué hace la cláusula PARTITION BY en funciones de ventana?",
       "options": [
         "Divide el resultado en grupos para calcular la función por separado en cada grupo",
-        "Crea índices por partición para la gestión eficiente de los datos.",
-        "Separa los datos en distintos esquemas en el contexto del diseño de bases de datos.",
-        "Divide la tabla en particiones físicas según las reglas de normalización aplicables."
+        "Crea índices por partición",
+        "Separa los datos en distintos esquemas",
+        "Divide la tabla en particiones físicas"
       ],
       "correct": 0,
       "explanation": "SELECT dept, salario, AVG(salario) OVER (PARTITION BY dept).",
@@ -3803,9 +3803,9 @@ const TEST_BANK_DATA = {
       "question": "¿Para qué sirve la función LEAD() en SQL?",
       "options": [
         "Accede al valor de la fila siguiente dentro de la misma partición",
-        "Desplaza todas las filas una posición en el modelo relacional de bases de datos.",
+        "Desplaza todas las filas una posición",
         "Calcula la diferencia entre filas consecutivas",
-        "Accede al valor de la fila anterior según la sintaxis estándar del lenguaje SQL."
+        "Accede al valor de la fila anterior"
       ],
       "correct": 0,
       "explanation": "LEAD(col, 1) vs LAG(col, 1) para fila anterior.",
@@ -3815,9 +3815,9 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp3_100",
       "question": "¿Qué es una función escalar en SQL?",
       "options": [
-        "Un procedimiento almacenado sin parámetros para la gestión eficiente de los datos.",
-        "Una función que devuelve una tabla en el contexto del diseño de bases de datos.",
-        "Una vista parametrizada según las reglas de normalización aplicables.",
+        "Un procedimiento almacenado sin parámetros",
+        "Una función que devuelve una tabla",
+        "Una vista parametrizada",
         "Función que recibe parámetros y devuelve un único valor (no una tabla)"
       ],
       "correct": 3,
@@ -3829,9 +3829,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué es Apache Cassandra?",
       "options": [
         "BD NoSQL columnar distribuida diseñada para alta disponibilidad y escalabilidad masiva",
-        "Una herramienta de backup de MongoDB en el modelo relacional de bases de datos.",
-        "Un motor de búsqueda de texto según la sintaxis estándar del lenguaje SQL.",
-        "Un servidor de base de datos relacional de Apache para la gestión eficiente de los datos."
+        "Una herramienta de backup de MongoDB",
+        "Un motor de búsqueda de texto",
+        "Un servidor de base de datos relacional de Apache"
       ],
       "correct": 0,
       "explanation": "Cassandra no tiene un único punto de fallo (masterless).",
@@ -3842,9 +3842,9 @@ const TEST_BANK_DATA = {
       "question": "¿Qué es Neo4j?",
       "options": [
         "Base de datos de grafos que almacena nodos y relaciones de forma nativa",
-        "Un motor de búsqueda de texto completo en el contexto del diseño de bases de datos.",
-        "Una BD relacional de código abierto según las reglas de normalización aplicables.",
-        "Una base de datos documental en el modelo relacional de bases de datos."
+        "Un motor de búsqueda de texto completo",
+        "Una BD relacional de código abierto",
+        "Una base de datos documental"
       ],
       "correct": 0,
       "explanation": "Neo4j usa Cypher como lenguaje de consulta.",
@@ -3854,10 +3854,10 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_exp3_103",
       "question": "¿Qué es Elasticsearch?",
       "options": [
-        "Una base de datos relacional elástica según la sintaxis estándar del lenguaje SQL.",
+        "Una base de datos relacional elástica",
         "Motor de búsqueda y análisis distribuido, orientado a texto completo y logs",
-        "Un servidor de caché distribuido para la gestión eficiente de los datos.",
-        "Un sistema de cola de mensajes en el contexto del diseño de bases de datos."
+        "Un servidor de caché distribuido",
+        "Un sistema de cola de mensajes"
       ],
       "correct": 1,
       "explanation": "Elasticsearch usa índices invertidos para búsqueda ultrarrápida en texto.",
@@ -3945,9 +3945,9 @@ const TEST_BANK_DATA = {
       "concept_id": "bases_de_datos_real_110",
       "question": "¿Cómo se implementa una relación N:M en el modelo relacional?",
       "options": [
-        "Con dos vistas materializadas según las reglas de normalización aplicables.",
+        "Con dos vistas materializadas",
         "Creando una tabla intermedia cuya clave primaria es la combinación de las PK de las dos tablas",
-        "Una única tabla con clave artificial y atributos duplicados en el modelo relacional de bases de datos.",
+        "Una única tabla con clave artificial y atributos duplicados",
         "Blockchain"
       ],
       "correct": 1,
@@ -4191,10 +4191,10 @@ const TEST_BANK_DATA = {
     {
       "question": "¿Qué diferencia esencial hay entre una vista y una tabla?",
       "options": [
-        "Una vista almacena datos físicamente según la sintaxis estándar del lenguaje SQL.",
+        "Una vista almacena datos físicamente",
         "Una vista es virtual; se reconstruye al vuelo a partir de la consulta SQL que la define",
-        "Una vista no admite filtros para la gestión eficiente de los datos.",
-        "Combinación de las anteriores en el contexto del diseño de bases de datos."
+        "Una vista no admite filtros",
+        "Combinación de las anteriores"
       ],
       "correct": 1,
       "explanation": "Las vistas (VIEW) son consultas guardadas; no almacenan datos propios salvo vistas materializadas.",

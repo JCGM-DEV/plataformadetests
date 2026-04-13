@@ -352,7 +352,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.",
+      "explanation": "La respuesta seleccionada es la correcta según la teoría de este módulo.",
       "unit": null
     },
     {
@@ -1105,7 +1105,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.",
+      "explanation": "La respuesta seleccionada es la correcta según la teoría de este módulo.",
       "unit": null
     },
     {
@@ -1302,7 +1302,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.",
+      "explanation": "La respuesta seleccionada es la correcta según la teoría de este módulo.",
       "unit": null
     },
     {
@@ -1488,7 +1488,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.",
+      "explanation": "La respuesta seleccionada es la correcta según la teoría de este módulo.",
       "unit": null
     },
     {
@@ -1633,7 +1633,7 @@ const SYLLABUS_RAW_DATA = {
         "Con el atributo xmlns:xsi en el elemento raíz"
       ],
       "correct": 2,
-      "explanation": "El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.",
+      "explanation": "La respuesta seleccionada es la correcta según la teoría de este módulo.",
       "unit": null
     },
     {
@@ -2174,7 +2174,7 @@ const SYLLABUS_RAW_DATA = {
         "El navegador aplicará automáticamente estilos CSS predeterminados al documento XML."
       ],
       "correct": 2,
-      "explanation": "El navegador simplemente mostrará la jerarquía de etiquetas y el contenido del documento en texto plano, sin aplicar ningún estilo ni formato visual es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "El navegador simplemente mostrará la jerarquía de etiquetas y el contenido del documento en texto plano, sin aplicar ningún estilo ni formato visual es la opción correcta.",
       "unit": null
     },
     {
@@ -2267,7 +2267,7 @@ const SYLLABUS_RAW_DATA = {
         "DTD tiene mayor capacidad expresiva que XSD para definir estructuras complejas."
       ],
       "correct": 2,
-      "explanation": "Su ausencia de tipos de datos, la dificultad para acciones sencillas como ordenar elementos, y su limitada compatibilidad con los espacios de nombres XML es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Su ausencia de tipos de datos, la dificultad para acciones sencillas como ordenar elementos, y su limitada compatibilidad con los espacios de nombres XML es la opción correcta.",
       "unit": null
     },
     {
@@ -2293,7 +2293,7 @@ const SYLLABUS_RAW_DATA = {
         "DTD y XSD son equivalentes en capacidad expresiva y solo difieren en la sintaxis."
       ],
       "correct": 2,
-      "explanation": "Un Schema XML tiene como objetivo definir la estructura base de un documento XML, incluyendo elementos, atributos, tipos de datos, orden, ocurrencia y valores por defecto o fijos, mejorando las capacidades de los DTD es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Un Schema XML tiene como objetivo definir la estructura base de un documento XML, incluyendo elementos, atributos, tipos de datos, orden, ocurrencia y valores por defecto o fijos, mejorando las capacidades de los DTD es la opción correcta.",
       "unit": null
     },
     {
@@ -2319,7 +2319,7 @@ const SYLLABUS_RAW_DATA = {
         "xs:Restriction, para limitar los valores posibles de un tipo de dato existente."
       ],
       "correct": 2,
-      "explanation": "xs:Pattern es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "xs:Pattern es la opción correcta.",
       "unit": null
     },
     {
@@ -2332,7 +2332,7 @@ const SYLLABUS_RAW_DATA = {
         "Mediante el atributo targetNamespace en el elemento raíz del documento XML."
       ],
       "correct": 1,
-      "explanation": "Mediante el atributo schemaLocation es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Mediante el atributo schemaLocation es la opción correcta.",
       "unit": null
     },
     {
@@ -2358,7 +2358,7 @@ const SYLLABUS_RAW_DATA = {
         "El atributo fixed, para establecer un valor fijo que no puede modificarse."
       ],
       "correct": 2,
-      "explanation": "use con valor required es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "use con valor required es la opción correcta.",
       "unit": null
     },
     {
@@ -2518,7 +2518,7 @@ const SYLLABUS_RAW_DATA = {
         "Con el atributo xmlns:xsi en el elemento raíz"
       ],
       "correct": 1,
-      "explanation": "Almacenan el documento XML en su forma original sin alterarlo, lo que permite recuperar el original y aprovechar su modelo jerárquico mediante nodos es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Almacenan el documento XML en su forma original sin alterarlo, lo que permite recuperar el original y aprovechar su modelo jerárquico mediante nodos es la opción correcta.",
       "unit": null
     },
     {
@@ -2531,7 +2531,7 @@ const SYLLABUS_RAW_DATA = {
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
       "correct": 1,
-      "explanation": "Tener Java 1.7 o una versión posterior instalada en el sistema operativo es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Tener Java 1.7 o una versión posterior instalada en el sistema operativo es la opción correcta.",
       "unit": null
     },
     {
@@ -2557,7 +2557,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "No pueden restaurar el documento XML original sin alterarlo y tienen una diferencia de filosofía con la naturaleza jerárquica de XML es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "No pueden restaurar el documento XML original sin alterarlo y tienen una diferencia de filosofía con la naturaleza jerárquica de XML es la opción correcta.",
       "unit": null
     },
     {
@@ -2583,7 +2583,7 @@ const SYLLABUS_RAW_DATA = {
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
       "correct": 1,
-      "explanation": "Ofrece capacidades de transformación, permitiendo no solo recuperar datos sino también devolver un resultado con una nueva estructura es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Ofrece capacidades de transformación, permitiendo no solo recuperar datos sino también devolver un resultado con una nueva estructura es la opción correcta.",
       "unit": null
     },
     {
@@ -2609,7 +2609,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Para importar datos de formatos estructurados (como XML, HTML, CSV) desde una URL específica, aplicando una consulta XPath es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Para importar datos de formatos estructurados (como XML, HTML, CSV) desde una URL específica, aplicando una consulta XPath es la opción correcta.",
       "unit": null
     },
     {
@@ -2635,7 +2635,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "XPath es un lenguaje para seleccionar nodos en documentos XML, mientras que XQuery, además de incluir XPath, es un lenguaje completo de consulta y transformación con sintaxis FLWOR es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "XPath es un lenguaje para seleccionar nodos en documentos XML, mientras que XQuery, además de incluir XPath, es un lenguaje completo de consulta y transformación con sintaxis FLWOR es la opción correcta.",
       "unit": null
     }
   ],
@@ -2663,7 +2663,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Abordar la confusión y la incompatibilidad surgida por la existencia de varios estándares RSS similares, proporcionando una solución más consistente es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Abordar la confusión y la incompatibilidad surgida por la existencia de varios estándares RSS similares, proporcionando una solución más consistente es la opción correcta.",
       "unit": null
     },
     {
@@ -2689,7 +2689,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Permitir que un sitio web acceda a los servicios y contenidos de otro sitio web a través de una licencia, distribuyendo automáticamente información actualizada a los usuarios interesados es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Permitir que un sitio web acceda a los servicios y contenidos de otro sitio web a través de una licencia, distribuyendo automáticamente información actualizada a los usuarios interesados es la opción correcta.",
       "unit": null
     },
     {
@@ -2702,7 +2702,7 @@ const SYLLABUS_RAW_DATA = {
         "Con el atributo xmlns:xsi en el elemento raíz"
       ],
       "correct": 2,
-      "explanation": "El almacenamiento directo del contenido en formato RSS en el repositorio, sin necesidad de transformación es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "El almacenamiento directo del contenido en formato RSS en el repositorio, sin necesidad de transformación es la opción correcta.",
       "unit": null
     },
     {
@@ -2741,7 +2741,7 @@ const SYLLABUS_RAW_DATA = {
         "Garantiza que el feed aumentará su posición en los motores de búsqueda automáticamente"
       ],
       "correct": 0,
-      "explanation": "Suscribirse a fuentes de noticias en formatos RSS o Atom y notificar al usuario sobre las actualizaciones de contenido desde la última lectura es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Suscribirse a fuentes de noticias en formatos RSS o Atom y notificar al usuario sobre las actualizaciones de contenido desde la última lectura es la opción correcta.",
       "unit": null
     }
   ],
@@ -2756,7 +2756,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Controlar los procesos de negocio de forma coordinada para la toma de decisiones, reducir costes y aumentar la productividad es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Controlar los procesos de negocio de forma coordinada para la toma de decisiones, reducir costes y aumentar la productividad es la opción correcta.",
       "unit": null
     },
     {
@@ -2769,7 +2769,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Crear previamente la base de datos en el sistema, ya que todo ERP se apoya en una base de datos centralizada es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Crear previamente la base de datos en el sistema, ya que todo ERP se apoya en una base de datos centralizada es la opción correcta.",
       "unit": null
     },
     {
@@ -2782,7 +2782,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Encontrar soluciones que integren a estos empleados en los flujos de información de la empresa en tiempo real es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Encontrar soluciones que integren a estos empleados en los flujos de información de la empresa en tiempo real es la opción correcta.",
       "unit": null
     },
     {
@@ -2795,7 +2795,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Mantener a los equipos actualizados con información personalizada sobre los clientes, su historial y sus preferencias de compra es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Mantener a los equipos actualizados con información personalizada sobre los clientes, su historial y sus preferencias de compra es la opción correcta.",
       "unit": null
     },
     {
@@ -2808,7 +2808,7 @@ const SYLLABUS_RAW_DATA = {
         "Con un certificado SSL autofirmado"
       ],
       "correct": 2,
-      "explanation": "El riesgo de filtrar información confidencial de la empresa hacia el exterior sin el control adecuado es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "El riesgo de filtrar información confidencial de la empresa hacia el exterior sin el control adecuado es la opción correcta.",
       "unit": null
     },
     {
@@ -2821,7 +2821,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Pueden ser provistos por el fabricante, desarrollados por terceros o incluso ser programas personalizados solicitados por la empresa es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Pueden ser provistos por el fabricante, desarrollados por terceros o incluso ser programas personalizados solicitados por la empresa es la opción correcta.",
       "unit": null
     },
     {
@@ -2834,7 +2834,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Activar acciones automatizadas como notificar a personas designadas o integrar los datos con otro software como SAP o Salesforce es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Activar acciones automatizadas como notificar a personas designadas o integrar los datos con otro software como SAP o Salesforce es la opción correcta.",
       "unit": null
     },
     {
@@ -2847,7 +2847,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Prevalecerá el rol que imponga las restricciones más estrictas para garantizar la seguridad es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Prevalecerá el rol que imponga las restricciones más estrictas para garantizar la seguridad es la opción correcta.",
       "unit": null
     },
     {
@@ -2860,7 +2860,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "Añadir un campo personalizado en las órdenes de envío para indicar el tipo de embalaje, que no venía por defecto en el sistema es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Añadir un campo personalizado en las órdenes de envío para indicar el tipo de embalaje, que no venía por defecto en el sistema es la opción correcta.",
       "unit": null
     },
     {
@@ -2873,7 +2873,7 @@ const SYLLABUS_RAW_DATA = {
         "Con una instancia reservada de pago anual"
       ],
       "correct": 2,
-      "explanation": "Implementan las últimas novedades en seguridad de forma inmediata y aplican la seguridad por capas, reduciendo vulnerabilidades es la respuesta correcta para esta pregunta del temario oficial.",
+      "explanation": "Implementan las últimas novedades en seguridad de forma inmediata y aplican la seguridad por capas, reduciendo vulnerabilidades es la opción correcta.",
       "unit": null
     }
   ],
@@ -6405,7 +6405,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.",
+      "explanation": "La respuesta seleccionada es la correcta según la teoría de este módulo.",
       "unit": null
     },
     {
@@ -6418,7 +6418,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.",
+      "explanation": "La respuesta seleccionada es la correcta según la teoría de este módulo.",
       "unit": null
     },
     {
@@ -6788,7 +6788,7 @@ const SYLLABUS_RAW_DATA = {
         "En relación con el paso de parámetros en Java, señale la afirmación correcta:"
       ],
       "correct": 1,
-      "explanation": "El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.",
+      "explanation": "La respuesta seleccionada es la correcta según la teoría de este módulo.",
       "unit": null
     },
     {
@@ -6866,7 +6866,7 @@ const SYLLABUS_RAW_DATA = {
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.",
+      "explanation": "La respuesta seleccionada es la correcta según la teoría de este módulo.",
       "unit": null
     },
     {

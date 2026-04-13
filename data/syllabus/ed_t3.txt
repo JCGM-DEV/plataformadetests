@@ -60,7 +60,7 @@ El diagrama de secuencia, que muestra la interacción entre objetos a lo largo d
 El diagrama de comunicación, que se centra en el intercambio de mensajes entre objetos
 *El diagrama de actividad.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
+EXPL:La opción seleccionada es la correcta según la teoría técnica.
 
 Los múltiples diagramas de UML, diseñados para cubrir diversas perspectivas de un sistema software, se agrupan en dos grandes categorías principales. ¿Cuáles son estas categorías?
 Diagramas de diseño y diagramas de implementación

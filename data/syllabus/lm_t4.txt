@@ -10,7 +10,7 @@ Su capacidad para combinarse fácilmente con otros DTD y su soporte nativo para 
 Su soporte robusto para la definición de tipos de datos complejos y la especificación del elemento raíz del documento
 *Su ausencia de tipos de datos, la dificultad para acciones sencillas como ordenar elementos, y su limitada compatibilidad con los espacios de nombres XML
 DTD tiene mayor capacidad expresiva que XSD para definir estructuras complejas.
-EXPL:Su ausencia de tipos de datos, la dificultad para acciones sencillas como ordenar elementos, y su limitada compatibilidad con los espacios de nombres XML es la respuesta correcta para esta pregunta del temario oficial.
+EXPL:La opción correcta es Su ausencia de tipos de datos, la dificultad para acciones sencillas como ordenar elementos, y su limitada compatibilidad con los espacios de nombres XML.
 ¿Cuál de los siguientes atributos del elemento raíz xs:schema en un XSD se utiliza para indicar si los elementos deben llevar el espacio de nombres delante (qualified o unqualified)?
 TargetNamespace
 xmlns:alias
@@ -22,7 +22,7 @@ Un Schema XML se centra exclusivamente en la sintaxis de las etiquetas XML, sin 
 Los Schemas XML están escritos en un lenguaje diferente a XML, lo que requiere analizadores y APIs distintos para su procesamiento
 *Un Schema XML tiene como objetivo definir la estructura base de un documento XML, incluyendo elementos, atributos, tipos de datos, orden, ocurrencia y valores por defecto o fijos, mejorando las capacidades de los DTD
 DTD y XSD son equivalentes en capacidad expresiva y solo difieren en la sintaxis.
-EXPL:Un Schema XML tiene como objetivo definir la estructura base de un documento XML, incluyendo elementos, atributos, tipos de datos, orden, ocurrencia y valores por defecto o fijos, mejorando las capacidades de los DTD es la respuesta correcta para esta pregunta del temario oficial.
+EXPL:La opción correcta es Un Schema XML tiene como objetivo definir la estructura base de un documento XML, incluyendo elementos, atributos, tipos de datos, orden, ocurrencia y valores por defecto o fijos, mejorando las capacidades de los DTD.
 Para definir un tipo de dato simple personalizado en un Schema XML, ¿qué estructura principal se utiliza?
 xs:complexType
 *xs:simpleType
@@ -34,13 +34,13 @@ xs:Enumeration
 xs:MaxLength
 *xs:Pattern
 xs:Restriction, para limitar los valores posibles de un tipo de dato existente.
-EXPL:xs:Pattern es la respuesta correcta para esta pregunta del temario oficial.
+EXPL:La opción correcta es xs:Pattern.
 ¿Cómo se asocia un documento XML con un Schema XML (XSD) cuando se utilizan explícitamente los nombres de los espacios de nombres en las etiquetas del documento XML?
 Mediante el atributo noNamespaceSchemaLocation
 *Mediante el atributo schemaLocation
 El documento XML no necesita asociarse explícitamente; el navegador lo detecta automáticamente
 Mediante el atributo targetNamespace en el elemento raíz del documento XML.
-EXPL:Mediante el atributo schemaLocation es la respuesta correcta para esta pregunta del temario oficial.
+EXPL:La opción correcta es Mediante el atributo schemaLocation.
 En un documento XSD, si se desea especificar que un elemento puede aparecer un número ilimitado de veces, ¿qué valor se debe asignar al atributo maxOccurs?
 0
 1
@@ -52,7 +52,7 @@ default
 use con valor optional
 *use con valor required
 El atributo fixed, para establecer un valor fijo que no puede modificarse.
-EXPL:use con valor required es la respuesta correcta para esta pregunta del temario oficial.
+EXPL:La opción correcta es use con valor required.
 Según los principios de validación de documentos XML, ¿cuál de las siguientes afirmaciones es correcta?
 Un documento XML siempre es válido si está bien formado
 *Un documento XML puede estar bien formado pero no ser válido si no cumple las restricciones de un DTD o XSD

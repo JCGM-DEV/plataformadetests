@@ -16,13 +16,13 @@ Detectar errores de sintaxis antes de ejecutar el programa
 Ejecutar el programa de forma más rápida y optimizada
 *Analizar la ejecución paso a paso para localizar errores lógicos.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
+EXPL:La opción seleccionada es la correcta según la teoría técnica.
 Antes de escribir un programa, es fundamental diseñar correctamente el algoritmo que resolverá el problema. Para que una secuencia de pasos pueda considerarse un algoritmo válido, debe cumplir una serie de características. ¿Cuál de las siguientes es una de ellas?
 Debe poder ejecutarse directamente por la máquina sin traducción
 *Debe ser finito y finalizar tras un número limitado de pasos.
 Debe estar escrito obligatoriamente en un lenguaje de programación concreto
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
+EXPL:La opción seleccionada es la correcta según la teoría técnica.
 Todo programa informático sigue un modelo básico de funcionamiento que permite transformar datos en información útil. Dentro del modelo Entrada–Proceso–Salida, ¿qué elemento se considera el núcleo del programa?
 Los datos que introduce el usuario mediante dispositivos de entrada
 *El algoritmo que procesa los datos y aplica la lógica del programa.

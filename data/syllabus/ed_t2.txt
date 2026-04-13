@@ -25,7 +25,7 @@ Instalar el IDE Visual Studio para asegurar el soporte de Python
 *Descargar e instalar la última versión del intérprete de Python y sus herramientas.
 Configurar las variables de entorno del sistema operativo para que apunten al instalador de PyCharm
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
+EXPL:La opción seleccionada es la correcta según la teoría técnica.
 
 Basándose en la distinción entre categorías de software, ¿cuál es la característica que define al software libre en contraste con el software propietario?
 El software libre siempre tiene un coste asociado a su uso, mientras que el software propietario es siempre gratuito

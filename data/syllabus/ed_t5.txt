@@ -18,7 +18,7 @@ El diagrama de secuencia, por su enfoque en la interacción entre objetos
 *El diagrama de actividad.
 El diagrama de estados, ya que muestra el ciclo de vida de un componente
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
+EXPL:La opción seleccionada es la correcta según la teoría técnica.
 
 ¿Cuál es una característica fundamental de la relación de Extensión (<<extend>>) en los diagramas de casos de uso UML?
 Es una relación fuerte y obligatoria donde la funcionalidad extendida siempre se ejecuta

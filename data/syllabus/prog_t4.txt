@@ -10,7 +10,7 @@ Cuando se declara la variable de referencia que lo apuntará
 *Cuando ninguna referencia activa apunta al objeto en memoria.
 Cuando el programa invoca explícitamente el recolector de basura
 En relación con el paso de parámetros en Java, señale la afirmación correcta:
-EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
+EXPL:La opción seleccionada es la correcta según la teoría técnica.
 Java utiliza paso por referencia para objetos y paso por valor para primitivos
 *Java pasa siempre una copia del valor, aunque en los objetos dicho valor sea la referencia.
 Java permite elegir entre paso por valor o por referencia
@@ -49,7 +49,7 @@ Se crea automáticamente una copia independiente del objeto
 *Ambas variables pasan a compartir la referencia al mismo objeto.
 El objeto se duplica en el Heap para evitar efectos colaterales
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:El protocolo PAS ante emergencias: Proteger (asegurar la zona), Avisar (llamar al 112), Socorrer (prestar primeros auxilios). El orden es fundamental para no crear más víctimas.
+EXPL:La opción seleccionada es la correcta según la teoría técnica.
 En el diseño de constructores, ¿qué consecuencia tiene definir al menos un constructor con parámetros en una clase?
 Java mantiene siempre disponible el constructor vacío implícito
 *El constructor vacío deja de existir si no se define explícitamente.
