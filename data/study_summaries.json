@@ -1024,8 +1024,8 @@
       "**Checklist de Despliegue**: Lista de verificación final para asegurar que no nos olvidamos de nada antes de pulsar el botón."
     ]
   },
-  "lm_tema_1": {
-    "name": "Tema 1: XML y Estructuras de Datos",
+  "lm_tema_2": {
+    "name": "Tema 2: XML y Estructuras de Datos",
     "points": [
       "**XML**: Metalenguaje basado en etiquetas para almacenar y transportar datos de forma estructurada e independiente.",
       "**Texto Plano**: XML es legible por humanos y máquinas, lo que facilita el intercambio entre sistemas distintos.",
@@ -1049,8 +1049,8 @@
       "**XML vs JSON**: XML es más descriptivo y formal; JSON es más ligero y popular en aplicaciones web modernas."
     ]
   },
-  "lm_tema_2": {
-    "name": "Tema 2: HTML y CSS",
+  "lm_tema_1": {
+    "name": "Tema 1: HTML y CSS",
     "points": [
       "**HTML5**: El estándar actual para definir la estructura y el contenido de las páginas web.",
       "**Semántica**: Usar etiquetas que dicen qué son (`<nav>`, `<article>`, `<footer>`) en lugar de simples `<div>`.",
