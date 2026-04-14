@@ -1,0 +1,162 @@
+¿Qué se entiende principalmente por servicios de cómputo
+en la nube?
+A) Aplicaciones instaladas en ordenadores personales​
+B) Capacidad de procesamiento ofrecida bajo demanda​
+C) Programas que solo funcionan con conexión a internet​
+D) Almacenamiento de archivos en servidores externos
+
+¿Cuál es una de las principales ventajas de usar servicios
+de cómputo frente a la computación tradicional?
+A) Tener siempre servidores propios​
+B) Comprar hardware para el peor escenario posible​
+C) Adaptar los recursos según la demanda real​
+D) Evitar el uso de sistemas operativos
+
+¿Qué significa el principio de “abstracción de la
+infraestructura”?
+A) Que el usuario diseña el hardware​
+B) Que el usuario no necesita saber dónde ni cómo se
+ejecuta su aplicación​
+C) Que la infraestructura no existe​
+D) Que solo se usan servidores físicos
+
+El modelo de “pago por uso” implica que:
+A) Se paga una cuota fija mensual​
+B) Se paga solo cuando el servidor está encendido​
+
+C) Se paga únicamente por los recursos que se utilizan​
+D) Se paga por adelantado todo el año
+
+¿Qué es una máquina virtual?
+A) Un contenedor ligero sin sistema operativo​
+B) Un sistema operativo compartido por varias
+aplicaciones​
+C) Una copia virtual de un sistema operativo que funciona
+como un equipo independiente​
+D) Un servidor físico dedicado
+
+¿Qué elemento permite que varias máquinas virtuales
+compartan el mismo hardware físico?
+A) El sistema operativo​
+B) El contenedor​
+C) El hipervisor​
+D) La red virtual
+
+¿Cuál de las siguientes NO es una ventaja de las máquinas
+virtuales?
+A) Aislamiento entre sistemas​
+B) Escalabilidad​
+C) Uso exclusivo de hardware físico​
+D) Flexibilidad
+
+¿Para qué sirve el aislamiento entre máquinas virtuales?
+A) Para que todas compartan datos​
+B) Para que un fallo no afecte a las demás​
+C) Para reducir el uso de memoria​
+D) Para eliminar el hipervisor
+
+¿Cuál es una buena práctica para reducir costes en
+máquinas virtuales?
+A) Mantenerlas siempre encendidas​
+B) Sobredimensionar recursos​
+C) Apagar las VMs cuando no se usan​
+D) Crear una VM nueva para cada tarea
+
+¿Para qué sirve el escalado automático en las máquinas
+virtuales?
+A) Para mejorar la seguridad​
+B) Para ajustar los recursos según la demanda​
+C) Para eliminar sistemas operativos​
+D) Para reducir el número de usuarios
+
+¿Qué es un contenedor?
+A) Una máquina virtual completa​
+B) Un servidor físico compartido​
+C) Un paquete con una aplicación y sus dependencias​
+D) Un sistema operativo independiente
+¿Cuál es una ventaja clave de los contenedores?
+A) Simplifican el desarrollo y despliegue​
+B) Son menos portables​
+C) Consumen más recursos que las VMs​
+D) Solo funcionan en un entorno concreto
+¿Qué significa que un contenedor sea portable?
+A) Que solo funciona en la nube​
+B) Que necesita hardware específico​
+C) Que puede ejecutarse en distintos entornos​
+D) Que tiene su propio sistema operativo
+¿Por qué los contenedores son más eficientes que las VMs?
+A) Porque usan más memoria​
+B) Porque no se pueden escalar​
+C) Porque usan hardware exclusivo​
+D) Porque comparten el sistema operativo
+¿Qué activa la ejecución de una función serverless?
+A) El arranque de un servidor​
+B) Un evento​
+C) El sistema operativo​
+D) Un contenedor manual
+
+¿Cómo se paga en la computación sin servidor?
+A) Cuota mensual fija​
+B) Por servidor activo​
+C) Por tiempo real de ejecución​
+D) Por número de usuarios
+¿Qué ocurre cuando aumenta la demanda en serverless?
+A) Hay que añadir servidores manualmente​
+B) La aplicación se cae​
+C) Se limita el número de usuarios​
+D) El sistema escala automáticamente
+¿Qué ofrece principalmente el modelo IaaS?
+A) Aplicaciones listas para usar​
+B) Código sin servidores​
+C) Recursos de cómputo virtualizados​
+D) Solo bases de datos
+¿Qué caracteriza a un servicio SaaS?
+A) El usuario gestiona la infraestructura​
+B) El usuario gestiona el sistema operativo​
+C) El usuario usa directamente la aplicación​
+D) El usuario configura servidores
+¿Qué aspecto NO se menciona como clave antes de
+adoptar servicios de cómputo?
+A) Seguridad​
+B) Coste​
+C) Escalabilidad​
+D) Diseño gráfico
+
+¿Por qué el comercio electrónico usa servicios de
+cómputo?
+A) Para evitar internet​
+B) Para manejar picos de tráfico​
+C) Para reducir usuarios​
+D) Para usar servidores físicos
+¿Cuál es la idea principal de la conclusión?
+A) Los servicios de cómputo son temporales​
+B) Solo sirven para grandes empresas​
+C) Son clave en el presente y futuro del software​
+D) Van a desaparecer
+
+RESPUESTAS:
+1-B
+2-C
+3-B
+4-C
+5-C
+6-C
+7-C
+8-B
+9-C
+10-B
+11-C
+12-C
+13-C
+14-B
+15-B
+16-C
+17-C
+18-C
+19-C
+20-D
+
+21-B
+22-C
+
+

@@ -1,0 +1,205 @@
+¿Cuál es la función principal de los servicios de bases de datos?​
+A) Crear aplicaciones web​
+B) Almacenar y administrar información de forma eficiente​
+C) Diseñar interfaces gráficas​
+D) Gestionar redes informáticas
+¿Qué característica permite que una base de datos crezca o se
+reduzca según las necesidades?​
+A) Persistencia​
+B) Seguridad​
+C) Escalabilidad​
+D) Consistencia
+¿Qué ventaja permite acceder a una base de datos desde
+cualquier lugar con Internet?​
+A) Flexibilidad​
+B) Accesibilidad​
+C) Persistencia​
+D) Integridad
+¿Qué software permite crear y gestionar bases de datos?​
+A) Sistema operativo​
+B) Lenguaje de programación​
+C) Sistema de gestión de bases de datos​
+D) Servidor web
+¿Qué característica garantiza que los datos no se pierdan al
+cerrar la aplicación?​
+A) Seguridad​
+B) Transacciones​
+C) Persistencia​
+D) Escalabilidad
+¿Qué característica evita contradicciones o errores en los datos?​
+A) Accesibilidad​
+B) Consistencia​
+
+C) Flexibilidad​
+D) Rendimiento
+¿Para qué sirven las transacciones en una base de datos?​
+A) Para almacenar datos históricos​
+B) Para ejecutar operaciones de forma independiente​
+C) Para realizar operaciones como una única unidad​
+D) Para mejorar el diseño de tablas
+¿Cuál es un beneficio clave de los servicios de bases de datos?​
+A) Eliminan la necesidad de programar​
+B) Mejoran la toma de decisiones​
+C) Sustituyen a Internet​
+D) Evitan el uso de servidores
+¿Qué tipo de base de datos organiza la información en tablas?​
+A) Analítica​
+B) NoSQL​
+C) Documental​
+D) Relacional
+¿Qué representa una fila en una tabla relacional?​
+A) Un atributo​
+B) Una clave​
+C) Un registro​
+D) Una relación
+¿Qué tipo de clave identifica de forma única un registro?​
+A) Clave externa​
+B) Clave secundaria​
+C) Clave foránea​
+D) Clave primaria
+¿Qué lenguaje se utiliza para trabajar con bases de datos
+relacionales?​
+A) HTML​
+B) Python​
+
+C) SQL​
+D) XML
+¿Qué garantiza el cumplimiento de las propiedades ACID?​
+A) La velocidad del sistema​
+B) La seguridad de las transacciones​
+C) La accesibilidad remota​
+D) La flexibilidad del esquema
+¿Cuál de los siguientes es un proveedor de bases de datos
+relacionales?​
+A) MongoDB​
+B) Redis​
+C) PostgreSQL​
+D) Cassandra
+¿En qué sector son especialmente comunes las bases de datos
+relacionales?​
+A) Videojuegos offline​
+B) Redes sociales​
+C) Comercio electrónico​
+D) Diseño gráfico
+
+¿Qué significa el término NoSQL?​
+A) No usar bases de datos​
+B) Solo SQL​
+C) No estructurado​
+D) Not Only SQL
+¿Qué tipo de datos suelen manejar las bases de datos NoSQL?​
+A) Solo datos numéricos​
+B) Datos no estructurados o semiestructurados​
+C) Datos tabulares​
+D) Datos cifrados
+¿Qué característica permite repartir la carga entre varios
+servidores?​
+A) Persistencia​
+B) Escalabilidad​
+C) Seguridad​
+D) Integridad
+¿Qué tipo de base de datos almacena pares clave-valor?​
+A) Documental​
+B) Grafos​
+C) Column-family​
+D) Key-value
+¿Qué tipo de base de datos es ideal para representar relaciones
+como en redes sociales?​
+A) Relacional​
+B) Documental​
+C) Grafos​
+D) Analítica
+¿Qué formato es común en bases de datos documentales?​
+A) CSV​
+B) JSON​
+C) TXT​
+D) PDF
+
+¿Qué ventaja ofrece la flexibilidad de esquema en NoSQL?​
+A) Más seguridad​
+B) Mayor velocidad​
+C) No necesitar una estructura fija​
+D) Menor consumo de red
+¿Qué significa escalabilidad horizontal?​
+A) Aumentar la potencia del servidor​
+B) Reducir el número de usuarios​
+C) Añadir más nodos al sistema​
+D) Optimizar consultas
+¿Qué permite la tolerancia a fallos en bases de datos NoSQL?​
+A) Eliminar datos duplicados​
+B) Continuar funcionando aunque falle un nodo​
+C) Evitar ataques​
+D) Mejorar el diseño
+¿Qué base de datos NoSQL es conocida por su alta velocidad y
+uso como caché?​
+A) MongoDB​
+B) Cassandra​
+C) Couchbase​
+D) Redis
+¿Qué base de datos NoSQL almacena datos en forma de
+documentos?​
+A) Redis​
+B) MongoDB​
+C) Cassandra​
+D) Oracle
+¿Para qué están diseñadas las bases de datos analíticas?​
+A) Operaciones diarias​
+B) Almacenamiento básico​
+C) Análisis de grandes volúmenes de datos​
+D) Gestión de usuarios
+
+¿Qué permiten los datos analíticos a las empresas?​
+A) Reducir costes de hardware​
+B) Tomar decisiones más informadas​
+C) Eliminar bases de datos relacionales​
+D) Mejorar la seguridad
+¿Qué tipo de consultas están optimizadas en bases de datos
+analíticas?​
+A) Simples​
+B) Transaccionales​
+C) Complejas​
+D) Manuales
+¿Qué aspecto es especialmente importante en bases de datos
+analíticas?​
+A) Diseño visual​
+B) Seguridad y privacidad​
+C) Uso exclusivo de SQL​
+D) Bajo coste
+
+CLASE 1
+
+1.​ B​
+2.​ C​
+3.​ B​
+4.​ C​
+5.​ C​
+6.​ B​
+7.​ C​
+8.​ B​
+9.​ D​
+10.​C​
+11.​D​
+12.​C​
+13.​B​
+14.​C​
+15.​C
+
+CLASE 2
+
+1.​ D​
+2.​ B​
+3.​ B​
+4.​ D​
+5.​ C​
+6.​ B​
+7.​ C​
+8.​ C​
+9.​ B​
+10.​D​
+11.​B​
+12.​C​
+13.​B​
+14.​C​
+15.​B
+
+

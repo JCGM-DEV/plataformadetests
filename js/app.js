@@ -360,9 +360,7 @@ function switchDash(sectionId) {
         renderStudyGuide();
         renderActivityLog();
     }
-    if (sectionId === 'simulacros') renderSubjects();
-    if (sectionId === 'labs') renderLabs();
-    if (sectionId === 'temario') renderSyllabusExams();
+    if (sectionId === 'academia') renderAcademia();
     if (sectionId === 'planner') renderAcademicPlanner();
     if (sectionId === 'progreso') renderProgress();
     if (sectionId === 'fallos') renderFallosSection();
@@ -409,225 +407,122 @@ async function init() {
 
 
 
-// ─── RENDER SUBJECTS ────────────────────────────────────────────
-function renderSubjects() {
-    const grid = document.getElementById('subject-grid');
+// ─── RENDER ACADEMIA (UNIFIED HUB) ──────────────────────────────
+function renderAcademia() {
+    const grid = document.getElementById('academia-grid');
+    if (!grid) return;
     grid.innerHTML = '';
+    
     const history = getHistory();
+    const fallosData = getFallos();
 
     APP_STATE.subjects.forEach(subject => {
         const pool = QUESTION_POOL[subject.id] || [];
-        const fallos = getFallos()[subject.id] || {};
-        const fallosCount = Object.keys(fallos).length;
-
-        // Subject-wide attempts (where unitId is null)
-        const subjectAttempts = history.filter(h => h.subjectId === subject.id && !h.unitId).length;
-
-        let unitsHTML = '<div class="unit-selector">';
-        for (let i = 1; i <= subject.units_count; i++) {
-            const unitPool = pool.filter(q => q.unit === i);
-            const pdfPath = THEORY_PDFS[subject.id]?.[i];
-            const videoPath = SUBJECT_VIDEOS[subject.id]?.[i];
-            const infoPath = THEORY_INFOGRAPHICS[subject.id]?.[i];
-            const reportPath = THEORY_REPORTS[subject.id]?.[i];
-            
-            // Unified count: Interactive attempts + Syllabus (PDF) attempts for this unit
-            const relatedSyllabusIds = APP_STATE.syllabusExams
-                .filter(e => e.subject_id === subject.id && e.unit === i)
-                .map(e => e.id);
-            const unitAttempts = history.filter(h => 
-                (h.subjectId === subject.id && h.unitId === i) || 
-                (relatedSyllabusIds.includes(h.subjectId))
-            ).length;
-            
-            // Resource flags
-            const hasPDF = !!pdfPath;
-            const hasSumm = hasSummary(subject.id, i);
-            const hasVideo = !!videoPath;
-            const hasInfo = !!infoPath;
-            const hasRepos = !!reportPath;
-
-            unitsHTML += `
-                <div class="topic-frame ${unitPool.length === 0 ? 'disabled' : ''}" 
-                     onclick="${unitPool.length > 0 ? `startExam('${subject.id}',${i})` : ''}"
-                     title="${unitPool.length > 0 ? `Hacer test del Tema ${i}` : 'Sin preguntas'}">
-                    <div class="topic-header">
-                        <span class="topic-title">TEMA ${i}</span>
-                        ${unitAttempts > 0 ? `<span class="topic-badge">${unitAttempts}</span>` : ''}
-                        <span class="topic-play-icon">🎯</span>
-                    </div>
-                    <div class="topic-content" onclick="event.stopPropagation()">
-                        ${hasPDF ? `<a href="${pdfPath}" target="_blank" class="res-link-labeled pdf" title="Ver teoría PDF" onclick="logTheory('${subject.name}', ${i}, '${subject.id}')">📄<span>PDF</span></a>` : ''}
-                        ${hasSumm ? `<a href="javascript:void(0)" onclick="openSummary('${subject.id}', ${i})" class="res-link-labeled summary" title="Ver Resumen del Tema">📝<span>SMRY</span></a>` : ''}
-                        ${hasVideo ? `<a href="javascript:void(0)" onclick="openVideo('${videoPath}')" class="res-link-labeled video" title="Ver video de repaso">🎬<span>VIDEO</span></a>` : ''}
-                        ${hasRepos ? `<a href="${reportPath}" target="_blank" class="res-link-labeled report" title="Ver Informe Detallado">📊<span>INFO</span></a>` : ''}
-                        ${hasInfo ? `<a href="${infoPath}" target="_blank" class="res-link-labeled infographic" title="Ver Infografía">🖼️<span>MAPA</span></a>` : ''}
-                    </div>
-                </div>`;
-        }
-        unitsHTML += '</div>';
-
-        // Mark today's subjects
-        const todaySubjects = getDailySubjects()?.subjects || [];
-        const isToday = todaySubjects.includes(subject.id);
+        const subjectFallos = fallosData[subject.id] || {};
+        const fallosCount = Object.keys(subjectFallos).length;
+        
+        // Labs for this subject
+        const subjectLabs = APP_STATE.syllabusExams.filter(e => e.subject_id === subject.id && e.type === 'lab');
+        
+        // Syllabus themes for this subject
+        const themes = APP_STATE.syllabusExams.filter(e => e.subject_id === subject.id && e.type !== 'lab');
 
         const card = document.createElement('div');
-        card.className = `subject-card${isToday ? ' subject-card-today' : ''}`;
-        card.setAttribute('data-subject-id', subject.id);
+        card.className = 'academia-card';
         card.style.setProperty('--card-color', subject.color || '#6366f1');
+        
+        // Build the themes list (Accordion)
+        let themesHTML = '';
+        if (themes.length > 0) {
+            themesHTML = `
+                <div class="academia-themes-section">
+                    <button class="academia-themes-toggle" onclick="toggleAcademiaSyllabus('${subject.id}')">
+                        <span class="toggle-label">📚 Temario Oficial (${themes.length} temas)</span>
+                        <span class="chevron">▼</span>
+                    </button>
+                    <div id="themes-list-${subject.id}" class="academia-themes-list hidden">
+                        ${themes.map(t => {
+                            const tAttempts = history.filter(h => h.subjectId === t.id).length;
+                            return `
+                            <div class="academia-theme-item">
+                                <div class="theme-info">
+                                    <span class="theme-name">${t.name}</span>
+                                    ${tAttempts > 0 ? `<span class="theme-badge">${tAttempts}</span>` : ''}
+                                </div>
+                                <div class="theme-actions">
+                                    <button class="btn-tiny" onclick="startSyllabusExam('${t.id}')">Hacer Test</button>
+                                </div>
+                            </div>`;
+                        }).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
         card.innerHTML = `
-            <div class="card-icon">${subject.icon}</div>
-            <h3>${subject.name}</h3>
-            <div class="card-badges">
-                <div class="card-pool-badge">${pool.length} preguntas</div>
-                ${subjectAttempts > 0 ? `<div class="badge-attempts">🎯 Simulacros: ${subjectAttempts}</div>` : ''}
+            <div class="academia-card-inner">
+                <div class="card-glass-bg"></div>
+                <div class="academia-card-header">
+                    <div class="academia-icon-wrapper">
+                        <span class="academia-icon">${subject.icon}</span>
+                    </div>
+                    <div class="academia-title-group">
+                        <h3>${subject.name}</h3>
+                        <div class="academia-meta">
+                            <span>🎯 ${pool.length} preguntas</span>
+                            ${fallosCount > 0 ? `<span class="academia-fallos-badge" onclick="switchDash('fallos')">❌ ${fallosCount} fallos</span>` : ''}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="academia-main-actions">
+                    <button class="btn-primary academia-btn-main" onclick="startExam('${subject.id}')">
+                        <span class="btn-icon">🚀</span>
+                        <div class="btn-texts">
+                            <span class="btn-main-text">Simulacro General</span>
+                            <span class="btn-sub-text">40 preguntas aleatorias</span>
+                        </div>
+                    </button>
+                    
+                    <div class="academia-secondary-actions">
+                        <button class="btn-secondary" onclick="startFlashcard('${subject.id}')">
+                            <span class="btn-icon">⚡</span> Flashcards
+                        </button>
+                        ${subjectLabs.length > 0 ? `
+                        <button class="btn-secondary btn-lab-link" onclick="startLab('${subjectLabs[0].id}')">
+                            <span class="btn-icon">🧪</span> Laboratorio
+                        </button>` : ''}
+                    </div>
+                </div>
+
+                ${themesHTML}
+
+                <div class="academia-card-footer">
+                    <button class="btn-text-only" onclick="startExam('${subject.id}', null, 'solo_no_se')">
+                        🎯 Solo lo que no sé
+                    </button>
+                </div>
             </div>
-            <div class="exam-selector-large">
-                <button onclick="startExam('${subject.id}')">🎯 Simulacro Completo</button>
-            </div>
-            <div class="card-actions-row">
-                <button class="btn-flashcard" onclick="startFlashcard('${subject.id}')">⚡ Flashcards</button>
-                <button class="btn-solo-nosé" onclick="startExam('${subject.id}', null, 'solo_no_se')" title="Solo preguntas no dominadas">🎯 Solo lo que no sé</button>
-                ${fallosCount > 0 ? `<button class="btn-fallos" onclick="startFallosExam('${subject.id}')">❌ Repasar fallos (${fallosCount})</button>` : ''}
-            </div>
-            ${unitsHTML}
         `;
         grid.appendChild(card);
     });
 }
 
-// ─── RENDER SYLLABUS ────────────────────────────────────────────
-function renderLabs() {
-    const labsContainer = document.getElementById('labs-container');
-    const labsGrid = document.getElementById('labs-grid');
-
-    if (!labsGrid) return;
-
-    // Separate labs from syllabus exams
-    const labs = APP_STATE.syllabusExams.filter(e => e.type === 'lab');
-
-    if (labs.length === 0) {
-        labsGrid.innerHTML = `
-            <div class="empty-state">
-                <div class="empty-icon">🧪</div>
-                <p>No hay laboratorios interactivos disponibles en este momento.</p>
-            </div>`;
-        return;
+function toggleAcademiaSyllabus(subjectId) {
+    const list = document.getElementById(`themes-list-${subjectId}`);
+    const btn = list.previousElementSibling;
+    const chevron = btn.querySelector('.chevron');
+    
+    const isHidden = list.classList.toggle('hidden');
+    chevron.style.transform = isHidden ? 'rotate(0deg)' : 'rotate(180deg)';
+    
+    if (!isHidden) {
+        list.style.maxHeight = list.scrollHeight + "px";
+        btn.classList.add('active');
+    } else {
+        list.style.maxHeight = "0px";
+        btn.classList.remove('active');
     }
-
-    labsGrid.innerHTML = '';
-
-    const labColors = {
-        bases_de_datos:         { color: '#06b6d4', bg: 'rgba(6,182,212,0.08)', border: 'rgba(6,182,212,0.3)' },
-        lenguaje_de_marcas:     { color: '#84cc16', bg: 'rgba(132,204,22,0.08)', border: 'rgba(132,204,22,0.3)' },
-        programacion:           { color: '#f97316', bg: 'rgba(249,115,22,0.08)', border: 'rgba(249,115,22,0.3)' },
-        entornos_de_desarrollo: { color: '#a855f7', bg: 'rgba(168,85,247,0.08)', border: 'rgba(168,85,247,0.3)' },
-        sistemas_informaticos:  { color: '#10b981', bg: 'rgba(16,185,129,0.08)', border: 'rgba(16,185,129,0.3)' },
-    };
-
-    labs.forEach(lab => {
-        const subject = APP_STATE.subjects.find(s => s.id === lab.subject_id);
-        const theme = labColors[lab.subject_id] || { color: '#6366f1', bg: 'rgba(99,102,241,0.08)', border: 'rgba(99,102,241,0.3)' };
-        const card = document.createElement('div');
-        card.className = 'lab-card';
-        card.style.cssText = `--lab-color:${theme.color};--lab-bg:${theme.bg};--lab-border:${theme.border}`;
-        card.innerHTML = `
-            <div class="lab-card-icon">${lab.icon || '🧪'}</div>
-            <div class="lab-card-body">
-                <div class="lab-card-subject">${subject ? subject.name : lab.subject_id}</div>
-                <h3 class="lab-card-title">${lab.name}</h3>
-                <p class="lab-card-desc">${typeof getLabDescription === 'function' ? getLabDescription(lab.id) : lab.name}</p>
-            </div>
-            <button class="lab-card-btn" onclick="startLab('${lab.id}')">
-                Abrir Lab →
-            </button>
-        `;
-        labsGrid.appendChild(card);
-    });
-}
-
-function renderSyllabusExams() {
-    const grid = document.getElementById('syllabus-grid');
-
-    if (!grid) return;
-
-    const syllabusExams = APP_STATE.syllabusExams.filter(e => e.type !== 'lab');
-    const history = getHistory(); // Get full history to count attempts
-
-    if (syllabusExams.length === 0) {
-        grid.innerHTML = `
-            <div class="empty-state">
-                <div class="empty-icon">📚</div>
-                <p>No se han encontrado exámenes del temario oficial.</p>
-            </div>`;
-        return;
-    }
-
-    const grouped = {};
-    syllabusExams.forEach(e => {
-        if (!grouped[e.subject_id]) grouped[e.subject_id] = [];
-        grouped[e.subject_id].push(e);
-    });
-
-    Object.keys(grouped).forEach(subjectId => {
-        const subject = APP_STATE.subjects.find(s => s.id === subjectId) || { name: subjectId, icon: '📖' };
-        const fallos = getFallos()[subjectId] || {};
-        const fallosCount = Object.keys(fallos).length;
-
-        const groupEl = document.createElement('div');
-        groupEl.className = 'syllabus-group';
-        groupEl.id = `syllabus-group-${subjectId}`;
-        groupEl.innerHTML = `
-            <div class="syllabus-group-header">
-                <span class="header-icon">${subject.icon}</span>
-                <h4>${subject.name}</h4>
-                <div class="syllabus-group-actions">
-                    <button class="simulacro-temario-btn" onclick="startSimulacroTemario('${subjectId}')">
-                        🎯 Simulacro (40 preguntas)
-                    </button>
-                    <button class="btn-flashcard" onclick="startSyllabusFlashcard('${subjectId}')" title="Flashcards del temario">
-                        ⚡ Flashcards
-                    </button>
-                    ${fallosCount > 0 ? `<button class="btn-fallos" onclick="startFallosExam('${subjectId}')" title="Repasar fallos">
-                        ❌ Fallos (${fallosCount})
-                    </button>` : ''}
-                </div>
-            </div>
-            <div class="grid-container syllabus-grid">
-                ${grouped[subjectId].map(exam => {
-                    // Unified count for PDF cards too
-                    const unitId = exam.unit;
-                    const relatedSyllabusIds = APP_STATE.syllabusExams
-                        .filter(e => e.subject_id === exam.subject_id && e.unit === unitId && unitId !== undefined)
-                        .map(e => e.id);
-                    
-                    const attempts = history.filter(h => 
-                        (h.subjectId === exam.id) || 
-                        (unitId !== undefined && h.subjectId === exam.subject_id && h.unitId === unitId) ||
-                        (unitId !== undefined && relatedSyllabusIds.includes(h.subjectId))
-                    ).length;
-                    return `
-                    <div class="subject-card syllabus-card ${exam.type === 'examen_final' ? 'examen-final-card' : ''}">
-                        <div class="card-icon">${exam.icon || '📖'}</div>
-                        <div class="card-badges">
-                            ${exam.type === 'examen_final'
-                                ? `<div class="badge-examen-final">EXAMEN FINAL</div>`
-                                : `<div class="badge-oficial">TEMARIO OFICIAL</div>`}
-                            ${attempts > 0 ? `<div class="badge-attempts">🔄 Repetido: ${attempts}</div>` : ''}
-                        </div>
-                        <h3>${exam.name}</h3>
-                        <div class="exam-selector-large">
-                            ${exam.type === 'examen_final'
-                                ? `<button onclick="startExamenFinal('${exam.subject_id}')" style="background:linear-gradient(135deg,#ef4444,#f97316)">🎯 Iniciar Simulacro Final</button>`
-                                : `<button onclick="startSyllabusExam('${exam.id}')">Iniciar Examen</button>`}
-                        </div>
-                        ${exam.type === 'examen_final' ? `<p style="font-size:0.75rem;color:var(--text-secondary);margin-top:0.5rem">30 teóricas + 30 prácticas · Penalización -1/3</p>` : ''}
-                    </div>
-                `}).join('')}
-            </div>
-        `;
-        grid.appendChild(groupEl);
-    });
 }
 
 function getLabDescription(labId) {

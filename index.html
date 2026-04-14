@@ -48,14 +48,8 @@
                     <a href="javascript:void(0)" onclick="switchDash('overview')" class="side-link active" data-section="overview">
                         <span class="side-icon">🏠</span> Resumen
                     </a>
-                    <a href="javascript:void(0)" onclick="switchDash('simulacros')" class="side-link" data-section="simulacros">
-                        <span class="side-icon">🎯</span> Simulacros y Teoría
-                    </a>
-                    <a href="javascript:void(0)" onclick="switchDash('labs')" class="side-link" data-section="labs">
-                        <span class="side-icon">🧪</span> Laboratorios
-                    </a>
-                    <a href="javascript:void(0)" onclick="switchDash('temario')" class="side-link" data-section="temario">
-                        <span class="side-icon">📚</span> Tests del temario oficial
+                    <a href="javascript:void(0)" onclick="switchDash('academia')" class="side-link" data-section="academia">
+                        <span class="side-icon">🎓</span> Academia
                     </a>
                     <a href="javascript:void(0)" onclick="switchDash('planner')" class="side-link" data-section="planner">
                         <span class="side-icon">📅</span> Planificador
@@ -113,30 +107,15 @@
                     </div>
 
                     <!-- Simulacros Section -->
-                    <div id="dash-section-simulacros" class="dash-section hidden">
+                    <!-- Academia Unified Section -->
+                    <div id="dash-section-academia" class="dash-section hidden">
                         <div class="section-header-simple">
-                            <h3>🎯 Simulacros y Teoría</h3>
-                            <p>Practica con preguntas por asignatura y tema.</p>
+                            <h3>🎓 Academia DAW</h3>
+                            <p>Tu centro de estudio unificado. Elige una asignatura para empezar.</p>
                         </div>
-                        <div id="subject-grid" class="grid-container">
-                            <div class="skeleton-card"></div>
-                            <div class="skeleton-card"></div>
-                            <div class="skeleton-card"></div>
+                        <div id="academia-grid" class="grid-container academia-grid">
+                            <!-- Unified subject cards will be rendered here -->
                         </div>
-                    </div>
-
-                    <!-- Labs Section -->
-                    <div id="dash-section-labs" class="dash-section hidden">
-                        <section id="labs-container">
-                            <div id="labs-grid" class="grid-container labs-grid"></div>
-                        </section>
-                    </div>
-
-                    <!-- Temario Section -->
-                    <div id="dash-section-temario" class="dash-section hidden">
-                        <section id="syllabus-container">
-                            <div id="syllabus-grid" class="grid-container syllabus-grid"></div>
-                        </section>
                     </div>
 
                     <!-- Planner Section -->
