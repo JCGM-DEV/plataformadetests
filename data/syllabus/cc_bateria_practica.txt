@@ -1,183 +1,3 @@
-¿Qué describe la arquitectura en la nube?
-La estructura y diseño de sistemas en la nube
-Solo servidores físicos
-Redes locales
-Programas instalados
-
-¿Cuál es una ventaja clave de la arquitectura cloud?
-Escalabilidad y reducción de costes
-Uso obligatorio de hardware propio
-Mayor complejidad
-Menor seguridad
-
-¿Qué permite la nube a las empresas?
-Acceder a tecnologías avanzadas sin gran inversión
-Reducir usuarios
-Limitar servicios
-Evitar internet
-
-¿Cuál es un principio de diseño?
-Excelencia operacional
-Programación básica
-Uso de hardware
-Instalación local
-
-¿Qué implica la excelencia operacional?
-Gestionar y operar sistemas eficientemente
-Reducir datos
-Evitar seguridad
-Usar menos servidores
-
-¿Qué busca la automatización?
-Reducir tareas manuales y errores
-Aumentar errores
-Hacer todo manual
-Reducir velocidad
-
-¿Para qué sirve el monitoreo?
-Detectar problemas en tiempo real
-Guardar datos
-Mejorar diseño
-Reducir usuarios
-
-¿Qué es la gestión de cambios?
-Controlar modificaciones en la arquitectura
-Eliminar sistemas
-Actualizar sin control
-Crear usuarios
-
-¿Qué protege la encriptación?
-Datos en tránsito y reposo
-Servidores
-Redes
-Usuarios
-
-¿Qué función tiene un firewall?
-Bloquear accesos no autorizados
-Almacenar datos
-Mejorar rendimiento
-Crear usuarios
-
-¿Qué es el control de acceso?
-Asignar permisos según roles
-Dar acceso total
-Quitar seguridad
-Eliminar usuarios
-
-¿Qué es la redundancia?
-Duplicar componentes críticos
-Reducir recursos
-Eliminar datos
-Optimizar código
-
-¿Para qué sirven las copias de seguridad?
-Recuperar información en caso de fallo
-Aumentar velocidad
-Reducir datos
-Mejorar diseño
-
-¿Qué hace el balanceo de carga?
-Distribuir tráfico entre servidores
-Aumentar fallos
-Reducir seguridad
-Eliminar datos
-
-¿Qué permite la escalabilidad?
-Ajustar recursos según la demanda
-Reducir usuarios
-Limitar recursos
-Eliminar servidores
-
-¿Qué es alta disponibilidad?
-Que el sistema esté siempre operativo
-Reducir costes
-Aumentar velocidad
-Usar más servidores
-
-¿Qué es redundancia?
-Duplicar componentes críticos
-Reducir datos
-Eliminar servidores
-Optimizar código
-
-¿Para qué sirve el balanceo de carga?
-Distribuir el tráfico entre servidores
-Reducir seguridad
-Guardar datos
-Aumentar almacenamiento
-
-¿Qué hace Kubernetes?
-Orquesta contenedores
-Gestiona bases de datos
-Mejora seguridad
-Almacena datos
-
-¿Qué es un servicio gestionado?
-Infraestructura administrada por el proveedor
-Un servidor físico
-Software local
-Programa offline
-
-¿Qué se analiza primero?
-Necesidades del negocio
-Costes
-Seguridad
-Código
-
-¿Qué se evalúa además de requisitos?
-Riesgos
-Usuarios
-Datos
-Software
-
-¿Para qué sirven las métricas?
-Medir el rendimiento y éxito
-Decorar sistemas
-Guardar datos
-Reducir código
-
-¿Qué modelo usan AWS, Azure y GCP?
-Pago por uso
-Pago fijo
-Gratis
-Suscripción anual
-
-¿Qué caracteriza a Google Cloud?
-IA y análisis de datos
-Seguridad básica
-Bajo coste
-Sin escalabilidad
-
-¿Qué es un microservicio?
-Sistema dividido en servicios pequeños
-Programa grande
-Base de datos
-Servidor único
-
-¿Qué implica el diseño de red?
-Conectividad y seguridad
-Solo cables
-Código
-Hardware
-
-¿Para qué sirve la automatización?
-Reducir errores y tiempo
-Aumentar errores
-Reducir datos
-Mejorar diseño
-
-¿Qué tipo de pruebas se realizan?
-Carga, seguridad e integración
-Solo visuales
-Solo código
-Ninguna
-
-¿Qué es mejora continua?
-Proceso constante de mejora
-Cambios únicos
-Sin análisis
-Solo mantenimiento
-
 ¿Qué se entiende principalmente por servicios de cómputo en la nube?
 Capacidad de procesamiento ofrecida bajo demanda
 Aplicaciones instaladas en ordenadores personales
@@ -303,3 +123,255 @@ Solo sirven para grandes empresas
 Los servicios de cómputo son temporales
 Son clave en el presente y futuro del software
 Van a desaparecer
+
+¿Cuál es la función principal de los servicios de almacenamiento en cloud computing?
+Proteger, conservar y permitir el acceso a los datos
+Ejecutar aplicaciones en la nube
+Conectar dispositivos IoT
+Sustituir los sistemas operativos
+
+¿Por qué ha aumentado tanto la necesidad de servicios de almacenamiento en los últimos años?
+Por el crecimiento del volumen de datos y nuevas tecnologías
+Por la reducción del uso de ordenadores
+Por la aparición de redes sociales únicamente
+Por la desaparición de servidores físicos
+
+¿Cuál de estos NO es un tipo de servicio de almacenamiento habitual en cloud?
+Estar pensado solo para copias de seguridad
+Organizar datos en carpetas
+Usar URLs para acceder a los datos
+Dividir la información en bloques de tamaño fijo
+
+¿Qué tipo de acceso ofrece el almacenamiento de bloques?
+Acceso solo en modo lectura
+Acceso secuencial
+Acceso de bajo nivel y aleatorio
+Acceso jerárquico
+
+¿Qué tipo de aplicaciones suelen usar almacenamiento de bloques?
+Alta durabilidad a largo plazo
+Bajo coste frente a cualquier otro tipo
+Alto rendimiento
+Acceso mediante navegador web
+
+¿Qué garantiza la consistencia de datos en el almacenamiento de bloques?
+Objetos identificados de forma única
+Carpetas jerárquicas
+Bloques de tamaño fijo
+Sectores de disco
+
+¿Qué información incluye un objeto en el almacenamiento de objetos?
+Archivos grandes y no estructurados
+Sistemas operativos
+Bases de datos transaccionales
+Memoria RAM
+
+¿Qué ventaja NO es propia del almacenamiento de objetos?
+Bajo coste
+Escalabilidad
+Alto rendimiento transaccional
+Alta durabilidad
+
+¿Cómo se accede normalmente a un objeto almacenado?
+Streaming de contenido multimedia
+Arranque de sistemas operativos
+Ejecución de máquinas virtuales.
+Procesamiento de transacciones
+
+¿Por qué el almacenamiento de objetos es ideal para contenido web?
+Almacenamiento de objetos
+Almacenamiento de ficheros
+Almacenamiento de bloques
+Almacenamiento local
+
+¿Qué tipo de almacenamiento se parece más al sistema de archivos de un ordenador?
+La colaboración entre usuarios
+La virtualización
+El streaming en directo
+El arranque de sistemas
+
+¿Qué permite el control de versiones en el almacenamiento de ficheros?
+Almacenamiento a largo plazo
+Acceso frecuente
+Datos temporales
+Aplicaciones en tiempo real
+
+¿Cuál es la función principal de los servicios de bases de datos?
+Almacenar y administrar información de forma eficiente
+Crear aplicaciones web
+Diseñar interfaces gráficas
+Gestionar redes informáticas
+
+¿Qué característica permite que una base de datos crezca o se reduzca según las necesidades?
+Escalabilidad
+Persistencia
+Seguridad
+Consistencia
+
+¿Qué ventaja permite acceder a una base de datos desde cualquier lugar con Internet?
+Accesibilidad
+Flexibilidad
+Persistencia
+Integridad
+
+¿Qué software permite crear y gestionar bases de datos?
+Sistema de gestión de bases de datos
+Sistema operativo
+Lenguaje de programación
+Servidor web
+
+¿Qué característica garantiza que los datos no se pierdan al cerrar la aplicación?
+Persistencia
+Seguridad
+Transacciones
+Escalabilidad
+
+¿Qué característica evita contradicciones o errores en los datos?
+Consistencia
+Accesibilidad
+Flexibilidad
+Rendimiento
+
+¿Para qué sirven las transacciones en una base de datos?
+Para realizar operaciones como una única unidad
+Para almacenar datos históricos
+Para ejecutar operaciones de forma independiente
+Para mejorar el diseño de tablas
+
+¿Cuál es un beneficio clave de los servicios de bases de datos?
+Mejoran la toma de decisiones
+Eliminan la necesidad de programar
+Sustituyen a Internet
+Evitan el uso de servidores
+
+¿Qué tipo de base de datos organiza la información en tablas?
+Relacional
+Analítica
+NoSQL
+Documental
+
+¿Qué representa una fila en una tabla relacional?
+Un registro
+Un atributo
+Una clave
+Una relación
+
+¿Qué tipo de clave identifica de forma única un registro?
+Clave primaria
+Clave externa
+Clave secundaria
+Clave foránea
+
+¿Qué lenguaje se utiliza para trabajar con bases de datos relacionales?
+SQL
+HTML
+Python
+XML
+
+¿Qué garantiza el cumplimiento de las propiedades ACID?
+La seguridad de las transacciones
+La velocidad del sistema
+La accesibilidad remota
+La flexibilidad del esquema
+
+¿Cuál de los siguientes es un proveedor de bases de datos relacionales?
+PostgreSQL
+MongoDB
+Redis
+Cassandra
+
+¿En qué sector son especialmente comunes las bases de datos relacionales?
+Comercio electrónico
+Videojuegos offline
+Redes sociales
+Diseño gráfico
+
+¿Qué significa el término NoSQL?
+Not Only SQL
+No usar bases de datos
+Solo SQL
+No estructurado
+
+¿Qué tipo de datos suelen manejar las bases de datos NoSQL?
+Datos no estructurados o semiestructurados
+Solo datos numéricos
+Datos tabulares
+Datos cifrados
+
+¿Qué característica permite repartir la carga entre varios servidores?
+Escalabilidad
+Persistencia
+Seguridad
+Integridad
+
+¿Qué tipo de base de datos almacena pares clave-valor?
+Key-value
+Documental
+Grafos
+Column-family
+
+¿Qué tipo de base de datos es ideal para representar relaciones como en redes sociales?
+Grafos
+Relacional
+Documental
+Analítica
+
+¿Qué formato es común en bases de datos documentales?
+JSON
+CSV
+TXT
+PDF
+
+¿Qué ventaja ofrece la flexibilidad de esquema en NoSQL?
+No necesitar una estructura fija
+Más seguridad
+Mayor velocidad
+Menor consumo de red
+
+¿Qué significa escalabilidad horizontal?
+Añadir más nodos al sistema
+Aumentar la potencia del servidor
+Reducir el número de usuarios
+Optimizar consultas
+
+¿Qué permite la tolerancia a fallos en bases de datos NoSQL?
+Continuar funcionando aunque falle un nodo
+Eliminar datos duplicados
+Evitar ataques
+Mejorar el diseño
+
+¿Qué base de datos NoSQL es conocida por su alta velocidad y uso como caché?
+Redis
+MongoDB
+Cassandra
+Couchbase
+
+¿Qué base de datos NoSQL almacena datos en forma de documentos?
+MongoDB
+Redis
+Cassandra
+Oracle
+
+¿Para qué están diseñadas las bases de datos analíticas?
+Análisis de grandes volúmenes de datos
+Operaciones diarias
+Almacenamiento básico
+Gestión de usuarios
+
+¿Qué permiten los datos analíticos a las empresas?
+Tomar decisiones más informadas
+Reducir costes de hardware
+Eliminar bases de datos relacionales
+Mejorar la seguridad
+
+¿Qué tipo de consultas están optimizadas en bases de datos analíticas?
+Complejas
+Simples
+Transaccionales
+Manuales
+
+¿Qué aspecto es especialmente importante en bases de datos analíticas?
+Seguridad y privacidad
+Diseño visual
+Uso exclusivo de SQL
+Bajo coste

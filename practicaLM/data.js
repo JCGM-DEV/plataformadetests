@@ -22,6 +22,7 @@ const UNITS = {
       { id: 'xml-quiz2', icon: '🧠', label: 'Quiz: XSD', type: 'quiz', quizId: 'xsd_quiz' },
       { id: 'xml-drag1', icon: '🎯', label: 'Ejercicio: Bien formado vs Válido', type: 'drag', dragId: 'xml_valido' },
       { id: 'xml-editor', icon: '⌨️', label: 'Editor XML con Validación', type: 'editor', editorId: 'xml_editor' },
+      { id: 'xml-reto', icon: '🏆', label: 'Reto María: XSD Avanzado', type: 'lesson', lessonId: 'reto_xsd_maria' },
     ]
   },
   xslt: {
@@ -32,6 +33,7 @@ const UNITS = {
       { id: 'xslt-quiz1', icon: '🧠', label: 'Quiz: XPath y XSLT', type: 'quiz', quizId: 'xslt_quiz' },
       { id: 'xslt-drag1', icon: '🎯', label: 'Ejercicio: Instrucciones XSLT', type: 'drag', dragId: 'xslt_instr' },
       { id: 'xslt-xpath', icon: '🧪', label: 'Evaluador XPath Interactivo', type: 'xpath', xpathId: 'xpath_main' },
+      { id: 'xslt-reto', icon: '🏆', label: 'Reto María: Transformación', type: 'lesson', lessonId: 'reto_xslt_maria' },
     ]
   },
   xquery: {
@@ -241,6 +243,46 @@ const LESSONS = {
     <span class="fn">{$p/nombre}</span>
   <span class="kw">&lt;/resultado&gt;</span>`,
     info: { type: 'tip', text: '💡 <strong>Recuerda (Examen)</strong>: En XQuery es obligatorio usar llaves <code>{}</code> al debolver XML si dentro quieres meter una variable (ej: <code>&lt;li&gt; {$var} &lt;/li&gt;</code>).' }
+  },
+
+  reto_xsd_maria: {
+    title: '🏆 Reto Oficial: Restricciones de Calidad',
+    subtitle: 'Implementa las reglas de validación enviadas por María',
+    concepts: [
+      { icon: '🔞', title: 'Rango de Edad', body: 'Configura un <code>xs:restriction</code> con <code>minInclusive value="0"</code> y <code>maxInclusive value="120"</code>.' },
+      { icon: '📏', title: 'Longitud de Nombre', body: 'Usa <code>minLength value="3"</code> para asegurar que el nombre del alumno sea válido.' },
+      { icon: '🔁', title: 'Indicadores', body: 'Configura <code>minOccurs="1"</code> y <code>maxOccurs="unbounded"</code> para permitir múltiples alumnos en una clase.' }
+    ],
+    codeExample: `<span class="kw">&lt;xs:simpleType</span> <span class="fn">name</span>=<span class="str">"edadTipo"</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;xs:restriction</span> <span class="fn">base</span>=<span class="str">"xs:integer"</span><span class="kw">&gt;</span>
+    <span class="kw">&lt;xs:minInclusive</span> <span class="fn">value</span>=<span class="str">"0"</span><span class="kw">/&gt;</span>
+    <span class="kw">&lt;xs:maxInclusive</span> <span class="fn">value</span>=<span class="str">"120"</span><span class="kw">/&gt;</span>
+  <span class="kw">&lt;/xs:restriction&gt;</span>
+<span class="kw">&lt;/xs:simpleType&gt;</span>`,
+    info: { type: 'important', text: '🎯 <strong>Tips de Examen</strong>: Recuerda que las restricciones (facets) siempre van dentro de un <code>xs:simpleType</code>.' }
+  },
+
+  reto_xslt_maria: {
+    title: '🏆 Reto Oficial: Transformación de Factura',
+    subtitle: 'Extraer datos específicos usando XPath y XSLT',
+    concepts: [
+      { icon: '📑', title: 'Cabecera XSLT', body: 'Asegúrate de incluir la versión 1.0 y el namespace oficial de W3C.' },
+      { icon: '🔍', title: 'xsl:value-of', body: 'Extrae el total de la factura usando <code>select="factura/total"</code>.' },
+      { icon: '📊', title: 'Generación de Tabla', body: 'Envuelve el <code>xsl:for-each</code> en etiquetas <code>&lt;table&gt;</code> y <code>&lt;tr&gt;</code>.' }
+    ],
+    codeExample: `<span class="kw">&lt;xsl:template</span> <span class="fn">match</span>=<span class="str">"/"</span><span class="kw">&gt;</span>
+  <span class="kw">&lt;html&gt;</span>
+    <span class="kw">&lt;body&gt;</span>
+      <span class="kw">&lt;h2&gt;</span>Listado de Alumnos<span class="kw">&lt;/h2&gt;</span>
+      <span class="kw">&lt;ul&gt;</span>
+        <span class="kw">&lt;xsl:for-each</span> <span class="fn">select</span>=<span class="str">"clase/alumno"</span><span class="kw">&gt;</span>
+          <span class="kw">&lt;li&gt;&lt;xsl:value-of</span> <span class="fn">select</span>=<span class="str">"nombre"</span><span class="kw">/&gt;&lt;/li&gt;</span>
+        <span class="kw">&lt;/xsl:for-each&gt;</span>
+      <span class="kw">&lt;/ul&gt;</span>
+    <span class="kw">&lt;/body&gt;</span>
+  <span class="kw">&lt;/html&gt;</span>
+<span class="kw">&lt;/xsl:template&gt;</span>`,
+    info: { type: 'tip', text: '💡 <strong>Pro-Tip</strong>: Usa <code>indent="yes"</code> en el <code>xsl:output</code> para que el resultado sea legible.' }
   }
 };
 
