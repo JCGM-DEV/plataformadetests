@@ -2912,28 +2912,31 @@ async function renderRanking() {
         const data = [];
         snapshot.forEach(doc => data.push(doc.data()));
 
-        // Group by subjectId -> unitId
-        const subjects = {};
+        const mocks = {};
+        const themes = {};
+
         data.forEach(entry => {
-            if (!subjects[entry.subjectId]) {
-                subjects[entry.subjectId] = {
+            const isMock = !entry.unitId;
+            const targetGroup = isMock ? mocks : themes;
+
+            if (!targetGroup[entry.subjectId]) {
+                targetGroup[entry.subjectId] = {
                     name: entry.subjectName,
                     units: {}
                 };
             }
             
             const unitKey = entry.unitId || 'all';
-            if (!subjects[entry.subjectId].units[unitKey]) {
-                subjects[entry.subjectId].units[unitKey] = {
+            if (!targetGroup[entry.subjectId].units[unitKey]) {
+                targetGroup[entry.subjectId].units[unitKey] = {
                     name: entry.unitName || (entry.unitId ? `Tema ${entry.unitId}` : "Simulacro Completo"),
-                    scoresMap: {} // Use map to deduplicate by userId
+                    scoresMap: {}
                 };
             }
             
-            // Deduplication: Only keep the highest score for this user in this category
-            const existing = subjects[entry.subjectId].units[unitKey].scoresMap[entry.userId];
+            const existing = targetGroup[entry.subjectId].units[unitKey].scoresMap[entry.userId];
             if (!existing || entry.score > existing.score) {
-                subjects[entry.subjectId].units[unitKey].scoresMap[entry.userId] = entry;
+                targetGroup[entry.subjectId].units[unitKey].scoresMap[entry.userId] = entry;
             }
         });
 
@@ -2942,65 +2945,84 @@ async function renderRanking() {
                 <span class="info-icon">💡</span>
                 <p>El ranking solo contabiliza exámenes estándar y simulacros. Los repasos de fallos no se incluyen por justicia competitiva.</p>
             </div>
+            
+            <div class="ranking-section">
+                <h3 class="ranking-section-title">🏆 Simulacros Generales</h3>
+                <div id="ranking-mocks-grid" class="ranking-grid"></div>
+            </div>
+            
+            <div class="ranking-section">
+                <h3 class="ranking-section-title">📚 Preparación por Temas (Examen Oficial)</h3>
+                <div id="ranking-themes-grid" class="ranking-grid"></div>
+            </div>
         `;
-        
-        const sortedSubjectIds = Object.keys(subjects).sort((a,b) => subjects[a].name.localeCompare(subjects[b].name));
 
-        sortedSubjectIds.forEach(sid => {
-            const subject = subjects[sid];
-            const subjectData = APP_STATE.subjects.find(s => s.id === sid) || { color: '#6366f1', icon: '📖' };
+        const renderGroup = (group, gridId) => {
+            const grid = document.getElementById(gridId);
+            const sortedIds = Object.keys(group).sort((a,b) => group[a].name.localeCompare(group[b].name));
             
-            const card = document.createElement('div');
-            card.className = 'ranking-card';
-            card.style.setProperty('--card-color', subjectData.color);
-            
-            let unitsHTML = '';
-            
-            const sortedUnitKeys = Object.keys(subject.units).sort((a, b) => {
-                if (a === 'all') return -1;
-                if (b === 'all') return 1;
-                return parseInt(a) - parseInt(b);
-            });
+            if (sortedIds.length === 0) {
+                grid.innerHTML = `<div class="empty-mini">Aún no hay puntuaciones en esta categoría.</div>`;
+                return;
+            }
 
-            sortedUnitKeys.forEach(ukey => {
-                const unit = subject.units[ukey];
-                const scores = Object.values(unit.scoresMap).sort((a, b) => b.score - a.score);
+            sortedIds.forEach(sid => {
+                const subject = group[sid];
+                const subjectData = APP_STATE.subjects.find(s => s.id === sid) || { color: '#6366f1', icon: '📖' };
                 
-                let listHTML = '';
+                const card = document.createElement('div');
+                card.className = 'ranking-card';
+                card.style.setProperty('--card-color', subjectData.color);
                 
-                scores.slice(0, 10).forEach((entry, index) => {
-                    listHTML += `
-                        <li class="ranking-item rank-${index + 1}">
-                            <div class="rank-user-info">
-                                <span class="rank-number">${index + 1}</span>
-                                <span class="rank-username">${entry.username}</span>
-                            </div>
-                            <span class="rank-score">${entry.score.toFixed(1).replace('.', ',')}</span>
-                        </li>
+                let unitsHTML = '';
+                const sortedUnitKeys = Object.keys(subject.units).sort((a, b) => {
+                    if (a === 'all') return -1;
+                    if (b === 'all') return 1;
+                    return parseInt(a) - parseInt(b);
+                });
+
+                sortedUnitKeys.forEach(ukey => {
+                    const unit = subject.units[ukey];
+                    const scores = Object.values(unit.scoresMap).sort((a, b) => b.score - a.score);
+                    let listHTML = '';
+                    
+                    scores.slice(0, 10).forEach((entry, index) => {
+                        listHTML += `
+                            <li class="ranking-item rank-${index + 1}">
+                                <div class="rank-user-info">
+                                    <span class="rank-number">${index + 1}</span>
+                                    <span class="rank-username">${entry.username}</span>
+                                </div>
+                                <span class="rank-score">${entry.score.toFixed(1).replace('.', ',')}</span>
+                            </li>
+                        `;
+                    });
+
+                    unitsHTML += `
+                        <div class="ranking-unit-section">
+                            <h5 class="ranking-unit-title">${unit.name}</h5>
+                            <ul class="ranking-list">
+                                ${listHTML}
+                            </ul>
+                        </div>
                     `;
                 });
 
-                unitsHTML += `
-                    <div class="ranking-unit-section">
-                        <h5 class="ranking-unit-title">${unit.name}</h5>
-                        <ul class="ranking-list">
-                            ${listHTML}
-                        </ul>
+                card.innerHTML = `
+                    <div class="ranking-card-header">
+                        <span class="subject-icon">${subjectData.icon}</span>
+                        <h4>${subject.name}</h4>
+                    </div>
+                    <div class="ranking-card-body">
+                        ${unitsHTML}
                     </div>
                 `;
+                grid.appendChild(card);
             });
+        };
 
-            card.innerHTML = `
-                <div class="ranking-card-header">
-                    <span class="subject-icon">${subjectData.icon}</span>
-                    <h4>${subject.name}</h4>
-                </div>
-                <div class="ranking-card-body">
-                    ${unitsHTML}
-                </div>
-            `;
-            container.appendChild(card);
-        });
+        renderGroup(mocks, 'ranking-mocks-grid');
+        renderGroup(themes, 'ranking-themes-grid');
 
     } catch (error) {
         console.error('Error fetching ranking:', error);
