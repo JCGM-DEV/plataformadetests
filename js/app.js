@@ -18,6 +18,7 @@ const APP_STATE = {
     // flashcard
     fcFlipped: false,
     isFinishing: false,
+    isReview: false,
     studySession: { 
         active: false, 
         subjectId: null, 
@@ -253,11 +254,13 @@ function saveExamResult(subjectId, subjectName, score, aciertos, errores, omitid
     const h = getHistory();
     const finalScore = parseFloat(score.toFixed(2));
     h.push({ id: Date.now(), date: new Date().toISOString(), subjectId, subjectName,
-             score: finalScore, aciertos, errores, omitidas, total, unitId });
+             score: finalScore, aciertos, errores, omitidas, total, unitId, isReview: APP_STATE.isReview });
     Sync.set(HISTORY_KEY, h);
 
-    // Update Global Ranking if authenticated
-    updateGlobalRanking(subjectId, subjectName, finalScore, unitId);
+    // Update Global Ranking if authenticated AND NOT a review session
+    if (!APP_STATE.isReview) {
+        updateGlobalRanking(subjectId, subjectName, finalScore, unitId);
+    }
 }
 
 function clearHistory() {
@@ -936,6 +939,7 @@ function prepareQuestion(q) {
 }
 
 function startExam(subjectId, unitId = null, mode = 'normal') {
+    APP_STATE.isReview = false;
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
     let pool = QUESTION_POOL[subjectId] || [];
     
@@ -1250,6 +1254,7 @@ function showQuickRead(subjectId, unitId, onStart) {
 
 // ─── MODO EXAMEN REAL (Feature 2) ───────────────────────────────
 function startExamReal(subjectId, totalPreguntas = 60) {
+    APP_STATE.isReview = false;
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
     const pool = QUESTION_POOL[subjectId] || [];
     if (pool.length === 0) { alert('No hay preguntas disponibles.'); return; }
@@ -1279,6 +1284,7 @@ function startFallosExam(subjectId) {
     if (pool.length === 0) { alert('No hay fallos registrados para esta asignatura.'); return; }
 
     APP_STATE.isFinishing = false;
+    APP_STATE.isReview = true;
     APP_STATE.currentExam = subject;
     APP_STATE.currentUnit = null;
     APP_STATE.isSyllabusMode = false;
@@ -1296,6 +1302,7 @@ function startFallosExam(subjectId) {
 // ─── SIMULACRO TEMARIO COMPLETO ─────────────────────────────────
 async function startExamenFinal(subjectId) {
     APP_STATE.isFinishing = false;
+    APP_STATE.isReview = false;
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
     const isEmp = subjectId === 'empleabilidad';
 
@@ -2919,13 +2926,23 @@ async function renderRanking() {
             if (!subjects[entry.subjectId].units[unitKey]) {
                 subjects[entry.subjectId].units[unitKey] = {
                     name: entry.unitName || (entry.unitId ? `Tema ${entry.unitId}` : "Simulacro Completo"),
-                    scores: []
+                    scoresMap: {} // Use map to deduplicate by userId
                 };
             }
-            subjects[entry.subjectId].units[unitKey].scores.push(entry);
+            
+            // Deduplication: Only keep the highest score for this user in this category
+            const existing = subjects[entry.subjectId].units[unitKey].scoresMap[entry.userId];
+            if (!existing || entry.score > existing.score) {
+                subjects[entry.subjectId].units[unitKey].scoresMap[entry.userId] = entry;
+            }
         });
 
-        container.innerHTML = '';
+        container.innerHTML = `
+            <div class="ranking-info-banner">
+                <span class="info-icon">💡</span>
+                <p>El ranking solo contabiliza exámenes estándar y simulacros. Los repasos de fallos no se incluyen por justicia competitiva.</p>
+            </div>
+        `;
         
         const sortedSubjectIds = Object.keys(subjects).sort((a,b) => subjects[a].name.localeCompare(subjects[b].name));
 
@@ -2939,7 +2956,6 @@ async function renderRanking() {
             
             let unitsHTML = '';
             
-            // Sort units: 'all' first, then by Tema number
             const sortedUnitKeys = Object.keys(subject.units).sort((a, b) => {
                 if (a === 'all') return -1;
                 if (b === 'all') return 1;
@@ -2948,9 +2964,11 @@ async function renderRanking() {
 
             sortedUnitKeys.forEach(ukey => {
                 const unit = subject.units[ukey];
+                const scores = Object.values(unit.scoresMap).sort((a, b) => b.score - a.score);
+                
                 let listHTML = '';
                 
-                unit.scores.slice(0, 10).forEach((entry, index) => {
+                scores.slice(0, 10).forEach((entry, index) => {
                     listHTML += `
                         <li class="ranking-item rank-${index + 1}">
                             <div class="rank-user-info">
