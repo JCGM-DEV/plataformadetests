@@ -864,7 +864,7 @@ function startExam(subjectId, unitId = null, mode = 'normal') {
         if (due.length >= 5) pool = due;
     }
 
-    const testSize = unitId !== null ? pool.length : Math.min(20, pool.length);
+    const testSize = unitId !== null ? pool.length : Math.min(40, pool.length);
     const lastIds = Sync.get(`last_test_${subjectId}`, []);
 
     APP_STATE.currentExam = subject;
@@ -1713,19 +1713,30 @@ function parseTxtExam(text, syllabusId) {
         .map(l => l.trim())
         .filter(l => l !== '' && !l.toLowerCase().startsWith('tema ') && !l.includes('( 1.00 puntos )'));
 
-    // ── Paso 1: agrupar en bloques separados por EXPL: ───────────────────────
-    // Cada bloque es: [pregunta, opcion1, opcion2, ..., EXPL:...]
+    // ── Paso 1: agrupar en bloques ──────────────────────────────────────────
     const blocks = [];
-    let current = [];
-    for (const line of rawLines) {
-        current.push(line);
-        if (line.startsWith('EXPL:')) {
-            blocks.push(current);
-            current = [];
+    
+    // Check if the file uses EXPL: markers anywhere
+    const hasExpl = rawLines.some(l => l.startsWith('EXPL:'));
+
+    if (hasExpl) {
+        // Standard behavior: Group by EXPL:
+        let current = [];
+        for (const line of rawLines) {
+            current.push(line);
+            if (line.startsWith('EXPL:')) {
+                blocks.push(current);
+                current = [];
+            }
+        }
+        if (current.length >= 3) blocks.push(current);
+    } else {
+        // Compact behavior: Every 5 lines is a block (Question + 4 options)
+        for (let i = 0; i < rawLines.length; i += 5) {
+            const block = rawLines.slice(i, i + 5);
+            if (block.length >= 2) blocks.push(block);
         }
     }
-    // Bloque final sin EXPL (si lo hubiera)
-    if (current.length >= 3) blocks.push(current);
 
     // ── Paso 2: parsear cada bloque ──────────────────────────────────────────
     const questions = [];

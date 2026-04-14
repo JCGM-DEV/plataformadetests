@@ -10163,943 +10163,827 @@ const TEST_BANK_DATA = {
     }
   ],
   "cloud_computing": [
-    {
-      "concept_id": "cloud_computing_0",
-      "question": "¿Qué modelo de servicio cloud proporciona infraestructura virtualizada (servidores, redes, almacenamiento)?",
-      "options": [
-        "IaaS",
-        "FaaS",
-        "PaaS",
-        "SaaS"
-      ],
-      "correct": 0,
-      "explanation": "IaaS proporciona infraestructura virtualizada (VMs, almacenamiento, redes). El usuario gestiona el SO y las aplicaciones. Ejemplos: AWS EC2, Azure VMs.",
-      "unit": 1
-    },
-    {
-      "concept_id": "cloud_computing_1",
-      "question": "¿Qué modelo de servicio cloud ofrece una plataforma para que los desarrolladores desplieguen aplicaciones sin gestionar el SO?",
-      "options": [
-        "SaaS",
-        "PaaS",
-        "IaaS",
-        "DBaaS"
-      ],
-      "correct": 1,
-      "explanation": "PaaS proporciona una plataforma completa de desarrollo. El proveedor gestiona la infraestructura; el usuario solo despliega aplicaciones. Ejemplo: Google App Engine.",
-      "unit": 1
-    },
-    {
-      "concept_id": "cloud_computing_2",
-      "question": "¿Qué modelo de servicio cloud ofrece software listo para usar a través del navegador?",
-      "options": [
-        "SaaS",
-        "NaaS",
-        "IaaS",
-        "PaaS"
-      ],
-      "correct": 0,
-      "explanation": "SaaS proporciona aplicaciones completas listas para usar a través de Internet. El proveedor gestiona todo. Ejemplos: Gmail, Microsoft 365, Salesforce.",
-      "unit": 1
-    },
-    {
-      "concept_id": "cloud_computing_3",
-      "question": "¿Qué tipo de nube es infraestructura exclusiva para una organización?",
-      "options": [
-        "Nube Comunitaria",
-        "Nube Pública",
-        "Nube Híbrida",
-        "Nube Privada"
-      ],
-      "correct": 3,
-      "explanation": "La nube privada ofrece máximo control.",
-      "unit": 1
-    },
-    {
-      "concept_id": "cloud_computing_4",
-      "question": "¿Qué es Amazon S3?",
-      "options": [
-        "Un servicio de DNS en el modelo de servicios de computación en la nube.",
-        "Servicio de almacenamiento de objetos en la nube de AWS",
-        "Una base de datos relacional según el modelo de despliegue cloud correspondiente.",
-        "Un servidor virtual de cómputo para la gestión de recursos en la infraestructura cloud."
-      ],
-      "correct": 1,
-      "explanation": "Simple Storage Service: buckets y objetos.",
-      "unit": 1
-    },
-    {
-      "concept_id": "cloud_computing_5",
-      "question": "¿Qué servicio de AWS proporciona servidores virtuales elásticos?",
-      "options": [
-        "Lambda",
-        "S3",
-        "RDS",
-        "EC2 (Elastic Compute Cloud)"
-      ],
-      "correct": 3,
-      "explanation": "EC2 permite configurar instancias de servidor.",
-      "unit": 1
-    },
-    {
-      "concept_id": "cloud_computing_6",
-      "question": "¿Qué es el 'escalado automático' (auto scaling) en la nube?",
-      "options": [
-        "Ajustar automáticamente la capacidad de recursos según la demanda",
-        "Ampliar el storage manualmente en el contexto de la arquitectura de servicios cloud.",
-        "Reiniciar servidores automáticamente según las características del proveedor de servicios.",
-        "Duplicar el ancho de banda en el modelo de servicios de computación en la nube."
-      ],
-      "correct": 0,
-      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
-      "unit": 1
-    },
-    {
-      "concept_id": "cloud_computing_7",
-      "question": "¿Qué es un contenedor en el contexto de cloud computing?",
-      "options": [
-        "Un servidor físico según el modelo de despliegue cloud correspondiente.",
-        "Una máquina virtual completa para la gestión de recursos en la infraestructura cloud.",
-        "Una cuenta de usuario cloud en el contexto de la arquitectura de servicios cloud.",
-        "Unidad ligera y portable que empaqueta una app con sus dependencias"
-      ],
-      "correct": 3,
-      "explanation": "Docker es la tecnología de contenedores más usada.",
-      "unit": 2
-    },
-    {
-      "concept_id": "cloud_computing_8",
-      "question": "¿Qué herramienta orquesta y gestiona contenedores a escala?",
-      "options": [
-        "Docker Compose",
-        "Ansible",
-        "Terraform",
-        "Kubernetes"
-      ],
-      "correct": 3,
-      "explanation": "Kubernetes (K8s) es el estándar de orquestación.",
-      "unit": 2
-    },
-    {
-      "concept_id": "cloud_computing_9",
-      "question": "¿Qué es serverless computing?",
-      "options": [
-        "Servidores sin sistema operativo según las características del proveedor de servicios.",
-        "Ejecutar código sin gestionar servidores (el proveedor los gestiona)",
-        "Cloud sin acceso a internet en el modelo de servicios de computación en la nube.",
-        "Computación local sin red según el modelo de despliegue cloud correspondiente."
-      ],
-      "correct": 1,
-      "explanation": "AWS Lambda es el servicio serverless más popular.",
-      "unit": 2
-    },
-    {
-      "concept_id": "cloud_computing_10",
-      "question": "¿Qué término describe la capacidad de un sistema cloud de crecer añadiendo más nodos?",
-      "options": [
-        "Resiliencia",
-        "Alta disponibilidad",
-        "Escalabilidad vertical",
-        "Escalabilidad horizontal"
-      ],
-      "correct": 3,
-      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
-      "unit": 2
-    },
-    {
-      "concept_id": "cloud_computing_11",
-      "question": "¿Qué es la Alta Disponibilidad (HA) en cloud?",
-      "options": [
-        "Diseño que minimiza el tiempo de inactividad distribuyendo recursos",
-        "Un tipo de backup para la gestión de recursos en la infraestructura cloud.",
-        "Una región de AWS en el contexto de la arquitectura de servicios cloud.",
-        "Tener muchos usuarios simultáneos según las características del proveedor de servicios."
-      ],
-      "correct": 0,
-      "explanation": "HA usa redundancia y zonas de disponibilidad.",
-      "unit": 2
-    },
-    {
-      "concept_id": "cloud_computing_12",
-      "question": "¿Qué significa 'CDN' en cloud?",
-      "options": [
-        "Central Data Node en el modelo de servicios de computación en la nube.",
-        "Content Definition Node según el modelo de despliegue cloud correspondiente.",
-        "Content Delivery Network: red de servidores que distribuye contenido globalmente cerca del usuario",
-        "Cloud Data Network para la gestión de recursos en la infraestructura cloud."
-      ],
-      "correct": 2,
-      "explanation": "CloudFront (AWS) y Cloudflare son CDNs.",
-      "unit": 2
-    },
-    {
-      "concept_id": "cloud_computing_13",
-      "question": "¿Qué es DevOps?",
-      "options": [
-        "Cultura y prácticas que unen desarrollo y operaciones para acelerar entregas",
-        "Un proveedor cloud en el contexto de la arquitectura de servicios cloud.",
-        "Un tipo de base de datos cloud según las características del proveedor de servicios.",
-        "Un lenguaje de programación en el modelo de servicios de computación en la nube."
-      ],
-      "correct": 0,
-      "explanation": "DevOps incluye CI/CD, automatización y monitorización.",
-      "unit": 2
-    },
-    {
-      "concept_id": "cloud_computing_14",
-      "question": "¿Qué es CI/CD?",
-      "options": [
-        "Configuración Inicial de Clúster y Despliegue según el modelo de despliegue cloud correspondiente.",
-        "Control de Instancias Cloud/Datos para la gestión de recursos en la infraestructura cloud.",
-        "Código Interno / Código Distribuido en el contexto de la arquitectura de servicios cloud.",
-        "Integración Continua y Entrega/Despliegue Continuos: automatizar pruebas y despliegues"
-      ],
-      "correct": 3,
-      "explanation": "Jenkins, GitHub Actions y GitLab CI son herramientas CI/CD.",
-      "unit": 3
-    },
-    {
-      "concept_id": "cloud_computing_exp_15",
-      "question": "¿Qué es la nube híbrida?",
-      "options": [
-        "Una red local con VPN según las características del proveedor de servicios.",
-        "Combinación de nube pública y privada interconectadas",
-        "Solo servicios de AWS y Azure en el modelo de servicios de computación en la nube.",
-        "Un tipo de VLAN en la nube según el modelo de despliegue cloud correspondiente."
-      ],
-      "correct": 1,
-      "explanation": "Permite mover cargas entre on-premise y cloud.",
-      "unit": 3
-    },
-    {
-      "concept_id": "cloud_computing_exp_16",
-      "question": "¿Qué es el SLA en cloud computing?",
-      "options": [
-        "El contrato de confidencialidad para la gestión de recursos en la infraestructura cloud.",
-        "Acuerdo de niveau de servicio que garantiza disponibilidad y rendimiento mínimos",
-        "El precio del servicio cloud en el contexto de la arquitectura de servicios cloud.",
-        "El plan de backup del proveedor según las características del proveedor de servicios."
-      ],
-      "correct": 1,
-      "explanation": "Service Level Agreement: ej. 99.9% uptime.",
-      "unit": 3
-    },
-    {
-      "concept_id": "cloud_computing_exp_17",
-      "question": "¿Qué es el modelo de responsabilidad compartida en cloud?",
-      "options": [
-        "Solo aplica a IaaS en el modelo de servicios de computación en la nube.",
-        "Todo lo gestiona el cliente según el modelo de despliegue cloud correspondiente.",
-        "El proveedor gestiona la infraestructura; el cliente gestiona sus datos y aplicaciones",
-        "Todo lo gestiona el proveedor para la gestión de recursos en la infraestructura cloud."
-      ],
-      "correct": 2,
-      "explanation": "El cliente siempre es responsable de sus datos.",
-      "unit": 3
-    },
-    {
-      "concept_id": "cloud_computing_exp_18",
-      "question": "¿Qué es Google Cloud Functions?",
-      "options": [
-        "Una base de datos de Google en el contexto de la arquitectura de servicios cloud.",
-        "Servicio serverless de Google Cloud para ejecutar código sin gestionar servidores",
-        "Una herramienta de CI/CD según las características del proveedor de servicios.",
-        "Un servicio de DNS de Google en el modelo de servicios de computación en la nube."
-      ],
-      "correct": 1,
-      "explanation": "Equivalente a AWS Lambda.",
-      "unit": 3
-    },
-    {
-      "concept_id": "cloud_computing_exp_19",
-      "question": "¿Qué es Azure Active Directory?",
-      "options": [
-        "Un servidor virtual de Microsoft según el modelo de despliegue cloud correspondiente.",
-        "Un sistema de archivos cloud para la gestión de recursos en la infraestructura cloud.",
-        "Un servicio de monitorización en el contexto de la arquitectura de servicios cloud.",
-        "Servicio de identidad y acceso (IAM) de Microsoft en la nube"
-      ],
-      "correct": 3,
-      "explanation": "Gestiona identidades, autenticación y permisos.",
-      "unit": 3
-    },
-    {
-      "concept_id": "cloud_computing_exp_20",
-      "question": "¿Qué es el principio de 'least privilege' en seguridad cloud?",
-      "options": [
-        "Usar siempre autenticación multifactor según las características del proveedor de servicios.",
-        "Dar acceso total a los administradores en el modelo de servicios de computación en la nube.",
-        "Cifrar todos los datos en reposo según el modelo de despliegue cloud correspondiente.",
-        "Dar a cada usuario o servicio solo los permisos mínimos necesarios para su función"
-      ],
-      "correct": 3,
-      "explanation": "Minimiza el impacto de una brecha de seguridad.",
-      "unit": 3
-    },
-    {
-      "concept_id": "cloud_computing_exp_21",
-      "question": "¿Qué servicio de AWS gestiona bases de datos relacionales gestionadas?",
-      "options": [
-        "RDS (Relational Database Service)",
-        "EC2",
-        "Lambda",
-        "S3"
-      ],
-      "correct": 0,
-      "explanation": "RDS soporta MySQL, PostgreSQL, Oracle, SQL Server.",
-      "unit": 4
-    },
-    {
-      "concept_id": "cloud_computing_exp_22",
-      "question": "¿Qué es Terraform?",
-      "options": [
-        "Un servicio de monitorización para la gestión de recursos en la infraestructura cloud.",
-        "Un sistema de contenedores en el contexto de la arquitectura de servicios cloud.",
-        "Herramienta de Infrastructure as Code (IaC) para provisionar recursos cloud de forma declarativa",
-        "Un gestor de DNS según las características del proveedor de servicios."
-      ],
-      "correct": 2,
-      "explanation": "Terraform es de HashiCorp y multi-cloud.",
-      "unit": 4
-    },
-    {
-      "concept_id": "cloud_computing_exp_23",
-      "question": "¿Qué es la observabilidad en cloud?",
-      "options": [
-        "El uso de CPU del servidor en el modelo de servicios de computación en la nube.",
-        "El SLA contratado según el modelo de despliegue cloud correspondiente.",
-        "El número de usuarios conectados para la gestión de recursos en la infraestructura cloud.",
-        "Capacidad de entender el estado interno del sistema con métricas, logs y trazas"
-      ],
-      "correct": 3,
-      "explanation": "ACID: Atomicidad (todo o nada), Consistencia (estado válido), Aislamiento (transacciones independientes), Durabilidad (cambios confirmados persisten aunque falle el sistema).",
-      "unit": 4
-    },
-    {
-      "concept_id": "cloud_computing_exp_24",
-      "question": "¿Qué es el cómputo en el borde (Edge Computing)?",
-      "options": [
-        "Cloud computing especial para dispositivos móviles en el contexto de la arquitectura de servicios cloud.",
-        "Un tipo de red WiFi de baja latencia según las características del proveedor de servicios.",
-        "Una región adicional de AWS en el modelo de servicios de computación en la nube.",
-        "Procesar datos cerca del origen (dispositivo/sensor) en lugar de en un datacenter central"
-      ],
-      "correct": 3,
-      "explanation": "Reduce latencia para IoT y aplicaciones en tiempo real.",
-      "unit": 4
-    },
-    {
-      "concept_id": "cloud_computing_exp_25",
-      "question": "¿Qué es un 'bucket' en Amazon S3?",
-      "options": [
-        "Una zona de disponibilidad según el modelo de despliegue cloud correspondiente.",
-        "Contenedor lógico para almacenar objetos (archivos) en S3",
-        "Una instancia virtual EC2 para la gestión de recursos en la infraestructura cloud.",
-        "Una base de datos de clave-valor en el contexto de la arquitectura de servicios cloud."
-      ],
-      "correct": 1,
-      "explanation": "Los buckets tienen nombres únicos globales.",
-      "unit": 4
-    },
-    {
-      "concept_id": "cloud_computing_exp_26",
-      "question": "¿Qué diferencia hay entre escalado vertical y horizontal?",
-      "options": [
-        "Vertical es más barato según las características del proveedor de servicios.",
-        "Horizontal no aplica en cloud en el modelo de servicios de computación en la nube.",
-        "Vertical: añadir más potencia a un servidor; Horizontal: añadir más servidores",
-        "Son lo mismo visto desde distinto ángulo según el modelo de despliegue cloud correspondiente."
-      ],
-      "correct": 2,
-      "explanation": "El escalado horizontal añade más servidores (scale out). El escalado vertical aumenta la capacidad de un servidor existente (scale up). El horizontal es más flexible y tolerante a fallos.",
-      "unit": 4
-    },
-    {
-      "concept_id": "cloud_computing_exp_27",
-      "question": "¿Qué es un grupo de autoescalado (Auto Scaling Group) en AWS?",
-      "options": [
-        "Una VPC privada para la gestión de recursos en la infraestructura cloud.",
-        "Conjunto de instancias EC2 que escalan automáticamente según la demanda",
-        "Un cluster de Kubernetes en el contexto de la arquitectura de servicios cloud.",
-        "Un grupo de usuarios con permisos según las características del proveedor de servicios."
-      ],
-      "correct": 1,
-      "explanation": "Define capacidad mínima, deseada y máxima.",
-      "unit": 4
-    },
-    {
-      "concept_id": "cloud_computing_exp_28",
-      "question": "¿Qué es IAM en AWS?",
-      "options": [
-        "Un firewall de AWS en el modelo de servicios de computación en la nube.",
-        "Un servicio de almacenamiento según el modelo de despliegue cloud correspondiente.",
-        "Identity and Access Management: gestiona usuarios, roles y permisos en AWS",
-        "Una base de datos de identidades para la gestión de recursos en la infraestructura cloud."
-      ],
-      "correct": 2,
-      "explanation": "IAM es la piedra angular de la seguridad en AWS.",
-      "unit": 5
-    },
-    {
-      "concept_id": "cloud_computing_exp_29",
-      "question": "¿Qué es una zona de disponibilidad (AZ) en AWS?",
-      "options": [
-        "Una región geográfica de AWS en el contexto de la arquitectura de servicios cloud.",
-        "Datacenter físico independiente dentro de una región de AWS",
-        "Una VLAN de AWS según las características del proveedor de servicios.",
-        "Un grupo de servidores del mismo tipo en el modelo de servicios de computación en la nube."
-      ],
-      "correct": 1,
-      "explanation": "Cada región tiene múltiples AZ para alta disponibilidad.",
-      "unit": 5
-    },
-    {
-      "concept_id": "cloud_computing_exp2_30",
-      "question": "¿Qué es Azure Blob Storage?",
-      "options": [
-        "Una base de datos relacional de Azure según el modelo de despliegue cloud correspondiente.",
-        "Servicio de almacenamiento de objetos no estructurados en Microsoft Azure",
-        "Un servicio de DNS de Microsoft para la gestión de recursos en la infraestructura cloud.",
-        "Un servidor virtual de Azure en el contexto de la arquitectura de servicios cloud."
-      ],
-      "correct": 1,
-      "explanation": "Equivalente a Amazon S3.",
-      "unit": 5
-    },
-    {
-      "concept_id": "cloud_computing_exp2_31",
-      "question": "¿Qué es Google Kubernetes Engine (GKE)?",
-      "options": [
-        "Servicio gestionado de Kubernetes en Google Cloud Platform",
-        "Un servicio serverless de Google según las características del proveedor de servicios.",
-        "Una base de datos de Google en el modelo de servicios de computación en la nube.",
-        "Una red privada virtual de GCP según el modelo de despliegue cloud correspondiente."
-      ],
-      "correct": 0,
-      "explanation": "GKE simplifica el despliegue y gestión de Kubernetes.",
-      "unit": 5
-    },
-    {
-      "concept_id": "cloud_computing_exp2_32",
-      "question": "¿Qué es FinOps?",
-      "options": [
-        "Un tipo de facturación cloud para la gestión de recursos en la infraestructura cloud.",
-        "Una herramienta de monitorización de costes en el contexto de la arquitectura de servicios cloud.",
-        "Práctica de gestión financiera del cloud para optimizar costes sin perder rendimiento",
-        "Un modelo de disponibilidad cloud según las características del proveedor de servicios."
-      ],
-      "correct": 2,
-      "explanation": "FinOps une equipos de finanzas, tecnología y negocio.",
-      "unit": 5
-    },
-    {
-      "concept_id": "cloud_computing_exp2_33",
-      "question": "¿Qué es RPO (Recovery Point Objective) en disaster recovery?",
-      "options": [
-        "Máxima cantidad de datos que se puede perder medida en tiempo antes de un desastre",
-        "El coste de la recuperación en el modelo de servicios de computación en la nube.",
-        "El número de réplicas necesarias según el modelo de despliegue cloud correspondiente.",
-        "Tiempo máximo de recuperación del servicio para la gestión de recursos en la infraestructura cloud."
-      ],
-      "correct": 0,
-      "explanation": "RPO define la frecuencia mínima de backups.",
-      "unit": 5
-    },
-    {
-      "concept_id": "cloud_computing_exp2_34",
-      "question": "¿Qué es RTO (Recovery Time Objective)?",
-      "options": [
-        "El número de zonas de disponibilidad en el contexto de la arquitectura de servicios cloud.",
-        "El coste de la interrupción según las características del proveedor de servicios.",
-        "Cantidad máxima de datos perdidos en el modelo de servicios de computación en la nube.",
-        "Tiempo máximo aceptable para restaurar el servicio tras un fallo"
-      ],
-      "correct": 3,
-      "explanation": "RTO define cuánto tiempo puede estar el servicio caído.",
-      "unit": 5
-    },
-    {
-      "concept_id": "cloud_computing_exp2_35",
-      "question": "¿Qué es una VPC (Virtual Private Cloud)?",
-      "options": [
-        "Una VPN de alta velocidad según el modelo de despliegue cloud correspondiente.",
-        "Red privada virtual aislada dentro de la infraestructura de un proveedor cloud",
-        "Un servidor virtual privado para la gestión de recursos en la infraestructura cloud.",
-        "Una VLAN de datacenter físico en el contexto de la arquitectura de servicios cloud."
-      ],
-      "correct": 1,
-      "explanation": "Cada VPC tiene su propio espacio de IPs privadas.",
-      "unit": 6
-    },
-    {
-      "concept_id": "cloud_computing_exp2_36",
-      "question": "¿Qué son los Security Groups en AWS?",
-      "options": [
-        "Grupos de usuarios con permisos IAM según las características del proveedor de servicios.",
-        "Políticas de cifrado de datos en el modelo de servicios de computación en la nube.",
-        "Firewalls virtuales que controlan el tráfico de entrada y salida de instancias EC2",
-        "VLANs dentro de la VPC según el modelo de despliegue cloud correspondiente."
-      ],
-      "correct": 2,
-      "explanation": "Los Security Groups son stateful: si aceptas entrada, la salida es automática.",
-      "unit": 6
-    },
-    {
-      "concept_id": "cloud_computing_exp2_37",
-      "question": "¿Qué es un Load Balancer en cloud?",
-      "options": [
-        "Distribuye el tráfico entrante entre múltiples instancias para evitar sobrecarga",
-        "Un sistema de caché para la gestión de recursos en la infraestructura cloud.",
-        "Un router de alta velocidad en el contexto de la arquitectura de servicios cloud.",
-        "Un servidor de DNS según las características del proveedor de servicios."
-      ],
-      "correct": 0,
-      "explanation": "AWS Elastic Load Balancing (ELB) tiene 3 tipos: ALB, NLB, CLB.",
-      "unit": 6
-    },
-    {
-      "concept_id": "cloud_computing_exp2_38",
-      "question": "¿Qué es el principio de diseño 'Design for Failure' en cloud?",
-      "options": [
-        "Documentar todos los posibles fallos en el modelo de servicios de computación en la nube.",
-        "Usar hardware de máxima calidad según el modelo de despliegue cloud correspondiente.",
-        "Probar el sistema hasta que falle para la gestión de recursos en la infraestructura cloud.",
-        "Asumir que cualquier componente puede fallar y diseñar el sistema para que siga funcionando"
-      ],
-      "correct": 3,
-      "explanation": "Netflix Chaos Monkey implementa este principio deliberadamente.",
-      "unit": 6
-    },
-    {
-      "concept_id": "cloud_computing_exp2_39",
-      "question": "¿Qué es un snapshot en cloud?",
-      "options": [
-        "Una fotografía de la interfaz de usuario en el contexto de la arquitectura de servicios cloud.",
-        "Una imagen de contenedor Docker según las características del proveedor de servicios.",
-        "Captura del estado de un disco o volumen en un momento concreto, usada para backup",
-        "Una copia del código fuente en el modelo de servicios de computación en la nube."
-      ],
-      "correct": 2,
-      "explanation": "Los snapshots son la base de los backups en cloud.",
-      "unit": 6
-    },
-    {
-      "concept_id": "cloud_computing_exp2_40",
-      "question": "¿Qué es la computación multi-nube (multi-cloud)?",
-      "options": [
-        "Nube privada con múltiples servidores según el modelo de despliegue cloud correspondiente.",
-        "Cloud en varios centros de datos del mismo proveedor",
-        "Usar servicios de varios proveedores cloud a la vez (AWS + Azure + GCP)",
-        "Tener múltiples cuentas en un mismo proveedor para la gestión de recursos en la infraestructura cloud."
-      ],
-      "correct": 2,
-      "explanation": "Multi-cloud evita el vendor lock-in.",
-      "unit": 6
-    },
-    {
-      "concept_id": "cloud_computing_exp2_41",
-      "question": "¿Qué es el vendor lock-in en cloud?",
-      "options": [
-        "Dependencia excesiva de un proveedor cloud que dificulta migrar a otro",
-        "El contrato mínimo de un proveedor cloud en el contexto de la arquitectura de servicios cloud.",
-        "Los costes de egreso de datos según las características del proveedor de servicios.",
-        "Las restricciones de uso de un servicio en el modelo de servicios de computación en la nube."
-      ],
-      "correct": 0,
-      "explanation": "El uso de estándares abiertos y Kubernetes reduce el lock-in.",
-      "unit": 6
-    },
-    {
-      "concept_id": "cloud_computing_exp2_42",
-      "question": "¿Qué es un Cloud Access Security Broker (CASB)?",
-      "options": [
-        "Un tipo de firewall cloud según el modelo de despliegue cloud correspondiente.",
-        "Un servicio de IAM externo para la gestión de recursos en la infraestructura cloud.",
-        "Un agente de monitorización en el contexto de la arquitectura de servicios cloud.",
-        "Software intermediario que aplica políticas de seguridad entre usuarios y proveedores cloud"
-      ],
-      "correct": 3,
-      "explanation": "Los CASB dan visibilidad y control sobre el uso del cloud.",
-      "unit": 7
-    },
-    {
-      "concept_id": "cloud_computing_exp2_43",
-      "question": "¿Qué es el cifrado en reposo (encryption at rest) en cloud?",
-      "options": [
-        "Cifrar los datos mientras viajan por la red según las características del proveedor de servicios.",
-        "Cifrar el tráfico entre microservicios en el modelo de servicios de computación en la nube.",
-        "Cifrar los datos almacenados en disco para protegerlos si hay acceso físico no autorizado",
-        "Cifrar las contraseñas de acceso según el modelo de despliegue cloud correspondiente."
-      ],
-      "correct": 2,
-      "explanation": "AWS S3 y EBS cifran en reposo con AES-256 por defecto.",
-      "unit": 7
-    },
-    {
-      "concept_id": "cloud_computing_exp2_44",
-      "question": "¿Qué es el cifrado en tránsito (encryption in transit)?",
-      "options": [
-        "Cifrar la base de datos en reposo para la gestión de recursos en la infraestructura cloud.",
-        "Cifrar los backups en el contexto de la arquitectura de servicios cloud.",
-        "Cifrar los discos del servidor según las características del proveedor de servicios.",
-        "Cifrar los datos mientras viajan entre sistemas mediante TLS/SSL"
-      ],
-      "correct": 3,
-      "explanation": "HTTPS usa TLS para cifrar el tráfico en tránsito.",
-      "unit": 7
-    },
-    {
-      "concept_id": "cloud_computing_exp3_45",
-      "question": "¿Qué es Amazon CloudWatch?",
-      "options": [
-        "El servicio de DNS de AWS en el modelo de servicios de computación en la nube.",
-        "Servicio de monitorización de métricas, logs y alarmas para recursos de AWS",
-        "La consola de administración de AWS según el modelo de despliegue cloud correspondiente.",
-        "Un servicio de almacenamiento de logs para la gestión de recursos en la infraestructura cloud."
-      ],
-      "correct": 1,
-      "explanation": "CloudWatch permite crear dashboards y alarmas automáticas.",
-      "unit": 7
-    },
-    {
-      "concept_id": "cloud_computing_exp3_46",
-      "question": "¿Qué es AWS CloudTrail?",
-      "options": [
-        "El historial de facturación de AWS en el contexto de la arquitectura de servicios cloud.",
-        "Una herramienta de depuración de Lambda según las características del proveedor de servicios.",
-        "Servicio que registra todas las llamadas a la API de AWS para auditoría y cumplimiento",
-        "El log de acceso de S3 en el modelo de servicios de computación en la nube."
-      ],
-      "correct": 2,
-      "explanation": "CloudTrail registra quién hizo qué, cuándo y desde dónde.",
-      "unit": 7
-    },
-    {
-      "concept_id": "cloud_computing_exp3_47",
-      "question": "¿Qué son las Instancias Spot de EC2?",
-      "options": [
-        "Instancias de máxima disponibilidad garantizada según el modelo de despliegue cloud correspondiente.",
-        "Instancias para desarrollo y pruebas para la gestión de recursos en la infraestructura cloud.",
-        "Instancias reservadas con contrato anual en el contexto de la arquitectura de servicios cloud.",
-        "Instancias EC2 con hasta 90% de descuento sobre el precio bajo demanda, que AWS puede interrumpir"
-      ],
-      "correct": 3,
-      "explanation": "Las Spot Instances son ideales para cargas tolerantes a interrupciones.",
-      "unit": 7
-    },
-    {
-      "concept_id": "cloud_computing_exp3_48",
-      "question": "¿Qué es Amazon SQS?",
-      "options": [
-        "Servicio de colas de mensajes gestionado para desacoplar componentes de aplicaciones",
-        "Un servicio de streaming de datos en tiempo real según las características del proveedor de servicios.",
-        "Una base de datos de colas en el modelo de servicios de computación en la nube.",
-        "Un servicio de envío de notificaciones push según el modelo de despliegue cloud correspondiente."
-      ],
-      "correct": 0,
-      "explanation": "Simple Queue Service: garantiza entrega aunque el receptor esté caído.",
-      "unit": 7
-    },
-    {
-      "concept_id": "cloud_computing_exp3_49",
-      "question": "¿Qué es Amazon SNS?",
-      "options": [
-        "Servicio de mensajería pub/sub que envía notificaciones a múltiples suscriptores a la vez",
-        "Un servicio de correo electrónico para la gestión de recursos en la infraestructura cloud.",
-        "Un sistema de cola punto a punto en el contexto de la arquitectura de servicios cloud.",
-        "Una base de datos de series temporales según las características del proveedor de servicios."
-      ],
-      "correct": 0,
-      "explanation": "Simple Notification Service: un mensaje llega a múltiples destinos.",
-      "unit": 8
-    },
-    {
-      "concept_id": "cloud_computing_exp3_50",
-      "question": "¿Qué es Amazon ElastiCache?",
-      "options": [
-        "Un acelerador de CDN de AWS en el modelo de servicios de computación en la nube.",
-        "Una base de datos elástica de AWS según el modelo de despliegue cloud correspondiente.",
-        "Un servicio de almacenamiento de objetos para la gestión de recursos en la infraestructura cloud.",
-        "Servicio gestionado de caché en memoria (Redis o Memcached) para acelerar aplicaciones"
-      ],
-      "correct": 3,
-      "explanation": "ElastiCache reduce la carga sobre la base de datos principal.",
-      "unit": 8
-    },
-    {
-      "concept_id": "cloud_computing_exp3_51",
-      "question": "¿Qué es Amazon API Gateway?",
-      "options": [
-        "Un proxy inverso de AWS en el contexto de la arquitectura de servicios cloud.",
-        "Servicio para crear, publicar y gestionar APIs REST, HTTP y WebSocket de forma escalable",
-        "Un servicio de autenticación de APIs según las características del proveedor de servicios.",
-        "Un balanceador de carga de AWS en el modelo de servicios de computación en la nube."
-      ],
-      "correct": 1,
-      "explanation": "API Gateway conecta clientes con funciones Lambda o servicios backend.",
-      "unit": 8
-    },
-    {
-      "concept_id": "cloud_computing_exp3_52",
-      "question": "¿Qué es una arquitectura de microservicios?",
-      "options": [
-        "Un patrón de base de datos distribuida según el modelo de despliegue cloud correspondiente.",
-        "Un framework de desarrollo rápido para la gestión de recursos en la infraestructura cloud.",
-        "Una aplicación monolítica optimizada en el contexto de la arquitectura de servicios cloud.",
-        "División de una aplicación en servicios pequeños e independientes que se comunican por API"
-      ],
-      "correct": 3,
-      "explanation": "Netflix, Spotify y Amazon usan microservicios.",
-      "unit": 8
-    },
-    {
-      "concept_id": "cloud_computing_exp3_53",
-      "question": "¿Qué diferencia hay entre REST y GraphQL?",
-      "options": [
-        "GraphQL es solo para bases de datos de grafos según las características del proveedor de servicios.",
-        "GraphQL no puede hacer mutaciones (escrituras) en el modelo de servicios de computación en la nube.",
-        "REST usa endpoints fijos; GraphQL usa un único endpoint donde el cliente especifica exactamente qué datos quiere",
-        "REST es más moderno que GraphQL según el modelo de despliegue cloud correspondiente."
-      ],
-      "correct": 2,
-      "explanation": "GraphQL elimina el over-fetching y under-fetching de datos.",
-      "unit": 8
-    },
-    {
-      "concept_id": "cloud_computing_exp3_54",
-      "question": "¿Qué es un mensaje de cola (message queue) y para qué sirve?",
-      "options": [
-        "Una base de datos temporal para la gestión de recursos en la infraestructura cloud.",
-        "Una cola de prioridad de CPU en el contexto de la arquitectura de servicios cloud.",
-        "Un tipo de cache distribuida según las características del proveedor de servicios.",
-        "Mecanismo de comunicación asíncrona entre servicios para desacoplarlos y absorber picos de carga"
-      ],
-      "correct": 3,
-      "explanation": "RabbitMQ, Kafka y SQS son sistemas de colas de mensajes.",
-      "unit": 8
-    },
-    {
-      "concept_id": "cloud_computing_exp3_55",
-      "question": "¿Qué es Apache Kafka?",
-      "options": [
-        "Un servidor de base de datos en el modelo de servicios de computación en la nube.",
-        "Un framework de microservicios según el modelo de despliegue cloud correspondiente.",
-        "Plataforma de streaming distribuido para procesar millones de eventos por segundo en tiempo real",
-        "Un servidor de aplicaciones Java para la gestión de recursos en la infraestructura cloud."
-      ],
-      "correct": 2,
-      "explanation": "Kafka es el estándar en arquitecturas de eventos en tiempo real.",
-      "unit": 8
-    },
-    {
-      "concept_id": "cloud_computing_exp3_56",
-      "question": "¿Qué es el patrón Circuit Breaker en microservicios?",
-      "options": [
-        "Mecanismo que detecta fallos en un servicio y cortocircuita las llamadas para evitar cascadas de errores",
-        "Una estrategia de reintento automático en el contexto de la arquitectura de servicios cloud.",
-        "Un patrón de autenticación entre servicios según las características del proveedor de servicios.",
-        "Un tipo de balanceo de carga en el modelo de servicios de computación en la nube."
-      ],
-      "correct": 0,
-      "explanation": "Netflix Hystrix y Resilience4j implementan el Circuit Breaker.",
-      "unit": 9
-    },
-    {
-      "concept_id": "cloud_computing_exp3_57",
-      "question": "¿Qué es la computación sin servidor (serverless)?",
-      "options": [
-        "Modelo donde el proveedor gestiona la infraestructura y el desarrollador solo escribe funciones",
-        "Cloud sin acceso a la configuración según el modelo de despliegue cloud correspondiente.",
-        "Servidores físicos sin sistema operativo para la gestión de recursos en la infraestructura cloud.",
-        "Computación en local sin internet en el contexto de la arquitectura de servicios cloud."
-      ],
-      "correct": 0,
-      "explanation": "AWS Lambda, Azure Functions y Google Cloud Functions son serverless.",
-      "unit": 9
-    },
-    {
-      "concept_id": "cloud_computing_exp3_58",
-      "question": "¿Qué es el formato YAML y dónde se usa habitualmente?",
-      "options": [
-        "Un lenguaje de programación funcional según las características del proveedor de servicios.",
-        "Lenguaje de serialización de datos legible por humanos, usado en configuraciones (Docker, K8s, CI/CD)",
-        "Un tipo de base de datos en el modelo de servicios de computación en la nube.",
-        "Un protocolo de comunicación web según el modelo de despliegue cloud correspondiente."
-      ],
-      "correct": 1,
-      "explanation": "YAML es un superconjunto de JSON más legible.",
-      "unit": 9
-    },
-    {
-      "concept_id": "cloud_computing_exp3_59",
-      "question": "¿Qué es Docker Compose?",
-      "options": [
-        "Herramienta para definir y ejecutar aplicaciones multi-contenedor con un archivo YAML (docker-compose.yml)",
-        "Un registro de imágenes Docker privado para la gestión de recursos en la infraestructura cloud.",
-        "Un orquestador de producción para contenedores en el contexto de la arquitectura de servicios cloud.",
-        "La CLI de Docker para gestionar contenedores individuales según las características del proveedor de servicios."
-      ],
-      "correct": 0,
-      "explanation": "docker compose up arranca todos los servicios definidos.",
-      "unit": 9
-    },
-    {
-      "concept_id": "cloud_computing_real_60",
-      "question": "¿Qué permite la infraestructura de la nube en términos de almacenamiento?",
-      "options": [
-        "Solo almacenamiento local",
-        "Almacenamiento escalable y accesible",
-        "No permite grandes volúmenes",
-        "Almacenamiento limitado y costoso"
-      ],
-      "correct": 1,
-      "explanation": "El cloud storage es elástico: puedes aumentar o reducir capacidad según necesidad.",
-      "unit": 9
-    },
-    {
-      "concept_id": "cloud_computing_real_61",
-      "question": "¿Qué tipo de servicio es Google Docs dentro de la computación en la nube?",
-      "options": [
-        "Nube híbrida",
-        "IaaS",
-        "SaaS",
-        "PaaS"
-      ],
-      "correct": 2,
-      "explanation": "SaaS: el proveedor ofrece la aplicación completa. Gmail, Salesforce, Office 365 también son SaaS.",
-      "unit": 9
-    },
-    {
-      "concept_id": "cloud_computing_real_62",
-      "question": "¿Cuál describe mejor la computación en la nube?",
-      "options": [
-        "Un tipo de hardware especializado en redes en el modelo de servicios de computación en la nube.",
-        "Una red de servidores que ofrece servicios informáticos a través de Internet",
-        "Un protocolo de comunicación entre servidores según el modelo de despliegue cloud correspondiente.",
-        "Un sistema operativo avanzado para servidores para la gestión de recursos en la infraestructura cloud."
-      ],
-      "correct": 1,
-      "explanation": "Cloud computing = acceder a recursos informáticos (computación, almacenamiento) vía Internet.",
-      "unit": 9
-    },
-    {
-      "concept_id": "cloud_computing_real_63",
-      "question": "¿Cuál es una ventaja de las redes de fibra óptica en la nube?",
-      "options": [
-        "Ancho de banda alto y baja latencia",
-        "Conexiones inestables",
-        "Solo funciona en redes locales",
-        "Alta latencia en transmisión"
-      ],
-      "correct": 0,
-      "explanation": "La fibra óptica transmite datos a velocidades próximas a la luz con mínima latencia.",
-      "unit": 10
-    },
-    {
-      "concept_id": "cloud_computing_real_64",
-      "question": "¿Cuál de estas opciones representa un servicio de nube pública?",
-      "options": [
-        "Un disco duro externo en red",
-        "Servidores internos de una empresa",
-        "Un centro de datos privado",
-        "Microsoft Azure"
-      ],
-      "correct": 3,
-      "explanation": "Azure, AWS y Google Cloud son los principales proveedores de nube pública.",
-      "unit": 10
-    },
-    {
-      "concept_id": "cloud_computing_real_65",
-      "question": "¿Qué caracteriza a una nube híbrida?",
-      "options": [
-        "No permite compartir datos entre sistemas",
-        "Solo accesible dentro de la empresa",
-        "Es una combinación de nube privada y pública",
-        "La opera únicamente un proveedor público"
-      ],
-      "correct": 2,
-      "explanation": "Nube híbrida: mezcla infraestructura on-premise (privada) con servicios cloud públicos.",
-      "unit": 10
-    },
-    {
-      "concept_id": "cloud_computing_real_66",
-      "question": "¿Cuál es la principal característica del modelo de facturación en la nube?",
-      "options": [
-        "Pago anticipado por recursos contratados",
-        "Pago por uso: solo se paga por los recursos consumidos",
-        "Pago fijo mensual sin importar el uso",
-        "Pago único al inicio del servicio en el contexto de la arquitectura de servicios cloud."
-      ],
-      "correct": 1,
-      "explanation": "Pay-as-you-go o pay-per-use: el modelo que democratizó el acceso a infraestructura IT.",
-      "unit": 10
-    },
-    {
-      "concept_id": "cloud_computing_real_67",
-      "question": "¿Qué modelo de precios en la nube ofrece descuentos a cambio de comprometerse a largo plazo?",
-      "options": [
-        "Pago por uso",
-        "Facturación consolidada",
-        "Instancias spot",
-        "Instancias reservadas"
-      ],
-      "correct": 3,
-      "explanation": "Las instancias reservadas (1 o 3 años) ofrecen hasta un 75% de descuento frente al precio bajo demanda.",
-      "unit": 10
-    },
-    {
-      "concept_id": "cloud_computing_real_68",
-      "question": "¿Qué permite la facturación consolidada en AWS/Azure?",
-      "options": [
-        "Evitar el pago de impuestos según las características del proveedor de servicios.",
-        "Pagar menos por los recursos utilizados",
-        "Automatizar completamente la contabilidad",
-        "Gestionar múltiples cuentas desde una sola plataforma"
-      ],
-      "correct": 3,
-      "explanation": "La facturación consolidada agrupa el gasto de múltiples cuentas para obtener descuentos por volumen.",
-      "unit": 10
-    },
-    {
-      "concept_id": "cloud_computing_real_69",
-      "question": "¿Qué elemento NO forma parte del Coste Total de la Propiedad (TCO)?",
-      "options": [
-        "Costes operativos en la nube",
-        "Coste de hardware y software",
-        "Gastos de transporte de los empleados",
-        "Mantenimiento y energía"
-      ],
-      "correct": 2,
-      "explanation": "TCO incluye hardware, software, mantenimiento, personal, energía y espacio físico. NO el transporte.",
-      "unit": 10
-    },
-    {
-      "question": "¿Cuál de los siguientes servicios pertenece a la categoría IaaS (Infraestructura como Servicio)?",
-      "options": [
-        "AWS Elastic Beanstalk",
-        "Azure Virtual Machines",
-        "Google Docs",
-        "Microsoft Office 365"
-      ],
-      "correct": 1,
-      "explanation": "IaaS: VMs, redes, almacenamiento. PaaS: Elastic Beanstalk. SaaS: Google Docs, Office 365.",
-      "concept_id": "cloud_computing_img_70",
-      "unit": 10
-    },
-    {
-      "question": "¿Cuál es un beneficio clave de la infraestructura de la nube en términos generales?",
-      "options": [
-        "Mayor consumo de recursos físicos",
-        "Acceso limitado a servidores",
-        "Escalabilidad flexible",
-        "Solo accesible desde una ubicación fija"
-      ],
-      "correct": 2,
-      "explanation": "La elasticidad es el beneficio clave del cloud: escala automáticamente según demanda.",
-      "concept_id": "cloud_computing_img_72",
-      "unit": 10
-    }
-  ],
+  {
+    "concept_id": "cloud_computing_0",
+    "question": "¿Qué se entiende principalmente por servicios de cómputo en la nube?",
+    "options": [
+      "Capacidad de procesamiento ofrecida bajo demanda",
+      "Aplicaciones instaladas en ordenadores personales",
+      "Programas que solo funcionan con conexión a internet",
+      "Almacenamiento de archivos en servidores externos"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_1",
+    "question": "¿Cuál es una de las principales ventajas de usar servicios de cómputo frente a la computación tradicional?",
+    "options": [
+      "Adaptar los recursos según la demanda real",
+      "Tener siempre servidores propios",
+      "Comprar hardware para el peor escenario posible",
+      "Evitar el uso de sistemas operativos"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_2",
+    "question": "¿Qué significa el principio de “abstracción de la infraestructura”?",
+    "options": [
+      "Se paga solo cuando el servidor está encendido",
+      "Se paga una cuota fija mensual",
+      "Se paga únicamente por los recursos que se utilizan",
+      "Se paga por adelantado todo el año"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_3",
+    "question": "¿Qué es una máquina virtual?",
+    "options": [
+      "Una copia virtual de un sistema operativo que funciona",
+      "Un contenedor ligero sin sistema operativo",
+      "Un sistema operativo compartido por varias",
+      "Un servidor físico dedicado"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_4",
+    "question": "¿Qué elemento permite que varias máquinas virtuales compartan el mismo hardware físico?",
+    "options": [
+      "El hipervisor",
+      "El sistema operativo",
+      "El contenedor",
+      "La red virtual"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_5",
+    "question": "¿Cuál de las siguientes NO es una ventaja de las máquinas virtuales?",
+    "options": [
+      "Uso exclusivo de hardware físico",
+      "Aislamiento entre sistemas",
+      "Escalabilidad",
+      "Flexibilidad"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_6",
+    "question": "¿Para qué sirve el aislamiento entre máquinas virtuales?",
+    "options": [
+      "Para reducir el uso de memoria",
+      "Para que todas compartan datos",
+      "Para que un fallo no afecte a las demás",
+      "Para eliminar el hipervisor"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_7",
+    "question": "¿Cuál es una buena práctica para reducir costes en máquinas virtuales?",
+    "options": [
+      "Sobredimensionar recursos",
+      "Mantenerlas siempre encendidas",
+      "Apagar las VMs cuando no se usan",
+      "Crear una VM nueva para cada tarea"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_8",
+    "question": "¿Para qué sirve el escalado automático en las máquinas virtuales?",
+    "options": [
+      "Para eliminar sistemas operativos",
+      "Para mejorar la seguridad",
+      "Para ajustar los recursos según la demanda",
+      "Para reducir el número de usuarios"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_9",
+    "question": "¿Qué es un contenedor?",
+    "options": [
+      "Un servidor físico compartido",
+      "Una máquina virtual completa",
+      "Un paquete con una aplicación y sus dependencias",
+      "Un sistema operativo independiente"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_10",
+    "question": "¿Cuál es una ventaja clave de los contenedores?",
+    "options": [
+      "Consumen más recursos que las VMs",
+      "Simplifican el desarrollo y despliegue",
+      "Son menos portables",
+      "Solo funcionan en un entorno concreto"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_11",
+    "question": "¿Qué significa que un contenedor sea portable?",
+    "options": [
+      "Que puede ejecutarse en distintos entornos",
+      "Que solo funciona en la nube",
+      "Que necesita hardware específico",
+      "Que tiene su propio sistema operativo"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_12",
+    "question": "¿Por qué los contenedores son más eficientes que las VMs?",
+    "options": [
+      "Porque usan hardware exclusivo",
+      "Porque usan más memoria",
+      "Porque no se pueden escalar",
+      "Porque comparten el sistema operativo"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_13",
+    "question": "¿Qué activa la ejecución de una función serverless?",
+    "options": [
+      "Un evento",
+      "El arranque de un servidor",
+      "El sistema operativo",
+      "Un contenedor manual"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_14",
+    "question": "¿Cómo se paga en la computación sin servidor?",
+    "options": [
+      "Por servidor activo",
+      "Cuota mensual fija",
+      "Por tiempo real de ejecución",
+      "Por número de usuarios"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_15",
+    "question": "¿Qué ocurre cuando aumenta la demanda en serverless?",
+    "options": [
+      "Se limita el número de usuarios",
+      "Hay que añadir servidores manualmente",
+      "La aplicación se cae",
+      "El sistema escala automáticamente"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_16",
+    "question": "¿Qué ofrece principalmente el modelo IaaS?",
+    "options": [
+      "Recursos de cómputo virtualizados",
+      "Aplicaciones listas para usar",
+      "Código sin servidores",
+      "Solo bases de datos"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_17",
+    "question": "¿Qué caracteriza a un servicio SaaS?",
+    "options": [
+      "El usuario usa directamente la aplicación",
+      "El usuario gestiona la infraestructura",
+      "El usuario gestiona el sistema operativo",
+      "El usuario configura servidores"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_18",
+    "question": "¿Qué aspecto NO se menciona como clave antes de adoptar servicios de cómputo?",
+    "options": [
+      "Escalabilidad",
+      "Seguridad",
+      "Coste",
+      "Diseño gráfico"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_19",
+    "question": "¿Por qué el comercio electrónico usa servicios de cómputo?",
+    "options": [
+      "Para usar servidores físicos",
+      "Para evitar internet",
+      "Para manejar picos de tráfico",
+      "Para reducir usuarios"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_20",
+    "question": "¿Cuál es la idea principal de la conclusión?",
+    "options": [
+      "Solo sirven para grandes empresas",
+      "Los servicios de cómputo son temporales",
+      "Son clave en el presente y futuro del software",
+      "Van a desaparecer"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 6
+  },
+  {
+    "concept_id": "cloud_computing_21",
+    "question": "¿Cuál es la función principal de los servicios de almacenamiento en cloud computing?",
+    "options": [
+      "Proteger, conservar y permitir el acceso a los datos",
+      "Ejecutar aplicaciones en la nube",
+      "Conectar dispositivos IoT",
+      "Sustituir los sistemas operativos"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 7
+  },
+  {
+    "concept_id": "cloud_computing_22",
+    "question": "¿Por qué ha aumentado tanto la necesidad de servicios de almacenamiento en los últimos años?",
+    "options": [
+      "Por el crecimiento del volumen de datos y nuevas tecnologías",
+      "Por la reducción del uso de ordenadores",
+      "Por la aparición de redes sociales únicamente",
+      "Por la desaparición de servidores físicos"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 7
+  },
+  {
+    "concept_id": "cloud_computing_23",
+    "question": "¿Cuál de estos NO es un tipo de servicio de almacenamiento habitual en cloud?",
+    "options": [
+      "Estar pensado solo para copias de seguridad",
+      "Organizar datos en carpetas",
+      "Usar URLs para acceder a los datos",
+      "Dividir la información en bloques de tamaño fijo"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 7
+  },
+  {
+    "concept_id": "cloud_computing_24",
+    "question": "¿Qué tipo de acceso ofrece el almacenamiento de bloques?",
+    "options": [
+      "Acceso solo en modo lectura",
+      "Acceso secuencial",
+      "Acceso de bajo nivel y aleatorio",
+      "Acceso jerárquico"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 7
+  },
+  {
+    "concept_id": "cloud_computing_25",
+    "question": "¿Qué tipo de aplicaciones suelen usar almacenamiento de bloques?",
+    "options": [
+      "Alta durabilidad a largo plazo",
+      "Bajo coste frente a cualquier otro tipo",
+      "Alto rendimiento",
+      "Acceso mediante navegador web"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 7
+  },
+  {
+    "concept_id": "cloud_computing_26",
+    "question": "¿Qué garantiza la consistencia de datos en el almacenamiento de bloques?",
+    "options": [
+      "Objetos identificados de forma única",
+      "Carpetas jerárquicas",
+      "Bloques de tamaño fijo",
+      "Sectores de disco"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 7
+  },
+  {
+    "concept_id": "cloud_computing_27",
+    "question": "¿Qué información incluye un objeto en el almacenamiento de objetos?",
+    "options": [
+      "Archivos grandes y no estructurados",
+      "Sistemas operativos",
+      "Bases de datos transaccionales",
+      "Memoria RAM"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 7
+  },
+  {
+    "concept_id": "cloud_computing_28",
+    "question": "¿Qué ventaja NO es propia del almacenamiento de objetos?",
+    "options": [
+      "Bajo coste",
+      "Escalabilidad",
+      "Alto rendimiento transaccional",
+      "Alta durabilidad"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 7
+  },
+  {
+    "concept_id": "cloud_computing_29",
+    "question": "¿Cómo se accede normalmente a un objeto almacenado?",
+    "options": [
+      "Streaming de contenido multimedia",
+      "Arranque de sistemas operativos",
+      "Ejecución de máquinas virtuales.",
+      "Procesamiento de transacciones"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 7
+  },
+  {
+    "concept_id": "cloud_computing_30",
+    "question": "¿Por qué el almacenamiento de objetos es ideal para contenido web?",
+    "options": [
+      "Almacenamiento de objetos",
+      "Almacenamiento de ficheros",
+      "Almacenamiento de bloques",
+      "Almacenamiento local"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 7
+  },
+  {
+    "concept_id": "cloud_computing_31",
+    "question": "¿Qué tipo de almacenamiento se parece más al sistema de archivos de un ordenador?",
+    "options": [
+      "La colaboración entre usuarios",
+      "La virtualización",
+      "El streaming en directo",
+      "El arranque de sistemas"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 7
+  },
+  {
+    "concept_id": "cloud_computing_32",
+    "question": "¿Qué permite el control de versiones en el almacenamiento de ficheros?",
+    "options": [
+      "Almacenamiento a largo plazo",
+      "Acceso frecuente",
+      "Datos temporales",
+      "Aplicaciones en tiempo real"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 7
+  },
+  {
+    "concept_id": "cloud_computing_33",
+    "question": "¿Cuál es la función principal de los servicios de bases de datos?",
+    "options": [
+      "Almacenar y administrar información de forma eficiente",
+      "Crear aplicaciones web",
+      "Diseñar interfaces gráficas",
+      "Gestionar redes informáticas"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_34",
+    "question": "¿Qué característica permite que una base de datos crezca o se reduzca según las necesidades?",
+    "options": [
+      "Escalabilidad",
+      "Persistencia",
+      "Seguridad",
+      "Consistencia"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_35",
+    "question": "¿Qué ventaja permite acceder a una base de datos desde cualquier lugar con Internet?",
+    "options": [
+      "Accesibilidad",
+      "Flexibilidad",
+      "Persistencia",
+      "Integridad"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_36",
+    "question": "¿Qué software permite crear y gestionar bases de datos?",
+    "options": [
+      "Sistema de gestión de bases de datos",
+      "Sistema operativo",
+      "Lenguaje de programación",
+      "Servidor web"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_37",
+    "question": "¿Qué característica garantiza que los datos no se pierdan al cerrar la aplicación?",
+    "options": [
+      "Persistencia",
+      "Seguridad",
+      "Transacciones",
+      "Escalabilidad"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_38",
+    "question": "¿Qué característica evita contradicciones o errores en los datos?",
+    "options": [
+      "Consistencia",
+      "Accesibilidad",
+      "Flexibilidad",
+      "Rendimiento"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_39",
+    "question": "¿Para qué sirven las transacciones en una base de datos?",
+    "options": [
+      "Para realizar operaciones como una única unidad",
+      "Para almacenar datos históricos",
+      "Para ejecutar operaciones de forma independiente",
+      "Para mejorar el diseño de tablas"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_40",
+    "question": "¿Cuál es un beneficio clave de los servicios de bases de datos?",
+    "options": [
+      "Mejoran la toma de decisiones",
+      "Eliminan la necesidad de programar",
+      "Sustituyen a Internet",
+      "Evitan el uso de servidores"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_41",
+    "question": "¿Qué tipo de base de datos organiza la información en tablas?",
+    "options": [
+      "Relacional",
+      "Analítica",
+      "NoSQL",
+      "Documental"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_42",
+    "question": "¿Qué representa una fila en una tabla relacional?",
+    "options": [
+      "Un registro",
+      "Un atributo",
+      "Una clave",
+      "Una relación"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_43",
+    "question": "¿Qué tipo de clave identifica de forma única un registro?",
+    "options": [
+      "Clave primaria",
+      "Clave externa",
+      "Clave secundaria",
+      "Clave foránea"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_44",
+    "question": "¿Qué lenguaje se utiliza para trabajar con bases de datos relacionales?",
+    "options": [
+      "SQL",
+      "HTML",
+      "Python",
+      "XML"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_45",
+    "question": "¿Qué garantiza el cumplimiento de las propiedades ACID?",
+    "options": [
+      "La seguridad de las transacciones",
+      "La velocidad del sistema",
+      "La accesibilidad remota",
+      "La flexibilidad del esquema"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_46",
+    "question": "¿Cuál de los siguientes es un proveedor de bases de datos relacionales?",
+    "options": [
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Cassandra"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_47",
+    "question": "¿En qué sector son especialmente comunes las bases de datos relacionales?",
+    "options": [
+      "Comercio electrónico",
+      "Videojuegos offline",
+      "Redes sociales",
+      "Diseño gráfico"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_48",
+    "question": "¿Qué significa el término NoSQL?",
+    "options": [
+      "Not Only SQL",
+      "No usar bases de datos",
+      "Solo SQL",
+      "No estructurado"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_49",
+    "question": "¿Qué tipo de datos suelen manejar las bases de datos NoSQL?",
+    "options": [
+      "Datos no estructurados o semiestructurados",
+      "Solo datos numéricos",
+      "Datos tabulares",
+      "Datos cifrados"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_50",
+    "question": "¿Qué característica permite repartir la carga entre varios servidores?",
+    "options": [
+      "Escalabilidad",
+      "Persistencia",
+      "Seguridad",
+      "Integridad"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_51",
+    "question": "¿Qué tipo de base de datos almacena pares clave-valor?",
+    "options": [
+      "Key-value",
+      "Documental",
+      "Grafos",
+      "Column-family"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_52",
+    "question": "¿Qué tipo de base de datos es ideal para representar relaciones como en redes sociales?",
+    "options": [
+      "Grafos",
+      "Relacional",
+      "Documental",
+      "Analítica"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_53",
+    "question": "¿Qué formato es común en bases de datos documentales?",
+    "options": [
+      "JSON",
+      "CSV",
+      "TXT",
+      "PDF"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_54",
+    "question": "¿Qué ventaja ofrece la flexibilidad de esquema en NoSQL?",
+    "options": [
+      "No necesitar una estructura fija",
+      "Más seguridad",
+      "Mayor velocidad",
+      "Menor consumo de red"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_55",
+    "question": "¿Qué significa escalabilidad horizontal?",
+    "options": [
+      "Añadir más nodos al sistema",
+      "Aumentar la potencia del servidor",
+      "Reducir el número de usuarios",
+      "Optimizar consultas"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_56",
+    "question": "¿Qué permite la tolerancia a fallos en bases de datos NoSQL?",
+    "options": [
+      "Continuar funcionando aunque falle un nodo",
+      "Eliminar datos duplicados",
+      "Evitar ataques",
+      "Mejorar el diseño"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_57",
+    "question": "¿Qué base de datos NoSQL es conocida por su alta velocidad y uso como caché?",
+    "options": [
+      "Redis",
+      "MongoDB",
+      "Cassandra",
+      "Couchbase"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_58",
+    "question": "¿Qué base de datos NoSQL almacena datos en forma de documentos?",
+    "options": [
+      "MongoDB",
+      "Redis",
+      "Cassandra",
+      "Oracle"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_59",
+    "question": "¿Para qué están diseñadas las bases de datos analíticas?",
+    "options": [
+      "Análisis de grandes volúmenes de datos",
+      "Operaciones diarias",
+      "Almacenamiento básico",
+      "Gestión de usuarios"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_60",
+    "question": "¿Qué permiten los datos analíticos a las empresas?",
+    "options": [
+      "Tomar decisiones más informadas",
+      "Reducir costes de hardware",
+      "Eliminar bases de datos relacionales",
+      "Mejorar la seguridad"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_61",
+    "question": "¿Qué tipo de consultas están optimizadas en bases de datos analíticas?",
+    "options": [
+      "Complejas",
+      "Simples",
+      "Transaccionales",
+      "Manuales"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  },
+  {
+    "concept_id": "cloud_computing_62",
+    "question": "¿Qué aspecto es especialmente importante en bases de datos analíticas?",
+    "options": [
+      "Seguridad y privacidad",
+      "Diseño visual",
+      "Uso exclusivo de SQL",
+      "Bajo coste"
+    ],
+    "correct": 0,
+    "explanation": "Oficial de los materiales de Maria.",
+    "unit": 8
+  }
+]
+,
   "empleabilidad": [
     {
       "concept_id": "empleabilidad_0",
