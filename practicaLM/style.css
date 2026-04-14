@@ -21,14 +21,14 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 /* SPLASH */
 .splash { min-height: 100vh; display: flex; align-items: center; justify-content: center;
   background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(132,204,22,.18) 0%, transparent 70%), var(--bg); padding: 2rem; }
-.splash-content { text-align: center; max-width: 1000px; width: 100%; }
+.splash-content { text-align: center; max-width: 1200px; width: 100%; }
 .splash-icon { font-size: 4rem; display: block; margin-bottom: 1rem; animation: float 3s ease-in-out infinite; }
 @keyframes float { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-8px); } }
 .splash-title { font-size: clamp(2rem,5vw,3.2rem); font-weight: 800; letter-spacing: -.02em;
   background: linear-gradient(135deg, #fff 30%, var(--accent3) 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: .5rem; }
 .splash-subtitle { font-size: 1.1rem; color: var(--text2); margin-bottom: 3rem; letter-spacing: .05em; }
-.splash-units { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; }
+.splash-units { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1.5rem; }
 .unit-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 2rem; text-align: left; cursor: pointer; transition: var(--transition); }
 .unit-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 8px 40px rgba(132,204,22,.2); }

@@ -39,8 +39,9 @@ const UNITS = {
   xquery: {
     label: 'T6', title: 'XQuery',
     sections: [
-      { id: 'xquery-teoria', icon: '📖', label: 'Teoría: XQuery (Pendiente de material)', type: 'lesson', lessonId: 'xquery_teoria' },
-      { id: 'xquery-editor', icon: '💻', label: 'Ejercicios VSCode XQuery (Pendiente)', type: 'editor', editorId: 'xquery_editor' }
+      { id: 'xquery-teoria', icon: '📖', label: 'Teoría: XQuery FLWOR', type: 'lesson', lessonId: 'xquery_teoria' },
+      { id: 'xquery-reto', icon: '🏆', label: 'Reto María: Consultas FLWOR', type: 'lesson', lessonId: 'reto_xquery_maria' },
+      { id: 'xquery-editor', icon: '💻', label: 'Editor XQuery Interactivo', type: 'editor', editorId: 'xquery_editor' }
     ]
   }
 };
@@ -283,6 +284,25 @@ const LESSONS = {
   <span class="kw">&lt;/html&gt;</span>
 <span class="kw">&lt;/xsl:template&gt;</span>`,
     info: { type: 'tip', text: '💡 <strong>Pro-Tip</strong>: Usa <code>indent="yes"</code> en el <code>xsl:output</code> para que el resultado sea legible.' }
+  },
+
+  reto_xquery_maria: {
+    title: '🏆 Reto Oficial: Catálogo FLWOR',
+    subtitle: 'Consultas complejas sobre el catálogo de María',
+    concepts: [
+      { icon: '📚', title: 'Selección de Libros', body: 'Usa <code>for $b in //book</code> para recorrer el catálogo.' },
+      { icon: '💲', title: 'Filtro de Precio', body: 'Añade <code>where $b/price > 30</code> para filtrar libros caros.' },
+      { icon: '🏗️', title: 'Construir XML', body: 'Usa <code>return &lt;libro&gt;{ $b/title/text() }&lt;/libro&gt;</code> para formatear la salida.' }
+    ],
+    codeExample: `<span class="cm">(: Reto: Libros de Maria con precio > 30 :)</span>
+<span class="kw">for</span> <span class="fn">$libro</span> <span class="kw">in</span> doc(<span class="str">"biblioteca.xml"</span>)//libro
+<span class="kw">where</span> <span class="fn">$libro</span>/precio > <span class="str">30</span>
+<span class="kw">order by</span> <span class="fn">$libro</span>/titulo
+<span class="kw">return</span>
+  <span class="kw">&lt;resultado&gt;</span>
+    <span class="fn">{ $libro/titulo/text() }</span>
+  <span class="kw">&lt;/resultado&gt;</span>`,
+    info: { type: 'important', text: '🎯 <strong>Clave de María</strong>: No olvides usar <code>text()</code> o <code>data()</code> para que el resultado no incluya las etiquetas originales si no las quieres.' }
   }
 };
 
