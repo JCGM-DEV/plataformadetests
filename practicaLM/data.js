@@ -224,13 +224,23 @@ const LESSONS = {
   },
 
   xquery_teoria: {
-    title: 'XQuery — Consultas XML (Pendiente)',
-    subtitle: 'Esperando el material de la profesora María (post-Enero 2026)',
+    title: 'XQuery — Consultas XML (Post Enero 2026)',
+    subtitle: 'Consultas avanzadas con expresiones FLWOR',
     concepts: [
-      { icon: '⏳', title: 'Pendiente de contenido', body: 'Necesitamos volcar aquí la teoría de XQuery basada en los documentos oficiales de la asignatura.' }
+      { icon: '🔄', title: 'Estructura FLWOR', body: '<strong>FOR</strong>: iterar sobre secuencias. <strong>LET</strong>: definir variables. <strong>WHERE</strong>: filtrar resultados. <strong>ORDER BY</strong>: ordenar. <strong>RETURN</strong>: construir el resultado.' },
+      { icon: '📍', title: 'Ejemplo Básico FLWOR', body: 'Para obtener nombres de productos con precio > 50: <code>for $p in //producto where $p/precio > 50 return $p/nombre</code>' },
+      { icon: '🔗', title: 'Generación HTML', body: 'XQuery permite devolver HTML directamente. <code>return &lt;li&gt;{ data($p/nombre) }&lt;/li&gt;</code> envuelve el resultado en etiquetas.' },
+      { icon: '⚙️', title: 'Funciones XQuery', body: '<code>data()</code>: extrae solo el valor. <code>doc("archivo.xml")</code>: carga un archivo. <code>sum() / count() / avg()</code>: operaciones de agregación típicas.' }
     ],
-    codeExample: `(: Esperando ejercicios oficiales de VSCode para rellenar los ejemplos :)`,
-    info: { type: 'warning', text: '⚠️ Sube los archivos de VSCode con soluciones para integrarlos aquí.' }
+    codeExample: `<span class="cm">(: Archivo: consultas.xq :)</span>
+<span class="kw">for</span> <span class="fn">$p</span> <span class="kw">in</span> doc(<span class="str">"tienda.xml"</span>)//producto
+<span class="kw">where</span> <span class="fn">$p</span>/precio > <span class="str">50</span>
+<span class="kw">order by</span> <span class="fn">$p</span>/precio <span class="kw">descending</span>
+<span class="kw">return</span>
+  <span class="kw">&lt;resultado&gt;</span>
+    <span class="fn">{$p/nombre}</span>
+  <span class="kw">&lt;/resultado&gt;</span>`,
+    info: { type: 'tip', text: '💡 <strong>Recuerda (Examen)</strong>: En XQuery es obligatorio usar llaves <code>{}</code> al debolver XML si dentro quieres meter una variable (ej: <code>&lt;li&gt; {$var} &lt;/li&gt;</code>).' }
   }
 };
 

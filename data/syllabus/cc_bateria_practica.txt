@@ -1,1 +1,305 @@
-// PENDIENTE: Rellenar con las preguntas tipo test de los Simulacros Prácticos de Cloud Computing (desde Enero 2026)
+¿Qué describe la arquitectura en la nube?
+La estructura y diseño de sistemas en la nube
+Solo servidores físicos
+Redes locales
+Programas instalados
+
+¿Cuál es una ventaja clave de la arquitectura cloud?
+Escalabilidad y reducción de costes
+Uso obligatorio de hardware propio
+Mayor complejidad
+Menor seguridad
+
+¿Qué permite la nube a las empresas?
+Acceder a tecnologías avanzadas sin gran inversión
+Reducir usuarios
+Limitar servicios
+Evitar internet
+
+¿Cuál es un principio de diseño?
+Excelencia operacional
+Programación básica
+Uso de hardware
+Instalación local
+
+¿Qué implica la excelencia operacional?
+Gestionar y operar sistemas eficientemente
+Reducir datos
+Evitar seguridad
+Usar menos servidores
+
+¿Qué busca la automatización?
+Reducir tareas manuales y errores
+Aumentar errores
+Hacer todo manual
+Reducir velocidad
+
+¿Para qué sirve el monitoreo?
+Detectar problemas en tiempo real
+Guardar datos
+Mejorar diseño
+Reducir usuarios
+
+¿Qué es la gestión de cambios?
+Controlar modificaciones en la arquitectura
+Eliminar sistemas
+Actualizar sin control
+Crear usuarios
+
+¿Qué protege la encriptación?
+Datos en tránsito y reposo
+Servidores
+Redes
+Usuarios
+
+¿Qué función tiene un firewall?
+Bloquear accesos no autorizados
+Almacenar datos
+Mejorar rendimiento
+Crear usuarios
+
+¿Qué es el control de acceso?
+Asignar permisos según roles
+Dar acceso total
+Quitar seguridad
+Eliminar usuarios
+
+¿Qué es la redundancia?
+Duplicar componentes críticos
+Reducir recursos
+Eliminar datos
+Optimizar código
+
+¿Para qué sirven las copias de seguridad?
+Recuperar información en caso de fallo
+Aumentar velocidad
+Reducir datos
+Mejorar diseño
+
+¿Qué hace el balanceo de carga?
+Distribuir tráfico entre servidores
+Aumentar fallos
+Reducir seguridad
+Eliminar datos
+
+¿Qué permite la escalabilidad?
+Ajustar recursos según la demanda
+Reducir usuarios
+Limitar recursos
+Eliminar servidores
+
+¿Qué es alta disponibilidad?
+Que el sistema esté siempre operativo
+Reducir costes
+Aumentar velocidad
+Usar más servidores
+
+¿Qué es redundancia?
+Duplicar componentes críticos
+Reducir datos
+Eliminar servidores
+Optimizar código
+
+¿Para qué sirve el balanceo de carga?
+Distribuir el tráfico entre servidores
+Reducir seguridad
+Guardar datos
+Aumentar almacenamiento
+
+¿Qué hace Kubernetes?
+Orquesta contenedores
+Gestiona bases de datos
+Mejora seguridad
+Almacena datos
+
+¿Qué es un servicio gestionado?
+Infraestructura administrada por el proveedor
+Un servidor físico
+Software local
+Programa offline
+
+¿Qué se analiza primero?
+Necesidades del negocio
+Costes
+Seguridad
+Código
+
+¿Qué se evalúa además de requisitos?
+Riesgos
+Usuarios
+Datos
+Software
+
+¿Para qué sirven las métricas?
+Medir el rendimiento y éxito
+Decorar sistemas
+Guardar datos
+Reducir código
+
+¿Qué modelo usan AWS, Azure y GCP?
+Pago por uso
+Pago fijo
+Gratis
+Suscripción anual
+
+¿Qué caracteriza a Google Cloud?
+IA y análisis de datos
+Seguridad básica
+Bajo coste
+Sin escalabilidad
+
+¿Qué es un microservicio?
+Sistema dividido en servicios pequeños
+Programa grande
+Base de datos
+Servidor único
+
+¿Qué implica el diseño de red?
+Conectividad y seguridad
+Solo cables
+Código
+Hardware
+
+¿Para qué sirve la automatización?
+Reducir errores y tiempo
+Aumentar errores
+Reducir datos
+Mejorar diseño
+
+¿Qué tipo de pruebas se realizan?
+Carga, seguridad e integración
+Solo visuales
+Solo código
+Ninguna
+
+¿Qué es mejora continua?
+Proceso constante de mejora
+Cambios únicos
+Sin análisis
+Solo mantenimiento
+
+¿Qué se entiende principalmente por servicios de cómputo en la nube?
+Capacidad de procesamiento ofrecida bajo demanda
+Aplicaciones instaladas en ordenadores personales
+Programas que solo funcionan con conexión a internet
+Almacenamiento de archivos en servidores externos
+
+¿Cuál es una de las principales ventajas de usar servicios de cómputo frente a la computación tradicional?
+Adaptar los recursos según la demanda real
+Tener siempre servidores propios
+Comprar hardware para el peor escenario posible
+Evitar el uso de sistemas operativos
+
+¿Qué significa el principio de “abstracción de la infraestructura”?
+Se paga solo cuando el servidor está encendido
+Se paga una cuota fija mensual
+Se paga únicamente por los recursos que se utilizan
+Se paga por adelantado todo el año
+
+¿Qué es una máquina virtual?
+Una copia virtual de un sistema operativo que funciona
+Un contenedor ligero sin sistema operativo
+Un sistema operativo compartido por varias
+Un servidor físico dedicado
+
+¿Qué elemento permite que varias máquinas virtuales compartan el mismo hardware físico?
+El hipervisor
+El sistema operativo
+El contenedor
+La red virtual
+
+¿Cuál de las siguientes NO es una ventaja de las máquinas virtuales?
+Uso exclusivo de hardware físico
+Aislamiento entre sistemas
+Escalabilidad
+Flexibilidad
+
+¿Para qué sirve el aislamiento entre máquinas virtuales?
+Para reducir el uso de memoria
+Para que todas compartan datos
+Para que un fallo no afecte a las demás
+Para eliminar el hipervisor
+
+¿Cuál es una buena práctica para reducir costes en máquinas virtuales?
+Sobredimensionar recursos
+Mantenerlas siempre encendidas
+Apagar las VMs cuando no se usan
+Crear una VM nueva para cada tarea
+
+¿Para qué sirve el escalado automático en las máquinas virtuales?
+Para eliminar sistemas operativos
+Para mejorar la seguridad
+Para ajustar los recursos según la demanda
+Para reducir el número de usuarios
+
+¿Qué es un contenedor?
+Un servidor físico compartido
+Una máquina virtual completa
+Un paquete con una aplicación y sus dependencias
+Un sistema operativo independiente
+
+¿Cuál es una ventaja clave de los contenedores?
+Consumen más recursos que las VMs
+Simplifican el desarrollo y despliegue
+Son menos portables
+Solo funcionan en un entorno concreto
+
+¿Qué significa que un contenedor sea portable?
+Que puede ejecutarse en distintos entornos
+Que solo funciona en la nube
+Que necesita hardware específico
+Que tiene su propio sistema operativo
+
+¿Por qué los contenedores son más eficientes que las VMs?
+Porque usan hardware exclusivo
+Porque usan más memoria
+Porque no se pueden escalar
+Porque comparten el sistema operativo
+
+¿Qué activa la ejecución de una función serverless?
+Un evento
+El arranque de un servidor
+El sistema operativo
+Un contenedor manual
+
+¿Cómo se paga en la computación sin servidor?
+Por servidor activo
+Cuota mensual fija
+Por tiempo real de ejecución
+Por número de usuarios
+
+¿Qué ocurre cuando aumenta la demanda en serverless?
+Se limita el número de usuarios
+Hay que añadir servidores manualmente
+La aplicación se cae
+El sistema escala automáticamente
+
+¿Qué ofrece principalmente el modelo IaaS?
+Recursos de cómputo virtualizados
+Aplicaciones listas para usar
+Código sin servidores
+Solo bases de datos
+
+¿Qué caracteriza a un servicio SaaS?
+El usuario usa directamente la aplicación
+El usuario gestiona la infraestructura
+El usuario gestiona el sistema operativo
+El usuario configura servidores
+
+¿Qué aspecto NO se menciona como clave antes de adoptar servicios de cómputo?
+Escalabilidad
+Seguridad
+Coste
+Diseño gráfico
+
+¿Por qué el comercio electrónico usa servicios de cómputo?
+Para usar servidores físicos
+Para evitar internet
+Para manejar picos de tráfico
+Para reducir usuarios
+
+¿Cuál es la idea principal de la conclusión?
+Solo sirven para grandes empresas
+Los servicios de cómputo son temporales
+Son clave en el presente y futuro del software
+Van a desaparecer
