@@ -60,49 +60,56 @@ const SYLLABUS_REGISTRY_DATA = [
     "name": "Tema 1: Conceptos Software",
     "subject_id": "entornos_de_desarrollo",
     "file": "data/syllabus/ed_t1.txt",
-    "icon": "🛠️"
+    "icon": "🛠️",
+    "unit": 1
   },
   {
     "id": "ed_tema_2",
     "name": "Tema 2: El IDE",
     "subject_id": "entornos_de_desarrollo",
     "file": "data/syllabus/ed_t2.txt",
-    "icon": "🛠️"
+    "icon": "🛠️",
+    "unit": 2
   },
   {
     "id": "ed_tema_3",
     "name": "Tema 3: Introducción UML",
     "subject_id": "entornos_de_desarrollo",
     "file": "data/syllabus/ed_t3.txt",
-    "icon": "🛠️"
+    "icon": "🛠️",
+    "unit": 3
   },
   {
     "id": "ed_tema_4",
     "name": "Tema 4: Diag. Estructurales",
     "subject_id": "entornos_de_desarrollo",
     "file": "data/syllabus/ed_t4.txt",
-    "icon": "🛠️"
+    "icon": "🛠️",
+    "unit": 4
   },
   {
     "id": "ed_tema_5",
     "name": "Tema 5: Diag. Comportamiento",
     "subject_id": "entornos_de_desarrollo",
     "file": "data/syllabus/ed_t5.txt",
-    "icon": "🛠️"
+    "icon": "🛠️",
+    "unit": 5
   },
   {
     "id": "ed_tema_6",
     "name": "Tema 6: Pruebas y Depuración",
     "subject_id": "entornos_de_desarrollo",
     "file": "data/syllabus/ed_t6.txt",
-    "icon": "🛠️"
+    "icon": "🛠️",
+    "unit": 6
   },
   {
     "id": "ed_tema_7",
     "name": "Tema 7: Optimización y Git",
     "subject_id": "entornos_de_desarrollo",
     "file": "data/syllabus/ed_t7.txt",
-    "icon": "🛠️"
+    "icon": "🛠️",
+    "unit": 7
   },
   {
     "id": "ed_lab_uml",
@@ -117,56 +124,64 @@ const SYLLABUS_REGISTRY_DATA = [
     "name": "LM Tema 1: Introd. Marcas",
     "subject_id": "lenguaje_de_marcas",
     "file": "data/syllabus/lm_t1.txt",
-    "icon": "📝"
+    "icon": "📝",
+    "unit": 1
   },
   {
     "id": "lm_tema_2",
     "name": "LM Tema 2: HTML y CSS",
     "subject_id": "lenguaje_de_marcas",
     "file": "data/syllabus/lm_t2.txt",
-    "icon": "📝"
+    "icon": "📝",
+    "unit": 2
   },
   {
     "id": "lm_tema_3",
     "name": "LM Tema 3: XML y XSD",
     "subject_id": "lenguaje_de_marcas",
     "file": "data/syllabus/lm_t3.txt",
-    "icon": "📝"
+    "icon": "📝",
+    "unit": 3
   },
   {
     "id": "lm_tema_4",
     "name": "LM Tema 4: Almacenamiento",
     "subject_id": "lenguaje_de_marcas",
     "file": "data/syllabus/lm_t4.txt",
-    "icon": "📝"
+    "icon": "📝",
+    "unit": 4
   },
   {
     "id": "lm_tema_5",
     "name": "LM Tema 5: XPath y XSLT",
     "subject_id": "lenguaje_de_marcas",
     "file": "data/syllabus/lm_t5.txt",
-    "icon": "📝"
+    "icon": "📝",
+    "unit": 5
   },
   {
     "id": "lm_tema_6",
     "name": "LM Tema 6: XQuery y BD-XML",
     "subject_id": "lenguaje_de_marcas",
     "file": "data/syllabus/lm_t6.txt",
-    "icon": "📝"
+    "icon": "📝",
+    "unit": 6
   },
   {
     "id": "lm_tema_7",
     "name": "LM Tema 7: RSS y Atom",
     "subject_id": "lenguaje_de_marcas",
     "file": "data/syllabus/lm_t7.txt",
-    "icon": "📝"
+    "icon": "📝",
+    "unit": 7
   },
   {
     "id": "lm_tema_8",
     "name": "LM Tema 8: ERP y CRM",
     "subject_id": "lenguaje_de_marcas",
     "file": "data/syllabus/lm_t8.txt",
-    "icon": "📝"
+    "icon": "📝",
+    "unit": 8
   },
   {
     "id": "emp_tema_1",
@@ -268,119 +283,136 @@ const SYLLABUS_REGISTRY_DATA = [
     "name": "Tema 1: Fundamentos",
     "subject_id": "programacion",
     "file": "data/syllabus/prog_t1.txt",
-    "icon": "💻"
+    "icon": "💻",
+    "unit": 1
   },
   {
     "id": "prog_tema_2",
     "name": "Tema 2: Clases y Objetos",
     "subject_id": "programacion",
     "file": "data/syllabus/prog_t2.txt",
-    "icon": "💻"
+    "icon": "💻",
+    "unit": 2
   },
   {
     "id": "prog_tema_3",
     "name": "Tema 3: Variables y Control",
     "subject_id": "programacion",
     "file": "data/syllabus/prog_t3.txt",
-    "icon": "💻"
+    "icon": "💻",
+    "unit": 3
   },
   {
     "id": "prog_tema_4",
     "name": "Tema 4: POO Avanzada",
     "subject_id": "programacion",
     "file": "data/syllabus/prog_t4.txt",
-    "icon": "💻"
+    "icon": "💻",
+    "unit": 4
   },
   {
     "id": "prog_tema_5",
     "name": "Tema 5: Arrays y Strings",
     "subject_id": "programacion",
     "file": "data/syllabus/prog_t5.txt",
-    "icon": "💻"
+    "icon": "💻",
+    "unit": 5
   },
   {
     "id": "prog_tema_6",
     "name": "Tema 6: Herencia e Interfaces",
     "subject_id": "programacion",
     "file": "data/syllabus/prog_t6.txt",
-    "icon": "💻"
+    "icon": "💻",
+    "unit": 6
   },
   {
     "id": "prog_tema_7",
     "name": "Tema 7: Colecciones y Excepciones",
     "subject_id": "programacion",
     "file": "data/syllabus/prog_t7.txt",
-    "icon": "💻"
+    "icon": "💻",
+    "unit": 7
   },
   {
     "id": "prog_tema_8",
     "name": "Tema 8: Ficheros y Streams",
     "subject_id": "programacion",
     "file": "data/syllabus/prog_t8.txt",
-    "icon": "💻"
+    "icon": "💻",
+    "unit": 8
   },
   {
     "id": "prog_tema_9",
     "name": "Tema 9: JDBC y Bases de Datos",
     "subject_id": "programacion",
     "file": "data/syllabus/prog_t9.txt",
-    "icon": "💻"
+    "icon": "💻",
+    "unit": 9
   },
   {
     "id": "prog_tema_10",
     "name": "Tema 10: BD Orientada a Objetos",
     "subject_id": "programacion",
     "file": "data/syllabus/prog_t10.txt",
-    "icon": "💻"
+    "icon": "💻",
+    "unit": 10
   },
   {
     "id": "si_tema_1",
     "name": "Tema 1: Redes y Hardware",
     "subject_id": "sistemas_informaticos",
     "file": "data/syllabus/si_t1.txt",
-    "icon": "🖥️"
+    "icon": "🖥️",
+    "unit": 1
   },
   {
     "id": "si_tema_2",
     "name": "Tema 2: Sistemas Operativos",
     "subject_id": "sistemas_informaticos",
     "file": "data/syllabus/si_t2.txt",
-    "icon": "🖥️"
+    "icon": "🖥️",
+    "unit": 2
   },
   {
     "id": "si_tema_3",
     "name": "Tema 3: Almacenamiento",
     "subject_id": "sistemas_informaticos",
     "file": "data/syllabus/si_t3.txt",
-    "icon": "🖥️"
+    "icon": "🖥️",
+    "unit": 3
   },
   {
     "id": "si_tema_4",
     "name": "Tema 4: Usuarios y Permisos",
     "subject_id": "sistemas_informaticos",
     "file": "data/syllabus/si_t4.txt",
-    "icon": "🖥️"
+    "icon": "🖥️",
+    "unit": 4
   },
   {
     "id": "si_tema_5",
     "name": "Tema 5: Redes TCP/IP",
     "subject_id": "sistemas_informaticos",
     "file": "data/syllabus/si_t5.txt",
-    "icon": "🖥️"
+    "icon": "🖥️",
+    "unit": 5
   },
   {
     "id": "si_tema_6",
     "name": "Tema 6: Seguridad",
     "subject_id": "sistemas_informaticos",
     "file": "data/syllabus/si_t6.txt",
-    "icon": "🖥️"
+    "icon": "🖥️",
+    "unit": 6
   },
   {
     "id": "si_tema_7",
     "name": "Tema 7: Software y Herramientas",
     "subject_id": "sistemas_informaticos",
     "file": "data/syllabus/si_t7.txt",
-    "icon": "🖥️"
+    "icon": "🖥️",
+    "unit": 7
   },
   {
     "id": "si_practicas",
@@ -410,70 +442,80 @@ const SYLLABUS_REGISTRY_DATA = [
     "name": "Tema 1: Conceptos Cloud",
     "subject_id": "cloud_computing",
     "file": "data/syllabus/cc_t1.txt",
-    "icon": "☁️"
+    "icon": "☁️",
+    "unit": 1
   },
   {
     "id": "cc_tema_2",
     "name": "Tema 2: Economía y Facturación",
     "subject_id": "cloud_computing",
     "file": "data/syllabus/cc_t2.txt",
-    "icon": "☁️"
+    "icon": "☁️",
+    "unit": 2
   },
   {
     "id": "cc_tema_3",
     "name": "Tema 3: Infraestructura",
     "subject_id": "cloud_computing",
     "file": "data/syllabus/cc_t3.txt",
-    "icon": "☁️"
+    "icon": "☁️",
+    "unit": 3
   },
   {
     "id": "cc_tema_4",
     "name": "Tema 4: Seguridad en la Nube",
     "subject_id": "cloud_computing",
     "file": "data/syllabus/cc_t4.txt",
-    "icon": "☁️"
+    "icon": "☁️",
+    "unit": 4
   },
   {
     "id": "cc_tema_5",
     "name": "Tema 5: Redes y CDN",
     "subject_id": "cloud_computing",
     "file": "data/syllabus/cc_t5.txt",
-    "icon": "☁️"
+    "icon": "☁️",
+    "unit": 5
   },
   {
     "id": "cc_tema_6",
     "name": "Tema 6: Servicios de Cómputo",
     "subject_id": "cloud_computing",
     "file": "data/syllabus/cc_t6.txt",
-    "icon": "☁️"
+    "icon": "☁️",
+    "unit": 6
   },
   {
     "id": "cc_tema_7",
     "name": "Tema 7: Almacenamiento",
     "subject_id": "cloud_computing",
     "file": "data/syllabus/cc_t7.txt",
-    "icon": "☁️"
+    "icon": "☁️",
+    "unit": 7
   },
   {
     "id": "cc_tema_8",
     "name": "Tema 8: Bases de Datos Cloud",
     "subject_id": "cloud_computing",
     "file": "data/syllabus/cc_t8.txt",
-    "icon": "☁️"
+    "icon": "☁️",
+    "unit": 8
   },
   {
     "id": "cc_tema_9",
     "name": "Tema 9: Arquitectura Cloud",
     "subject_id": "cloud_computing",
     "file": "data/syllabus/cc_t9.txt",
-    "icon": "☁️"
+    "icon": "☁️",
+    "unit": 9
   },
   {
     "id": "cc_tema_10",
     "name": "Tema 10: Escalado y Monitorización",
     "subject_id": "cloud_computing",
     "file": "data/syllabus/cc_t10.txt",
-    "icon": "☁️"
+    "icon": "☁️",
+    "unit": 10
   },
   {
     "id": "cc_examen_final",
