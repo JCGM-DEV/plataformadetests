@@ -69,6 +69,9 @@
                     <a href="javascript:void(0)" onclick="switchDash('fallos')" class="side-link" data-section="fallos">
                         <span class="side-icon">❌</span> Repasar Fallos
                     </a>
+                    <a href="javascript:void(0)" onclick="switchDash('ranking')" class="side-link" data-section="ranking">
+                        <span class="side-icon">🏆</span> Ranking Global
+                    </a>
                 </nav>
 
                 <div class="sidebar-footer">
@@ -166,6 +169,23 @@
                     <div id="dash-section-fallos" class="dash-section hidden">
                         <section id="fallos-section">
                             <div id="fallos-grid" class="grid-container"></div>
+                        </section>
+                    </div>
+
+                    <!-- Ranking Section -->
+                    <div id="dash-section-ranking" class="dash-section hidden">
+                        <section id="ranking-section">
+                            <div class="section-header-simple">
+                                <h3>🏆 Ranking Global de Estudiantes</h3>
+                                <p>Compite con tus compañeros y alcanza la excelencia en cada asignatura.</p>
+                            </div>
+                            <div id="ranking-container" class="ranking-board-grid">
+                                <!-- Ranking grouped by subject will be rendered here -->
+                                <div class="empty-state">
+                                    <div class="empty-icon">⏳</div>
+                                    <p>Cargando ranking en tiempo real...</p>
+                                </div>
+                            </div>
                         </section>
                     </div>
                 </main>

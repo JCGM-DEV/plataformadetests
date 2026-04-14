@@ -251,9 +251,13 @@ function getHistory() { return Sync.get(HISTORY_KEY, []); }
 
 function saveExamResult(subjectId, subjectName, score, aciertos, errores, omitidas, total, unitId = null) {
     const h = getHistory();
+    const finalScore = parseFloat(score.toFixed(2));
     h.push({ id: Date.now(), date: new Date().toISOString(), subjectId, subjectName,
-             score: parseFloat(score.toFixed(2)), aciertos, errores, omitidas, total, unitId });
+             score: finalScore, aciertos, errores, omitidas, total, unitId });
     Sync.set(HISTORY_KEY, h);
+
+    // Update Global Ranking if authenticated
+    updateGlobalRanking(subjectId, subjectName, finalScore);
 }
 
 function clearHistory() {
@@ -330,7 +334,8 @@ function switchDash(sectionId) {
         'temario': 'Tests del temario oficial (Los que hemos hecho en cada tema)',
         'planner': 'Planificador de Estudio',
         'progreso': 'Mi Análisis de Progreso',
-        'fallos': 'Repaso de Errores'
+        'fallos': 'Repaso de Errores',
+        'ranking': '🏆 Ranking Global de Estudiantes'
     };
     const titleEl = document.getElementById('current-section-title');
     if (titleEl) titleEl.textContent = titles[sectionId] || 'Dashboard';
@@ -358,6 +363,7 @@ function switchDash(sectionId) {
     if (sectionId === 'planner') renderAcademicPlanner();
     if (sectionId === 'progreso') renderProgress();
     if (sectionId === 'fallos') renderFallosSection();
+    if (sectionId === 'ranking') renderRanking();
 }
 
 // ─── INIT ────────────────────────────────────────────────────────
@@ -2814,4 +2820,119 @@ function scrollToSubject(id) {
             setTimeout(() => el.classList.remove('highlight-momentary'), 2000);
         }
     }, 150);
+}
+
+// ─── RANKING SYSTEM (GLOBAL) ────────────────────────────────────
+async function updateGlobalRanking(subjectId, subjectName, score) {
+    if (!Auth.currentUser || !Auth.db) return;
+    
+    const userId = Auth.currentUser.uid;
+    const username = Auth.currentUser.email.split('@')[0];
+    const docId = `${userId}_${subjectId}`;
+    
+    try {
+        const docRef = Auth.db.collection('rankings').doc(docId);
+        const doc = await docRef.get();
+        
+        if (!doc.exists || doc.data().score < score) {
+            await docRef.set({
+                userId,
+                username,
+                subjectId,
+                subjectName,
+                score: score,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            });
+            console.log(`Global ranking updated for ${subjectName}: ${score}`);
+        }
+    } catch (error) {
+        console.error('Error updating global ranking:', error);
+    }
+}
+
+async function renderRanking() {
+    const container = document.getElementById('ranking-container');
+    if (!container) return;
+
+    if (!Auth.db) {
+        container.innerHTML = `
+            <div class="empty-state">
+                <div class="empty-icon">🔒</div>
+                <p>Debes estar registrado e iniciar sesión para ver el ranking global.</p>
+            </div>`;
+        return;
+    }
+
+    try {
+        const snapshot = await Auth.db.collection('rankings')
+            .orderBy('score', 'desc')
+            .limit(100)
+            .get();
+        
+        if (snapshot.empty) {
+            container.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-icon">🏆</div>
+                    <p>Aún no hay puntuaciones registradas en el ranking global. ¡Sé el primero!</p>
+                </div>`;
+            return;
+        }
+
+        const data = [];
+        snapshot.forEach(doc => data.push(doc.data()));
+
+        // Group by subjectId
+        const subjects = {};
+        data.forEach(entry => {
+            if (!subjects[entry.subjectId]) {
+                subjects[entry.subjectId] = {
+                    name: entry.subjectName,
+                    scores: []
+                };
+            }
+            subjects[entry.subjectId].scores.push(entry);
+        });
+
+        container.innerHTML = '';
+        
+        // Sort subjects by name or importance
+        const sortedSubjectIds = Object.keys(subjects).sort((a,b) => subjects[a].name.localeCompare(subjects[b].name));
+
+        sortedSubjectIds.forEach(sid => {
+            const subject = subjects[sid];
+            const subjectData = APP_STATE.subjects.find(s => s.id === sid) || { color: '#6366f1', icon: '📖' };
+            
+            const card = document.createElement('div');
+            card.className = 'ranking-card';
+            card.style.setProperty('--card-color', subjectData.color);
+            
+            let listHTML = '';
+            subject.scores.slice(0, 10).forEach((entry, index) => {
+                listHTML += `
+                    <li class="ranking-item rank-${index + 1}">
+                        <div class="rank-user-info">
+                            <span class="rank-number">${index + 1}</span>
+                            <span class="rank-username">${entry.username}</span>
+                        </div>
+                        <span class="rank-score">${entry.score.toFixed(1).replace('.', ',')}</span>
+                    </li>
+                `;
+            });
+
+            card.innerHTML = `
+                <div class="ranking-card-header">
+                    <span class="subject-icon">${subjectData.icon}</span>
+                    <h4>${subject.name}</h4>
+                </div>
+                <ul class="ranking-list">
+                    ${listHTML}
+                </ul>
+            `;
+            container.appendChild(card);
+        });
+
+    } catch (error) {
+        console.error('Error fetching ranking:', error);
+        container.innerHTML = `<div class="empty-ranking">Error al cargar el ranking: ${error.message}</div>`;
+    }
 }
