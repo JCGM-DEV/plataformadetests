@@ -474,5 +474,21 @@
         "subject_id": "cloud_computing",
         "file": "data/syllabus/cc_t10.txt",
         "icon": "☁️"
+    },
+    {
+        "id": "cc_examen_final",
+        "name": "🎯 SIMULACRO EXAMEN FINAL (Práctica)",
+        "type": "examen_final",
+        "subject_id": "cloud_computing",
+        "file": "data/syllabus/cc_bateria_practica.txt",
+        "icon": "☁️"
+    },
+    {
+        "id": "lm_examen_final",
+        "name": "🎯 SIMULACRO EXAMEN FINAL (Teoría)",
+        "type": "examen_final",
+        "subject_id": "lenguaje_de_marcas",
+        "file": "data/syllabus/lm_bateria_teoria.txt",
+        "icon": "📝"
     }
 ]

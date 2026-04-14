@@ -33,6 +33,13 @@ const UNITS = {
       { id: 'xslt-drag1', icon: '🎯', label: 'Ejercicio: Instrucciones XSLT', type: 'drag', dragId: 'xslt_instr' },
       { id: 'xslt-xpath', icon: '🧪', label: 'Evaluador XPath Interactivo', type: 'xpath', xpathId: 'xpath_main' },
     ]
+  },
+  xquery: {
+    label: 'T6', title: 'XQuery',
+    sections: [
+      { id: 'xquery-teoria', icon: '📖', label: 'Teoría: XQuery (Pendiente de material)', type: 'lesson', lessonId: 'xquery_teoria' },
+      { id: 'xquery-editor', icon: '💻', label: 'Ejercicios VSCode XQuery (Pendiente)', type: 'editor', editorId: 'xquery_editor' }
+    ]
   }
 };
 
@@ -214,6 +221,16 @@ const LESSONS = {
   <span class="kw">&lt;/xsl:template&gt;</span>
 <span class="kw">&lt;/xsl:stylesheet&gt;</span>`,
     info: { type: 'tip', text: '💡 <strong>Chrome y XSLT local</strong>: Chrome bloquea la transformación XSLT cuando se abre desde file:// por restricciones de seguridad. En el examen pueden preguntar esto: la respuesta es que se muestra página en blanco o no se aplica la transformación.' }
+  },
+
+  xquery_teoria: {
+    title: 'XQuery — Consultas XML (Pendiente)',
+    subtitle: 'Esperando el material de la profesora María (post-Enero 2026)',
+    concepts: [
+      { icon: '⏳', title: 'Pendiente de contenido', body: 'Necesitamos volcar aquí la teoría de XQuery basada en los documentos oficiales de la asignatura.' }
+    ],
+    codeExample: `(: Esperando ejercicios oficiales de VSCode para rellenar los ejemplos :)`,
+    info: { type: 'warning', text: '⚠️ Sube los archivos de VSCode con soluciones para integrarlos aquí.' }
   }
 };
 
