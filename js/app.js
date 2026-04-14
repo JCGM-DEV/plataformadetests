@@ -1304,61 +1304,66 @@ async function startExamenFinal(subjectId) {
     APP_STATE.isFinishing = false;
     APP_STATE.isReview = false;
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
-    const isEmp = subjectId === 'empleabilidad';
-
-    // Empleabilidad: 50 preguntas de la batería oficial, SIN penalización
-    if (isEmp) {
-        const bateriaEntry = APP_STATE.syllabusExams.find(e => e.id === 'emp_bateria');
-        document.getElementById('exam-subject-label').textContent = `⏳ Preparando simulacro...`;
-        showView('exam');
-        document.getElementById('exam-engine-root').innerHTML = `<div style="text-align:center;padding:4rem;color:var(--text-secondary)"><p>Cargando 50 preguntas...</p></div>`;
-        try {
-            const res = await fetch(bateriaEntry.file + '?v=' + Date.now());
-            const text = await res.text();
-            const allQ = shuffleArray(parseTxtExam(text, 'emp_bateria')).map(prepareQuestion);
-            APP_STATE.currentExam = { ...subject, id: subjectId, name: 'Empleabilidad — Simulacro Examen Final' };
-            APP_STATE.currentUnit = null;
-            APP_STATE.isSyllabusMode = true;
-            APP_STATE.examMode = 'sin_penalizacion';
-            APP_STATE.examQuestions = allQ;
-            APP_STATE.currentQuestionIndex = 0;
-            APP_STATE.answers = [];
-            APP_STATE.timer = 3600; // 1 hora
-            document.getElementById('exam-subject-label').textContent = `🎯 ${subject.icon} Simulacro Examen Final — ${allQ.length} preguntas · Sin penalización`;
-            renderQuestion(); startTimer();
-        } catch(e) { alert('Error al cargar.'); showView('dashboard'); }
-        return;
-    }
-
-    // Resto de asignaturas: 30 teóricas + 30 prácticas (SI)
-    const teoricasPool = QUESTION_POOL[subjectId] || [];
-    const practicasEntry = APP_STATE.syllabusExams.find(e => e.id === 'si_practicas');
-
-    document.getElementById('exam-subject-label').textContent = `⏳ Preparando examen final...`;
+    
+    document.getElementById('exam-subject-label').textContent = `⏳ Preparando simulacro...`;
     showView('exam');
-    document.getElementById('exam-engine-root').innerHTML = `<div style="text-align:center;padding:4rem;color:var(--text-secondary)"><p>Cargando 60 preguntas...</p></div>`;
+    document.getElementById('exam-engine-root').innerHTML = `<div style="text-align:center;padding:4rem;color:var(--text-secondary)"><p>Cargando preguntas...</p></div>`;
 
     try {
-        const teoricas = shuffleArray(teoricasPool).slice(0, 30);
-        let practicas = [];
-        if (practicasEntry) {
-            const res = await fetch(practicasEntry.file + '?v=' + Date.now());
+        let allQ = [];
+        let time = 3600;
+        let titleInfo = "";
+        let penalizacionStr = "Penalización normal";
+        APP_STATE.examMode = 'normal';
+
+        if (subjectId === 'empleabilidad') {
+            const entry = APP_STATE.syllabusExams.find(e => e.id === 'emp_bateria');
+            const res = await fetch(entry.file + '?v=' + Date.now());
             const text = await res.text();
-            practicas = shuffleArray(parseTxtExam(text, 'si_practicas')).slice(0, 30);
+            allQ = shuffleArray(parseTxtExam(text, 'emp_bateria')).map(prepareQuestion);
+            APP_STATE.examMode = 'sin_penalizacion';
+            penalizacionStr = "Sin penalización";
+            titleInfo = "50 preguntas";
+        } 
+        else if (subjectId === 'sistemas_informaticos') {
+            const teoricasPool = QUESTION_POOL[subjectId] || [];
+            const practicasEntry = APP_STATE.syllabusExams.find(e => e.id === 'si_practicas');
+            const teoricas = shuffleArray(teoricasPool).slice(0, 30);
+            
+            let practicas = [];
+            if (practicasEntry) {
+                const res = await fetch(practicasEntry.file + '?v=' + Date.now());
+                const text = await res.text();
+                practicas = shuffleArray(parseTxtExam(text, 'si_practicas')).slice(0, 30);
+            }
+            allQ = shuffleArray([...teoricas, ...practicas]).map(prepareQuestion);
+            time = allQ.length * 90;
+            titleInfo = `60 preguntas (30T + ${practicas.length}P)`;
+            penalizacionStr = "Penalización -1/3";
         }
-        const allQ = shuffleArray([...teoricas, ...practicas]);
+        else {
+            // Generic fallback for CC, LM, etc.
+            const subjectMockEntry = APP_STATE.syllabusExams.find(e => e.subject_id === subjectId && e.type === 'examen_final');
+            if (!subjectMockEntry) throw new Error("No final exam configured");
+            const res = await fetch(subjectMockEntry.file + '?v=' + Date.now());
+            const text = await res.text();
+            allQ = shuffleArray(parseTxtExam(text, subjectMockEntry.id)).map(prepareQuestion);
+            time = allQ.length * 60; // 1 min per question
+            titleInfo = `${allQ.length} preguntas`;
+            penalizacionStr = "Penalización -1/3";
+        }
+
         if (allQ.length === 0) { alert('No se pudieron cargar preguntas.'); showView('dashboard'); return; }
 
-        APP_STATE.currentExam = { ...subject, id: subjectId, name: 'SI — Simulacro Examen Final' };
+        APP_STATE.currentExam = { ...subject, id: subjectId, name: `${subject.name} — Simulacro Examen Final` };
         APP_STATE.currentUnit = null;
         APP_STATE.isSyllabusMode = true;
-        APP_STATE.examMode = 'normal';
-        APP_STATE.examQuestions = allQ.map(prepareQuestion);
+        APP_STATE.examQuestions = allQ;
         APP_STATE.currentQuestionIndex = 0;
         APP_STATE.answers = [];
-        APP_STATE.timer = allQ.length * 90;
+        APP_STATE.timer = time;
 
-        document.getElementById('exam-subject-label').textContent = `🎯 ${subject.icon} Simulacro Examen Final — ${allQ.length} preguntas (30T + ${practicas.length}P)`;
+        document.getElementById('exam-subject-label').textContent = `🎯 ${subject.icon} Simulacro Examen Final — ${titleInfo} · ${penalizacionStr}`;
         renderQuestion(); startTimer();
     } catch(e) { console.error(e); alert('Error al cargar el examen final.'); showView('dashboard'); }
 }
@@ -1689,8 +1694,17 @@ function finishExam() {
     const puntuacionFinal = Math.max(0, puntuacionBruta);
     const calificacion = (puntuacionFinal / total) * 10;
     const passed = calificacion >= 5;
+    
+    // CONSOLDIDATE SUBJECT ID: Use parent subject_id if it's a syllabus test
+    const parentId = APP_STATE.currentExam.subject_id;
+    let rankingSubjectId = parentId || APP_STATE.currentExam.id;
+    let rankingSubjectName = APP_STATE.currentExam.name || 'Examen';
+    
+    // Get pretty name from official subjects list
+    const officialSub = APP_STATE.subjects.find(s => s.id === rankingSubjectId);
+    if (officialSub) rankingSubjectName = officialSub.name;
 
-    saveExamResult(APP_STATE.currentExam.id, APP_STATE.currentExam.name || 'Examen', calificacion, aciertos, errores, omitidas, total, APP_STATE.currentUnit);
+    saveExamResult(rankingSubjectId, rankingSubjectName, calificacion, aciertos, errores, omitidas, total, APP_STATE.currentUnit);
 
     // Log Activity
     const sub = APP_STATE.subjects.find(s => s.id === APP_STATE.currentExam.id);
@@ -2910,7 +2924,32 @@ async function renderRanking() {
         }
 
         const data = [];
-        snapshot.forEach(doc => data.push(doc.data()));
+        snapshot.forEach(doc => {
+            let entry = doc.data();
+            
+            // RETROACTIVE MAPPING: Fix old records with theme-specific IDs
+            const legacyMap = {
+                'bd_tema_': 'bases_de_datos',
+                'si_tema_': 'sistemas_informaticos',
+                'prog_tema_': 'programacion',
+                'lm_tema_': 'lenguaje_de_marcas',
+                'ed_tema_': 'entornos_de_desarrollo',
+                'cc_tema_': 'cloud_computing',
+                'emp_tema_': 'empleabilidad'
+            };
+            
+            for (const [prefix, parentId] of Object.entries(legacyMap)) {
+                if (entry.subjectId.startsWith(prefix)) {
+                    entry.subjectId = parentId;
+                    // Also update name from official list if possible
+                    const sub = APP_STATE.subjects.find(s => s.id === parentId);
+                    if (sub) entry.subjectName = sub.name;
+                    break;
+                }
+            }
+            
+            data.push(entry);
+        });
 
         const mocks = {};
         const themes = {};
