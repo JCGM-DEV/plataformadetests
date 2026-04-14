@@ -404,6 +404,37 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
 }
 .btn-secondary:hover { background: rgba(255,255,255,0.1); }
 
+.btn-tiny {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.btn-tiny:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.3);
+  transform: translateY(-1px);
+}
+
+.btn-theory {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: #818cf8;
+}
+
+.btn-theory:hover {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
 /* ── TOPIC FRAMES (UNIT SELECTOR) ────────────────────────────── */
 .unit-selector {
     display: grid;

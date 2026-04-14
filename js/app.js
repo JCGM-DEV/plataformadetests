@@ -443,13 +443,29 @@ function renderAcademia() {
                     <div id="themes-list-${subject.id}" class="academia-themes-list hidden">
                         ${themes.map(t => {
                             const tAttempts = history.filter(h => h.subjectId === t.id).length;
+                            const res = PDF_MAP[subject.id]?.[t.unit];
+                            
+                            let resHTML = '';
+                            if (res) {
+                                resHTML = `
+                                    <div class="resource-links-container">
+                                        ${res.path ? `<a href="javascript:void(0)" class="res-link-labeled" onclick="window.open('${res.path}', '_blank')"><span>Teoría</span>📄</a>` : ''}
+                                        ${res.video ? `<a href="javascript:void(0)" class="res-link-labeled video" onclick="openVideo('${res.video}')"><span>Vídeo</span>🎬</a>` : ''}
+                                        ${res.infographic ? `<a href="javascript:void(0)" class="res-link-labeled infographic" onclick="window.open('${res.infographic}', '_blank')"><span>Resumen</span>📊</a>` : ''}
+                                        ${res.report ? `<a href="javascript:void(0)" class="res-link-labeled report" onclick="window.open('${res.report}', '_blank')"><span>Informe</span>📋</a>` : ''}
+                                    </div>
+                                `;
+                            }
+
                             return `
                             <div class="academia-theme-item">
                                 <div class="theme-info">
                                     <span class="theme-name">${t.name}</span>
                                     ${tAttempts > 0 ? `<span class="theme-badge">${tAttempts}</span>` : ''}
                                 </div>
+                                ${resHTML}
                                 <div class="theme-actions">
+                                    <button class="btn-tiny btn-theory" onclick="openSummary('${subject.id}', ${t.unit})">Ver Teoría</button>
                                     <button class="btn-tiny" onclick="startSyllabusExam('${t.id}')">Hacer Test</button>
                                 </div>
                             </div>`;
