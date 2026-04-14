@@ -441,32 +441,38 @@ function renderAcademia() {
                         <span class="chevron">▼</span>
                     </button>
                     <div id="themes-list-${subject.id}" class="academia-themes-list hidden">
-                        ${themes.map(t => {
+                        ${themes.map((t, themeIdx) => {
                             const tAttempts = history.filter(h => h.subjectId === t.id).length;
                             const res = PDF_MAP[subject.id]?.[t.unit];
+                            const menuId = `menu-${subject.id}-${themeIdx}`;
                             
-                            let resHTML = '';
-                            if (res) {
-                                resHTML = `
-                                    <div class="resource-links-container">
-                                        ${res.path ? `<a href="javascript:void(0)" class="res-link-labeled" onclick="window.open('${res.path}', '_blank')"><span>Teoría</span>📄</a>` : ''}
-                                        ${res.video ? `<a href="javascript:void(0)" class="res-link-labeled video" onclick="openVideo('${res.video}')"><span>Vídeo</span>🎬</a>` : ''}
-                                        ${res.infographic ? `<a href="javascript:void(0)" class="res-link-labeled infographic" onclick="window.open('${res.infographic}', '_blank')"><span>Resumen</span>📊</a>` : ''}
-                                        ${res.report ? `<a href="javascript:void(0)" class="res-link-labeled report" onclick="window.open('${res.report}', '_blank')"><span>Informe</span>📋</a>` : ''}
-                                    </div>
-                                `;
-                            }
-
                             return `
                             <div class="academia-theme-item">
-                                <div class="theme-info">
-                                    <span class="theme-name">${t.name}</span>
+                                <div class="theme-info" style="flex: 1; min-width: 0;">
+                                    <span class="theme-name" title="${t.name}">${t.name}</span>
                                     ${tAttempts > 0 ? `<span class="theme-badge">${tAttempts}</span>` : ''}
                                 </div>
-                                ${resHTML}
-                                <div class="theme-actions">
-                                    <button class="btn-tiny btn-theory" onclick="openSummary('${subject.id}', ${t.unit})">Ver Teoría</button>
-                                    <button class="btn-tiny" onclick="startSyllabusExam('${t.id}')">Hacer Test</button>
+                                
+                                <div class="theme-dropdown-container">
+                                    <button class="theme-dropdown-trigger" onclick="toggleThemeMenu(event, '${menuId}')" title="Opciones">⋮</button>
+                                    <div id="${menuId}" class="theme-dropdown-menu">
+                                        <div class="theme-dropdown-label">Estudio Interactivo</div>
+                                        <button class="theme-dropdown-item primary" onclick="openSummary('${subject.id}', ${t.unit})">
+                                            <span class="icon">📘</span> Ver Teoría
+                                        </button>
+                                        <button class="theme-dropdown-item" onclick="startSyllabusExam('${t.id}')">
+                                            <span class="icon">✍️</span> Hacer Test
+                                        </button>
+                                        
+                                        ${res ? `
+                                            <div class="theme-dropdown-divider"></div>
+                                            <div class="theme-dropdown-label">Recursos</div>
+                                            ${res.path ? `<button class="theme-dropdown-item" onclick="window.open('${res.path}', '_blank')"><span class="icon">📄</span> Teoría PDF</button>` : ''}
+                                            ${res.video ? `<button class="theme-dropdown-item" onclick="openVideo('${res.video}')"><span class="icon">🎬</span> Vídeo Tutorial</button>` : ''}
+                                            ${res.infographic ? `<button class="theme-dropdown-item" onclick="window.open('${res.infographic}', '_blank')"><span class="icon">📊</span> Infografía</button>` : ''}
+                                            ${res.report ? `<button class="theme-dropdown-item" onclick="window.open('${res.report}', '_blank')"><span class="icon">📋</span> Informe</button>` : ''}
+                                        ` : ''}
+                                    </div>
                                 </div>
                             </div>`;
                         }).join('')}
@@ -2983,3 +2989,33 @@ async function renderRanking() {
         container.innerHTML = `<div class="empty-ranking">Error al cargar el ranking: ${error.message}</div>`;
     }
 }
+
+// ─── THEME MENU TOGGLE ──────────────────────────────────────────
+function toggleThemeMenu(event, menuId) {
+    event.stopPropagation();
+    const menu = document.getElementById(menuId);
+    const trigger = event.currentTarget;
+    
+    // Close all other menus
+    document.querySelectorAll('.theme-dropdown-menu').forEach(m => {
+        if (m.id !== menuId) {
+            m.classList.remove('visible');
+            const otherTrigger = m.previousElementSibling;
+            if (otherTrigger) otherTrigger.classList.remove('active');
+        }
+    });
+
+    // Toggle current
+    const isVisible = menu.classList.contains('visible');
+    menu.classList.toggle('visible', !isVisible);
+    trigger.classList.toggle('active', !isVisible);
+}
+
+// Global listener to close theme menus when clicking outside
+document.addEventListener('click', () => {
+    document.querySelectorAll('.theme-dropdown-menu.visible').forEach(m => {
+        m.classList.remove('visible');
+        const trigger = m.previousElementSibling;
+        if (trigger) trigger.classList.remove('active');
+    });
+});
