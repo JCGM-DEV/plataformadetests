@@ -3174,9 +3174,34 @@ body.has-active-session .assistant-fab {
     letter-spacing: -0.01em;
 }
 
-.ranking-list {
+.ranking-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     padding: 1rem;
+}
+
+.ranking-unit-section {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ranking-unit-title {
+    font-size: 0.85rem;
+    color: var(--card-color);
+    margin-bottom: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid color-mix(in srgb, var(--card-color), transparent 80%);
+    padding-bottom: 6px;
+}
+
+.ranking-list {
     list-style: none;
+    padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;

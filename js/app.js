@@ -257,7 +257,7 @@ function saveExamResult(subjectId, subjectName, score, aciertos, errores, omitid
     Sync.set(HISTORY_KEY, h);
 
     // Update Global Ranking if authenticated
-    updateGlobalRanking(subjectId, subjectName, finalScore);
+    updateGlobalRanking(subjectId, subjectName, finalScore, unitId);
 }
 
 function clearHistory() {
@@ -2823,12 +2823,34 @@ function scrollToSubject(id) {
 }
 
 // ─── RANKING SYSTEM (GLOBAL) ────────────────────────────────────
-async function updateGlobalRanking(subjectId, subjectName, score) {
+function getUnitTitle(subjectId, unitId) {
+    if (!unitId) return "Simulacro Completo";
+    
+    const prefixes = {
+        sistemas_informaticos: 'si',
+        bases_de_datos: 'bd',
+        programacion: 'prog',
+        lenguaje_de_marcas: 'lm',
+        entornos_de_desarrollo: 'ed',
+        cloud_computing: 'cc',
+        empleabilidad: 'emp'
+    };
+    
+    const prefix = prefixes[subjectId];
+    if (!prefix) return `Tema ${unitId}`;
+    
+    const key = `${prefix}_tema_${unitId}`;
+    const summary = APP_STATE.summaries[key];
+    return summary ? summary.name : `Tema ${unitId}`;
+}
+
+async function updateGlobalRanking(subjectId, subjectName, score, unitId = null) {
     if (!Auth.currentUser || !Auth.db) return;
     
     const userId = Auth.currentUser.uid;
     const username = Auth.currentUser.email.split('@')[0];
-    const docId = `${userId}_${subjectId}`;
+    const unitName = getUnitTitle(subjectId, unitId);
+    const docId = `${userId}_${subjectId}_${unitId || 'all'}`;
     
     try {
         const docRef = Auth.db.collection('rankings').doc(docId);
@@ -2840,10 +2862,12 @@ async function updateGlobalRanking(subjectId, subjectName, score) {
                 username,
                 subjectId,
                 subjectName,
+                unitId: unitId,
+                unitName: unitName,
                 score: score,
                 timestamp: firebase.firestore.FieldValue.serverTimestamp()
             });
-            console.log(`Global ranking updated for ${subjectName}: ${score}`);
+            console.log(`Global ranking updated for ${subjectName} - ${unitName}: ${score}`);
         }
     } catch (error) {
         console.error('Error updating global ranking:', error);
@@ -2866,7 +2890,7 @@ async function renderRanking() {
     try {
         const snapshot = await Auth.db.collection('rankings')
             .orderBy('score', 'desc')
-            .limit(100)
+            .limit(200) // Increase limit for nested results
             .get();
         
         if (snapshot.empty) {
@@ -2881,21 +2905,28 @@ async function renderRanking() {
         const data = [];
         snapshot.forEach(doc => data.push(doc.data()));
 
-        // Group by subjectId
+        // Group by subjectId -> unitId
         const subjects = {};
         data.forEach(entry => {
             if (!subjects[entry.subjectId]) {
                 subjects[entry.subjectId] = {
                     name: entry.subjectName,
+                    units: {}
+                };
+            }
+            
+            const unitKey = entry.unitId || 'all';
+            if (!subjects[entry.subjectId].units[unitKey]) {
+                subjects[entry.subjectId].units[unitKey] = {
+                    name: entry.unitName || (entry.unitId ? `Tema ${entry.unitId}` : "Simulacro Completo"),
                     scores: []
                 };
             }
-            subjects[entry.subjectId].scores.push(entry);
+            subjects[entry.subjectId].units[unitKey].scores.push(entry);
         });
 
         container.innerHTML = '';
         
-        // Sort subjects by name or importance
         const sortedSubjectIds = Object.keys(subjects).sort((a,b) => subjects[a].name.localeCompare(subjects[b].name));
 
         sortedSubjectIds.forEach(sid => {
@@ -2906,16 +2937,38 @@ async function renderRanking() {
             card.className = 'ranking-card';
             card.style.setProperty('--card-color', subjectData.color);
             
-            let listHTML = '';
-            subject.scores.slice(0, 10).forEach((entry, index) => {
-                listHTML += `
-                    <li class="ranking-item rank-${index + 1}">
-                        <div class="rank-user-info">
-                            <span class="rank-number">${index + 1}</span>
-                            <span class="rank-username">${entry.username}</span>
-                        </div>
-                        <span class="rank-score">${entry.score.toFixed(1).replace('.', ',')}</span>
-                    </li>
+            let unitsHTML = '';
+            
+            // Sort units: 'all' first, then by Tema number
+            const sortedUnitKeys = Object.keys(subject.units).sort((a, b) => {
+                if (a === 'all') return -1;
+                if (b === 'all') return 1;
+                return parseInt(a) - parseInt(b);
+            });
+
+            sortedUnitKeys.forEach(ukey => {
+                const unit = subject.units[ukey];
+                let listHTML = '';
+                
+                unit.scores.slice(0, 10).forEach((entry, index) => {
+                    listHTML += `
+                        <li class="ranking-item rank-${index + 1}">
+                            <div class="rank-user-info">
+                                <span class="rank-number">${index + 1}</span>
+                                <span class="rank-username">${entry.username}</span>
+                            </div>
+                            <span class="rank-score">${entry.score.toFixed(1).replace('.', ',')}</span>
+                        </li>
+                    `;
+                });
+
+                unitsHTML += `
+                    <div class="ranking-unit-section">
+                        <h5 class="ranking-unit-title">${unit.name}</h5>
+                        <ul class="ranking-list">
+                            ${listHTML}
+                        </ul>
+                    </div>
                 `;
             });
 
@@ -2924,9 +2977,9 @@ async function renderRanking() {
                     <span class="subject-icon">${subjectData.icon}</span>
                     <h4>${subject.name}</h4>
                 </div>
-                <ul class="ranking-list">
-                    ${listHTML}
-                </ul>
+                <div class="ranking-card-body">
+                    ${unitsHTML}
+                </div>
             `;
             container.appendChild(card);
         });
