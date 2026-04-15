@@ -104,13 +104,50 @@ function renderToolbox() {
       <button class="tool-btn" onclick="addLabNode('io')"><span class="tool-icon para"></span> Ent/Sal</button>
     `;
   } else {
+    const ex = currentExerciseIdx !== -1 ? (LAB_EXERCISES[activeSection]?.[currentExerciseIdx]) : null;
+    const requiredRel = ex?.solution?.rels?.[0]?.type || null;
+
+    const relTypes = [
+      { type: 'inherit', icon: '◁—', label: 'Herencia' },
+      { type: 'compose', icon: '◆—', label: 'Comp.' },
+      { type: 'agg',     icon: '◇—', label: 'Agreg.' },
+      { type: 'assoc',   icon: '———', label: 'Asoc.' },
+    ];
+
+    const relButtons = relTypes.map(r => {
+      const isSelected = window.currentRelType === r.type;
+      const isRequired = requiredRel === r.type;
+      const cls = isSelected ? 'tool-btn tool-btn--active' : (isRequired ? 'tool-btn tool-btn--hint' : 'tool-btn');
+      return `<button class="${cls}" id="relbtn-${r.type}" onclick="selectRelTool('${r.type}')">
+        <span class="tool-icon">${r.icon}</span> ${r.label}
+        ${isRequired && !isSelected ? '<span class="tool-hint-badge">?</span>' : ''}
+      </button>`;
+    }).join('');
+
     return `
       <button class="tool-btn" onclick="addLabNode('class')"><span class="tool-icon rect" style="border-width:2px;border-style:double"></span> Clase</button>
-      <button class="tool-btn" onclick="setLabRelation('inherit')"><span class="tool-icon">◁—</span> Herencia</button>
-      <button class="tool-btn" onclick="setLabRelation('compose')"><span class="tool-icon">◆—</span> Comp.</button>
-      <button class="tool-btn" onclick="setLabRelation('agg')"><span class="tool-icon">◇—</span> Agreg.</button>
-      <button class="tool-btn" onclick="setLabRelation('assoc')"><span class="tool-icon">———</span> Asoc.</button>
+      ${relButtons}
     `;
+  }
+}
+
+function selectRelTool(type) {
+  const ex = currentExerciseIdx !== -1 ? (LAB_EXERCISES[activeSection]?.[currentExerciseIdx]) : null;
+  const requiredRel = ex?.solution?.rels?.[0]?.type || null;
+
+  window.currentRelType = type;
+
+  // Re-render toolbox to update active state
+  const toolboxGrid = document.querySelector('.toolbox-grid');
+  if (toolboxGrid) toolboxGrid.innerHTML = renderToolbox();
+
+  if (requiredRel && type !== requiredRel) {
+    const names = { inherit: 'Herencia', compose: 'Composición', agg: 'Agregación', assoc: 'Asociación' };
+    showFeedback(`⚠️ Has seleccionado "${names[type]}". Para este ejercicio necesitas otra herramienta. Piensa: ¿las partes sobreviven al todo?`, 'warning');
+  } else if (requiredRel && type === requiredRel) {
+    showFeedback(`✅ ¡Correcto! Ahora usa el desplegable "Relacionar con..." para conectar las clases.`, 'success');
+  } else {
+    showToast('Conector: ' + type, 'info');
   }
 }
 
@@ -133,6 +170,7 @@ function startExercise(idx) {
   currentExerciseIdx = idx;
   labNodes = [];
   labConnections = [];
+  window.currentRelType = null;
   toggleExerciseList();
   renderLabUI();
   validateLabState(); // Initial check
@@ -227,15 +265,46 @@ function getConnectionLabel(fromId) {
 function addUMLRelation(fromId, toId) {
   if (!toId) return;
   toId = parseInt(toId);
-  const type = window.currentRelType || 'assoc';
-  labConnections.push({ from: fromId, to: toId, type: type });
+
+  if (!window.currentRelType) {
+    showFeedback('⚠️ Primero selecciona el tipo de conector en las herramientas (Herencia, Comp., Agreg. o Asoc.).', 'warning');
+    return;
+  }
+
+  const ex = currentExerciseIdx !== -1 ? (LAB_EXERCISES[activeSection]?.[currentExerciseIdx]) : null;
+  const requiredRel = ex?.solution?.rels?.[0]?.type || null;
+
+  if (requiredRel && window.currentRelType !== requiredRel) {
+    const names = { inherit: 'Herencia ◁—', compose: 'Composición ◆—', agg: 'Agregación ◇—', assoc: 'Asociación ———' };
+    showFeedback(`❌ Tipo de relación incorrecto. Has usado "${names[window.currentRelType]}". Selecciona la herramienta correcta antes de conectar.`, 'error');
+    return;
+  }
+
+  labConnections.push({ from: fromId, to: toId, type: window.currentRelType });
   updateLabCanvas();
   validateLabState();
 }
 
 function setLabRelation(type) {
-  window.currentRelType = type;
-  showToast('Conector: ' + type, 'info');
+  selectRelTool(type);
+}
+
+function showFeedback(msg, type) {
+  const feedback = document.getElementById('lab-feedback');
+  const fbMsg = document.getElementById('fb-msg');
+  if (!feedback || !fbMsg) return;
+  feedback.classList.remove('hidden');
+  feedback.className = 'lab-feedback-board ' + (type === 'error' ? 'error' : type === 'success' ? 'success' : 'info');
+  fbMsg.textContent = msg;
+  // Auto-hide non-success messages after 4s
+  if (type !== 'success') {
+    clearTimeout(window._fbTimeout);
+    window._fbTimeout = setTimeout(() => {
+      if (feedback.className.includes('error') || feedback.className.includes('info')) {
+        feedback.classList.add('hidden');
+      }
+    }, 4000);
+  }
 }
 
 function removeNode(id) {
