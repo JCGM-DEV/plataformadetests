@@ -2995,44 +2995,45 @@ function toggleThemeMenu(event, menuId) {
     event.stopPropagation();
     const menu = document.getElementById(menuId);
     const trigger = event.currentTarget;
-    
+
     // Close all other menus
     document.querySelectorAll('.theme-dropdown-menu').forEach(m => {
         if (m.id !== menuId) {
             m.classList.remove('visible');
-            m.style.top = '';
-            m.style.bottom = '';
             const otherTrigger = m.previousElementSibling;
             if (otherTrigger) otherTrigger.classList.remove('active');
         }
     });
 
-    // Toggle current
     const isVisible = menu.classList.contains('visible');
+
     if (!isVisible) {
-        // Reset position styles before measuring
-        menu.style.top = '';
-        menu.style.bottom = '';
-        menu.style.visibility = 'hidden';
-        menu.style.display = 'block';
-
         const triggerRect = trigger.getBoundingClientRect();
-        const menuHeight = menu.offsetHeight;
+        const menuWidth = 220; // min-width del menú
+        const estimatedMenuHeight = 220; // altura estimada del menú
+
+        // Posición horizontal: alinear a la derecha del trigger
+        let left = triggerRect.right - menuWidth;
+        if (left < 8) left = 8;
+
+        // Posición vertical: abajo por defecto, arriba si no hay espacio
         const spaceBelow = window.innerHeight - triggerRect.bottom;
-        const spaceAbove = triggerRect.top;
-
-        menu.style.display = '';
-        menu.style.visibility = '';
-
-        if (spaceBelow < menuHeight + 12 && spaceAbove > spaceBelow) {
-            // Open upwards
-            menu.style.top = 'auto';
-            menu.style.bottom = 'calc(100% + 8px)';
+        let top, bottom;
+        if (spaceBelow < estimatedMenuHeight + 12) {
+            // Abrir hacia arriba
+            top = 'auto';
+            bottom = (window.innerHeight - triggerRect.top + 8) + 'px';
         } else {
-            // Open downwards (default)
-            menu.style.top = 'calc(100% + 8px)';
-            menu.style.bottom = 'auto';
+            // Abrir hacia abajo
+            top = (triggerRect.bottom + 8) + 'px';
+            bottom = 'auto';
         }
+
+        menu.style.position = 'fixed';
+        menu.style.left = left + 'px';
+        menu.style.right = 'auto';
+        menu.style.top = top;
+        menu.style.bottom = bottom;
     }
 
     menu.classList.toggle('visible', !isVisible);

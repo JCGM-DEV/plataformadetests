@@ -3595,9 +3595,9 @@ body.has-active-session .assistant-fab {
 }
 
 .theme-dropdown-menu {
-    position: absolute;
-    right: 0;
-    top: calc(100% + 8px);
+    position: fixed;
+    right: auto;
+    top: auto;
     bottom: auto;
     background: rgba(15, 23, 42, 0.98);
     backdrop-filter: blur(20px);
