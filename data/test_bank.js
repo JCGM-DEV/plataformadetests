@@ -1,4 +1,4 @@
-const testBank = {
+const TEST_BANK_DATA = {
   "sistemas_informaticos": [
     {
       "concept_id": "si_tema_1_q0",
@@ -10014,4 +10014,4 @@ const testBank = {
   ]
 };
 
-if (typeof module !== 'undefined') { module.exports = testBank; }
+if (typeof module !== 'undefined') { module.exports = TEST_BANK_DATA; }
