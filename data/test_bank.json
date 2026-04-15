@@ -1501,11 +1501,11 @@
       "options": [
         "route delete [destino]",
         "netsh route remove [destino]",
-        "route delete [destino]",
-        "ipconfig /route del [destino]"
+        "ipconfig /route del [destino]",
+        "arp -d [destino]"
       ],
-      "correct": 2,
-      "explanation": "La respuesta es 'route delete [destino]'. \"route delete [destino]\" y \"netsh route remove [destino]\" son incorrectos porque describen conceptos diferentes.",
+      "correct": 0,
+      "explanation": "El comando correcto es 'route delete [destino]'. Este comando elimina una ruta estática específica de la tabla de enrutamiento de Windows.",
       "unit": null
     },
     {
@@ -5199,13 +5199,13 @@
       "concept_id": "ed_tema_2_q5",
       "question": "¿Cuál es el propósito principal de los \"plugins\" o \"módulos\" en un Entorno de Desarrollo Integrado (IDE)?",
       "options": [
-        "Reemplazar las funcionalidades centrales del IDE, requiriendo una reinstalación completa",
         "Permitir que el IDE se ejecute en diferentes sistemas operativos sin necesidad de recompilación",
-        "Permitir que el IDE se ejecute en diferentes sistemas operativos sin necesidad de recompilación.",
-        "Extender o mejorar las características y funcionalidades del IDE, actuando como complementos opcionales"
+        "Reemplazar las funcionalidades centrales del IDE, requiriendo una reinstalación completa",
+        "Extender o mejorar las características y funcionalidades del IDE, actuando como complementos opcionales",
+        "Gestionar la memoria RAM del sistema operativo durante la compilación"
       ],
       "correct": 2,
-      "explanation": "Permitir que el IDE se ejecute en diferentes sistemas operativos sin necesidad de recompilación.",
+      "explanation": "Los plugins o módulos sirven para extender y mejorar las funcionalidades del IDE de forma opcional, sin modificar su núcleo. Ejemplos: plugins de control de versiones, linters, formateadores, etc.",
       "unit": null
     },
     {
