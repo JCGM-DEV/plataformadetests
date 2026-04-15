@@ -1693,6 +1693,14 @@ function finishExam() {
                 <button class="next-btn" style="background:#7c3aed" onclick="openLibreta()">📓 Mi Libreta de Errores</button>
                 ${(() => { const lib = getLibreta(); const cnt = Object.values(lib).reduce((s,a)=>s+a.length,0); return cnt > 0 ? `<button class="next-btn" style="background:#059669" onclick="exportarLibreta()">⬇️ Exportar Libreta (${cnt})</button>` : ''; })()}
             </div>
+            <div id="transcripcion-area" style="margin-top:2rem;">
+                <button class="next-btn" style="background:#0f766e;width:100%;font-size:0.95rem;" onclick="toggleTranscripcion()">📋 Ver / Copiar todo para corregir con IA</button>
+                <div id="transcripcion-box" style="display:none;margin-top:1rem;">
+                    <textarea id="transcripcion-text" readonly style="width:100%;min-height:320px;background:#0f172a;color:#e2e8f0;border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1rem;font-family:monospace;font-size:0.78rem;line-height:1.6;resize:vertical;"></textarea>
+                    <button onclick="copiarTranscripcion()" style="margin-top:0.5rem;width:100%;padding:0.7rem;background:#0891b2;border:none;border-radius:8px;color:#fff;font-weight:600;cursor:pointer;font-size:0.9rem;">📋 Copiar al portapapeles</button>
+                    <p id="copy-confirm" style="text-align:center;color:#4ade80;font-size:0.85rem;margin-top:0.4rem;display:none;">✅ ¡Copiado! Pégalo en la IA para que lo corrija.</p>
+                </div>
+            </div>
         </div>`;
     } catch (error) {
         console.error('Error in finishExam:', error);
@@ -1711,6 +1719,74 @@ function exitExamToHome() {
     document.getElementById('exam-engine-root').innerHTML = '';
     showView('dashboard');
     renderFallosSection();
+}
+
+function toggleTranscripcion() {
+    const box = document.getElementById('transcripcion-box');
+    if (!box) return;
+    const isHidden = box.style.display === 'none';
+    box.style.display = isHidden ? 'block' : 'none';
+    if (isHidden) {
+        const textarea = document.getElementById('transcripcion-text');
+        if (textarea) textarea.value = generarTranscripcion();
+    }
+}
+
+function generarTranscripcion() {
+    const letters = ['A', 'B', 'C', 'D', 'E'];
+    const examName = APP_STATE.currentExam?.name || 'Examen';
+    const lines = [];
+    lines.push(`EXAMEN: ${examName}`);
+    lines.push(`Fecha: ${new Date().toLocaleDateString('es-ES')}`);
+    lines.push('═'.repeat(60));
+    lines.push('');
+    lines.push('Por favor, revisa si las respuestas correctas indicadas son realmente correctas. Indica cuáles están mal y cuál debería ser la respuesta correcta con su justificación.');
+    lines.push('');
+    lines.push('═'.repeat(60));
+    lines.push('');
+
+    APP_STATE.answers.forEach((a, idx) => {
+        const q = a.question;
+        const displayOptions = q._shuffledOptions || q.options;
+        const correctIdx = a.correct;
+        const selectedIdx = a.selected;
+
+        lines.push(`PREGUNTA ${idx + 1}: ${q.question}`);
+        lines.push('');
+        displayOptions.forEach((opt, i) => {
+            const letter = letters[i] || String(i + 1);
+            const isCorrect = i === correctIdx;
+            const isSelected = i === selectedIdx;
+            let prefix = `  ${letter}) `;
+            let suffix = '';
+            if (isCorrect && isSelected) suffix = '  ← MI RESPUESTA ✓ (correcta)';
+            else if (isCorrect && !isSelected) suffix = '  ← CORRECTA (yo no la marqué)';
+            else if (!isCorrect && isSelected) suffix = '  ← MI RESPUESTA ✗ (incorrecta)';
+            lines.push(`${prefix}${opt}${suffix}`);
+        });
+
+        if (selectedIdx === -1) lines.push('  [Pregunta omitida / sin respuesta]');
+        lines.push('');
+    });
+
+    lines.push('═'.repeat(60));
+    return lines.join('\n');
+}
+
+function copiarTranscripcion() {
+    const textarea = document.getElementById('transcripcion-text');
+    if (!textarea) return;
+    textarea.select();
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(textarea.value).then(() => {
+            const msg = document.getElementById('copy-confirm');
+            if (msg) { msg.style.display = 'block'; setTimeout(() => msg.style.display = 'none', 3000); }
+        });
+    } else {
+        document.execCommand('copy');
+        const msg = document.getElementById('copy-confirm');
+        if (msg) { msg.style.display = 'block'; setTimeout(() => msg.style.display = 'none', 3000); }
+    }
 }
 
 // ─── ROBUST QUESTION DETECTION ──────────────────────────────────
