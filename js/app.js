@@ -3000,6 +3000,8 @@ function toggleThemeMenu(event, menuId) {
     document.querySelectorAll('.theme-dropdown-menu').forEach(m => {
         if (m.id !== menuId) {
             m.classList.remove('visible');
+            m.style.top = '';
+            m.style.bottom = '';
             const otherTrigger = m.previousElementSibling;
             if (otherTrigger) otherTrigger.classList.remove('active');
         }
@@ -3007,6 +3009,32 @@ function toggleThemeMenu(event, menuId) {
 
     // Toggle current
     const isVisible = menu.classList.contains('visible');
+    if (!isVisible) {
+        // Reset position styles before measuring
+        menu.style.top = '';
+        menu.style.bottom = '';
+        menu.style.visibility = 'hidden';
+        menu.style.display = 'block';
+
+        const triggerRect = trigger.getBoundingClientRect();
+        const menuHeight = menu.offsetHeight;
+        const spaceBelow = window.innerHeight - triggerRect.bottom;
+        const spaceAbove = triggerRect.top;
+
+        menu.style.display = '';
+        menu.style.visibility = '';
+
+        if (spaceBelow < menuHeight + 12 && spaceAbove > spaceBelow) {
+            // Open upwards
+            menu.style.top = 'auto';
+            menu.style.bottom = 'calc(100% + 8px)';
+        } else {
+            // Open downwards (default)
+            menu.style.top = 'calc(100% + 8px)';
+            menu.style.bottom = 'auto';
+        }
+    }
+
     menu.classList.toggle('visible', !isVisible);
     trigger.classList.toggle('active', !isVisible);
 }
