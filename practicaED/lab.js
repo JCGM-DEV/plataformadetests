@@ -391,56 +391,186 @@ function validateLabState() {
 function updateLabCanvas() {
   const canvas = document.getElementById('lab-canvas');
   if (!canvas) return;
-  if (labNodes.length === 0) { canvas.innerHTML = '<div class="canvas-empty">Añade elementos desde la izquierda</div>'; return; }
-  
+  if (labNodes.length === 0) {
+    canvas.innerHTML = '<div class="canvas-empty">Añade elementos desde la izquierda</div>';
+    return;
+  }
+
+  if (currentLabMode === 'uml') {
+    renderUMLCanvas(canvas);
+  } else {
+    renderFlowCanvas(canvas);
+  }
+}
+
+function renderUMLCanvas(canvas) {
+  const W = 180, cols = 2, colGap = 80, rowGap = 60, startX = 40, startY = 30;
+
+  // Compute positions in a grid layout
+  const nodeBoxes = {};
+  labNodes.forEach((n, i) => {
+    const col = i % cols;
+    const row = Math.floor(i / cols);
+    const x = startX + col * (W + colGap);
+    const y = startY + row * 200 + (row > 0 ? row * rowGap : 0);
+    const attrs = n.attrs || [];
+    const methods = n.methods || [];
+    const box = umlClass(x, y, W, n.text, attrs, methods, false, false);
+    nodeBoxes[n.id] = box;
+  });
+
+  // Recalculate y positions based on actual box heights to avoid overlap
+  let colHeights = [startY, startY];
+  labNodes.forEach((n, i) => {
+    const col = i % cols;
+    const x = startX + col * (W + colGap);
+    const y = colHeights[col];
+    const attrs = n.attrs || [];
+    const methods = n.methods || [];
+    const box = umlClass(x, y, W, n.text, attrs, methods, false, false);
+    nodeBoxes[n.id] = box;
+    colHeights[col] = y + box.h + rowGap;
+  });
+
   let svgContent = '';
-  // Connections
+
+  // Draw connections first (behind nodes)
+  labConnections.forEach(c => {
+    const from = nodeBoxes[c.from];
+    const to = nodeBoxes[c.to];
+    if (!from || !to) return;
+    svgContent += drawUMLConnection(from, to, c.type);
+  });
+
+  // Draw nodes on top
+  labNodes.forEach(n => {
+    svgContent += nodeBoxes[n.id].svg;
+  });
+
+  const totalH = Math.max(400, ...Object.values(nodeBoxes).map(b => b.bottom + 40));
+  const totalW = startX * 2 + cols * W + (cols - 1) * colGap;
+  canvas.innerHTML = `<svg viewBox="0 0 ${totalW} ${totalH}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">${SVG_DEFS}${svgContent}</svg>`;
+}
+
+function drawUMLConnection(from, to, type) {
+  // Find best connection points (top/bottom/left/right of each box)
+  const points = getBestConnectionPoints(from, to);
+  const x1 = points.x1, y1 = points.y1, x2 = points.x2, y2 = points.y2;
+
+  // Midpoint for label
+  const mx = (x1 + x2) / 2;
+  const my = (y1 + y2) / 2;
+
+  // Offset end point to leave room for marker
+  const dx = x2 - x1, dy = y2 - y1;
+  const len = Math.sqrt(dx*dx + dy*dy) || 1;
+  const offset = 14;
+  const ex = x2 - (dx/len)*offset;
+  const ey = y2 - (dy/len)*offset;
+
+  // Diamond offset from start
+  const diamondSize = 10;
+  const sx = x1 + (dx/len)*diamondSize;
+  const sy = y1 + (dy/len)*diamondSize;
+
+  let out = '';
+
+  if (type === 'inherit') {
+    // Solid line + open triangle at target
+    out += `<line x1="${x1}" y1="${y1}" x2="${ex}" y2="${ey}" stroke="#a78bfa" stroke-width="2"/>`;
+    out += drawOpenTriangle(x2, y2, dx, dy, '#a78bfa');
+    out += drawRelLabel(mx, my, 'herencia', '#a78bfa');
+  } else if (type === 'compose') {
+    // Solid line + filled diamond at source + arrow at target
+    out += `<line x1="${sx}" y1="${sy}" x2="${ex}" y2="${ey}" stroke="#f87171" stroke-width="2" marker-end="url(#arrowAssoc)"/>`;
+    out += drawDiamond(x1, y1, dx, dy, '#f87171', true);
+    out += drawRelLabel(mx, my, 'composición ◆', '#f87171');
+  } else if (type === 'agg') {
+    // Solid line + empty diamond at source + arrow at target
+    out += `<line x1="${sx}" y1="${sy}" x2="${ex}" y2="${ey}" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrowAssoc)"/>`;
+    out += drawDiamond(x1, y1, dx, dy, '#60a5fa', false);
+    out += drawRelLabel(mx, my, 'agregación ◇', '#60a5fa');
+  } else {
+    // Association: simple arrow
+    out += `<line x1="${x1}" y1="${y1}" x2="${ex}" y2="${ey}" stroke="#9898b8" stroke-width="2" marker-end="url(#arrowAssoc)"/>`;
+    out += drawRelLabel(mx, my, 'asociación', '#9898b8');
+  }
+
+  return out;
+}
+
+function getBestConnectionPoints(from, to) {
+  // Try vertical connection (top/bottom) if boxes are roughly aligned horizontally
+  const fromCX = (from.left + from.right) / 2;
+  const toCX = (to.left + to.right) / 2;
+  const horizOverlap = Math.abs(fromCX - toCX) < 60;
+
+  if (horizOverlap) {
+    if (from.bottom < to.top) {
+      return { x1: fromCX, y1: from.bottom, x2: toCX, y2: to.top };
+    } else {
+      return { x1: fromCX, y1: from.top, x2: toCX, y2: to.bottom };
+    }
+  }
+  // Horizontal connection
+  if (from.right < to.left) {
+    return { x1: from.right, y1: (from.top + from.bottom)/2, x2: to.left, y2: (to.top + to.bottom)/2 };
+  } else {
+    return { x1: from.left, y1: (from.top + from.bottom)/2, x2: to.right, y2: (to.top + to.bottom)/2 };
+  }
+}
+
+function drawOpenTriangle(tipX, tipY, dx, dy, color) {
+  const len = Math.sqrt(dx*dx + dy*dy) || 1;
+  const ux = dx/len, uy = dy/len;
+  const size = 14;
+  const half = 8;
+  // Base of triangle (perpendicular to direction)
+  const bx = tipX - ux*size;
+  const by = tipY - uy*size;
+  const lx = bx - uy*half;
+  const ly = by + ux*half;
+  const rx = bx + uy*half;
+  const ry = by - ux*half;
+  return `<polygon points="${tipX},${tipY} ${lx},${ly} ${rx},${ry}" fill="#0f172a" stroke="${color}" stroke-width="2"/>`;
+}
+
+function drawDiamond(cx, cy, dx, dy, color, filled) {
+  const len = Math.sqrt(dx*dx + dy*dy) || 1;
+  const ux = dx/len, uy = dy/len;
+  const h = 12, w = 7;
+  const tip1x = cx - ux*h, tip1y = cy - uy*h;
+  const tip2x = cx + ux*h, tip2y = cy + uy*h; // unused, diamond starts at cx,cy
+  const lx = cx - ux*(h/2) - uy*w;
+  const ly = cy - uy*(h/2) + ux*w;
+  const rx = cx - ux*(h/2) + uy*w;
+  const ry = cy - uy*(h/2) - ux*w;
+  const fill = filled ? color : '#0f172a';
+  return `<polygon points="${cx},${cy} ${lx},${ly} ${tip1x},${tip1y} ${rx},${ry}" fill="${fill}" stroke="${color}" stroke-width="2"/>`;
+}
+
+function drawRelLabel(x, y, text, color) {
+  return `<rect x="${x - text.length*3.2}" y="${y - 9}" width="${text.length*6.4}" height="14" rx="4" fill="rgba(15,23,42,0.85)"/>
+  <text x="${x}" y="${y + 2}" text-anchor="middle" font-size="9" font-family="Inter,sans-serif" fill="${color}" font-weight="600">${text}</text>`;
+}
+
+function renderFlowCanvas(canvas) {
+  let svgContent = '';
   labConnections.forEach(c => {
     const from = labNodes.find(n => n.id === c.from);
     const to = labNodes.find(n => n.id === c.to);
     if (!from || !to) return;
-    
-    if (currentLabMode === 'flow') {
-      svgContent += `<line x1="${from.x}" y1="${from.y + 20}" x2="${to.x}" y2="${to.y - 20}" stroke="#4a4a7a" stroke-width="2" marker-end="url(#arrowAct)"/>`;
-      if (c.label) svgContent += `<text x="${from.x + 12}" y="${(from.y + to.y)/2}" fill="#fbbf24" font-size="11" font-family="Inter" font-weight="600">${c.label}</text>`;
-    } else {
-      const marker = c.type === 'inherit' || c.type === 'agg' || c.type === 'compose' ? '' : 'url(#arrowAssoc)';
-      const markerEnd = c.type === 'inherit' ? 'url(#arrowInherit)' : marker;
-      const color = c.type === 'compose' ? '#f87171' : (c.type === 'agg' ? '#60a5fa' : '#9898b8');
-      
-      svgContent += `<line x1="${from.x}" y1="${from.y}" x2="${to.x}" y2="${to.y}" stroke="${color}" stroke-width="2" marker-end="${markerEnd}"/>`;
-      if (c.type === 'compose') {
-        svgContent += `<polygon points="${from.x},${from.y} ${from.x+6},${from.y+6} ${from.x+12},${from.y} ${from.x+6},${from.y-6}" fill="#f87171" transform="translate(-6,0)"/>`;
-      } else if (c.type === 'agg') {
-        svgContent += `<polygon points="${from.x},${from.y} ${from.x+6},${from.y+6} ${from.x+12},${from.y} ${from.x+6},${from.y-6}" fill="#1a1a30" stroke="#60a5fa" stroke-width="2" transform="translate(-6,0)"/>`;
-      }
-    }
+    svgContent += `<line x1="${from.x}" y1="${from.y + 20}" x2="${to.x}" y2="${to.y - 20}" stroke="#4a4a7a" stroke-width="2" marker-end="url(#arrowAct)"/>`;
+    if (c.label) svgContent += `<text x="${from.x + 12}" y="${(from.y + to.y)/2}" fill="#fbbf24" font-size="11" font-family="Inter" font-weight="600">${c.label}</text>`;
   });
 
-  // Nodes
   labNodes.forEach(n => {
-    if (currentLabMode === 'flow') {
-      const w = 150, h = 42;
-      if (n.type === 'start') svgContent += `<rect x="${n.x - w/2}" y="${n.y - h/2}" width="${w}" height="${h}" rx="21" class="act-rect"/>`;
-      else if (n.type === 'process') svgContent += `<rect x="${n.x - w/2}" y="${n.y - h/2}" width="${w}" height="${h}" class="act-rect" rx="6"/>`;
-      else if (n.type === 'decision') svgContent += `<polygon points="${n.x},${n.y-30} ${n.x+75},${n.y} ${n.x},${n.y+30} ${n.x-75},${n.y}" class="act-diamond" style="fill:#161628;stroke:#fbbf24;stroke-width:2"/>`;
-      else if (n.type === 'io') svgContent += `<polygon points="${n.x-65},${n.y+21} ${n.x+75},${n.y+21} ${n.x+65},${n.y-21} ${n.x-75},${n.y-21}" class="act-rect" style="fill:rgba(124, 92, 252, 0.08);stroke:#7c5cfc"/>`;
-      svgContent += `<text x="${n.x}" y="${n.y+5}" text-anchor="middle" class="act-text" style="font-weight:600;font-size:12px">${n.text}</text>`;
-    } else {
-      const w = 180;
-      const hAttr = Math.max(1, n.attrs.length) * 18 + 10;
-      const hMeth = Math.max(1, n.methods.length) * 18 + 10;
-      const totalH = 34 + hAttr + hMeth;
-      svgContent += `<g transform="translate(${n.x - w/2},${n.y - 20})">
-        <rect width="${w}" height="${totalH}" class="uml-rect" rx="6"/>
-        <rect width="${w}" height="32" class="uml-rect-header" style="fill:#252545" rx="6 6 0 0"/>
-        <text x="${w/2}" y="21" text-anchor="middle" class="uml-text-name" style="fill:#fff;font-size:12px">${n.text}</text>
-        <line x1="0" y1="32" x2="${w}" y2="32" class="uml-line"/>
-        ${n.attrs.map((a, i) => `<text x="10" y="${50 + i*18}" style="fill:#22d3a0;font-size:11px;font-family:JetBrains Mono">${a}</text>`).join('')}
-        <line x1="0" y1="${34 + hAttr}" x2="${w}" y2="${34 + hAttr}" class="uml-line"/>
-        ${n.methods.map((m, i) => `<text x="10" y="${34 + hAttr + 18 + i*18}" style="fill:#a78bfa;font-size:11px;font-family:JetBrains Mono">${m}</text>`).join('')}
-      </g>`;
-    }
+    const w = 150, h = 42;
+    if (n.type === 'start') svgContent += `<rect x="${n.x - w/2}" y="${n.y - h/2}" width="${w}" height="${h}" rx="21" class="act-rect"/>`;
+    else if (n.type === 'process') svgContent += `<rect x="${n.x - w/2}" y="${n.y - h/2}" width="${w}" height="${h}" class="act-rect" rx="6"/>`;
+    else if (n.type === 'decision') svgContent += `<polygon points="${n.x},${n.y-30} ${n.x+75},${n.y} ${n.x},${n.y+30} ${n.x-75},${n.y}" class="act-diamond" style="fill:#161628;stroke:#fbbf24;stroke-width:2"/>`;
+    else if (n.type === 'io') svgContent += `<polygon points="${n.x-65},${n.y+21} ${n.x+75},${n.y+21} ${n.x+65},${n.y-21} ${n.x-75},${n.y-21}" class="act-rect" style="fill:rgba(124, 92, 252, 0.08);stroke:#7c5cfc"/>`;
+    svgContent += `<text x="${n.x}" y="${n.y+5}" text-anchor="middle" class="act-text" style="font-weight:600;font-size:12px">${n.text}</text>`;
   });
 
   const maxHeight = Math.max(500, ...labNodes.map(n => n.y + 120));
