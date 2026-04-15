@@ -2993,59 +2993,99 @@ async function renderRanking() {
 // ─── THEME MENU TOGGLE ──────────────────────────────────────────
 function toggleThemeMenu(event, menuId) {
     event.stopPropagation();
-    const menu = document.getElementById(menuId);
+    const originalMenu = document.getElementById(menuId);
     const trigger = event.currentTarget;
 
     // Close all other menus
-    document.querySelectorAll('.theme-dropdown-menu').forEach(m => {
-        if (m.id !== menuId) {
-            m.classList.remove('visible');
-            const otherTrigger = m.previousElementSibling;
-            if (otherTrigger) otherTrigger.classList.remove('active');
-        }
-    });
+    closeAllThemeMenus(menuId);
 
-    const isVisible = menu.classList.contains('visible');
+    const isVisible = originalMenu.dataset.portalOpen === 'true';
 
-    if (!isVisible) {
-        const triggerRect = trigger.getBoundingClientRect();
-        const menuWidth = 220; // min-width del menú
-        const estimatedMenuHeight = 220; // altura estimada del menú
-
-        // Posición horizontal: alinear a la derecha del trigger
-        let left = triggerRect.right - menuWidth;
-        if (left < 8) left = 8;
-
-        // Posición vertical: abajo por defecto, arriba si no hay espacio
-        const spaceBelow = window.innerHeight - triggerRect.bottom;
-        let top, bottom;
-        if (spaceBelow < estimatedMenuHeight + 12) {
-            // Abrir hacia arriba
-            top = 'auto';
-            bottom = (window.innerHeight - triggerRect.top + 8) + 'px';
-        } else {
-            // Abrir hacia abajo
-            top = (triggerRect.bottom + 8) + 'px';
-            bottom = 'auto';
-        }
-
-        menu.style.position = 'fixed';
-        menu.style.left = left + 'px';
-        menu.style.right = 'auto';
-        menu.style.top = top;
-        menu.style.bottom = bottom;
+    if (isVisible) {
+        closeThemeMenuPortal(menuId);
+    } else {
+        openThemeMenuPortal(menuId, trigger);
     }
 
-    menu.classList.toggle('visible', !isVisible);
     trigger.classList.toggle('active', !isVisible);
+}
+
+function openThemeMenuPortal(menuId, trigger) {
+    const originalMenu = document.getElementById(menuId);
+
+    // Create portal clone appended to body
+    const portalId = menuId + '-portal';
+    let portal = document.getElementById(portalId);
+    if (!portal) {
+        portal = originalMenu.cloneNode(true);
+        portal.id = portalId;
+        portal.style.position = 'fixed';
+        portal.style.zIndex = '99999';
+        document.body.appendChild(portal);
+    }
+
+    const triggerRect = trigger.getBoundingClientRect();
+    const menuWidth = 220;
+    const estimatedMenuHeight = 230;
+
+    let left = triggerRect.right - menuWidth;
+    if (left < 8) left = 8;
+
+    const spaceBelow = window.innerHeight - triggerRect.bottom;
+    if (spaceBelow < estimatedMenuHeight + 12) {
+        portal.style.top = 'auto';
+        portal.style.bottom = (window.innerHeight - triggerRect.top + 8) + 'px';
+    } else {
+        portal.style.top = (triggerRect.bottom + 8) + 'px';
+        portal.style.bottom = 'auto';
+    }
+    portal.style.left = left + 'px';
+    portal.style.right = 'auto';
+
+    // Small delay so the element is in DOM before adding visible
+    requestAnimationFrame(() => portal.classList.add('visible'));
+
+    originalMenu.dataset.portalOpen = 'true';
+    trigger.dataset.menuId = menuId;
+}
+
+function closeThemeMenuPortal(menuId) {
+    const originalMenu = document.getElementById(menuId);
+    const portalId = menuId + '-portal';
+    const portal = document.getElementById(portalId);
+    if (portal) {
+        portal.classList.remove('visible');
+        setTimeout(() => portal.remove(), 200);
+    }
+    if (originalMenu) originalMenu.dataset.portalOpen = 'false';
+}
+
+function closeAllThemeMenus(exceptId) {
+    document.querySelectorAll('.theme-dropdown-menu').forEach(m => {
+        if (m.id !== exceptId && m.dataset.portalOpen === 'true') {
+            closeThemeMenuPortal(m.id);
+            const trigger = m.closest('.theme-dropdown-container')?.querySelector('.theme-dropdown-trigger');
+            if (trigger) trigger.classList.remove('active');
+        }
+    });
+    // Also remove any stale portals
+    document.querySelectorAll('[id$="-portal"]').forEach(p => {
+        const baseId = p.id.replace('-portal', '');
+        if (baseId !== exceptId) {
+            p.classList.remove('visible');
+            setTimeout(() => p.remove(), 200);
+        }
+    });
 }
 
 // Global listener to close theme menus when clicking outside
 document.addEventListener('click', (e) => {
-    if (e.target.closest('.theme-dropdown-menu') || e.target.closest('.theme-dropdown-trigger')) return;
-    document.querySelectorAll('.theme-dropdown-menu.visible').forEach(m => {
-        m.classList.remove('visible');
-        const trigger = m.previousElementSibling;
-        if (trigger) trigger.classList.remove('active');
+    if (e.target.closest('[id$="-portal"]') || e.target.closest('.theme-dropdown-trigger')) return;
+    document.querySelectorAll('.theme-dropdown-menu').forEach(m => {
+        if (m.dataset.portalOpen === 'true') {
+            closeThemeMenuPortal(m.id);
+            const trigger = m.closest('.theme-dropdown-container')?.querySelector('.theme-dropdown-trigger');
+            if (trigger) trigger.classList.remove('active');
+        }
     });
 });
