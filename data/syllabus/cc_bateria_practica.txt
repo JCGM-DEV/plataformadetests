@@ -1,491 +1,491 @@
 ¿Qué se entiende principalmente por servicios de cómputo en la nube?
-Capacidad de procesamiento ofrecida bajo demanda
-Aplicaciones instaladas en ordenadores personales
-Programas que solo funcionan con conexión a internet
-Almacenamiento de archivos en servidores externos
+A) Aplicaciones instaladas en ordenadores personales
+*B) Capacidad de procesamiento ofrecida bajo demanda
+C) Programas que solo funcionan con conexión a internet
+D) Almacenamiento de archivos en servidores externos
 
 ¿Cuál es una de las principales ventajas de usar servicios de cómputo frente a la computación tradicional?
-Adaptar los recursos según la demanda real
-Tener siempre servidores propios
-Comprar hardware para el peor escenario posible
-Evitar el uso de sistemas operativos
+A) Tener siempre servidores propios
+B) Comprar hardware para el peor escenario posible
+*C) Adaptar los recursos según la demanda real
+D) Evitar el uso de sistemas operativos
 
 ¿Qué significa el principio de "abstracción de la infraestructura"?
-Que el usuario no necesita saber dónde ni cómo se ejecuta su aplicación
-Que el usuario diseña el hardware
-Que la infraestructura no existe
-Que solo se usan servidores físicos
+A) Que el usuario diseña el hardware
+*B) Que el usuario no necesita saber dónde ni cómo se ejecuta su aplicación
+C) Que la infraestructura no existe
+D) Que solo se usan servidores físicos
 
 El modelo de "pago por uso" implica que:
-Se paga únicamente por los recursos que se utilizan
-Se paga una cuota fija mensual
-Se paga solo cuando el servidor está encendido
-Se paga por adelantado todo el año
+A) Se paga una cuota fija mensual
+B) Se paga solo cuando el servidor está encendido
+*C) Se paga únicamente por los recursos que se utilizan
+D) Se paga por adelantado todo el año
 
 ¿Qué es una máquina virtual?
-Una copia virtual de un sistema operativo que funciona como un equipo independiente
-Un contenedor ligero sin sistema operativo
-Un sistema operativo compartido por varias aplicaciones
-Un servidor físico dedicado
+A) Un contenedor ligero sin sistema operativo
+B) Un sistema operativo compartido por varias aplicaciones
+*C) Una copia virtual de un sistema operativo que funciona como un equipo independiente
+D) Un servidor físico dedicado
 
 ¿Qué elemento permite que varias máquinas virtuales compartan el mismo hardware físico?
-El hipervisor
-El sistema operativo
-El contenedor
-La red virtual
+A) El sistema operativo
+B) El contenedor
+*C) El hipervisor
+D) La red virtual
 
 ¿Cuál de las siguientes NO es una ventaja de las máquinas virtuales?
-Uso exclusivo de hardware físico
-Aislamiento entre sistemas
-Escalabilidad
-Flexibilidad
+A) Aislamiento entre sistemas
+B) Escalabilidad
+*C) Uso exclusivo de hardware físico
+D) Flexibilidad
 
 ¿Para qué sirve el aislamiento entre máquinas virtuales?
-Para que un fallo no afecte a las demás
-Para que todas compartan datos
-Para reducir el uso de memoria
-Para eliminar el hipervisor
+A) Para que todas compartan datos
+*B) Para que un fallo no afecte a las demás
+C) Para reducir el uso de memoria
+D) Para eliminar el hipervisor
 
 ¿Cuál es una buena práctica para reducir costes en máquinas virtuales?
-Apagar las VMs cuando no se usan
-Mantenerlas siempre encendidas
-Sobredimensionar recursos
-Crear una VM nueva para cada tarea
+A) Mantenerlas siempre encendidas
+B) Sobredimensionar recursos
+*C) Apagar las VMs cuando no se usan
+D) Crear una VM nueva para cada tarea
 
 ¿Para qué sirve el escalado automático en las máquinas virtuales?
-Para ajustar los recursos según la demanda
-Para mejorar la seguridad
-Para eliminar sistemas operativos
-Para reducir el número de usuarios
+A) Para mejorar la seguridad
+*B) Para ajustar los recursos según la demanda
+C) Para eliminar sistemas operativos
+D) Para reducir el número de usuarios
 
 ¿Qué es un contenedor?
-Un paquete con una aplicación y sus dependencias
-Una máquina virtual completa
-Un servidor físico compartido
-Un sistema operativo independiente
+A) Una máquina virtual completa
+B) Un servidor físico compartido
+*C) Un paquete con una aplicación y sus dependencias
+D) Un sistema operativo independiente
 
 ¿Cuál es una ventaja clave de los contenedores?
-Simplifican el desarrollo y despliegue
-Son menos portables
-Consumen más recursos que las VMs
-Solo funcionan en un entorno concreto
+*A) Simplifican el desarrollo y despliegue
+B) Son menos portables
+C) Consumen más recursos que las VMs
+D) Solo funcionan en un entorno concreto
 
 ¿Qué significa que un contenedor sea portable?
-Que puede ejecutarse en distintos entornos
-Que solo funciona en la nube
-Que necesita hardware específico
-Que tiene su propio sistema operativo
+A) Que solo funciona en la nube
+B) Que necesita hardware específico
+*C) Que puede ejecutarse en distintos entornos
+D) Que tiene su propio sistema operativo
 
 ¿Por qué los contenedores son más eficientes que las VMs?
-Porque comparten el sistema operativo
-Porque usan más memoria
-Porque no se pueden escalar
-Porque usan hardware exclusivo
+A) Porque usan más memoria
+B) Porque no se pueden escalar
+C) Porque usan hardware exclusivo
+*D) Porque comparten el sistema operativo
 
 ¿Qué activa la ejecución de una función serverless?
-Un evento
-El arranque de un servidor
-El sistema operativo
-Un contenedor manual
+A) El arranque de un servidor
+*B) Un evento
+C) El sistema operativo
+D) Un contenedor manual
 
 ¿Cómo se paga en la computación sin servidor?
-Por tiempo real de ejecución
-Cuota mensual fija
-Por servidor activo
-Por número de usuarios
+A) Cuota mensual fija
+B) Por servidor activo
+*C) Por tiempo real de ejecución
+D) Por número de usuarios
 
 ¿Qué ocurre cuando aumenta la demanda en serverless?
-El sistema escala automáticamente
-Hay que añadir servidores manualmente
-La aplicación se cae
-Se limita el número de usuarios
+A) Hay que añadir servidores manualmente
+B) La aplicación se cae
+C) Se limita el número de usuarios
+*D) El sistema escala automáticamente
 
 ¿Qué ofrece principalmente el modelo IaaS?
-Recursos de cómputo virtualizados
-Aplicaciones listas para usar
-Código sin servidores
-Solo bases de datos
+A) Aplicaciones listas para usar
+B) Código sin servidores
+*C) Recursos de cómputo virtualizados
+D) Solo bases de datos
 
 ¿Qué caracteriza a un servicio SaaS?
-El usuario usa directamente la aplicación
-El usuario gestiona la infraestructura
-El usuario gestiona el sistema operativo
-El usuario configura servidores
+A) El usuario gestiona la infraestructura
+B) El usuario gestiona el sistema operativo
+*C) El usuario usa directamente la aplicación
+D) El usuario configura servidores
 
 ¿Qué aspecto NO se menciona como clave antes de adoptar servicios de cómputo?
-Diseño gráfico
-Seguridad
-Coste
-Escalabilidad
+A) Seguridad
+B) Coste
+C) Escalabilidad
+*D) Diseño gráfico
 
 ¿Por qué el comercio electrónico usa servicios de cómputo?
-Para manejar picos de tráfico
-Para evitar internet
-Para reducir usuarios
-Para usar servidores físicos
+A) Para evitar internet
+*B) Para manejar picos de tráfico
+C) Para reducir usuarios
+D) Para usar servidores físicos
 
 ¿Cuál es la idea principal de la conclusión?
-Son clave en el presente y futuro del software
-Los servicios de cómputo son temporales
-Solo sirven para grandes empresas
-Van a desaparecer
+A) Los servicios de cómputo son temporales
+B) Solo sirven para grandes empresas
+*C) Son clave en el presente y futuro del software
+D) Van a desaparecer
 
 ¿Cuál es la función principal de los servicios de almacenamiento en cloud computing?
-Proteger, conservar y permitir el acceso a los datos
-Ejecutar aplicaciones en la nube
-Conectar dispositivos IoT
-Sustituir los sistemas operativos
+A) Ejecutar aplicaciones en la nube
+*B) Proteger, conservar y permitir el acceso a los datos
+C) Conectar dispositivos IoT
+D) Sustituir los sistemas operativos
 
 ¿Por qué ha aumentado tanto la necesidad de servicios de almacenamiento en los últimos años?
-Por el crecimiento del volumen de datos y nuevas tecnologías
-Por la reducción del uso de ordenadores
-Por la aparición de redes sociales únicamente
-Por la desaparición de servidores físicos
+A) Por la reducción del uso de ordenadores
+B) Por la aparición de redes sociales únicamente
+*C) Por el crecimiento del volumen de datos y nuevas tecnologías
+D) Por la desaparición de servidores físicos
 
 ¿Cuál de estos NO es un tipo de servicio de almacenamiento habitual en cloud?
-Almacenamiento de procesos
-Almacenamiento de bloques
-Almacenamiento de objetos
-Almacenamiento de ficheros
+A) Almacenamiento de bloques
+B) Almacenamiento de objetos
+C) Almacenamiento de ficheros
+*D) Almacenamiento de procesos
 
 El almacenamiento de bloques se caracteriza principalmente por:
-Dividir la información en bloques de tamaño fijo
-Organizar datos en carpetas
-Usar URLs para acceder a los datos
-Estar pensado solo para copias de seguridad
+A) Organizar datos en carpetas
+B) Usar URLs para acceder a los datos
+*C) Dividir la información en bloques de tamaño fijo
+D) Estar pensado solo para copias de seguridad
 
 ¿Qué tipo de acceso ofrece el almacenamiento de bloques?
-Acceso de bajo nivel y aleatorio
-Acceso secuencial
-Acceso solo en modo lectura
-Acceso jerárquico
+A) Acceso secuencial
+*B) Acceso de bajo nivel y aleatorio
+C) Acceso solo en modo lectura
+D) Acceso jerárquico
 
 ¿Qué tipo de aplicaciones suelen usar almacenamiento de bloques?
-Bases de datos y sistemas críticos
-Aplicaciones web estáticas
-Streaming de vídeo
-Correo electrónico
+A) Aplicaciones web estáticas
+B) Streaming de vídeo
+*C) Bases de datos y sistemas críticos
+D) Correo electrónico
 
 Una ventaja clave del almacenamiento de bloques es:
-Alto rendimiento
-Bajo coste frente a cualquier otro tipo
-Alta durabilidad a largo plazo
-Acceso mediante navegador web
+A) Bajo coste frente a cualquier otro tipo
+B) Alta durabilidad a largo plazo
+*C) Alto rendimiento
+D) Acceso mediante navegador web
 
 ¿Qué garantiza la consistencia de datos en el almacenamiento de bloques?
-La facilidad para modificar y actualizar bloques
-El uso de URLs
-El acceso público
-El uso de carpetas
+A) El uso de URLs
+*B) La facilidad para modificar y actualizar bloques
+C) El acceso público
+D) El uso de carpetas
 
 Las máquinas virtuales utilizan almacenamiento de bloques porque:
-Funcionan como discos físicos
-Necesitan acceso a objetos
-Solo permiten lectura
-Usan metadatos complejos
+A) Necesitan acceso a objetos
+*B) Funcionan como discos físicos
+C) Solo permiten lectura
+D) Usan metadatos complejos
 
 El almacenamiento de objetos se basa en:
-Objetos identificados de forma única
-Carpetas jerárquicas
-Bloques de tamaño fijo
-Sectores de disco
+A) Carpetas jerárquicas
+B) Bloques de tamaño fijo
+*C) Objetos identificados de forma única
+D) Sectores de disco
 
 ¿Qué información incluye un objeto en el almacenamiento de objetos?
-Contenido, metadatos e identificador
-Solo el contenido
-Solo metadatos
-Carpetas y permisos
+A) Solo el contenido
+*B) Contenido, metadatos e identificador
+C) Solo metadatos
+D) Carpetas y permisos
 
 El almacenamiento de objetos es especialmente adecuado para:
-Archivos grandes y no estructurados
-Sistemas operativos
-Bases de datos transaccionales
-Memoria RAM
+A) Sistemas operativos
+B) Bases de datos transaccionales
+*C) Archivos grandes y no estructurados
+D) Memoria RAM
 
 ¿Qué ventaja NO es propia del almacenamiento de objetos?
-Alto rendimiento transaccional
-Escalabilidad
-Bajo coste
-Alta durabilidad
+A) Escalabilidad
+B) Bajo coste
+*C) Alto rendimiento transaccional
+D) Alta durabilidad
 
 ¿Cómo se accede normalmente a un objeto almacenado?
-Mediante una URL o identificador único
-Mediante una ruta de carpetas
-Desde la BIOS
-Usando comandos de bajo nivel
+A) Mediante una ruta de carpetas
+*B) Mediante una URL o identificador único
+C) Desde la BIOS
+D) Usando comandos de bajo nivel
 
 El almacenamiento de objetos es una alternativa flexible principalmente al:
-Almacenamiento de bloques
-Almacenamiento en cinta
-Almacenamiento local
-Almacenamiento en memoria
+A) Almacenamiento en cinta
+*B) Almacenamiento de bloques
+C) Almacenamiento local
+D) Almacenamiento en memoria
 
 Un caso típico de uso del almacenamiento de objetos es:
-Streaming de contenido multimedia
-Arranque de sistemas operativos
-Ejecución de máquinas virtuales
-Procesamiento de transacciones
+A) Arranque de sistemas operativos
+*B) Streaming de contenido multimedia
+C) Ejecución de máquinas virtuales
+D) Procesamiento de transacciones
 
 ¿Por qué el almacenamiento de objetos es ideal para contenido web?
-Porque escala fácilmente y usa URLs
-Porque es jerárquico
-Porque usa discos locales
-Porque es más rápido que la RAM
+A) Porque es jerárquico
+B) Porque usa discos locales
+*C) Porque escala fácilmente y usa URLs
+D) Porque es más rápido que la RAM
 
 El almacenamiento de grandes volúmenes de datos para IA suele hacerse con:
-Almacenamiento de objetos
-Almacenamiento de ficheros
-Almacenamiento de bloques
-Almacenamiento local
+A) Almacenamiento de ficheros
+B) Almacenamiento de bloques
+*C) Almacenamiento de objetos
+D) Almacenamiento local
 
 ¿Qué tipo de almacenamiento se parece más al sistema de archivos de un ordenador?
-Ficheros
-Objetos
-Bloques
-Archivado
+A) Objetos
+B) Bloques
+*C) Ficheros
+D) Archivado
 
 Una ventaja principal del almacenamiento de ficheros es:
-Organización en carpetas
-Acceso mediante URLs
-Uso exclusivo para backups
-Bajo nivel de acceso
+A) Acceso mediante URLs
+*B) Organización en carpetas
+C) Uso exclusivo para backups
+D) Bajo nivel de acceso
 
 El almacenamiento de ficheros facilita especialmente:
-La colaboración entre usuarios
-La virtualización
-El streaming en directo
-El arranque de sistemas
+A) La virtualización
+*B) La colaboración entre usuarios
+C) El streaming en directo
+D) El arranque de sistemas
 
 ¿Qué permite el control de versiones en el almacenamiento de ficheros?
-Recuperar versiones anteriores
-Eliminar archivos automáticamente
-Aumentar el rendimiento
-Reducir el tamaño de los archivos
+A) Eliminar archivos automáticamente
+*B) Recuperar versiones anteriores
+C) Aumentar el rendimiento
+D) Reducir el tamaño de los archivos
 
 Un repositorio de código suele utilizar:
-Almacenamiento de ficheros
-Almacenamiento de bloques
-Almacenamiento en cinta (Archivado de datos)
-Memoria caché
+A) Almacenamiento de bloques
+*B) Almacenamiento de ficheros
+C) Almacenamiento en cinta (Archivado de datos)
+D) Memoria caché
 
 El archivado de datos está pensado para:
-Almacenamiento a largo plazo
-Acceso frecuente
-Datos temporales
-Aplicaciones en tiempo real
+A) Acceso frecuente
+B) Datos temporales
+*C) Almacenamiento a largo plazo
+D) Aplicaciones en tiempo real
 
 ¿Qué tipo de almacenamiento suele usarse en archivado de datos?
-Soluciones de bajo coste
-SSD de alto rendimiento
-Memoria RAM
-Bases de datos activas
+A) SSD de alto rendimiento
+B) Memoria RAM
+*C) Soluciones de bajo coste
+D) Bases de datos activas
 
 Un motivo habitual para archivar datos es:
-Cumplir requisitos legales
-Mejorar la velocidad
-Ejecutar aplicaciones
-Reducir usuarios
+A) Mejorar la velocidad
+*B) Cumplir requisitos legales
+C) Ejecutar aplicaciones
+D) Reducir usuarios
 
 Los datos archivados se caracterizan por:
-Tener acceso menos frecuente
-Accederse constantemente
-Estar siempre en uso
-No poder recuperarse
+A) Accederse constantemente
+B) Estar siempre en uso
+*C) Tener acceso menos frecuente
+D) No poder recuperarse
 
 El archivado de datos ayuda a:
-Optimizar costes de almacenamiento
-Aumentar el consumo de recursos
-Eliminar información histórica
-Reducir la seguridad
+A) Aumentar el consumo de recursos
+*B) Optimizar costes de almacenamiento
+C) Eliminar información histórica
+D) Reducir la seguridad
 
 Si una empresa quiere guardar registros antiguos para auditorías, debería usar:
-Archivado de datos
-Almacenamiento de bloques
-Almacenamiento de objetos activo
-Memoria local
+A) Almacenamiento de bloques
+B) Almacenamiento de objetos activo
+*C) Archivado de datos
+D) Memoria local
 
 La elección del tipo de almacenamiento depende principalmente de:
-El caso de uso y las necesidades
-El proveedor cloud
-El color del sistema
-El sistema operativo
+A) El proveedor cloud
+B) El color del sistema
+*C) El caso de uso y las necesidades
+D) El sistema operativo
 
 ¿Cuál es la función principal de los servicios de bases de datos?
-Almacenar y administrar información de forma eficiente
-Crear aplicaciones web
-Diseñar interfaces gráficas
-Gestionar redes informáticas
+A) Crear aplicaciones web
+*B) Almacenar y administrar información de forma eficiente
+C) Diseñar interfaces gráficas
+D) Gestionar redes informáticas
 
 ¿Qué característica permite que una base de datos crezca o se reduzca según las necesidades?
-Escalabilidad
-Persistencia
-Seguridad
-Consistencia
+A) Persistencia
+B) Seguridad
+*C) Escalabilidad
+D) Consistencia
 
 ¿Qué ventaja permite acceder a una base de datos desde cualquier lugar con Internet?
-Accesibilidad
-Flexibilidad
-Persistencia
-Integridad
+A) Flexibilidad
+*B) Accesibilidad
+C) Persistencia
+D) Integridad
 
 ¿Qué software permite crear y gestionar bases de datos?
-Sistema de gestión de bases de datos
-Sistema operativo
-Lenguaje de programación
-Servidor web
+A) Sistema operativo
+B) Lenguaje de programación
+*C) Sistema de gestión de bases de datos
+D) Servidor web
 
 ¿Qué característica garantiza que los datos no se pierdan al cerrar la aplicación?
-Persistencia
-Seguridad
-Transacciones
-Escalabilidad
+A) Seguridad
+B) Transacciones
+*C) Persistencia
+D) Escalabilidad
 
 ¿Qué característica evita contradicciones o errores en los datos?
-Consistencia
-Accesibilidad
-Flexibilidad
-Rendimiento
+A) Accesibilidad
+*B) Consistencia
+C) Flexibilidad
+D) Rendimiento
 
 ¿Para qué sirven las transacciones en una base de datos?
-Para realizar operaciones como una única unidad
-Para almacenar datos históricos
-Para ejecutar operaciones de forma independiente
-Para mejorar el diseño de tablas
+A) Para almacenar datos históricos
+B) Para ejecutar operaciones de forma independiente
+*C) Para realizar operaciones como una única unidad
+D) Para mejorar el diseño de tablas
 
 ¿Cuál es un beneficio clave de los servicios de bases de datos?
-Mejoran la toma de decisiones
-Eliminan la necesidad de programar
-Sustituyen a Internet
-Evitan el uso de servidores
+A) Eliminan la necesidad de programar
+*B) Mejoran la toma de decisiones
+C) Sustituyen a Internet
+D) Evitan el uso de servidores
 
 ¿Qué tipo de base de datos organiza la información en tablas?
-Relacional
-Analítica
-NoSQL
-Documental
+A) Analítica
+B) NoSQL
+C) Documental
+*D) Relacional
 
 ¿Qué representa una fila en una tabla relacional?
-Un registro
-Un atributo
-Una clave
-Una relación
+A) Un atributo
+B) Una clave
+*C) Un registro
+D) Una relación
 
 ¿Qué tipo de clave identifica de forma única un registro?
-Clave primaria
-Clave externa
-Clave secundaria
-Clave foránea
+A) Clave externa
+B) Clave secundaria
+C) Clave foránea
+*D) Clave primaria
 
 ¿Qué lenguaje se utiliza para trabajar con bases de datos relacionales?
-SQL
-HTML
-Python
-XML
+A) HTML
+B) Python
+*C) SQL
+D) XML
 
 ¿Qué garantiza el cumplimiento de las propiedades ACID?
-La seguridad de las transacciones
-La velocidad del sistema
-La accesibilidad remota
-La flexibilidad del esquema
+A) La velocidad del sistema
+*B) La seguridad de las transacciones
+C) La accesibilidad remota
+D) La flexibilidad del esquema
 
 ¿Cuál de los siguientes es un proveedor de bases de datos relacionales?
-PostgreSQL
-MongoDB
-Redis
-Cassandra
+A) MongoDB
+B) Redis
+*C) PostgreSQL
+D) Cassandra
 
 ¿En qué sector son especialmente comunes las bases de datos relacionales?
-Comercio electrónico
-Videojuegos offline
-Redes sociales
-Diseño gráfico
+A) Videojuegos offline
+B) Redes sociales
+*C) Comercio electrónico
+D) Diseño gráfico
 
 ¿Qué significa el término NoSQL?
-Not Only SQL
-No usar bases de datos
-Solo SQL
-No estructurado
+A) No usar bases de datos
+B) Solo SQL
+C) No estructurado
+*D) Not Only SQL
 
 ¿Qué tipo de datos suelen manejar las bases de datos NoSQL?
-Datos no estructurados o semiestructurados
-Solo datos numéricos
-Datos tabulares
-Datos cifrados
+A) Solo datos numéricos
+*B) Datos no estructurados o semiestructurados
+C) Datos tabulares
+D) Datos cifrados
 
 ¿Qué característica permite repartir la carga entre varios servidores?
-Escalabilidad
-Persistencia
-Seguridad
-Integridad
+A) Persistencia
+*B) Escalabilidad
+C) Seguridad
+D) Integridad
 
 ¿Qué tipo de base de datos almacena pares clave-valor?
-Key-value
-Documental
-Grafos
-Column-family
+A) Documental
+B) Grafos
+C) Column-family
+*D) Key-value
 
 ¿Qué tipo de base de datos es ideal para representar relaciones como en redes sociales?
-Grafos
-Relacional
-Documental
-Analítica
+A) Relacional
+B) Documental
+*C) Grafos
+D) Analítica
 
 ¿Qué formato es común en bases de datos documentales?
-JSON
-CSV
-TXT
-PDF
+A) CSV
+*B) JSON
+C) TXT
+D) PDF
 
 ¿Qué ventaja ofrece la flexibilidad de esquema en NoSQL?
-No necesitar una estructura fija
-Más seguridad
-Mayor velocidad
-Menor consumo de red
+A) Más seguridad
+B) Mayor velocidad
+*C) No necesitar una estructura fija
+D) Menor consumo de red
 
 ¿Qué significa escalabilidad horizontal?
-Añadir más nodos al sistema
-Aumentar la potencia del servidor
-Reducir el número de usuarios
-Optimizar consultas
+A) Aumentar la potencia del servidor
+B) Reducir el número de usuarios
+*C) Añadir más nodos al sistema
+D) Optimizar consultas
 
 ¿Qué permite la tolerancia a fallos en bases de datos NoSQL?
-Continuar funcionando aunque falle un nodo
-Eliminar datos duplicados
-Evitar ataques
-Mejorar el diseño
+A) Eliminar datos duplicados
+*B) Continuar funcionando aunque falle un nodo
+C) Evitar ataques
+D) Mejorar el diseño
 
 ¿Qué base de datos NoSQL es conocida por su alta velocidad y uso como caché?
-Redis
-MongoDB
-Cassandra
-Couchbase
+A) MongoDB
+B) Cassandra
+C) Couchbase
+*D) Redis
 
 ¿Qué base de datos NoSQL almacena datos en forma de documentos?
-MongoDB
-Redis
-Cassandra
-Oracle
+A) Redis
+*B) MongoDB
+C) Cassandra
+D) Oracle
 
 ¿Para qué están diseñadas las bases de datos analíticas?
-Análisis de grandes volúmenes de datos
-Operaciones diarias
-Almacenamiento básico
-Gestión de usuarios
+A) Operaciones diarias
+B) Almacenamiento básico
+*C) Análisis de grandes volúmenes de datos
+D) Gestión de usuarios
 
 ¿Qué permiten los datos analíticos a las empresas?
-Tomar decisiones más informadas
-Reducir costes de hardware
-Eliminar bases de datos relacionales
-Mejorar la seguridad
+A) Reducir costes de hardware
+*B) Tomar decisiones más informadas
+C) Eliminar bases de datos relacionales
+D) Mejorar la seguridad
 
 ¿Qué tipo de consultas están optimizadas en bases de datos analíticas?
-Complejas
-Simples
-Transaccionales
-Manuales
+A) Simples
+B) Transaccionales
+*C) Complejas
+D) Manuales
 
 ¿Qué aspecto es especialmente importante en bases de datos analíticas?
-Seguridad y privacidad
-Diseño visual
-Uso exclusivo de SQL
-Bajo coste
+A) Diseño visual
+*B) Seguridad y privacidad
+C) Uso exclusivo de SQL
+D) Bajo coste
