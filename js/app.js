@@ -507,9 +507,6 @@ function renderAcademia() {
                     </button>
                     
                     <div class="academia-secondary-actions">
-                        <button class="btn-secondary" onclick="startFlashcard('${subject.id}')">
-                            <span class="btn-icon">⚡</span> Flashcards
-                        </button>
                         ${subjectLabs.length > 0 ? `
                         <button class="btn-secondary btn-lab-link" onclick="startLab('${subjectLabs[0].id}')">
                             <span class="btn-icon">🧪</span> Laboratorio
@@ -640,9 +637,7 @@ function renderFallosSection() {
             <div class="exam-selector-large" style="margin-top:0.75rem">
                 <button onclick="startFallosExam('${subjectId}')">❌ Repasar fallos</button>
             </div>
-            <div class="card-actions-row">
-                <button class="btn-flashcard" onclick="startFallosFlashcard('${subjectId}')">⚡ Flashcards</button>
-            </div>
+
         `;
         grid.appendChild(card);
     });
