@@ -830,6 +830,8 @@ function renderStats() {
 // ─── EXAM ENGINE ────────────────────────────────────────────────
 function prepareQuestion(q) {
     if (!q.options || q.options.length === 0) return q;
+    // Don't shuffle if the question comes from a txt bateria (options have fixed order from PDF)
+    if (q.noShuffle) return q;
     
     // Create an array of indices [0, 1, 2, 3...]
     const indices = q.options.map((_, i) => i);
@@ -1851,12 +1853,16 @@ function parseTxtExam(text, syllabusId) {
                 break;
             }
             if (options.length >= 4) break;
-            if (l.startsWith('*')) {
+            // Strip leading * (correct marker) and letter prefix like A), B), *C), A. etc.
+            const isCorrect = l.startsWith('*');
+            const stripped = (isCorrect ? l.slice(1) : l)
+                .trim()
+                .replace(/^[A-Ea-e][).\-]\s*/, '')  // Remove "A) ", "B. ", "C- " etc.
+                .trim();
+            if (isCorrect) {
                 correctIndex = options.length;
-                options.push(l.slice(1).trim());
-            } else {
-                options.push(l);
             }
+            options.push(stripped);
         }
 
         if (options.length >= 2) {
@@ -1866,7 +1872,8 @@ function parseTxtExam(text, syllabusId) {
                 options,
                 correct: correctIndex,
                 explanation,
-                unit: null
+                unit: null,
+                noShuffle: true
             });
         }
     }
