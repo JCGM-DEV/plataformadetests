@@ -10,10 +10,10 @@ Tener siempre servidores propios
 Comprar hardware para el peor escenario posible
 Evitar el uso de sistemas operativos
 
-¿Qué significa el principio de “abstracción de la infraestructura”?
-Se paga solo cuando el servidor está encendido
-Se paga una cuota fija mensual
+¿Cuál es el modelo de pago propio de los servicios de cómputo en la nube?
 Se paga únicamente por los recursos que se utilizan
+Se paga una cuota fija mensual
+Se paga solo cuando el servidor está encendido
 Se paga por adelantado todo el año
 
 ¿Qué es una máquina virtual?
@@ -143,55 +143,55 @@ Usar URLs para acceder a los datos
 Dividir la información en bloques de tamaño fijo
 
 ¿Qué tipo de acceso ofrece el almacenamiento de bloques?
-Acceso solo en modo lectura
-Acceso secuencial
 Acceso de bajo nivel y aleatorio
+Acceso secuencial
+Acceso solo en modo lectura
 Acceso jerárquico
 
 ¿Qué tipo de aplicaciones suelen usar almacenamiento de bloques?
-Alta durabilidad a largo plazo
+Alto rendimiento y baja latencia
+Baja durabilidad
 Bajo coste frente a cualquier otro tipo
-Alto rendimiento
 Acceso mediante navegador web
 
 ¿Qué garantiza la consistencia de datos en el almacenamiento de bloques?
-Objetos identificados de forma única
-Carpetas jerárquicas
 Bloques de tamaño fijo
+Carpetas jerárquicas
+Objetos identificados de forma única
 Sectores de disco
 
-¿Qué información incluye un objeto en el almacenamiento de objetos?
+¿Qué tipos de datos se almacenan habitualmente en el almacenamiento de objetos?
 Archivos grandes y no estructurados
 Sistemas operativos
 Bases de datos transaccionales
 Memoria RAM
 
 ¿Qué ventaja NO es propia del almacenamiento de objetos?
-Bajo coste
-Escalabilidad
 Alto rendimiento transaccional
+Escalabilidad
+Bajo coste
 Alta durabilidad
 
-¿Cómo se accede normalmente a un objeto almacenado?
+¿Para qué tipo de contenido es ideal el almacenamiento de objetos?
 Streaming de contenido multimedia
 Arranque de sistemas operativos
-Ejecución de máquinas virtuales.
+Ejecución de máquinas virtuales
 Procesamiento de transacciones
 
-¿Por qué el almacenamiento de objetos es ideal para contenido web?
+¿Qué tipo de almacenamiento es ideal para imágenes, vídeos y archivos estáticos accesibles desde la web?
 Almacenamiento de objetos
 Almacenamiento de ficheros
 Almacenamiento de bloques
 Almacenamiento local
 
-¿Qué tipo de almacenamiento se parece más al sistema de archivos de un ordenador?
+¿Cuál es una ventaja del almacenamiento de ficheros frente a otros tipos?
 La colaboración entre usuarios
 La virtualización
 El streaming en directo
 El arranque de sistemas
 
-¿Qué permite el control de versiones en el almacenamiento de ficheros?
-Almacenamiento a largo plazo
+¿Para qué tipo de datos se recomienda el archivado en la nube?
+Almacenamiento a largo plazo con bajo coste de acceso
 Acceso frecuente
 Datos temporales
 Aplicaciones en tiempo real

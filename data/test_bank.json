@@ -5922,7 +5922,7 @@
         "Falta de escalabilidad"
       ],
       "correct": 2,
-      "explanation": "La respuesta es 'Acceso ubicuo a los datos y aplicaciones.'. \"Aumento de costos operativos.\" y \"Dependencia del hardware local.\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "La computación en la nube permite acceder a datos y aplicaciones desde cualquier dispositivo con conexión a Internet (acceso ubicuo). Las otras opciones describen desventajas o características de la infraestructura tradicional on-premise.",
       "unit": null
     },
     {
@@ -5987,7 +5987,7 @@
         "Que ofrezca hardware de última generación"
       ],
       "correct": 2,
-      "explanation": "La respuesta es 'La seguridad, fiabilidad y escalabilidad del servicio.'. \"La disponibilidad de planes gratuitos.\" y \"La ubicación de los servidores en el mismo país.\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "Al elegir un proveedor de servicios en la nube los criterios más importantes son la seguridad (certificaciones ISO 27001, SOC 2), la fiabilidad (SLA de disponibilidad) y la escalabilidad. El precio o la ubicación de los servidores son factores secundarios.",
       "unit": null
     },
     {
@@ -6104,7 +6104,7 @@
         "Programas de ofimática"
       ],
       "correct": 0,
-      "explanation": "La respuesta es 'Plataformas de análisis de datos y predicciones.'. \"Redes sociales y foros de discusión.\" y \"Servicios de almacenamiento en la nube.\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "Las plataformas de análisis de datos (como AWS Cost Explorer, Azure Cost Management o herramientas de BI) permiten visualizar, desglosar y predecir el gasto en la nube, identificando servicios sobredimensionados o ineficientes.",
       "unit": null
     },
     {
@@ -6182,7 +6182,7 @@
         "Solo funciona en redes locales"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'Ancho de banda alto y baja latencia'. \"Alta latencia en la transmisión de datos\" y \"Conexiones inestables\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "Las redes de fibra óptica transmiten datos mediante pulsos de luz, lo que ofrece un ancho de banda muy elevado y una latencia muy baja en comparación con el cobre. Son la espina dorsal de la conectividad entre centros de datos en la nube.",
       "unit": null
     },
     {
@@ -6559,7 +6559,7 @@
         "FTP"
       ],
       "correct": 0,
-      "explanation": "La respuesta es 'SSL/TLS'. \"UDP\" y \"RIP\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "SSL (Secure Sockets Layer) y su sucesor TLS (Transport Layer Security) son los protocolos estándar para cifrar la transmisión de datos en Internet. UDP es un protocolo de transporte sin cifrado, RIP es un protocolo de enrutamiento y FTP es un protocolo de transferencia de archivos.",
       "unit": null
     },
     {
@@ -6663,7 +6663,7 @@
         "SaaS"
       ],
       "correct": 0,
-      "explanation": "La respuesta es 'Computación sin servidor (serverless)'. \"Máquinas virtuales\" y \"IaaS\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "La computación sin servidor (serverless) permite ejecutar código en respuesta a eventos sin gestionar ni aprovisionar servidores. El proveedor gestiona toda la infraestructura. Ejemplos: AWS Lambda, Azure Functions, Google Cloud Functions.",
       "unit": null
     },
     {
@@ -6949,7 +6949,7 @@
         "No realizar copias de seguridad"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'Escalar recursos según la demanda'. \"Mantener servidores encendidos sin monitoreo\" y \"Comprar más recursos de los necesarios\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "Escalar los recursos según la demanda (auto-scaling) es la estrategia más eficaz para optimizar costes: se paga solo por lo que se usa en cada momento. Mantener servidores encendidos sin monitoreo genera costes innecesarios.",
       "unit": null
     },
     {
@@ -6988,7 +6988,7 @@
         "Limitar el acceso a los servicios en línea"
       ],
       "correct": 2,
-      "explanation": "La respuesta es 'Diseñar sistemas escalables, seguros y eficientes'. \"Reducir la velocidad de procesamiento\" y \"Aumentar los costos de infraestructura\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "El objetivo principal de la arquitectura en la nube es diseñar sistemas que sean escalables (crecen con la demanda), seguros (protegen datos e identidades) y eficientes (optimizan costes y rendimiento). Frameworks como el AWS Well-Architected Framework formalizan estos principios.",
       "unit": null
     },
     {
@@ -7066,7 +7066,7 @@
         "Evitar el uso de firewalls y control de accesos"
       ],
       "correct": 2,
-      "explanation": "La respuesta es 'Implementar estrategias de respaldo y recuperación'.",
+      "explanation": "La recuperación ante desastres en la nube se basa en implementar estrategias de respaldo y recuperación: copias de seguridad periódicas, replicación en múltiples regiones y planes de continuidad de negocio (RTO/RPO definidos).",
       "unit": null
     },
     {
@@ -7078,8 +7078,8 @@
         "El escalado horizontal solo funciona en servidores físicos",
         "Ambos términos significan lo mismo"
       ],
-      "correct": 1,
-      "explanation": "El escalado horizontal añade más servidores (scale out). El escalado vertical aumenta la capacidad de un servidor existente (scale up). El horizontal es más flexible y tolerante a fallos.",
+      "correct": 0,
+      "explanation": "El escalado horizontal (scale out) añade más servidores para distribuir la carga, mientras que el escalado vertical (scale up) aumenta la capacidad de un servidor existente (más CPU, RAM). El horizontal es más flexible y tolerante a fallos en la nube.",
       "unit": null
     },
     {
@@ -7143,8 +7143,8 @@
         "Color de la interfaz gráfica",
         "Tráfico de red"
       ],
-      "correct": 0,
-      "explanation": "La respuesta es 'Uso de CPU'. \"Consumo de memoria\" y \"Color de la interfaz gráfica\" son incorrectos porque describen conceptos diferentes.",
+      "correct": 2,
+      "explanation": "El color de la interfaz gráfica NO es una métrica de monitorización. Las métricas clave son el uso de CPU, el consumo de memoria y el tráfico de red, ya que reflejan el rendimiento, la salud y la carga del sistema.",
       "unit": null
     },
     {
@@ -7156,8 +7156,8 @@
         "Un documento almacenado en una memoria USB",
         "Un usuario navegando en su propio sitio web local"
       ],
-      "correct": 0,
-      "explanation": "La respuesta es 'Una aplicación de escritorio instalada en un solo equipo.'.",
+      "correct": 1,
+      "explanation": "El escalado automático es más útil en aplicaciones con demanda variable e impredecible, como un sitio de comercio electrónico durante el Black Friday. Añade servidores automáticamente cuando el tráfico se dispara y los reduce cuando baja, optimizando coste y disponibilidad.",
       "unit": null
     },
     {
