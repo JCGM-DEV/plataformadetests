@@ -3041,7 +3041,8 @@ function toggleThemeMenu(event, menuId) {
 }
 
 // Global listener to close theme menus when clicking outside
-document.addEventListener('click', () => {
+document.addEventListener('click', (e) => {
+    if (e.target.closest('.theme-dropdown-menu') || e.target.closest('.theme-dropdown-trigger')) return;
     document.querySelectorAll('.theme-dropdown-menu.visible').forEach(m => {
         m.classList.remove('visible');
         const trigger = m.previousElementSibling;
