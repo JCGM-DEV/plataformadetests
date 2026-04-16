@@ -183,25 +183,6 @@ const THEORY_INFOGRAPHICS = {
 
 
 const THEORY_REPORTS = {
-    "lenguaje_de_marcas": {
-        "1": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/The_Digital_Blueprint.pdf",
-        "2": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/HTML_Structural_Blueprint.pdf",
-        "3": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/XSD_Architecture.pdf",
-        "4": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/Structured_Data_Architecture.pdf",
-        "5": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/Refinería_de_Datos_XML.pdf",
-        "6": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/XML_Architecture_Blueprint.pdf",
-        "7": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/Arquitectura_de_Sindicación_Web.pdf",
-        "8": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/Digital_Business_Blueprint.pdf"
-    },
-    "sistemas_informaticos": {
-        "1": "Sistemas%20informaticos/informes%20y%20presentaciones/Microcomputer_Systems.pdf",
-        "2": "Sistemas%20informaticos/informes%20y%20presentaciones/Systems_Architecture_Blueprint.pdf",
-        "3": "Sistemas%20informaticos/informes%20y%20presentaciones/Data_Architecture_Blueprint.pdf",
-        "4": "Sistemas%20informaticos/informes%20y%20presentaciones/Admin_Console_Playbook.pdf",
-        "5": "Sistemas%20informaticos/informes%20y%20presentaciones/Network_Operations_Blueprint.pdf",
-        "6": "Sistemas%20informaticos/informes%20y%20presentaciones/Network_Security_Blueprint.pdf",
-        "7": "Sistemas%20informaticos/informes%20y%20presentaciones/Mastering_the_Software_Ecosystem.pdf"
-    },
     "empleabilidad": {
         "1": "Empleabilidad/informe%20e%20infografia/Guía_de_Derechos_Laborales.pdf",
         "2": "Empleabilidad/informe%20e%20infografia/IT_Safety_Blueprint.pdf",
@@ -220,6 +201,15 @@ const THEORY_REPORTS = {
         "8": "Programacion/informes%20y%20presentaciones/Java_Data_Logistics.pdf",
         "9": "Programacion/informes%20y%20presentaciones/The_JDBC_Blueprint.pdf",
         "10": "Programacion/informes%20y%20presentaciones/Native_Object_Databases.pdf"
+    },
+    "sistemas_informaticos": {
+        "1": "Sistemas%20informaticos/informes%20y%20presentaciones/Microcomputer_Systems.pdf",
+        "2": "Sistemas%20informaticos/informes%20y%20presentaciones/Systems_Architecture_Blueprint.pdf",
+        "3": "Sistemas%20informaticos/informes%20y%20presentaciones/Data_Architecture_Blueprint.pdf",
+        "4": "Sistemas%20informaticos/informes%20y%20presentaciones/Admin_Console_Playbook.pdf",
+        "5": "Sistemas%20informaticos/informes%20y%20presentaciones/Network_Operations_Blueprint.pdf",
+        "6": "Sistemas%20informaticos/informes%20y%20presentaciones/Network_Security_Blueprint.pdf",
+        "7": "Sistemas%20informaticos/informes%20y%20presentaciones/Mastering_the_Software_Ecosystem.pdf"
     }
 };
 
