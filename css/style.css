@@ -142,8 +142,10 @@ h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
   flex-direction: column;
   background: radial-gradient(circle at top right, rgba(99,102,241,0.05), transparent 40%);
   overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
   z-index: 1; /* Keep content below overlay */
+  min-width: 0; /* Fix for flex item overflow */
 }
 
 /* ── SIDEBAR OVERLAY ────────────────────────────────────────── */
