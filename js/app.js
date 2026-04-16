@@ -442,7 +442,7 @@ function renderAcademia() {
                     </button>
                     <div id="themes-list-${subject.id}" class="academia-themes-list hidden">
                         ${themes.map((t, themeIdx) => {
-                            const tAttempts = history.filter(h => h.subjectId === t.id).length;
+                            const tAttempts = history.filter(h => h.subjectId === t.id || (h.subjectId === subject.id && h.unitId == t.unit)).length;
                             const res = PDF_MAP[subject.id]?.[t.unit];
                             const menuId = `menu-${subject.id}-${themeIdx}`;
                             
