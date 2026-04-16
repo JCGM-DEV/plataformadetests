@@ -219,6 +219,7 @@
       "name": "UD1",
       "total_pages": 24,
       "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/The_Digital_Blueprint.pdf",
       "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_1.png",
       "video": "Lenguaje de marcas/videos/Los_Cimientos_de_la_Web.mp4"
     },
@@ -227,6 +228,7 @@
       "name": "UD2",
       "total_pages": 86,
       "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/HTML_Structural_Blueprint.pdf",
       "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_2.png",
       "video": "Lenguaje de marcas/videos/El_lenguaje_oculto_de_la_web.mp4"
     },
@@ -235,6 +237,7 @@
       "name": "UD3",
       "total_pages": 46,
       "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/XSD_Architecture.pdf",
       "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_3.png",
       "video": "Lenguaje de marcas/videos/Esquemas_y_Vocabularios_XML.mp4"
     },
@@ -243,6 +246,7 @@
       "name": "UD4",
       "total_pages": 26,
       "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/Structured_Data_Architecture.pdf",
       "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_4.png",
       "video": "Lenguaje de marcas/videos/Almacenar_y_Consultar_XML.mp4"
     },
@@ -251,6 +255,7 @@
       "name": "UD5",
       "total_pages": 32,
       "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/Refinería_de_Datos_XML.pdf",
       "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_5.png",
       "video": "Lenguaje de marcas/videos/Conversión_y_Adaptación_de_XML.mp4"
     },
@@ -259,6 +264,7 @@
       "name": "UD6",
       "total_pages": 36,
       "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/XML_Architecture_Blueprint.pdf",
       "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_6.png",
       "video": "Lenguaje de marcas/videos/XML_vs.mp4"
     },
@@ -267,6 +273,7 @@
       "name": "UD7",
       "total_pages": 30,
       "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/Arquitectura_de_Sindicación_Web.pdf",
       "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_7.png",
       "video": "Lenguaje de marcas/videos/Sindicación_de_Contenidos.mp4"
     },
@@ -275,6 +282,7 @@
       "name": "UD8",
       "total_pages": 32,
       "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/Digital_Business_Blueprint.pdf",
       "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_8.png",
       "video": "Lenguaje de marcas/videos/Sistemas_de_Gestión__ERP.mp4"
     }
