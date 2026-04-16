@@ -162,6 +162,7 @@
       "name": "UD1",
       "total_pages": 36,
       "exists": true,
+      "report": "Bases de datos/informes y presentaciones/The_Information_Blueprint.pdf",
       "infographic": "Bases de datos/informes y presentaciones/infografia_tema_1.png",
       "video": "Bases de datos/videos/Almacenamiento_de_la_información.mp4"
     },
@@ -170,6 +171,7 @@
       "name": "UD2",
       "total_pages": 81,
       "exists": true,
+      "report": "Bases de datos/informes y presentaciones/SQL_Fundamentals.pdf",
       "infographic": "Bases de datos/informes y presentaciones/infografia_tema_2.png",
       "video": "Bases de datos/videos/La_Biblioteca_Invisible.mp4"
     },
@@ -178,6 +180,7 @@
       "name": "UD3",
       "total_pages": 71,
       "exists": true,
+      "report": "Bases de datos/informes y presentaciones/Arquitectura_de_Datos_Relacionales.pdf",
       "infographic": "Bases de datos/informes y presentaciones/infografia_tema_3.png",
       "video": "Bases de datos/videos/Bases_de_Datos_Relacionales.mp4"
     },
@@ -186,6 +189,7 @@
       "name": "UD4",
       "total_pages": 81,
       "exists": true,
+      "report": "Bases de datos/informes y presentaciones/Data_Architecture_and_Persistence.pdf",
       "infographic": "Bases de datos/informes y presentaciones/infografia_tema_4.png",
       "video": "Bases de datos/videos/Diagramas_Entidad-Relación.mp4"
     },
@@ -194,6 +198,7 @@
       "name": "UD5",
       "total_pages": 50,
       "exists": true,
+      "report": "Bases de datos/informes y presentaciones/Mastering_MySQL_Data_Architecture.pdf",
       "infographic": "Bases de datos/informes y presentaciones/infografia_tema_5.png",
       "video": "Bases de datos/videos/Introducción_a_SQL__Cómo_Preguntar_a_los_Datos.mp4"
     },
@@ -202,6 +207,7 @@
       "name": "UD6",
       "total_pages": 98,
       "exists": true,
+      "report": "Bases de datos/informes y presentaciones/MySQL_Programming_Essentials.pdf",
       "infographic": "Bases de datos/informes y presentaciones/infografia_tema_6.png",
       "video": "Bases de datos/videos/Tratamiento_de_Datos.mp4"
     },
@@ -210,6 +216,8 @@
       "name": "UD7",
       "total_pages": 57,
       "exists": true,
+      "report": "Bases de datos/informes y presentaciones/Object-Relational_Architecture.pdf",
+      "infographic": "Bases de datos/informes y presentaciones/infografia_tema_7.png",
       "video": "Bases de datos/videos/Programación_de_BBDD.mp4"
     }
   },

@@ -220,6 +220,15 @@ const THEORY_REPORTS = {
         "6": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/Structured_Data_Architecture.pdf",
         "7": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/Arquitectura_de_Sindicación_Web.pdf",
         "8": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/Digital_Business_Blueprint.pdf"
+    },
+    "bases_de_datos": {
+        "1": "Bases%20de%20datos/informes%20y%20presentaciones/The_Information_Blueprint.pdf",
+        "2": "Bases%20de%20datos/informes%20y%20presentaciones/SQL_Fundamentals.pdf",
+        "3": "Bases%20de%20datos/informes%20y%20presentaciones/Arquitectura_de_Datos_Relacionales.pdf",
+        "4": "Bases%20de%20datos/informes%20y%20presentaciones/Data_Architecture_and_Persistence.pdf",
+        "5": "Bases%20de%20datos/informes%20y%20presentaciones/Mastering_MySQL_Data_Architecture.pdf",
+        "6": "Bases%20de%20datos/informes%20y%20presentaciones/MySQL_Programming_Essentials.pdf",
+        "7": "Bases%20de%20datos/informes%20y%20presentaciones/Object-Relational_Architecture.pdf"
     }
 };
 
