@@ -210,6 +210,16 @@ const THEORY_REPORTS = {
         "5": "Sistemas%20informaticos/informes%20y%20presentaciones/Network_Operations_Blueprint.pdf",
         "6": "Sistemas%20informaticos/informes%20y%20presentaciones/Network_Security_Blueprint.pdf",
         "7": "Sistemas%20informaticos/informes%20y%20presentaciones/Mastering_the_Software_Ecosystem.pdf"
+    },
+    "lenguaje_de_marcas": {
+        "1": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/The_Digital_Blueprint.pdf",
+        "2": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/HTML_Structural_Blueprint.pdf",
+        "3": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/XSD_Architecture.pdf",
+        "4": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/XML_Architecture_Blueprint.pdf",
+        "5": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/Refinería_de_Datos_XML.pdf",
+        "6": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/Structured_Data_Architecture.pdf",
+        "7": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/Arquitectura_de_Sindicación_Web.pdf",
+        "8": "Lenguaje%20de%20marcas/informes%20y%20presentaciones/Digital_Business_Blueprint.pdf"
     }
 };
 
