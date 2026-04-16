@@ -183,6 +183,15 @@ const THEORY_INFOGRAPHICS = {
 
 
 const THEORY_REPORTS = {
+    "sistemas_informaticos": {
+        "1": "Sistemas%20informaticos/informes%20y%20presentaciones/Microcomputer_Systems.pdf",
+        "2": "Sistemas%20informaticos/informes%20y%20presentaciones/Systems_Architecture_Blueprint.pdf",
+        "3": "Sistemas%20informaticos/informes%20y%20presentaciones/Data_Architecture_Blueprint.pdf",
+        "4": "Sistemas%20informaticos/informes%20y%20presentaciones/Admin_Console_Playbook.pdf",
+        "5": "Sistemas%20informaticos/informes%20y%20presentaciones/Network_Operations_Blueprint.pdf",
+        "6": "Sistemas%20informaticos/informes%20y%20presentaciones/Network_Security_Blueprint.pdf",
+        "7": "Sistemas%20informaticos/informes%20y%20presentaciones/Mastering_the_Software_Ecosystem.pdf"
+    },
     "empleabilidad": {
         "1": "Empleabilidad/informe%20e%20infografia/Guía_de_Derechos_Laborales.pdf",
         "2": "Empleabilidad/informe%20e%20infografia/IT_Safety_Blueprint.pdf",
