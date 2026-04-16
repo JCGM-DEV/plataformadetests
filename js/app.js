@@ -1872,8 +1872,7 @@ function parseTxtExam(text, syllabusId) {
                 options,
                 correct: correctIndex,
                 explanation,
-                unit: null,
-                noShuffle: true
+                unit: null
             });
         }
     }
