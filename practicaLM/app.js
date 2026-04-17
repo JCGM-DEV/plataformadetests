@@ -4,8 +4,8 @@
 let currentUnit = null, completedSections = new Set(), score = { correct: 0, wrong: 0 }, activeSection = null;
 let quizState = { questions: [], current: 0, answered: false };
 let currentDragItem = null, dragExerciseIdx = 0, dragResults = [];
-let editorState = { exercises: [], current: 0, type: 'html' };
-let touchChip = null, toastTimer = null;
+let editorState = { exercises: [], current: 0, type: 'html', achievedMilestones: new Set() };
+let stuckTimer = null, touchChip = null, toastTimer = null;
 
 function selectUnit(unitId) {
   currentUnit = unitId;
@@ -29,7 +29,15 @@ function goHome() {
 function buildSidebar(unit) {
   const nav = document.getElementById('sidebar-nav');
   nav.innerHTML = `<div class="sidebar-section">${unit.label} — ${unit.title}</div>`;
+  let lastCategory = null;
   unit.sections.forEach(s => {
+    if (s.category && s.category !== lastCategory) {
+      const catDiv = document.createElement('div');
+      catDiv.className = 'sidebar-category';
+      catDiv.textContent = s.category;
+      nav.appendChild(catDiv);
+      lastCategory = s.category;
+    }
     const div = document.createElement('div');
     div.className = 'sidebar-item'; div.id = 'nav-' + s.id;
     div.innerHTML = `<span class="item-icon">${s.icon}</span><span>${s.label}</span>${completedSections.has(s.id) ? '<span class="item-done">✓</span>' : ''}`;
@@ -237,7 +245,7 @@ function checkDrag(idxStr, dragId) {
 // ── EDITOR ───────────────────────────────────────────────────────
 function showEditor(editorId) {
   const labData = EDITOR_LABS[editorId];
-  editorState = { exercises: labData.exercises, current: 0, type: labData.type };
+  editorState = { exercises: labData.exercises, current: 0, type: labData.type, achievedMilestones: new Set() };
   renderEditorExercise(labData);
 }
 
@@ -258,10 +266,10 @@ function renderEditorExercise(labData) {
       <p>${ex.desc}</p>
       <p class="hint">💡 ${ex.hint}</p>
     </div>
-    <div style="margin-top:1rem" class="editor-workspace">
+    <div style="margin-top:1rem" class="editor-workspace guide-container">
       <div class="editor-pane">
         <div class="editor-pane-label">${isHTML ? '📝 HTML' : '📄 XML'}</div>
-        <textarea class="editor-textarea" id="editor-input" spellcheck="false" oninput="${isHTML ? 'updatePreview()' : 'updateXMLOutput()'}">${ex.starter}</textarea>
+        <textarea class="editor-textarea" id="editor-input" spellcheck="false" oninput="onEditorInput(${isHTML})">${ex.starter}</textarea>
         <div class="editor-actions">
           ${isHTML ? '<button class="btn-run" onclick="updatePreview()">▶ Actualizar</button>' : '<button class="btn-run" onclick="validateXML()">✓ Validar XML</button>'}
           <div class="exercise-nav">
@@ -296,6 +304,59 @@ function updateXMLOutput() {
   const output = document.getElementById('xml-output');
   if (!output) return;
   output.innerHTML = syntaxHighlightXML(code);
+}
+
+function onEditorInput(isHTML) {
+  if (isHTML) updatePreview(); else updateXMLOutput();
+  checkMilestones();
+  resetStuckTimer();
+}
+
+function checkMilestones() {
+  const code = document.getElementById('editor-input')?.value || '';
+  const ex = editorState.exercises[editorState.current];
+  if (!ex.milestones) return;
+
+  ex.milestones.forEach(m => {
+    if (!editorState.achievedMilestones.has(m.id) && m.check.test(code)) {
+      editorState.achievedMilestones.add(m.id);
+      showGuidancePopup(m.popup);
+    }
+  });
+}
+
+function resetStuckTimer() {
+  if (stuckTimer) clearTimeout(stuckTimer);
+  const ex = editorState.exercises[editorState.current];
+  if (!ex.milestones) return;
+
+  stuckTimer = setTimeout(() => {
+    const code = document.getElementById('editor-input')?.value || '';
+    // Si ha pasado mucho tiempo y no ha completado el primer hito, sugerir pista
+    if (editorState.achievedMilestones.size === 0 && code.trim().length < 50) {
+      showGuidancePopup("¿Necesitas ayuda? Recuerda mirar la pista (💡) arriba.");
+    }
+  }, 12000); // 12 segundos de inactividad
+}
+
+function showGuidancePopup(text) {
+  // Eliminar popups anteriores
+  const old = document.querySelectorAll('.guide-popup');
+  old.forEach(o => o.remove());
+
+  const container = document.querySelector('.guide-container');
+  if (!container) return;
+
+  const popup = document.createElement('div');
+  popup.className = 'guide-popup';
+  popup.innerHTML = `
+    <div class="guide-popup-text">${text}</div>
+    <div class="guide-popup-close" onclick="this.parentElement.remove()">Entendido</div>
+  `;
+  container.appendChild(popup);
+
+  // Auto-cerrar tras 6 segundos
+  setTimeout(() => popup.remove(), 6000);
 }
 
 function syntaxHighlightXML(xml) {

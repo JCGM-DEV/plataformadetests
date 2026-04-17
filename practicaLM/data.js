@@ -36,12 +36,70 @@ const UNITS = {
       { id: 'xslt-reto', icon: '🏆', label: 'Reto María: Transformación', type: 'lesson', lessonId: 'reto_xslt_maria' },
     ]
   },
-  xquery: {
-    label: 'T6', title: 'XQuery',
+  bachero: {
+    label: 'EXAMEN', title: 'Repaso Práctico Bachero',
     sections: [
-      { id: 'xquery-teoria', icon: '📖', label: 'Teoría: XQuery FLWOR', type: 'lesson', lessonId: 'xquery_teoria' },
-      { id: 'xquery-reto', icon: '🏆', label: 'Reto María: Consultas FLWOR', type: 'lesson', lessonId: 'reto_xquery_maria' },
-      { id: 'xquery-editor', icon: '💻', label: 'Editor XQuery Interactivo', type: 'editor', editorId: 'xquery_editor' }
+      { id: 'b-h1', category: 'Bloque 1: HTML', icon: '🌐', label: 'HTML 1: Estructura', type: 'editor', editorId: 'h_1' },
+      { id: 'b-h2', category: 'Bloque 1: HTML', icon: '🌐', label: 'HTML 2: Títulos y Br', type: 'editor', editorId: 'h_2' },
+      { id: 'b-h3', category: 'Bloque 1: HTML', icon: '🌐', label: 'HTML 3: Formato Texto', type: 'editor', editorId: 'h_3' },
+      { id: 'b-h4', category: 'Bloque 1: HTML', icon: '🌐', label: 'HTML 4: Listas', type: 'editor', editorId: 'h_4' },
+      { id: 'b-h5', category: 'Bloque 1: HTML', icon: '🌐', label: 'HTML 5: Enlaces', type: 'editor', editorId: 'h_5' },
+      { id: 'b-h6', category: 'Bloque 1: HTML', icon: '🌐', label: 'HTML 6: Imágenes', type: 'editor', editorId: 'h_6' },
+      { id: 'b-h7', category: 'Bloque 1: HTML', icon: '🌐', label: 'HTML 7: Tablas', type: 'editor', editorId: 'h_7' },
+      { id: 'b-h8', category: 'Bloque 1: HTML', icon: '🌐', label: 'HTML 8: Div y Span', type: 'editor', editorId: 'h_8' },
+      { id: 'b-h9', category: 'Bloque 1: HTML', icon: '🌐', label: 'HTML 9: Formularios', type: 'editor', editorId: 'h_9' },
+      { id: 'b-h10', category: 'Bloque 1: HTML', icon: '🌐', label: 'HTML 10: Página Completa', type: 'editor', editorId: 'h_10' },
+
+      { id: 'b-x1', category: 'Bloque 2: XML & DTD', icon: '📄', label: 'XML 1: Alumno', type: 'editor', editorId: 'x_1' },
+      { id: 'b-x2', category: 'Bloque 2: XML & DTD', icon: '📄', label: 'XML 2: Curso', type: 'editor', editorId: 'x_2' },
+      { id: 'b-x3', category: 'Bloque 2: XML & DTD', icon: '📄', label: 'XML 3: CSS', type: 'editor', editorId: 'x_3' },
+      { id: 'b-x4', category: 'Bloque 2: XML & DTD', icon: '📄', label: 'XML 4: CDATA', type: 'editor', editorId: 'x_4' },
+      { id: 'b-d1', category: 'Bloque 2: XML & DTD', icon: '📜', label: 'DTD 1: Persona', type: 'editor', editorId: 'd_1' },
+      { id: 'b-d2', category: 'Bloque 2: XML & DTD', icon: '📜', label: 'DTD 2: Clase (+)', type: 'editor', editorId: 'd_2' },
+      { id: 'b-d3', category: 'Bloque 2: XML & DTD', icon: '📜', label: 'DTD 3: Libro (Attr)', type: 'editor', editorId: 'd_3' },
+      { id: 'b-d4', category: 'Bloque 2: XML & DTD', icon: '📜', label: 'DTD 4: Entidades', type: 'editor', editorId: 'd_4' },
+
+      { id: 'b-s1', category: 'Bloque 3: XSD', icon: '🛡️', label: 'XSD 1: Persona', type: 'editor', editorId: 's_1' },
+      { id: 'b-s2', category: 'Bloque 3: XSD', icon: '🛡️', label: 'XSD 2: Ocurrencias', type: 'editor', editorId: 's_2' },
+      { id: 'b-s3', category: 'Bloque 3: XSD', icon: '🛡️', label: 'XSD 3: Atributos', type: 'editor', editorId: 's_3' },
+      { id: 'b-s4', category: 'Bloque 3: XSD', icon: '🛡️', label: 'XSD 4: Restricciones', type: 'editor', editorId: 's_4' },
+      { id: 'b-s5', category: 'Bloque 3: XSD', icon: '🛡️', label: 'XSD 5: Choice', type: 'editor', editorId: 's_5' },
+      { id: 'b-s6', category: 'Bloque 3: XSD', icon: '🛡️', label: 'XSD 6: DNI Pattern', type: 'editor', editorId: 's_6' },
+      { id: 'b-s7', category: 'Bloque 3: XSD', icon: '🛡️', label: 'XSD 7: Enum A-D', type: 'editor', editorId: 's_7' },
+      { id: 'b-s8', category: 'Bloque 3: XSD', icon: '🛡️', label: 'XSD 8: Usuario Full', type: 'editor', editorId: 's_8' },
+      { id: 'b-s9', category: 'Bloque 3: XSD', icon: '🛡️', label: 'XSD 9: Pattern AB123', type: 'editor', editorId: 's_9' },
+      { id: 'b-s10', category: 'Bloque 3: XSD', icon: '🛡️', label: 'XSD 10: Tienda Completa', type: 'editor', editorId: 's_10' },
+
+      { id: 'b-sl1', category: 'Bloque 4: XSLT', icon: '🔄', label: 'XSLT 1: Básicos', type: 'editor', editorId: 'sl_1' },
+      { id: 'b-sl2', category: 'Bloque 4: XSLT', icon: '🔄', label: 'XSLT 2: For-each', type: 'editor', editorId: 'sl_2' },
+      { id: 'b-sl3', category: 'Bloque 4: XSLT', icon: '🔄', label: 'XSLT 3: Filtro XPath', type: 'editor', editorId: 'sl_3' },
+      { id: 'b-sl4', category: 'Bloque 4: XSLT', icon: '🔄', label: 'XSLT 4: Sort', type: 'editor', editorId: 'sl_4' },
+      { id: 'b-sl5', category: 'Bloque 4: XSLT', icon: '🔄', label: 'XSLT 5: Formato Texto', type: 'editor', editorId: 'sl_5' },
+      { id: 'b-sl6', category: 'Bloque 4: XSLT', icon: '🔄', label: 'XSLT 6: Listas HTML', type: 'editor', editorId: 'sl_6' },
+      { id: 'b-sl7', category: 'Bloque 4: XSLT', icon: '🔄', label: 'XSLT 7: Tablas HTML', type: 'editor', editorId: 'sl_7' },
+      { id: 'b-sl8', category: 'Bloque 4: XSLT', icon: '🔄', label: 'XSLT 8: Filtro Marca', type: 'editor', editorId: 'sl_8' },
+      { id: 'b-sl9', category: 'Bloque 4: XSLT', icon: '🔄', label: 'XSLT 9: Filtro Precio', type: 'editor', editorId: 'sl_9' },
+      { id: 'b-sl10', category: 'Bloque 4: XSLT', icon: '🔄', label: 'XSLT 10: Sort Asc', type: 'editor', editorId: 'sl_10' },
+      { id: 'b-sl11', category: 'Bloque 4: XSLT', icon: '🔄', label: 'XSLT 11: Sort Desc', type: 'editor', editorId: 'sl_11' },
+      { id: 'b-sl12', category: 'Bloque 4: XSLT', icon: '🔄', label: 'XSLT 12: Uso xsl:if', type: 'editor', editorId: 'sl_12' },
+
+      { id: 'b-q1', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 1: Títulos', type: 'editor', editorId: 'q_1' },
+      { id: 'b-q2', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 2: FLWOR Full', type: 'editor', editorId: 'q_2' },
+      { id: 'b-q3', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 3: Agregaciones', type: 'editor', editorId: 'q_3' },
+      { id: 'b-q4', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 4: Filtro Marca', type: 'editor', editorId: 'q_4' },
+      { id: 'b-q5', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 5: Ordenación', type: 'editor', editorId: 'q_5' },
+      { id: 'b-q6', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 6: Orden Desc', type: 'editor', editorId: 'q_6' },
+      { id: 'b-q7', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 7: Nuevo XML', type: 'editor', editorId: 'q_7' },
+      { id: 'b-q8', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 8: Biblioteca', type: 'editor', editorId: 'q_8' },
+      { id: 'b-q9', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 9: Libro + Autor', type: 'editor', editorId: 'q_9' },
+      { id: 'b-q10', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 10: Filtro Inf.', type: 'editor', editorId: 'q_10' },
+      { id: 'b-q11', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 11: Precio > 25', type: 'editor', editorId: 'q_11' },
+      { id: 'b-q12', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 12: Sort Precio', type: 'editor', editorId: 'q_12' },
+      { id: 'b-q13', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 13: Sort Desc', type: 'editor', editorId: 'q_13' },
+      { id: 'b-q14', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 14: Primero', type: 'editor', editorId: 'q_14' },
+      { id: 'b-q15', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 15: Último', type: 'editor', editorId: 'q_15' },
+      { id: 'b-q16', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 16: Conteo', type: 'editor', editorId: 'q_16' },
+      { id: 'b-q17', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 17: Stock < 5', type: 'editor', editorId: 'q_17' }
     ]
   }
 };
@@ -497,16 +555,652 @@ const EDITOR_LABS = {
 <catalogo>
   <!-- Añade tus productos aquí -->
   
-</catalogo>` },
-      { id: 2, title: 'Documento con namespace', desc: 'Crea un XML con namespace por defecto (xmlns="http://miempresa.com/productos") y al menos un elemento con prefijo (xmlns:desc="http://miempresa.com/descripciones").',
-        hint: 'xmlns="URI" para namespace por defecto, xmlns:prefijo="URI" para con prefijo',
-        starter: `<?xml version="1.0" encoding="UTF-8"?>
-<catalogo xmlns="" xmlns:desc="">
-  <producto id="1">
-    <nombre>Ejemplo</nombre>
-    <desc:detalle>Descripción detallada</desc:detalle>
-  </producto>
 </catalogo>` }
     ]
+  },
+  h_1: {
+    title: 'HTML 1: Estructura Básica',
+    description: 'Crea la estructura fundamental de un documento HTML5.',
+    type: 'html',
+    exercises: [{
+      id: 1, title: 'El esqueleto',
+      desc: 'Crea un documento con doctype, html, head (con meta charset y title) y body. Dentro del body pon un h1 con "Hola Mundo".',
+      hint: 'Usa <!DOCTYPE html>, <html lang="es">...',
+      starter: ``,
+      milestones: [
+        { id: 'doctype', check: /<!DOCTYPE html>/i, popup: '¡Bien! El DOCTYPE es esencial.' },
+        { id: 'h1', check: /<h1>Hola Mundo<\/h1>/i, popup: '¡Perfecto! Ya tienes tu primer encabezado.' }
+      ]
+    }]
+  },
+  h_2: {
+    title: 'HTML 2: Títulos y Br/Hr',
+    description: 'Usa encabezados y separadores visuales.',
+    type: 'html',
+    exercises: [{
+      id: 1, title: 'Jerarquía',
+      desc: 'Pon un h1, un h2, un párrafo con texto, una línea horizontal (<hr>) y otro párrafo con un salto de línea (<br>) en medio.',
+      hint: 'Usa <hr> para líneas y <br> para saltos.',
+      starter: ``,
+      milestones: [
+        { id: 'hr', check: /<hr/i, popup: 'Línea divisoria añadida.' },
+        { id: 'br', check: /<br/i, popup: 'Salto de línea detectado.' }
+      ]
+    }]
+  },
+  h_3: {
+    title: 'HTML 3: Formato de Texto',
+    description: 'Aplica estilos lógicos y físicos al texto.',
+    type: 'html',
+    exercises: [{
+      id: 1, title: 'Estilos',
+      desc: 'Crea un párrafo donde una palabra sea negrita (<b>), otra cursiva (<i>), otra subrayada (<u>) y otra tachada (<s>).',
+      hint: 'Usa b, i, u, s.',
+      starter: `<p>Este es un texto con </p>`,
+      milestones: [
+        { id: 'bold', check: /<b>/i, popup: 'Negrita detectada.' },
+        { id: 'italic', check: /<i>/i, popup: 'Cursiva detectada.' }
+      ]
+    }]
+  },
+  h_4: {
+    title: 'HTML 4: Listas',
+    description: 'Crea listas ordenadas y no ordenadas.',
+    type: 'html',
+    exercises: [{
+      id: 1, title: 'La Compra',
+      desc: 'Crea una lista no ordenada (ul) con 3 elementos. Luego una lista ordenada (ol) con 2 pasos.',
+      hint: 'Usa ul > li y ol > li.',
+      starter: ``,
+      milestones: [
+        { id: 'ul', check: /<ul>/i, popup: 'Lista de puntos creada.' },
+        { id: 'ol', check: /<ol>/i, popup: 'Lista numerada creada.' }
+      ]
+    }]
+  },
+  h_5: {
+    title: 'HTML 5: Enlaces',
+    description: 'Navegación interna y externa.',
+    type: 'html',
+    exercises: [{
+      id: 1, title: 'Surfeando',
+      desc: 'Crea un enlace a "google.es" que se abra en pestaña nueva. Luego un enlace que baje hasta un id "final" en la página.',
+      hint: 'Usa target="_blank" y href="#id".',
+      starter: `<p id="inicio"></p>
+<!-- Enlaces aquí -->
+<div style="height:1000px"></div>
+<p id="final">El final</p>`,
+      milestones: [
+        { id: 'blank', check: /target="_blank"/i, popup: 'Abrir en pestaña nueva: ¡Correcto!' },
+        { id: 'anchor', check: /href="#final"/i, popup: 'Enlace interno detectado.' }
+      ]
+    }]
+  },
+  h_6: {
+    title: 'HTML 6: Imágenes',
+    description: 'Insertar medios visuales.',
+    type: 'html',
+    exercises: [{
+      id: 1, title: 'Foto',
+      desc: 'Inserta una imagen (puedes usar https://via.placeholder.com/150) con un texto alternativo (alt) y un tamaño (width) de 100.',
+      hint: 'Usa <img src="..." alt="..." width="...">',
+      starter: ``,
+      milestones: [
+        { id: 'alt', check: /alt=/i, popup: '¡Muy bien! El "alt" es vital para la accesibilidad.' },
+        { id: 'width', check: /width=/i, popup: 'Tamaño ajustado.' }
+      ]
+    }]
+  },
+  h_7: {
+    title: 'HTML 7: Tablas',
+    description: 'Estructura datos tabulares.',
+    type: 'html',
+    exercises: [{
+      id: 1, title: 'Horario',
+      desc: 'Crea una tabla con un borde de 1. Debe tener una fila de cabecera (th) con "Día" y "Materia" y dos filas de datos (td).',
+      hint: 'table > tr > th/td',
+      starter: ``,
+      milestones: [
+        { id: 'table', check: /<table border="1">/i, popup: 'Tabla iniciada con borde.' },
+        { id: 'th', check: /<th>/i, popup: 'Cabecera detectada.' }
+      ]
+    }]
+  },
+  h_8: {
+    title: 'HTML 8: Div y Span',
+    description: 'Contenedores de bloque y línea.',
+    type: 'html',
+    exercises: [{
+      id: 1, title: 'Cajas',
+      desc: 'Crea un div con un color de fondo (usando style) y dentro un span con texto en rojo.',
+      hint: '<div style="background:yellow"> <span style="color:red">...</span> </div>',
+      starter: ``,
+      milestones: [
+        { id: 'div', check: /<div/i, popup: 'Contenedor de bloque creado.' },
+        { id: 'span', check: /<span/i, popup: 'Contenedor de línea creado.' }
+      ]
+    }]
+  },
+  h_9: {
+    title: 'HTML 9: Formularios',
+    description: 'Captura de datos del usuario.',
+    type: 'html',
+    exercises: [{
+      id: 1, title: 'Registro',
+      desc: 'Crea un form con un input de texto para el nombre, un input de email, un textarea para comentarios y un botón de tipo submit.',
+      hint: 'input type="text", type="email", textarea, button type="submit"',
+      starter: ``,
+      milestones: [
+        { id: 'email', check: /type="email"/i, popup: 'Input de email: ¡Correcto!' },
+        { id: 'submit', check: /type="submit"/i, popup: 'Botón de envío configurado.' }
+      ]
+    }]
+  },
+  h_10: {
+    title: 'HTML 10: Página Completa',
+    description: 'Integra todo lo aprendido.',
+    type: 'html',
+    exercises: [{
+      id: 1, title: 'Proyecto Final',
+      desc: 'Crea una página que tenga: Título (h1), un Imagen, una Lista de 3 cosas, una Tabla de 2x2 y un pequeño Formulario de contacto.',
+      hint: 'Es un resumen de todo el PDF de Repaso HTML.',
+      starter: ``,
+      milestones: [
+        { id: 'all', check: /<h1>.*<img.*<ul>.*<table>.*<form/si, popup: '¡Increíble! Has integrado todos los elementos del examen.' }
+      ]
+    }]
+  },
+  x_1: {
+    title: 'XML 1: Alumno',
+    description: 'Crea un XML básico para un alumno.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Datos del Alumno',
+      desc: 'Crea un XML con raíz "alumno" que contenga: nombre, apellidos, edad y ciclo.',
+      hint: 'Asegúrate de cerrar todas las etiquetas.',
+      starter: `<?xml version="1.0" encoding="UTF-8"?>
+`,
+      milestones: [
+        { id: 'alumno', check: /<alumno>.*<nombre>.*<apellidos>.*<edad>.*<ciclo>/si, popup: '¡Estructura de alumno completada!' }
+      ]
+    }]
+  },
+  x_2: {
+    title: 'XML 2: Curso y Módulos',
+    description: 'XML con elementos anidados.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Lista de Módulos',
+      desc: 'Crea un XML "curso" con nombre, centro y una lista de "modulos". Cada "modulo" debe tener nombre y horas (mínimo 2 módulos).',
+      hint: 'curso > modulos > modulo',
+      starter: `<?xml version="1.0" encoding="UTF-8"?>
+`,
+      milestones: [
+        { id: 'nesting', check: /<modulos>.*<modulo>.*<\/modulo>.*<modulo>/si, popup: '¡Bien! El anidamiento es correcto.' }
+      ]
+    }]
+  },
+  x_3: {
+    title: 'XML 3: Asociación CSS',
+    description: 'Enlazar una hoja de estilos.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Estilos Externos',
+      desc: 'Dado un XML de un libro, añade la instrucción para asociar "estilos.css".',
+      hint: 'Usa <?xml-stylesheet ... ?>',
+      starter: `<?xml version="1.0" encoding="UTF-8"?>
+<libro>
+  <titulo>XML Básico</titulo>
+</libro>`,
+      milestones: [
+        { id: 'css', check: /xml-stylesheet.*href="estilos.css"/i, popup: '¡Correcto! El XML ahora tiene estilo.' }
+      ]
+    }]
+  },
+  x_4: {
+    title: 'XML 4: Secciones CDATA',
+    description: 'Evitar que XML interprete código.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Código Literal',
+      desc: 'Crea un elemento "codigo" que contenga etiquetas <h1> y <p> usando una sección CDATA.',
+      hint: '<![CDATA[ ... ]]>',
+      starter: `<codigo>`,
+      milestones: [
+        { id: 'cdata', check: /<!\[CDATA\[.*<h1>.*<\/codigo>/si, popup: '¡Perfecto! El CDATA protege tu código.' }
+      ]
+    }]
+  },
+  d_1: {
+    title: 'DTD 1: Persona',
+    description: 'Validación básica con DTD interna.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Persona Estricta',
+      desc: 'Crea un XML para "persona" con "nombre" (texto) y "edad" (texto) usando una DTD interna.',
+      hint: '<!DOCTYPE persona [ <!ELEMENT ... > ]>',
+      starter: `<?xml version="1.0" encoding="UTF-8"?>
+`,
+      milestones: [
+        { id: 'dtd', check: /<!ELEMENT persona \(nombre, edad\)>/i, popup: '¡DTD definida correctamente!' }
+      ]
+    }]
+  },
+  d_2: {
+    title: 'DTD 2: Clase (+)',
+    description: 'Uso de cuantificadores en DTD.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Uno o más Alumnos',
+      desc: 'Crea una DTD para "clase" que contenga uno o más elementos "alumno". Cada alumno debe tener un "nombre".',
+      hint: 'Usa + para "uno o más".',
+      starter: `<?xml version="1.0" encoding="UTF-8"?>
+`,
+      milestones: [
+        { id: 'plus', check: /alumno\+/i, popup: '¡Uso del "+" detectado!' }
+      ]
+    }]
+  },
+  d_3: {
+    title: 'DTD 3: Libro (Atributos)',
+    description: 'Definición de atributos obligatorios.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'ISBN Requerido',
+      desc: 'Crea una DTD para "libro" con un atributo "isbn" que sea obligatorio (#REQUIRED).',
+      hint: '<!ATTLIST libro isbn CDATA #REQUIRED>',
+      starter: `<?xml version="1.0" encoding="UTF-8"?>
+`,
+      milestones: [
+        { id: 'attr', check: /#REQUIRED/i, popup: 'Atributo obligatorio: ¡Check!' }
+      ]
+    }]
+  },
+  d_4: {
+    title: 'DTD 4: Entidades',
+    description: 'Reutilización de constantes en XML.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Entidad Centro',
+      desc: 'Define una entidad llamada "centro" con el valor "Euroformac" y úsala dentro del elemento "instituto".',
+      hint: '<!ENTITY centro "Euroformac"> ... &centro;',
+      starter: `<?xml version="1.0" encoding="UTF-8"?>
+`,
+      milestones: [
+        { id: 'entity', check: /<!ENTITY \w+ ".*">/i, popup: 'Entidad definida. ¡Úsala con &nombre;!' }
+      ]
+    }]
+  },
+  s_1: {
+    title: 'XSD 1: Persona',
+    description: 'Esquema básico de secuencia.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Persona Simple',
+      desc: 'Crea un XSD para "persona" con "nombre" (string) y "edad" (integer) en secuencia.',
+      hint: 'xs:sequence > xs:element',
+      starter: `<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+`,
+      milestones: [
+        { id: 'seq', check: /xs:sequence/i, popup: 'Secuencia de elementos: ¡OK!' }
+      ]
+    }]
+  },
+  s_2: {
+    title: 'XSD 2: Ocurrencias',
+    description: 'minOccurs y maxOccurs.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Alumnos ilimitados',
+      desc: 'Define un elemento "alumno" que deba aparecer al menos una vez y sin límite máximo.',
+      hint: 'minOccurs="1" maxOccurs="unbounded"',
+      starter: `<xs:element name="clase">
+  <xs:complexType><xs:sequence>
+    <!-- Define alumno aquí -->
+`,
+      milestones: [
+        { id: 'unbounded', check: /maxOccurs="unbounded"/i, popup: '¡Unbounded! Así se define una lista infinita.' }
+      ]
+    }]
+  },
+  s_3: {
+    title: 'XSD 3: Atributos',
+    description: 'Validación de atributos requeridos.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Atributo ISBN',
+      desc: 'Crea un esquema para un libro con un atributo obligatorio "isbn" de tipo string.',
+      hint: 'xs:attribute use="required" (va después de xsl:sequence)',
+      starter: `<xs:element name="libro">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="titulo" type="xs:string"/>
+    </xs:sequence>
+    <!-- Atributo aquí -->
+`,
+      milestones: [
+        { id: 'req', check: /use="required"/i, popup: 'Atributo obligatorio configurado.' }
+      ]
+    }]
+  },
+  s_4: {
+    title: 'XSD 4: Restricciones de Rango',
+    description: 'minInclusive y maxInclusive.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Edad Humana',
+      desc: 'Crea un tipo simple para "edad" que admita valores entre 0 y 120.',
+      hint: 'xs:restriction base="xs:integer"',
+      starter: `<xs:simpleType name="tipoEdad">
+  <xs:restriction base="xs:integer">
+`,
+      milestones: [
+        { id: 'range', check: /maxInclusive value="120"/i, popup: 'Rango de edad: ¡Perfecto!' }
+      ]
+    }]
+  },
+  s_5: {
+    title: 'XSD 5: Choice',
+    description: 'Elegir uno entre varios elementos.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Email o Username',
+      desc: 'Crea un esquema donde el usuario deba elegir entre proporcionar un "email" o un "nick", pero no ambos.',
+      hint: 'xs:choice',
+      starter: `<xs:element name="registro">
+  <xs:complexType>
+    <xs:choice>
+`,
+      milestones: [
+        { id: 'choice', check: /xs:choice/i, popup: 'Uso de or-exclusivo (choice) detectado.' }
+      ]
+    }]
+  },
+  s_6: {
+    title: 'XSD 6: DNI Pattern',
+    description: 'Expresiones regulares en XSD.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'DNI Español',
+      desc: 'Crea un patrón para validar 8 números seguidos de una letra mayúscula.',
+      hint: '[0-9]{8}[A-Z]',
+      starter: `<xs:pattern value="`,
+      milestones: [
+        { id: 'pattern', check: /\[0-9\]\{8\}\[A-Z\]/, popup: '¡Regex de DNI correcto!' }
+      ]
+    }]
+  },
+  s_7: {
+    title: 'XSD 7: Enum A-D',
+    description: 'Lista cerrada de valores permitidos.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Categorías Fijas',
+      desc: 'Crea un tipo para "categoria" que solo acepte A, B, C o D.',
+      hint: 'xs:enumeration',
+      starter: `<xs:simpleType name="tipoCat">
+  <xs:restriction base="xs:string">
+`,
+      milestones: [
+        { id: 'enum', check: /enumeration value="D"/i, popup: '¡Todas las opciones incluidas!' }
+      ]
+    }]
+  },
+  s_8: {
+    title: 'XSD 8: Usuario Full',
+    description: 'Combinación de minLength y Pattern.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Usuario Robusto',
+      desc: 'Crea un tipo para nick entre 5 y 12 caracteres, solo letras minúsculas y números.',
+      hint: 'minLength, maxLength y pattern.',
+      starter: `<xs:restriction base="xs:string">
+`,
+      milestones: [
+        { id: 'mixed', check: /minLength.*maxLength.*pattern/si, popup: '¡Increíble! Has cubierto todas las restricciones.' }
+      ]
+    }]
+  },
+  s_9: {
+    title: 'XSD 9: Pattern AB123',
+    description: 'Patrones específicos de negocio.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Código de Producto',
+      desc: 'Crea un patrón para un código que empiece por 2 mayúsculas y siga con 3 números (ej: AB123).',
+      hint: '[A-Z]{2}[0-9]{3}',
+      starter: `<xs:pattern value="`,
+      milestones: [
+        { id: 'p2', check: /\[A-Z\]\{2\}\[0-9\]\{3\}/, popup: '¡Código de producto validado!' }
+      ]
+    }]
+  },
+  s_10: {
+    title: 'XSD 10: Tienda Completa',
+    description: 'Integración avanzada de XSD.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Esquema de Tienda',
+      desc: 'Crea un esquema para "tienda" > "producto" con nombre, precio (decimal), iva (4, 10, 21) y categoria (A, B, C).',
+      hint: 'Es una mezcla de enumeraciones y tipos simples.',
+      starter: ``,
+      milestones: [
+        { id: 'full', check: /decimal.*enumeration.*enumeration/si, popup: '¡Nivel avanzado alcanzado!' }
+      ]
+    }]
+  },
+  sl_1: {
+    title: 'XSLT 1: Básicos',
+    description: 'La estructura de una hoja de estilos.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Stylesheet',
+      desc: 'Crea la estructura básica de XSLT con xsl:stylesheet y un xsl:template que mochee la raíz.',
+      hint: '<xsl:stylesheet ...> <xsl:template match="/">',
+      starter: ``,
+      milestones: [
+        { id: 'xslt', check: /xsl:stylesheet/i, popup: 'Sheet iniciada.' },
+        { id: 'match', check: /match="\/"/i, popup: 'Template para la raíz creado.' }
+      ]
+    }]
+  },
+  sl_2: {
+    title: 'XSLT 2: For-each',
+    description: 'Iterar sobre conjuntos de nodos.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Lista de Nombres',
+      desc: 'Usa xsl:for-each para recorrer todos los "libro" y mostrar su "titulo".',
+      hint: '<xsl:for-each select="//libro">',
+      starter: ``,
+      milestones: [
+        { id: 'fe', check: /xsl:for-each/i, popup: 'Bucle iniciado.' },
+        { id: 'vo', check: /xsl:value-of/i, popup: 'Extrayendo valor.' }
+      ]
+    }]
+  },
+  sl_3: {
+    title: 'XSLT 3: Filtro XPath',
+    description: 'Filtrado en tiempo de transformación.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Libros de Informática',
+      desc: 'Muestra solo los títulos de los libros cuya categoría sea "Informática".',
+      hint: 'select="//libro[categoria=\'Informática\']"',
+      starter: ``,
+      milestones: [
+        { id: 'filt', check: /\[categoria='Informática'\]/i, popup: '¡Filtro XPath detectado!' }
+      ]
+    }]
+  },
+  sl_4: {
+    title: 'XSLT 4: Sort',
+    description: 'Ordenación de resultados.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Ordenados por Precio',
+      desc: 'Usa xsl:sort dentro de for-each para ordenar por precio de menor a mayor.',
+      hint: '<xsl:sort select="precio" order="ascending"/>',
+      starter: ``,
+      milestones: [
+        { id: 'sort', check: /xsl:sort/i, popup: '¡Resultados ordenados!' }
+      ]
+    }]
+  },
+  sl_5: {
+    title: 'XSLT 5: Formato de Texto Especial',
+    description: 'Usa xsl:text para dar formato a la salida.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Nombre - Precio',
+      desc: 'Muestra el nombre seguido de un guion y el precio con el símbolo €.',
+      hint: 'Usa <xsl:text> - </xsl:text> y <xsl:text>€</xsl:text>',
+      starter: ``,
+      milestones: [
+        { id: 'text', check: /xsl:text/i, popup: '¡Bien! xsl:text es ideal para espacios y símbolos.' }
+      ]
+    }]
+  },
+  sl_6: {
+    title: 'XSLT 6: Listas HTML',
+    description: 'Genera una lista no ordenada (ul).',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Lista de Productos',
+      desc: 'Recorre los productos y genera un <li> para cada nombre.',
+      hint: '<ul> <xsl:for-each ...> <li>...</li> </xsl:for-each> </ul>',
+      starter: ``,
+      milestones: [
+        { id: 'li', check: /<li>/i, popup: '¡Estructura de lista detectada!' }
+      ]
+    }]
+  },
+  sl_7: {
+    title: 'XSLT 7: Tablas HTML Completas',
+    description: 'Genera una tabla con cabecera y datos.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Catálogo en Tabla',
+      desc: 'Crea una <table> con columnas Nombre, Marca y Precio.',
+      hint: 'tr > th para cabeceras, tr > td para datos.',
+      starter: ``,
+      milestones: [
+        { id: 'table', check: /<table/i, popup: '¡Tabla iniciada!' },
+        { id: 'td', check: /<td>/i, popup: '¡Celdas de datos preparadas!' }
+      ]
+    }]
+  },
+  sl_8: {
+    title: 'XSLT 8: Filtro por Marca',
+    description: 'Uso de predicados XPath en xsl:for-each.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Solo Logitech',
+      desc: 'Muestra solo los nombres de los productos cuya marca sea Logitech.',
+      hint: 'select="tienda/producto[marca=\'Logitech\']"',
+      starter: ``,
+      milestones: [
+        { id: 'filter', check: /\[marca='Logitech'\]/i, popup: '¡Filtro de marca correcto!' }
+      ]
+    }]
+  },
+  sl_9: {
+    title: 'XSLT 9: Filtro por Precio',
+    description: 'Filtrado numérico en XPath.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Productos Caros',
+      desc: 'Muestra los nombres de productos con precio mayor que 50.',
+      hint: 'select="tienda/producto[precio > 50]" (recuerda usar &gt; si es necesario)',
+      starter: ``,
+      milestones: [
+        { id: 'price', check: /precio\s*(&gt;|>)\s*50/i, popup: '¡Filtro de precio detectado!' }
+      ]
+    }]
+  },
+  sl_10: {
+    title: 'XSLT 10: Ordenación Ascendente',
+    description: 'Uso de xsl:sort.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'De menor a mayor',
+      desc: 'Ordena los productos por precio de forma ascendente.',
+      hint: '<xsl:sort select="precio" data-type="number" order="ascending"/>',
+      starter: ``,
+      milestones: [
+        { id: 'sort', check: /order="ascending"/i, popup: '¡Ordenación ascendente configurada!' }
+      ]
+    }]
+  },
+  sl_11: {
+    title: 'XSLT 11: Ordenación Descendente',
+    description: 'Invertir el orden con xsl:sort.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'De mayor a menor',
+      desc: 'Ordena los productos por precio de forma descendente.',
+      hint: '<xsl:sort select="precio" data-type="number" order="descending"/>',
+      starter: ``,
+      milestones: [
+        { id: 'desc', check: /order="descending"/i, popup: '¡Ordenación descendente configurada!' }
+      ]
+    }]
+  },
+  sl_12: {
+    title: 'XSLT 12: Condición xsl:if',
+    description: 'Lógica condicional dentro del bucle.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Control de Stock',
+      desc: 'Muestra el nombre solo si el stock es mayor que 20.',
+      hint: '<xsl:if test="stock > 20">',
+      starter: ``,
+      milestones: [
+        { id: 'if', check: /xsl:if/i, popup: '¡Condición if detectada!' }
+      ]
+    }]
+  },
+  q_1: {
+    title: 'XQuery 1: Básicos',
+    description: 'Consultas directas.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Todos los Títulos',
+      desc: 'Obtén los títulos de todos los libros de la biblioteca.',
+      hint: '//libro/titulo',
+      starter: ``,
+      milestones: [
+        { id: 'q1', check: /\/\/libro\/titulo/i, popup: 'Consulta directa: ¡Check!' }
+      ]
+    }]
+  },
+  q_2: {
+    title: 'XQuery 2: FLWOR Full',
+    description: 'For, Let, Where, Order by, Return.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Procesamiento Completo',
+      desc: 'Busca libros > 20€, ordénalos por precio y devuelve un nuevo XML <resultado> con el título.',
+      hint: 'for $l in ... where ... order by ... return <resultado>{$l/titulo}</resultado>',
+      starter: ``,
+      milestones: [
+        { id: 'flwor', check: /for.*where.*order.*return/si, popup: '¡FLWOR completo dominado!' }
+      ]
+    }]
+  },
+  q_3: {
+    title: 'XQuery 3: Agregaciones',
+    description: 'Funciones de conteo y cálculo.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Contar Libros',
+      desc: 'Usa la función count() para mostrar cuántos libros hay en total en la biblioteca.',
+      hint: 'count(//libro)',
+      starter: ``,
+      milestones: [
+        { id: 'count', check: /count\(/i, popup: '¡Función de agregación detectada!' }
+      ]
+    }]
   }
 };

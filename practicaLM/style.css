@@ -330,3 +330,46 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 .xpath-match { background: rgba(132, 204, 22, 0.2); border-radius: 2px; box-shadow: 0 0 0 1px var(--accent); color: var(--accent3) !important; font-weight: bold; }
 .xpath-no-match { color: var(--text2); font-style: italic; }
 
+/* SPECIAL BACHERO CARD */
+.sidebar-category {
+  font-size: .65rem; font-weight: 800; color: var(--accent);
+  letter-spacing: .1em; padding: 1.25rem .75rem .5rem;
+  text-transform: uppercase; border-bottom: 1px solid var(--border);
+  margin-bottom: .5rem; pointer-events: none;
+}
+
+/* SPECIAL BACHERO CARD */
+.bachero-special { background: linear-gradient(135deg, var(--surface), #1a200a); border: 1.5px solid var(--accent); }
+.unit-badge.gold { background: linear-gradient(135deg, #ffd700, #b8860b); color: #000; }
+
+/* GUIDANCE POPUPS */
+.guide-container { position: relative; }
+.guide-popup {
+  position: absolute; bottom: 20px; right: 20px; max-width: 280px;
+  background: rgba(26, 42, 8, 0.95); backdrop-filter: blur(12px);
+  border: 1.5px solid var(--accent); border-radius: 16px; padding: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,.5), 0 0 15px rgba(132, 204, 22, 0.3);
+  z-index: 200; animation: popupBounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex; flex-direction: column; gap: .75rem;
+}
+.guide-popup::before {
+  content: "💡"; font-size: 1.5rem; position: absolute; top: -15px; left: -10px;
+  background: var(--bg); border-radius: 50%; padding: 2px;
+}
+.guide-popup-text { font-size: .88rem; line-height: 1.5; color: var(--text); font-weight: 500; }
+.guide-popup-close {
+  align-self: flex-end; font-size: .75rem; color: var(--accent2);
+  cursor: pointer; font-weight: 700; text-transform: uppercase; letter-spacing: .05em;
+}
+
+@keyframes popupBounce {
+  from { opacity: 0; transform: translateY(20px) scale(0.9); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.pulse-hint { animation: pulseGlow 2s infinite; }
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(132, 204, 22, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(132, 204, 22, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(132, 204, 22, 0); }
+}
