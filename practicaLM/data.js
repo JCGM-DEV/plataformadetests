@@ -99,7 +99,15 @@ const UNITS = {
       { id: 'b-q14', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 14: Primero', type: 'editor', editorId: 'q_14' },
       { id: 'b-q15', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 15: Último', type: 'editor', editorId: 'q_15' },
       { id: 'b-q16', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 16: Conteo', type: 'editor', editorId: 'q_16' },
-      { id: 'b-q17', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 17: Stock < 5', type: 'editor', editorId: 'q_17' }
+      { id: 'b-q17', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 17: Stock < 5', type: 'editor', editorId: 'q_17' },
+      
+      { id: 'b-q18', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 1: Videojuegos', type: 'editor', editorId: 'q_18' },
+      { id: 'b-q19', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 2: Academia', type: 'editor', editorId: 'q_19' },
+      { id: 'b-q20', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 3: Páginas', type: 'editor', editorId: 'q_20' },
+      { id: 'b-q21', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 4: Coches (Max)', type: 'editor', editorId: 'q_21' },
+      { id: 'b-q22', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 5: Alumnos', type: 'editor', editorId: 'q_22' },
+      { id: 'b-q23', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 6: Películas', type: 'editor', editorId: 'q_23' },
+      { id: 'b-q24', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 7: Pedidos', type: 'editor', editorId: 'q_24' }
     ]
   }
 };
@@ -1431,6 +1439,202 @@ const EDITOR_LABS = {
       starter: ``,
       milestones: [
         { id: 'where', check: /stock\s*<\s*5/i, popup: 'Filtro de stock OK.', instruction: 'Añade un where para filtrar los libros con stock inferior a 5.' }
+      ]
+    }]
+  },
+  q_18: {
+    title: 'XQuery Extra 1: Videojuegos',
+    description: 'Consulta básica sobre una colección de juegos.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Títulos de Juegos',
+      desc: 'Muestra los títulos de todos los videojuegos.',
+      hint: 'for $j in //juego return $j/titulo',
+      starter: `<videojuegos>
+ <juego>
+  <titulo>FIFA 25</titulo>
+  <plataforma>PS5</plataforma>
+  <precio>70</precio>
+ </juego>
+ <juego>
+  <titulo>Minecraft</titulo>
+  <plataforma>PC</plataforma>
+  <precio>30</precio>
+ </juego>
+ <juego>
+  <titulo>Zelda</titulo>
+  <plataforma>Switch</plataforma>
+  <precio>60</precio>
+ </juego>
+</videojuegos>`,
+      milestones: [
+        { id: 'for', check: /for\s+\$j\s+in/i, popup: 'Bucle FOR OK.', instruction: 'Empieza con un bucle for $j in //juego.' },
+        { id: 'ret', check: /return\s+\$j\/titulo/i, popup: 'Retorno de título OK.', instruction: 'Devuelve el nodo título de cada juego.' }
+      ]
+    }]
+  },
+  q_19: {
+    title: 'XQuery Extra 2: Academia',
+    description: 'Filtrado por precio.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Cursos Caros',
+      desc: 'Muestra los idiomas de los cursos con precio mayor que 110.',
+      hint: 'where $c/precio > 110',
+      starter: `<academia>
+ <curso>
+  <idioma>Inglés</idioma>
+  <precio>120</precio>
+ </curso>
+ <curso>
+  <idioma>Francés</idioma>
+  <precio>100</precio>
+ </curso>
+ <curso>
+  <idioma>Alemán</idioma>
+  <precio>150</precio>
+ </curso>
+</academia>`,
+      milestones: [
+        { id: 'where', check: /where\s+\$c\/precio\s*>\s*110/i, popup: 'Filtro de precio OK.', instruction: 'Añade un where para filtrar los cursos de más de 110€.' }
+      ]
+    }]
+  },
+  q_20: {
+    title: 'XQuery Extra 3: Biblioteca (Páginas)',
+    description: 'Ordenación por campo numérico.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Orden por Páginas',
+      desc: 'Muestra los títulos de los libros ordenados por número de páginas (ascendente).',
+      hint: 'order by $l/paginas',
+      starter: `<biblioteca>
+ <libro>
+  <titulo>Don Quijote</titulo>
+  <paginas>900</paginas>
+ </libro>
+ <libro>
+  <titulo>La Celestina</titulo>
+  <paginas>300</paginas>
+ </libro>
+ <libro>
+  <titulo>Platero y yo</titulo>
+  <paginas>150</paginas>
+ </libro>
+</biblioteca>`,
+      milestones: [
+        { id: 'order', check: /order\s+by\s+\$l\/paginas/i, popup: 'Ordenación OK.', instruction: 'Añade la cláusula order by $l/paginas.' }
+      ]
+    }]
+  },
+  q_21: {
+    title: 'XQuery Extra 4: Coches (Max)',
+    description: 'Uso de funciones de agregación (max).',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'El Coche más Caro',
+      desc: 'Muestra el modelo del coche con el precio máximo.',
+      hint: 'where $c/precio = max(//precio)',
+      starter: `<coches>
+ <coche>
+  <modelo>Ibiza</modelo>
+  <precio>18000</precio>
+ </coche>
+ <coche>
+  <modelo>Clio</modelo>
+  <precio>17500</precio>
+ </coche>
+ <coche>
+  <modelo>X1</modelo>
+  <precio>42000</precio>
+ </coche>
+</coches>`,
+      milestones: [
+        { id: 'max', check: /max\(/i, popup: 'Función MAX detectada.', instruction: 'Usa la función max(//precio) para comparar con el precio del coche actual.' }
+      ]
+    }]
+  },
+  q_22: {
+    title: 'XQuery Extra 5: Alumnos',
+    description: 'Filtrado de notas.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Alumnos Aprobados',
+      desc: 'Muestra solo los nombres de los alumnos cuya nota sea mayor o igual a 5.',
+      hint: 'where $a/nota >= 5',
+      starter: `<alumnos>
+ <alumno>
+  <nombre>Ana</nombre>
+  <nota>8</nota>
+ </alumno>
+ <alumno>
+  <nombre>Luis</nombre>
+  <nota>4</nota>
+ </alumno>
+ <alumno>
+  <nombre>Marta</nombre>
+  <nota>9</nota>
+ </alumno>
+</alumnos>`,
+      milestones: [
+        { id: 'pass', check: /nota\s*>=\s*5/i, popup: 'Aprobados filtrados.', instruction: 'Añade el filtro where $a/nota >= 5.' }
+      ]
+    }]
+  },
+  q_23: {
+    title: 'XQuery Extra 6: Películas',
+    description: 'Filtro por duración.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Películas Cortas',
+      desc: 'Muestra los títulos de las películas con duración menor que 150 minutos.',
+      hint: 'where $p/duracion < 150',
+      starter: `<peliculas>
+ <pelicula>
+  <titulo>Origen</titulo>
+  <duracion>148</duracion>
+ </pelicula>
+ <pelicula>
+  <titulo>Coco</titulo>
+  <duracion>105</duracion>
+ </pelicula>
+ <pelicula>
+  <titulo>Gladiator</titulo>
+  <duracion>155</duracion>
+ </pelicula>
+</peliculas>`,
+      milestones: [
+        { id: 'short', check: /duracion\s*<\s*150/i, popup: 'Duración controlada.', instruction: 'Filtra las películas con duración < 150.' }
+      ]
+    }]
+  },
+  q_24: {
+    title: 'XQuery Extra 7: Pedidos',
+    description: 'Filtro por atributo/campo de texto.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Pedidos de Lucía',
+      desc: 'Muestra todos los datos de los pedidos realizados por "Lucía".',
+      hint: "where $p/cliente = 'Lucía'",
+      starter: `<pedidos>
+ <pedido>
+  <cliente>Lucía</cliente>
+  <producto>Teclado</producto>
+  <cantidad>2</cantidad>
+ </pedido>
+ <pedido>
+  <cliente>Mario</cliente>
+  <producto>Ratón</producto>
+  <cantidad>1</cantidad>
+ </pedido>
+ <pedido>
+  <cliente>Lucía</cliente>
+  <producto>Monitor</producto>
+  <cantidad>3</cantidad>
+ </pedido>
+</pedidos>`,
+      milestones: [
+        { id: 'client', check: /cliente\s*=\s*(['"])Lucía\1/i, popup: 'Pedidos de Lucía encontrados.', instruction: "Filtra por el cliente 'Lucía' usando el operador =." }
       ]
     }]
   }
