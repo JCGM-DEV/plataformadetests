@@ -264,8 +264,8 @@ function renderEditorExercise(labData) {
     <div class="exercise-desc">
       <h4>Ejercicio ${editorState.current+1}/${total}: ${ex.title}</h4>
       <p>${ex.desc}</p>
-      <p class="hint">💡 ${ex.hint}</p>
     </div>
+    <div id="tutor-container">${renderTutorPanel()}</div>
     <div style="margin-top:1rem" class="editor-workspace guide-container">
       <div class="editor-pane">
         <div class="editor-pane-label">${isHTML ? '📝 HTML' : '📄 XML'}</div>
@@ -317,26 +317,75 @@ function checkMilestones() {
   const ex = editorState.exercises[editorState.current];
   if (!ex.milestones) return;
 
+  let achievedNew = false;
   ex.milestones.forEach(m => {
     if (!editorState.achievedMilestones.has(m.id) && m.check.test(code)) {
       editorState.achievedMilestones.add(m.id);
       showGuidancePopup(m.popup);
+      achievedNew = true;
     }
   });
+
+  if (achievedNew) {
+    const container = document.getElementById('tutor-container');
+    if (container) container.innerHTML = renderTutorPanel();
+  }
+}
+
+function renderTutorPanel(isStuck = false) {
+  const ex = editorState.exercises[editorState.current];
+  const milestones = ex.milestones || [];
+  const nextIdx = milestones.findIndex(m => !editorState.achievedMilestones.has(m.id));
+  
+  let tutorText = "";
+  let badge = "";
+  let avatar = "🤖";
+
+  if (nextIdx === -1 && milestones.length > 0) {
+    tutorText = "¡Excelente! Has completado todos los pasos de este ejercicio. Pulsa 'Siguiente' para continuar.";
+    badge = "COMPLETADO";
+    avatar = "🌟";
+  } else if (milestones.length > 0) {
+    const nextM = milestones[nextIdx];
+    if (isStuck) {
+      tutorText = `¿Te has atascado? Pista: ${nextM.hint || nextM.instruction || ex.hint}`;
+      badge = "PISTA";
+      avatar = "💡";
+    } else {
+      tutorText = nextIdx === 0 ? `Para empezar: ${nextM.instruction || ex.hint}` : `Buen trabajo. Ahora: ${nextM.instruction || 'continúa con el siguiente paso.'}`;
+      badge = `PASO ${nextIdx + 1}/${milestones.length}`;
+    }
+  } else {
+    tutorText = ex.hint || "Usa el editor para completar el ejercicio propuesto.";
+    badge = "GUÍA";
+  }
+
+  return `
+    <div class="tutor-panel ${isStuck ? 'tutor-stuck' : ''}">
+      <div class="tutor-avatar">${avatar}</div>
+      <div class="tutor-content">
+        <div class="tutor-label">Bachero Tutor <span class="tutor-badge" style="${isStuck?'background:var(--accent2)':''}">${badge}</span></div>
+        <div class="tutor-step-text">${escapeHTML(tutorText)}</div>
+      </div>
+    </div>`;
+}
+
+function escapeHTML(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
 }
 
 function resetStuckTimer() {
   if (stuckTimer) clearTimeout(stuckTimer);
-  const ex = editorState.exercises[editorState.current];
-  if (!ex.milestones) return;
-
   stuckTimer = setTimeout(() => {
-    const code = document.getElementById('editor-input')?.value || '';
-    // Si ha pasado mucho tiempo y no ha completado el primer hito, sugerir pista
-    if (editorState.achievedMilestones.size === 0 && code.trim().length < 50) {
-      showGuidancePopup("¿Necesitas ayuda? Recuerda mirar la pista (💡) arriba.");
+    const container = document.getElementById('tutor-container');
+    if (container) {
+      container.innerHTML = renderTutorPanel(true);
+      // Efecto visual de sacudida para llamar la atención
+      container.querySelector('.tutor-panel').classList.add('shake');
     }
-  }, 12000); // 12 segundos de inactividad
+  }, 15000); // 15 segundos de inactividad
 }
 
 function showGuidancePopup(text) {

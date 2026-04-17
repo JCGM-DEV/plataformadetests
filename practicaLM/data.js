@@ -568,8 +568,8 @@ const EDITOR_LABS = {
       hint: 'Usa <!DOCTYPE html>, <html lang="es">...',
       starter: ``,
       milestones: [
-        { id: 'doctype', check: /<!DOCTYPE html>/i, popup: '¡Bien! El DOCTYPE es esencial.' },
-        { id: 'h1', check: /<h1>Hola Mundo<\/h1>/i, popup: '¡Perfecto! Ya tienes tu primer encabezado.' }
+        { id: 'doctype', check: /<!DOCTYPE html>/i, popup: '¡Bien! El DOCTYPE es esencial.', instruction: 'Empieza escribiendo la declaración <!DOCTYPE html>.' },
+        { id: 'h1', check: /<h1>Hola Mundo<\/h1>/i, popup: '¡Perfecto! Ya tienes el h1.', instruction: 'Ahora añade un encabezado <h1> con el texto "Hola Mundo".' }
       ]
     }]
   },
@@ -583,8 +583,8 @@ const EDITOR_LABS = {
       hint: 'Usa <hr> para líneas y <br> para saltos.',
       starter: ``,
       milestones: [
-        { id: 'hr', check: /<hr/i, popup: 'Línea divisoria añadida.' },
-        { id: 'br', check: /<br/i, popup: 'Salto de línea detectado.' }
+        { id: 'hr', check: /<hr/i, popup: 'Línea horizontal detectada.', instruction: 'Inserta una línea divisoria usando la etiqueta <hr>.' },
+        { id: 'br', check: /<br/i, popup: 'Salto de línea detectado.', instruction: 'Añade un salto de línea interno usando <br>.' }
       ]
     }]
   },
@@ -598,8 +598,8 @@ const EDITOR_LABS = {
       hint: 'Usa b, i, u, s.',
       starter: `<p>Este es un texto con </p>`,
       milestones: [
-        { id: 'bold', check: /<b>/i, popup: 'Negrita detectada.' },
-        { id: 'italic', check: /<i>/i, popup: 'Cursiva detectada.' }
+        { id: 'bold', check: /<b>/i, popup: 'Negrita detectada.', instruction: 'Pon una palabra en negrita usando <b>.' },
+        { id: 'italic', check: /<i>/i, popup: 'Cursiva detectada.', instruction: 'Pon una palabra en cursiva usando <i>.' }
       ]
     }]
   },
@@ -613,8 +613,8 @@ const EDITOR_LABS = {
       hint: 'Usa ul > li y ol > li.',
       starter: ``,
       milestones: [
-        { id: 'ul', check: /<ul>/i, popup: 'Lista de puntos creada.' },
-        { id: 'ol', check: /<ol>/i, popup: 'Lista numerada creada.' }
+        { id: 'ul', check: /<ul>/i, popup: 'Lista no ordenada lista.', instruction: 'Crea una lista de puntos usando <ul> y <li>.' },
+        { id: 'ol', check: /<ol>/i, popup: 'Lista ordenada lista.', instruction: 'Crea una lista numerada usando <ol> (pasos).' }
       ]
     }]
   },
@@ -1000,8 +1000,8 @@ const EDITOR_LABS = {
       hint: '<xsl:stylesheet ...> <xsl:template match="/">',
       starter: ``,
       milestones: [
-        { id: 'xslt', check: /xsl:stylesheet/i, popup: 'Sheet iniciada.' },
-        { id: 'match', check: /match="\/"/i, popup: 'Template para la raíz creado.' }
+        { id: 'xslt', check: /xsl:stylesheet/i, popup: 'Hoja de estilos iniciada.', instruction: 'Define la hoja de estilos con <xsl:stylesheet version="1.0" ...>.' },
+        { id: 'match', check: /match="\/"/i, popup: 'Template raíz creado.', instruction: 'Crea un <xsl:template match="/"> para procesar el documento desde la raíz.' }
       ]
     }]
   },
@@ -1015,8 +1015,8 @@ const EDITOR_LABS = {
       hint: '<xsl:for-each select="//libro">',
       starter: ``,
       milestones: [
-        { id: 'fe', check: /xsl:for-each/i, popup: 'Bucle iniciado.' },
-        { id: 'vo', check: /xsl:value-of/i, popup: 'Extrayendo valor.' }
+        { id: 'fe', check: /xsl:for-each/i, popup: 'Bucle for-each listo.', instruction: 'Usa <xsl:for-each select="//libro"> para recorrer todos los libros.' },
+        { id: 'vo', check: /xsl:value-of/i, popup: 'Valor extraído.', instruction: 'Dentro del bucle, usa <xsl:value-of select="titulo"/> para mostrar el nombre.' }
       ]
     }]
   },
@@ -1030,7 +1030,7 @@ const EDITOR_LABS = {
       hint: 'select="//libro[categoria=\'Informática\']"',
       starter: ``,
       milestones: [
-        { id: 'filt', check: /\[categoria='Informática'\]/i, popup: '¡Filtro XPath detectado!' }
+        { id: 'filt', check: /\[categoria='Informática'\]/i, popup: 'Filtro XPath aplicado.', instruction: 'Añade el filtro [categoria=\'Informática\'] al select del for-each.' }
       ]
     }]
   },
@@ -1044,7 +1044,7 @@ const EDITOR_LABS = {
       hint: '<xsl:sort select="precio" order="ascending"/>',
       starter: ``,
       milestones: [
-        { id: 'sort', check: /xsl:sort/i, popup: '¡Resultados ordenados!' }
+        { id: 'sort', check: /xsl:sort/i, popup: 'Ordenación configurada.', instruction: 'Añade <xsl:sort select="precio" order="ascending"/> dentro del for-each.' }
       ]
     }]
   },
@@ -1157,7 +1157,7 @@ const EDITOR_LABS = {
       hint: '<xsl:if test="stock > 20">',
       starter: ``,
       milestones: [
-        { id: 'if', check: /xsl:if/i, popup: '¡Condición if detectada!' }
+        { id: 'if', check: /xsl:if/i, popup: '¡Condición if detectada!', instruction: 'Usa xsl:if para filtrar por stock.', hint: 'Prueba con <xsl:if test="stock > 20">' }
       ]
     }]
   },
@@ -1171,7 +1171,7 @@ const EDITOR_LABS = {
       hint: '//libro/titulo',
       starter: ``,
       milestones: [
-        { id: 'q1', check: /\/\/libro\/titulo/i, popup: 'Consulta directa: ¡Check!' }
+        { id: 'q1', check: /\/\/libro\/titulo/i, popup: '¡Exacto! XPath directo.', instruction: 'Extrae todos los elementos <titulo> de la colección.', hint: 'Simplemente escribe //libro/titulo' }
       ]
     }]
   },
@@ -1185,7 +1185,7 @@ const EDITOR_LABS = {
       hint: 'for $l in ... where ... order by ... return <resultado>{$l/titulo}</resultado>',
       starter: ``,
       milestones: [
-        { id: 'flwor', check: /for.*where.*order.*return/si, popup: '¡FLWOR completo dominado!' }
+        { id: 'flwor', check: /for.*where.*order.*return/si, popup: '¡FLWOR completo!', instruction: 'Escribe una consulta FLWOR completa.', hint: 'Estructura: for $l in //libro where $l/precio > 20 order by $l/precio return $l/titulo' }
       ]
     }]
   },
@@ -1199,7 +1199,7 @@ const EDITOR_LABS = {
       hint: 'count(//libro)',
       starter: ``,
       milestones: [
-        { id: 'count', check: /count\(/i, popup: '¡Función de agregación detectada!' }
+        { id: 'count', check: /count\(/i, popup: '¡Conteo total listo!', instruction: 'Usa la función count() envolviendo la ruta de los libros para obtener el total.' }
       ]
     }]
   }
