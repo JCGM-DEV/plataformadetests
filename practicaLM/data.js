@@ -583,8 +583,11 @@ const EDITOR_LABS = {
       hint: 'Usa <hr> para líneas y <br> para saltos.',
       starter: ``,
       milestones: [
-        { id: 'hr', check: /<hr/i, popup: 'Línea horizontal detectada.', instruction: 'Inserta una línea divisoria usando la etiqueta <hr>.' },
-        { id: 'br', check: /<br/i, popup: 'Salto de línea detectado.', instruction: 'Añade un salto de línea interno usando <br>.' }
+        { id: 'h1', check: /<h1>/i, popup: '¡Bien! El título principal h1 está listo.', instruction: 'Empieza poniendo un título <h1> para el documento.' },
+        { id: 'h2', check: /<h2>/i, popup: 'H2 detectado.', instruction: 'Ahora añade un subtítulo <h2> justo debajo.' },
+        { id: 'p', check: /<p>/i, popup: 'Primer párrafo listo.', instruction: 'Escribe un párrafo con texto explicativo.' },
+        { id: 'hr', check: /<hr/i, popup: 'Línea horizontal detectada.', instruction: 'Ahora inserta una línea divisoria usando la etiqueta <hr>.' },
+        { id: 'br', check: /<br/i, popup: 'Salto de línea detectado.', instruction: 'Finalmente, añade otro párrafo que incluya un salto de línea <br> en medio.' }
       ]
     }]
   },
@@ -599,7 +602,9 @@ const EDITOR_LABS = {
       starter: `<p>Este es un texto con </p>`,
       milestones: [
         { id: 'bold', check: /<b>/i, popup: 'Negrita detectada.', instruction: 'Pon una palabra en negrita usando <b>.' },
-        { id: 'italic', check: /<i>/i, popup: 'Cursiva detectada.', instruction: 'Pon una palabra en cursiva usando <i>.' }
+        { id: 'italic', check: /<i>/i, popup: 'Cursiva detectada.', instruction: 'Pon una palabra en cursiva usando <i>.' },
+        { id: 'u', check: /<u>/i, popup: 'Subrayado detectado.', instruction: 'Añade una palabra subrayada con <u>.' },
+        { id: 's', check: /<s>/i, popup: 'Tachado detectado.', instruction: 'Finalmente, añade una palabra tachada usando <s>.' }
       ]
     }]
   },
@@ -661,8 +666,9 @@ const EDITOR_LABS = {
       hint: 'table > tr > th/td',
       starter: ``,
       milestones: [
-        { id: 'table', check: /<table border="1">/i, popup: 'Tabla iniciada con borde.' },
-        { id: 'th', check: /<th>/i, popup: 'Cabecera detectada.' }
+        { id: 'table', check: /<table border="1">/i, popup: 'Tabla iniciada con borde.', instruction: 'Crea la etiqueta <table> con el atributo border="1".' },
+        { id: 'th', check: /<th>/i, popup: 'Cabecera detectada.', instruction: 'Añade una fila con encabezados <th>.' },
+        { id: 'td', check: /<td>/i, popup: 'Celdas de datos listas.', instruction: 'Completa la tabla con un par de filas de datos usando <td>.' }
       ]
     }]
   },
@@ -676,8 +682,8 @@ const EDITOR_LABS = {
       hint: '<div style="background:yellow"> <span style="color:red">...</span> </div>',
       starter: ``,
       milestones: [
-        { id: 'div', check: /<div/i, popup: 'Contenedor de bloque creado.' },
-        { id: 'span', check: /<span/i, popup: 'Contenedor de línea creado.' }
+        { id: 'div', check: /<div/i, popup: 'Contenedor de bloque creado.', instruction: 'Crea un elemento <div> con un estilo de fondo.' },
+        { id: 'span', check: /<span/i, popup: 'Contenedor de línea creado.', instruction: 'Añade un <span> dentro del div con color de texto rojo.' }
       ]
     }]
   },
@@ -706,7 +712,11 @@ const EDITOR_LABS = {
       hint: 'Es un resumen de todo el PDF de Repaso HTML.',
       starter: ``,
       milestones: [
-        { id: 'all', check: /<h1>.*<img.*<ul>.*<table>.*<form/si, popup: '¡Increíble! Has integrado todos los elementos del examen.' }
+        { id: 'h1', check: /<h1>/i, popup: 'Título listo.', instruction: 'Paso 1: Pon un título h1.' },
+        { id: 'img', check: /<img/i, popup: 'Imagen lista.', instruction: 'Paso 2: Inserta una imagen.' },
+        { id: 'list', check: /<ul>/i, popup: 'Lista lista.', instruction: 'Paso 3: Crea una lista de 3 elementos.' },
+        { id: 'table', check: /<table>/i, popup: 'Tabla lista.', instruction: 'Paso 4: Añade una tabla de 2x2.' },
+        { id: 'form', check: /<form/i, popup: 'Formulario listo.', instruction: 'Paso 5: Termina con un formulario de contacto.' }
       ]
     }]
   },
@@ -721,7 +731,8 @@ const EDITOR_LABS = {
       starter: `<?xml version="1.0" encoding="UTF-8"?>
 `,
       milestones: [
-        { id: 'alumno', check: /<alumno>.*<nombre>.*<apellidos>.*<edad>.*<ciclo>/si, popup: '¡Estructura de alumno completada!' }
+        { id: 'root', check: /<alumno>/i, popup: 'Raíz <alumno> detectada.', instruction: 'Crea el elemento raíz llamado <alumno>.' },
+        { id: 'fields', check: /<nombre>.*<apellidos>.*<edad>.*<ciclo>/si, popup: 'Campos completados.', instruction: 'Añade los elementos hijos: nombre, apellidos, edad y ciclo.' }
       ]
     }]
   },
@@ -736,7 +747,8 @@ const EDITOR_LABS = {
       starter: `<?xml version="1.0" encoding="UTF-8"?>
 `,
       milestones: [
-        { id: 'nesting', check: /<modulos>.*<modulo>.*<\/modulo>.*<modulo>/si, popup: '¡Bien! El anidamiento es correcto.' }
+        { id: 'root', check: /<curso>/i, popup: 'Raíz <curso> detectada.', instruction: 'Empieza con el elemento raíz <curso>.' },
+        { id: 'nested', check: /<modulos>.*<modulo>/si, popup: 'Anidamiento correcto.', instruction: 'Crea una sección <modulos> y dentro define al menos dos elementos <modulo>.' }
       ]
     }]
   },
@@ -782,7 +794,9 @@ const EDITOR_LABS = {
       starter: `<?xml version="1.0" encoding="UTF-8"?>
 `,
       milestones: [
-        { id: 'dtd', check: /<!ELEMENT persona \(nombre, edad\)>/i, popup: '¡DTD definida correctamente!' }
+        { id: 'doctype', check: /<!DOCTYPE persona/i, popup: 'DOCTYPE iniciado.', instruction: 'Define la DTD interna con <!DOCTYPE persona [ ... ].' },
+        { id: 'ele_root', check: /<!ELEMENT persona \(nombre, edad\)>/i, popup: 'Elemento raíz definido.', instruction: 'Define el elemento persona con sus hijos nombre y edad.' },
+        { id: 'ele_pcdata', check: /<!ELEMENT (nombre|edad) \(#PCDATA\)>/i, popup: 'Tipos de datos definidos.', instruction: 'Define los elementos nombre y edad como (#PCDATA).' }
       ]
     }]
   },
@@ -797,7 +811,9 @@ const EDITOR_LABS = {
       starter: `<?xml version="1.0" encoding="UTF-8"?>
 `,
       milestones: [
-        { id: 'plus', check: /alumno\+/i, popup: '¡Uso del "+" detectado!' }
+        { id: 'doctype', check: /<!DOCTYPE clase/i, popup: 'DOCTYPE iniciado.', instruction: 'Empieza definiendo la DTD interna con <!DOCTYPE clase [ ... ].' },
+        { id: 'ele', check: /<!ELEMENT clase \(alumno\+\)>/i, popup: 'Elemento raíz con cuantificador detectado.', instruction: 'Define el elemento clase conteniendo uno o más (+) alumnos.' },
+        { id: 'ele2', check: /<!ELEMENT alumno \(nombre\)>/i, popup: 'Hijo definido.', instruction: 'Finalmente, define el elemento alumno conteniedo un nombre.' }
       ]
     }]
   },
@@ -812,7 +828,8 @@ const EDITOR_LABS = {
       starter: `<?xml version="1.0" encoding="UTF-8"?>
 `,
       milestones: [
-        { id: 'attr', check: /#REQUIRED/i, popup: 'Atributo obligatorio: ¡Check!' }
+        { id: 'ele', check: /<!ELEMENT libro EMPTY>/i, popup: 'Elemento libro definido.', instruction: 'Paso 1: Define el elemento libro (puedes usar EMPTY si no tiene contenido).' },
+        { id: 'attr', check: /<!ATTLIST libro isbn CDATA #REQUIRED>/i, popup: 'Atributo obligatorio listo.', instruction: 'Paso 2: Define la lista de atributos con ATTLIST, marcando el isbn como #REQUIRED.' }
       ]
     }]
   },
@@ -827,7 +844,8 @@ const EDITOR_LABS = {
       starter: `<?xml version="1.0" encoding="UTF-8"?>
 `,
       milestones: [
-        { id: 'entity', check: /<!ENTITY \w+ ".*">/i, popup: 'Entidad definida. ¡Úsala con &nombre;!' }
+        { id: 'ent', check: /<!ENTITY centro "Euroformac">/i, popup: 'Entidad definida.', instruction: 'Primero define la entidad: <!ENTITY centro "Euroformac">.' },
+        { id: 'use', check: /&centro;/i, popup: 'Entidad utilizada.', instruction: 'Ahora usa la entidad dentro del elemento instituto con &centro;.' }
       ]
     }]
   },
@@ -880,7 +898,9 @@ const EDITOR_LABS = {
     <!-- Atributo aquí -->
 `,
       milestones: [
-        { id: 'req', check: /use="required"/i, popup: 'Atributo obligatorio configurado.' }
+        { id: 'complex', check: /<xs:complexType>/i, popup: 'Tipo complejo iniciado.', instruction: 'Empieza definiendo el <xs:complexType> para el libro.' },
+        { id: 'seq', check: /<xs:sequence>/i, popup: 'Secuencia preparada.', instruction: 'Dentro del complexType, define una <xs:sequence> para los elementos hijos.' },
+        { id: 'attr', check: /<xs:attribute name="isbn" type="xs:string" use="required"/i, popup: 'Atributo obligatorio listo.', instruction: 'Finalmente, añade el atributo "isbn" después de cerrar la secuencia.' }
       ]
     }]
   },
@@ -896,7 +916,9 @@ const EDITOR_LABS = {
   <xs:restriction base="xs:integer">
 `,
       milestones: [
-        { id: 'range', check: /maxInclusive value="120"/i, popup: 'Rango de edad: ¡Perfecto!' }
+        { id: 'restr', check: /<xs:restriction base="xs:integer">/i, popup: 'Restricción base lista.', instruction: 'Define la restricción con base="xs:integer".' },
+        { id: 'min', check: /minInclusive value="0"/i, popup: 'Mínimo configurado.', instruction: 'Añade el valor mínimo (0) con minInclusive.' },
+        { id: 'max', check: /maxInclusive value="120"/i, popup: 'Máximo configurado.', instruction: 'Añade el valor máximo (120) con maxInclusive.' }
       ]
     }]
   },
@@ -1044,7 +1066,9 @@ const EDITOR_LABS = {
       hint: '<xsl:sort select="precio" order="ascending"/>',
       starter: ``,
       milestones: [
-        { id: 'sort', check: /xsl:sort/i, popup: 'Ordenación configurada.', instruction: 'Añade <xsl:sort select="precio" order="ascending"/> dentro del for-each.' }
+        { id: 'fe', check: /xsl:for-each/i, popup: 'Bucle iniciado.', instruction: 'Crea un <xsl:for-each> para recorrer los elementos.' },
+        { id: 'sort', check: /xsl:sort/i, popup: 'Ordenación configurada.', instruction: 'Dentro del for-each, añade <xsl:sort select="precio"/>.' },
+        { id: 'vo', check: /xsl:value-of/i, popup: 'Valor extraído.', instruction: 'Usa <xsl:value-of> para mostrar el resultado ordenado.' }
       ]
     }]
   },
@@ -1086,8 +1110,9 @@ const EDITOR_LABS = {
       hint: 'tr > th para cabeceras, tr > td para datos.',
       starter: ``,
       milestones: [
-        { id: 'table', check: /<table/i, popup: '¡Tabla iniciada!' },
-        { id: 'td', check: /<td>/i, popup: '¡Celdas de datos preparadas!' }
+        { id: 'table', check: /<table/i, popup: 'Tabla iniciada.', instruction: 'Empieza creando la estructura de la tabla con <table>.' },
+        { id: 'th', check: /<th>/i, popup: 'Cabecera detectada.', instruction: 'Crea una fila de cabecera usando <tr> y <th>.' },
+        { id: 'td', check: /<td>/i, popup: 'Celdas de datos preparadas.', instruction: 'Ahora añade las celdas de datos con <td> dentro de un for-each.' }
       ]
     }]
   },
@@ -1101,7 +1126,8 @@ const EDITOR_LABS = {
       hint: 'select="tienda/producto[marca=\'Logitech\']"',
       starter: ``,
       milestones: [
-        { id: 'filter', check: /\[marca='Logitech'\]/i, popup: '¡Filtro de marca correcto!' }
+        { id: 'fe', check: /xsl:for-each/i, popup: 'Bucle for-each iniciado.', instruction: 'Usa <xsl:for-each> para recorrer los productos.' },
+        { id: 'filter', check: /\[marca='Logitech'\]/i, popup: '¡Filtro de marca aplicado!', instruction: 'Añade el filtro [marca=\'Logitech\'] al select del for-each.' }
       ]
     }]
   },
@@ -1115,7 +1141,8 @@ const EDITOR_LABS = {
       hint: 'select="tienda/producto[precio > 50]" (recuerda usar &gt; si es necesario)',
       starter: ``,
       milestones: [
-        { id: 'price', check: /precio\s*(&gt;|>)\s*50/i, popup: '¡Filtro de precio detectado!' }
+        { id: 'fe', check: /xsl:for-each/i, popup: 'Bucle for-each iniciado.', instruction: 'Usa <xsl:for-each> para recorrer los productos.' },
+        { id: 'price', check: /precio\s*(&gt;|>)\s*50/i, popup: '¡Filtro de precio aplicado!', instruction: 'Añade el filtro [precio > 50] al select del for-each.' }
       ]
     }]
   },
@@ -1129,7 +1156,8 @@ const EDITOR_LABS = {
       hint: '<xsl:sort select="precio" data-type="number" order="ascending"/>',
       starter: ``,
       milestones: [
-        { id: 'sort', check: /order="ascending"/i, popup: '¡Ordenación ascendente configurada!' }
+        { id: 'fe', check: /xsl:for-each/i, popup: 'Bucle for-each iniciado.', instruction: 'Crea el for-each para los productos.' },
+        { id: 'sort', check: /order="ascending"/i, popup: 'Ordenación ascendente lista.', instruction: 'Añade <xsl:sort select="precio" order="ascending"/> dentro del bucle.' }
       ]
     }]
   },
@@ -1143,7 +1171,8 @@ const EDITOR_LABS = {
       hint: '<xsl:sort select="precio" data-type="number" order="descending"/>',
       starter: ``,
       milestones: [
-        { id: 'desc', check: /order="descending"/i, popup: '¡Ordenación descendente configurada!' }
+        { id: 'fe', check: /xsl:for-each/i, popup: 'Bucle for-each iniciado.', instruction: 'Crea el for-each para los productos.' },
+        { id: 'desc', check: /order="descending"/i, popup: 'Ordenación descendente lista.', instruction: 'Añade <xsl:sort select="precio" order="descending"/> dentro del bucle.' }
       ]
     }]
   },
@@ -1157,7 +1186,8 @@ const EDITOR_LABS = {
       hint: '<xsl:if test="stock > 20">',
       starter: ``,
       milestones: [
-        { id: 'if', check: /xsl:if/i, popup: '¡Condición if detectada!', instruction: 'Usa xsl:if para filtrar por stock.', hint: 'Prueba con <xsl:if test="stock > 20">' }
+        { id: 'if', check: /xsl:if/i, popup: 'Condición if detectada.', instruction: 'Usa la etiqueta <xsl:if> para el control de stock.' },
+        { id: 'test', check: /test="stock\s*(&gt;|>)\s*20"/i, popup: 'Atributo test configurado.', instruction: 'Añade el atributo test="stock > 20" al xsl:if.' }
       ]
     }]
   },
@@ -1185,7 +1215,10 @@ const EDITOR_LABS = {
       hint: 'for $l in ... where ... order by ... return <resultado>{$l/titulo}</resultado>',
       starter: ``,
       milestones: [
-        { id: 'flwor', check: /for.*where.*order.*return/si, popup: '¡FLWOR completo!', instruction: 'Escribe una consulta FLWOR completa.', hint: 'Estructura: for $l in //libro where $l/precio > 20 order by $l/precio return $l/titulo' }
+        { id: 'for', check: /for\s+\$l\s+in/i, popup: 'Cláusula FOR lista.', instruction: 'Empieza con la cláusula: for $l in //libro' },
+        { id: 'where', check: /where\s+\$l/i, popup: 'Cláusula WHERE lista.', instruction: 'Añade un filtro: where $l/precio > 20' },
+        { id: 'order', check: /order\s+by/i, popup: 'Cláusula ORDER BY lista.', instruction: 'Ordena los resultados: order by $l/precio' },
+        { id: 'return', check: /return\s+<resultado/i, popup: 'Cláusula RETURN lista.', instruction: 'Finalmente, genera la salida: return <resultado>{$l/titulo}</resultado>' }
       ]
     }]
   },
@@ -1200,6 +1233,204 @@ const EDITOR_LABS = {
       starter: ``,
       milestones: [
         { id: 'count', check: /count\(/i, popup: '¡Conteo total listo!', instruction: 'Usa la función count() envolviendo la ruta de los libros para obtener el total.' }
+      ]
+    }]
+  },
+  q_4: {
+    title: 'XQuery 4: Filtro por Marca',
+    description: 'Cláusula where con igualdad.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Solo Logitech',
+      desc: 'Muestra los nombres de los productos cuya marca sea "Logitech".',
+      hint: 'where $p/marca = "Logitech"',
+      starter: ``,
+      milestones: [
+        { id: 'for', check: /for\s+\$p\s+in/i, popup: 'Bucle for OK.', instruction: 'Paso 1: Define el bucle para los productos.' },
+        { id: 'where', check: /where.*"Logitech"/i, popup: 'Filtro de marca OK.', instruction: 'Paso 2: Añade el filtro where $p/marca = "Logitech".' },
+        { id: 'return', check: /return/i, popup: 'Salida lista.', instruction: 'Paso 3: Devuelve el nombre del producto.' }
+      ]
+    }]
+  },
+  q_5: {
+    title: 'XQuery 5: Ordenación',
+    description: 'Cláusula order by.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Ordenación por Precio',
+      desc: 'Obtén los nombres de productos ordenados por precio (ascendente).',
+      hint: 'order by $p/precio',
+      starter: ``,
+      milestones: [
+        { id: 'order', check: /order by/i, popup: 'Ordenación OK.', instruction: 'Añade la cláusula order by $p/precio después del for.' }
+      ]
+    }]
+  },
+  q_6: {
+    title: 'XQuery 6: Orden Descendente',
+    description: 'Uso de la palabra clave descending.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Caro a Barato',
+      desc: 'Obtén los nombres de productos ordenados por precio de mayor a menor.',
+      hint: 'order by $p/precio descending',
+      starter: ``,
+      milestones: [
+        { id: 'desc', check: /descending/i, popup: 'Orden descendente OK.', instruction: 'Añade la palabra clave "descending" a la ordenación.' }
+      ]
+    }]
+  },
+  q_7: {
+    title: 'XQuery 7: Nuevo XML',
+    description: 'Generación de etiquetas personalizadas.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Items de Tienda',
+      desc: 'Genera un XML <productos> que contenga elementos <item> con el nombre y el precio.',
+      hint: 'return <item>{$p/nombre}{$p/precio}</item>',
+      starter: ``,
+      milestones: [
+        { id: 'wrap', check: /return\s+<item>/i, popup: 'Etiqueta item creada.', instruction: 'En el return, envuelve los campos en etiquetas <item>.' }
+      ]
+    }]
+  },
+  q_8: {
+    title: 'XQuery 8: Biblioteca (Títulos)',
+    description: 'Consulta sobre el documento biblioteca.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Títulos de Libros',
+      desc: 'Muestra los títulos de todos los libros de la biblioteca.',
+      hint: 'for $l in //libro return $l/titulo',
+      starter: ``,
+      milestones: [
+        { id: 'for', check: /for\s+\$l\s+in\s+\/\/libro/i, popup: 'Acceso a biblioteca OK.', instruction: 'Paso 1: Accede a todos los libros de la colección.' }
+      ]
+    }]
+  },
+  q_9: {
+    title: 'XQuery 9: Título + Autor',
+    description: 'Extracción de múltiples campos.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Ficha de Libro',
+      desc: 'Muestra el título y el autor de cada libro dentro de una etiqueta <libro>.',
+      hint: 'return <libro>{$l/titulo}{$l/autor}</libro>',
+      starter: ``,
+      milestones: [
+        { id: 'fields', check: /<libro>.*titulo.*autor/si, popup: 'Ficha de libro OK.', instruction: 'Paso 2: Devuelve el título y el autor envueltos en <libro>.' }
+      ]
+    }]
+  },
+  q_10: {
+    title: 'XQuery 10: Filtro Informática',
+    description: 'Filtrado por categoría.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Solo Informática',
+      desc: 'Muestra los títulos de los libros de la categoría "Informática".',
+      hint: 'where $l/categoria = "Informática"',
+      starter: ``,
+      milestones: [
+        { id: 'where', check: /where.*"Informática"/i, popup: 'Filtro de categoría OK.', instruction: 'Añade un where para filtrar por la categoría "Informática".' }
+      ]
+    }]
+  },
+  q_11: {
+    title: 'XQuery 11: Precio > 25',
+    description: 'Filtrado numérico en FLWOR.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Libros Caros',
+      desc: 'Muestra los títulos de los libros con precio estrictamente mayor que 25.',
+      hint: 'where $l/precio > 25',
+      starter: ``,
+      milestones: [
+        { id: 'where', check: /precio\s*>\s*25/i, popup: 'Filtro de precio OK.', instruction: 'Añade la condición where $l/precio > 25.' }
+      ]
+    }]
+  },
+  q_12: {
+    title: 'XQuery 12: Sort por Precio',
+    description: 'Ordenación ascendente básica.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Orden por Precio',
+      desc: 'Muestra los títulos de los libros ordenados por precio (ascendente).',
+      hint: 'order by $l/precio',
+      starter: ``,
+      milestones: [
+        { id: 'order', check: /order by/i, popup: 'Ordenación OK.', instruction: 'Añade la cláusula order by $l/precio.' }
+      ]
+    }]
+  },
+  q_13: {
+    title: 'XQuery 13: Sort Descendente',
+    description: 'Uso de descending en biblioteca.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Orden Inverso',
+      desc: 'Muestra los títulos de los libros ordenados por precio de mayor a menor.',
+      hint: 'order by $l/precio descending',
+      starter: ``,
+      milestones: [
+        { id: 'desc', check: /descending/i, popup: 'Orden descendente OK.', instruction: 'Añade la palabra clave "descending" tras el order by.' }
+      ]
+    }]
+  },
+  q_14: {
+    title: 'XQuery 14: Primer Libro',
+    description: 'Uso de índices en XPath.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'El Primero',
+      desc: 'Muestra el título del primer libro del documento.',
+      hint: '(//libro)[1]/titulo',
+      starter: ``,
+      milestones: [
+        { id: 'index', check: /\[1\]/i, popup: 'Acceso por índice OK.', instruction: 'Usa el índice [1] para seleccionar solo el primer libro.' }
+      ]
+    }]
+  },
+  q_15: {
+    title: 'XQuery 15: Último Libro',
+    description: 'Uso de la función last().',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'El Último',
+      desc: 'Muestra el título del último libro del documento.',
+      hint: '(//libro)[last()]/titulo',
+      starter: ``,
+      milestones: [
+        { id: 'last', check: /last\(\)/i, popup: 'Función last() OK.', instruction: 'Usa la función last() dentro de los corchetes para el último elemento.' }
+      ]
+    }]
+  },
+  q_16: {
+    title: 'XQuery 16: Conteo Total',
+    description: 'Uso de count() en biblioteca.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: '¿Cuántos libros hay?',
+      desc: 'Muestra el número total de libros en la biblioteca.',
+      hint: 'count(//libro)',
+      starter: ``,
+      milestones: [
+        { id: 'count', check: /count\(/i, popup: 'Conteo total OK.', instruction: 'Usa la función count(//libro) para mostrar el número total.' }
+      ]
+    }]
+  },
+  q_17: {
+    title: 'XQuery 17: Stock Bajo',
+    description: 'Filtrado por cantidad.',
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Poco Stock',
+      desc: 'Muestra los títulos de los libros con menos de 5 unidades en stock.',
+      hint: 'where $l/stock < 5',
+      starter: ``,
+      milestones: [
+        { id: 'where', check: /stock\s*<\s*5/i, popup: 'Filtro de stock OK.', instruction: 'Añade un where para filtrar los libros con stock inferior a 5.' }
       ]
     }]
   }

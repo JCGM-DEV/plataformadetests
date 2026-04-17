@@ -258,12 +258,12 @@ function renderEditorExercise(labData) {
 
   view.innerHTML = `
     <div class="editor-header">
-      <h2>${isHTML ? '⌨️' : '📄'} ${labData.title}</h2>
-      <p>${labData.description}</p>
+      <h2>${isHTML ? '⌨️' : '📄'} ${escapeHTML(labData.title)}</h2>
+      <p>${escapeHTML(labData.description)}</p>
     </div>
     <div class="exercise-desc">
-      <h4>Ejercicio ${editorState.current+1}/${total}: ${ex.title}</h4>
-      <p>${ex.desc}</p>
+      <h4>Ejercicio ${editorState.current+1}/${total}: ${escapeHTML(ex.title)}</h4>
+      <p>${escapeHTML(ex.desc)}</p>
     </div>
     <div id="tutor-container">${renderTutorPanel()}</div>
     <div style="margin-top:1rem" class="editor-workspace guide-container">
@@ -399,7 +399,7 @@ function showGuidancePopup(text) {
   const popup = document.createElement('div');
   popup.className = 'guide-popup';
   popup.innerHTML = `
-    <div class="guide-popup-text">${text}</div>
+    <div class="guide-popup-text">${escapeHTML(text)}</div>
     <div class="guide-popup-close" onclick="this.parentElement.remove()">Entendido</div>
   `;
   container.appendChild(popup);
