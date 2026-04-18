@@ -1,61 +1,61 @@
 tema 2
 Los métodos permiten definir el comportamiento de los objetos y pueden devolver o no un valor. ¿Qué indica que un método tenga como tipo de retorno la palabra clave void?
-Que el método devuelve un valor vacío
-Que el método no realiza ninguna acción
+Que el método devuelve un valor vacío.
+Que el método no realiza ninguna acción.
 *Que el método realiza una acción pero no devuelve ningún valor.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:void indica que el método realiza una acción pero NO devuelve ningún valor. Si un método devuelve algo, se especifica el tipo (int, String, etc.). void ≠ "devuelve vacío".
+EXPL:void indica que el método realiza una tarea pero no devuelve ningún valor al llamador.
 Los atributos de una clase representan el estado de los objetos creados a partir de ella. ¿Cuál de las siguientes afirmaciones sobre los atributos es correcta?
-Los atributos se declaran dentro de los métodos
+Los atributos se declaran dentro de los métodos.
 *Cada objeto tiene su propia copia de los atributos definidos en la clase.
-Todos los objetos comparten los mismos valores de los atributos
-Mediante una clase abstracta con métodos estáticos
-EXPL:Cada objeto tiene su propia copia de los atributos definidos en la clase.
-El constructor es un elemento fundamental dentro de una clase en Java y cumple una función específica. ¿Cuál es la misión principal de un constructor?
-Ejecutar la lógica principal del programa
-*Inicializar los atributos del objeto en el momento de su creación.
-Definir el comportamiento común de todas las clases
+Todos los objetos comparten los mismos valores de los atributos.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:El constructor inicializa los atributos del objeto en el momento de su creación con new. Tiene el mismo nombre que la clase y no tiene tipo de retorno. Si no se define, Java crea uno por defecto.
+EXPL:Cada instancia (objeto) mantiene su propio estado a través de sus atributos.
+El constructor es un elemento fundamental dentro de una clase en Java y cumple una función específica. ¿Cuál es la misión principal de un constructor?
+Ejecutar la lógica principal del programa.
+*Inicializar los atributos del objeto en el momento de su creación.
+Definir el comportamiento común de todas las clases.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:El constructor se invoca al crear el objeto para asegurar que empiece en un estado válido.
 En programación orientada a objetos, una clase no representa directamente un objeto real, sino una definición abstracta que sirve como base para crear instancias. ¿Cuál de las siguientes afirmaciones describe correctamente el concepto de clase?
-Es una estructura que contiene únicamente métodos sin datos asociados
+Es una estructura que contiene únicamente métodos sin datos asociados.
 *Es una plantilla que define los atributos y comportamientos de una entidad.
-Es un objeto creado en memoria mediante el operador new
-Mediante una clase abstracta con métodos estáticos
-EXPL:Una clase es una plantilla que define los atributos (estado) y métodos (comportamiento) de sus objetos. Un objeto es una instancia concreta creada a partir de esa plantilla con new.
+Es un objeto creado en memoria mediante el operador new.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:La clase es el plano; el objeto es la casa construida con ese plano.
 En Java, las variables que hacen referencia a objetos no almacenan el objeto en sí, sino una dirección de memoria. ¿Qué consecuencia tiene esto al asignar una referencia a otra?
-Se crea automáticamente una copia independiente del objeto
+Se crea automáticamente una copia independiente del objeto.
 *Ambas referencias apuntan al mismo objeto en memoria.
-El objeto original se elimina de la memoria
-Mediante una clase abstracta con métodos estáticos
-EXPL:La respuesta es 'Ambas referencias apuntan al mismo objeto en memoria.'.
-Cuando una clase tiene una relación fuerte de "todo-parte" con otra y la parte no puede existir sin el todo, estamos ante un tipo concreto de relación entre clases. ¿De cuál se trata?
-Dependencia
-Agregación
+El objeto original se elimina de la memoria.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:En Java, las variables de objeto son punteros/referencias a la memoria Heap.
+Cuando una clase tiene una relación fuerte de “todo-parte” con otra y la parte no puede existir sin el todo, estamos ante un tipo concreto de relación entre clases. ¿De cuál se trata?
+Dependencia.
+Agregación.
 *Composición.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:La respuesta es 'Composición.'. "Dependencia." y "Agregación." son incorrectos porque describen conceptos diferentes.
+EXPL:La composición es una relación de pertenencia fuerte donde la parte desaparece con el todo.
 Los métodos getter y setter se utilizan para controlar el acceso a los atributos privados de una clase. ¿Cuál es una de las principales ventajas de usar setters en lugar de hacer públicos los atributos?
-Permiten acceder directamente a la memoria del objeto
+Permiten acceder directamente a la memoria del objeto.
 *Permiten validar los datos antes de modificar el estado del objeto.
-Eliminan la necesidad de constructores
+Eliminan la necesidad de constructores.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:Permiten validar los datos antes de modificar el estado del objeto.
+EXPL:Los setters permiten añadir lógica de validación (por ejemplo, que una edad no sea negativa).
 El encapsulamiento es uno de los principios clave de la programación orientada a objetos y se apoya en los modificadores de acceso. ¿Cuál es la regla de oro más habitual en Java para aplicar correctamente el encapsulamiento?
-Atributos públicos y métodos privados
+Atributos públicos y métodos privados.
 *Atributos privados y métodos públicos.
-Atributos y métodos siempre protected
+Atributos y métodos siempre protected.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:El encapsulamiento protege el estado interno del objeto declarando los atributos como private y exponiendo solo lo necesario mediante métodos public (getters/setters). Permite validar antes de modificar.
+EXPL:Ocultar los datos (private) y exponer el servicio (public) es el núcleo del encapsulamiento.
 El polimorfismo permite que un mismo mensaje provoque comportamientos distintos según el objeto que lo reciba. ¿Qué requisito técnico es necesario para que el polimorfismo funcione correctamente en Java?
-El uso exclusivo de atributos protected
+El uso exclusivo de atributos protected.
 *La sobreescritura de métodos en las clases hijas.
-La creación de múltiples constructores
-Mediante una clase abstracta con métodos estáticos
-EXPL:El polimorfismo permite que el mismo método se comporte diferente según el tipo real del objeto. Requiere sobreescritura (@Override) en las clases hijas. Se activa con enlace dinámico en tiempo de ejecución.
+La creación de múltiples constructores.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:Para el polimorfismo dinámico es necesario que el hijo redefine el comportamiento del padre.
 En Java, todo el código debe estar contenido dentro de clases, y estas siguen una estructura concreta y unas normas estrictas. ¿Cuál de las siguientes reglas es obligatoria cuando se define una clase pública?
-El nombre de la clase debe escribirse en minúsculas
+El nombre de la clase debe escribirse en minúsculas.
 *El archivo debe llamarse igual que la clase pública y tener extensión .java.
-La clase debe contener al menos un método main
-Mediante una clase abstracta con métodos estáticos
-EXPL:El archivo debe llamarse igual que la clase pública y tener extensión .java.
+La clase debe contener al menos un método main.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:En Java, el nombre del archivo fuente debe coincidir con la clase pública que contiene.

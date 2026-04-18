@@ -1,61 +1,61 @@
 tema 7
 ¿Para qué se utiliza la palabra clave throws (en plural) en la firma de un método?
-Para lanzar una instancia específica de una excepción en una línea concreta de código
+Para lanzar una instancia específica de una excepción en una línea concreta de código.
 *Para indicar que el método delega la responsabilidad de gestionar ciertas excepciones a quien lo invoque.
-Para obligar al bloque finally a cerrar todos los recursos abiertos de forma manual
-Mediante una clase abstracta con métodos estáticos
-EXPL:throws en la firma del método declara que puede lanzar una excepción checked. El llamador debe manejarla con try-catch o propagarla con throws. throw (sin s) lanza la excepción en una línea concreta.
+Para obligar al bloque finally a cerrar todos los recursos abiertos de forma manual.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:Propaga la excepción para que el método superior decida cómo gestionarla.
 Al recorrer una colección, ¿en qué caso es indispensable utilizar un Iterator en lugar de un bucle for-each?
-Cuando solo necesitamos leer los datos sin modificarlos
-Cuando queremos filtrar la colección mediante un objeto Stream
+Cuando solo necesitamos leer los datos sin modificarlos.
+Cuando queremos filtrar la colección mediante un objeto Stream.
 *Cuando necesitamos eliminar elementos de la colección de forma segura mientras la recorremos.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:Iterator es necesario cuando se necesita eliminar elementos de una colección durante la iteración. Usar list.remove() en un for-each lanza ConcurrentModificationException. it.remove() es seguro.
-¿Cuál es el propósito de utilizar Genéricos al declarar una colección como ArrayList<String>?
-Permitir que la lista guarde cualquier tipo de objeto (mezclar enteros, cadenas, etc.)
+EXPL:Iterator permite usar .remove() de forma segura durante la iteración.
+¿Cuál es el propósito de utilizar Genéricos (<T>) al declarar una colección como ArrayList<String>?
+Permitir que la lista guarde cualquier tipo de objeto (mezclar enteros, cadenas, etc.).
 *Aportar seguridad de tipos en tiempo de compilación y evitar la necesidad de realizar castings manuales.
-Hacer que la colección sea inmutable y no se puedan añadir más elementos tras su creación
+Hacer que la colección sea inmutable y no se puedan añadir más elementos tras su creación.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:Aportar seguridad de tipos en tiempo de compilación y evitar la necesidad de realizar castings manuales.
+EXPL:Evitas el ClassCastException en tiempo de ejecución al restringir los tipos en compilación.
 Dentro del Java Collections Framework, ¿qué interfaz debe usarse si se requiere una colección que no permita elementos duplicados?
 List
 *Set
 Queue
-Mediante una clase abstracta con métodos estáticos
-EXPL:La respuesta es 'Set'. "List" y "Queue" son incorrectos porque describen conceptos diferentes.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:Set es un conjunto matemático: no hay repetidos y no suele haber orden.
 ¿Cuál es la diferencia principal entre un ArrayList y un HashSet?
 *El ArrayList mantiene el orden de inserción, mientras que el HashSet no garantiza ningún orden.
-El ArrayList no permite duplicados y el HashSet sí
-El HashSet es más lento para acceder a elementos que el ArrayList porque usa índices
+El ArrayList no permite duplicados y el HashSet sí.
+El HashSet es más lento para acceder a elementos que el ArrayList porque usa índices.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:ArrayList mantiene el orden de inserción y permite duplicados. HashSet no garantiza orden y no permite duplicados. ArrayList es O(1) para acceso por índice; HashSet es O(1) para contains().
-Sobre la interfaz Map, ¿cuál de las siguientes afirmaciones es correcta?
-Hereda directamente de la interfaz Collection
+EXPL:ArrayList es una lista (secuencial); HashSet es una bolsa (dispersión por hash).
+Sobre la interfaz Map, ¿cuál de las siguientes afirmaciones es correcta según el temario?
+Hereda directamente de la interfaz Collection.
 *Almacena elementos en parejas de Clave-Valor y no pertenece a la jerarquía de Collection.
-Es una lista ordenada que permite acceder a los elementos mediante un índice numérico
+Es una lista ordenada que permite acceder a los elementos mediante un índice numérico.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:Map almacena pares clave-valor. No hereda de Collection. HashMap no garantiza orden; TreeMap mantiene orden natural de claves; LinkedHashMap mantiene orden de inserción.
-¿Cuál es la principal ventaja del "try-with-resources"?
-Permite capturar múltiples excepciones en una sola línea de código
+EXPL:Map usa diccionarios (k/v). No es una Collection propiamente dicha.
+¿Cuál es la principal ventaja del "try-with-resources" introducido en versiones modernas de Java?
+Permite capturar múltiples excepciones en una sola línea de código.
 *Gestiona automáticamente el cierre de recursos (como archivos o conexiones) al finalizar el bloque.
-Aumenta la velocidad de ejecución de las colecciones tipo List y Map
+Aumenta la velocidad de ejecución de las colecciones tipo List y Map.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:try-with-resources cierra automáticamente los recursos (ficheros, conexiones) al salir del bloque, incluso si hay excepción. El recurso debe implementar AutoCloseable. Evita el finally con close() manual.
+EXPL:Garantiza que el archivo se cierre aunque ocurra una excepción (AutoCloseable).
 Según la jerarquía de excepciones en Java, ¿cuál es la diferencia entre un Error y una Exception?
-Las Exception son fallos graves del sistema (como falta de memoria), mientras que los Error son fallos del programa
+Las Exception son fallos graves del sistema (como falta de memoria), mientras que los Error son fallos del programa.
 *Los Error son situaciones irrecuperables de la JVM, mientras que las Exception son condiciones que una aplicación debería capturar.
-No hay diferencia; ambos términos se usan indistintamente para cualquier fallo en tiempo de ejecución
-Mediante una clase abstracta con métodos estáticos
-EXPL:Los Error son situaciones irrecuperables de la JVM, mientras que las Exception son condiciones que una aplicación deberí...
+No hay diferencia; ambos términos se usan indistintamente para cualquier fallo en tiempo de ejecución.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:Error = fallo de la máquina (OutOfMemory); Exception = fallo lógico (FileNotFound).
 ¿Qué caracteriza a las excepciones de tipo RuntimeException (Unchecked)?
 *El compilador no obliga a capturarlas ni a declararlas en la firma del método.
-Son excepciones que deben ser revisadas obligatoriamente por el programador antes de compilar
-Son las únicas excepciones que pueden lanzarse mediante la palabra clave throw
+Son excepciones que deben ser revisadas obligatoriamente por el programador antes de compilar.
+Son las únicas excepciones que pueden lanzarse mediante la palabra clave throw.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:El compilador no obliga a capturarlas ni a declararlas en la firma del método.
+EXPL:Son excepciones 'no comprobadas' que suelen indicar fallos de programación (null pointer).
 En una estructura try-catch-finally, ¿cuándo se ejecuta el bloque finally?
-Solo si se produce una excepción y esta es capturada correctamente
-Solo si no se produce ninguna excepción durante la ejecución del try
+Solo si se produce una excepción y esta es capturada correctamente.
+Solo si no se produce ninguna excepción durante la ejecución del try.
 *Siempre, independientemente de si se lanzó una excepción o si fue capturada.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:Siempre, independientemente de si se lanzó una excepción o si fue capturada.
+EXPL:finally es el bloque de limpieza garantizada (cierre de BD, logs, etc.).

@@ -1,61 +1,61 @@
 tema 8
 Si un atributo de una clase se marca con la palabra clave transient, ¿qué ocurre durante la serialización?
-Ese atributo se guarda con prioridad absoluta antes que los demás
+Ese atributo se guarda con prioridad absoluta antes que los demás.
 *Ese atributo se ignora y no se guarda en el fichero (útil para datos sensibles como contraseñas).
-El atributo se convierte automáticamente a formato hexadecimal para ahorrar espacio
-Mediante una clase abstracta con métodos estáticos
-EXPL:transient marca un atributo para que sea ignorado durante la serialización. Útil para datos sensibles (contraseñas) o datos que no tienen sentido fuera del contexto de ejecución (conexiones, hilos).
+El atributo se convierte automáticamente a formato hexadecimal para ahorrar espacio.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:transient le dice a la JVM: 'este dato no es persistente' (ej: una contraseña).
 ¿Cuál es la diferencia principal entre un flujo de Bytes y un flujo de Caracteres?
 *Los de Bytes procesan datos de 8 bits (imágenes, audio), mientras que los de Caracteres procesan datos de 16 bits usando Unicode (texto).
-Los flujos de Bytes son solo para lectura y los de Caracteres solo para escritura
-No hay diferencia técnica; Java decide cuál usar automáticamente según el tamaño del archivo
+Los flujos de Bytes son solo para lectura y los de Caracteres solo para escritura.
+No hay diferencia técnica; Java decide cuál usar automáticamente según el tamaño del archivo.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:Los de Bytes procesan datos de 8 bits (imágenes, audio), mientras que los de Caracteres procesan datos de 16 bits usando...
+EXPL:Bytes (0-255) para archivos binarios; Characters para texto idiomático (Unicode).
 Al trabajar con archivos de texto, ¿qué sucede si se abre un FileWriter con el parámetro append en true?
-El archivo se borra completamente antes de empezar a escribir
+El archivo se borra completamente antes de empezar a escribir.
 *El nuevo contenido se añade al final del archivo sin borrar lo que ya existía.
-El archivo se bloquea para que otros programas no puedan leerlo mientras se escribe
+El archivo se bloquea para que otros programas no puedan leerlo mientras se escribe.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:new FileWriter("f.txt", true) abre el fichero en modo append: el nuevo contenido se añade al final sin borrar lo existente. Sin el parámetro true (o con false), sobreescribe el fichero.
+EXPL:append=true no pisa el archivo, añade al final del contenido actual.
 ¿Qué método de la clase Scanner es el más adecuado para leer una frase completa que contenga espacios?
 next()
 nextInt()
 *nextLine()
-Mediante una clase abstracta con métodos estáticos
-EXPL:nextLine() lee toda la línea incluyendo espacios. next() lee solo hasta el primer espacio. nextInt() lee un entero. Para leer frases completas, siempre usar nextLine().
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:nextLine() lee hasta encontrar el salto de línea, incluyendo los espacios intermedios.
 ¿Qué clase de la jerarquía de caracteres se utiliza específicamente para leer texto de un archivo de forma eficiente?
 FileInputStream
 FileWriter
 *FileReader
-Mediante una clase abstracta con métodos estáticos
-EXPL:La respuesta es 'FileReader'. "FileInputStream" y "FileWriter" son incorrectos porque describen conceptos diferentes.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:FileReader es el Stream de caracteres orientado específicamente a archivos de disco.
 ¿Qué es la "Serialización" de objetos en Java?
 *El proceso de convertir un objeto en una secuencia de bytes para poder almacenarlo en un fichero o enviarlo por red.
-Un método para ordenar alfabéticamente los atributos de una clase
-El proceso de borrar un objeto del Heap para liberar memoria
-Mediante una clase abstracta con métodos estáticos
-EXPL:El proceso de convertir un objeto en una secuencia de bytes para poder almacenarlo en un fichero o enviarlo por red.
-Respecto a la Salida Estándar de Errores (System.err), ¿qué afirmación es correcta?
-Envía los datos directamente a la impresora del sistema
-*Se utiliza para mensajes de diagnóstico y errores, y por defecto suele mostrarse en color rojo en la consola.
-Es exactamente lo mismo que System.out y no se recomienda su uso en entornos profesionales
+Un método para ordenar alfabéticamente los atributos de una clase.
+El proceso de borrar un objeto del Heap para liberar memoria.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:Se utiliza para mensajes de diagnóstico y errores, y por defecto suele mostrarse en color rojo en la consola.
+EXPL:Permite convertir el estado de un objeto en un chorro de bytes persistente.
+Respecto a la Salida Estándar de Errores (System.err), ¿qué afirmación es correcta?
+Envía los datos directamente a la impresora del sistema.
+*Se utiliza para mensajes de diagnóstico y errores, y por defecto suele mostrarse en color rojo en la consola.
+Es exactamente lo mismo que System.out y no se recomienda su uso en entornos profesionales.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:Es un canal separado para que los errores no se mezclen con la salida normal de datos.
 ¿Cuál es la función del "Buffer" en las operaciones de entrada/salida?
 *Actuar como una memoria intermedia para reducir el número de accesos físicos al disco o red, mejorando el rendimiento.
-Cifrar los datos para que no puedan ser leídos por otros programas del sistema operativo
-Convertir automáticamente archivos binarios en archivos de texto plano
+Cifrar los datos para que no puedan ser leídos por otros programas del sistema operativo.
+Convertir automáticamente archivos binarios en archivos de texto plano.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:Actuar como una memoria intermedia para reducir el número de accesos físicos al disco o red, mejorando el rendimiento.
+EXPL:Acceder al disco por cada byte es muy lento; el buffer agrupa las lecturas/escrituras.
 En el contexto de Java, ¿qué es un "Stream" o flujo de datos?
-Es una estructura de datos estática que almacena información en la memoria RAM
+Es una estructura de datos estática que almacena información en la memoria RAM.
 *Es un canal unidireccional que transporta información de forma secuencial desde un origen a un destino.
-Es una base de datos interna que Java utiliza para guardar objetos de forma permanente
-Mediante una clase abstracta con métodos estáticos
-EXPL:Es un canal unidireccional que transporta información de forma secuencial desde un origen a un destino.
+Es una base de datos interna que Java utiliza para guardar objetos de forma permanente.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:Representa el flujo continuo de datos de un punto A a un punto B.
 Para que una clase pueda ser serializada, ¿qué requisito debe cumplir obligatoriamente?
-Debe heredar de la clase File
+Debe heredar de la clase File.
 *Debe implementar la interfaz Serializable, que actúa como una "interfaz de marcado".
-Todos sus métodos deben ser declarados como static
-Mediante una clase abstracta con métodos estáticos
-EXPL:Serializable es una interfaz marcadora (sin métodos) que indica que los objetos de esa clase pueden convertirse en bytes para almacenarse o enviarse por red. serialVersionUID controla la compatibilidad de versiones.
+Todos sus métodos deben ser declarados como static.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:Serializable es una interfaz de marcado (interfaz vacía) que da permiso a la JVM.

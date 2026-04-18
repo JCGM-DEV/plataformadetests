@@ -1846,7 +1846,15 @@ function parseTxtExam(text, syllabusId) {
         // Standard behavior: Group by EXPL:
         let current = [];
         for (const line of rawLines) {
+            // New Question Detection: If block has content and line starts with ¿, 
+            // flush current block even if EXPL: was missing
+            if (current.length >= 2 && line.startsWith('¿') && !current[current.length-1].startsWith('EXPL:')) {
+                blocks.push(current);
+                current = [];
+            }
+
             current.push(line);
+            
             if (line.startsWith('EXPL:')) {
                 blocks.push(current);
                 current = [];

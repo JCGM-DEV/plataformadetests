@@ -1,61 +1,61 @@
 tema 6
 ¿Cuál es la diferencia fundamental de diseño entre una Clase Abstracta y una Interfaz?
 *La Clase Abstracta define qué "ES" el objeto (identidad), mientras que la Interfaz define qué "PUEDE HACER" (capacidad).
-Las Interfaces permiten guardar variables de estado mutables y las Clases Abstractas no
-Las Clases Abstractas permiten herencia múltiple y las Interfaces solo herencia simple
-Mediante una clase abstracta con métodos estáticos
-EXPL:Clase abstracta: puede tener código concreto, atributos, herencia simple. Interfaz: solo métodos abstractos (por defecto), implementación múltiple. Abstracta = identidad ("es un"), Interfaz = capacidad ("puede hacer").
+Las Interfaces permiten guardar variables de estado mutables y las Clases Abstractas no.
+Las Clases Abstractas permiten herencia múltiple y las Interfaces solo herencia simple.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:La interfaz garantiza que el objeto cumple un contrato de comportamiento.
 ¿Qué característica define al modificador de acceso protected?
-Hace que el miembro sea visible solo para la clase actual y nadie más
+Hace que el miembro sea visible solo para la clase actual y nadie más.
 *Permite el acceso a cualquier clase del mismo paquete y a cualquier subclase, incluso en paquetes distintos.
-Es exactamente igual al acceso public
-Con un certificado SSL autofirmado
-EXPL:Permite el acceso a cualquier clase del mismo paquete y a cualquier subclase, incluso en paquetes distintos.
+Es exactamente igual al acceso public, pero solo funciona con métodos static.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:protected une la visibilidad de paquete con la de herencia.
 En Java, ¿cuál es la jerarquía máxima de la que heredan implícitamente todas las clases, incluidos los arrays y Strings?
 *La clase java.lang.Object.
-La clase Super
-No existe una jerarquía común; cada clase es independiente a menos que use extends
+La clase Super.
+No existe una jerarquía común; cada clase es independiente a menos que use extends.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:La respuesta es 'La clase java.lang.Object.'.
+EXPL:Object es la raíz definitiva de todo el árbol de clases en Java.
 ¿Por qué Java prohíbe la herencia múltiple de clases (heredar de dos padres a la vez)?
 *Para evitar el "Problema del Diamante" y la ambigüedad en la ejecución de métodos.
-Porque consumiría demasiada memoria en el Heap al duplicar los constructores
-Porque todas las clases deben ser obligatoriamente final para ser seguras
+Porque consumiría demasiada memoria en el Heap al duplicar los constructores.
+Porque todas las clases deben ser obligatoriamente final para ser seguras.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:El Problema del Diamante ocurre en herencia múltiple cuando dos clases padre tienen el mismo método y la clase hija no sabe cuál usar. Java lo evita prohibiendo la herencia múltiple de clases.
+EXPL:Se evita la complejidad de heredar múltiples estados contradictorios (herencia de implementación).
 ¿Cuál es la función principal de la anotación @Override en la sobreescritura de métodos?
-Obligar al método a ser final para que no pueda volver a cambiarse
+Obligar al método a ser final para que no pueda volver a cambiarse.
 *Actuar como un control de calidad que avisa al compilador si el método no existe en el padre.
-Permitir que el método cambie su lista de parámetros (Sobrecarga)
+Permitir que el método cambie su lista de parámetros (Sobrecarga).
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:@Override indica que el método sobreescribe uno de la superclase. El compilador verifica que el método realmente existe en el padre. Sin @Override, si hay un error tipográfico, se crearía un método nuevo sin avisar.
-Sobre las clases abstractas, ¿cuál es la "Regla de Hierro"?
-Deben tener obligatoriamente todos sus métodos vacíos
+EXPL:Evita errores de dedo al escribir el nombre del método en la subclase.
+Sobre las clases abstractas, ¿cuál es la "Regla de Hierro" mencionada en el temario?
+Deben tener obligatoriamente todos sus métodos vacíos.
 *No se pueden crear objetos (instancias) de una clase abstracta.
-Solo pueden heredar de interfaces y nunca de otras clases
-Mediante una clase abstracta con métodos estáticos
-EXPL:No se pueden crear objetos (instancias) de una clase abstracta.
-Si deseamos garantizar que un algoritmo crítico no sea alterado por ninguna subclase, ¿qué debemos hacer?
-Declarar el método como abstract
-*Declarar el método como final.
-Declarar el método como static y private simultáneamente
-Mediante una clase abstracta con métodos estáticos
-EXPL:La respuesta es 'Declarar el método como final.'.
-Al decidir entre Herencia y Composición, ¿qué principio de diseño de software recomienda el temario?
-Priorizar siempre la Herencia para maximizar la reutilización de código
-*Favorecer la Composición sobre la Herencia para obtener un acoplamiento más bajo y flexible.
-Usar la Herencia para relaciones "Tiene-Un" y la Composición para relaciones "Es-Un"
+Solo pueden heredar de interfaces y nunca de otras clases.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:Herencia = relación "es un" (Perro es un Animal). Composición = relación "tiene un" (Casa tiene Habitaciones). Se recomienda favorecer la composición sobre la herencia para menor acoplamiento.
+EXPL:Son conceptos puros; no puedes tener un 'Animal' genérico, solo perros o gatos concretos.
+Si deseamos garantizar que un algoritmo crítico no sea alterado por ninguna subclase, ¿qué debemos hacer?
+Declarar el método como abstract.
+*Declarar el método como final.
+Declarar el método como static y private simultáneamente.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:final impide que alguien 'pise' la lógica de ese método en una clase hija.
+Al decidir entre Herencia y Composición, ¿qué principio de diseño de software recomienda el temario?
+Priorizar siempre la Herencia para maximizar la reutilización de código de "Caja Blanca".
+*Favorecer la Composición sobre la Herencia para obtener un acoplamiento más bajo y flexible.
+Usar la Herencia para relaciones "Tiene-Un" y la Composición para relaciones "Es-Un".
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:La composición suele ser preferible porque es más flexible y menos rígida que la herencia.
 Si un método es declarado como static, ¿cuál de las siguientes afirmaciones es CORRECTA?
 *Pertenece a la clase y no puede acceder a variables de instancia ni usar this.
-Requiere crear un objeto con new antes de poder ser invocado
-Cada objeto creado tiene su propia copia privada de dicho método en memoria
-Mediante una clase abstracta con métodos estáticos
-EXPL:Un método o atributo static pertenece a la CLASE, no a los objetos. Se accede con NombreClase.metodo(). No puede acceder a atributos de instancia ni usar this, porque no está asociado a ningún objeto concreto.
+Requiere crear un objeto con new antes de poder ser invocado.
+Cada objeto creado tiene su propia copia privada de dicho método en memoria.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:Lo estático es de la 'clase', no de las 'instancias'. No conoce a 'this'.
 Respecto a los constructores y la herencia, ¿cuál es el orden estricto de inicialización?
-Primero se inicializa la subclase (hija) y finalmente la superclase (padre)
-Se inicializan simultáneamente para optimizar la carga de la JVM
+Primero se inicializa la subclase (hija) y finalmente la superclase (padre).
+Se inicializan simultáneamente para optimizar la carga de la JVM.
 *Los padres siempre se inicializan antes que los hijos, empezando desde la clase Object.
-Mediante una clase abstracta con métodos estáticos
-EXPL:El constructor inicializa los atributos del objeto en el momento de su creación con new. Tiene el mismo nombre que la clase y no tiene tipo de retorno. Si no se define, Java crea uno por defecto.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:Antes de construir el hijo, Java debe asegurar que la parte padre esté lista.

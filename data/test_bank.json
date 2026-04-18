@@ -2712,13 +2712,13 @@
       "concept_id": "prog_tema_1_q0",
       "question": "Los lenguajes de programación utilizan distintos tipos de datos para representar la información y gestionar la memoria de forma adecuada. ¿Cuál de los siguientes no pertenece a los tipos de datos básicos o primitivos?",
       "options": [
-        "Número entero",
-        "Valor booleano",
+        "Número entero.",
+        "Valor booleano.",
         "Array o arreglo.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "La respuesta es 'Array o arreglo.'. \"Número entero.\" y \"Valor booleano.\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "Un array o arreglo es una estructura de datos, no un tipo primitivo básico (int, boolean, char, etc.).",
       "unit": null
     },
     {
@@ -2726,337 +2726,337 @@
       "question": "Aunque a menudo se confunden, los conceptos de algoritmo y programa no son equivalentes. ¿Cuál de las siguientes afirmaciones describe correctamente la relación entre ambos?",
       "options": [
         "El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación.",
-        "El programa es independiente del lenguaje y el algoritmo depende del lenguaje utilizado",
-        "Ambos conceptos son idénticos y se diferencian solo por el formato en el que se escriben",
+        "El programa es independiente del lenguaje y el algoritmo depende del lenguaje utilizado.",
+        "Ambos conceptos son idénticos y se diferencian solo por el formato en el que se escriben.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación.",
+      "explanation": "El algoritmo es el diseño lógico (pasos) y el programa es la implementación en un lenguaje específico.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_1_q2",
       "question": "Durante el desarrollo de un programa, pueden aparecer errores que no impiden la compilación pero provocan resultados incorrectos. ¿Cuál es la función principal de un depurador (debugger) dentro de un entorno de desarrollo?",
       "options": [
-        "Detectar errores de sintaxis antes de ejecutar el programa",
-        "Ejecutar el programa de forma más rápida y optimizada",
+        "Detectar errores de sintaxis antes de ejecutar el programa.",
+        "Ejecutar el programa de forma más rápida y optimizada.",
         "Analizar la ejecución paso a paso para localizar errores lógicos.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "La opción seleccionada es la correcta según la teoría técnica.",
+      "explanation": "Un depurador permite detener la ejecución y ver el estado de las variables paso a paso.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_1_q3",
       "question": "Antes de escribir un programa, es fundamental diseñar correctamente el algoritmo que resolverá el problema. Para que una secuencia de pasos pueda considerarse un algoritmo válido, debe cumplir una serie de características. ¿Cuál de las siguientes es una de ellas?",
       "options": [
-        "Debe poder ejecutarse directamente por la máquina sin traducción",
+        "Debe poder ejecutarse directamente por la máquina sin traducción.",
         "Debe ser finito y finalizar tras un número limitado de pasos.",
-        "Debe estar escrito obligatoriamente en un lenguaje de programación concreto",
+        "Debe estar escrito obligatoriamente en un lenguaje de programación concreto.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La opción seleccionada es la correcta según la teoría técnica.",
+      "explanation": "Un algoritmo debe ser finito, preciso y definido.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_1_q4",
       "question": "Todo programa informático sigue un modelo básico de funcionamiento que permite transformar datos en información útil. Dentro del modelo Entrada–Proceso–Salida, ¿qué elemento se considera el núcleo del programa?",
       "options": [
-        "Los datos que introduce el usuario mediante dispositivos de entrada",
+        "Los datos que introduce el usuario mediante dispositivos de entrada.",
         "El algoritmo que procesa los datos y aplica la lógica del programa.",
-        "El sistema que muestra el resultado final al usuario",
-        "Con el atributo xmlns:xsi en el elemento raíz"
+        "El sistema que muestra el resultado final al usuario.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Además del código, un programa necesita datos para operar. Los datos son la información que el programa procesa (operandos en una operación, registros de una BD, etc.).",
+      "explanation": "El algoritmo/proceso es el núcleo que transforma las entradas en salidas.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_1_q5",
       "question": "Las estructuras de control permiten modificar el flujo normal de ejecución de un programa. ¿Qué tipo de estructura se utiliza cuando es necesario repetir varias veces un conjunto de instrucciones mientras se cumpla una condición?",
       "options": [
-        "Estructura secuencial",
-        "Estructura selectiva",
+        "Estructura secuencial.",
+        "Estructura selectiva.",
         "Estructura iterativa.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "La respuesta es 'Estructura iterativa.'. \"Estructura secuencial.\" y \"Estructura selectiva.\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "Las estructuras iterativas (bucles) repiten código mientras se cumple una condición.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_1_q6",
       "question": "Los paradigmas de programación ofrecen diferentes formas de organizar y estructurar el software. En el paradigma orientado a objetos, ¿cuál es el elemento central sobre el que se construyen los programas?",
       "options": [
-        "Las funciones matemáticas",
+        "Las funciones matemáticas.",
         "Los objetos que combinan datos y comportamiento.",
-        "Las instrucciones ejecutadas de forma secuencial",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Las instrucciones ejecutadas de forma secuencial.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'Los objetos que combinan datos y comportamiento.'.",
+      "explanation": "En POO, todo gira en torno a los objetos y sus interacciones.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_1_q7",
       "question": "Java es un lenguaje de programación con un modelo de ejecución particular que combina características de distintos enfoques. ¿Por qué se considera que Java utiliza un sistema híbrido de compilación e interpretación?",
       "options": [
-        "Porque el código se ejecuta directamente como código máquina del sistema operativo",
+        "Porque el código se ejecuta directamente como código máquina del sistema operativo.",
         "Porque el código se compila a bytecode y se ejecuta mediante la Máquina Virtual de Java.",
-        "Porque no necesita ningún proceso previo para poder ejecutarse",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Porque no necesita ningún proceso previo para poder ejecutarse.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Porque el código se compila a bytecode y se ejecuta mediante la Máquina Virtual de Java.",
+      "explanation": "Java compila a bytecode y la JVM lo interpreta/ejecuta.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_1_q8",
       "question": "La programación no se limita únicamente a escribir código, sino que engloba varias tareas necesarias para que un programa funcione correctamente a lo largo del tiempo. ¿Cuál de las siguientes opciones define mejor qué es programar?",
       "options": [
-        "Utilizar programas informáticos ya existentes para resolver tareas cotidianas",
+        "Utilizar programas informáticos ya existentes para resolver tareas cotidianas.",
         "Diseñar, codificar, depurar y mantener programas que ejecuta un ordenador.",
-        "Ejecutar instrucciones previamente creadas sin necesidad de modificarlas",
+        "Ejecutar instrucciones previamente creadas sin necesidad de modificarlas.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Diseñar, codificar, depurar y mantener programas que ejecuta un ordenador.",
+      "explanation": "Programar es el proceso completo de solución de problemas mediante software.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_1_q9",
       "question": "En informática es importante diferenciar entre los conceptos de dato e información, ya que no significan exactamente lo mismo. ¿Cuál de las siguientes afirmaciones es correcta?",
       "options": [
-        "El dato es información interpretada y la información es un dato sin procesar",
+        "El dato es información interpretada y la información es un dato sin procesar.",
         "El dato es un valor aislado y la información es el resultado de procesar datos con un contexto.",
-        "Ambos términos se utilizan indistintamente y no existe diferencia real entre ellos",
+        "Ambos términos se utilizan indistintamente y no existe diferencia real entre ellos.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "El dato es un valor aislado y la información es el resultado de procesar datos con un contexto.",
+      "explanation": "El dato es un valor bruto; la información es el dato procesado con significado.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_2_q0",
       "question": "Los métodos permiten definir el comportamiento de los objetos y pueden devolver o no un valor. ¿Qué indica que un método tenga como tipo de retorno la palabra clave void?",
       "options": [
-        "Que el método devuelve un valor vacío",
-        "Que el método no realiza ninguna acción",
+        "Que el método devuelve un valor vacío.",
+        "Que el método no realiza ninguna acción.",
         "Que el método realiza una acción pero no devuelve ningún valor.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "void indica que el método realiza una acción pero NO devuelve ningún valor. Si un método devuelve algo, se especifica el tipo (int, String, etc.). void ≠ \"devuelve vacío\".",
+      "explanation": "void indica que el método realiza una tarea pero no devuelve ningún valor al llamador.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_2_q1",
       "question": "Los atributos de una clase representan el estado de los objetos creados a partir de ella. ¿Cuál de las siguientes afirmaciones sobre los atributos es correcta?",
       "options": [
-        "Los atributos se declaran dentro de los métodos",
+        "Los atributos se declaran dentro de los métodos.",
         "Cada objeto tiene su propia copia de los atributos definidos en la clase.",
-        "Todos los objetos comparten los mismos valores de los atributos",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Todos los objetos comparten los mismos valores de los atributos.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Cada objeto tiene su propia copia de los atributos definidos en la clase.",
+      "explanation": "Cada instancia (objeto) mantiene su propio estado a través de sus atributos.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_2_q2",
       "question": "El constructor es un elemento fundamental dentro de una clase en Java y cumple una función específica. ¿Cuál es la misión principal de un constructor?",
       "options": [
-        "Ejecutar la lógica principal del programa",
+        "Ejecutar la lógica principal del programa.",
         "Inicializar los atributos del objeto en el momento de su creación.",
-        "Definir el comportamiento común de todas las clases",
+        "Definir el comportamiento común de todas las clases.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "El constructor inicializa los atributos del objeto en el momento de su creación con new. Tiene el mismo nombre que la clase y no tiene tipo de retorno. Si no se define, Java crea uno por defecto.",
+      "explanation": "El constructor se invoca al crear el objeto para asegurar que empiece en un estado válido.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_2_q3",
       "question": "En programación orientada a objetos, una clase no representa directamente un objeto real, sino una definición abstracta que sirve como base para crear instancias. ¿Cuál de las siguientes afirmaciones describe correctamente el concepto de clase?",
       "options": [
-        "Es una estructura que contiene únicamente métodos sin datos asociados",
+        "Es una estructura que contiene únicamente métodos sin datos asociados.",
         "Es una plantilla que define los atributos y comportamientos de una entidad.",
-        "Es un objeto creado en memoria mediante el operador new",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Es un objeto creado en memoria mediante el operador new.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Una clase es una plantilla que define los atributos (estado) y métodos (comportamiento) de sus objetos. Un objeto es una instancia concreta creada a partir de esa plantilla con new.",
+      "explanation": "La clase es el plano; el objeto es la casa construida con ese plano.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_2_q4",
       "question": "En Java, las variables que hacen referencia a objetos no almacenan el objeto en sí, sino una dirección de memoria. ¿Qué consecuencia tiene esto al asignar una referencia a otra?",
       "options": [
-        "Se crea automáticamente una copia independiente del objeto",
+        "Se crea automáticamente una copia independiente del objeto.",
         "Ambas referencias apuntan al mismo objeto en memoria.",
-        "El objeto original se elimina de la memoria",
-        "Mediante una clase abstracta con métodos estáticos"
+        "El objeto original se elimina de la memoria.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'Ambas referencias apuntan al mismo objeto en memoria.'.",
+      "explanation": "En Java, las variables de objeto son punteros/referencias a la memoria Heap.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_2_q5",
-      "question": "Cuando una clase tiene una relación fuerte de \"todo-parte\" con otra y la parte no puede existir sin el todo, estamos ante un tipo concreto de relación entre clases. ¿De cuál se trata?",
+      "question": "Cuando una clase tiene una relación fuerte de “todo-parte” con otra y la parte no puede existir sin el todo, estamos ante un tipo concreto de relación entre clases. ¿De cuál se trata?",
       "options": [
-        "Dependencia",
-        "Agregación",
+        "Dependencia.",
+        "Agregación.",
         "Composición.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "La respuesta es 'Composición.'. \"Dependencia.\" y \"Agregación.\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "La composición es una relación de pertenencia fuerte donde la parte desaparece con el todo.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_2_q6",
       "question": "Los métodos getter y setter se utilizan para controlar el acceso a los atributos privados de una clase. ¿Cuál es una de las principales ventajas de usar setters en lugar de hacer públicos los atributos?",
       "options": [
-        "Permiten acceder directamente a la memoria del objeto",
+        "Permiten acceder directamente a la memoria del objeto.",
         "Permiten validar los datos antes de modificar el estado del objeto.",
-        "Eliminan la necesidad de constructores",
+        "Eliminan la necesidad de constructores.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Permiten validar los datos antes de modificar el estado del objeto.",
+      "explanation": "Los setters permiten añadir lógica de validación (por ejemplo, que una edad no sea negativa).",
       "unit": null
     },
     {
       "concept_id": "prog_tema_2_q7",
       "question": "El encapsulamiento es uno de los principios clave de la programación orientada a objetos y se apoya en los modificadores de acceso. ¿Cuál es la regla de oro más habitual en Java para aplicar correctamente el encapsulamiento?",
       "options": [
-        "Atributos públicos y métodos privados",
+        "Atributos públicos y métodos privados.",
         "Atributos privados y métodos públicos.",
-        "Atributos y métodos siempre protected",
+        "Atributos y métodos siempre protected.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "El encapsulamiento protege el estado interno del objeto declarando los atributos como private y exponiendo solo lo necesario mediante métodos public (getters/setters). Permite validar antes de modificar.",
+      "explanation": "Ocultar los datos (private) y exponer el servicio (public) es el núcleo del encapsulamiento.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_2_q8",
       "question": "El polimorfismo permite que un mismo mensaje provoque comportamientos distintos según el objeto que lo reciba. ¿Qué requisito técnico es necesario para que el polimorfismo funcione correctamente en Java?",
       "options": [
-        "El uso exclusivo de atributos protected",
+        "El uso exclusivo de atributos protected.",
         "La sobreescritura de métodos en las clases hijas.",
-        "La creación de múltiples constructores",
-        "Mediante una clase abstracta con métodos estáticos"
+        "La creación de múltiples constructores.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "El polimorfismo permite que el mismo método se comporte diferente según el tipo real del objeto. Requiere sobreescritura (@Override) en las clases hijas. Se activa con enlace dinámico en tiempo de ejecución.",
+      "explanation": "Para el polimorfismo dinámico es necesario que el hijo redefine el comportamiento del padre.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_2_q9",
       "question": "En Java, todo el código debe estar contenido dentro de clases, y estas siguen una estructura concreta y unas normas estrictas. ¿Cuál de las siguientes reglas es obligatoria cuando se define una clase pública?",
       "options": [
-        "El nombre de la clase debe escribirse en minúsculas",
+        "El nombre de la clase debe escribirse en minúsculas.",
         "El archivo debe llamarse igual que la clase pública y tener extensión .java.",
-        "La clase debe contener al menos un método main",
-        "Mediante una clase abstracta con métodos estáticos"
+        "La clase debe contener al menos un método main.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "El archivo debe llamarse igual que la clase pública y tener extensión .java.",
+      "explanation": "En Java, el nombre del archivo fuente debe coincidir con la clase pública que contiene.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_3_q0",
       "question": "Las variables en Java tienen un ciclo de vida y un proceso de uso muy definido. ¿Cuál es el orden correcto para poder utilizar una variable sin provocar un error de compilación?",
       "options": [
-        "Inicializar, declarar, utilizar",
-        "Declarar, inicializar, utilizar.",
-        "Utilizar, declarar, inicializar",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Inicializar &rarr; declarar &rarr; utilizar.",
+        "Declarar &rarr; inicializar &rarr; utilizar.",
+        "Utilizar &rarr; declarar &rarr; inicializar.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'Declarar, inicializar, utilizar.'. \"Inicializar, declarar, utilizar.\" y \"Utilizar, declarar, inicializar.\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "Primero se define el tipo y nombre, luego se le asigna un valor antes de leerlo.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_3_q1",
       "question": "En Java, el punto y coma es un elemento sintáctico obligatorio en la mayoría de las instrucciones. ¿Qué indica realmente el punto y coma dentro del código?",
       "options": [
-        "El final lógico de un bloque de código",
+        "El final lógico de un bloque de código.",
         "El final de una sentencia para el compilador.",
-        "El final de una línea de texto para el programador",
-        "Mediante una clase abstracta con métodos estáticos"
+        "El final de una línea de texto para el programador.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'El final de una sentencia para el compilador.'.",
+      "explanation": "Sintácticamente, el ; es el terminador de sentencias en Java.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_3_q2",
       "question": "Cuando se realiza una conversión explícita de un tipo de dato mayor a uno menor, como de double a int, ¿qué efecto se produce?",
       "options": [
-        "El valor se redondea automáticamente",
+        "El valor se redondea automáticamente.",
         "Se produce un truncamiento y posible pérdida de información.",
-        "Java lanza siempre una excepción en tiempo de ejecución",
+        "Java lanza siempre una excepción en tiempo de ejecución.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'Se produce un truncamiento y posible pérdida de información.'.",
+      "explanation": "Un cast 'estrecho' puede perder decimales o desbordar el rango del tipo destino.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_3_q3",
       "question": "Las llaves { } juegan un papel fundamental en la organización del código Java y afectan directamente a la visibilidad de las variables. ¿Qué función principal cumplen las llaves dentro de un programa?",
       "options": [
-        "Indicar el final de cada instrucción",
+        "Indicar el final de cada instrucción.",
         "Definir bloques de código y el ámbito de las variables.",
-        "Separar visualmente el código para mejorar su legibilidad",
+        "Separar visualmente el código para mejorar su legibilidad.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'Definir bloques de código y el ámbito de las variables.'.",
+      "explanation": "Las llaves delimitan el 'scope'. Una variable declarada dentro no existe fuera.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_3_q4",
       "question": "Las expresiones pueden combinar varios operadores, y Java sigue una jerarquía estricta para evaluarlas. ¿Qué operador tiene mayor prioridad en una expresión compleja?",
       "options": [
-        "Los operadores aritméticos de suma y resta",
-        "Los operadores de asignación",
+        "Los operadores aritméticos de suma y resta.",
+        "Los operadores de asignación.",
         "Los paréntesis.",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "La respuesta es 'Los paréntesis.'. \"Los operadores aritméticos de suma y resta.\" y \"Los operadores de asignación.\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "Los paréntesis rompen el orden natural de evaluación (PEMDAS/BODMAS).",
       "unit": null
     },
     {
       "concept_id": "prog_tema_3_q5",
       "question": "Al trabajar con constantes en Java se utiliza la palabra reservada final. ¿Cuál es la principal ventaja de usar constantes frente a valores literales repetidos en el código?",
       "options": [
-        "Aumentan el rendimiento del programa",
-        "Permiten cambiar su valor en tiempo de ejecución",
+        "Aumentan el rendimiento del programa.",
+        "Permiten cambiar su valor en tiempo de ejecución.",
         "Mejoran la legibilidad y facilitan el mantenimiento del código.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "Mejoran la legibilidad y facilitan el mantenimiento del código.",
+      "explanation": "Si cambias el valor en un solo sitio (la constante), se actualiza en todo el programa.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_3_q6",
       "question": "Dentro de las estructuras de control de flujo, las sentencias break, continue y return tienen efectos distintos. ¿Qué ocurre cuando se ejecuta una sentencia return dentro de un bucle?",
       "options": [
-        "Se salta únicamente la iteración actual del bucle",
-        "Se finaliza el bucle",
+        "Se salta únicamente la iteración actual del bucle.",
+        "Se finaliza el bucle pero continúa el método.",
         "Se sale inmediatamente del método completo.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "La respuesta es 'Se sale inmediatamente del método completo.'.",
+      "explanation": "return interrumpe totalmente el método actual y devuelve el control al llamador.",
       "unit": null
     },
     {
@@ -3066,270 +3066,296 @@
         "1contador",
         "nombre usuario",
         "nombreUsuario",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "La respuesta es 'nombreUsuario'. \"1contador\" y \"nombre usuario\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "En Java se usa lowerCamelCase para variables (no empezar con número, no espacios).",
       "unit": null
     },
     {
       "concept_id": "prog_tema_3_q8",
       "question": "En Java, el código fuente no es un texto plano, sino que sigue una estructura jerárquica muy concreta. ¿Cuál es el orden correcto y obligatorio de los elementos que debe respetar un programa ejecutable?",
       "options": [
-        "Clase, Paquete, Método, Sentencias",
-        "Paquete (opcional), Clase, Método, Sentencias.",
-        "Método, Clase, Paquete, Sentencias",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Clase &rarr; Paquete &rarr; Método &rarr; Sentencias.",
+        "Paquete (opcional) &rarr; Clase &rarr; Método &rarr; Sentencias.",
+        "Método &rarr; Clase &rarr; Paquete &rarr; Sentencias.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'Paquete (opcional), Clase, Método, Sentencias.'. \"Clase, Paquete, Método, Sentencias.\" y \"Método, Clase, Paquete, Sentencias.\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "Estructura estándar de un archivo Java: package -> class -> method -> statements.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_3_q9",
       "question": "Java distingue claramente entre tipos de datos primitivos y tipos de referencia. ¿Cuál de las siguientes afirmaciones es correcta respecto a los tipos primitivos?",
       "options": [
-        "Son objetos y disponen de métodos propios",
+        "Son objetos y disponen de métodos propios.",
         "Almacenan directamente el valor en memoria y no son objetos.",
-        "Siempre se almacenan en el Heap",
+        "Siempre se almacenan en el Heap.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'Almacenan directamente el valor en memoria y no son objetos.'.",
+      "explanation": "Los primitivos (int, double...) guardan el valor literal; los de referencia guardan la dirección.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_4_q0",
-      "question": "¿Cuál de las siguientes afirmaciones describe correctamente la relación entre una clase y un objeto?",
+      "question": "¿Cuál de las siguientes afirmaciones describe correctamente la relación entre una clase y un objeto en Python?",
       "options": [
-        "Una clase es un tipo de dato primitivo, y un objeto es una variable que almacena ese tipo de dato",
+        "Una clase es un tipo de dato primitivo, y un objeto es una variable que almacena ese tipo de dato.",
         "Una clase actúa como una plantilla o plano que define las propiedades y métodos, mientras que un objeto es una instancia específica creada a partir de esa clase.",
-        "Un objeto es una función que se define dentro de una clase, y la clase es el resultado de la ejecución de un objeto",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Un objeto es una función que se define dentro de una clase, y la clase es el resultado de la ejecución de un objeto.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Una clase es una plantilla que define los atributos (estado) y métodos (comportamiento) de sus objetos. Un objeto es una instancia concreta creada a partir de esa plantilla con new.",
+      "explanation": "Una clase es el molde; el objeto es la galleta. El molde define la forma.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_4_q1",
       "question": "Durante la ejecución de un programa Java, ¿en qué situación un objeto pasa a ser considerado inalcanzable y candidato a la recolección de basura?",
       "options": [
-        "Cuando se declara la variable de referencia que lo apuntará",
+        "Cuando se declara la variable de referencia que lo apuntará.",
         "Cuando ninguna referencia activa apunta al objeto en memoria.",
-        "Cuando el programa invoca explícitamente el recolector de basura",
-        "En relación con el paso de parámetros en Java, señale la afirmación correcta:"
+        "Cuando el programa invoca explícitamente el recolector de basura.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La opción seleccionada es la correcta según la teoría técnica.",
+      "explanation": "El GC libera objetos que ya no pueden ser accedidos desde ningún hilo en ejecución.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_4_q2",
-      "question": "Java utiliza paso por referencia para objetos y paso por valor para primitivos",
+      "question": "En relación con el paso de parámetros en Java, señale la afirmación correcta:",
       "options": [
+        "Java utiliza paso por referencia para objetos y paso por valor para primitivos.",
         "Java pasa siempre una copia del valor, aunque en los objetos dicho valor sea la referencia.",
-        "Java permite elegir entre paso por valor o por referencia",
-        "En el uso profesional de la Programación Orientada a Objetos, ¿cuál es la finalidad principal del encapsulamiento?",
-        "Facilitar el acceso directo a los atributos desde cualquier clase"
+        "Java permite elegir entre paso por valor o por referencia.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
-      "correct": 0,
-      "explanation": "El encapsulamiento protege el estado interno del objeto declarando los atributos como private y exponiendo solo lo necesario mediante métodos public (getters/setters). Permite validar antes de modificar.",
+      "correct": 1,
+      "explanation": "En Java TODO se pasa por valor. Para objetos, el 'valor' es la referencia de memoria.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_4_q3",
-      "question": "Respecto a la definición y uso de métodos en una clase, ¿qué característica permite la sobrecarga de métodos?",
+      "question": "En el uso profesional de la Programación Orientada a Objetos, ¿cuál es la finalidad principal del encapsulamiento?",
       "options": [
-        "Diferenciar los métodos únicamente por su tipo de retorno",
-        "Definir varios métodos con el mismo nombre y distinta firma de parámetros.",
-        "Utilizar modificadores de acceso diferentes en cada método",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Facilitar el acceso directo a los atributos desde cualquier clase.",
+        "Proteger el estado interno del objeto y controlar su modificación.",
+        "Reducir el número de métodos definidos en una clase.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Definir varios métodos con el mismo nombre y distinta firma de parámetros.",
+      "explanation": "Ocultar la complejidad interna y proteger la integridad de los datos.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_4_q4",
-      "question": "Desde el punto de vista del diseño orientado a objetos, ¿cuál es la diferencia conceptual entre herencia y composición?",
+      "question": "Respecto a la definición y uso de métodos en una clase, ¿qué característica permite la sobrecarga de métodos?",
       "options": [
-        "La herencia modela una relación \"tiene un\" y la composición una relación \"es un\"",
-        "La herencia establece una relación \"es un\" y la composición una relación \"tiene un\".",
-        "Ambas representan exactamente el mismo tipo de relación",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Diferenciar los métodos únicamente por su tipo de retorno.",
+        "Definir varios métodos con el mismo nombre y distinta firma de parámetros.",
+        "Utilizar modificadores de acceso diferentes en cada método.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Herencia = relación \"es un\" (Perro es un Animal). Composición = relación \"tiene un\" (Casa tiene Habitaciones). Se recomienda favorecer la composición sobre la herencia para menor acoplamiento.",
+      "explanation": "La firma (nombre + parámetros) debe ser distinta para que el compilador sepa cuál llamar.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_4_q5",
-      "question": "Desde el punto de vista de la gestión de memoria, ¿qué elemento se almacena en el Stack cuando se trabaja con objetos en Java?",
+      "question": "Desde el punto de vista del diseño orientado a objetos, ¿cuál es la diferencia conceptual entre herencia y composición?",
       "options": [
-        "El objeto completo con todos sus atributos",
-        "La referencia que apunta al objeto almacenado en el Heap.",
-        "Una copia independiente del objeto original",
-        "Mediante una clase abstracta con métodos estáticos"
+        "La herencia modela una relación “tiene un” y la composición una relación “es un”.",
+        "La herencia establece una relación “es un” y la composición una relación “tiene un”.",
+        "Ambas representan exactamente el mismo tipo de relación.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'La referencia que apunta al objeto almacenado en el Heap.'. \"El objeto completo con todos sus atributos.\" y \"Una copia independiente del objeto original.\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "La herencia es jerárquica (especialización); la composición es ensamblaje (piezas).",
       "unit": null
     },
     {
       "concept_id": "prog_tema_4_q6",
-      "question": "En proyectos Java de tamaño medio o grande, ¿qué combinación de prácticas contribuye directamente a la organización, reutilización y mantenibilidad del código?",
+      "question": "Desde el punto de vista de la gestión de memoria, ¿qué elemento se almacena en el Stack cuando se trabaja con objetos en Java?",
       "options": [
-        "Uso de paquetes, gestión de librerías y documentación mediante Javadoc.",
-        "Uso exclusivo de clases públicas sin separación en paquetes",
-        "Eliminación de comentarios y documentación para simplificar el código",
-        "Mediante una clase abstracta con métodos estáticos"
+        "El objeto completo con todos sus atributos.",
+        "La referencia que apunta al objeto almacenado en el Heap.",
+        "Una copia independiente del objeto original.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
-      "correct": 0,
-      "explanation": "La reutilización de código ahorra costes de creación y modificación, y reduce errores al centralizar los cambios en un único lugar. Es uno de los principios fundamentales de la ingeniería del software.",
+      "correct": 1,
+      "explanation": "El Stack guarda variables locales y referencias; el Heap guarda los objetos reales.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_4_q7",
-      "question": "En relación con la asignación de variables en Java, ¿qué ocurre cuando dos variables de tipo objeto se igualan?",
+      "question": "En proyectos Java de tamaño medio o grande, ¿qué combinación de prácticas contribuye directamente a la organización, reutilización y mantenibilidad del código?",
       "options": [
-        "Se crea automáticamente una copia independiente del objeto",
-        "Ambas variables pasan a compartir la referencia al mismo objeto.",
-        "El objeto se duplica en el Heap para evitar efectos colaterales",
+        "Uso de paquetes, gestión de librerías y documentación mediante Javadoc.",
+        "Uso exclusivo de clases públicas sin separación en paquetes.",
+        "Eliminación de comentarios y documentación para simplificar el código.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
-      "correct": 1,
-      "explanation": "La opción seleccionada es la correcta según la teoría técnica.",
+      "correct": 0,
+      "explanation": "Paquetes para estructurar, librerías para reutilizar y Javadoc para comunicar.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_4_q8",
-      "question": "En el diseño de constructores, ¿qué consecuencia tiene definir al menos un constructor con parámetros en una clase?",
+      "question": "En relación con la asignación de variables en Java, ¿qué ocurre cuando dos variables de tipo objeto se igualan?",
       "options": [
-        "Java mantiene siempre disponible el constructor vacío implícito",
-        "El constructor vacío deja de existir si no se define explícitamente.",
-        "Se impide la sobrecarga de constructores",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Se crea automáticamente una copia independiente del objeto.",
+        "Ambas variables pasan a compartir la referencia al mismo objeto.",
+        "El objeto se duplica en el Heap para evitar efectos colaterales.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "El constructor inicializa los atributos del objeto en el momento de su creación con new. Tiene el mismo nombre que la clase y no tiene tipo de retorno. Si no se define, Java crea uno por defecto.",
+      "explanation": "No se crea un nuevo objeto; ahora hay dos punteros apuntando al mismo sitio en el Heap.",
+      "unit": null
+    },
+    {
+      "concept_id": "prog_tema_4_q9",
+      "question": "En el diseño de constructores, ¿qué consecuencia tiene definir al menos un constructor con parámetros en una clase?",
+      "options": [
+        "Java mantiene siempre disponible el constructor vacío implícito.",
+        "El constructor vacío deja de existir si no se define explícitamente.",
+        "Se impide la sobrecarga de constructores.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
+      ],
+      "correct": 1,
+      "explanation": "Si escribes un constructor, Java asume que quieres control total y quita el de por defecto.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_5_q0",
       "question": "En relación con los arrays multidimensionales en Java, ¿cuál de las siguientes afirmaciones es correcta?",
       "options": [
-        "Representan una estructura continua de memoria bidimensional real",
+        "Representan una estructura continua de memoria bidimensional real.",
         "Son arrays cuyos elementos son, a su vez, otros arrays.",
-        "Tienen un único valor de longitud para filas y columnas",
-        "En relación con los índices de un array, señale la afirmación correcta:"
+        "Tienen un único valor de longitud para filas y columnas.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'Son arrays cuyos elementos son, a su vez, otros arrays.'.",
+      "explanation": "Un array multidimensional en Java es un array de objetos array, no una matriz contigua.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_5_q1",
-      "question": "El primer elemento se encuentra en la posición 1",
+      "question": "En relación con los índices de un array, señale la afirmación correcta:",
       "options": [
-        "El último elemento se encuentra en la posición igual a la longitud del array",
+        "El primer elemento se encuentra en la posición 1.",
+        "El último elemento se encuentra en la posición igual a la longitud del array.",
         "Los índices válidos van desde 0 hasta longitud menos uno.",
-        "Desde el punto de vista de la memoria en Java, ¿cuál es la característica fundamental de un array?",
-        "Es una estructura primitiva que se almacena íntegramente en el Stack"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
-      "correct": 1,
-      "explanation": "Es un objeto que se almacena en el Heap y se accede mediante una referencia.",
+      "correct": 2,
+      "explanation": "0 es la base. Por tanto, el último es N-1.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_5_q2",
-      "question": "En el procesamiento de arrays, ¿qué característica distingue al recorrido con for-each frente al for clásico?",
+      "question": "Desde el punto de vista de la memoria en Java, ¿cuál es la característica fundamental de un array?",
       "options": [
-        "Permite modificar directamente los elementos del array",
-        "Proporciona acceso al índice y al valor simultáneamente",
-        "Está orientado a la lectura secuencial sin acceso a la posición.",
+        "Es una estructura primitiva que se almacena íntegramente en el Stack.",
+        "Es un objeto que se almacena en el Heap y se accede mediante una referencia.",
+        "Es una colección dinámica cuyo tamaño puede variar durante la ejecución.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
-      "correct": 2,
-      "explanation": "Está orientado a la lectura secuencial sin acceso a la posición.",
+      "correct": 1,
+      "explanation": "Los arrays son objetos. La variable solo guarda la referencia al bloque de memoria.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_5_q3",
-      "question": "¿Cuál es la finalidad principal de la propiedad length en los arrays?",
+      "question": "En el procesamiento de arrays, ¿qué característica distingue al recorrido con for-each frente al for clásico?",
       "options": [
-        "Modificar el tamaño del array durante la ejecución",
-        "Conocer el número de elementos para acceder y recorrer el array de forma segura.",
-        "Contar únicamente los elementos que han sido inicializados explícitamente",
+        "Permite modificar directamente los elementos del array.",
+        "Proporciona acceso al índice y al valor simultáneamente.",
+        "Está orientado a la lectura secuencial sin acceso a la posición.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
-      "correct": 1,
-      "explanation": "Conocer el número de elementos para acceder y recorrer el array de forma segura.",
+      "correct": 2,
+      "explanation": "for-each es un azúcar sintáctico para iterar sobre valores de forma limpia.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_5_q4",
-      "question": "Desde un enfoque profesional, ¿cuál es la ventaja principal de utilizar los métodos de ordenación proporcionados por Java frente a los algoritmos académicos?",
+      "question": "¿Cuál es la finalidad principal de la propiedad length en los arrays?",
       "options": [
-        "Son más sencillos conceptualmente que los algoritmos clásicos",
-        "Están optimizados y reducen errores en la implementación.",
-        "Permiten mantener el orden original del array automáticamente",
+        "Modificar el tamaño del array durante la ejecución.",
+        "Conocer el número de elementos para acceder y recorrer el array de forma segura.",
+        "Contar únicamente los elementos que han sido inicializados explícitamente.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'Están optimizados y reducen errores en la implementación.'.",
+      "explanation": "length es un atributo final que nos dice cuántas casillas fueron reservadas.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_5_q5",
-      "question": "Respecto a los algoritmos de búsqueda, ¿cuál es la condición indispensable para poder aplicar una búsqueda binaria?",
+      "question": "Desde un enfoque profesional, ¿cuál es la ventaja principal de utilizar los métodos de ordenación proporcionados por Java frente a los algoritmos académicos?",
       "options": [
-        "Que el array tenga un tamaño reducido",
-        "Que el array esté previamente ordenado.",
-        "Que el array contenga únicamente valores numéricos",
+        "Son más sencillos conceptualmente que los algoritmos clásicos.",
+        "Están optimizados y reducen errores en la implementación.",
+        "Permiten mantener el orden original del array automáticamente.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'Que el array esté previamente ordenado.'.",
+      "explanation": "Usa implementaciones estándar (como Arrays.sort) que son muy eficientes y seguras.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_5_q6",
-      "question": "¿Qué afirmación describe correctamente el tamaño de un array en Java?",
+      "question": "Respecto a los algoritmos de búsqueda, ¿cuál es la condición indispensable para poder aplicar una búsqueda binaria?",
       "options": [
-        "El tamaño puede modificarse añadiendo o eliminando elementos",
-        "El tamaño se fija en el momento de su creación y no puede cambiar.",
-        "El tamaño depende del número de elementos inicializados manualmente",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Que el array tenga un tamaño reducido.",
+        "Que el array esté previamente ordenado.",
+        "Que el array contenga únicamente valores numéricos.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "El tamaño se fija en el momento de su creación y no puede cambiar.",
+      "explanation": "Divide el problema a la mitad en cada paso, pero requiere que los datos estén en orden.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_5_q7",
-      "question": "Al trabajar con cadenas de caracteres en Java, ¿qué significa que la clase String sea inmutable?",
+      "question": "¿Qué afirmación describe correctamente el tamaño de un array en Java?",
       "options": [
-        "Que no se pueden comparar dos cadenas entre sí",
-        "Que una vez creado un texto, no puede modificarse su contenido.",
-        "Que solo puede crearse mediante el operador new",
-        "Mediante una clase abstracta con métodos estáticos"
+        "El tamaño puede modificarse añadiendo o eliminando elementos.",
+        "El tamaño se fija en el momento de su creación y no puede cambiar.",
+        "El tamaño depende del número de elementos inicializados manualmente.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Que una vez creado un texto, no puede modificarse su contenido.",
+      "explanation": "En Java los arrays son estáticos en tamaño; para dinámicos se usa ArrayList.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_5_q8",
+      "question": "Al trabajar con cadenas de caracteres en Java, ¿qué significa que la clase String sea inmutable?",
+      "options": [
+        "Que no se pueden comparar dos cadenas entre sí.",
+        "Que una vez creado un texto, no puede modificarse su contenido.",
+        "Que solo puede crearse mediante el operador new.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
+      ],
+      "correct": 1,
+      "explanation": "Una vez creado un String, cualquier operación crea un nuevo objeto String en el pool.",
+      "unit": null
+    },
+    {
+      "concept_id": "prog_tema_5_q9",
       "question": "¿Cuál es la forma correcta de comparar el contenido de dos cadenas de caracteres en Java?",
       "options": [
-        "Utilizando el operador de igualdad para comprobar las referencias",
-        "Comparando directamente su longitud",
-        "Utilizando un método que evalúa el contenido textual (equals o compareTo).",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Utilizando el operador de igualdad para comprobar las referencias.",
+        "Comparando directamente su longitud.",
+        "Utilizando un método que evalúa el contenido textual.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "Utilizando un método que evalúa el contenido textual (equals o compareTo).",
+      "explanation": "Usa .equals() para comparar el texto. == solo compara si son el mismo objeto en memoria.",
       "unit": null
     },
     {
@@ -3337,25 +3363,25 @@
       "question": "¿Cuál es la diferencia fundamental de diseño entre una Clase Abstracta y una Interfaz?",
       "options": [
         "La Clase Abstracta define qué \"ES\" el objeto (identidad), mientras que la Interfaz define qué \"PUEDE HACER\" (capacidad).",
-        "Las Interfaces permiten guardar variables de estado mutables y las Clases Abstractas no",
-        "Las Clases Abstractas permiten herencia múltiple y las Interfaces solo herencia simple",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Las Interfaces permiten guardar variables de estado mutables y las Clases Abstractas no.",
+        "Las Clases Abstractas permiten herencia múltiple y las Interfaces solo herencia simple.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "Clase abstracta: puede tener código concreto, atributos, herencia simple. Interfaz: solo métodos abstractos (por defecto), implementación múltiple. Abstracta = identidad (\"es un\"), Interfaz = capacidad (\"puede hacer\").",
+      "explanation": "La interfaz garantiza que el objeto cumple un contrato de comportamiento.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_6_q1",
       "question": "¿Qué característica define al modificador de acceso protected?",
       "options": [
-        "Hace que el miembro sea visible solo para la clase actual y nadie más",
+        "Hace que el miembro sea visible solo para la clase actual y nadie más.",
         "Permite el acceso a cualquier clase del mismo paquete y a cualquier subclase, incluso en paquetes distintos.",
-        "Es exactamente igual al acceso public",
-        "Con un certificado SSL autofirmado"
+        "Es exactamente igual al acceso public, pero solo funciona con métodos static.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Permite el acceso a cualquier clase del mismo paquete y a cualquier subclase, incluso en paquetes distintos.",
+      "explanation": "protected une la visibilidad de paquete con la de herencia.",
       "unit": null
     },
     {
@@ -3363,12 +3389,12 @@
       "question": "En Java, ¿cuál es la jerarquía máxima de la que heredan implícitamente todas las clases, incluidos los arrays y Strings?",
       "options": [
         "La clase java.lang.Object.",
-        "La clase Super",
-        "No existe una jerarquía común; cada clase es independiente a menos que use extends",
+        "La clase Super.",
+        "No existe una jerarquía común; cada clase es independiente a menos que use extends.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "La respuesta es 'La clase java.lang.Object.'.",
+      "explanation": "Object es la raíz definitiva de todo el árbol de clases en Java.",
       "unit": null
     },
     {
@@ -3376,64 +3402,64 @@
       "question": "¿Por qué Java prohíbe la herencia múltiple de clases (heredar de dos padres a la vez)?",
       "options": [
         "Para evitar el \"Problema del Diamante\" y la ambigüedad en la ejecución de métodos.",
-        "Porque consumiría demasiada memoria en el Heap al duplicar los constructores",
-        "Porque todas las clases deben ser obligatoriamente final para ser seguras",
+        "Porque consumiría demasiada memoria en el Heap al duplicar los constructores.",
+        "Porque todas las clases deben ser obligatoriamente final para ser seguras.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "El Problema del Diamante ocurre en herencia múltiple cuando dos clases padre tienen el mismo método y la clase hija no sabe cuál usar. Java lo evita prohibiendo la herencia múltiple de clases.",
+      "explanation": "Se evita la complejidad de heredar múltiples estados contradictorios (herencia de implementación).",
       "unit": null
     },
     {
       "concept_id": "prog_tema_6_q4",
       "question": "¿Cuál es la función principal de la anotación @Override en la sobreescritura de métodos?",
       "options": [
-        "Obligar al método a ser final para que no pueda volver a cambiarse",
+        "Obligar al método a ser final para que no pueda volver a cambiarse.",
         "Actuar como un control de calidad que avisa al compilador si el método no existe en el padre.",
-        "Permitir que el método cambie su lista de parámetros (Sobrecarga)",
+        "Permitir que el método cambie su lista de parámetros (Sobrecarga).",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "@Override indica que el método sobreescribe uno de la superclase. El compilador verifica que el método realmente existe en el padre. Sin @Override, si hay un error tipográfico, se crearía un método nuevo sin avisar.",
+      "explanation": "Evita errores de dedo al escribir el nombre del método en la subclase.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_6_q5",
-      "question": "Sobre las clases abstractas, ¿cuál es la \"Regla de Hierro\"?",
+      "question": "Sobre las clases abstractas, ¿cuál es la \"Regla de Hierro\" mencionada en el temario?",
       "options": [
-        "Deben tener obligatoriamente todos sus métodos vacíos",
+        "Deben tener obligatoriamente todos sus métodos vacíos.",
         "No se pueden crear objetos (instancias) de una clase abstracta.",
-        "Solo pueden heredar de interfaces y nunca de otras clases",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Solo pueden heredar de interfaces y nunca de otras clases.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "No se pueden crear objetos (instancias) de una clase abstracta.",
+      "explanation": "Son conceptos puros; no puedes tener un 'Animal' genérico, solo perros o gatos concretos.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_6_q6",
       "question": "Si deseamos garantizar que un algoritmo crítico no sea alterado por ninguna subclase, ¿qué debemos hacer?",
       "options": [
-        "Declarar el método como abstract",
+        "Declarar el método como abstract.",
         "Declarar el método como final.",
-        "Declarar el método como static y private simultáneamente",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Declarar el método como static y private simultáneamente.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'Declarar el método como final.'.",
+      "explanation": "final impide que alguien 'pise' la lógica de ese método en una clase hija.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_6_q7",
       "question": "Al decidir entre Herencia y Composición, ¿qué principio de diseño de software recomienda el temario?",
       "options": [
-        "Priorizar siempre la Herencia para maximizar la reutilización de código",
+        "Priorizar siempre la Herencia para maximizar la reutilización de código de \"Caja Blanca\".",
         "Favorecer la Composición sobre la Herencia para obtener un acoplamiento más bajo y flexible.",
-        "Usar la Herencia para relaciones \"Tiene-Un\" y la Composición para relaciones \"Es-Un\"",
+        "Usar la Herencia para relaciones \"Tiene-Un\" y la Composición para relaciones \"Es-Un\".",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Herencia = relación \"es un\" (Perro es un Animal). Composición = relación \"tiene un\" (Casa tiene Habitaciones). Se recomienda favorecer la composición sobre la herencia para menor acoplamiento.",
+      "explanation": "La composición suele ser preferible porque es más flexible y menos rígida que la herencia.",
       "unit": null
     },
     {
@@ -3441,64 +3467,64 @@
       "question": "Si un método es declarado como static, ¿cuál de las siguientes afirmaciones es CORRECTA?",
       "options": [
         "Pertenece a la clase y no puede acceder a variables de instancia ni usar this.",
-        "Requiere crear un objeto con new antes de poder ser invocado",
-        "Cada objeto creado tiene su propia copia privada de dicho método en memoria",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Requiere crear un objeto con new antes de poder ser invocado.",
+        "Cada objeto creado tiene su propia copia privada de dicho método en memoria.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "Un método o atributo static pertenece a la CLASE, no a los objetos. Se accede con NombreClase.metodo(). No puede acceder a atributos de instancia ni usar this, porque no está asociado a ningún objeto concreto.",
+      "explanation": "Lo estático es de la 'clase', no de las 'instancias'. No conoce a 'this'.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_6_q9",
       "question": "Respecto a los constructores y la herencia, ¿cuál es el orden estricto de inicialización?",
       "options": [
-        "Primero se inicializa la subclase (hija) y finalmente la superclase (padre)",
-        "Se inicializan simultáneamente para optimizar la carga de la JVM",
+        "Primero se inicializa la subclase (hija) y finalmente la superclase (padre).",
+        "Se inicializan simultáneamente para optimizar la carga de la JVM.",
         "Los padres siempre se inicializan antes que los hijos, empezando desde la clase Object.",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "El constructor inicializa los atributos del objeto en el momento de su creación con new. Tiene el mismo nombre que la clase y no tiene tipo de retorno. Si no se define, Java crea uno por defecto.",
+      "explanation": "Antes de construir el hijo, Java debe asegurar que la parte padre esté lista.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_7_q0",
       "question": "¿Para qué se utiliza la palabra clave throws (en plural) en la firma de un método?",
       "options": [
-        "Para lanzar una instancia específica de una excepción en una línea concreta de código",
+        "Para lanzar una instancia específica de una excepción en una línea concreta de código.",
         "Para indicar que el método delega la responsabilidad de gestionar ciertas excepciones a quien lo invoque.",
-        "Para obligar al bloque finally a cerrar todos los recursos abiertos de forma manual",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Para obligar al bloque finally a cerrar todos los recursos abiertos de forma manual.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "throws en la firma del método declara que puede lanzar una excepción checked. El llamador debe manejarla con try-catch o propagarla con throws. throw (sin s) lanza la excepción en una línea concreta.",
+      "explanation": "Propaga la excepción para que el método superior decida cómo gestionarla.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_7_q1",
       "question": "Al recorrer una colección, ¿en qué caso es indispensable utilizar un Iterator en lugar de un bucle for-each?",
       "options": [
-        "Cuando solo necesitamos leer los datos sin modificarlos",
-        "Cuando queremos filtrar la colección mediante un objeto Stream",
+        "Cuando solo necesitamos leer los datos sin modificarlos.",
+        "Cuando queremos filtrar la colección mediante un objeto Stream.",
         "Cuando necesitamos eliminar elementos de la colección de forma segura mientras la recorremos.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "Iterator es necesario cuando se necesita eliminar elementos de una colección durante la iteración. Usar list.remove() en un for-each lanza ConcurrentModificationException. it.remove() es seguro.",
+      "explanation": "Iterator permite usar .remove() de forma segura durante la iteración.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_7_q2",
-      "question": "¿Cuál es el propósito de utilizar Genéricos al declarar una colección como ArrayList<String>?",
+      "question": "¿Cuál es el propósito de utilizar Genéricos (<T>) al declarar una colección como ArrayList<String>?",
       "options": [
-        "Permitir que la lista guarde cualquier tipo de objeto (mezclar enteros, cadenas, etc.)",
+        "Permitir que la lista guarde cualquier tipo de objeto (mezclar enteros, cadenas, etc.).",
         "Aportar seguridad de tipos en tiempo de compilación y evitar la necesidad de realizar castings manuales.",
-        "Hacer que la colección sea inmutable y no se puedan añadir más elementos tras su creación",
+        "Hacer que la colección sea inmutable y no se puedan añadir más elementos tras su creación.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Aportar seguridad de tipos en tiempo de compilación y evitar la necesidad de realizar castings manuales.",
+      "explanation": "Evitas el ClassCastException en tiempo de ejecución al restringir los tipos en compilación.",
       "unit": null
     },
     {
@@ -3508,10 +3534,10 @@
         "List",
         "Set",
         "Queue",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La respuesta es 'Set'. \"List\" y \"Queue\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "Set es un conjunto matemático: no hay repetidos y no suele haber orden.",
       "unit": null
     },
     {
@@ -3519,51 +3545,51 @@
       "question": "¿Cuál es la diferencia principal entre un ArrayList y un HashSet?",
       "options": [
         "El ArrayList mantiene el orden de inserción, mientras que el HashSet no garantiza ningún orden.",
-        "El ArrayList no permite duplicados y el HashSet sí",
-        "El HashSet es más lento para acceder a elementos que el ArrayList porque usa índices",
+        "El ArrayList no permite duplicados y el HashSet sí.",
+        "El HashSet es más lento para acceder a elementos que el ArrayList porque usa índices.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "ArrayList mantiene el orden de inserción y permite duplicados. HashSet no garantiza orden y no permite duplicados. ArrayList es O(1) para acceso por índice; HashSet es O(1) para contains().",
+      "explanation": "ArrayList es una lista (secuencial); HashSet es una bolsa (dispersión por hash).",
       "unit": null
     },
     {
       "concept_id": "prog_tema_7_q5",
-      "question": "Sobre la interfaz Map, ¿cuál de las siguientes afirmaciones es correcta?",
+      "question": "Sobre la interfaz Map, ¿cuál de las siguientes afirmaciones es correcta según el temario?",
       "options": [
-        "Hereda directamente de la interfaz Collection",
+        "Hereda directamente de la interfaz Collection.",
         "Almacena elementos en parejas de Clave-Valor y no pertenece a la jerarquía de Collection.",
-        "Es una lista ordenada que permite acceder a los elementos mediante un índice numérico",
+        "Es una lista ordenada que permite acceder a los elementos mediante un índice numérico.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Map almacena pares clave-valor. No hereda de Collection. HashMap no garantiza orden; TreeMap mantiene orden natural de claves; LinkedHashMap mantiene orden de inserción.",
+      "explanation": "Map usa diccionarios (k/v). No es una Collection propiamente dicha.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_7_q6",
-      "question": "¿Cuál es la principal ventaja del \"try-with-resources\"?",
+      "question": "¿Cuál es la principal ventaja del \"try-with-resources\" introducido en versiones modernas de Java?",
       "options": [
-        "Permite capturar múltiples excepciones en una sola línea de código",
+        "Permite capturar múltiples excepciones en una sola línea de código.",
         "Gestiona automáticamente el cierre de recursos (como archivos o conexiones) al finalizar el bloque.",
-        "Aumenta la velocidad de ejecución de las colecciones tipo List y Map",
+        "Aumenta la velocidad de ejecución de las colecciones tipo List y Map.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "try-with-resources cierra automáticamente los recursos (ficheros, conexiones) al salir del bloque, incluso si hay excepción. El recurso debe implementar AutoCloseable. Evita el finally con close() manual.",
+      "explanation": "Garantiza que el archivo se cierre aunque ocurra una excepción (AutoCloseable).",
       "unit": null
     },
     {
       "concept_id": "prog_tema_7_q7",
       "question": "Según la jerarquía de excepciones en Java, ¿cuál es la diferencia entre un Error y una Exception?",
       "options": [
-        "Las Exception son fallos graves del sistema (como falta de memoria), mientras que los Error son fallos del programa",
+        "Las Exception son fallos graves del sistema (como falta de memoria), mientras que los Error son fallos del programa.",
         "Los Error son situaciones irrecuperables de la JVM, mientras que las Exception son condiciones que una aplicación debería capturar.",
-        "No hay diferencia; ambos términos se usan indistintamente para cualquier fallo en tiempo de ejecución",
-        "Mediante una clase abstracta con métodos estáticos"
+        "No hay diferencia; ambos términos se usan indistintamente para cualquier fallo en tiempo de ejecución.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Los Error son situaciones irrecuperables de la JVM, mientras que las Exception son condiciones que una aplicación deberí...",
+      "explanation": "Error = fallo de la máquina (OutOfMemory); Exception = fallo lógico (FileNotFound).",
       "unit": null
     },
     {
@@ -3571,38 +3597,38 @@
       "question": "¿Qué caracteriza a las excepciones de tipo RuntimeException (Unchecked)?",
       "options": [
         "El compilador no obliga a capturarlas ni a declararlas en la firma del método.",
-        "Son excepciones que deben ser revisadas obligatoriamente por el programador antes de compilar",
-        "Son las únicas excepciones que pueden lanzarse mediante la palabra clave throw",
+        "Son excepciones que deben ser revisadas obligatoriamente por el programador antes de compilar.",
+        "Son las únicas excepciones que pueden lanzarse mediante la palabra clave throw.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "El compilador no obliga a capturarlas ni a declararlas en la firma del método.",
+      "explanation": "Son excepciones 'no comprobadas' que suelen indicar fallos de programación (null pointer).",
       "unit": null
     },
     {
       "concept_id": "prog_tema_7_q9",
       "question": "En una estructura try-catch-finally, ¿cuándo se ejecuta el bloque finally?",
       "options": [
-        "Solo si se produce una excepción y esta es capturada correctamente",
-        "Solo si no se produce ninguna excepción durante la ejecución del try",
+        "Solo si se produce una excepción y esta es capturada correctamente.",
+        "Solo si no se produce ninguna excepción durante la ejecución del try.",
         "Siempre, independientemente de si se lanzó una excepción o si fue capturada.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "Siempre, independientemente de si se lanzó una excepción o si fue capturada.",
+      "explanation": "finally es el bloque de limpieza garantizada (cierre de BD, logs, etc.).",
       "unit": null
     },
     {
       "concept_id": "prog_tema_8_q0",
       "question": "Si un atributo de una clase se marca con la palabra clave transient, ¿qué ocurre durante la serialización?",
       "options": [
-        "Ese atributo se guarda con prioridad absoluta antes que los demás",
+        "Ese atributo se guarda con prioridad absoluta antes que los demás.",
         "Ese atributo se ignora y no se guarda en el fichero (útil para datos sensibles como contraseñas).",
-        "El atributo se convierte automáticamente a formato hexadecimal para ahorrar espacio",
-        "Mediante una clase abstracta con métodos estáticos"
+        "El atributo se convierte automáticamente a formato hexadecimal para ahorrar espacio.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "transient marca un atributo para que sea ignorado durante la serialización. Útil para datos sensibles (contraseñas) o datos que no tienen sentido fuera del contexto de ejecución (conexiones, hilos).",
+      "explanation": "transient le dice a la JVM: 'este dato no es persistente' (ej: una contraseña).",
       "unit": null
     },
     {
@@ -3610,25 +3636,25 @@
       "question": "¿Cuál es la diferencia principal entre un flujo de Bytes y un flujo de Caracteres?",
       "options": [
         "Los de Bytes procesan datos de 8 bits (imágenes, audio), mientras que los de Caracteres procesan datos de 16 bits usando Unicode (texto).",
-        "Los flujos de Bytes son solo para lectura y los de Caracteres solo para escritura",
-        "No hay diferencia técnica; Java decide cuál usar automáticamente según el tamaño del archivo",
+        "Los flujos de Bytes son solo para lectura y los de Caracteres solo para escritura.",
+        "No hay diferencia técnica; Java decide cuál usar automáticamente según el tamaño del archivo.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "Los de Bytes procesan datos de 8 bits (imágenes, audio), mientras que los de Caracteres procesan datos de 16 bits usando...",
+      "explanation": "Bytes (0-255) para archivos binarios; Characters para texto idiomático (Unicode).",
       "unit": null
     },
     {
       "concept_id": "prog_tema_8_q2",
       "question": "Al trabajar con archivos de texto, ¿qué sucede si se abre un FileWriter con el parámetro append en true?",
       "options": [
-        "El archivo se borra completamente antes de empezar a escribir",
+        "El archivo se borra completamente antes de empezar a escribir.",
         "El nuevo contenido se añade al final del archivo sin borrar lo que ya existía.",
-        "El archivo se bloquea para que otros programas no puedan leerlo mientras se escribe",
+        "El archivo se bloquea para que otros programas no puedan leerlo mientras se escribe.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "new FileWriter(\"f.txt\", true) abre el fichero en modo append: el nuevo contenido se añade al final sin borrar lo existente. Sin el parámetro true (o con false), sobreescribe el fichero.",
+      "explanation": "append=true no pisa el archivo, añade al final del contenido actual.",
       "unit": null
     },
     {
@@ -3638,10 +3664,10 @@
         "next()",
         "nextInt()",
         "nextLine()",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "nextLine() lee toda la línea incluyendo espacios. next() lee solo hasta el primer espacio. nextInt() lee un entero. Para leer frases completas, siempre usar nextLine().",
+      "explanation": "nextLine() lee hasta encontrar el salto de línea, incluyendo los espacios intermedios.",
       "unit": null
     },
     {
@@ -3651,10 +3677,10 @@
         "FileInputStream",
         "FileWriter",
         "FileReader",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "La respuesta es 'FileReader'. \"FileInputStream\" y \"FileWriter\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "FileReader es el Stream de caracteres orientado específicamente a archivos de disco.",
       "unit": null
     },
     {
@@ -3662,25 +3688,25 @@
       "question": "¿Qué es la \"Serialización\" de objetos en Java?",
       "options": [
         "El proceso de convertir un objeto en una secuencia de bytes para poder almacenarlo en un fichero o enviarlo por red.",
-        "Un método para ordenar alfabéticamente los atributos de una clase",
-        "El proceso de borrar un objeto del Heap para liberar memoria",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Un método para ordenar alfabéticamente los atributos de una clase.",
+        "El proceso de borrar un objeto del Heap para liberar memoria.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "El proceso de convertir un objeto en una secuencia de bytes para poder almacenarlo en un fichero o enviarlo por red.",
+      "explanation": "Permite convertir el estado de un objeto en un chorro de bytes persistente.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_8_q6",
       "question": "Respecto a la Salida Estándar de Errores (System.err), ¿qué afirmación es correcta?",
       "options": [
-        "Envía los datos directamente a la impresora del sistema",
+        "Envía los datos directamente a la impresora del sistema.",
         "Se utiliza para mensajes de diagnóstico y errores, y por defecto suele mostrarse en color rojo en la consola.",
-        "Es exactamente lo mismo que System.out y no se recomienda su uso en entornos profesionales",
+        "Es exactamente lo mismo que System.out y no se recomienda su uso en entornos profesionales.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Se utiliza para mensajes de diagnóstico y errores, y por defecto suele mostrarse en color rojo en la consola.",
+      "explanation": "Es un canal separado para que los errores no se mezclen con la salida normal de datos.",
       "unit": null
     },
     {
@@ -3688,38 +3714,38 @@
       "question": "¿Cuál es la función del \"Buffer\" en las operaciones de entrada/salida?",
       "options": [
         "Actuar como una memoria intermedia para reducir el número de accesos físicos al disco o red, mejorando el rendimiento.",
-        "Cifrar los datos para que no puedan ser leídos por otros programas del sistema operativo",
-        "Convertir automáticamente archivos binarios en archivos de texto plano",
+        "Cifrar los datos para que no puedan ser leídos por otros programas del sistema operativo.",
+        "Convertir automáticamente archivos binarios en archivos de texto plano.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "Actuar como una memoria intermedia para reducir el número de accesos físicos al disco o red, mejorando el rendimiento.",
+      "explanation": "Acceder al disco por cada byte es muy lento; el buffer agrupa las lecturas/escrituras.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_8_q8",
       "question": "En el contexto de Java, ¿qué es un \"Stream\" o flujo de datos?",
       "options": [
-        "Es una estructura de datos estática que almacena información en la memoria RAM",
+        "Es una estructura de datos estática que almacena información en la memoria RAM.",
         "Es un canal unidireccional que transporta información de forma secuencial desde un origen a un destino.",
-        "Es una base de datos interna que Java utiliza para guardar objetos de forma permanente",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Es una base de datos interna que Java utiliza para guardar objetos de forma permanente.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Es un canal unidireccional que transporta información de forma secuencial desde un origen a un destino.",
+      "explanation": "Representa el flujo continuo de datos de un punto A a un punto B.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_8_q9",
       "question": "Para que una clase pueda ser serializada, ¿qué requisito debe cumplir obligatoriamente?",
       "options": [
-        "Debe heredar de la clase File",
+        "Debe heredar de la clase File.",
         "Debe implementar la interfaz Serializable, que actúa como una \"interfaz de marcado\".",
-        "Todos sus métodos deben ser declarados como static",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Todos sus métodos deben ser declarados como static.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Serializable es una interfaz marcadora (sin métodos) que indica que los objetos de esa clase pueden convertirse en bytes para almacenarse o enviarse por red. serialVersionUID controla la compatibilidad de versiones.",
+      "explanation": "Serializable es una interfaz de marcado (interfaz vacía) que da permiso a la JVM.",
       "unit": null
     },
     {
@@ -3727,12 +3753,12 @@
       "question": "¿Cuál es la función del \"Driver\" (Controlador) en una conexión JDBC?",
       "options": [
         "Traducir las llamadas de la API JDBC al protocolo específico del gestor de base de datos (MySQL, Oracle, etc.).",
-        "Diseñar las tablas de la base de datos automáticamente desde el código Java",
-        "Comprobar que el código SQL no tenga errores de sintaxis antes de enviarlo",
+        "Diseñar las tablas de la base de datos automáticamente desde el código Java.",
+        "Comprobar que el código SQL no tenga errores de sintaxis antes de enviarlo.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "JDBC (Java Database Connectivity) es la API estándar de Java para conectarse a bases de datos. El Driver traduce las llamadas JDBC al protocolo específico de cada SGBD (MySQL, Oracle, etc.).",
+      "explanation": "El driver es el intérprete entre Java (estándar) y la base de datos (propietaria).",
       "unit": null
     },
     {
@@ -3742,10 +3768,10 @@
         "conn.rollback()",
         "conn.reset()",
         "conn.undo()",
-        "Mediante una subconsulta correlacionada con EXISTS"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "ROLLBACK deshace todos los cambios realizados desde el último START TRANSACTION o SAVEPOINT, devolviendo la base de datos al estado anterior. Es la operación de \"deshacer\" de las transacciones.",
+      "explanation": "rollback deshace todos los cambios realizados desde el último commit.",
       "unit": null
     },
     {
@@ -3753,25 +3779,25 @@
       "question": "¿Qué representan las siglas ACID en el contexto de las transacciones de bases de datos?",
       "options": [
         "Un conjunto de propiedades (Atomicidad, Consistencia, Aislamiento y Durabilidad) que garantizan la integridad de las operaciones.",
-        "Un protocolo de cifrado para que las contraseñas de la base de datos viajen seguras",
-        "El nombre del driver estándar utilizado para conectar Java con bases de datos SQLite",
+        "Un protocolo de cifrado para que las contraseñas de la base de datos viajen seguras.",
+        "El nombre del driver estándar utilizado para conectar Java con bases de datos SQLite.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.",
+      "explanation": "Son las 4 reglas de oro de las bases de datos transaccionales.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_9_q3",
       "question": "Para gestionar una transacción de forma manual en Java, ¿cuál es el primer paso imprescindible?",
       "options": [
-        "Llamar al método conn.commit()",
+        "Llamar al método conn.commit().",
         "Establecer conn.setAutoCommit(false).",
-        "Cerrar la conexión con el bloque finally",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Cerrar la conexión con el bloque finally.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "COMMIT confirma permanentemente todos los cambios de la transacción actual. Una vez ejecutado, los cambios son visibles para otros usuarios y no se pueden deshacer con ROLLBACK.",
+      "explanation": "Debemos quitar el modo automático para poder decidir cuándo hacer commit.",
       "unit": null
     },
     {
@@ -3781,49 +3807,49 @@
         "jdbc:mysql",
         "localhost",
         "3306",
-        "Mediante una subconsulta correlacionada con EXISTS"
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "JDBC (Java Database Connectivity) es la API estándar de Java para conectarse a bases de datos. El Driver traduce las llamadas JDBC al protocolo específico de cada SGBD (MySQL, Oracle, etc.).",
+      "explanation": "localhost es el host, 3306 es el puerto y empresa es la base de datos.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_9_q5",
       "question": "¿Por qué se recomienda el uso de PreparedStatement en lugar de Statement para ejecutar consultas con parámetros?",
       "options": [
-        "Porque Statement no permite ejecutar consultas de tipo SELECT",
+        "Porque Statement no permite ejecutar consultas de tipo SELECT.",
         "Porque PreparedStatement aumenta la seguridad contra ataques de Inyección SQL y mejora el rendimiento mediante la precompilación.",
-        "Porque Statement solo puede usarse con bases de datos locales y no en red",
-        "Mediante una subconsulta correlacionada con EXISTS"
+        "Porque Statement solo puede usarse con bases de datos locales y no en red.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "PreparedStatement precompila la consulta SQL y usa parámetros (?) en lugar de concatenar strings. Previene inyección SQL y mejora el rendimiento en consultas repetidas.",
+      "explanation": "PreparedStatement evita que el usuario pegue código malicioso en los campos de texto.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_9_q6",
       "question": "¿Cómo funciona el objeto ResultSet al recuperar datos de una consulta?",
       "options": [
-        "Carga todos los datos de la base de datos en una lista estática de forma inmediata",
+        "Carga todos los datos de la base de datos en una lista estática de forma inmediata.",
         "Actúa como un cursor que inicialmente apunta \"antes de la primera fila\" y requiere el método next() para avanzar.",
-        "Es una interfaz que solo permite leer datos de tipo texto (String)",
-        "Mediante una subconsulta correlacionada con EXISTS"
+        "Es una interfaz que solo permite leer datos de tipo texto (String).",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "ResultSet actúa como un cursor que inicialmente apunta ANTES de la primera fila. next() avanza al siguiente registro y devuelve false cuando no hay más. getString(), getInt() etc. leen los valores.",
+      "explanation": "next() mueve el cursor a la primera fila, luego a la segunda, etc.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_9_q7",
       "question": "¿Cuál es la forma más profesional y segura de gestionar el cierre de Connection, Statement y ResultSet para evitar fugas de memoria?",
       "options": [
-        "Cerrarlos manualmente uno a uno en el cuerpo principal del código",
-        "Confiar en que el Garbage Collector los cerrará cuando el programa termine",
+        "Cerrarlos manualmente uno a uno en el cuerpo principal del código.",
+        "Confiar en que el Garbage Collector los cerrará cuando el programa termine.",
         "Utilizar la estructura try-with-resources para que Java los cierre automáticamente al finalizar el bloque.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
-      "explanation": "try-with-resources cierra automáticamente los recursos (ficheros, conexiones) al salir del bloque, incluso si hay excepción. El recurso debe implementar AutoCloseable. Evita el finally con close() manual.",
+      "explanation": "try-with-resources es el estándar moderno para asegurar el cierre de conexiones.",
       "unit": null
     },
     {
@@ -3836,33 +3862,33 @@
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "PreparedStatement precompila la consulta SQL y usa parámetros (?) en lugar de concatenar strings. Previene inyección SQL y mejora el rendimiento en consultas repetidas.",
+      "explanation": "executeUpdate se usa para todo lo que sea MODIFICAR datos (Insert/Update/Delete).",
       "unit": null
     },
     {
       "concept_id": "prog_tema_9_q9",
       "question": "¿Qué es JDBC dentro del ecosistema de Java?",
       "options": [
-        "Una base de datos ligera que se integra directamente en el JDK",
+        "Una base de datos ligera que se integra directamente en el JDK.",
         "Una API que proporciona un conjunto de interfaces estándar para interactuar con bases de datos independientemente del motor usado.",
-        "Un lenguaje de consulta que sustituye al SQL tradicional para mejorar el rendimiento",
-        "Mediante una clase abstracta con métodos estáticos"
+        "Un lenguaje de consulta que sustituye al SQL tradicional para mejorar el rendimiento.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "JDBC (Java Database Connectivity) es la API estándar de Java para conectarse a bases de datos. El Driver traduce las llamadas JDBC al protocolo específico de cada SGBD (MySQL, Oracle, etc.).",
+      "explanation": "Java Database Connectivity es la interfaz estándar de Java para SQL.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_10_q0",
       "question": "¿Qué es el OID (Object Identifier) en una base de datos orientada a objetos?",
       "options": [
-        "Una clave primaria numérica que el programador debe gestionar manualmente",
+        "Una clave primaria numérica que el programador debe gestionar manualmente.",
         "Un identificador único generado por el sistema que es independiente del valor de los atributos del objeto.",
-        "El nombre de la variable que utilizamos en el código Java para referenciar al objeto",
-        "Mediante una subconsulta correlacionada con EXISTS"
+        "El nombre de la variable que utilizamos en el código Java para referenciar al objeto.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "El OID (Object Identifier) es un identificador único generado automáticamente por el sistema para cada objeto en una BDOO. Es independiente del valor de los atributos, a diferencia de las claves primarias relacionales.",
+      "explanation": "El OID permite identificar al objeto aunque cambien todos sus valores internos.",
       "unit": null
     },
     {
@@ -3875,7 +3901,7 @@
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "ObjectContainer es el objeto principal en db4o/ObjectDB que actúa como contenedor de objetos y gestiona la sesión. Es el equivalente a la Connection de JDBC pero para bases de datos orientadas a objetos.",
+      "explanation": "Es la puerta de entrada para persistir y recuperar objetos de la base de datos.",
       "unit": null
     },
     {
@@ -3883,103 +3909,103 @@
       "question": "¿Qué sucede si se activa la propiedad de \"Cascada\" (Cascade On Update/Delete)?",
       "options": [
         "Las operaciones realizadas sobre un objeto padre se propagan automáticamente a sus objetos hijos relacionados.",
-        "El sistema operativo borra la base de datos si ocurre un error crítico",
-        "El objeto se guarda simultáneamente en dos bases de datos distintas para mayor seguridad",
+        "El sistema operativo borra la base de datos si ocurre un error crítico.",
+        "El objeto se guarda simultáneamente en dos bases de datos distintas para mayor seguridad.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
-      "explanation": "Las operaciones realizadas sobre un objeto padre se propagan automáticamente a sus objetos hijos relacionados.",
+      "explanation": "Simula la integridad referencial en cascada del modelo relacional.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_10_q3",
       "question": "¿Qué problema fundamental vienen a solucionar las BDOO en comparación con las bases de datos relacionales?",
       "options": [
-        "La lentitud de los discos duros actuales",
+        "La lentitud de los discos duros actuales.",
         "La \"Desadaptación de Impedancia\", evitando tener que traducir objetos a tablas y filas.",
-        "La imposibilidad de usar SQL en entornos de red",
+        "La imposibilidad de usar SQL en entornos de red.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "La \"Desadaptación de Impedancia\" (Impedance Mismatch) es el problema de traducir objetos Java a tablas relacionales y viceversa. Las BDOO eliminan este problema almacenando objetos directamente.",
+      "explanation": "Las BDOO resuelven el problema de tener que 'trocear' objetos en tablas.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_10_q4",
       "question": "¿Cómo funciona el mecanismo de consulta QBE (Query By Example)?",
       "options": [
-        "Se escribe una sentencia de texto similar a SQL",
+        "Se escribe una sentencia de texto similar a SQL.",
         "Se crea un objeto \"prototipo\" o plantilla y el sistema busca objetos que coincidan con sus atributos no nulos.",
-        "Se programa un filtro mediante una función lambda de Java",
-        "Mediante una subconsulta correlacionada con EXISTS"
+        "Se programa un filtro mediante una función lambda de Java.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "QBE (Query By Example) crea un objeto \"prototipo\" con los valores que se buscan. El sistema devuelve todos los objetos que coincidan con los atributos no nulos del prototipo. Es más intuitivo que OQL.",
+      "explanation": "Es como buscar a alguien dándole una foto (el ejemplo) en lugar de una descripción.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_10_q5",
       "question": "¿Qué ventaja principal ofrecen las \"Native Queries\" (Consultas Nativas) frente a otros métodos?",
       "options": [
-        "Son mucho más rápidas que las consultas por OID",
+        "Son mucho más rápidas que las consultas por OID.",
         "Permiten usar código Java puro para filtrar, proporcionando total seguridad de tipos (Type-Safe).",
-        "No requieren que la base de datos esté abierta para ejecutarse",
-        "Mediante una subconsulta correlacionada con EXISTS"
+        "No requieren que la base de datos esté abierta para ejecutarse.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.",
+      "explanation": "Al usar Java puro para filtrar, el compilador detecta errores de tipos de datos.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_10_q6",
       "question": "En las consultas OQL, ¿cómo se navega a través de las relaciones entre objetos?",
       "options": [
-        "Mediante el uso de sentencias JOIN complejas como en el modelo relacional",
+        "Mediante el uso de sentencias JOIN complejas como en el modelo relacional.",
         "Utilizando la \"notación de punto\" (ej. p.ciudad.nombre) para seguir los grafos de objetos.",
-        "No se puede navegar entre relaciones; solo se pueden consultar objetos aislados",
-        "Mediante una subconsulta correlacionada con EXISTS"
+        "No se puede navegar entre relaciones; solo se pueden consultar objetos aislados.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Utilizando la \"notación de punto\" (ej. p.ciudad.nombre) para seguir los grafos de objetos.",
+      "explanation": "Es mucho más natural navegar por atributos (punto) que hacer JOINs manuales.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_10_q7",
       "question": "¿Qué controla el parámetro \"Activation Depth\" (Profundidad de Activación)?",
       "options": [
-        "El número máximo de usuarios que pueden conectarse a la vez",
+        "El número máximo de usuarios que pueden conectarse a la vez.",
         "El nivel de profundidad del grafo de objetos que se carga en la memoria RAM al recuperar un objeto.",
-        "La cantidad de copias de seguridad que el sistema realiza cada hora",
+        "La cantidad de copias de seguridad que el sistema realiza cada hora.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "Activation Depth controla cuántos niveles del grafo de objetos se cargan en memoria al recuperar un objeto. Un valor bajo mejora el rendimiento; un valor alto carga más objetos relacionados automáticamente.",
+      "explanation": "Evita cargar toda la base de datos en RAM al abrir un solo objeto pequeño.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_10_q8",
       "question": "En el estándar ODMG, ¿qué lenguaje se utiliza específicamente para definir la estructura de la base de datos?",
       "options": [
-        "OQL (Object Query Language)",
+        "OQL (Object Query Language).",
         "ODL (Object Definition Language).",
-        "SQL-92",
-        "Mediante una subconsulta correlacionada con EXISTS"
+        "SQL-92.",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "ODL (Object Definition Language) es el lenguaje del estándar ODMG para definir la estructura de una BDOO. OQL (Object Query Language) es para consultas. SQL-92 es para bases de datos relacionales.",
+      "explanation": "ODL define clases/atributos; OQL realiza las búsquedas de objetos.",
       "unit": null
     },
     {
       "concept_id": "prog_tema_10_q9",
       "question": "¿Cuál es la diferencia principal entre el modo de funcionamiento \"Embebido\" y el modo \"Servidor\"?",
       "options": [
-        "El modo Embebido permite múltiples conexiones remotas, mientras que el Servidor es solo para un usuario",
-        "El modo Embebido: la base de datos corre en el mismo proceso que la aplicación; el modo Servidor es un proceso independiente.",
-        "El modo Servidor es gratuito y el modo Embebido requiere licencia comercial",
+        "El modo Embebido permite múltiples conexiones remotas, mientras que el Servidor es solo para un usuario.",
+        "El modo Embebido la base de datos corre en el mismo proceso que la aplicación, mientras que el modo Servidor es un proceso independiente.",
+        "El modo Servidor es gratuito y el modo Embebido requiere licencia comercial.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
-      "explanation": "En modo Embebido, la base de datos corre en el mismo proceso JVM que la aplicación (más rápido, un solo usuario). En modo Servidor, es un proceso independiente que acepta múltiples conexiones remotas.",
+      "explanation": "Embebido = misma memoria que la App; Servidor = red independiente.",
       "unit": null
     }
   ],

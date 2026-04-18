@@ -1,61 +1,61 @@
 tema 3
 Las variables en Java tienen un ciclo de vida y un proceso de uso muy definido. ¿Cuál es el orden correcto para poder utilizar una variable sin provocar un error de compilación?
-Inicializar, declarar, utilizar
-*Declarar, inicializar, utilizar.
-Utilizar, declarar, inicializar
-Mediante una clase abstracta con métodos estáticos
-EXPL:La respuesta es 'Declarar, inicializar, utilizar.'. "Inicializar, declarar, utilizar." y "Utilizar, declarar, inicializar." son incorrectos porque describen conceptos diferentes.
+Inicializar &rarr; declarar &rarr; utilizar.
+*Declarar &rarr; inicializar &rarr; utilizar.
+Utilizar &rarr; declarar &rarr; inicializar.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:Primero se define el tipo y nombre, luego se le asigna un valor antes de leerlo.
 En Java, el punto y coma es un elemento sintáctico obligatorio en la mayoría de las instrucciones. ¿Qué indica realmente el punto y coma dentro del código?
-El final lógico de un bloque de código
+El final lógico de un bloque de código.
 *El final de una sentencia para el compilador.
-El final de una línea de texto para el programador
-Mediante una clase abstracta con métodos estáticos
-EXPL:La respuesta es 'El final de una sentencia para el compilador.'.
+El final de una línea de texto para el programador.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:Sintácticamente, el ; es el terminador de sentencias en Java.
 Cuando se realiza una conversión explícita de un tipo de dato mayor a uno menor, como de double a int, ¿qué efecto se produce?
-El valor se redondea automáticamente
+El valor se redondea automáticamente.
 *Se produce un truncamiento y posible pérdida de información.
-Java lanza siempre una excepción en tiempo de ejecución
+Java lanza siempre una excepción en tiempo de ejecución.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:La respuesta es 'Se produce un truncamiento y posible pérdida de información.'.
+EXPL:Un cast 'estrecho' puede perder decimales o desbordar el rango del tipo destino.
 Las llaves { } juegan un papel fundamental en la organización del código Java y afectan directamente a la visibilidad de las variables. ¿Qué función principal cumplen las llaves dentro de un programa?
-Indicar el final de cada instrucción
+Indicar el final de cada instrucción.
 *Definir bloques de código y el ámbito de las variables.
-Separar visualmente el código para mejorar su legibilidad
+Separar visualmente el código para mejorar su legibilidad.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:La respuesta es 'Definir bloques de código y el ámbito de las variables.'.
+EXPL:Las llaves delimitan el 'scope'. Una variable declarada dentro no existe fuera.
 Las expresiones pueden combinar varios operadores, y Java sigue una jerarquía estricta para evaluarlas. ¿Qué operador tiene mayor prioridad en una expresión compleja?
-Los operadores aritméticos de suma y resta
-Los operadores de asignación
+Los operadores aritméticos de suma y resta.
+Los operadores de asignación.
 *Los paréntesis.
-Mediante una clase abstracta con métodos estáticos
-EXPL:La respuesta es 'Los paréntesis.'. "Los operadores aritméticos de suma y resta." y "Los operadores de asignación." son incorrectos porque describen conceptos diferentes.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:Los paréntesis rompen el orden natural de evaluación (PEMDAS/BODMAS).
 Al trabajar con constantes en Java se utiliza la palabra reservada final. ¿Cuál es la principal ventaja de usar constantes frente a valores literales repetidos en el código?
-Aumentan el rendimiento del programa
-Permiten cambiar su valor en tiempo de ejecución
+Aumentan el rendimiento del programa.
+Permiten cambiar su valor en tiempo de ejecución.
 *Mejoran la legibilidad y facilitan el mantenimiento del código.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:Mejoran la legibilidad y facilitan el mantenimiento del código.
+EXPL:Si cambias el valor en un solo sitio (la constante), se actualiza en todo el programa.
 Dentro de las estructuras de control de flujo, las sentencias break, continue y return tienen efectos distintos. ¿Qué ocurre cuando se ejecuta una sentencia return dentro de un bucle?
-Se salta únicamente la iteración actual del bucle
-Se finaliza el bucle
+Se salta únicamente la iteración actual del bucle.
+Se finaliza el bucle pero continúa el método.
 *Se sale inmediatamente del método completo.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:La respuesta es 'Se sale inmediatamente del método completo.'.
+EXPL:return interrumpe totalmente el método actual y devuelve el control al llamador.
 Los identificadores permiten nombrar variables, métodos, clases y paquetes, pero deben cumplir unas reglas estrictas. ¿Cuál de las siguientes opciones representa un identificador válido y bien escrito para una variable?
 1contador
 nombre usuario
 *nombreUsuario
-Mediante una clase abstracta con métodos estáticos
-EXPL:La respuesta es 'nombreUsuario'. "1contador" y "nombre usuario" son incorrectos porque describen conceptos diferentes.
-En Java, el código fuente no es un texto plano, sino que sigue una estructura jerárquica muy concreta. ¿Cuál es el orden correcto y obligatorio de los elementos que debe respetar un programa ejecutable?
-Clase, Paquete, Método, Sentencias
-*Paquete (opcional), Clase, Método, Sentencias.
-Método, Clase, Paquete, Sentencias
-Mediante una clase abstracta con métodos estáticos
-EXPL:La respuesta es 'Paquete (opcional), Clase, Método, Sentencias.'. "Clase, Paquete, Método, Sentencias." y "Método, Clase, Paquete, Sentencias." son incorrectos porque describen conceptos diferentes.
-Java distingue claramente entre tipos de datos primitivos y tipos de referencia. ¿Cuál de las siguientes afirmaciones es correcta respecto a los tipos primitivos?
-Son objetos y disponen de métodos propios
-*Almacenan directamente el valor en memoria y no son objetos.
-Siempre se almacenan en el Heap
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:La respuesta es 'Almacenan directamente el valor en memoria y no son objetos.'.
+EXPL:En Java se usa lowerCamelCase para variables (no empezar con número, no espacios).
+En Java, el código fuente no es un texto plano, sino que sigue una estructura jerárquica muy concreta. ¿Cuál es el orden correcto y obligatorio de los elementos que debe respetar un programa ejecutable?
+Clase &rarr; Paquete &rarr; Método &rarr; Sentencias.
+*Paquete (opcional) &rarr; Clase &rarr; Método &rarr; Sentencias.
+Método &rarr; Clase &rarr; Paquete &rarr; Sentencias.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:Estructura estándar de un archivo Java: package -> class -> method -> statements.
+Java distingue claramente entre tipos de datos primitivos y tipos de referencia. ¿Cuál de las siguientes afirmaciones es correcta respecto a los tipos primitivos?
+Son objetos y disponen de métodos propios.
+*Almacenan directamente el valor en memoria y no son objetos.
+Siempre se almacenan en el Heap.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:Los primitivos (int, double...) guardan el valor literal; los de referencia guardan la dirección.
