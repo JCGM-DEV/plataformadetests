@@ -271,7 +271,10 @@ function renderEditorExercise(labData) {
         <div class="editor-pane-label">${isHTML ? '📝 HTML' : '📄 XML'}</div>
         <textarea class="editor-textarea" id="editor-input" spellcheck="false" oninput="onEditorInput(${isHTML})">${ex.starter}</textarea>
         <div class="editor-actions">
-          ${isHTML ? '<button class="btn-run" onclick="updatePreview()">▶ Actualizar</button>' : '<button class="btn-run" onclick="validateXML()">✓ Validar XML</button>'}
+          ${labData.type === 'html' ? '<button class="btn-run" onclick="updatePreview()">▶ Actualizar</button>' : 
+            labData.type === 'xquery' ? '<button class="btn-run" onclick="validateXML()">✓ Validar Consulta</button>' :
+            labData.type === 'xslt' ? '<button class="btn-run" onclick="validateXML()">✓ Validar XSLT</button>' :
+            '<button class="btn-run" onclick="validateXML()">✓ Validar XML</button>'}
           <div class="exercise-nav">
             <button onclick="prevEditorEx()" ${editorState.current === 0 ? 'disabled' : ''}>← Anterior</button>
             <span>${editorState.current+1} / ${total}</span>
@@ -423,17 +426,34 @@ function syntaxHighlightXML(xml) {
 function validateXML() {
   const code = document.getElementById('editor-input')?.value || '';
   const result = document.getElementById('validation-result');
+  const type = editorState.type;
+  
   try {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(code, 'application/xml');
-    const error = doc.querySelector('parsererror');
-    if (error) {
-      result.innerHTML = `<div class="validation-result invalid">❌ XML mal formado: ${error.textContent.split('\n')[0]}</div>`;
-      score.wrong++; document.querySelector('#score-wrong span').textContent = score.wrong;
+    if (type === 'xquery' || type === 'xslt') {
+      const ex = editorState.exercises[editorState.current];
+      const completed = editorState.achievedMilestones.size;
+      const total = (ex.milestones || []).length;
+      
+      if (completed < total && total > 0) {
+        result.innerHTML = `<div class="validation-result invalid">⚠️ Aún te faltan pasos por completar (${completed}/${total}). Revisa las instrucciones del tutor.</div>`;
+        score.wrong++; document.querySelector('#score-wrong span').textContent = score.wrong;
+      } else {
+        result.innerHTML = `<div class="validation-result valid">✅ ${type.toUpperCase()} completado correctamente. ¡Buen trabajo!</div>`;
+        score.correct++; document.querySelector('#score-correct span').textContent = score.correct;
+        completedSections.add(activeSection); updateProgress();
+      }
     } else {
-      result.innerHTML = `<div class="validation-result valid">✅ XML bien formado. Estructura válida.</div>`;
-      score.correct++; document.querySelector('#score-correct span').textContent = score.correct;
-      completedSections.add(activeSection); updateProgress();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(code, 'application/xml');
+      const error = doc.querySelector('parsererror');
+      if (error) {
+        result.innerHTML = `<div class="validation-result invalid">❌ XML mal formado: ${error.textContent.split('\n')[0]}</div>`;
+        score.wrong++; document.querySelector('#score-wrong span').textContent = score.wrong;
+      } else {
+        result.innerHTML = `<div class="validation-result valid">✅ XML bien formado. Estructura válida.</div>`;
+        score.correct++; document.querySelector('#score-correct span').textContent = score.correct;
+        completedSections.add(activeSection); updateProgress();
+      }
     }
     updateXMLOutput();
   } catch(e) {

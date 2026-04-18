@@ -83,31 +83,32 @@ const UNITS = {
       { id: 'b-sl11', category: 'Bloque 4: XSLT', icon: '🔄', label: 'XSLT 11: Sort Desc', type: 'editor', editorId: 'sl_11' },
       { id: 'b-sl12', category: 'Bloque 4: XSLT', icon: '🔄', label: 'XSLT 12: Uso xsl:if', type: 'editor', editorId: 'sl_12' },
 
-      { id: 'b-q1', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 1: Títulos', type: 'editor', editorId: 'q_1' },
-      { id: 'b-q2', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 2: FLWOR Full', type: 'editor', editorId: 'q_2' },
-      { id: 'b-q3', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 3: Agregaciones', type: 'editor', editorId: 'q_3' },
-      { id: 'b-q4', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 4: Filtro Marca', type: 'editor', editorId: 'q_4' },
-      { id: 'b-q5', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 5: Ordenación', type: 'editor', editorId: 'q_5' },
-      { id: 'b-q6', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 6: Orden Desc', type: 'editor', editorId: 'q_6' },
-      { id: 'b-q7', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 7: Nuevo XML', type: 'editor', editorId: 'q_7' },
-      { id: 'b-q8', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 8: Biblioteca', type: 'editor', editorId: 'q_8' },
-      { id: 'b-q9', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 9: Libro + Autor', type: 'editor', editorId: 'q_9' },
-      { id: 'b-q10', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 10: Filtro Inf.', type: 'editor', editorId: 'q_10' },
-      { id: 'b-q11', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 11: Precio > 25', type: 'editor', editorId: 'q_11' },
-      { id: 'b-q12', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 12: Sort Precio', type: 'editor', editorId: 'q_12' },
-      { id: 'b-q13', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 13: Sort Desc', type: 'editor', editorId: 'q_13' },
-      { id: 'b-q14', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 14: Primero', type: 'editor', editorId: 'q_14' },
-      { id: 'b-q15', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 15: Último', type: 'editor', editorId: 'q_15' },
-      { id: 'b-q16', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 16: Conteo', type: 'editor', editorId: 'q_16' },
-      { id: 'b-q17', category: 'Bloque 5: XQuery', icon: '🔍', label: 'XQuery 17: Stock < 5', type: 'editor', editorId: 'q_17' },
+      { id: 'b-q1', category: 'Bloque 5: XQuery (Biblioteca)', icon: '📚', label: 'Q1: Títulos', type: 'editor', editorId: 'q_1' },
+      { id: 'b-q2', category: 'Bloque 5: XQuery (Biblioteca)', icon: '📚', label: 'Q2: Tít + Aut', type: 'editor', editorId: 'q_2' },
+      { id: 'b-q3', category: 'Bloque 5: XQuery (Biblioteca)', icon: '📚', label: 'Q3: Informática', type: 'editor', editorId: 'q_3' },
+      { id: 'b-q4', category: 'Bloque 5: XQuery (Biblioteca)', icon: '📚', label: 'Q4: Precio > 25', type: 'editor', editorId: 'q_4' },
+      { id: 'b-q5', category: 'Bloque 5: XQuery (Biblioteca)', icon: '📚', label: 'Q5: Orden Asc', type: 'editor', editorId: 'q_5' },
+      { id: 'b-q6', category: 'Bloque 5: XQuery (Biblioteca)', icon: '📚', label: 'Q6: Orden Desc', type: 'editor', editorId: 'q_6' },
+      { id: 'b-q7', category: 'Bloque 5: XQuery (Biblioteca)', icon: '📚', label: 'Q7: Primero', type: 'editor', editorId: 'q_7' },
+      { id: 'b-q8', category: 'Bloque 5: XQuery (Biblioteca)', icon: '📚', label: 'Q8: Último', type: 'editor', editorId: 'q_8' },
+      { id: 'b-q9', category: 'Bloque 5: XQuery (Biblioteca)', icon: '📚', label: 'Q9: Conteo', type: 'editor', editorId: 'q_9' },
+      { id: 'b-q10', category: 'Bloque 5: XQuery (Biblioteca)', icon: '📚', label: 'Q10: Stock < 5', type: 'editor', editorId: 'q_10' },
+
+      { id: 'b-q11', category: 'Bloque 6: XQuery (Tienda)', icon: '🛒', label: 'Q11: Tienda Intro', type: 'editor', editorId: 'q_12' },
+      { id: 'b-q12', category: 'Bloque 6: XQuery (Tienda)', icon: '🛒', label: 'Q12: Tienda Format', type: 'editor', editorId: 'q_13' },
+      { id: 'b-q13', category: 'Bloque 6: XQuery (Tienda)', icon: '🛒', label: 'Q13: Tienda > 50', type: 'editor', editorId: 'q_14' },
+      { id: 'b-q14', category: 'Bloque 6: XQuery (Tienda)', icon: '🛒', label: 'Q14: Tienda Logitech', type: 'editor', editorId: 'q_15' },
+      { id: 'b-q15', category: 'Bloque 6: XQuery (Tienda)', icon: '🛒', label: 'Q15: Tienda Asc', type: 'editor', editorId: 'q_16' },
+      { id: 'b-q16', category: 'Bloque 6: XQuery (Tienda)', icon: '🛒', label: 'Q16: Tienda Desc', type: 'editor', editorId: 'q_17' },
+      { id: 'b-q17', category: 'Bloque 6: XQuery (Tienda)', icon: '🛒', label: 'Q17: Tienda Stock', type: 'editor', editorId: 'q_18' },
       
-      { id: 'b-q18', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 1: Videojuegos', type: 'editor', editorId: 'q_18' },
-      { id: 'b-q19', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 2: Academia', type: 'editor', editorId: 'q_19' },
-      { id: 'b-q20', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 3: Páginas', type: 'editor', editorId: 'q_20' },
-      { id: 'b-q21', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 4: Coches (Max)', type: 'editor', editorId: 'q_21' },
-      { id: 'b-q22', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 5: Alumnos', type: 'editor', editorId: 'q_22' },
-      { id: 'b-q23', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 6: Películas', type: 'editor', editorId: 'q_23' },
-      { id: 'b-q24', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 7: Pedidos', type: 'editor', editorId: 'q_24' }
+      { id: 'b-q18', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 1: Videojuegos', type: 'editor', editorId: 'q_19' },
+      { id: 'b-q19', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 2: Academia', type: 'editor', editorId: 'q_20' },
+      { id: 'b-q20', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 3: Páginas', type: 'editor', editorId: 'q_21' },
+      { id: 'b-q21', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 4: Coches (Max)', type: 'editor', editorId: 'q_22' },
+      { id: 'b-q22', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 5: Alumnos', type: 'editor', editorId: 'q_23' },
+      { id: 'b-q23', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 6: Películas', type: 'editor', editorId: 'q_24' },
+      { id: 'b-q24', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 7: Pedidos', type: 'editor', editorId: 'q_25' }
     ]
   }
 };
@@ -135,7 +136,7 @@ const XPATH_LABS = {
     <stock>8</stock>
   </libro>
   <libro categoria="CINE" id="301">
-    <titulo lang="es">Historia del Cine</vic>
+    <titulo lang="es">Historia del Cine</titulo>
     <autor>Gourdet, Jean</autor>
     <precio moneda="EUR">15.20</precio>
     <stock>0</stock>
@@ -574,7 +575,16 @@ const EDITOR_LABS = {
       id: 1, title: 'El esqueleto',
       desc: 'Crea un documento con doctype, html, head (con meta charset y title) y body. Dentro del body pon un h1 con "Hola Mundo".',
       hint: 'Usa <!DOCTYPE html>, <html lang="es">...',
-      starter: ``,
+      starter: `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Primera Web</title>
+</head>
+<body>
+  <h1>Hola Mundo</h1>
+</body>
+</html>`,
       milestones: [
         { id: 'doctype', check: /<!DOCTYPE html>/i, popup: '¡Bien! El DOCTYPE es esencial.', instruction: 'Empieza escribiendo la declaración <!DOCTYPE html>.' },
         { id: 'h1', check: /<h1>Hola Mundo<\/h1>/i, popup: '¡Perfecto! Ya tienes el h1.', instruction: 'Ahora añade un encabezado <h1> con el texto "Hola Mundo".' }
@@ -589,7 +599,16 @@ const EDITOR_LABS = {
       id: 1, title: 'Jerarquía',
       desc: 'Pon un h1, un h2, un párrafo con texto, una línea horizontal (<hr>) y otro párrafo con un salto de línea (<br>) en medio.',
       hint: 'Usa <hr> para líneas y <br> para saltos.',
-      starter: ``,
+      starter: `<!DOCTYPE html>
+<html>
+<body>
+  <h1>Título Principal</h1>
+  <h2>Subtítulo</h2>
+  <p>Este es el primer párrafo de texto.</p>
+  <hr>
+  <p>Segundo párrafo con <br> un salto de línea.</p>
+</body>
+</html>`,
       milestones: [
         { id: 'h1', check: /<h1>/i, popup: '¡Bien! El título principal h1 está listo.', instruction: 'Empieza poniendo un título <h1> para el documento.' },
         { id: 'h2', check: /<h2>/i, popup: 'H2 detectado.', instruction: 'Ahora añade un subtítulo <h2> justo debajo.' },
@@ -607,7 +626,12 @@ const EDITOR_LABS = {
       id: 1, title: 'Estilos',
       desc: 'Crea un párrafo donde una palabra sea negrita (<b>), otra cursiva (<i>), otra subrayada (<u>) y otra tachada (<s>).',
       hint: 'Usa b, i, u, s.',
-      starter: `<p>Este es un texto con </p>`,
+      starter: `<!DOCTYPE html>
+<html>
+<body>
+  <p>Este es un texto con <b>negrita</b>, <i>cursiva</i>, <u>subrayado</u> y <s>tachado</s>.</p>
+</body>
+</html>`,
       milestones: [
         { id: 'bold', check: /<b>/i, popup: 'Negrita detectada.', instruction: 'Pon una palabra en negrita usando <b>.' },
         { id: 'italic', check: /<i>/i, popup: 'Cursiva detectada.', instruction: 'Pon una palabra en cursiva usando <i>.' },
@@ -624,7 +648,20 @@ const EDITOR_LABS = {
       id: 1, title: 'La Compra',
       desc: 'Crea una lista no ordenada (ul) con 3 elementos. Luego una lista ordenada (ol) con 2 pasos.',
       hint: 'Usa ul > li y ol > li.',
-      starter: ``,
+      starter: `<!DOCTYPE html>
+<html>
+<body>
+  <ul>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+  </ul>
+  <ol>
+    <li>Paso 1</li>
+    <li>Paso 2</li>
+  </ol>
+</body>
+</html>`,
       milestones: [
         { id: 'ul', check: /<ul>/i, popup: 'Lista no ordenada lista.', instruction: 'Crea una lista de puntos usando <ul> y <li>.' },
         { id: 'ol', check: /<ol>/i, popup: 'Lista ordenada lista.', instruction: 'Crea una lista numerada usando <ol> (pasos).' }
@@ -639,10 +676,16 @@ const EDITOR_LABS = {
       id: 1, title: 'Surfeando',
       desc: 'Crea un enlace a "google.es" que se abra en pestaña nueva. Luego un enlace que baje hasta un id "final" en la página.',
       hint: 'Usa target="_blank" y href="#id".',
-      starter: `<p id="inicio"></p>
-<!-- Enlaces aquí -->
-<div style="height:1000px"></div>
-<p id="final">El final</p>`,
+      starter: `<!DOCTYPE html>
+<html>
+<body>
+  <a href="https://google.es" target="_blank">Google</a>
+  <a href="#final">Ir al final</a>
+  <p id="inicio"></p>
+  <div style="height:1000px"></div>
+  <p id="final">El final</p>
+</body>
+</html>`,
       milestones: [
         { id: 'blank', check: /target="_blank"/i, popup: 'Abrir en pestaña nueva: ¡Correcto!' },
         { id: 'anchor', check: /href="#final"/i, popup: 'Enlace interno detectado.' }
@@ -657,7 +700,12 @@ const EDITOR_LABS = {
       id: 1, title: 'Foto',
       desc: 'Inserta una imagen (puedes usar https://via.placeholder.com/150) con un texto alternativo (alt) y un tamaño (width) de 100.',
       hint: 'Usa <img src="..." alt="..." width="...">',
-      starter: ``,
+      starter: `<!DOCTYPE html>
+<html>
+<body>
+  <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo" width="100">
+</body>
+</html>`,
       milestones: [
         { id: 'alt', check: /alt=/i, popup: '¡Muy bien! El "alt" es vital para la accesibilidad.' },
         { id: 'width', check: /width=/i, popup: 'Tamaño ajustado.' }
@@ -672,7 +720,16 @@ const EDITOR_LABS = {
       id: 1, title: 'Horario',
       desc: 'Crea una tabla con un borde de 1. Debe tener una fila de cabecera (th) con "Día" y "Materia" y dos filas de datos (td).',
       hint: 'table > tr > th/td',
-      starter: ``,
+      starter: `<!DOCTYPE html>
+<html>
+<body>
+  <table border="1">
+    <tr><th>Día</th><th>Materia</th></tr>
+    <tr><td>Lunes</td><td>XML</td></tr>
+    <tr><td>Martes</td><td>HTML</td></tr>
+  </table>
+</body>
+</html>`,
       milestones: [
         { id: 'table', check: /<table border="1">/i, popup: 'Tabla iniciada con borde.', instruction: 'Crea la etiqueta <table> con el atributo border="1".' },
         { id: 'th', check: /<th>/i, popup: 'Cabecera detectada.', instruction: 'Añade una fila con encabezados <th>.' },
@@ -688,7 +745,14 @@ const EDITOR_LABS = {
       id: 1, title: 'Cajas',
       desc: 'Crea un div con un color de fondo (usando style) y dentro un span con texto en rojo.',
       hint: '<div style="background:yellow"> <span style="color:red">...</span> </div>',
-      starter: ``,
+      starter: `<!DOCTYPE html>
+<html>
+<body>
+  <div style="background:yellow">
+    <span style="color:red">Texto rojo</span>
+  </div>
+</body>
+</html>`,
       milestones: [
         { id: 'div', check: /<div/i, popup: 'Contenedor de bloque creado.', instruction: 'Crea un elemento <div> con un estilo de fondo.' },
         { id: 'span', check: /<span/i, popup: 'Contenedor de línea creado.', instruction: 'Añade un <span> dentro del div con color de texto rojo.' }
@@ -703,7 +767,17 @@ const EDITOR_LABS = {
       id: 1, title: 'Registro',
       desc: 'Crea un form con un input de texto para el nombre, un input de email, un textarea para comentarios y un botón de tipo submit.',
       hint: 'input type="text", type="email", textarea, button type="submit"',
-      starter: ``,
+      starter: `<!DOCTYPE html>
+<html>
+<body>
+  <form>
+    <input type="text" placeholder="Nombre">
+    <input type="email" placeholder="Email">
+    <textarea></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>`,
       milestones: [
         { id: 'email', check: /type="email"/i, popup: 'Input de email: ¡Correcto!' },
         { id: 'submit', check: /type="submit"/i, popup: 'Botón de envío configurado.' }
@@ -718,7 +792,16 @@ const EDITOR_LABS = {
       id: 1, title: 'Proyecto Final',
       desc: 'Crea una página que tenga: Título (h1), un Imagen, una Lista de 3 cosas, una Tabla de 2x2 y un pequeño Formulario de contacto.',
       hint: 'Es un resumen de todo el PDF de Repaso HTML.',
-      starter: ``,
+      starter: `<!DOCTYPE html>
+<html>
+<body>
+  <h1>Mi Proyecto</h1>
+  <img src="img.jpg" alt="Foto">
+  <ul><li>A</li><li>B</li><li>C</li></ul>
+  <table border="1"><tr><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td></tr></table>
+  <form><button type="submit">Enviar</button></form>
+</body>
+</html>`,
       milestones: [
         { id: 'h1', check: /<h1>/i, popup: 'Título listo.', instruction: 'Paso 1: Pon un título h1.' },
         { id: 'img', check: /<img/i, popup: 'Imagen lista.', instruction: 'Paso 2: Inserta una imagen.' },
@@ -737,7 +820,12 @@ const EDITOR_LABS = {
       desc: 'Crea un XML con raíz "alumno" que contenga: nombre, apellidos, edad y ciclo.',
       hint: 'Asegúrate de cerrar todas las etiquetas.',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
-`,
+<alumno>
+  <nombre>Juan</nombre>
+  <apellidos>Pérez</apellidos>
+  <edad>20</edad>
+  <ciclo>DAW</ciclo>
+</alumno>`,
       milestones: [
         { id: 'root', check: /<alumno>/i, popup: 'Raíz <alumno> detectada.', instruction: 'Crea el elemento raíz llamado <alumno>.' },
         { id: 'fields', check: /<nombre>.*<apellidos>.*<edad>.*<ciclo>/si, popup: 'Campos completados.', instruction: 'Añade los elementos hijos: nombre, apellidos, edad y ciclo.' }
@@ -753,7 +841,14 @@ const EDITOR_LABS = {
       desc: 'Crea un XML "curso" con nombre, centro y una lista de "modulos". Cada "modulo" debe tener nombre y horas (mínimo 2 módulos).',
       hint: 'curso > modulos > modulo',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
-`,
+<curso>
+  <nombre>Desarrollo Web</nombre>
+  <centro>Euroformac</centro>
+  <modulos>
+    <modulo><nombre>HTML</nombre><horas>50</horas></modulo>
+    <modulo><nombre>XML</nombre><horas>40</horas></modulo>
+  </modulos>
+</curso>`,
       milestones: [
         { id: 'root', check: /<curso>/i, popup: 'Raíz <curso> detectada.', instruction: 'Empieza con el elemento raíz <curso>.' },
         { id: 'nested', check: /<modulos>.*<modulo>/si, popup: 'Anidamiento correcto.', instruction: 'Crea una sección <modulos> y dentro define al menos dos elementos <modulo>.' }
@@ -769,6 +864,7 @@ const EDITOR_LABS = {
       desc: 'Dado un XML de un libro, añade la instrucción para asociar "estilos.css".',
       hint: 'Usa <?xml-stylesheet ... ?>',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="estilos.css"?>
 <libro>
   <titulo>XML Básico</titulo>
 </libro>`,
@@ -785,7 +881,13 @@ const EDITOR_LABS = {
       id: 1, title: 'Código Literal',
       desc: 'Crea un elemento "codigo" que contenga etiquetas <h1> y <p> usando una sección CDATA.',
       hint: '<![CDATA[ ... ]]>',
-      starter: `<codigo>`,
+      starter: `<?xml version="1.0" encoding="UTF-8"?>
+<codigo>
+  <![CDATA[ 
+     <h1>Título</h1>
+     <p>Párrafo</p>
+  ]]>
+</codigo>`,
       milestones: [
         { id: 'cdata', check: /<!\[CDATA\[.*<h1>.*<\/codigo>/si, popup: '¡Perfecto! El CDATA protege tu código.' }
       ]
@@ -800,7 +902,15 @@ const EDITOR_LABS = {
       desc: 'Crea un XML para "persona" con "nombre" (texto) y "edad" (texto) usando una DTD interna.',
       hint: '<!DOCTYPE persona [ <!ELEMENT ... > ]>',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
-`,
+<!DOCTYPE persona [
+  <!ELEMENT persona (nombre, edad)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT edad (#PCDATA)>
+]>
+<persona>
+  <nombre>Ana</nombre>
+  <edad>25</edad>
+</persona>`,
       milestones: [
         { id: 'doctype', check: /<!DOCTYPE persona/i, popup: 'DOCTYPE iniciado.', instruction: 'Define la DTD interna con <!DOCTYPE persona [ ... ].' },
         { id: 'ele_root', check: /<!ELEMENT persona \(nombre, edad\)>/i, popup: 'Elemento raíz definido.', instruction: 'Define el elemento persona con sus hijos nombre y edad.' },
@@ -817,7 +927,14 @@ const EDITOR_LABS = {
       desc: 'Crea una DTD para "clase" que contenga uno o más elementos "alumno". Cada alumno debe tener un "nombre".',
       hint: 'Usa + para "uno o más".',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
-`,
+<!DOCTYPE clase [
+  <!ELEMENT clase (alumno+)>
+  <!ELEMENT alumno (nombre)>
+  <!ELEMENT nombre (#PCDATA)>
+]>
+<clase>
+  <alumno><nombre>Juan</nombre></alumno>
+</clase>`,
       milestones: [
         { id: 'doctype', check: /<!DOCTYPE clase/i, popup: 'DOCTYPE iniciado.', instruction: 'Empieza definiendo la DTD interna con <!DOCTYPE clase [ ... ].' },
         { id: 'ele', check: /<!ELEMENT clase \(alumno\+\)>/i, popup: 'Elemento raíz con cuantificador detectado.', instruction: 'Define el elemento clase conteniendo uno o más (+) alumnos.' },
@@ -834,7 +951,11 @@ const EDITOR_LABS = {
       desc: 'Crea una DTD para "libro" con un atributo "isbn" que sea obligatorio (#REQUIRED).',
       hint: '<!ATTLIST libro isbn CDATA #REQUIRED>',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
-`,
+<!DOCTYPE libro [
+  <!ELEMENT libro EMPTY>
+  <!ATTLIST libro isbn CDATA #REQUIRED>
+]>
+<libro isbn="12345"/>`,
       milestones: [
         { id: 'ele', check: /<!ELEMENT libro EMPTY>/i, popup: 'Elemento libro definido.', instruction: 'Paso 1: Define el elemento libro (puedes usar EMPTY si no tiene contenido).' },
         { id: 'attr', check: /<!ATTLIST libro isbn CDATA #REQUIRED>/i, popup: 'Atributo obligatorio listo.', instruction: 'Paso 2: Define la lista de atributos con ATTLIST, marcando el isbn como #REQUIRED.' }
@@ -850,7 +971,11 @@ const EDITOR_LABS = {
       desc: 'Define una entidad llamada "centro" con el valor "Euroformac" y úsala dentro del elemento "instituto".',
       hint: '<!ENTITY centro "Euroformac"> ... &centro;',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
-`,
+<!DOCTYPE instituto [
+  <!ENTITY centro "Euroformac">
+  <!ELEMENT instituto (#PCDATA)>
+]>
+<instituto>&centro;</instituto>`,
       milestones: [
         { id: 'ent', check: /<!ENTITY centro "Euroformac">/i, popup: 'Entidad definida.', instruction: 'Primero define la entidad: <!ENTITY centro "Euroformac">.' },
         { id: 'use', check: /&centro;/i, popup: 'Entidad utilizada.', instruction: 'Ahora usa la entidad dentro del elemento instituto con &centro;.' }
@@ -867,7 +992,15 @@ const EDITOR_LABS = {
       hint: 'xs:sequence > xs:element',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-`,
+  <xs:element name="persona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="edad" type="xs:integer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>`,
       milestones: [
         { id: 'seq', check: /xs:sequence/i, popup: 'Secuencia de elementos: ¡OK!' }
       ]
@@ -883,8 +1016,9 @@ const EDITOR_LABS = {
       hint: 'minOccurs="1" maxOccurs="unbounded"',
       starter: `<xs:element name="clase">
   <xs:complexType><xs:sequence>
-    <!-- Define alumno aquí -->
-`,
+    <xs:element name="alumno" minOccurs="1" maxOccurs="unbounded"/>
+  </xs:sequence></xs:complexType>
+</xs:element>`,
       milestones: [
         { id: 'unbounded', check: /maxOccurs="unbounded"/i, popup: '¡Unbounded! Así se define una lista infinita.' }
       ]
@@ -903,8 +1037,9 @@ const EDITOR_LABS = {
     <xs:sequence>
       <xs:element name="titulo" type="xs:string"/>
     </xs:sequence>
-    <!-- Atributo aquí -->
-`,
+    <xs:attribute name="isbn" type="xs:string" use="required"/>
+  </xs:complexType>
+</xs:element>`,
       milestones: [
         { id: 'complex', check: /<xs:complexType>/i, popup: 'Tipo complejo iniciado.', instruction: 'Empieza definiendo el <xs:complexType> para el libro.' },
         { id: 'seq', check: /<xs:sequence>/i, popup: 'Secuencia preparada.', instruction: 'Dentro del complexType, define una <xs:sequence> para los elementos hijos.' },
@@ -922,7 +1057,10 @@ const EDITOR_LABS = {
       hint: 'xs:restriction base="xs:integer"',
       starter: `<xs:simpleType name="tipoEdad">
   <xs:restriction base="xs:integer">
-`,
+    <xs:minInclusive value="0"/>
+    <xs:maxInclusive value="120"/>
+  </xs:restriction>
+</xs:simpleType>`,
       milestones: [
         { id: 'restr', check: /<xs:restriction base="xs:integer">/i, popup: 'Restricción base lista.', instruction: 'Define la restricción con base="xs:integer".' },
         { id: 'min', check: /minInclusive value="0"/i, popup: 'Mínimo configurado.', instruction: 'Añade el valor mínimo (0) con minInclusive.' },
@@ -941,7 +1079,11 @@ const EDITOR_LABS = {
       starter: `<xs:element name="registro">
   <xs:complexType>
     <xs:choice>
-`,
+      <xs:element name="email" type="xs:string"/>
+      <xs:element name="nick" type="xs:string"/>
+    </xs:choice>
+  </xs:complexType>
+</xs:element>`,
       milestones: [
         { id: 'choice', check: /xs:choice/i, popup: 'Uso de or-exclusivo (choice) detectado.' }
       ]
@@ -955,7 +1097,7 @@ const EDITOR_LABS = {
       id: 1, title: 'DNI Español',
       desc: 'Crea un patrón para validar 8 números seguidos de una letra mayúscula.',
       hint: '[0-9]{8}[A-Z]',
-      starter: `<xs:pattern value="`,
+      starter: `<xs:pattern value="[0-9]{8}[A-Z]"/>`,
       milestones: [
         { id: 'pattern', check: /\[0-9\]\{8\}\[A-Z\]/, popup: '¡Regex de DNI correcto!' }
       ]
@@ -971,7 +1113,12 @@ const EDITOR_LABS = {
       hint: 'xs:enumeration',
       starter: `<xs:simpleType name="tipoCat">
   <xs:restriction base="xs:string">
-`,
+    <xs:enumeration value="A"/>
+    <xs:enumeration value="B"/>
+    <xs:enumeration value="C"/>
+    <xs:enumeration value="D"/>
+  </xs:restriction>
+</xs:simpleType>`,
       milestones: [
         { id: 'enum', check: /enumeration value="D"/i, popup: '¡Todas las opciones incluidas!' }
       ]
@@ -986,7 +1133,10 @@ const EDITOR_LABS = {
       desc: 'Crea un tipo para nick entre 5 y 12 caracteres, solo letras minúsculas y números.',
       hint: 'minLength, maxLength y pattern.',
       starter: `<xs:restriction base="xs:string">
-`,
+  <xs:minLength value="5"/>
+  <xs:maxLength value="12"/>
+  <xs:pattern value="[a-z0-9]+"/>
+</xs:restriction>`,
       milestones: [
         { id: 'mixed', check: /minLength.*maxLength.*pattern/si, popup: '¡Increíble! Has cubierto todas las restricciones.' }
       ]
@@ -1000,7 +1150,7 @@ const EDITOR_LABS = {
       id: 1, title: 'Código de Producto',
       desc: 'Crea un patrón para un código que empiece por 2 mayúsculas y siga con 3 números (ej: AB123).',
       hint: '[A-Z]{2}[0-9]{3}',
-      starter: `<xs:pattern value="`,
+      starter: `<xs:pattern value="[A-Z]{2}[0-9]{3}"/>`,
       milestones: [
         { id: 'p2', check: /\[A-Z\]\{2\}\[0-9\]\{3\}/, popup: '¡Código de producto validado!' }
       ]
@@ -1014,7 +1164,28 @@ const EDITOR_LABS = {
       id: 1, title: 'Esquema de Tienda',
       desc: 'Crea un esquema para "tienda" > "producto" con nombre, precio (decimal), iva (4, 10, 21) y categoria (A, B, C).',
       hint: 'Es una mezcla de enumeraciones y tipos simples.',
-      starter: ``,
+      starter: `<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="tienda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="producto" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string"/>
+              <xs:element name="precio" type="xs:decimal"/>
+              <xs:element name="iva">
+                <xs:simpleType><xs:restriction base="xs:integer">
+                  <xs:enumeration value="4"/><xs:enumeration value="10"/><xs:enumeration value="21"/>
+                </xs:restriction></xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>`,
       milestones: [
         { id: 'full', check: /decimal.*enumeration.*enumeration/si, popup: '¡Nivel avanzado alcanzado!' }
       ]
@@ -1023,12 +1194,21 @@ const EDITOR_LABS = {
   sl_1: {
     title: 'XSLT 1: Básicos',
     description: 'La estructura de una hoja de estilos.',
-    type: 'xml',
+    type: 'xslt',
     exercises: [{
       id: 1, title: 'Stylesheet',
-      desc: 'Crea la estructura básica de XSLT con xsl:stylesheet y un xsl:template que mochee la raíz.',
+      desc: 'Crea la estructura básica de XSLT con xsl:stylesheet y un xsl:template que matchee la raíz.',
       hint: '<xsl:stylesheet ...> <xsl:template match="/">',
-      starter: ``,
+      starter: `<!-- XML DE ORIGEN:
+<biblioteca>
+  <libro><titulo>Don Quijote</titulo></libro>
+</biblioteca>
+-->
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:template match="/">
+    <html><body></body></html>
+  </xsl:template>
+</xsl:stylesheet>`,
       milestones: [
         { id: 'xslt', check: /xsl:stylesheet/i, popup: 'Hoja de estilos iniciada.', instruction: 'Define la hoja de estilos con <xsl:stylesheet version="1.0" ...>.' },
         { id: 'match', check: /match="\/"/i, popup: 'Template raíz creado.', instruction: 'Crea un <xsl:template match="/"> para procesar el documento desde la raíz.' }
@@ -1038,12 +1218,17 @@ const EDITOR_LABS = {
   sl_2: {
     title: 'XSLT 2: For-each',
     description: 'Iterar sobre conjuntos de nodos.',
-    type: 'xml',
+    type: 'xslt',
     exercises: [{
       id: 1, title: 'Lista de Nombres',
       desc: 'Usa xsl:for-each para recorrer todos los "libro" y mostrar su "titulo".',
       hint: '<xsl:for-each select="//libro">',
-      starter: ``,
+      starter: `<!-- XML: <biblioteca><libro><titulo>...</titulo></libro></biblioteca> -->
+<xsl:template match="/">
+  <xsl:for-each select="//libro">
+    <p><xsl:value-of select="titulo"/></p>
+  </xsl:for-each>
+</xsl:template>`,
       milestones: [
         { id: 'fe', check: /xsl:for-each/i, popup: 'Bucle for-each listo.', instruction: 'Usa <xsl:for-each select="//libro"> para recorrer todos los libros.' },
         { id: 'vo', check: /xsl:value-of/i, popup: 'Valor extraído.', instruction: 'Dentro del bucle, usa <xsl:value-of select="titulo"/> para mostrar el nombre.' }
@@ -1053,12 +1238,16 @@ const EDITOR_LABS = {
   sl_3: {
     title: 'XSLT 3: Filtro XPath',
     description: 'Filtrado en tiempo de transformación.',
-    type: 'xml',
+    type: 'xslt',
     exercises: [{
       id: 1, title: 'Libros de Informática',
       desc: 'Muestra solo los títulos de los libros cuya categoría sea "Informática".',
       hint: 'select="//libro[categoria=\'Informática\']"',
-      starter: ``,
+      starter: `<xsl:template match="/">
+  <xsl:for-each select="//libro[categoria='Informática']">
+    <p><xsl:value-of select="titulo"/></p>
+  </xsl:for-each>
+</xsl:template>`,
       milestones: [
         { id: 'filt', check: /\[categoria='Informática'\]/i, popup: 'Filtro XPath aplicado.', instruction: 'Añade el filtro [categoria=\'Informática\'] al select del for-each.' }
       ]
@@ -1067,12 +1256,17 @@ const EDITOR_LABS = {
   sl_4: {
     title: 'XSLT 4: Sort',
     description: 'Ordenación de resultados.',
-    type: 'xml',
+    type: 'xslt',
     exercises: [{
       id: 1, title: 'Ordenados por Precio',
       desc: 'Usa xsl:sort dentro de for-each para ordenar por precio de menor a mayor.',
       hint: '<xsl:sort select="precio" order="ascending"/>',
-      starter: ``,
+      starter: `<xsl:template match="/">
+  <xsl:for-each select="//libro">
+    <xsl:sort select="precio" order="ascending"/>
+    <p><xsl:value-of select="titulo"/></p>
+  </xsl:for-each>
+</xsl:template>`,
       milestones: [
         { id: 'fe', check: /xsl:for-each/i, popup: 'Bucle iniciado.', instruction: 'Crea un <xsl:for-each> para recorrer los elementos.' },
         { id: 'sort', check: /xsl:sort/i, popup: 'Ordenación configurada.', instruction: 'Dentro del for-each, añade <xsl:sort select="precio"/>.' },
@@ -1083,12 +1277,18 @@ const EDITOR_LABS = {
   sl_5: {
     title: 'XSLT 5: Formato de Texto Especial',
     description: 'Usa xsl:text para dar formato a la salida.',
-    type: 'xml',
+    type: 'xslt',
     exercises: [{
-      id: 1, title: 'Nombre - Precio',
-      desc: 'Muestra el nombre seguido de un guion y el precio con el símbolo €.',
       hint: 'Usa <xsl:text> - </xsl:text> y <xsl:text>€</xsl:text>',
-      starter: ``,
+      starter: `<!-- XML: <tienda><producto><nombre>HP</nombre><precio>500</precio></producto></tienda> -->
+<xsl:template match="/">
+  <xsl:for-each select="//producto">
+    <xsl:value-of select="nombre"/>
+    <xsl:text> - </xsl:text>
+    <xsl:value-of select="precio"/>
+    <xsl:text>€</xsl:text>
+  </xsl:for-each>
+</xsl:template>`,
       milestones: [
         { id: 'text', check: /xsl:text/i, popup: '¡Bien! xsl:text es ideal para espacios y símbolos.' }
       ]
@@ -1097,12 +1297,17 @@ const EDITOR_LABS = {
   sl_6: {
     title: 'XSLT 6: Listas HTML',
     description: 'Genera una lista no ordenada (ul).',
-    type: 'xml',
+    type: 'xslt',
     exercises: [{
-      id: 1, title: 'Lista de Productos',
-      desc: 'Recorre los productos y genera un <li> para cada nombre.',
       hint: '<ul> <xsl:for-each ...> <li>...</li> </xsl:for-each> </ul>',
-      starter: ``,
+      starter: `<!-- XML: <tienda><producto><nombre>Monitor</nombre></producto></tienda> -->
+<xsl:template match="/">
+  <ul>
+    <xsl:for-each select="//producto">
+      <li><xsl:value-of select="nombre"/></li>
+    </xsl:for-each>
+  </ul>
+</xsl:template>`,
       milestones: [
         { id: 'li', check: /<li>/i, popup: '¡Estructura de lista detectada!' }
       ]
@@ -1111,12 +1316,18 @@ const EDITOR_LABS = {
   sl_7: {
     title: 'XSLT 7: Tablas HTML Completas',
     description: 'Genera una tabla con cabecera y datos.',
-    type: 'xml',
+    type: 'xslt',
     exercises: [{
-      id: 1, title: 'Catálogo en Tabla',
-      desc: 'Crea una <table> con columnas Nombre, Marca y Precio.',
       hint: 'tr > th para cabeceras, tr > td para datos.',
-      starter: ``,
+      starter: `<!-- XML: <tienda><producto><nombre>...</nombre><marca>...</marca></producto></tienda> -->
+<xsl:template match="/">
+  <table border="1">
+    <tr><th>Nombre</th><th>Marca</th></tr>
+    <xsl:for-each select="//producto">
+      <tr><td><xsl:value-of select="nombre"/></td><td><xsl:value-of select="marca"/></td></tr>
+    </xsl:for-each>
+  </table>
+</xsl:template>`,
       milestones: [
         { id: 'table', check: /<table/i, popup: 'Tabla iniciada.', instruction: 'Empieza creando la estructura de la tabla con <table>.' },
         { id: 'th', check: /<th>/i, popup: 'Cabecera detectada.', instruction: 'Crea una fila de cabecera usando <tr> y <th>.' },
@@ -1127,12 +1338,17 @@ const EDITOR_LABS = {
   sl_8: {
     title: 'XSLT 8: Filtro por Marca',
     description: 'Uso de predicados XPath en xsl:for-each.',
-    type: 'xml',
+    type: 'xslt',
     exercises: [{
       id: 1, title: 'Solo Logitech',
       desc: 'Muestra solo los nombres de los productos cuya marca sea Logitech.',
       hint: 'select="tienda/producto[marca=\'Logitech\']"',
-      starter: ``,
+      starter: `<!-- XML: <tienda><producto><nombre>...</nombre><marca>Logitech</marca></producto></tienda> -->
+<xsl:template match="/">
+  <xsl:for-each select="//producto[marca='Logitech']">
+    <p><xsl:value-of select="nombre"/></p>
+  </xsl:for-each>
+</xsl:template>`,
       milestones: [
         { id: 'fe', check: /xsl:for-each/i, popup: 'Bucle for-each iniciado.', instruction: 'Usa <xsl:for-each> para recorrer los productos.' },
         { id: 'filter', check: /\[marca='Logitech'\]/i, popup: '¡Filtro de marca aplicado!', instruction: 'Añade el filtro [marca=\'Logitech\'] al select del for-each.' }
@@ -1142,12 +1358,13 @@ const EDITOR_LABS = {
   sl_9: {
     title: 'XSLT 9: Filtro por Precio',
     description: 'Filtrado numérico en XPath.',
-    type: 'xml',
+    type: 'xslt',
     exercises: [{
-      id: 1, title: 'Productos Caros',
-      desc: 'Muestra los nombres de productos con precio mayor que 50.',
       hint: 'select="tienda/producto[precio > 50]" (recuerda usar &gt; si es necesario)',
-      starter: ``,
+      starter: `<!-- XML: <tienda><producto><precio>60</precio></producto></tienda> -->
+<xsl:template match="/">
+  
+</xsl:template>`,
       milestones: [
         { id: 'fe', check: /xsl:for-each/i, popup: 'Bucle for-each iniciado.', instruction: 'Usa <xsl:for-each> para recorrer los productos.' },
         { id: 'price', check: /precio\s*(&gt;|>)\s*50/i, popup: '¡Filtro de precio aplicado!', instruction: 'Añade el filtro [precio > 50] al select del for-each.' }
@@ -1157,12 +1374,18 @@ const EDITOR_LABS = {
   sl_10: {
     title: 'XSLT 10: Ordenación Ascendente',
     description: 'Uso de xsl:sort.',
-    type: 'xml',
+    type: 'xslt',
     exercises: [{
       id: 1, title: 'De menor a mayor',
       desc: 'Ordena los productos por precio de forma ascendente.',
       hint: '<xsl:sort select="precio" data-type="number" order="ascending"/>',
-      starter: ``,
+      starter: `<!-- XML: <tienda><producto><precio>10</precio></producto><producto><precio>5</precio></producto></tienda> -->
+<xsl:template match="/">
+  <xsl:for-each select="//producto">
+    <xsl:sort select="precio" order="ascending"/>
+    <p><xsl:value-of select="precio"/></p>
+  </xsl:for-each>
+</xsl:template>`,
       milestones: [
         { id: 'fe', check: /xsl:for-each/i, popup: 'Bucle for-each iniciado.', instruction: 'Crea el for-each para los productos.' },
         { id: 'sort', check: /order="ascending"/i, popup: 'Ordenación ascendente lista.', instruction: 'Añade <xsl:sort select="precio" order="ascending"/> dentro del bucle.' }
@@ -1172,12 +1395,18 @@ const EDITOR_LABS = {
   sl_11: {
     title: 'XSLT 11: Ordenación Descendente',
     description: 'Invertir el orden con xsl:sort.',
-    type: 'xml',
+    type: 'xslt',
     exercises: [{
       id: 1, title: 'De mayor a menor',
       desc: 'Ordena los productos por precio de forma descendente.',
       hint: '<xsl:sort select="precio" data-type="number" order="descending"/>',
-      starter: ``,
+      starter: `<!-- XML: <tienda><producto><precio>10</precio></producto><producto><precio>5</precio></producto></tienda> -->
+<xsl:template match="/">
+  <xsl:for-each select="//producto">
+    <xsl:sort select="precio" order="descending"/>
+    <p><xsl:value-of select="precio"/></p>
+  </xsl:for-each>
+</xsl:template>`,
       milestones: [
         { id: 'fe', check: /xsl:for-each/i, popup: 'Bucle for-each iniciado.', instruction: 'Crea el for-each para los productos.' },
         { id: 'desc', check: /order="descending"/i, popup: 'Ordenación descendente lista.', instruction: 'Añade <xsl:sort select="precio" order="descending"/> dentro del bucle.' }
@@ -1187,12 +1416,19 @@ const EDITOR_LABS = {
   sl_12: {
     title: 'XSLT 12: Condición xsl:if',
     description: 'Lógica condicional dentro del bucle.',
-    type: 'xml',
+    type: 'xslt',
     exercises: [{
       id: 1, title: 'Control de Stock',
       desc: 'Muestra el nombre solo si el stock es mayor que 20.',
       hint: '<xsl:if test="stock > 20">',
-      starter: ``,
+      starter: `<!-- XML: <tienda><producto><nombre>HP</nombre><stock>25</stock></producto></tienda> -->
+<xsl:template match="/">
+  <xsl:for-each select="//producto">
+    <xsl:if test="stock > 20">
+      <p><xsl:value-of select="nombre"/></p>
+    </xsl:if>
+  </xsl:for-each>
+</xsl:template>`,
       milestones: [
         { id: 'if', check: /xsl:if/i, popup: 'Condición if detectada.', instruction: 'Usa la etiqueta <xsl:if> para el control de stock.' },
         { id: 'test', check: /test="stock\s*(&gt;|>)\s*20"/i, popup: 'Atributo test configurado.', instruction: 'Añade el atributo test="stock > 20" al xsl:if.' }
@@ -1200,252 +1436,379 @@ const EDITOR_LABS = {
     }]
   },
   q_1: {
-    title: 'XQuery 1: Básicos',
-    description: 'Consultas directas.',
-    type: 'xml',
+    title: 'XQuery 1: Títulos',
+    description: 'Obtener los nombres de todos los libros.',
+    type: 'xquery',
     exercises: [{
       id: 1, title: 'Todos los Títulos',
-      desc: 'Obtén los títulos de todos los libros de la biblioteca.',
-      hint: '//libro/titulo',
-      starter: ``,
+      desc: 'Muestra los títulos de todos los libros de la biblioteca.',
+      hint: 'for $l in //libro return $l/titulo',
+      starter: `(: XML DE BASE :)
+<biblioteca>
+  <libro>
+    <titulo>Aprende XML</titulo>
+    <autor>Ana Ruiz</autor>
+    <categoria>Informática</categoria>
+    <precio>28</precio>
+    <stock>12</stock>
+  </libro>
+  <libro>
+    <titulo>XQuery desde cero</titulo>
+    <autor>Luis Pérez</autor>
+    <categoria>Informática</categoria>
+    <precio>35</precio>
+    <stock>7</stock>
+  </libro>
+  <libro>
+    <titulo>Historia de Roma</titulo>
+    <autor>Clara Gómez</autor>
+    <categoria>Historia</categoria>
+    <precio>22</precio>
+    <stock>20</stock>
+  </libro>
+  <libro>
+    <titulo>CSS práctico</titulo>
+    <autor>Marta León</autor>
+    <categoria>Informática</categoria>
+    <precio>18</precio>
+    <stock>4</stock>
+  </libro>
+  <libro>
+    <titulo>Arte medieval</titulo>
+    <autor>Pedro Sanz</autor>
+    <categoria>Arte</categoria>
+    <precio>40</precio>
+    <stock>3</stock>
+  </libro>
+</biblioteca>
+
+(: ESCRIBE TU CONSULTA AQUÍ :)
+`,
       milestones: [
-        { id: 'q1', check: /\/\/libro\/titulo/i, popup: '¡Exacto! XPath directo.', instruction: 'Extrae todos los elementos <titulo> de la colección.', hint: 'Simplemente escribe //libro/titulo' }
+        { id: 'q1', check: /(for.*return.*titulo|\/\/libro\/titulo)/i, popup: '¡Exacto! XPath o FLWOR detectado.', instruction: 'Extrae los títulos de todos los libros.', hint: 'for $l in //libro return $l/titulo' }
       ]
     }]
   },
   q_2: {
-    title: 'XQuery 2: FLWOR Full',
-    description: 'For, Let, Where, Order by, Return.',
-    type: 'xml',
+    title: 'XQuery 2: Título y Autor',
+    description: 'Extracción de múltiples campos.',
+    type: 'xquery',
     exercises: [{
-      id: 1, title: 'Procesamiento Completo',
-      desc: 'Busca libros > 20€, ordénalos por precio y devuelve un nuevo XML <resultado> con el título.',
-      hint: 'for $l in ... where ... order by ... return <resultado>{$l/titulo}</resultado>',
-      starter: ``,
+      id: 1, title: 'Libro XML',
+      desc: 'Muestra el título y el autor de cada libro envueltos en un nuevo nodo <libro>.',
+      hint: 'return <libro>{$l/titulo}{$l/autor}</libro>',
+      starter: `(: USA EL XML DE LA BIBLIOTECA :)
+
+`,
       milestones: [
-        { id: 'for', check: /for\s+\$l\s+in/i, popup: 'Cláusula FOR lista.', instruction: 'Empieza con la cláusula: for $l in //libro' },
-        { id: 'where', check: /where\s+\$l/i, popup: 'Cláusula WHERE lista.', instruction: 'Añade un filtro: where $l/precio > 20' },
-        { id: 'order', check: /order\s+by/i, popup: 'Cláusula ORDER BY lista.', instruction: 'Ordena los resultados: order by $l/precio' },
-        { id: 'return', check: /return\s+<resultado/i, popup: 'Cláusula RETURN lista.', instruction: 'Finalmente, genera la salida: return <resultado>{$l/titulo}</resultado>' }
+        { id: 'libro', check: /return\s+<libro>.*titulo.*autor/si, popup: 'Estructura <libro> OK.' }
       ]
     }]
   },
   q_3: {
-    title: 'XQuery 3: Agregaciones',
-    description: 'Funciones de conteo y cálculo.',
-    type: 'xml',
+    title: 'XQuery 3: Informática',
+    description: 'Filtrado por categoría.',
+    type: 'xquery',
     exercises: [{
-      id: 1, title: 'Contar Libros',
-      desc: 'Usa la función count() para mostrar cuántos libros hay en total en la biblioteca.',
-      hint: 'count(//libro)',
-      starter: ``,
+      id: 1, title: 'Solo Informática',
+      desc: 'Muestra los títulos de los libros de la categoría "Informática".',
+      hint: 'where $l/categoria = "Informática"',
+      starter: `(: USA EL XML DE LA BIBLIOTECA :)
+
+`,
       milestones: [
-        { id: 'count', check: /count\(/i, popup: '¡Conteo total listo!', instruction: 'Usa la función count() envolviendo la ruta de los libros para obtener el total.' }
+        { id: 'it', check: /categoria\s*=\s*(['"])Informática\1/i, popup: 'Filtro de categoría OK.' }
       ]
     }]
   },
   q_4: {
-    title: 'XQuery 4: Filtro por Marca',
-    description: 'Cláusula where con igualdad.',
-    type: 'xml',
+    title: 'XQuery 4: Precio > 25',
+    description: 'Filtrado numérico.',
+    type: 'xquery',
     exercises: [{
-      id: 1, title: 'Solo Logitech',
-      desc: 'Muestra los nombres de los productos cuya marca sea "Logitech".',
-      hint: 'where $p/marca = "Logitech"',
-      starter: ``,
+      id: 1, title: 'Libros Caros',
+      desc: 'Muestra los títulos de los libros con precio superior a 25 euros.',
+      hint: 'where $l/precio > 25',
+      starter: `(: USA EL XML DE LA BIBLIOTECA :)
+
+`,
       milestones: [
-        { id: 'for', check: /for\s+\$p\s+in/i, popup: 'Bucle for OK.', instruction: 'Paso 1: Define el bucle para los productos.' },
-        { id: 'where', check: /where.*"Logitech"/i, popup: 'Filtro de marca OK.', instruction: 'Paso 2: Añade el filtro where $p/marca = "Logitech".' },
-        { id: 'return', check: /return/i, popup: 'Salida lista.', instruction: 'Paso 3: Devuelve el nombre del producto.' }
+        { id: 'price', check: /precio\s*>\s*25/i, popup: 'Filtro de precio OK.' }
       ]
     }]
   },
   q_5: {
-    title: 'XQuery 5: Ordenación',
-    description: 'Cláusula order by.',
-    type: 'xml',
+    title: 'XQuery 5: Orden Ascendente',
+    description: 'Uso de order by.',
+    type: 'xquery',
     exercises: [{
-      id: 1, title: 'Ordenación por Precio',
-      desc: 'Obtén los nombres de productos ordenados por precio (ascendente).',
-      hint: 'order by $p/precio',
-      starter: ``,
+      id: 1, title: 'Orden por Precio',
+      desc: 'Muestra los títulos de los libros ordenados por precio (de menor a mayor).',
+      hint: 'order by $l/precio',
+      starter: `(: USA EL XML DE LA BIBLIOTECA :)
+
+`,
       milestones: [
-        { id: 'order', check: /order by/i, popup: 'Ordenación OK.', instruction: 'Añade la cláusula order by $p/precio después del for.' }
+        { id: 'order', check: /order by\s+\$l\/precio/i, popup: 'Ordenación ascendente OK.' }
       ]
     }]
   },
   q_6: {
     title: 'XQuery 6: Orden Descendente',
-    description: 'Uso de la palabra clave descending.',
-    type: 'xml',
+    description: 'Uso de descending.',
+    type: 'xquery',
     exercises: [{
-      id: 1, title: 'Caro a Barato',
-      desc: 'Obtén los nombres de productos ordenados por precio de mayor a menor.',
-      hint: 'order by $p/precio descending',
-      starter: ``,
+      id: 1, title: 'Orden Inverso',
+      desc: 'Muestra los títulos de los libros ordenados por precio (de mayor a menor).',
+      hint: 'order by $l/precio descending',
+      starter: `(: USA EL XML DE LA BIBLIOTECA :)
+
+`,
       milestones: [
-        { id: 'desc', check: /descending/i, popup: 'Orden descendente OK.', instruction: 'Añade la palabra clave "descending" a la ordenación.' }
+        { id: 'desc', check: /descending/i, popup: 'Ordenación descendente OK.' }
       ]
     }]
   },
   q_7: {
-    title: 'XQuery 7: Nuevo XML',
-    description: 'Generación de etiquetas personalizadas.',
-    type: 'xml',
-    exercises: [{
-      id: 1, title: 'Items de Tienda',
-      desc: 'Genera un XML <productos> que contenga elementos <item> con el nombre y el precio.',
-      hint: 'return <item>{$p/nombre}{$p/precio}</item>',
-      starter: ``,
-      milestones: [
-        { id: 'wrap', check: /return\s+<item>/i, popup: 'Etiqueta item creada.', instruction: 'En el return, envuelve los campos en etiquetas <item>.' }
-      ]
-    }]
-  },
-  q_8: {
-    title: 'XQuery 8: Biblioteca (Títulos)',
-    description: 'Consulta sobre el documento biblioteca.',
-    type: 'xml',
-    exercises: [{
-      id: 1, title: 'Títulos de Libros',
-      desc: 'Muestra los títulos de todos los libros de la biblioteca.',
-      hint: 'for $l in //libro return $l/titulo',
-      starter: ``,
-      milestones: [
-        { id: 'for', check: /for\s+\$l\s+in\s+\/\/libro/i, popup: 'Acceso a biblioteca OK.', instruction: 'Paso 1: Accede a todos los libros de la colección.' }
-      ]
-    }]
-  },
-  q_9: {
-    title: 'XQuery 9: Título + Autor',
-    description: 'Extracción de múltiples campos.',
-    type: 'xml',
-    exercises: [{
-      id: 1, title: 'Ficha de Libro',
-      desc: 'Muestra el título y el autor de cada libro dentro de una etiqueta <libro>.',
-      hint: 'return <libro>{$l/titulo}{$l/autor}</libro>',
-      starter: ``,
-      milestones: [
-        { id: 'fields', check: /<libro>.*titulo.*autor/si, popup: 'Ficha de libro OK.', instruction: 'Paso 2: Devuelve el título y el autor envueltos en <libro>.' }
-      ]
-    }]
-  },
-  q_10: {
-    title: 'XQuery 10: Filtro Informática',
-    description: 'Filtrado por categoría.',
-    type: 'xml',
-    exercises: [{
-      id: 1, title: 'Solo Informática',
-      desc: 'Muestra los títulos de los libros de la categoría "Informática".',
-      hint: 'where $l/categoria = "Informática"',
-      starter: ``,
-      milestones: [
-        { id: 'where', check: /where.*"Informática"/i, popup: 'Filtro de categoría OK.', instruction: 'Añade un where para filtrar por la categoría "Informática".' }
-      ]
-    }]
-  },
-  q_11: {
-    title: 'XQuery 11: Precio > 25',
-    description: 'Filtrado numérico en FLWOR.',
-    type: 'xml',
-    exercises: [{
-      id: 1, title: 'Libros Caros',
-      desc: 'Muestra los títulos de los libros con precio estrictamente mayor que 25.',
-      hint: 'where $l/precio > 25',
-      starter: ``,
-      milestones: [
-        { id: 'where', check: /precio\s*>\s*25/i, popup: 'Filtro de precio OK.', instruction: 'Añade la condición where $l/precio > 25.' }
-      ]
-    }]
-  },
-  q_12: {
-    title: 'XQuery 12: Sort por Precio',
-    description: 'Ordenación ascendente básica.',
-    type: 'xml',
-    exercises: [{
-      id: 1, title: 'Orden por Precio',
-      desc: 'Muestra los títulos de los libros ordenados por precio (ascendente).',
-      hint: 'order by $l/precio',
-      starter: ``,
-      milestones: [
-        { id: 'order', check: /order by/i, popup: 'Ordenación OK.', instruction: 'Añade la cláusula order by $l/precio.' }
-      ]
-    }]
-  },
-  q_13: {
-    title: 'XQuery 13: Sort Descendente',
-    description: 'Uso de descending en biblioteca.',
-    type: 'xml',
-    exercises: [{
-      id: 1, title: 'Orden Inverso',
-      desc: 'Muestra los títulos de los libros ordenados por precio de mayor a menor.',
-      hint: 'order by $l/precio descending',
-      starter: ``,
-      milestones: [
-        { id: 'desc', check: /descending/i, popup: 'Orden descendente OK.', instruction: 'Añade la palabra clave "descending" tras el order by.' }
-      ]
-    }]
-  },
-  q_14: {
-    title: 'XQuery 14: Primer Libro',
-    description: 'Uso de índices en XPath.',
-    type: 'xml',
+    title: 'XQuery 7: Primer Libro',
+    description: 'Uso de índices.',
+    type: 'xquery',
     exercises: [{
       id: 1, title: 'El Primero',
       desc: 'Muestra el título del primer libro del documento.',
       hint: '(//libro)[1]/titulo',
-      starter: ``,
+      starter: `(: USA EL XML DE LA BIBLIOTECA :)
+
+`,
       milestones: [
-        { id: 'index', check: /\[1\]/i, popup: 'Acceso por índice OK.', instruction: 'Usa el índice [1] para seleccionar solo el primer libro.' }
+        { id: 'idx', check: /\[1\]/i, popup: 'Acceso por índice OK.' }
       ]
     }]
   },
-  q_15: {
-    title: 'XQuery 15: Último Libro',
-    description: 'Uso de la función last().',
-    type: 'xml',
+  q_8: {
+    title: 'XQuery 8: Último Libro',
+    description: 'Uso de last().',
+    type: 'xquery',
     exercises: [{
       id: 1, title: 'El Último',
       desc: 'Muestra el título del último libro del documento.',
       hint: '(//libro)[last()]/titulo',
-      starter: ``,
+      starter: `(: USA EL XML DE LA BIBLIOTECA :)
+
+`,
       milestones: [
-        { id: 'last', check: /last\(\)/i, popup: 'Función last() OK.', instruction: 'Usa la función last() dentro de los corchetes para el último elemento.' }
+        { id: 'last', check: /last\(\)/i, popup: 'Función last() OK.' }
       ]
     }]
   },
-  q_16: {
-    title: 'XQuery 16: Conteo Total',
-    description: 'Uso de count() en biblioteca.',
-    type: 'xml',
+  q_9: {
+    title: 'XQuery 9: Conteo Total',
+    description: 'Uso de count().',
+    type: 'xquery',
     exercises: [{
       id: 1, title: '¿Cuántos libros hay?',
       desc: 'Muestra el número total de libros en la biblioteca.',
       hint: 'count(//libro)',
-      starter: ``,
+      starter: `(: USA EL XML DE LA BIBLIOTECA :)
+
+`,
       milestones: [
-        { id: 'count', check: /count\(/i, popup: 'Conteo total OK.', instruction: 'Usa la función count(//libro) para mostrar el número total.' }
+        { id: 'count', check: /count\(/i, popup: 'Conteo total OK.' }
       ]
     }]
   },
-  q_17: {
-    title: 'XQuery 17: Stock Bajo',
+  q_10: {
+    title: 'XQuery 10: Stock Bajo',
     description: 'Filtrado por cantidad.',
-    type: 'xml',
+    type: 'xquery',
     exercises: [{
       id: 1, title: 'Poco Stock',
       desc: 'Muestra los títulos de los libros con menos de 5 unidades en stock.',
       hint: 'where $l/stock < 5',
-      starter: ``,
+      starter: `(: USA EL XML DE LA BIBLIOTECA :)
+
+`,
       milestones: [
-        { id: 'where', check: /stock\s*<\s*5/i, popup: 'Filtro de stock OK.', instruction: 'Añade un where para filtrar los libros con stock inferior a 5.' }
+        { id: 'stock', check: /stock\s*<\s*5/i, popup: 'Filtro de stock OK.' }
+      ]
+    }]
+  },
+  q_11: {
+    title: 'XQuery 11: Videojuegos (Extra)',
+    description: 'Consulta sobre una colección de juegos.',
+    type: 'xquery',
+    exercises: [{
+      id: 1, title: 'Títulos de Juegos',
+      desc: 'Muestra los títulos de todos los videojuegos.',
+      hint: 'for $j in //juego return $j/titulo',
+      starter: `<videojuegos>
+ <juego>
+  <titulo>FIFA 25</titulo>
+  <plataforma>PS5</plataforma>
+  <precio>70</precio>
+ </juego>
+ <juego>
+  <titulo>Minecraft</titulo>
+  <plataforma>PC</plataforma>
+  <precio>30</precio>
+ </juego>
+ <juego>
+  <titulo>Zelda</titulo>
+  <plataforma>Switch</plataforma>
+  <precio>60</precio>
+ </juego>
+</videojuegos>`,
+      milestones: [
+        { id: 'for', check: /for\s+\$j\s+in/i, popup: 'Bucle FOR OK.' },
+        { id: 'ret', check: /return\s+\$j\/titulo/i, popup: 'Retorno de título OK.' }
+      ]
+    }]
+  },
+  q_12: {
+    title: 'XQuery Tienda 1: Productos',
+    description: 'Listado simple de tienda.',
+    type: 'xquery',
+    exercises: [{
+      id: 1, title: 'Nombres de Productos',
+      desc: 'Muestra los nombres de todos los productos de la tienda.',
+      hint: 'for $p in //producto return $p/nombre',
+      starter: `<tienda>
+  <producto>
+    <nombre>Ratón Óptico</nombre>
+    <marca>Logitech</marca>
+    <precio>25</precio>
+    <stock>50</stock>
+  </producto>
+  <producto>
+    <nombre>Teclado Mecánico</nombre>
+    <marca>Corsair</marca>
+    <precio>85</precio>
+    <stock>20</stock>
+  </producto>
+  <producto>
+    <nombre>Monitor 4K</nombre>
+    <marca>LG</marca>
+    <precio>350</precio>
+    <stock>10</stock>
+  </producto>
+  <producto>
+    <nombre>Alfombrilla XXL</marca>
+    <marca>Logitech</marca>
+    <precio>15</precio>
+    <stock>100</stock>
+  </producto>
+  <producto>
+    <nombre>Auriculares Gaming</nombre>
+    <marca>Razer</marca>
+    <precio>120</precio>
+    <stock>15</stock>
+  </producto>
+</tienda>`,
+      milestones: [
+        { id: 'prod', check: /(for.*return.*nombre|\/\/producto\/nombre)/i, popup: 'Productos detectados.' }
+      ]
+    }]
+  },
+  q_13: {
+    title: 'XQuery Tienda 2: Formato XML',
+    description: 'Generación de etiquetas personalizadas.',
+    type: 'xquery',
+    exercises: [{
+      id: 1, title: 'Producto y Precio',
+      desc: 'Muestra el nombre y el precio de cada producto envueltos en un nodo <item>.',
+      hint: 'return <item>{$p/nombre}{$p/precio}</item>',
+      starter: `(: USA EL XML DE LA TIENDA :)
+
+`,
+      milestones: [
+        { id: 'wrap', check: /return\s+<item>.*nombre.*precio/si, popup: 'Estructura <item> OK.' }
+      ]
+    }]
+  },
+  q_14: {
+    title: 'XQuery Tienda 3: Precio > 50',
+    description: 'Filtro numérico hardware.',
+    type: 'xquery',
+    exercises: [{
+      id: 1, title: 'Productos Caros',
+      desc: 'Muestra los nombres de los productos con un precio superior a 50 euros.',
+      hint: 'where $p/precio > 50',
+      starter: `(: USA EL XML DE LA TIENDA :)
+
+`,
+      milestones: [
+        { id: 'price', check: /precio\s*>\s*50/i, popup: 'Filtro de precio OK.' }
+      ]
+    }]
+  },
+  q_15: {
+    title: 'XQuery Tienda 4: Marca Logitech',
+    description: 'Filtrado por texto de marca.',
+    type: 'xquery',
+    exercises: [{
+      id: 1, title: 'Solo Logitech',
+      desc: 'Muestra los nombres de los productos cuya marca sea "Logitech".',
+      hint: 'where $p/marca = "Logitech"',
+      starter: `(: USA EL XML DE LA TIENDA :)
+
+`,
+      milestones: [
+        { id: 'brand', check: /marca\s*=\s*(['"])Logitech\1/i, popup: 'Filtro de marca OK.' }
+      ]
+    }]
+  },
+  q_16: {
+    title: 'XQuery Tienda 5: Orden Ascendente',
+    description: 'Uso de order by en tienda.',
+    type: 'xquery',
+    exercises: [{
+      id: 1, title: 'Orden por Precio',
+      desc: 'Muestra los nombres de los productos ordenados por precio (de menor a mayor).',
+      hint: 'order by $p/precio',
+      starter: `(: USA EL XML DE LA TIENDA :)
+
+`,
+      milestones: [
+        { id: 'order', check: /order by\s+\$p\/precio/i, popup: 'Ordenación ascendente OK.' }
+      ]
+    }]
+  },
+  q_17: {
+    title: 'XQuery Tienda 6: Orden Descendente',
+    description: 'Uso de descending en hardware.',
+    type: 'xquery',
+    exercises: [{
+      id: 1, title: 'Orden Inverso',
+      desc: 'Muestra los nombres de los productos ordenados por precio (de mayor a menor).',
+      hint: 'order by $p/precio descending',
+      starter: `(: USA EL XML DE LA TIENDA :)
+
+`,
+      milestones: [
+        { id: 'desc', check: /descending/i, popup: 'Ordenación descendente OK.' }
       ]
     }]
   },
   q_18: {
-    title: 'XQuery Extra 1: Videojuegos',
+    title: 'XQuery Tienda 7: Inventario',
+    description: 'Generación de resumen de stock.',
+    type: 'xquery',
+    exercises: [{
+      id: 1, title: 'Nombre y Stock',
+      desc: 'Muestra el nombre y el stock de cada producto en un nuevo nodo <inventario>.',
+      hint: 'return <inventario>{$p/nombre}{$p/stock}</inventario>',
+      starter: `(: USA EL XML DE LA TIENDA :)
+
+`,
+      milestones: [
+        { id: 'stock', check: /return\s+<inventario>.*nombre.*stock/si, popup: 'Estructura <inventario> OK.' }
+      ]
+    }]
+  },
+  q_19: {
+    title: 'XQuery Extra: Videojuegos',
     description: 'Consulta básica sobre una colección de juegos.',
-    type: 'xml',
+    type: 'xquery',
     exercises: [{
       id: 1, title: 'Títulos de Juegos',
       desc: 'Muestra los títulos de todos los videojuegos.',
@@ -1473,10 +1836,10 @@ const EDITOR_LABS = {
       ]
     }]
   },
-  q_19: {
+  q_20: {
     title: 'XQuery Extra 2: Academia',
     description: 'Filtrado por precio.',
-    type: 'xml',
+    type: 'xquery',
     exercises: [{
       id: 1, title: 'Cursos Caros',
       desc: 'Muestra los idiomas de los cursos con precio mayor que 110.',
@@ -1500,10 +1863,10 @@ const EDITOR_LABS = {
       ]
     }]
   },
-  q_20: {
+  q_21: {
     title: 'XQuery Extra 3: Biblioteca (Páginas)',
     description: 'Ordenación por campo numérico.',
-    type: 'xml',
+    type: 'xquery',
     exercises: [{
       id: 1, title: 'Orden por Páginas',
       desc: 'Muestra los títulos de los libros ordenados por número de páginas (ascendente).',
@@ -1527,7 +1890,7 @@ const EDITOR_LABS = {
       ]
     }]
   },
-  q_21: {
+  q_22: {
     title: 'XQuery Extra 4: Coches (Max)',
     description: 'Uso de funciones de agregación (max).',
     type: 'xml',
@@ -1554,10 +1917,10 @@ const EDITOR_LABS = {
       ]
     }]
   },
-  q_22: {
+  q_23: {
     title: 'XQuery Extra 5: Alumnos',
     description: 'Filtrado de notas.',
-    type: 'xml',
+    type: 'xquery',
     exercises: [{
       id: 1, title: 'Alumnos Aprobados',
       desc: 'Muestra solo los nombres de los alumnos cuya nota sea mayor o igual a 5.',
@@ -1581,10 +1944,10 @@ const EDITOR_LABS = {
       ]
     }]
   },
-  q_23: {
+  q_24: {
     title: 'XQuery Extra 6: Películas',
     description: 'Filtro por duración.',
-    type: 'xml',
+    type: 'xquery',
     exercises: [{
       id: 1, title: 'Películas Cortas',
       desc: 'Muestra los títulos de las películas con duración menor que 150 minutos.',
@@ -1608,10 +1971,10 @@ const EDITOR_LABS = {
       ]
     }]
   },
-  q_24: {
+  q_25: {
     title: 'XQuery Extra 7: Pedidos',
     description: 'Filtro por atributo/campo de texto.',
-    type: 'xml',
+    type: 'xquery',
     exercises: [{
       id: 1, title: 'Pedidos de Lucía',
       desc: 'Muestra todos los datos de los pedidos realizados por "Lucía".',
