@@ -276,7 +276,7 @@ function renderSQLExercise(labData) {
         <textarea class="sql-textarea" id="sql-input" placeholder="Escribe tu consulta SQL aquí..." spellcheck="false">${ex.prefill || ''}</textarea>
         <div class="sql-actions">
           <button class="btn-run" onclick="runSQL()">▶ Ejecutar</button>
-          <button class="btn-secondary" onclick="showSolution()">👁 Ver solución</button>
+          <button class="btn-help" onclick="showSQLSolution()" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);color:white;border-radius:8px;padding:0.6rem 1.2rem;border:none;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:0.4rem;transition:0.2s;box-shadow:0 4px 12px rgba(59,130,246,0.3)">💡 Ayuda</button>
           <div class="sql-nav">
             <button onclick="prevSQLEx()" ${sqlState.current === 0 ? 'disabled' : ''}>← Anterior</button>
             <span>${sqlState.current+1} / ${total}</span>
@@ -338,10 +338,41 @@ function renderTable(rows) {
     </tbody></table></div>`;
 }
 
-function showSolution() {
+function showSQLSolution() {
   const ex = sqlState.exercises[sqlState.current];
-  document.getElementById('sql-input').value = ex.solution;
-  showToast('Solución cargada — ejecútala para ver el resultado', 'info');
+  if (!ex.solution) { showToast('No hay solución disponible', 'info'); return; }
+  
+  const modalContent = document.getElementById('modal-content');
+  modalContent.innerHTML = `
+    <h3>💡 Ayuda: Solución SQL</h3>
+    <p>Copia y ejecuta esta consulta para ver el resultado esperado o compárala con la tuya.</p>
+    <div class="code-block" style="white-space:pre; text-align:left; font-family:'JetBrains Mono',monospace; font-size:14px; background:#0c1e2e; padding:15px; border-radius:8px; border:1px solid #1e3a4a; overflow-x:auto;">${syntaxHighlightSQL(ex.solution)}</div>
+    <div style="margin-top:1.5rem;display:flex;gap:1rem">
+      <button class="btn-primary" onclick="copySQLToEditor()">Auto-completar</button>
+      <button class="btn-secondary" onclick="closeModal()">Cerrar</button>
+    </div>`;
+  document.getElementById('modal-overlay').classList.remove('hidden');
+}
+
+function copySQLToEditor() {
+  const ex = sqlState.exercises[sqlState.current];
+  const editor = document.getElementById('sql-input');
+  if (editor) {
+    editor.value = ex.solution;
+    closeModal();
+    showToast('Solución cargada en el editor', 'success');
+  }
+}
+
+function syntaxHighlightSQL(sql) {
+  if (!sql) return '';
+  return sql
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/\b(SELECT|FROM|WHERE|INSERT|INTO|VALUES|UPDATE|SET|DELETE|AND|OR|JOIN|INNER|LEFT|RIGHT|ON|GROUP\s+BY|ORDER\s+BY|HAVING|DISTINCT|AS|LIMIT|BETWEEN|IS|NULL|NOT|LIKE|SUM|AVG|MAX|MIN|COUNT)\b/gi, match => `<span style="color:#60a5fa;font-weight:600">${match.toUpperCase()}</span>`)
+    .replace(/'[^']*'/g, match => `<span style="color:#86efac">${match}</span>`)
+    .replace(/\b(\d+)\b/g, match => `<span style="color:#fca5a5">${match}</span>`);
 }
 
 function prevSQLEx() {

@@ -10,6 +10,11 @@ let touchChip = null, toastTimer = null;
 function selectUnit(unitId) {
   currentUnit = unitId;
   const unit = UNITS[unitId];
+  if (unitId === 'doctor' && unit.sections.length === 0 && typeof DOCTOR_EXERCISES !== 'undefined') {
+    unit.sections = DOCTOR_EXERCISES.map(e => ({
+      id: e.id, icon: '🧑‍⚕️', label: e.topic, type: 'doctor_lab', exerciseId: e.id
+    }));
+  }
   document.getElementById('splash').classList.add('hidden');
   document.getElementById('app').classList.remove('hidden');
   document.getElementById('topbar-unit').textContent = unit.label;
@@ -51,10 +56,11 @@ function openSection(section) {
   else if (section.type === 'code') showCodeLab(section.codeId);
   else if (section.type === 'ejercicio') showEjercicio(section.ejercicioId);
   else if (section.type === 'tutor') renderTutorSplash();
+  else if (section.type === 'doctor_lab') showDoctorLab(section.exerciseId);
 }
 
 function hideAllViews() {
-  ['lesson-view','quiz-view','drag-view','code-view','ejercicio-view','tutor-view','welcome-panel'].forEach(id => {
+  ['lesson-view','quiz-view','drag-view','code-view','ejercicio-view','tutor-view','doctor-view','welcome-panel'].forEach(id => {
     const el = document.getElementById(id); if (el) el.classList.add('hidden');
   });
 }
@@ -274,6 +280,7 @@ function renderCodeExercise(labData) {
         <textarea class="code-textarea" id="code-input" spellcheck="false">${ex.starter}</textarea>
         <div class="code-actions">
           <button class="btn-run" onclick="analyzeCode()">🔍 Analizar Código</button>
+          <button class="btn-help" onclick="showCodeSolution()" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);color:white;border-radius:8px;padding:0.6rem 1.2rem;border:none;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:0.4rem;transition:0.2s;box-shadow:0 4px 12px rgba(59,130,246,0.3)">💡 Ayuda</button>
           <div class="code-nav">
             <button onclick="prevCodeEx()" ${codeState.current === 0 ? 'disabled' : ''}>← Anterior</button>
             <span>${codeState.current+1} / ${total}</span>
@@ -336,6 +343,46 @@ function nextCodeEx() {
     const sec = unit.sections.find(s => s.id === activeSection);
     renderCodeExercise(CODE_LABS[sec.codeId]);
   }
+}
+
+// ── HELP SYSTEM ──────────────────────────────────────────────────
+function showCodeSolution() {
+  const ex = codeState.exercises[codeState.current];
+  if (!ex.solution) { showToast('No hay solución disponible', 'info'); return; }
+  
+  const modalContent = document.getElementById('modal-content');
+  modalContent.innerHTML = `
+    <h3>💡 Ayuda: Solución de Referencia</h3>
+    <p>Aquí tienes una implementación correcta para este ejercicio. Analízala para entender la estructura.</p>
+    <div class="code-block" id="solution-code" style="white-space:pre; text-align:left; font-family:'JetBrains Mono',monospace; font-size:14px; background:#0c1e2e; padding:15px; border-radius:8px; border:1px solid #1e3a4a; overflow-x:auto;">${syntaxHighlightJava(ex.solution)}</div>
+    <div style="margin-top:1.5rem;display:flex;gap:1rem">
+      <button class="btn-primary" onclick="copyCodeSolutionToEditor()">Copiar al Editor</button>
+      <button class="btn-secondary" onclick="closeModal()">Cerrar</button>
+    </div>`;
+  document.getElementById('modal-overlay').classList.remove('hidden');
+}
+
+function copyCodeSolutionToEditor() {
+  const ex = codeState.exercises[codeState.current];
+  const editor = document.getElementById('code-input');
+  if (editor) {
+    editor.value = ex.solution;
+    closeModal();
+    showToast('Solución copiada al editor', 'success');
+  }
+}
+
+function syntaxHighlightJava(code) {
+  if (!code) return '';
+  return code
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/\/\/.*/g, match => `<span class="cm">${match}</span>`)
+    .replace(/"[^"]*"/g, match => `<span class="str">${match}</span>`)
+    .replace(/\b(public|private|protected|class|interface|abstract|extends|implements|void|int|double|boolean|String|if|else|throw|new|super|import|return|throws|static)\b/g, match => `<span class="kw">${match}</span>`)
+    .replace(/\b(System|Math|ArrayList|List|Map|HashMap|Thread|Runnable|Exception|IllegalArgumentException|SaldoInsuficienteException)\b/g, match => `<span class="fn">${match}</span>`)
+    .replace(/\b(\d+)\b/g, match => `<span class="num">${match}</span>`);
 }
 
 // ── PROGRESS & TOAST ─────────────────────────────────────────────
@@ -501,4 +548,52 @@ function checkEjercicio(ejId) {
   }
   score.correct += passed;
   document.querySelector('#score-correct span').textContent = score.correct;
+}
+
+// ── DR. JAVA LAB ───────────────────────────────────────────────────
+function showDoctorLab(exerciseId) {
+  const data = DOCTOR_EXERCISES.find(e => e.id === exerciseId);
+  if (!data) return;
+  const view = document.getElementById('doctor-view');
+  view.classList.remove('hidden');
+  
+  view.innerHTML = `
+    <div class="doctor-header" style="margin-bottom:1.5rem">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h2>🧑‍⚕️ Clínica Java: ${data.topic}</h2>
+      </div>
+      <p style="color:var(--text2);margin-top:0.5rem">Analiza el escenario, planifica tu solución y compárala con el diagnóstico del doctor.</p>
+    </div>
+    
+    <div class="doctor-scenario" style="background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:var(--radius2);padding:1.5rem;margin-bottom:1.5rem;">
+      <h3 style="font-size:1rem;color:var(--accent3);margin-bottom:1rem">Caso de Estudio</h3>
+      <div style="font-size:0.95rem;line-height:1.6;white-space:pre-wrap;">${data.exercise}</div>
+    </div>
+    
+    <div class="doctor-workspace" style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem">
+      <h3 style="font-size:1rem;color:var(--text)">Tu Diagnóstico (Borrador)</h3>
+      <textarea id="doctor-draft" placeholder="Escribe aquí tu planteamiento o código base antes de ver la solución completa..." style="width:100%;height:150px;background:var(--bg3);border:1px dashed var(--border);border-radius:var(--radius2);color:var(--text);padding:1rem;font-family:'JetBrains Mono', monospace;font-size:0.95rem;resize:vertical;"></textarea>
+    </div>
+    
+    <div class="doctor-actions" style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+      <button class="btn-check" onclick="markDone()">✓ Ejercicio completado</button>
+      <button class="btn-help" onclick="showDoctorSolution('${exerciseId}')" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);color:white;border-radius:8px;padding:0.7rem 1.5rem;border:none;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:0.4rem;transition:0.2s;box-shadow:0 4px 12px rgba(59,130,246,0.3)">💡 Ver Diagnóstico del Dr.</button>
+    </div>
+  `;
+}
+
+function showDoctorSolution(exerciseId) {
+  const data = DOCTOR_EXERCISES.find(e => e.id === exerciseId);
+  if (!data || !data.solution) { showToast('Solución no disponible','info'); return; }
+  
+  const modalContent = document.getElementById('modal-content');
+  const highlightedCode = typeof syntaxHighlightJava === 'function' ? syntaxHighlightJava(data.solution) : data.solution;
+  
+  modalContent.innerHTML = `
+    <h3>💡 Diagnóstico: ${data.topic}</h3>
+    <div class="code-block" style="white-space:pre-wrap; text-align:left; font-family:'JetBrains Mono',monospace; font-size:13px; background:#0c1e2e; padding:20px; border-radius:8px; border:1px solid #1e3a4a; overflow-x:auto; margin-top:1.5rem; max-height:60vh; overflow-y:auto; line-height:1.5">${highlightedCode}</div>
+    <div style="margin-top:1.5rem;display:flex;justify-content:flex-end">
+      <button class="btn-secondary" onclick="closeModal()">Cerrar Consulta</button>
+    </div>`;
+  document.getElementById('modal-overlay').classList.remove('hidden');
 }

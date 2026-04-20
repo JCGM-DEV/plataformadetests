@@ -66,6 +66,7 @@
                     <div class="info-header">
                         <span class="difficulty-badge" id="challenge-diff">Media</span>
                         <h2 id="challenge-title">Selecciona un desafío</h2>
+                        <button id="btn-help" class="btn-help hidden" onclick="showSolution()">💡 Ayuda</button>
                     </div>
                     <p id="challenge-desc">Elige un ejercicio del menú lateral para empezar a practicar en la terminal.</p>
                     <div id="challenge-hint" class="hint-box hidden">
@@ -95,6 +96,12 @@
     </div>
 
     <div id="toast" class="toast hidden"></div>
+
+    <div id="modal-overlay" class="modal-overlay hidden" onclick="closeModal()">
+        <div class="modal-content" id="modal-content" onclick="event.stopPropagation()">
+            <!-- Modal content will be injected by JS -->
+        </div>
+    </div>
 
     <script src="data.js"></script>
     <script src="app.js"></script>

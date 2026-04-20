@@ -43,6 +43,13 @@
           <div class="unit-topics"><span>Herencia</span><span>Interfaces</span><span>Excepciones</span><span>Colecciones</span></div>
           <button class="btn-primary" style="background:linear-gradient(135deg,#ef4444,#f97316)">Practicar →</button>
         </div>
+        <div class="unit-card" onclick="selectUnit('doctor')" style="border-color:rgba(16,185,129,0.4);background:linear-gradient(135deg,rgba(16,185,129,0.06),rgba(5,150,105,0.06))">
+          <div class="unit-badge" style="background:linear-gradient(135deg,#10b981,#059669)">DR. JAVA</div>
+          <h3>🧑‍⚕️ Ejercicios del Doctor</h3>
+          <p>Aprende de forma guiada con resolución de problemas paso a paso basados en los ejercicios oficiales.</p>
+          <div class="unit-topics"><span>16 Ejercicios</span><span>Guiado</span><span>Soluciones</span></div>
+          <button class="btn-primary" style="background:linear-gradient(135deg,#10b981,#059669)">Entrar al Lab →</button>
+        </div>
       </div>
     </div>
   </div>
@@ -75,6 +82,7 @@
         <div id="code-view" class="code-view hidden"></div>
         <div id="ejercicio-view" class="ejercicio-view hidden"></div>
         <div id="tutor-view" class="tutor-view hidden"></div>
+        <div id="doctor-view" class="doctor-view hidden"></div>
         <div id="welcome-panel" class="welcome-panel">
           <div class="welcome-icon">💻</div>
           <h2>Selecciona un tema del menú</h2>
@@ -94,6 +102,7 @@
 
   <script src="data.js"></script>
   <script src="ejercicios.js"></script>
+  <script src="doctor_data.js"></script>
   <script src="tutor.js"></script>
   <script src="tutor_engine.js"></script>
   <script src="app.js"></script>

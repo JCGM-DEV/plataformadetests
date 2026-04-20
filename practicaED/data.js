@@ -692,27 +692,31 @@ const GIT_CHALLENGES = [
     title: 'Primeros pasos',
     scenario: 'Inicializa el repositorio y realiza tu primer commit con el mensaje "Initial commit".',
     validate: (state) => state.initialized && state.commits.length > 0 && state.commits[0].msg.toLowerCase().includes('initial'),
-    hint: 'Usa "git init", luego "git add ." y finalmente "git commit -m \'Initial commit\'"'
+    hint: 'Usa "git init", luego "git add ." y finalmente "git commit -m \'Initial commit\'"',
+    solution: 'git init\ngit add .\ngit commit -m "Initial commit"'
   },
   {
     id: 'git-ex2',
     title: 'Trabajando con ramas',
     scenario: 'Crea una nueva rama llamada "desarrollo" (sin cambiarte a ella aún).',
     validate: (state) => state.branches['desarrollo'] !== undefined,
-    hint: 'Usa "git branch desarrollo"'
+    hint: 'Usa "git branch desarrollo"',
+    solution: 'git branch desarrollo'
   },
   {
     id: 'git-ex3',
     title: 'Navegación entre ramas',
     scenario: 'Cámbiate a la rama "desarrollo".',
     validate: (state) => state.head === 'desarrollo',
-    hint: 'Usa "git checkout desarrollo"'
+    hint: 'Usa "git checkout desarrollo"',
+    solution: 'git checkout desarrollo'
   },
   {
     id: 'git-ex4',
     title: 'Commit en rama secundaria',
     scenario: 'Estando en la rama "desarrollo", realiza un commit con el mensaje "Feature 1".',
     validate: (state) => state.head === 'desarrollo' && state.commits.some(c => c.msg.toLowerCase().includes('feature')),
-    hint: 'Asegúrate de estar en "desarrollo", añade archivos y haz commit.'
+    hint: 'Asegúrate de estar en "desarrollo", añade archivos y haz commit.',
+    solution: 'git add .\ngit commit -m "Feature 1"'
   }
 ];

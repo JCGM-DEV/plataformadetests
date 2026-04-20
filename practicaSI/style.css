@@ -103,17 +103,20 @@ body {
   font-family: 'JetBrains Mono', monospace;
 }
 
-.btn-primary {
-  width: 100%;
-  padding: 1rem;
-  background: var(--primary);
+.btn-primary:hover { background: #059669; }
+
+.btn-help {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
   border: none;
-  border-radius: 12px;
-  color: #000;
+  border-radius: 8px;
+  color: #fff;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s;
+  font-size: 0.85rem;
 }
+.btn-help:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4); }
 
 /* ── APP LAYOUT ────────────────────────────────────────────── */
 .app { display: flex; flex-direction: column; height: 100vh; background: var(--bg-dark); }
@@ -259,3 +262,44 @@ body {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+/* ── MODAL ────────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: #1e293b;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.3s ease;
+}
+
+.modal-content h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary); }
+.modal-content p { color: var(--text-dim); margin-bottom: 2rem; line-height: 1.6; }
+
+.code-block {
+  background: #050810;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  color: #facc15;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }

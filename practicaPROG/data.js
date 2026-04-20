@@ -43,8 +43,13 @@ const UNITS = {
       { id: 'prac-ej2', icon: '📝', label: 'Ejercicio 2: Sistema Vehículos', type: 'ejercicio', ejercicioId: 'ej2' },
       { id: 'prac-ej3', icon: '📝', label: 'Ejercicio 3: Biblioteca', type: 'ejercicio', ejercicioId: 'ej3' },
     ]
+  },
+  doctor: {
+    label: 'DR. JAVA', title: 'Ejercicios del Doctor',
+    sections: []
   }
 };
+
 
 const LESSONS = {
   clases: {
@@ -348,6 +353,22 @@ const CODE_LABS = {
     
     // TODO: setter setPrecio() con validación (precio > 0)
 }`,
+        solution: `public class Producto {
+    private String nombre;
+    private double precio;
+    
+    public Producto(String nombre, double precio) {
+        this.nombre = nombre;
+        setPrecio(precio);
+    }
+    
+    public String getNombre() { return nombre; }
+    public double getPrecio() { return precio; }
+    
+    public void setPrecio(double p) {
+        if (p > 0) this.precio = p;
+    }
+} `,
         checks: [
           { desc: 'Tiene atributo private double precio', test: code => /private\s+double\s+precio/.test(code) },
           { desc: 'Constructor recibe nombre y precio', test: code => /Producto\s*\(\s*String\s+\w+\s*,\s*double\s+\w+\s*\)/.test(code) },
@@ -375,6 +396,18 @@ class Circulo {
     // TODO: implementar area() con @Override
     // Fórmula: Math.PI * radio * radio
 }`,
+        solution: `class Circulo extends Figura {
+    private double radio;
+    
+    public Circulo(double radio) {
+        this.radio = radio;
+    }
+    
+    @Override
+    double area() {
+        return Math.PI * radio * radio;
+    }
+} `,
         checks: [
           { desc: 'Circulo extiende Figura', test: code => /class\s+Circulo\s+extends\s+Figura/.test(code) },
           { desc: 'Tiene @Override', test: code => /@Override/.test(code) },
@@ -398,6 +431,24 @@ class Factura {
     
     // TODO: implementar calcularTotal() → subtotal + (subtotal * iva / 100)
 }`,
+        solution: `interface Calculable {
+    double calcularTotal();
+}
+
+class Factura implements Calculable {
+    private double subtotal;
+    private double iva;
+    
+    public Factura(double subtotal, double iva) {
+        this.subtotal = subtotal;
+        this.iva = iva;
+    }
+    
+    @Override
+    public double calcularTotal() {
+        return subtotal + (subtotal * iva / 100);
+    }
+} `,
         checks: [
           { desc: 'Existe interfaz Calculable', test: code => /interface\s+Calculable/.test(code) },
           { desc: 'Factura implementa Calculable', test: code => /class\s+Factura\s+implements\s+Calculable/.test(code) },
@@ -423,6 +474,24 @@ public class EjemploLista {
         // TODO: for-each para imprimir solo los pares
     }
 }`,
+        solution: `import java.util.ArrayList;
+
+public class EjemploLista {
+    public static void main(String[] args) {
+        ArrayList<Integer> numeros = new ArrayList<>();
+        numeros.add(1);
+        numeros.add(4);
+        numeros.add(7);
+        numeros.add(10);
+        numeros.add(12);
+        
+        for (Integer num : numeros) {
+            if (num % 2 == 0) {
+                System.out.println(num);
+            }
+        }
+    }
+} `,
         checks: [
           { desc: 'Usa ArrayList', test: code => /ArrayList/.test(code) },
           { desc: 'Usa for-each o for', test: code => /for\s*\(/.test(code) },
@@ -446,6 +515,28 @@ public class CuentaBancaria {
     
     public double getSaldo() { return saldo; }
 }`,
+        solution: `class SaldoInsuficienteException extends Exception {
+    public SaldoInsuficienteException(String msg) {
+        super(msg);
+    }
+}
+
+public class CuentaBancaria {
+    private double saldo;
+    
+    public CuentaBancaria(double saldoInicial) {
+        this.saldo = saldoInicial;
+    }
+    
+    public void retirar(double importe) throws SaldoInsuficienteException {
+        if (importe > saldo) {
+            throw new SaldoInsuficienteException("Saldo insuficiente");
+        }
+        saldo -= importe;
+    }
+    
+    public double getSaldo() { return saldo; }
+} `,
         checks: [
           { desc: 'Crea excepción personalizada', test: code => /class\s+SaldoInsuficienteException\s+extends\s+Exception/.test(code) },
           { desc: 'Método retirar con throws', test: code => /retirar.+throws\s+SaldoInsuficienteException/.test(code) },
@@ -468,6 +559,21 @@ public class Main {
         // TODO: llamar a start() (NO a run())
     }
 }`,
+        solution: `class ContadorRunnable implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(Thread.currentThread().getName() + ": número " + i);
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Thread h1 = new Thread(new ContadorRunnable(), "Hilo 1");
+        h1.start();
+    }
+} `,
         checks: [
           { desc: 'Implementa Runnable', test: code => /implements\s+Runnable/.test(code) },
           { desc: 'Sobreescribe run()', test: code => /void\s+run\s*\(\s*\)/.test(code) },

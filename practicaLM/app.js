@@ -275,6 +275,9 @@ function renderEditorExercise(labData) {
             labData.type === 'xquery' ? '<button class="btn-run" onclick="validateXML()">✓ Validar Consulta</button>' :
             labData.type === 'xslt' ? '<button class="btn-run" onclick="validateXML()">✓ Validar XSLT</button>' :
             '<button class="btn-run" onclick="validateXML()">✓ Validar XML</button>'}
+          
+          ${ex.solution ? `<button class="btn-help" onclick="showSolution()">💡 Ayuda</button>` : ''}
+
           <div class="exercise-nav">
             <button onclick="prevEditorEx()" ${editorState.current === 0 ? 'disabled' : ''}>← Anterior</button>
             <span>${editorState.current+1} / ${total}</span>
@@ -540,9 +543,43 @@ function evaluateXPath() {
 }
 
 function escapeHTML(str) {
+  if (!str) return '';
   const p = document.createElement('p');
   p.textContent = str;
   return p.innerHTML;
+}
+
+function showSolution() {
+  const ex = editorState.exercises[editorState.current];
+  if (!ex.solution) return;
+
+  const modal = document.getElementById('modal-overlay');
+  const content = document.getElementById('modal-content');
+  
+  content.innerHTML = `
+    <h3>💡 Solución Sugerida</h3>
+    <p>Aquí tienes el resultado final para que puedas consultarlo. Puedes copiarlo manualmente o usar el botón inferior para aplicarlo al editor.</p>
+    <div class="code-block">${syntaxHighlightXML(ex.solution)}</div>
+    <div style="margin-top:2rem; display:flex; gap:1rem;">
+      <button class="btn-primary" onclick="copySolutionToEditor()">Copiar al Editor</button>
+      <button class="btn-secondary" onclick="closeModal()">Cerrar</button>
+    </div>
+  `;
+  
+  modal.classList.remove('hidden');
+}
+
+function copySolutionToEditor() {
+  const ex = editorState.exercises[editorState.current];
+  if (!ex.solution) return;
+  
+  const input = document.getElementById('editor-input');
+  if (input) {
+    input.value = ex.solution;
+    onEditorInput(editorState.type === 'html');
+    closeModal();
+    showToast('Solución copiada al editor', 'success');
+  }
 }
 
 

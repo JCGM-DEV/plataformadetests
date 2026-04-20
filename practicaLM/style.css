@@ -57,6 +57,10 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
   border: none; border-radius: var(--radius2); padding: .7rem 2rem; font-size: .95rem; font-weight: 700;
   cursor: pointer; font-family: inherit; transition: var(--transition); }
 .btn-run:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(245,158,11,.4); }
+.btn-help { background: linear-gradient(135deg, var(--blue), #3b82f6); color: #000c1a;
+  border: none; border-radius: var(--radius2); padding: .7rem 1.5rem; font-size: .95rem; font-weight: 700;
+  cursor: pointer; font-family: inherit; transition: var(--transition); }
+.btn-help:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(59,130,246,.4); }
 
 /* TOPBAR */
 .topbar { height: 60px; background: rgba(2,13,20,.95); backdrop-filter: blur(12px);

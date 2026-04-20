@@ -194,8 +194,11 @@ function renderGitViz() {
           <div class="ex-tag">DESAFÍO GIT</div>
           <h4>${ex.title}</h4>
           <p>${ex.scenario}</p>
+          <div style="margin-top:1rem;display:flex;gap:0.75rem">
+            <button class="btn-help" onclick="showGitSolution()">💡 Ayuda</button>
+            <button class="btn-secondary" style="padding:0.4rem 0.8rem;font-size:0.8rem" onclick="gitRepo.currentChallengeIdx = -1; renderGitViz()">✕ Cerrar</button>
+          </div>
         </div>
-        <button class="ex-close" onclick="gitRepo.currentChallengeIdx = -1; renderGitViz()">✕</button>
       </div>`;
   }
 

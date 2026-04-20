@@ -57,6 +57,11 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
   border: none; border-radius: var(--radius2); padding: .7rem 2rem; font-size: .95rem; font-weight: 700;
   cursor: pointer; font-family: inherit; transition: var(--transition); }
 .btn-run:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(245,158,11,.4); }
+.btn-help { background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: #fff; border: none; border-radius: var(--radius2); padding: .7rem 1.5rem;
+  font-size: .95rem; font-weight: 700; cursor: pointer; font-family: inherit;
+  transition: var(--transition); display: inline-flex; align-items: center; gap: .5rem; }
+.btn-help:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(59,130,246,.4); }
 
 /* TOPBAR */
 .topbar { height: 60px; background: rgba(2,13,20,.95); backdrop-filter: blur(12px);
@@ -105,7 +110,7 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 .welcome-panel p { color: var(--text2); font-size: .9rem; }
 
 /* LESSON VIEW */
-.lesson-view, .quiz-view, .drag-view { padding: 2rem; max-width: 900px; margin: 0 auto; width: 100%; }
+.lesson-view, .quiz-view, .drag-view, .doctor-view { padding: 2rem; max-width: 900px; margin: 0 auto; width: 100%; }
 .lesson-header { margin-bottom: 2rem; }
 .lesson-header h2 { font-size: 1.75rem; font-weight: 800;
   background: linear-gradient(135deg, #fff 0%, var(--accent3) 100%);
@@ -271,7 +276,7 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
-@media(max-width:640px){ .lesson-view,.quiz-view,.drag-view{ padding:1rem; } .sql-view,.er-view{ padding:1rem; } }
+@media(max-width:640px){ .lesson-view,.quiz-view,.drag-view,.doctor-view{ padding:1rem; } .sql-view,.er-view{ padding:1rem; } }
 
 /* CODE VIEW */
 .code-view { padding: 1.5rem; width: 100%; max-width: 1100px; margin: 0 auto; }

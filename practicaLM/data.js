@@ -579,6 +579,16 @@ const EDITOR_LABS = {
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <title>Práctica HTML</title>
+</head>
+<body>
+  <!-- Escribe tu código aquí -->
+</body>
+</html>`,
+      solution: `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
   <title>Mi Primera Web</title>
 </head>
 <body>
@@ -600,6 +610,12 @@ const EDITOR_LABS = {
       desc: 'Pon un h1, un h2, un párrafo con texto, una línea horizontal (<hr>) y otro párrafo con un salto de línea (<br>) en medio.',
       hint: 'Usa <hr> para líneas y <br> para saltos.',
       starter: `<!DOCTYPE html>
+<html>
+<body>
+  <!-- Usa h1, h2, hr y br aquí -->
+</body>
+</html>`,
+      solution: `<!DOCTYPE html>
 <html>
 <body>
   <h1>Título Principal</h1>
@@ -629,7 +645,13 @@ const EDITOR_LABS = {
       starter: `<!DOCTYPE html>
 <html>
 <body>
-  <p>Este es un texto con <b>negrita</b>, <i>cursiva</i>, <u>subrayado</u> y <s>tachado</s>.</p>
+  <p>Este es un texto con <!-- Pon estilo aquí --></p>
+</body>
+</html>`,
+      solution: `<!DOCTYPE html>
+<html>
+<body>
+  <p>Este es un texto con <b>negrita</b>, <i>cursiva</i>, <u>subrayado</u> and <s>tachado</s>.</p>
 </body>
 </html>`,
       milestones: [
@@ -649,6 +671,12 @@ const EDITOR_LABS = {
       desc: 'Crea una lista no ordenada (ul) con 3 elementos. Luego una lista ordenada (ol) con 2 pasos.',
       hint: 'Usa ul > li y ol > li.',
       starter: `<!DOCTYPE html>
+<html>
+<body>
+  <!-- Crea las listas aquí -->
+</body>
+</html>`,
+      solution: `<!DOCTYPE html>
 <html>
 <body>
   <ul>
@@ -679,6 +707,15 @@ const EDITOR_LABS = {
       starter: `<!DOCTYPE html>
 <html>
 <body>
+  <!-- Enlaces aquí -->
+  <p id="inicio"></p>
+  <div style="height:1000px"></div>
+  <p id="final">El final</p>
+</body>
+</html>`,
+      solution: `<!DOCTYPE html>
+<html>
+<body>
   <a href="https://google.es" target="_blank">Google</a>
   <a href="#final">Ir al final</a>
   <p id="inicio"></p>
@@ -703,6 +740,12 @@ const EDITOR_LABS = {
       starter: `<!DOCTYPE html>
 <html>
 <body>
+  <!-- Imagen aquí -->
+</body>
+</html>`,
+      solution: `<!DOCTYPE html>
+<html>
+<body>
   <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo" width="100">
 </body>
 </html>`,
@@ -721,6 +764,12 @@ const EDITOR_LABS = {
       desc: 'Crea una tabla con un borde de 1. Debe tener una fila de cabecera (th) con "Día" y "Materia" y dos filas de datos (td).',
       hint: 'table > tr > th/td',
       starter: `<!DOCTYPE html>
+<html>
+<body>
+  <!-- Tabla aquí -->
+</body>
+</html>`,
+      solution: `<!DOCTYPE html>
 <html>
 <body>
   <table border="1">
@@ -748,6 +797,12 @@ const EDITOR_LABS = {
       starter: `<!DOCTYPE html>
 <html>
 <body>
+  <!-- Div y Span aquí -->
+</body>
+</html>`,
+      solution: `<!DOCTYPE html>
+<html>
+<body>
   <div style="background:yellow">
     <span style="color:red">Texto rojo</span>
   </div>
@@ -768,6 +823,12 @@ const EDITOR_LABS = {
       desc: 'Crea un form con un input de texto para el nombre, un input de email, un textarea para comentarios y un botón de tipo submit.',
       hint: 'input type="text", type="email", textarea, button type="submit"',
       starter: `<!DOCTYPE html>
+<html>
+<body>
+  <!-- Formulario aquí -->
+</body>
+</html>`,
+      solution: `<!DOCTYPE html>
 <html>
 <body>
   <form>
@@ -820,6 +881,9 @@ const EDITOR_LABS = {
       desc: 'Crea un XML con raíz "alumno" que contenga: nombre, apellidos, edad y ciclo.',
       hint: 'Asegúrate de cerrar todas las etiquetas.',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
+<!-- Crea la raíz <alumno> y sus campos aquí -->
+`,
+      solution: `<?xml version="1.0" encoding="UTF-8"?>
 <alumno>
   <nombre>Juan</nombre>
   <apellidos>Pérez</apellidos>
@@ -841,6 +905,9 @@ const EDITOR_LABS = {
       desc: 'Crea un XML "curso" con nombre, centro y una lista de "modulos". Cada "modulo" debe tener nombre y horas (mínimo 2 módulos).',
       hint: 'curso > modulos > modulo',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
+<!-- Crea la estructura de curso y módulos aquí -->
+`,
+      solution: `<?xml version="1.0" encoding="UTF-8"?>
 <curso>
   <nombre>Desarrollo Web</nombre>
   <centro>Euroformac</centro>
@@ -864,6 +931,10 @@ const EDITOR_LABS = {
       desc: 'Dado un XML de un libro, añade la instrucción para asociar "estilos.css".',
       hint: 'Usa <?xml-stylesheet ... ?>',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
+<libro>
+  <titulo>XML Básico</titulo>
+</libro>`,
+      solution: `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="estilos.css"?>
 <libro>
   <titulo>XML Básico</titulo>
@@ -882,6 +953,10 @@ const EDITOR_LABS = {
       desc: 'Crea un elemento "codigo" que contenga etiquetas <h1> y <p> usando una sección CDATA.',
       hint: '<![CDATA[ ... ]]>',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
+<codigo>
+  <!-- Pon el CDATA aquí -->
+</codigo>`,
+      solution: `<?xml version="1.0" encoding="UTF-8"?>
 <codigo>
   <![CDATA[ 
      <h1>Título</h1>
@@ -902,9 +977,12 @@ const EDITOR_LABS = {
       desc: 'Crea un XML para "persona" con "nombre" (texto) y "edad" (texto) usando una DTD interna.',
       hint: '<!DOCTYPE persona [ <!ELEMENT ... > ]>',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
+<!-- Define la DTD interna y el elemento persona -->
+`,
+      solution: `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE persona [
   <!ELEMENT persona (nombre, edad)>
-  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT name (#PCDATA)>
   <!ELEMENT edad (#PCDATA)>
 ]>
 <persona>
@@ -927,6 +1005,9 @@ const EDITOR_LABS = {
       desc: 'Crea una DTD para "clase" que contenga uno o más elementos "alumno". Cada alumno debe tener un "nombre".',
       hint: 'Usa + para "uno o más".',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
+<!-- Define la DTD para clase y alumnos -->
+`,
+      solution: `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE clase [
   <!ELEMENT clase (alumno+)>
   <!ELEMENT alumno (nombre)>
@@ -951,6 +1032,9 @@ const EDITOR_LABS = {
       desc: 'Crea una DTD para "libro" con un atributo "isbn" que sea obligatorio (#REQUIRED).',
       hint: '<!ATTLIST libro isbn CDATA #REQUIRED>',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
+<!-- Define el atributo isbn en la DTD -->
+`,
+      solution: `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE libro [
   <!ELEMENT libro EMPTY>
   <!ATTLIST libro isbn CDATA #REQUIRED>
@@ -971,6 +1055,9 @@ const EDITOR_LABS = {
       desc: 'Define una entidad llamada "centro" con el valor "Euroformac" y úsala dentro del elemento "instituto".',
       hint: '<!ENTITY centro "Euroformac"> ... &centro;',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
+<!-- Define la entidad &centro; en la DTD -->
+`,
+      solution: `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE instituto [
   <!ENTITY centro "Euroformac">
   <!ELEMENT instituto (#PCDATA)>
@@ -991,6 +1078,10 @@ const EDITOR_LABS = {
       desc: 'Crea un XSD para "persona" con "nombre" (string) y "edad" (integer) en secuencia.',
       hint: 'xs:sequence > xs:element',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- Define el elemento persona aquí -->
+</xs:schema>`,
+      solution: `<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="persona">
     <xs:complexType>
@@ -1015,6 +1106,9 @@ const EDITOR_LABS = {
       desc: 'Define un elemento "alumno" que deba aparecer al menos una vez y sin límite máximo.',
       hint: 'minOccurs="1" maxOccurs="unbounded"',
       starter: `<xs:element name="clase">
+  <!-- Define el alumno con minOccurs y maxOccurs -->
+</xs:element>`,
+      solution: `<xs:element name="clase">
   <xs:complexType><xs:sequence>
     <xs:element name="alumno" minOccurs="1" maxOccurs="unbounded"/>
   </xs:sequence></xs:complexType>
@@ -1033,6 +1127,9 @@ const EDITOR_LABS = {
       desc: 'Crea un esquema para un libro con un atributo obligatorio "isbn" de tipo string.',
       hint: 'xs:attribute use="required" (va después de xsl:sequence)',
       starter: `<xs:element name="libro">
+  <!-- Define el complexType y el atributo isbn -->
+</xs:element>`,
+      solution: `<xs:element name="libro">
   <xs:complexType>
     <xs:sequence>
       <xs:element name="titulo" type="xs:string"/>
@@ -1056,6 +1153,9 @@ const EDITOR_LABS = {
       desc: 'Crea un tipo simple para "edad" que admita valores entre 0 y 120.',
       hint: 'xs:restriction base="xs:integer"',
       starter: `<xs:simpleType name="tipoEdad">
+  <!-- Define la restricción entre 0 y 120 -->
+</xs:simpleType>`,
+      solution: `<xs:simpleType name="tipoEdad">
   <xs:restriction base="xs:integer">
     <xs:minInclusive value="0"/>
     <xs:maxInclusive value="120"/>
@@ -1077,6 +1177,9 @@ const EDITOR_LABS = {
       desc: 'Crea un esquema donde el usuario deba elegir entre proporcionar un "email" o un "nick", pero no ambos.',
       hint: 'xs:choice',
       starter: `<xs:element name="registro">
+  <!-- Usa xs:choice para email o nick -->
+</xs:element>`,
+      solution: `<xs:element name="registro">
   <xs:complexType>
     <xs:choice>
       <xs:element name="email" type="xs:string"/>
@@ -1097,7 +1200,9 @@ const EDITOR_LABS = {
       id: 1, title: 'DNI Español',
       desc: 'Crea un patrón para validar 8 números seguidos de una letra mayúscula.',
       hint: '[0-9]{8}[A-Z]',
-      starter: `<xs:pattern value="[0-9]{8}[A-Z]"/>`,
+      starter: `<!-- Pattern para 8 números y 1 letra -->
+<xs:pattern value=""/>`,
+      solution: `<xs:pattern value="[0-9]{8}[A-Z]"/>`,
       milestones: [
         { id: 'pattern', check: /\[0-9\]\{8\}\[A-Z\]/, popup: '¡Regex de DNI correcto!' }
       ]
@@ -1112,6 +1217,9 @@ const EDITOR_LABS = {
       desc: 'Crea un tipo para "categoria" que solo acepte A, B, C o D.',
       hint: 'xs:enumeration',
       starter: `<xs:simpleType name="tipoCat">
+  <!-- Enumeración A, B, C, D -->
+</xs:simpleType>`,
+      solution: `<xs:simpleType name="tipoCat">
   <xs:restriction base="xs:string">
     <xs:enumeration value="A"/>
     <xs:enumeration value="B"/>
@@ -1133,6 +1241,9 @@ const EDITOR_LABS = {
       desc: 'Crea un tipo para nick entre 5 y 12 caracteres, solo letras minúsculas y números.',
       hint: 'minLength, maxLength y pattern.',
       starter: `<xs:restriction base="xs:string">
+  <!-- minLength 5, maxLength 12, pattern [a-z0-9]+ -->
+</xs:restriction>`,
+      solution: `<xs:restriction base="xs:string">
   <xs:minLength value="5"/>
   <xs:maxLength value="12"/>
   <xs:pattern value="[a-z0-9]+"/>
@@ -1150,7 +1261,9 @@ const EDITOR_LABS = {
       id: 1, title: 'Código de Producto',
       desc: 'Crea un patrón para un código que empiece por 2 mayúsculas y siga con 3 números (ej: AB123).',
       hint: '[A-Z]{2}[0-9]{3}',
-      starter: `<xs:pattern value="[A-Z]{2}[0-9]{3}"/>`,
+      starter: `<!-- Pattern AB123 -->
+<xs:pattern value=""/>`,
+      solution: `<xs:pattern value="[A-Z]{2}[0-9]{3}"/>`,
       milestones: [
         { id: 'p2', check: /\[A-Z\]\{2\}\[0-9\]\{3\}/, popup: '¡Código de producto validado!' }
       ]
@@ -1165,6 +1278,10 @@ const EDITOR_LABS = {
       desc: 'Crea un esquema para "tienda" > "producto" con nombre, precio (decimal), iva (4, 10, 21) y categoria (A, B, C).',
       hint: 'Es una mezcla de enumeraciones y tipos simples.',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- Tienda completa -->
+</xs:schema>`,
+      solution: `<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="tienda">
     <xs:complexType>
@@ -1199,7 +1316,12 @@ const EDITOR_LABS = {
       id: 1, title: 'Stylesheet',
       desc: 'Crea la estructura básica de XSLT con xsl:stylesheet y un xsl:template que matchee la raíz.',
       hint: '<xsl:stylesheet ...> <xsl:template match="/">',
-      starter: `<!-- XML DE ORIGEN:
+      starter: `<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:template match="/">
+    <!-- Escribe aquí -->
+  </xsl:template>
+</xsl:stylesheet>`,
+      solution: `<!-- XML DE ORIGEN:
 <biblioteca>
   <libro><titulo>Don Quijote</titulo></libro>
 </biblioteca>
@@ -1223,7 +1345,10 @@ const EDITOR_LABS = {
       id: 1, title: 'Lista de Nombres',
       desc: 'Usa xsl:for-each para recorrer todos los "libro" y mostrar su "titulo".',
       hint: '<xsl:for-each select="//libro">',
-      starter: `<!-- XML: <biblioteca><libro><titulo>...</titulo></libro></biblioteca> -->
+      starter: `<xsl:template match="/">
+  <!-- Recorre todos los libros y muestra su título -->
+</xsl:template>`,
+      solution: `<!-- XML: <biblioteca><libro><titulo>...</titulo></libro></biblioteca> -->
 <xsl:template match="/">
   <xsl:for-each select="//libro">
     <p><xsl:value-of select="titulo"/></p>
@@ -1244,6 +1369,9 @@ const EDITOR_LABS = {
       desc: 'Muestra solo los títulos de los libros cuya categoría sea "Informática".',
       hint: 'select="//libro[categoria=\'Informática\']"',
       starter: `<xsl:template match="/">
+  <!-- Muestra títulos de libros de Informática -->
+</xsl:template>`,
+      solution: `<xsl:template match="/">
   <xsl:for-each select="//libro[categoria='Informática']">
     <p><xsl:value-of select="titulo"/></p>
   </xsl:for-each>
@@ -1262,6 +1390,9 @@ const EDITOR_LABS = {
       desc: 'Usa xsl:sort dentro de for-each para ordenar por precio de menor a mayor.',
       hint: '<xsl:sort select="precio" order="ascending"/>',
       starter: `<xsl:template match="/">
+  <!-- Ordena por precio y muestra el título -->
+</xsl:template>`,
+      solution: `<xsl:template match="/">
   <xsl:for-each select="//libro">
     <xsl:sort select="precio" order="ascending"/>
     <p><xsl:value-of select="titulo"/></p>
@@ -1280,7 +1411,10 @@ const EDITOR_LABS = {
     type: 'xslt',
     exercises: [{
       hint: 'Usa <xsl:text> - </xsl:text> y <xsl:text>€</xsl:text>',
-      starter: `<!-- XML: <tienda><producto><nombre>HP</nombre><precio>500</precio></producto></tienda> -->
+      starter: `<xsl:template match="/">
+  <!-- Usa xsl:text para el formato "nombre - precio€" -->
+</xsl:template>`,
+      solution: `<!-- XML: <tienda><producto><nombre>HP</nombre><precio>500</precio></producto></tienda> -->
 <xsl:template match="/">
   <xsl:for-each select="//producto">
     <xsl:value-of select="nombre"/>
@@ -1300,7 +1434,10 @@ const EDITOR_LABS = {
     type: 'xslt',
     exercises: [{
       hint: '<ul> <xsl:for-each ...> <li>...</li> </xsl:for-each> </ul>',
-      starter: `<!-- XML: <tienda><producto><nombre>Monitor</nombre></producto></tienda> -->
+      starter: `<xsl:template match="/">
+  <!-- Genera un lista <ul> con los nombres -->
+</xsl:template>`,
+      solution: `<!-- XML: <tienda><producto><nombre>Monitor</nombre></producto></tienda> -->
 <xsl:template match="/">
   <ul>
     <xsl:for-each select="//producto">
@@ -1319,7 +1456,10 @@ const EDITOR_LABS = {
     type: 'xslt',
     exercises: [{
       hint: 'tr > th para cabeceras, tr > td para datos.',
-      starter: `<!-- XML: <tienda><producto><nombre>...</nombre><marca>...</marca></producto></tienda> -->
+      starter: `<xsl:template match="/">
+  <!-- Genera una <table> con Nombre y Marca -->
+</xsl:template>`,
+      solution: `<!-- XML: <tienda><producto><nombre>...</nombre><marca>...</marca></producto></tienda> -->
 <xsl:template match="/">
   <table border="1">
     <tr><th>Nombre</th><th>Marca</th></tr>
@@ -1343,7 +1483,10 @@ const EDITOR_LABS = {
       id: 1, title: 'Solo Logitech',
       desc: 'Muestra solo los nombres de los productos cuya marca sea Logitech.',
       hint: 'select="tienda/producto[marca=\'Logitech\']"',
-      starter: `<!-- XML: <tienda><producto><nombre>...</nombre><marca>Logitech</marca></producto></tienda> -->
+      starter: `<xsl:template match="/">
+  <!-- Filtra por marca Logitech -->
+</xsl:template>`,
+      solution: `<!-- XML: <tienda><producto><nombre>...</nombre><marca>Logitech</marca></producto></tienda> -->
 <xsl:template match="/">
   <xsl:for-each select="//producto[marca='Logitech']">
     <p><xsl:value-of select="nombre"/></p>
@@ -1361,9 +1504,14 @@ const EDITOR_LABS = {
     type: 'xslt',
     exercises: [{
       hint: 'select="tienda/producto[precio > 50]" (recuerda usar &gt; si es necesario)',
-      starter: `<!-- XML: <tienda><producto><precio>60</precio></producto></tienda> -->
+      starter: `<xsl:template match="/">
+  <!-- Filtra productos con precio > 50 -->
+</xsl:template>`,
+      solution: `<!-- XML: <tienda><producto><precio>60</precio></producto></tienda> -->
 <xsl:template match="/">
-  
+  <xsl:for-each select="//producto[precio > 50]">
+    <p><xsl:value-of select="precio"/></p>
+  </xsl:for-each>
 </xsl:template>`,
       milestones: [
         { id: 'fe', check: /xsl:for-each/i, popup: 'Bucle for-each iniciado.', instruction: 'Usa <xsl:for-each> para recorrer los productos.' },
@@ -1379,7 +1527,10 @@ const EDITOR_LABS = {
       id: 1, title: 'De menor a mayor',
       desc: 'Ordena los productos por precio de forma ascendente.',
       hint: '<xsl:sort select="precio" data-type="number" order="ascending"/>',
-      starter: `<!-- XML: <tienda><producto><precio>10</precio></producto><producto><precio>5</precio></producto></tienda> -->
+      starter: `<xsl:template match="/">
+  <!-- Ordena por precio (ascendente) -->
+</xsl:template>`,
+      solution: `<!-- XML: <tienda><producto><precio>10</precio></producto><producto><precio>5</precio></producto></tienda> -->
 <xsl:template match="/">
   <xsl:for-each select="//producto">
     <xsl:sort select="precio" order="ascending"/>
@@ -1400,7 +1551,10 @@ const EDITOR_LABS = {
       id: 1, title: 'De mayor a menor',
       desc: 'Ordena los productos por precio de forma descendente.',
       hint: '<xsl:sort select="precio" data-type="number" order="descending"/>',
-      starter: `<!-- XML: <tienda><producto><precio>10</precio></producto><producto><precio>5</precio></producto></tienda> -->
+      starter: `<xsl:template match="/">
+  <!-- Ordena por precio (descendente) -->
+</xsl:template>`,
+      solution: `<!-- XML: <tienda><producto><precio>10</precio></producto><producto><precio>5</precio></producto></tienda> -->
 <xsl:template match="/">
   <xsl:for-each select="//producto">
     <xsl:sort select="precio" order="descending"/>
@@ -1421,7 +1575,10 @@ const EDITOR_LABS = {
       id: 1, title: 'Control de Stock',
       desc: 'Muestra el nombre solo si el stock es mayor que 20.',
       hint: '<xsl:if test="stock > 20">',
-      starter: `<!-- XML: <tienda><producto><nombre>HP</nombre><stock>25</stock></producto></tienda> -->
+      starter: `<xsl:template match="/">
+  <!-- Usa xsl:if para mostrar stock > 20 -->
+</xsl:template>`,
+      solution: `<!-- XML: <tienda><producto><nombre>HP</nombre><stock>25</stock></producto></tienda> -->
 <xsl:template match="/">
   <xsl:for-each select="//producto">
     <xsl:if test="stock > 20">
@@ -1443,7 +1600,7 @@ const EDITOR_LABS = {
       id: 1, title: 'Todos los Títulos',
       desc: 'Muestra los títulos de todos los libros de la biblioteca.',
       hint: 'for $l in //libro return $l/titulo',
-      starter: `(: XML DE BASE :)
+      starter: `(: XML de la biblioteca :)
 <biblioteca>
   <libro>
     <titulo>Aprende XML</titulo>
@@ -1482,8 +1639,10 @@ const EDITOR_LABS = {
   </libro>
 </biblioteca>
 
-(: ESCRIBE TU CONSULTA AQUÍ :)
+(: Escribe tu consulta FLWOR aquí :)
 `,
+      solution: `for $l in //libro
+return $l/titulo`,
       milestones: [
         { id: 'q1', check: /(for.*return.*titulo|\/\/libro\/titulo)/i, popup: '¡Exacto! XPath o FLWOR detectado.', instruction: 'Extrae los títulos de todos los libros.', hint: 'for $l in //libro return $l/titulo' }
       ]
@@ -1497,9 +1656,10 @@ const EDITOR_LABS = {
       id: 1, title: 'Libro XML',
       desc: 'Muestra el título y el autor de cada libro envueltos en un nuevo nodo <libro>.',
       hint: 'return <libro>{$l/titulo}{$l/autor}</libro>',
-      starter: `(: USA EL XML DE LA BIBLIOTECA :)
-
+      starter: `(: Escribe tu consulta aquí :)
 `,
+      solution: `for $l in //libro
+return <libro>{$l/titulo}{$l/autor}</libro>`,
       milestones: [
         { id: 'libro', check: /return\s+<libro>.*titulo.*autor/si, popup: 'Estructura <libro> OK.' }
       ]
@@ -1513,9 +1673,11 @@ const EDITOR_LABS = {
       id: 1, title: 'Solo Informática',
       desc: 'Muestra los títulos de los libros de la categoría "Informática".',
       hint: 'where $l/categoria = "Informática"',
-      starter: `(: USA EL XML DE LA BIBLIOTECA :)
-
+      starter: `(: Escribe tu consulta aquí :)
 `,
+      solution: `for $l in //libro
+where $l/categoria = "Informática"
+return $l/titulo`,
       milestones: [
         { id: 'it', check: /categoria\s*=\s*(['"])Informática\1/i, popup: 'Filtro de categoría OK.' }
       ]
@@ -1529,9 +1691,11 @@ const EDITOR_LABS = {
       id: 1, title: 'Libros Caros',
       desc: 'Muestra los títulos de los libros con precio superior a 25 euros.',
       hint: 'where $l/precio > 25',
-      starter: `(: USA EL XML DE LA BIBLIOTECA :)
-
+      starter: `(: Escribe tu consulta aquí :)
 `,
+      solution: `for $l in //libro
+where $l/precio > 25
+return $l/titulo`,
       milestones: [
         { id: 'price', check: /precio\s*>\s*25/i, popup: 'Filtro de precio OK.' }
       ]
@@ -1545,9 +1709,11 @@ const EDITOR_LABS = {
       id: 1, title: 'Orden por Precio',
       desc: 'Muestra los títulos de los libros ordenados por precio (de menor a mayor).',
       hint: 'order by $l/precio',
-      starter: `(: USA EL XML DE LA BIBLIOTECA :)
-
+      starter: `(: Escribe tu consulta aquí :)
 `,
+      solution: `for $l in //libro
+order by $l/precio
+return $l/titulo`,
       milestones: [
         { id: 'order', check: /order by\s+\$l\/precio/i, popup: 'Ordenación ascendente OK.' }
       ]
@@ -1561,9 +1727,11 @@ const EDITOR_LABS = {
       id: 1, title: 'Orden Inverso',
       desc: 'Muestra los títulos de los libros ordenados por precio (de mayor a menor).',
       hint: 'order by $l/precio descending',
-      starter: `(: USA EL XML DE LA BIBLIOTECA :)
-
+      starter: `(: Escribe tu consulta aquí :)
 `,
+      solution: `for $l in //libro
+order by $l/precio descending
+return $l/titulo`,
       milestones: [
         { id: 'desc', check: /descending/i, popup: 'Ordenación descendente OK.' }
       ]
@@ -1577,9 +1745,9 @@ const EDITOR_LABS = {
       id: 1, title: 'El Primero',
       desc: 'Muestra el título del primer libro del documento.',
       hint: '(//libro)[1]/titulo',
-      starter: `(: USA EL XML DE LA BIBLIOTECA :)
-
+      starter: `(: Escribe tu consulta aquí :)
 `,
+      solution: `(//libro)[1]/titulo`,
       milestones: [
         { id: 'idx', check: /\[1\]/i, popup: 'Acceso por índice OK.' }
       ]
@@ -1593,9 +1761,9 @@ const EDITOR_LABS = {
       id: 1, title: 'El Último',
       desc: 'Muestra el título del último libro del documento.',
       hint: '(//libro)[last()]/titulo',
-      starter: `(: USA EL XML DE LA BIBLIOTECA :)
-
+      starter: `(: Escribe tu consulta aquí :)
 `,
+      solution: `(//libro)[last()]/titulo`,
       milestones: [
         { id: 'last', check: /last\(\)/i, popup: 'Función last() OK.' }
       ]
@@ -1609,9 +1777,9 @@ const EDITOR_LABS = {
       id: 1, title: '¿Cuántos libros hay?',
       desc: 'Muestra el número total de libros en la biblioteca.',
       hint: 'count(//libro)',
-      starter: `(: USA EL XML DE LA BIBLIOTECA :)
-
+      starter: `(: Escribe tu consulta aquí :)
 `,
+      solution: `count(//libro)`,
       milestones: [
         { id: 'count', check: /count\(/i, popup: 'Conteo total OK.' }
       ]
@@ -1625,9 +1793,11 @@ const EDITOR_LABS = {
       id: 1, title: 'Poco Stock',
       desc: 'Muestra los títulos de los libros con menos de 5 unidades en stock.',
       hint: 'where $l/stock < 5',
-      starter: `(: USA EL XML DE LA BIBLIOTECA :)
-
+      starter: `(: Escribe tu consulta aquí :)
 `,
+      solution: `for $l in //libro
+where $l/stock < 5
+return $l/titulo`,
       milestones: [
         { id: 'stock', check: /stock\s*<\s*5/i, popup: 'Filtro de stock OK.' }
       ]
@@ -1641,23 +1811,10 @@ const EDITOR_LABS = {
       id: 1, title: 'Títulos de Juegos',
       desc: 'Muestra los títulos de todos los videojuegos.',
       hint: 'for $j in //juego return $j/titulo',
-      starter: `<videojuegos>
- <juego>
-  <titulo>FIFA 25</titulo>
-  <plataforma>PS5</plataforma>
-  <precio>70</precio>
- </juego>
- <juego>
-  <titulo>Minecraft</titulo>
-  <plataforma>PC</plataforma>
-  <precio>30</precio>
- </juego>
- <juego>
-  <titulo>Zelda</titulo>
-  <plataforma>Switch</plataforma>
-  <precio>60</precio>
- </juego>
-</videojuegos>`,
+      starter: `(: Escribe tu consulta aquí :)
+`,
+      solution: `for $j in //juego
+return $j/titulo`,
       milestones: [
         { id: 'for', check: /for\s+\$j\s+in/i, popup: 'Bucle FOR OK.' },
         { id: 'ret', check: /return\s+\$j\/titulo/i, popup: 'Retorno de título OK.' }
@@ -1672,38 +1829,10 @@ const EDITOR_LABS = {
       id: 1, title: 'Nombres de Productos',
       desc: 'Muestra los nombres de todos los productos de la tienda.',
       hint: 'for $p in //producto return $p/nombre',
-      starter: `<tienda>
-  <producto>
-    <nombre>Ratón Óptico</nombre>
-    <marca>Logitech</marca>
-    <precio>25</precio>
-    <stock>50</stock>
-  </producto>
-  <producto>
-    <nombre>Teclado Mecánico</nombre>
-    <marca>Corsair</marca>
-    <precio>85</precio>
-    <stock>20</stock>
-  </producto>
-  <producto>
-    <nombre>Monitor 4K</nombre>
-    <marca>LG</marca>
-    <precio>350</precio>
-    <stock>10</stock>
-  </producto>
-  <producto>
-    <nombre>Alfombrilla XXL</marca>
-    <marca>Logitech</marca>
-    <precio>15</precio>
-    <stock>100</stock>
-  </producto>
-  <producto>
-    <nombre>Auriculares Gaming</nombre>
-    <marca>Razer</marca>
-    <precio>120</precio>
-    <stock>15</stock>
-  </producto>
-</tienda>`,
+      starter: `(: Escribe tu consulta aquí :)
+`,
+      solution: `for $p in //producto
+return $p/nombre`,
       milestones: [
         { id: 'prod', check: /(for.*return.*nombre|\/\/producto\/nombre)/i, popup: 'Productos detectados.' }
       ]
@@ -1717,9 +1846,10 @@ const EDITOR_LABS = {
       id: 1, title: 'Producto y Precio',
       desc: 'Muestra el nombre y el precio de cada producto envueltos en un nodo <item>.',
       hint: 'return <item>{$p/nombre}{$p/precio}</item>',
-      starter: `(: USA EL XML DE LA TIENDA :)
-
+      starter: `(: Escribe tu consulta aquí :)
 `,
+      solution: `for $p in //producto
+return <item>{$p/nombre}{$p/precio}</item>`,
       milestones: [
         { id: 'wrap', check: /return\s+<item>.*nombre.*precio/si, popup: 'Estructura <item> OK.' }
       ]
@@ -1733,9 +1863,11 @@ const EDITOR_LABS = {
       id: 1, title: 'Productos Caros',
       desc: 'Muestra los nombres de los productos con un precio superior a 50 euros.',
       hint: 'where $p/precio > 50',
-      starter: `(: USA EL XML DE LA TIENDA :)
-
+      starter: `(: Escribe tu consulta aquí :)
 `,
+      solution: `for $p in //producto
+where $p/precio > 50
+return $p/nombre`,
       milestones: [
         { id: 'price', check: /precio\s*>\s*50/i, popup: 'Filtro de precio OK.' }
       ]
@@ -1749,9 +1881,11 @@ const EDITOR_LABS = {
       id: 1, title: 'Solo Logitech',
       desc: 'Muestra los nombres de los productos cuya marca sea "Logitech".',
       hint: 'where $p/marca = "Logitech"',
-      starter: `(: USA EL XML DE LA TIENDA :)
-
+      starter: `(: Escribe tu consulta aquí :)
 `,
+      solution: `for $p in //producto
+where $p/marca = "Logitech"
+return $p/nombre`,
       milestones: [
         { id: 'brand', check: /marca\s*=\s*(['"])Logitech\1/i, popup: 'Filtro de marca OK.' }
       ]
@@ -1765,9 +1899,11 @@ const EDITOR_LABS = {
       id: 1, title: 'Orden por Precio',
       desc: 'Muestra los nombres de los productos ordenados por precio (de menor a mayor).',
       hint: 'order by $p/precio',
-      starter: `(: USA EL XML DE LA TIENDA :)
-
+      starter: `(: Escribe tu consulta aquí :)
 `,
+      solution: `for $p in //producto
+order by $p/precio
+return $p/nombre`,
       milestones: [
         { id: 'order', check: /order by\s+\$p\/precio/i, popup: 'Ordenación ascendente OK.' }
       ]
@@ -1781,9 +1917,11 @@ const EDITOR_LABS = {
       id: 1, title: 'Orden Inverso',
       desc: 'Muestra los nombres de los productos ordenados por precio (de mayor a menor).',
       hint: 'order by $p/precio descending',
-      starter: `(: USA EL XML DE LA TIENDA :)
-
+      starter: `(: Escribe tu consulta aquí :)
 `,
+      solution: `for $p in //producto
+order by $p/precio descending
+return $p/nombre`,
       milestones: [
         { id: 'desc', check: /descending/i, popup: 'Ordenación descendente OK.' }
       ]
@@ -1797,9 +1935,10 @@ const EDITOR_LABS = {
       id: 1, title: 'Nombre y Stock',
       desc: 'Muestra el nombre y el stock de cada producto en un nuevo nodo <inventario>.',
       hint: 'return <inventario>{$p/nombre}{$p/stock}</inventario>',
-      starter: `(: USA EL XML DE LA TIENDA :)
-
+      starter: `(: Escribe tu consulta aquí :)
 `,
+      solution: `for $p in //producto
+return <inventario>{$p/nombre}{$p/stock}</inventario>`,
       milestones: [
         { id: 'stock', check: /return\s+<inventario>.*nombre.*stock/si, popup: 'Estructura <inventario> OK.' }
       ]

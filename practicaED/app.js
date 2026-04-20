@@ -552,3 +552,50 @@ function showToast(msg, type = 'info') {
   if (toastTimer) clearTimeout(toastTimer);
   toastTimer = setTimeout(() => { t.classList.remove('show'); }, 2600);
 }
+
+// ---- HELP SYSTEM ----
+function showGitSolution() {
+  const ex = GIT_CHALLENGES[gitRepo.currentChallengeIdx];
+  if (!ex || !ex.solution) { showToast('No hay solución disponible', 'info'); return; }
+  
+  const modalContent = document.getElementById('modal-content');
+  modalContent.innerHTML = `
+    <h3>💡 Ayuda: Comandos Git</h3>
+    <p>Para completar este desafío, utiliza la siguiente secuencia de comandos:</p>
+    <div class="code-block" style="white-space:pre; text-align:left; font-family:'JetBrains Mono',monospace; font-size:14px; background:#0c1e2e; padding:15px; border-radius:8px; border:1px solid #1e3a4a; overflow-x:auto; color:#86efac; margin:1rem 0;">${ex.solution}</div>
+    <div style="margin-top:1.5rem;display:flex;gap:1rem">
+      <button class="btn-primary" onclick="pasteGitSolution()">Auto-completar</button>
+      <button class="btn-secondary" onclick="closeModal()">Cerrar</button>
+    </div>`;
+  document.getElementById('modal-overlay').classList.remove('hidden');
+}
+
+function pasteGitSolution() {
+  const ex = GIT_CHALLENGES[gitRepo.currentChallengeIdx];
+  const input = document.getElementById('git-input');
+  if (input) {
+    input.value = ex.solution.split('\n')[0]; // paste first command or all? logic suggests all but terminal might not support multiline easily
+    input.value = ex.solution; 
+    closeModal();
+    showToast('Comandos cargados en el terminal', 'success');
+  }
+}
+
+function showLabSolution() {
+  const ex = LAB_EXERCISES[activeSection]?.[currentExerciseIdx];
+  if (!ex) return;
+  
+  const modalContent = document.getElementById('modal-content');
+  modalContent.innerHTML = `
+    <h3>💡 Ayuda: Diagrama Correcto</h3>
+    <p>Para resolver este diagrama, asegúrate de añadir los siguientes elementos:</p>
+    <ul style="text-align:left; color:var(--text2); font-size:0.9rem; margin:1rem 0; padding-left:1.5rem; line-height:1.6;">
+      ${ex.solution.nodes ? ex.solution.nodes.map(n => `<li>Clase <strong>${n.text}</strong> ${n.attrs ? `con atributos [${n.attrs.join(', ')}]` : ''}</li>`).join('') : ''}
+      ${ex.solution.rels ? ex.solution.rels.map(r => `<li>Relación <strong>${r.type === 'inherit' ? 'Herencia' : r.type === 'compose' ? 'Composición' : 'Agregación'}</strong> desde ${r.from} hacia ${r.to}</li>`).join('') : ''}
+      ${ex.solution.nodes_flow ? `<li>Bloques requeridos: <strong>${ex.solution.nodes_flow.join(', ')}</strong></li>` : ''}
+    </ul>
+    <div style="margin-top:1.5rem;">
+      <button class="btn-secondary" onclick="closeModal()">Entendido</button>
+    </div>`;
+  document.getElementById('modal-overlay').classList.remove('hidden');
+}

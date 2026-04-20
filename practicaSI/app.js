@@ -69,8 +69,42 @@ function loadChallenge(idx) {
   document.getElementById('challenge-desc').innerHTML = ch.desc;
   document.getElementById('challenge-diff').textContent = ch.difficulty;
   document.getElementById('challenge-hint').classList.add('hidden');
+  document.getElementById('btn-help').classList.remove('hidden');
   
   renderSidebar();
+}
+
+function showSolution() {
+  const currentChallenge = DATA[currentMode].challenges[currentChallengeIdx];
+  if (!currentChallenge) return;
+
+  const modal = document.getElementById('modal-overlay');
+  const content = document.getElementById('modal-content');
+  
+  content.innerHTML = `
+    <h3>💡 Comando de Solución</h3>
+    <p>Si tienes dudas sobre cómo resolver este desafío, aquí tienes el comando sugerido:</p>
+    <div class="code-block">
+      <code>${currentChallenge.hint}</code>
+    </div>
+    <div style="margin-top:2rem; display:flex; gap:1rem;">
+      <button class="btn-primary" onclick="pasteCommand('${currentChallenge.hint.replace(/'/g, "\\'")}')">Pegar en Terminal</button>
+      <button class="btn-secondary" onclick="closeModal()">Cerrar</button>
+    </div>
+  `;
+  
+  modal.classList.remove('hidden');
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.add('hidden');
+}
+
+function pasteCommand(cmd) {
+  terminalInput.value = cmd;
+  terminalInput.focus();
+  closeModal();
+  showToast('Comando listo en la terminal');
 }
 
 function showHint() {

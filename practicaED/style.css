@@ -193,6 +193,11 @@ body {
   font-family: inherit;
 }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(124,92,252,.4); }
+.btn-help { background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: #fff; border: none; border-radius: var(--radius2); padding: 0.6rem 1.2rem;
+  font-size: 0.95rem; font-weight: 700; cursor: pointer; font-family: inherit;
+  transition: var(--transition); display: inline-flex; align-items: center; gap: .5rem; }
+.btn-help:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(59,130,246,.4); }
 
 .btn-secondary {
   display: inline-flex;
