@@ -489,3 +489,183 @@ A) Diseño visual
 *B) Seguridad y privacidad
 C) Uso exclusivo de SQL
 D) Bajo coste
+
+¿Qué permite el escalado automático?
+A) Apagar servidores
+*B) Ajustar recursos según la demanda
+C) Reiniciar sistemas
+D) Monitorizar
+
+¿Qué problema tienen las aplicaciones modernas?
+A) Poco tráfico
+B) Falta de CPU
+*C) Tráfico variable
+D) Sin usuarios
+
+¿Qué mide la monitorización?
+*A) Estado y rendimiento
+B) Diseño
+C) Código
+D) Red
+
+¿Qué mejora el escalado automático?
+A) Diseño
+*B) Rendimiento
+C) Código
+D) Seguridad
+
+¿Qué reduce el escalado automático?
+A) Usuarios
+B) Red
+C) CPU
+*D) Costes
+
+Balanceador de carga sirve para:
+A) Apagar servidores
+*B) Distribuir tráfico
+C) Medir CPU
+D) Reiniciar
+
+Round Robin significa:
+A) Aleatorio
+B) Fijo
+C) Menos conexiones
+*D) Turnos cíclicos
+
+Least Connections envía tráfico a:
+A) Más ocupado
+*B) Menos ocupado
+C) Aleatorio
+D) Siempre igual
+
+Sticky Sessions significa:
+A) Aleatorio
+*B) Mismo servidor para usuario
+C) Menos CPU
+D) Más red
+
+Métrica importante:
+A) Nombre
+B) Usuario
+*C) CPU
+D) Color
+
+Otra métrica clave:
+A) Disco
+B) Red
+C) Usuario
+*D) Memoria
+
+Las alertas sirven para:
+A) Decorar
+B) Reiniciar
+*C) Avisar de problemas
+D) Apagar
+
+Monitorización recopila:
+A) Código
+B) Usuarios
+*C) Datos
+D) Logs
+
+Escalado automático usa:
+*A) Reglas
+B) Usuarios
+C) Diseño
+D) Redes
+
+Las reglas definen:
+A) Usuarios
+B) Código
+*C) Cuándo escalar
+D) CPU
+
+Escalado horizontal:
+*A) Más servidores
+B) Más CPU
+C) Menos RAM
+D) Menos red
+
+Escalado vertical:
+*A) Más capacidad en uno
+B) Más servidores
+C) Menos CPU
+D) Más red
+
+Caso de uso:
+A) Word
+B) Excel
+C) Paint
+*D) E-commerce
+
+Otro caso:
+A) Calculadora
+*B) Red social
+C) Bloc
+D) Editor
+
+Desafío principal:
+A) Fácil configuración
+*B) Complejidad
+C) Sin coste
+D) Sin errores
+
+Otro desafío:
+A) Diseño
+B) Red
+*C) Costes
+D) CPU
+
+Buena práctica:
+A) Ignorar datos
+*B) Definir métricas
+C) Apagar
+D) Reiniciar
+
+Otra práctica:
+A) No monitorizar
+B) Ignorar
+C) Apagar
+*D) Monitorizar continuamente
+
+Monitorización ayuda a:
+A) Ignorar
+B) Apagar
+*C) Detectar problemas
+D) Reducir
+
+Escalado mejora:
+*A) Disponibilidad
+B) Diseño
+C) Código
+D) Red
+
+Sin monitorización:
+*A) Ciegos
+B) Mejor
+C) Rápido
+D) Seguro
+
+Reglas mal configuradas:
+A) Perfecto
+*B) Problemas
+C) Mejora
+D) Nada
+
+Escalado automático evita:
+A) Costes
+*B) Intervención manual
+C) CPU
+D) Red
+
+Objetivo final:
+A) Apagar
+*B) Buen rendimiento
+C) Reducir
+D) Ignorar
+
+Resultado final:
+A) Peor sistema
+*B) Sistema eficiente y escalable
+C) Más errores
+D) Menos usuarios

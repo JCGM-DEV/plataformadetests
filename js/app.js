@@ -1287,9 +1287,14 @@ async function startExamenFinal(subjectId) {
             // Generic fallback for CC, LM, etc.
             const subjectMockEntry = APP_STATE.syllabusExams.find(e => e.subject_id === subjectId && e.type === 'examen_final');
             if (!subjectMockEntry) throw new Error("No final exam configured");
-            const res = await fetch(subjectMockEntry.file + '?v=' + Date.now());
-            const text = await res.text();
-            allQ = shuffleArray(parseTxtExam(text, subjectMockEntry.id)).map(prepareQuestion);
+            
+            if (typeof SYLLABUS_RAW_DATA !== 'undefined' && SYLLABUS_RAW_DATA[subjectMockEntry.id]) {
+                allQ = shuffleArray(SYLLABUS_RAW_DATA[subjectMockEntry.id]).map(prepareQuestion);
+            } else {
+                const res = await fetch(subjectMockEntry.file + '?v=' + Date.now());
+                const text = await res.text();
+                allQ = shuffleArray(parseTxtExam(text, subjectMockEntry.id)).map(prepareQuestion);
+            }
             time = allQ.length * 60; // 1 min per question
             titleInfo = `${allQ.length} preguntas`;
             penalizacionStr = "Penalización -1/3";
@@ -1320,9 +1325,14 @@ async function startSyllabusFlashcard(subjectId) {
     document.getElementById('flashcard-root').innerHTML = `<div style="text-align:center;padding:4rem;color:var(--text-secondary)"><p>Cargando flashcards del temario...</p></div>`;
 
     try {
-        const fetches = temas.map(t => fetch(t.file + '?v=' + Date.now())
-            .then(r => r.text()).then(text => parseTxtExam(text, t.id)).catch(() => []));
-        const allArrays = await Promise.all(fetches);
+        let allArrays = [];
+        if (typeof SYLLABUS_RAW_DATA !== 'undefined') {
+            allArrays = temas.map(t => SYLLABUS_RAW_DATA[t.id] || []);
+        } else {
+            const fetches = temas.map(t => fetch(t.file + '?v=' + Date.now())
+                .then(r => r.text()).then(text => parseTxtExam(text, t.id)).catch(() => []));
+            allArrays = await Promise.all(fetches);
+        }
         const pool = shuffleArray(allArrays.flat());
         if (pool.length === 0) { alert('No se pudieron cargar preguntas.'); showView('dashboard'); return; }
 
@@ -1352,13 +1362,18 @@ async function startSimulacroTemario(subjectId) {
         </div>`;
 
     try {
-        // Fetch all tema files in parallel
-        const fetches = temas.map(t => fetch(t.file + '?v=' + Date.now())
-            .then(r => r.text())
-            .then(text => parseTxtExam(text, t.id))
-            .catch(() => []));
+        let allArrays = [];
+        if (typeof SYLLABUS_RAW_DATA !== 'undefined') {
+            allArrays = temas.map(t => SYLLABUS_RAW_DATA[t.id] || []);
+        } else {
+            // Fetch all tema files in parallel
+            const fetches = temas.map(t => fetch(t.file + '?v=' + Date.now())
+                .then(r => r.text())
+                .then(text => parseTxtExam(text, t.id))
+                .catch(() => []));
 
-        const allArrays = await Promise.all(fetches);
+            allArrays = await Promise.all(fetches);
+        }
         const allQuestions = allArrays.flat();
 
         if (allQuestions.length === 0) { alert('No se pudieron cargar preguntas.'); showView('dashboard'); return; }
@@ -1407,9 +1422,14 @@ async function startSyllabusExam(syllabusId) {
     const examInfo = APP_STATE.syllabusExams.find(e => e.id === syllabusId);
     if (!examInfo) return;
     try {
-        const res = await fetch(examInfo.file);
-        const text = await res.text();
-        const questions = parseTxtExam(text, syllabusId);
+        let questions = [];
+        if (typeof SYLLABUS_RAW_DATA !== 'undefined' && SYLLABUS_RAW_DATA[syllabusId]) {
+            questions = SYLLABUS_RAW_DATA[syllabusId];
+        } else {
+            const res = await fetch(examInfo.file);
+            const text = await res.text();
+            questions = parseTxtExam(text, syllabusId);
+        }
         if (questions.length === 0) { alert('No se han podido extraer preguntas del archivo.'); return; }
 
         APP_STATE.currentExam = { ...examInfo, id: syllabusId };
