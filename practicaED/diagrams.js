@@ -27,6 +27,12 @@ const SVG_DEFS = `<defs>
   <marker id="arrowAssoc" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
     <polygon points="0 0, 10 3.5, 0 7" fill="#9898b8"/>
   </marker>
+  <marker id="arrowOpen" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#7c5cfc" stroke-width="1.5"/>
+  </marker>
+  <marker id="arrowOpenGray" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10" fill="none" stroke="#9898b8" stroke-width="1.5"/>
+  </marker>
 </defs>`;
 
 function umlClass(x, y, w, name, attrs, methods, isAbstract, isInterface) {
@@ -208,9 +214,9 @@ function renderCasosUso() {
   out += `<line x1="60" y1="120" x2="${ucs[1].x-65}" y2="${ucs[1].y}" stroke="#4a4a7a" stroke-width="1.5"/>`;
   out += `<line x1="440" y1="115" x2="${ucs[3].x+65}" y2="${ucs[3].y}" stroke="#4a4a7a" stroke-width="1.5"/>`;
   // include arrows
-  out += `<line x1="${ucs[0].x}" y1="${ucs[0].y+19}" x2="${ucs[2].x}" y2="${ucs[2].y-19}" stroke="#7c5cfc" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrowRealize)"/>`;
+  out += `<line x1="${ucs[0].x}" y1="${ucs[0].y+19}" x2="${ucs[2].x}" y2="${ucs[2].y-19}" stroke="#7c5cfc" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrowOpen)"/>`;
   out += `<text x="275" y="170" font-family="Inter" font-size="10" fill="#7c5cfc">«include»</text>`;
-  out += `<line x1="${ucs[1].x}" y1="${ucs[1].y+19}" x2="${ucs[2].x}" y2="${ucs[2].y-19}" stroke="#7c5cfc" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrowRealize)"/>`;
+  out += `<line x1="${ucs[1].x}" y1="${ucs[1].y+19}" x2="${ucs[2].x}" y2="${ucs[2].y-19}" stroke="#7c5cfc" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arrowOpen)"/>`;
   return svgWrap(out, '0 0 500 350');
 }
 
@@ -313,7 +319,7 @@ function renderActividadCompra() {
     { x:180, y:310, w:140, h:34, label:'Confirmar Pago' },
   ];
   acts.forEach(a => {
-    out += `<rect x="${a.x}" y="${a.y}" width="${a.w}" height="${a.h}" rx="17" class="act-rect"/>`;
+    out += `<rect x="${a.x}" y="${a.y}" width="${a.w}" height="${a.h}" rx="4" class="act-rect"/>`;
     out += `<text x="${a.x+a.w/2}" y="${a.y+a.h/2+4}" class="act-text">${a.label}</text>`;
   });
   // Decision diamond

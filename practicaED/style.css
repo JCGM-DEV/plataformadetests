@@ -1199,3 +1199,50 @@ body {
 .git-prompt { display: flex; align-items: center; gap: 8px; padding: 10px 16px; background: #1a1a2e; border-top: 1px solid var(--border); }
 .git-prompt .prompt { color: var(--green); font-weight: bold; }
 #git-input { flex: 1; background: none; border: none; color: #fff; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; outline: none; }
+
+/* Lab UI Improvements */
+.conn-label-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg2);
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  font-size: 0.75rem;
+}
+
+.conn-label-row span {
+  color: var(--accent3);
+  min-width: 60px;
+}
+
+.conn-label-row input {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+}
+
+.btn-tiny-del {
+  background: none;
+  border: none;
+  color: var(--red);
+  cursor: pointer;
+  padding: 2px 4px;
+  font-size: 0.75rem;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.btn-tiny-del:hover {
+  opacity: 1;
+}
+
+.btn-tiny {
+  padding: 2px 8px;
+  font-size: 0.7rem;
+}

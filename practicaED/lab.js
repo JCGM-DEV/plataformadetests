@@ -236,14 +236,53 @@ function renderUMLInputs(n) {
 }
 
 function renderFlowInputs(n) {
-  if (n.type === 'decision') {
+  const nodeConnections = labConnections.filter(c => c.from === n.id);
+  const connList = nodeConnections.map(c => {
+    const toNode = labNodes.find(ln => ln.id === c.to);
     return `
-      <div class="flow-subinputs">
-        <input type="text" value="${getConnectionLabel(n.id)}" oninput="updateConnectionLabelUI(${n.id}, this.value)" placeholder="Etiqueta (Ej: Sí/No)">
+      <div class="conn-label-row">
+        <span>→ ${toNode ? toNode.text : '?'}</span>
+        <input type="text" value="${c.label || ''}" oninput="updateSpecificConnectionLabel(${n.id}, ${c.to}, this.value)" placeholder="Etiqueta...">
+        <button class="btn-tiny-del" onclick="removeConnection(${n.id}, ${c.to})">✕</button>
       </div>
     `;
-  }
-  return '';
+  }).join('');
+
+  return `
+    <div class="flow-subinputs">
+      ${connList}
+      <div class="rel-control">
+        <select onchange="addFlowRelation(${n.id}, this.value); this.selectedIndex=0">
+          <option value="">Conectar con...</option>
+          ${labNodes.filter(other => other.id !== n.id).map(other => `<option value="${other.id}">${other.text}</option>`).join('')}
+        </select>
+      </div>
+    </div>
+  `;
+}
+
+function updateSpecificConnectionLabel(fromId, toId, label) {
+  const conn = labConnections.find(c => c.from === fromId && c.to === toId);
+  if (conn) conn.label = label;
+  updateLabCanvas();
+  validateLabState();
+}
+
+function addFlowRelation(fromId, toId) {
+  if (!toId) return;
+  toId = parseInt(toId);
+  if (labConnections.some(c => c.from === fromId && c.to === toId)) return;
+  labConnections.push({ from: fromId, to: toId, label: '' });
+  renderNodeList();
+  updateLabCanvas();
+  validateLabState();
+}
+
+function removeConnection(fromId, toId) {
+  labConnections = labConnections.filter(c => !(c.from === fromId && c.to === toId));
+  renderNodeList();
+  updateLabCanvas();
+  validateLabState();
 }
 
 function updateNodeProperty(id, prop, val) {
@@ -563,17 +602,32 @@ function renderFlowCanvas(canvas) {
     const from = labNodes.find(n => n.id === c.from);
     const to = labNodes.find(n => n.id === c.to);
     if (!from || !to) return;
-    svgContent += `<line x1="${from.x}" y1="${from.y + 20}" x2="${to.x}" y2="${to.y - 20}" stroke="#4a4a7a" stroke-width="2" marker-end="url(#arrowAct)"/>`;
-    if (c.label) svgContent += `<text x="${from.x + 12}" y="${(from.y + to.y)/2}" fill="#fbbf24" font-size="11" font-family="Inter" font-weight="600">${c.label}</text>`;
+    
+    // Calculate arrow path with a bit of offset if multiple connections
+    const fromOtherConns = labConnections.filter(lc => lc.from === c.from);
+    const isMultiple = fromOtherConns.length > 1;
+    const connIdx = fromOtherConns.indexOf(c);
+    const offset = isMultiple ? (connIdx - (fromOtherConns.length-1)/2) * 25 : 0;
+
+    const x1 = from.x + offset, y1 = from.y + 20;
+    const x2 = to.x, y2 = to.y - 20;
+    
+    svgContent += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#4a4a7a" stroke-width="2" marker-end="url(#arrowAct)"/>`;
+    if (c.label) {
+      const mx = (x1 + x2) / 2 + 5;
+      const my = (y1 + y2) / 2;
+      svgContent += `<rect x="${mx-2}" y="${my-10}" width="${c.label.length*7+4}" height="14" rx="3" fill="#161628" opacity="0.8"/>`;
+      svgContent += `<text x="${mx}" y="${my}" fill="#fbbf24" font-size="10" font-family="Inter" font-weight="600">${c.label}</text>`;
+    }
   });
 
   labNodes.forEach(n => {
     const w = 150, h = 42;
-    if (n.type === 'start') svgContent += `<rect x="${n.x - w/2}" y="${n.y - h/2}" width="${w}" height="${h}" rx="21" class="act-rect"/>`;
-    else if (n.type === 'process') svgContent += `<rect x="${n.x - w/2}" y="${n.y - h/2}" width="${w}" height="${h}" class="act-rect" rx="6"/>`;
+    if (n.type === 'start') svgContent += `<rect x="${n.x - w/2}" y="${n.y - h/2}" width="${w}" height="${h}" rx="21" class="act-rect" style="fill:rgba(34, 211, 160, 0.1);stroke:#22d3a0"/>`;
+    else if (n.type === 'process') svgContent += `<rect x="${n.x - w/2}" y="${n.y - h/2}" width="${w}" height="${h}" class="act-rect" rx="2" style="fill:rgba(96, 165, 250, 0.1);stroke:#60a5fa"/>`;
     else if (n.type === 'decision') svgContent += `<polygon points="${n.x},${n.y-30} ${n.x+75},${n.y} ${n.x},${n.y+30} ${n.x-75},${n.y}" class="act-diamond" style="fill:#161628;stroke:#fbbf24;stroke-width:2"/>`;
     else if (n.type === 'io') svgContent += `<polygon points="${n.x-65},${n.y+21} ${n.x+75},${n.y+21} ${n.x+65},${n.y-21} ${n.x-75},${n.y-21}" class="act-rect" style="fill:rgba(124, 92, 252, 0.08);stroke:#7c5cfc"/>`;
-    svgContent += `<text x="${n.x}" y="${n.y+5}" text-anchor="middle" class="act-text" style="font-weight:600;font-size:12px">${n.text}</text>`;
+    svgContent += `<text x="${n.x}" y="${n.y+5}" text-anchor="middle" class="act-text" style="font-weight:600;font-size:11px">${n.text}</text>`;
   });
 
   const maxHeight = Math.max(500, ...labNodes.map(n => n.y + 120));
