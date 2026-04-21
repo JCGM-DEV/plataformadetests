@@ -4891,6 +4891,19 @@
         "Garantiza que el feed aumentará su posición en los motores de búsqueda automáticamente"
       ],
       "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": 7
+    },
+    {
+      "concept_id": "lm_tema_7_q8",
+      "question": "¿Cuál es la función esencial de un \"agregador\" (lector de canales o noticias) en el ecosistema de la sindicación de contenidos?",
+      "options": [
+        "Crear nuevos artículos y publicarlos en los sitios web de los autores",
+        "Suscribirse a fuentes de noticias en formatos RSS o Atom y notificar al usuario sobre las actualizaciones de contenido desde la última lectura",
+        "Validar la sintaxis de los feeds RSS o Atom para asegurar su compatibilidad con los estándares",
+        "Ninguna de las anteriores opciones es completamente correcta en este contexto"
+      ],
+      "correct": 1,
       "explanation": "La opción correcta es Suscribirse a fuentes de noticias en formatos RSS o Atom y notificar al usuario sobre las actualizaciones de contenido desde la última lectura.",
       "unit": 7
     },
@@ -7216,10 +7229,1453 @@
       "concept_id": "cc_examen_final_q0",
       "question": "¿Qué se entiende principalmente por servicios de cómputo en la nube?",
       "options": [
-        "A) Aplicaciones instaladas en ordenadores personales",
-        "B) Capacidad de procesamiento ofrecida bajo demanda",
-        "C) Programas que solo funcionan con conexión a internet",
-        "D) Almacenamiento de archivos en servidores externos"
+        "Aplicaciones instaladas en ordenadores personales",
+        "Capacidad de procesamiento ofrecida bajo demanda",
+        "Programas que solo funcionan con conexión a internet",
+        "Almacenamiento de archivos en servidores externos"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q1",
+      "question": "¿Cuál es una de las principales ventajas de usar servicios de cómputo frente a la computación tradicional?",
+      "options": [
+        "Tener siempre servidores propios",
+        "Comprar hardware para el peor escenario posible",
+        "Adaptar los recursos según la demanda real",
+        "Evitar el uso de sistemas operativos"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q2",
+      "question": "¿Qué significa el principio de \"abstracción de la infraestructura\"?",
+      "options": [
+        "Que el usuario diseña el hardware",
+        "Que el usuario no necesita saber dónde ni cómo se ejecuta su aplicación",
+        "Que la infraestructura no existe",
+        "Que solo se usan servidores físicos"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q3",
+      "question": "El modelo de \"pago por uso\" implica que:",
+      "options": [
+        "Se paga una cuota fija mensual",
+        "Se paga solo cuando el servidor está encendido",
+        "Se paga únicamente por los recursos que se utilizan",
+        "Se paga por adelantado todo el año"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q4",
+      "question": "¿Qué es una máquina virtual?",
+      "options": [
+        "Un contenedor ligero sin sistema operativo",
+        "Un sistema operativo compartido por varias aplicaciones",
+        "Una copia virtual de un sistema operativo que funciona como un equipo independiente",
+        "Un servidor físico dedicado"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q5",
+      "question": "¿Qué elemento permite que varias máquinas virtuales compartan el mismo hardware físico?",
+      "options": [
+        "El sistema operativo",
+        "El contenedor",
+        "El hipervisor",
+        "La red virtual"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q6",
+      "question": "¿Cuál de las siguientes NO es una ventaja de las máquinas virtuales?",
+      "options": [
+        "Aislamiento entre sistemas",
+        "Escalabilidad",
+        "Uso exclusivo de hardware físico",
+        "Flexibilidad"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q7",
+      "question": "¿Para qué sirve el aislamiento entre máquinas virtuales?",
+      "options": [
+        "Para que todas compartan datos",
+        "Para que un fallo no afecte a las demás",
+        "Para reducir el uso de memoria",
+        "Para eliminar el hipervisor"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q8",
+      "question": "¿Cuál es una buena práctica para reducir costes en máquinas virtuales?",
+      "options": [
+        "Mantenerlas siempre encendidas",
+        "Sobredimensionar recursos",
+        "Apagar las VMs cuando no se usan",
+        "Crear una VM nueva para cada tarea"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q9",
+      "question": "¿Para qué sirve el escalado automático en las máquinas virtuales?",
+      "options": [
+        "Para mejorar la seguridad",
+        "Para ajustar los recursos según la demanda",
+        "Para eliminar sistemas operativos",
+        "Para reducir el número de usuarios"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q10",
+      "question": "¿Qué es un contenedor?",
+      "options": [
+        "Una máquina virtual completa",
+        "Un servidor físico compartido",
+        "Un paquete con una aplicación y sus dependencias",
+        "Un sistema operativo independiente"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q11",
+      "question": "¿Cuál es una ventaja clave de los contenedores?",
+      "options": [
+        "Simplifican el desarrollo y despliegue",
+        "Son menos portables",
+        "Consumen más recursos que las VMs",
+        "Solo funcionan en un entorno concreto"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q12",
+      "question": "¿Qué significa que un contenedor sea portable?",
+      "options": [
+        "Que solo funciona en la nube",
+        "Que necesita hardware específico",
+        "Que puede ejecutarse en distintos entornos",
+        "Que tiene su propio sistema operativo"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q13",
+      "question": "¿Por qué los contenedores son más eficientes que las VMs?",
+      "options": [
+        "Porque usan más memoria",
+        "Porque no se pueden escalar",
+        "Porque usan hardware exclusivo",
+        "Porque comparten el sistema operativo"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q14",
+      "question": "¿Qué activa la ejecución de una función serverless?",
+      "options": [
+        "El arranque de un servidor",
+        "Un evento",
+        "El sistema operativo",
+        "Un contenedor manual"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q15",
+      "question": "¿Cómo se paga en la computación sin servidor?",
+      "options": [
+        "Cuota mensual fija",
+        "Por servidor activo",
+        "Por tiempo real de ejecución",
+        "Por número de usuarios"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q16",
+      "question": "¿Qué ocurre cuando aumenta la demanda en serverless?",
+      "options": [
+        "Hay que añadir servidores manualmente",
+        "La aplicación se cae",
+        "Se limita el número de usuarios",
+        "El sistema escala automáticamente"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q17",
+      "question": "¿Qué ofrece principalmente el modelo IaaS?",
+      "options": [
+        "Aplicaciones listas para usar",
+        "Código sin servidores",
+        "Recursos de cómputo virtualizados",
+        "Solo bases de datos"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q18",
+      "question": "¿Qué caracteriza a un servicio SaaS?",
+      "options": [
+        "El usuario gestiona la infraestructura",
+        "El usuario gestiona el sistema operativo",
+        "El usuario usa directamente la aplicación",
+        "El usuario configura servidores"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q19",
+      "question": "¿Qué aspecto NO se menciona como clave antes de adoptar servicios de cómputo?",
+      "options": [
+        "Seguridad",
+        "Coste",
+        "Escalabilidad",
+        "Diseño gráfico"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q20",
+      "question": "¿Por qué el comercio electrónico usa servicios de cómputo?",
+      "options": [
+        "Para evitar internet",
+        "Para manejar picos de tráfico",
+        "Para reducir usuarios",
+        "Para usar servidores físicos"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q21",
+      "question": "¿Cuál es la idea principal de la conclusión?",
+      "options": [
+        "Los servicios de cómputo son temporales",
+        "Solo sirven para grandes empresas",
+        "Son clave en el presente y futuro del software",
+        "Van a desaparecer"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q22",
+      "question": "¿Cuál es la función principal de los servicios de almacenamiento en cloud computing?",
+      "options": [
+        "Ejecutar aplicaciones en la nube",
+        "Proteger, conservar y permitir el acceso a los datos",
+        "Conectar dispositivos IoT",
+        "Sustituir los sistemas operativos"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q23",
+      "question": "¿Por qué ha aumentado tanto la necesidad de servicios de almacenamiento en los últimos años?",
+      "options": [
+        "Por la reducción del uso de ordenadores",
+        "Por la aparición de redes sociales únicamente",
+        "Por el crecimiento del volumen de datos y nuevas tecnologías",
+        "Por la desaparición de servidores físicos"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q24",
+      "question": "¿Cuál de estos NO es un tipo de servicio de almacenamiento habitual en cloud?",
+      "options": [
+        "Almacenamiento de bloques",
+        "Almacenamiento de objetos",
+        "Almacenamiento de ficheros",
+        "Almacenamiento de procesos"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q25",
+      "question": "El almacenamiento de bloques se caracteriza principalmente por:",
+      "options": [
+        "Organizar datos en carpetas",
+        "Usar URLs para acceder a los datos",
+        "Dividir la información en bloques de tamaño fijo",
+        "Estar pensado solo para copias de seguridad"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q26",
+      "question": "¿Qué tipo de acceso ofrece el almacenamiento de bloques?",
+      "options": [
+        "Acceso secuencial",
+        "Acceso de bajo nivel y aleatorio",
+        "Acceso solo en modo lectura",
+        "Acceso jerárquico"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q27",
+      "question": "¿Qué tipo de aplicaciones suelen usar almacenamiento de bloques?",
+      "options": [
+        "Aplicaciones web estáticas",
+        "Streaming de vídeo",
+        "Bases de datos y sistemas críticos",
+        "Correo electrónico"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q28",
+      "question": "Una ventaja clave del almacenamiento de bloques es:",
+      "options": [
+        "Bajo coste frente a cualquier otro tipo",
+        "Alta durabilidad a largo plazo",
+        "Alto rendimiento",
+        "Acceso mediante navegador web"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q29",
+      "question": "¿Qué garantiza la consistencia de datos en el almacenamiento de bloques?",
+      "options": [
+        "El uso de URLs",
+        "La facilidad para modificar y actualizar bloques",
+        "El acceso público",
+        "El uso de carpetas"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q30",
+      "question": "Las máquinas virtuales utilizan almacenamiento de bloques porque:",
+      "options": [
+        "Necesitan acceso a objetos",
+        "Funcionan como discos físicos",
+        "Solo permiten lectura",
+        "Usan metadatos complejos"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q31",
+      "question": "El almacenamiento de objetos se basa en:",
+      "options": [
+        "Carpetas jerárquicas",
+        "Bloques de tamaño fijo",
+        "Objetos identificados de forma única",
+        "Sectores de disco"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q32",
+      "question": "¿Qué información incluye un objeto en el almacenamiento de objetos?",
+      "options": [
+        "Solo el contenido",
+        "Contenido, metadatos e identificador",
+        "Solo metadatos",
+        "Carpetas y permisos"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q33",
+      "question": "El almacenamiento de objetos es especialmente adecuado para:",
+      "options": [
+        "Sistemas operativos",
+        "Bases de datos transaccionales",
+        "Archivos grandes y no estructurados",
+        "Memoria RAM"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q34",
+      "question": "¿Qué ventaja NO es propia del almacenamiento de objetos?",
+      "options": [
+        "Escalabilidad",
+        "Bajo coste",
+        "Alto rendimiento transaccional",
+        "Alta durabilidad"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q35",
+      "question": "¿Cómo se accede normalmente a un objeto almacenado?",
+      "options": [
+        "Mediante una ruta de carpetas",
+        "Mediante una URL o identificador único",
+        "Desde la BIOS",
+        "Usando comandos de bajo nivel"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q36",
+      "question": "El almacenamiento de objetos es una alternativa flexible principalmente al:",
+      "options": [
+        "Almacenamiento en cinta",
+        "Almacenamiento de bloques",
+        "Almacenamiento local",
+        "Almacenamiento en memoria"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q37",
+      "question": "Un caso típico de uso del almacenamiento de objetos es:",
+      "options": [
+        "Arranque de sistemas operativos",
+        "Streaming de contenido multimedia",
+        "Ejecución de máquinas virtuales",
+        "Procesamiento de transacciones"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q38",
+      "question": "¿Por qué el almacenamiento de objetos es ideal para contenido web?",
+      "options": [
+        "Porque es jerárquico",
+        "Porque usa discos locales",
+        "Porque escala fácilmente y usa URLs",
+        "Porque es más rápido que la RAM"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q39",
+      "question": "El almacenamiento de grandes volúmenes de datos para IA suele hacerse con:",
+      "options": [
+        "Almacenamiento de ficheros",
+        "Almacenamiento de bloques",
+        "Almacenamiento de objetos",
+        "Almacenamiento local"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q40",
+      "question": "¿Qué tipo de almacenamiento se parece más al sistema de archivos de un ordenador?",
+      "options": [
+        "Objetos",
+        "Bloques",
+        "Ficheros",
+        "Archivado"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q41",
+      "question": "Una ventaja principal del almacenamiento de ficheros es:",
+      "options": [
+        "Acceso mediante URLs",
+        "Organización en carpetas",
+        "Uso exclusivo para backups",
+        "Bajo nivel de acceso"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q42",
+      "question": "El almacenamiento de ficheros facilita especialmente:",
+      "options": [
+        "La virtualización",
+        "La colaboración entre usuarios",
+        "El streaming en directo",
+        "El arranque de sistemas"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q43",
+      "question": "¿Qué permite el control de versiones en el almacenamiento de ficheros?",
+      "options": [
+        "Eliminar archivos automáticamente",
+        "Recuperar versiones anteriores",
+        "Aumentar el rendimiento",
+        "Reducir el tamaño de los archivos"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q44",
+      "question": "Un repositorio de código suele utilizar:",
+      "options": [
+        "Almacenamiento de bloques",
+        "Almacenamiento de ficheros",
+        "Almacenamiento en cinta (Archivado de datos)",
+        "Memoria caché"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q45",
+      "question": "El archivado de datos está pensado para:",
+      "options": [
+        "Acceso frecuente",
+        "Datos temporales",
+        "Almacenamiento a largo plazo",
+        "Aplicaciones en tiempo real"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q46",
+      "question": "¿Qué tipo de almacenamiento suele usarse en archivado de datos?",
+      "options": [
+        "SSD de alto rendimiento",
+        "Memoria RAM",
+        "Soluciones de bajo coste",
+        "Bases de datos activas"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q47",
+      "question": "Un motivo habitual para archivar datos es:",
+      "options": [
+        "Mejorar la velocidad",
+        "Cumplir requisitos legales",
+        "Ejecutar aplicaciones",
+        "Reducir usuarios"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q48",
+      "question": "Los datos archivados se caracterizan por:",
+      "options": [
+        "Accederse constantemente",
+        "Estar siempre en uso",
+        "Tener acceso menos frecuente",
+        "No poder recuperarse"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q49",
+      "question": "El archivado de datos ayuda a:",
+      "options": [
+        "Aumentar el consumo de recursos",
+        "Optimizar costes de almacenamiento",
+        "Eliminar información histórica",
+        "Reducir la seguridad"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q50",
+      "question": "Si una empresa quiere guardar registros antiguos para auditorías, debería usar:",
+      "options": [
+        "Almacenamiento de bloques",
+        "Almacenamiento de objetos activo",
+        "Archivado de datos",
+        "Memoria local"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q51",
+      "question": "La elección del tipo de almacenamiento depende principalmente de:",
+      "options": [
+        "El proveedor cloud",
+        "El color del sistema",
+        "El caso de uso y las necesidades",
+        "El sistema operativo"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q52",
+      "question": "¿Cuál es la función principal de los servicios de bases de datos?",
+      "options": [
+        "Crear aplicaciones web",
+        "Almacenar y administrar información de forma eficiente",
+        "Diseñar interfaces gráficas",
+        "Gestionar redes informáticas"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q53",
+      "question": "¿Qué característica permite que una base de datos crezca o se reduzca según las necesidades?",
+      "options": [
+        "Persistencia",
+        "Seguridad",
+        "Escalabilidad",
+        "Consistencia"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q54",
+      "question": "¿Qué ventaja permite acceder a una base de datos desde cualquier lugar con Internet?",
+      "options": [
+        "Flexibilidad",
+        "Accesibilidad",
+        "Persistencia",
+        "Integridad"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q55",
+      "question": "¿Qué software permite crear y gestionar bases de datos?",
+      "options": [
+        "Sistema operativo",
+        "Lenguaje de programación",
+        "Sistema de gestión de bases de datos",
+        "Servidor web"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q56",
+      "question": "¿Qué característica garantiza que los datos no se pierdan al cerrar la aplicación?",
+      "options": [
+        "Seguridad",
+        "Transacciones",
+        "Persistencia",
+        "Escalabilidad"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q57",
+      "question": "¿Qué característica evita contradicciones o errores en los datos?",
+      "options": [
+        "Accesibilidad",
+        "Consistencia",
+        "Flexibilidad",
+        "Rendimiento"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q58",
+      "question": "¿Para qué sirven las transacciones en una base de datos?",
+      "options": [
+        "Para almacenar datos históricos",
+        "Para ejecutar operaciones de forma independiente",
+        "Para realizar operaciones como una única unidad",
+        "Para mejorar el diseño de tablas"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q59",
+      "question": "¿Cuál es un beneficio clave de los servicios de bases de datos?",
+      "options": [
+        "Eliminan la necesidad de programar",
+        "Mejoran la toma de decisiones",
+        "Sustituyen a Internet",
+        "Evitan el uso de servidores"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q60",
+      "question": "¿Qué tipo de base de datos organiza la información en tablas?",
+      "options": [
+        "Analítica",
+        "NoSQL",
+        "Documental",
+        "Relacional"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q61",
+      "question": "¿Qué representa una fila en una tabla relacional?",
+      "options": [
+        "Un atributo",
+        "Una clave",
+        "Un registro",
+        "Una relación"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q62",
+      "question": "¿Qué tipo de clave identifica de forma única un registro?",
+      "options": [
+        "Clave externa",
+        "Clave secundaria",
+        "Clave foránea",
+        "Clave primaria"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q63",
+      "question": "¿Qué lenguaje se utiliza para trabajar con bases de datos relacionales?",
+      "options": [
+        "HTML",
+        "Python",
+        "SQL",
+        "XML"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q64",
+      "question": "¿Qué garantiza el cumplimiento de las propiedades ACID?",
+      "options": [
+        "La velocidad del sistema",
+        "La seguridad de las transacciones",
+        "La accesibilidad remota",
+        "La flexibilidad del esquema"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q65",
+      "question": "¿Cuál de los siguientes es un proveedor de bases de datos relacionales?",
+      "options": [
+        "MongoDB",
+        "Redis",
+        "PostgreSQL",
+        "Cassandra"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q66",
+      "question": "¿En qué sector son especialmente comunes las bases de datos relacionales?",
+      "options": [
+        "Videojuegos offline",
+        "Redes sociales",
+        "Comercio electrónico",
+        "Diseño gráfico"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q67",
+      "question": "¿Qué significa el término NoSQL?",
+      "options": [
+        "No usar bases de datos",
+        "Solo SQL",
+        "No estructurado",
+        "Not Only SQL"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q68",
+      "question": "¿Qué tipo de datos suelen manejar las bases de datos NoSQL?",
+      "options": [
+        "Solo datos numéricos",
+        "Datos no estructurados o semiestructurados",
+        "Datos tabulares",
+        "Datos cifrados"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q69",
+      "question": "¿Qué característica permite repartir la carga entre varios servidores?",
+      "options": [
+        "Persistencia",
+        "Escalabilidad",
+        "Seguridad",
+        "Integridad"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q70",
+      "question": "¿Qué tipo de base de datos almacena pares clave-valor?",
+      "options": [
+        "Documental",
+        "Grafos",
+        "Column-family",
+        "Key-value"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q71",
+      "question": "¿Qué tipo de base de datos es ideal para representar relaciones como en redes sociales?",
+      "options": [
+        "Relacional",
+        "Documental",
+        "Grafos",
+        "Analítica"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q72",
+      "question": "¿Qué formato es común en bases de datos documentales?",
+      "options": [
+        "CSV",
+        "JSON",
+        "TXT",
+        "PDF"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q73",
+      "question": "¿Qué ventaja ofrece la flexibilidad de esquema en NoSQL?",
+      "options": [
+        "Más seguridad",
+        "Mayor velocidad",
+        "No necesitar una estructura fija",
+        "Menor consumo de red"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q74",
+      "question": "¿Qué significa escalabilidad horizontal?",
+      "options": [
+        "Aumentar la potencia del servidor",
+        "Reducir el número de usuarios",
+        "Añadir más nodos al sistema",
+        "Optimizar consultas"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q75",
+      "question": "¿Qué permite la tolerancia a fallos en bases de datos NoSQL?",
+      "options": [
+        "Eliminar datos duplicados",
+        "Continuar funcionando aunque falle un nodo",
+        "Evitar ataques",
+        "Mejorar el diseño"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q76",
+      "question": "¿Qué base de datos NoSQL es conocida por su alta velocidad y uso como caché?",
+      "options": [
+        "MongoDB",
+        "Cassandra",
+        "Couchbase",
+        "Redis"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q77",
+      "question": "¿Qué base de datos NoSQL almacena datos en forma de documentos?",
+      "options": [
+        "Redis",
+        "MongoDB",
+        "Cassandra",
+        "Oracle"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q78",
+      "question": "¿Para qué están diseñadas las bases de datos analíticas?",
+      "options": [
+        "Operaciones diarias",
+        "Almacenamiento básico",
+        "Análisis de grandes volúmenes de datos",
+        "Gestión de usuarios"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q79",
+      "question": "¿Qué permiten los datos analíticos a las empresas?",
+      "options": [
+        "Reducir costes de hardware",
+        "Tomar decisiones más informadas",
+        "Eliminar bases de datos relacionales",
+        "Mejorar la seguridad"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q80",
+      "question": "¿Qué tipo de consultas están optimizadas en bases de datos analíticas?",
+      "options": [
+        "Simples",
+        "Transaccionales",
+        "Complejas",
+        "Manuales"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q81",
+      "question": "¿Qué aspecto es especialmente importante en bases de datos analíticas?",
+      "options": [
+        "Diseño visual",
+        "Seguridad y privacidad",
+        "Uso exclusivo de SQL",
+        "Bajo coste"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q82",
+      "question": "¿Qué permite el escalado automático?",
+      "options": [
+        "Apagar servidores",
+        "Ajustar recursos según la demanda",
+        "Reiniciar sistemas",
+        "Monitorizar"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q83",
+      "question": "¿Qué problema tienen las aplicaciones modernas?",
+      "options": [
+        "Poco tráfico",
+        "Falta de CPU",
+        "Tráfico variable",
+        "Sin usuarios"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q84",
+      "question": "¿Qué mide la monitorización?",
+      "options": [
+        "Estado y rendimiento",
+        "Diseño",
+        "Código",
+        "Red"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q85",
+      "question": "¿Qué mejora el escalado automático?",
+      "options": [
+        "Diseño",
+        "Rendimiento",
+        "Código",
+        "Seguridad"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q86",
+      "question": "¿Qué reduce el escalado automático?",
+      "options": [
+        "Usuarios",
+        "Red",
+        "CPU",
+        "Costes"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q87",
+      "question": "Balanceador de carga sirve para:",
+      "options": [
+        "Apagar servidores",
+        "Distribuir tráfico",
+        "Medir CPU",
+        "Reiniciar"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q88",
+      "question": "Round Robin significa:",
+      "options": [
+        "Aleatorio",
+        "Fijo",
+        "Menos conexiones",
+        "Turnos cíclicos"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q89",
+      "question": "Least Connections envía tráfico a:",
+      "options": [
+        "Más ocupado",
+        "Menos ocupado",
+        "Aleatorio",
+        "Siempre igual"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q90",
+      "question": "Sticky Sessions significa:",
+      "options": [
+        "Aleatorio",
+        "Mismo servidor para usuario",
+        "Menos CPU",
+        "Más red"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q91",
+      "question": "Métrica importante:",
+      "options": [
+        "Nombre",
+        "Usuario",
+        "CPU",
+        "Color"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q92",
+      "question": "Otra métrica clave:",
+      "options": [
+        "Disco",
+        "Red",
+        "Usuario",
+        "Memoria"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q93",
+      "question": "Las alertas sirven para:",
+      "options": [
+        "Decorar",
+        "Reiniciar",
+        "Avisar de problemas",
+        "Apagar"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q94",
+      "question": "Monitorización recopila:",
+      "options": [
+        "Código",
+        "Usuarios",
+        "Datos",
+        "Logs"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q95",
+      "question": "Escalado automático usa:",
+      "options": [
+        "Reglas",
+        "Usuarios",
+        "Diseño",
+        "Redes"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q96",
+      "question": "Las reglas definen:",
+      "options": [
+        "Usuarios",
+        "Código",
+        "Cuándo escalar",
+        "CPU"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q97",
+      "question": "Escalado horizontal:",
+      "options": [
+        "Más servidores",
+        "Más CPU",
+        "Menos RAM",
+        "Menos red"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q98",
+      "question": "Escalado vertical:",
+      "options": [
+        "Más capacidad en uno",
+        "Más servidores",
+        "Menos CPU",
+        "Más red"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q99",
+      "question": "Caso de uso:",
+      "options": [
+        "Word",
+        "Excel",
+        "Paint",
+        "E-commerce"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q100",
+      "question": "Otro caso:",
+      "options": [
+        "Calculadora",
+        "Red social",
+        "Bloc",
+        "Editor"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q101",
+      "question": "Desafío principal:",
+      "options": [
+        "Fácil configuración",
+        "Complejidad",
+        "Sin coste",
+        "Sin errores"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q102",
+      "question": "Otro desafío:",
+      "options": [
+        "Diseño",
+        "Red",
+        "Costes",
+        "CPU"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q103",
+      "question": "Buena práctica:",
+      "options": [
+        "Ignorar datos",
+        "Definir métricas",
+        "Apagar",
+        "Reiniciar"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q104",
+      "question": "Otra práctica:",
+      "options": [
+        "No monitorizar",
+        "Ignorar",
+        "Apagar",
+        "Monitorizar continuamente"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q105",
+      "question": "Monitorización ayuda a:",
+      "options": [
+        "Ignorar",
+        "Apagar",
+        "Detectar problemas",
+        "Reducir"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q106",
+      "question": "Escalado mejora:",
+      "options": [
+        "Disponibilidad",
+        "Diseño",
+        "Código",
+        "Red"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q107",
+      "question": "Sin monitorización:",
+      "options": [
+        "Ciegos",
+        "Mejor",
+        "Rápido",
+        "Seguro"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q108",
+      "question": "Reglas mal configuradas:",
+      "options": [
+        "Perfecto",
+        "Problemas",
+        "Mejora",
+        "Nada"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q109",
+      "question": "Escalado automático evita:",
+      "options": [
+        "Costes",
+        "Intervención manual",
+        "CPU",
+        "Red"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q110",
+      "question": "Objetivo final:",
+      "options": [
+        "Apagar",
+        "Buen rendimiento",
+        "Reducir",
+        "Ignorar"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_examen_final_q111",
+      "question": "Resultado final:",
+      "options": [
+        "Peor sistema",
+        "Sistema eficiente y escalable",
+        "Más errores",
+        "Menos usuarios"
       ],
       "correct": 1,
       "explanation": "Pregunta del temario oficial.",
