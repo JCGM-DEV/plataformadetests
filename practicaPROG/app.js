@@ -10,9 +10,9 @@ let touchChip = null, toastTimer = null;
 function selectUnit(unitId) {
   currentUnit = unitId;
   const unit = UNITS[unitId];
-  if (unitId === 'doctor' && unit.sections.length === 0 && typeof DOCTOR_EXERCISES !== 'undefined') {
-    unit.sections = DOCTOR_EXERCISES.map(e => ({
-      id: e.id, icon: '🧑‍⚕️', label: e.topic, type: 'doctor_lab', exerciseId: e.id
+  if (unitId === 'doctor' && unit.sections.length === 0 && typeof DOCTOR_EXERCISES_MODIFIED !== 'undefined') {
+    unit.sections = DOCTOR_EXERCISES_MODIFIED.map(e => ({
+      id: e.id, icon: '🧑‍⚕️', label: e.titulo, type: 'ejercicio', ejercicioId: e.id
     }));
   }
   document.getElementById('splash').classList.add('hidden');
@@ -526,11 +526,14 @@ function checkEjercicio(ejId) {
     ],
   };
 
-  const ejChecks = checks[ejId] || [];
+  // Get checks from the object or fallback
+  const checksForEj = ej.checks || checks[ejId] || [];
+  const ejChecks = typeof checksForEj === 'function' ? checksForEj(code) : checksForEj;
+  
   ejChecks.forEach((check, i) => {
     const el = document.getElementById(`criterio-${i}`);
     if (el) {
-      const ok = check();
+      const ok = check(code);
       el.textContent = (ok ? '✅' : '❌') + ' ' + ej.criterios[i];
       el.className = `criterio-item ${ok ? 'criterio-ok' : 'criterio-fail'}`;
       if (ok) passed++;

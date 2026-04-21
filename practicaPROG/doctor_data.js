@@ -1,50 +1,4504 @@
-const DOCTOR_EXERCISES = [
+const DOCTOR_EXERCISES_MODIFIED = [
   {
-    "id": "dr_ej_1",
-    "topic": "Encapsulacion",
-    "exercise": "Ejercicio 1\n\nCrea una clase CuentaBancaria con los siguientes atributos privados:\n\n    \u2022   saldo (double)\n\n    \u2022   titular (String)\n\nImplementa los siguientes m\u00e9todos p\u00fablicos:\n\n    1. depositar(double cantidad): Aumenta el saldo en la cantidad especificada.\n\n    2. retirar(double cantidad): Disminuye el saldo solo si hay fondos suficientes.\n\n    3. getSaldo(): Retorna el saldo actual.\n\n    4. getTitular() y setTitular(String titular): Para obtener y modificar el titular de la cuenta.\n\nPrueba desde la clase main todos los m\u00e9todos de la clase CuentaBancaria.\n\n\n\nEjercicio 2\n\nCrea una clase Estudiante que tenga los siguientes atributos privados:\n\n    \u2022   nombre (String)\n\n    \u2022   edad (int)\n\n    \u2022   calificacion (double)\n\nImplementa los siguientes m\u00e9todos p\u00fablicos:\n\n    1. getNombre() y setNombre(String nombre): Para obtener y modificar el nombre.\n\n    2. getEdad() y setEdad(int edad): La edad solo puede ser mayor o igual a 0.\n\n    3. getCalificacion() y setCalificacion(double calificacion): Debe estar entre 0 y 10.\n\n    4. mostrarInfo(): Imprime los datos del estudiante.\n\nPrueba desde la clase main todos los m\u00e9todos de la clase Estudiante.\n\n\n\nEjercicio 3\n\nCrea una clase Libro con los siguientes atributos privados:\n\n    \u2022   titulo (String)\n\n    \u2022   autor (String)\n\n    \u2022   disponible (boolean)\n\nY los siguientes m\u00e9todos p\u00fablicos:\n\n    1. setTitulo(String titulo), getTitulo().\n\f    2. setAutor(String autor), getAutor().\n\n    3. setDisponible(boolean disponible), getDisponible().\n\n    4. prestar(): Marca el libro como no disponible si est\u00e1 disponible.\n\n    5. devolver(): Marca el libro como disponible si estaba prestado.\n\n    6. mostrarInfo(): Muestra los datos del libro.\n\nPrueba desde la clase main todos los m\u00e9todos de la clase Libro.\n\n\n\nEjercicio 4\n\nCrea una clase Automovil con los siguientes atributos privados:\n\n    \u2022   marca (String)\n\n    \u2022   modelo (String)\n\n    \u2022   velocidad (int)\n\nY los siguientes m\u00e9todos p\u00fablicos:\n\n    1. setMarca(String marca), getMarca().\n\n    2. setModelo(String modelo), getModelo().\n\n    3. setVelocidad(int velocidad), getVelocidad(). (La velocidad no puede ser negativa).\n\n    4. acelerar(int incremento): Aumenta la velocidad en la cantidad indicada.\n\n    5. frenar(int decremento): Disminuye la velocidad, pero sin quedar negativa.\n\n    6. mostrarInfo(): Muestra los datos del autom\u00f3vil.\n\nPrueba desde la clase main todos los m\u00e9todos de la clase Automovil.",
-    "solution": "Ejercicio 1\n\nCrea una clase CuentaBancaria con los siguientes atributos privados:\n\n    \u2022   saldo (double)\n\n    \u2022   titular (String)\n\nImplementa los siguientes m\u00e9todos p\u00fablicos:\n\n    1. depositar(double cantidad): Aumenta el saldo en la cantidad especificada.\n\n    2. retirar(double cantidad): Disminuye el saldo solo si hay fondos suficientes.\n\n    3. getSaldo(): Retorna el saldo actual.\n\n    4. getTitular() y setTitular(String titular): Para obtener y modificar el titular de la cuenta.\n\nPrueba desde la clase main todos los m\u00e9todos.\n\n class CuentaBancaria {\n    private double saldo;\n    private String titular;\n\n   public void setTitular(String nuevoTitular) {\n     titular = nuevoTitular;\n   }\n\n   public String getTitular() {\n     return titular;\n   }\n\n   public void setSaldo(double nuevoSaldo) {\n     if (saldo >= 0) {\n         saldo = nuevoSaldo;\n     } else {\n         System.out.println(\"El saldo no puede ser negativo. Se establece en 0.\");\n         saldo = 0;\n     }\n   }\n\n   public double getSaldo() {\n     return saldo;\n   }\n\n   // M\u00e9todo para depositar dinero\n   public void depositar(double cantidad) {\n      if (cantidad > 0) {\n          saldo += cantidad;\n          System.out.println(\"Dep\u00f3sito exitoso. Nuevo saldo: \" + saldo);\n      } else {\n          System.out.println(\"La cantidad a depositar debe ser positiva.\");\n      }\n\f     }\n\n     // M\u00e9todo para retirar dinero\n     public void retirar(double cantidad) {\n        if (cantidad > 0 && cantidad <= saldo) {\n            saldo -= cantidad;\n            System.out.println(\"Retiro exitoso. Nuevo saldo: \" + saldo);\n        } else {\n            System.out.println(\"Fondos insuficientes o cantidad inv\u00e1lida.\");\n        }\n     }\n\n     // M\u00e9todo para mostrar informaci\u00f3n de la cuenta\n     public void mostrarInfo() {\n        System.out.println(\"Titular: \" + titular);\n        System.out.println(\"Saldo actual: \" + saldo);\n     }\n }\n\n public class Main {\n   public static void main(String[] args) {\n     // Instancia una cuenta bancaria\n     CuentaBancaria cuenta = new CuentaBancaria();\n\n         // Establecer valores con setters\n         cuenta.setTitular(\"Juan P\u00e9rez\");\n         cuenta.setSaldo(1000);\n\n         // Mostrar informaci\u00f3n de la cuenta\n         cuenta.mostrarInfo();\n\n         // Realizar transacciones\n         cuenta.depositar(500);\n         cuenta.retirar(300);\n         cuenta.retirar(2000); // Intento de retiro fallido\n\n         // Mostrar saldo final\n         cuenta.mostrarInfo();\n     }\n }\n\n\n\n\nEjercicio 2\n\nCrea una clase Estudiante que tenga los siguientes atributos privados:\n\n     \u2022     nombre (String)\n\n     \u2022     edad (int)\n\n     \u2022     calificacion (double)\n\fImplementa los siguientes m\u00e9todos p\u00fablicos:\n\n     1. getNombre() y setNombre(String nombre): Para obtener y modificar el nombre.\n\n     2. getEdad() y setEdad(int edad): La edad solo puede ser mayor o igual a 0.\n\n     3. getCalificacion() y setCalificacion(double calificacion): Debe estar entre 0 y 10.\n\n     4. mostrarInfo(): Imprime los datos del estudiante.\n\nPrueba desde la clase main todos los m\u00e9todos.\n\n class Estudiante {\n    private String nombre;\n    private int edad;\n    private double calificacion;\n\n     public void setNombre(String nuevoNombre) {\n       nombre = nuevoNombre;\n     }\n\n     public String getNombre() {\n       return nombre;\n     }\n\n     public void setEdad(int nuevoValor) {\n       edad = nuevoValor;\n     }\n\n     public int getEdad() {\n       return edad;\n     }\n\n     public void setCalificacion(double nuevoValor) {\n       calificacion = nuevoValor;\n     }\n\n     public double getCalificacion() {\n       return calificacion;\n     }\n\n     public void mostrarInfo() {\n       System.out.println(\"Nombre: \" + nombre);\n       System.out.println(\"Edad: \" + edad);\n       System.out.println(\"Calificaci\u00f3n: \" + calificacion);\n     }\n }\n\n public class Main {\n   public static void main(String[] args) {\n     // Instanciar un estudiante\n     Estudiante estudiante1 = new Estudiante();\n\n       // Establecer valores usando setters\n\f         estudiante1.setNombre(\"Carlos P\u00e9rez\");\n         estudiante1.setEdad(18);\n         estudiante1.setCalificacion(9.2);\n\n         // Mostrar informaci\u00f3n\n         estudiante1.mostrarInfo();\n     }\n }\n\n\n\n\nEjercicio 3\n\nCrea una clase Libro con los siguientes atributos privados:\n\n     \u2022     titulo (String)\n\n     \u2022     autor (String)\n\n     \u2022     disponible (boolean)\n\nY los siguientes m\u00e9todos p\u00fablicos:\n\n     1. setTitulo(String titulo), getTitulo().\n\n     2. setAutor(String autor), getAutor().\n\n     3. setDisponible(boolean disponible), getDisponible().\n\n     4. prestar(): Marca el libro como no disponible si est\u00e1 disponible.\n\n     5. devolver(): Marca el libro como disponible si estaba prestado.\n\n     6. mostrarInfo(): Muestra los datos del libro.\n\nPrueba desde la clase main todos los m\u00e9todos.\n\n class Libro {\n    private String titulo;\n    private String autor;\n    private boolean disponible;\n\n     public void setTitulo(String t) {\n       titulo = t;\n     }\n\n     public String getTitulo() {\n       return titulo;\n     }\n\n     public void setAutor(String a) {\n       autor = a;\n     }\n\n     public String getAutor() {\n\f        return autor;\n    }\n\n    public void setDisponible(boolean d) {\n      disponible = d;\n    }\n\n    public boolean getDisponible() {\n      return disponible;\n    }\n\n    public void prestar() {\n      if (disponible) {\n          System.out.println(\"El libro \\\"\" + titulo + \"\\\" est\u00e1 disponible.\");\n          disponible = false;\n      } else {\n          System.out.println(\"El libro \\\"\" + titulo + \"\\\" ya est\u00e1 prestado.\");\n      }\n    }\n\n    public void devolver() {\n      if (!disponible) {\n          System.out.println(\"El libro \\\"\" + titulo + \"\\\" ha sido devuelto.\");\n          disponible = true;\n      } else {\n          System.out.println(\"El libro \\\"\" + titulo + \"\\\" ya estaba disponible.\");\n      }\n    }\n\n    public void mostrarInfo() {\n      System.out.println(\"T\u00edtulo: \" + titulo);\n      System.out.println(\"Autor: \" + autor);\n      System.out.println(\"Disponible: \" + (disponible ? \"S\u00ed\" : \"No\"));\n    }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    // Crear un libro sin constructor\n    Libro libro1 = new Libro();\n\n        // Establecer valores con setters\n        libro1.setTitulo(\"Cien a\u00f1os de soledad\");\n        libro1.setAutor(\"Gabriel Garc\u00eda M\u00e1rquez\");\n        libro1.setDisponible(true);\n\n        // Mostrar informaci\u00f3n inicial\n        libro1.mostrarInfo();\n\n        // Intentar prestar y devolver el libro\n        libro1.prestar();\n        libro1.prestar(); // Intento de prestar nuevamente\n\f         libro1.devolver();\n         libro1.devolver(); // Intento de devolver nuevamente\n\n         // Mostrar informaci\u00f3n final\n         libro1.mostrarInfo();\n     }\n }\n\n\nEjercicio 4\n\nCrea una clase Automovil con los siguientes atributos privados:\n\n     \u2022     marca (String)\n\n     \u2022     modelo (String)\n\n     \u2022     velocidad (int)\n\nY los siguientes m\u00e9todos p\u00fablicos:\n\n     1. setMarca(String marca), getMarca().\n\n     2. setModelo(String modelo), getModelo().\n\n     3. setVelocidad(int velocidad), getVelocidad(). (La velocidad no puede ser negativa).\n\n     4. acelerar(int incremento): Aumenta la velocidad en la cantidad indicada.\n\n     5. frenar(int decremento): Disminuye la velocidad, pero sin quedar negativa.\n\n     6. mostrarInfo(): Muestra los datos del autom\u00f3vil.\n\nPrueba desde la clase main todos los m\u00e9todos.\n\n class Automovil {\n    private String marca;\n    private String modelo;\n    private int velocidad;\n\n     public void setMarca(String m) {\n       marca = m;\n     }\n\n     public String getMarca() {\n       return marca;\n     }\n\n     public void setModelo(String mod) {\n       modelo = mod;\n     }\n\n     public String getModelo() {\n       return modelo;\n     }\n\f    public void setVelocidad(int v) {\n        velocidad = v;\n    }\n\n    public int getVelocidad() {\n      return velocidad;\n    }\n\n  public void acelerar(int incremento) {\n      velocidad += incremento;\n      System.out.println(\"El autom\u00f3vil ha acelerado. Nueva velocidad: \" + velocidad + \"\nkm/h\");\n  }\n\n  public void frenar(int decremento) {\n         velocidad -= decremento;\n         System.out.println(\"El autom\u00f3vil ha frenado. Nueva velocidad: \" + velocidad + \"\nkm/h\");\n  }\n\n    public void mostrarInfo() {\n      System.out.println(\"Marca: \" + marca);\n      System.out.println(\"Modelo: \" + modelo);\n      System.out.println(\"Velocidad actual: \" + velocidad + \" km/h\");\n    }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Automovil auto1 = new Automovil();\n\n        auto1.setMarca(\"Toyota\");\n        auto1.setModelo(\"Corolla\");\n        auto1.setVelocidad(50);\n\n        auto1.mostrarInfo();\n\n        auto1.acelerar(30);\n        auto1.frenar(60);\n        auto1.frenar(10); // Intento de frenar cuando est\u00e1 en 0\n\n        auto1.mostrarInfo();\n    }\n}"
+    id: 'dr_ej_1_1',
+    titulo: `Dr. Java: Encapsulacion - Ej 1`,
+    nivel: '⭐⭐',
+    temas: ["Encapsulacion"],
+    tiempo: '15 min',
+    enunciado: `Crea una clase CuentaBancaria con los siguientes atributos privados:
+
+    •   saldo (double)
+
+    •   titular (String)
+
+Implementa los siguientes métodos públicos:
+
+    1. depositar(double cantidad): Aumenta el saldo en la cantidad especificada.
+
+    2. retirar(double cantidad): Disminuye el saldo solo si hay fondos suficientes.
+
+    3. getSaldo(): Retorna el saldo actual.
+
+    4. getTitular() y setTitular(String titular): Para obtener y modificar el titular de la cuenta.
+
+Prueba desde la clase main todos los métodos de la clase CuentaBancaria.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Crea una clase CuentaBancaria con los siguientes atributos privados:
+
+    •   saldo (double)
+
+    •   titular (String)
+
+Implementa los siguientes métodos públicos:
+
+    1. depositar(double cantidad): Aumenta el saldo en la cantidad especificada.
+
+    2. retirar(double cantidad): Disminuye el saldo solo si hay fondos suficientes.
+
+    3. getSaldo(): Retorna el saldo actual.
+
+    4. getTitular() y setTitular(String titular): Para obtener y modificar el titular de la cuenta.
+
+Prueba desde la clase main todos los métodos.
+
+ class CuentaBancaria {
+    private double saldo;
+    private String titular;
+
+   public void setTitular(String nuevoTitular) {
+     titular = nuevoTitular;
+   }
+
+   public String getTitular() {
+     return titular;
+   }
+
+   public void setSaldo(double nuevoSaldo) {
+     if (saldo &gt;= 0) {
+         saldo = nuevoSaldo;
+     } else {
+         System.out.println("El saldo no puede ser negativo. Se establece en 0.");
+         saldo = 0;
+     }
+   }
+
+   public double getSaldo() {
+     return saldo;
+   }
+
+   // Método para depositar dinero
+   public void depositar(double cantidad) {
+      if (cantidad &gt; 0) {
+          saldo += cantidad;
+          System.out.println("Depósito exitoso. Nuevo saldo: " + saldo);
+      } else {
+          System.out.println("La cantidad a depositar debe ser positiva.");
+      }
+     }
+
+     // Método para retirar dinero
+     public void retirar(double cantidad) {
+        if (cantidad &gt; 0 && cantidad &lt;= saldo) {
+            saldo -= cantidad;
+            System.out.println("Retiro exitoso. Nuevo saldo: " + saldo);
+        } else {
+            System.out.println("Fondos insuficientes o cantidad inválida.");
+        }
+     }
+
+     // Método para mostrar información de la cuenta
+     public void mostrarInfo() {
+        System.out.println("Titular: " + titular);
+        System.out.println("Saldo actual: " + saldo);
+     }
+ }
+
+ public class Main {
+   public static void main(String[] args) {
+     // Instancia una cuenta bancaria
+     CuentaBancaria cuenta = new CuentaBancaria();
+
+         // Establecer valores con setters
+         cuenta.setTitular("Juan Pérez");
+         cuenta.setSaldo(1000);
+
+         // Mostrar información de la cuenta
+         cuenta.mostrarInfo();
+
+         // Realizar transacciones
+         cuenta.depositar(500);
+         cuenta.retirar(300);
+         cuenta.retirar(2000); // Intento de retiro fallido
+
+         // Mostrar saldo final
+         cuenta.mostrarInfo();
+     }
+ }`,
+    criterios: ["Define la clase CuentaBancaria", "Define la clase main", "Define la clase Main", "Implementa el m\u00e9todo depositar", "Implementa el m\u00e9todo getTitular", "Implementa el m\u00e9todo setTitular"],
+    checks: [
+       (c) =>  /class\s+CuentaBancaria/i.test(c),
+       (c) =>  /class\s+main/i.test(c),
+       (c) =>  /class\s+Main/i.test(c),
+       (c) =>  /depositar\s*\(/i.test(c),
+       (c) =>  /getTitular\s*\(/i.test(c),
+       (c) =>  /setTitular\s*\(/i.test(c)
+    ]
   },
   {
-    "id": "dr_ej_2",
-    "topic": "Herencia",
-    "exercise": "Ejercicio 1\n\nCrea una clase base Figura con un m\u00e9todo dibujar() que imprima \"Dibujando una figura\ngen\u00e9rica\".\n\nCrea dos subclases:\n\n    \u2022   Circulo, que sobrescriba dibujar() e imprima \"Dibujando un c\u00edrculo\".\n\n    \u2022   Cuadrado, que sobrescriba dibujar() e imprima \"Dibujando un cuadrado\".\n\nEn main(), crea un objeto de Circulo y otro de Cuadrado, y llama a sus m\u00e9todos dibujar()\nindividualmente.\n\n\n\nEjercicio 2\n\nCrea una clase base Empleado con un m\u00e9todo calcularSalario() que imprima \"Salario base de un\nempleado\".\n\nCrea dos subclases:\n\n    \u2022   EmpleadoTiempoCompleto, que sobrescriba calcularSalario() e imprima \"Salario de\n        tiempo completo: 1000 \u20ac\".\n\n    \u2022   EmpleadoMedioTiempo, que sobrescriba calcularSalario() e imprima \"Salario de medio\n        tiempo: 500 \u20ac\".\n\nEn main(), crea un objeto de EmpleadoTiempoCompleto y otro de EmpleadoMedioTiempo, y\nllama a sus m\u00e9todos calcularSalario() individualmente.\n\n\n\nEjercicio 3\n\nCrea una clase base Instrumento con un m\u00e9todo tocar() que imprima \"Sonido gen\u00e9rico de un\ninstrumento\".\n\nCrea dos subclases:\n\n    \u2022   Guitarra, que sobrescriba tocar() e imprima \"Sonido de guitarra: Strum Strum\".\n\n    \u2022   Piano, que sobrescriba tocar() e imprima \"Sonido de piano: Plink Plink\".\n\nEn main(), crea un objeto de Guitarra y otro de Piano, y llama a sus m\u00e9todos tocar()\nindividualmente.\n\n\n\nEjercicio 4\n\nCrea una clase base CuentaBancaria con:\n\n    \u2022   Un atributo privado saldo (double).\n\f    \u2022   M\u00e9todos p\u00fablicos depositar(double cantidad) y retirar(double cantidad), asegurando\n        que el saldo no sea negativo.\n\n    \u2022   Un m\u00e9todo mostrarSaldo() que imprima el saldo actual.\n\nCrea dos subclases:\n\n    \u2022   CuentaAhorro, que sobrescriba retirar() y permita retirar solo si el saldo es mayor a 100.\n\n    \u2022   CuentaCorriente, que sobrescriba retirar() y permita retirar hasta dejar el saldo en -500\n        (sobregiro).\n\nEn main(), crea una cuenta de ahorro y una cuenta corriente, realiza dep\u00f3sitos y retiros, e\nimprime los resultados.\n\n\n\nEjercicio 5\n\nCrea una clase base Dispositivo con:\n\n    \u2022   Atributos privados: marca (String) y precio (double).\n\n    \u2022   M\u00e9todos p\u00fablicos setMarca(String), getMarca(), setPrecio(double), getPrecio().\n\n    \u2022   Un m\u00e9todo mostrarInfo(), que imprima la informaci\u00f3n del dispositivo.\n\nCrea dos subclases:\n\n    \u2022   Smartphone, con un atributo adicional almacenamientoGB (int) y m\u00e9todos\n        setAlmacenamiento(int) y getAlmacenamiento().\n\n    \u2022   Laptop, con un atributo adicional ramGB (int) y m\u00e9todos setRam(int) y getRam().\n\n    \u2022   Ambas sobrescriben mostrarInfo().\n\nEn main(), crea un Smartphone y una Laptop, asigna valores con los m\u00e9todos set y muestra su\ninformaci\u00f3n.",
-    "solution": "Ejercicio 1\n\nCrea una clase base Figura con un m\u00e9todo dibujar() que imprima \"Dibujando una figura\ngen\u00e9rica\".\n\nCrea dos subclases:\n\n     \u2022     Circulo, que sobrescriba dibujar() e imprima \"Dibujando un c\u00edrculo\".\n\n     \u2022     Cuadrado, que sobrescriba dibujar() e imprima \"Dibujando un cuadrado\".\n\nEn main(), crea un objeto de Circulo y otro de Cuadrado, y llama a sus m\u00e9todos dibujar()\nindividualmente.\n\n // Clase base\n class Figura {\n    void dibujar() {\n      System.out.println(\"Dibujando una figura gen\u00e9rica\");\n    }\n }\n\n // Subclase Circulo\n class Circulo extends Figura {\n    void dibujar() {\n      System.out.println(\"Dibujando un c\u00edrculo\");\n    }\n }\n\n // Subclase Cuadrado\n class Cuadrado extends Figura {\n    void dibujar() {\n      System.out.println(\"Dibujando un cuadrado\");\n    }\n }\n\n // Clase principal\n public class Main {\n    public static void main(String[] args) {\n      Figura f1 = new Circulo();\n      f1.dibujar();\n\n         Figura f2 = new Cuadrado();\n         f2.dibujar();\n     }\n }\n\n\nEjercicio 2\n\nCrea una clase base Empleado con un m\u00e9todo calcularSalario() que imprima \"Salario base de un\nempleado\".\n\fCrea dos subclases:\n\n     \u2022     EmpleadoTiempoCompleto, que sobrescriba calcularSalario() e imprima \"Salario de\n           tiempo completo: 1000 \u20ac\".\n\n     \u2022     EmpleadoMedioTiempo, que sobrescriba calcularSalario() e imprima \"Salario de medio\n           tiempo: 500 \u20ac\".\n\nEn main(), crea un objeto de EmpleadoTiempoCompleto y otro de EmpleadoMedioTiempo, y\nllama a sus m\u00e9todos calcularSalario() individualmente.\n\n // Clase base\n class Empleado {\n    void calcularSalario() {\n      System.out.println(\"Salario base de un empleado\");\n    }\n }\n\n // Subclase EmpleadoTiempoCompleto\n class EmpleadoTiempoCompleto extends Empleado {\n    void calcularSalario() {\n      System.out.println(\"Salario de tiempo completo: 1000 \u20ac\");\n    }\n }\n\n // Subclase EmpleadoMedioTiempo\n class EmpleadoMedioTiempo extends Empleado {\n    void calcularSalario() {\n      System.out.println(\"Salario de medio tiempo: 500 \u20ac\");\n    }\n }\n\n // Clase principal\n public class Main {\n    public static void main(String[] args) {\n      Empleado e1 = new EmpleadoTiempoCompleto();\n      e1.calcularSalario();\n\n         Empleado e2 = new EmpleadoMedioTiempo();\n         e2.calcularSalario();\n     }\n }\n\n\nEjercicio 3\n\nCrea una clase base Instrumento con un m\u00e9todo tocar() que imprima \"Sonido gen\u00e9rico de un\ninstrumento\".\n\nCrea dos subclases:\n\n     \u2022     Guitarra, que sobrescriba tocar() e imprima \"Sonido de guitarra: Strum Strum\".\n\n     \u2022     Piano, que sobrescriba tocar() e imprima \"Sonido de piano: Plink Plink\".\n\fEn main(), crea un objeto de Guitarra y otro de Piano, y llama a sus m\u00e9todos tocar()\nindividualmente.\n\n // Clase base\n class Instrumento {\n    void tocar() {\n      System.out.println(\"Sonido gen\u00e9rico de un instrumento\");\n    }\n }\n\n // Subclase Guitarra\n class Guitarra extends Instrumento {\n    void tocar() {\n      System.out.println(\"Sonido de guitarra: Strum Strum\");\n    }\n }\n\n // Subclase Piano\n class Piano extends Instrumento {\n    void tocar() {\n      System.out.println(\"Sonido de piano: Plink Plink\");\n    }\n }\n\n // Clase principal\n public class Main {\n    public static void main(String[] args) {\n      Instrumento i1 = new Guitarra();\n      i1.tocar();\n\n         Instrumento i2 = new Piano();\n         i2.tocar();\n     }\n }\n\n\nEjercicio 4\n\nCrea una clase base CuentaBancaria con:\n\n     \u2022     Un atributo privado saldo (double).\n\n     \u2022     M\u00e9todos p\u00fablicos depositar(double cantidad) y retirar(double cantidad), asegurando\n           que el saldo no sea negativo.\n\n     \u2022     Un m\u00e9todo mostrarSaldo() que imprima el saldo actual.\n\nCrea dos subclases:\n\n     \u2022     CuentaAhorro, que sobrescriba retirar() y permita retirar solo si el saldo es mayor a 100.\n\n     \u2022     CuentaCorriente, que sobrescriba retirar() y permita retirar hasta dejar el saldo en -500\n           (sobregiro).\n\fEn main(), crea una cuenta de ahorro y una cuenta corriente, realiza dep\u00f3sitos y retiros, e\nimprime los resultados.\n\n // Clase base con encapsulaci\u00f3n\n class CuentaBancaria {\n    private double saldo;\n\n     public void depositar(double cantidad) {\n       if (cantidad > 0) {\n           saldo += cantidad;\n           System.out.println(\"Dep\u00f3sito exitoso: \" + cantidad);\n       } else {\n           System.out.println(\"Cantidad inv\u00e1lida para dep\u00f3sito.\");\n       }\n     }\n\n     public void retirar(double cantidad) {\n       if (cantidad > 0 && saldo >= cantidad) {\n           saldo -= cantidad;\n           System.out.println(\"Retiro exitoso: \" + cantidad);\n       } else {\n           System.out.println(\"Fondos insuficientes.\");\n       }\n     }\n\n     public void mostrarSaldo() {\n       System.out.println(\"Saldo actual: \" + saldo);\n     }\n\n     protected double getSaldo() {\n       return saldo;\n     }\n\n     protected void setSaldo(double cantidad) {\n       saldo = cantidad;\n     }\n }\n\n // Subclase CuentaAhorro con restricci\u00f3n de retiro\n class CuentaAhorro extends CuentaBancaria {\n    public void retirar(double cantidad) {\n      if (getSaldo() - cantidad >= 100) {\n          setSaldo(getSaldo() - cantidad);\n          System.out.println(\"Retiro exitoso de cuenta de ahorro: \" + cantidad);\n      } else {\n          System.out.println(\"No puedes retirar, saldo m\u00ednimo de 100 requerido.\");\n      }\n    }\n }\n\n // Subclase CuentaCorriente con sobregiro\n class CuentaCorriente extends CuentaBancaria {\n\f     public void retirar(double cantidad) {\n       if (getSaldo() - cantidad >= -500) {\n           setSaldo(getSaldo() - cantidad);\n           System.out.println(\"Retiro exitoso de cuenta corriente: \" + cantidad);\n       } else {\n           System.out.println(\"L\u00edmite de sobregiro alcanzado (-500).\");\n       }\n     }\n }\n\n // Clase principal\n public class Main {\n    public static void main(String[] args) {\n      CuentaAhorro ahorro = new CuentaAhorro();\n      CuentaCorriente corriente = new CuentaCorriente();\n\n         ahorro.depositar(500);\n         ahorro.mostrarSaldo();\n         ahorro.retirar(450);\n         ahorro.mostrarSaldo();\n\n         corriente.depositar(200);\n         corriente.mostrarSaldo();\n         corriente.retirar(600);\n         corriente.mostrarSaldo();\n     }\n }\n\n\nEjercicio 5\n\nCrea una clase base Dispositivo con:\n\n     \u2022     Atributos privados: marca (String) y precio (double).\n\n     \u2022     M\u00e9todos p\u00fablicos setMarca(String), getMarca(), setPrecio(double), getPrecio().\n\n     \u2022     Un m\u00e9todo mostrarInfo(), que imprima la informaci\u00f3n del dispositivo.\n\nCrea dos subclases:\n\n     \u2022     Smartphone, con un atributo adicional almacenamientoGB (int) y m\u00e9todos\n           setAlmacenamiento(int) y getAlmacenamiento().\n\n     \u2022     Laptop, con un atributo adicional ramGB (int) y m\u00e9todos setRam(int) y getRam().\n\n     \u2022     Ambas sobrescriben mostrarInfo().\n\nEn main(), crea un Smartphone y una Laptop, asigna valores con los m\u00e9todos set y muestra su\ninformaci\u00f3n.\n\n // Clase base con encapsulaci\u00f3n\n class Dispositivo {\n    private String marca;\n    private double precio;\n\f    public void setMarca(String m) {\n      marca = m;\n    }\n\n    public String getMarca() {\n      return marca;\n    }\n\n    public void setPrecio(double p) {\n      if (p > 0) {\n          precio = p;\n      }\n    }\n\n    public double getPrecio() {\n      return precio;\n    }\n\n    public void mostrarInfo() {\n      System.out.println(\"Marca: \" + marca + \", Precio: \" + precio);\n    }\n}\n\n// Subclase Smartphone\nclass Smartphone extends Dispositivo {\n   private int almacenamientoGB;\n\n    public void setAlmacenamiento(int a) {\n      if (a > 0) {\n          almacenamientoGB = a;\n      }\n    }\n\n    public int getAlmacenamiento() {\n      return almacenamientoGB;\n    }\n\n    public void mostrarInfo() {\n      super.mostrarInfo();\n      System.out.println(\"Almacenamiento: \" + almacenamientoGB + \" GB\");\n    }\n}\n\n// Subclase Laptop\nclass Laptop extends Dispositivo {\n   private int ramGB;\n\n    public void setRam(int r) {\n      if (r > 0) {\n          ramGB = r;\n      }\n\f    }\n\n    public int getRam() {\n      return ramGB;\n    }\n\n    public void mostrarInfo() {\n      super.mostrarInfo();\n      System.out.println(\"RAM: \" + ramGB + \" GB\");\n    }\n}\n\n// Clase principal\npublic class Main {\n   public static void main(String[] args) {\n     Smartphone phone = new Smartphone();\n     phone.setMarca(\"Samsung\");\n     phone.setPrecio(899.99);\n     phone.setAlmacenamiento(128);\n\n        Laptop laptop = new Laptop();\n        laptop.setMarca(\"Dell\");\n        laptop.setPrecio(1299.99);\n        laptop.setRam(16);\n\n        phone.mostrarInfo();\n        laptop.mostrarInfo();\n    }\n}"
+    id: 'dr_ej_1_2',
+    titulo: `Dr. Java: Encapsulacion - Ej 2`,
+    nivel: '⭐⭐',
+    temas: ["Encapsulacion"],
+    tiempo: '15 min',
+    enunciado: `Crea una clase Estudiante que tenga los siguientes atributos privados:
+
+    •   nombre (String)
+
+    •   edad (int)
+
+    •   calificacion (double)
+
+Implementa los siguientes métodos públicos:
+
+    1. getNombre() y setNombre(String nombre): Para obtener y modificar el nombre.
+
+    2. getEdad() y setEdad(int edad): La edad solo puede ser mayor o igual a 0.
+
+    3. getCalificacion() y setCalificacion(double calificacion): Debe estar entre 0 y 10.
+
+    4. mostrarInfo(): Imprime los datos del estudiante.
+
+Prueba desde la clase main todos los métodos de la clase Estudiante.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Crea una clase Estudiante que tenga los siguientes atributos privados:
+
+     •     nombre (String)
+
+     •     edad (int)
+
+     •     calificacion (double)
+Implementa los siguientes métodos públicos:
+
+     1. getNombre() y setNombre(String nombre): Para obtener y modificar el nombre.
+
+     2. getEdad() y setEdad(int edad): La edad solo puede ser mayor o igual a 0.
+
+     3. getCalificacion() y setCalificacion(double calificacion): Debe estar entre 0 y 10.
+
+     4. mostrarInfo(): Imprime los datos del estudiante.
+
+Prueba desde la clase main todos los métodos.
+
+ class Estudiante {
+    private String nombre;
+    private int edad;
+    private double calificacion;
+
+     public void setNombre(String nuevoNombre) {
+       nombre = nuevoNombre;
+     }
+
+     public String getNombre() {
+       return nombre;
+     }
+
+     public void setEdad(int nuevoValor) {
+       edad = nuevoValor;
+     }
+
+     public int getEdad() {
+       return edad;
+     }
+
+     public void setCalificacion(double nuevoValor) {
+       calificacion = nuevoValor;
+     }
+
+     public double getCalificacion() {
+       return calificacion;
+     }
+
+     public void mostrarInfo() {
+       System.out.println("Nombre: " + nombre);
+       System.out.println("Edad: " + edad);
+       System.out.println("Calificación: " + calificacion);
+     }
+ }
+
+ public class Main {
+   public static void main(String[] args) {
+     // Instanciar un estudiante
+     Estudiante estudiante1 = new Estudiante();
+
+       // Establecer valores usando setters
+         estudiante1.setNombre("Carlos Pérez");
+         estudiante1.setEdad(18);
+         estudiante1.setCalificacion(9.2);
+
+         // Mostrar información
+         estudiante1.mostrarInfo();
+     }
+ }`,
+    criterios: ["Define la clase main", "Define la clase Main", "Define la clase Estudiante", "Implementa el m\u00e9todo mostrarInfo", "Implementa el m\u00e9todo getEdad", "Implementa el m\u00e9todo setNombre"],
+    checks: [
+       (c) =>  /class\s+main/i.test(c),
+       (c) =>  /class\s+Main/i.test(c),
+       (c) =>  /class\s+Estudiante/i.test(c),
+       (c) =>  /mostrarInfo\s*\(/i.test(c),
+       (c) =>  /getEdad\s*\(/i.test(c),
+       (c) =>  /setNombre\s*\(/i.test(c)
+    ]
   },
   {
-    "id": "dr_ej_3",
-    "topic": "Modificadores de acceso",
-    "exercise": "Ejercicio 1\n\nCrea un sistema de biblioteca con clases relacionadas, donde se utilizan distintos modificadores\nde acceso para controlar la visibilidad de los atributos y m\u00e9todos. Para ello:\n\n    1. Crea una clase base Libro con los siguientes atributos:\n\n              o   titulo (String) private\n\n              o   autor (String) private\n\n              o   anoPublicacion (int) protected\n\n              o   precio (double) default (sin modificador)\n\n        M\u00e9todos en Libro:\n\n              o   Un m\u00e9todo public mostrarInformacion() que imprime el t\u00edtulo y el autor.\n\n              o   Un m\u00e9todo private calcularPrecioConDescuento() que calcula un descuento del\n                  10% sobre el precio y lo imprime.\n\n    2. Crea una subclase LibroDigital que herede de Libro y tenga:\n\n              o   Un atributo adicional tamanoMB (double) private.\n\n              o   Un m\u00e9todo public mostrarInformacionDigital() que imprima el tama\u00f1o del\n                  archivo digital y llame a mostrarInformacion().\n\n    3. Crea una clase Biblioteca que tenga un atributo default cantidadLibros (int).\n\n              o   En Biblioteca, crea un m\u00e9todo public agregarLibro(Libro libro) para agregar un\n                  libro a la biblioteca.\n\n              o   Dentro de la misma clase, crea un m\u00e9todo protected mostrarCantidadLibros()\n                  que imprima la cantidad de libros en la biblioteca.\n\n    4. En main(), crea instancias de Libro y LibroDigital, y utiliza los m\u00e9todos p\u00fablicos,\n       protegidos y privados adecuadamente.\n\n\n\nEjercicio 2\n\nCrea un sistema para gestionar productos en una tienda, utilizando modificadores de acceso.\nPara ello:\n\n    1. Crea una clase base Producto que tenga los siguientes atributos:\n\n              o   nombre (String) private\n\n              o   precio (double) private\n\n              o   cantidad (int) protected\n\n              o   codigo (String) default (sin modificador)\n\f        M\u00e9todos en Producto:\n\n              o   Un m\u00e9todo public mostrarInfo() que imprima el nombre y el precio del\n                  producto.\n\n              o   Un m\u00e9todo private calcularDescuento() que calcule un 5% de descuento sobre\n                  el precio.\n\n    2. Crea una subclase ProductoElectronico que herede de Producto y tenga:\n\n              o   Un atributo adicional marca (String) private.\n\n              o   Un m\u00e9todo public mostrarInfoElectronico() que imprima la marca y el c\u00f3digo\n                  del producto.\n\n    3. Crea una clase Tienda con:\n\n              o   Un atributo default totalProductos (int) que llevar\u00e1 el conteo de productos en\n                  la tienda.\n\n              o   Un m\u00e9todo public agregarProducto(Producto producto) que aumente el\n                  n\u00famero de productos en la tienda.\n\n              o   Un m\u00e9todo protected mostrarTotalProductos() que imprima la cantidad de\n                  productos en la tienda.\n\n    4. En main(), crea instancias de Producto y ProductoElectronico, usa los m\u00e9todos set para\n       asignar valores, y muestra la informaci\u00f3n.\n\n\n\nEjercicio 3\n\nCrea un sistema para gestionar cuentas bancarias, utilizando modificadores de acceso. Para ello:\n\n    1. Crea una clase base CuentaBancaria que tenga como atributos:\n\n              o   numeroCuenta (String) private\n\n              o   saldo (double) private\n\n              o   titular (String) protected\n\n              o   tipoCuenta (String) default (sin modificador)\n\n        M\u00e9todos en CuentaBancaria:\n\n              o   Un m\u00e9todo public mostrarInformacion() que imprima el titular, el n\u00famero de\n                  cuenta y el saldo.\n\n              o   Un m\u00e9todo private calcularIntereses() que calcule un 2% de intereses sobre el\n                  saldo y lo imprima.\n\n    2. Crea una subclase CuentaAhorro que herede de CuentaBancaria y tenga:\n\n              o   Un atributo adicional intereses (double) private.\n\n              o   Un m\u00e9todo public mostrarInformacionCuentaAhorro() que imprima el tipo de\n                  cuenta y los intereses.\n\f3. Crea una clase Banco con:\n\n       o   Un atributo default totalCuentas (int) que llevar\u00e1 el conteo de cuentas en el\n           banco.\n\n       o   Un m\u00e9todo public agregarCuenta(CuentaBancaria cuenta) que aumente el\n           n\u00famero de cuentas en el banco.\n\n       o   Un m\u00e9todo protected mostrarTotalCuentas() que imprima la cantidad de\n           cuentas en el banco.\n\n4. En main(), crea instancias de CuentaBancaria y CuentaAhorro, usa los m\u00e9todos set para\n   asignar valores, y muestra la informaci\u00f3n.",
-    "solution": "Ejercicio 1\n\nCrea un sistema de biblioteca con clases relacionadas, donde se utilizan distintos modificadores\nde acceso para controlar la visibilidad de los atributos y m\u00e9todos. Para ello:\n\n    1. Crea una clase base Libro con los siguientes atributos:\n\n              o   titulo (String) private\n\n              o   autor (String) private\n\n              o   anoPublicacion (int) protected\n\n              o   precio (double) default (sin modificador)\n\n        M\u00e9todos en Libro:\n\n              o   Un m\u00e9todo public mostrarInformacion() que imprime el t\u00edtulo y el autor.\n\n              o   Un m\u00e9todo private calcularPrecioConDescuento() que calcula un descuento del\n                  10% sobre el precio y lo imprime.\n\n    2. Crea una subclase LibroDigital que herede de Libro y tenga:\n\n              o   Un atributo adicional tamanoMB (double) private.\n\n              o   Un m\u00e9todo public mostrarInformacionDigital() que imprima el tama\u00f1o del\n                  archivo digital y llame a mostrarInformacion().\n\n    3. Crea una clase Biblioteca que tenga un atributo default cantidadLibros (int).\n\n              o   En Biblioteca, crea un m\u00e9todo public agregarLibro(Libro libro) para agregar un\n                  libro a la biblioteca.\n\n              o   Dentro de la misma clase, crea un m\u00e9todo protected mostrarCantidadLibros()\n                  que imprima la cantidad de libros en la biblioteca.\n\n    4. En main(), crea instancias de Libro y LibroDigital, y utiliza los m\u00e9todos p\u00fablicos,\n       protegidos y privados adecuadamente.\n\n class Libro {\n    private String titulo;\n    private String autor;\n    protected int anoPublicacion;\n    double precio;\n\n   public void setTitulo(String t) {\n     titulo = t;\n   }\n\n   public String getTitulo() {\n     return titulo;\n   }\n\f    public void setAutor(String a) {\n      autor = a;\n    }\n\n    public String getAutor() {\n      return autor;\n    }\n\n    public void setAnoPublicacion(int a) {\n      anoPublicacion = a;\n    }\n\n    public int getAnoPublicacion() {\n      return anoPublicacion;\n    }\n\n    public void setPrecio(double p) {\n      precio = p;\n    }\n\n    public double getPrecio() {\n      return precio;\n    }\n\n    public void mostrarInformacion() {\n      System.out.println(\"T\u00edtulo: \" + titulo + \", Autor: \" + autor);\n    }\n\n    private void calcularPrecioConDescuento() {\n      double precioConDescuento = precio * 0.9; // 10% de descuento\n      System.out.println(\"Precio con descuento: \" + precioConDescuento);\n    }\n}\n\n// Subclase LibroDigital\nclass LibroDigital extends Libro {\n   private double tamanoMB;\n\n    public void setTamanoMB(double t) {\n      tamanoMB = t;\n    }\n\n    public double getTamanoMB() {\n      return tamanoMB;\n    }\n\n    public void mostrarInformacionDigital() {\n      mostrarInformacion();\n      System.out.println(\"Tama\u00f1o del archivo digital: \" + tamanoMB + \" MB\");\n    }\n}\n\f // Clase Biblioteca\n class Biblioteca {\n    int cantidadLibros;\n\n     public void agregarLibro(Libro libro) {\n       cantidadLibros++;\n       System.out.println(\"Libro agregado: \" + libro.getTitulo());\n     }\n\n     protected void mostrarCantidadLibros() {\n       System.out.println(\"Cantidad de libros en la biblioteca: \" + cantidadLibros);\n     }\n }\n\n // Clase principal\n public class Main {\n    public static void main(String[] args) {\n      Libro libro1 = new Libro();\n      libro1.setTitulo(\"El Quijote\");\n      libro1.setAutor(\"Miguel de Cervantes\");\n      libro1.setAnoPublicacion(1605);\n      libro1.setPrecio(25.0);\n\n       LibroDigital libroDigital1 = new LibroDigital();\n       libroDigital1.setTitulo(\"Java para principiantes\");\n       libroDigital1.setAutor(\"Jos\u00e9 P\u00e9rez\");\n       libroDigital1.setAnoPublicacion(2020);\n       libroDigital1.setPrecio(35.0);\n       libroDigital1.setTamanoMB(5.0);\n\n       libro1.mostrarInformacion();\n       libroDigital1.mostrarInformacionDigital();\n\n      // Accediendo a m\u00e9todos privados y protegidos (solo de ejemplo, no es posible fuera de\n la clase):\n      // libro1.calcularPrecioConDescuento(); // No es accesible, es private\n      // libro1.anoPublicacion; // Es accesible dentro de la subclase, pero no desde aqu\u00ed\n (protected)\n    }\n }\n\n\nEjercicio 2\n\nCrea un sistema para gestionar productos en una tienda, utilizando modificadores de acceso.\nPara ello:\n\n     1. Crea una clase base Producto que tenga los siguientes atributos:\n\n              o   nombre (String) private\n\n              o   precio (double) private\n\f           o   cantidad (int) protected\n\n           o   codigo (String) default (sin modificador)\n\n      M\u00e9todos en Producto:\n\n           o   Un m\u00e9todo public mostrarInfo() que imprima el nombre y el precio del\n               producto.\n\n           o   Un m\u00e9todo private calcularDescuento() que calcule un 5% de descuento sobre\n               el precio.\n\n  2. Crea una subclase ProductoElectronico que herede de Producto y tenga:\n\n           o   Un atributo adicional marca (String) private.\n\n           o   Un m\u00e9todo public mostrarInfoElectronico() que imprima la marca y el c\u00f3digo\n               del producto.\n\n  3. Crea una clase Tienda con:\n\n           o   Un atributo default totalProductos (int) que llevar\u00e1 el conteo de productos en\n               la tienda.\n\n           o   Un m\u00e9todo public agregarProducto(Producto producto) que aumente el\n               n\u00famero de productos en la tienda.\n\n           o   Un m\u00e9todo protected mostrarTotalProductos() que imprima la cantidad de\n               productos en la tienda.\n\n  4. En main(), crea instancias de Producto y ProductoElectronico, usa los m\u00e9todos set para\n     asignar valores, y muestra la informaci\u00f3n.\n\n\n\n// Clase Producto\nclass Producto {\n   private String nombre;\n   private double precio;\n   protected int cantidad;\n   String codigo;\n\n  public void setNombre(String nuevoNombre) {\n    nombre = nuevoNombre;\n  }\n\n  public String getNombre() {\n    return nombre;\n  }\n\n  public void setPrecio(double nuevoPrecio) {\n    precio = nuevoPrecio;\n  }\n\n  public double getPrecio() {\n    return precio;\n\f    }\n\n    public void setCantidad(int nuevaCantidad) {\n      cantidad = nuevaCantidad;\n    }\n\n    public int getCantidad() {\n      return cantidad;\n    }\n\n    public void setCodigo(String nuevoCodigo) {\n      codigo = nuevoCodigo;\n    }\n\n    public String getCodigo() {\n      return codigo;\n    }\n\n    public void mostrarInfo() {\n      System.out.println(\"Producto: \" + nombre + \", Precio: \" + precio);\n    }\n\n    private void calcularDescuento() {\n      double descuento = precio * 0.05; // 5% descuento\n      System.out.println(\"Descuento: \" + descuento);\n    }\n}\n\n// Subclase ProductoElectronico\nclass ProductoElectronico extends Producto {\n   private String marca;\n\n    public void setMarca(String nuevaMarca) {\n      marca = nuevaMarca;\n    }\n\n    public String getMarca() {\n      return marca;\n    }\n\n    public void mostrarInfoElectronico() {\n      mostrarInfo(); // Llamando a mostrarInfo de la clase base\n      System.out.println(\"Marca: \" + marca + \", C\u00f3digo: \" + codigo);\n    }\n}\n\n// Clase Tienda\nclass Tienda {\n   int totalProductos;\n\n    public void agregarProducto(Producto producto) {\n      totalProductos++;\n\f         System.out.println(\"Producto agregado: \" + producto.getNombre());\n     }\n\n     protected void mostrarTotalProductos() {\n       System.out.println(\"Total productos en la tienda: \" + totalProductos);\n     }\n }\n\n public class Main {\n   public static void main(String[] args) {\n     Producto producto1 = new Producto();\n     producto1.setNombre(\"Camiseta\");\n     producto1.setPrecio(19.99);\n     producto1.setCantidad(10);\n     producto1.setCodigo(\"C123\");\n\n         ProductoElectronico productoElectronico1 = new ProductoElectronico();\n         productoElectronico1.setNombre(\"Laptop\");\n         productoElectronico1.setPrecio(899.99);\n         productoElectronico1.setCantidad(5);\n         productoElectronico1.setCodigo(\"L456\");\n         productoElectronico1.setMarca(\"Dell\");\n\n         producto1.mostrarInfo();\n         productoElectronico1.mostrarInfoElectronico();\n\n         Tienda tienda = new Tienda();\n         tienda.agregarProducto(producto1);\n         tienda.agregarProducto(productoElectronico1);\n         tienda.mostrarTotalProductos();\n     }\n }\n\n\nProducto:\n\n     \u2022     Los atributos nombre y precio son private para que solo se accedan mediante los\n           m\u00e9todos set y get.\n\n     \u2022     El atributo cantidad es protected, por lo que puede ser accedido desde subclases como\n           ProductoElectronico.\n\n     \u2022     El atributo codigo tiene el modificador default, lo que significa que es accesible solo\n           dentro del paquete.\n\nProductoElectronico:\n\n     \u2022     Hereda de Producto y tiene un atributo marca que es private.\n\n     \u2022     El m\u00e9todo mostrarInfoElectronico() imprime tanto los datos de la clase base como el\n           atributo adicional.\n\nTienda:\n\f    \u2022   Lleva el conteo de productos con el atributo totalProductos que tiene un modificador\n        default.\n\n    \u2022   El m\u00e9todo agregarProducto() aumenta el conteo de productos en la tienda, mientras\n        que mostrarTotalProductos() muestra ese total.\n\n\n\nEjercicio 3\n\nCrea un sistema para gestionar cuentas bancarias, utilizando modificadores de acceso. Para ello:\n\n    1. Crea una clase base CuentaBancaria que tenga como atributos:\n\n              o   numeroCuenta (String) private\n\n              o   saldo (double) private\n\n              o   titular (String) protected\n\n              o   tipoCuenta (String) default (sin modificador)\n\n        M\u00e9todos en CuentaBancaria:\n\n              o   Un m\u00e9todo public mostrarInformacion() que imprima el titular, el n\u00famero de\n                  cuenta y el saldo.\n\n              o   Un m\u00e9todo private calcularIntereses() que calcule un 2% de intereses sobre el\n                  saldo y lo imprima.\n\n    2. Crea una subclase CuentaAhorro que herede de CuentaBancaria y tenga:\n\n              o   Un atributo adicional intereses (double) private.\n\n              o   Un m\u00e9todo public mostrarInformacionCuentaAhorro() que imprima el tipo de\n                  cuenta y los intereses.\n\n    3. Crea una clase Banco con:\n\n              o   Un atributo default totalCuentas (int) que llevar\u00e1 el conteo de cuentas en el\n                  banco.\n\n              o   Un m\u00e9todo public agregarCuenta(CuentaBancaria cuenta) que aumente el\n                  n\u00famero de cuentas en el banco.\n\n              o   Un m\u00e9todo protected mostrarTotalCuentas() que imprima la cantidad de\n                  cuentas en el banco.\n\n    4. En main(), crea instancias de CuentaBancaria y CuentaAhorro, usa los m\u00e9todos set para\n       asignar valores, y muestra la informaci\u00f3n.\n\n class CuentaBancaria {\n    private String numeroCuenta;\n    private double saldo;\n    protected String titular;\n    String tipoCuenta;\n\n   public void setNumeroCuenta(String nuevoNumeroCuenta) {\n\f        numeroCuenta = nuevoNumeroCuenta;\n    }\n\n    public String getNumeroCuenta() {\n      return numeroCuenta;\n    }\n\n    public void setSaldo(double nuevoSaldo) {\n      saldo = nuevoSaldo;\n    }\n\n    public double getSaldo() {\n      return saldo;\n    }\n\n    public void setTitular(String nuevoTitular) {\n      titular = nuevoTitular;\n    }\n\n    public String getTitular() {\n      return titular;\n    }\n\n    public void setTipoCuenta(String nuevoTipoCuenta) {\n      tipoCuenta = nuevoTipoCuenta;\n    }\n\n    public String getTipoCuenta() {\n      return tipoCuenta;\n    }\n\n  public void mostrarInformacion() {\n    System.out.println(\"Titular: \" + titular + \", N\u00famero de Cuenta: \" + numeroCuenta + \",\nSaldo: \" + saldo);\n  }\n\n    private void calcularIntereses() {\n      double intereses = saldo * 0.02; // 2% de intereses\n      System.out.println(\"Intereses calculados: \" + intereses);\n    }\n}\n\n// Subclase CuentaAhorro\nclass CuentaAhorro extends CuentaBancaria {\n   private double intereses;\n\n    public void setIntereses(double nuevosIntereses) {\n      intereses = nuevosIntereses;\n    }\n\n    public double getIntereses() {\n      return intereses;\n\f     }\n\n     public void mostrarInformacionCuentaAhorro() {\n       mostrarInformacion(); // Llamando a mostrarInformacion de la clase base\n       System.out.println(\"Tipo de cuenta: \" + tipoCuenta + \", Intereses: \" + intereses + \"%\");\n     }\n }\n\n class Banco {\n    int totalCuentas;\n\n     public void agregarCuenta(CuentaBancaria cuenta) {\n       totalCuentas++;\n       System.out.println(\"Cuenta agregada: \" + cuenta.getNumeroCuenta());\n     }\n\n     protected void mostrarTotalCuentas() {\n       System.out.println(\"Total cuentas en el banco: \" + totalCuentas);\n     }\n }\n\n public class Main {\n   public static void main(String[] args) {\n     CuentaBancaria cuenta1 = new CuentaBancaria();\n     cuenta1.setNumeroCuenta(\"123456789\");\n     cuenta1.setSaldo(1000.0);\n     cuenta1.setTitular(\"Juan P\u00e9rez\");\n     cuenta1.setTipoCuenta(\"Corriente\");\n\n         CuentaAhorro cuentaAhorro1 = new CuentaAhorro();\n         cuentaAhorro1.setNumeroCuenta(\"987654321\");\n         cuentaAhorro1.setSaldo(5000.0);\n         cuentaAhorro1.setTitular(\"Mar\u00eda G\u00f3mez\");\n         cuentaAhorro1.setTipoCuenta(\"Ahorro\");\n         cuentaAhorro1.setIntereses(3.0);\n\n         cuenta1.mostrarInformacion();\n         cuentaAhorro1.mostrarInformacionCuentaAhorro();\n\n         Banco banco = new Banco();\n         banco.agregarCuenta(cuenta1);\n         banco.agregarCuenta(cuentaAhorro1);\n         banco.mostrarTotalCuentas();\n     }\n }\n\n\nCuentaBancaria:\n\n     \u2022     Los atributos numeroCuenta y saldo son private para proteger la informaci\u00f3n sensible.\n\f   \u2022     El atributo titular es protected y puede ser accedido por clases hijas como\n         CuentaAhorro.\n\n   \u2022     El atributo tipoCuenta es default (sin modificador) y solo es accesible dentro del mismo\n         paquete.\n\n   \u2022     El m\u00e9todo mostrarInformacion() imprime la informaci\u00f3n b\u00e1sica de la cuenta.\n\n   \u2022     El m\u00e9todo calcularIntereses() es privado y se usa solo internamente.\n\nCuentaAhorro:\n\n   \u2022     Hereda de CuentaBancaria y tiene un atributo adicional intereses (porcentaje de\n         intereses).\n\n   \u2022     El m\u00e9todo mostrarInformacionCuentaAhorro() imprime detalles adicionales de la\n         cuenta de ahorro.\n\nBanco:\n\n   \u2022     Lleva el conteo de cuentas con el atributo totalCuentas.\n\n   \u2022     El m\u00e9todo agregarCuenta() aumenta el n\u00famero de cuentas en el banco y muestra el\n         n\u00famero de cuenta agregada.\n\n   \u2022     El m\u00e9todo mostrarTotalCuentas() muestra el total de cuentas en el banco."
+    id: 'dr_ej_1_3',
+    titulo: `Dr. Java: Encapsulacion - Ej 3`,
+    nivel: '⭐⭐',
+    temas: ["Encapsulacion"],
+    tiempo: '15 min',
+    enunciado: `Crea una clase Libro con los siguientes atributos privados:
+
+    •   titulo (String)
+
+    •   autor (String)
+
+    •   disponible (boolean)
+
+Y los siguientes métodos públicos:
+
+    1. setTitulo(String titulo), getTitulo().
+    2. setAutor(String autor), getAutor().
+
+    3. setDisponible(boolean disponible), getDisponible().
+
+    4. prestar(): Marca el libro como no disponible si está disponible.
+
+    5. devolver(): Marca el libro como disponible si estaba prestado.
+
+    6. mostrarInfo(): Muestra los datos del libro.
+
+Prueba desde la clase main todos los métodos de la clase Libro.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Crea una clase Libro con los siguientes atributos privados:
+
+     •     titulo (String)
+
+     •     autor (String)
+
+     •     disponible (boolean)
+
+Y los siguientes métodos públicos:
+
+     1. setTitulo(String titulo), getTitulo().
+
+     2. setAutor(String autor), getAutor().
+
+     3. setDisponible(boolean disponible), getDisponible().
+
+     4. prestar(): Marca el libro como no disponible si está disponible.
+
+     5. devolver(): Marca el libro como disponible si estaba prestado.
+
+     6. mostrarInfo(): Muestra los datos del libro.
+
+Prueba desde la clase main todos los métodos.
+
+ class Libro {
+    private String titulo;
+    private String autor;
+    private boolean disponible;
+
+     public void setTitulo(String t) {
+       titulo = t;
+     }
+
+     public String getTitulo() {
+       return titulo;
+     }
+
+     public void setAutor(String a) {
+       autor = a;
+     }
+
+     public String getAutor() {
+        return autor;
+    }
+
+    public void setDisponible(boolean d) {
+      disponible = d;
+    }
+
+    public boolean getDisponible() {
+      return disponible;
+    }
+
+    public void prestar() {
+      if (disponible) {
+          System.out.println("El libro \"" + titulo + "\" está disponible.");
+          disponible = false;
+      } else {
+          System.out.println("El libro \"" + titulo + "\" ya está prestado.");
+      }
+    }
+
+    public void devolver() {
+      if (!disponible) {
+          System.out.println("El libro \"" + titulo + "\" ha sido devuelto.");
+          disponible = true;
+      } else {
+          System.out.println("El libro \"" + titulo + "\" ya estaba disponible.");
+      }
+    }
+
+    public void mostrarInfo() {
+      System.out.println("Título: " + titulo);
+      System.out.println("Autor: " + autor);
+      System.out.println("Disponible: " + (disponible ? "Sí" : "No"));
+    }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    // Crear un libro sin constructor
+    Libro libro1 = new Libro();
+
+        // Establecer valores con setters
+        libro1.setTitulo("Cien años de soledad");
+        libro1.setAutor("Gabriel García Márquez");
+        libro1.setDisponible(true);
+
+        // Mostrar información inicial
+        libro1.mostrarInfo();
+
+        // Intentar prestar y devolver el libro
+        libro1.prestar();
+        libro1.prestar(); // Intento de prestar nuevamente
+         libro1.devolver();
+         libro1.devolver(); // Intento de devolver nuevamente
+
+         // Mostrar información final
+         libro1.mostrarInfo();
+     }
+ }`,
+    criterios: ["Define la clase main", "Define la clase Main", "Define la clase Libro", "Implementa el m\u00e9todo getAutor", "Implementa el m\u00e9todo getTitulo", "Implementa el m\u00e9todo mostrarInfo"],
+    checks: [
+       (c) =>  /class\s+main/i.test(c),
+       (c) =>  /class\s+Main/i.test(c),
+       (c) =>  /class\s+Libro/i.test(c),
+       (c) =>  /getAutor\s*\(/i.test(c),
+       (c) =>  /getTitulo\s*\(/i.test(c),
+       (c) =>  /mostrarInfo\s*\(/i.test(c)
+    ]
   },
   {
-    "id": "dr_ej_4",
-    "topic": "Constructores",
-    "exercise": "Ejercicio 1\n\nVamos a gestionar los productos de una tienda. Para ello, vamos a crear una clase Producto que\ntenga los atributos: nombre, precio y cantidad. Usaremos constructores para inicializar estos\natributos al crear instancias de la clase. Adem\u00e1s, crearemos una subclase ProductoElectronico\nque herede de Producto y agregue un atributo adicional para la marca. Tambi\u00e9n, incluiremos\nun m\u00e9todo para mostrar la informaci\u00f3n del producto. As\u00ed:\n\n    1. Producto:\n\n              o   Atributos:\n\n                      \u25aa   nombre (String)\n\n                      \u25aa   precio (double)\n\n                      \u25aa   cantidad (int)\n\n              o   Constructor que reciba nombre, precio y cantidad como par\u00e1metros y los\n                  inicialice.\n\n              o   M\u00e9todo mostrarInformacion() que imprima los detalles del producto.\n\n    2. ProductoElectronico (subclase de Producto):\n\n              o   Atributo adicional: marca (String)\n\n              o   Constructor que reciba nombre, precio, cantidad, y marca como par\u00e1metros.\n\n              o   M\u00e9todo mostrarInformacionElectronico() que imprima los detalles del\n                  producto electr\u00f3nico.\n\n    3. Tienda:\n\n              o   Atributo: productos (un arreglo de tipo Producto de tama\u00f1o fijo).\n\n              o   M\u00e9todo agregarProducto() que reciba un objeto de tipo Producto y lo agregue\n                  al arreglo.\n\n              o   M\u00e9todo mostrarProductos() que imprima todos los productos de la tienda.\n\n    4. En el main(), crea instancias de Producto y ProductoElectronico usando los\n       constructores, agrega los productos a la tienda, y muestra la informaci\u00f3n.\n\n\n\nEjercicio 2\n\nVamos a gestionar una biblioteca de pel\u00edculas. Para ello vamos a crear una clase Pelicula que\ntenga los atributos: titulo, duracion (en minutos), y anioEstreno. Luego, se crear\u00e1 una subclase\nPeliculaDeAccion que herede de Pelicula y tenga un atributo adicional para la clasificacion.\nUsaremos constructores para inicializar los atributos.\n\n    1. Pelicula:\n\n              o   Atributos:\n\f                      \u25aa   tituloPelicula (String)\n\n                      \u25aa   duracionPelicula (int)\n\n                      \u25aa   anioEstrenoPelicula (int)\n\n              o   Constructor que reciba titulo, duracion y anioEstreno como par\u00e1metros y los\n                  inicialice.\n\n              o   M\u00e9todo mostrarInformacion() que imprima los detalles de la pel\u00edcula.\n\n    2. PeliculaDeAccion (subclase de Pelicula):\n\n              o   Atributo adicional: clasificacionPelicula (String)\n\n              o   Constructor que reciba titulo, duracion, anioEstreno y clasificacion como\n                  par\u00e1metros.\n\n              o   M\u00e9todo mostrarInformacionAccion() que imprima los detalles de la pel\u00edcula de\n                  acci\u00f3n.\n\n    3. Biblioteca:\n\n              o   Atributo: peliculas (un arreglo de tipo Pelicula de tama\u00f1o fijo).\n\n              o   M\u00e9todo agregarPelicula() que reciba un objeto de tipo Pelicula y lo agregue al\n                  arreglo.\n\n              o   M\u00e9todo mostrarPeliculas() que imprima todos los detalles de las pel\u00edculas.\n\n    4. En el main(), crea instancias de Pelicula y PeliculaDeAccion usando los constructores,\n       agrega las pel\u00edculas a la biblioteca y muestra la informaci\u00f3n de todas las pel\u00edculas.\n\n\n\nEjercicio 3\n\nVamos a gestionar un inventario de electrodom\u00e9sticos. Para ello vamos a crear un sistema de\ngesti\u00f3n de inventario para una tienda de electrodom\u00e9sticos. Tendremos una clase base\nProductoElectrico con atributos comunes como el nombre y el precio, y luego una subclase\nTelevisor que agregue un atributo adicional para la tamanoPantalla en pulgadas. As\u00ed:\n\n    1. ProductoElectrico:\n\n              o   Atributos:\n\n                      \u25aa   nombreProductoElectrico (String)\n\n                      \u25aa   precioProductoElectrico (double)\n\n              o   Constructor que reciba nombre y precio como par\u00e1metros y los inicialice.\n\n              o   M\u00e9todo mostrarInformacion() que imprima los detalles del producto el\u00e9ctrico.\n\n    2. Televisor (subclase de ProductoElectrico):\n\n              o   Atributo adicional: tamanoPantallaTelevisor (int, en pulgadas).\n\n              o   Constructor que reciba nombre, precio y tamano como par\u00e1metros.\n\f        o   M\u00e9todo mostrarInformacionTelevisor() que imprima los detalles del televisor.\n\n3. Inventario:\n\n        o   Atributo: productos (un arreglo de tipo ProductoElectrico de tama\u00f1o fijo).\n\n        o   M\u00e9todo agregarProducto() que reciba un objeto de tipo ProductoElectrico y lo\n            agregue al arreglo.\n\n        o   M\u00e9todo mostrarProductos() que imprima todos los detalles de los productos\n            en el inventario.\n\n4. En el main(), crea instancias de ProductoElectrico y Televisor usando los constructores,\n   agrega los productos al inventario y muestra la informaci\u00f3n de todos los productos.",
-    "solution": "Ejercicio 1\n\nVamos a gestionar los productos de una tienda. Para ello, vamos a crear una clase Producto que\ntenga los atributos: nombre, precio y cantidad. Usaremos constructores para inicializar estos\natributos al crear instancias de la clase. Adem\u00e1s, crearemos una subclase ProductoElectronico\nque herede de Producto y agregue un atributo adicional para la marca. Tambi\u00e9n, incluiremos\nun m\u00e9todo para mostrar la informaci\u00f3n del producto. As\u00ed:\n\n    1. Producto:\n\n              o   Atributos:\n\n                      \u25aa   nombre (String)\n\n                      \u25aa   precio (double)\n\n                      \u25aa   cantidad (int)\n\n              o   Constructor que reciba nombre, precio y cantidad como par\u00e1metros y los\n                  inicialice.\n\n              o   M\u00e9todo mostrarInformacion() que imprima los detalles del producto.\n\n    2. ProductoElectronico (subclase de Producto):\n\n              o   Atributo adicional: marca (String)\n\n              o   Constructor que reciba nombre, precio, cantidad, y marca como par\u00e1metros.\n\n              o   M\u00e9todo mostrarInformacionElectronico() que imprima los detalles del\n                  producto electr\u00f3nico.\n\n    3. Tienda:\n\n              o   Atributo: productos (un arreglo de tipo Producto de tama\u00f1o fijo).\n\n              o   M\u00e9todo agregarProducto() que reciba un objeto de tipo Producto y lo agregue\n                  al arreglo.\n\n              o   M\u00e9todo mostrarProductos() que imprima todos los productos de la tienda.\n\n    4. En el main(), crea instancias de Producto y ProductoElectronico usando los\n       constructores, agrega los productos a la tienda, y muestra la informaci\u00f3n.\n\n class Producto {\n    private String nombreProducto;\n    private double precioProducto;\n    private int cantidadProducto;\n\n   public Producto(String nombre, double precio, int cantidad) {\n     nombreProducto = nombre;\n     precioProducto = precio;\n     cantidadProducto = cantidad;\n   }\n\f    public String obtenerNombre() {\n      return nombreProducto;\n    }\n\n    public double obtenerPrecio() {\n      return precioProducto;\n    }\n\n    public int obtenerCantidad() {\n      return cantidadProducto;\n    }\n\n  public void mostrarInformacion() {\n    System.out.println(\"Producto: \" + nombreProducto + \", Precio: \" + precioProducto + \",\nCantidad: \" + cantidadProducto);\n  }\n}\n\nclass ProductoElectronico extends Producto {\n   private String marcaProductoElectronico;\n\n    public ProductoElectronico(String nombre, double precio, int cantidad, String marca) {\n      nombreProducto = nombre;\n      precioProducto = precio;\n      cantidadProducto = cantidad;\n      marcaProductoElectronico = marca;\n    }\n\n    public void mostrarInformacionElectronico() {\n      mostrarInformacion(); // Llamando al m\u00e9todo de la clase base\n      System.out.println(\"Marca: \" + marcaProductoElectronico);\n    }\n}\n\nclass Tienda {\n   private Producto[] productos;\n   private int indice;\n\n    public Tienda(int capacidad) {\n      productos = new Producto[capacidad];\n      indice = 0;\n    }\n\n    public void agregarProducto(Producto producto) {\n      if (indice < productos.length) {\n          productos[indice] = producto;\n          indice++;\n      } else {\n          System.out.println(\"La tienda est\u00e1 llena.\");\n      }\n    }\n\f     public void mostrarProductos() {\n       System.out.println(\"Productos disponibles en la tienda:\");\n       for (int i = 0; i < indice; i++) {\n         productos[i].mostrarInformacion();\n       }\n     }\n }\n\n public class Main {\n   public static void main(String[] args) {\n\n      Producto producto1 = new Producto(\"Camiseta\", 19.99, 10);\n      ProductoElectronico productoElectronico1 = new ProductoElectronico(\"Laptop\", 899.99,\n 5, \"Dell\");\n\n         Tienda tienda = new Tienda(5);\n         tienda.agregarProducto(producto1);\n         tienda.agregarProducto(productoElectronico1);\n\n         tienda.mostrarProductos();\n     }\n }\n\n\nEjercicio 2\n\nVamos a gestionar una biblioteca de pel\u00edculas. Para ello vamos a crear una clase Pelicula que\ntenga los atributos: titulo, duracion (en minutos), y anioEstreno. Luego, se crear\u00e1 una subclase\nPeliculaDeAccion que herede de Pelicula y tenga un atributo adicional para la clasificacion.\nUsaremos constructores para inicializar los atributos.\n\n     1. Pelicula:\n\n               o   Atributos:\n\n                       \u25aa   tituloPelicula (String)\n\n                       \u25aa   duracionPelicula (int)\n\n                       \u25aa   anioEstrenoPelicula (int)\n\n               o   Constructor que reciba titulo, duracion y anioEstreno como par\u00e1metros y los\n                   inicialice.\n\n               o   M\u00e9todo mostrarInformacion() que imprima los detalles de la pel\u00edcula.\n\n     2. PeliculaDeAccion (subclase de Pelicula):\n\n               o   Atributo adicional: clasificacionPelicula (String)\n\n               o   Constructor que reciba titulo, duracion, anioEstreno y clasificacion como\n                   par\u00e1metros.\n\n               o   M\u00e9todo mostrarInformacionAccion() que imprima los detalles de la pel\u00edcula de\n                   acci\u00f3n.\n\f  3. Biblioteca:\n\n           o   Atributo: peliculas (un arreglo de tipo Pelicula de tama\u00f1o fijo).\n\n           o   M\u00e9todo agregarPelicula() que reciba un objeto de tipo Pelicula y lo agregue al\n               arreglo.\n\n           o   M\u00e9todo mostrarPeliculas() que imprima todos los detalles de las pel\u00edculas.\n\n  4. En el main(), crea instancias de Pelicula y PeliculaDeAccion usando los constructores,\n     agrega las pel\u00edculas a la biblioteca y muestra la informaci\u00f3n de todas las pel\u00edculas.\n\nclass Pelicula {\n   private String tituloPelicula;\n   private int duracionPelicula;\n   private int anioEstrenoPelicula;\n\n  public Pelicula(String titulo, int duracion, int anioEstreno) {\n    tituloPelicula = titulo;\n    duracionPelicula = duracion;\n    anioEstrenoPelicula = anioEstreno;\n  }\n\n  public String obtenerTitulo() {\n    return tituloPelicula;\n  }\n\n  public int obtenerDuracion() {\n    return duracionPelicula;\n  }\n\n  public int obtenerAnioEstreno() {\n    return anioEstrenoPelicula;\n  }\n\n  public void mostrarInformacion() {\n    System.out.println(\"T\u00edtulo: \" + tituloPelicula + \", Duraci\u00f3n: \" + duracionPelicula + \"\nminutos, A\u00f1o de estreno: \" + anioEstrenoPelicula);\n  }\n}\n\nclass PeliculaDeAccion extends Pelicula {\n   private String clasificacionPelicula;\n\n  public PeliculaDeAccion(String titulo, int duracion, int anioEstreno, String clasificacion) {\n    tituloPelicula = titulo;\n    duracionPelicula = duracion;\n    anioEstrenoPelicula = anioEstreno;\n    clasificacionPelicula = clasificacion;\n  }\n\n  public void mostrarInformacionAccion() {\n    mostrarInformacion(); // Llamando al m\u00e9todo de la clase base\n\f         System.out.println(\"Clasificaci\u00f3n: \" + clasificacionPelicula);\n     }\n }\n\n class Biblioteca {\n    private Pelicula[] peliculas;\n    private int indice;\n\n     public Biblioteca(int capacidad) {\n       peliculas = new Pelicula[capacidad];\n       indice = 0;\n     }\n\n     public void agregarPelicula(Pelicula pelicula) {\n       if (indice < peliculas.length) {\n           peliculas[indice] = pelicula;\n           indice++;\n       } else {\n           System.out.println(\"La biblioteca est\u00e1 llena.\");\n       }\n     }\n\n     public void mostrarPeliculas() {\n       System.out.println(\"Pel\u00edculas disponibles en la biblioteca:\");\n       for (int i = 0; i < indice; i++) {\n         peliculas[i].mostrarInformacion();\n       }\n     }\n }\n\n public class Main {\n   public static void main(String[] args) {\n\n     Pelicula pelicula1 = new Pelicula(\"La Casa de Papel\", 60, 2017);\n     PeliculaDeAccion peliculaDeAccion1 = new PeliculaDeAccion(\"Rocky\", 120, 1983,\n \"acci\u00f3n\");\n\n         Biblioteca biblioteca = new Biblioteca(5);\n         biblioteca.agregarPelicula(pelicula1);\n         biblioteca.agregarPelicula(peliculaDeAccion1);\n\n         biblioteca.mostrarPeliculas();\n     }\n }\n\n\nEjercicio 3\n\nVamos a gestionar un inventario de electrodom\u00e9sticos. Para ello vamos a crear un sistema de\ngesti\u00f3n de inventario para una tienda de electrodom\u00e9sticos. Tendremos una clase base\nProductoElectrico con atributos comunes como el nombre y el precio, y luego una subclase\nTelevisor que agregue un atributo adicional para la tamanoPantalla en pulgadas. As\u00ed:\n\f  1. ProductoElectrico:\n\n          o   Atributos:\n\n                   \u25aa   nombreProductoElectrico (String)\n\n                   \u25aa   precioProductoElectrico (double)\n\n          o   Constructor que reciba nombre y precio como par\u00e1metros y los inicialice.\n\n          o   M\u00e9todo mostrarInformacion() que imprima los detalles del producto el\u00e9ctrico.\n\n  2. Televisor (subclase de ProductoElectrico):\n\n          o   Atributo adicional: tamanoPantallaTelevisor (int, en pulgadas).\n\n          o   Constructor que reciba nombre, precio y tamano como par\u00e1metros.\n\n          o   M\u00e9todo mostrarInformacionTelevisor() que imprima los detalles del televisor.\n\n  3. Inventario:\n\n          o   Atributo: productos (un arreglo de tipo ProductoElectrico de tama\u00f1o fijo).\n\n          o   M\u00e9todo agregarProducto() que reciba un objeto de tipo ProductoElectrico y lo\n              agregue al arreglo.\n\n          o   M\u00e9todo mostrarProductos() que imprima todos los detalles de los productos\n              en el inventario.\n\n  4. En el main(), crea instancias de ProductoElectrico y Televisor usando los constructores,\n     agrega los productos al inventario y muestra la informaci\u00f3n de todos los productos.\n\n\n\nclass ProductoElectrico {\n   private String nombreProductoElectrico;\n   private double precioProductoElectrico;\n\n  public ProductoElectrico(String nombre, double precio) {\n    nombreProductoElectrico = nombre;\n    precioProductoElectrico = precio;\n  }\n\n  public String obtenerNombre() {\n    return nombreProductoElectrico;\n  }\n\n  public double obtenerPrecio() {\n    return precioProductoElectrico;\n  }\n\n  public void mostrarInformacion() {\n    System.out.println(\"Producto: \" + nombreProductoElectrico + \", Precio: \" +\nprecioProductoElectrico);\n  }\n}\n\fclass Televisor extends ProductoElectrico {\n   private int tamanoPantallaTelevisor;\n\n    public Televisor(String nombre, double precio, int tamano) {\n      nombreProductoElectrico = nombre;\n      precioProductoElectrico = precio;\n      tamanoPantallaTelevisor = tamano;\n    }\n\n    public void mostrarInformacionTelevisor() {\n      mostrarInformacion(); // Llamando al m\u00e9todo de la clase base\n      System.out.println(\"Tama\u00f1o de pantalla: \" + tamanoPantallaTelevisor + \" pulgadas\");\n    }\n}\n\nclass Inventario {\n   private ProductoElectrico[] productos;\n   private int indice;\n\n    public Inventario(int capacidad) {\n      productos = new ProductoElectrico[capacidad];\n      indice = 0;\n    }\n\n    public void agregarProducto(ProductoElectrico producto) {\n      if (indice < productos.length) {\n          productos[indice] = producto;\n          indice++;\n      } else {\n          System.out.println(\"El inventario est\u00e1 lleno.\");\n      }\n    }\n\n    public void mostrarProductos() {\n      System.out.println(\"Productos disponibles en el inventario:\");\n      for (int i = 0; i < indice; i++) {\n        productos[i].mostrarInformacion();\n      }\n    }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n\n      ProductoElectrico producto1 = new ProductoElectrico(\"Aspiradora\", 120.50);\n      Televisor televisor1 = new Televisor(\"Samsung 55\", 499.99, 55);\n\n      Inventario inventario = new Inventario(5);\n      inventario.agregarProducto(producto1);\n      inventario.agregarProducto(televisor1);\n\f        // Mostrar productos en el inventario\n        inventario.mostrarProductos();\n    }\n}"
-  },
-  {
-    "id": "dr_ej_5",
-    "topic": "Polimorfismo y sobrecarga",
-    "exercise": "Ejercicio 1\n\nImplementa un sistema para gestionar una tienda de veh\u00edculos. Cada veh\u00edculo tiene una marca\ny una descripci\u00f3n espec\u00edfica seg\u00fan su tipo. As\u00ed:\n\nClases a implementar:\n\n    \u2022   Vehiculo (Clase base)\n\n    \u2022   Coche (Subclase de Vehiculo)\n\n    \u2022   Moto (Subclase de Vehiculo)\n\n    \u2022   Bicicleta (Subclase de Vehiculo)\n\nPolimorfismo:\n\n    \u2022   Todas las subclases deben sobrescribir el m\u00e9todo obtenerDescripcion() para devolver\n        informaci\u00f3n espec\u00edfica de cada tipo de veh\u00edculo.\n\nSobrecarga:\n\n    \u2022   La clase Coche debe tener una versi\u00f3n adicional de obtenerDescripcion() que reciba un\n        par\u00e1metro indicando el tipo de combustible.\n\nPruebas:\n\n    \u2022   Crear objetos de cada clase (Coche, Moto, Bicicleta).\n\n    \u2022   Llamar al m\u00e9todo obtenerDescripcion() en cada objeto.\n\n    \u2022   En el caso de Coche, llamar tambi\u00e9n a la versi\u00f3n sobrecargada con el tipo de\n        combustible.\n\nEjemplo de salida esperada:\n\n Coche de la marca Toyota con 4 puertas\n Moto de la marca Honda con casco incluido\n Bicicleta de la marca Giant con 21 cambios\n Coche de la marca Toyota con 4 puertas, usa Gasolina\n\n\n\n\nEjercicio 2\n\nImplementa un sistema para gestionar una empresa. Cada empleado tiene un nombre y un\nsalario base, pero dependiendo del tipo de empleado, el c\u00e1lculo del salario var\u00eda.\n\nClases a implementar:\n\n    \u2022   Empleado (Clase base)\n    \u2022   Gerente (Subclase de Empleado)\n    \u2022   Ingeniero (Subclase de Empleado)\n    \u2022   Asistente (Subclase de Empleado)\n\fPolimorfismo:\n\nCada tipo de empleado debe sobrescribir el m\u00e9todo calcularSalario(), aplicando su propia l\u00f3gica\nde c\u00e1lculo:\n\n    \u2022   Gerente: Recibe un bono adicional.\n    \u2022   Ingeniero: Tiene un extra por certificaciones.\n    \u2022   Asistente: No tiene extras, solo el salario base.\n\nSobrecarga:\n\nLa clase Ingeniero debe tener una versi\u00f3n sobrecargada de calcularSalario() que reciba el\nn\u00famero de certificaciones y aumente el salario bas\u00e1ndose en ellas.\n\nPruebas:\n\n    \u2022   Crear objetos de cada clase (Gerente, Ingeniero, Asistente).\n\n    \u2022   Llamar al m\u00e9todo calcularSalario() en cada objeto.\n\n    \u2022   Para Ingeniero, llamar tambi\u00e9n a la versi\u00f3n sobrecargada con el n\u00famero de\n        certificaciones.\n\nEjemplo de salida esperada:\n\n Salario del Gerente: 7500\n Salario del Ingeniero: 5000\n Salario del Asistente: 3000\n Salario del Ingeniero con 3 certificaciones: 5300\n\n\n\n\nEjercicio 3\n\nImplementa un sistema para calcular el \u00e1rea de diferentes figuras geom\u00e9tricas. Cada figura tiene\nuna forma diferente de calcular su \u00e1rea.\n\nClases a implementar:\n\n    \u2022   Figura (Clase base)\n    \u2022   Cuadrado (Subclase de Figura)\n    \u2022   Rectangulo (Subclase de Figura)\n    \u2022   Circulo (Subclase de Figura)\n\nPolimorfismo:\n\nCada subclase debe sobrescribir el m\u00e9todo calcularArea(), aplicando su propia f\u00f3rmula:\n\n    \u2022   Cuadrado: Lado \u00d7 Lado\n    \u2022   Rect\u00e1ngulo: Base \u00d7 Altura\n    \u2022   C\u00edrculo: \u03c0 \u00d7 Radio\u00b2\n\nSobrecarga:\n\nLa clase Rectangulo debe tener una versi\u00f3n sobrecargada de calcularArea(int factor), que\nmultiplique el \u00e1rea por un factor determinado.\n\fPruebas:\n\n    \u2022   Crear objetos de cada figura (Cuadrado, Rectangulo, Circulo).\n\n    \u2022   Llamar al m\u00e9todo calcularArea() en cada objeto.\n\n    \u2022   Para Rectangulo, llamar tambi\u00e9n a la versi\u00f3n sobrecargada con un factor.\n\nEjemplo de salida esperada:\n\n \u00c1rea del Cuadrado: 25.0\n \u00c1rea del Rect\u00e1ngulo: 30.0\n \u00c1rea del C\u00edrculo: 78.5\n \u00c1rea del Rect\u00e1ngulo con factor 2: 60.0\n\n\n\n\nEjercicio 4\n\nImplementa un sistema para una tienda de instrumentos musicales. Se necesita clasificar\ndiferentes tipos de instrumentos y describir c\u00f3mo suenan.\n\nClases a implementar:\n\n    \u2022   Instrumento (Clase base)\n    \u2022   Guitarra (Subclase de Instrumento)\n    \u2022   Piano (Subclase de Instrumento)\n    \u2022   Bateria (Subclase de Instrumento)\n\nPolimorfismo:\n\nCada subclase debe sobrescribir el m\u00e9todo tocarInstrumento(), devolviendo un sonido\ncaracter\u00edstico:\n\n    \u2022   Guitarra: \"Rasgueando cuerdas...\"\n    \u2022   Piano: \"Notas melodiosas suenan...\"\n    \u2022   Bater\u00eda: \"Pum pum chas!\"\n\nSobrecarga:\n\nLa clase Guitarra debe tener una versi\u00f3n sobrecargada de tocarInstrumento(int cuerdas), que\nindique cu\u00e1ntas cuerdas se est\u00e1n tocando.\n\nPruebas:\n\n    \u2022   Crear objetos de cada instrumento (Guitarra, Piano, Bateria).\n\n    \u2022   Llamar al m\u00e9todo tocarInstrumento() en cada objeto.\n\n    \u2022   Para Guitarra, llamar tambi\u00e9n a la versi\u00f3n sobrecargada con el n\u00famero de cuerdas\n        tocadas.\n\nEjemplo de salida esperada:\n\n Guitarra: Rasgueando cuerdas...\n Piano: Notas melodiosas suenan...\n\fBater\u00eda: Pum pum chas!\nGuitarra tocando 6 cuerdas: Rasgueando 6 cuerdas...",
-    "solution": "Ejercicio 1\n\nImplementa un sistema para gestionar una tienda de veh\u00edculos. Cada veh\u00edculo tiene una marca\ny una descripci\u00f3n espec\u00edfica seg\u00fan su tipo. As\u00ed:\n\nClases a implementar:\n\n     \u2022    Vehiculo (Clase base)\n\n     \u2022    Coche (Subclase de Vehiculo)\n\n     \u2022    Moto (Subclase de Vehiculo)\n\n     \u2022    Bicicleta (Subclase de Vehiculo)\n\nPolimorfismo:\n\n     \u2022    Todas las subclases deben sobrescribir el m\u00e9todo obtenerDescripcion() para devolver\n          informaci\u00f3n espec\u00edfica de cada tipo de veh\u00edculo.\n\nSobrecarga:\n\n     \u2022    La clase Coche debe tener una versi\u00f3n adicional de obtenerDescripcion() que reciba un\n          par\u00e1metro indicando el tipo de combustible.\n\nPruebas:\n\n     \u2022    Crear objetos de cada clase (Coche, Moto, Bicicleta).\n\n     \u2022    Llamar al m\u00e9todo obtenerDescripcion() en cada objeto.\n\n     \u2022    En el caso de Coche, llamar tambi\u00e9n a la versi\u00f3n sobrecargada con el tipo de\n          combustible.\n\nEjemplo de salida esperada:\n\n Coche de la marca Toyota con 4 puertas\n Moto de la marca Honda con casco incluido\n Bicicleta de la marca Giant con 21 cambios\n Coche de la marca Toyota con 4 puertas, usa Gasolina\n\n\n // Clase Vehiculo (base)\n class Vehiculo {\n    String marcaVehiculo;\n\n     public Vehiculo(String marcaParametro) {\n       marcaVehiculo = marcaParametro;\n     }\n\n     public String obtenerDescripcion() {\n       return \"Veh\u00edculo de la marca \" + marcaVehiculo;\n     }\n }\n\f// Clase Coche con polimorfismo y sobrecarga\nclass Coche extends Vehiculo {\n   int puertasCoche;\n\n    public Coche(String marcaParametro, int puertasParametro) {\n      marcaVehiculo = marcaParametro;\n      puertasCoche = puertasParametro;\n    }\n\n   // Sobrecarga con par\u00e1metro adicional (tipo de combustible)\n   public String obtenerDescripcion(String tipoCombustible) {\n      return \"Coche de la marca \" + marcaVehiculo + \" con \" + puertasCoche + \" puertas, usa \"\n+ tipoCombustible;\n   }\n\n    public String obtenerDescripcion() {\n      return \"Coche de la marca \" + marcaVehiculo + \" con \" + puertasCoche + \" puertas\";\n    }\n}\n\n// Clase Moto con polimorfismo\nclass Moto extends Vehiculo {\n   boolean incluyeCasco;\n\n    public Moto(String marcaParametro, boolean cascoParametro) {\n      marcaVehiculo = marcaParametro;\n      incluyeCasco = cascoParametro;\n    }\n\n    public String obtenerDescripcion() {\n      if (incluyeCasco) {\n          return \"Moto de la marca \" + marcaVehiculo + \" con casco incluido\";\n      }\n      return \"Moto de la marca \" + marcaVehiculo + \" sin casco incluido\";\n    }\n}\n\n// Clase Bicicleta con polimorfismo\nclass Bicicleta extends Vehiculo {\n   int cambiosBicicleta;\n\n    public Bicicleta(String marcaParametro, int cambiosParametro) {\n      marcaVehiculo = marcaParametro;\n      cambiosBicicleta = cambiosParametro;\n    }\n\n    public String obtenerDescripcion() {\n      return \"Bicicleta de la marca \" + marcaVehiculo + \" con \" + cambiosBicicleta + \" cambios\";\n    }\n}\n\n// Clase Main para probar polimorfismo y sobrecarga\n\f public class Main {\n   public static void main(String[] args) {\n     Coche cocheEjemplo = new Coche(\"Toyota\", 4);\n     Moto motoEjemplo = new Moto(\"Honda\", true);\n     Bicicleta bicicletaEjemplo = new Bicicleta(\"Giant\", 21);\n\n         // Polimorfismo: cada objeto usa su versi\u00f3n de obtenerDescripcion()\n         System.out.println(cocheEjemplo.obtenerDescripcion());\n         System.out.println(motoEjemplo.obtenerDescripcion());\n         System.out.println(bicicletaEjemplo.obtenerDescripcion());\n\n         // Sobrecarga en Coche: llamada con un par\u00e1metro adicional\n         System.out.println(cocheEjemplo.obtenerDescripcion(\"Gasolina\"));\n     }\n }\n\n\nEjercicio 2\n\nImplementa un sistema para gestionar una empresa. Cada empleado tiene un nombre y un\nsalario base, pero dependiendo del tipo de empleado, el c\u00e1lculo del salario var\u00eda.\n\nClases a implementar:\n\n     \u2022     Empleado (Clase base)\n     \u2022     Gerente (Subclase de Empleado)\n     \u2022     Ingeniero (Subclase de Empleado)\n     \u2022     Asistente (Subclase de Empleado)\n\nPolimorfismo:\n\nCada tipo de empleado debe sobrescribir el m\u00e9todo calcularSalario(), aplicando su propia l\u00f3gica\nde c\u00e1lculo:\n\n     \u2022     Gerente: Recibe un bono adicional.\n     \u2022     Ingeniero: Tiene un extra por certificaciones.\n     \u2022     Asistente: No tiene extras, solo el salario base.\n\nSobrecarga:\n\nLa clase Ingeniero debe tener una versi\u00f3n sobrecargada de calcularSalario() que reciba el\nn\u00famero de certificaciones y aumente el salario bas\u00e1ndose en ellas.\n\nPruebas:\n\n     \u2022     Crear objetos de cada clase (Gerente, Ingeniero, Asistente).\n\n     \u2022     Llamar al m\u00e9todo calcularSalario() en cada objeto.\n\n     \u2022     Para Ingeniero, llamar tambi\u00e9n a la versi\u00f3n sobrecargada con el n\u00famero de\n           certificaciones.\n\nEjemplo de salida esperada:\n\n Salario del Gerente: 7500\n\fSalario del Ingeniero: 5000\nSalario del Asistente: 3000\nSalario del Ingeniero con 3 certificaciones: 5300\n\n\n// Clase base Empleado\nclass Empleado {\n   String nombreEmpleado;\n   double salarioBase;\n\n    public Empleado(String nombreParametro, double salarioParametro) {\n      nombreEmpleado = nombreParametro;\n      salarioBase = salarioParametro;\n    }\n\n    public double calcularSalario() {\n      return salarioBase;\n    }\n}\n\n// Clase Gerente con polimorfismo\nclass Gerente extends Empleado {\n   double bonoGerente;\n\n  public Gerente(String nombreParametro,                 double     salarioParametro,   double\nbonoParametro) {\n    nombreEmpleado = nombreParametro;\n    salarioBase = salarioParametro;\n    bonoGerente = bonoParametro;\n  }\n\n    public double calcularSalario() {\n      return salarioBase + bonoGerente;\n    }\n}\n\n// Clase Ingeniero con polimorfismo y sobrecarga\nclass Ingeniero extends Empleado {\n   double extraCertificacion;\n\n  public Ingeniero(String nombreParametro,               double     salarioParametro,   double\nextraParametro) {\n    nombreEmpleado = nombreParametro;\n    salarioBase = salarioParametro;\n    extraCertificacion = extraParametro;\n  }\n\n    // M\u00e9todo sobrecargado para calcular salario con certificaciones\n    public double calcularSalario(int cantidadCertificaciones) {\n       return salarioBase + (extraCertificacion * cantidadCertificaciones);\n    }\n\f     public double calcularSalario() {\n       return salarioBase;\n     }\n }\n\n // Clase Asistente con polimorfismo\n class Asistente extends Empleado {\n    public Asistente(String nombreParametro, double salarioParametro) {\n      nombreEmpleado = nombreParametro;\n      salarioBase = salarioParametro;\n    }\n\n     public double calcularSalario() {\n       return salarioBase;\n     }\n }\n\n // Clase Main para probar el polimorfismo y la sobrecarga\n public class Main {\n    public static void main(String[] args) {\n      Gerente gerenteEjemplo = new Gerente(\"Carlos\", 7000, 500);\n      Ingeniero ingenieroEjemplo = new Ingeniero(\"Ana\", 5000, 100);\n      Asistente asistenteEjemplo = new Asistente(\"Luis\", 3000);\n\n         // Polimorfismo: llamada a calcularSalario() seg\u00fan el tipo de empleado\n         System.out.println(\"Salario del Gerente: \" + gerenteEjemplo.calcularSalario());\n         System.out.println(\"Salario del Ingeniero: \" + ingenieroEjemplo.calcularSalario());\n         System.out.println(\"Salario del Asistente: \" + asistenteEjemplo.calcularSalario());\n\n     // Sobrecarga en Ingeniero: c\u00e1lculo con certificaciones\n     System.out.println(\"Salario    del    Ingeniero     con        3    certificaciones:      \"   +\n ingenieroEjemplo.calcularSalario(3));\n   }\n }\n\n\nEjercicio 3\n\nImplementa un sistema para calcular el \u00e1rea de diferentes figuras geom\u00e9tricas. Cada figura tiene\nuna forma diferente de calcular su \u00e1rea.\n\nClases a implementar:\n\n     \u2022     Figura (Clase base)\n     \u2022     Cuadrado (Subclase de Figura)\n     \u2022     Rectangulo (Subclase de Figura)\n     \u2022     Circulo (Subclase de Figura)\n\nPolimorfismo:\n\nCada subclase debe sobrescribir el m\u00e9todo calcularArea(), aplicando su propia f\u00f3rmula:\n\n     \u2022     Cuadrado: Lado \u00d7 Lado\n\f     \u2022   Rect\u00e1ngulo: Base \u00d7 Altura\n     \u2022   C\u00edrculo: \u03c0 \u00d7 Radio\u00b2\n\nSobrecarga:\n\nLa clase Rectangulo debe tener una versi\u00f3n sobrecargada de calcularArea(int factor), que\nmultiplique el \u00e1rea por un factor determinado.\n\nPruebas:\n\n     \u2022   Crear objetos de cada figura (Cuadrado, Rectangulo, Circulo).\n\n     \u2022   Llamar al m\u00e9todo calcularArea() en cada objeto.\n\n     \u2022   Para Rectangulo, llamar tambi\u00e9n a la versi\u00f3n sobrecargada con un factor.\n\nEjemplo de salida esperada:\n\n \u00c1rea del Cuadrado: 25.0\n \u00c1rea del Rect\u00e1ngulo: 30.0\n \u00c1rea del C\u00edrculo: 78.5\n \u00c1rea del Rect\u00e1ngulo con factor 2: 60.0\n\n\n // Clase base Figura\n class Figura {\n    public double calcularArea() {\n      return 0;\n    }\n }\n\n // Clase Cuadrado con polimorfismo\n class Cuadrado extends Figura {\n    double ladoCuadrado;\n\n     public Cuadrado(double ladoParametro) {\n       ladoCuadrado = ladoParametro;\n     }\n\n     public double calcularArea() {\n       return ladoCuadrado * ladoCuadrado;\n     }\n }\n\n // Clase Rectangulo con polimorfismo y sobrecarga\n class Rectangulo extends Figura {\n    double baseRectangulo;\n    double alturaRectangulo;\n\n     public Rectangulo(double baseParametro, double alturaParametro) {\n       baseRectangulo = baseParametro;\n       alturaRectangulo = alturaParametro;\n     }\n\f     public double calcularArea() {\n       return baseRectangulo * alturaRectangulo;\n     }\n\n     // Sobrecarga con un factor multiplicador\n     public double calcularArea(int factor) {\n        return (baseRectangulo * alturaRectangulo) * factor;\n     }\n }\n\n // Clase Circulo con polimorfismo\n class Circulo extends Figura {\n    double radioCirculo;\n\n     public Circulo(double radioParametro) {\n       radioCirculo = radioParametro;\n     }\n\n     public double calcularArea() {\n       return 3.14 * radioCirculo * radioCirculo;\n     }\n }\n\n // Clase Main para probar el polimorfismo y la sobrecarga\n public class Main {\n    public static void main(String[] args) {\n      Cuadrado cuadradoEjemplo = new Cuadrado(5);\n      Rectangulo rectanguloEjemplo = new Rectangulo(5, 6);\n      Circulo circuloEjemplo = new Circulo(5);\n\n         // Polimorfismo: cada figura usa su propia versi\u00f3n de calcularArea()\n         System.out.println(\"\u00c1rea del Cuadrado: \" + cuadradoEjemplo.calcularArea());\n         System.out.println(\"\u00c1rea del Rect\u00e1ngulo: \" + rectanguloEjemplo.calcularArea());\n         System.out.println(\"\u00c1rea del C\u00edrculo: \" + circuloEjemplo.calcularArea());\n\n     // Sobrecarga en Rectangulo: c\u00e1lculo con factor\n     System.out.println(\"\u00c1rea     del      Rect\u00e1ngulo          con     factor     2:       \"   +\n rectanguloEjemplo.calcularArea(2));\n   }\n }\n\n\nEjercicio 4\n\nImplementa un sistema para una tienda de instrumentos musicales. Se necesita clasificar\ndiferentes tipos de instrumentos y describir c\u00f3mo suenan.\n\nClases a implementar:\n\n     \u2022     Instrumento (Clase base)\n     \u2022     Guitarra (Subclase de Instrumento)\n     \u2022     Piano (Subclase de Instrumento)\n\f   \u2022   Bateria (Subclase de Instrumento)\n\nPolimorfismo:\n\nCada subclase debe sobrescribir el m\u00e9todo tocarInstrumento(), devolviendo un sonido\ncaracter\u00edstico:\n\n   \u2022   Guitarra: \"Rasgueando cuerdas...\"\n   \u2022   Piano: \"Notas melodiosas suenan...\"\n   \u2022   Bater\u00eda: \"Pum pum chas!\"\n\nSobrecarga:\n\nLa clase Guitarra debe tener una versi\u00f3n sobrecargada de tocarInstrumento(int cuerdas), que\nindique cu\u00e1ntas cuerdas se est\u00e1n tocando.\n\nPruebas:\n\n   \u2022   Crear objetos de cada instrumento (Guitarra, Piano, Bateria).\n\n   \u2022   Llamar al m\u00e9todo tocarInstrumento() en cada objeto.\n\n   \u2022   Para Guitarra, llamar tambi\u00e9n a la versi\u00f3n sobrecargada con el n\u00famero de cuerdas\n       tocadas.\n\nEjemplo de salida esperada:\n\n Guitarra: Rasgueando cuerdas...\n Piano: Notas melodiosas suenan...\n Bater\u00eda: Pum pum chas!\n Guitarra tocando 6 cuerdas: Rasgueando 6 cuerdas...\n\n\n // Clase base Instrumento\n class Instrumento {\n    public String tocarInstrumento() {\n      return \"Sonido de instrumento desconocido...\";\n    }\n }\n\n // Clase Guitarra con polimorfismo y sobrecarga\n class Guitarra extends Instrumento {\n    String tipoGuitarra;\n\n   public Guitarra(String tipoParametro) {\n     tipoGuitarra = tipoParametro;\n   }\n\n   public String tocarInstrumento() {\n     return \"Rasgueando cuerdas...\";\n   }\n\n   // Sobrecarga con n\u00famero de cuerdas\n   public String tocarInstrumento(int cuerdas) {\n      return \"Rasgueando \" + cuerdas + \" cuerdas...\";\n\f    }\n}\n\n// Clase Piano con polimorfismo\nclass Piano extends Instrumento {\n   int teclasPiano;\n\n    public Piano(int teclasParametro) {\n      teclasPiano = teclasParametro;\n    }\n\n    public String tocarInstrumento() {\n      return \"Notas melodiosas suenan...\";\n    }\n}\n\n// Clase Bateria con polimorfismo\nclass Bateria extends Instrumento {\n   int tamboresBateria;\n\n    public Bateria(int tamboresParametro) {\n      tamboresBateria = tamboresParametro;\n    }\n\n    public String tocarInstrumento() {\n      return \"Pum pum chas!\";\n    }\n}\n\n// Clase Main para probar polimorfismo y sobrecarga\npublic class Main {\n   public static void main(String[] args) {\n     Guitarra guitarraEjemplo = new Guitarra(\"Ac\u00fastica\");\n     Piano pianoEjemplo = new Piano(88);\n     Bateria bateriaEjemplo = new Bateria(5);\n\n        // Polimorfismo: cada instrumento usa su propia versi\u00f3n de tocarInstrumento()\n        System.out.println(\"Guitarra: \" + guitarraEjemplo.tocarInstrumento());\n        System.out.println(\"Piano: \" + pianoEjemplo.tocarInstrumento());\n        System.out.println(\"Bater\u00eda: \" + bateriaEjemplo.tocarInstrumento());\n\n     // Sobrecarga en Guitarra: tocar con un n\u00famero de cuerdas espec\u00edfico\n     System.out.println(\"Guitarra        tocando        6        cuerdas:          \"    +\nguitarraEjemplo.tocarInstrumento(6));\n  }\n}"
-  },
-  {
-    "id": "dr_ej_6",
-    "topic": "Orden de llamada a constructores",
-    "exercise": "Ejercicio 1\n\nDesarrolla un sistema que modele una cadena de fabricaci\u00f3n de productos electr\u00f3nicos, con\ndiferentes niveles de herencia y constructores encadenados para observar el orden de ejecuci\u00f3n\nde los constructores cuando se crean objetos de la subclase m\u00e1s espec\u00edfica.\n\nClases a implementar:\n\n    \u2022    Producto (Clase base)\n\n    \u2022    Electronico (Subclase de Producto)\n\n    \u2022    Computadora (Subclase de Electronico)\n\n    \u2022    Portatil (Subclase de Computadora)\n\nInicializaci\u00f3n de atributos:\n\n    \u2022    Cada clase debe tener atributos propios, como nombre, fabricante, procesador, peso,\n         etc.\n\n    \u2022    El constructor de cada clase debe inicializar estos atributos e imprimir un mensaje para\n         indicar su ejecuci\u00f3n.\n\nCrea un objeto de la clase Portatil y observa el orden en que se ejecutan los constructores y\nc\u00f3mo se inicializan los atributos. Ejemplo de salida del sistema:\n\n Constructor de Producto ejecutado\n Nombre: Dispositivo\n Fabricante: Gen\u00e9rico\n\n Constructor de Electronico ejecutado\n Voltaje: 220V\n\n Constructor de Computadora ejecutado\n Procesador: Intel Core i7\n RAM: 16GB\n\n Constructor de Portatil ejecutado\n Peso: 1.5 kg\n Autonom\u00eda: 10 horas\n\n\nEjercicio 2\n\nDesarrolla un sistema que modele distintos tipos de veh\u00edculos terrestres, con diferentes niveles\nde herencia y constructores encadenados para analizar el orden de ejecuci\u00f3n de los\nconstructores cuando se crean objetos de la subclase m\u00e1s espec\u00edfica.\n\nClases a implementar:\n\n    \u2022    Vehiculo (Clase base)\n    \u2022    Motorizado (Subclase de Vehiculo)\n\f    \u2022   Automovil (Subclase de Motorizado)\n    \u2022   Deportivo (Subclase de Automovil)\n\nInicializaci\u00f3n de Atributos:\n\n    \u2022   Cada clase debe tener atributos propios, como tipo, motor, cilindraje, velocidad\n        m\u00e1xima, etc.\n    \u2022   Cada constructor debe inicializar estos atributos e imprimir un mensaje que indique su\n        ejecuci\u00f3n.\n\nCrea un objeto de cada una de las clases y observa el orden en que se ejecutan los constructores\ny c\u00f3mo se inicializan los atributos.\n\n\n\nEjercicio 3\n\nDesarrolla un sistema que modele distintos tipos de dispositivos inteligentes con diferentes\nniveles de herencia y constructores encadenados para analizar el orden de ejecuci\u00f3n de los\nconstructores cuando se crean objetos de la subclase m\u00e1s espec\u00edfica.\n\nClases a implementar:\n\n    \u2022   Dispositivo (Clase base)\n    \u2022   DispositivoInteligente (Subclase de Dispositivo)\n    \u2022   Telefono (Subclase de DispositivoInteligente)\n    \u2022   Smartphone (Subclase de Telefono)\n\nInicializaci\u00f3n de Atributos:\n\n    \u2022   Cada clase debe tener atributos propios, como nombre, conectividad, sistema\n        operativo, c\u00e1mara, etc.\n    \u2022   Cada constructor debe inicializar estos atributos e imprimir un mensaje que indique su\n        ejecuci\u00f3n.\n\nCrea un objeto de cada clase y observa el orden en que se ejecutan los constructores y c\u00f3mo se\ninicializan los atributos.\n\n\n\nEjercicio 4\n\nDesarrolla un sistema que modele distintos tipos de transporte p\u00fablico con m\u00faltiples niveles de\nherencia y sobrecarga de constructores para analizar el orden de ejecuci\u00f3n de los constructores\ncuando se crean objetos de la subclase m\u00e1s espec\u00edfica, considerando la sobrecarga en algunas\nclases.\n\nClases a implementar:\n\n    \u2022   Transporte (Clase base)\n    \u2022   TransportePublico (Subclase de Transporte)\n    \u2022   Autobus (Subclase de TransportePublico)\n    \u2022   AutobusElectrico (Subclase de Autobus)\n\fSobrecarga de constructores:\n\n    \u2022   Transporte tiene un constructor sin par\u00e1metros y otro que recibe el tipo.\n    \u2022   TransportePublico tiene un constructor que permite definir la capacidad de pasajeros.\n    \u2022   Autobus tiene un constructor que permite definir la ruta.\n    \u2022   AutobusElectrico tiene un constructor que permite definir la autonom\u00eda de la bater\u00eda.\n\nCrea objetos con diferentes constructores y observa el orden de ejecuci\u00f3n de los constructores.\n\n\n\nEjercicio 5\n\nAmpl\u00eda el ejercicio 2 y desarrolla un sistema que modele diferentes tipos de veh\u00edculos con\nm\u00faltiples niveles de herencia y sobrecarga de constructores para analizar el orden de ejecuci\u00f3n\nde los constructores cuando se crean objetos de la subclase m\u00e1s espec\u00edfica, considerando la\nsobrecarga en varias clases.\n\nClases a implementar:\n\n    \u2022   Vehiculo (Clase base)\n    \u2022   VehiculoMotorizado (Subclase de Vehiculo)\n    \u2022   Automovil (Subclase de VehiculoMotorizado)\n    \u2022   Camion (Subclase de VehiculoMotorizado)\n    \u2022   Deportivo (Subclase de Automovil)\n    \u2022   CamionElectrico (Subclase de Camion)\n\nSobrecarga de constructores:\n\n    \u2022   Vehiculo tiene un constructor sin par\u00e1metros y otro que recibe el tipo.\n    \u2022   VehiculoMotorizado tiene un constructor que permite definir el tipo de motor.\n    \u2022   Automovil y Camion tienen constructores que permiten definir la cantidad de puertas o\n        la carga m\u00e1xima.\n    \u2022   Deportivo y CamionElectrico tienen constructores que permiten definir caracter\u00edsticas\n        adicionales.\n\nInstancia objetos con diferentes constructores y observa el orden de ejecuci\u00f3n.",
-    "solution": "Ejercicio 1\n\nDesarrolla un sistema que modele una cadena de fabricaci\u00f3n de productos electr\u00f3nicos, con\ndiferentes niveles de herencia y constructores encadenados para observar el orden de ejecuci\u00f3n\nde los constructores cuando se crean objetos de la subclase m\u00e1s espec\u00edfica.\n\nClases a implementar:\n\n    \u2022    Producto (Clase base)\n\n    \u2022    Electronico (Subclase de Producto)\n\n    \u2022    Computadora (Subclase de Electronico)\n\n    \u2022    Portatil (Subclase de Computadora)\n\nInicializaci\u00f3n de atributos:\n\n    \u2022    Cada clase debe tener atributos propios, como nombre, fabricante, procesador, peso,\n         etc.\n\n    \u2022    El constructor de cada clase debe inicializar estos atributos e imprimir un mensaje para\n         indicar su ejecuci\u00f3n.\n\nCrea un objeto de la clase Portatil y observa el orden en que se ejecutan los constructores y\nc\u00f3mo se inicializan los atributos. Ejemplo de salida del sistema:\n\n Constructor de Producto ejecutado\n Nombre: Dispositivo\n Fabricante: Gen\u00e9rico\n\n Constructor de Electronico ejecutado\n Voltaje: 220V\n\n Constructor de Computadora ejecutado\n Procesador: Intel Core i7\n RAM: 16GB\n\n Constructor de Portatil ejecutado\n Peso: 1.5 kg\n Autonom\u00eda: 10 horas\n\n\n // Clase base Producto\n class Producto {\n    String nombre;\n    String fabricante;\n\n   public Producto() {\n     nombre = \"Dispositivo\";\n     fabricante = \"Gen\u00e9rico\";\n     System.out.println(\"Constructor de Producto ejecutado\");\n     System.out.println(\"Nombre: \" + nombre);\n\f        System.out.println(\"Fabricante: \" + fabricante);\n        System.out.println();\n    }\n}\n\n// Subclase Electronico\nclass Electronico extends Producto {\n   int voltaje;\n\n    public Electronico() {\n      voltaje = 220;\n      System.out.println(\"Constructor de Electronico ejecutado\");\n      System.out.println(\"Voltaje: \" + voltaje + \"V\");\n      System.out.println();\n    }\n}\n\n// Subclase Computadora\nclass Computadora extends Electronico {\n   String procesador;\n   int ram;\n\n    public Computadora() {\n      procesador = \"Intel Core i7\";\n      ram = 16;\n      System.out.println(\"Constructor de Computadora ejecutado\");\n      System.out.println(\"Procesador: \" + procesador);\n      System.out.println(\"RAM: \" + ram + \"GB\");\n      System.out.println();\n    }\n}\n\n// Subclase Portatil\nclass Portatil extends Computadora {\n   double peso;\n   int autonomia;\n\n    public Portatil() {\n      peso = 1.5;\n      autonomia = 10;\n      System.out.println(\"Constructor de Portatil ejecutado\");\n      System.out.println(\"Peso: \" + peso + \" kg\");\n      System.out.println(\"Autonom\u00eda: \" + autonomia + \" horas\");\n      System.out.println();\n    }\n}\n\n// Clase Main para probar el orden de ejecuci\u00f3n de los constructores\npublic class Main {\n   public static void main(String[] args) {\n     Portatil portatilEjemplo = new Portatil();\n   }\n\f }\n\n\nEjercicio 2\n\nDesarrolla un sistema que modele distintos tipos de veh\u00edculos terrestres, con diferentes niveles\nde herencia y constructores encadenados para analizar el orden de ejecuci\u00f3n de los\nconstructores cuando se crean objetos de la subclase m\u00e1s espec\u00edfica.\n\nClases a implementar:\n\n     \u2022   Vehiculo (Clase base)\n     \u2022   Motorizado (Subclase de Vehiculo)\n     \u2022   Automovil (Subclase de Motorizado)\n     \u2022   Deportivo (Subclase de Automovil)\n\nInicializaci\u00f3n de Atributos:\n\n     \u2022   Cada clase debe tener atributos propios, como tipo, motor, cilindraje, velocidad\n         m\u00e1xima, etc.\n     \u2022   Cada constructor debe inicializar estos atributos e imprimir un mensaje que indique su\n         ejecuci\u00f3n.\n\nCrea un objeto de cada una de las clases y observa el orden en que se ejecutan los constructores\ny c\u00f3mo se inicializan los atributos.\n\n // Clase base Vehiculo\n class Vehiculo {\n    String tipo;\n\n     public Vehiculo() {\n       tipo = \"Terrestre\";\n       System.out.println(\"Constructor de Vehiculo ejecutado\");\n       System.out.println(\"Tipo: \" + tipo);\n       System.out.println();\n     }\n }\n\n // Subclase Motorizado\n class Motorizado extends Vehiculo {\n    String motor;\n\n     public Motorizado() {\n       motor = \"Combusti\u00f3n\";\n       System.out.println(\"Constructor de Motorizado ejecutado\");\n       System.out.println(\"Motor: \" + motor);\n       System.out.println();\n     }\n }\n\n // Subclase Automovil\n class Automovil extends Motorizado {\n    int cilindraje;\n\f     public Automovil() {\n       cilindraje = 2000;\n       System.out.println(\"Constructor de Automovil ejecutado\");\n       System.out.println(\"Cilindraje: \" + cilindraje + \" cc\");\n       System.out.println();\n     }\n }\n\n // Subclase Deportivo\n class Deportivo extends Automovil {\n    int velocidadMaxima;\n\n     public Deportivo() {\n       velocidadMaxima = 300;\n       System.out.println(\"Constructor de Deportivo ejecutado\");\n       System.out.println(\"Velocidad M\u00e1xima: \" + velocidadMaxima + \" km/h\");\n       System.out.println();\n     }\n }\n\n // Clase Main para probar el orden de ejecuci\u00f3n de los constructores\n public class Main {\n    public static void main(String[] args) {\n      Deportivo autoDeportivo = new Deportivo();\n    }\n }\n\n\nEjercicio 3\n\nDesarrolla un sistema que modele distintos tipos de dispositivos inteligentes con diferentes\nniveles de herencia y constructores encadenados para analizar el orden de ejecuci\u00f3n de los\nconstructores cuando se crean objetos de la subclase m\u00e1s espec\u00edfica.\n\nClases a implementar:\n\n     \u2022   Dispositivo (Clase base)\n     \u2022   DispositivoInteligente (Subclase de Dispositivo)\n     \u2022   Telefono (Subclase de DispositivoInteligente)\n     \u2022   Smartphone (Subclase de Telefono)\n\nInicializaci\u00f3n de Atributos:\n\n     \u2022   Cada clase debe tener atributos propios, como nombre, conectividad, sistema\n         operativo, c\u00e1mara, etc.\n     \u2022   Cada constructor debe inicializar estos atributos e imprimir un mensaje que indique su\n         ejecuci\u00f3n.\n\nCrea un objeto de cada clase y observa el orden en que se ejecutan los constructores y c\u00f3mo se\ninicializan los atributos.\n\n // Clase base Dispositivo\n\fclass Dispositivo {\n   String nombre;\n\n    public Dispositivo() {\n      nombre = \"Electr\u00f3nico\";\n      System.out.println(\"Constructor de Dispositivo ejecutado\");\n      System.out.println(\"Nombre: \" + nombre);\n      System.out.println();\n    }\n}\n\n// Subclase DispositivoInteligente\nclass DispositivoInteligente extends Dispositivo {\n   String conectividad;\n\n    public DispositivoInteligente() {\n      conectividad = \"WiFi\";\n      System.out.println(\"Constructor de DispositivoInteligente ejecutado\");\n      System.out.println(\"Conectividad: \" + conectividad);\n      System.out.println();\n    }\n}\n\n// Subclase Telefono\nclass Telefono extends DispositivoInteligente {\n   String sistemaOperativo;\n\n    public Telefono() {\n      sistemaOperativo = \"Android\";\n      System.out.println(\"Constructor de Telefono ejecutado\");\n      System.out.println(\"Sistema Operativo: \" + sistemaOperativo);\n      System.out.println();\n    }\n}\n\n// Subclase Smartphone\nclass Smartphone extends Telefono {\n   String camara;\n\n    public Smartphone() {\n      camara = \"108 MP\";\n      System.out.println(\"Constructor de Smartphone ejecutado\");\n      System.out.println(\"C\u00e1mara: \" + camara);\n      System.out.println();\n    }\n}\n\n// Clase Main para probar el orden de ejecuci\u00f3n de los constructores\npublic class Main {\n   public static void main(String[] args) {\n     Smartphone miSmartphone = new Smartphone();\n   }\n\f }\n\n\nEjercicio 4\n\nDesarrolla un sistema que modele distintos tipos de transporte p\u00fablico con m\u00faltiples niveles de\nherencia y sobrecarga de constructores para analizar el orden de ejecuci\u00f3n de los constructores\ncuando se crean objetos de la subclase m\u00e1s espec\u00edfica, considerando la sobrecarga en algunas\nclases.\n\nClases a implementar:\n\n     \u2022   Transporte (Clase base)\n     \u2022   TransportePublico (Subclase de Transporte)\n     \u2022   Autobus (Subclase de TransportePublico)\n     \u2022   AutobusElectrico (Subclase de Autobus)\n\nSobrecarga de constructores:\n\n     \u2022   Transporte tiene un constructor sin par\u00e1metros y otro que recibe el tipo.\n     \u2022   TransportePublico tiene un constructor que permite definir la capacidad de pasajeros.\n     \u2022   Autobus tiene un constructor que permite definir la ruta.\n     \u2022   AutobusElectrico tiene un constructor que permite definir la autonom\u00eda de la bater\u00eda.\n\nCrea objetos con diferentes constructores y observa el orden de ejecuci\u00f3n de los constructores.\n\n // Clase base Transporte\n class Transporte {\n    String tipo;\n\n     // Constructor sin par\u00e1metros\n     public Transporte() {\n        tipo = \"P\u00fablico\";\n        System.out.println(\"Constructor de Transporte ejecutado\");\n        System.out.println(\"Tipo: \" + tipo);\n        System.out.println();\n     }\n\n     // Constructor sobrecargado\n     public Transporte(String tipoTransporte) {\n        tipo = tipoTransporte;\n        System.out.println(\"Constructor de Transporte ejecutado con tipo personalizado\");\n        System.out.println(\"Tipo: \" + tipo);\n        System.out.println();\n     }\n }\n\n // Subclase TransportePublico\n class TransportePublico extends Transporte {\n    int capacidadPasajeros;\n\n     // Constructor sin par\u00e1metros\n     public TransportePublico() {\n\f        capacidadPasajeros = 40;\n        System.out.println(\"Constructor de TransportePublico ejecutado\");\n        System.out.println(\"Capacidad de pasajeros: \" + capacidadPasajeros);\n        System.out.println();\n    }\n\n  // Constructor sobrecargado\n  public TransportePublico(int capacidad) {\n     capacidadPasajeros = capacidad;\n     System.out.println(\"Constructor de TransportePublico ejecutado con capacidad\npersonalizada\");\n     System.out.println(\"Capacidad de pasajeros: \" + capacidadPasajeros);\n     System.out.println();\n  }\n}\n\n// Subclase Autobus\nclass Autobus extends TransportePublico {\n   String ruta;\n\n    // Constructor sin par\u00e1metros\n    public Autobus() {\n       ruta = \"Centro - Norte\";\n       System.out.println(\"Constructor de Autobus ejecutado\");\n       System.out.println(\"Ruta: \" + ruta);\n       System.out.println();\n    }\n\n    // Constructor sobrecargado\n    public Autobus(String nuevaRuta) {\n       ruta = nuevaRuta;\n       System.out.println(\"Constructor de Autobus ejecutado con ruta personalizada\");\n       System.out.println(\"Ruta: \" + ruta);\n       System.out.println();\n    }\n}\n\n// Subclase AutobusElectrico\nclass AutobusElectrico extends Autobus {\n   int autonomiaBateria;\n\n    // Constructor sin par\u00e1metros\n    public AutobusElectrico() {\n       autonomiaBateria = 300;\n       System.out.println(\"Constructor de AutobusElectrico ejecutado\");\n       System.out.println(\"Autonom\u00eda de bater\u00eda: \" + autonomiaBateria + \" km\");\n       System.out.println();\n    }\n\n    // Constructor sobrecargado\n    public AutobusElectrico(int autonomia) {\n       autonomiaBateria = autonomia;\n\f     System.out.println(\"Constructor de AutobusElectrico ejecutado con autonom\u00eda\n personalizada\");\n     System.out.println(\"Autonom\u00eda de bater\u00eda: \" + autonomiaBateria + \" km\");\n     System.out.println();\n   }\n }\n\n // Clase Main para probar el orden de ejecuci\u00f3n de los constructores\n public class Main {\n    public static void main(String[] args) {\n      System.out.println(\"Creando un AutobusElectrico con valores predeterminados\");\n      AutobusElectrico bus1 = new AutobusElectrico();\n\n         System.out.println(\"Creando un AutobusElectrico con valores personalizados\");\n         AutobusElectrico bus2 = new AutobusElectrico(400);\n     }\n }\n\n\nEjercicio 5\n\nAmpl\u00eda el ejercicio 2 y desarrolla un sistema que modele diferentes tipos de veh\u00edculos con\nm\u00faltiples niveles de herencia y sobrecarga de constructores para analizar el orden de ejecuci\u00f3n\nde los constructores cuando se crean objetos de la subclase m\u00e1s espec\u00edfica, considerando la\nsobrecarga en varias clases.\n\nClases a implementar:\n\n     \u2022     Vehiculo (Clase base)\n     \u2022     VehiculoMotorizado (Subclase de Vehiculo)\n     \u2022     Automovil (Subclase de VehiculoMotorizado)\n     \u2022     Camion (Subclase de VehiculoMotorizado)\n     \u2022     Deportivo (Subclase de Automovil)\n     \u2022     CamionElectrico (Subclase de Camion)\n\nSobrecarga de constructores:\n\n     \u2022     Vehiculo tiene un constructor sin par\u00e1metros y otro que recibe el tipo.\n     \u2022     VehiculoMotorizado tiene un constructor que permite definir el tipo de motor.\n     \u2022     Automovil y Camion tienen constructores que permiten definir la cantidad de puertas o\n           la carga m\u00e1xima.\n     \u2022     Deportivo y CamionElectrico tienen constructores que permiten definir caracter\u00edsticas\n           adicionales.\n\nInstancia objetos con diferentes constructores y observa el orden de ejecuci\u00f3n.\n\n // Clase base Vehiculo\n class Vehiculo {\n    String tipo;\n\n     public Vehiculo() {\n       tipo = \"Terrestre\";\n       System.out.println(\"Constructor de Vehiculo ejecutado\");\n\f        System.out.println(\"Tipo: \" + tipo);\n        System.out.println();\n    }\n\n    public Vehiculo(String tipoVehiculo) {\n      tipo = tipoVehiculo;\n      System.out.println(\"Constructor de Vehiculo ejecutado con tipo personalizado\");\n      System.out.println(\"Tipo: \" + tipo);\n      System.out.println();\n    }\n}\n\n// Subclase VehiculoMotorizado\nclass VehiculoMotorizado extends Vehiculo {\n   String motor;\n\n    public VehiculoMotorizado() {\n      motor = \"Gasolina\";\n      System.out.println(\"Constructor de VehiculoMotorizado ejecutado\");\n      System.out.println(\"Motor: \" + motor);\n      System.out.println();\n    }\n\n  public VehiculoMotorizado(String tipoMotor) {\n    motor = tipoMotor;\n    System.out.println(\"Constructor de VehiculoMotorizado          ejecutado    con     motor\npersonalizado\");\n    System.out.println(\"Motor: \" + motor);\n    System.out.println();\n  }\n}\n\n// Subclase Automovil\nclass Automovil extends VehiculoMotorizado {\n   int puertas;\n\n    public Automovil() {\n      puertas = 4;\n      System.out.println(\"Constructor de Automovil ejecutado\");\n      System.out.println(\"Puertas: \" + puertas);\n      System.out.println();\n    }\n\n  public Automovil(int numPuertas) {\n    puertas = numPuertas;\n    System.out.println(\"Constructor de Automovil ejecutado con n\u00famero de puertas\npersonalizado\");\n    System.out.println(\"Puertas: \" + puertas);\n    System.out.println();\n  }\n}\n\f// Subclase Camion\nclass Camion extends VehiculoMotorizado {\n   int cargaMaxima;\n\n  public Camion() {\n    cargaMaxima = 10;\n    System.out.println(\"Constructor de Camion ejecutado\");\n    System.out.println(\"Carga M\u00e1xima: \" + cargaMaxima + \" toneladas\");\n    System.out.println();\n  }\n\n  public Camion(int carga) {\n    cargaMaxima = carga;\n    System.out.println(\"Constructor de Camion ejecutado con              carga   m\u00e1xima\npersonalizada\");\n    System.out.println(\"Carga M\u00e1xima: \" + cargaMaxima + \" toneladas\");\n    System.out.println();\n  }\n}\n\n// Subclase Deportivo (hereda de Automovil)\nclass Deportivo extends Automovil {\n   int velocidadMaxima;\n\n  public Deportivo() {\n    velocidadMaxima = 300;\n    System.out.println(\"Constructor de Deportivo ejecutado\");\n    System.out.println(\"Velocidad M\u00e1xima: \" + velocidadMaxima + \" km/h\");\n    System.out.println();\n  }\n\n  public Deportivo(int velocidad) {\n    velocidadMaxima = velocidad;\n    System.out.println(\"Constructor de Deportivo ejecutado con velocidad m\u00e1xima\npersonalizada\");\n    System.out.println(\"Velocidad M\u00e1xima: \" + velocidadMaxima + \" km/h\");\n    System.out.println();\n  }\n}\n\n// Subclase CamionElectrico (hereda de Camion)\nclass CamionElectrico extends Camion {\n   int autonomiaBateria;\n\n  public CamionElectrico() {\n    autonomiaBateria = 400;\n    System.out.println(\"Constructor de CamionElectrico ejecutado\");\n    System.out.println(\"Autonom\u00eda de bater\u00eda: \" + autonomiaBateria + \" km\");\n    System.out.println();\n  }\n\n  public CamionElectrico(int autonomia) {\n\f    autonomiaBateria = autonomia;\n    System.out.println(\"Constructor de CamionElectrico ejecutado con              autonom\u00eda\npersonalizada\");\n    System.out.println(\"Autonom\u00eda de bater\u00eda: \" + autonomiaBateria + \" km\");\n    System.out.println();\n  }\n}\n\n// Clase Main para probar el orden de ejecuci\u00f3n de los constructores\npublic class Main {\n   public static void main(String[] args) {\n     System.out.println(\"Creando un Deportivo con valores predeterminados\");\n     Deportivo autoDeportivo = new Deportivo();\n\n        System.out.println(\"Creando un CamionElectrico con valores personalizados\");\n        CamionElectrico camion1 = new CamionElectrico(500);\n    }\n}"
-  },
-  {
-    "id": "dr_ej_7",
-    "topic": "Arrays de objetos",
-    "exercise": "Ejercicio 1\n\nDesarrolla un programa que administre una flota de veh\u00edculos utilizando arrays de objetos. El\nsistema permitir\u00e1 almacenar informaci\u00f3n de varios veh\u00edculos y mostrar\u00e1 un resumen de todos\nlos veh\u00edculos registrados. Para ello:\n\n    \u2022   Implementa las clases Vehiculo (Clase base con atributos generales), Automovil y\n        Camion (Subclases de Vehiculo con atributos espec\u00edficos).\n    \u2022   Crea un array de objetos para almacenar m\u00faltiples veh\u00edculos. El array debe permitir\n        agregar tanto autom\u00f3viles como camiones.\n    \u2022   Implementa un m\u00e9todo para agregar veh\u00edculos al array. Y otro m\u00e9todo para mostrar\n        todos los veh\u00edculos registrados.\n    \u2022   Para probar el sistema, crea un array de 5 veh\u00edculos y muestra la informaci\u00f3n en la\n        consola.\n\n\n\nEjercicio 2\n\nDesarrolla un programa que administre un inventario de dispositivos electr\u00f3nicos utilizando\narrays de objetos. El sistema permitir\u00e1 almacenar informaci\u00f3n de varios dispositivos y mostrar\u00e1\nun resumen de todos los dispositivos registrados. Para ello:\n\n    \u2022   Implementa las clases Dispositivo (Clase base con atributos generales), Smartphone y\n        Laptop (Subclases de Dispositivo con atributos espec\u00edficos).\n    \u2022   Crea un array de objetos para almacenar m\u00faltiples dispositivos. El array debe permitir\n        agregar tanto smartphones como laptops.\n    \u2022   Implementa un m\u00e9todo para agregar dispositivos al array y otro m\u00e9todo para mostrar\n        todos los dispositivos registrados.\n    \u2022   Para probar el sistema crea un array de 5 dispositivos (combinando smartphones y\n        laptops) y muestra la informaci\u00f3n de los dispositivos en la consola.\n\n\n\nEjercicio 3\n\nDesarrolla un programa que administre un sistema de empleados utilizando arrays de objetos.\nEl sistema permitir\u00e1 almacenar informaci\u00f3n de diferentes tipos de empleados y mostrar\u00e1 un\nresumen de todos los empleados registrados. Para ello:\n\n    \u2022   Implementa las clases Empleado (Clase base con atributos generales), Gerente,\n        Desarrollador y Asistente (Subclases de Empleado con atributos espec\u00edficos),\n        DesarrolladorBackend y DesarrolladorFrontend (Subclases de Desarrollador con\n        atributos especializados).\n    \u2022   Crea un array de objetos para almacenar m\u00faltiples empleados. El array debe permitir\n        agregar gerentes, desarrolladores backend, desarrolladores frontend y asistentes.\n    \u2022   Implementa un m\u00e9todo para agregar empleados al array y otro m\u00e9todo para mostrar\n        todos los empleados registrados.\n\f    \u2022   Para probar el sistema crea un array de 7 empleados (combinando gerentes,\n        desarrolladores backend, desarrolladores frontend y asistentes) y muestra la\n        informaci\u00f3n de los empleados en la consola.\n\n\n\nEjercicio 4\n\nDesarrolla un sistema para gestionar un zool\u00f3gico utilizando arrays de objetos. El sistema\npermitir\u00e1 registrar diferentes tipos de animales y realizar operaciones con ellos. Para ello:\n\n    \u2022   Implementa las clases:\n\n              o   Animal (Clase base con atributos generales).\n\n              o   Mamifero y Ave (Subclases de Animal con atributos espec\u00edficos).\n\n              o   Felino y Canino (Subclases de Mamifero).\n\n              o   Aguila y Loro (Subclases de Ave).\n\n    \u2022   Agrega m\u00e9todos en las clases para:\n\n              o   Emitir sonidos caracter\u00edsticos.\n\n              o   Mostrar informaci\u00f3n del animal.\n\n              o   Contar cu\u00e1ntos animales hay de cada tipo.\n\n    \u2022   Implementa un array de objetos para almacenar los animales.\n\n    \u2022   Agrega un m\u00e9todo para alimentar a todos los animales del zool\u00f3gico.\n\n    \u2022   Para probar el sistema, crea un array con al menos 8 animales, muestra su informaci\u00f3n\n        y realiza las acciones correspondientes.",
-    "solution": "Ejercicio 1\n\nDesarrolla un programa que administre una flota de veh\u00edculos utilizando arrays de objetos. El\nsistema permitir\u00e1 almacenar informaci\u00f3n de varios veh\u00edculos y mostrar\u00e1 un resumen de todos\nlos veh\u00edculos registrados. Para ello:\n\n     \u2022   Implementa las clases Vehiculo (Clase base con atributos generales), Automovil y\n         Camion (Subclases de Vehiculo con atributos espec\u00edficos).\n     \u2022   Crea un array de objetos para almacenar m\u00faltiples veh\u00edculos. El array debe permitir\n         agregar tanto autom\u00f3viles como camiones.\n     \u2022   Implementa un m\u00e9todo para agregar veh\u00edculos al array. Y otro m\u00e9todo para mostrar\n         todos los veh\u00edculos registrados.\n     \u2022   Para probar el sistema, crea un array de 5 veh\u00edculos y muestra la informaci\u00f3n en la\n         consola.\n\n class Vehiculo {\n    String marca;\n    String modelo;\n    int anio;\n\n     public Vehiculo(String marcaVehiculo, String modeloVehiculo, int anioVehiculo) {\n       marca = marcaVehiculo;\n       modelo = modeloVehiculo;\n       anio = anioVehiculo;\n     }\n\n     public void mostrarInfo() {\n       System.out.println(\"Marca: \" + marca + \", Modelo: \" + modelo + \", A\u00f1o: \" + anio);\n     }\n }\n\n class Automovil extends Vehiculo {\n    int puertas;\n\n   public Automovil(String marcaVehiculo, String modeloVehiculo, int anioVehiculo, int\n numPuertas) {\n     marca = marcaVehiculo;\n     modelo = modeloVehiculo;\n     anio = anioVehiculo;\n     puertas = numPuertas;\n   }\n\n     public void mostrarInfo() {\n       System.out.println(\"Marca: \" + marca + \", Modelo: \" + modelo + \", A\u00f1o: \" + anio);\n       System.out.println(\"Puertas: \" + puertas);\n     }\n }\n\n class Camion extends Vehiculo {\n\f     int cargaMaxima;\n\n     public Camion(String marcaVehiculo, String modeloVehiculo, int anioVehiculo, int carga) {\n       marca = marcaVehiculo;\n       modelo = modeloVehiculo;\n       anio = anioVehiculo;\n       cargaMaxima = carga;\n     }\n\n     public void mostrarInfo() {\n       System.out.println(\"Marca: \" + marca + \", Modelo: \" + modelo + \", A\u00f1o: \" + anio);\n       System.out.println(\"Carga M\u00e1xima: \" + cargaMaxima + \" toneladas\");\n     }\n }\n\n public class Main {\n   public static void main(String[] args) {\n     Vehiculo[] flota = new Vehiculo[5];\n\n         flota[0] = new Automovil(\"Toyota\", \"Corolla\", 2020, 4);\n         flota[1] = new Automovil(\"Honda\", \"Civic\", 2022, 4);\n         flota[2] = new Camion(\"Volvo\", \"FH16\", 2019, 20);\n         flota[3] = new Automovil(\"Ford\", \"Focus\", 2018, 4);\n         flota[4] = new Camion(\"Mercedes\", \"Actros\", 2021, 25);\n\n         System.out.println(\"Veh\u00edculos registrados: \");\n         for (int i = 0; i < flota.length; i++) {\n           flota[i].mostrarInfo();\n         }\n     }\n }\n\n\nEjercicio 2\n\nDesarrolla un programa que administre un inventario de dispositivos electr\u00f3nicos utilizando\narrays de objetos. El sistema permitir\u00e1 almacenar informaci\u00f3n de varios dispositivos y mostrar\u00e1\nun resumen de todos los dispositivos registrados. Para ello:\n\n     \u2022     Implementa las clases Dispositivo (Clase base con atributos generales), Smartphone y\n           Laptop (Subclases de Dispositivo con atributos espec\u00edficos).\n     \u2022     Crea un array de objetos para almacenar m\u00faltiples dispositivos. El array debe permitir\n           agregar tanto smartphones como laptops.\n     \u2022     Implementa un m\u00e9todo para agregar dispositivos al array y otro m\u00e9todo para mostrar\n           todos los dispositivos registrados.\n     \u2022     Para probar el sistema crea un array de 5 dispositivos (combinando smartphones y\n           laptops) y muestra la informaci\u00f3n de los dispositivos en la consola.\n\n\n\n class Dispositivo {\n    String marca;\n\f    String modelo;\n    double precio;\n\n  public Dispositivo(String marcaDispositivo,           String   modeloDispositivo,     double\nprecioDispositivo) {\n    marca = marcaDispositivo;\n    modelo = modeloDispositivo;\n    precio = precioDispositivo;\n  }\n\n    public void mostrarInfo() {\n      System.out.println(\"Marca: \" + marca + \", Modelo: \" + modelo + \", Precio: \" + precio);\n    }\n}\n\nclass Smartphone extends Dispositivo {\n   int almacenamiento;\n\n  public Smartphone(String marcaDispositivo,            String   modeloDispositivo,     double\nprecioDispositivo, int almacenamientoGB) {\n    marca = marcaDispositivo;\n    modelo = modeloDispositivo;\n    precio = precioDispositivo;\n    almacenamiento = almacenamientoGB;\n  }\n\n    public void mostrarInfo() {\n      System.out.println(\"Marca: \" + marca + \", Modelo: \" + modelo + \", Precio: \" + precio);\n      System.out.println(\"Almacenamiento: \" + almacenamiento + \"GB\");\n    }\n}\n\nclass Laptop extends Dispositivo {\n   double tamanoPantalla;\n\n  public Laptop(String marcaDispositivo, String modeloDispositivo, double precioDispositivo,\ndouble pantallaPulgadas) {\n    marca = marcaDispositivo;\n    modelo = modeloDispositivo;\n    precio = precioDispositivo;\n    tamanoPantalla = pantallaPulgadas;\n  }\n\n    public void mostrarInfo() {\n      System.out.println(\"Marca: \" + marca + \", Modelo: \" + modelo + \", Precio: \" + precio);\n      System.out.println(\"Tama\u00f1o de pantalla: \" + tamanoPantalla + \" pulgadas\");\n    }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Dispositivo[] inventario = new Dispositivo[5];\n\f         inventario[0] = new Smartphone(\"Samsung\", \"Galaxy S21\", 799.99, 128);\n         inventario[1] = new Laptop(\"Dell\", \"XPS 13\", 1199.99, 13.3);\n         inventario[2] = new Smartphone(\"Apple\", \"iPhone 14\", 999.99, 256);\n         inventario[3] = new Laptop(\"HP\", \"Pavilion 15\", 799.99, 15.6);\n         inventario[4] = new Smartphone(\"Google\", \"Pixel 7\", 599.99, 128);\n\n         System.out.println(\"Inventario de dispositivos electr\u00f3nicos\");\n         for (int i = 0; i < inventario.length; i++) {\n           inventario[i].mostrarInfo();\n         }\n     }\n }\n\n\nEjercicio 3\n\nDesarrolla un programa que administre un sistema de empleados utilizando arrays de objetos.\nEl sistema permitir\u00e1 almacenar informaci\u00f3n de diferentes tipos de empleados y mostrar\u00e1 un\nresumen de todos los empleados registrados. Para ello:\n\n     \u2022     Implementa las clases Empleado (Clase base con atributos generales), Gerente,\n           Desarrollador y Asistente (Subclases de Empleado con atributos espec\u00edficos),\n           DesarrolladorBackend y DesarrolladorFrontend (Subclases de Desarrollador con\n           atributos especializados).\n     \u2022     Crea un array de objetos para almacenar m\u00faltiples empleados. El array debe permitir\n           agregar gerentes, desarrolladores backend, desarrolladores frontend y asistentes.\n     \u2022     Implementa un m\u00e9todo para agregar empleados al array y otro m\u00e9todo para mostrar\n           todos los empleados registrados.\n     \u2022     Para probar el sistema crea un array de 7 empleados (combinando gerentes,\n           desarrolladores backend, desarrolladores frontend y asistentes) y muestra la\n           informaci\u00f3n de los empleados en la consola.\n\n\n\n class Empleado {\n    String nombre;\n    int edad;\n    double salario;\n\n     public Empleado(String nombreEmpleado, int edadEmpleado, double salarioEmpleado) {\n       nombre = nombreEmpleado;\n       edad = edadEmpleado;\n       salario = salarioEmpleado;\n     }\n\n     public void mostrarInfo() {\n       System.out.println(\"Nombre: \" + nombre + \", Edad: \" + edad + \", Salario: \" + salario);\n     }\n }\n\n class Gerente extends Empleado {\n\f    String departamento;\n\n  public Gerente(String nombreEmpleado, int edadEmpleado, double salarioEmpleado,\nString depto) {\n     nombre = nombreEmpleado;\n     edad = edadEmpleado;\n     salario = salarioEmpleado;\n     departamento = depto;\n  }\n\n    public void mostrarInfo() {\n      System.out.println(\"Nombre: \" + nombre + \", Edad: \" + edad + \", Salario: \" + salario);\n      System.out.println(\"Departamento: \" + departamento);\n    }\n}\n\nclass Asistente extends Empleado {\n   String jefe;\n\n  public Asistente(String nombreEmpleado, int edadEmpleado, double salarioEmpleado,\nString nombreJefe) {\n     nombre = nombreEmpleado;\n     edad = edadEmpleado;\n     salario = salarioEmpleado;\n     jefe = nombreJefe;\n  }\n\n    public void mostrarInfo() {\n      System.out.println(\"Nombre: \" + nombre + \", Edad: \" + edad + \", Salario: \" + salario);\n      System.out.println(\"Jefe: \" + jefe);\n    }\n}\n\nclass Desarrollador extends Empleado {\n   String lenguaje;\n\n  public Desarrollador(String nombreEmpleado, int edadEmpleado, double salarioEmpleado,\nString lenguajeProg) {\n     nombre = nombreEmpleado;\n     edad = edadEmpleado;\n     salario = salarioEmpleado;\n     lenguaje = lenguajeProg;\n  }\n\n    public void mostrarInfo() {\n      System.out.println(\"Nombre: \" + nombre + \", Edad: \" + edad + \", Salario: \" + salario);\n      System.out.println(\"Lenguaje de programaci\u00f3n: \" + lenguaje);\n    }\n}\n\nclass DesarrolladorBackend extends Desarrollador {\n   String baseDatos;\n\f  public DesarrolladorBackend(String nombreEmpleado, int edadEmpleado, double\nsalarioEmpleado, String lenguajeProg, String bd) {\n     nombre = nombreEmpleado;\n     edad = edadEmpleado;\n     salario = salarioEmpleado;\n     lenguaje = lenguajeProg;\n     baseDatos = bd;\n  }\n\n    public void mostrarInfo() {\n      System.out.println(\"Nombre: \" + nombre + \", Edad: \" + edad + \", Salario: \" + salario);\n      System.out.println(\"Lenguaje de programaci\u00f3n: \" + lenguaje);\n      System.out.println(\"Base de datos: \" + baseDatos);\n    }\n}\n\nclass DesarrolladorFrontend extends Desarrollador {\n   String framework;\n\n  public DesarrolladorFrontend(String nombreEmpleado, int edadEmpleado, double\nsalarioEmpleado, String lenguajeProg, String fw) {\n     nombre = nombreEmpleado;\n     edad = edadEmpleado;\n     salario = salarioEmpleado;\n     lenguaje = lenguajeProg;\n     framework = fw;\n  }\n\n    public void mostrarInfo() {\n      System.out.println(\"Nombre: \" + nombre + \", Edad: \" + edad + \", Salario: \" + salario);\n      System.out.println(\"Lenguaje de programaci\u00f3n: \" + lenguaje);\n      System.out.println(\"Framework: \" + framework);\n    }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Empleado[] empleados = new Empleado[7];\n\n    empleados[0] = new Gerente(\"Carlos P\u00e9rez\", 45, 5000, \"Ventas\");\n    empleados[1] = new DesarrolladorBackend(\"Ana G\u00f3mez\", 30, 4000, \"Java\", \"MySQL\");\n    empleados[2] = new DesarrolladorFrontend(\"Luis Torres\", 28, 3800, \"JavaScript\",\n\"React\");\n    empleados[3] = new DesarrolladorBackend(\"Elena Ruiz\", 32, 4100, \"Python\",\n\"PostgreSQL\");\n    empleados[4] = new DesarrolladorFrontend(\"Javier Mendoza\", 27, 3700, \"TypeScript\",\n\"Angular\");\n    empleados[5] = new Asistente(\"Marta L\u00f3pez\", 35, 2500, \"Carlos P\u00e9rez\");\n    empleados[6] = new Gerente(\"Ricardo Salinas\", 50, 5500, \"Tecnolog\u00eda\");\n\n      System.out.println(\"Registro de empleados: \");\n\f         for (int i = 0; i < empleados.length; i++) {\n           empleados[i].mostrarInfo();\n         }\n     }\n }\n\n\nEjercicio 4\n\nDesarrolla un sistema para gestionar un zool\u00f3gico utilizando arrays de objetos. El sistema\npermitir\u00e1 registrar diferentes tipos de animales y realizar operaciones con ellos. Para ello:\n\n     \u2022     Implementa las clases:\n\n               o    Animal (Clase base con atributos generales).\n\n               o    Mamifero y Ave (Subclases de Animal con atributos espec\u00edficos).\n\n               o    Felino y Canino (Subclases de Mamifero).\n\n               o    Aguila y Loro (Subclases de Ave).\n\n     \u2022     Agrega m\u00e9todos en las clases para:\n\n               o    Emitir sonidos caracter\u00edsticos.\n\n               o    Mostrar informaci\u00f3n del animal.\n\n               o    Contar cu\u00e1ntos animales hay de cada tipo.\n\n     \u2022     Implementa un array de objetos para almacenar los animales.\n\n     \u2022     Agrega un m\u00e9todo para alimentar a todos los animales del zool\u00f3gico.\n\n     \u2022     Para probar el sistema, crea un array con al menos 8 animales, muestra su informaci\u00f3n\n           y realiza las acciones correspondientes.\n\n class Animal {\n    String nombre;\n    int edad;\n    double peso;\n\n     // Contador de animales. Variable global o de clase\n     static int totalAnimales = 0;\n\n     public Animal(String nombreAnimal, int edadAnimal, double pesoAnimal) {\n       nombre = nombreAnimal;\n       edad = edadAnimal;\n       peso = pesoAnimal;\n       totalAnimales++;\n     }\n\n   public void mostrarInfo() {\n      System.out.println(\"Nombre: \" + nombre + \", Edad: \" + edad + \" a\u00f1os, Peso: \" + peso + \"\n kg\");\n   }\n\f    public void emitirSonido() {\n      System.out.println(nombre + \" hace un sonido desconocido.\");\n    }\n\n    public static void mostrarTotalAnimales() {\n      System.out.println(\"Total de animales en el zool\u00f3gico: \" + totalAnimales);\n    }\n}\n\nclass Mamifero extends Animal {\n   boolean tienePelo;\n\n   public Mamifero(String nombreAnimal, int edadAnimal, double pesoAnimal, boolean\ntienePeloAnimal) {\n     nombre = nombreAnimal;\n     edad = edadAnimal;\n     peso = pesoAnimal;\n     tienePelo = tienePeloAnimal;\n   }\n\n    public void amamantar() {\n      System.out.println(nombre + \" est\u00e1 amamantando a sus cr\u00edas.\");\n    }\n}\n\nclass Felino extends Mamifero {\n   boolean garrasRetractiles;\n\n   public Felino(String nombreAnimal, int edadAnimal, double pesoAnimal, boolean\ntienePeloAnimal, boolean garras) {\n     nombre = nombreAnimal;\n     edad = edadAnimal;\n     peso = pesoAnimal;\n     tienePelo = tienePeloAnimal;\n     garrasRetractiles = garras;\n   }\n\n    public void emitirSonido() {\n      System.out.println(nombre + \" ruge o ma\u00falla.\");\n    }\n}\n\nclass Canino extends Mamifero {\n   boolean cazaEnManada;\n\n   public Canino(String nombreAnimal, int edadAnimal, double pesoAnimal, boolean\ntienePeloAnimal, boolean caza) {\n     nombre = nombreAnimal;\n     edad = edadAnimal;\n     peso = pesoAnimal;\n     tienePelo = tienePeloAnimal;\n\f        cazaEnManada = caza;\n    }\n\n    public void emitirSonido() {\n      System.out.println(nombre + \" ladra o a\u00falla.\");\n    }\n}\n\nclass Ave extends Animal {\n   double envergaduraAlas;\n\n    public Ave(String nombreAnimal, int edadAnimal, double pesoAnimal, double envergadura)\n{\n        nombre = nombreAnimal;\n        edad = edadAnimal;\n        peso = pesoAnimal;\n        envergaduraAlas = envergadura;\n    }\n\n  public void volar() {\n     System.out.println(nombre + \" est\u00e1 volando con una envergadura de \" + envergaduraAlas\n+ \" metros.\");\n  }\n}\n\nclass Aguila extends Ave {\n   boolean esCazadora;\n\n  public Aguila(String nombreAnimal, int edadAnimal, double pesoAnimal, double\nenvergadura, boolean cazadora) {\n    nombre = nombreAnimal;\n    edad = edadAnimal;\n    peso = pesoAnimal;\n    envergaduraAlas = envergadura;\n    esCazadora = cazadora;\n  }\n\n    public void emitirSonido() {\n      System.out.println(nombre + \" emite un grito agudo.\");\n    }\n}\n\nclass Loro extends Ave {\n   boolean puedeHablar;\n\n  public Loro(String nombreAnimal, int edadAnimal, double pesoAnimal, double\nenvergadura, boolean habla) {\n    nombre = nombreAnimal;\n    edad = edadAnimal;\n    peso = pesoAnimal;\n    envergaduraAlas = envergadura;\n    puedeHablar = habla;\n\f    }\n\n    public void emitirSonido() {\n      if (puedeHablar) {\n          System.out.println(nombre + \" dice 'Hola, \u00bfc\u00f3mo est\u00e1s?'\");\n      } else {\n          System.out.println(nombre + \" emite un sonido de loro.\");\n      }\n    }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Animal[] zoologico = new Animal[8];\n\n        zoologico[0] = new Felino(\"Le\u00f3n\", 5, 190, true, true);\n        zoologico[1] = new Canino(\"Lobo\", 4, 60, true, true);\n        zoologico[2] = new Felino(\"Tigre\", 6, 220, true, true);\n        zoologico[3] = new Canino(\"Zorro\", 3, 10, true, false);\n        zoologico[4] = new Aguila(\"\u00c1guila Real\", 7, 6.5, 2.1, true);\n        zoologico[5] = new Loro(\"Loro Verde\", 2, 1.2, 0.5, true);\n        zoologico[6] = new Loro(\"Guacamayo\", 3, 1.5, 1.2, false);\n        zoologico[7] = new Aguila(\"\u00c1guila Calva\", 8, 6.8, 2.3, true);\n\n        System.out.println(\"Informaci\u00f3n de los animales: \");\n        for (int i = 0; i < zoologico.length; i++) {\n          zoologico[i].mostrarInfo();\n          zoologico[i].emitirSonido();\n        }\n\n        // Contar cu\u00e1ntos animales hay\n        Animal.mostrarTotalAnimales();\n\n        // Alimentar a los animales\n        System.out.println(\"\\nAlimentando a los animales: \");\n        for (int i = 0; i < zoologico.length; i++) {\n           System.out.println(zoologico[i].nombre + \" est\u00e1 comiendo.\");\n        }\n    }\n}"
-  },
-  {
-    "id": "dr_ej_8",
-    "topic": "@Override, this y super",
-    "exercise": "Ejercicio 1\n\nCrea un sistema que maneje diferentes tipos de veh\u00edculos usando herencia y sobreescritura de\nm\u00e9todos:\n\n    1. Crea una clase base Vehiculo con:\n\n              o   Atributos marca y modelo.\n\n              o   Un constructor que reciba la marca y el modelo.\n\n              o   Constructor sin par\u00e1metros con valores predeterminados. Usa this en el\n                  constructor.\n\n              o   Un m\u00e9todo mostrarInfo() que imprima la informaci\u00f3n del veh\u00edculo.\n\n    2. Crea una clase Coche que extienda Vehiculo con:\n\n              o   A\u00f1ade el atributo puertas (n\u00famero de puertas).\n\n              o   Un constructor que reciba la marca, el modelo y las puertas, usando super para\n                  inicializar los atributos de la clase base.\n\n              o   Constructor sin par\u00e1metros con valores predeterminados. Usa this en el\n                  constructor.\n\n              o   Sobrescribe (@Override) el m\u00e9todo mostrarInfo() para incluir el n\u00famero de\n                  puertas.\n\n    3. Crea una clase Moto que extienda Vehiculo con:\n\n              o   A\u00f1ade el atributo cilindrada.\n\n              o   Un constructor que reciba la marca, el modelo y la cilindrada, usando super.\n\n              o   Constructor sin par\u00e1metros con valores predeterminados. Usa this en el\n                  constructor.\n\n              o   Sobrescribe mostrarInfo() para incluir la cilindrada.\n\n    4. En la funci\u00f3n main, crea un array de 4 Vehiculos con instancias de Coche y Moto. Luego\n       llama a mostrarInfo() con cada objeto.\n\n\n\nEjercicio 2\n\nCrea un sistema de empleados con diferentes tipos (Gerente y Desarrollador). Cada uno tiene\natributos espec\u00edficos y un m\u00e9todo calcularSalario(), que ser\u00e1 sobrescrito en cada clase derivada.\n\n    1. Crea la clase base Empleado con:\n\n              o   Atributos nombre, salarioBase y id.\n\n              o   Un constructor que use this() para asignar valores por defecto.\n\n              o   Un m\u00e9todo calcularSalario() que devuelva salarioBase.\n\f       o   Un m\u00e9todo mostrarInfo() que muestre el nombre y salario.\n\n2. Crea la clase Gerente que extienda Empleado con:\n\n       o   Atributo bonoGerencial.\n\n       o   Un constructor que use super() para llamar al constructor de Empleado.\n\n       o   Sobrescribe calcularSalario() para sumar bonoGerencial.\n\n3. Crea la clase Desarrollador que extienda Empleado con:\n\n       o   Atributo horasExtras y pagoPorHoraExtra.\n\n       o   Un constructor que use super().\n\n       o   Sobrescribe calcularSalario() para sumar el pago por horas extras.\n\n4. En la funci\u00f3n main, crea un array de 4 Empleados con instancias de Gerente y\n   Desarrollador. Luego llama a mostrarInfo() con cada objeto.",
-    "solution": "Ejercicio 1\n\nCrea un sistema que maneje diferentes tipos de veh\u00edculos usando herencia y sobreescritura de\nm\u00e9todos:\n\n    1. Crea una clase base Vehiculo con:\n\n              o   Atributos marca y modelo.\n\n              o   Un constructor que reciba la marca y el modelo.\n\n              o   Constructor sin par\u00e1metros con valores predeterminados. Usa this en el\n                  constructor.\n\n              o   Un m\u00e9todo mostrarInfo() que imprima la informaci\u00f3n del veh\u00edculo.\n\n    2. Crea una clase Coche que extienda Vehiculo con:\n\n              o   A\u00f1ade el atributo puertas (n\u00famero de puertas).\n\n              o   Un constructor que reciba la marca, el modelo y las puertas, usando super para\n                  inicializar los atributos de la clase base.\n\n              o   Constructor sin par\u00e1metros con valores predeterminados. Usa this en el\n                  constructor.\n\n              o   Sobrescribe (@Override) el m\u00e9todo mostrarInfo() para incluir el n\u00famero de\n                  puertas.\n\n    3. Crea una clase Moto que extienda Vehiculo con:\n\n              o   A\u00f1ade el atributo cilindrada.\n\n              o   Un constructor que reciba la marca, el modelo y la cilindrada, usando super.\n\n              o   Constructor sin par\u00e1metros con valores predeterminados. Usa this en el\n                  constructor.\n\n              o   Sobrescribe mostrarInfo() para incluir la cilindrada.\n\n    4. En la funci\u00f3n main, crea un array de 4 Vehiculos con instancias de Coche y Moto. Luego\n       llama a mostrarInfo() con cada objeto.\n\n\n\n class Vehiculo {\n    protected String marca;\n    protected String modelo;\n\n   public Vehiculo(String marca, String modelo) {\n     this.marca = marca;\n     this.modelo = modelo;\n   }\n\n   // Constructor sin par\u00e1metros con valores predeterminados\n\f    public Vehiculo() {\n      this(\"Desconocida\", \"Gen\u00e9rico\");\n    }\n\n    public void mostrarInfo() {\n      System.out.println(\"Veh\u00edculo: \" + marca + \" \" + modelo);\n    }\n}\n\nclass Coche extends Vehiculo {\n   private int puertas;\n\n    public Coche(String marca, String modelo, int puertas) {\n      super(marca, modelo);\n      this.puertas = puertas;\n    }\n\n    // Constructor sin par\u00e1metros con valores predeterminados\n    public Coche() {\n       this(\"Toyota\", \"Corolla\", 4);\n    }\n\n    // Sobrescribe el m\u00e9todo mostrarInfo\n    @Override\n    public void mostrarInfo() {\n       super.mostrarInfo();\n       System.out.println(\"N\u00famero de puertas: \" + this.puertas);\n    }\n}\n\nclass Moto extends Vehiculo {\n   private int cilindrada;\n\n    public Moto(String marca, String modelo, int cilindrada) {\n      super(marca, modelo);\n      this.cilindrada = cilindrada;\n    }\n\n    // Constructor sin par\u00e1metros con valores predeterminados\n    public Moto() {\n       this(\"Honda\", \"CBR600\", 600);\n    }\n\n    // Sobrescribe el m\u00e9todo mostrarInfo\n    @Override\n    public void mostrarInfo() {\n       super.mostrarInfo();\n       System.out.println(\"Cilindrada: \" + this.cilindrada + \"cc\");\n    }\n}\n\npublic class Main {\n\f     public static void main(String[] args) {\n       Vehiculo[] vehiculos = {\n          new Coche(\"Ford\", \"Fiesta\", 5),\n          new Coche(),\n          new Moto(\"Yamaha\", \"R1\", 1000),\n          new Moto()\n       };\n\n         for (int i = 0; i < vehiculos.length; i++) {\n           vehiculos[i].mostrarInfo();\n         }\n     }\n }\n\n\nEjercicio 2\n\nCrea un sistema de empleados con diferentes tipos (Gerente y Desarrollador). Cada uno tiene\natributos espec\u00edficos y un m\u00e9todo calcularSalario(), que ser\u00e1 sobrescrito en cada clase derivada.\n\n     1. Crea la clase base Empleado con:\n\n                o   Atributos nombre, salarioBase y id.\n\n                o   Un constructor que use this() para asignar valores por defecto.\n\n                o   Un m\u00e9todo calcularSalario() que devuelva salarioBase.\n\n                o   Un m\u00e9todo mostrarInfo() que muestre el nombre y salario.\n\n     2. Crea la clase Gerente que extienda Empleado con:\n\n                o   Atributo bonoGerencial.\n\n                o   Un constructor que use super() para llamar al constructor de Empleado.\n\n                o   Sobrescribe calcularSalario() para sumar bonoGerencial.\n\n     3. Crea la clase Desarrollador que extienda Empleado con:\n\n                o   Atributo horasExtras y pagoPorHoraExtra.\n\n                o   Un constructor que use super().\n\n                o   Sobrescribe calcularSalario() para sumar el pago por horas extras.\n\n     4. En la funci\u00f3n main, crea un array de 4 Empleados con instancias de Gerente y\n        Desarrollador. Luego llama a mostrarInfo() con cada objeto.\n\n class Empleado {\n    protected String nombre;\n    protected double salarioBase;\n    protected int id;\n\n     public Empleado(String nombre, double salarioBase, int id) {\n       this.nombre = nombre;\n       this.salarioBase = salarioBase;\n\f      this.id = id;\n  }\n\n  public Empleado() {\n    this(\"Empleado Gen\u00e9rico\", 1000.0, 0);\n  }\n\n  public double calcularSalario() {\n    return salarioBase;\n  }\n\n  public void mostrarInfo() {\n    System.out.println(\"ID: \" + id + \" Nombre: \" + nombre + \" Salario: \" + calcularSalario());\n  }\n}\n/* Aqu\u00ed, calcularSalario() no es un m\u00e9todo est\u00e1tico, as\u00ed que solo se puede llamar a trav\u00e9s de\nun objeto. Pero... \u00bfd\u00f3nde est\u00e1 ese objeto? Est\u00e1 impl\u00edcito.\nEn Java, cuando llamas a un m\u00e9todo dentro de otro m\u00e9todo de la misma instancia, Java asume\nque es this.calcularSalario(), aunque no lo escribas expl\u00edcitamente.\nEs decir, la anterior l\u00ednea es equivalente a:\n  System.out.println(\"ID: \" + id + \" Nombre: \" + nombre + \" Salario: \" + this.calcularSalario());\nDonde this se refiere al objeto actual en el que se est\u00e1 ejecutando mostrarInfo(). */\n\nclass Gerente extends Empleado {\n   private double bonoGerencial;\n\n  public Gerente(String nombre, double salarioBase, int id, double bonoGerencial) {\n    super(nombre, salarioBase, id);\n    this.bonoGerencial = bonoGerencial;\n  }\n\n  public Gerente() {\n    this(\"Gerente Default\", 3000.0, 1, 500.0);\n  }\n\n  @Override\n  public double calcularSalario() {\n    return super.calcularSalario() + this.bonoGerencial; //En este caso se est\u00e1 accediendo al\nm\u00e9todo calcularSalario con el objeto Gerente\n  }\n}\n\nclass Desarrollador extends Empleado {\n   private int horasExtras;\n   private double pagoPorHoraExtra;\n\n  public Desarrollador(String nombre, double salarioBase, int id, int horasExtras, double\npagoPorHoraExtra) {\n    super(nombre, salarioBase, id);\n    this.horasExtras = horasExtras;\n    this.pagoPorHoraExtra = pagoPorHoraExtra;\n\f    }\n\n    public Desarrollador() {\n      this(\"Desarrollador Default\", 2500.0, 2, 10, 20.0);\n    }\n\n  @Override\n  public double calcularSalario() {\n    return super.calcularSalario() + (horasExtras * pagoPorHoraExtra);//En este caso se est\u00e1\naccediendo al getter calcularSalario() con el objeto Desarrollador\n  }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    Empleado[] empleados = new Empleado[4];\n\n        for (int i = 0; i < empleados.length; i++) {\n          if (i % 2 == 0) {\n             empleados[i] = new Gerente(\"Gerente\" + i, 3500.0, i + 1, 700.0);\n          } else {\n             empleados[i] = new Desarrollador(\"Dev\" + i, 2700.0, i + 1, 5 + i, 25.0);\n          }\n        }\n\n        for (int i = 0; i < empleados.length; i++) {\n          empleados[i].mostrarInfo();\n        }\n    }\n}"
+    id: 'dr_ej_1_4',
+    titulo: `Dr. Java: Encapsulacion - Ej 4`,
+    nivel: '⭐⭐',
+    temas: ["Encapsulacion"],
+    tiempo: '15 min',
+    enunciado: `Crea una clase Automovil con los siguientes atributos privados:
+
+    •   marca (String)
+
+    •   modelo (String)
+
+    •   velocidad (int)
+
+Y los siguientes métodos públicos:
+
+    1. setMarca(String marca), getMarca().
+
+    2. setModelo(String modelo), getModelo().
+
+    3. setVelocidad(int velocidad), getVelocidad(). (La velocidad no puede ser negativa).
+
+    4. acelerar(int incremento): Aumenta la velocidad en la cantidad indicada.
+
+    5. frenar(int decremento): Disminuye la velocidad, pero sin quedar negativa.
+
+    6. mostrarInfo(): Muestra los datos del automóvil.
+
+Prueba desde la clase main todos los métodos de la clase Automovil.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Crea una clase Automovil con los siguientes atributos privados:
+
+     •     marca (String)
+
+     •     modelo (String)
+
+     •     velocidad (int)
+
+Y los siguientes métodos públicos:
+
+     1. setMarca(String marca), getMarca().
+
+     2. setModelo(String modelo), getModelo().
+
+     3. setVelocidad(int velocidad), getVelocidad(). (La velocidad no puede ser negativa).
+
+     4. acelerar(int incremento): Aumenta la velocidad en la cantidad indicada.
+
+     5. frenar(int decremento): Disminuye la velocidad, pero sin quedar negativa.
+
+     6. mostrarInfo(): Muestra los datos del automóvil.
+
+Prueba desde la clase main todos los métodos.
+
+ class Automovil {
+    private String marca;
+    private String modelo;
+    private int velocidad;
+
+     public void setMarca(String m) {
+       marca = m;
+     }
+
+     public String getMarca() {
+       return marca;
+     }
+
+     public void setModelo(String mod) {
+       modelo = mod;
+     }
+
+     public String getModelo() {
+       return modelo;
+     }
+    public void setVelocidad(int v) {
+        velocidad = v;
+    }
+
+    public int getVelocidad() {
+      return velocidad;
+    }
+
+  public void acelerar(int incremento) {
+      velocidad += incremento;
+      System.out.println("El automóvil ha acelerado. Nueva velocidad: " + velocidad + "
+km/h");
   }
+
+  public void frenar(int decremento) {
+         velocidad -= decremento;
+         System.out.println("El automóvil ha frenado. Nueva velocidad: " + velocidad + "
+km/h");
+  }
+
+    public void mostrarInfo() {
+      System.out.println("Marca: " + marca);
+      System.out.println("Modelo: " + modelo);
+      System.out.println("Velocidad actual: " + velocidad + " km/h");
+    }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Automovil auto1 = new Automovil();
+
+        auto1.setMarca("Toyota");
+        auto1.setModelo("Corolla");
+        auto1.setVelocidad(50);
+
+        auto1.mostrarInfo();
+
+        auto1.acelerar(30);
+        auto1.frenar(60);
+        auto1.frenar(10); // Intento de frenar cuando está en 0
+
+        auto1.mostrarInfo();
+    }
+}`,
+    criterios: ["Define la clase Automovil", "Define la clase main", "Define la clase Main", "Implementa el m\u00e9todo frenar", "Implementa el m\u00e9todo mostrarInfo", "Implementa el m\u00e9todo setVelocidad"],
+    checks: [
+       (c) =>  /class\s+Automovil/i.test(c),
+       (c) =>  /class\s+main/i.test(c),
+       (c) =>  /class\s+Main/i.test(c),
+       (c) =>  /frenar\s*\(/i.test(c),
+       (c) =>  /mostrarInfo\s*\(/i.test(c),
+       (c) =>  /setVelocidad\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_2_1',
+    titulo: `Dr. Java: Herencia - Ej 1`,
+    nivel: '⭐⭐',
+    temas: ["Herencia"],
+    tiempo: '15 min',
+    enunciado: `Crea una clase base Figura con un método dibujar() que imprima "Dibujando una figura
+genérica".
+
+Crea dos subclases:
+
+    •   Circulo, que sobrescriba dibujar() e imprima "Dibujando un círculo".
+
+    •   Cuadrado, que sobrescriba dibujar() e imprima "Dibujando un cuadrado".
+
+En main(), crea un objeto de Circulo y otro de Cuadrado, y llama a sus métodos dibujar()
+individualmente.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Crea una clase base Figura con un método dibujar() que imprima "Dibujando una figura
+genérica".
+
+Crea dos subclases:
+
+     •     Circulo, que sobrescriba dibujar() e imprima "Dibujando un círculo".
+
+     •     Cuadrado, que sobrescriba dibujar() e imprima "Dibujando un cuadrado".
+
+En main(), crea un objeto de Circulo y otro de Cuadrado, y llama a sus métodos dibujar()
+individualmente.
+
+ // Clase base
+ class Figura {
+    void dibujar() {
+      System.out.println("Dibujando una figura genérica");
+    }
+ }
+
+ // Subclase Circulo
+ class Circulo extends Figura {
+    void dibujar() {
+      System.out.println("Dibujando un círculo");
+    }
+ }
+
+ // Subclase Cuadrado
+ class Cuadrado extends Figura {
+    void dibujar() {
+      System.out.println("Dibujando un cuadrado");
+    }
+ }
+
+ // Clase principal
+ public class Main {
+    public static void main(String[] args) {
+      Figura f1 = new Circulo();
+      f1.dibujar();
+
+         Figura f2 = new Cuadrado();
+         f2.dibujar();
+     }
+ }`,
+    criterios: ["Define la clase Main", "Define la clase Cuadrado", "Define la clase Circulo", "Implementa el m\u00e9todo dibujar"],
+    checks: [
+       (c) =>  /class\s+Main/i.test(c),
+       (c) =>  /class\s+Cuadrado/i.test(c),
+       (c) =>  /class\s+Circulo/i.test(c),
+       (c) =>  /dibujar\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_2_2',
+    titulo: `Dr. Java: Herencia - Ej 2`,
+    nivel: '⭐⭐',
+    temas: ["Herencia"],
+    tiempo: '15 min',
+    enunciado: `Crea una clase base Empleado con un método calcularSalario() que imprima "Salario base de un
+empleado".
+
+Crea dos subclases:
+
+    •   EmpleadoTiempoCompleto, que sobrescriba calcularSalario() e imprima "Salario de
+        tiempo completo: 1000 €".
+
+    •   EmpleadoMedioTiempo, que sobrescriba calcularSalario() e imprima "Salario de medio
+        tiempo: 500 €".
+
+En main(), crea un objeto de EmpleadoTiempoCompleto y otro de EmpleadoMedioTiempo, y
+llama a sus métodos calcularSalario() individualmente.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Crea una clase base Empleado con un método calcularSalario() que imprima "Salario base de un
+empleado".
+Crea dos subclases:
+
+     •     EmpleadoTiempoCompleto, que sobrescriba calcularSalario() e imprima "Salario de
+           tiempo completo: 1000 €".
+
+     •     EmpleadoMedioTiempo, que sobrescriba calcularSalario() e imprima "Salario de medio
+           tiempo: 500 €".
+
+En main(), crea un objeto de EmpleadoTiempoCompleto y otro de EmpleadoMedioTiempo, y
+llama a sus métodos calcularSalario() individualmente.
+
+ // Clase base
+ class Empleado {
+    void calcularSalario() {
+      System.out.println("Salario base de un empleado");
+    }
+ }
+
+ // Subclase EmpleadoTiempoCompleto
+ class EmpleadoTiempoCompleto extends Empleado {
+    void calcularSalario() {
+      System.out.println("Salario de tiempo completo: 1000 €");
+    }
+ }
+
+ // Subclase EmpleadoMedioTiempo
+ class EmpleadoMedioTiempo extends Empleado {
+    void calcularSalario() {
+      System.out.println("Salario de medio tiempo: 500 €");
+    }
+ }
+
+ // Clase principal
+ public class Main {
+    public static void main(String[] args) {
+      Empleado e1 = new EmpleadoTiempoCompleto();
+      e1.calcularSalario();
+
+         Empleado e2 = new EmpleadoMedioTiempo();
+         e2.calcularSalario();
+     }
+ }`,
+    criterios: ["Define la clase Main", "Define la clase Empleado", "Define la clase EmpleadoTiempoCompleto", "Implementa el m\u00e9todo calcularSalario"],
+    checks: [
+       (c) =>  /class\s+Main/i.test(c),
+       (c) =>  /class\s+Empleado/i.test(c),
+       (c) =>  /class\s+EmpleadoTiempoCompleto/i.test(c),
+       (c) =>  /calcularSalario\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_2_3',
+    titulo: `Dr. Java: Herencia - Ej 3`,
+    nivel: '⭐⭐',
+    temas: ["Herencia"],
+    tiempo: '15 min',
+    enunciado: `Crea una clase base Instrumento con un método tocar() que imprima "Sonido genérico de un
+instrumento".
+
+Crea dos subclases:
+
+    •   Guitarra, que sobrescriba tocar() e imprima "Sonido de guitarra: Strum Strum".
+
+    •   Piano, que sobrescriba tocar() e imprima "Sonido de piano: Plink Plink".
+
+En main(), crea un objeto de Guitarra y otro de Piano, y llama a sus métodos tocar()
+individualmente.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Crea una clase base Instrumento con un método tocar() que imprima "Sonido genérico de un
+instrumento".
+
+Crea dos subclases:
+
+     •     Guitarra, que sobrescriba tocar() e imprima "Sonido de guitarra: Strum Strum".
+
+     •     Piano, que sobrescriba tocar() e imprima "Sonido de piano: Plink Plink".
+En main(), crea un objeto de Guitarra y otro de Piano, y llama a sus métodos tocar()
+individualmente.
+
+ // Clase base
+ class Instrumento {
+    void tocar() {
+      System.out.println("Sonido genérico de un instrumento");
+    }
+ }
+
+ // Subclase Guitarra
+ class Guitarra extends Instrumento {
+    void tocar() {
+      System.out.println("Sonido de guitarra: Strum Strum");
+    }
+ }
+
+ // Subclase Piano
+ class Piano extends Instrumento {
+    void tocar() {
+      System.out.println("Sonido de piano: Plink Plink");
+    }
+ }
+
+ // Clase principal
+ public class Main {
+    public static void main(String[] args) {
+      Instrumento i1 = new Guitarra();
+      i1.tocar();
+
+         Instrumento i2 = new Piano();
+         i2.tocar();
+     }
+ }`,
+    criterios: ["Define la clase Instrumento", "Define la clase Guitarra", "Define la clase Main", "Implementa el m\u00e9todo tocar"],
+    checks: [
+       (c) =>  /class\s+Instrumento/i.test(c),
+       (c) =>  /class\s+Guitarra/i.test(c),
+       (c) =>  /class\s+Main/i.test(c),
+       (c) =>  /tocar\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_2_4',
+    titulo: `Dr. Java: Herencia - Ej 4`,
+    nivel: '⭐⭐',
+    temas: ["Herencia"],
+    tiempo: '15 min',
+    enunciado: `Crea una clase base CuentaBancaria con:
+
+    •   Un atributo privado saldo (double).
+    •   Métodos públicos depositar(double cantidad) y retirar(double cantidad), asegurando
+        que el saldo no sea negativo.
+
+    •   Un método mostrarSaldo() que imprima el saldo actual.
+
+Crea dos subclases:
+
+    •   CuentaAhorro, que sobrescriba retirar() y permita retirar solo si el saldo es mayor a 100.
+
+    •   CuentaCorriente, que sobrescriba retirar() y permita retirar hasta dejar el saldo en -500
+        (sobregiro).
+
+En main(), crea una cuenta de ahorro y una cuenta corriente, realiza depósitos y retiros, e
+imprime los resultados.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Crea una clase base CuentaBancaria con:
+
+     •     Un atributo privado saldo (double).
+
+     •     Métodos públicos depositar(double cantidad) y retirar(double cantidad), asegurando
+           que el saldo no sea negativo.
+
+     •     Un método mostrarSaldo() que imprima el saldo actual.
+
+Crea dos subclases:
+
+     •     CuentaAhorro, que sobrescriba retirar() y permita retirar solo si el saldo es mayor a 100.
+
+     •     CuentaCorriente, que sobrescriba retirar() y permita retirar hasta dejar el saldo en -500
+           (sobregiro).
+En main(), crea una cuenta de ahorro y una cuenta corriente, realiza depósitos y retiros, e
+imprime los resultados.
+
+ // Clase base con encapsulación
+ class CuentaBancaria {
+    private double saldo;
+
+     public void depositar(double cantidad) {
+       if (cantidad &gt; 0) {
+           saldo += cantidad;
+           System.out.println("Depósito exitoso: " + cantidad);
+       } else {
+           System.out.println("Cantidad inválida para depósito.");
+       }
+     }
+
+     public void retirar(double cantidad) {
+       if (cantidad &gt; 0 && saldo &gt;= cantidad) {
+           saldo -= cantidad;
+           System.out.println("Retiro exitoso: " + cantidad);
+       } else {
+           System.out.println("Fondos insuficientes.");
+       }
+     }
+
+     public void mostrarSaldo() {
+       System.out.println("Saldo actual: " + saldo);
+     }
+
+     protected double getSaldo() {
+       return saldo;
+     }
+
+     protected void setSaldo(double cantidad) {
+       saldo = cantidad;
+     }
+ }
+
+ // Subclase CuentaAhorro con restricción de retiro
+ class CuentaAhorro extends CuentaBancaria {
+    public void retirar(double cantidad) {
+      if (getSaldo() - cantidad &gt;= 100) {
+          setSaldo(getSaldo() - cantidad);
+          System.out.println("Retiro exitoso de cuenta de ahorro: " + cantidad);
+      } else {
+          System.out.println("No puedes retirar, saldo mínimo de 100 requerido.");
+      }
+    }
+ }
+
+ // Subclase CuentaCorriente con sobregiro
+ class CuentaCorriente extends CuentaBancaria {
+     public void retirar(double cantidad) {
+       if (getSaldo() - cantidad &gt;= -500) {
+           setSaldo(getSaldo() - cantidad);
+           System.out.println("Retiro exitoso de cuenta corriente: " + cantidad);
+       } else {
+           System.out.println("Límite de sobregiro alcanzado (-500).");
+       }
+     }
+ }
+
+ // Clase principal
+ public class Main {
+    public static void main(String[] args) {
+      CuentaAhorro ahorro = new CuentaAhorro();
+      CuentaCorriente corriente = new CuentaCorriente();
+
+         ahorro.depositar(500);
+         ahorro.mostrarSaldo();
+         ahorro.retirar(450);
+         ahorro.mostrarSaldo();
+
+         corriente.depositar(200);
+         corriente.mostrarSaldo();
+         corriente.retirar(600);
+         corriente.mostrarSaldo();
+     }
+ }`,
+    criterios: ["Define la clase CuentaAhorro", "Define la clase CuentaBancaria", "Define la clase CuentaCorriente", "Implementa el m\u00e9todo mostrarSaldo", "Implementa el m\u00e9todo retirar"],
+    checks: [
+       (c) =>  /class\s+CuentaAhorro/i.test(c),
+       (c) =>  /class\s+CuentaBancaria/i.test(c),
+       (c) =>  /class\s+CuentaCorriente/i.test(c),
+       (c) =>  /mostrarSaldo\s*\(/i.test(c),
+       (c) =>  /retirar\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_2_5',
+    titulo: `Dr. Java: Herencia - Ej 5`,
+    nivel: '⭐⭐',
+    temas: ["Herencia"],
+    tiempo: '15 min',
+    enunciado: `Crea una clase base Dispositivo con:
+
+    •   Atributos privados: marca (String) y precio (double).
+
+    •   Métodos públicos setMarca(String), getMarca(), setPrecio(double), getPrecio().
+
+    •   Un método mostrarInfo(), que imprima la información del dispositivo.
+
+Crea dos subclases:
+
+    •   Smartphone, con un atributo adicional almacenamientoGB (int) y métodos
+        setAlmacenamiento(int) y getAlmacenamiento().
+
+    •   Laptop, con un atributo adicional ramGB (int) y métodos setRam(int) y getRam().
+
+    •   Ambas sobrescriben mostrarInfo().
+
+En main(), crea un Smartphone y una Laptop, asigna valores con los métodos set y muestra su
+información.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Crea una clase base Dispositivo con:
+
+     •     Atributos privados: marca (String) y precio (double).
+
+     •     Métodos públicos setMarca(String), getMarca(), setPrecio(double), getPrecio().
+
+     •     Un método mostrarInfo(), que imprima la información del dispositivo.
+
+Crea dos subclases:
+
+     •     Smartphone, con un atributo adicional almacenamientoGB (int) y métodos
+           setAlmacenamiento(int) y getAlmacenamiento().
+
+     •     Laptop, con un atributo adicional ramGB (int) y métodos setRam(int) y getRam().
+
+     •     Ambas sobrescriben mostrarInfo().
+
+En main(), crea un Smartphone y una Laptop, asigna valores con los métodos set y muestra su
+información.
+
+ // Clase base con encapsulación
+ class Dispositivo {
+    private String marca;
+    private double precio;
+    public void setMarca(String m) {
+      marca = m;
+    }
+
+    public String getMarca() {
+      return marca;
+    }
+
+    public void setPrecio(double p) {
+      if (p &gt; 0) {
+          precio = p;
+      }
+    }
+
+    public double getPrecio() {
+      return precio;
+    }
+
+    public void mostrarInfo() {
+      System.out.println("Marca: " + marca + ", Precio: " + precio);
+    }
+}
+
+// Subclase Smartphone
+class Smartphone extends Dispositivo {
+   private int almacenamientoGB;
+
+    public void setAlmacenamiento(int a) {
+      if (a &gt; 0) {
+          almacenamientoGB = a;
+      }
+    }
+
+    public int getAlmacenamiento() {
+      return almacenamientoGB;
+    }
+
+    public void mostrarInfo() {
+      super.mostrarInfo();
+      System.out.println("Almacenamiento: " + almacenamientoGB + " GB");
+    }
+}
+
+// Subclase Laptop
+class Laptop extends Dispositivo {
+   private int ramGB;
+
+    public void setRam(int r) {
+      if (r &gt; 0) {
+          ramGB = r;
+      }
+    }
+
+    public int getRam() {
+      return ramGB;
+    }
+
+    public void mostrarInfo() {
+      super.mostrarInfo();
+      System.out.println("RAM: " + ramGB + " GB");
+    }
+}
+
+// Clase principal
+public class Main {
+   public static void main(String[] args) {
+     Smartphone phone = new Smartphone();
+     phone.setMarca("Samsung");
+     phone.setPrecio(899.99);
+     phone.setAlmacenamiento(128);
+
+        Laptop laptop = new Laptop();
+        laptop.setMarca("Dell");
+        laptop.setPrecio(1299.99);
+        laptop.setRam(16);
+
+        phone.mostrarInfo();
+        laptop.mostrarInfo();
+    }
+}`,
+    criterios: ["Define la clase Laptop", "Define la clase Dispositivo", "Define la clase Smartphone", "Implementa el m\u00e9todo getRam", "Implementa el m\u00e9todo mostrarInfo"],
+    checks: [
+       (c) =>  /class\s+Laptop/i.test(c),
+       (c) =>  /class\s+Dispositivo/i.test(c),
+       (c) =>  /class\s+Smartphone/i.test(c),
+       (c) =>  /getRam\s*\(/i.test(c),
+       (c) =>  /mostrarInfo\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_3_1',
+    titulo: `Dr. Java: Modificadores de acceso - Ej 1`,
+    nivel: '⭐⭐',
+    temas: ["Modificadores de acceso"],
+    tiempo: '15 min',
+    enunciado: `Crea un sistema de biblioteca con clases relacionadas, donde se utilizan distintos modificadores
+de acceso para controlar la visibilidad de los atributos y métodos. Para ello:
+
+    1. Crea una clase base Libro con los siguientes atributos:
+
+              o   titulo (String) private
+
+              o   autor (String) private
+
+              o   anoPublicacion (int) protected
+
+              o   precio (double) default (sin modificador)
+
+        Métodos en Libro:
+
+              o   Un método public mostrarInformacion() que imprime el título y el autor.
+
+              o   Un método private calcularPrecioConDescuento() que calcula un descuento del
+                  10% sobre el precio y lo imprime.
+
+    2. Crea una subclase LibroDigital que herede de Libro y tenga:
+
+              o   Un atributo adicional tamanoMB (double) private.
+
+              o   Un método public mostrarInformacionDigital() que imprima el tamaño del
+                  archivo digital y llame a mostrarInformacion().
+
+    3. Crea una clase Biblioteca que tenga un atributo default cantidadLibros (int).
+
+              o   En Biblioteca, crea un método public agregarLibro(Libro libro) para agregar un
+                  libro a la biblioteca.
+
+              o   Dentro de la misma clase, crea un método protected mostrarCantidadLibros()
+                  que imprima la cantidad de libros en la biblioteca.
+
+    4. En main(), crea instancias de Libro y LibroDigital, y utiliza los métodos públicos,
+       protegidos y privados adecuadamente.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Crea un sistema de biblioteca con clases relacionadas, donde se utilizan distintos modificadores
+de acceso para controlar la visibilidad de los atributos y métodos. Para ello:
+
+    1. Crea una clase base Libro con los siguientes atributos:
+
+              o   titulo (String) private
+
+              o   autor (String) private
+
+              o   anoPublicacion (int) protected
+
+              o   precio (double) default (sin modificador)
+
+        Métodos en Libro:
+
+              o   Un método public mostrarInformacion() que imprime el título y el autor.
+
+              o   Un método private calcularPrecioConDescuento() que calcula un descuento del
+                  10% sobre el precio y lo imprime.
+
+    2. Crea una subclase LibroDigital que herede de Libro y tenga:
+
+              o   Un atributo adicional tamanoMB (double) private.
+
+              o   Un método public mostrarInformacionDigital() que imprima el tamaño del
+                  archivo digital y llame a mostrarInformacion().
+
+    3. Crea una clase Biblioteca que tenga un atributo default cantidadLibros (int).
+
+              o   En Biblioteca, crea un método public agregarLibro(Libro libro) para agregar un
+                  libro a la biblioteca.
+
+              o   Dentro de la misma clase, crea un método protected mostrarCantidadLibros()
+                  que imprima la cantidad de libros en la biblioteca.
+
+    4. En main(), crea instancias de Libro y LibroDigital, y utiliza los métodos públicos,
+       protegidos y privados adecuadamente.
+
+ class Libro {
+    private String titulo;
+    private String autor;
+    protected int anoPublicacion;
+    double precio;
+
+   public void setTitulo(String t) {
+     titulo = t;
+   }
+
+   public String getTitulo() {
+     return titulo;
+   }
+    public void setAutor(String a) {
+      autor = a;
+    }
+
+    public String getAutor() {
+      return autor;
+    }
+
+    public void setAnoPublicacion(int a) {
+      anoPublicacion = a;
+    }
+
+    public int getAnoPublicacion() {
+      return anoPublicacion;
+    }
+
+    public void setPrecio(double p) {
+      precio = p;
+    }
+
+    public double getPrecio() {
+      return precio;
+    }
+
+    public void mostrarInformacion() {
+      System.out.println("Título: " + titulo + ", Autor: " + autor);
+    }
+
+    private void calcularPrecioConDescuento() {
+      double precioConDescuento = precio * 0.9; // 10% de descuento
+      System.out.println("Precio con descuento: " + precioConDescuento);
+    }
+}
+
+// Subclase LibroDigital
+class LibroDigital extends Libro {
+   private double tamanoMB;
+
+    public void setTamanoMB(double t) {
+      tamanoMB = t;
+    }
+
+    public double getTamanoMB() {
+      return tamanoMB;
+    }
+
+    public void mostrarInformacionDigital() {
+      mostrarInformacion();
+      System.out.println("Tamaño del archivo digital: " + tamanoMB + " MB");
+    }
+}
+ // Clase Biblioteca
+ class Biblioteca {
+    int cantidadLibros;
+
+     public void agregarLibro(Libro libro) {
+       cantidadLibros++;
+       System.out.println("Libro agregado: " + libro.getTitulo());
+     }
+
+     protected void mostrarCantidadLibros() {
+       System.out.println("Cantidad de libros en la biblioteca: " + cantidadLibros);
+     }
+ }
+
+ // Clase principal
+ public class Main {
+    public static void main(String[] args) {
+      Libro libro1 = new Libro();
+      libro1.setTitulo("El Quijote");
+      libro1.setAutor("Miguel de Cervantes");
+      libro1.setAnoPublicacion(1605);
+      libro1.setPrecio(25.0);
+
+       LibroDigital libroDigital1 = new LibroDigital();
+       libroDigital1.setTitulo("Java para principiantes");
+       libroDigital1.setAutor("José Pérez");
+       libroDigital1.setAnoPublicacion(2020);
+       libroDigital1.setPrecio(35.0);
+       libroDigital1.setTamanoMB(5.0);
+
+       libro1.mostrarInformacion();
+       libroDigital1.mostrarInformacionDigital();
+
+      // Accediendo a métodos privados y protegidos (solo de ejemplo, no es posible fuera de
+ la clase):
+      // libro1.calcularPrecioConDescuento(); // No es accesible, es private
+      // libro1.anoPublicacion; // Es accesible dentro de la subclase, pero no desde aquí
+ (protected)
+    }
+ }`,
+    criterios: ["Define la clase LibroDigital", "Define la clase Main", "Define la clase Libro", "Implementa el m\u00e9todo mostrarCantidadLibros", "Implementa el m\u00e9todo agregarLibro"],
+    checks: [
+       (c) =>  /class\s+LibroDigital/i.test(c),
+       (c) =>  /class\s+Main/i.test(c),
+       (c) =>  /class\s+Libro/i.test(c),
+       (c) =>  /mostrarCantidadLibros\s*\(/i.test(c),
+       (c) =>  /agregarLibro\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_3_2',
+    titulo: `Dr. Java: Modificadores de acceso - Ej 2`,
+    nivel: '⭐⭐',
+    temas: ["Modificadores de acceso"],
+    tiempo: '15 min',
+    enunciado: `Crea un sistema para gestionar productos en una tienda, utilizando modificadores de acceso.
+Para ello:
+
+    1. Crea una clase base Producto que tenga los siguientes atributos:
+
+              o   nombre (String) private
+
+              o   precio (double) private
+
+              o   cantidad (int) protected
+
+              o   codigo (String) default (sin modificador)
+        Métodos en Producto:
+
+              o   Un método public mostrarInfo() que imprima el nombre y el precio del
+                  producto.
+
+              o   Un método private calcularDescuento() que calcule un 5% de descuento sobre
+                  el precio.
+
+    2. Crea una subclase ProductoElectronico que herede de Producto y tenga:
+
+              o   Un atributo adicional marca (String) private.
+
+              o   Un método public mostrarInfoElectronico() que imprima la marca y el código
+                  del producto.
+
+    3. Crea una clase Tienda con:
+
+              o   Un atributo default totalProductos (int) que llevará el conteo de productos en
+                  la tienda.
+
+              o   Un método public agregarProducto(Producto producto) que aumente el
+                  número de productos en la tienda.
+
+              o   Un método protected mostrarTotalProductos() que imprima la cantidad de
+                  productos en la tienda.
+
+    4. En main(), crea instancias de Producto y ProductoElectronico, usa los métodos set para
+       asignar valores, y muestra la información.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Crea un sistema para gestionar productos en una tienda, utilizando modificadores de acceso.
+Para ello:
+
+     1. Crea una clase base Producto que tenga los siguientes atributos:
+
+              o   nombre (String) private
+
+              o   precio (double) private
+           o   cantidad (int) protected
+
+           o   codigo (String) default (sin modificador)
+
+      Métodos en Producto:
+
+           o   Un método public mostrarInfo() que imprima el nombre y el precio del
+               producto.
+
+           o   Un método private calcularDescuento() que calcule un 5% de descuento sobre
+               el precio.
+
+  2. Crea una subclase ProductoElectronico que herede de Producto y tenga:
+
+           o   Un atributo adicional marca (String) private.
+
+           o   Un método public mostrarInfoElectronico() que imprima la marca y el código
+               del producto.
+
+  3. Crea una clase Tienda con:
+
+           o   Un atributo default totalProductos (int) que llevará el conteo de productos en
+               la tienda.
+
+           o   Un método public agregarProducto(Producto producto) que aumente el
+               número de productos en la tienda.
+
+           o   Un método protected mostrarTotalProductos() que imprima la cantidad de
+               productos en la tienda.
+
+  4. En main(), crea instancias de Producto y ProductoElectronico, usa los métodos set para
+     asignar valores, y muestra la información.
+
+
+
+// Clase Producto
+class Producto {
+   private String nombre;
+   private double precio;
+   protected int cantidad;
+   String codigo;
+
+  public void setNombre(String nuevoNombre) {
+    nombre = nuevoNombre;
+  }
+
+  public String getNombre() {
+    return nombre;
+  }
+
+  public void setPrecio(double nuevoPrecio) {
+    precio = nuevoPrecio;
+  }
+
+  public double getPrecio() {
+    return precio;
+    }
+
+    public void setCantidad(int nuevaCantidad) {
+      cantidad = nuevaCantidad;
+    }
+
+    public int getCantidad() {
+      return cantidad;
+    }
+
+    public void setCodigo(String nuevoCodigo) {
+      codigo = nuevoCodigo;
+    }
+
+    public String getCodigo() {
+      return codigo;
+    }
+
+    public void mostrarInfo() {
+      System.out.println("Producto: " + nombre + ", Precio: " + precio);
+    }
+
+    private void calcularDescuento() {
+      double descuento = precio * 0.05; // 5% descuento
+      System.out.println("Descuento: " + descuento);
+    }
+}
+
+// Subclase ProductoElectronico
+class ProductoElectronico extends Producto {
+   private String marca;
+
+    public void setMarca(String nuevaMarca) {
+      marca = nuevaMarca;
+    }
+
+    public String getMarca() {
+      return marca;
+    }
+
+    public void mostrarInfoElectronico() {
+      mostrarInfo(); // Llamando a mostrarInfo de la clase base
+      System.out.println("Marca: " + marca + ", Código: " + codigo);
+    }
+}
+
+// Clase Tienda
+class Tienda {
+   int totalProductos;
+
+    public void agregarProducto(Producto producto) {
+      totalProductos++;
+         System.out.println("Producto agregado: " + producto.getNombre());
+     }
+
+     protected void mostrarTotalProductos() {
+       System.out.println("Total productos en la tienda: " + totalProductos);
+     }
+ }
+
+ public class Main {
+   public static void main(String[] args) {
+     Producto producto1 = new Producto();
+     producto1.setNombre("Camiseta");
+     producto1.setPrecio(19.99);
+     producto1.setCantidad(10);
+     producto1.setCodigo("C123");
+
+         ProductoElectronico productoElectronico1 = new ProductoElectronico();
+         productoElectronico1.setNombre("Laptop");
+         productoElectronico1.setPrecio(899.99);
+         productoElectronico1.setCantidad(5);
+         productoElectronico1.setCodigo("L456");
+         productoElectronico1.setMarca("Dell");
+
+         producto1.mostrarInfo();
+         productoElectronico1.mostrarInfoElectronico();
+
+         Tienda tienda = new Tienda();
+         tienda.agregarProducto(producto1);
+         tienda.agregarProducto(productoElectronico1);
+         tienda.mostrarTotalProductos();
+     }
+ }
+
+
+Producto:
+
+     •     Los atributos nombre y precio son private para que solo se accedan mediante los
+           métodos set y get.
+
+     •     El atributo cantidad es protected, por lo que puede ser accedido desde subclases como
+           ProductoElectronico.
+
+     •     El atributo codigo tiene el modificador default, lo que significa que es accesible solo
+           dentro del paquete.
+
+ProductoElectronico:
+
+     •     Hereda de Producto y tiene un atributo marca que es private.
+
+     •     El método mostrarInfoElectronico() imprime tanto los datos de la clase base como el
+           atributo adicional.
+
+Tienda:
+    •   Lleva el conteo de productos con el atributo totalProductos que tiene un modificador
+        default.
+
+    •   El método agregarProducto() aumenta el conteo de productos en la tienda, mientras
+        que mostrarTotalProductos() muestra ese total.`,
+    criterios: ["Define la clase Producto", "Define la clase Tienda", "Define la clase Main", "Implementa el m\u00e9todo mostrarInfo", "Implementa el m\u00e9todo mostrarTotalProductos"],
+    checks: [
+       (c) =>  /class\s+Producto/i.test(c),
+       (c) =>  /class\s+Tienda/i.test(c),
+       (c) =>  /class\s+Main/i.test(c),
+       (c) =>  /mostrarInfo\s*\(/i.test(c),
+       (c) =>  /mostrarTotalProductos\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_3_3',
+    titulo: `Dr. Java: Modificadores de acceso - Ej 3`,
+    nivel: '⭐⭐',
+    temas: ["Modificadores de acceso"],
+    tiempo: '15 min',
+    enunciado: `Crea un sistema para gestionar cuentas bancarias, utilizando modificadores de acceso. Para ello:
+
+    1. Crea una clase base CuentaBancaria que tenga como atributos:
+
+              o   numeroCuenta (String) private
+
+              o   saldo (double) private
+
+              o   titular (String) protected
+
+              o   tipoCuenta (String) default (sin modificador)
+
+        Métodos en CuentaBancaria:
+
+              o   Un método public mostrarInformacion() que imprima el titular, el número de
+                  cuenta y el saldo.
+
+              o   Un método private calcularIntereses() que calcule un 2% de intereses sobre el
+                  saldo y lo imprima.
+
+    2. Crea una subclase CuentaAhorro que herede de CuentaBancaria y tenga:
+
+              o   Un atributo adicional intereses (double) private.
+
+              o   Un método public mostrarInformacionCuentaAhorro() que imprima el tipo de
+                  cuenta y los intereses.
+3. Crea una clase Banco con:
+
+       o   Un atributo default totalCuentas (int) que llevará el conteo de cuentas en el
+           banco.
+
+       o   Un método public agregarCuenta(CuentaBancaria cuenta) que aumente el
+           número de cuentas en el banco.
+
+       o   Un método protected mostrarTotalCuentas() que imprima la cantidad de
+           cuentas en el banco.
+
+4. En main(), crea instancias de CuentaBancaria y CuentaAhorro, usa los métodos set para
+   asignar valores, y muestra la información.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Crea un sistema para gestionar cuentas bancarias, utilizando modificadores de acceso. Para ello:
+
+    1. Crea una clase base CuentaBancaria que tenga como atributos:
+
+              o   numeroCuenta (String) private
+
+              o   saldo (double) private
+
+              o   titular (String) protected
+
+              o   tipoCuenta (String) default (sin modificador)
+
+        Métodos en CuentaBancaria:
+
+              o   Un método public mostrarInformacion() que imprima el titular, el número de
+                  cuenta y el saldo.
+
+              o   Un método private calcularIntereses() que calcule un 2% de intereses sobre el
+                  saldo y lo imprima.
+
+    2. Crea una subclase CuentaAhorro que herede de CuentaBancaria y tenga:
+
+              o   Un atributo adicional intereses (double) private.
+
+              o   Un método public mostrarInformacionCuentaAhorro() que imprima el tipo de
+                  cuenta y los intereses.
+
+    3. Crea una clase Banco con:
+
+              o   Un atributo default totalCuentas (int) que llevará el conteo de cuentas en el
+                  banco.
+
+              o   Un método public agregarCuenta(CuentaBancaria cuenta) que aumente el
+                  número de cuentas en el banco.
+
+              o   Un método protected mostrarTotalCuentas() que imprima la cantidad de
+                  cuentas en el banco.
+
+    4. En main(), crea instancias de CuentaBancaria y CuentaAhorro, usa los métodos set para
+       asignar valores, y muestra la información.
+
+ class CuentaBancaria {
+    private String numeroCuenta;
+    private double saldo;
+    protected String titular;
+    String tipoCuenta;
+
+   public void setNumeroCuenta(String nuevoNumeroCuenta) {
+        numeroCuenta = nuevoNumeroCuenta;
+    }
+
+    public String getNumeroCuenta() {
+      return numeroCuenta;
+    }
+
+    public void setSaldo(double nuevoSaldo) {
+      saldo = nuevoSaldo;
+    }
+
+    public double getSaldo() {
+      return saldo;
+    }
+
+    public void setTitular(String nuevoTitular) {
+      titular = nuevoTitular;
+    }
+
+    public String getTitular() {
+      return titular;
+    }
+
+    public void setTipoCuenta(String nuevoTipoCuenta) {
+      tipoCuenta = nuevoTipoCuenta;
+    }
+
+    public String getTipoCuenta() {
+      return tipoCuenta;
+    }
+
+  public void mostrarInformacion() {
+    System.out.println("Titular: " + titular + ", Número de Cuenta: " + numeroCuenta + ",
+Saldo: " + saldo);
+  }
+
+    private void calcularIntereses() {
+      double intereses = saldo * 0.02; // 2% de intereses
+      System.out.println("Intereses calculados: " + intereses);
+    }
+}
+
+// Subclase CuentaAhorro
+class CuentaAhorro extends CuentaBancaria {
+   private double intereses;
+
+    public void setIntereses(double nuevosIntereses) {
+      intereses = nuevosIntereses;
+    }
+
+    public double getIntereses() {
+      return intereses;
+     }
+
+     public void mostrarInformacionCuentaAhorro() {
+       mostrarInformacion(); // Llamando a mostrarInformacion de la clase base
+       System.out.println("Tipo de cuenta: " + tipoCuenta + ", Intereses: " + intereses + "%");
+     }
+ }
+
+ class Banco {
+    int totalCuentas;
+
+     public void agregarCuenta(CuentaBancaria cuenta) {
+       totalCuentas++;
+       System.out.println("Cuenta agregada: " + cuenta.getNumeroCuenta());
+     }
+
+     protected void mostrarTotalCuentas() {
+       System.out.println("Total cuentas en el banco: " + totalCuentas);
+     }
+ }
+
+ public class Main {
+   public static void main(String[] args) {
+     CuentaBancaria cuenta1 = new CuentaBancaria();
+     cuenta1.setNumeroCuenta("123456789");
+     cuenta1.setSaldo(1000.0);
+     cuenta1.setTitular("Juan Pérez");
+     cuenta1.setTipoCuenta("Corriente");
+
+         CuentaAhorro cuentaAhorro1 = new CuentaAhorro();
+         cuentaAhorro1.setNumeroCuenta("987654321");
+         cuentaAhorro1.setSaldo(5000.0);
+         cuentaAhorro1.setTitular("María Gómez");
+         cuentaAhorro1.setTipoCuenta("Ahorro");
+         cuentaAhorro1.setIntereses(3.0);
+
+         cuenta1.mostrarInformacion();
+         cuentaAhorro1.mostrarInformacionCuentaAhorro();
+
+         Banco banco = new Banco();
+         banco.agregarCuenta(cuenta1);
+         banco.agregarCuenta(cuentaAhorro1);
+         banco.mostrarTotalCuentas();
+     }
+ }
+
+
+CuentaBancaria:
+
+     •     Los atributos numeroCuenta y saldo son private para proteger la información sensible.
+   •     El atributo titular es protected y puede ser accedido por clases hijas como
+         CuentaAhorro.
+
+   •     El atributo tipoCuenta es default (sin modificador) y solo es accesible dentro del mismo
+         paquete.
+
+   •     El método mostrarInformacion() imprime la información básica de la cuenta.
+
+   •     El método calcularIntereses() es privado y se usa solo internamente.
+
+CuentaAhorro:
+
+   •     Hereda de CuentaBancaria y tiene un atributo adicional intereses (porcentaje de
+         intereses).
+
+   •     El método mostrarInformacionCuentaAhorro() imprime detalles adicionales de la
+         cuenta de ahorro.
+
+Banco:
+
+   •     Lleva el conteo de cuentas con el atributo totalCuentas.
+
+   •     El método agregarCuenta() aumenta el número de cuentas en el banco y muestra el
+         número de cuenta agregada.
+
+   •     El método mostrarTotalCuentas() muestra el total de cuentas en el banco.`,
+    criterios: ["Define la clase Main", "Define la clase CuentaAhorro", "Define la clase Banco", "Implementa el m\u00e9todo mostrarTotalCuentas", "Implementa el m\u00e9todo agregarCuenta"],
+    checks: [
+       (c) =>  /class\s+Main/i.test(c),
+       (c) =>  /class\s+CuentaAhorro/i.test(c),
+       (c) =>  /class\s+Banco/i.test(c),
+       (c) =>  /mostrarTotalCuentas\s*\(/i.test(c),
+       (c) =>  /agregarCuenta\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_4_1',
+    titulo: `Dr. Java: Constructores - Ej 1`,
+    nivel: '⭐⭐',
+    temas: ["Constructores"],
+    tiempo: '15 min',
+    enunciado: `Vamos a gestionar los productos de una tienda. Para ello, vamos a crear una clase Producto que
+tenga los atributos: nombre, precio y cantidad. Usaremos constructores para inicializar estos
+atributos al crear instancias de la clase. Además, crearemos una subclase ProductoElectronico
+que herede de Producto y agregue un atributo adicional para la marca. También, incluiremos
+un método para mostrar la información del producto. Así:
+
+    1. Producto:
+
+              o   Atributos:
+
+                      ▪   nombre (String)
+
+                      ▪   precio (double)
+
+                      ▪   cantidad (int)
+
+              o   Constructor que reciba nombre, precio y cantidad como parámetros y los
+                  inicialice.
+
+              o   Método mostrarInformacion() que imprima los detalles del producto.
+
+    2. ProductoElectronico (subclase de Producto):
+
+              o   Atributo adicional: marca (String)
+
+              o   Constructor que reciba nombre, precio, cantidad, y marca como parámetros.
+
+              o   Método mostrarInformacionElectronico() que imprima los detalles del
+                  producto electrónico.
+
+    3. Tienda:
+
+              o   Atributo: productos (un arreglo de tipo Producto de tamaño fijo).
+
+              o   Método agregarProducto() que reciba un objeto de tipo Producto y lo agregue
+                  al arreglo.
+
+              o   Método mostrarProductos() que imprima todos los productos de la tienda.
+
+    4. En el main(), crea instancias de Producto y ProductoElectronico usando los
+       constructores, agrega los productos a la tienda, y muestra la información.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Vamos a gestionar los productos de una tienda. Para ello, vamos a crear una clase Producto que
+tenga los atributos: nombre, precio y cantidad. Usaremos constructores para inicializar estos
+atributos al crear instancias de la clase. Además, crearemos una subclase ProductoElectronico
+que herede de Producto y agregue un atributo adicional para la marca. También, incluiremos
+un método para mostrar la información del producto. Así:
+
+    1. Producto:
+
+              o   Atributos:
+
+                      ▪   nombre (String)
+
+                      ▪   precio (double)
+
+                      ▪   cantidad (int)
+
+              o   Constructor que reciba nombre, precio y cantidad como parámetros y los
+                  inicialice.
+
+              o   Método mostrarInformacion() que imprima los detalles del producto.
+
+    2. ProductoElectronico (subclase de Producto):
+
+              o   Atributo adicional: marca (String)
+
+              o   Constructor que reciba nombre, precio, cantidad, y marca como parámetros.
+
+              o   Método mostrarInformacionElectronico() que imprima los detalles del
+                  producto electrónico.
+
+    3. Tienda:
+
+              o   Atributo: productos (un arreglo de tipo Producto de tamaño fijo).
+
+              o   Método agregarProducto() que reciba un objeto de tipo Producto y lo agregue
+                  al arreglo.
+
+              o   Método mostrarProductos() que imprima todos los productos de la tienda.
+
+    4. En el main(), crea instancias de Producto y ProductoElectronico usando los
+       constructores, agrega los productos a la tienda, y muestra la información.
+
+ class Producto {
+    private String nombreProducto;
+    private double precioProducto;
+    private int cantidadProducto;
+
+   public Producto(String nombre, double precio, int cantidad) {
+     nombreProducto = nombre;
+     precioProducto = precio;
+     cantidadProducto = cantidad;
+   }
+    public String obtenerNombre() {
+      return nombreProducto;
+    }
+
+    public double obtenerPrecio() {
+      return precioProducto;
+    }
+
+    public int obtenerCantidad() {
+      return cantidadProducto;
+    }
+
+  public void mostrarInformacion() {
+    System.out.println("Producto: " + nombreProducto + ", Precio: " + precioProducto + ",
+Cantidad: " + cantidadProducto);
+  }
+}
+
+class ProductoElectronico extends Producto {
+   private String marcaProductoElectronico;
+
+    public ProductoElectronico(String nombre, double precio, int cantidad, String marca) {
+      nombreProducto = nombre;
+      precioProducto = precio;
+      cantidadProducto = cantidad;
+      marcaProductoElectronico = marca;
+    }
+
+    public void mostrarInformacionElectronico() {
+      mostrarInformacion(); // Llamando al método de la clase base
+      System.out.println("Marca: " + marcaProductoElectronico);
+    }
+}
+
+class Tienda {
+   private Producto[] productos;
+   private int indice;
+
+    public Tienda(int capacidad) {
+      productos = new Producto[capacidad];
+      indice = 0;
+    }
+
+    public void agregarProducto(Producto producto) {
+      if (indice &lt; productos.length) {
+          productos[indice] = producto;
+          indice++;
+      } else {
+          System.out.println("La tienda está llena.");
+      }
+    }
+     public void mostrarProductos() {
+       System.out.println("Productos disponibles en la tienda:");
+       for (int i = 0; i &lt; indice; i++) {
+         productos[i].mostrarInformacion();
+       }
+     }
+ }
+
+ public class Main {
+   public static void main(String[] args) {
+
+      Producto producto1 = new Producto("Camiseta", 19.99, 10);
+      ProductoElectronico productoElectronico1 = new ProductoElectronico("Laptop", 899.99,
+ 5, "Dell");
+
+         Tienda tienda = new Tienda(5);
+         tienda.agregarProducto(producto1);
+         tienda.agregarProducto(productoElectronico1);
+
+         tienda.mostrarProductos();
+     }
+ }`,
+    criterios: ["Define la clase Tienda", "Define la clase Producto", "Define la clase ProductoElectronico", "Implementa el m\u00e9todo mostrarInformacionElectronico", "Implementa el m\u00e9todo mostrarInformacion"],
+    checks: [
+       (c) =>  /class\s+Tienda/i.test(c),
+       (c) =>  /class\s+Producto/i.test(c),
+       (c) =>  /class\s+ProductoElectronico/i.test(c),
+       (c) =>  /mostrarInformacionElectronico\s*\(/i.test(c),
+       (c) =>  /mostrarInformacion\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_4_2',
+    titulo: `Dr. Java: Constructores - Ej 2`,
+    nivel: '⭐⭐',
+    temas: ["Constructores"],
+    tiempo: '15 min',
+    enunciado: `Vamos a gestionar una biblioteca de películas. Para ello vamos a crear una clase Pelicula que
+tenga los atributos: titulo, duracion (en minutos), y anioEstreno. Luego, se creará una subclase
+PeliculaDeAccion que herede de Pelicula y tenga un atributo adicional para la clasificacion.
+Usaremos constructores para inicializar los atributos.
+
+    1. Pelicula:
+
+              o   Atributos:
+                      ▪   tituloPelicula (String)
+
+                      ▪   duracionPelicula (int)
+
+                      ▪   anioEstrenoPelicula (int)
+
+              o   Constructor que reciba titulo, duracion y anioEstreno como parámetros y los
+                  inicialice.
+
+              o   Método mostrarInformacion() que imprima los detalles de la película.
+
+    2. PeliculaDeAccion (subclase de Pelicula):
+
+              o   Atributo adicional: clasificacionPelicula (String)
+
+              o   Constructor que reciba titulo, duracion, anioEstreno y clasificacion como
+                  parámetros.
+
+              o   Método mostrarInformacionAccion() que imprima los detalles de la película de
+                  acción.
+
+    3. Biblioteca:
+
+              o   Atributo: peliculas (un arreglo de tipo Pelicula de tamaño fijo).
+
+              o   Método agregarPelicula() que reciba un objeto de tipo Pelicula y lo agregue al
+                  arreglo.
+
+              o   Método mostrarPeliculas() que imprima todos los detalles de las películas.
+
+    4. En el main(), crea instancias de Pelicula y PeliculaDeAccion usando los constructores,
+       agrega las películas a la biblioteca y muestra la información de todas las películas.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Vamos a gestionar una biblioteca de películas. Para ello vamos a crear una clase Pelicula que
+tenga los atributos: titulo, duracion (en minutos), y anioEstreno. Luego, se creará una subclase
+PeliculaDeAccion que herede de Pelicula y tenga un atributo adicional para la clasificacion.
+Usaremos constructores para inicializar los atributos.
+
+     1. Pelicula:
+
+               o   Atributos:
+
+                       ▪   tituloPelicula (String)
+
+                       ▪   duracionPelicula (int)
+
+                       ▪   anioEstrenoPelicula (int)
+
+               o   Constructor que reciba titulo, duracion y anioEstreno como parámetros y los
+                   inicialice.
+
+               o   Método mostrarInformacion() que imprima los detalles de la película.
+
+     2. PeliculaDeAccion (subclase de Pelicula):
+
+               o   Atributo adicional: clasificacionPelicula (String)
+
+               o   Constructor que reciba titulo, duracion, anioEstreno y clasificacion como
+                   parámetros.
+
+               o   Método mostrarInformacionAccion() que imprima los detalles de la película de
+                   acción.
+  3. Biblioteca:
+
+           o   Atributo: peliculas (un arreglo de tipo Pelicula de tamaño fijo).
+
+           o   Método agregarPelicula() que reciba un objeto de tipo Pelicula y lo agregue al
+               arreglo.
+
+           o   Método mostrarPeliculas() que imprima todos los detalles de las películas.
+
+  4. En el main(), crea instancias de Pelicula y PeliculaDeAccion usando los constructores,
+     agrega las películas a la biblioteca y muestra la información de todas las películas.
+
+class Pelicula {
+   private String tituloPelicula;
+   private int duracionPelicula;
+   private int anioEstrenoPelicula;
+
+  public Pelicula(String titulo, int duracion, int anioEstreno) {
+    tituloPelicula = titulo;
+    duracionPelicula = duracion;
+    anioEstrenoPelicula = anioEstreno;
+  }
+
+  public String obtenerTitulo() {
+    return tituloPelicula;
+  }
+
+  public int obtenerDuracion() {
+    return duracionPelicula;
+  }
+
+  public int obtenerAnioEstreno() {
+    return anioEstrenoPelicula;
+  }
+
+  public void mostrarInformacion() {
+    System.out.println("Título: " + tituloPelicula + ", Duración: " + duracionPelicula + "
+minutos, Año de estreno: " + anioEstrenoPelicula);
+  }
+}
+
+class PeliculaDeAccion extends Pelicula {
+   private String clasificacionPelicula;
+
+  public PeliculaDeAccion(String titulo, int duracion, int anioEstreno, String clasificacion) {
+    tituloPelicula = titulo;
+    duracionPelicula = duracion;
+    anioEstrenoPelicula = anioEstreno;
+    clasificacionPelicula = clasificacion;
+  }
+
+  public void mostrarInformacionAccion() {
+    mostrarInformacion(); // Llamando al método de la clase base
+         System.out.println("Clasificación: " + clasificacionPelicula);
+     }
+ }
+
+ class Biblioteca {
+    private Pelicula[] peliculas;
+    private int indice;
+
+     public Biblioteca(int capacidad) {
+       peliculas = new Pelicula[capacidad];
+       indice = 0;
+     }
+
+     public void agregarPelicula(Pelicula pelicula) {
+       if (indice &lt; peliculas.length) {
+           peliculas[indice] = pelicula;
+           indice++;
+       } else {
+           System.out.println("La biblioteca está llena.");
+       }
+     }
+
+     public void mostrarPeliculas() {
+       System.out.println("Películas disponibles en la biblioteca:");
+       for (int i = 0; i &lt; indice; i++) {
+         peliculas[i].mostrarInformacion();
+       }
+     }
+ }
+
+ public class Main {
+   public static void main(String[] args) {
+
+     Pelicula pelicula1 = new Pelicula("La Casa de Papel", 60, 2017);
+     PeliculaDeAccion peliculaDeAccion1 = new PeliculaDeAccion("Rocky", 120, 1983,
+ "acción");
+
+         Biblioteca biblioteca = new Biblioteca(5);
+         biblioteca.agregarPelicula(pelicula1);
+         biblioteca.agregarPelicula(peliculaDeAccion1);
+
+         biblioteca.mostrarPeliculas();
+     }
+ }`,
+    criterios: ["Define la clase PeliculaDeAccion", "Define la clase Main", "Define la clase Pelicula", "Implementa el m\u00e9todo agregarPelicula", "Implementa el m\u00e9todo mostrarInformacion"],
+    checks: [
+       (c) =>  /class\s+PeliculaDeAccion/i.test(c),
+       (c) =>  /class\s+Main/i.test(c),
+       (c) =>  /class\s+Pelicula/i.test(c),
+       (c) =>  /agregarPelicula\s*\(/i.test(c),
+       (c) =>  /mostrarInformacion\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_4_3',
+    titulo: `Dr. Java: Constructores - Ej 3`,
+    nivel: '⭐⭐',
+    temas: ["Constructores"],
+    tiempo: '15 min',
+    enunciado: `Vamos a gestionar un inventario de electrodomésticos. Para ello vamos a crear un sistema de
+gestión de inventario para una tienda de electrodomésticos. Tendremos una clase base
+ProductoElectrico con atributos comunes como el nombre y el precio, y luego una subclase
+Televisor que agregue un atributo adicional para la tamanoPantalla en pulgadas. Así:
+
+    1. ProductoElectrico:
+
+              o   Atributos:
+
+                      ▪   nombreProductoElectrico (String)
+
+                      ▪   precioProductoElectrico (double)
+
+              o   Constructor que reciba nombre y precio como parámetros y los inicialice.
+
+              o   Método mostrarInformacion() que imprima los detalles del producto eléctrico.
+
+    2. Televisor (subclase de ProductoElectrico):
+
+              o   Atributo adicional: tamanoPantallaTelevisor (int, en pulgadas).
+
+              o   Constructor que reciba nombre, precio y tamano como parámetros.
+        o   Método mostrarInformacionTelevisor() que imprima los detalles del televisor.
+
+3. Inventario:
+
+        o   Atributo: productos (un arreglo de tipo ProductoElectrico de tamaño fijo).
+
+        o   Método agregarProducto() que reciba un objeto de tipo ProductoElectrico y lo
+            agregue al arreglo.
+
+        o   Método mostrarProductos() que imprima todos los detalles de los productos
+            en el inventario.
+
+4. En el main(), crea instancias de ProductoElectrico y Televisor usando los constructores,
+   agrega los productos al inventario y muestra la información de todos los productos.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Vamos a gestionar un inventario de electrodomésticos. Para ello vamos a crear un sistema de
+gestión de inventario para una tienda de electrodomésticos. Tendremos una clase base
+ProductoElectrico con atributos comunes como el nombre y el precio, y luego una subclase
+Televisor que agregue un atributo adicional para la tamanoPantalla en pulgadas. Así:
+  1. ProductoElectrico:
+
+          o   Atributos:
+
+                   ▪   nombreProductoElectrico (String)
+
+                   ▪   precioProductoElectrico (double)
+
+          o   Constructor que reciba nombre y precio como parámetros y los inicialice.
+
+          o   Método mostrarInformacion() que imprima los detalles del producto eléctrico.
+
+  2. Televisor (subclase de ProductoElectrico):
+
+          o   Atributo adicional: tamanoPantallaTelevisor (int, en pulgadas).
+
+          o   Constructor que reciba nombre, precio y tamano como parámetros.
+
+          o   Método mostrarInformacionTelevisor() que imprima los detalles del televisor.
+
+  3. Inventario:
+
+          o   Atributo: productos (un arreglo de tipo ProductoElectrico de tamaño fijo).
+
+          o   Método agregarProducto() que reciba un objeto de tipo ProductoElectrico y lo
+              agregue al arreglo.
+
+          o   Método mostrarProductos() que imprima todos los detalles de los productos
+              en el inventario.
+
+  4. En el main(), crea instancias de ProductoElectrico y Televisor usando los constructores,
+     agrega los productos al inventario y muestra la información de todos los productos.
+
+
+
+class ProductoElectrico {
+   private String nombreProductoElectrico;
+   private double precioProductoElectrico;
+
+  public ProductoElectrico(String nombre, double precio) {
+    nombreProductoElectrico = nombre;
+    precioProductoElectrico = precio;
+  }
+
+  public String obtenerNombre() {
+    return nombreProductoElectrico;
+  }
+
+  public double obtenerPrecio() {
+    return precioProductoElectrico;
+  }
+
+  public void mostrarInformacion() {
+    System.out.println("Producto: " + nombreProductoElectrico + ", Precio: " +
+precioProductoElectrico);
+  }
+}
+class Televisor extends ProductoElectrico {
+   private int tamanoPantallaTelevisor;
+
+    public Televisor(String nombre, double precio, int tamano) {
+      nombreProductoElectrico = nombre;
+      precioProductoElectrico = precio;
+      tamanoPantallaTelevisor = tamano;
+    }
+
+    public void mostrarInformacionTelevisor() {
+      mostrarInformacion(); // Llamando al método de la clase base
+      System.out.println("Tamaño de pantalla: " + tamanoPantallaTelevisor + " pulgadas");
+    }
+}
+
+class Inventario {
+   private ProductoElectrico[] productos;
+   private int indice;
+
+    public Inventario(int capacidad) {
+      productos = new ProductoElectrico[capacidad];
+      indice = 0;
+    }
+
+    public void agregarProducto(ProductoElectrico producto) {
+      if (indice &lt; productos.length) {
+          productos[indice] = producto;
+          indice++;
+      } else {
+          System.out.println("El inventario está lleno.");
+      }
+    }
+
+    public void mostrarProductos() {
+      System.out.println("Productos disponibles en el inventario:");
+      for (int i = 0; i &lt; indice; i++) {
+        productos[i].mostrarInformacion();
+      }
+    }
+}
+
+public class Main {
+  public static void main(String[] args) {
+
+      ProductoElectrico producto1 = new ProductoElectrico("Aspiradora", 120.50);
+      Televisor televisor1 = new Televisor("Samsung 55", 499.99, 55);
+
+      Inventario inventario = new Inventario(5);
+      inventario.agregarProducto(producto1);
+      inventario.agregarProducto(televisor1);
+        // Mostrar productos en el inventario
+        inventario.mostrarProductos();
+    }
+}`,
+    criterios: ["Define la clase ProductoElectrico", "Define la clase Televisor", "Define la clase Inventario", "Implementa el m\u00e9todo mostrarInformacionTelevisor", "Implementa el m\u00e9todo mostrarInformacion"],
+    checks: [
+       (c) =>  /class\s+ProductoElectrico/i.test(c),
+       (c) =>  /class\s+Televisor/i.test(c),
+       (c) =>  /class\s+Inventario/i.test(c),
+       (c) =>  /mostrarInformacionTelevisor\s*\(/i.test(c),
+       (c) =>  /mostrarInformacion\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_5_1',
+    titulo: `Dr. Java: Polimorfismo y sobrecarga - Ej 1`,
+    nivel: '⭐⭐',
+    temas: ["Polimorfismo y sobrecarga"],
+    tiempo: '15 min',
+    enunciado: `Implementa un sistema para gestionar una tienda de vehículos. Cada vehículo tiene una marca
+y una descripción específica según su tipo. Así:
+
+Clases a implementar:
+
+    •   Vehiculo (Clase base)
+
+    •   Coche (Subclase de Vehiculo)
+
+    •   Moto (Subclase de Vehiculo)
+
+    •   Bicicleta (Subclase de Vehiculo)
+
+Polimorfismo:
+
+    •   Todas las subclases deben sobrescribir el método obtenerDescripcion() para devolver
+        información específica de cada tipo de vehículo.
+
+Sobrecarga:
+
+    •   La clase Coche debe tener una versión adicional de obtenerDescripcion() que reciba un
+        parámetro indicando el tipo de combustible.
+
+Pruebas:
+
+    •   Crear objetos de cada clase (Coche, Moto, Bicicleta).
+
+    •   Llamar al método obtenerDescripcion() en cada objeto.
+
+    •   En el caso de Coche, llamar también a la versión sobrecargada con el tipo de
+        combustible.
+
+Ejemplo de salida esperada:
+
+ Coche de la marca Toyota con 4 puertas
+ Moto de la marca Honda con casco incluido
+ Bicicleta de la marca Giant con 21 cambios
+ Coche de la marca Toyota con 4 puertas, usa Gasolina`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Implementa un sistema para gestionar una tienda de vehículos. Cada vehículo tiene una marca
+y una descripción específica según su tipo. Así:
+
+Clases a implementar:
+
+     •    Vehiculo (Clase base)
+
+     •    Coche (Subclase de Vehiculo)
+
+     •    Moto (Subclase de Vehiculo)
+
+     •    Bicicleta (Subclase de Vehiculo)
+
+Polimorfismo:
+
+     •    Todas las subclases deben sobrescribir el método obtenerDescripcion() para devolver
+          información específica de cada tipo de vehículo.
+
+Sobrecarga:
+
+     •    La clase Coche debe tener una versión adicional de obtenerDescripcion() que reciba un
+          parámetro indicando el tipo de combustible.
+
+Pruebas:
+
+     •    Crear objetos de cada clase (Coche, Moto, Bicicleta).
+
+     •    Llamar al método obtenerDescripcion() en cada objeto.
+
+     •    En el caso de Coche, llamar también a la versión sobrecargada con el tipo de
+          combustible.
+
+Ejemplo de salida esperada:
+
+ Coche de la marca Toyota con 4 puertas
+ Moto de la marca Honda con casco incluido
+ Bicicleta de la marca Giant con 21 cambios
+ Coche de la marca Toyota con 4 puertas, usa Gasolina
+
+
+ // Clase Vehiculo (base)
+ class Vehiculo {
+    String marcaVehiculo;
+
+     public Vehiculo(String marcaParametro) {
+       marcaVehiculo = marcaParametro;
+     }
+
+     public String obtenerDescripcion() {
+       return "Vehículo de la marca " + marcaVehiculo;
+     }
+ }
+// Clase Coche con polimorfismo y sobrecarga
+class Coche extends Vehiculo {
+   int puertasCoche;
+
+    public Coche(String marcaParametro, int puertasParametro) {
+      marcaVehiculo = marcaParametro;
+      puertasCoche = puertasParametro;
+    }
+
+   // Sobrecarga con parámetro adicional (tipo de combustible)
+   public String obtenerDescripcion(String tipoCombustible) {
+      return "Coche de la marca " + marcaVehiculo + " con " + puertasCoche + " puertas, usa "
++ tipoCombustible;
+   }
+
+    public String obtenerDescripcion() {
+      return "Coche de la marca " + marcaVehiculo + " con " + puertasCoche + " puertas";
+    }
+}
+
+// Clase Moto con polimorfismo
+class Moto extends Vehiculo {
+   boolean incluyeCasco;
+
+    public Moto(String marcaParametro, boolean cascoParametro) {
+      marcaVehiculo = marcaParametro;
+      incluyeCasco = cascoParametro;
+    }
+
+    public String obtenerDescripcion() {
+      if (incluyeCasco) {
+          return "Moto de la marca " + marcaVehiculo + " con casco incluido";
+      }
+      return "Moto de la marca " + marcaVehiculo + " sin casco incluido";
+    }
+}
+
+// Clase Bicicleta con polimorfismo
+class Bicicleta extends Vehiculo {
+   int cambiosBicicleta;
+
+    public Bicicleta(String marcaParametro, int cambiosParametro) {
+      marcaVehiculo = marcaParametro;
+      cambiosBicicleta = cambiosParametro;
+    }
+
+    public String obtenerDescripcion() {
+      return "Bicicleta de la marca " + marcaVehiculo + " con " + cambiosBicicleta + " cambios";
+    }
+}
+
+// Clase Main para probar polimorfismo y sobrecarga
+ public class Main {
+   public static void main(String[] args) {
+     Coche cocheEjemplo = new Coche("Toyota", 4);
+     Moto motoEjemplo = new Moto("Honda", true);
+     Bicicleta bicicletaEjemplo = new Bicicleta("Giant", 21);
+
+         // Polimorfismo: cada objeto usa su versión de obtenerDescripcion()
+         System.out.println(cocheEjemplo.obtenerDescripcion());
+         System.out.println(motoEjemplo.obtenerDescripcion());
+         System.out.println(bicicletaEjemplo.obtenerDescripcion());
+
+         // Sobrecarga en Coche: llamada con un parámetro adicional
+         System.out.println(cocheEjemplo.obtenerDescripcion("Gasolina"));
+     }
+ }`,
+    criterios: ["Define la clase Vehiculo", "Define la clase Coche", "Define la clase Main", "Implementa el m\u00e9todo obtenerDescripcion"],
+    checks: [
+       (c) =>  /class\s+Vehiculo/i.test(c),
+       (c) =>  /class\s+Coche/i.test(c),
+       (c) =>  /class\s+Main/i.test(c),
+       (c) =>  /obtenerDescripcion\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_5_2',
+    titulo: `Dr. Java: Polimorfismo y sobrecarga - Ej 2`,
+    nivel: '⭐⭐',
+    temas: ["Polimorfismo y sobrecarga"],
+    tiempo: '15 min',
+    enunciado: `Implementa un sistema para gestionar una empresa. Cada empleado tiene un nombre y un
+salario base, pero dependiendo del tipo de empleado, el cálculo del salario varía.
+
+Clases a implementar:
+
+    •   Empleado (Clase base)
+    •   Gerente (Subclase de Empleado)
+    •   Ingeniero (Subclase de Empleado)
+    •   Asistente (Subclase de Empleado)
+Polimorfismo:
+
+Cada tipo de empleado debe sobrescribir el método calcularSalario(), aplicando su propia lógica
+de cálculo:
+
+    •   Gerente: Recibe un bono adicional.
+    •   Ingeniero: Tiene un extra por certificaciones.
+    •   Asistente: No tiene extras, solo el salario base.
+
+Sobrecarga:
+
+La clase Ingeniero debe tener una versión sobrecargada de calcularSalario() que reciba el
+número de certificaciones y aumente el salario basándose en ellas.
+
+Pruebas:
+
+    •   Crear objetos de cada clase (Gerente, Ingeniero, Asistente).
+
+    •   Llamar al método calcularSalario() en cada objeto.
+
+    •   Para Ingeniero, llamar también a la versión sobrecargada con el número de
+        certificaciones.
+
+Ejemplo de salida esperada:
+
+ Salario del Gerente: 7500
+ Salario del Ingeniero: 5000
+ Salario del Asistente: 3000
+ Salario del Ingeniero con 3 certificaciones: 5300`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Implementa un sistema para gestionar una empresa. Cada empleado tiene un nombre y un
+salario base, pero dependiendo del tipo de empleado, el cálculo del salario varía.
+
+Clases a implementar:
+
+     •     Empleado (Clase base)
+     •     Gerente (Subclase de Empleado)
+     •     Ingeniero (Subclase de Empleado)
+     •     Asistente (Subclase de Empleado)
+
+Polimorfismo:
+
+Cada tipo de empleado debe sobrescribir el método calcularSalario(), aplicando su propia lógica
+de cálculo:
+
+     •     Gerente: Recibe un bono adicional.
+     •     Ingeniero: Tiene un extra por certificaciones.
+     •     Asistente: No tiene extras, solo el salario base.
+
+Sobrecarga:
+
+La clase Ingeniero debe tener una versión sobrecargada de calcularSalario() que reciba el
+número de certificaciones y aumente el salario basándose en ellas.
+
+Pruebas:
+
+     •     Crear objetos de cada clase (Gerente, Ingeniero, Asistente).
+
+     •     Llamar al método calcularSalario() en cada objeto.
+
+     •     Para Ingeniero, llamar también a la versión sobrecargada con el número de
+           certificaciones.
+
+Ejemplo de salida esperada:
+
+ Salario del Gerente: 7500
+Salario del Ingeniero: 5000
+Salario del Asistente: 3000
+Salario del Ingeniero con 3 certificaciones: 5300
+
+
+// Clase base Empleado
+class Empleado {
+   String nombreEmpleado;
+   double salarioBase;
+
+    public Empleado(String nombreParametro, double salarioParametro) {
+      nombreEmpleado = nombreParametro;
+      salarioBase = salarioParametro;
+    }
+
+    public double calcularSalario() {
+      return salarioBase;
+    }
+}
+
+// Clase Gerente con polimorfismo
+class Gerente extends Empleado {
+   double bonoGerente;
+
+  public Gerente(String nombreParametro,                 double     salarioParametro,   double
+bonoParametro) {
+    nombreEmpleado = nombreParametro;
+    salarioBase = salarioParametro;
+    bonoGerente = bonoParametro;
+  }
+
+    public double calcularSalario() {
+      return salarioBase + bonoGerente;
+    }
+}
+
+// Clase Ingeniero con polimorfismo y sobrecarga
+class Ingeniero extends Empleado {
+   double extraCertificacion;
+
+  public Ingeniero(String nombreParametro,               double     salarioParametro,   double
+extraParametro) {
+    nombreEmpleado = nombreParametro;
+    salarioBase = salarioParametro;
+    extraCertificacion = extraParametro;
+  }
+
+    // Método sobrecargado para calcular salario con certificaciones
+    public double calcularSalario(int cantidadCertificaciones) {
+       return salarioBase + (extraCertificacion * cantidadCertificaciones);
+    }
+     public double calcularSalario() {
+       return salarioBase;
+     }
+ }
+
+ // Clase Asistente con polimorfismo
+ class Asistente extends Empleado {
+    public Asistente(String nombreParametro, double salarioParametro) {
+      nombreEmpleado = nombreParametro;
+      salarioBase = salarioParametro;
+    }
+
+     public double calcularSalario() {
+       return salarioBase;
+     }
+ }
+
+ // Clase Main para probar el polimorfismo y la sobrecarga
+ public class Main {
+    public static void main(String[] args) {
+      Gerente gerenteEjemplo = new Gerente("Carlos", 7000, 500);
+      Ingeniero ingenieroEjemplo = new Ingeniero("Ana", 5000, 100);
+      Asistente asistenteEjemplo = new Asistente("Luis", 3000);
+
+         // Polimorfismo: llamada a calcularSalario() según el tipo de empleado
+         System.out.println("Salario del Gerente: " + gerenteEjemplo.calcularSalario());
+         System.out.println("Salario del Ingeniero: " + ingenieroEjemplo.calcularSalario());
+         System.out.println("Salario del Asistente: " + asistenteEjemplo.calcularSalario());
+
+     // Sobrecarga en Ingeniero: cálculo con certificaciones
+     System.out.println("Salario    del    Ingeniero     con        3    certificaciones:      "   +
+ ingenieroEjemplo.calcularSalario(3));
+   }
+ }`,
+    criterios: ["Define la clase Empleado", "Define la clase Gerente", "Define la clase Ingeniero", "Implementa el m\u00e9todo calcularSalario"],
+    checks: [
+       (c) =>  /class\s+Empleado/i.test(c),
+       (c) =>  /class\s+Gerente/i.test(c),
+       (c) =>  /class\s+Ingeniero/i.test(c),
+       (c) =>  /calcularSalario\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_5_3',
+    titulo: `Dr. Java: Polimorfismo y sobrecarga - Ej 3`,
+    nivel: '⭐⭐',
+    temas: ["Polimorfismo y sobrecarga"],
+    tiempo: '15 min',
+    enunciado: `Implementa un sistema para calcular el área de diferentes figuras geométricas. Cada figura tiene
+una forma diferente de calcular su área.
+
+Clases a implementar:
+
+    •   Figura (Clase base)
+    •   Cuadrado (Subclase de Figura)
+    •   Rectangulo (Subclase de Figura)
+    •   Circulo (Subclase de Figura)
+
+Polimorfismo:
+
+Cada subclase debe sobrescribir el método calcularArea(), aplicando su propia fórmula:
+
+    •   Cuadrado: Lado × Lado
+    •   Rectángulo: Base × Altura
+    •   Círculo: π × Radio²
+
+Sobrecarga:
+
+La clase Rectangulo debe tener una versión sobrecargada de calcularArea(int factor), que
+multiplique el área por un factor determinado.
+Pruebas:
+
+    •   Crear objetos de cada figura (Cuadrado, Rectangulo, Circulo).
+
+    •   Llamar al método calcularArea() en cada objeto.
+
+    •   Para Rectangulo, llamar también a la versión sobrecargada con un factor.
+
+Ejemplo de salida esperada:
+
+ Área del Cuadrado: 25.0
+ Área del Rectángulo: 30.0
+ Área del Círculo: 78.5
+ Área del Rectángulo con factor 2: 60.0`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Implementa un sistema para calcular el área de diferentes figuras geométricas. Cada figura tiene
+una forma diferente de calcular su área.
+
+Clases a implementar:
+
+     •     Figura (Clase base)
+     •     Cuadrado (Subclase de Figura)
+     •     Rectangulo (Subclase de Figura)
+     •     Circulo (Subclase de Figura)
+
+Polimorfismo:
+
+Cada subclase debe sobrescribir el método calcularArea(), aplicando su propia fórmula:
+
+     •     Cuadrado: Lado × Lado
+     •   Rectángulo: Base × Altura
+     •   Círculo: π × Radio²
+
+Sobrecarga:
+
+La clase Rectangulo debe tener una versión sobrecargada de calcularArea(int factor), que
+multiplique el área por un factor determinado.
+
+Pruebas:
+
+     •   Crear objetos de cada figura (Cuadrado, Rectangulo, Circulo).
+
+     •   Llamar al método calcularArea() en cada objeto.
+
+     •   Para Rectangulo, llamar también a la versión sobrecargada con un factor.
+
+Ejemplo de salida esperada:
+
+ Área del Cuadrado: 25.0
+ Área del Rectángulo: 30.0
+ Área del Círculo: 78.5
+ Área del Rectángulo con factor 2: 60.0
+
+
+ // Clase base Figura
+ class Figura {
+    public double calcularArea() {
+      return 0;
+    }
+ }
+
+ // Clase Cuadrado con polimorfismo
+ class Cuadrado extends Figura {
+    double ladoCuadrado;
+
+     public Cuadrado(double ladoParametro) {
+       ladoCuadrado = ladoParametro;
+     }
+
+     public double calcularArea() {
+       return ladoCuadrado * ladoCuadrado;
+     }
+ }
+
+ // Clase Rectangulo con polimorfismo y sobrecarga
+ class Rectangulo extends Figura {
+    double baseRectangulo;
+    double alturaRectangulo;
+
+     public Rectangulo(double baseParametro, double alturaParametro) {
+       baseRectangulo = baseParametro;
+       alturaRectangulo = alturaParametro;
+     }
+     public double calcularArea() {
+       return baseRectangulo * alturaRectangulo;
+     }
+
+     // Sobrecarga con un factor multiplicador
+     public double calcularArea(int factor) {
+        return (baseRectangulo * alturaRectangulo) * factor;
+     }
+ }
+
+ // Clase Circulo con polimorfismo
+ class Circulo extends Figura {
+    double radioCirculo;
+
+     public Circulo(double radioParametro) {
+       radioCirculo = radioParametro;
+     }
+
+     public double calcularArea() {
+       return 3.14 * radioCirculo * radioCirculo;
+     }
+ }
+
+ // Clase Main para probar el polimorfismo y la sobrecarga
+ public class Main {
+    public static void main(String[] args) {
+      Cuadrado cuadradoEjemplo = new Cuadrado(5);
+      Rectangulo rectanguloEjemplo = new Rectangulo(5, 6);
+      Circulo circuloEjemplo = new Circulo(5);
+
+         // Polimorfismo: cada figura usa su propia versión de calcularArea()
+         System.out.println("Área del Cuadrado: " + cuadradoEjemplo.calcularArea());
+         System.out.println("Área del Rectángulo: " + rectanguloEjemplo.calcularArea());
+         System.out.println("Área del Círculo: " + circuloEjemplo.calcularArea());
+
+     // Sobrecarga en Rectangulo: cálculo con factor
+     System.out.println("Área     del      Rectángulo          con     factor     2:       "   +
+ rectanguloEjemplo.calcularArea(2));
+   }
+ }`,
+    criterios: ["Define la clase Circulo", "Define la clase Rectangulo", "Define la clase Figura", "Implementa el m\u00e9todo calcularArea"],
+    checks: [
+       (c) =>  /class\s+Circulo/i.test(c),
+       (c) =>  /class\s+Rectangulo/i.test(c),
+       (c) =>  /class\s+Figura/i.test(c),
+       (c) =>  /calcularArea\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_5_4',
+    titulo: `Dr. Java: Polimorfismo y sobrecarga - Ej 4`,
+    nivel: '⭐⭐',
+    temas: ["Polimorfismo y sobrecarga"],
+    tiempo: '15 min',
+    enunciado: `Implementa un sistema para una tienda de instrumentos musicales. Se necesita clasificar
+diferentes tipos de instrumentos y describir cómo suenan.
+
+Clases a implementar:
+
+    •   Instrumento (Clase base)
+    •   Guitarra (Subclase de Instrumento)
+    •   Piano (Subclase de Instrumento)
+    •   Bateria (Subclase de Instrumento)
+
+Polimorfismo:
+
+Cada subclase debe sobrescribir el método tocarInstrumento(), devolviendo un sonido
+característico:
+
+    •   Guitarra: "Rasgueando cuerdas..."
+    •   Piano: "Notas melodiosas suenan..."
+    •   Batería: "Pum pum chas!"
+
+Sobrecarga:
+
+La clase Guitarra debe tener una versión sobrecargada de tocarInstrumento(int cuerdas), que
+indique cuántas cuerdas se están tocando.
+
+Pruebas:
+
+    •   Crear objetos de cada instrumento (Guitarra, Piano, Bateria).
+
+    •   Llamar al método tocarInstrumento() en cada objeto.
+
+    •   Para Guitarra, llamar también a la versión sobrecargada con el número de cuerdas
+        tocadas.
+
+Ejemplo de salida esperada:
+
+ Guitarra: Rasgueando cuerdas...
+ Piano: Notas melodiosas suenan...
+Batería: Pum pum chas!
+Guitarra tocando 6 cuerdas: Rasgueando 6 cuerdas...`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Implementa un sistema para una tienda de instrumentos musicales. Se necesita clasificar
+diferentes tipos de instrumentos y describir cómo suenan.
+
+Clases a implementar:
+
+     •     Instrumento (Clase base)
+     •     Guitarra (Subclase de Instrumento)
+     •     Piano (Subclase de Instrumento)
+   •   Bateria (Subclase de Instrumento)
+
+Polimorfismo:
+
+Cada subclase debe sobrescribir el método tocarInstrumento(), devolviendo un sonido
+característico:
+
+   •   Guitarra: "Rasgueando cuerdas..."
+   •   Piano: "Notas melodiosas suenan..."
+   •   Batería: "Pum pum chas!"
+
+Sobrecarga:
+
+La clase Guitarra debe tener una versión sobrecargada de tocarInstrumento(int cuerdas), que
+indique cuántas cuerdas se están tocando.
+
+Pruebas:
+
+   •   Crear objetos de cada instrumento (Guitarra, Piano, Bateria).
+
+   •   Llamar al método tocarInstrumento() en cada objeto.
+
+   •   Para Guitarra, llamar también a la versión sobrecargada con el número de cuerdas
+       tocadas.
+
+Ejemplo de salida esperada:
+
+ Guitarra: Rasgueando cuerdas...
+ Piano: Notas melodiosas suenan...
+ Batería: Pum pum chas!
+ Guitarra tocando 6 cuerdas: Rasgueando 6 cuerdas...
+
+
+ // Clase base Instrumento
+ class Instrumento {
+    public String tocarInstrumento() {
+      return "Sonido de instrumento desconocido...";
+    }
+ }
+
+ // Clase Guitarra con polimorfismo y sobrecarga
+ class Guitarra extends Instrumento {
+    String tipoGuitarra;
+
+   public Guitarra(String tipoParametro) {
+     tipoGuitarra = tipoParametro;
+   }
+
+   public String tocarInstrumento() {
+     return "Rasgueando cuerdas...";
+   }
+
+   // Sobrecarga con número de cuerdas
+   public String tocarInstrumento(int cuerdas) {
+      return "Rasgueando " + cuerdas + " cuerdas...";
+    }
+}
+
+// Clase Piano con polimorfismo
+class Piano extends Instrumento {
+   int teclasPiano;
+
+    public Piano(int teclasParametro) {
+      teclasPiano = teclasParametro;
+    }
+
+    public String tocarInstrumento() {
+      return "Notas melodiosas suenan...";
+    }
+}
+
+// Clase Bateria con polimorfismo
+class Bateria extends Instrumento {
+   int tamboresBateria;
+
+    public Bateria(int tamboresParametro) {
+      tamboresBateria = tamboresParametro;
+    }
+
+    public String tocarInstrumento() {
+      return "Pum pum chas!";
+    }
+}
+
+// Clase Main para probar polimorfismo y sobrecarga
+public class Main {
+   public static void main(String[] args) {
+     Guitarra guitarraEjemplo = new Guitarra("Acústica");
+     Piano pianoEjemplo = new Piano(88);
+     Bateria bateriaEjemplo = new Bateria(5);
+
+        // Polimorfismo: cada instrumento usa su propia versión de tocarInstrumento()
+        System.out.println("Guitarra: " + guitarraEjemplo.tocarInstrumento());
+        System.out.println("Piano: " + pianoEjemplo.tocarInstrumento());
+        System.out.println("Batería: " + bateriaEjemplo.tocarInstrumento());
+
+     // Sobrecarga en Guitarra: tocar con un número de cuerdas específico
+     System.out.println("Guitarra        tocando        6        cuerdas:          "    +
+guitarraEjemplo.tocarInstrumento(6));
+  }
+}`,
+    criterios: ["Define la clase Guitarra", "Define la clase Piano", "Define la clase Bateria", "Implementa el m\u00e9todo tocarInstrumento"],
+    checks: [
+       (c) =>  /class\s+Guitarra/i.test(c),
+       (c) =>  /class\s+Piano/i.test(c),
+       (c) =>  /class\s+Bateria/i.test(c),
+       (c) =>  /tocarInstrumento\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_6_1',
+    titulo: `Dr. Java: Orden de llamada a constructores - Ej 1`,
+    nivel: '⭐⭐',
+    temas: ["Orden de llamada a constructores"],
+    tiempo: '15 min',
+    enunciado: `Desarrolla un sistema que modele una cadena de fabricación de productos electrónicos, con
+diferentes niveles de herencia y constructores encadenados para observar el orden de ejecución
+de los constructores cuando se crean objetos de la subclase más específica.
+
+Clases a implementar:
+
+    •    Producto (Clase base)
+
+    •    Electronico (Subclase de Producto)
+
+    •    Computadora (Subclase de Electronico)
+
+    •    Portatil (Subclase de Computadora)
+
+Inicialización de atributos:
+
+    •    Cada clase debe tener atributos propios, como nombre, fabricante, procesador, peso,
+         etc.
+
+    •    El constructor de cada clase debe inicializar estos atributos e imprimir un mensaje para
+         indicar su ejecución.
+
+Crea un objeto de la clase Portatil y observa el orden en que se ejecutan los constructores y
+cómo se inicializan los atributos. Ejemplo de salida del sistema:
+
+ Constructor de Producto ejecutado
+ Nombre: Dispositivo
+ Fabricante: Genérico
+
+ Constructor de Electronico ejecutado
+ Voltaje: 220V
+
+ Constructor de Computadora ejecutado
+ Procesador: Intel Core i7
+ RAM: 16GB
+
+ Constructor de Portatil ejecutado
+ Peso: 1.5 kg
+ Autonomía: 10 horas`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Desarrolla un sistema que modele una cadena de fabricación de productos electrónicos, con
+diferentes niveles de herencia y constructores encadenados para observar el orden de ejecución
+de los constructores cuando se crean objetos de la subclase más específica.
+
+Clases a implementar:
+
+    •    Producto (Clase base)
+
+    •    Electronico (Subclase de Producto)
+
+    •    Computadora (Subclase de Electronico)
+
+    •    Portatil (Subclase de Computadora)
+
+Inicialización de atributos:
+
+    •    Cada clase debe tener atributos propios, como nombre, fabricante, procesador, peso,
+         etc.
+
+    •    El constructor de cada clase debe inicializar estos atributos e imprimir un mensaje para
+         indicar su ejecución.
+
+Crea un objeto de la clase Portatil y observa el orden en que se ejecutan los constructores y
+cómo se inicializan los atributos. Ejemplo de salida del sistema:
+
+ Constructor de Producto ejecutado
+ Nombre: Dispositivo
+ Fabricante: Genérico
+
+ Constructor de Electronico ejecutado
+ Voltaje: 220V
+
+ Constructor de Computadora ejecutado
+ Procesador: Intel Core i7
+ RAM: 16GB
+
+ Constructor de Portatil ejecutado
+ Peso: 1.5 kg
+ Autonomía: 10 horas
+
+
+ // Clase base Producto
+ class Producto {
+    String nombre;
+    String fabricante;
+
+   public Producto() {
+     nombre = "Dispositivo";
+     fabricante = "Genérico";
+     System.out.println("Constructor de Producto ejecutado");
+     System.out.println("Nombre: " + nombre);
+        System.out.println("Fabricante: " + fabricante);
+        System.out.println();
+    }
+}
+
+// Subclase Electronico
+class Electronico extends Producto {
+   int voltaje;
+
+    public Electronico() {
+      voltaje = 220;
+      System.out.println("Constructor de Electronico ejecutado");
+      System.out.println("Voltaje: " + voltaje + "V");
+      System.out.println();
+    }
+}
+
+// Subclase Computadora
+class Computadora extends Electronico {
+   String procesador;
+   int ram;
+
+    public Computadora() {
+      procesador = "Intel Core i7";
+      ram = 16;
+      System.out.println("Constructor de Computadora ejecutado");
+      System.out.println("Procesador: " + procesador);
+      System.out.println("RAM: " + ram + "GB");
+      System.out.println();
+    }
+}
+
+// Subclase Portatil
+class Portatil extends Computadora {
+   double peso;
+   int autonomia;
+
+    public Portatil() {
+      peso = 1.5;
+      autonomia = 10;
+      System.out.println("Constructor de Portatil ejecutado");
+      System.out.println("Peso: " + peso + " kg");
+      System.out.println("Autonomía: " + autonomia + " horas");
+      System.out.println();
+    }
+}
+
+// Clase Main para probar el orden de ejecución de los constructores
+public class Main {
+   public static void main(String[] args) {
+     Portatil portatilEjemplo = new Portatil();
+   }
+ }`,
+    criterios: ["Define la clase Producto", "Define la clase Computadora", "Define la clase debe"],
+    checks: [
+       (c) =>  /class\s+Producto/i.test(c),
+       (c) =>  /class\s+Computadora/i.test(c),
+       (c) =>  /class\s+debe/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_6_2',
+    titulo: `Dr. Java: Orden de llamada a constructores - Ej 2`,
+    nivel: '⭐⭐',
+    temas: ["Orden de llamada a constructores"],
+    tiempo: '15 min',
+    enunciado: `Desarrolla un sistema que modele distintos tipos de vehículos terrestres, con diferentes niveles
+de herencia y constructores encadenados para analizar el orden de ejecución de los
+constructores cuando se crean objetos de la subclase más específica.
+
+Clases a implementar:
+
+    •    Vehiculo (Clase base)
+    •    Motorizado (Subclase de Vehiculo)
+    •   Automovil (Subclase de Motorizado)
+    •   Deportivo (Subclase de Automovil)
+
+Inicialización de Atributos:
+
+    •   Cada clase debe tener atributos propios, como tipo, motor, cilindraje, velocidad
+        máxima, etc.
+    •   Cada constructor debe inicializar estos atributos e imprimir un mensaje que indique su
+        ejecución.
+
+Crea un objeto de cada una de las clases y observa el orden en que se ejecutan los constructores
+y cómo se inicializan los atributos.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Desarrolla un sistema que modele distintos tipos de vehículos terrestres, con diferentes niveles
+de herencia y constructores encadenados para analizar el orden de ejecución de los
+constructores cuando se crean objetos de la subclase más específica.
+
+Clases a implementar:
+
+     •   Vehiculo (Clase base)
+     •   Motorizado (Subclase de Vehiculo)
+     •   Automovil (Subclase de Motorizado)
+     •   Deportivo (Subclase de Automovil)
+
+Inicialización de Atributos:
+
+     •   Cada clase debe tener atributos propios, como tipo, motor, cilindraje, velocidad
+         máxima, etc.
+     •   Cada constructor debe inicializar estos atributos e imprimir un mensaje que indique su
+         ejecución.
+
+Crea un objeto de cada una de las clases y observa el orden en que se ejecutan los constructores
+y cómo se inicializan los atributos.
+
+ // Clase base Vehiculo
+ class Vehiculo {
+    String tipo;
+
+     public Vehiculo() {
+       tipo = "Terrestre";
+       System.out.println("Constructor de Vehiculo ejecutado");
+       System.out.println("Tipo: " + tipo);
+       System.out.println();
+     }
+ }
+
+ // Subclase Motorizado
+ class Motorizado extends Vehiculo {
+    String motor;
+
+     public Motorizado() {
+       motor = "Combustión";
+       System.out.println("Constructor de Motorizado ejecutado");
+       System.out.println("Motor: " + motor);
+       System.out.println();
+     }
+ }
+
+ // Subclase Automovil
+ class Automovil extends Motorizado {
+    int cilindraje;
+     public Automovil() {
+       cilindraje = 2000;
+       System.out.println("Constructor de Automovil ejecutado");
+       System.out.println("Cilindraje: " + cilindraje + " cc");
+       System.out.println();
+     }
+ }
+
+ // Subclase Deportivo
+ class Deportivo extends Automovil {
+    int velocidadMaxima;
+
+     public Deportivo() {
+       velocidadMaxima = 300;
+       System.out.println("Constructor de Deportivo ejecutado");
+       System.out.println("Velocidad Máxima: " + velocidadMaxima + " km/h");
+       System.out.println();
+     }
+ }
+
+ // Clase Main para probar el orden de ejecución de los constructores
+ public class Main {
+    public static void main(String[] args) {
+      Deportivo autoDeportivo = new Deportivo();
+    }
+ }`,
+    criterios: ["Define la clase Vehiculo", "Define la clase Automovil", "Define la clase Deportivo"],
+    checks: [
+       (c) =>  /class\s+Vehiculo/i.test(c),
+       (c) =>  /class\s+Automovil/i.test(c),
+       (c) =>  /class\s+Deportivo/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_6_3',
+    titulo: `Dr. Java: Orden de llamada a constructores - Ej 3`,
+    nivel: '⭐⭐',
+    temas: ["Orden de llamada a constructores"],
+    tiempo: '15 min',
+    enunciado: `Desarrolla un sistema que modele distintos tipos de dispositivos inteligentes con diferentes
+niveles de herencia y constructores encadenados para analizar el orden de ejecución de los
+constructores cuando se crean objetos de la subclase más específica.
+
+Clases a implementar:
+
+    •   Dispositivo (Clase base)
+    •   DispositivoInteligente (Subclase de Dispositivo)
+    •   Telefono (Subclase de DispositivoInteligente)
+    •   Smartphone (Subclase de Telefono)
+
+Inicialización de Atributos:
+
+    •   Cada clase debe tener atributos propios, como nombre, conectividad, sistema
+        operativo, cámara, etc.
+    •   Cada constructor debe inicializar estos atributos e imprimir un mensaje que indique su
+        ejecución.
+
+Crea un objeto de cada clase y observa el orden en que se ejecutan los constructores y cómo se
+inicializan los atributos.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Desarrolla un sistema que modele distintos tipos de dispositivos inteligentes con diferentes
+niveles de herencia y constructores encadenados para analizar el orden de ejecución de los
+constructores cuando se crean objetos de la subclase más específica.
+
+Clases a implementar:
+
+     •   Dispositivo (Clase base)
+     •   DispositivoInteligente (Subclase de Dispositivo)
+     •   Telefono (Subclase de DispositivoInteligente)
+     •   Smartphone (Subclase de Telefono)
+
+Inicialización de Atributos:
+
+     •   Cada clase debe tener atributos propios, como nombre, conectividad, sistema
+         operativo, cámara, etc.
+     •   Cada constructor debe inicializar estos atributos e imprimir un mensaje que indique su
+         ejecución.
+
+Crea un objeto de cada clase y observa el orden en que se ejecutan los constructores y cómo se
+inicializan los atributos.
+
+ // Clase base Dispositivo
+class Dispositivo {
+   String nombre;
+
+    public Dispositivo() {
+      nombre = "Electrónico";
+      System.out.println("Constructor de Dispositivo ejecutado");
+      System.out.println("Nombre: " + nombre);
+      System.out.println();
+    }
+}
+
+// Subclase DispositivoInteligente
+class DispositivoInteligente extends Dispositivo {
+   String conectividad;
+
+    public DispositivoInteligente() {
+      conectividad = "WiFi";
+      System.out.println("Constructor de DispositivoInteligente ejecutado");
+      System.out.println("Conectividad: " + conectividad);
+      System.out.println();
+    }
+}
+
+// Subclase Telefono
+class Telefono extends DispositivoInteligente {
+   String sistemaOperativo;
+
+    public Telefono() {
+      sistemaOperativo = "Android";
+      System.out.println("Constructor de Telefono ejecutado");
+      System.out.println("Sistema Operativo: " + sistemaOperativo);
+      System.out.println();
+    }
+}
+
+// Subclase Smartphone
+class Smartphone extends Telefono {
+   String camara;
+
+    public Smartphone() {
+      camara = "108 MP";
+      System.out.println("Constructor de Smartphone ejecutado");
+      System.out.println("Cámara: " + camara);
+      System.out.println();
+    }
+}
+
+// Clase Main para probar el orden de ejecución de los constructores
+public class Main {
+   public static void main(String[] args) {
+     Smartphone miSmartphone = new Smartphone();
+   }
+ }`,
+    criterios: ["Define la clase Smartphone", "Define la clase DispositivoInteligente", "Define la clase y"],
+    checks: [
+       (c) =>  /class\s+Smartphone/i.test(c),
+       (c) =>  /class\s+DispositivoInteligente/i.test(c),
+       (c) =>  /class\s+y/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_6_4',
+    titulo: `Dr. Java: Orden de llamada a constructores - Ej 4`,
+    nivel: '⭐⭐',
+    temas: ["Orden de llamada a constructores"],
+    tiempo: '15 min',
+    enunciado: `Desarrolla un sistema que modele distintos tipos de transporte público con múltiples niveles de
+herencia y sobrecarga de constructores para analizar el orden de ejecución de los constructores
+cuando se crean objetos de la subclase más específica, considerando la sobrecarga en algunas
+clases.
+
+Clases a implementar:
+
+    •   Transporte (Clase base)
+    •   TransportePublico (Subclase de Transporte)
+    •   Autobus (Subclase de TransportePublico)
+    •   AutobusElectrico (Subclase de Autobus)
+Sobrecarga de constructores:
+
+    •   Transporte tiene un constructor sin parámetros y otro que recibe el tipo.
+    •   TransportePublico tiene un constructor que permite definir la capacidad de pasajeros.
+    •   Autobus tiene un constructor que permite definir la ruta.
+    •   AutobusElectrico tiene un constructor que permite definir la autonomía de la batería.
+
+Crea objetos con diferentes constructores y observa el orden de ejecución de los constructores.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Desarrolla un sistema que modele distintos tipos de transporte público con múltiples niveles de
+herencia y sobrecarga de constructores para analizar el orden de ejecución de los constructores
+cuando se crean objetos de la subclase más específica, considerando la sobrecarga en algunas
+clases.
+
+Clases a implementar:
+
+     •   Transporte (Clase base)
+     •   TransportePublico (Subclase de Transporte)
+     •   Autobus (Subclase de TransportePublico)
+     •   AutobusElectrico (Subclase de Autobus)
+
+Sobrecarga de constructores:
+
+     •   Transporte tiene un constructor sin parámetros y otro que recibe el tipo.
+     •   TransportePublico tiene un constructor que permite definir la capacidad de pasajeros.
+     •   Autobus tiene un constructor que permite definir la ruta.
+     •   AutobusElectrico tiene un constructor que permite definir la autonomía de la batería.
+
+Crea objetos con diferentes constructores y observa el orden de ejecución de los constructores.
+
+ // Clase base Transporte
+ class Transporte {
+    String tipo;
+
+     // Constructor sin parámetros
+     public Transporte() {
+        tipo = "Público";
+        System.out.println("Constructor de Transporte ejecutado");
+        System.out.println("Tipo: " + tipo);
+        System.out.println();
+     }
+
+     // Constructor sobrecargado
+     public Transporte(String tipoTransporte) {
+        tipo = tipoTransporte;
+        System.out.println("Constructor de Transporte ejecutado con tipo personalizado");
+        System.out.println("Tipo: " + tipo);
+        System.out.println();
+     }
+ }
+
+ // Subclase TransportePublico
+ class TransportePublico extends Transporte {
+    int capacidadPasajeros;
+
+     // Constructor sin parámetros
+     public TransportePublico() {
+        capacidadPasajeros = 40;
+        System.out.println("Constructor de TransportePublico ejecutado");
+        System.out.println("Capacidad de pasajeros: " + capacidadPasajeros);
+        System.out.println();
+    }
+
+  // Constructor sobrecargado
+  public TransportePublico(int capacidad) {
+     capacidadPasajeros = capacidad;
+     System.out.println("Constructor de TransportePublico ejecutado con capacidad
+personalizada");
+     System.out.println("Capacidad de pasajeros: " + capacidadPasajeros);
+     System.out.println();
+  }
+}
+
+// Subclase Autobus
+class Autobus extends TransportePublico {
+   String ruta;
+
+    // Constructor sin parámetros
+    public Autobus() {
+       ruta = "Centro - Norte";
+       System.out.println("Constructor de Autobus ejecutado");
+       System.out.println("Ruta: " + ruta);
+       System.out.println();
+    }
+
+    // Constructor sobrecargado
+    public Autobus(String nuevaRuta) {
+       ruta = nuevaRuta;
+       System.out.println("Constructor de Autobus ejecutado con ruta personalizada");
+       System.out.println("Ruta: " + ruta);
+       System.out.println();
+    }
+}
+
+// Subclase AutobusElectrico
+class AutobusElectrico extends Autobus {
+   int autonomiaBateria;
+
+    // Constructor sin parámetros
+    public AutobusElectrico() {
+       autonomiaBateria = 300;
+       System.out.println("Constructor de AutobusElectrico ejecutado");
+       System.out.println("Autonomía de batería: " + autonomiaBateria + " km");
+       System.out.println();
+    }
+
+    // Constructor sobrecargado
+    public AutobusElectrico(int autonomia) {
+       autonomiaBateria = autonomia;
+     System.out.println("Constructor de AutobusElectrico ejecutado con autonomía
+ personalizada");
+     System.out.println("Autonomía de batería: " + autonomiaBateria + " km");
+     System.out.println();
+   }
+ }
+
+ // Clase Main para probar el orden de ejecución de los constructores
+ public class Main {
+    public static void main(String[] args) {
+      System.out.println("Creando un AutobusElectrico con valores predeterminados");
+      AutobusElectrico bus1 = new AutobusElectrico();
+
+         System.out.println("Creando un AutobusElectrico con valores personalizados");
+         AutobusElectrico bus2 = new AutobusElectrico(400);
+     }
+ }`,
+    criterios: ["Define la clase TransportePublico", "Define la clase AutobusElectrico", "Define la clase m\u00e1s"],
+    checks: [
+       (c) =>  /class\s+TransportePublico/i.test(c),
+       (c) =>  /class\s+AutobusElectrico/i.test(c),
+       (c) =>  /class\s+más/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_6_5',
+    titulo: `Dr. Java: Orden de llamada a constructores - Ej 5`,
+    nivel: '⭐⭐',
+    temas: ["Orden de llamada a constructores"],
+    tiempo: '15 min',
+    enunciado: `Amplía el ejercicio 2 y desarrolla un sistema que modele diferentes tipos de vehículos con
+múltiples niveles de herencia y sobrecarga de constructores para analizar el orden de ejecución
+de los constructores cuando se crean objetos de la subclase más específica, considerando la
+sobrecarga en varias clases.
+
+Clases a implementar:
+
+    •   Vehiculo (Clase base)
+    •   VehiculoMotorizado (Subclase de Vehiculo)
+    •   Automovil (Subclase de VehiculoMotorizado)
+    •   Camion (Subclase de VehiculoMotorizado)
+    •   Deportivo (Subclase de Automovil)
+    •   CamionElectrico (Subclase de Camion)
+
+Sobrecarga de constructores:
+
+    •   Vehiculo tiene un constructor sin parámetros y otro que recibe el tipo.
+    •   VehiculoMotorizado tiene un constructor que permite definir el tipo de motor.
+    •   Automovil y Camion tienen constructores que permiten definir la cantidad de puertas o
+        la carga máxima.
+    •   Deportivo y CamionElectrico tienen constructores que permiten definir características
+        adicionales.
+
+Instancia objetos con diferentes constructores y observa el orden de ejecución.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Amplía el ejercicio 2 y desarrolla un sistema que modele diferentes tipos de vehículos con
+múltiples niveles de herencia y sobrecarga de constructores para analizar el orden de ejecución
+de los constructores cuando se crean objetos de la subclase más específica, considerando la
+sobrecarga en varias clases.
+
+Clases a implementar:
+
+     •     Vehiculo (Clase base)
+     •     VehiculoMotorizado (Subclase de Vehiculo)
+     •     Automovil (Subclase de VehiculoMotorizado)
+     •     Camion (Subclase de VehiculoMotorizado)
+     •     Deportivo (Subclase de Automovil)
+     •     CamionElectrico (Subclase de Camion)
+
+Sobrecarga de constructores:
+
+     •     Vehiculo tiene un constructor sin parámetros y otro que recibe el tipo.
+     •     VehiculoMotorizado tiene un constructor que permite definir el tipo de motor.
+     •     Automovil y Camion tienen constructores que permiten definir la cantidad de puertas o
+           la carga máxima.
+     •     Deportivo y CamionElectrico tienen constructores que permiten definir características
+           adicionales.
+
+Instancia objetos con diferentes constructores y observa el orden de ejecución.
+
+ // Clase base Vehiculo
+ class Vehiculo {
+    String tipo;
+
+     public Vehiculo() {
+       tipo = "Terrestre";
+       System.out.println("Constructor de Vehiculo ejecutado");
+        System.out.println("Tipo: " + tipo);
+        System.out.println();
+    }
+
+    public Vehiculo(String tipoVehiculo) {
+      tipo = tipoVehiculo;
+      System.out.println("Constructor de Vehiculo ejecutado con tipo personalizado");
+      System.out.println("Tipo: " + tipo);
+      System.out.println();
+    }
+}
+
+// Subclase VehiculoMotorizado
+class VehiculoMotorizado extends Vehiculo {
+   String motor;
+
+    public VehiculoMotorizado() {
+      motor = "Gasolina";
+      System.out.println("Constructor de VehiculoMotorizado ejecutado");
+      System.out.println("Motor: " + motor);
+      System.out.println();
+    }
+
+  public VehiculoMotorizado(String tipoMotor) {
+    motor = tipoMotor;
+    System.out.println("Constructor de VehiculoMotorizado          ejecutado    con     motor
+personalizado");
+    System.out.println("Motor: " + motor);
+    System.out.println();
+  }
+}
+
+// Subclase Automovil
+class Automovil extends VehiculoMotorizado {
+   int puertas;
+
+    public Automovil() {
+      puertas = 4;
+      System.out.println("Constructor de Automovil ejecutado");
+      System.out.println("Puertas: " + puertas);
+      System.out.println();
+    }
+
+  public Automovil(int numPuertas) {
+    puertas = numPuertas;
+    System.out.println("Constructor de Automovil ejecutado con número de puertas
+personalizado");
+    System.out.println("Puertas: " + puertas);
+    System.out.println();
+  }
+}
+// Subclase Camion
+class Camion extends VehiculoMotorizado {
+   int cargaMaxima;
+
+  public Camion() {
+    cargaMaxima = 10;
+    System.out.println("Constructor de Camion ejecutado");
+    System.out.println("Carga Máxima: " + cargaMaxima + " toneladas");
+    System.out.println();
+  }
+
+  public Camion(int carga) {
+    cargaMaxima = carga;
+    System.out.println("Constructor de Camion ejecutado con              carga   máxima
+personalizada");
+    System.out.println("Carga Máxima: " + cargaMaxima + " toneladas");
+    System.out.println();
+  }
+}
+
+// Subclase Deportivo (hereda de Automovil)
+class Deportivo extends Automovil {
+   int velocidadMaxima;
+
+  public Deportivo() {
+    velocidadMaxima = 300;
+    System.out.println("Constructor de Deportivo ejecutado");
+    System.out.println("Velocidad Máxima: " + velocidadMaxima + " km/h");
+    System.out.println();
+  }
+
+  public Deportivo(int velocidad) {
+    velocidadMaxima = velocidad;
+    System.out.println("Constructor de Deportivo ejecutado con velocidad máxima
+personalizada");
+    System.out.println("Velocidad Máxima: " + velocidadMaxima + " km/h");
+    System.out.println();
+  }
+}
+
+// Subclase CamionElectrico (hereda de Camion)
+class CamionElectrico extends Camion {
+   int autonomiaBateria;
+
+  public CamionElectrico() {
+    autonomiaBateria = 400;
+    System.out.println("Constructor de CamionElectrico ejecutado");
+    System.out.println("Autonomía de batería: " + autonomiaBateria + " km");
+    System.out.println();
+  }
+
+  public CamionElectrico(int autonomia) {
+    autonomiaBateria = autonomia;
+    System.out.println("Constructor de CamionElectrico ejecutado con              autonomía
+personalizada");
+    System.out.println("Autonomía de batería: " + autonomiaBateria + " km");
+    System.out.println();
+  }
+}
+
+// Clase Main para probar el orden de ejecución de los constructores
+public class Main {
+   public static void main(String[] args) {
+     System.out.println("Creando un Deportivo con valores predeterminados");
+     Deportivo autoDeportivo = new Deportivo();
+
+        System.out.println("Creando un CamionElectrico con valores personalizados");
+        CamionElectrico camion1 = new CamionElectrico(500);
+    }
+}`,
+    criterios: ["Define la clase Vehiculo", "Define la clase Automovil", "Define la clase Deportivo"],
+    checks: [
+       (c) =>  /class\s+Vehiculo/i.test(c),
+       (c) =>  /class\s+Automovil/i.test(c),
+       (c) =>  /class\s+Deportivo/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_7_1',
+    titulo: `Dr. Java: Arrays de objetos - Ej 1`,
+    nivel: '⭐⭐',
+    temas: ["Arrays de objetos"],
+    tiempo: '15 min',
+    enunciado: `Desarrolla un programa que administre una flota de vehículos utilizando arrays de objetos. El
+sistema permitirá almacenar información de varios vehículos y mostrará un resumen de todos
+los vehículos registrados. Para ello:
+
+    •   Implementa las clases Vehiculo (Clase base con atributos generales), Automovil y
+        Camion (Subclases de Vehiculo con atributos específicos).
+    •   Crea un array de objetos para almacenar múltiples vehículos. El array debe permitir
+        agregar tanto automóviles como camiones.
+    •   Implementa un método para agregar vehículos al array. Y otro método para mostrar
+        todos los vehículos registrados.
+    •   Para probar el sistema, crea un array de 5 vehículos y muestra la información en la
+        consola.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Desarrolla un programa que administre una flota de vehículos utilizando arrays de objetos. El
+sistema permitirá almacenar información de varios vehículos y mostrará un resumen de todos
+los vehículos registrados. Para ello:
+
+     •   Implementa las clases Vehiculo (Clase base con atributos generales), Automovil y
+         Camion (Subclases de Vehiculo con atributos específicos).
+     •   Crea un array de objetos para almacenar múltiples vehículos. El array debe permitir
+         agregar tanto automóviles como camiones.
+     •   Implementa un método para agregar vehículos al array. Y otro método para mostrar
+         todos los vehículos registrados.
+     •   Para probar el sistema, crea un array de 5 vehículos y muestra la información en la
+         consola.
+
+ class Vehiculo {
+    String marca;
+    String modelo;
+    int anio;
+
+     public Vehiculo(String marcaVehiculo, String modeloVehiculo, int anioVehiculo) {
+       marca = marcaVehiculo;
+       modelo = modeloVehiculo;
+       anio = anioVehiculo;
+     }
+
+     public void mostrarInfo() {
+       System.out.println("Marca: " + marca + ", Modelo: " + modelo + ", Año: " + anio);
+     }
+ }
+
+ class Automovil extends Vehiculo {
+    int puertas;
+
+   public Automovil(String marcaVehiculo, String modeloVehiculo, int anioVehiculo, int
+ numPuertas) {
+     marca = marcaVehiculo;
+     modelo = modeloVehiculo;
+     anio = anioVehiculo;
+     puertas = numPuertas;
+   }
+
+     public void mostrarInfo() {
+       System.out.println("Marca: " + marca + ", Modelo: " + modelo + ", Año: " + anio);
+       System.out.println("Puertas: " + puertas);
+     }
+ }
+
+ class Camion extends Vehiculo {
+     int cargaMaxima;
+
+     public Camion(String marcaVehiculo, String modeloVehiculo, int anioVehiculo, int carga) {
+       marca = marcaVehiculo;
+       modelo = modeloVehiculo;
+       anio = anioVehiculo;
+       cargaMaxima = carga;
+     }
+
+     public void mostrarInfo() {
+       System.out.println("Marca: " + marca + ", Modelo: " + modelo + ", Año: " + anio);
+       System.out.println("Carga Máxima: " + cargaMaxima + " toneladas");
+     }
+ }
+
+ public class Main {
+   public static void main(String[] args) {
+     Vehiculo[] flota = new Vehiculo[5];
+
+         flota[0] = new Automovil("Toyota", "Corolla", 2020, 4);
+         flota[1] = new Automovil("Honda", "Civic", 2022, 4);
+         flota[2] = new Camion("Volvo", "FH16", 2019, 20);
+         flota[3] = new Automovil("Ford", "Focus", 2018, 4);
+         flota[4] = new Camion("Mercedes", "Actros", 2021, 25);
+
+         System.out.println("Vehículos registrados: ");
+         for (int i = 0; i &lt; flota.length; i++) {
+           flota[i].mostrarInfo();
+         }
+     }
+ }`,
+    criterios: ["Define la clase Automovil", "Define la clase Main", "Define la clase Vehiculo"],
+    checks: [
+       (c) =>  /class\s+Automovil/i.test(c),
+       (c) =>  /class\s+Main/i.test(c),
+       (c) =>  /class\s+Vehiculo/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_7_2',
+    titulo: `Dr. Java: Arrays de objetos - Ej 2`,
+    nivel: '⭐⭐',
+    temas: ["Arrays de objetos"],
+    tiempo: '15 min',
+    enunciado: `Desarrolla un programa que administre un inventario de dispositivos electrónicos utilizando
+arrays de objetos. El sistema permitirá almacenar información de varios dispositivos y mostrará
+un resumen de todos los dispositivos registrados. Para ello:
+
+    •   Implementa las clases Dispositivo (Clase base con atributos generales), Smartphone y
+        Laptop (Subclases de Dispositivo con atributos específicos).
+    •   Crea un array de objetos para almacenar múltiples dispositivos. El array debe permitir
+        agregar tanto smartphones como laptops.
+    •   Implementa un método para agregar dispositivos al array y otro método para mostrar
+        todos los dispositivos registrados.
+    •   Para probar el sistema crea un array de 5 dispositivos (combinando smartphones y
+        laptops) y muestra la información de los dispositivos en la consola.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Desarrolla un programa que administre un inventario de dispositivos electrónicos utilizando
+arrays de objetos. El sistema permitirá almacenar información de varios dispositivos y mostrará
+un resumen de todos los dispositivos registrados. Para ello:
+
+     •     Implementa las clases Dispositivo (Clase base con atributos generales), Smartphone y
+           Laptop (Subclases de Dispositivo con atributos específicos).
+     •     Crea un array de objetos para almacenar múltiples dispositivos. El array debe permitir
+           agregar tanto smartphones como laptops.
+     •     Implementa un método para agregar dispositivos al array y otro método para mostrar
+           todos los dispositivos registrados.
+     •     Para probar el sistema crea un array de 5 dispositivos (combinando smartphones y
+           laptops) y muestra la información de los dispositivos en la consola.
+
+
+
+ class Dispositivo {
+    String marca;
+    String modelo;
+    double precio;
+
+  public Dispositivo(String marcaDispositivo,           String   modeloDispositivo,     double
+precioDispositivo) {
+    marca = marcaDispositivo;
+    modelo = modeloDispositivo;
+    precio = precioDispositivo;
+  }
+
+    public void mostrarInfo() {
+      System.out.println("Marca: " + marca + ", Modelo: " + modelo + ", Precio: " + precio);
+    }
+}
+
+class Smartphone extends Dispositivo {
+   int almacenamiento;
+
+  public Smartphone(String marcaDispositivo,            String   modeloDispositivo,     double
+precioDispositivo, int almacenamientoGB) {
+    marca = marcaDispositivo;
+    modelo = modeloDispositivo;
+    precio = precioDispositivo;
+    almacenamiento = almacenamientoGB;
+  }
+
+    public void mostrarInfo() {
+      System.out.println("Marca: " + marca + ", Modelo: " + modelo + ", Precio: " + precio);
+      System.out.println("Almacenamiento: " + almacenamiento + "GB");
+    }
+}
+
+class Laptop extends Dispositivo {
+   double tamanoPantalla;
+
+  public Laptop(String marcaDispositivo, String modeloDispositivo, double precioDispositivo,
+double pantallaPulgadas) {
+    marca = marcaDispositivo;
+    modelo = modeloDispositivo;
+    precio = precioDispositivo;
+    tamanoPantalla = pantallaPulgadas;
+  }
+
+    public void mostrarInfo() {
+      System.out.println("Marca: " + marca + ", Modelo: " + modelo + ", Precio: " + precio);
+      System.out.println("Tamaño de pantalla: " + tamanoPantalla + " pulgadas");
+    }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Dispositivo[] inventario = new Dispositivo[5];
+         inventario[0] = new Smartphone("Samsung", "Galaxy S21", 799.99, 128);
+         inventario[1] = new Laptop("Dell", "XPS 13", 1199.99, 13.3);
+         inventario[2] = new Smartphone("Apple", "iPhone 14", 999.99, 256);
+         inventario[3] = new Laptop("HP", "Pavilion 15", 799.99, 15.6);
+         inventario[4] = new Smartphone("Google", "Pixel 7", 599.99, 128);
+
+         System.out.println("Inventario de dispositivos electrónicos");
+         for (int i = 0; i &lt; inventario.length; i++) {
+           inventario[i].mostrarInfo();
+         }
+     }
+ }`,
+    criterios: ["Define la clase Laptop", "Define la clase Dispositivo", "Define la clase Smartphone"],
+    checks: [
+       (c) =>  /class\s+Laptop/i.test(c),
+       (c) =>  /class\s+Dispositivo/i.test(c),
+       (c) =>  /class\s+Smartphone/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_7_3',
+    titulo: `Dr. Java: Arrays de objetos - Ej 3`,
+    nivel: '⭐⭐',
+    temas: ["Arrays de objetos"],
+    tiempo: '15 min',
+    enunciado: `Desarrolla un programa que administre un sistema de empleados utilizando arrays de objetos.
+El sistema permitirá almacenar información de diferentes tipos de empleados y mostrará un
+resumen de todos los empleados registrados. Para ello:
+
+    •   Implementa las clases Empleado (Clase base con atributos generales), Gerente,
+        Desarrollador y Asistente (Subclases de Empleado con atributos específicos),
+        DesarrolladorBackend y DesarrolladorFrontend (Subclases de Desarrollador con
+        atributos especializados).
+    •   Crea un array de objetos para almacenar múltiples empleados. El array debe permitir
+        agregar gerentes, desarrolladores backend, desarrolladores frontend y asistentes.
+    •   Implementa un método para agregar empleados al array y otro método para mostrar
+        todos los empleados registrados.
+    •   Para probar el sistema crea un array de 7 empleados (combinando gerentes,
+        desarrolladores backend, desarrolladores frontend y asistentes) y muestra la
+        información de los empleados en la consola.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Desarrolla un programa que administre un sistema de empleados utilizando arrays de objetos.
+El sistema permitirá almacenar información de diferentes tipos de empleados y mostrará un
+resumen de todos los empleados registrados. Para ello:
+
+     •     Implementa las clases Empleado (Clase base con atributos generales), Gerente,
+           Desarrollador y Asistente (Subclases de Empleado con atributos específicos),
+           DesarrolladorBackend y DesarrolladorFrontend (Subclases de Desarrollador con
+           atributos especializados).
+     •     Crea un array de objetos para almacenar múltiples empleados. El array debe permitir
+           agregar gerentes, desarrolladores backend, desarrolladores frontend y asistentes.
+     •     Implementa un método para agregar empleados al array y otro método para mostrar
+           todos los empleados registrados.
+     •     Para probar el sistema crea un array de 7 empleados (combinando gerentes,
+           desarrolladores backend, desarrolladores frontend y asistentes) y muestra la
+           información de los empleados en la consola.
+
+
+
+ class Empleado {
+    String nombre;
+    int edad;
+    double salario;
+
+     public Empleado(String nombreEmpleado, int edadEmpleado, double salarioEmpleado) {
+       nombre = nombreEmpleado;
+       edad = edadEmpleado;
+       salario = salarioEmpleado;
+     }
+
+     public void mostrarInfo() {
+       System.out.println("Nombre: " + nombre + ", Edad: " + edad + ", Salario: " + salario);
+     }
+ }
+
+ class Gerente extends Empleado {
+    String departamento;
+
+  public Gerente(String nombreEmpleado, int edadEmpleado, double salarioEmpleado,
+String depto) {
+     nombre = nombreEmpleado;
+     edad = edadEmpleado;
+     salario = salarioEmpleado;
+     departamento = depto;
+  }
+
+    public void mostrarInfo() {
+      System.out.println("Nombre: " + nombre + ", Edad: " + edad + ", Salario: " + salario);
+      System.out.println("Departamento: " + departamento);
+    }
+}
+
+class Asistente extends Empleado {
+   String jefe;
+
+  public Asistente(String nombreEmpleado, int edadEmpleado, double salarioEmpleado,
+String nombreJefe) {
+     nombre = nombreEmpleado;
+     edad = edadEmpleado;
+     salario = salarioEmpleado;
+     jefe = nombreJefe;
+  }
+
+    public void mostrarInfo() {
+      System.out.println("Nombre: " + nombre + ", Edad: " + edad + ", Salario: " + salario);
+      System.out.println("Jefe: " + jefe);
+    }
+}
+
+class Desarrollador extends Empleado {
+   String lenguaje;
+
+  public Desarrollador(String nombreEmpleado, int edadEmpleado, double salarioEmpleado,
+String lenguajeProg) {
+     nombre = nombreEmpleado;
+     edad = edadEmpleado;
+     salario = salarioEmpleado;
+     lenguaje = lenguajeProg;
+  }
+
+    public void mostrarInfo() {
+      System.out.println("Nombre: " + nombre + ", Edad: " + edad + ", Salario: " + salario);
+      System.out.println("Lenguaje de programación: " + lenguaje);
+    }
+}
+
+class DesarrolladorBackend extends Desarrollador {
+   String baseDatos;
+  public DesarrolladorBackend(String nombreEmpleado, int edadEmpleado, double
+salarioEmpleado, String lenguajeProg, String bd) {
+     nombre = nombreEmpleado;
+     edad = edadEmpleado;
+     salario = salarioEmpleado;
+     lenguaje = lenguajeProg;
+     baseDatos = bd;
+  }
+
+    public void mostrarInfo() {
+      System.out.println("Nombre: " + nombre + ", Edad: " + edad + ", Salario: " + salario);
+      System.out.println("Lenguaje de programación: " + lenguaje);
+      System.out.println("Base de datos: " + baseDatos);
+    }
+}
+
+class DesarrolladorFrontend extends Desarrollador {
+   String framework;
+
+  public DesarrolladorFrontend(String nombreEmpleado, int edadEmpleado, double
+salarioEmpleado, String lenguajeProg, String fw) {
+     nombre = nombreEmpleado;
+     edad = edadEmpleado;
+     salario = salarioEmpleado;
+     lenguaje = lenguajeProg;
+     framework = fw;
+  }
+
+    public void mostrarInfo() {
+      System.out.println("Nombre: " + nombre + ", Edad: " + edad + ", Salario: " + salario);
+      System.out.println("Lenguaje de programación: " + lenguaje);
+      System.out.println("Framework: " + framework);
+    }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Empleado[] empleados = new Empleado[7];
+
+    empleados[0] = new Gerente("Carlos Pérez", 45, 5000, "Ventas");
+    empleados[1] = new DesarrolladorBackend("Ana Gómez", 30, 4000, "Java", "MySQL");
+    empleados[2] = new DesarrolladorFrontend("Luis Torres", 28, 3800, "JavaScript",
+"React");
+    empleados[3] = new DesarrolladorBackend("Elena Ruiz", 32, 4100, "Python",
+"PostgreSQL");
+    empleados[4] = new DesarrolladorFrontend("Javier Mendoza", 27, 3700, "TypeScript",
+"Angular");
+    empleados[5] = new Asistente("Marta López", 35, 2500, "Carlos Pérez");
+    empleados[6] = new Gerente("Ricardo Salinas", 50, 5500, "Tecnología");
+
+      System.out.println("Registro de empleados: ");
+         for (int i = 0; i &lt; empleados.length; i++) {
+           empleados[i].mostrarInfo();
+         }
+     }
+ }`,
+    criterios: ["Define la clase Desarrollador", "Define la clase DesarrolladorFrontend", "Define la clase Gerente"],
+    checks: [
+       (c) =>  /class\s+Desarrollador/i.test(c),
+       (c) =>  /class\s+DesarrolladorFrontend/i.test(c),
+       (c) =>  /class\s+Gerente/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_7_4',
+    titulo: `Dr. Java: Arrays de objetos - Ej 4`,
+    nivel: '⭐⭐',
+    temas: ["Arrays de objetos"],
+    tiempo: '15 min',
+    enunciado: `Desarrolla un sistema para gestionar un zoológico utilizando arrays de objetos. El sistema
+permitirá registrar diferentes tipos de animales y realizar operaciones con ellos. Para ello:
+
+    •   Implementa las clases:
+
+              o   Animal (Clase base con atributos generales).
+
+              o   Mamifero y Ave (Subclases de Animal con atributos específicos).
+
+              o   Felino y Canino (Subclases de Mamifero).
+
+              o   Aguila y Loro (Subclases de Ave).
+
+    •   Agrega métodos en las clases para:
+
+              o   Emitir sonidos característicos.
+
+              o   Mostrar información del animal.
+
+              o   Contar cuántos animales hay de cada tipo.
+
+    •   Implementa un array de objetos para almacenar los animales.
+
+    •   Agrega un método para alimentar a todos los animales del zoológico.
+
+    •   Para probar el sistema, crea un array con al menos 8 animales, muestra su información
+        y realiza las acciones correspondientes.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Desarrolla un sistema para gestionar un zoológico utilizando arrays de objetos. El sistema
+permitirá registrar diferentes tipos de animales y realizar operaciones con ellos. Para ello:
+
+     •     Implementa las clases:
+
+               o    Animal (Clase base con atributos generales).
+
+               o    Mamifero y Ave (Subclases de Animal con atributos específicos).
+
+               o    Felino y Canino (Subclases de Mamifero).
+
+               o    Aguila y Loro (Subclases de Ave).
+
+     •     Agrega métodos en las clases para:
+
+               o    Emitir sonidos característicos.
+
+               o    Mostrar información del animal.
+
+               o    Contar cuántos animales hay de cada tipo.
+
+     •     Implementa un array de objetos para almacenar los animales.
+
+     •     Agrega un método para alimentar a todos los animales del zoológico.
+
+     •     Para probar el sistema, crea un array con al menos 8 animales, muestra su información
+           y realiza las acciones correspondientes.
+
+ class Animal {
+    String nombre;
+    int edad;
+    double peso;
+
+     // Contador de animales. Variable global o de clase
+     static int totalAnimales = 0;
+
+     public Animal(String nombreAnimal, int edadAnimal, double pesoAnimal) {
+       nombre = nombreAnimal;
+       edad = edadAnimal;
+       peso = pesoAnimal;
+       totalAnimales++;
+     }
+
+   public void mostrarInfo() {
+      System.out.println("Nombre: " + nombre + ", Edad: " + edad + " años, Peso: " + peso + "
+ kg");
+   }
+    public void emitirSonido() {
+      System.out.println(nombre + " hace un sonido desconocido.");
+    }
+
+    public static void mostrarTotalAnimales() {
+      System.out.println("Total de animales en el zoológico: " + totalAnimales);
+    }
+}
+
+class Mamifero extends Animal {
+   boolean tienePelo;
+
+   public Mamifero(String nombreAnimal, int edadAnimal, double pesoAnimal, boolean
+tienePeloAnimal) {
+     nombre = nombreAnimal;
+     edad = edadAnimal;
+     peso = pesoAnimal;
+     tienePelo = tienePeloAnimal;
+   }
+
+    public void amamantar() {
+      System.out.println(nombre + " está amamantando a sus crías.");
+    }
+}
+
+class Felino extends Mamifero {
+   boolean garrasRetractiles;
+
+   public Felino(String nombreAnimal, int edadAnimal, double pesoAnimal, boolean
+tienePeloAnimal, boolean garras) {
+     nombre = nombreAnimal;
+     edad = edadAnimal;
+     peso = pesoAnimal;
+     tienePelo = tienePeloAnimal;
+     garrasRetractiles = garras;
+   }
+
+    public void emitirSonido() {
+      System.out.println(nombre + " ruge o maúlla.");
+    }
+}
+
+class Canino extends Mamifero {
+   boolean cazaEnManada;
+
+   public Canino(String nombreAnimal, int edadAnimal, double pesoAnimal, boolean
+tienePeloAnimal, boolean caza) {
+     nombre = nombreAnimal;
+     edad = edadAnimal;
+     peso = pesoAnimal;
+     tienePelo = tienePeloAnimal;
+        cazaEnManada = caza;
+    }
+
+    public void emitirSonido() {
+      System.out.println(nombre + " ladra o aúlla.");
+    }
+}
+
+class Ave extends Animal {
+   double envergaduraAlas;
+
+    public Ave(String nombreAnimal, int edadAnimal, double pesoAnimal, double envergadura)
+{
+        nombre = nombreAnimal;
+        edad = edadAnimal;
+        peso = pesoAnimal;
+        envergaduraAlas = envergadura;
+    }
+
+  public void volar() {
+     System.out.println(nombre + " está volando con una envergadura de " + envergaduraAlas
++ " metros.");
+  }
+}
+
+class Aguila extends Ave {
+   boolean esCazadora;
+
+  public Aguila(String nombreAnimal, int edadAnimal, double pesoAnimal, double
+envergadura, boolean cazadora) {
+    nombre = nombreAnimal;
+    edad = edadAnimal;
+    peso = pesoAnimal;
+    envergaduraAlas = envergadura;
+    esCazadora = cazadora;
+  }
+
+    public void emitirSonido() {
+      System.out.println(nombre + " emite un grito agudo.");
+    }
+}
+
+class Loro extends Ave {
+   boolean puedeHablar;
+
+  public Loro(String nombreAnimal, int edadAnimal, double pesoAnimal, double
+envergadura, boolean habla) {
+    nombre = nombreAnimal;
+    edad = edadAnimal;
+    peso = pesoAnimal;
+    envergaduraAlas = envergadura;
+    puedeHablar = habla;
+    }
+
+    public void emitirSonido() {
+      if (puedeHablar) {
+          System.out.println(nombre + " dice 'Hola, ¿cómo estás?'");
+      } else {
+          System.out.println(nombre + " emite un sonido de loro.");
+      }
+    }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Animal[] zoologico = new Animal[8];
+
+        zoologico[0] = new Felino("León", 5, 190, true, true);
+        zoologico[1] = new Canino("Lobo", 4, 60, true, true);
+        zoologico[2] = new Felino("Tigre", 6, 220, true, true);
+        zoologico[3] = new Canino("Zorro", 3, 10, true, false);
+        zoologico[4] = new Aguila("Águila Real", 7, 6.5, 2.1, true);
+        zoologico[5] = new Loro("Loro Verde", 2, 1.2, 0.5, true);
+        zoologico[6] = new Loro("Guacamayo", 3, 1.5, 1.2, false);
+        zoologico[7] = new Aguila("Águila Calva", 8, 6.8, 2.3, true);
+
+        System.out.println("Información de los animales: ");
+        for (int i = 0; i &lt; zoologico.length; i++) {
+          zoologico[i].mostrarInfo();
+          zoologico[i].emitirSonido();
+        }
+
+        // Contar cuántos animales hay
+        Animal.mostrarTotalAnimales();
+
+        // Alimentar a los animales
+        System.out.println("\nAlimentando a los animales: ");
+        for (int i = 0; i &lt; zoologico.length; i++) {
+           System.out.println(zoologico[i].nombre + " está comiendo.");
+        }
+    }
+}`,
+    criterios: ["Define la clase Ave", "Define la clase Mamifero", "Define la clase Loro"],
+    checks: [
+       (c) =>  /class\s+Ave/i.test(c),
+       (c) =>  /class\s+Mamifero/i.test(c),
+       (c) =>  /class\s+Loro/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_8_1',
+    titulo: `Dr. Java: @Override, this y super - Ej 1`,
+    nivel: '⭐⭐',
+    temas: ["@Override, this y super"],
+    tiempo: '15 min',
+    enunciado: `Crea un sistema que maneje diferentes tipos de vehículos usando herencia y sobreescritura de
+métodos:
+
+    1. Crea una clase base Vehiculo con:
+
+              o   Atributos marca y modelo.
+
+              o   Un constructor que reciba la marca y el modelo.
+
+              o   Constructor sin parámetros con valores predeterminados. Usa this en el
+                  constructor.
+
+              o   Un método mostrarInfo() que imprima la información del vehículo.
+
+    2. Crea una clase Coche que extienda Vehiculo con:
+
+              o   Añade el atributo puertas (número de puertas).
+
+              o   Un constructor que reciba la marca, el modelo y las puertas, usando super para
+                  inicializar los atributos de la clase base.
+
+              o   Constructor sin parámetros con valores predeterminados. Usa this en el
+                  constructor.
+
+              o   Sobrescribe (@Override) el método mostrarInfo() para incluir el número de
+                  puertas.
+
+    3. Crea una clase Moto que extienda Vehiculo con:
+
+              o   Añade el atributo cilindrada.
+
+              o   Un constructor que reciba la marca, el modelo y la cilindrada, usando super.
+
+              o   Constructor sin parámetros con valores predeterminados. Usa this en el
+                  constructor.
+
+              o   Sobrescribe mostrarInfo() para incluir la cilindrada.
+
+    4. En la función main, crea un array de 4 Vehiculos con instancias de Coche y Moto. Luego
+       llama a mostrarInfo() con cada objeto.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Crea un sistema que maneje diferentes tipos de vehículos usando herencia y sobreescritura de
+métodos:
+
+    1. Crea una clase base Vehiculo con:
+
+              o   Atributos marca y modelo.
+
+              o   Un constructor que reciba la marca y el modelo.
+
+              o   Constructor sin parámetros con valores predeterminados. Usa this en el
+                  constructor.
+
+              o   Un método mostrarInfo() que imprima la información del vehículo.
+
+    2. Crea una clase Coche que extienda Vehiculo con:
+
+              o   Añade el atributo puertas (número de puertas).
+
+              o   Un constructor que reciba la marca, el modelo y las puertas, usando super para
+                  inicializar los atributos de la clase base.
+
+              o   Constructor sin parámetros con valores predeterminados. Usa this en el
+                  constructor.
+
+              o   Sobrescribe (@Override) el método mostrarInfo() para incluir el número de
+                  puertas.
+
+    3. Crea una clase Moto que extienda Vehiculo con:
+
+              o   Añade el atributo cilindrada.
+
+              o   Un constructor que reciba la marca, el modelo y la cilindrada, usando super.
+
+              o   Constructor sin parámetros con valores predeterminados. Usa this en el
+                  constructor.
+
+              o   Sobrescribe mostrarInfo() para incluir la cilindrada.
+
+    4. En la función main, crea un array de 4 Vehiculos con instancias de Coche y Moto. Luego
+       llama a mostrarInfo() con cada objeto.
+
+
+
+ class Vehiculo {
+    protected String marca;
+    protected String modelo;
+
+   public Vehiculo(String marca, String modelo) {
+     this.marca = marca;
+     this.modelo = modelo;
+   }
+
+   // Constructor sin parámetros con valores predeterminados
+    public Vehiculo() {
+      this("Desconocida", "Genérico");
+    }
+
+    public void mostrarInfo() {
+      System.out.println("Vehículo: " + marca + " " + modelo);
+    }
+}
+
+class Coche extends Vehiculo {
+   private int puertas;
+
+    public Coche(String marca, String modelo, int puertas) {
+      super(marca, modelo);
+      this.puertas = puertas;
+    }
+
+    // Constructor sin parámetros con valores predeterminados
+    public Coche() {
+       this("Toyota", "Corolla", 4);
+    }
+
+    // Sobrescribe el método mostrarInfo
+    @Override
+    public void mostrarInfo() {
+       super.mostrarInfo();
+       System.out.println("Número de puertas: " + this.puertas);
+    }
+}
+
+class Moto extends Vehiculo {
+   private int cilindrada;
+
+    public Moto(String marca, String modelo, int cilindrada) {
+      super(marca, modelo);
+      this.cilindrada = cilindrada;
+    }
+
+    // Constructor sin parámetros con valores predeterminados
+    public Moto() {
+       this("Honda", "CBR600", 600);
+    }
+
+    // Sobrescribe el método mostrarInfo
+    @Override
+    public void mostrarInfo() {
+       super.mostrarInfo();
+       System.out.println("Cilindrada: " + this.cilindrada + "cc");
+    }
+}
+
+public class Main {
+     public static void main(String[] args) {
+       Vehiculo[] vehiculos = {
+          new Coche("Ford", "Fiesta", 5),
+          new Coche(),
+          new Moto("Yamaha", "R1", 1000),
+          new Moto()
+       };
+
+         for (int i = 0; i &lt; vehiculos.length; i++) {
+           vehiculos[i].mostrarInfo();
+         }
+     }
+ }`,
+    criterios: ["Define la clase Main", "Define la clase Moto", "Define la clase Coche", "Implementa el m\u00e9todo mostrarInfo"],
+    checks: [
+       (c) =>  /class\s+Main/i.test(c),
+       (c) =>  /class\s+Moto/i.test(c),
+       (c) =>  /class\s+Coche/i.test(c),
+       (c) =>  /mostrarInfo\s*\(/i.test(c)
+    ]
+  },
+  {
+    id: 'dr_ej_8_2',
+    titulo: `Dr. Java: @Override, this y super - Ej 2`,
+    nivel: '⭐⭐',
+    temas: ["@Override, this y super"],
+    tiempo: '15 min',
+    enunciado: `Crea un sistema de empleados con diferentes tipos (Gerente y Desarrollador). Cada uno tiene
+atributos específicos y un método calcularSalario(), que será sobrescrito en cada clase derivada.
+
+    1. Crea la clase base Empleado con:
+
+              o   Atributos nombre, salarioBase y id.
+
+              o   Un constructor que use this() para asignar valores por defecto.
+
+              o   Un método calcularSalario() que devuelva salarioBase.
+       o   Un método mostrarInfo() que muestre el nombre y salario.
+
+2. Crea la clase Gerente que extienda Empleado con:
+
+       o   Atributo bonoGerencial.
+
+       o   Un constructor que use super() para llamar al constructor de Empleado.
+
+       o   Sobrescribe calcularSalario() para sumar bonoGerencial.
+
+3. Crea la clase Desarrollador que extienda Empleado con:
+
+       o   Atributo horasExtras y pagoPorHoraExtra.
+
+       o   Un constructor que use super().
+
+       o   Sobrescribe calcularSalario() para sumar el pago por horas extras.
+
+4. En la función main, crea un array de 4 Empleados con instancias de Gerente y
+   Desarrollador. Luego llama a mostrarInfo() con cada objeto.`,
+    pistas: ["Analiza bien los requisitos antes de programar.", "Revisa tus nombres de variables."],
+    solucion: `Crea un sistema de empleados con diferentes tipos (Gerente y Desarrollador). Cada uno tiene
+atributos específicos y un método calcularSalario(), que será sobrescrito en cada clase derivada.
+
+     1. Crea la clase base Empleado con:
+
+                o   Atributos nombre, salarioBase y id.
+
+                o   Un constructor que use this() para asignar valores por defecto.
+
+                o   Un método calcularSalario() que devuelva salarioBase.
+
+                o   Un método mostrarInfo() que muestre el nombre y salario.
+
+     2. Crea la clase Gerente que extienda Empleado con:
+
+                o   Atributo bonoGerencial.
+
+                o   Un constructor que use super() para llamar al constructor de Empleado.
+
+                o   Sobrescribe calcularSalario() para sumar bonoGerencial.
+
+     3. Crea la clase Desarrollador que extienda Empleado con:
+
+                o   Atributo horasExtras y pagoPorHoraExtra.
+
+                o   Un constructor que use super().
+
+                o   Sobrescribe calcularSalario() para sumar el pago por horas extras.
+
+     4. En la función main, crea un array de 4 Empleados con instancias de Gerente y
+        Desarrollador. Luego llama a mostrarInfo() con cada objeto.
+
+ class Empleado {
+    protected String nombre;
+    protected double salarioBase;
+    protected int id;
+
+     public Empleado(String nombre, double salarioBase, int id) {
+       this.nombre = nombre;
+       this.salarioBase = salarioBase;
+      this.id = id;
+  }
+
+  public Empleado() {
+    this("Empleado Genérico", 1000.0, 0);
+  }
+
+  public double calcularSalario() {
+    return salarioBase;
+  }
+
+  public void mostrarInfo() {
+    System.out.println("ID: " + id + " Nombre: " + nombre + " Salario: " + calcularSalario());
+  }
+}
+/* Aquí, calcularSalario() no es un método estático, así que solo se puede llamar a través de
+un objeto. Pero... ¿dónde está ese objeto? Está implícito.
+En Java, cuando llamas a un método dentro de otro método de la misma instancia, Java asume
+que es this.calcularSalario(), aunque no lo escribas explícitamente.
+Es decir, la anterior línea es equivalente a:
+  System.out.println("ID: " + id + " Nombre: " + nombre + " Salario: " + this.calcularSalario());
+Donde this se refiere al objeto actual en el que se está ejecutando mostrarInfo(). */
+
+class Gerente extends Empleado {
+   private double bonoGerencial;
+
+  public Gerente(String nombre, double salarioBase, int id, double bonoGerencial) {
+    super(nombre, salarioBase, id);
+    this.bonoGerencial = bonoGerencial;
+  }
+
+  public Gerente() {
+    this("Gerente Default", 3000.0, 1, 500.0);
+  }
+
+  @Override
+  public double calcularSalario() {
+    return super.calcularSalario() + this.bonoGerencial; //En este caso se está accediendo al
+método calcularSalario con el objeto Gerente
+  }
+}
+
+class Desarrollador extends Empleado {
+   private int horasExtras;
+   private double pagoPorHoraExtra;
+
+  public Desarrollador(String nombre, double salarioBase, int id, int horasExtras, double
+pagoPorHoraExtra) {
+    super(nombre, salarioBase, id);
+    this.horasExtras = horasExtras;
+    this.pagoPorHoraExtra = pagoPorHoraExtra;
+    }
+
+    public Desarrollador() {
+      this("Desarrollador Default", 2500.0, 2, 10, 20.0);
+    }
+
+  @Override
+  public double calcularSalario() {
+    return super.calcularSalario() + (horasExtras * pagoPorHoraExtra);//En este caso se está
+accediendo al getter calcularSalario() con el objeto Desarrollador
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Empleado[] empleados = new Empleado[4];
+
+        for (int i = 0; i &lt; empleados.length; i++) {
+          if (i % 2 == 0) {
+             empleados[i] = new Gerente("Gerente" + i, 3500.0, i + 1, 700.0);
+          } else {
+             empleados[i] = new Desarrollador("Dev" + i, 2700.0, i + 1, 5 + i, 25.0);
+          }
+        }
+
+        for (int i = 0; i &lt; empleados.length; i++) {
+          empleados[i].mostrarInfo();
+        }
+    }
+}`,
+    criterios: ["Define la clase derivada", "Define la clase Desarrollador", "Define la clase Gerente", "Implementa el m\u00e9todo calcularSalario", "Implementa el m\u00e9todo super", "Implementa el m\u00e9todo mostrarInfo"],
+    checks: [
+       (c) =>  /class\s+derivada/i.test(c),
+       (c) =>  /class\s+Desarrollador/i.test(c),
+       (c) =>  /class\s+Gerente/i.test(c),
+       (c) =>  /calcularSalario\s*\(/i.test(c),
+       (c) =>  /super\s*\(/i.test(c),
+       (c) =>  /mostrarInfo\s*\(/i.test(c)
+    ]
+  },
 ];
+
+// Append all Dr. Java exercises to the global EJERCICIOS array
+if (typeof EJERCICIOS !== 'undefined') { EJERCICIOS.push(...DOCTOR_EXERCISES_MODIFIED); }
+
