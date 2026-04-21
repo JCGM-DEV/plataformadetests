@@ -55,12 +55,13 @@ function openSection(section) {
   else if (section.type === 'drag') showDrag(section.dragId);
   else if (section.type === 'code') showCodeLab(section.codeId);
   else if (section.type === 'ejercicio') showEjercicio(section.ejercicioId);
+  else if (section.type === 'guide') showGuide(section.guideId);
   else if (section.type === 'tutor') renderTutorSplash();
   else if (section.type === 'doctor_lab') showDoctorLab(section.exerciseId);
 }
 
 function hideAllViews() {
-  ['lesson-view','quiz-view','drag-view','code-view','ejercicio-view','tutor-view','doctor-view','welcome-panel'].forEach(id => {
+  ['lesson-view','quiz-view','drag-view','code-view','ejercicio-view','tutor-view','doctor-view','guide-view','welcome-panel'].forEach(id => {
     const el = document.getElementById(id); if (el) el.classList.add('hidden');
   });
 }
@@ -403,6 +404,30 @@ function showToast(msg, type = 'info') {
 }
 
 function closeModal() { document.getElementById('modal-overlay').classList.add('hidden'); }
+
+// ── STUDY GUIDES (SUPERVIVENCIA) ─────────────────────────────────
+function showGuide(guideId) {
+  const guide = GUIDES.find(g => g.id === guideId);
+  if (!guide) return;
+  const view = document.getElementById('guide-view');
+  view.classList.remove('hidden');
+
+  view.innerHTML = `
+    <div class="guide-container">
+      <div class="guide-header">
+        <span class="guide-badge">🔥 Guía de Supervivencia</span>
+        <h2>${guide.title}</h2>
+        <p>${guide.subtitle}</p>
+      </div>
+      <div class="guide-body">
+        ${guide.content}
+      </div>
+      <div class="guide-actions" style="margin-top: 2rem; text-align: center;">
+        <button class="btn-primary" onclick="markDone()">✓ Marcar como leído</button>
+      </div>
+    </div>
+  `;
+}
 
 // ── EJERCICIOS PRÁCTICOS ─────────────────────────────────────────
 let ejercicioState = { showPistas: false, showSolucion: false };

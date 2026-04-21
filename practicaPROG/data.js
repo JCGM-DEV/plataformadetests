@@ -38,6 +38,7 @@ const UNITS = {
   practicas: {
     label: 'EXAMEN', title: 'Prácticas Examen',
     sections: [
+      { id: 'prac-guia', icon: '📘', label: 'Guía de Supervivencia', type: 'guide', guideId: 'exam_guide' },
       { id: 'prac-tutor', icon: '🎓', label: '🎓 Tutor Interactivo', type: 'tutor' },
       { id: 'prac-ej1', icon: '📝', label: 'Ejercicio 1: Gestión Empleados', type: 'ejercicio', ejercicioId: 'ej1' },
       { id: 'prac-ej2', icon: '📝', label: 'Ejercicio 2: Sistema Vehículos', type: 'ejercicio', ejercicioId: 'ej2' },
@@ -583,3 +584,40 @@ public class Main {
     ]
   }
 };
+
+const GUIDES = [
+  {
+    id: 'exam_guide',
+    title: 'Cómo Aprobar el Examen de Programación',
+    subtitle: 'El enfoque táctico para no perderte entre Clases y Objetos.',
+    content: `
+      <div class="guide-section">
+        <h3>1. Lee el enunciado rompiéndolo en Fases</h3>
+        <p>No intentes programar todo a la vez. El examen está diseñado para evaluar piezas individuales. Divídelo mentalmente en:</p>
+        <ul class="guide-list">
+          <li><strong>Clases Base (Fáciles):</strong> Son las clases que no tienen mucha lógica, solo atributos, getters y setters. Hazlas primero, son puntos asegurados.</li>
+          <li><strong>Herencia e Interfaces (Medio):</strong> Fíjate en palabras como "Tipos de..." (Herencia) o "Comportamientos compartidos" (Interfaces).</li>
+          <li><strong>El Main y la Lógica (Avanzado):</strong> Recorrer listas (ArrayList), agrupar en diccionarios (HashMap) y capturar excepciones (try-catch).</li>
+        </ul>
+      </div>
+
+      <div class="guide-section warning-section">
+        <h3>2. Herencia VS Interfaces: Evita la Trampa</h3>
+        <div class="trap-alert">
+          <strong>🚨 La Trampa Típica:</strong> Te piden hacer un "Patinete" y un "Helicóptero". Ambos *se mueven*, así que quieres usar herencia de la clase 'Vehículo'. ¡Error, sus lógicas internas son totalmente distintas! Si comparten *acciones* pero NO naturalezas, usa una <code>interface Movible</code>.
+        </div>
+        <p><strong>Usa <code style="color:var(--yellow)">abstract class</code> cuando:</strong> Las clases hijas comparten código real y atributos genéricos (ej. <code>nombre</code>, <code>id</code>).</p>
+        <p><strong>Usa <code style="color:var(--green)">interface</code> cuando:</strong> Solo comparten la firma del método, y cada uno lo implementa a su manera radicalmente diferente (ej. <code>void cargarBateria()</code>).</p>
+      </div>
+
+      <div class="guide-section highlight-section">
+        <h3>3. Trucos Rápidos para ganar puntos</h3>
+        <ul class="guide-list">
+          <li><strong>Polimorfismo gratuito:</strong> Si tienes una herencia <code>Perro extends Animal</code>, siempre crea tus ArrayList usando el padre: <code>List&lt;Animal&gt; lista = new ArrayList&lt;&gt;();</code>. Usar <code>List&lt;Perro&gt;</code> es un error de diseño frecuente.</li>
+          <li><strong>Encapsulación estricta:</strong> NUNCA dejes atributos públicos. Siempre <code>private</code> e incluye <code>getters/setters</code>. Perderás puntos por no hacerlo aunque tu lógica sea perfecta.</li>
+          <li><strong>Excepciones / Nullointers:</strong> Cuando busques algo en un <code>ArrayList</code>, siempre devuelve <code>null</code> o lanza una excepción si no lo encuentras.</li>
+        </ul>
+      </div>
+    `
+  }
+];

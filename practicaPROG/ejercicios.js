@@ -11,34 +11,34 @@ const EJERCICIOS = [
     nivel: '⭐⭐',
     temas: ['Encapsulación', 'Herencia', 'Polimorfismo'],
     tiempo: '30 min',
-    enunciado: `Una empresa necesita un sistema para gestionar sus empleados.
-Diseña e implementa en Java las siguientes clases:
+    enunciado: `<p style="margin-bottom: 1rem;">Una empresa necesita un sistema para gestionar sus empleados. Diseña e implementa en Java las siguientes clases:</p>
+      
+<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--blue);">
+  <h4 style="color: var(--blue);">Fase 1: Clase Base</h4>
+  <ul style="padding-left: 1.25rem;">
+    <li>Crea la clase abstracta <strong>Persona</strong>.</li>
+    <li>Atributos <code>private</code>: nombre (String), edad (int).</li>
+    <li>Constructor con parámetros y Getters y setters con validación (edad > 0).</li>
+    <li>Método abstracto: <code>String getInfo()</code></li>
+  </ul>
+</div>
 
-1. Clase abstracta <strong>Persona</strong> con:
-   - Atributos privados: nombre (String), edad (int)
-   - Constructor con parámetros
-   - Getters y setters con validación (edad > 0)
-   - Método abstracto: <em>String getInfo()</em>
+<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--accent);">
+  <h4 style="color: var(--accent);">Fase 2: Herencia y Polimorfismo</h4>
+  <ul style="padding-left: 1.25rem;">
+    <li>Clase <strong>Empleado</strong> que extiende Persona. Añade: salario (double), departamento (String). Implementa <code>getInfo()</code> y <code>calcularBonus()</code> (devuelve el 10%).</li>
+    <li>Clase <strong>Directivo</strong> que extiende Empleado. Añade numEmpleadosACargo (int). Sobreescribe <code>calcularBonus()</code> para devolver el 20% y <code>getInfo()</code>.</li>
+  </ul>
+</div>
 
-2. Clase <strong>Empleado</strong> que extiende Persona con:
-   - Atributo privado: salario (double), departamento (String)
-   - Constructor que llame al padre
-   - Implementa getInfo() mostrando todos los datos
-   - Método calcularBonus(): devuelve el 10% del salario
-
-3. Clase <strong>Directivo</strong> que extiende Empleado con:
-   - Atributo privado: numEmpleadosACargo (int)
-   - Sobreescribe calcularBonus(): devuelve el 20% del salario
-   - Sobreescribe getInfo() añadiendo el número de empleados a cargo
-
-4. Interfaz <strong>Gestionable</strong> con:
-   - Método: <em>void gestionar()</em>
-   - Haz que Directivo implemente esta interfaz
-
-5. En el <strong>main</strong>:
-   - Crea un ArrayList de tipo Persona con al menos 3 objetos (mezcla de Empleado y Directivo)
-   - Recorre la lista e imprime getInfo() de cada uno (polimorfismo)
-   - Captura una excepción si se intenta crear un empleado con salario negativo`,
+<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--green);">
+  <h4 style="color: var(--green);">Fase 3: Interfaces y el Main</h4>
+  <ul style="padding-left: 1.25rem;">
+    <li>Crea la interfaz <strong>Gestionable</strong> con <code>void gestionar()</code>. Haz que Directivo la implemente.</li>
+    <li>En el <strong>main</strong>: Crea un <code>ArrayList&lt;Persona&gt;</code> con mezcla de empleados y directivos. Recorre la lista con un for-each e imprime su info (polimorfismo).</li>
+    <li>Captura una excepción si alguien intenta crear un empleado con salario negativo.</li>
+  </ul>
+</div>`,
 
     pistas: [
       '💡 <strong>Encapsulación</strong>: todos los atributos deben ser <code>private</code>. Usa <code>this.nombre = nombre</code> en el constructor.',
@@ -114,35 +114,34 @@ Diseña e implementa en Java las siguientes clases:
     nivel: '⭐⭐⭐',
     temas: ['Herencia', 'Interfaces', 'Colecciones', 'Excepciones'],
     tiempo: '30 min',
-    enunciado: `Diseña un sistema de gestión de una flota de vehículos:
+    enunciado: `<p style="margin-bottom: 1rem;">Diseña un sistema de gestión de una flota de vehículos. Este ejercicio mezcla Herencia Abstracta con Interfaces y HashMap.</p>
+    
+<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--blue);">
+  <h4 style="color: var(--blue);">Fase 1: Interfaces y Clases Base</h4>
+  <ul style="padding-left: 1.25rem;">
+    <li>Crea la excepción <strong>MatriculaDuplicadaException</strong>.</li>
+    <li>Crea la interfaz <strong>Conducible</strong> con: <code>void arrancar()</code>, <code>void parar()</code> y <code>String getEstado()</code>.</li>
+    <li>Clase abstracta <strong>Vehiculo</strong> (implementa Conducible) con: matricula, marca, velocidadMax. Añade el método abstracto <code>String getTipo()</code>.</li>
+  </ul>
+</div>
 
-1. Interfaz <strong>Conducible</strong> con:
-   - <em>void arrancar()</em>
-   - <em>void parar()</em>
-   - <em>String getEstado()</em>
+<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--accent);">
+  <h4 style="color: var(--accent);">Fase 2: Clases Concretas</h4>
+  <ul style="padding-left: 1.25rem;">
+    <li>Clase <strong>Coche</strong> (extiende Vehiculo). Añade <code>numPuertas</code>. Implementa todos los métodos obligatorios. Su tipo es "Coche".</li>
+    <li>Clase <strong>Moto</strong> (extiende Vehiculo). Añade <code>tieneSidecar</code>. Implementa todos los métodos obligatorios. Su tipo es "Moto".</li>
+  </ul>
+</div>
 
-2. Clase abstracta <strong>Vehiculo</strong> con:
-   - Atributos privados: matricula (String), marca (String), velocidadMax (int)
-   - Constructor con parámetros
-   - Método abstracto: <em>String getTipo()</em>
-   - Implementa Conducible
-
-3. Clase <strong>Coche</strong> que extiende Vehiculo con:
-   - Atributo: numPuertas (int)
-   - Implementa getTipo() devolviendo "Coche"
-   - Implementa arrancar(), parar() y getEstado()
-
-4. Clase <strong>Moto</strong> que extiende Vehiculo con:
-   - Atributo: tieneSidecar (boolean)
-   - Implementa getTipo() devolviendo "Moto"
-
-5. Clase <strong>GestorFlota</strong> con:
-   - Atributo: <em>HashMap&lt;String, Vehiculo&gt;</em> donde la clave es la matrícula
-   - Método <em>añadir(Vehiculo v)</em>: añade al mapa, lanza excepción si la matrícula ya existe
-   - Método <em>buscar(String matricula)</em>: devuelve el vehículo o lanza excepción si no existe
-   - Método <em>listarTodos()</em>: imprime todos los vehículos con su tipo e info
-
-6. Crea una excepción personalizada <strong>MatriculaDuplicadaException</strong>`,
+<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--yellow);">
+  <h4 style="color: var(--yellow);">Fase 3: Uso de Collections (HashMap)</h4>
+  <ul style="padding-left: 1.25rem;">
+    <li>Clase <strong>GestorFlota</strong> con un <code>HashMap&lt;String, Vehiculo&gt;</code> (la clave es la matrícula).</li>
+    <li>Método <code>añadir(Vehiculo v)</code>: Añade al mapa. Lanza <code>MatriculaDuplicadaException</code> si la matrícula ya existe.</li>
+    <li>Método <code>buscar(String matricula)</code>: Devuelve el vehículo o lanza excepción genérica.</li>
+    <li>Método <code>listarTodos()</code>: Itera el HashMap e imprime info de cada vehículo.</li>
+  </ul>
+</div>`,
 
     pistas: [
       '💡 <strong>Interfaz + clase abstracta</strong>: <code>abstract class Vehiculo implements Conducible</code> — la clase abstracta puede implementar la interfaz parcialmente o dejar métodos sin implementar.',
@@ -208,34 +207,34 @@ Diseña e implementa en Java las siguientes clases:
     nivel: '⭐⭐',
     temas: ['Encapsulación', 'ArrayList', 'Excepciones', 'Interfaces'],
     tiempo: '30 min',
-    enunciado: `Diseña un sistema de gestión de una biblioteca:
+    enunciado: `<p style="margin-bottom: 1rem;">Diseña un sistema de gestión de una biblioteca enfocado en polimorfismo y manejo de ArrayList con búsqueda lineal.</p>
 
-1. Interfaz <strong>Prestable</strong> con:
-   - <em>void prestar(String usuario)</em>
-   - <em>void devolver()</em>
-   - <em>boolean isDisponible()</em>
+<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--blue);">
+  <h4 style="color: var(--blue);">Fase 1: Excepciones e Interfaces</h4>
+  <ul style="padding-left: 1.25rem;">
+    <li>Excepción personalizada <strong>ElementoNoEncontradoException</strong>.</li>
+    <li>Interfaz <strong>Prestable</strong> con <code>prestar(String usuario)</code>, <code>devolver()</code> y <code>isDisponible()</code>.</li>
+  </ul>
+</div>
 
-2. Clase abstracta <strong>Elemento</strong> con:
-   - Atributos privados: titulo (String), año (int), disponible (boolean = true)
-   - Implementa Prestable
-   - Método abstracto: <em>String getCategoria()</em>
+<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--accent);">
+  <h4 style="color: var(--accent);">Fase 2: Elementos de la Biblioteca</h4>
+  <ul style="padding-left: 1.25rem;">
+    <li>Clase abstracta <strong>Elemento</strong> (implementa Prestable). Atributos: titulo, año, disponible (inicializado a true). Método abstracto: <code>getCategoria()</code>.</li>
+    <li>Clase <strong>Libro</strong> (extiende Elemento). Añade autor, numPaginas. Su categoría es "Libro".</li>
+    <li>Clase <strong>Revista</strong> (extiende Elemento). Añade numero, editorial. Su categoría es "Revista".</li>
+  </ul>
+</div>
 
-3. Clase <strong>Libro</strong> que extiende Elemento con:
-   - Atributos: autor (String), numPaginas (int)
-   - Implementa getCategoria() → "Libro"
-
-4. Clase <strong>Revista</strong> que extiende Elemento con:
-   - Atributos: numero (int), editorial (String)
-   - Implementa getCategoria() → "Revista"
-
-5. Clase <strong>Biblioteca</strong> con:
-   - <em>ArrayList&lt;Elemento&gt;</em> catalogo
-   - Método <em>añadir(Elemento e)</em>
-   - Método <em>buscarPorTitulo(String titulo)</em>: devuelve el elemento o lanza ElementoNoEncontradoException
-   - Método <em>listarDisponibles()</em>: imprime solo los disponibles
-   - Método <em>prestarElemento(String titulo, String usuario)</em>: busca y presta, lanza excepción si no disponible
-
-6. Excepción personalizada <strong>ElementoNoEncontradoException</strong>`,
+<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--green);">
+  <h4 style="color: var(--green);">Fase 3: Gestión con ArrayList</h4>
+  <ul style="padding-left: 1.25rem;">
+    <li>Clase <strong>Biblioteca</strong> con un <code>ArrayList&lt;Elemento&gt;</code>.</li>
+    <li>Método <code>añadir(Elemento e)</code>.</li>
+    <li>Método <code>buscarPorTitulo(String titulo)</code>: Itera la lista. Haz un <code>if</code> para ver si el título coincide. Si termina el bucle sin encontrarlo, lanza <code>ElementoNoEncontradoException</code>.</li>
+    <li>Método <code>prestarElemento(titulo, usuario)</code>: Busca, si no está disponible lanza una RuntimeException. Si lo está, marca como no disponible al usuario.</li>
+  </ul>
+</div>`,
 
     pistas: [
       '💡 <strong>disponible</strong>: inicializa el atributo en la declaración: <code>private boolean disponible = true;</code>',
