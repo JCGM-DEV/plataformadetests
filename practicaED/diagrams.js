@@ -13,7 +13,7 @@ const SVG_DEFS = `<defs>
     <polygon points="0 0, 10 3.5, 0 7" fill="#4a4a7a"/>
   </marker>
   <marker id="arrowAct" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-    <polygon points="0 0, 10 3.5, 0 7" fill="#4a4a7a"/>
+    <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
   </marker>
   <marker id="arrowInherit" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto">
     <polygon points="0 0, 12 6, 0 12" fill="#1a1a30" stroke="#4a4a7a" stroke-width="1"/>
@@ -319,7 +319,15 @@ function renderActividadCompra() {
     { x:180, y:310, w:140, h:34, label:'Confirmar Pago' },
   ];
   acts.forEach(a => {
-    out += `<rect x="${a.x}" y="${a.y}" width="${a.w}" height="${a.h}" rx="4" class="act-rect"/>`;
+    let cls = 'act-rect';
+    if (a.label.includes('Tarjeta') || a.label.includes('PayPal')) cls = 'act-para';
+    const rx = cls === 'act-rect' ? 4 : 0;
+    
+    if (cls === 'act-para') {
+      out += `<polygon points="${a.x-10},${a.y+a.h} ${a.x+a.w},${a.y+a.h} ${a.x+a.w+10},${a.y} ${a.x},${a.y}" class="act-para"/>`;
+    } else {
+      out += `<rect x="${a.x}" y="${a.y}" width="${a.w}" height="${a.h}" rx="${rx}" class="${cls}"/>`;
+    }
     out += `<text x="${a.x+a.w/2}" y="${a.y+a.h/2+4}" class="act-text">${a.label}</text>`;
   });
   // Decision diamond
@@ -333,15 +341,15 @@ function renderActividadCompra() {
   out += `<line x1="250" y1="144" x2="250" y2="174" class="act-arrow" marker-end="url(#arrowAct)"/>`;
   out += `<line x1="250" y1="209" x2="250" y2="219" class="act-arrow" marker-end="url(#arrowAct)"/>`;
   // Decision to branches
-  out += `<line x1="225" y1="245" x2="200" y2="245" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrowAct)"/>`;
-  out += `<line x1="275" y1="245" x2="300" y2="245" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrowAct)"/>`;
-  out += `<text x="195" y="240" font-family="Inter" font-size="9" fill="#fbbf24">Tarjeta</text>`;
-  out += `<text x="275" y="240" font-family="Inter" font-size="9" fill="#fbbf24">PayPal</text>`;
+  out += `<line x1="225" y1="245" x2="200" y2="245" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowAct)"/>`;
+  out += `<line x1="275" y1="245" x2="300" y2="245" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowAct)"/>`;
+  out += `<text x="185" y="240" font-family="Inter" font-size="10" fill="#ffc107" font-weight="700">Sí</text>`;
+  out += `<text x="285" y="240" font-family="Inter" font-size="10" fill="#ffc107" font-weight="700">No</text>`;
   // Merge back
-  out += `<line x1="130" y1="274" x2="130" y2="327" stroke="#4a4a7a" stroke-width="1.5"/>`;
-  out += `<line x1="130" y1="327" x2="179" y2="327" class="act-arrow" marker-end="url(#arrowAct)"/>`;
-  out += `<line x1="365" y1="274" x2="365" y2="327" stroke="#4a4a7a" stroke-width="1.5"/>`;
-  out += `<line x1="365" y1="327" x2="321" y2="327" class="act-arrow" marker-end="url(#arrowAct)"/>`;
+  out += `<line x1="130" y1="274" x2="130" y2="327" stroke="#555" stroke-width="2"/>`;
+  out += `<line x1="130" y1="327" x2="179" y2="327" class="act-arrow"/>`;
+  out += `<line x1="365" y1="274" x2="365" y2="327" stroke="#555" stroke-width="2"/>`;
+  out += `<line x1="365" y1="327" x2="321" y2="327" class="act-arrow"/>`;
   // Final
   out += `<line x1="250" y1="344" x2="250" y2="360" class="act-arrow" marker-end="url(#arrowAct)"/>`;
   out += `<circle cx="250" cy="372" r="10" class="state-end"/>`;

@@ -30,6 +30,13 @@
   --radius2: 8px;
   --shadow: 0 4px 32px rgba(0,0,0,.5);
   --shadow2: 0 2px 16px rgba(0,0,0,.3);
+  --flow-init: #3f51b5;
+  --flow-init-bg: rgba(63, 81, 181, 0.2);
+  --flow-proc: #ff9800;
+  --flow-proc-bg: rgba(255, 152, 0, 0.2);
+  --flow-io: #ffc107;
+  --flow-io-bg: rgba(255, 193, 7, 0.2);
+  --flow-dec: #1a1a1a;
   --transition: .2s ease;
 }
 
@@ -1015,10 +1022,14 @@ body {
 .state-label { font-family: 'Inter', sans-serif; font-size: 10px; fill: #9898b8; }
 
 /* Activity */
-.act-rect { fill: #1a1a30; stroke: #4a4a7a; stroke-width: 1.5; rx: 20; }
-.act-diamond { fill: #1a1a30; stroke: var(--yellow); stroke-width: 1.5; }
-.act-text { font-family: 'Inter', sans-serif; font-size: 11px; fill: #e8e8f0; text-anchor: middle; }
-.act-arrow { stroke: #4a4a7a; stroke-width: 1.5; marker-end: url(#arrowAct); fill: none; }
+/* Activity / Flow Nodes */
+.act-rect { fill: var(--flow-proc-bg); stroke: var(--flow-proc); stroke-width: 2; rx: 4; }
+.act-oval { fill: var(--flow-init-bg); stroke: var(--flow-init); stroke-width: 2; }
+.act-para { fill: var(--flow-io-bg); stroke: var(--flow-io); stroke-width: 2; }
+.act-diamond { fill: var(--flow-dec); stroke: #444; stroke-width: 2; }
+.act-text { font-family: 'Inter', sans-serif; font-size: 11px; fill: #e8e8f0; text-anchor: middle; font-weight: 600; }
+.act-text-white { fill: #ffffff; font-weight: 700; }
+.act-arrow { stroke: #555; stroke-width: 2; marker-end: url(#arrowAct); fill: none; }
 .act-sync { fill: #7c5cfc; }
 
 /* Responsive adjustments */
@@ -1245,4 +1256,40 @@ body {
 .btn-tiny {
   padding: 2px 8px;
   font-size: 0.7rem;
+}
+
+/* Position Controls for Flow Nodes */
+.pos-controls {
+  display: flex;
+  gap: 2px;
+  margin: 0 4px;
+}
+
+.btn-pos {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.2s;
+}
+
+.btn-pos:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.node-edit-card[data-type="decision"] {
+  border-left: 3px solid var(--yellow);
+}
+
+.node-edit-card[data-type="start"] {
+  border-left: 3px solid var(--green);
+}
+
+.node-edit-card[data-type="process"] {
+  border-left: 3px solid var(--blue);
 }
