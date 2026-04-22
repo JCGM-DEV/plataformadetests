@@ -41,7 +41,11 @@ const UNITS = {
       { id: 'ud5-drag2', icon: '🎯', label: 'Ejercicio: Tipo de mensaje', type: 'drag', dragId: 'tipo_mensaje' },
       { id: 'ud5-drag3', icon: '🎯', label: 'Ejercicio: Secuencia vs Comunicación', type: 'drag', dragId: 'comunicacion_vs_secuencia' },
       { id: 'ud5-diagram', icon: '📐', label: 'Diagramas Guiados', type: 'diagram', diagId: 'ud5_diag' },
-      { id: 'ud5-lab', icon: '🧪', label: 'Laboratorio: Flujogramas', type: 'lab' },
+      { id: 'ud5-lab', icon: '🧪', label: 'Lab: Actividad / Flujo', type: 'lab' },
+      { id: 'ud5-lab-usecase', icon: '🧪', label: 'Lab: Casos de Uso', type: 'lab' },
+      { id: 'ud5-lab-seq', icon: '🧪', label: 'Lab: Secuencia', type: 'lab' },
+      { id: 'ud5-lab-comms', icon: '🧪', label: 'Lab: Comunicación', type: 'lab' },
+      { id: 'ud5-lab-states', icon: '🧪', label: 'Lab: Estados', type: 'lab' },
     ]
   },
   ud7: {
@@ -939,6 +943,154 @@ const LAB_EXERCISES = {
     }
   ]
 };
+
+// Append new lab exercises for the 4 new interactive modes
+Object.assign(LAB_EXERCISES, {
+  'ud5-lab-usecase': [
+    {
+      id: 'uc-ex1', title: 'Sistema de Login',
+      scenario: 'Un actor "Usuario" puede "Identificarse". Ese caso de uso incluye (obligatoriamente) "Verificar Contraseña". Adiciona el sistema y las conexiones.',
+      solution: {
+        actors: ['Usuario'], usecases: ['Identificarse', 'Verificar'],
+        rels: [
+          { from: 'Usuario', to: 'Identificarse', type: 'assoc' },
+          { from: 'Identificarse', to: 'Verificar', type: 'include' }
+        ]
+      }
+    },
+    {
+      id: 'uc-ex2', title: 'Cajero Automático',
+      scenario: 'Actor "Cliente" puede "Retirar Efectivo" (que incluye "Verificar Saldo"). Opcionalmente "Pagar Servicio" puede extender "Retirar Efectivo".',
+      solution: {
+        actors: ['Cliente'], usecases: ['Retirar', 'Verificar', 'Pagar'],
+        rels: [
+          { from: 'Cliente', to: 'Retirar', type: 'assoc' },
+          { from: 'Retirar', to: 'Verificar', type: 'include' },
+          { from: 'Pagar', to: 'Retirar', type: 'extend' }
+        ]
+      }
+    },
+    {
+      id: 'uc-ex3', title: 'Tienda Online',
+      scenario: 'Actor "Cliente" realiza pedido (incluye iniciar sesión). Actor "Admin" gestiona productos. Ambos actores extienden el actor base "Usuario".',
+      solution: {
+        actors: ['Cliente', 'Admin', 'Usuario'],
+        usecases: ['Realizar Pedido', 'Iniciar Sesión', 'Gestionar'],
+        rels: [
+          { from: 'Cliente', to: 'Usuario', type: 'generalize' },
+          { from: 'Admin', to: 'Usuario', type: 'generalize' },
+          { from: 'Cliente', to: 'Realizar Pedido', type: 'assoc' },
+          { from: 'Realizar Pedido', to: 'Iniciar Sesión', type: 'include' },
+          { from: 'Admin', to: 'Gestionar', type: 'assoc' }
+        ]
+      }
+    }
+  ],
+
+  'ud5-lab-seq': [
+    {
+      id: 'seq-ex1', title: 'Login — 3 Objetos',
+      scenario: 'Añade 3 objetos: ":Cliente", ":Sistema", ":BBDD". El cliente envía "login()" al sistema (síncrono), el sistema envía "findUser()" a la BBDD, la BBDD retorna un resultado.',
+      solution: {
+        lifelines: [':Cliente', ':Sistema', ':BBDD'],
+        messages: ['login', 'findUser'],
+        minMessages: 2
+      }
+    },
+    {
+      id: 'seq-ex2', title: 'Compra Online',
+      scenario: 'Objetos: ":Cliente", ":Tienda", ":Pago". El cliente hace "realizarPedido()", la tienda llama "procesarPago()" al servicio de pago (asíncrono), y el pago retorna confirmación.',
+      solution: {
+        lifelines: [':Cliente', ':Tienda', ':Pago'],
+        messages: ['realizarPedido', 'procesarPago'],
+        minMessages: 2
+      }
+    },
+    {
+      id: 'seq-ex3', title: 'Reserva de Hotel',
+      scenario: 'Objetos: ":Cliente", ":Web", ":Reservas", ":BBDD". Flujo de reserva con al menos 3 mensajes: buscarDisponibilidad, confirmarReserva, guardarReserva.',
+      solution: {
+        lifelines: [':Cliente', ':Web', ':Reservas'],
+        messages: ['buscarDisponibilidad', 'confirmarReserva', 'guardar'],
+        minMessages: 3
+      }
+    }
+  ],
+
+  'ud5-lab-comms': [
+    {
+      id: 'comms-ex1', title: 'Login — Diagrama de Comunicación',
+      scenario: 'Crea los mismos 3 objetos que en el diagrama de secuencia: ":Cliente", ":Sistema", ":BBDD". Enlázalos con mensajes numerados (1: login(), 2: findUser(), 2.1: query()). Compara: ¡es la misma información que la secuencia, pero sin eje de tiempo!',
+      solution: {
+        objects: [':Cliente', ':Sistema', ':BBDD'],
+        links: [
+          { from: ':Cliente', to: ':Sistema' },
+          { from: ':Sistema', to: ':BBDD' }
+        ],
+        minMessages: 2
+      }
+    },
+    {
+      id: 'comms-ex2', title: 'Pedido con 4 Objetos',
+      scenario: 'Crea: ":Cliente", ":Carrito", ":Pago", ":Almacén". Enlaza: Cliente→Carrito (1: añadirProducto()), Carrito→Pago (2: procesarPago()), Pago→Almacén (2.1: reservarStock()).',
+      solution: {
+        objects: [':Cliente', ':Carrito', ':Pago'],
+        links: [
+          { from: ':Cliente', to: ':Carrito' },
+          { from: ':Carrito', to: ':Pago' }
+        ],
+        minMessages: 2
+      }
+    }
+  ],
+
+  'ud5-lab-states': [
+    {
+      id: 'st-ex1', title: 'Estados de una Factura',
+      scenario: 'Modela el ciclo de vida de una Factura: Inicial → CREADA → PENDIENTE → PAGADA → Final. Añade también una transición de PENDIENTE a CANCELADA.',
+      solution: {
+        needsInitial: true, needsFinal: true,
+        states: ['CREADA', 'PENDIENTE', 'PAGADA', 'CANCELADA'],
+        transitions: [
+          { from: 'initial', to: 'CREADA' },
+          { from: 'CREADA', to: 'PENDIENTE' },
+          { from: 'PENDIENTE', to: 'PAGADA' },
+          { from: 'PENDIENTE', to: 'CANCELADA' }
+        ]
+      }
+    },
+    {
+      id: 'st-ex2', title: 'Semáforo',
+      scenario: 'Ciclo de un Semáforo: Inicial → ROJO → VERDE → AMARILLO → ROJO (ciclo). Añade las transiciones con los eventos temporizador.',
+      solution: {
+        needsInitial: true, needsFinal: false,
+        states: ['ROJO', 'VERDE', 'AMARILLO'],
+        transitions: [
+          { from: 'initial', to: 'ROJO' },
+          { from: 'ROJO', to: 'VERDE' },
+          { from: 'VERDE', to: 'AMARILLO' },
+          { from: 'AMARILLO', to: 'ROJO' }
+        ]
+      }
+    },
+    {
+      id: 'st-ex3', title: 'Pedido de Tienda',
+      scenario: 'Estados de un Pedido: NUEVO → PROCESANDO → ENVIADO → ENTREGADO (final). Si se cancela antes de enviarse: PROCESANDO → CANCELADO (final).',
+      solution: {
+        needsInitial: true, needsFinal: true,
+        states: ['NUEVO', 'PROCESANDO', 'ENVIADO', 'ENTREGADO', 'CANCELADO'],
+        transitions: [
+          { from: 'initial', to: 'NUEVO' },
+          { from: 'NUEVO', to: 'PROCESANDO' },
+          { from: 'PROCESANDO', to: 'ENVIADO' },
+          { from: 'ENVIADO', to: 'ENTREGADO' },
+          { from: 'PROCESANDO', to: 'CANCELADO' }
+        ]
+      }
+    }
+  ]
+});
+
 
 const GIT_CHALLENGES = [
   {
