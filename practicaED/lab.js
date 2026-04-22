@@ -9,12 +9,48 @@ let currentLabMode = 'flow';
 let currentExerciseIdx = -1;
 
 const LAB_MODE_META = {
-  uml:      { title: 'Clases UML',               icon: '📐' },
-  flow:     { title: 'Diagrama de Actividad',    icon: '🔄' },
-  usecase:  { title: 'Casos de Uso',             icon: '⭕' },
-  sequence: { title: 'Diagrama de Secuencia',    icon: '⬇️' },
-  comms:    { title: 'Diagrama de Comunicación', icon: '🔢' },
-  states:   { title: 'Diagrama de Estados',      icon: '⚫' },
+  uml:      { title: 'Clases UML',               icon: 'UML_CLASS' },
+  flow:     { title: 'Diagrama de Actividad',    icon: 'UML_ACTIVITY' },
+  usecase:  { title: 'Casos de Uso',             icon: 'UML_ACTOR' },
+  sequence: { title: 'Diagrama de Secuencia',    icon: 'UML_SEQ' },
+  comms:    { title: 'Diagrama de Comunicación', icon: 'UML_COMMS' },
+  states:   { title: 'Diagrama de Estados',      icon: 'UML_STATE' },
+};
+
+const UML_SYMBOLS = {
+  // Generic Icons for Mode Headers
+  UML_CLASS: `<svg viewBox="0 0 24 24" class="uml-icon-header"><rect x="4" y="4" width="16" height="16" rx="1" stroke="currentColor" fill="none" stroke-width="1.5"/><line x1="4" y1="10" x2="20" y2="10" stroke="currentColor" stroke-width="1.5"/></svg>`,
+  UML_ACTIVITY: `<svg viewBox="0 0 24 24" class="uml-icon-header"><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" fill="none" stroke-width="1.5"/><circle cx="12" cy="12" r="3" stroke="currentColor" fill="none" stroke-width="1.5"/></svg>`,
+  UML_ACTOR: `<svg viewBox="0 0 24 24" class="uml-icon-header"><circle cx="12" cy="7" r="4" stroke="currentColor" fill="none" stroke-width="1.5"/><line x1="12" y1="11" x2="12" y2="18" stroke="currentColor" stroke-width="1.5"/><line x1="8" y1="14" x2="16" y2="14" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="18" x2="9" y2="22" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="18" x2="15" y2="22" stroke="currentColor" stroke-width="1.5"/></svg>`,
+  UML_SEQ: `<svg viewBox="0 0 24 24" class="uml-icon-header"><line x1="8" y1="4" x2="8" y2="20" stroke="currentColor" stroke-dasharray="2 2" stroke-width="1.5"/><line x1="16" y1="4" x2="16" y2="20" stroke="currentColor" stroke-dasharray="2 2" stroke-width="1.5"/><line x1="8" y1="10" x2="16" y2="10" stroke="currentColor" marker-end="url(#arrowAssoc)" stroke-width="1.5"/></svg>`,
+  UML_COMMS: `<svg viewBox="0 0 24 24" class="uml-icon-header"><rect x="3" y="3" width="7" height="5" rx="1" stroke="currentColor" fill="none" stroke-width="1.5"/><rect x="14" y="16" width="7" height="5" rx="1" stroke="currentColor" fill="none" stroke-width="1.5"/><line x1="10" y1="8" x2="14" y2="16" stroke="currentColor" stroke-width="1.5"/></svg>`,
+  UML_STATE: `<svg viewBox="0 0 24 24" class="uml-icon-header"><rect x="4" y="6" width="16" height="12" rx="6" stroke="currentColor" fill="none" stroke-width="1.5"/></svg>`,
+
+  // Element Symbols
+  actor: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><circle cx="12" cy="5" r="4" stroke="currentColor" fill="none" stroke-width="1.5"/><line x1="12" y1="9" x2="12" y2="18" stroke="currentColor" stroke-width="1.5"/><line x1="6" y1="12" x2="18" y2="12" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="18" x2="8" y2="23" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="18" x2="16" y2="23" stroke="currentColor" stroke-width="1.5"/></svg>`,
+  usecase: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><ellipse cx="12" cy="12" rx="10" ry="6" stroke="currentColor" fill="none" stroke-width="1.5"/></svg>`,
+  system: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><rect x="3" y="3" width="18" height="18" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="3 2"/></svg>`,
+  class: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><rect x="3" y="3" width="18" height="18" stroke="currentColor" fill="none" stroke-width="1.5"/><line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1.5"/><line x1="3" y1="15" x2="21" y2="15" stroke="currentColor" stroke-width="1.5"/></svg>`,
+  start: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><rect x="4" y="7" width="16" height="10" rx="5" stroke="currentColor" fill="none" stroke-width="1.5"/></svg>`,
+  process: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><rect x="3" y="6" width="18" height="12" stroke="currentColor" fill="none" stroke-width="1.5"/></svg>`,
+  decision: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><path d="M 12 4 L 20 12 L 12 20 L 4 12 Z" stroke="currentColor" fill="none" stroke-width="1.5"/></svg>`,
+  io: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><path d="M 6 6 L 21 6 L 18 18 L 3 18 Z" stroke="currentColor" fill="none" stroke-width="1.5"/></svg>`,
+  lifeline: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><rect x="4" y="3" width="16" height="6" stroke="currentColor" fill="none" stroke-width="1.5"/><line x1="12" y1="9" x2="12" y2="21" stroke="currentColor" stroke-dasharray="2 2" stroke-width="1.5"/></svg>`,
+  obj: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><rect x="4" y="6" width="16" height="12" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="12" y="14" font-size="6" text-anchor="middle" fill="currentColor">object</text></svg>`,
+  initial: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><circle cx="12" cy="12" r="6" fill="currentColor" stroke="none"/></svg>`,
+  state: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><rect x="3" y="7" width="18" height="10" rx="5" stroke="currentColor" fill="none" stroke-width="1.5"/></svg>`,
+  final: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><circle cx="12" cy="12" r="8" stroke="currentColor" fill="none" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="currentColor" stroke="none"/></svg>`,
+
+  // Connectors
+  inherit: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><line x1="4" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.5"/><path d="M 16 7 L 22 12 L 16 17 Z" fill="none" stroke="currentColor"/></svg>`,
+  compose: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><line x1="10" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.5"/><path d="M 4 12 L 7 9 L 10 12 L 7 15 Z" fill="currentColor" stroke="currentColor"/></svg>`,
+  agg: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><line x1="10" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.5"/><path d="M 4 12 L 7 9 L 10 12 L 7 15 Z" fill="none" stroke="currentColor"/></svg>`,
+  assoc: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.5"/></svg>`,
+  include: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2" marker-end="url(#arrowAssoc)"/></svg>`,
+  generalize: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><line x1="4" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.5"/><path d="M 16 7 L 22 12 L 16 17 Z" fill="none" stroke="currentColor"/></svg>`,
+  sync: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" marker-end="url(#arrowFull)"/></svg>`,
+  async: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.5" marker-end="url(#arrowOpen)"/></svg>`,
+  return: `<svg viewBox="0 0 24 24" class="uml-tool-svg"><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2" marker-end="url(#arrowOpen)"/></svg>`,
 };
 
 function showLab() {
@@ -45,7 +81,7 @@ function renderLabUI() {
     <div class="lab-header">
       <div style="display:flex; justify-content:space-between; align-items:center">
         <div>
-          <h2>${meta.icon} Lab: ${meta.title}</h2>
+          <h2>${UML_SYMBOLS[meta.icon] || meta.icon} Lab: ${meta.title}</h2>
           <p>Construye diagramas UML con corrección en tiempo real.</p>
         </div>
         ${exercises.length > 0 ? `
@@ -121,10 +157,10 @@ function renderToolbox() {
 
 function renderFlowToolbox() {
   return `
-    <button class="tool-btn" onclick="addLabNode('start')"><span class="tool-icon oval"></span> Inicio/Fin</button>
-    <button class="tool-btn" onclick="addLabNode('process')"><span class="tool-icon rect"></span> Proceso</button>
-    <button class="tool-btn" onclick="addLabNode('decision')"><span class="tool-icon diamond"></span> Decisión</button>
-    <button class="tool-btn" onclick="addLabNode('io')"><span class="tool-icon para"></span> Ent/Sal</button>
+    <button class="tool-btn" onclick="addLabNode('start')"><span class="tool-icon">${UML_SYMBOLS.start}</span> Inicio/Fin</button>
+    <button class="tool-btn" onclick="addLabNode('process')"><span class="tool-icon">${UML_SYMBOLS.process}</span> Proceso</button>
+    <button class="tool-btn" onclick="addLabNode('decision')"><span class="tool-icon">${UML_SYMBOLS.decision}</span> Decisión</button>
+    <button class="tool-btn" onclick="addLabNode('io')"><span class="tool-icon">${UML_SYMBOLS.io}</span> Ent/Sal</button>
   `;
 }
 
@@ -132,80 +168,77 @@ function renderUMLToolbox() {
   const ex = currentExerciseIdx !== -1 ? (LAB_EXERCISES[activeSection]?.[currentExerciseIdx]) : null;
   const requiredRel = ex?.solution?.rels?.[0]?.type || null;
   const relTypes = [
-    { type: 'inherit', icon: '◁—', label: 'Herencia' },
-    { type: 'compose', icon: '◆—', label: 'Comp.' },
-    { type: 'agg',     icon: '◇—', label: 'Agreg.' },
-    { type: 'assoc',   icon: '———', label: 'Asoc.' },
+    { type: 'inherit', symbol: UML_SYMBOLS.inherit, label: 'Herencia' },
+    { type: 'compose', symbol: UML_SYMBOLS.compose, label: 'Comp.' },
+    { type: 'agg',     symbol: UML_SYMBOLS.agg,     label: 'Agreg.' },
+    { type: 'assoc',   symbol: UML_SYMBOLS.assoc,   label: 'Asoc.' },
   ];
   const relButtons = relTypes.map(r => {
     const isSelected = window.currentRelType === r.type;
     const isRequired = requiredRel === r.type;
     const cls = isSelected ? 'tool-btn tool-btn--active' : (isRequired ? 'tool-btn tool-btn--hint' : 'tool-btn');
     return `<button class="${cls}" id="relbtn-${r.type}" onclick="selectRelTool('${r.type}')">
-      <span class="tool-icon">${r.icon}</span> ${r.label}
+      <span class="tool-icon">${r.symbol}</span> ${r.label}
       ${isRequired && !isSelected ? '<span class="tool-hint-badge">?</span>' : ''}
     </button>`;
   }).join('');
   return `
-    <button class="tool-btn" onclick="addLabNode('class')"><span class="tool-icon rect" style="border-width:2px;border-style:double"></span> Clase</button>
+    <button class="tool-btn" onclick="addLabNode('class')"><span class="tool-icon">${UML_SYMBOLS.class}</span> Clase</button>
     ${relButtons}
   `;
 }
 
 function renderUseCaseToolbox() {
   const ucRelTypes = [
-    { type: 'assoc',      icon: '—',     label: 'Asociación' },
-    { type: 'include',    icon: '«inc»', label: 'Include' },
-    { type: 'extend',     icon: '«ext»', label: 'Extend' },
-    { type: 'generalize', icon: '◁—',   label: 'Generaliz.' },
+    { type: 'assoc',      symbol: UML_SYMBOLS.assoc,      label: 'Asoc.' },
+    { type: 'include',    symbol: UML_SYMBOLS.include,    label: 'Incl.' },
+    { type: 'extend',     symbol: UML_SYMBOLS.include,    label: 'Ext.' }, // Same symbol, different label
+    { type: 'generalize', symbol: UML_SYMBOLS.generalize, label: 'Gen.' },
   ];
   const btns = ucRelTypes.map(r => {
     const isSelected = window.currentRelType === r.type;
     return `<button class="tool-btn ${isSelected ? 'tool-btn--active' : ''}" onclick="selectRelTool('${r.type}')">
-      <span style="font-size:9px;font-weight:700">${r.icon}</span> ${r.label}
+      <span class="tool-icon">${r.symbol}</span> ${r.label}
     </button>`;
   }).join('');
   return `
-    <button class="tool-btn" onclick="addLabNode('actor')">🧑 Actor</button>
-    <button class="tool-btn" onclick="addLabNode('usecase')"><span class="tool-icon oval" style="width:28px;height:16px;display:inline-block"></span> Caso de Uso</button>
-    <button class="tool-btn" onclick="addLabNode('system')"><span class="tool-icon rect" style="border-style:dashed"></span> Sistema</button>
+    <button class="tool-btn" onclick="addLabNode('actor')"><span class="tool-icon">${UML_SYMBOLS.actor}</span> Actor</button>
+    <button class="tool-btn" onclick="addLabNode('usecase')"><span class="tool-icon">${UML_SYMBOLS.usecase}</span> C. Uso</button>
+    <button class="tool-btn" onclick="addLabNode('system')"><span class="tool-icon">${UML_SYMBOLS.system}</span> Sistema</button>
     ${btns}
-    <p style="font-size:0.72rem;color:#9898b8;margin-top:0.5rem">1. Selecciona el tipo de relación<br>2. Usa "Conectar con..." en el elemento</p>
   `;
 }
 
 function renderSequenceToolbox() {
   const msgTypes = [
-    { type: 'sync',   icon: '→',  label: 'Síncrono' },
-    { type: 'async',  icon: '⇢',  label: 'Asíncrono' },
-    { type: 'return', icon: '⋯→', label: 'Retorno' },
+    { type: 'sync',   symbol: UML_SYMBOLS.sync,   label: 'Sinc.' },
+    { type: 'async',  symbol: UML_SYMBOLS.async,  label: 'Asinc.' },
+    { type: 'return', symbol: UML_SYMBOLS.return, label: 'Ret.' },
   ];
   const btns = msgTypes.map(r => {
     const isSelected = window.currentRelType === r.type;
     return `<button class="tool-btn ${isSelected ? 'tool-btn--active' : ''}" onclick="selectRelTool('${r.type}')">
-      ${r.icon} ${r.label}
+       <span class="tool-icon">${r.symbol}</span> ${r.label}
     </button>`;
   }).join('');
   return `
-    <button class="tool-btn" onclick="addLabNode('lifeline')"><span class="tool-icon rect"></span> Objeto/Actor</button>
+    <button class="tool-btn" onclick="addLabNode('lifeline')"><span class="tool-icon">${UML_SYMBOLS.lifeline}</span> Objeto</button>
     ${btns}
-    <p style="font-size:0.72rem;color:#9898b8;margin-top:0.5rem">1. Selecciona tipo de mensaje<br>2. En el elemento: usa "Enviar msg a..."<br>3. Escribe el nombre del método</p>
   `;
 }
 
 function renderCommsToolbox() {
   return `
-    <button class="tool-btn" onclick="addLabNode('obj')"><span class="tool-icon rect"></span> Objeto</button>
-    <p style="font-size:0.72rem;color:#9898b8;margin-top:0.5rem">Añade objetos y usa "Enlazar con..." para crear mensajes numerados automáticamente.</p>
+    <button class="tool-btn" onclick="addLabNode('obj')"><span class="tool-icon">${UML_SYMBOLS.obj}</span> Objeto</button>
+    <button class="tool-btn tool-btn--disabled"><span class="tool-icon">${UML_SYMBOLS.assoc}</span> Enlace</button>
   `;
 }
 
 function renderStatesToolbox() {
   return `
-    <button class="tool-btn" onclick="addLabNode('initial')">⚫ Est. Inicial</button>
-    <button class="tool-btn" onclick="addLabNode('state')"><span class="tool-icon oval" style="border-radius:8px"></span> Estado</button>
-    <button class="tool-btn" onclick="addLabNode('final')">🎯 Est. Final</button>
-    <p style="font-size:0.72rem;color:#9898b8;margin-top:0.5rem">Añade estados y usa "Transición a..." para conectarlos. Escribe el evento en la etiqueta.</p>
+    <button class="tool-btn" onclick="addLabNode('initial')"><span class="tool-icon">${UML_SYMBOLS.initial}</span> Inicial</button>
+    <button class="tool-btn" onclick="addLabNode('state')"><span class="tool-icon">${UML_SYMBOLS.state}</span> Estado</button>
+    <button class="tool-btn" onclick="addLabNode('final')"><span class="tool-icon">${UML_SYMBOLS.final}</span> Final</button>
   `;
 }
 
@@ -321,16 +354,16 @@ function renderNodeList() {
   };
 
   list.innerHTML = labNodes.map(n => {
-    const icon = iconMap[n.type] || '🟦';
+    const symbol = UML_SYMBOLS[n.type] || '<span class="node-badge">?</span>';
     const showText = n.type !== 'initial' && n.type !== 'final';
     const showPos = ['flow'].includes(currentLabMode);
     return `
       <div class="node-edit-card" data-type="${n.type}">
         <div class="node-row">
-          <span class="node-badge" title="${n.type}">${icon}</span>
+          <div class="node-badge-svg">${symbol}</div>
           ${showText
             ? `<input type="text" value="${n.text}" oninput="updateNodeProperty(${n.id}, 'text', this.value)" placeholder="Nombre...">`
-            : `<span style="color:#9898b8;font-size:0.8rem">${n.type === 'initial' ? 'Inicio ⚫' : 'Fin 🎯'}</span>`}
+            : `<span style="color:#9898b8;font-size:0.8rem">${n.type === 'initial' ? 'Foco Inicial' : 'Foco Final'}</span>`}
           ${showPos ? `
             <div class="pos-controls">
               <button class="btn-pos" onclick="moveNode(${n.id}, -40)">←</button>
@@ -849,14 +882,14 @@ function renderUseCaseCanvas(canvas) {
 }
 
 function drawStickFigure(cx, cy, name) {
-  const R=11, bH=28, lH=22, aW=16;
+  const R=10, bH=24, lH=20, aW=14;
   return [
-    `<circle cx="${cx}" cy="${cy-bH-R}" r="${R}" fill="none" stroke="#22d3a0" stroke-width="2"/>`,
-    `<line x1="${cx}" y1="${cy-bH}" x2="${cx}" y2="${cy}" stroke="#22d3a0" stroke-width="2"/>`,
-    `<line x1="${cx-aW}" y1="${cy-bH+10}" x2="${cx+aW}" y2="${cy-bH+10}" stroke="#22d3a0" stroke-width="2"/>`,
-    `<line x1="${cx}" y1="${cy}" x2="${cx-aW}" y2="${cy+lH}" stroke="#22d3a0" stroke-width="2"/>`,
-    `<line x1="${cx}" y1="${cy}" x2="${cx+aW}" y2="${cy+lH}" stroke="#22d3a0" stroke-width="2"/>`,
-    `<text x="${cx}" y="${cy+lH+14}" text-anchor="middle" font-family="Inter" font-size="11" fill="#22d3a0" font-weight="600">${name}</text>`,
+    `<circle cx="${cx}" cy="${cy-bH-R}" r="${R}" fill="none" stroke="#22d3a0" stroke-width="1.8"/>`,
+    `<line x1="${cx}" y1="${cy-bH}" x2="${cx}" y2="${cy}" stroke="#22d3a0" stroke-width="1.8"/>`,
+    `<line x1="${cx-aW}" y1="${cy-bH+8}" x2="${cx+aW}" y2="${cy-bH+8}" stroke="#22d3a0" stroke-width="1.8"/>`,
+    `<line x1="${cx}" y1="${cy}" x2="${cx-aW}" y2="${cy+lH}" stroke="#22d3a0" stroke-width="1.8"/>`,
+    `<line x1="${cx}" y1="${cy}" x2="${cx+aW}" y2="${cy+lH}" stroke="#22d3a0" stroke-width="1.8"/>`,
+    `<text x="${cx}" y="${cy+lH+16}" text-anchor="middle" font-family="Inter" font-size="11" fill="#22d3a0" font-weight="600">${name}</text>`,
   ].join('');
 }
 
@@ -1010,16 +1043,14 @@ function renderStatesCanvas(canvas) {
   // Initial ⚫
   if (initial) {
     const p = posMap[initial.id];
-    svg += `<circle cx="${p.cx}" cy="${p.cy}" r="13" fill="#c4b5fd"/>`;
-    svg += `<text x="${p.cx+22}" y="${p.cy+5}" font-family="Inter" font-size="10" fill="#9898b8">Estado inicial</text>`;
+    svg += `<circle cx="${p.cx}" cy="${p.cy}" r="9" fill="#c4b5fd"/>`;
   }
 
   // Final ⊙ (double circle)
   if (final) {
     const p = posMap[final.id];
-    svg += `<circle cx="${p.cx}" cy="${p.cy}" r="15" fill="none" stroke="#c4b5fd" stroke-width="2"/>`;
-    svg += `<circle cx="${p.cx}" cy="${p.cy}" r="9" fill="#c4b5fd"/>`;
-    svg += `<text x="${p.cx+22}" y="${p.cy+5}" font-family="Inter" font-size="10" fill="#9898b8">Estado final</text>`;
+    svg += `<circle cx="${p.cx}" cy="${p.cy}" r="12" fill="none" stroke="#c4b5fd" stroke-width="1.5"/>`;
+    svg += `<circle cx="${p.cx}" cy="${p.cy}" r="6" fill="#c4b5fd"/>`;
   }
 
   canvas.innerHTML = `<svg viewBox="0 0 ${W} ${H2}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">${SVG_DEFS}${svg}</svg>`;

@@ -1142,6 +1142,62 @@ body {
 
 .tool-icon { display: flex; align-items: center; justify-content: center; font-size: .8rem; font-family: 'JetBrains Mono'; color: var(--accent3); }
 
+/* PROFESSIONAL UML ICON STYLING */
+.uml-icon-header {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+  color: var(--accent3);
+}
+
+.uml-tool-svg {
+  width: 26px;
+  height: 26px;
+  color: var(--accent3);
+  transition: .2s;
+}
+
+.tool-btn:hover .uml-tool-svg {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.node-badge-svg {
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  background: var(--surface2);
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent3);
+}
+
+.node-edit-card:hover .node-badge-svg {
+  border-color: var(--accent);
+  background: var(--bg3);
+}
+
+.tool-btn {
+  flex-direction: column;
+  padding: 0.75rem 0.25rem;
+  height: auto;
+  min-height: 70px;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.tool-btn .tool-icon {
+  margin-bottom: 2px;
+}
+
+
 /* FEEDBACK BOARD */
 .lab-feedback-board { display: flex; gap: 1rem; background: var(--bg2); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 1.25rem; margin-top: 2rem; border-left: 5px solid var(--accent); transition: .3s ease; animation: fadeIn .4s ease; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
@@ -1162,8 +1218,8 @@ body {
 .lab-canvas-area { position: relative; }
 
 /* TOOLBOX ICONS FIX */
-.toolbox-grid .tool-btn .tool-icon { border: 1.5px solid var(--accent); }
-.toolbox-grid .tool-btn:hover .tool-icon { border-color: var(--accent2); }
+.toolbox-grid .tool-btn .tool-icon { border: none; }
+.toolbox-grid .tool-btn:hover .tool-icon { border: none; }
 
 /* EXERCISE PANEL CLOSE */
 .ex-close { background: var(--surface2); border: 1px solid var(--border); color: var(--text2); padding: .35rem .75rem; border-radius: 6px; font-size: .75rem; font-weight: 600; cursor: pointer; transition: .2s; }
