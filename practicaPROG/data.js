@@ -36,13 +36,12 @@ const UNITS = {
     ]
   },
   practicas: {
-    label: 'EXAMEN', title: 'Prácticas Examen',
+    label: 'EXAMEN', title: 'Prácticas Examen Final',
     sections: [
       { id: 'prac-guia', icon: '📘', label: 'Guía de Supervivencia', type: 'guide', guideId: 'exam_guide' },
       { id: 'prac-tutor', icon: '🎓', label: '🎓 Tutor Interactivo', type: 'tutor' },
-      { id: 'prac-ej1', icon: '📝', label: 'Ejercicio 1: Gestión Empleados', type: 'ejercicio', ejercicioId: 'ej1' },
-      { id: 'prac-ej2', icon: '📝', label: 'Ejercicio 2: Sistema Vehículos', type: 'ejercicio', ejercicioId: 'ej2' },
-      { id: 'prac-ej3', icon: '📝', label: 'Ejercicio 3: Biblioteca', type: 'ejercicio', ejercicioId: 'ej3' },
+      { id: 'prac-ej1', icon: '📝', label: 'Ej 1 — Sistema de Vehículos', type: 'ejercicio', ejercicioId: 'ej1' },
+      { id: 'prac-ej2', icon: '📝', label: 'Ej 2 — Sistema de Empleados', type: 'ejercicio', ejercicioId: 'ej2' },
     ]
   },
   doctor: {
@@ -588,36 +587,71 @@ public class Main {
 const GUIDES = [
   {
     id: 'exam_guide',
-    title: 'Cómo Aprobar el Examen de Programación',
-    subtitle: 'El enfoque táctico para no perderte entre Clases y Objetos.',
+    title: 'Guía del Examen Final — 16 de Mayo',
+    subtitle: 'Lo que ha confirmado el profesor: 2 ejercicios, en papel, 1 hora.',
     content: `
-      <div class="guide-section">
-        <h3>1. Lee el enunciado rompiéndolo en Fases</h3>
-        <p>No intentes programar todo a la vez. El examen está diseñado para evaluar piezas individuales. Divídelo mentalmente en:</p>
+      <div class="guide-section" style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.3);border-radius:12px;padding:1.25rem;margin-bottom:1.5rem">
+        <h3 style="color:#f87171">📋 Formato oficial del examen (email del profesor)</h3>
         <ul class="guide-list">
-          <li><strong>Clases Base (Fáciles):</strong> Son las clases que no tienen mucha lógica, solo atributos, getters y setters. Hazlas primero, son puntos asegurados.</li>
-          <li><strong>Herencia e Interfaces (Medio):</strong> Fíjate en palabras como "Tipos de..." (Herencia) o "Comportamientos compartidos" (Interfaces).</li>
-          <li><strong>El Main y la Lógica (Avanzado):</strong> Recorrer listas (ArrayList), agrupar en diccionarios (HashMap) y capturar excepciones (try-catch).</li>
+          <li>⏱ <strong>Duración total: 1h 30min</strong> → <strong>30 min test</strong> (a, b, c, d — 2 incorrectas cancelan 1) + <strong>1 hora práctica</strong></li>
+          <li>📝 <strong>2 ejercicios prácticos</strong> en papel, en los que habrá que <em>distribuir un sistema por clases</em></li>
+          <li>✅ Temas confirmados: <strong>control de excepciones, encapsulación, herencia, polimorfismo, abstracción e interfaces</strong></li>
+          <li>🗂 También: <strong>estructuras dinámicas vistas en clase</strong> (arrays de objetos, ArrayList, etc.)</li>
+          <li>🚫 <strong>No importan los errores de sintaxis, pero sí los de lógica</strong></li>
+        </ul>
+      </div>
+
+      <div class="guide-section">
+        <h3>1. Estructura mental para cada ejercicio</h3>
+        <p>Cuando leas el enunciado, divídelo así en la cabeza:</p>
+        <ul class="guide-list">
+          <li><strong>① Interface:</strong> Si el enunciado dice "todos se pueden [hacer algo]" → crea una <code>interface</code>. Ej: todos arrancan → <code>interface Conducible { void arrancar(); }</code></li>
+          <li><strong>② Clase abstracta:</strong> La "clase madre" que nunca se instancia directamente. Tiene atributos <code>protected</code> y métodos abstractos obligatorios para las hijas. Usa <code>abstract class X implements MiInterface</code></li>
+          <li><strong>③ Subclases:</strong> Cada tipo concreto (Coche, Moto, Gerente…). Constructor con <code>super()</code>, atributos propios <code>private</code>, y <code>@Override</code> en cada método del padre.</li>
+          <li><strong>④ El main:</strong> Array de objetos del tipo de la clase madre (<code>Animal[] lista = new Animal[4]</code>), <code>try-catch</code> si puede haber error, y un <code>for</code> que recorre con polimorfismo.</li>
         </ul>
       </div>
 
       <div class="guide-section warning-section">
-        <h3>2. Herencia VS Interfaces: Evita la Trampa</h3>
+        <h3>2. Los 5 elementos que el profesor mira siempre</h3>
         <div class="trap-alert">
-          <strong>🚨 La Trampa Típica:</strong> Te piden hacer un "Patinete" y un "Helicóptero". Ambos *se mueven*, así que quieres usar herencia de la clase 'Vehículo'. ¡Error, sus lógicas internas son totalmente distintas! Si comparten *acciones* pero NO naturalezas, usa una <code>interface Movible</code>.
+          <strong>⚠️ Si falta alguno, pierdes puntos aunque el resto esté perfecto:</strong>
         </div>
-        <p><strong>Usa <code style="color:var(--yellow)">abstract class</code> cuando:</strong> Las clases hijas comparten código real y atributos genéricos (ej. <code>nombre</code>, <code>id</code>).</p>
-        <p><strong>Usa <code style="color:var(--green)">interface</code> cuando:</strong> Solo comparten la firma del método, y cada uno lo implementa a su manera radicalmente diferente (ej. <code>void cargarBateria()</code>).</p>
+        <ul class="guide-list" style="margin-top:0.75rem">
+          <li>🔒 <strong>Encapsulación:</strong> atributos <code>private</code> en subclases, <code>protected</code> en la clase abstracta. NUNCA <code>public</code>.</li>
+          <li>🔗 <strong>super() en constructor:</strong> Primera línea del constructor hijo. Si lo olvidas, no compilará.</li>
+          <li>🏷 <strong>@Override:</strong> Ponlo encima de cada método sobreescrito. El profesor lo mira.</li>
+          <li>🧩 <strong>this() en constructor sin parámetros:</strong> <code>public Vehiculo() { this("Marca", "Modelo", 0); }</code></li>
+          <li>🚨 <strong>try-catch:</strong> Siempre que pueda fallar algo (ej: salario negativo en el constructor).</li>
+        </ul>
       </div>
 
       <div class="guide-section highlight-section">
-        <h3>3. Trucos Rápidos para ganar puntos</h3>
-        <ul class="guide-list">
-          <li><strong>Polimorfismo gratuito:</strong> Si tienes una herencia <code>Perro extends Animal</code>, siempre crea tus ArrayList usando el padre: <code>List&lt;Animal&gt; lista = new ArrayList&lt;&gt;();</code>. Usar <code>List&lt;Perro&gt;</code> es un error de diseño frecuente.</li>
-          <li><strong>Encapsulación estricta:</strong> NUNCA dejes atributos públicos. Siempre <code>private</code> e incluye <code>getters/setters</code>. Perderás puntos por no hacerlo aunque tu lógica sea perfecta.</li>
-          <li><strong>Excepciones / Nullointers:</strong> Cuando busques algo en un <code>ArrayList</code>, siempre devuelve <code>null</code> o lanza una excepción si no lo encuentras.</li>
-        </ul>
+        <h3>3. Esqueleto mínimo ganador (memoriza esto)</h3>
+        <div style="background:#0c1e2e;border-radius:8px;padding:1rem;font-family:'JetBrains Mono',monospace;font-size:0.8rem;line-height:1.7;color:#cdd6f4">
+<span style="color:#89b4fa">interface</span> <span style="color:#cba6f7">Accion</span> { <span style="color:#89b4fa">void</span> <span style="color:#89dceb">hacer</span>(); }<br><br>
+<span style="color:#89b4fa">abstract class</span> <span style="color:#cba6f7">Padre</span> <span style="color:#89b4fa">implements</span> <span style="color:#cba6f7">Accion</span> {<br>
+&nbsp;&nbsp;<span style="color:#89b4fa">protected</span> <span style="color:#f38ba8">String</span> nombre;<br>
+&nbsp;&nbsp;<span style="color:#89b4fa">public</span> <span style="color:#cba6f7">Padre</span>(<span style="color:#f38ba8">String</span> nombre) { <span style="color:#89b4fa">this</span>.nombre = nombre; }<br>
+&nbsp;&nbsp;<span style="color:#89b4fa">public</span> <span style="color:#cba6f7">Padre</span>() { <span style="color:#89b4fa">this</span>(<span style="color:#a6e3a1">"Genérico"</span>); }  <span style="color:#6c7086">// this()</span><br>
+&nbsp;&nbsp;<span style="color:#89b4fa">public abstract</span> <span style="color:#f38ba8">String</span> <span style="color:#89dceb">getTipo</span>();<br>
+}<br><br>
+<span style="color:#89b4fa">class</span> <span style="color:#cba6f7">Hijo</span> <span style="color:#89b4fa">extends</span> <span style="color:#cba6f7">Padre</span> {<br>
+&nbsp;&nbsp;<span style="color:#89b4fa">private int</span> extra;<br>
+&nbsp;&nbsp;<span style="color:#89b4fa">public</span> <span style="color:#cba6f7">Hijo</span>(<span style="color:#f38ba8">String</span> nombre, <span style="color:#89b4fa">int</span> extra) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#89b4fa">super</span>(nombre);  <span style="color:#6c7086">// ← primera línea siempre</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#89b4fa">this</span>.extra = extra;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span style="color:#f38ba8">@Override</span> <span style="color:#89b4fa">public</span> <span style="color:#f38ba8">String</span> <span style="color:#89dceb">getTipo</span>() { <span style="color:#89b4fa">return</span> <span style="color:#a6e3a1">"Hijo"</span>; }<br>
+&nbsp;&nbsp;<span style="color:#f38ba8">@Override</span> <span style="color:#89b4fa">public void</span> <span style="color:#89dceb">hacer</span>() { System.out.println(nombre + <span style="color:#a6e3a1">" hace algo"</span>); }<br>
+}<br><br>
+<span style="color:#6c7086">// En main:</span><br>
+<span style="color:#cba6f7">Padre</span>[] arr = <span style="color:#89b4fa">new</span> <span style="color:#cba6f7">Padre</span>[<span style="color:#fab387">3</span>];<br>
+arr[<span style="color:#fab387">0</span>] = <span style="color:#89b4fa">new</span> <span style="color:#cba6f7">Hijo</span>(<span style="color:#a6e3a1">"A"</span>, <span style="color:#fab387">5</span>);<br>
+<span style="color:#89b4fa">try</span> { ... } <span style="color:#89b4fa">catch</span> (<span style="color:#cba6f7">IllegalArgumentException</span> e) { ... }
+        </div>
       </div>
     `
   }
 ];
+

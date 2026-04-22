@@ -1,291 +1,351 @@
 // =============================================
 // EJERCICIOS PRÁCTICOS — Programación DAW
-// Basados en el formato del examen real:
-// 2 ejercicios, sistema por clases, en papel
+// Examen final: 2 ejercicios, en papel, sin IDE
+// Temas: encapsulación, herencia, polimorfismo,
+//        abstracción, interfaces, excepciones,
+//        y estructuras dinámicas (arrays de objetos)
 // =============================================
 
 const EJERCICIOS = [
   {
     id: 'ej1',
-    titulo: 'Sistema de Gestión de Empleados',
+    titulo: 'Ejercicio 1 — Sistema de Vehículos',
     nivel: '⭐⭐',
-    temas: ['Encapsulación', 'Herencia', 'Polimorfismo'],
+    temas: ['Abstract', 'Herencia', 'Interfaces', 'Encapsulación', 'Polimorfismo', 'Excepciones'],
     tiempo: '30 min',
-    enunciado: `<p style="margin-bottom: 1rem;">Una empresa necesita un sistema para gestionar sus empleados. Diseña e implementa en Java las siguientes clases:</p>
-      
-<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--blue);">
-  <h4 style="color: var(--blue);">Fase 1: Clase Base</h4>
-  <ul style="padding-left: 1.25rem;">
-    <li>Crea la clase abstracta <strong>Persona</strong>.</li>
-    <li>Atributos <code>private</code>: nombre (String), edad (int).</li>
-    <li>Constructor con parámetros y Getters y setters con validación (edad > 0).</li>
-    <li>Método abstracto: <code>String getInfo()</code></li>
+    enunciado: `<p style="margin-bottom:1rem;">Diseña un sistema para gestionar una flota de vehículos. El examen pide que escribas en papel las clases Java con la lógica correcta.</p>
+
+<div class="code-exercise-desc" style="margin-bottom:1rem;border-left:3px solid var(--blue)">
+  <h4 style="color:var(--blue)">Parte 1 — Interfaz y clase abstracta</h4>
+  <ul style="padding-left:1.25rem">
+    <li>Crea la interfaz <strong>Conducible</strong> con el método <code>void arrancar()</code>.</li>
+    <li>Crea la clase <strong>abstracta</strong> <code>Vehiculo</code> que <strong>implemente</strong> <code>Conducible</code>.<br>
+        Atributos <code>protected</code>: <code>marca (String)</code>, <code>modelo (String)</code>, <code>velocidadMax (int)</code>.<br>
+        Constructor que reciba los tres atributos.<br>
+        Constructor sin parámetros (valores "Genérica", "Genérico", 0) usando <code>this()</code>.<br>
+        Método abstracto: <code>String getTipo()</code>.<br>
+        Método <code>mostrarInfo()</code> que imprima marca, modelo, velocidadMax y tipo.
+    </li>
   </ul>
 </div>
 
-<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--accent);">
-  <h4 style="color: var(--accent);">Fase 2: Herencia y Polimorfismo</h4>
-  <ul style="padding-left: 1.25rem;">
-    <li>Clase <strong>Empleado</strong> que extiende Persona. Añade: salario (double), departamento (String). Implementa <code>getInfo()</code> y <code>calcularBonus()</code> (devuelve el 10%).</li>
-    <li>Clase <strong>Directivo</strong> que extiende Empleado. Añade numEmpleadosACargo (int). Sobreescribe <code>calcularBonus()</code> para devolver el 20% y <code>getInfo()</code>.</li>
+<div class="code-exercise-desc" style="margin-bottom:1rem;border-left:3px solid var(--accent)">
+  <h4 style="color:var(--accent)">Parte 2 — Subclases con herencia</h4>
+  <ul style="padding-left:1.25rem">
+    <li>Clase <strong>Coche</strong> que extienda <code>Vehiculo</code>.<br>
+        Añade atributo <code>private int numPuertas</code>.<br>
+        Constructor con <code>marca, modelo, velocidadMax, numPuertas</code> usando <code>super()</code>.<br>
+        Constructor sin parámetros: hereda de <code>Vehiculo()</code> y pone puertas = 4.<br>
+        <code>@Override getTipo()</code> → devuelve <code>"Coche"</code>.<br>
+        <code>@Override mostrarInfo()</code> → llama <code>super.mostrarInfo()</code> y añade numPuertas.<br>
+        <code>@Override arrancar()</code> → imprime <code>"El coche [marca] arranca"</code>.
+    </li>
+    <li>Clase <strong>Moto</strong> que extienda <code>Vehiculo</code>.<br>
+        Añade atributo <code>private int cilindrada</code>.<br>
+        Constructor con <code>marca, modelo, velocidadMax, cilindrada</code> usando <code>super()</code>.<br>
+        Constructor sin parámetros: hereda de <code>Vehiculo()</code> y pone cilindrada = 125.<br>
+        <code>@Override getTipo()</code> → devuelve <code>"Moto"</code>.<br>
+        <code>@Override mostrarInfo()</code> → llama <code>super.mostrarInfo()</code> y añade cilindrada.<br>
+        <code>@Override arrancar()</code> → imprime <code>"La moto [marca] arranca"</code>.
+    </li>
   </ul>
 </div>
 
-<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--green);">
-  <h4 style="color: var(--green);">Fase 3: Interfaces y el Main</h4>
-  <ul style="padding-left: 1.25rem;">
-    <li>Crea la interfaz <strong>Gestionable</strong> con <code>void gestionar()</code>. Haz que Directivo la implemente.</li>
-    <li>En el <strong>main</strong>: Crea un <code>ArrayList&lt;Persona&gt;</code> con mezcla de empleados y directivos. Recorre la lista con un for-each e imprime su info (polimorfismo).</li>
-    <li>Captura una excepción si alguien intenta crear un empleado con salario negativo.</li>
+<div class="code-exercise-desc" style="margin-bottom:1rem;border-left:3px solid var(--green)">
+  <h4 style="color:var(--green)">Parte 3 — Array de objetos y excepciones en el main</h4>
+  <ul style="padding-left:1.25rem">
+    <li>En el <code>main()</code>: crea un array de 4 <code>Vehiculo</code> con instancias de Coche y Moto.</li>
+    <li>Recorre el array con un <code>for</code> y llama a <code>arrancar()</code> y <code>mostrarInfo()</code> de cada uno (polimorfismo).</li>
+    <li>Añade un bloque <code>try-catch</code>: si <code>velocidadMax</code> fuera negativo, lanza una <code>IllegalArgumentException</code> con un mensaje descriptivo.</li>
   </ul>
 </div>`,
 
     pistas: [
-      '💡 <strong>Encapsulación</strong>: todos los atributos deben ser <code>private</code>. Usa <code>this.nombre = nombre</code> en el constructor.',
-      '💡 <strong>Herencia</strong>: usa <code>extends</code> para heredar. En el constructor hijo, llama a <code>super(nombre, edad)</code> como primera línea.',
-      '💡 <strong>Clase abstracta</strong>: <code>abstract class Persona</code> — no se puede instanciar directamente. El método abstracto no tiene cuerpo: <code>public abstract String getInfo();</code>',
-      '💡 <strong>@Override</strong>: cuando sobreescribes un método, añade <code>@Override</code> encima para que el compilador lo verifique.',
-      '💡 <strong>Interfaz</strong>: <code>interface Gestionable { void gestionar(); }</code> — luego <code>class Directivo extends Empleado implements Gestionable</code>',
-      '💡 <strong>Polimorfismo</strong>: <code>ArrayList&lt;Persona&gt; lista = new ArrayList&lt;&gt;();</code> — puedes añadir Empleado y Directivo porque ambos son Persona.',
-      '💡 <strong>Excepción</strong>: en el setter de salario: <code>if (salario < 0) throw new IllegalArgumentException("Salario no puede ser negativo");</code>',
+      '💡 <strong>Interface</strong>: <code>interface Conducible { void arrancar(); }</code>',
+      '💡 <strong>Abstract class</strong>: <code>abstract class Vehiculo implements Conducible { ... }</code><br>No se puede instanciar directamente. El método abstracto no tiene cuerpo.',
+      '💡 <strong>Constructor sin parámetros con this()</strong>: <code>public Vehiculo() { this("Genérica", "Genérico", 0); }</code>',
+      '💡 <strong>Herencia + super()</strong>: <code>public Coche(String marca, String modelo, int vel, int puertas) { super(marca, modelo, vel); this.numPuertas = puertas; }</code>',
+      '💡 <strong>@Override</strong>: Úsalo sobre cada método sobreescrito. Si falta, el profesor lo penaliza.',
+      '💡 <strong>Array de objetos polimórfico</strong>: <code>Vehiculo[] flota = new Vehiculo[4];</code> — puede contener Coche y Moto porque ambos son Vehiculo.',
+      '💡 <strong>Excepción</strong>: <code>if (velocidadMax < 0) throw new IllegalArgumentException("La velocidad no puede ser negativa");</code> dentro de <code>try { ... } catch (IllegalArgumentException e) { System.out.println(e.getMessage()); }</code>',
     ],
 
-    solucion: `<span class="kw">abstract class</span> <span class="fn">Persona</span> {
-    <span class="kw">private</span> <span class="tp">String</span> nombre;
-    <span class="kw">private</span> <span class="tp">int</span> edad;
-
-    <span class="kw">public</span> <span class="fn">Persona</span>(<span class="tp">String</span> nombre, <span class="tp">int</span> edad) {
-        <span class="kw">this</span>.nombre = nombre;
-        setEdad(edad);
-    }
-    <span class="kw">public</span> <span class="tp">String</span> <span class="fn">getNombre</span>() { <span class="kw">return</span> nombre; }
-    <span class="kw">public void</span> <span class="fn">setEdad</span>(<span class="tp">int</span> edad) {
-        <span class="kw">if</span> (edad <= <span class="num">0</span>) <span class="kw">throw new</span> <span class="fn">IllegalArgumentException</span>(<span class="str">"Edad inválida"</span>);
-        <span class="kw">this</span>.edad = edad;
-    }
-    <span class="kw">public abstract</span> <span class="tp">String</span> <span class="fn">getInfo</span>();
+    solucion: `<span class="kw">interface</span> <span class="fn">Conducible</span> {
+    <span class="kw">void</span> <span class="fn">arrancar</span>();
 }
 
-<span class="kw">class</span> <span class="fn">Empleado</span> <span class="kw">extends</span> <span class="fn">Persona</span> {
-    <span class="kw">private double</span> salario;
-    <span class="kw">private</span> <span class="tp">String</span> departamento;
+<span class="kw">abstract class</span> <span class="fn">Vehiculo</span> <span class="kw">implements</span> <span class="fn">Conducible</span> {
+    <span class="kw">protected</span> <span class="tp">String</span> marca;
+    <span class="kw">protected</span> <span class="tp">String</span> modelo;
+    <span class="kw">protected int</span> velocidadMax;
 
-    <span class="kw">public</span> <span class="fn">Empleado</span>(<span class="tp">String</span> nombre, <span class="tp">int</span> edad, <span class="tp">double</span> salario, <span class="tp">String</span> dept) {
-        <span class="kw">super</span>(nombre, edad);
-        <span class="kw">if</span> (salario < <span class="num">0</span>) <span class="kw">throw new</span> <span class="fn">IllegalArgumentException</span>(<span class="str">"Salario negativo"</span>);
-        <span class="kw">this</span>.salario = salario;
-        <span class="kw">this</span>.departamento = dept;
+    <span class="kw">public</span> <span class="fn">Vehiculo</span>(<span class="tp">String</span> marca, <span class="tp">String</span> modelo, <span class="kw">int</span> velocidadMax) {
+        <span class="kw">this</span>.marca = marca;
+        <span class="kw">this</span>.modelo = modelo;
+        <span class="kw">this</span>.velocidadMax = velocidadMax;
     }
-    <span class="kw">public double</span> <span class="fn">calcularBonus</span>() { <span class="kw">return</span> salario * <span class="num">0.10</span>; }
-
-    <span class="kw">@Override</span>
-    <span class="kw">public</span> <span class="tp">String</span> <span class="fn">getInfo</span>() {
-        <span class="kw">return</span> <span class="str">"Empleado: "</span> + <span class="fn">getNombre</span>() + <span class="str">" | Dept: "</span> + departamento + <span class="str">" | Salario: "</span> + salario;
+    <span class="cm">// Constructor sin parámetros usando this()</span>
+    <span class="kw">public</span> <span class="fn">Vehiculo</span>() {
+        <span class="kw">this</span>(<span class="str">"Genérica"</span>, <span class="str">"Genérico"</span>, <span class="num">0</span>);
+    }
+    <span class="kw">public abstract</span> <span class="tp">String</span> <span class="fn">getTipo</span>();
+    <span class="kw">public void</span> <span class="fn">mostrarInfo</span>() {
+        System.out.<span class="fn">println</span>(<span class="str">"Tipo: "</span> + <span class="fn">getTipo</span>() + <span class="str">" | Marca: "</span> + marca + <span class="str">" | Modelo: "</span> + modelo + <span class="str">" | Vel. Máx: "</span> + velocidadMax);
     }
 }
 
-<span class="kw">interface</span> <span class="fn">Gestionable</span> { <span class="kw">void</span> <span class="fn">gestionar</span>(); }
+<span class="kw">class</span> <span class="fn">Coche</span> <span class="kw">extends</span> <span class="fn">Vehiculo</span> {
+    <span class="kw">private int</span> numPuertas;
 
-<span class="kw">class</span> <span class="fn">Directivo</span> <span class="kw">extends</span> <span class="fn">Empleado</span> <span class="kw">implements</span> <span class="fn">Gestionable</span> {
-    <span class="kw">private int</span> numEmpleadosACargo;
-
-    <span class="kw">public</span> <span class="fn">Directivo</span>(<span class="tp">String</span> nombre, <span class="tp">int</span> edad, <span class="tp">double</span> salario, <span class="tp">String</span> dept, <span class="tp">int</span> num) {
-        <span class="kw">super</span>(nombre, edad, salario, dept);
-        <span class="kw">this</span>.numEmpleadosACargo = num;
+    <span class="kw">public</span> <span class="fn">Coche</span>(<span class="tp">String</span> marca, <span class="tp">String</span> modelo, <span class="kw">int</span> vel, <span class="kw">int</span> puertas) {
+        <span class="kw">super</span>(marca, modelo, vel);
+        <span class="kw">this</span>.numPuertas = puertas;
     }
-    <span class="kw">@Override public double</span> <span class="fn">calcularBonus</span>() { <span class="kw">return</span> salario * <span class="num">0.20</span>; }
-    <span class="kw">@Override public</span> <span class="tp">String</span> <span class="fn">getInfo</span>() { <span class="kw">return super</span>.<span class="fn">getInfo</span>() + <span class="str">" | A cargo: "</span> + numEmpleadosACargo; }
-    <span class="kw">@Override public void</span> <span class="fn">gestionar</span>() { System.out.<span class="fn">println</span>(<span class="fn">getNombre</span>() + <span class="str">" gestiona el equipo"</span>); }
+    <span class="kw">public</span> <span class="fn">Coche</span>() { <span class="kw">this</span>(<span class="str">"Desconocida"</span>, <span class="str">"Genérico"</span>, <span class="num">0</span>, <span class="num">4</span>); }
+
+    <span class="kw">@Override public</span> <span class="tp">String</span> <span class="fn">getTipo</span>() { <span class="kw">return</span> <span class="str">"Coche"</span>; }
+    <span class="kw">@Override public void</span> <span class="fn">mostrarInfo</span>() {
+        <span class="kw">super</span>.<span class="fn">mostrarInfo</span>();
+        System.out.<span class="fn">println</span>(<span class="str">"  Puertas: "</span> + numPuertas);
+    }
+    <span class="kw">@Override public void</span> <span class="fn">arrancar</span>() {
+        System.out.<span class="fn">println</span>(<span class="str">"El coche "</span> + marca + <span class="str">" arranca"</span>);
+    }
+}
+
+<span class="kw">class</span> <span class="fn">Moto</span> <span class="kw">extends</span> <span class="fn">Vehiculo</span> {
+    <span class="kw">private int</span> cilindrada;
+
+    <span class="kw">public</span> <span class="fn">Moto</span>(<span class="tp">String</span> marca, <span class="tp">String</span> modelo, <span class="kw">int</span> vel, <span class="kw">int</span> cc) {
+        <span class="kw">super</span>(marca, modelo, vel);
+        <span class="kw">this</span>.cilindrada = cc;
+    }
+    <span class="kw">public</span> <span class="fn">Moto</span>() { <span class="kw">this</span>(<span class="str">"Desconocida"</span>, <span class="str">"Genérica"</span>, <span class="num">0</span>, <span class="num">125</span>); }
+
+    <span class="kw">@Override public</span> <span class="tp">String</span> <span class="fn">getTipo</span>() { <span class="kw">return</span> <span class="str">"Moto"</span>; }
+    <span class="kw">@Override public void</span> <span class="fn">mostrarInfo</span>() {
+        <span class="kw">super</span>.<span class="fn">mostrarInfo</span>();
+        System.out.<span class="fn">println</span>(<span class="str">"  Cilindrada: "</span> + cilindrada + <span class="str">"cc"</span>);
+    }
+    <span class="kw">@Override public void</span> <span class="fn">arrancar</span>() {
+        System.out.<span class="fn">println</span>(<span class="str">"La moto "</span> + marca + <span class="str">" arranca"</span>);
+    }
+}
+
+<span class="kw">public class</span> <span class="fn">Main</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="tp">String</span>[] args) {
+        <span class="fn">Vehiculo</span>[] flota = <span class="kw">new</span> <span class="fn">Vehiculo</span>[<span class="num">4</span>];
+        flota[<span class="num">0</span>] = <span class="kw">new</span> <span class="fn">Coche</span>(<span class="str">"Toyota"</span>, <span class="str">"Corolla"</span>, <span class="num">180</span>, <span class="num">4</span>);
+        flota[<span class="num">1</span>] = <span class="kw">new</span> <span class="fn">Moto</span>(<span class="str">"Honda"</span>, <span class="str">"CB500"</span>, <span class="num">200</span>, <span class="num">500</span>);
+        flota[<span class="num">2</span>] = <span class="kw">new</span> <span class="fn">Coche</span>(<span class="str">"Ford"</span>, <span class="str">"Focus"</span>, <span class="num">190</span>, <span class="num">5</span>);
+        flota[<span class="num">3</span>] = <span class="kw">new</span> <span class="fn">Moto</span>(<span class="str">"Kawasaki"</span>, <span class="str">"Ninja"</span>, <span class="num">250</span>, <span class="num">650</span>);
+
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; flota.length; i++) {
+            flota[i].<span class="fn">arrancar</span>();
+            flota[i].<span class="fn">mostrarInfo</span>();
+        }
+
+        <span class="kw">try</span> {
+            <span class="kw">throw new</span> <span class="fn">IllegalArgumentException</span>(<span class="str">"La velocidad máxima no puede ser negativa"</span>);
+        } <span class="kw">catch</span> (<span class="fn">IllegalArgumentException</span> e) {
+            System.out.<span class="fn">println</span>(<span class="str">"Error: "</span> + e.<span class="fn">getMessage</span>());
+        }
+    }
 }`,
 
     criterios: [
-      'Clase abstracta Persona con atributos privados y método abstracto',
-      'Empleado hereda de Persona con constructor que llama a super()',
-      'Directivo hereda de Empleado y sobreescribe calcularBonus()',
-      'Interfaz Gestionable implementada por Directivo',
-      'ArrayList<Persona> con polimorfismo en el recorrido',
-      'Excepción lanzada para salario negativo',
+      'Interface Conducible con void arrancar()',
+      'Clase abstracta Vehiculo implements Conducible con atributos protected',
+      'Constructor sin parámetros con this() en Vehiculo',
+      'Método abstracto getTipo() en Vehiculo',
+      'Coche extiende Vehiculo con super() en constructor y @Override',
+      'Moto extiende Vehiculo con super() en constructor y @Override',
+      'Array Vehiculo[] con polimorfismo (Coche y Moto)',
+      'Bloque try-catch con IllegalArgumentException',
+    ],
+
+    checks: [
+      (c) => /interface\s+Conducible/i.test(c),
+      (c) => /abstract\s+class\s+Vehiculo/i.test(c) && /implements\s+Conducible/i.test(c),
+      (c) => /this\s*\(/.test(c),
+      (c) => /abstract\s+\w+\s+getTipo/i.test(c),
+      (c) => /class\s+Coche\s+extends\s+Vehiculo/i.test(c) && /super\s*\(/.test(c),
+      (c) => /class\s+Moto\s+extends\s+Vehiculo/i.test(c),
+      (c) => /Vehiculo\s*\[\s*\]/.test(c),
+      (c) => /try\s*\{/.test(c) && /catch\s*\(/.test(c),
     ]
   },
 
   {
     id: 'ej2',
-    titulo: 'Sistema de Vehículos con Estructuras Dinámicas',
-    nivel: '⭐⭐⭐',
-    temas: ['Herencia', 'Interfaces', 'Colecciones', 'Excepciones'],
-    tiempo: '30 min',
-    enunciado: `<p style="margin-bottom: 1rem;">Diseña un sistema de gestión de una flota de vehículos. Este ejercicio mezcla Herencia Abstracta con Interfaces y HashMap.</p>
-    
-<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--blue);">
-  <h4 style="color: var(--blue);">Fase 1: Interfaces y Clases Base</h4>
-  <ul style="padding-left: 1.25rem;">
-    <li>Crea la excepción <strong>MatriculaDuplicadaException</strong>.</li>
-    <li>Crea la interfaz <strong>Conducible</strong> con: <code>void arrancar()</code>, <code>void parar()</code> y <code>String getEstado()</code>.</li>
-    <li>Clase abstracta <strong>Vehiculo</strong> (implementa Conducible) con: matricula, marca, velocidadMax. Añade el método abstracto <code>String getTipo()</code>.</li>
-  </ul>
-</div>
-
-<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--accent);">
-  <h4 style="color: var(--accent);">Fase 2: Clases Concretas</h4>
-  <ul style="padding-left: 1.25rem;">
-    <li>Clase <strong>Coche</strong> (extiende Vehiculo). Añade <code>numPuertas</code>. Implementa todos los métodos obligatorios. Su tipo es "Coche".</li>
-    <li>Clase <strong>Moto</strong> (extiende Vehiculo). Añade <code>tieneSidecar</code>. Implementa todos los métodos obligatorios. Su tipo es "Moto".</li>
-  </ul>
-</div>
-
-<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--yellow);">
-  <h4 style="color: var(--yellow);">Fase 3: Uso de Collections (HashMap)</h4>
-  <ul style="padding-left: 1.25rem;">
-    <li>Clase <strong>GestorFlota</strong> con un <code>HashMap&lt;String, Vehiculo&gt;</code> (la clave es la matrícula).</li>
-    <li>Método <code>añadir(Vehiculo v)</code>: Añade al mapa. Lanza <code>MatriculaDuplicadaException</code> si la matrícula ya existe.</li>
-    <li>Método <code>buscar(String matricula)</code>: Devuelve el vehículo o lanza excepción genérica.</li>
-    <li>Método <code>listarTodos()</code>: Itera el HashMap e imprime info de cada vehículo.</li>
-  </ul>
-</div>`,
-
-    pistas: [
-      '💡 <strong>Interfaz + clase abstracta</strong>: <code>abstract class Vehiculo implements Conducible</code> — la clase abstracta puede implementar la interfaz parcialmente o dejar métodos sin implementar.',
-      '💡 <strong>HashMap</strong>: <code>HashMap&lt;String, Vehiculo&gt; flota = new HashMap&lt;&gt;();</code> — usa <code>flota.containsKey(matricula)</code> para verificar si ya existe.',
-      '💡 <strong>Excepción personalizada</strong>: <code>class MatriculaDuplicadaException extends Exception { public MatriculaDuplicadaException(String msg) { super(msg); } }</code>',
-      '💡 <strong>throws en el método</strong>: <code>public void añadir(Vehiculo v) throws MatriculaDuplicadaException</code>',
-      '💡 <strong>Recorrer HashMap</strong>: <code>for (Map.Entry&lt;String, Vehiculo&gt; entry : flota.entrySet()) { entry.getKey(); entry.getValue(); }</code>',
-      '💡 <strong>Estado del vehículo</strong>: usa un atributo booleano <code>private boolean encendido = false;</code> que cambias en arrancar() y parar().',
-    ],
-
-    solucion: `<span class="kw">class</span> <span class="fn">MatriculaDuplicadaException</span> <span class="kw">extends</span> <span class="fn">Exception</span> {
-    <span class="kw">public</span> <span class="fn">MatriculaDuplicadaException</span>(<span class="tp">String</span> msg) { <span class="kw">super</span>(msg); }
-}
-
-<span class="kw">interface</span> <span class="fn">Conducible</span> {
-    <span class="kw">void</span> <span class="fn">arrancar</span>();
-    <span class="kw">void</span> <span class="fn">parar</span>();
-    <span class="tp">String</span> <span class="fn">getEstado</span>();
-}
-
-<span class="kw">abstract class</span> <span class="fn">Vehiculo</span> <span class="kw">implements</span> <span class="fn">Conducible</span> {
-    <span class="kw">private</span> <span class="tp">String</span> matricula, marca;
-    <span class="kw">private int</span> velocidadMax;
-    <span class="kw">protected boolean</span> encendido = <span class="kw">false</span>;
-
-    <span class="kw">public</span> <span class="fn">Vehiculo</span>(<span class="tp">String</span> matricula, <span class="tp">String</span> marca, <span class="tp">int</span> velMax) {
-        <span class="kw">this</span>.matricula = matricula; <span class="kw">this</span>.marca = marca; <span class="kw">this</span>.velocidadMax = velMax;
-    }
-    <span class="kw">public</span> <span class="tp">String</span> <span class="fn">getMatricula</span>() { <span class="kw">return</span> matricula; }
-    <span class="kw">public abstract</span> <span class="tp">String</span> <span class="fn">getTipo</span>();
-    <span class="kw">@Override public void</span> <span class="fn">arrancar</span>() { encendido = <span class="kw">true</span>; }
-    <span class="kw">@Override public void</span> <span class="fn">parar</span>() { encendido = <span class="kw">false</span>; }
-    <span class="kw">@Override public</span> <span class="tp">String</span> <span class="fn">getEstado</span>() { <span class="kw">return</span> encendido ? <span class="str">"Encendido"</span> : <span class="str">"Apagado"</span>; }
-}
-
-<span class="kw">class</span> <span class="fn">GestorFlota</span> {
-    <span class="kw">private</span> HashMap&lt;<span class="tp">String</span>, <span class="fn">Vehiculo</span>&gt; flota = <span class="kw">new</span> HashMap&lt;&gt;();
-
-    <span class="kw">public void</span> <span class="fn">añadir</span>(<span class="fn">Vehiculo</span> v) <span class="kw">throws</span> <span class="fn">MatriculaDuplicadaException</span> {
-        <span class="kw">if</span> (flota.<span class="fn">containsKey</span>(v.<span class="fn">getMatricula</span>()))
-            <span class="kw">throw new</span> <span class="fn">MatriculaDuplicadaException</span>(<span class="str">"Matrícula ya existe: "</span> + v.<span class="fn">getMatricula</span>());
-        flota.<span class="fn">put</span>(v.<span class="fn">getMatricula</span>(), v);
-    }
-    <span class="kw">public void</span> <span class="fn">listarTodos</span>() {
-        <span class="kw">for</span> (Map.Entry&lt;<span class="tp">String</span>, <span class="fn">Vehiculo</span>&gt; e : flota.<span class="fn">entrySet</span>())
-            System.out.<span class="fn">println</span>(e.<span class="fn">getValue</span>().<span class="fn">getTipo</span>() + <span class="str">": "</span> + e.<span class="fn">getKey</span>() + <span class="str">" | "</span> + e.<span class="fn">getValue</span>().<span class="fn">getEstado</span>());
-    }
-}`,
-
-    criterios: [
-      'Excepción personalizada MatriculaDuplicadaException',
-      'Interfaz Conducible con los 3 métodos',
-      'Clase abstracta Vehiculo implementa Conducible',
-      'Coche y Moto heredan de Vehiculo',
-      'GestorFlota usa HashMap<String, Vehiculo>',
-      'Método añadir() lanza excepción si matrícula duplicada',
-    ]
-  },
-
-  {
-    id: 'ej3',
-    titulo: 'Biblioteca con Estructuras Dinámicas',
+    titulo: 'Ejercicio 2 — Sistema de Empleados',
     nivel: '⭐⭐',
-    temas: ['Encapsulación', 'ArrayList', 'Excepciones', 'Interfaces'],
+    temas: ['Abstract', 'Interfaces', 'Herencia', 'Polimorfismo', 'Encapsulación', 'Excepciones', 'Array de objetos'],
     tiempo: '30 min',
-    enunciado: `<p style="margin-bottom: 1rem;">Diseña un sistema de gestión de una biblioteca enfocado en polimorfismo y manejo de ArrayList con búsqueda lineal.</p>
+    enunciado: `<p style="margin-bottom:1rem;">Diseña un sistema para gestionar distintos tipos de empleados en una empresa. El examen pide que escribas en papel las clases Java con la lógica correcta.</p>
 
-<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--blue);">
-  <h4 style="color: var(--blue);">Fase 1: Excepciones e Interfaces</h4>
-  <ul style="padding-left: 1.25rem;">
-    <li>Excepción personalizada <strong>ElementoNoEncontradoException</strong>.</li>
-    <li>Interfaz <strong>Prestable</strong> con <code>prestar(String usuario)</code>, <code>devolver()</code> y <code>isDisponible()</code>.</li>
+<div class="code-exercise-desc" style="margin-bottom:1rem;border-left:3px solid var(--blue)">
+  <h4 style="color:var(--blue)">Parte 1 — Interfaz y clase abstracta</h4>
+  <ul style="padding-left:1.25rem">
+    <li>Crea la interfaz <strong>Evaluable</strong> con el método <code>String evaluar()</code>.</li>
+    <li>Crea la clase <strong>abstracta</strong> <code>Empleado</code> que <strong>implemente</strong> <code>Evaluable</code>.<br>
+        Atributos <code>private</code>: <code>nombre (String)</code>, <code>salarioBase (double)</code>.<br>
+        Constructor que reciba nombre y salarioBase. Si salarioBase &lt; 0, lanza <code>IllegalArgumentException</code>.<br>
+        Constructor sin parámetros (nombre = "Sin nombre", salarioBase = 1000.0) usando <code>this()</code>.<br>
+        Getters <code>getNombre()</code> y <code>getSalarioBase()</code>.<br>
+        Método abstracto: <code>double calcularSalario()</code>.<br>
+        Método <code>mostrarInfo()</code> que imprima nombre, salario base y salario calculado.
+    </li>
   </ul>
 </div>
 
-<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--accent);">
-  <h4 style="color: var(--accent);">Fase 2: Elementos de la Biblioteca</h4>
-  <ul style="padding-left: 1.25rem;">
-    <li>Clase abstracta <strong>Elemento</strong> (implementa Prestable). Atributos: titulo, año, disponible (inicializado a true). Método abstracto: <code>getCategoria()</code>.</li>
-    <li>Clase <strong>Libro</strong> (extiende Elemento). Añade autor, numPaginas. Su categoría es "Libro".</li>
-    <li>Clase <strong>Revista</strong> (extiende Elemento). Añade numero, editorial. Su categoría es "Revista".</li>
+<div class="code-exercise-desc" style="margin-bottom:1rem;border-left:3px solid var(--accent)">
+  <h4 style="color:var(--accent)">Parte 2 — Subclases (Herencia y Polimorfismo)</h4>
+  <ul style="padding-left:1.25rem">
+    <li>Clase <strong>Gerente</strong> que extienda <code>Empleado</code>.<br>
+        Atributo <code>private double bonificacion</code>.<br>
+        Constructor con <code>nombre, salarioBase, bonificacion</code> usando <code>super()</code>.<br>
+        <code>@Override calcularSalario()</code> → devuelve <code>getSalarioBase() + bonificacion</code>.<br>
+        <code>@Override evaluar()</code> → devuelve <code>"Gerente [nombre]: Rendimiento alto"</code>.
+    </li>
+    <li>Clase <strong>Desarrollador</strong> que extienda <code>Empleado</code>.<br>
+        Atributo <code>private int numProyectos</code>.<br>
+        Constructor con <code>nombre, salarioBase, numProyectos</code> usando <code>super()</code>.<br>
+        <code>@Override calcularSalario()</code> → devuelve <code>getSalarioBase() + (numProyectos * 200)</code>.<br>
+        <strong>Sobrecarga</strong>: añade <code>double calcularSalario(int horasExtra)</code> → devuelve <code>calcularSalario() + (horasExtra * 15)</code>.<br>
+        <code>@Override evaluar()</code> → devuelve <code>"Desarrollador [nombre]: "</code> + proyectos + <code>" proyectos"</code>.
+    </li>
+    <li>Clase <strong>Asistente</strong> que extienda <code>Empleado</code>.<br>
+        Constructor con <code>nombre, salarioBase</code> usando <code>super()</code>.<br>
+        <code>@Override calcularSalario()</code> → devuelve <code>getSalarioBase()</code> (sin extras).<br>
+        <code>@Override evaluar()</code> → devuelve <code>"Asistente [nombre]: Soporte al equipo"</code>.
+    </li>
   </ul>
 </div>
 
-<div class="code-exercise-desc" style="margin-bottom: 1rem; border-left: 3px solid var(--green);">
-  <h4 style="color: var(--green);">Fase 3: Gestión con ArrayList</h4>
-  <ul style="padding-left: 1.25rem;">
-    <li>Clase <strong>Biblioteca</strong> con un <code>ArrayList&lt;Elemento&gt;</code>.</li>
-    <li>Método <code>añadir(Elemento e)</code>.</li>
-    <li>Método <code>buscarPorTitulo(String titulo)</code>: Itera la lista. Haz un <code>if</code> para ver si el título coincide. Si termina el bucle sin encontrarlo, lanza <code>ElementoNoEncontradoException</code>.</li>
-    <li>Método <code>prestarElemento(titulo, usuario)</code>: Busca, si no está disponible lanza una RuntimeException. Si lo está, marca como no disponible al usuario.</li>
+<div class="code-exercise-desc" style="margin-bottom:1rem;border-left:3px solid var(--green)">
+  <h4 style="color:var(--green)">Parte 3 — Array de objetos y polimorfismo en el main</h4>
+  <ul style="padding-left:1.25rem">
+    <li>En el <code>main()</code>: usa <code>try-catch</code> para crear los objetos y capturar posibles <code>IllegalArgumentException</code>.</li>
+    <li>Crea un array de 4 <code>Empleado</code> con mezcla de Gerente, Desarrollador y Asistente.</li>
+    <li>Recorre el array con un <code>for</code> y llama a <code>mostrarInfo()</code> de cada uno (polimorfismo).</li>
+    <li>Para el Desarrollador, llama también a la versión sobrecargada <code>calcularSalario(10)</code> e imprime el resultado.</li>
   </ul>
 </div>`,
 
     pistas: [
-      '💡 <strong>disponible</strong>: inicializa el atributo en la declaración: <code>private boolean disponible = true;</code>',
-      '💡 <strong>prestar()</strong>: comprueba si está disponible antes de prestarlo: <code>if (!disponible) throw new RuntimeException("No disponible");</code>',
-      '💡 <strong>Buscar en ArrayList</strong>: usa un bucle for-each: <code>for (Elemento e : catalogo) { if (e.getTitulo().equals(titulo)) return e; }</code>',
-      '💡 <strong>listarDisponibles()</strong>: filtra con <code>if (e.isDisponible())</code> dentro del bucle.',
-      '💡 <strong>Polimorfismo</strong>: el ArrayList es de tipo Elemento pero puede contener Libro y Revista. Al llamar getCategoria() se ejecuta el método del tipo real.',
+      '💡 <strong>Interface</strong>: <code>interface Evaluable { String evaluar(); }</code>',
+      '💡 <strong>Abstract class</strong>: <code>abstract class Empleado implements Evaluable { private String nombre; ... }</code> — los atributos son <code>private</code>, acceso vía getters.',
+      '💡 <strong>Excepción en constructor</strong>: <code>if (salarioBase < 0) throw new IllegalArgumentException("Salario no puede ser negativo");</code>',
+      '💡 <strong>Constructor sin parámetros con this()</strong>: <code>public Empleado() { this("Sin nombre", 1000.0); }</code>',
+      '💡 <strong>Herencia con super()</strong>: <code>public Gerente(String nombre, double salario, double bono) { super(nombre, salario); this.bonificacion = bono; }</code>',
+      '💡 <strong>Sobrecarga</strong>: mismo nombre de método, distintos parámetros. <code>public double calcularSalario(int horasExtra) { return calcularSalario() + (horasExtra * 15); }</code>',
+      '💡 <strong>Array polimórfico</strong>: <code>Empleado[] plantilla = new Empleado[4];</code> — puede contener Gerente, Desarrollador y Asistente.',
     ],
 
-    solucion: `<span class="cm">// Solo estructura principal — completa el resto</span>
-<span class="kw">class</span> <span class="fn">ElementoNoEncontradoException</span> <span class="kw">extends</span> <span class="fn">Exception</span> {
-    <span class="kw">public</span> <span class="fn">ElementoNoEncontradoException</span>(<span class="tp">String</span> msg) { <span class="kw">super</span>(msg); }
+    solucion: `<span class="kw">interface</span> <span class="fn">Evaluable</span> {
+    <span class="tp">String</span> <span class="fn">evaluar</span>();
 }
 
-<span class="kw">abstract class</span> <span class="fn">Elemento</span> <span class="kw">implements</span> <span class="fn">Prestable</span> {
-    <span class="kw">private</span> <span class="tp">String</span> titulo;
-    <span class="kw">private int</span> año;
-    <span class="kw">private boolean</span> disponible = <span class="kw">true</span>;
-    <span class="kw">private</span> <span class="tp">String</span> usuarioPrestamo;
+<span class="kw">abstract class</span> <span class="fn">Empleado</span> <span class="kw">implements</span> <span class="fn">Evaluable</span> {
+    <span class="kw">private</span> <span class="tp">String</span> nombre;
+    <span class="kw">private double</span> salarioBase;
 
-    <span class="kw">public</span> <span class="fn">Elemento</span>(<span class="tp">String</span> titulo, <span class="tp">int</span> año) { <span class="kw">this</span>.titulo = titulo; <span class="kw">this</span>.año = año; }
-    <span class="kw">public</span> <span class="tp">String</span> <span class="fn">getTitulo</span>() { <span class="kw">return</span> titulo; }
-    <span class="kw">public abstract</span> <span class="tp">String</span> <span class="fn">getCategoria</span>();
-
-    <span class="kw">@Override public void</span> <span class="fn">prestar</span>(<span class="tp">String</span> usuario) {
-        <span class="kw">if</span> (!disponible) <span class="kw">throw new</span> <span class="fn">RuntimeException</span>(<span class="str">"No disponible"</span>);
-        disponible = <span class="kw">false</span>; usuarioPrestamo = usuario;
+    <span class="kw">public</span> <span class="fn">Empleado</span>(<span class="tp">String</span> nombre, <span class="kw">double</span> salarioBase) {
+        <span class="kw">if</span> (salarioBase &lt; <span class="num">0</span>) <span class="kw">throw new</span> <span class="fn">IllegalArgumentException</span>(<span class="str">"Salario no puede ser negativo"</span>);
+        <span class="kw">this</span>.nombre = nombre;
+        <span class="kw">this</span>.salarioBase = salarioBase;
     }
-    <span class="kw">@Override public void</span> <span class="fn">devolver</span>() { disponible = <span class="kw">true</span>; usuarioPrestamo = <span class="kw">null</span>; }
-    <span class="kw">@Override public boolean</span> <span class="fn">isDisponible</span>() { <span class="kw">return</span> disponible; }
+    <span class="cm">// Constructor sin parámetros con this()</span>
+    <span class="kw">public</span> <span class="fn">Empleado</span>() { <span class="kw">this</span>(<span class="str">"Sin nombre"</span>, <span class="num">1000.0</span>); }
+
+    <span class="kw">public</span> <span class="tp">String</span> <span class="fn">getNombre</span>() { <span class="kw">return</span> nombre; }
+    <span class="kw">public double</span> <span class="fn">getSalarioBase</span>() { <span class="kw">return</span> salarioBase; }
+
+    <span class="kw">public abstract double</span> <span class="fn">calcularSalario</span>();
+
+    <span class="kw">public void</span> <span class="fn">mostrarInfo</span>() {
+        System.out.<span class="fn">println</span>(<span class="str">"Empleado: "</span> + nombre + <span class="str">" | Base: "</span> + salarioBase + <span class="str">" | Total: "</span> + <span class="fn">calcularSalario</span>());
+        System.out.<span class="fn">println</span>(<span class="fn">evaluar</span>());
+    }
 }
 
-<span class="kw">class</span> <span class="fn">Biblioteca</span> {
-    <span class="kw">private</span> ArrayList&lt;<span class="fn">Elemento</span>&gt; catalogo = <span class="kw">new</span> ArrayList&lt;&gt;();
+<span class="kw">class</span> <span class="fn">Gerente</span> <span class="kw">extends</span> <span class="fn">Empleado</span> {
+    <span class="kw">private double</span> bonificacion;
 
-    <span class="kw">public void</span> <span class="fn">añadir</span>(<span class="fn">Elemento</span> e) { catalogo.<span class="fn">add</span>(e); }
+    <span class="kw">public</span> <span class="fn">Gerente</span>(<span class="tp">String</span> nombre, <span class="kw">double</span> salario, <span class="kw">double</span> bono) {
+        <span class="kw">super</span>(nombre, salario);
+        <span class="kw">this</span>.bonificacion = bono;
+    }
+    <span class="kw">@Override public double</span> <span class="fn">calcularSalario</span>() { <span class="kw">return</span> <span class="fn">getSalarioBase</span>() + bonificacion; }
+    <span class="kw">@Override public</span> <span class="tp">String</span> <span class="fn">evaluar</span>() { <span class="kw">return</span> <span class="str">"Gerente "</span> + <span class="fn">getNombre</span>() + <span class="str">": Rendimiento alto"</span>; }
+}
 
-    <span class="kw">public</span> <span class="fn">Elemento</span> <span class="fn">buscarPorTitulo</span>(<span class="tp">String</span> titulo) <span class="kw">throws</span> <span class="fn">ElementoNoEncontradoException</span> {
-        <span class="kw">for</span> (<span class="fn">Elemento</span> e : catalogo)
-            <span class="kw">if</span> (e.<span class="fn">getTitulo</span>().<span class="fn">equals</span>(titulo)) <span class="kw">return</span> e;
-        <span class="kw">throw new</span> <span class="fn">ElementoNoEncontradoException</span>(<span class="str">"No encontrado: "</span> + titulo);
+<span class="kw">class</span> <span class="fn">Desarrollador</span> <span class="kw">extends</span> <span class="fn">Empleado</span> {
+    <span class="kw">private int</span> numProyectos;
+
+    <span class="kw">public</span> <span class="fn">Desarrollador</span>(<span class="tp">String</span> nombre, <span class="kw">double</span> salario, <span class="kw">int</span> proyectos) {
+        <span class="kw">super</span>(nombre, salario);
+        <span class="kw">this</span>.numProyectos = proyectos;
+    }
+    <span class="kw">@Override public double</span> <span class="fn">calcularSalario</span>() { <span class="kw">return</span> <span class="fn">getSalarioBase</span>() + (numProyectos * <span class="num">200</span>); }
+    <span class="cm">// Sobrecarga del método</span>
+    <span class="kw">public double</span> <span class="fn">calcularSalario</span>(<span class="kw">int</span> horasExtra) { <span class="kw">return</span> <span class="fn">calcularSalario</span>() + (horasExtra * <span class="num">15</span>); }
+    <span class="kw">@Override public</span> <span class="tp">String</span> <span class="fn">evaluar</span>() { <span class="kw">return</span> <span class="str">"Desarrollador "</span> + <span class="fn">getNombre</span>() + <span class="str">": "</span> + numProyectos + <span class="str">" proyectos"</span>; }
+}
+
+<span class="kw">class</span> <span class="fn">Asistente</span> <span class="kw">extends</span> <span class="fn">Empleado</span> {
+    <span class="kw">public</span> <span class="fn">Asistente</span>(<span class="tp">String</span> nombre, <span class="kw">double</span> salario) { <span class="kw">super</span>(nombre, salario); }
+    <span class="kw">@Override public double</span> <span class="fn">calcularSalario</span>() { <span class="kw">return</span> <span class="fn">getSalarioBase</span>(); }
+    <span class="kw">@Override public</span> <span class="tp">String</span> <span class="fn">evaluar</span>() { <span class="kw">return</span> <span class="str">"Asistente "</span> + <span class="fn">getNombre</span>() + <span class="str">": Soporte al equipo"</span>; }
+}
+
+<span class="kw">public class</span> <span class="fn">Main</span> {
+    <span class="kw">public static void</span> <span class="fn">main</span>(<span class="tp">String</span>[] args) {
+        <span class="fn">Empleado</span>[] plantilla = <span class="kw">new</span> <span class="fn">Empleado</span>[<span class="num">4</span>];
+        <span class="kw">try</span> {
+            plantilla[<span class="num">0</span>] = <span class="kw">new</span> <span class="fn">Gerente</span>(<span class="str">"Ana"</span>, <span class="num">3000</span>, <span class="num">1500</span>);
+            plantilla[<span class="num">1</span>] = <span class="kw">new</span> <span class="fn">Desarrollador</span>(<span class="str">"Luis"</span>, <span class="num">2500</span>, <span class="num">3</span>);
+            plantilla[<span class="num">2</span>] = <span class="kw">new</span> <span class="fn">Asistente</span>(<span class="str">"María"</span>, <span class="num">1800</span>);
+            plantilla[<span class="num">3</span>] = <span class="kw">new</span> <span class="fn">Gerente</span>(<span class="str">"Pedro"</span>, <span class="num">3500</span>, <span class="num">2000</span>);
+        } <span class="kw">catch</span> (<span class="fn">IllegalArgumentException</span> e) {
+            System.out.<span class="fn">println</span>(<span class="str">"Error al crear empleado: "</span> + e.<span class="fn">getMessage</span>());
+        }
+
+        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; plantilla.length; i++) {
+            plantilla[i].<span class="fn">mostrarInfo</span>();
+        }
+
+        <span class="cm">// Sobrecarga: calcularSalario con horas extra</span>
+        <span class="fn">Desarrollador</span> dev = (<span class="fn">Desarrollador</span>) plantilla[<span class="num">1</span>];
+        System.out.<span class="fn">println</span>(<span class="str">"Salario con 10h extra: "</span> + dev.<span class="fn">calcularSalario</span>(<span class="num">10</span>));
     }
 }`,
 
     criterios: [
-      'Excepción personalizada ElementoNoEncontradoException',
-      'Interfaz Prestable con 3 métodos',
-      'Clase abstracta Elemento implementa Prestable',
-      'Libro y Revista heredan de Elemento',
-      'Biblioteca usa ArrayList<Elemento>',
-      'buscarPorTitulo() lanza excepción si no existe',
+      'Interface Evaluable con String evaluar()',
+      'Clase abstracta Empleado implements Evaluable con atributos private',
+      'Método abstracto calcularSalario() en Empleado',
+      'Excepción IllegalArgumentException en el constructor si salario < 0',
+      'Constructor sin parámetros con this() en Empleado',
+      'Gerente extiende Empleado con super() y @Override calcularSalario()',
+      'Desarrollador con sobrecarga de calcularSalario(int horasExtra)',
+      'Asistente extiende Empleado y devuelve getSalarioBase() sin extras',
+      'Array Empleado[] con polimorfismo (Gerente, Desarrollador, Asistente)',
+      'try-catch capturando IllegalArgumentException',
+    ],
+
+    checks: [
+      (c) => /interface\s+Evaluable/i.test(c),
+      (c) => /abstract\s+class\s+Empleado/i.test(c) && /implements\s+Evaluable/i.test(c),
+      (c) => /abstract\s+\w+\s+calcularSalario/i.test(c),
+      (c) => /throw\s+new\s+IllegalArgumentException/i.test(c),
+      (c) => /this\s*\(/.test(c),
+      (c) => /class\s+Gerente\s+extends\s+Empleado/i.test(c) && /super\s*\(/.test(c),
+      (c) => /calcularSalario\s*\(\s*int\s+\w+\s*\)/i.test(c),
+      (c) => /class\s+Asistente\s+extends\s+Empleado/i.test(c),
+      (c) => /Empleado\s*\[\s*\]/.test(c),
+      (c) => /try\s*\{/.test(c) && /catch\s*\(/.test(c),
     ]
   }
 ];
