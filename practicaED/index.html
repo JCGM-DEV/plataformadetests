@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UML Practice Lab — ED Examen</title>
-  <meta name="description" content="Plataforma interactiva para practicar Diagramas de Clases (UD4) y Diagramas de Comportamiento (UD5) de Entornos de Desarrollo DAW/DAM.">
+  <title>UML Practice Lab — Temas 3, 4 y 5 | ED DAW/DAM</title>
+  <meta name="description" content="Laboratorio interactivo de diagramas UML para T3 (Introducción UML), T4 (Diagramas de Clases) y T5 (Diagramas de Comportamiento) de Entornos de Desarrollo DAW/DAM.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -17,9 +17,18 @@
       <h1 class="splash-title">UML Practice Lab</h1>
       <p class="splash-subtitle">Entornos de Desarrollo · DAW/DAM</p>
       <div class="splash-units">
+        <div class="unit-card" onclick="selectUnit('ud3')" style="border-color:rgba(250,191,36,0.4);background:linear-gradient(135deg,rgba(250,191,36,0.06),rgba(251,146,60,0.06))">
+          <div class="unit-badge" style="background:linear-gradient(135deg,#f59e0b,#f97316)">UD3 — T3</div>
+          <h3>📡 Introducción al UML</h3>
+          <p>Historia, versiones, clasificación de los 15 diagramas y herramientas CASE</p>
+          <div class="unit-topics">
+            <span>UML 2.5</span><span>Estructurales</span><span>Comportamiento</span><span>CASE</span>
+          </div>
+          <button class="btn-primary" style="background:linear-gradient(135deg,#f59e0b,#f97316)">Practicar →</button>
+        </div>
         <div class="unit-card" onclick="selectUnit('ud4')">
-          <div class="unit-badge">UD4</div>
-          <h3>Diagramas de Clases</h3>
+          <div class="unit-badge">UD4 — T4</div>
+          <h3>📐 Diagramas de Clases</h3>
           <p>Visibilidad, relaciones, herencia, composición, agregación e interfaces</p>
           <div class="unit-topics">
             <span>Notación</span><span>Relaciones</span><span>Herencia</span><span>Interfaces</span>
@@ -27,11 +36,11 @@
           <button class="btn-primary">Practicar →</button>
         </div>
         <div class="unit-card" onclick="selectUnit('ud5')">
-          <div class="unit-badge">UD5</div>
-          <h3>Diagramas de Comportamiento</h3>
+          <div class="unit-badge">UD5 — T5</div>
+          <h3>🔄 Diagramas de Comportamiento</h3>
           <p>Casos de uso, secuencia, comunicación, actividad y estados</p>
           <div class="unit-topics">
-            <span>Casos de uso</span><span>Secuencia</span><span>Actividad</span><span>Estados</span>
+            <span>Casos de uso</span><span>Secuencia</span><span>Comunicación</span><span>Estados</span>
           </div>
           <button class="btn-primary">Practicar →</button>
         </div>

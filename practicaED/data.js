@@ -3,6 +3,16 @@
 // =============================================
 
 const UNITS = {
+  ud3: {
+    label: 'UD3',
+    title: 'Introducción al UML',
+    sections: [
+      { id: 'ud3-teoria', icon: '📖', label: 'Teoría: ¿Qué es UML?', type: 'lesson', lessonId: 'ud3_intro' },
+      { id: 'ud3-quiz', icon: '🧠', label: 'Quiz: Tipos de Diagramas', type: 'quiz', quizId: 'ud3_quiz' },
+      { id: 'ud3-drag', icon: '🎯', label: 'Ejercicio: Clasifica el Diagrama', type: 'drag', dragId: 'clasifica_diagrams' },
+      { id: 'ud3-diagram', icon: '📐', label: 'Mapa Visual de UML', type: 'diagram', diagId: 'ud3_diag' },
+    ]
+  },
   ud4: {
     label: 'UD4',
     title: 'Diagramas de Clases',
@@ -23,11 +33,13 @@ const UNITS = {
     sections: [
       { id: 'ud5-teoria1', icon: '📖', label: 'Teoría: Casos de Uso', type: 'lesson', lessonId: 'casos_uso' },
       { id: 'ud5-teoria2', icon: '📖', label: 'Teoría: Secuencia', type: 'lesson', lessonId: 'secuencia' },
-      { id: 'ud5-teoria3', icon: '📖', label: 'Teoría: Estados y Actividad', type: 'lesson', lessonId: 'estados' },
+      { id: 'ud5-teoria3', icon: '📖', label: 'Teoría: Comunicación', type: 'lesson', lessonId: 'comunicacion' },
+      { id: 'ud5-teoria4', icon: '📖', label: 'Teoría: Estados y Actividad', type: 'lesson', lessonId: 'estados' },
       { id: 'ud5-quiz1', icon: '🧠', label: 'Quiz: Casos de Uso', type: 'quiz', quizId: 'casos_uso' },
-      { id: 'ud5-quiz2', icon: '🧠', label: 'Quiz: Secuencia', type: 'quiz', quizId: 'secuencia' },
+      { id: 'ud5-quiz2', icon: '🧠', label: 'Quiz: Secuencia y Comunicación', type: 'quiz', quizId: 'secuencia' },
       { id: 'ud5-drag1', icon: '🎯', label: 'Ejercicio: include vs extend', type: 'drag', dragId: 'include_extend' },
       { id: 'ud5-drag2', icon: '🎯', label: 'Ejercicio: Tipo de mensaje', type: 'drag', dragId: 'tipo_mensaje' },
+      { id: 'ud5-drag3', icon: '🎯', label: 'Ejercicio: Secuencia vs Comunicación', type: 'drag', dragId: 'comunicacion_vs_secuencia' },
       { id: 'ud5-diagram', icon: '📐', label: 'Diagramas Guiados', type: 'diagram', diagId: 'ud5_diag' },
       { id: 'ud5-lab', icon: '🧪', label: 'Laboratorio: Flujogramas', type: 'lab' },
     ]
@@ -47,6 +59,31 @@ const UNITS = {
 // LESSONS
 // =============================================
 const LESSONS = {
+  ud3_intro: {
+    title: 'Introducción al UML — Tema 3',
+    subtitle: 'Historia, características, versiones y clasificación de los 15 diagramas',
+    concepts: [
+      { icon: '🏛️', title: '¿Qué es UML?', body: '<strong>Unified Modeling Language</strong>: lenguaje de modelado estandarizado para representar sistemas orientados a objetos. Presentado en <strong>1997</strong> por la OMG. Estándar ISO desde <strong>2004</strong>. Versión actual: <strong>2.5.1</strong> (diciembre 2017).' },
+      { icon: '📊', title: 'Diagramas Estructurales (estáticos)', body: 'Muestran el sistema en reposo (foto fija). Incluyen: <strong>Clases, Objetos, Componentes, Despliegue, Estructura Compuesta, Paquetes</strong>. El más importante: <em>Diagrama de clases</em>.' },
+      { icon: '🔄', title: 'Diagramas de Comportamiento (dinámicos)', body: 'Muestran la actividad y funcionalidad del sistema. Incluyen: <strong>Casos de Uso, Actividad, Estado (máquina de estados)</strong>, y los de <strong>Interacción</strong>: Secuencia, Comunicación, Tiempos, General de Interacción.' },
+      { icon: '🔧', title: 'Herramientas CASE', body: '<em>Computer Aided Software Engineering</em>. Software que da soporte a la ingeniería de software: crear diagramas UML, <strong>generar código</strong> a partir de diagramas e <strong>ingeniería inversa</strong> (generar diagramas desde código existente).' },
+      { icon: '↔️', title: 'Estructural vs Comportamiento', body: '<strong>Estructurales</strong>: ¿qué hay en el sistema? (clases, objetos, módulos). <strong>Comportamiento</strong>: ¿qué hace el sistema? (procesos, interacciones, estados). UML propone <strong>15 diagramas</strong> en total.' },
+      { icon: '⭐', title: 'El más importante: Clases', body: 'El diagrama de clases es el más utilizado. Muchas herramientas CASE permiten <strong>generar código Java</strong> directamente desde él, y también hacer ingeniería inversa del código a diagrama.' },
+    ],
+    codeExample: `<span class="kw">ESTRUCTURALES</span>           <span class="kw">COMPORTAMIENTO</span>
+──────────────────       ──────────────────────
+<span class="nm">Clases ★</span>                <span class="vis-pub">Casos de Uso</span>
+<span class="nm">Objetos</span>                 <span class="vis-pub">Actividad</span>
+<span class="nm">Componentes</span>             <span class="vis-pub">Estado (Máq. Estados)</span>
+<span class="nm">Despliegue</span>              <span class="kw">Interacción:</span>
+<span class="nm">Estructura Compuesta</span>      <span class="vis-prot">Secuencia</span>
+<span class="nm">Paquetes</span>                  <span class="vis-prot">Comunicación</span>
+                          <span class="vis-prot">Tiempos</span>
+                          <span class="vis-prot">General Interacción</span>`,
+    info: { type: 'tip', text: '💡 <strong>Para el examen</strong>: Los diagramas de <em>interacción</em> son un subgrupo de los de comportamiento. El diagrama de <strong>secuencia</strong> y el de <strong>comunicación</strong> muestran la misma información pero desde perspectivas distintas: secuencia enfatiza el tiempo, comunicación enfatiza las relaciones entre objetos.' },
+    svg: 'uml_tipos'
+  },
+
   notacion: {
     title: 'Notación de Clases UML',
     subtitle: 'Estructura visual de una clase: nombre, atributos y métodos',
@@ -139,6 +176,32 @@ const LESSONS = {
     svg: 'secuencia'
   },
 
+  comunicacion: {
+    title: 'Diagrama de Comunicación — Tema 5',
+    subtitle: 'Objetos conectados, mensajes numerados y diferencias con el diagrama de secuencia',
+    concepts: [
+      { icon: '🔵', title: 'Objetos', body: 'Se representan como rectángulos con el nombre en formato <code>nombre:Clase</code> (ej: <code>:Cliente</code>, <code>:Pedido</code>). Igual que en el diagrama de secuencia, pero sin línea de vida.' },
+      { icon: '🔗', title: 'Enlace (Link)', body: 'Línea continua entre objetos que se comunican. Representa que existe una relación (asociación) entre ellos. Los mensajes viajan por esta línea.' },
+      { icon: '🔢', title: 'Mensajes numerados', body: 'Los mensajes llevan un <strong>número de secuencia</strong> para indicar el orden: <code>1: login()</code>, <code>2: query()</code>, <code>2.1: findUser()</code>. La numeración anidada (1.1, 1.2) indica sub-mensajes dentro de una llamada.' },
+      { icon: '↔️', title: 'Vs Diagrama de Secuencia', body: '<strong>Secuencia</strong>: énfasis en el <em>tiempo</em> (eje vertical). Más fácil leer el orden. <strong>Comunicación</strong>: énfasis en las <em>relaciones entre objetos</em>. Más compacto y muestra mejor la arquitectura.' },
+      { icon: '→', title: 'Dirección del mensaje', body: 'La flecha indica la dirección del mensaje. Los números indican la secuencia temporal. Se puede indicar retorno añadiendo <code>/ retorno</code> al mensaje.' },
+      { icon: '🔄', title: 'Equivalencia', body: 'Un diagrama de comunicación <strong>se puede transformar en secuencia y viceversa</strong>. Muestran exactamente la misma información pero con diferente énfasis visual.' },
+    ],
+    codeExample: `<span class="cm">// Diagrama de Comunicación — Sistema de Login</span>
+<span class="vis-pub">:Cliente</span> ────────── <span class="vis-prot">:LoginCtrl</span> ────────── <span class="vis-pub">:UserService</span>
+                                        |
+                              <span class="vis-prot">:BBDD</span>
+
+<span class="kw">Mensajes numerados:</span>
+<span class="nm">1:</span> login(user, pwd)    → :LoginCtrl
+<span class="nm">2:</span> authenticate(u, p)  → :UserService
+<span class="nm">2.1:</span> findUser(user)     → :BBDD
+<span class="nm">2.2:</span> / userData         ← :BBDD
+<span class="nm">3:</span> / response(ok)      ← :LoginCtrl`,
+    info: { type: 'warning', text: '⚠️ <strong>Clave del examen</strong>: En secuencia lees de <em>arriba a abajo</em> (tiempo). En comunicación lees los <em>números</em> (1, 2, 2.1...). Ambos diagramas son equivalentes. La numeración anidada (2.1) indica mensajes enviados DENTRO de la ejecución del mensaje 2.' },
+    svg: 'comunicacion'
+  },
+
   estados: {
     title: 'Diagramas de Estado y Actividad',
     subtitle: 'Ciclo de vida de un objeto y flujos de trabajo',
@@ -163,6 +226,83 @@ const LESSONS = {
 // QUIZZES
 // =============================================
 const QUIZZES = {
+  ud3_quiz: {
+    title: 'Quiz: Tipos de Diagramas UML',
+    questions: [
+      {
+        q: '¿En qué año se presentó la primera versión de UML?',
+        hint: 'Fue presentado por la OMG en la década de los 90.',
+        opts: ['1990', '1995', '1997', '2004'],
+        ans: 2,
+        exp: 'UML fue presentado por primera vez en <strong>1997</strong> por la OMG (Object Management Group). En 2004 se adoptó como estándar ISO.'
+      },
+      {
+        q: '¿Qué tipo de diagrama UML es el diagrama de CLASES?',
+        hint: 'Muestra la estructura estática del sistema.',
+        opts: ['Diagrama de comportamiento', 'Diagrama de interacción', 'Diagrama estructural', 'Diagrama de actividad'],
+        ans: 2,
+        exp: 'El diagrama de clases es un <strong>diagrama estructural</strong>. Los diagramas estructurales muestran la estructura estática (en reposo) del sistema: clases, objetos, componentes, etc.'
+      },
+      {
+        q: '¿Cuál de estos es un diagrama de COMPORTAMIENTO?',
+        hint: 'Muestra la dinámica o actividad del sistema.',
+        opts: ['Diagrama de Clases', 'Diagrama de Despliegue', 'Diagrama de Componentes', 'Diagrama de Casos de Uso'],
+        ans: 3,
+        exp: 'El diagrama de <strong>Casos de Uso</strong> es de comportamiento: muestra qué hace el sistema y cómo interactúan los actores. Clases, Despliegue y Componentes son estructurales.'
+      },
+      {
+        q: '¿Qué es la ingeniería inversa en el contexto de las herramientas CASE?',
+        hint: 'Va en sentido contrario a la generación de código.',
+        opts: [
+          'Crear código a partir del diagrama de clases',
+          'Obtener diagramas UML a partir de código fuente existente',
+          'Convertir un diagrama de secuencia en diagrama de clases',
+          'Documentar los errores del sistema'
+        ],
+        ans: 1,
+        exp: '<strong>Ingeniería inversa</strong>: obtener diagramas UML (especialmente de clases) a partir del código fuente ya existente. Es la acción contraria a la generación de código.'
+      },
+      {
+        q: '¿Cuántos diagramas contempla UML en total?',
+        hint: 'Se dividen en dos grandes grupos: estructurales y de comportamiento.',
+        opts: ['7', '10', '15', '20'],
+        ans: 2,
+        exp: 'UML contempla <strong>15 diagramas</strong> en total: 6 estructurales y 9 de comportamiento (incluyendo los 4 de interacción: secuencia, comunicación, tiempos y general).'
+      },
+      {
+        q: '¿El diagrama de SECUENCIA y el de COMUNICACIÓN son...?',
+        hint: 'Muestran la misma información pero desde perspectivas distintas.',
+        opts: [
+          'Completamente diferentes: modelan cosas distintas',
+          'Equivalentes: muestran la misma información, diferente énfasis',
+          'El de secuencia es estructural y el de comunicación es de comportamiento',
+          'Solo se usan juntos'
+        ],
+        ans: 1,
+        exp: 'Son <strong>equivalentes</strong>: muestran la misma interacción. Secuencia enfatiza el <em>tiempo</em> (eje vertical). Comunicación enfatiza las <em>relaciones entre objetos</em>. Se pueden convertir uno en otro.'
+      },
+      {
+        q: '¿Qué son las herramientas CASE?',
+        hint: 'CASE = Computer Aided Software Engineering.',
+        opts: [
+          'Lenguajes de programación orientados a objetos',
+          'Herramientas que ayudan a diseñar y desarrollar sistemas software (diagramas, generación de código)',
+          'Frameworks de pruebas automatizadas',
+          'Sistemas de control de versiones'
+        ],
+        ans: 1,
+        exp: 'Las <strong>herramientas CASE</strong> (Computer Aided Software Engineering) dan soporte al proceso de desarrollo: crear diagramas UML, generar código a partir de ellos y realizar ingeniería inversa.'
+      },
+      {
+        q: '¿Cuál de los siguientes diagramas es un diagrama de INTERACCIÓN?',
+        hint: 'Los de interacción son un subgrupo de los de comportamiento.',
+        opts: ['Diagrama de Clases', 'Diagrama de Estado', 'Diagrama de Secuencia', 'Diagrama de Despliegue'],
+        ans: 2,
+        exp: 'El <strong>Diagrama de Secuencia</strong> es un diagrama de interacción (subgrupo de comportamiento). Los de interacción son: Secuencia, Comunicación, Tiempos y General de Interacción.'
+      }
+    ]
+  },
+
   visibilidad: {
     title: 'Quiz: Visibilidad y Notación',
     questions: [
@@ -422,6 +562,30 @@ const QUIZZES = {
         opts: ['ref', 'loop', 'opt', 'alt'],
         ans: 1,
         exp: '<strong>loop</strong> indica repetición. Se ejecuta mientras se cumpla la condición indicada entre []. Se puede indicar número de iteraciones: loop(min, max).'
+      },
+      {
+        q: '¿Qué elemento diferencia al diagrama de COMUNICACIÓN del de SECUENCIA?',
+        hint: 'En comunicación los mensajes tienen algo que indica su orden.',
+        opts: [
+          'Los actores externos solo aparecen en comunicación',
+          'Los mensajes llevan un número de secuencia (1:, 2:, 2.1:...)',
+          'Las lifelines solo existen en comunicación',
+          'En comunicación no se pueden modelar retornos'
+        ],
+        ans: 1,
+        exp: 'En el diagrama de <strong>comunicación</strong>, los mensajes llevan <strong>números de secuencia</strong> (1:, 2:, 2.1:) para indicar el orden temporal. En secuencia el orden lo da la posición vertical.'
+      },
+      {
+        q: 'En un diagrama de comunicación, ¿qué significa el mensaje "2.1: findUser()"?',
+        hint: 'El punto indica que es un sub-mensaje.',
+        opts: [
+          'Es el mensaje número 21 en el flujo',
+          'Es el segundo sub-mensaje dentro de la ejecución del mensaje 2',
+          'Es el primer mensaje enviado en el segundo escenario',
+          'Solo indica que el método tiene 2 parámetros'
+        ],
+        ans: 1,
+        exp: 'La numeración <strong>anidada (2.1)</strong> indica que es el <em>primer sub-mensaje</em> enviado como parte de la ejecución del mensaje 2. Permite reflejar cadenas de llamadas internas.'
       }
     ]
   }
@@ -431,6 +595,55 @@ const QUIZZES = {
 // DRAG & DROP EXERCISES
 // =============================================
 const DRAG_EXERCISES = {
+  clasifica_diagrams: {
+    title: 'Clasifica el tipo de Diagrama UML',
+    description: 'Indica si cada diagrama es ESTRUCTURAL o DE COMPORTAMIENTO según la clasificación UML.',
+    exercises: [
+      {
+        scenario: 'Diagrama de CLASES: muestra las clases del sistema con sus atributos, métodos y relaciones.',
+        chips: ['Estructural', 'Comportamiento'],
+        answer: 'Estructural',
+        explanation: 'Diagrama de Clases → Estructural. Muestra la estructura estática (en reposo) del sistema.'
+      },
+      {
+        scenario: 'Diagrama de CASOS DE USO: muestra los actores y las funcionalidades del sistema.',
+        chips: ['Estructural', 'Comportamiento'],
+        answer: 'Comportamiento',
+        explanation: 'Diagrama de Casos de Uso → Comportamiento. Modela qué hace el sistema y cómo interactúan los actores.'
+      },
+      {
+        scenario: 'Diagrama de SECUENCIA: representa el intercambio de mensajes entre objetos a lo largo del tiempo.',
+        chips: ['Estructural', 'Comportamiento'],
+        answer: 'Comportamiento',
+        explanation: 'Diagrama de Secuencia → Comportamiento (subcategoría: Interacción). Modela interacciones dinámicas.'
+      },
+      {
+        scenario: 'Diagrama de DESPLIEGUE: muestra los elementos hardware y software del sistema y su relación.',
+        chips: ['Estructural', 'Comportamiento'],
+        answer: 'Estructural',
+        explanation: 'Diagrama de Despliegue → Estructural. Muestra la infraestructura (servidores, nodos) en reposo.'
+      },
+      {
+        scenario: 'Diagrama de ACTIVIDAD: representa la secuencia de pasos para completar un proceso o flujo de trabajo.',
+        chips: ['Estructural', 'Comportamiento'],
+        answer: 'Comportamiento',
+        explanation: 'Diagrama de Actividad → Comportamiento. Modela el flujo de trabajo dinámico con decisiones y bifurcaciones.'
+      },
+      {
+        scenario: 'Diagrama de COMPONENTES: muestra los componentes del sistema y sus interfaces de comunicación.',
+        chips: ['Estructural', 'Comportamiento'],
+        answer: 'Estructural',
+        explanation: 'Diagrama de Componentes → Estructural. Muestra cómo se organizan los módulos o subsistemas.'
+      },
+      {
+        scenario: 'Diagrama de COMUNICACIÓN: muestra objetos conectados con mensajes numerados.',
+        chips: ['Estructural', 'Comportamiento'],
+        answer: 'Comportamiento',
+        explanation: 'Diagrama de Comunicación → Comportamiento (subcategoría: Interacción). Equivalente al de secuencia, con énfasis en relaciones.'
+      }
+    ]
+  },
+
   clasifica_rel: {
     title: 'Clasifica las Relaciones UML',
     description: 'Arrastra cada descripción al tipo de relación UML que corresponde.',
@@ -565,6 +778,43 @@ const DRAG_EXERCISES = {
         explanation: 'Mensaje de CREACIÓN. El nuevo objeto aparece en la lifeline con la notación «create».'
       }
     ]
+  },
+
+  comunicacion_vs_secuencia: {
+    title: 'Secuencia vs Comunicación: Clasifica',
+    description: 'Para cada característica, decide si pertenece al diagrama de secuencia, comunicación, o ambos.',
+    exercises: [
+      {
+        scenario: 'El orden temporal de los mensajes se representa en el eje VERTICAL (de arriba abajo).',
+        chips: ['Secuencia', 'Comunicación', 'Ambos'],
+        answer: 'Secuencia',
+        explanation: 'En Secuencia el tiempo es vertical. En Comunicación el orden lo dan los números (1:, 2:, 2.1:...).'
+      },
+      {
+        scenario: 'Los mensajes llevan números (1:, 2:, 2.1:) para indicar el orden de envío.',
+        chips: ['Secuencia', 'Comunicación', 'Ambos'],
+        answer: 'Comunicación',
+        explanation: 'Característica exclusiva del Diagrama de Comunicación: la numeración secuencial con posible anidación (2.1, 2.2...).'
+      },
+      {
+        scenario: 'Muestra los objetos que intervienen en la interacción.',
+        chips: ['Secuencia', 'Comunicación', 'Ambos'],
+        answer: 'Ambos',
+        explanation: 'Ambos diagramas muestran los mismos objetos. Son equivalentes: misma información, diferente énfasis gráfico.'
+      },
+      {
+        scenario: 'Énfasis principal en las RELACIONES ESTRUCTURALES entre objetos (quién conoce a quién).',
+        chips: ['Secuencia', 'Comunicación', 'Ambos'],
+        answer: 'Comunicación',
+        explanation: 'El diagrama de Comunicación muestra mejor la arquitectura de objetos (quién llama a quién). Secuencia es mejor para ver el flujo temporal.'
+      },
+      {
+        scenario: 'Usa barras de activación para mostrar cuándo un objeto está ejecutando una operación.',
+        chips: ['Secuencia', 'Comunicación', 'Ambos'],
+        answer: 'Secuencia',
+        explanation: 'Las barras de activación son exclusivas del Diagrama de Secuencia (rectángulos sobre la lifeline). Comunicación no las usa.'
+      }
+    ]
   }
 };
 
@@ -572,13 +822,17 @@ const DRAG_EXERCISES = {
 // DIAGRAM DATA (guided SVGs)
 // =============================================
 const DIAGRAMS = {
+  ud3_diag: {
+    title: 'Mapa Visual de Diagramas UML',
+    items: ['uml_tipos']
+  },
   ud4_diag: {
     title: 'Galería de Diagramas de Clases',
     items: ['clase_simple', 'herencia', 'relaciones_completo', 'interfaces']
   },
   ud5_diag: {
     title: 'Galería de Diagramas de Comportamiento',
-    items: ['casos_uso', 'secuencia_login', 'estados_factura', 'actividad_compra']
+    items: ['casos_uso', 'secuencia_login', 'comunicacion', 'estados_factura', 'actividad_compra']
   }
 };
 

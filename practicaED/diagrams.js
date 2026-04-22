@@ -77,6 +77,110 @@ function svgWrap(content, viewBox) {
 
 // ---- Individual Diagram Renderers ----
 
+function renderUMLTipos() {
+  let out = '';
+  // Title
+  out += `<text x="300" y="22" font-family="Inter" font-size="14" font-weight="700" fill="#c4b5fd" text-anchor="middle">15 Diagramas UML</text>`;
+
+  // Left column — Estructurales
+  out += `<rect x="10" y="35" width="190" height="290" rx="8" fill="rgba(74,74,122,0.25)" stroke="#4a4a7a" stroke-width="1.5"/>`;
+  out += `<text x="105" y="55" font-family="Inter" font-size="12" font-weight="700" fill="#7c5cfc" text-anchor="middle">ESTRUCTURALES</text>`;
+  out += `<text x="105" y="68" font-family="Inter" font-size="10" fill="#9898b8" text-anchor="middle">(estáticos — "foto fija")</text>`;
+
+  const estructurales = ['Clases ★', 'Objetos', 'Componentes', 'Despliegue', 'Estructura Compuesta', 'Paquetes'];
+  estructurales.forEach((d, i) => {
+    const y = 88 + i * 38;
+    const isMain = d.includes('★');
+    out += `<rect x="25" y="${y}" width="160" height="28" rx="5" fill="${isMain ? 'rgba(124,92,252,0.2)' : 'rgba(26,26,48,0.7)'}" stroke="${isMain ? '#7c5cfc' : '#4a4a7a'}" stroke-width="${isMain ? '1.5' : '1'}"/>`;
+    out += `<text x="105" y="${y + 17}" font-family="Inter" font-size="11" fill="${isMain ? '#c4b5fd' : '#9898b8'}" text-anchor="middle" font-weight="${isMain ? '600' : '400'}">${d}</text>`;
+  });
+
+  // Right column — Comportamiento
+  out += `<rect x="210" y="35" width="190" height="290" rx="8" fill="rgba(16,90,80,0.2)" stroke="#10b981" stroke-width="1.5" stroke-dasharray="4 2"/>`;
+  out += `<text x="305" y="55" font-family="Inter" font-size="12" font-weight="700" fill="#10b981" text-anchor="middle">COMPORTAMIENTO</text>`;
+  out += `<text x="305" y="68" font-family="Inter" font-size="10" fill="#9898b8" text-anchor="middle">(dinámicos — "en acción")</text>`;
+
+  const comportamiento = ['Casos de Uso', 'Actividad', 'Estado (M. Estados)'];
+  comportamiento.forEach((d, i) => {
+    const y = 78 + i * 36;
+    out += `<rect x="220" y="${y}" width="170" height="28" rx="5" fill="rgba(16,90,80,0.25)" stroke="#10b981" stroke-width="1"/>`;
+    out += `<text x="305" y="${y + 17}" font-family="Inter" font-size="11" fill="#6ee7b7" text-anchor="middle">${d}</text>`;
+  });
+
+  // Interacción subgroup
+  out += `<rect x="218" y="192" width="174" height="125" rx="6" fill="rgba(92,92,252,0.12)" stroke="#7c5cfc" stroke-width="1.5"/>`;
+  out += `<text x="305" y="207" font-family="Inter" font-size="10" font-weight="700" fill="#a78bfa" text-anchor="middle">Interacción (subgrupo)</text>`;
+  const interaccion = ['Secuencia ★', 'Comunicación ★', 'Tiempos', 'Gral. Interacción'];
+  interaccion.forEach((d, i) => {
+    const y = 214 + i * 26;
+    const isMain = d.includes('★');
+    out += `<rect x="228" y="${y}" width="155" height="20" rx="4" fill="${isMain ? 'rgba(124,92,252,0.2)' : 'none'}"/>`;
+    out += `<text x="305" y="${y + 13}" font-family="Inter" font-size="10.5" fill="${isMain ? '#c4b5fd' : '#8888a8'}" text-anchor="middle" font-weight="${isMain ? '600' : '400'}">${d}</text>`;
+  });
+
+  // Legend
+  out += `<rect x="10" y="337" width="12" height="12" rx="2" fill="rgba(124,92,252,0.3)" stroke="#7c5cfc"/>`;
+  out += `<text x="27" y="347" font-family="Inter" font-size="10" fill="#9898b8">Los marcados ★ son clave para el examen (T4 y T5)</text>`;
+
+  return svgWrap(out, '0 0 410 360');
+}
+
+function renderComunicacion() {
+  let out = '';
+
+  // Objects (rectangles)
+  const objs = [
+    { id: 'cli',  x: 30,  y: 110, w: 110, label: ':Cliente' },
+    { id: 'ctrl', x: 215, y: 30,  w: 140, label: ':LoginController' },
+    { id: 'svc',  x: 390, y: 110, w: 130, label: ':UserService' },
+    { id: 'db',   x: 215, y: 210, w: 110, label: ':BBDD' },
+  ];
+  const boxH = 34;
+  objs.forEach(o => {
+    out += `<rect x="${o.x}" y="${o.y}" width="${o.w}" height="${boxH}" rx="4" class="seq-head"/>`;
+    out += `<text x="${o.x + o.w/2}" y="${o.y + boxH/2 + 5}" class="seq-text" text-anchor="middle" font-size="11">${o.label}</text>`;
+  });
+
+  // Links (lines between objects)
+  // Cliente -- LoginController
+  const cliR = { x: objs[0].x + objs[0].w, y: objs[0].y + boxH/2 };
+  const ctrlL = { x: objs[1].x, y: objs[1].y + boxH/2 };
+  const ctrlB = { x: objs[1].x + objs[1].w/2, y: objs[1].y + boxH };
+  const svcL  = { x: objs[2].x, y: objs[2].y + boxH/2 };
+  const ctrlR = { x: objs[1].x + objs[1].w, y: objs[1].y + boxH/2 };
+  const dbT   = { x: objs[3].x + objs[3].w/2, y: objs[3].y };
+  const svcB  = { x: objs[2].x + objs[2].w/2, y: objs[2].y + boxH };
+
+  // Link lines
+  out += `<line x1="${cliR.x}" y1="${cliR.y}" x2="${ctrlL.x}" y2="${ctrlL.y}" stroke="#4a4a7a" stroke-width="1.5"/>`;
+  out += `<line x1="${ctrlR.x}" y1="${ctrlR.y}" x2="${svcL.x}" y2="${svcL.y}" stroke="#4a4a7a" stroke-width="1.5"/>`;
+  out += `<line x1="${ctrlB.x}" y1="${ctrlB.y}" x2="${dbT.x}" y2="${dbT.y}" stroke="#4a4a7a" stroke-width="1.5"/>`;
+  out += `<line x1="${svcB.x}" y1="${svcB.y}" x2="${dbT.x + 30}" y2="${dbT.y}" stroke="#4a4a7a" stroke-width="1.5"/>`;
+
+  // Numbered messages on links
+  const msgs = [
+    { x: 155, y: 84,  color: '#22d3a0', arrow: '→', label: '1: login(user, pwd)' },
+    { x: 322, y: 84,  color: '#22d3a0', arrow: '→', label: '2: authenticate(u, p)' },
+    { x: 260, y: 148, color: '#fbbf24', arrow: '↓', label: '2.1: findUser(user)' },
+    { x: 260, y: 190, color: '#9898b8', arrow: '↑', label: '2.2: / userData' },
+    { x: 115, y: 126, color: '#9898b8', arrow: '←', label: '3: / response(ok)' },
+  ];
+  msgs.forEach(m => {
+    out += `<text x="${m.x}" y="${m.y}" font-family="Inter" font-size="10.5" fill="${m.color}" text-anchor="middle" font-weight="600">${m.arrow} ${m.label}</text>`;
+  });
+
+  // Legend
+  out += `<rect x="10" y="270" width="520" height="55" rx="6" fill="rgba(26,26,48,0.7)" stroke="#4a4a7a"/>`;
+  out += `<text x="270" y="287" font-family="Inter" font-size="11" fill="#c4b5fd" text-anchor="middle" font-weight="700">Claves del Diagrama de Comunicación</text>`;
+  out += `<text x="30" y="305" font-family="Inter" font-size="10" fill="#22d3a0">● Objetos = rectángulos con :NombreClase</text>`;
+  out += `<text x="30" y="317" font-family="Inter" font-size="10" fill="#fbbf24">● Numeración anidada (2.1) = submensaje dentro del mensaje 2</text>`;
+  out += `<text x="280" y="305" font-family="Inter" font-size="10" fill="#9898b8">● Sin lifelines ni barras de activación</text>`;
+  out += `<text x="280" y="317" font-family="Inter" font-size="10" fill="#9898b8">● Equivalente al diagrama de secuencia</text>`;
+
+  return svgWrap(out, '0 0 540 335');
+}
+
+
 function renderClaseSimple() {
   let out = '';
   const c = umlClass(20, 20, 260, 'Empleado',
@@ -358,21 +462,25 @@ function renderActividadCompra() {
 }
 
 const SVG_MAP = {
+  uml_tipos: renderUMLTipos,
   clase_simple: renderClaseSimple,
   herencia: renderHerencia,
   relaciones_completo: renderRelaciones,
   interfaces: renderInterfaces,
   casos_uso: renderCasosUso,
   secuencia_login: renderSecuenciaLogin,
+  comunicacion: renderComunicacion,
   estados_factura: renderEstadosFactura,
   actividad_compra: renderActividadCompra,
 };
 
 // Inline SVGs for lessons (small previews)
 const LESSON_SVG_MAP = {
+  uml_tipos: renderUMLTipos,
   clase_simple: renderClaseSimple,
   relaciones: renderRelaciones,
   casos_uso: renderCasosUso,
   secuencia: renderSecuenciaLogin,
+  comunicacion: renderComunicacion,
   estados: renderEstadosFactura,
 };
