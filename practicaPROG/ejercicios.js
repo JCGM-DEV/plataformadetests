@@ -140,7 +140,7 @@ const EJERCICIOS = [
         flota[<span class="num">2</span>] = <span class="kw">new</span> <span class="fn">Coche</span>(<span class="str">"Ford"</span>, <span class="str">"Focus"</span>, <span class="num">190</span>, <span class="num">5</span>);
         flota[<span class="num">3</span>] = <span class="kw">new</span> <span class="fn">Moto</span>(<span class="str">"Kawasaki"</span>, <span class="str">"Ninja"</span>, <span class="num">250</span>, <span class="num">650</span>);
 
-        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; flota.length; i++) {
+        <span class="kw">for</span> (<span class="kw">int</span> i = 0; i < flota.length; i++) {
             flota[i].<span class="fn">arrancar</span>();
             flota[i].<span class="fn">mostrarInfo</span>();
         }
@@ -165,14 +165,14 @@ const EJERCICIOS = [
     ],
 
     checks: [
-      (c) => /interface\s+Conducible/i.test(c),
-      (c) => /abstract\s+class\s+Vehiculo/i.test(c) && /implements\s+Conducible/i.test(c),
-      (c) => /this\s*\(/.test(c),
-      (c) => /abstract\s+\w+\s+getTipo/i.test(c),
-      (c) => /class\s+Coche\s+extends\s+Vehiculo/i.test(c) && /super\s*\(/.test(c),
-      (c) => /class\s+Moto\s+extends\s+Vehiculo/i.test(c),
-      (c) => /Vehiculo\s*\[\s*\]/.test(c),
-      (c) => /try\s*\{/.test(c) && /catch\s*\(/.test(c),
+      (c) => /interface\s+Conducible\s*\{[\s\S]*void\s+arrancar\s*\(\s*\)\s*;/i.test(c),
+      (c) => /abstract\s+class\s+Vehiculo\s+implements\s+Conducible/i.test(c) && /protected\s+String\s+marca/i.test(c) && /protected\s+int\s+velocidadMax/i.test(c),
+      (c) => /public\s+Vehiculo\s*\(\s*\)\s*\{[\s\S]*this\s*\([\s\S]*\)\s*;/.test(c),
+      (c) => /public\s+abstract\s+String\s+getTipo\s*\(\s*\)\s*;/i.test(c),
+      (c) => /class\s+Coche\s+extends\s+Vehiculo/i.test(c) && /super\s*\([\s\S]*\)\s*;/i.test(c),
+      (c) => /class\s+Moto\s+extends\s+Vehiculo/i.test(c) && /super\s*\([\s\S]*\)\s*;/i.test(c),
+      (c) => /Vehiculo\s*\[\s*\]\s+\w+\s*=\s*new\s+Vehiculo\s*\[\s*\d+\s*\]/i.test(c),
+      (c) => /try\s*\{[\s\S]*\}\s*catch\s*\(\s*IllegalArgumentException\s+\w+\s*\)\s*\{/i.test(c),
     ]
   },
 
@@ -304,21 +304,21 @@ const EJERCICIOS = [
     <span class="kw">public static void</span> <span class="fn">main</span>(<span class="tp">String</span>[] args) {
         <span class="fn">Empleado</span>[] plantilla = <span class="kw">new</span> <span class="fn">Empleado</span>[<span class="num">4</span>];
         <span class="kw">try</span> {
-            plantilla[<span class="num">0</span>] = <span class="kw">new</span> <span class="fn">Gerente</span>(<span class="str">"Ana"</span>, <span class="num">3000</span>, <span class="num">1500</span>);
-            plantilla[<span class="num">1</span>] = <span class="kw">new</span> <span class="fn">Desarrollador</span>(<span class="str">"Luis"</span>, <span class="num">2500</span>, <span class="num">3</span>);
-            plantilla[<span class="num">2</span>] = <span class="kw">new</span> <span class="fn">Asistente</span>(<span class="str">"María"</span>, <span class="num">1800</span>);
-            plantilla[<span class="num">3</span>] = <span class="kw">new</span> <span class="fn">Gerente</span>(<span class="str">"Pedro"</span>, <span class="num">3500</span>, <span class="num">2000</span>);
+            plantilla[0] = <span class="kw">new</span> <span class="fn">Gerente</span>(<span class="str">"Ana"</span>, <span class="num">3000</span>, <span class="num">1500</span>);
+            plantilla[1] = <span class="kw">new</span> <span class="fn">Desarrollador</span>(<span class="str">"Luis"</span>, <span class="num">2500</span>, <span class="num">3</span>);
+            plantilla[2] = <span class="kw">new</span> <span class="fn">Asistente</span>(<span class="str">"María"</span>, <span class="num">1800</span>);
+            plantilla[3] = <span class="kw">new</span> <span class="fn">Gerente</span>(<span class="str">"Pedro"</span>, <span class="num">3500</span>, <span class="num">2000</span>);
         } <span class="kw">catch</span> (<span class="fn">IllegalArgumentException</span> e) {
             System.out.<span class="fn">println</span>(<span class="str">"Error al crear empleado: "</span> + e.<span class="fn">getMessage</span>());
         }
 
-        <span class="kw">for</span> (<span class="kw">int</span> i = <span class="num">0</span>; i &lt; plantilla.length; i++) {
+        <span class="kw">for</span> (<span class="kw">int</span> i = 0; i < plantilla.length; i++) {
             plantilla[i].<span class="fn">mostrarInfo</span>();
         }
 
-        <span class="cm">// Sobrecarga: calcularSalario con horas extra</span>
-        <span class="fn">Desarrollador</span> dev = (<span class="fn">Desarrollador</span>) plantilla[<span class="num">1</span>];
-        System.out.<span class="fn">println</span>(<span class="str">"Salario con 10h extra: "</span> + dev.<span class="fn">calcularSalario</span>(<span class="num">10</span>));
+        // Sobrecarga: calcularSalario con horas extra
+        <span class="fn">Desarrollador</span> dev = (<span class="fn">Desarrollador</span>) plantilla[1];
+        System.out.<span class="fn">println</span>(<span class="str">"Salario con 10h extra: "</span> + dev.<span class="fn">calcularSalario</span>(10));
     }
 }`,
 
@@ -336,16 +336,16 @@ const EJERCICIOS = [
     ],
 
     checks: [
-      (c) => /interface\s+Evaluable/i.test(c),
-      (c) => /abstract\s+class\s+Empleado/i.test(c) && /implements\s+Evaluable/i.test(c),
-      (c) => /abstract\s+\w+\s+calcularSalario/i.test(c),
-      (c) => /throw\s+new\s+IllegalArgumentException/i.test(c),
-      (c) => /this\s*\(/.test(c),
-      (c) => /class\s+Gerente\s+extends\s+Empleado/i.test(c) && /super\s*\(/.test(c),
-      (c) => /calcularSalario\s*\(\s*int\s+\w+\s*\)/i.test(c),
-      (c) => /class\s+Asistente\s+extends\s+Empleado/i.test(c),
-      (c) => /Empleado\s*\[\s*\]/.test(c),
-      (c) => /try\s*\{/.test(c) && /catch\s*\(/.test(c),
+      (c) => /interface\s+Evaluable\s*\{[\s\S]*String\s+evaluar\s*\(\s*\)\s*;/i.test(c),
+      (c) => /abstract\s+class\s+Empleado\s+implements\s+Evaluable/i.test(c) && /private\s+String\s+nombre/i.test(c) && /private\s+double\s+salarioBase/i.test(c),
+      (c) => /public\s+abstract\s+double\s+calcularSalario\s*\(\s*\)\s*;/i.test(c),
+      (c) => /public\s+Empleado\s*\([\s\S]*\)\s*\{[\s\S]*throw\s+new\s+IllegalArgumentException/i.test(c),
+      (c) => /public\s+Empleado\s*\(\s*\)\s*\{[\s\S]*this\s*\(/i.test(c),
+      (c) => /class\s+Gerente\s+extends\s+Empleado/i.test(c) && /super\s*\([\s\S]*\)\s*;/i.test(c),
+      (c) => /public\s+double\s+calcularSalario\s*\(\s*int\s+\w+\s*\)/i.test(c),
+      (c) => /class\s+Asistente\s+extends\s+Empleado/i.test(c) && /super\s*\([\s\S]*\)\s*;/i.test(c),
+      (c) => /Empleado\s*\[\s*\]\s+\w+\s*=\s*new\s+Empleado\s*\[\s*\d+\s*\]/i.test(c),
+      (c) => /try\s*\{[\s\S]*\}\s*catch\s*\(\s*IllegalArgumentException\s+\w+\s*\)/i.test(c),
     ]
   }
 ];

@@ -41,9 +41,9 @@ Se declara con la palabra <code>abstract</code> y suele tener uno o más <strong
           placeholder: '// Escribe aquí tu clase abstracta Persona...\n// Recuerda: abstract class Persona { ... }',
           checks: [
             { desc: 'Declara abstract class Persona', test: c => /abstract\s+class\s+Persona/i.test(c) },
-            { desc: 'Atributos private nombre y edad', test: c => /private\s+String\s+nombre/i.test(c) && /private\s+int\s+edad/i.test(c) },
-            { desc: 'Constructor con parámetros', test: c => /Persona\s*\(.*String.*,.*int/i.test(c) || /Persona\s*\(.*int.*,.*String/i.test(c) },
-            { desc: 'Método abstracto getInfo()', test: c => /abstract.*String.*getInfo\s*\(\s*\)/i.test(c) || /String.*abstract.*getInfo\s*\(\s*\)/i.test(c) },
+            { desc: 'Atributos private nombre (String) y edad (int)', test: c => /private\s+String\s+nombre/i.test(c) && /private\s+int\s+edad/i.test(c) },
+            { desc: 'Constructor Persona(String, int) con this', test: c => /public\s+Persona\s*\(\s*String\s+\w+\s*,\s*int\s+\w+\s*\)[\s\S]*this\./i.test(c) },
+            { desc: 'Método abstracto String getInfo()', test: c => /public\s+abstract\s+String\s+getInfo\s*\(\s*\)\s*;/i.test(c) },
           ]
         }
       },
@@ -115,8 +115,8 @@ La subclase puede tener sus propios atributos adicionales.`,
           placeholder: '// class Empleado extends Persona {\n//     private double salario;\n//     ...\n//     public Empleado(...) {\n//         super(...);\n//         ...\n//     }\n// }',
           checks: [
             { desc: 'class Empleado extends Persona', test: c => /class\s+Empleado\s+extends\s+Persona/i.test(c) },
-            { desc: 'Atributo private double salario', test: c => /private\s+double\s+salario/i.test(c) },
-            { desc: 'Constructor llama a super()', test: c => /class\s+Empleado[\s\S]*super\s*\(/i.test(c) },
+            { desc: 'Atributo private double salario', test: c => /private\s+double\s+salario\s*;/i.test(c) },
+            { desc: 'Constructor llama a super(nombre, edad)', test: c => /public\s+Empleado\s*\([\s\S]*\)[\s\S]*super\s*\(\s*\w+\s*,\s*\w+\s*\)\s*;/i.test(c) },
             { desc: 'Asigna this.salario y this.departamento', test: c => /this\.salario\s*=/i.test(c) && /this\.departamento\s*=/i.test(c) },
           ]
         }
@@ -296,14 +296,14 @@ En el examen suelen pedir: lanzar excepción en setter, o crear una excepción p
 - Usa try-catch para capturar posibles DniInvalidoException`,
 
       criterios: [
-        { desc: 'Clase abstracta Miembro con atributos privados y método abstracto getRol()', key: 'abstracta', test: c => /abstract\s+class\s+Miembro/i.test(c) && /abstract.*getRol\s*\(\s*\)/i.test(c) },
-        { desc: 'Encapsulación: atributos private con getters/setters', key: 'encapsulacion', test: c => /private\s+String\s+nombre/i.test(c) && /getNombre\s*\(\s*\)/i.test(c) },
-        { desc: 'Alumno extends Miembro con super() en constructor', key: 'herencia_alumno', test: c => /class\s+Alumno\s+extends\s+Miembro/i.test(c) && /super\s*\(/i.test(c) },
-        { desc: 'Profesor extends Miembro', key: 'herencia_prof', test: c => /class\s+Profesor\s+extends\s+Miembro/i.test(c) },
-        { desc: 'Interfaz Evaluable implementada por Alumno', key: 'interfaz', test: c => /interface\s+Evaluable/i.test(c) && /Alumno\s+extends\s+Miembro\s+implements\s+Evaluable/i.test(c) },
-        { desc: 'Excepción personalizada DniInvalidoException', key: 'excepcion_custom', test: c => /class\s+DniInvalidoException\s+extends\s+Exception/i.test(c) },
-        { desc: 'ArrayList<Miembro> con polimorfismo', key: 'polimorfismo', test: c => /ArrayList\s*<\s*Miembro\s*>/i.test(c) },
-        { desc: 'Bloque try-catch en el main', key: 'try_catch', test: c => /try\s*\{[\s\S]*\}\s*catch/i.test(c) },
+        { desc: 'Clase abstracta Miembro con atributos private y getRol() abstracto', key: 'abstracta', test: c => /abstract\s+class\s+Miembro/i.test(c) && /private\s+String\s+(nombre|dni)/i.test(c) && /public\s+abstract\s+String\s+getRol\s*\(\s*\)\s*;/i.test(c) },
+        { desc: 'Encapsulación: setter para DNI con validación isEmpty', key: 'encapsulacion', test: c => /public\s+void\s+setDni\s*\(\s*String\s+\w+\s*\)[\s\S]*if\s*\([\s\S]*\.isEmpty\s*\(\s*\)/i.test(c) },
+        { desc: 'Alumno hereda de Miembro y usa super(nombre, dni)', key: 'herencia_alumno', test: c => /class\s+Alumno\s+extends\s+Miembro/i.test(c) && /super\s*\(\s*\w+\s*,\s*\w+\s*\)\s*;/i.test(c) },
+        { desc: 'Profesor hereda de Miembro', key: 'herencia_prof', test: c => /class\s+Profesor\s+extends\s+Miembro/i.test(c) },
+        { desc: 'Alumno implementa interface Evaluable { double calcularMedia(); }', key: 'interfaz', test: c => /interface\s+Evaluable\s*\{[\s\S]*double\s+calcularMedia\s*\(\s*\)\s*;/i.test(c) && /Alumno[\s\S]*implements\s+Evaluable/i.test(c) },
+        { desc: 'Excepción DniInvalidoException extends Exception', key: 'excepcion_custom', test: c => /class\s+DniInvalidoException\s+extends\s+Exception/i.test(c) },
+        { desc: 'ArrayList<Miembro> con polimorfismo', key: 'polimorfismo', test: c => /ArrayList\s*<\s*Miembro\s*>\s+\w+\s*=\s*new\s+ArrayList/i.test(c) },
+        { desc: 'Uso de try-catch con DniInvalidoException', key: 'try_catch', test: c => /try\s*\{[\s\S]*\}\s*catch\s*\(\s*DniInvalidoException\s+\w+\s*\)/i.test(c) },
       ]
     }
   },

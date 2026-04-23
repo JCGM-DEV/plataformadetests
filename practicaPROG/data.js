@@ -370,10 +370,10 @@ const CODE_LABS = {
     }
 } `,
         checks: [
-          { desc: 'Tiene atributo private double precio', test: code => /private\s+double\s+precio/.test(code) },
-          { desc: 'Constructor recibe nombre y precio', test: code => /Producto\s*\(\s*String\s+\w+\s*,\s*double\s+\w+\s*\)/.test(code) },
-          { desc: 'Tiene método getPrecio()', test: code => /getPrecio\s*\(\s*\)/.test(code) },
-          { desc: 'Setter valida precio > 0', test: code => /setPrecio/.test(code) && />/.test(code) && /0/.test(code) }
+          { desc: 'Tiene atributo private double precio', test: code => /private\s+double\s+precio\s*;/i.test(code) },
+          { desc: 'Constructor recibe nombre y precio', test: code => /public\s+Producto\s*\(\s*String\s+\w+\s*,\s*double\s+\w+\s*\)/i.test(code) },
+          { desc: 'Tiene método public double getPrecio()', test: code => /public\s+double\s+getPrecio\s*\(\s*\)/i.test(code) },
+          { desc: 'Setter valida precio > 0 y lanza error o asigna', test: code => /public\s+void\s+setPrecio/i.test(code) && /if\s*\(\s*\w+\s*>\s*0\s*\)/i.test(code) }
         ]
       },
       { id: 2, title: 'Herencia y @Override', desc: 'Completa la clase Circulo que extiende Figura. Debe implementar el método abstracto area() usando Math.PI * radio * radio.',
@@ -450,9 +450,9 @@ class Factura implements Calculable {
     }
 } `,
         checks: [
-          { desc: 'Existe interfaz Calculable', test: code => /interface\s+Calculable/.test(code) },
-          { desc: 'Factura implementa Calculable', test: code => /class\s+Factura\s+implements\s+Calculable/.test(code) },
-          { desc: 'Implementa calcularTotal()', test: code => /calcularTotal\s*\(\s*\)/.test(code) }
+          { desc: 'Existe interfaz Calculable con double calcularTotal()', test: code => /interface\s+Calculable\s*\{[\s\S]*double\s+calcularTotal\s*\(\s*\)\s*;/i.test(code) },
+          { desc: 'Factura implementa Calculable', test: code => /class\s+Factura\s+implements\s+Calculable/i.test(code) },
+          { desc: 'Implementa calcularTotal() con @Override', test: code => /@Override[\s\S]*public\s+double\s+calcularTotal\s*\(\s*\)/i.test(code) }
         ]
       }
     ]
