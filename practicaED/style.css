@@ -1054,8 +1054,8 @@ body {
 .lab-header h2 { font-size: 1.75rem; font-weight: 800; background: linear-gradient(135deg, #fff 0%, var(--accent3) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: .5rem; }
 .lab-header p { color: var(--text2); }
 
-.lab-workspace { display: grid; grid-template-columns: 420px 1fr; gap: 2rem; min-height: 500px; align-items: start; }
-@media(max-width: 1024px) { .lab-workspace { grid-template-columns: 1fr; } }
+.lab-workspace { display: grid; grid-template-columns: 470px 1fr; gap: 2rem; min-height: 500px; align-items: start; }
+@media(max-width: 1100px) { .lab-workspace { grid-template-columns: 1fr; } }
 
 .lab-toolbox { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; display: flex; flex-direction: column; gap: 1.5rem; position: sticky; top: 80px; }
 .toolbox-group h3 { font-size: .75rem; font-weight: 700; text-transform: uppercase; color: var(--text2); letter-spacing: .05em; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: .5rem; }
