@@ -104,21 +104,24 @@ function executeGitCommand(fullCmd) {
         break;
 
       case 'commit':
-        let msg = args.join(' ');
-        if (msg.includes('-m')) {
-           msg = msg.split('-m')[1].replace(/['"]/g, '').trim();
-        } else {
-           msg = "Manual commit";
-        }
-
-        if (gitRepo.staging.length === 0) {
+        let commitMsg = args.join(' ');
+        if (!commitMsg.includes('-m')) {
+          addLog('error: switch `m\' requiere un valor. Uso: git commit -m "mensaje"', 'err');
+          addLog('Pista: En este simulador, el mensaje es obligatorio para avanzar.', 'info');
+        } else if (gitRepo.staging.length === 0) {
           addLog('nothing to commit, working tree clean', 'warn');
+          addLog('Pista: ¿Has usado "git add ." para preparar los archivos?', 'info');
         } else {
+          const rawMsg = commitMsg.split('-m')[1].replace(/['"]/g, '').trim();
+          if (!rawMsg) {
+             addLog('error: el mensaje del commit no puede estar vacío', 'err');
+             return;
+          }
           const parentHash = gitRepo.branches[gitRepo.head] || (gitRepo.commits.length > 0 ? gitRepo.commits[gitRepo.commits.length-1].hash : null);
           const newHash = Math.random().toString(16).substring(2, 8);
           const newCommit = {
             hash: newHash,
-            msg: msg,
+            msg: rawMsg,
             parent: parentHash,
             x: 50 + gitRepo.commits.length * 80,
             y: 100
@@ -126,7 +129,7 @@ function executeGitCommand(fullCmd) {
           gitRepo.commits.push(newCommit);
           gitRepo.branches[gitRepo.head] = newHash;
           gitRepo.staging = [];
-          addLog(`[${gitRepo.head} ${newHash}] ${msg}`, 'suc');
+          addLog(`[${gitRepo.head} ${newHash}] ${rawMsg}`, 'suc');
           addLog(`${gitRepo.workingDir.length} files changed, insertions(+)`);
         }
         break;
@@ -226,6 +229,19 @@ function renderGitViz() {
 
   canvas.innerHTML = selectorHtml + challengeHtml;
   
+  // Feedback board similar to UML lab
+  const feedbackBoard = document.createElement('div');
+  feedbackBoard.id = 'git-feedback';
+  feedbackBoard.className = 'lab-feedback-board hidden';
+  feedbackBoard.innerHTML = `
+    <div class="fb-icon">💡</div>
+    <div class="fb-content">
+      <div class="fb-title">Pista del Desafío</div>
+      <div id="git-fb-msg" class="fb-msg">...</div>
+    </div>
+  `;
+  canvas.appendChild(feedbackBoard);
+  
   // Draw lines
   gitRepo.commits.forEach(c => {
     if (c.parent) {
@@ -278,25 +294,27 @@ function drawLine(parent, x1, y1, x2, y2) {
 function checkGitChallenges() {
   if (gitRepo.currentChallengeIdx === -1) return;
   const ex = GIT_CHALLENGES[gitRepo.currentChallengeIdx];
+  const feedback = document.getElementById('git-feedback');
+  const fbMsg = document.getElementById('git-fb-msg');
+  
   if (ex.validate(gitRepo)) {
+    if (feedback) {
+      feedback.classList.remove('hidden');
+      feedback.className = 'lab-feedback-board success';
+      fbMsg.innerHTML = `<strong>¡Desafío logrado!</strong> ${ex.title} completado con éxito. 🚀`;
+    }
     showToast('¡Desafío completado! 🎉', 'success');
-    // Add success message to terminal
-    const output = document.getElementById('git-output');
-    const div = document.createElement('div');
-    div.className = 'suc';
-    div.style.padding = '8px';
-    div.style.borderLeft = '4px solid var(--green)';
-    div.style.background = 'rgba(34,211,160,0.1)';
-    div.innerHTML = `<strong>¡OBJETIVO LOGRADO!</strong> ${ex.title} completado con éxito.`;
-    output.appendChild(div);
-    output.scrollTop = output.scrollHeight;
     
     // Mark section as done in main app
     if (activeSection) {
        completedSections.add(activeSection);
        updateProgress();
-       const el = document.getElementById('nav-' + activeSection);
-       if (el && !el.querySelector('.item-done')) el.innerHTML += '<span class="item-done">✓</span>';
+    }
+  } else {
+    if (feedback) {
+      feedback.classList.remove('hidden');
+      feedback.className = 'lab-feedback-board info';
+      fbMsg.textContent = ex.hint;
     }
   }
 }

@@ -848,10 +848,29 @@ const LAB_EXERCISES = {
     { 
       id: 'ud4-ex1', 
       title: 'Clase Simple Empleado', 
-      scenario: 'Crea una clase llamada "Empleado" con dos atributos privados: "nombre" (String) y "sueldo" (double). Añade un método público "getSueldo()".',
+      scenario: 'Crea una clase llamada "Empleado" con dos atributos privados: "nombre" (String) y "sueldo" (double). Añade un método público "getSueldo()" que devuelva double.',
       solution: {
-        nodes: [{ text: 'Empleado', attrs: ['nombre', 'sueldo'], methods: ['getSueldo'] }],
-        hints: { no_nodes: 'Añade una clase para empezar.', wrong_name: 'La clase debe llamarse "Empleado".', missing_attrs: 'Te faltan los atributos "nombre" y "sueldo".', missing_meths: 'El método "getSueldo()" es obligatorio.' }
+        nodes: [
+          { 
+            text: 'Empleado', 
+            attrs: [
+              { keyword: 'nombre', visibility: '-', type: 'String' },
+              { keyword: 'sueldo', visibility: '-', type: 'double' }
+            ],
+            methods: [
+              { keyword: 'getSueldo', visibility: '+', returnType: 'double' }
+            ]
+          }
+        ],
+        hints: { 
+          no_nodes: 'Añade una clase para empezar.', 
+          wrong_name: 'La clase debe llamarse "Empleado".', 
+          missing_attrs: 'Te faltan los atributos "nombre" y "sueldo".', 
+          missing_meths: 'El método "getSueldo()" es obligatorio.',
+          wrong_visibility: 'Revisa la visibilidad: los atributos deben ser privados (-) y el método público (+).',
+          wrong_type: 'Revisa los tipos: nombre debe ser String, sueldo debe ser double.',
+          type_mismatch: 'Error de coherencia: getSueldo() debe devolver el mismo tipo que el atributo "sueldo" (double).'
+        }
       }
     },
     { 
@@ -859,9 +878,20 @@ const LAB_EXERCISES = {
       title: 'Herencia Animal', 
       scenario: 'Crea una clase padre "Animal" y una clase hija "Perro" que herede de ella. Perro debe tener "- raza : String".',
       solution: {
-        nodes: [{ text: 'Animal' }, { text: 'Perro', attrs: ['raza'] }],
+        nodes: [
+          { text: 'Animal' }, 
+          { text: 'Perro', attrs: [
+            { keyword: 'raza', visibility: '-', type: 'String' }
+          ]}
+        ],
         rels: [{ from: 'Perro', to: 'Animal', type: 'inherit' }],
-        hints: { node_count: 'Necesitas dos clases: Animal y Perro.', missing_rel: 'Falta la relación de herencia de Perro a Animal.', wrong_attr: 'La clase Perro debe tener el atributo "raza".' }
+        hints: { 
+          node_count: 'Necesitas dos clases: Animal y Perro.', 
+          missing_rel: 'Falta la relación de herencia de Perro a Animal.', 
+          wrong_attr: 'La clase Perro debe tener el atributo "raza".',
+          wrong_visibility: 'El atributo "raza" debe ser privado (-).',
+          wrong_type: 'El atributo "raza" debe ser de tipo String.'
+        }
       }
     },
     {
@@ -877,11 +907,23 @@ const LAB_EXERCISES = {
     {
       id: 'ud4-ex4',
       title: 'Interfaz Volable',
-      scenario: 'Define una clase "Avion" que implemente una interfaz "Volable". La interfaz tiene "+ volar()". El avión tiene "- matricula".',
+      scenario: 'Define una clase "Avion" que implemente una interfaz "Volable". La interfaz tiene "+ volar() : void". El avión tiene "- matricula : String".',
       solution: {
-        nodes: [{ text: 'Volable', methods: ['volar'] }, { text: 'Avion', attrs: ['matricula'] }],
-        rels: [{ from: 'Avion', to: 'Volable', type: 'inherit' }], // inherit as realization marker
-        hints: { missing_meths: 'La interfaz Volable debe tener el método "volar()".', missing_rel: 'Conecta Avion con Volable.' }
+        nodes: [
+          { text: 'Volable', methods: [
+            { keyword: 'volar', visibility: '+', returnType: 'void' }
+          ]}, 
+          { text: 'Avion', attrs: [
+            { keyword: 'matricula', visibility: '-', type: 'String' }
+          ]}
+        ],
+        rels: [{ from: 'Avion', to: 'Volable', type: 'inherit' }],
+        hints: { 
+          missing_meths: 'La interfaz Volable debe tener el método "volar()".', 
+          missing_rel: 'Conecta Avion con Volable.',
+          wrong_visibility: 'Revisa la visibilidad del método/atributo.',
+          wrong_type: 'Revisa los tipos de datos.'
+        }
       }
     },
     {
@@ -1095,34 +1137,34 @@ Object.assign(LAB_EXERCISES, {
 const GIT_CHALLENGES = [
   {
     id: 'git-ex1',
-    title: 'Primeros pasos',
-    scenario: 'Inicializa el repositorio y realiza tu primer commit con el mensaje "Initial commit".',
+    title: 'Primeros pasos (init → add → commit)',
+    scenario: 'Inicializa un nuevo repositorio, añade los archivos al área de preparación y realiza tu primer commit con el mensaje "Initial commit".',
     validate: (state) => state.initialized && state.commits.length > 0 && state.commits[0].msg.toLowerCase().includes('initial'),
-    hint: 'Usa "git init", luego "git add ." y finalmente "git commit -m \'Initial commit\'"',
+    hint: 'Sigue el flujo: 1. "git init", 2. "git add ." para preparar los archivos, 3. "git commit -m \'Initial commit\'" para confirmar.',
     solution: 'git init\ngit add .\ngit commit -m "Initial commit"'
   },
   {
     id: 'git-ex2',
-    title: 'Trabajando con ramas',
-    scenario: 'Crea una nueva rama llamada "desarrollo" (sin cambiarte a ella aún).',
+    title: 'Trabajando con ramas (Branching)',
+    scenario: 'Para organizar el trabajo, crea una nueva rama llamada "desarrollo" partiendo de la rama actual.',
     validate: (state) => state.branches['desarrollo'] !== undefined,
-    hint: 'Usa "git branch desarrollo"',
+    hint: 'Usa el comando "git branch desarrollo" para crearla.',
     solution: 'git branch desarrollo'
   },
   {
     id: 'git-ex3',
-    title: 'Navegación entre ramas',
-    scenario: 'Cámbiate a la rama "desarrollo".',
+    title: 'Cambiando el contexto (Checkout)',
+    scenario: 'Ahora que has creado la rama "desarrollo", cámbiate a ella para empezar a trabajar allí.',
     validate: (state) => state.head === 'desarrollo',
-    hint: 'Usa "git checkout desarrollo"',
+    hint: 'Usa "git checkout desarrollo" para cambiar el puntero HEAD.',
     solution: 'git checkout desarrollo'
   },
   {
     id: 'git-ex4',
-    title: 'Commit en rama secundaria',
-    scenario: 'Estando en la rama "desarrollo", realiza un commit con el mensaje "Feature 1".',
+    title: 'Evolución del proyecto',
+    scenario: 'Estando en la rama "desarrollo", crea un nuevo commit con el mensaje "Feature 1" para registrar tus cambios.',
     validate: (state) => state.head === 'desarrollo' && state.commits.some(c => c.msg.toLowerCase().includes('feature')),
-    hint: 'Asegúrate de estar en "desarrollo", añade archivos y haz commit.',
+    hint: 'Recuerda que antes de cada commit debes usar "git add ." para preparar los cambios.',
     solution: 'git add .\ngit commit -m "Feature 1"'
   }
 ];

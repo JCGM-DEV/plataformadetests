@@ -1099,12 +1099,96 @@ function validateLabState() {
 }
 
 function validateUML(sol) {
-  const mainNode = labNodes.find(n => n.text.toLowerCase().includes(sol.nodes[0].text.toLowerCase()));
-  if (!mainNode) return [sol.hints?.wrong_name || 'Nombre de clase incorrecto.', false];
-  const hasAttrs = sol.nodes[0].attrs ? sol.nodes[0].attrs.every(a => mainNode.attrs?.some(ma => ma.toLowerCase().includes(a.toLowerCase()))) : true;
-  const hasMeths = sol.nodes[0].methods ? sol.nodes[0].methods.every(m => mainNode.methods?.some(mm => mm.toLowerCase().includes(m.toLowerCase()))) : true;
-  if (!hasAttrs) return [sol.hints?.missing_attrs || 'Faltan atributos.', false];
-  if (!hasMeths) return [sol.hints?.missing_meths || 'Faltan métodos.', false];
+  // --- 1. Validate node count ---
+  const requiredNodeCount = sol.nodes.length;
+  if (labNodes.length < requiredNodeCount) {
+    return [sol.hints?.node_count || `Necesitas ${requiredNodeCount} clase(s). Tienes ${labNodes.length}.`, false];
+  }
+
+  // --- 2. Validate each node ---
+  for (const solNode of sol.nodes) {
+    const matchedNode = labNodes.find(n => n.text.toLowerCase().includes(solNode.text.toLowerCase()));
+    if (!matchedNode) {
+      return [sol.hints?.wrong_name || `Falta la clase "${solNode.text}".`, false];
+    }
+
+    // --- 2a. Validate attributes (supports both old string[] and new object[] format) ---
+    if (solNode.attrs) {
+      for (const solAttr of solNode.attrs) {
+        // New format: { keyword, visibility, type }
+        if (typeof solAttr === 'object' && solAttr.keyword) {
+          const foundAttr = matchedNode.attrs?.find(ma => ma.toLowerCase().includes(solAttr.keyword.toLowerCase()));
+          if (!foundAttr) {
+            return [sol.hints?.missing_attrs || `Falta el atributo "${solAttr.keyword}" en "${solNode.text}".`, false];
+          }
+          // Check visibility prefix
+          if (solAttr.visibility) {
+            const attrTrimmed = foundAttr.trim();
+            if (!attrTrimmed.startsWith(solAttr.visibility)) {
+              return [sol.hints?.wrong_visibility || `El atributo "${solAttr.keyword}" debe tener visibilidad "${solAttr.visibility}" (${solAttr.visibility === '-' ? 'privado' : solAttr.visibility === '+' ? 'público' : solAttr.visibility === '#' ? 'protegido' : 'paquete'}).`, false];
+            }
+          }
+          // Check type
+          if (solAttr.type) {
+            const colonIdx = foundAttr.indexOf(':');
+            if (colonIdx === -1) {
+              return [`El atributo "${solAttr.keyword}" necesita indicar el tipo. Formato: "visibilidad nombre : tipo". Ejemplo: "${solAttr.visibility || '-'} ${solAttr.keyword} : ${solAttr.type}"`, false];
+            }
+            const declaredType = foundAttr.substring(colonIdx + 1).trim().toLowerCase();
+            if (!declaredType.includes(solAttr.type.toLowerCase())) {
+              return [sol.hints?.wrong_type || `El tipo de "${solAttr.keyword}" debe ser ${solAttr.type}, no "${declaredType}".`, false];
+            }
+          }
+        } else {
+          // Old format: plain string
+          if (!matchedNode.attrs?.some(ma => ma.toLowerCase().includes(solAttr.toLowerCase()))) {
+            return [sol.hints?.missing_attrs || `Falta el atributo "${solAttr}" en "${solNode.text}".`, false];
+          }
+        }
+      }
+    }
+
+    // --- 2b. Validate methods (supports both old string[] and new object[] format) ---
+    if (solNode.methods) {
+      for (const solMeth of solNode.methods) {
+        if (typeof solMeth === 'object' && solMeth.keyword) {
+          const foundMeth = matchedNode.methods?.find(mm => mm.toLowerCase().includes(solMeth.keyword.toLowerCase()));
+          if (!foundMeth) {
+            return [sol.hints?.missing_meths || `Falta el método "${solMeth.keyword}()" en "${solNode.text}".`, false];
+          }
+          // Check visibility prefix
+          if (solMeth.visibility) {
+            const methTrimmed = foundMeth.trim();
+            if (!methTrimmed.startsWith(solMeth.visibility)) {
+              return [sol.hints?.wrong_visibility || `El método "${solMeth.keyword}()" debe tener visibilidad "${solMeth.visibility}" (${solMeth.visibility === '+' ? 'público' : solMeth.visibility === '-' ? 'privado' : solMeth.visibility === '#' ? 'protegido' : 'paquete'}).`, false];
+            }
+          }
+          // Check return type
+          if (solMeth.returnType) {
+            const colonIdx = foundMeth.indexOf(':');
+            if (colonIdx === -1) {
+              return [`El método "${solMeth.keyword}()" necesita indicar el tipo de retorno. Formato: "visibilidad nombre() : tipo". Ejemplo: "${solMeth.visibility || '+'} ${solMeth.keyword}() : ${solMeth.returnType}"`, false];
+            }
+            const declaredReturn = foundMeth.substring(colonIdx + 1).trim().toLowerCase();
+            if (!declaredReturn.includes(solMeth.returnType.toLowerCase())) {
+              // Check for type coherence hint (getter returning wrong type)
+              if (sol.hints?.type_mismatch && solMeth.keyword.toLowerCase().startsWith('get')) {
+                return [sol.hints.type_mismatch, false];
+              }
+              return [sol.hints?.wrong_type || `El método "${solMeth.keyword}()" debe devolver ${solMeth.returnType}, no "${declaredReturn}".`, false];
+            }
+          }
+        } else {
+          // Old format: plain string
+          if (!matchedNode.methods?.some(mm => mm.toLowerCase().includes(solMeth.toLowerCase()))) {
+            return [sol.hints?.missing_meths || `Falta el método "${solMeth}()" en "${solNode.text}".`, false];
+          }
+        }
+      }
+    }
+  }
+
+  // --- 3. Validate relationships ---
   if (sol.rels) {
     for (const sr of sol.rels) {
       const fromN = labNodes.find(ln => ln.text.toLowerCase().includes(sr.from.toLowerCase()));
@@ -1127,6 +1211,27 @@ function validateFlow(sol) {
   const allText = labNodes.map(n => n.text.toLowerCase());
   const missing = sol.nodes_flow.find(k => k !== '?' && !allText.some(t => t.includes(k.toLowerCase())));
   if (missing) return [`Falta el bloque de: "${missing}"`, false];
+
+  // Validate connections: each node (except end) should have at least one outgoing connection
+  const nonEndNodes = labNodes.filter(n => !n.text.toLowerCase().includes('fin'));
+  if (nonEndNodes.length > 0 && labConnections.length === 0) {
+    return ['Conecta los bloques entre sí usando la opción "Conectar con..." debajo de cada elemento.', false];
+  }
+  const disconnectedNode = nonEndNodes.find(n => !labConnections.some(c => c.from === n.id));
+  if (disconnectedNode) {
+    return [`El bloque "${disconnectedNode.text}" no está conectado con ningún otro. Usa "Conectar con..." para enlazarlo.`, false];
+  }
+  // Decision nodes should have at least 2 outgoing connections (Sí / No)
+  if (hasDecision) {
+    const decisionNodes = labNodes.filter(n => n.type === 'decision');
+    for (const dn of decisionNodes) {
+      const outConns = labConnections.filter(c => c.from === dn.id);
+      if (outConns.length < 2) {
+        return [`El bloque de decisión "${dn.text}" necesita al menos 2 salidas (Sí / No). Tiene ${outConns.length}.`, false];
+      }
+    }
+  }
+
   return ['', true];
 }
 
