@@ -110,6 +110,16 @@ const UNITS = {
       { id: 'b-q23', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 6: Películas', type: 'editor', editorId: 'q_24' },
       { id: 'b-q24', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 7: Pedidos', type: 'editor', editorId: 'q_25' }
     ]
+  },
+  simulacros: {
+    label: 'EXAMEN', title: 'Simulacros de Examen',
+    sections: [
+      { id: 'sim1-quiz', icon: '🧠', label: 'Simulacro 1: Test Teórico', type: 'quiz', quizId: 'simulacro1_quiz' },
+      { id: 'sim1-h1', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '1. Estructura y Head', type: 'editor', editorId: 'sim1_p1' },
+      { id: 'sim1-h2', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '2. Header y Menú', type: 'editor', editorId: 'sim1_p2' },
+      { id: 'sim1-h3', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '3. Productos (Sección)', type: 'editor', editorId: 'sim1_p3' },
+      { id: 'sim1-h4', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '4. Formulario Contacto', type: 'editor', editorId: 'sim1_p4' },
+    ]
   }
 };
 
@@ -452,7 +462,39 @@ const QUIZZES = {
     { q: '¿Qué instrucción XSLT equivale a un if-elseif-else?', hint: 'Tiene xsl:when y xsl:otherwise.',
       opts: ['xsl:if', 'xsl:switch', 'xsl:choose', 'xsl:case'], ans: 2,
       exp: '<strong>xsl:choose</strong> con xsl:when (condiciones) y xsl:otherwise (caso por defecto) equivale a if-elseif-else. xsl:if solo tiene la parte "if" sin else.' }
-  ]}
+  ]},
+  simulacro1_quiz: [
+    {
+      q: "¿Qué es un lenguaje de marcas?",
+      a: ["Un sistema de etiquetas para estructurar información", "Un lenguaje de programación", "Un compilador", "Un sistema operativo"],
+      c: 0,
+      ex: "Los lenguajes de marcas (como HTML o XML) usan etiquetas para dar estructura a los datos, no para ejecutar algoritmos."
+    },
+    {
+      q: "¿Qué lenguaje es estándar para páginas web?",
+      a: ["XML", "JSON", "HTML", "XSLT"],
+      c: 2,
+      ex: "HTML es el lenguaje estándar para la creación de páginas web."
+    },
+    {
+      q: "¿Qué organismo regula estándares web?",
+      a: ["ISO", "IEEE", "W3C", "Oracle"],
+      c: 2,
+      ex: "El World Wide Web Consortium (W3C) es el encargado de estandarizar las tecnologías web."
+    },
+    {
+      q: "¿Qué representa el DOM?",
+      a: ["Un lenguaje", "Un modelo de objetos del documento", "Un servidor", "Un compilador"],
+      c: 1,
+      ex: "Document Object Model (DOM) representa la estructura de un documento como un árbol de objetos."
+    },
+    {
+      q: "¿Qué etiqueta define el cuerpo en HTML?",
+      a: ["<head>", "<body>", "<html>", "<div>"],
+      c: 1,
+      ex: "El contenido visible de la página se encierra dentro de la etiqueta <body>."
+    }
+  ]
 };
 
 const DRAG_EXERCISES = {
@@ -2133,6 +2175,70 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
 </pedidos>`,
       milestones: [
         { id: 'client', check: /cliente\s*=\s*(['"])Lucía\1/i, popup: 'Pedidos de Lucía encontrados.', instruction: "Filtra por el cliente 'Lucía' usando el operador =." }
+      ]
+    }]
+  },
+  sim1_p1: {
+    exercises: [{
+      id: 1, title: 'Estructura HTML5',
+      desc: 'Crea un documento HTML5 básico con DOCTYPE, html (lang="es"), head (charset, viewport, title) y body vacío.',
+      hint: 'Usa <!DOCTYPE html>, <meta charset="UTF-8">, etc.',
+      starter: `<!-- Crea la estructura básica aquí -->\n`,
+      solution: `<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>Mi Tienda Online</title>\n</head>\n<body>\n</body>\n</html>`,
+      milestones: [
+        { id: 'doctype', check: /<!DOCTYPE html>/i, popup: '¡Bien! HTML5 iniciado.', instruction: 'Escribe la declaración <!DOCTYPE html>.' },
+        { id: 'html', check: /<html lang="es">/i, popup: 'Idioma configurado.', instruction: 'Añade la etiqueta <html lang="es">.' },
+        { id: 'head', check: /<head>/i, popup: 'Cabecera detectada.', instruction: 'Crea la sección <head>.' },
+        { id: 'meta', check: /meta charset="UTF-8"/i, popup: 'Codificación UTF-8 lista.', instruction: 'Añade el meta charset="UTF-8".' },
+        { id: 'title', check: /<title>.*<\/title>/i, popup: 'Título configurado.', instruction: 'Pon un <title> descriptivo.' }
+      ]
+    }]
+  },
+  sim1_p2: {
+    exercises: [{
+      id: 1, title: 'Encabezado y Navegación',
+      desc: 'Dentro del body, crea un <header> con un <h1> y un <h2>. Después, añade un <nav> con una lista <ul> de 4 enlaces (Op1, Op2, Op3, Op4).',
+      hint: '<header><h1>...</h1></header> <nav><ul><li><a>...</a></li></ul></nav>',
+      starter: `<body>\n  <!-- Añade header y nav aquí -->\n</body>`,
+      solution: `<body>\n  <header>\n    <h1>Mi Gran Tienda</h1>\n    <h2>Los mejores productos al mejor precio</h2>\n  </header>\n  <nav>\n    <ul>\n      <li><a href="#">Op1</a></li>\n      <li><a href="#">Op2</a></li>\n      <li><a href="#">Op3</a></li>\n      <li><a href="#">Op4</a></li>\n    </ul>\n  </nav>\n</body>`,
+      milestones: [
+        { id: 'header', check: /<header>/i, popup: 'Encabezado listo.', instruction: 'Crea el bloque <header>.' },
+        { id: 'h1', check: /<h1>/i, popup: 'Título principal OK.', instruction: 'Añade el título <h1>.' },
+        { id: 'nav', check: /<nav>/i, popup: 'Menú de navegación detectado.', instruction: 'Crea el bloque <nav>.' },
+        { id: 'ul', check: /<ul>/i, popup: 'Lista iniciada.', instruction: 'Crea una lista <ul> para el menú.' },
+        { id: 'li', check: /<li>.*<li>.*<li>.*<li>/si, popup: '4 opciones listas.', instruction: 'Añade los 4 elementos <li> con sus enlaces <a>.' }
+      ]
+    }]
+  },
+  sim1_p3: {
+    exercises: [{
+      id: 1, title: 'Sección de Productos',
+      desc: 'Crea una <section> con el título "Productos destacados". Añade 3 bloques <article>, cada uno con un <h3> (nombre), una <img> (usa src="url"), un <p> (descripción) y un <p><strong> (precio).',
+      hint: '<section> <article> <h3>...</h3> <img ...> </article> </section>',
+      starter: `<section>\n  <!-- 3 artículos de producto aquí -->\n</section>`,
+      solution: `<section>\n  <h2>Productos destacados</h2>\n  <article>\n    <h3>Producto 1</h3>\n    <img src="img1.jpg" alt="P1">\n    <p>Descripción del producto 1.</p>\n    <p><strong>Precio:</strong> 100€</p>\n  </article>\n  <article>\n    <h3>Producto 2</h3>\n    <img src="img2.jpg" alt="P2">\n    <p>Descripción del producto 2.</p>\n    <p><strong>Precio:</strong> 200€</p>\n  </article>\n  <article>\n    <h3>Producto 3</h3>\n    <img src="img3.jpg" alt="P3">\n    <p>Descripción del producto 3.</p>\n    <p><strong>Precio:</strong> 300€</p>\n  </article>\n</section>`,
+      milestones: [
+        { id: 'section', check: /<section>/i, popup: 'Sección iniciada.', instruction: 'Crea la <section>.' },
+        { id: 'art1', check: /<article>/i, popup: 'Primer producto OK.', instruction: 'Añade el primer <article>.' },
+        { id: 'art3', check: /<article>.*<article>.*<article>/si, popup: '¡3 productos listos!', instruction: 'Añade los 3 bloques <article> completos (título, imagen, descripción, precio).' },
+        { id: 'img', check: /<img.*src=.*alt=/i, popup: 'Imágenes accesibles.', instruction: 'Asegúrate de que las imágenes tengan src y alt.' }
+      ]
+    }]
+  },
+  sim1_p4: {
+    exercises: [{
+      id: 1, title: 'Formulario de Contacto',
+      desc: 'Crea una <section> con un formulario. Debe tener campos para Nombre (text), Email (email), un <select> con 3 opciones (Consulta, Pedido, Reclamación), un <textarea> (mensaje) y un botón de envío.',
+      hint: '<form> <label> <input> <select> <textarea> <input type="submit"> </form>',
+      starter: `<section>\n  <h2>Contacto</h2>\n  <!-- Formulario aquí -->\n</section>`,
+      solution: `<section>\n  <h2>Contacto</h2>\n  <form action="#" method="post">\n    <label for="nombre">Nombre:</label>\n    <input type="text" id="nombre" name="nombre"><br>\n    <label for="email">Email:</label>\n    <input type="email" id="email" name="email"><br>\n    <label for="motivo">Motivo:</label>\n    <select id="motivo" name="motivo">\n      <option value="c">Consulta</option>\n      <option value="p">Pedido</option>\n      <option value="r">Reclamación</option>\n    </select><br>\n    <label for="msj">Mensaje:</label>\n    <textarea id="msj" name="msj"></textarea><br>\n    <input type="submit" value="Enviar">\n  </form>\n</section>`,
+      milestones: [
+        { id: 'form', check: /<form/i, popup: 'Formulario iniciado.', instruction: 'Crea la etiqueta <form>.' },
+        { id: 'email', check: /type="email"/i, popup: 'Tipo email correcto.', instruction: 'Usa type="email" para el campo de correo.' },
+        { id: 'select', check: /<select/i, popup: 'Selector añadido.', instruction: 'Añade el <select>.' },
+        { id: 'opt3', check: /<option.*<option.*<option/si, popup: 'Opciones completas.', instruction: 'Añade las 3 opciones al selector.' },
+        { id: 'text', check: /<textarea/i, popup: 'Área de texto lista.', instruction: 'Añade el <textarea>.' },
+        { id: 'submit', check: /type="submit"/i, popup: '¡Listo para enviar!', instruction: 'Finaliza con el botón type="submit".' }
       ]
     }]
   }
