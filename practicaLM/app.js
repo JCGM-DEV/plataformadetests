@@ -136,11 +136,11 @@ function renderQuestion() {
       <span class="quiz-counter">Pregunta ${current+1} / ${questions.length}</span>
     </div>
     <div class="question-card">
-      <div class="question-text">${q.q}</div>
-      ${q.hint ? `<div class="question-hint">💡 ${q.hint}</div>` : ''}
+      <div class="question-text">${escapeHTML(q.q)}</div>
+      ${q.hint ? `<div class="question-hint">💡 ${escapeHTML(q.hint)}</div>` : ''}
       <div class="options-grid">${q.opts.map((o,i) => `
         <button class="option-btn" id="opt-${i}" onclick="selectAnswer(${i})">
-          <span class="opt-letter">${letters[i]}</span><span>${o}</span>
+          <span class="opt-letter">${letters[i]}</span><span>${escapeHTML(o)}</span>
         </button>`).join('')}
       </div>
       <div class="explanation-box" id="explanation"></div>
