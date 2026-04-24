@@ -575,16 +575,8 @@ const EDITOR_LABS = {
       id: 1, title: 'El esqueleto',
       desc: 'Crea un documento con doctype, html, head (con meta charset y title) y body. Dentro del body pon un h1 con "Hola Mundo".',
       hint: 'Usa <!DOCTYPE html>, <html lang="es">...',
-      starter: `<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Práctica HTML</title>
-</head>
-<body>
-  <!-- Escribe tu código aquí -->
-</body>
-</html>`,
+      starter: `<!-- Empieza aquí tu documento HTML5 -->
+`,
       solution: `<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -596,8 +588,12 @@ const EDITOR_LABS = {
 </body>
 </html>`,
       milestones: [
-        { id: 'doctype', check: /<!DOCTYPE html>/i, popup: '¡Bien! El DOCTYPE es esencial.', instruction: 'Empieza escribiendo la declaración <!DOCTYPE html>.' },
-        { id: 'h1', check: /<h1>Hola Mundo<\/h1>/i, popup: '¡Perfecto! Ya tienes el h1.', instruction: 'Ahora añade un encabezado <h1> con el texto "Hola Mundo".' }
+        { id: 'doctype', check: /<!DOCTYPE html>/i, popup: '¡Excelente! El DOCTYPE indica al navegador que usas HTML5.', instruction: 'Escribe la declaración de tipo de documento: <!DOCTYPE html>.' },
+        { id: 'html', check: /<html/i, popup: '¡Bien! La etiqueta html es la raíz del documento.', instruction: 'Añade la etiqueta de apertura <html> (puedes incluir el atributo lang="es").' },
+        { id: 'head', check: /<head>/i, popup: 'Cabecera detectada. Aquí van los metadatos.', instruction: 'Crea la sección <head> con su etiqueta de apertura y cierre.' },
+        { id: 'title', check: /<title>.*<\/title>/i, popup: '¡Título configurado!', instruction: 'Dentro del head, añade un <title> con el nombre de tu página.' },
+        { id: 'body', check: /<body>/i, popup: '¡Cuerpo listo! Aquí irá el contenido visible.', instruction: 'Después del </head>, crea la sección <body>.' },
+        { id: 'h1', check: /<h1>Hola Mundo<\/h1>/i, popup: '¡Perfecto! Ya tienes tu primer encabezado.', instruction: 'Dentro del body, añade un <h1> que diga "Hola Mundo".' }
       ]
     }]
   },

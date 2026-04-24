@@ -84,12 +84,33 @@ function showLesson(lessonId) {
 }
 
 function markDone() {
-  if (activeSection) {
-    completedSections.add(activeSection);
-    const el = document.getElementById('nav-' + activeSection);
-    if (el && !el.querySelector('.item-done')) el.innerHTML += '<span class="item-done">✓</span>';
-    updateProgress(); showToast('¡Sección completada! ✓', 'success');
+  if (!activeSection) return;
+
+  // If we are in an editor, check milestones first
+  const editorView = document.getElementById('editor-view');
+  if (editorView && !editorView.classList.contains('hidden')) {
+    const ex = editorState.exercises[editorState.current];
+    const total = (ex && ex.milestones) ? ex.milestones.length : 0;
+    const achieved = editorState.achievedMilestones.size;
+    
+    if (total > 0 && achieved < total) {
+      showToast(`⚠️ Completa todos los pasos antes de marcar como terminado (${achieved}/${total})`, 'error');
+      
+      // Highlight the tutor panel to show what's missing
+      const tutor = document.getElementById('tutor-container');
+      if (tutor) {
+        tutor.classList.add('shake');
+        setTimeout(() => tutor.classList.remove('shake'), 500);
+      }
+      return;
+    }
   }
+
+  completedSections.add(activeSection);
+  const el = document.getElementById('nav-' + activeSection);
+  if (el && !el.querySelector('.item-done')) el.innerHTML += '<span class="item-done">✓</span>';
+  updateProgress();
+  showToast('¡Sección completada! ✓', 'success');
 }
 
 // ── QUIZ ─────────────────────────────────────────────────────────
@@ -256,6 +277,9 @@ function renderEditorExercise(labData) {
   const total = editorState.exercises.length;
   const isHTML = labData.type === 'html';
 
+  // Check milestones silently once on load to avoid asking for what's already there
+  checkMilestones(true);
+
   view.innerHTML = `
     <div class="editor-header">
       <h2>${isHTML ? '⌨️' : '📄'} ${escapeHTML(labData.title)}</h2>
@@ -318,7 +342,7 @@ function onEditorInput(isHTML) {
   resetStuckTimer();
 }
 
-function checkMilestones() {
+function checkMilestones(silent = false) {
   const code = document.getElementById('editor-input')?.value || '';
   const ex = editorState.exercises[editorState.current];
   if (!ex.milestones) return;
@@ -327,7 +351,7 @@ function checkMilestones() {
   ex.milestones.forEach(m => {
     if (!editorState.achievedMilestones.has(m.id) && m.check.test(code)) {
       editorState.achievedMilestones.add(m.id);
-      showGuidancePopup(m.popup);
+      if (!silent) showGuidancePopup(m.popup);
       achievedNew = true;
     }
   });
@@ -343,36 +367,45 @@ function renderTutorPanel(isStuck = false) {
   const milestones = ex.milestones || [];
   const nextIdx = milestones.findIndex(m => !editorState.achievedMilestones.has(m.id));
   
-  let tutorText = "";
+  let mainText = "";
   let badge = "";
   let avatar = "🤖";
 
   if (nextIdx === -1 && milestones.length > 0) {
-    tutorText = "¡Excelente! Has completado todos los pasos de este ejercicio. Pulsa 'Siguiente' para continuar.";
+    mainText = "¡Excelente! Has completado todos los pasos de este ejercicio.";
     badge = "COMPLETADO";
     avatar = "🌟";
   } else if (milestones.length > 0) {
     const nextM = milestones[nextIdx];
-    if (isStuck) {
-      tutorText = `¿Te has atascado? Pista: ${nextM.hint || nextM.instruction || ex.hint}`;
-      badge = "PISTA";
-      avatar = "💡";
-    } else {
-      tutorText = nextIdx === 0 ? `Para empezar: ${nextM.instruction || ex.hint}` : `Buen trabajo. Ahora: ${nextM.instruction || 'continúa con el siguiente paso.'}`;
-      badge = `PASO ${nextIdx + 1}/${milestones.length}`;
-    }
+    mainText = isStuck ? `Pista: ${nextM.hint || nextM.instruction}` : nextM.instruction;
+    badge = `PASO ${nextIdx + 1}/${milestones.length}`;
+    if (isStuck) avatar = "💡";
   } else {
-    tutorText = ex.hint || "Usa el editor para completar el ejercicio propuesto.";
+    mainText = ex.desc || "Completa el ejercicio propuesto.";
     badge = "GUÍA";
   }
 
+  // Build steps list
+  const stepsList = milestones.map((m, idx) => {
+    const done = editorState.achievedMilestones.has(m.id);
+    const active = idx === nextIdx;
+    return `
+      <div class="tutor-step-item ${done ? 'done' : ''} ${active ? 'active' : ''}">
+        <span class="step-icon">${done ? '✅' : active ? '➡️' : '⚪'}</span>
+        <span class="step-label">${escapeHTML(m.instruction)}</span>
+      </div>`;
+  }).join('');
+
   return `
     <div class="tutor-panel ${isStuck ? 'tutor-stuck' : ''}">
-      <div class="tutor-avatar">${avatar}</div>
-      <div class="tutor-content">
-        <div class="tutor-label">Bachero Tutor <span class="tutor-badge" style="${isStuck?'background:var(--accent2)':''}">${badge}</span></div>
-        <div class="tutor-step-text">${escapeHTML(tutorText)}</div>
+      <div class="tutor-top">
+        <div class="tutor-avatar">${avatar}</div>
+        <div class="tutor-content">
+          <div class="tutor-label">Bachero Tutor <span class="tutor-badge">${badge}</span></div>
+          <div class="tutor-main-text">${escapeHTML(mainText)}</div>
+        </div>
       </div>
+      ${milestones.length > 0 ? `<div class="tutor-steps-list">${stepsList}</div>` : ''}
     </div>`;
 }
 
