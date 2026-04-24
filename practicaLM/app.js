@@ -124,14 +124,20 @@ function renderQuestion() {
   const view = document.getElementById('quiz-view');
   view.classList.remove('hidden');
   const { questions, current } = quizState;
+  
   if (current >= questions.length) { renderQuizResult(); return; }
+  
   const q = questions[current];
   const letters = ['A','B','C','D'];
+  
   view.innerHTML = `
-    <div class="quiz-header"><h2>🧠 Quiz</h2><span class="quiz-counter">Pregunta ${current+1} / ${questions.length}</span></div>
+    <div class="quiz-header">
+      <h2>🧠 Quiz</h2>
+      <span class="quiz-counter">Pregunta ${current+1} / ${questions.length}</span>
+    </div>
     <div class="question-card">
       <div class="question-text">${q.q}</div>
-      <div class="question-hint">💡 ${q.hint}</div>
+      ${q.hint ? `<div class="question-hint">💡 ${q.hint}</div>` : ''}
       <div class="options-grid">${q.opts.map((o,i) => `
         <button class="option-btn" id="opt-${i}" onclick="selectAnswer(${i})">
           <span class="opt-letter">${letters[i]}</span><span>${o}</span>
@@ -139,7 +145,9 @@ function renderQuestion() {
       </div>
       <div class="explanation-box" id="explanation"></div>
     </div>
-    <div class="quiz-actions"><button class="btn-check" id="btn-next" onclick="nextQuestion()" style="display:none">Siguiente →</button></div>`;
+    <div class="quiz-actions">
+      <button class="btn-check" id="btn-next" onclick="nextQuestion()" style="display:none">Siguiente →</button>
+    </div>`;
   quizState.answered = false;
 }
 
@@ -377,7 +385,8 @@ function renderTutorPanel(isStuck = false) {
     avatar = "🌟";
   } else if (milestones.length > 0) {
     const nextM = milestones[nextIdx];
-    mainText = isStuck ? `Pista: ${nextM.hint || nextM.instruction}` : nextM.instruction;
+    const guidance = nextM.instruction || nextM.popup || "Sigue con el siguiente paso.";
+    mainText = isStuck ? `Pista: ${nextM.hint || guidance}` : guidance;
     badge = `PASO ${nextIdx + 1}/${milestones.length}`;
     if (isStuck) avatar = "💡";
   } else {
@@ -392,7 +401,7 @@ function renderTutorPanel(isStuck = false) {
     return `
       <div class="tutor-step-item ${done ? 'done' : ''} ${active ? 'active' : ''}">
         <span class="step-icon">${done ? '✅' : active ? '➡️' : '⚪'}</span>
-        <span class="step-label">${escapeHTML(m.instruction)}</span>
+        <span class="step-label">${escapeHTML(m.instruction || m.popup || "Objetivo")}</span>
       </div>`;
   }).join('');
 

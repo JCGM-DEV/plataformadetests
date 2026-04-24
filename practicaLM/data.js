@@ -468,30 +468,35 @@ const QUIZZES = {
     questions: [
       {
         q: "¿Qué es un lenguaje de marcas?",
+        hint: "Estructura vs Lógica",
         opts: ["Un sistema de etiquetas para estructurar información", "Un lenguaje de programación", "Un compilador", "Un sistema operativo"],
         ans: 0,
         exp: "Los lenguajes de marcas (como HTML o XML) usan etiquetas para dar estructura a los datos, no para ejecutar algoritmos."
       },
       {
         q: "¿Qué lenguaje es estándar para páginas web?",
+        hint: "Es el lenguaje de la web por excelencia",
         opts: ["XML", "JSON", "HTML", "XSLT"],
         ans: 2,
         exp: "HTML es el lenguaje estándar para la creación de páginas web."
       },
       {
         q: "¿Qué organismo regula estándares web?",
+        hint: "Consorcio internacional",
         opts: ["ISO", "IEEE", "W3C", "Oracle"],
         ans: 2,
         exp: "El World Wide Web Consortium (W3C) es el encargado de estandarizar las tecnologías web."
       },
       {
         q: "¿Qué representa el DOM?",
+        hint: "Modelo jerárquico",
         opts: ["Un lenguaje", "Un modelo de objetos del documento", "Un servidor", "Un compilador"],
         ans: 1,
         exp: "Document Object Model (DOM) representa la estructura de un documento como un árbol de objetos."
       },
       {
         q: "¿Qué etiqueta define el cuerpo en HTML?",
+        hint: "Contenido visible",
         opts: ["<head>", "<body>", "<html>", "<div>"],
         ans: 1,
         exp: "El contenido visible de la página se encierra dentro de la etiqueta <body>."
