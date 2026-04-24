@@ -463,38 +463,41 @@ const QUIZZES = {
       opts: ['xsl:if', 'xsl:switch', 'xsl:choose', 'xsl:case'], ans: 2,
       exp: '<strong>xsl:choose</strong> con xsl:when (condiciones) y xsl:otherwise (caso por defecto) equivale a if-elseif-else. xsl:if solo tiene la parte "if" sin else.' }
   ]},
-  simulacro1_quiz: [
-    {
-      q: "¿Qué es un lenguaje de marcas?",
-      a: ["Un sistema de etiquetas para estructurar información", "Un lenguaje de programación", "Un compilador", "Un sistema operativo"],
-      c: 0,
-      ex: "Los lenguajes de marcas (como HTML o XML) usan etiquetas para dar estructura a los datos, no para ejecutar algoritmos."
-    },
-    {
-      q: "¿Qué lenguaje es estándar para páginas web?",
-      a: ["XML", "JSON", "HTML", "XSLT"],
-      c: 2,
-      ex: "HTML es el lenguaje estándar para la creación de páginas web."
-    },
-    {
-      q: "¿Qué organismo regula estándares web?",
-      a: ["ISO", "IEEE", "W3C", "Oracle"],
-      c: 2,
-      ex: "El World Wide Web Consortium (W3C) es el encargado de estandarizar las tecnologías web."
-    },
-    {
-      q: "¿Qué representa el DOM?",
-      a: ["Un lenguaje", "Un modelo de objetos del documento", "Un servidor", "Un compilador"],
-      c: 1,
-      ex: "Document Object Model (DOM) representa la estructura de un documento como un árbol de objetos."
-    },
-    {
-      q: "¿Qué etiqueta define el cuerpo en HTML?",
-      a: ["<head>", "<body>", "<html>", "<div>"],
-      c: 1,
-      ex: "El contenido visible de la página se encierra dentro de la etiqueta <body>."
-    }
-  ]
+  simulacro1_quiz: {
+    title: 'Simulacro 1: Test Teórico',
+    questions: [
+      {
+        q: "¿Qué es un lenguaje de marcas?",
+        opts: ["Un sistema de etiquetas para estructurar información", "Un lenguaje de programación", "Un compilador", "Un sistema operativo"],
+        ans: 0,
+        exp: "Los lenguajes de marcas (como HTML o XML) usan etiquetas para dar estructura a los datos, no para ejecutar algoritmos."
+      },
+      {
+        q: "¿Qué lenguaje es estándar para páginas web?",
+        opts: ["XML", "JSON", "HTML", "XSLT"],
+        ans: 2,
+        exp: "HTML es el lenguaje estándar para la creación de páginas web."
+      },
+      {
+        q: "¿Qué organismo regula estándares web?",
+        opts: ["ISO", "IEEE", "W3C", "Oracle"],
+        ans: 2,
+        exp: "El World Wide Web Consortium (W3C) es el encargado de estandarizar las tecnologías web."
+      },
+      {
+        q: "¿Qué representa el DOM?",
+        opts: ["Un lenguaje", "Un modelo de objetos del documento", "Un servidor", "Un compilador"],
+        ans: 1,
+        exp: "Document Object Model (DOM) representa la estructura de un documento como un árbol de objetos."
+      },
+      {
+        q: "¿Qué etiqueta define el cuerpo en HTML?",
+        opts: ["<head>", "<body>", "<html>", "<div>"],
+        ans: 1,
+        exp: "El contenido visible de la página se encierra dentro de la etiqueta <body>."
+      }
+    ]
+  }
 };
 
 const DRAG_EXERCISES = {
