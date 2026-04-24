@@ -936,7 +936,7 @@ const EDITOR_LABS = {
   <titulo>XML Básico</titulo>
 </libro>`,
       milestones: [
-        { id: 'css', check: /xml-stylesheet.*href="estilos.css"/i, popup: '¡Correcto! El XML ahora tiene estilo.' }
+        { id: 'css', check: /xml-stylesheet.*href="estilos.css"/i, popup: '¡Correcto! El XML ahora tiene estilo.', instruction: 'Añade la instrucción <?xml-stylesheet ... ?> con el enlace al CSS.' }
       ]
     }]
   },
@@ -960,7 +960,7 @@ const EDITOR_LABS = {
   ]]>
 </codigo>`,
       milestones: [
-        { id: 'cdata', check: /<!\[CDATA\[.*<h1>.*<\/codigo>/si, popup: '¡Perfecto! El CDATA protege tu código.' }
+        { id: 'cdata', check: /<!\[CDATA\[.*<h1>.*<\/codigo>/si, popup: '¡Perfecto! El CDATA protege tu código.', instruction: 'Envuelve las etiquetas HTML en una sección <![CDATA[ ... ]]>' }
       ]
     }]
   },
@@ -1089,7 +1089,7 @@ const EDITOR_LABS = {
   </xs:element>
 </xs:schema>`,
       milestones: [
-        { id: 'seq', check: /xs:sequence/i, popup: 'Secuencia de elementos: ¡OK!' }
+        { id: 'seq', check: /xs:sequence/i, popup: 'Secuencia de elementos: ¡OK!', instruction: 'Define una secuencia <xs:sequence> para los elementos hijos.' }
       ]
     }]
   },
@@ -1110,7 +1110,7 @@ const EDITOR_LABS = {
   </xs:sequence></xs:complexType>
 </xs:element>`,
       milestones: [
-        { id: 'unbounded', check: /maxOccurs="unbounded"/i, popup: '¡Unbounded! Así se define una lista infinita.' }
+        { id: 'unbounded', check: /maxOccurs="unbounded"/i, popup: '¡Unbounded! Así se define una lista infinita.', instruction: 'Usa el atributo maxOccurs="unbounded" en el elemento alumno.' }
       ]
     }]
   },
@@ -1184,7 +1184,7 @@ const EDITOR_LABS = {
   </xs:complexType>
 </xs:element>`,
       milestones: [
-        { id: 'choice', check: /xs:choice/i, popup: 'Uso de or-exclusivo (choice) detectado.' }
+        { id: 'choice', check: /xs:choice/i, popup: 'Uso de or-exclusivo (choice) detectado.', instruction: 'Usa la etiqueta <xs:choice> para permitir elegir entre email o nick.' }
       ]
     }]
   },
@@ -1200,7 +1200,7 @@ const EDITOR_LABS = {
 <xs:pattern value=""/>`,
       solution: `<xs:pattern value="[0-9]{8}[A-Z]"/>`,
       milestones: [
-        { id: 'pattern', check: /\[0-9\]\{8\}\[A-Z\]/, popup: '¡Regex de DNI correcto!' }
+        { id: 'pattern', check: /\[0-9\]\{8\}\[A-Z\]/, popup: '¡Regex de DNI correcto!', instruction: 'Define el patrón value="[0-9]{8}[A-Z]" dentro de xs:pattern.' }
       ]
     }]
   },
@@ -1224,7 +1224,7 @@ const EDITOR_LABS = {
   </xs:restriction>
 </xs:simpleType>`,
       milestones: [
-        { id: 'enum', check: /enumeration value="D"/i, popup: '¡Todas las opciones incluidas!' }
+        { id: 'enum', check: /enumeration value="D"/i, popup: '¡Todas las opciones incluidas!', instruction: 'Añade los elementos <xs:enumeration> para cada una de las letras A, B, C y D.' }
       ]
     }]
   },
@@ -1245,7 +1245,7 @@ const EDITOR_LABS = {
   <xs:pattern value="[a-z0-9]+"/>
 </xs:restriction>`,
       milestones: [
-        { id: 'mixed', check: /minLength.*maxLength.*pattern/si, popup: '¡Increíble! Has cubierto todas las restricciones.' }
+        { id: 'mixed', check: /minLength.*maxLength.*pattern/si, popup: '¡Increíble! Has cubierto todas las restricciones.', instruction: 'Añade las restricciones minLength="5", maxLength="12" y el patrón [a-z0-9]+.' }
       ]
     }]
   },
@@ -1261,7 +1261,7 @@ const EDITOR_LABS = {
 <xs:pattern value=""/>`,
       solution: `<xs:pattern value="[A-Z]{2}[0-9]{3}"/>`,
       milestones: [
-        { id: 'p2', check: /\[A-Z\]\{2\}\[0-9\]\{3\}/, popup: '¡Código de producto validado!' }
+        { id: 'p2', check: /\[A-Z\]\{2\}\[0-9\]\{3\}/, popup: '¡Código de producto validado!', instruction: 'Crea el patrón para que empiece por 2 mayúsculas y siga con 3 números.' }
       ]
     }]
   },
@@ -1300,7 +1300,7 @@ const EDITOR_LABS = {
   </xs:element>
 </xs:schema>`,
       milestones: [
-        { id: 'full', check: /decimal.*enumeration.*enumeration/si, popup: '¡Nivel avanzado alcanzado!' }
+        { id: 'full', check: /decimal.*enumeration.*enumeration/si, popup: '¡Nivel avanzado alcanzado!', instruction: 'Completa todo el esquema definiendo la secuencia de productos y sus tipos internos.' }
       ]
     }]
   },
@@ -1420,7 +1420,7 @@ const EDITOR_LABS = {
   </xsl:for-each>
 </xsl:template>`,
       milestones: [
-        { id: 'text', check: /xsl:text/i, popup: '¡Bien! xsl:text es ideal para espacios y símbolos.' }
+        { id: 'text', check: /xsl:text/i, popup: '¡Bien! xsl:text es ideal para espacios y símbolos.', instruction: 'Usa <xsl:text> para añadir el guión y el símbolo del euro.' }
       ]
     }]
   },
@@ -1442,7 +1442,7 @@ const EDITOR_LABS = {
   </ul>
 </xsl:template>`,
       milestones: [
-        { id: 'li', check: /<li>/i, popup: '¡Estructura de lista detectada!' }
+        { id: 'li', check: /<li>/i, popup: '¡Estructura de lista detectada!', instruction: 'Envuelve el nombre de cada producto en una etiqueta <li>.' }
       ]
     }]
   },
@@ -1657,7 +1657,7 @@ return $l/titulo`,
       solution: `for $l in //libro
 return <libro>{$l/titulo}{$l/autor}</libro>`,
       milestones: [
-        { id: 'libro', check: /return\s+<libro>.*titulo.*autor/si, popup: 'Estructura <libro> OK.' }
+        { id: 'libro', check: /return\s+<libro>.*titulo.*autor/si, popup: 'Estructura <libro> OK.', instruction: 'Crea el nodo <libro> que envuelva el título y el autor.' }
       ]
     }]
   },
@@ -1675,7 +1675,7 @@ return <libro>{$l/titulo}{$l/autor}</libro>`,
 where $l/categoria = "Informática"
 return $l/titulo`,
       milestones: [
-        { id: 'it', check: /categoria\s*=\s*(['"])Informática\1/i, popup: 'Filtro de categoría OK.' }
+        { id: 'it', check: /categoria\s*=\s*(['"])Informática\1/i, popup: 'Filtro de categoría OK.', instruction: 'Añade la condición where para filtrar por la categoría "Informática".' }
       ]
     }]
   },
@@ -1693,7 +1693,7 @@ return $l/titulo`,
 where $l/precio > 25
 return $l/titulo`,
       milestones: [
-        { id: 'price', check: /precio\s*>\s*25/i, popup: 'Filtro de precio OK.' }
+        { id: 'price', check: /precio\s*>\s*25/i, popup: 'Filtro de precio OK.', instruction: 'Filtra los libros cuyo precio sea mayor que 25.' }
       ]
     }]
   },
@@ -1711,7 +1711,7 @@ return $l/titulo`,
 order by $l/precio
 return $l/titulo`,
       milestones: [
-        { id: 'order', check: /order by\s+\$l\/precio/i, popup: 'Ordenación ascendente OK.' }
+        { id: 'order', check: /order by\s+\$l\/precio/i, popup: 'Ordenación ascendente OK.', instruction: 'Añade la cláusula order by para ordenar por el campo precio.' }
       ]
     }]
   },
@@ -1745,7 +1745,7 @@ return $l/titulo`,
 `,
       solution: `(//libro)[1]/titulo`,
       milestones: [
-        { id: 'idx', check: /\[1\]/i, popup: 'Acceso por índice OK.' }
+        { id: 'idx', check: /\[1\]/i, popup: 'Acceso por índice OK.', instruction: 'Usa el índice [1] para seleccionar solo el primer libro.' }
       ]
     }]
   },
@@ -1761,7 +1761,7 @@ return $l/titulo`,
 `,
       solution: `(//libro)[last()]/titulo`,
       milestones: [
-        { id: 'last', check: /last\(\)/i, popup: 'Función last() OK.' }
+        { id: 'last', check: /last\(\)/i, popup: 'Función last() OK.', instruction: 'Usa la función last() dentro del índice para obtener el último elemento.' }
       ]
     }]
   },
@@ -1777,7 +1777,7 @@ return $l/titulo`,
 `,
       solution: `count(//libro)`,
       milestones: [
-        { id: 'count', check: /count\(/i, popup: 'Conteo total OK.' }
+        { id: 'count', check: /count\(/i, popup: 'Conteo total OK.', instruction: 'Usa la función count() para contar el número de nodos libro.' }
       ]
     }]
   },
@@ -1795,7 +1795,7 @@ return $l/titulo`,
 where $l/stock < 5
 return $l/titulo`,
       milestones: [
-        { id: 'stock', check: /stock\s*<\s*5/i, popup: 'Filtro de stock OK.' }
+        { id: 'stock', check: /stock\s*<\s*5/i, popup: 'Filtro de stock OK.', instruction: 'Añade una condición where para filtrar por stock < 5.' }
       ]
     }]
   },
@@ -1830,7 +1830,7 @@ return $j/titulo`,
       solution: `for $p in //producto
 return $p/nombre`,
       milestones: [
-        { id: 'prod', check: /(for.*return.*nombre|\/\/producto\/nombre)/i, popup: 'Productos detectados.' }
+        { id: 'prod', check: /(for.*return.*nombre|\/\/producto\/nombre)/i, popup: 'Productos detectados.', instruction: 'Selecciona el nombre de cada producto.' }
       ]
     }]
   },
@@ -1847,7 +1847,7 @@ return $p/nombre`,
       solution: `for $p in //producto
 return <item>{$p/nombre}{$p/precio}</item>`,
       milestones: [
-        { id: 'wrap', check: /return\s+<item>.*nombre.*precio/si, popup: 'Estructura <item> OK.' }
+        { id: 'wrap', check: /return\s+<item>.*nombre.*precio/si, popup: 'Estructura <item> OK.', instruction: 'Crea el nodo <item> y pon dentro el nombre y el precio.' }
       ]
     }]
   },
@@ -1865,7 +1865,7 @@ return <item>{$p/nombre}{$p/precio}</item>`,
 where $p/precio > 50
 return $p/nombre`,
       milestones: [
-        { id: 'price', check: /precio\s*>\s*50/i, popup: 'Filtro de precio OK.' }
+        { id: 'price', check: /precio\s*>\s*50/i, popup: 'Filtro de precio OK.', instruction: 'Filtra los productos con precio > 50.' }
       ]
     }]
   },
@@ -1883,7 +1883,7 @@ return $p/nombre`,
 where $p/marca = "Logitech"
 return $p/nombre`,
       milestones: [
-        { id: 'brand', check: /marca\s*=\s*(['"])Logitech\1/i, popup: 'Filtro de marca OK.' }
+        { id: 'brand', check: /marca\s*=\s*(['"])Logitech\1/i, popup: 'Filtro de marca OK.', instruction: "Añade el filtro where para la marca 'Logitech'." }
       ]
     }]
   },
@@ -1901,7 +1901,7 @@ return $p/nombre`,
 order by $p/precio
 return $p/nombre`,
       milestones: [
-        { id: 'order', check: /order by\s+\$p\/precio/i, popup: 'Ordenación ascendente OK.' }
+        { id: 'order', check: /order by\s+\$p\/precio/i, popup: 'Ordenación ascendente OK.', instruction: 'Ordena el resultado por precio de forma ascendente.' }
       ]
     }]
   },
@@ -1936,7 +1936,7 @@ return $p/nombre`,
       solution: `for $p in //producto
 return <inventario>{$p/nombre}{$p/stock}</inventario>`,
       milestones: [
-        { id: 'stock', check: /return\s+<inventario>.*nombre.*stock/si, popup: 'Estructura <inventario> OK.' }
+        { id: 'stock', check: /return\s+<inventario>.*nombre.*stock/si, popup: 'Estructura <inventario> OK.', instruction: 'Crea el nodo <inventario> con el nombre y el stock del producto.' }
       ]
     }]
   },
