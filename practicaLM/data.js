@@ -2187,6 +2187,7 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
     }]
   },
   sim1_p1: {
+    type: 'html',
     exercises: [{
       id: 1, title: 'Estructura HTML5',
       desc: 'Crea un documento HTML5 básico con DOCTYPE, html (lang="es"), head (charset, viewport, title) y body vacío.',
@@ -2203,6 +2204,7 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
     }]
   },
   sim1_p2: {
+    type: 'html',
     exercises: [{
       id: 1, title: 'Encabezado y Navegación',
       desc: 'Dentro del body, crea un <header> con un <h1> y un <h2>. Después, añade un <nav> con una lista <ul> de 4 enlaces (Op1, Op2, Op3, Op4).',
@@ -2219,6 +2221,7 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
     }]
   },
   sim1_p3: {
+    type: 'html',
     exercises: [{
       id: 1, title: 'Sección de Productos',
       desc: 'Crea una <section> con el título "Productos destacados". Añade 3 bloques <article>, cada uno con un <h3> (nombre), una <img> (usa src="url"), un <p> (descripción) y un <p><strong> (precio).',
@@ -2234,6 +2237,7 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
     }]
   },
   sim1_p4: {
+    type: 'html',
     exercises: [{
       id: 1, title: 'Formulario de Contacto',
       desc: 'Crea una <section> con un formulario. Debe tener campos para Nombre (text), Email (email), un <select> con 3 opciones (Consulta, Pedido, Reclamación), un <textarea> (mensaje) y un botón de envío.',

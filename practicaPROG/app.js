@@ -22,6 +22,17 @@ function selectUnit(unitId) {
   buildSidebar(unit); showWelcome();
 }
 
+function loadCompletionState() {
+  try {
+    const saved = localStorage.getItem('prog_completed_sections');
+    if (saved) completedSections = new Set(JSON.parse(saved));
+  } catch (e) { console.error("Error loading progress", e); }
+}
+
+function saveCompletionState() {
+  localStorage.setItem('prog_completed_sections', JSON.stringify([...completedSections]));
+}
+
 function goHome() {
   document.getElementById('splash').classList.remove('hidden');
   document.getElementById('app').classList.add('hidden');
@@ -35,12 +46,35 @@ function buildSidebar(unit) {
   const nav = document.getElementById('sidebar-nav');
   nav.innerHTML = `<div class="sidebar-section">${unit.label} — ${unit.title}</div>`;
   unit.sections.forEach(s => {
+    const isDone = completedSections.has(s.id);
     const div = document.createElement('div');
-    div.className = 'sidebar-item'; div.id = 'nav-' + s.id;
-    div.innerHTML = `<span class="item-icon">${s.icon}</span><span>${s.label}</span>${completedSections.has(s.id) ? '<span class="item-done">✓</span>' : ''}`;
-    div.onclick = () => openSection(s);
+    div.className = `sidebar-item ${isDone ? 'done' : ''} ${activeSection === s.id ? 'active' : ''}`;
+    div.id = 'nav-' + s.id;
+    div.innerHTML = `
+      <div class="item-checkbox" onclick="toggleSectionCompletion('${s.id}', event)"></div>
+      <span class="item-icon">${s.icon}</span>
+      <span>${s.label}</span>
+    `;
+    div.onclick = (e) => {
+      if (!e.target.classList.contains('item-checkbox')) openSection(s);
+    };
     nav.appendChild(div);
   });
+  updateProgress();
+}
+
+function toggleSectionCompletion(sectionId, event) {
+  if (event) event.stopPropagation();
+  if (completedSections.has(sectionId)) {
+    completedSections.delete(sectionId);
+    showToast('Sección marcada como pendiente', 'info');
+  } else {
+    completedSections.add(sectionId);
+    showToast('¡Sección completada! ✓', 'success');
+  }
+  saveCompletionState();
+  const el = document.getElementById('nav-' + sectionId);
+  if (el) el.classList.toggle('done', completedSections.has(sectionId));
   updateProgress();
 }
 
@@ -84,10 +118,11 @@ function showLesson(lessonId) {
 }
 
 function markDone() {
-  if (activeSection) {
+  if (activeSection && !completedSections.has(activeSection)) {
     completedSections.add(activeSection);
+    saveCompletionState();
     const el = document.getElementById('nav-' + activeSection);
-    if (el && !el.querySelector('.item-done')) el.innerHTML += '<span class="item-done">✓</span>';
+    if (el) el.classList.add('done');
     updateProgress(); showToast('¡Sección completada! ✓', 'success');
   }
 }
@@ -165,7 +200,7 @@ function renderQuizResult() {
         <button class="btn-secondary" onclick="showWelcome()">Menú</button>
       </div>
     </div>`;
-  completedSections.add(activeSection); updateProgress();
+  markDone();
 }
 
 // ── DRAG ─────────────────────────────────────────────────────────
@@ -248,7 +283,7 @@ function checkDrag(dragId) {
         <button class="btn-primary" onclick="showDrag('${dragId}')">Repetir 🔁</button>
         <button class="btn-secondary" onclick="showWelcome()">Menú</button>
       </div></div>`;
-    completedSections.add(activeSection); updateProgress();
+    markDone();
   }
 }
 
@@ -316,7 +351,7 @@ function analyzeCode() {
       🎉 <strong>¡Todos los requisitos cumplidos!</strong> Buen trabajo.
     </div>`;
     score.correct++; document.querySelector('#score-correct span').textContent = score.correct;
-    completedSections.add(activeSection); updateProgress();
+    markDone();
     showToast('¡Ejercicio completado! 🎉', 'success');
   } else {
     const passed = ex.checks.filter(c => c.test(code)).length;
@@ -625,3 +660,5 @@ function showDoctorSolution(exerciseId) {
     </div>`;
   document.getElementById('modal-overlay').classList.remove('hidden');
 }
+
+loadCompletionState();

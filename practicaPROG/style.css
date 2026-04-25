@@ -95,7 +95,11 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 .sidebar-item:hover { background: var(--surface); color: var(--text); border-color: var(--border); }
 .sidebar-item.active { background: rgba(249,115,22,.12); color: var(--accent3); border-color: rgba(249,115,22,.3); }
 .sidebar-item .item-icon { font-size: 1rem; flex-shrink: 0; }
-.sidebar-item .item-done { margin-left: auto; color: var(--green); font-size: .8rem; }
+.sidebar-item .item-done { margin-left: auto; color: var(--green); font-size: .8rem; display: none; }
+.sidebar-item.done .item-checkbox { background: var(--green); border-color: var(--green); }
+.sidebar-item.done .item-checkbox::after { content: '✓'; color: #001a10; font-size: .75rem; font-weight: 800; }
+.sidebar-item .item-checkbox { width: 18px; height: 18px; border: 2px solid var(--border2); border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: var(--transition); background: var(--bg3); }
+.sidebar-item .item-checkbox:hover { border-color: var(--accent); }
 .sidebar-progress { padding: 1rem .75rem; border-top: 1px solid var(--border); }
 .progress-label { font-size: .75rem; color: var(--text2); margin-bottom: .5rem; }
 .progress-bar-wrap { background: var(--surface); border-radius: 20px; height: 6px; overflow: hidden; margin-bottom: .3rem; }
