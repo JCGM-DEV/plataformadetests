@@ -502,6 +502,7 @@ function renderEjercicio(ej) {
 // Usa comentarios para explicar tu razonamiento"></textarea>
         <div class="ej-actions">
           <button class="btn-primary" onclick="checkEjercicio('${ej.id}')">✅ Verificar criterios</button>
+          <button class="btn-ai-help" onclick="requestAIFeedback('${ej.id}')" id="btn-ai-help">✨ Consultar al Profesor IA</button>
           <button class="btn-secondary" onclick="togglePistas('${ej.id}')" id="btn-pistas">
             💡 ${ejercicioState.showPistas ? 'Ocultar pistas' : 'Ver pistas'}
           </button>

@@ -136,6 +136,7 @@ function renderTutorAprendizaje(session) {
             <button class="btn-tutor-check" onclick="verificarPasoTutor()">
               🔍 Verificar
             </button>
+            <button class="btn-ai-help" onclick="requestAIFeedback(null, true)" id="btn-ai-help" style="padding: 0.55rem 1rem; font-size: 0.85rem">✨ Consultar IA</button>
             <div class="paper-nav">
               ${!isFirst ? `<button class="btn-tutor-nav" onclick="irPasoTutor(${tutorState.pasoActual - 1})">← Anterior</button>` : ''}
               <button class="btn-tutor-nav primary" onclick="irPasoTutor(${tutorState.pasoActual + 1})" id="btn-tutor-next">
@@ -292,6 +293,7 @@ function renderTutorExamen(session) {
             <button class="btn-exam-submit" onclick="corregirExamenTutor()">
               ✅ Entregar y corregir
             </button>
+            <button class="btn-ai-help" onclick="requestAIFeedback(null, true)" id="btn-ai-help">✨ Revisión del Profe IA</button>
             <button class="btn-tutor-nav" onclick="volverAprendizajeTutor()">
               ← Volver a las lecciones
             </button>
