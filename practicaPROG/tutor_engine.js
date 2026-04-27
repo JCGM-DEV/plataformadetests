@@ -359,17 +359,16 @@ function corregirExamenTutor() {
   // Feedback detallado
   const fallos = resultados.filter(r => !r.ok);
   const consejos = {
-    'abstracta': 'Recuerda: <code>abstract class NombreClase</code> y el método abstracto sin cuerpo: <code>public abstract TipoRetorno metodo();</code>',
-    'encapsulacion': 'Todos los atributos deben ser <code>private</code>. Añade getters (<code>return atributo;</code>) y setters con validación.',
-    'herencia_alumno': 'La subclase debe empezar con <code>class X extends Y</code> y el constructor debe llamar a <code>super(params);</code> como primera línea.',
-    'herencia_prof': 'Usa <code>class Profesor extends Miembro</code>. El constructor también necesita <code>super()</code>.',
-    'interfaz': 'Primero define <code>interface Evaluable { double calcularMedia(); }</code>. Luego <code>class Alumno extends Miembro implements Evaluable</code>.',
-    'excepcion_custom': 'La plantilla: <code>class DniInvalidoException extends Exception { public DniInvalidoException(String msg) { super(msg); } }</code>',
-    'polimorfismo': 'Crea <code>ArrayList&lt;Miembro&gt; lista = new ArrayList&lt;&gt;();</code> y añade objetos Alumno y Profesor con <code>lista.add(...)</code>.',
-    'try_catch': 'Rodea el código que puede fallar con <code>try { ... } catch (TipoExcepcion e) { System.out.println(e.getMessage()); }</code>',
-    'interfaz': 'Primero <code>interface Vendible</code> con los métodos, luego <code>abstract class Producto implements Vendible</code>.',
-    'hashmap': 'Declara <code>HashMap&lt;String, Producto&gt; inventario = new HashMap&lt;&gt;();</code>. Usa <code>put(codigo, producto)</code> y <code>get(codigo)</code>.',
-    'excepcion': 'Crea <code>class StockInsuficienteException extends Exception</code> con constructor <code>super(msg)</code>.',
+    'abstracta': 'Recuerda: <code>abstract class NombreClase</code> y los métodos abstractos sin cuerpo. ¡No olvides el tipo de retorno!',
+    'encapsulacion': 'Atributos <code>private</code> en subclases y <code>protected</code> en la base. Los setters deben validar datos.',
+    'herencia_alumno': 'El constructor hijo DEBE pasar los parámetros al padre con <code>super(nombre, dni, ...)</code>. ¡Es un error de lógica grave olvidarlo!',
+    'herencia_prof': 'Toda subclase necesita llamar a <code>super()</code> en su constructor si el padre no tiene uno vacío.',
+    'interfaz': 'La interfaz define el contrato. La clase debe usar <code>implements</code> y sobreescribir todos sus métodos.',
+    'excepcion_custom': 'Las excepciones propias extienden de <code>Exception</code> y su constructor llama a <code>super(mensaje)</code>.',
+    'polimorfismo': 'Un array de tipo Padre puede guardar objetos de tipo Hijo. Luego, al recorrerlo, Java llama al método del hijo automáticamente.',
+    'try_catch': 'El <code>try</code> envuelve el código peligroso, y el <code>catch</code> captura el error para que el programa no "explote".',
+    'hashmap': 'En un <code>HashMap</code>, la clave debe ser única (como el código de producto). Se recorre con <code>entrySet()</code>.',
+    'excepcion': 'Lanza la excepción con <code>throw new MiExcepcion("...")</code> cuando se detecte el error de lógica.',
     'herencia_elec': '<code>class Electronico extends Producto</code> con constructor que llame a <code>super()</code>.',
     'herencia_ali': '<code>class Alimentacion extends Producto</code> con constructor que llame a <code>super()</code>.',
   };

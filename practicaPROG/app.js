@@ -559,32 +559,7 @@ function checkEjercicio(ejId) {
   let passed = 0;
 
   // Check each criterion against the code
-  const checks = {
-    'ej1': [
-      () => /abstract\s+class\s+persona/i.test(code),
-      () => /extends\s+persona/i.test(code) && /super\s*\(/i.test(code),
-      () => /class\s+directivo/i.test(code) && /calcularbonus/i.test(code),
-      () => /interface\s+gestionable/i.test(code) && /implements\s+gestionable/i.test(code),
-      () => /arraylist\s*<\s*persona/i.test(code),
-      () => /throw\s+new/i.test(code) && /exception/i.test(code),
-    ],
-    'ej2': [
-      () => /class\s+\w+\s+extends\s+exception/i.test(code),
-      () => /interface\s+conducible/i.test(code),
-      () => /abstract\s+class\s+vehiculo/i.test(code) && /implements\s+conducible/i.test(code),
-      () => /class\s+coche/i.test(code) || /class\s+moto/i.test(code),
-      () => /hashmap\s*</i.test(code),
-      () => /throws\s+\w+exception/i.test(code),
-    ],
-    'ej3': [
-      () => /class\s+\w+\s+extends\s+exception/i.test(code),
-      () => /interface\s+prestable/i.test(code),
-      () => /abstract\s+class\s+elemento/i.test(code) && /implements\s+prestable/i.test(code),
-      () => /class\s+libro/i.test(code) || /class\s+revista/i.test(code),
-      () => /arraylist\s*</i.test(code),
-      () => /throw\s+new/i.test(code),
-    ],
-  };
+  const checks = {}; // Se usan los checks definidos centralizadamente en ejercicios.js
 
   // Get checks from the object or fallback
   const checksForEj = ej.checks || checks[ejId] || [];

@@ -43,7 +43,7 @@ Se declara con la palabra <code>abstract</code> y suele tener uno o más <strong
             { desc: 'Declara abstract class Persona', test: c => /abstract\s+class\s+Persona/i.test(c) },
             { desc: 'Atributos private nombre (String) y edad (int)', test: c => /private\s+String\s+nombre/i.test(c) && /private\s+int\s+edad/i.test(c) },
             { desc: 'Constructor Persona(String, int) con this', test: c => /public\s+Persona\s*\(\s*String\s+\w+\s*,\s*int\s+\w+\s*\)[\s\S]*this\./i.test(c) },
-            { desc: 'Método abstracto String getInfo()', test: c => /public\s+abstract\s+String\s+getInfo\s*\(\s*\)\s*;/i.test(c) },
+            { desc: 'Método abstracto String getInfo() (debe devolver String)', test: c => /public\s+abstract\s+String\s+getInfo\s*\(\s*\)\s*;/i.test(c) },
           ]
         }
       },
@@ -116,7 +116,7 @@ La subclase puede tener sus propios atributos adicionales.`,
           checks: [
             { desc: 'class Empleado extends Persona', test: c => /class\s+Empleado\s+extends\s+Persona/i.test(c) },
             { desc: 'Atributo private double salario', test: c => /private\s+double\s+salario\s*;/i.test(c) },
-            { desc: 'Constructor llama a super(nombre, edad)', test: c => /public\s+Empleado\s*\([\s\S]*\)[\s\S]*super\s*\(\s*\w+\s*,\s*\w+\s*\)\s*;/i.test(c) },
+            { desc: 'Constructor llama a super(nombre, edad) obligatoriamente', test: c => /public\s+Empleado\s*\([\s\S]*\)[\s\S]*super\s*\(\s*\w+\s*,\s*\w+\s*\)\s*;/i.test(c) },
             { desc: 'Asigna this.salario y this.departamento', test: c => /this\.salario\s*=/i.test(c) && /this\.departamento\s*=/i.test(c) },
           ]
         }
