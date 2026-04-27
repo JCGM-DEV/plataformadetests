@@ -2724,8 +2724,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Los agregadores de escritorio no requieren una conexión a Internet, a diferencia de los agregadores web",
         "Los agregadores web están alojados en sitios específicos y se acceden a través de un navegador (ideales para múltiples dispositivos), mientras que los de escritorio son aplicaciones que se instalan localmente en un dispositivo (ideales para un uso fijo)",
-        "Los agregadores web no permiten la sincronización de la lectura entre diferentes dispositivos, a diferencia de los de escritorio",
-        "Una de las mejoras técnicas que Atom 1.0 introdujo respecto a RSS 2.0 fue la capacidad de:"
+        "Los agregadores web no permiten la sincronización de la lectura entre diferentes dispositivos, a diferencia de los de escritorio"
       ],
       "correct": 1,
       "explanation": "La opción correcta es Los agregadores web están alojados en sitios específicos y se acceden a través de un navegador (ideales para múltiples dispositivos), mientras que los de escritorio son aplicaciones que se instalan localmente en un dispositivo (ideales para un uso fijo).",
@@ -2733,19 +2732,30 @@ const SYLLABUS_RAW_DATA = {
     },
     {
       "concept_id": "lm_tema_7_q7",
-      "question": "Ser más popular y contar con un soporte universal en todos los agregadores",
+      "question": "Una de las mejoras técnicas que Atom 1.0 introdujo respecto a RSS 2.0 fue la capacidad de:",
       "options": [
+        "Ser más popular y contar con un soporte universal en todos los agregadores",
         "Requerir menos elementos obligatorios para la creación de un feed",
-        "Indicar el tipo de contenido (texto plano, HTML o multimedia) de la noticia, y utilizar un formato de fecha estándar ISO para una mayor flexibilidad",
-        "La validación de un feed de contenidos (RSS/Atom) es crucial porque:",
-        "Garantiza que el feed aumentará su posición en los motores de búsqueda automáticamente"
+        "Indicar el tipo de contenido (texto plano, HTML o multimedia) de la noticia, y utilizar un formato de fecha estándar ISO para una mayor flexibilidad"
       ],
-      "correct": 0,
-      "explanation": "Pregunta del temario oficial.",
+      "correct": 2,
+      "explanation": "La opción correcta es Indicar el tipo de contenido (texto plano, HTML o multimedia) de la noticia, y utilizar un formato de fecha estándar ISO para una mayor flexibilidad.",
       "unit": null
     },
     {
       "concept_id": "lm_tema_7_q8",
+      "question": "La validación de un feed de contenidos (RSS/Atom) es crucial porque:",
+      "options": [
+        "Garantiza que el feed aumentará su posición en los motores de búsqueda automáticamente",
+        "Asegura que el feed cumple con los estándares del W3C y las especificaciones RSS/Atom, verificando la accesibilidad de su URI y la ausencia de errores de sintaxis",
+        "Permite que el feed se registre en directorios de canales sin necesidad de aprobación manual"
+      ],
+      "correct": 1,
+      "explanation": "La opción correcta es Asegura que el feed cumple con los estándares del W3C y las especificaciones RSS/Atom, verificando la accesibilidad de su URI y la ausencia de errores de sintaxis.",
+      "unit": null
+    },
+    {
+      "concept_id": "lm_tema_7_q9",
       "question": "¿Cuál es la función esencial de un \"agregador\" (lector de canales o noticias) en el ecosistema de la sindicación de contenidos?",
       "options": [
         "Crear nuevos artículos y publicarlos en los sitios web de los autores",
