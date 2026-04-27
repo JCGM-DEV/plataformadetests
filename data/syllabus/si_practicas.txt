@@ -282,11 +282,11 @@ ipconfig /flushdns
 ipconfig /all
 EXPL:DHCP (Dynamic Host Configuration Protocol) asigna automáticamente direcciones IP, máscara de subred, puerta de enlace y DNS a los dispositivos de la red.
 ¿Qué comando de Windows elimina una ruta estática de la tabla de enrutamiento?
-route delete [destino]
+route drop [destino]
 netsh route remove [destino]
 *route delete [destino]
 ipconfig /route del [destino]
-EXPL:La respuesta es 'route delete [destino]'. "route delete [destino]" y "netsh route remove [destino]" son incorrectos porque describen conceptos diferentes.
+EXPL:La respuesta es 'route delete [destino]'. "route drop [destino]" y "netsh route remove [destino]" son incorrectos porque describen conceptos diferentes.
 ¿Qué comando de Windows verifica si el puerto 80 está abierto en una máquina remota?
 ping [IP] -p 80
 netstat -p 80 [IP]

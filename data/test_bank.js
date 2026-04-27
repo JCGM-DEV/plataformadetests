@@ -1499,13 +1499,13 @@ const TEST_BANK_DATA = {
       "concept_id": "si_practicas_q47",
       "question": "¿Qué comando de Windows elimina una ruta estática de la tabla de enrutamiento?",
       "options": [
-        "route delete [destino]",
+        "route drop [destino]",
         "netsh route remove [destino]",
         "route delete [destino]",
         "ipconfig /route del [destino]"
       ],
       "correct": 2,
-      "explanation": "La respuesta es 'route delete [destino]'. \"route delete [destino]\" y \"netsh route remove [destino]\" son incorrectos porque describen conceptos diferentes.",
+      "explanation": "La respuesta es 'route delete [destino]'. \"route drop [destino]\" y \"netsh route remove [destino]\" son incorrectos porque describen conceptos diferentes.",
       "unit": null
     },
     {
