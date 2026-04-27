@@ -189,11 +189,50 @@ async function requestAIFeedback(ejId, isTutor = false) {
         const feedback = await getAIFeedback(ej, code);
         showAIModalFeedback(feedback);
     } catch (err) {
-        showToast(err.message, 'error');
+        console.warn("IA falló, usando motor de feedback local:", err);
+        const localFeedback = getLocalSmartFeedback(ej, code);
+        showAIModalFeedback(localFeedback);
     } finally {
         btn.disabled = false;
         btn.innerHTML = originalText;
     }
+}
+
+/**
+ * Motor de Feedback Local (Smart Offline)
+ * Analiza el código sin necesidad de API externa.
+ */
+function getLocalSmartFeedback(context, code) {
+    let feedback = "### 🎓 Revisión del Profesor (Modo Offline)\n";
+    feedback += "La conexión con la IA ha fallado, pero he analizado tu código con el motor interno:\n\n";
+    
+    const errors = [];
+    
+    // 1. Detección de tipos de retorno incorrectos
+    if (/public\s+String\s+mostrarInfo/i.test(code)) {
+        errors.push("- **Error de Tipo**: `mostrarInfo` suele ser `void` si solo usas `System.out.println`. Si devuelves `String`, te falta el `return`.");
+    }
+    
+    // 2. Detección de super() vacío cuando hay parámetros
+    if (/public\s+\w+\s*\([\s\S]*\)[\s\S]*super\s*\(\s*\)\s*;/i.test(code) && context.titulo.includes("Vehículos")) {
+        errors.push("- **Lógica de Herencia**: Estás llamando a `super()` vacío, pero la clase padre (Vehiculo) necesita la marca y el modelo. ¡Esto es un suspenso directo!");
+    }
+
+    // 3. Detección de falta de comillas en Strings
+    if (/return\s+[A-Z]\w+;/i.test(code) && !/return\s+".*";/i.test(code)) {
+        errors.push("- **Error de Sintaxis**: En `getTipo()`, recuerda que los textos van entre comillas: `return \"Coche\";`.");
+    }
+
+    if (errors.length > 0) {
+        feedback += "#### ❌ Errores detectados:\n" + errors.join("\n") + "\n\n";
+    } else {
+        feedback += "✅ No he detectado errores graves a simple vista, pero revisa bien los criterios de evaluación abajo.\n\n";
+    }
+
+    feedback += "#### 💡 Consejo del Profe:\n";
+    feedback += "En el examen real, fíjate bien en si los métodos son `abstract`. Si lo son, la clase HIJA debe implementarlos sí o sí con la misma cabecera.";
+    
+    return feedback;
 }
 
 function showAIModalFeedback(markdown) {
