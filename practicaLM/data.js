@@ -504,7 +504,6 @@ const QUIZZES = {
         ans: 1,
         exp: "El contenido visible de la página se encierra dentro de la etiqueta <body>."
       }
-      }
     ]
   },
   simulacro2_quiz: {
