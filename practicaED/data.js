@@ -249,7 +249,7 @@ const LESSONS = {
     ],
     codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
   <p style="margin-bottom:1rem; color:var(--text1); font-size:1.1rem;">Las prácticas se realizan con <strong>Visual Paradigm Online</strong>.</p>
-  <a href="https://online.visual-paradigm.com/es/diagrams/features/uml-tool/" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
+  <a href="https://online.visual-paradigm.com/drive/#proj=0&dashboard" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
 </div>`,
     info: { type: 'tip', text: '💡 <strong>Instrucciones:</strong> Dibuja el diagrama en Visual Paradigm, expórtalo como imagen (PNG/JPG) y añádelo a tu documento de entrega.' },
     svg: 'casos_uso'
@@ -265,7 +265,7 @@ const LESSONS = {
       { icon: '→', title: 'Mensajes y Respuestas', body: 'Dibuja los mensajes (llamadas a métodos) y los retornos en el orden temporal correcto.' }
     ],
     codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
-  <a href="https://online.visual-paradigm.com/es/diagrams/features/uml-tool/" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
+  <a href="https://online.visual-paradigm.com/drive/#proj=0&dashboard" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
 </div>`,
     info: { type: 'tip', text: '💡 <strong>Instrucciones:</strong> Representa la sucesión de llamadas para completar un préstamo. Exporte como imagen.' },
     svg: 'secuencia'
