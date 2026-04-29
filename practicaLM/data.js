@@ -119,6 +119,9 @@ const UNITS = {
       { id: 'sim1-h2', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '2. Header y Menú', type: 'editor', editorId: 'sim1_p2' },
       { id: 'sim1-h3', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '3. Productos (Sección)', type: 'editor', editorId: 'sim1_p3' },
       { id: 'sim1-h4', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '4. Formulario Contacto', type: 'editor', editorId: 'sim1_p4' },
+      { id: 'sim2-quiz', icon: '🧠', label: 'Simulacro 2: Test Teórico', type: 'quiz', quizId: 'simulacro2_quiz' },
+      { id: 'sim2-p1', category: 'Práctico 2: XML & DTD', icon: '📄', label: '1. Validación DTD', type: 'editor', editorId: 'sim2_p1' },
+      { id: 'sim2-p2', category: 'Práctico 2: XML & XSD', icon: '🛡️', label: '2. Creación XSD', type: 'editor', editorId: 'sim2_p2' }
     ]
   }
 };
@@ -500,6 +503,47 @@ const QUIZZES = {
         opts: ["<head>", "<body>", "<html>", "<div>"],
         ans: 1,
         exp: "El contenido visible de la página se encierra dentro de la etiqueta <body>."
+      }
+      }
+    ]
+  },
+  simulacro2_quiz: {
+    title: 'Simulacro 2: Test Teórico',
+    questions: [
+      {
+        q: "¿Qué atributo se usa en imágenes?",
+        hint: "Es el origen (source) de la imagen.",
+        opts: ["href", "src", "link", "img"],
+        ans: 1,
+        exp: "El atributo src (source) se utiliza para especificar la ruta de la imagen en HTML."
+      },
+      {
+        q: "¿Qué lenguaje se usa para estilos?",
+        hint: "Hojas de Estilo en Cascada.",
+        opts: ["CSS", "XML", "HTML", "JSON"],
+        ans: 0,
+        exp: "CSS (Cascading Style Sheets) es el lenguaje utilizado para definir los estilos visuales."
+      },
+      {
+        q: "¿Qué lenguaje es de listas?",
+        hint: "Para crear listas usas <ul>, <ol>, <li>.",
+        opts: ["XML", "HTML", "JSON", "CSS"],
+        ans: 1,
+        exp: "HTML proporciona etiquetas nativas para crear listas, como <ul> para desordenadas y <ol> para ordenadas."
+      },
+      {
+        q: "¿Qué debe tener XML?",
+        hint: "Es estricto con su sintaxis.",
+        opts: ["Etiquetas abiertas sin cerrar", "Etiquetas bien cerradas", "Solo atributos", "Solo texto"],
+        ans: 1,
+        exp: "Para que un documento XML esté bien formado, todas sus etiquetas deben estar correctamente cerradas."
+      },
+      {
+        q: "¿Qué es DTD?",
+        hint: "Define las reglas del XML.",
+        opts: ["Lenguaje de consulta", "Definición de estructura XML", "Motor de base de datos", "Editor"],
+        ans: 1,
+        exp: "DTD (Document Type Definition) se utiliza para definir la estructura válida de un documento XML."
       }
     ]
   }
@@ -2251,6 +2295,37 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
         { id: 'opt3', check: /<option.*<option.*<option/si, popup: 'Opciones completas.', instruction: 'Añade las 3 opciones al selector.' },
         { id: 'text', check: /<textarea/i, popup: 'Área de texto lista.', instruction: 'Añade el <textarea>.' },
         { id: 'submit', check: /type="submit"/i, popup: '¡Listo para enviar!', instruction: 'Finaliza con el botón type="submit".' }
+      ]
+    }]
+  },
+  sim2_p1: {
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Validación DTD',
+      desc: 'Dado un XML con <libro>, <titulo>, <autor> y <precio>, crea la DTD interna que lo valide.',
+      hint: 'Usa <!DOCTYPE libro [ ... ]>',
+      starter: `<?xml version="1.0" encoding="UTF-8"?>\n<!-- Añade la declaración DOCTYPE y los elementos aquí -->\n<libro>\n  <titulo>XML Básico</titulo>\n  <autor>Juan Pérez</autor>\n  <precio>25</precio>\n</libro>`,
+      solution: `<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE libro [\n  <!ELEMENT libro (titulo, autor, precio)>\n  <!ELEMENT titulo (#PCDATA)>\n  <!ELEMENT autor (#PCDATA)>\n  <!ELEMENT precio (#PCDATA)>\n]>\n<libro>\n  <titulo>XML Básico</titulo>\n  <autor>Juan Pérez</autor>\n  <precio>25</precio>\n</libro>`,
+      milestones: [
+        { id: 'doctype', check: /<!DOCTYPE\s+libro/i, popup: '¡DTD iniciada!', instruction: 'Añade <!DOCTYPE libro [ ... ]>' },
+        { id: 'libro_elem', check: /<!ELEMENT\s+libro/i, popup: 'Elemento raíz definido.', instruction: 'Define el elemento libro conteniendo titulo, autor y precio.' },
+        { id: 'pcdata', check: /#PCDATA.*#PCDATA.*#PCDATA/si, popup: 'Elementos de texto definidos.', instruction: 'Define titulo, autor y precio como #PCDATA.' }
+      ]
+    }]
+  },
+  sim2_p2: {
+    type: 'xml',
+    exercises: [{
+      id: 1, title: 'Creación XSD',
+      desc: 'Dado un XML con <producto>, crea un XSD donde el precio sea decimal y el stock sea entero positivo.',
+      hint: 'Crea la estructura <xs:schema> y define los tipos xs:decimal y xs:positiveInteger',
+      starter: `<?xml version="1.0" encoding="UTF-8"?>\n<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">\n  <!-- Define el esquema aquí -->\n  \n</xs:schema>`,
+      solution: `<?xml version="1.0" encoding="UTF-8"?>\n<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">\n  <xs:element name="producto">\n    <xs:complexType>\n      <xs:sequence>\n        <xs:element name="nombre" type="xs:string"/>\n        <xs:element name="precio" type="xs:decimal"/>\n        <xs:element name="stock" type="xs:positiveInteger"/>\n      </xs:sequence>\n    </xs:complexType>\n  </xs:element>\n</xs:schema>`,
+      milestones: [
+        { id: 'elem_prod', check: /<xs:element\s+name="producto"/i, popup: 'Elemento raíz definido.', instruction: 'Define el elemento "producto".' },
+        { id: 'complex', check: /<xs:complexType>/i, popup: 'Tipo complejo añadido.', instruction: 'Añade <xs:complexType> y <xs:sequence>.' },
+        { id: 'decimal', check: /type="xs:decimal"/i, popup: 'Precio decimal correcto.', instruction: 'Define "precio" con type="xs:decimal".' },
+        { id: 'positive', check: /type="xs:positiveInteger"/i, popup: 'Stock positivo correcto.', instruction: 'Define "stock" con type="xs:positiveInteger".' }
       ]
     }]
   }
