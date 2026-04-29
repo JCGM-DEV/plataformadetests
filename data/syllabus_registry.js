@@ -532,5 +532,13 @@ const SYLLABUS_REGISTRY_DATA = [
     "subject_id": "lenguaje_de_marcas",
     "file": "practicaLM/index.html?unit=simulacros",
     "icon": "💻"
+  },
+  {
+    "id": "cc_simulacro_27_04",
+    "name": "🎯 SIMULACRO 27/04",
+    "type": "examen_final",
+    "subject_id": "cloud_computing",
+    "file": "data/syllabus/cc_simulacro_27_04.txt",
+    "icon": "☁️"
   }
 ];

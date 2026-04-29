@@ -13198,70 +13198,265 @@ const SYLLABUS_RAW_DATA = {
       "unit": null
     }
   ],
-  "lm_examen_final": [
+  "cc_simulacro_27_04": [
     {
-      "concept_id": "lm_examen_final_q0",
-      "question": "¿Qué es un lenguaje de marcas?",
+      "concept_id": "cc_simulacro_27_04_q0",
+      "question": "1. ¿Qué tipo NoSQL usa nodos y aristas?",
       "options": [
-        "Un sistema de etiquetas para estructurar información",
-        "Un lenguaje de programación",
-        "Un compilador",
-        "Un sistema operativo"
+        "Key-Value",
+        "Document",
+        "Graph",
+        "Column"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_simulacro_27_04_q1",
+      "question": "2. ¿Qué permite el almacenamiento de objetos?",
+      "options": [
+        "Acceso por bloques",
+        "Acceso local",
+        "Acceso físico",
+        "Acceso por URL"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_simulacro_27_04_q2",
+      "question": "3. ¿Qué es una máquina virtual?",
+      "options": [
+        "Un sistema operativo virtual",
+        "Un hardware físico",
+        "Una red",
+        "Un cable"
       ],
       "correct": 0,
-      "explanation": "Un lenguaje de marcas utiliza etiquetas para definir la estructura y presentación de la información.",
+      "explanation": "Pregunta del temario oficial.",
       "unit": null
     },
     {
-      "concept_id": "lm_examen_final_q1",
-      "question": "¿Qué lenguaje es estándar para páginas web?",
+      "concept_id": "cc_simulacro_27_04_q3",
+      "question": "4. ¿Qué combinación mejora alta disponibilidad?",
       "options": [
-        "XML",
-        "JSON",
-        "HTML",
-        "XSLT"
+        "Firewall + SQL",
+        "VM + almacenamiento",
+        "Redundancia + balanceo + tolerancia a fallos",
+        "Backup + CPU"
       ],
       "correct": 2,
-      "explanation": "HTML (HyperText Markup Language) es el estándar fundamental para la creación de páginas web.",
+      "explanation": "Pregunta del temario oficial.",
       "unit": null
     },
     {
-      "concept_id": "lm_examen_final_q2",
-      "question": "¿Qué organismo regula estándares web?",
+      "concept_id": "cc_simulacro_27_04_q4",
+      "question": "5. ¿Qué mide la tasa de errores?",
       "options": [
-        "ISO",
-        "IEEE",
-        "W3C",
-        "Oracle"
+        "Uso de CPU",
+        "Fallos en sistema",
+        "Memoria",
+        "Red"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_simulacro_27_04_q5",
+      "question": "6. ¿Qué permite escalado horizontal?",
+      "options": [
+        "Más CPU",
+        "Más servidores",
+        "Más RAM",
+        "Más disco"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_simulacro_27_04_q6",
+      "question": "7. ¿Qué tecnología empaqueta aplicaciones con dependencias?",
+      "options": [
+        "Contenedores",
+        "VM",
+        "Redes",
+        "Bases de datos"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_simulacro_27_04_q7",
+      "question": "8. ¿Qué ventaja principal tienen los contenedores?",
+      "options": [
+        "Más hardware",
+        "Menos rendimiento",
+        "Portabilidad",
+        "Más consumo"
       ],
       "correct": 2,
-      "explanation": "El W3C (World Wide Web Consortium) es el principal organismo internacional que desarrolla estándares para la Web.",
+      "explanation": "Pregunta del temario oficial.",
       "unit": null
     },
     {
-      "concept_id": "lm_examen_final_q3",
-      "question": "¿Qué representa el DOM?",
+      "concept_id": "cc_simulacro_27_04_q8",
+      "question": "9. ¿Qué permite la monitorización continua?",
       "options": [
-        "Un lenguaje",
-        "Un modelo de objetos del documento",
-        "Un servidor",
-        "Un compilador"
+        "Ignorar fallos",
+        "Reducir CPU",
+        "Borrar datos",
+        "Detectar problemas"
       ],
-      "correct": 1,
-      "explanation": "DOM significa Document Object Model, y es una interfaz de programación para documentos HTML y XML que representa la página como un árbol de objetos.",
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
       "unit": null
     },
     {
-      "concept_id": "lm_examen_final_q4",
-      "question": "¿Qué etiqueta define el cuerpo en HTML?",
+      "concept_id": "cc_simulacro_27_04_q9",
+      "question": "10. ¿Qué principio arquitectónico busca evitar fallos?",
       "options": [
-        "<head>",
-        "<body>",
-        "<html>",
-        "<div>"
+        "Seguridad",
+        "Coste",
+        "Fiabilidad",
+        "Rendimiento"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_simulacro_27_04_q10",
+      "question": "11. (Conceptos Cloud) Una empresa decide migrar su infraestructura a la nube para evitar comprar hardware y poder crecer rápidamente cuando aumente la demanda. ¿Qué característica principal del cloud está aprovechando?",
+      "options": [
+        "Virtualización",
+        "Escalabilidad",
+        "Monitorización",
+        "Redundancia"
       ],
       "correct": 1,
-      "explanation": "La etiqueta <body> contiene todo el contenido visible de un documento HTML, como texto, imágenes y enlaces.",
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_simulacro_27_04_q11",
+      "question": "12. (Modelos de servicio) Una empresa utiliza una plataforma donde puede desplegar aplicaciones sin gestionar servidores, pero sí configura el entorno (lenguaje, librerías, etc.). ¿Qué modelo está usando?",
+      "options": [
+        "IaaS",
+        "PaaS",
+        "SaaS",
+        "Serverless"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_simulacro_27_04_q12",
+      "question": "13. (Cómputo) Un equipo necesita aislar completamente varios sistemas operativos en un mismo servidor físico. ¿Qué tecnología es la más adecuada?",
+      "options": [
+        "Contenedores",
+        "Máquinas virtuales",
+        "CDN",
+        "DNS"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_simulacro_27_04_q13",
+      "question": "14. (Redes) Una empresa quiere impedir accesos no autorizados desde internet a su infraestructura cloud. ¿Qué componente debe implementar principalmente?",
+      "options": [
+        "Balanceador de carga",
+        "Firewall",
+        "CDN",
+        "DNS"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_simulacro_27_04_q14",
+      "question": "15. (Almacenamiento) Una empresa guarda copias de seguridad que solo se consultan en caso de desastre y quiere minimizar costes. ¿Qué tipo de almacenamiento usaría?",
+      "options": [
+        "Bloques",
+        "Objetos",
+        "Archivado",
+        "RAM"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_simulacro_27_04_q15",
+      "question": "16. (Bases de datos) Una aplicación necesita guardar sesiones de usuarios con accesos muy rápidos y simples (clave-valor). ¿Qué tipo de base de datos usarías?",
+      "options": [
+        "Relacional",
+        "Documental",
+        "Key-Value",
+        "Grafos"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_simulacro_27_04_q16",
+      "question": "17. (Arquitectura cloud) Un sistema está diseñado para seguir funcionando incluso si falla uno de sus componentes. ¿Qué característica está aplicando?",
+      "options": [
+        "Escalabilidad",
+        "Tolerancia a fallos",
+        "Monitorización",
+        "Virtualización"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_simulacro_27_04_q17",
+      "question": "18. (Optimización de costes) Una empresa detecta que está pagando por recursos que no utiliza. ¿Qué práctica debería aplicar?",
+      "options": [
+        "Redundancia",
+        "Monitorización de costes",
+        "Balanceo",
+        "CDN"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_simulacro_27_04_q18",
+      "question": "19. (Escalado y rendimiento) Un sistema distribuye automáticamente las peticiones al servidor menos cargado. ¿Qué algoritmo de balanceo está usando?",
+      "options": [
+        "Round Robin",
+        "Least Connections",
+        "Random",
+        "Sticky Sessions"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null
+    },
+    {
+      "concept_id": "cc_simulacro_27_04_q19",
+      "question": "20. (Seguridad) Una empresa aplica cifrado tanto cuando los datos se almacenan como cuando se transmiten. ¿Qué objetivo está logrando?",
+      "options": [
+        "Escalabilidad",
+        "Integridad",
+        "Confidencialidad",
+        "Rendimiento"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
       "unit": null
     }
   ]

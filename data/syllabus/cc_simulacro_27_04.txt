@@ -1,0 +1,119 @@
+1. ¿Qué tipo NoSQL usa nodos y aristas?
+a) Key-Value
+b) Document
+*c) Graph
+d) Column
+
+2. ¿Qué permite el almacenamiento de objetos?
+a) Acceso por bloques
+b) Acceso local
+c) Acceso físico
+*d) Acceso por URL
+
+3. ¿Qué es una máquina virtual?
+*a) Un sistema operativo virtual
+b) Un hardware físico
+c) Una red
+d) Un cable
+
+4. ¿Qué combinación mejora alta disponibilidad?
+a) Firewall + SQL
+b) VM + almacenamiento
+*c) Redundancia + balanceo + tolerancia a fallos
+d) Backup + CPU
+
+5. ¿Qué mide la tasa de errores?
+a) Uso de CPU
+*b) Fallos en sistema
+c) Memoria
+d) Red
+
+6. ¿Qué permite escalado horizontal?
+a) Más CPU
+*b) Más servidores
+c) Más RAM
+d) Más disco
+
+7. ¿Qué tecnología empaqueta aplicaciones con dependencias?
+*a) Contenedores
+b) VM
+c) Redes
+d) Bases de datos
+
+8. ¿Qué ventaja principal tienen los contenedores?
+a) Más hardware
+b) Menos rendimiento
+*c) Portabilidad
+d) Más consumo
+
+9. ¿Qué permite la monitorización continua?
+a) Ignorar fallos
+b) Reducir CPU
+c) Borrar datos
+*d) Detectar problemas
+
+10. ¿Qué principio arquitectónico busca evitar fallos?
+a) Seguridad
+b) Coste
+*c) Fiabilidad
+d) Rendimiento
+
+11. (Conceptos Cloud) Una empresa decide migrar su infraestructura a la nube para evitar comprar hardware y poder crecer rápidamente cuando aumente la demanda. ¿Qué característica principal del cloud está aprovechando?
+a) Virtualización
+*b) Escalabilidad
+c) Monitorización
+d) Redundancia
+
+12. (Modelos de servicio) Una empresa utiliza una plataforma donde puede desplegar aplicaciones sin gestionar servidores, pero sí configura el entorno (lenguaje, librerías, etc.). ¿Qué modelo está usando?
+a) IaaS
+*b) PaaS
+c) SaaS
+d) Serverless
+
+13. (Cómputo) Un equipo necesita aislar completamente varios sistemas operativos en un mismo servidor físico. ¿Qué tecnología es la más adecuada?
+a) Contenedores
+*b) Máquinas virtuales
+c) CDN
+d) DNS
+
+14. (Redes) Una empresa quiere impedir accesos no autorizados desde internet a su infraestructura cloud. ¿Qué componente debe implementar principalmente?
+a) Balanceador de carga
+*b) Firewall
+c) CDN
+d) DNS
+
+15. (Almacenamiento) Una empresa guarda copias de seguridad que solo se consultan en caso de desastre y quiere minimizar costes. ¿Qué tipo de almacenamiento usaría?
+a) Bloques
+b) Objetos
+*c) Archivado
+d) RAM
+
+16. (Bases de datos) Una aplicación necesita guardar sesiones de usuarios con accesos muy rápidos y simples (clave-valor). ¿Qué tipo de base de datos usarías?
+a) Relacional
+b) Documental
+*c) Key-Value
+d) Grafos
+
+17. (Arquitectura cloud) Un sistema está diseñado para seguir funcionando incluso si falla uno de sus componentes. ¿Qué característica está aplicando?
+a) Escalabilidad
+*b) Tolerancia a fallos
+c) Monitorización
+d) Virtualización
+
+18. (Optimización de costes) Una empresa detecta que está pagando por recursos que no utiliza. ¿Qué práctica debería aplicar?
+a) Redundancia
+*b) Monitorización de costes
+c) Balanceo
+d) CDN
+
+19. (Escalado y rendimiento) Un sistema distribuye automáticamente las peticiones al servidor menos cargado. ¿Qué algoritmo de balanceo está usando?
+a) Round Robin
+*b) Least Connections
+c) Random
+d) Sticky Sessions
+
+20. (Seguridad) Una empresa aplica cifrado tanto cuando los datos se almacenan como cuando se transmiten. ¿Qué objetivo está logrando?
+a) Escalabilidad
+b) Integridad
+*c) Confidencialidad
+d) Rendimiento
