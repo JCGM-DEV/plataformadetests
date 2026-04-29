@@ -534,11 +534,11 @@ function renderAcademia() {
                         </div>
                     </button>
                     
-                    <div class="academia-secondary-actions">
-                        ${subjectLabs.length > 0 ? `
-                        <button class="btn-secondary btn-lab-link" onclick="startLab('${subjectLabs[0].id}')">
-                            <span class="btn-icon">🧪</span> Laboratorio
-                        </button>` : ''}
+                    <div class="academia-secondary-actions" style="display:flex; flex-direction:column; gap:0.5rem; width:100%;">
+                        ${subjectLabs.map(lab => `
+                        <button class="btn-secondary btn-lab-link" onclick="startLab('${lab.id}')" style="width:100%; justify-content:flex-start; text-align:left;">
+                            <span class="btn-icon">${lab.icon || '🧪'}</span> <span style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${lab.name}</span>
+                        </button>`).join('')}
                     </div>
                 </div>
 
