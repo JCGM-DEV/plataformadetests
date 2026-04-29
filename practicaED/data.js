@@ -671,6 +671,27 @@ const QUIZZES = {
     title: 'Test de Conocimientos',
     questions: [
       {
+        q: '¿Qué es el desarrollo de software?',
+        hint: 'Engloba todo el ciclo, desde la idea hasta el mantenimiento.',
+        opts: ['El proceso de fabricar componentes físicos de una computadora.', 'El conjunto de actividades para crear, diseñar, desplegar y mantener programas informáticos.', 'La venta de licencias de sistemas operativos.', 'El estudio de la historia de la informática.'],
+        ans: 1,
+        exp: 'El desarrollo de software incluye todo el <strong>conjunto de actividades</strong> necesarias para crear y mantener programas.'
+      },
+      {
+        q: '¿Cuál es la primera fase del ciclo de vida del software?',
+        hint: 'Antes de programar hay que saber qué hacer.',
+        opts: ['Programación.', 'Pruebas.', 'Análisis de requisitos.', 'Mantenimiento.'],
+        ans: 2,
+        exp: 'La primera fase es el <strong>Análisis de requisitos</strong>, donde se define qué debe hacer el sistema.'
+      },
+      {
+        q: '¿Qué metodología de desarrollo se centra en la adaptación continua y la entrega incremental?',
+        hint: 'Scrum y Kanban son ejemplos de este tipo.',
+        opts: ['Metodologías Ágiles.', 'Modelo en Cascada.', 'Modelo Lineal.', 'Programación Estática.'],
+        ans: 0,
+        exp: 'Las <strong>Metodologías Ágiles</strong> se basan en el desarrollo iterativo, entregas continuas y adaptación rápida a los cambios.'
+      },
+      {
         q: '¿Qué caracteriza al ciclo de vida en cascada?',
         hint: 'Es un modelo tradicional no iterativo.',
         opts: ['Divide el proyecto en pequeñas versiones funcionales independientes.', 'Ejecuta las fases del desarrollo de forma secuencial.', 'Se basa exclusivamente en pruebas unitarias.', 'No necesita documentación.'],
