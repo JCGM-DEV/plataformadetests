@@ -120,6 +120,14 @@ const SYLLABUS_REGISTRY_DATA = [
     "icon": "⬡"
   },
   {
+    "id": "ed_examen_final",
+    "name": "🎯 SIMULACRO EXAMEN FINAL (VP Online)",
+    "type": "lab",
+    "subject_id": "entornos_de_desarrollo",
+    "file": "practicaED/index.html?unit=simulacros",
+    "icon": "💻"
+  },
+  {
     "id": "lm_tema_1",
     "name": "LM Tema 1: Introd. Marcas",
     "subject_id": "lenguaje_de_marcas",

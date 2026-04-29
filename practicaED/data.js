@@ -56,6 +56,17 @@ const UNITS = {
       { id: 'ud7-quiz', icon: '🧠', label: 'Quiz: Comandos Git', type: 'quiz', quizId: 'git_quiz' },
       { id: 'ud7-lab', icon: '🧪', label: 'Simulador Git Visual', type: 'git' },
     ]
+  },
+  simulacros: {
+    label: 'EXAMEN',
+    title: 'Simulacros de Examen',
+    sections: [
+      { id: 'sim-quiz', icon: '🧠', label: 'Test de Conocimientos', type: 'quiz', quizId: 'sim_quiz' },
+      { id: 'sim-p1', icon: '🧑', label: 'Práctica 1: Casos de Uso', type: 'lesson', lessonId: 'sim_vp_p1' },
+      { id: 'sim-p2', icon: '⏱️', label: 'Práctica 2: Secuencia', type: 'lesson', lessonId: 'sim_vp_p2' },
+      { id: 'sim-p3', icon: '🔄', label: 'Práctica 3: Actividad', type: 'lesson', lessonId: 'sim_vp_p3' },
+      { id: 'sim-p4', icon: '🚦', label: 'Práctica 4: Estados', type: 'lesson', lessonId: 'sim_vp_p4' }
+    ]
   }
 };
 
@@ -222,6 +233,69 @@ const LESSONS = {
 <span class="nm">PENDIENTE</span> → [pagar] → <span class="vis-pub">PAGADA</span> → <span class="vis-pub">⊙</span>
 <span class="nm">PENDIENTE</span> → [cancelar] → <span class="vis-priv">CANCELADA</span> → <span class="vis-pub">⊙</span>`,
     info: { type: 'success', text: '✅ <strong>Diferencia clave</strong>: Diagrama de <b>estados</b> = ciclo de vida de UN objeto. Diagrama de <b>actividad</b> = flujo de trabajo (proceso) completo con decisiones y paralelismos.' },
+    svg: 'estados'
+  },
+
+  sim_vp_p1: {
+    title: 'Práctica 1: Diagrama de Casos de Uso',
+    subtitle: 'Sistema de Gestión de Préstamos de Bicicletas',
+    concepts: [
+      { icon: '🧑', title: 'Identificar Actores', body: 'Identifica al menos 2 tipos de actores principales que interactuarán con el sistema (ej. Usuario, Empleado).' },
+      { icon: '⭕', title: 'Casos de Uso (Funcionalidades)', body: 'Define al menos 5 funcionalidades (Buscar, Prestar, Devolver, Registrar, etc).' },
+      { icon: '➡️', title: 'Asociaciones', body: 'Representa las relaciones de comunicación entre los actores y los casos de uso.' },
+      { icon: '«include»', title: 'Relación de Inclusión', body: 'Identifica y representa al menos una relación de inclusión («include»).' },
+      { icon: '«extend»', title: 'Relación de Extensión', body: 'Identifica y representa al menos una relación de extensión («extend»).' },
+      { icon: '📦', title: 'Límite del Sistema', body: 'Ubica los casos de uso dentro del rectángulo de límite del sistema y los actores fuera.' }
+    ],
+    codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
+  <p style="margin-bottom:1rem; color:var(--text1); font-size:1.1rem;">Las prácticas se realizan con <strong>Visual Paradigm Online</strong>.</p>
+  <a href="https://online.visual-paradigm.com/es/diagrams/features/uml-tool/" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
+</div>`,
+    info: { type: 'tip', text: '💡 <strong>Instrucciones:</strong> Dibuja el diagrama en Visual Paradigm, expórtalo como imagen (PNG/JPG) y añádelo a tu documento de entrega.' },
+    svg: 'casos_uso'
+  },
+  sim_vp_p2: {
+    title: 'Práctica 2: Diagrama de Secuencia',
+    subtitle: 'Interacción para "Prestar Bicicleta"',
+    concepts: [
+      { icon: '👤', title: 'Actor / Usuario', body: 'Inicia el flujo solicitando "Prestar Bicicleta".' },
+      { icon: '🧱', title: 'Objetos Clave', body: 'Identifica las clases u objetos que participan (Sistema, Bicicleta, Registro, etc).' },
+      { icon: '⬇️', title: 'Líneas de Vida', body: 'Traza las líneas verticales para cada participante en la interacción.' },
+      { icon: '▬', title: 'Barras de Activación', body: 'Indica los focos de control donde el objeto procesa datos.' },
+      { icon: '→', title: 'Mensajes y Respuestas', body: 'Dibuja los mensajes (llamadas a métodos) y los retornos en el orden temporal correcto.' }
+    ],
+    codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
+  <a href="https://online.visual-paradigm.com/es/diagrams/features/uml-tool/" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
+</div>`,
+    info: { type: 'tip', text: '💡 <strong>Instrucciones:</strong> Representa la sucesión de llamadas para completar un préstamo. Exporte como imagen.' },
+    svg: 'secuencia'
+  },
+  sim_vp_p3: {
+    title: 'Práctica 3: Diagrama de Actividad',
+    subtitle: 'Flujo del proceso "Devolver Bicicleta"',
+    concepts: [
+      { icon: '⚫', title: 'Nodo Inicial y Final', body: 'Todo diagrama de actividad necesita un punto de inicio y al menos un punto final.' },
+      { icon: '⭕', title: 'Actividades', body: 'Las acciones que se realizan paso a paso (Evaluar daños, Actualizar stock...).' },
+      { icon: '🔷', title: 'Decisión (Rombo)', body: 'Implementa la decisión: ¿Devuelta con retraso o daños? Sí → Penalizar. No → Actualizar como disponible.' }
+    ],
+    codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
+  <a href="https://online.visual-paradigm.com/es/diagrams/features/uml-tool/" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
+</div>`,
+    info: { type: 'tip', text: '💡 <strong>Instrucciones:</strong> Modela el proceso secuencial con sus bifurcaciones. Exporte como imagen.' },
+    svg: 'estados'
+  },
+  sim_vp_p4: {
+    title: 'Práctica 4: Diagrama de Estados',
+    subtitle: 'Ciclo de vida de una "Bicicleta"',
+    concepts: [
+      { icon: '🚲', title: 'Objeto Bicicleta', body: 'Analiza los posibles estados estables en los que puede estar una bicicleta en el sistema.' },
+      { icon: '⭕', title: 'Estados Posibles', body: 'Por ejemplo: Disponible, Prestada, En Mantenimiento, Retirada, etc.' },
+      { icon: '→', title: 'Transiciones', body: 'Representa las acciones que hacen cambiar la bicicleta de un estado a otro (ej. "prestar()", "devolver()", "avería()").' }
+    ],
+    codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
+  <a href="https://online.visual-paradigm.com/es/diagrams/features/uml-tool/" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
+</div>`,
+    info: { type: 'tip', text: '💡 <strong>Instrucciones:</strong> Crea la máquina de estados. Exporte como imagen y pégalo en tu entrega.' },
     svg: 'estados'
   }
 };
@@ -590,6 +664,102 @@ const QUIZZES = {
         ],
         ans: 1,
         exp: 'La numeración <strong>anidada (2.1)</strong> indica que es el <em>primer sub-mensaje</em> enviado como parte de la ejecución del mensaje 2. Permite reflejar cadenas de llamadas internas.'
+      }
+    ]
+  },
+  sim_quiz: {
+    title: 'Test de Conocimientos',
+    questions: [
+      {
+        q: '¿Qué caracteriza al ciclo de vida en cascada?',
+        hint: 'Es un modelo tradicional no iterativo.',
+        opts: ['Divide el proyecto en pequeñas versiones funcionales independientes.', 'Ejecuta las fases del desarrollo de forma secuencial.', 'Se basa exclusivamente en pruebas unitarias.', 'No necesita documentación.'],
+        ans: 1,
+        exp: 'El ciclo de vida en cascada se caracteriza por ejecutar las fases del desarrollo de forma <strong>secuencial</strong>.'
+      },
+      {
+        q: '¿Qué es un IDE?',
+        hint: 'Sus siglas significan Integrated Development Environment.',
+        opts: ['Un lenguaje de programación orientado a objetos.', 'Una aplicación que integra herramientas para desarrollar software.', 'Un tipo de diagrama UML.', 'Un sistema operativo para programadores.'],
+        ans: 1,
+        exp: 'Un IDE es un <strong>Entorno de Desarrollo Integrado</strong>, una aplicación que incluye editor, compilador, depurador y otras herramientas.'
+      },
+      {
+        q: '¿Cuál de las siguientes tareas puede realizarse normalmente desde un entorno de desarrollo?',
+        hint: 'Todo el ciclo principal del programador se hace ahí.',
+        opts: ['Editar código fuente, detectar errores y ejecutar programas.', 'Sustituir completamente al programador.', 'Evitar siempre todos los errores del software.', 'Convertir cualquier programa en hardware.'],
+        ans: 0,
+        exp: 'Desde el IDE se puede <strong>editar código, compilar, ejecutar y depurar</strong> errores (debug).'
+      },
+      {
+        q: '¿Para qué se utiliza UML?',
+        hint: 'Es un estándar de modelado.',
+        opts: ['Para instalar sistemas operativos.', 'Para representar gráfica y textualmente un sistema informático orientado a objetos.', 'Para sustituir las pruebas de software.', 'Para crear únicamente bases de datos.'],
+        ans: 1,
+        exp: 'UML (Lenguaje de Modelado Unificado) se usa para <strong>representar y documentar</strong> la estructura y comportamiento de un sistema de software.'
+      },
+      {
+        q: '¿En qué dos grandes grupos se dividen los diagramas UML?',
+        hint: 'Uno para lo que es el sistema, otro para lo que hace el sistema.',
+        opts: ['Públicos y privados.', 'Compilados e interpretados.', 'Estructurales y de comportamiento.', 'Manuales y automáticos.'],
+        ans: 2,
+        exp: 'Los diagramas UML se dividen en <strong>Estructurales</strong> (estáticos) y de <strong>Comportamiento</strong> (dinámicos).'
+      },
+      {
+        q: '¿Qué representa un diagrama de clases?',
+        hint: 'Es el diagrama estructural principal.',
+        opts: ['Las clases de un sistema, sus atributos, métodos y relaciones.', 'Los pasos de ejecución de una actividad.', 'El orden temporal de los mensajes entre objetos.', 'El historial de versiones de un proyecto.'],
+        ans: 0,
+        exp: 'Muestra la <strong>estructura estática</strong> del sistema modelando sus clases, atributos, operaciones (métodos) y sus relaciones.'
+      },
+      {
+        q: 'En un diagrama de clases UML, ¿cómo se representa normalmente una clase?',
+        hint: 'Es la representación visual estándar.',
+        opts: ['Como una elipse.', 'Como un rombo.', 'Como un rectángulo dividido en zonas para nombre, atributos y métodos.', 'Como una línea discontinua con una flecha.'],
+        ans: 2,
+        exp: 'Se representa como un <strong>rectángulo dividido en 3 compartimentos</strong>: nombre, atributos y métodos.'
+      },
+      {
+        q: '¿Qué relación UML representa una relación de herencia entre una clase hija y una clase base?',
+        hint: 'Es sinónimo de herencia en UML.',
+        opts: ['Asociación.', 'Generalización.', 'Composición.', 'Dependencia.'],
+        ans: 1,
+        exp: 'La <strong>Generalización</strong> es el término que UML utiliza para la herencia entre clases.'
+      },
+      {
+        q: '¿Qué representa un diagrama de casos de uso?',
+        hint: 'Se centra en los usuarios y las funciones.',
+        opts: ['La relación entre actores y funcionalidades del sistema.', 'La estructura interna de una clase.', 'Los errores detectados durante la ejecución.', 'El código fuente generado automáticamente.'],
+        ans: 0,
+        exp: 'Un diagrama de casos de uso muestra <strong>qué hace el sistema</strong> y la relación entre el sistema y sus <strong>actores</strong>.'
+      },
+      {
+        q: '¿Qué diagrama UML representa la secuencia de interacciones entre objetos para resolver un proceso?',
+        hint: 'Pone énfasis en el orden temporal.',
+        opts: ['Diagrama de estados.', 'Diagrama de secuencia.', 'Diagrama de despliegue.', 'Diagrama de paquetes.'],
+        ans: 1,
+        exp: 'El diagrama de <strong>secuencia</strong> muestra cómo los objetos interactúan a través de mensajes ordenados en el tiempo.'
+      },
+      {
+        q: '¿Cuál es el objetivo principal de las pruebas de software?',
+        hint: 'Aseguran la calidad.',
+        opts: ['Cambiar el lenguaje de programación del proyecto.', 'Detectar errores y comprobar que el software funciona correctamente.', 'Eliminar la necesidad de documentación.', 'Crear automáticamente todos los diagramas UML.'],
+        ans: 1,
+        exp: 'Las pruebas buscan <strong>detectar defectos y verificar</strong> que el comportamiento del software es el esperado.'
+      },
+      {
+        q: '¿Qué es la refactorización?',
+        hint: 'Afecta la estructura interna sin alterar la funcionalidad externa.',
+        opts: ['Añadir nuevas funcionalidades al programa.', 'Cambiar el sistema operativo donde se ejecuta una aplicación.', 'Mejorar la estructura y legibilidad del código sin cambiar su comportamiento funcional.', 'Eliminar todas las pruebas del proyecto.'],
+        ans: 2,
+        exp: 'Refactorizar consiste en <strong>mejorar el código interno</strong> (hacerlo más limpio o eficiente) sin alterar el funcionamiento final.'
+      },
+      {
+        q: '¿Para qué sirve un sistema de control de versiones?',
+        hint: 'Como Git.',
+        opts: ['Para gestionar cambios en el código y poder consultar o restaurar versiones anteriores.', 'Para ejecutar programas sin sistema operativo.', 'Para sustituir los diagramas UML.', 'Para eliminar la necesidad de trabajar en equipo.'],
+        ans: 0,
+        exp: 'Permite <strong>rastrear y gestionar el historial</strong> de cambios en el código fuente de un proyecto.'
       }
     ]
   }

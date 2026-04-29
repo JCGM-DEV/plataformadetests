@@ -599,3 +599,12 @@ function showLabSolution() {
     </div>`;
   document.getElementById('modal-overlay').classList.remove('hidden');
 }
+
+// Auto-load unit from URL if present
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const unit = urlParams.get('unit');
+  if (unit && UNITS[unit]) {
+    selectUnit(unit);
+  }
+});
