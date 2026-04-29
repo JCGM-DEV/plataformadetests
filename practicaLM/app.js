@@ -643,3 +643,11 @@ function showToast(msg, type = 'info') {
 }
 
 function closeModal() { document.getElementById('modal-overlay').classList.add('hidden'); }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const unit = urlParams.get('unit');
+  if (unit && UNITS[unit]) {
+    selectUnit(unit);
+  }
+});

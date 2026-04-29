@@ -527,10 +527,10 @@ const SYLLABUS_REGISTRY_DATA = [
   },
   {
     "id": "lm_examen_final",
-    "name": "🎯 SIMULACRO EXAMEN FINAL (Teoría)",
-    "type": "examen_final",
+    "name": "🎯 SIMULACRO EXAMEN FINAL (Interactivo)",
+    "type": "lab",
     "subject_id": "lenguaje_de_marcas",
-    "file": "data/syllabus/lm_bateria_teoria.txt",
-    "icon": "📝"
+    "file": "practicaLM/index.html?unit=simulacros",
+    "icon": "💻"
   }
 ];

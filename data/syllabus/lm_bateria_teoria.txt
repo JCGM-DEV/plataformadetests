@@ -1,1 +1,35 @@
-// PENDIENTE: Rellenar con las preguntas tipo test de Teoría de Lenguaje de Marcas (desde Enero 2026)
+tema 1
+¿Qué es un lenguaje de marcas?
+*Un sistema de etiquetas para estructurar información
+Un lenguaje de programación
+Un compilador
+Un sistema operativo
+EXPL:Un lenguaje de marcas utiliza etiquetas para definir la estructura y presentación de la información.
+
+¿Qué lenguaje es estándar para páginas web?
+XML
+JSON
+*HTML
+XSLT
+EXPL:HTML (HyperText Markup Language) es el estándar fundamental para la creación de páginas web.
+
+¿Qué organismo regula estándares web?
+ISO
+IEEE
+*W3C
+Oracle
+EXPL:El W3C (World Wide Web Consortium) es el principal organismo internacional que desarrolla estándares para la Web.
+
+¿Qué representa el DOM?
+Un lenguaje
+*Un modelo de objetos del documento
+Un servidor
+Un compilador
+EXPL:DOM significa Document Object Model, y es una interfaz de programación para documentos HTML y XML que representa la página como un árbol de objetos.
+
+¿Qué etiqueta define el cuerpo en HTML?
+<head>
+*<body>
+<html>
+<div>
+EXPL:La etiqueta <body> contiene todo el contenido visible de un documento HTML, como texto, imágenes y enlaces.

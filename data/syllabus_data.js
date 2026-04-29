@@ -13198,5 +13198,71 @@ const SYLLABUS_RAW_DATA = {
       "unit": null
     }
   ],
-  "lm_examen_final": []
+  "lm_examen_final": [
+    {
+      "concept_id": "lm_examen_final_q0",
+      "question": "¿Qué es un lenguaje de marcas?",
+      "options": [
+        "Un sistema de etiquetas para estructurar información",
+        "Un lenguaje de programación",
+        "Un compilador",
+        "Un sistema operativo"
+      ],
+      "correct": 0,
+      "explanation": "Un lenguaje de marcas utiliza etiquetas para definir la estructura y presentación de la información.",
+      "unit": null
+    },
+    {
+      "concept_id": "lm_examen_final_q1",
+      "question": "¿Qué lenguaje es estándar para páginas web?",
+      "options": [
+        "XML",
+        "JSON",
+        "HTML",
+        "XSLT"
+      ],
+      "correct": 2,
+      "explanation": "HTML (HyperText Markup Language) es el estándar fundamental para la creación de páginas web.",
+      "unit": null
+    },
+    {
+      "concept_id": "lm_examen_final_q2",
+      "question": "¿Qué organismo regula estándares web?",
+      "options": [
+        "ISO",
+        "IEEE",
+        "W3C",
+        "Oracle"
+      ],
+      "correct": 2,
+      "explanation": "El W3C (World Wide Web Consortium) es el principal organismo internacional que desarrolla estándares para la Web.",
+      "unit": null
+    },
+    {
+      "concept_id": "lm_examen_final_q3",
+      "question": "¿Qué representa el DOM?",
+      "options": [
+        "Un lenguaje",
+        "Un modelo de objetos del documento",
+        "Un servidor",
+        "Un compilador"
+      ],
+      "correct": 1,
+      "explanation": "DOM significa Document Object Model, y es una interfaz de programación para documentos HTML y XML que representa la página como un árbol de objetos.",
+      "unit": null
+    },
+    {
+      "concept_id": "lm_examen_final_q4",
+      "question": "¿Qué etiqueta define el cuerpo en HTML?",
+      "options": [
+        "<head>",
+        "<body>",
+        "<html>",
+        "<div>"
+      ],
+      "correct": 1,
+      "explanation": "La etiqueta <body> contiene todo el contenido visible de un documento HTML, como texto, imágenes y enlaces.",
+      "unit": null
+    }
+  ]
 };
