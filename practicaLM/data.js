@@ -2267,15 +2267,22 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
     type: 'html',
     exercises: [{
       id: 1, title: 'Sección de Productos',
-      desc: 'Crea una <section> con el título "Productos destacados". Añade 3 bloques <article>, cada uno con un <h3> (nombre), una <img> (usa src="url"), un <p> (descripción) y un <p><strong> (precio).',
-      hint: '<section> <article> <h3>...</h3> <img ...> </article> </section>',
-      starter: `<section>\n  <!-- 3 artículos de producto aquí -->\n</section>`,
-      solution: `<section>\n  <h2>Productos destacados</h2>\n  <article>\n    <h3>Producto 1</h3>\n    <img src="img1.jpg" alt="P1">\n    <p>Descripción del producto 1.</p>\n    <p><strong>Precio:</strong> 100€</p>\n  </article>\n  <article>\n    <h3>Producto 2</h3>\n    <img src="img2.jpg" alt="P2">\n    <p>Descripción del producto 2.</p>\n    <p><strong>Precio:</strong> 200€</p>\n  </article>\n  <article>\n    <h3>Producto 3</h3>\n    <img src="img3.jpg" alt="P3">\n    <p>Descripción del producto 3.</p>\n    <p><strong>Precio:</strong> 300€</p>\n  </article>\n</section>`,
+      desc: `Crea una &lt;section&gt; con título &lt;h2&gt;Productos destacados&lt;/h2&gt;. Añade 3 productos como bloques &lt;article&gt;. Cada producto DEBE incluir:
+• &lt;h3&gt; con el nombre
+• &lt;img&gt; con src y alt
+• &lt;p&gt; con la descripción del producto
+• &lt;p&gt;&lt;strong&gt;Precio:&lt;/strong&gt; X€&lt;/p&gt;`,
+      hint: '&lt;section&gt; &lt;h2&gt;...&lt;/h2&gt; &lt;article&gt; &lt;h3&gt;...&lt;/h3&gt; &lt;img src="..." alt="..."&gt; &lt;p&gt;descripción&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Precio:&lt;/strong&gt; ...€&lt;/p&gt; &lt;/article&gt; &lt;/section&gt;',
+      starter: `<section>\n  <h2>Productos destacados</h2>\n  <!-- Añade 3 article (nombre, imagen, descripción, precio) -->\n</section>`,
+      solution: `<section>\n  <h2>Productos destacados</h2>\n  <article>\n    <h3>Portátil Gamer</h3>\n    <img src="portatil.jpg" alt="Portátil Gamer">\n    <p>Portátil de alto rendimiento ideal para juegos y trabajo.</p>\n    <p><strong>Precio:</strong> 1200€</p>\n  </article>\n  <article>\n    <h3>Smartphone Pro</h3>\n    <img src="smartphone.jpg" alt="Smartphone Pro">\n    <p>Teléfono inteligente con cámara de alta resolución y gran batería.</p>\n    <p><strong>Precio:</strong> 850€</p>\n  </article>\n  <article>\n    <h3>Auriculares inalámbricos</h3>\n    <img src="auriculares.jpg" alt="Auriculares inalámbricos">\n    <p>Auriculares con cancelación de ruido y sonido envolvente.</p>\n    <p><strong>Precio:</strong> 150€</p>\n  </article>\n</section>`,
       milestones: [
         { id: 'section', check: /<section>/i, popup: 'Sección iniciada.', instruction: 'Crea la <section>.' },
+        { id: 'h2', check: /<h2>/i, popup: 'Título de sección OK.', instruction: 'Añade el <h2>Productos destacados</h2>.' },
         { id: 'art1', check: /<article>/i, popup: 'Primer producto OK.', instruction: 'Añade el primer <article>.' },
-        { id: 'art3', check: /<article>.*<article>.*<article>/si, popup: '¡3 productos listos!', instruction: 'Añade los 3 bloques <article> completos (título, imagen, descripción, precio).' },
-        { id: 'img', check: /<img.*src=.*alt=/i, popup: 'Imágenes accesibles.', instruction: 'Asegúrate de que las imágenes tengan src y alt.' }
+        { id: 'art3', check: /<article>.*<article>.*<article>/si, popup: '¡3 productos listos!', instruction: 'Añade los 3 bloques <article> completos.' },
+        { id: 'img', check: /<img.*src=.*alt=/i, popup: 'Imágenes con alt accesible.', instruction: 'Asegúrate de que las imágenes tengan src y alt.' },
+        { id: 'desc', check: /<p>[^<]{5,}<\/p>/i, popup: '¡Descripción del producto detectada!', instruction: 'Añade un <p> con la descripción de cada producto.' },
+        { id: 'precio', check: /<strong>Precio.*<\/strong>/i, popup: 'Precio en negrita correcto.', instruction: 'Añade <p><strong>Precio:</strong> X€</p> en cada artículo.' }
       ]
     }]
   },
@@ -2283,17 +2290,23 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
     type: 'html',
     exercises: [{
       id: 1, title: 'Formulario de Contacto',
-      desc: 'Crea una <section> con un formulario. Debe tener campos para Nombre (text), Email (email), un <select> con 3 opciones (Consulta, Pedido, Reclamación), un <textarea> (mensaje) y un botón de envío.',
-      hint: '<form> <label> <input> <select> <textarea> <input type="submit"> </form>',
-      starter: `<section>\n  <h2>Contacto</h2>\n  <!-- Formulario aquí -->\n</section>`,
-      solution: `<section>\n  <h2>Contacto</h2>\n  <form action="#" method="post">\n    <label for="nombre">Nombre:</label>\n    <input type="text" id="nombre" name="nombre"><br>\n    <label for="email">Email:</label>\n    <input type="email" id="email" name="email"><br>\n    <label for="motivo">Motivo:</label>\n    <select id="motivo" name="motivo">\n      <option value="c">Consulta</option>\n      <option value="p">Pedido</option>\n      <option value="r">Reclamación</option>\n    </select><br>\n    <label for="msj">Mensaje:</label>\n    <textarea id="msj" name="msj"></textarea><br>\n    <input type="submit" value="Enviar">\n  </form>\n</section>`,
+      desc: `Crea una &lt;section&gt; con &lt;h2&gt;Contacto&lt;/h2&gt; y un formulario (&lt;form action="#" method="post"&gt;). El formulario DEBE incluir:
+• &lt;label&gt; + &lt;input type="text"&gt; para Nombre
+• &lt;label&gt; + &lt;input type="email"&gt; para Email
+• &lt;label&gt; + &lt;select&gt; con 3 opciones: Consulta, Pedido, Reclamación
+• &lt;label&gt; + &lt;textarea rows="5" cols="30"&gt; para Mensaje
+• &lt;input type="submit" value="Enviar"&gt;`,
+      hint: 'Usa for/id para conectar los label con sus inputs. El &lt;select&gt; va con &lt;option&gt; dentro.',
+      starter: `<section>\n  <h2>Contacto</h2>\n  <form action="#" method="post">\n    <!-- Campos del formulario aquí -->\n  </form>\n</section>`,
+      solution: `<section>\n  <h2>Contacto</h2>\n  <form action="#" method="post">\n    <label for="nombre">Nombre:</label><br>\n    <input type="text" id="nombre" name="nombre"><br><br>\n    <label for="email">Email:</label><br>\n    <input type="email" id="email" name="email"><br><br>\n    <label for="tipo">Motivo:</label><br>\n    <select id="tipo" name="tipo">\n      <option value="consulta">Consulta</option>\n      <option value="pedido">Pedido</option>\n      <option value="reclamacion">Reclamación</option>\n    </select><br><br>\n    <label for="mensaje">Mensaje:</label><br>\n    <textarea id="mensaje" name="mensaje" rows="5" cols="30"></textarea><br><br>\n    <input type="submit" value="Enviar">\n  </form>\n</section>`,
       milestones: [
-        { id: 'form', check: /<form/i, popup: 'Formulario iniciado.', instruction: 'Crea la etiqueta <form>.' },
-        { id: 'email', check: /type="email"/i, popup: 'Tipo email correcto.', instruction: 'Usa type="email" para el campo de correo.' },
-        { id: 'select', check: /<select/i, popup: 'Selector añadido.', instruction: 'Añade el <select>.' },
-        { id: 'opt3', check: /<option.*<option.*<option/si, popup: 'Opciones completas.', instruction: 'Añade las 3 opciones al selector.' },
-        { id: 'text', check: /<textarea/i, popup: 'Área de texto lista.', instruction: 'Añade el <textarea>.' },
-        { id: 'submit', check: /type="submit"/i, popup: '¡Listo para enviar!', instruction: 'Finaliza con el botón type="submit".' }
+        { id: 'form', check: /action="#".*method="post"/i, popup: 'Formulario con método POST correcto.', instruction: 'Crea <form action="#" method="post">.' },
+        { id: 'nombre', check: /type="text".*id="nombre"/i, popup: 'Campo Nombre OK.', instruction: 'Añade <input type="text" id="nombre" name="nombre">.' },
+        { id: 'email', check: /type="email"/i, popup: 'Campo Email correcto.', instruction: 'Usa type="email" para el campo de correo electrónico.' },
+        { id: 'select', check: /<select/i, popup: 'Selector añadido.', instruction: 'Añade el <select id="tipo">.' },
+        { id: 'opt3', check: /<option.*<option.*<option/si, popup: '¡3 opciones completas!', instruction: 'Añade las 3 opciones: Consulta, Pedido, Reclamación.' },
+        { id: 'textarea', check: /<textarea/i, popup: 'Área de mensaje lista.', instruction: 'Añade <textarea rows="5" cols="30"> para el mensaje.' },
+        { id: 'submit', check: /type="submit"/i, popup: '¡Formulario listo!', instruction: 'Finaliza con <input type="submit" value="Enviar">.' }
       ]
     }]
   },
