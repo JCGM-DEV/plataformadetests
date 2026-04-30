@@ -2267,11 +2267,11 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
     type: 'html',
     exercises: [{
       id: 1, title: 'Sección de Productos',
-      desc: `Crea una &lt;section&gt; con título &lt;h2&gt;Productos destacados&lt;/h2&gt;. Añade 3 productos como bloques &lt;article&gt;. Cada producto DEBE incluir:
-• &lt;h3&gt; con el nombre
-• &lt;img&gt; con src y alt
-• &lt;p&gt; con la descripción del producto
-• &lt;p&gt;&lt;strong&gt;Precio:&lt;/strong&gt; X€&lt;/p&gt;`,
+      desc: `Crea una <section> con título <h2>Productos destacados</h2>. Añade 3 productos como bloques <article>. Cada producto DEBE incluir:
+• <h3> con el nombre del producto
+• <img> con src y alt
+• <p> con la descripción del producto
+• <p><strong>Precio:</strong> X€</p>`,
       hint: '&lt;section&gt; &lt;h2&gt;...&lt;/h2&gt; &lt;article&gt; &lt;h3&gt;...&lt;/h3&gt; &lt;img src="..." alt="..."&gt; &lt;p&gt;descripción&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Precio:&lt;/strong&gt; ...€&lt;/p&gt; &lt;/article&gt; &lt;/section&gt;',
       starter: `<section>\n  <h2>Productos destacados</h2>\n  <!-- Añade 3 article (nombre, imagen, descripción, precio) -->\n</section>`,
       solution: `<section>\n  <h2>Productos destacados</h2>\n  <article>\n    <h3>Portátil Gamer</h3>\n    <img src="portatil.jpg" alt="Portátil Gamer">\n    <p>Portátil de alto rendimiento ideal para juegos y trabajo.</p>\n    <p><strong>Precio:</strong> 1200€</p>\n  </article>\n  <article>\n    <h3>Smartphone Pro</h3>\n    <img src="smartphone.jpg" alt="Smartphone Pro">\n    <p>Teléfono inteligente con cámara de alta resolución y gran batería.</p>\n    <p><strong>Precio:</strong> 850€</p>\n  </article>\n  <article>\n    <h3>Auriculares inalámbricos</h3>\n    <img src="auriculares.jpg" alt="Auriculares inalámbricos">\n    <p>Auriculares con cancelación de ruido y sonido envolvente.</p>\n    <p><strong>Precio:</strong> 150€</p>\n  </article>\n</section>`,
@@ -2290,12 +2290,12 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
     type: 'html',
     exercises: [{
       id: 1, title: 'Formulario de Contacto',
-      desc: `Crea una &lt;section&gt; con &lt;h2&gt;Contacto&lt;/h2&gt; y un formulario (&lt;form action="#" method="post"&gt;). El formulario DEBE incluir:
-• &lt;label&gt; + &lt;input type="text"&gt; para Nombre
-• &lt;label&gt; + &lt;input type="email"&gt; para Email
-• &lt;label&gt; + &lt;select&gt; con 3 opciones: Consulta, Pedido, Reclamación
-• &lt;label&gt; + &lt;textarea rows="5" cols="30"&gt; para Mensaje
-• &lt;input type="submit" value="Enviar"&gt;`,
+      desc: `Crea una <section> con <h2>Contacto</h2> y un formulario (<form action="#" method="post">). El formulario DEBE incluir:
+• <label> + <input type="text"> para Nombre
+• <label> + <input type="email"> para Email
+• <label> + <select> con 3 opciones: Consulta, Pedido, Reclamación
+• <label> + <textarea rows="5" cols="30"> para Mensaje
+• <input type="submit" value="Enviar">`,
       hint: 'Usa for/id para conectar los label con sus inputs. El &lt;select&gt; va con &lt;option&gt; dentro.',
       starter: `<section>\n  <h2>Contacto</h2>\n  <form action="#" method="post">\n    <!-- Campos del formulario aquí -->\n  </form>\n</section>`,
       solution: `<section>\n  <h2>Contacto</h2>\n  <form action="#" method="post">\n    <label for="nombre">Nombre:</label><br>\n    <input type="text" id="nombre" name="nombre"><br><br>\n    <label for="email">Email:</label><br>\n    <input type="email" id="email" name="email"><br><br>\n    <label for="tipo">Motivo:</label><br>\n    <select id="tipo" name="tipo">\n      <option value="consulta">Consulta</option>\n      <option value="pedido">Pedido</option>\n      <option value="reclamacion">Reclamación</option>\n    </select><br><br>\n    <label for="mensaje">Mensaje:</label><br>\n    <textarea id="mensaje" name="mensaje" rows="5" cols="30"></textarea><br><br>\n    <input type="submit" value="Enviar">\n  </form>\n</section>`,
