@@ -449,8 +449,8 @@ function renderAcademia() {
         const subjectFallos = fallosData[subject.id] || {};
         const fallosCount = Object.keys(subjectFallos).length;
         
-        // Labs for this subject
-        const subjectLabs = APP_STATE.syllabusExams.filter(e => e.subject_id === subject.id && e.type === 'lab');
+        // Labs and simulations for this subject
+        const subjectLabs = APP_STATE.syllabusExams.filter(e => e.subject_id === subject.id && (e.type === 'lab' || (e.type === 'examen_final' && e.id !== subject.id + '_examen_final')));
         
         // Syllabus themes for this subject
         const themes = APP_STATE.syllabusExams.filter(e => e.subject_id === subject.id && e.type !== 'lab');
@@ -536,9 +536,15 @@ function renderAcademia() {
                     
                     <div class="academia-secondary-actions" style="display:flex; flex-direction:column; gap:0.5rem; width:100%;">
                         ${subjectLabs.map(lab => `
-                        <button class="btn-secondary btn-lab-link" onclick="startLab('${lab.id}')" style="width:100%; justify-content:flex-start; text-align:left;">
-                            <span class="btn-icon">${lab.icon || '🧪'}</span> <span style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${lab.name}</span>
-                        </button>`).join('')}
+                        <div style="display:flex; gap:0.35rem; width:100%;">
+                            <button class="btn-secondary btn-lab-link" onclick="${lab.type === 'examen_final' ? `startSyllabusExam('${lab.id}')` : `startLab('${lab.id}')`}" style="flex:1; justify-content:flex-start; text-align:left; border-radius: 8px 0 0 8px;">
+                                <span class="btn-icon">${lab.icon || '🧪'}</span> <span style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${lab.name}</span>
+                            </button>
+                            ${lab.solution ? `
+                            <button class="btn-secondary" onclick="window.open('${lab.solution}', '_blank')" title="Ver Solución" style="width:42px; padding:0; display:flex; align-items:center; justify-content:center; border-radius: 0 8px 8px 0; background: var(--bg-card); border-left: 1px solid var(--border-color);">
+                                <span style="font-size: 1.1rem;">📄</span>
+                            </button>` : ''}
+                        </div>`).join('')}
                     </div>
                 </div>
 
@@ -678,12 +684,8 @@ function extractTemaFromId(conceptId, subjectId) {
     return m ? m[1] : null;
 }
 
-// PDF map loaded from data/pdf_map.json
-let PDF_MAP = {};
-fetch('data/pdf_map.json?v=' + Date.now())
-    .then(r => r.json())
-    .then(data => { PDF_MAP = data; })
-    .catch(() => {});
+// PDF map loaded from data/pdf_map.js (via index.html script tag)
+// let PDF_MAP = {}; // Initialized in data/pdf_map.js
 
 
 // ─── PROGRESS / CHART ───────────────────────────────────────────

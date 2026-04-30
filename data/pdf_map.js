@@ -1,0 +1,486 @@
+const PDF_MAP = 
+{
+  "programacion": {
+    "1": {
+      "path": "Programacion/TemasPDF/TEMA 1.pdf",
+      "name": "Tema 1",
+      "total_pages": 45,
+      "exists": true,
+      "report": "Programacion/informes y presentaciones/Blueprint_to_Console.pdf",
+      "infographic": "Programacion/informes y presentaciones/infografia_prog_1.png",
+      "video": "Programacion/videos/Desmitificando_la_programación.mp4"
+    },
+    "2": {
+      "path": "Programacion/TemasPDF/TEMA 2.pdf",
+      "name": "Tema 2",
+      "total_pages": 39,
+      "exists": true,
+      "report": "Programacion/informes y presentaciones/Java_Code_Blueprint.pdf",
+      "infographic": "Programacion/informes y presentaciones/infografia_prog_2.png",
+      "video": "Programacion/videos/POO__De_planos_a_edificios.mp4"
+    },
+    "3": {
+      "path": "Programacion/TemasPDF/TEMA 3_act.pdf",
+      "name": "Tema 3",
+      "total_pages": 28,
+      "exists": true,
+      "report": "Programacion/informes y presentaciones/Java_Data_Architecture.pdf",
+      "infographic": "Programacion/informes y presentaciones/infografia_prog_3.png",
+      "video": "Programacion/videos/La_gramática_del_código.mp4"
+    },
+    "4": {
+      "path": "Programacion/TemasPDF/TEMA 4.pdf",
+      "name": "Tema 4",
+      "total_pages": 40,
+      "exists": true,
+      "report": "Programacion/informes y presentaciones/Digital_Architecture_Mastery.pdf",
+      "infographic": "Programacion/informes y presentaciones/infografia_prog_4.png",
+      "video": "Programacion/videos/POO_Avanzada__Superpoderes.mp4"
+    },
+    "5": {
+      "path": "Programacion/TemasPDF/TEMA 5.pdf",
+      "name": "Tema 5",
+      "total_pages": 25,
+      "exists": true,
+      "report": "Programacion/informes y presentaciones/Java_Architecture_Blueprint.pdf",
+      "infographic": "Programacion/informes y presentaciones/infografia_prog_5.png",
+      "video": "Programacion/videos/Bloques_de_Java__Arrays_y_Strings.mp4"
+    },
+    "6": {
+      "path": "Programacion/TemasPDF/TEMA 6.pdf",
+      "name": "Tema 6",
+      "total_pages": 37,
+      "exists": true,
+      "report": "Programacion/informes y presentaciones/Java_Object_Mastery.pdf",
+      "infographic": "Programacion/informes y presentaciones/infografia_prog_6.png",
+      "video": "Programacion/videos/La_Vida_de_un_Objeto.mp4"
+    },
+    "7": {
+      "path": "Programacion/TemasPDF/TEMA 7.pdf",
+      "name": "Tema 7",
+      "total_pages": 29,
+      "exists": true,
+      "report": "Programacion/informes y presentaciones/Java_Exceptions_and_Collections.pdf",
+      "infographic": "Programacion/informes y presentaciones/infografia_prog_7.png",
+      "video": "Programacion/videos/Del_Caos_al_Control__Excepciones_y_Colecciones_en_Java.mp4"
+    },
+    "8": {
+      "path": "Programacion/TemasPDF/TEMA 8.pdf",
+      "name": "Tema 8",
+      "total_pages": 43,
+      "exists": true,
+      "report": "Programacion/informes y presentaciones/Java_Data_Logistics.pdf",
+      "infographic": "Programacion/informes y presentaciones/infografia_prog_8.png",
+      "video": "Programacion/videos/Desmitificando_la_E_S_en_Java.mp4"
+    },
+    "9": {
+      "path": "Programacion/TemasPDF/TEMA 9.pdf",
+      "name": "Tema 9",
+      "total_pages": 36,
+      "exists": true,
+      "report": "Programacion/informes y presentaciones/The_JDBC_Blueprint.pdf",
+      "infographic": "Programacion/informes y presentaciones/infografia_prog_9.png",
+      "video": "Programacion/videos/JDBC__El_Traductor_Universal.mp4"
+    },
+    "10": {
+      "path": "Programacion/TemasPDF/TEMA 10.pdf",
+      "name": "Tema 10",
+      "total_pages": 62,
+      "exists": true,
+      "report": "Programacion/informes y presentaciones/Native_Object_Databases.pdf",
+      "infographic": "Programacion/informes y presentaciones/infografia_prog_10.png",
+      "video": "Programacion/videos/Bases_de_datos_orientadas_a_objetos.mp4"
+    }
+  },
+  "sistemas_informaticos": {
+    "1": {
+      "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD1_1.pdf",
+      "name": "UD1",
+      "total_pages": 44,
+      "exists": true,
+      "report": "Sistemas informaticos/informes y presentaciones/Microcomputer_Systems.pdf",
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_1.png",
+      "video": "Sistemas informaticos/videos/El_plano_del_ordenador.mp4"
+    },
+    "2": {
+      "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD2.pdf",
+      "name": "UD2",
+      "total_pages": 61,
+      "exists": true,
+      "report": "Sistemas informaticos/informes y presentaciones/Systems_Architecture_Blueprint.pdf",
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_2.png",
+      "video": "Sistemas informaticos/videos/Instalación_de_Sistemas_Operativos.mp4"
+    },
+    "3": {
+      "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD3.pdf",
+      "name": "UD3",
+      "total_pages": 47,
+      "exists": true,
+      "report": "Sistemas informaticos/informes y presentaciones/Data_Architecture_Blueprint.pdf",
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_3.png",
+      "video": "Sistemas informaticos/videos/Gestión_de_la_Información.mp4"
+    },
+    "4": {
+      "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD4.pdf",
+      "name": "UD4",
+      "total_pages": 43,
+      "exists": true,
+      "report": "Sistemas informaticos/informes y presentaciones/Admin_Console_Playbook.pdf",
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_4.png",
+      "video": "Sistemas informaticos/videos/Configuración__Del_Caos_al_Control.mp4"
+    },
+    "5": {
+      "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD5.pdf",
+      "name": "UD5",
+      "total_pages": 46,
+      "exists": true,
+      "report": "Sistemas informaticos/informes y presentaciones/Network_Operations_Blueprint.pdf",
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_5.png",
+      "video": "Sistemas informaticos/videos/El_viaje_de_un_clic.mp4"
+    },
+    "6": {
+      "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD6_1.pdf",
+      "name": "UD6",
+      "total_pages": 39,
+      "exists": true,
+      "report": "Sistemas informaticos/informes y presentaciones/Network_Security_Blueprint.pdf",
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_6.png",
+      "video": "Sistemas informaticos/videos/La_Arquitectura_de_Seguridad.mp4"
+    },
+    "7": {
+      "path": "Sistemas informaticos/TemasPDF/DAW_SI_UD7_1.pdf",
+      "name": "UD7",
+      "total_pages": 45,
+      "exists": true,
+      "report": "Sistemas informaticos/informes y presentaciones/Mastering_the_Software_Ecosystem.pdf",
+      "infographic": "Sistemas informaticos/informes y presentaciones/infografia_tema_7.png",
+      "video": "Sistemas informaticos/videos/El_software_que_mueve_tu_mundo.mp4"
+    }
+  },
+  "bases_de_datos": {
+    "1": {
+      "path": "Bases de datos/TemasPDF/DAW_BD_UD1.pdf",
+      "name": "UD1",
+      "total_pages": 36,
+      "exists": true,
+      "report": "Bases de datos/informes y presentaciones/The_Information_Blueprint.pdf",
+      "infographic": "Bases de datos/informes y presentaciones/infografia_tema_1.png",
+      "video": "Bases de datos/videos/Almacenamiento_de_la_información.mp4"
+    },
+    "2": {
+      "path": "Bases de datos/TemasPDF/DAW_BD_UD2.pdf",
+      "name": "UD2",
+      "total_pages": 81,
+      "exists": true,
+      "report": "Bases de datos/informes y presentaciones/SQL_Fundamentals.pdf",
+      "infographic": "Bases de datos/informes y presentaciones/infografia_tema_2.png",
+      "video": "Bases de datos/videos/La_Biblioteca_Invisible.mp4"
+    },
+    "3": {
+      "path": "Bases de datos/TemasPDF/DAW_BD_UD3.pdf",
+      "name": "UD3",
+      "total_pages": 71,
+      "exists": true,
+      "report": "Bases de datos/informes y presentaciones/Arquitectura_de_Datos_Relacionales.pdf",
+      "infographic": "Bases de datos/informes y presentaciones/infografia_tema_3.png",
+      "video": "Bases de datos/videos/Diagramas_Entidad-Relación.mp4"
+    },
+    "4": {
+      "path": "Bases de datos/TemasPDF/DAW_BD_UD4 (1).pdf",
+      "name": "UD4",
+      "total_pages": 81,
+      "exists": true,
+      "report": "Bases de datos/informes y presentaciones/Data_Architecture_and_Persistence.pdf",
+      "infographic": "Bases de datos/informes y presentaciones/infografia_tema_4.png",
+      "video": "Bases de datos/videos/Introducción_a_SQL__Cómo_Preguntar_a_los_Datos.mp4"
+    },
+    "5": {
+      "path": "Bases de datos/TemasPDF/DAW_BD_UD5.pdf",
+      "name": "UD5",
+      "total_pages": 50,
+      "exists": true,
+      "report": "Bases de datos/informes y presentaciones/Mastering_MySQL_Data_Architecture.pdf",
+      "infographic": "Bases de datos/informes y presentaciones/infografia_tema_5.png",
+      "video": "Bases de datos/videos/Tratamiento_de_Datos.mp4"
+    },
+    "6": {
+      "path": "Bases de datos/TemasPDF/DAW_BD_UD6.pdf",
+      "name": "UD6",
+      "total_pages": 98,
+      "exists": true,
+      "report": "Bases de datos/informes y presentaciones/MySQL_Programming_Essentials.pdf",
+      "infographic": "Bases de datos/informes y presentaciones/infografia_tema_6.png",
+      "video": "Bases de datos/videos/Programación_de_BBDD.mp4"
+    },
+    "7": {
+      "path": "Bases de datos/TemasPDF/DAW_BD_UD7.pdf",
+      "name": "UD7",
+      "total_pages": 57,
+      "exists": true,
+      "report": "Bases de datos/informes y presentaciones/Object-Relational_Architecture.pdf",
+      "infographic": "Bases de datos/informes y presentaciones/infografia_tema_7.png",
+      "video": "Programacion/videos/Bases_de_datos_orientadas_a_objetos.mp4"
+    }
+  },
+  "lenguaje_de_marcas": {
+    "1": {
+      "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD1_1 (1).pdf",
+      "name": "UD1",
+      "total_pages": 24,
+      "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/The_Digital_Blueprint.pdf",
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_1.png",
+      "video": "Lenguaje de marcas/videos/Los_Cimientos_de_la_Web.mp4"
+    },
+    "2": {
+      "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD2_1.pdf",
+      "name": "UD2",
+      "total_pages": 86,
+      "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/HTML_Structural_Blueprint.pdf",
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_2.png",
+      "video": "Lenguaje de marcas/videos/El_lenguaje_oculto_de_la_web.mp4"
+    },
+    "3": {
+      "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD3_1.pdf",
+      "name": "UD3",
+      "total_pages": 46,
+      "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/XSD_Architecture.pdf",
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_3.png",
+      "video": "Lenguaje de marcas/videos/Esquemas_y_Vocabularios_XML.mp4"
+    },
+    "4": {
+      "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD4_1.pdf",
+      "name": "UD4",
+      "total_pages": 26,
+      "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/XML_Architecture_Blueprint.pdf",
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_4.png",
+      "video": "Lenguaje de marcas/videos/Almacenar_y_Consultar_XML.mp4"
+    },
+    "5": {
+      "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD5_1.pdf",
+      "name": "UD5",
+      "total_pages": 32,
+      "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/Refinería_de_Datos_XML.pdf",
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_5.png",
+      "video": "Lenguaje de marcas/videos/Conversión_y_Adaptación_de_XML.mp4"
+    },
+    "6": {
+      "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD6_1.pdf",
+      "name": "UD6",
+      "total_pages": 36,
+      "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/Structured_Data_Architecture.pdf",
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_6.png",
+      "video": "Lenguaje de marcas/videos/XML_vs.mp4"
+    },
+    "7": {
+      "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD7_1.pdf",
+      "name": "UD7",
+      "total_pages": 30,
+      "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/Arquitectura_de_Sindicación_Web.pdf",
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_7.png",
+      "video": "Lenguaje de marcas/videos/Sindicación_de_Contenidos.mp4"
+    },
+    "8": {
+      "path": "Lenguaje de marcas/TemasPDF/DAW_LM_UD8_1.pdf",
+      "name": "UD8",
+      "total_pages": 32,
+      "exists": true,
+      "report": "Lenguaje de marcas/informes y presentaciones/Digital_Business_Blueprint.pdf",
+      "infographic": "Lenguaje de marcas/informes y presentaciones/infografia_tema_8.png",
+      "video": "Lenguaje de marcas/videos/Sistemas_de_Gestión__ERP.mp4"
+    }
+  },
+  "entornos_de_desarrollo": {
+    "1": {
+      "path": "Entornos de desarrollo/TemasPDF/DAW_ED_UD1_PORTADANUEVA_1.pdf",
+      "name": "UD1",
+      "total_pages": 41,
+      "exists": true,
+      "infographic": "Entornos de desarrollo/informes y presentaciones/infografia_tema_1.png",
+      "video": "Entornos de desarrollo/videos/De_la_Idea_al_Programa.mp4"
+    },
+    "2": {
+      "path": "Entornos de desarrollo/TemasPDF/DAW_ED_UD2_PORTADANUEVA_1.pdf",
+      "name": "UD2",
+      "total_pages": 21,
+      "exists": true,
+      "infographic": "Entornos de desarrollo/informes y presentaciones/infografia_tema_2.png",
+      "video": "Entornos de desarrollo/videos/Entornos_de_Desarrollo.mp4"
+    },
+    "3": {
+      "path": "Entornos de desarrollo/TemasPDF/DAW_ED_UD3_PORTADANUEVA.pdf",
+      "name": "UD3",
+      "total_pages": 16,
+      "exists": true,
+      "infographic": "Entornos de desarrollo/informes y presentaciones/infografia_tema_3.png",
+      "video": "Entornos de desarrollo/videos/El_Plano_del_Software__UML.mp4"
+    },
+    "4": {
+      "path": "Entornos de desarrollo/TemasPDF/DAW_ED_UD4_PORTADANUEVA_1.pdf",
+      "name": "UD4",
+      "total_pages": 24,
+      "exists": true,
+      "infographic": "Entornos de desarrollo/informes y presentaciones/infografia_tema_4.png",
+      "video": "Entornos de desarrollo/videos/Los_Planos_del_Código__UML.mp4"
+    },
+    "5": {
+      "path": "Entornos de desarrollo/TemasPDF/DAW_ED_UD5_PORTADANUEVA_1.pdf",
+      "name": "UD5",
+      "total_pages": 24,
+      "exists": true,
+      "infographic": "Entornos de desarrollo/informes y presentaciones/infografia_tema_5.png",
+      "video": "Entornos de desarrollo/videos/Diagramas_de_Comportamiento.mp4"
+    },
+    "6": {
+      "path": "Entornos de desarrollo/TemasPDF/DAW_ED_UD6_PORTADANUEVA_1.pdf",
+      "name": "UD6",
+      "total_pages": 22,
+      "exists": true,
+      "infographic": "Entornos de desarrollo/informes y presentaciones/infografia_tema_6.png",
+      "video": "Entornos de desarrollo/videos/El_Mundo_Oculto_de_las_Pruebas_de_Software.mp4"
+    },
+    "7": {
+      "path": "Entornos de desarrollo/TemasPDF/DAW_ED_UD7_PORTADANUEVA_1.pdf",
+      "name": "UD7",
+      "total_pages": 24,
+      "exists": true,
+      "infographic": "Entornos de desarrollo/informes y presentaciones/infografia_tema_7.png",
+      "video": "Entornos de desarrollo/videos/Optimización_y_documentación.mp4"
+    }
+  },
+  "cloud_computing": {
+    "1": {
+      "path": "Cloud Computing/TemasPDF/Modulo-1-Conceptos-de-la-computacion-en-la-nube.pdf",
+      "name": "Módulo 1",
+      "total_pages": 16,
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_1.png",
+      "video": "Cloud Computing/videos/Desmitificando_La_Nube.mp4"
+    },
+    "2": {
+      "path": "Cloud Computing/TemasPDF/Modulo-2-Economia-y-facturacion-en-la-nube.pdf",
+      "name": "Módulo 2",
+      "total_pages": 15,
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_2.png",
+      "video": "Cloud Computing/videos/Economía_y_Facturación_Cloud.mp4"
+    },
+    "3": {
+      "path": "Cloud Computing/TemasPDF/Modulo-3-Infraestructura-de-la-nube.pdf",
+      "name": "Módulo 3",
+      "total_pages": 15,
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_3.png",
+      "video": "Cloud Computing/videos/Infraestructura_de_la_Nube.mp4"
+    },
+    "4": {
+      "path": "Cloud Computing/TemasPDF/Modulo-4-Seguridad-en-la-nube.pdf",
+      "name": "Módulo 4",
+      "total_pages": 15,
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_4.png",
+      "video": "Cloud Computing/videos/Seguridad_en_la_nube.mp4"
+    },
+    "5": {
+      "path": "Cloud Computing/TemasPDF/Modulo-5-Redes-y-Entrega-de-Contenidos.pdf",
+      "name": "Módulo 5",
+      "total_pages": 15,
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_5.png",
+      "video": "Cloud Computing/videos/Redes_y_Entrega_de_Contenidos.mp4"
+    },
+    "6": {
+      "path": "Cloud Computing/TemasPDF/Modulo-6-Servicios-de-computo.pdf",
+      "name": "Módulo 6",
+      "total_pages": 15,
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_6.png",
+      "video": "Cloud Computing/videos/Servicios_de_computación.mp4"
+    },
+    "7": {
+      "path": "Cloud Computing/TemasPDF/Modulo-7-Servicios-de-almacenamiento.pdf",
+      "name": "Módulo 7",
+      "total_pages": 15,
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_7.png",
+      "video": "Cloud Computing/videos/Las_bibliotecas_invisibles.mp4"
+    },
+    "8": {
+      "path": "Cloud Computing/TemasPDF/Modulo-8-Servicios-de-bases-de-datos.pdf",
+      "name": "Módulo 8",
+      "total_pages": 16,
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_8.png",
+      "video": "Cloud Computing/videos/Servicios_de_BBDD__El_Corazón_Invisible_del_Mundo_Digital.mp4"
+    },
+    "9": {
+      "path": "Cloud Computing/TemasPDF/Modulo-9-Arquitectura-en-la-nube.pdf",
+      "name": "Módulo 9",
+      "total_pages": 17,
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_9.png",
+      "video": "Cloud Computing/videos/Arquitectura_en_la_nube.mp4"
+    },
+    "10": {
+      "path": "Cloud Computing/TemasPDF/Modulo-10-Escalado-automatico-y-monitorizacion.pdf",
+      "name": "Módulo 10",
+      "total_pages": 17,
+      "exists": true,
+      "infographic": "Cloud Computing/informes y presentaciones/infografia_tema_10.png",
+      "video": "Cloud Computing/videos/Escalado_y_Monitorización.mp4"
+    }
+  },
+  "empleabilidad": {
+    "1": {
+      "path": "Empleabilidad/TemasPDF/UD1_EI_PORTADANUEVA.pdf",
+      "name": "UD1",
+      "total_pages": 47,
+      "exists": true,
+      "report": "Empleabilidad/informe e infografia/Guía_de_Derechos_Laborales.pdf",
+      "infographic": "Empleabilidad/informe e infografia/infografia_emp_1_2.png",
+      "video": "Empleabilidad/videos/Prevención_de_Riesgos_Laborales.mp4"
+    },
+    "2": {
+      "path": "Empleabilidad/TemasPDF/UD2_EI_PORTADANUEVA.pdf",
+      "name": "UD2",
+      "total_pages": 53,
+      "exists": true,
+      "report": "Empleabilidad/informe e infografia/IT_Safety_Blueprint.pdf",
+      "infographic": "Empleabilidad/informe e infografia/infografia_emp_1_2.png",
+      "video": "Empleabilidad/videos/Carrera_en_sector_tecnológico.mp4"
+    },
+    "3": {
+      "path": "Empleabilidad/TemasPDF/UD3_EI_PORTADANUEVA.pdf",
+      "name": "UD3",
+      "total_pages": 25,
+      "exists": true,
+      "report": "Empleabilidad/informe e infografia/Professional_Career_Dashboard.pdf",
+      "infographic": "Empleabilidad/informe e infografia/infografia_emp_3.png",
+      "video": "Empleabilidad/videos/El_Aprendizaje_Autónomo.mp4"
+    },
+    "4": {
+      "path": "Empleabilidad/TemasPDF/UD4_EI_PORTADANUEVA.pdf",
+      "name": "UD4",
+      "total_pages": 31,
+      "exists": true,
+      "report": "Empleabilidad/informe e infografia/IT_Career_Blueprint.pdf",
+      "infographic": "Empleabilidad/informe e infografia/infografia_emp_4.png",
+      "video": "Empleabilidad/videos/Tu_primer_contrato,_explicado.mp4"
+    },
+    "5": {
+      "path": "Empleabilidad/TemasPDF/UD5_EI_PORTADANUEVA.pdf",
+      "name": "UD5",
+      "total_pages": 19,
+      "exists": true,
+      "report": "Empleabilidad/informe e infografia/The_IT_Career_Code.pdf",
+      "infographic": "Empleabilidad/informe e infografia/infografia_emp_5.png",
+      "video": "Empleabilidad/videos/El_potencial_profesional.mp4"
+    }
+  }
+};
