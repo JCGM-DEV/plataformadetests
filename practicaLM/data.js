@@ -525,10 +525,10 @@ const QUIZZES = {
       },
       {
         q: "¿Qué lenguaje es de listas?",
-        hint: "Para crear listas usas <ul>, <ol>, <li>.",
+        hint: "JSON usa arrays [] para representar listas de datos.",
         opts: ["XML", "HTML", "JSON", "CSS"],
-        ans: 1,
-        exp: "HTML proporciona etiquetas nativas para crear listas, como <ul> para desordenadas y <ol> para ordenadas."
+        ans: 2,
+        exp: "JSON (JavaScript Object Notation) utiliza arrays [] para representar listas de datos, por ejemplo: [\"item1\", \"item2\"]. Es el formato de listas más común en intercambio de datos."
       },
       {
         q: "¿Qué debe tener XML?",
