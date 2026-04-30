@@ -981,8 +981,8 @@ const SUBJECT_VIDEOS = {
         "10": "Programacion/videos/JDBC__El_Traductor_Universal.mp4"
     },
     "bases_de_datos": {
-        "1": "Bases%20de%20datos/videos/La_Biblioteca_Invisible.mp4",
-        "2": "Bases%20de%20datos/videos/Bases_de_Datos_Relacionales.mp4",
+        "1": "Bases%20de%20datos/videos/Almacenamiento_de_la_información.mp4",
+        "2": "Bases%20de%20datos/videos/La_Biblioteca_Invisible.mp4",
         "3": "Bases%20de%20datos/videos/Diagramas_Entidad-Relación.mp4",
         "4": "Bases%20de%20datos/videos/Introducción_a_SQL__Cómo_Preguntar_a_los_Datos.mp4",
         "5": "Bases%20de%20datos/videos/Tratamiento_de_Datos.mp4",

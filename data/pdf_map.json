@@ -182,7 +182,7 @@
       "exists": true,
       "report": "Bases de datos/informes y presentaciones/Arquitectura_de_Datos_Relacionales.pdf",
       "infographic": "Bases de datos/informes y presentaciones/infografia_tema_3.png",
-      "video": "Bases de datos/videos/Bases_de_Datos_Relacionales.mp4"
+      "video": "Bases de datos/videos/Diagramas_Entidad-Relación.mp4"
     },
     "4": {
       "path": "Bases de datos/TemasPDF/DAW_BD_UD4 (1).pdf",
@@ -191,7 +191,7 @@
       "exists": true,
       "report": "Bases de datos/informes y presentaciones/Data_Architecture_and_Persistence.pdf",
       "infographic": "Bases de datos/informes y presentaciones/infografia_tema_4.png",
-      "video": "Bases de datos/videos/Diagramas_Entidad-Relación.mp4"
+      "video": "Bases de datos/videos/Introducción_a_SQL__Cómo_Preguntar_a_los_Datos.mp4"
     },
     "5": {
       "path": "Bases de datos/TemasPDF/DAW_BD_UD5.pdf",
@@ -200,7 +200,7 @@
       "exists": true,
       "report": "Bases de datos/informes y presentaciones/Mastering_MySQL_Data_Architecture.pdf",
       "infographic": "Bases de datos/informes y presentaciones/infografia_tema_5.png",
-      "video": "Bases de datos/videos/Introducción_a_SQL__Cómo_Preguntar_a_los_Datos.mp4"
+      "video": "Bases de datos/videos/Tratamiento_de_Datos.mp4"
     },
     "6": {
       "path": "Bases de datos/TemasPDF/DAW_BD_UD6.pdf",
@@ -209,7 +209,7 @@
       "exists": true,
       "report": "Bases de datos/informes y presentaciones/MySQL_Programming_Essentials.pdf",
       "infographic": "Bases de datos/informes y presentaciones/infografia_tema_6.png",
-      "video": "Bases de datos/videos/Tratamiento_de_Datos.mp4"
+      "video": "Bases de datos/videos/Programación_de_BBDD.mp4"
     },
     "7": {
       "path": "Bases de datos/TemasPDF/DAW_BD_UD7.pdf",
@@ -218,7 +218,7 @@
       "exists": true,
       "report": "Bases de datos/informes y presentaciones/Object-Relational_Architecture.pdf",
       "infographic": "Bases de datos/informes y presentaciones/infografia_tema_7.png",
-      "video": "Bases de datos/videos/Programación_de_BBDD.mp4"
+      "video": "Programacion/videos/Bases_de_datos_orientadas_a_objetos.mp4"
     }
   },
   "lenguaje_de_marcas": {

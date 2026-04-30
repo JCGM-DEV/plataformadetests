@@ -4,7 +4,7 @@
 
 const UNITS = {
   sql: {
-    label: 'T2–T5', title: 'SQL Interactivo',
+    label: 'T2, T4–T5', title: 'SQL Interactivo',
     sections: [
       { id: 'sql-teoria-ddl', icon: '📖', label: 'Teoría: DDL (CREATE/ALTER/DROP)', type: 'lesson', lessonId: 'ddl' },
       { id: 'sql-teoria-dml', icon: '📖', label: 'Teoría: DML (SELECT/INSERT/UPDATE)', type: 'lesson', lessonId: 'dml' },
@@ -32,7 +32,7 @@ const UNITS = {
     ]
   },
   prog: {
-    label: 'T6', title: 'Programación BD',
+    label: 'T6–T7', title: 'Programación BD',
     sections: [
       { id: 'prog-teoria', icon: '📖', label: 'Teoría: Procedimientos y Funciones', type: 'lesson', lessonId: 'proc_func' },
       { id: 'prog-teoria2', icon: '📖', label: 'Teoría: Cursores y Triggers', type: 'lesson', lessonId: 'cursores' },
