@@ -8,29 +8,34 @@ async function callAI_Universal(prompt) {
     
     if (!key) throw new Error('Por favor, configura tu API Key en los ajustes (icono de engranaje).');
 
-    // Usamos la URL limpia y pasamos la clave por cabecera, que a veces sortea bloqueos regionales
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
+    // Usamos el endpoint oculto de compatibilidad con OpenAI
+    // Esto sortea el error "models/gemini... not found" porque usa una ruta de validación distinta.
+    const url = `https://generativelanguage.googleapis.com/v1beta/openai/chat/completions`;
     
     try {
         const res = await fetch(url, {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json',
-                'x-goog-api-key': key 
+                'Authorization': `Bearer ${key}` // En el protocolo OpenAI la clave va aquí
             },
-            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+            body: JSON.stringify({
+                model: model, // En OpenAI el modelo va en el body, no en la URL
+                messages: [{ role: "user", content: prompt }]
+            })
         });
 
         const data = await res.json();
 
-        if (res.ok) {
-            return data.candidates[0].content.parts[0].text;
+        if (res.ok && data.choices && data.choices.length > 0) {
+            return data.choices[0].message.content;
         } else {
             if (res.status === 403 || res.status === 401) {
-                throw new Error('Tu clave no es válida o no tiene permisos. Verifica que la has copiado bien.');
+                throw new Error('Tu clave ha sido bloqueada. Crea una nueva.');
             }
-            throw new Error(`Google rechazó el modelo "${model}": ${data.error?.message || 'Error desconocido'}`);
+            throw new Error(`Fallo en el protocolo alternativo: ${data.error?.message || 'Error desconocido'}`);
         }
+
     } catch (e) {
         throw new Error(`Conexión fallida: ${e.message}`);
     }
