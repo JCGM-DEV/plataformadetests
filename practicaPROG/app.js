@@ -536,6 +536,22 @@ function renderEjercicio(ej) {
         </ul>
       </div>
     </div>`;
+    
+  // Hacer la lista interactiva
+  makeEnunciadoInteractive('.ej-enunciado-text');
+}
+
+function makeEnunciadoInteractive(selector) {
+    setTimeout(() => {
+        const container = document.querySelector(selector);
+        if (!container) return;
+        const items = container.querySelectorAll('li');
+        items.forEach(li => {
+            li.onclick = function() {
+                this.classList.toggle('todo-done');
+            };
+        });
+    }, 50);
 }
 
 function togglePistas(ejId) {

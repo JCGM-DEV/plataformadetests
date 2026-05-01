@@ -657,3 +657,42 @@ textarea:focus, #exam-code-input:focus {
   cursor: pointer; transition: var(--transition);
 }
 .settings-btn:hover { border-color: var(--accent2); color: var(--accent3); }
+
+/* --- CHECKLIST INTERACTIVA EN ENUNCIADOS --- */
+.ej-enunciado-text li, .exam-enunciado-text li {
+    list-style: none !important;
+    position: relative;
+    padding-left: 2rem !important;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    padding: 0.4rem 0.6rem 0.4rem 2rem;
+}
+
+.ej-enunciado-text li:hover, .exam-enunciado-text li:hover {
+    background: rgba(255,255,255,0.03);
+}
+
+.ej-enunciado-text li::before, .exam-enunciado-text li::before {
+    content: '⬜';
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    filter: grayscale(1) opacity(0.5);
+}
+
+.ej-enunciado-text li.todo-done, .exam-enunciado-text li.todo-done {
+    color: var(--text-secondary);
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.ej-enunciado-text li.todo-done::before, .exam-enunciado-text li.todo-done::before {
+    content: '✅';
+    filter: none;
+    opacity: 1;
+}
+

@@ -305,6 +305,11 @@ function renderTutorExamen(session) {
 
     </div>
   `;
+
+  if (typeof makeEnunciadoInteractive === 'function') {
+      makeEnunciadoInteractive('.exam-enunciado-text');
+  }
+
   startExamTimer(60 * 60); // 1 hour
 }
 
