@@ -3242,24 +3242,15 @@ function triggerCunaoEffect(passed) {
     const bottomText = passed ? "CUÑAAAAOOOOOOO" : "ESTUDIA, CUÑAAAAOOOOOOO";
     
     overlay.innerHTML = `
-        <img src="assets/cunao.png" class="cunao-img" alt="Risitas">
+        <img src="risitas/pngegg.png" class="cunao-img" alt="Risitas">
         <div class="cunao-text">${topText}</div>
         <div class="cunao-text" style="font-size:1.5rem;animation-delay:0.2s;color:${passed ? '#4ade80' : '#f87171'}">${bottomText}</div>
     `;
     document.body.appendChild(overlay);
 
-    // Sonido con SpeechSynthesis (Voz de cuñao)
-    if ('speechSynthesis' in window) {
-        const phrase = passed 
-            ? "¡Qué bueno eres cuñaaaaaoooooo!" 
-            : "¡Qué malo eres perro, estudia, cuñaaaaaoooooo!";
-            
-        const msg = new SpeechSynthesisUtterance(phrase);
-        msg.lang = 'es-ES';
-        msg.pitch = passed ? 1.4 : 1.1; // Más agudo si apruebas, más grave/serio si suspendes
-        msg.rate = 0.9;
-        window.speechSynthesis.speak(msg);
-    }
+    // Sonido Real del Risitas
+    const audio = new Audio('risitas/Voicy_El Risitas Laugh.mp3');
+    audio.play().catch(e => console.log("Audio play blocked by browser", e));
 
     setTimeout(() => {
         overlay.style.opacity = '0';
