@@ -1,49 +1,95 @@
 /**
- * AI SERVICE — Final Diagnostic
+ * AI SERVICE — Hardcoded Integration
  */
 
-async function requestLMAIFeedback() {
-    const key = (localStorage.getItem('lm_ai_key') || '').trim();
-    if (!key) return showToast('Pega la clave en ajustes', 'error');
+const AI_CONFIG = {
+    apiKey: 'AIzaSyDRCGgP95cwGJgquxgkXmPAVuZ2fIQfucI', // Integrada directamente por petición del usuario
+    model: 'gemini-1.5-flash',
+    version: 'v1beta'
+};
 
-    const btn = document.getElementById('btn-lm-ai');
-    btn.disabled = true; btn.innerHTML = '⏳ Obteniendo lista oficial...';
+async function callAI_Universal(prompt) {
+    const url = `https://generativelanguage.googleapis.com/${AI_CONFIG.version}/models/${AI_CONFIG.model}:generateContent?key=${AI_CONFIG.apiKey}`;
+    
+    console.log('[AI-SYSTEM] Intentando petición con clave hardcodeada...');
 
     try {
-        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${key}`);
+        const res = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+        });
+
         const data = await res.json();
-        
-        const modalContent = document.getElementById('modal-content');
-        
-        if (data.models && data.models.length > 0) {
-            let list = data.models.map(m => `<li>${m.name}</li>`).join('');
-            modalContent.innerHTML = `<h3>✅ Modelos encontrados</h3><p>Tu clave ve estos modelos:</p><ul>${list}</ul><p>Si esta lista aparece, pulsa de nuevo "Pedir corrección" y debería funcionar.</p><button class="btn-secondary" onclick="closeModal()">Cerrar</button>`;
+
+        if (res.ok) {
+            return data.candidates[0].content.parts[0].text;
         } else {
-            modalContent.innerHTML = `<h3>❌ Lista vacía</h3><p>Google dice que tu clave no tiene acceso a NINGÚN modelo.</p><pre style="background:#000;padding:1rem;font-size:0.7rem">${JSON.stringify(data, null, 2)}</pre><p><b>Solución:</b> Ve a AI Studio y crea una clave NUEVA en un proyecto nuevo.</p><button class="btn-secondary" onclick="closeModal()">Cerrar</button>`;
+            throw new Error(data.error?.message || 'Error desconocido');
         }
-    } catch (err) {
-        showToast('Error de red', 'error');
-    } finally {
-        btn.disabled = false; btn.innerHTML = '✨ Pedir corrección IA';
-        document.getElementById('modal-overlay').classList.remove('hidden');
+    } catch (e) {
+        throw new Error(`Fallo de conexión: ${e.message}`);
     }
 }
 
-// ... (Resto de funciones de UI)
-function closeModal() { document.getElementById('modal-overlay').classList.add('hidden'); }
-function showToast(m,t){ console.log(m); }
+// ── Adaptadores ──────────────────────────────────────────────────
 
-function openSettings() {
-    const key = localStorage.getItem('lm_ai_key') || '';
+async function requestLMAIFeedback() {
+    const code = document.getElementById('exam-input')?.value || '';
+    if (!code.trim()) return;
+
+    const btn = document.getElementById('btn-lm-ai');
+    const orig = btn.innerHTML;
+    btn.disabled = true; btn.innerHTML = '⏳ Profesor corrigiendo...';
+
+    try {
+        const feedback = await callAI_Universal(`Eres un profesor de Lenguaje de Marcas. Corrige este ejercicio: \n${code}`);
+        showFeedbackModal(feedback);
+    } catch (err) {
+        showFeedbackModal(`### ❌ Error en la API de Google\n\n${err.message}`);
+    } finally {
+        btn.disabled = false; btn.innerHTML = orig;
+    }
+}
+
+async function requestAIFeedback() {
+    const code = document.getElementById('ej-input')?.value || document.getElementById('exam-code-input')?.value || '';
+    if (!code.trim()) return;
+
+    const btn = document.getElementById('btn-ai-help');
+    const orig = btn.innerHTML;
+    btn.disabled = true; btn.innerHTML = '⏳ Profesor corrigiendo...';
+
+    try {
+        const feedback = await callAI_Universal(`Eres un profesor de Programación Java. Corrige este ejercicio: \n${code}`);
+        showFeedbackModal(feedback);
+    } catch (err) {
+        showFeedbackModal(`### ❌ Error en la API de Google\n\n${err.message}`);
+    } finally {
+        btn.disabled = false; btn.innerHTML = orig;
+    }
+}
+
+function showFeedbackModal(markdown) {
     const content = document.getElementById('modal-content');
-    content.innerHTML = `<h3>⚙️ Ajustes IA</h3><p>Borra la clave actual y pega la de AI Studio:</p><input type="password" id="ai-key-input" value="${key}" placeholder="AIza..." style="width:100%;padding:.7rem;margin:1rem 0;background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:8px"><button class="btn-primary" onclick="saveAISettings()">Guardar</button>`;
+    content.innerHTML = `
+        <div style="padding:1.5rem">
+            <h3 style="color:var(--accent);margin-bottom:1rem">🎓 Revisión del Profesor IA</h3>
+            <div style="line-height:1.6; color:var(--text); font-size:0.95rem; max-height:60vh; overflow-y:auto">
+                ${markdown.replace(/\n/g, '<br>')}
+            </div>
+            <div style="margin-top:1.5rem; border-top:1px solid var(--border); padding-top:1rem; text-align:right">
+                <button class="btn-secondary" onclick="closeModal()">Cerrar revisión</button>
+            </div>
+        </div>
+    `;
     document.getElementById('modal-overlay').classList.remove('hidden');
 }
 
-function saveAISettings() {
-    const key = document.getElementById('ai-key-input').value.trim();
-    localStorage.setItem('lm_ai_key', key);
-    localStorage.setItem('prog_ai_key', key);
-    alert('Clave guardada. Prueba ahora.');
-    location.reload();
+function closeModal() {
+    document.getElementById('modal-overlay').classList.add('hidden');
+}
+
+function openSettings() {
+    alert("La clave está integrada directamente en el código para máxima estabilidad.");
 }
