@@ -3238,8 +3238,8 @@ function triggerCunaoEffect(passed) {
     const overlay = document.createElement('div');
     overlay.className = 'cunao-overlay';
     
-    const topText = passed ? "¡CUÑAAAAOOOOOOO!" : "¡CUÑAAAAOOOOOOO!";
-    const bottomText = passed ? "QUÉ BUENO ERES" : "QUÉ MALO ERES, ¡ESTUDIA PERRO!";
+    const topText = passed ? "¡QUÉ BUENO ERES!" : "¡QUÉ MALO ERES PERRO!";
+    const bottomText = passed ? "CUÑAAAAOOOOOOO" : "ESTUDIA, CUÑAAAAOOOOOOO";
     
     overlay.innerHTML = `
         <img src="assets/cunao.png" class="cunao-img" alt="Risitas">
@@ -3251,8 +3251,8 @@ function triggerCunaoEffect(passed) {
     // Sonido con SpeechSynthesis (Voz de cuñao)
     if ('speechSynthesis' in window) {
         const phrase = passed 
-            ? "¡Cuñaaaaaooooooo, qué bueno eres!" 
-            : "¡Cuñaaaaaooooooo, qué malo eres, estudia perro!";
+            ? "¡Qué bueno eres cuñaaaaaoooooo!" 
+            : "¡Qué malo eres perro, estudia, cuñaaaaaoooooo!";
             
         const msg = new SpeechSynthesisUtterance(phrase);
         msg.lang = 'es-ES';
