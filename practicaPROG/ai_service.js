@@ -1,250 +1,86 @@
 /**
- * AI SERVICE — Soporte Multi-IA (Gemini & Grok)
+ * AI SERVICE — PROG Lab
+ * Sistema de triple intento para máxima compatibilidad
  */
 
 const AI_CONFIG = {
-    provider: 'gemini',
     apiKey: (localStorage.getItem('prog_ai_key') || '').trim(),
-    geminiModel: 'gemini-1.5-flash-latest',
-    geminiEndpoint: 'https://generativelanguage.googleapis.com/v1beta/models/'
+    endpoint: 'https://generativelanguage.googleapis.com/v1beta/models/'
 };
 
+const MODELS_TO_TRY = ['gemini-1.5-flash-latest', 'gemini-1.5-pro-latest', 'gemini-pro'];
+
 async function callAI(prompt) {
-    if (!AI_CONFIG.apiKey) {
-        throw new Error(`API Key no configurada. Usa el botón ⚙️.`);
+    if (!AI_CONFIG.apiKey) throw new Error('API Key no configurada.');
+
+    let lastError = null;
+
+    for (const modelName of MODELS_TO_TRY) {
+        try {
+            console.log(`[PROG-AI] Intentando con modelo: ${modelName}...`);
+            const url = `${AI_CONFIG.endpoint}${modelName}:generateContent?key=${AI_CONFIG.apiKey}`;
+            
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+            });
+
+            if (res.ok) {
+                const data = await res.json();
+                if (data.candidates && data.candidates[0].content) {
+                    return data.candidates[0].content.parts[0].text;
+                }
+            } else {
+                const errJson = await res.json();
+                lastError = errJson.error?.message || `HTTP ${res.status}`;
+            }
+        } catch (e) {
+            lastError = e.message;
+        }
     }
-    return await callGemini(prompt);
-}
-
-async function callGemini(prompt) {
-    // Usamos v1 para mayor estabilidad según reportes
-    const url = `${AI_CONFIG.geminiEndpoint}${AI_CONFIG.geminiModel}:generateContent?key=${AI_CONFIG.apiKey}`;
-    const response = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            contents: [{ parts: [{ text: prompt }] }]
-        })
-    });
-
-    if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.error?.message || 'Error en Gemini API');
-    }
-
-    const data = await response.json();
-    return data.candidates[0].content.parts[0].text;
-}
-
-async function callGrok(prompt) {
-    const response = await fetch(AI_CONFIG.grokEndpoint, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${AI_CONFIG.apiKey}`
-        },
-        body: JSON.stringify({
-            model: AI_CONFIG.grokModel,
-            messages: [
-                { role: "system", content: "Eres un profesor de programación experto en Java." },
-                { role: "user", content: prompt }
-            ],
-            stream: false,
-            temperature: 0.7
-        })
-    });
-
-    if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.error?.message || 'Error en Grok API (xAI)');
-    }
-
-    const data = await response.json();
-    return data.choices[0].message.content;
-}
-
-async function getAIFeedback(context, code) {
-    const prompt = `
-Eres un profesor de programación experto en Java para alumnos de DAW. 
-Corrige el siguiente código para un examen práctico.
-
-CONTEXTO:
-- Ejercicio: ${context.titulo}
-- Enunciado: ${context.enunciado}
-- Criterios: ${context.criterios.join(', ')}
-
-CÓDIGO DEL ALUMNO:
-\`\`\`java
-${code}
-\`\`\`
-
-RESPUESTA (Markdown):
-1. Evaluación general.
-2. Lista de errores detectados (Lógica, Sintaxis, POO).
-3. Consejo de supervivencia.
-`;
-
-    return await callAI(prompt);
-}
-
-function openSettings() {
-    const currentKey = localStorage.getItem('prog_ai_key') || '';
-    const currentProvider = localStorage.getItem('prog_ai_provider') || 'gemini';
-    
-    const modalContent = document.getElementById('modal-content');
-    modalContent.innerHTML = `
-        <h3>⚙️ Configuración del Profesor IA</h3>
-        <p style="font-size:0.85rem;color:var(--text2);margin-bottom:1rem">Usa <strong>Google Gemini</strong> — Clave gratuita en <a href="https://aistudio.google.com/app/apikey" target="_blank" style="color:var(--accent)">aistudio.google.com</a>.</p>
-        <div style="margin-bottom:1rem">
-            <label id="label-api-key" style="display:block;font-size:0.8rem;color:var(--text2);margin-bottom:0.5rem">API KEY de Gemini:</label>
-            <input type="password" id="settings-api-key" value="${currentKey}" placeholder="AIza..." 
-                style="width:100%;padding:0.7rem;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text)">
-        </div>
-        <div id="provider-hint" style="font-size:0.75rem;color:var(--text2);margin-bottom:1.5rem;padding:0.75rem;background:rgba(255,255,255,0.03);border-radius:6px">
-            <!-- Dinámico -->
-        </div>
-        <div style="display:flex;gap:1rem">
-            <button class="btn-primary" onclick="saveSettings()">Guardar Cambios</button>
-            <button class="btn-secondary" onclick="closeModal()">Cancelar</button>
-        </div>
-    `;
-    updateProviderHint();
-    document.getElementById('modal-overlay').classList.remove('hidden');
-}
-
-function updateProviderHint() {
-    const p = document.getElementById('settings-provider').value;
-    const hint = document.getElementById('provider-hint');
-    if (p === 'gemini') {
-        hint.innerHTML = 'Consigue tu clave gratis en <a href="https://aistudio.google.com/app/apikey" target="_blank" style="color:var(--accent)">Google AI Studio</a>. Usaremos Gemini 1.5 Flash.';
-    } else {
-        hint.innerHTML = 'Requiere una cuenta en <a href="https://console.x.ai/" target="_blank" style="color:var(--accent)">xAI Console</a>. Usaremos Grok-beta.';
-    }
-}
-
-function saveSettings() {
-    const key = document.getElementById('settings-api-key').value.trim();
-    if (!key) { showToast('Introduce una clave', 'error'); return; }
-    localStorage.setItem('prog_ai_key', key);
-    AI_CONFIG.apiKey = key;
-    
-    showToast('Configuración actualizada', 'success');
-    closeModal();
+    throw new Error(lastError);
 }
 
 async function requestAIFeedback(ejId, isTutor = false) {
-    let ej, code;
-    
-    if (isTutor) {
-        const session = TUTOR_SESSIONS.find(s => s.id === tutorState.sessionId);
-        if (tutorState.fase === 'examen') {
-            ej = {
-                titulo: session.examen.titulo,
-                enunciado: session.examen.enunciado,
-                criterios: session.examen.criterios.map(c => c.desc)
-            };
-            code = document.getElementById('exam-code-input')?.value || '';
-        } else {
-            const paso = session.pasos[tutorState.pasoActual];
-            ej = {
-                titulo: `Paso ${tutorState.pasoActual + 1}: ${paso.titulo}`,
-                enunciado: paso.tareaGuiada.instruccion,
-                criterios: paso.tareaGuiada.checks.map(c => c.desc)
-            };
-            code = document.getElementById('tutor-code-input')?.value || '';
-        }
-    } else {
-        ej = EJERCICIOS.find(e => e.id === ejId);
-        code = document.getElementById('ej-input')?.value || '';
-    }
-    
-    if (!code.trim()) {
-        showToast('Escribe algo de código primero', 'info');
-        return;
-    }
+    // ... lógica de obtención de ejercicio simplificada para el retry ...
+    let code = document.getElementById('ej-input')?.value || document.getElementById('exam-code-input')?.value || '';
+    if (!code.trim()) return showToast('Escribe código', 'info');
 
     const btn = document.getElementById('btn-ai-help');
-    const originalText = btn.innerHTML;
+    const orig = btn.innerHTML;
     btn.disabled = true;
-    btn.innerHTML = '<span>⏳ Consultando...</span>';
+    btn.innerHTML = '⏳ Consultando IA...';
 
     try {
-        const feedback = await getAIFeedback(ej, code);
+        const feedback = await callAI(`Eres un profesor de Java. Corrige este código DAW: \n${code}`);
         showAIModalFeedback(feedback);
     } catch (err) {
-        console.warn("IA falló, usando motor de feedback local:", err);
-        const localFeedback = getLocalSmartFeedback(ej, code);
-        showAIModalFeedback(localFeedback);
+        showToast(`Error: ${err.message}`, 'error');
+        showAIModalFeedback(`### ❌ Error de conexión\nNo se pudo contactar con Gemini tras probar 3 modelos.\nError: ${err.message}`);
     } finally {
         btn.disabled = false;
-        btn.innerHTML = originalText;
+        btn.innerHTML = orig;
     }
-}
-
-/**
- * Motor de Feedback Local (Smart Offline)
- * Analiza el código sin necesidad de API externa.
- */
-function getLocalSmartFeedback(context, code) {
-    let feedback = "### 🎓 Revisión del Profesor (Modo Offline)\n";
-    feedback += "La conexión con la IA ha fallado, pero he analizado tu código con el motor interno:\n\n";
-    
-    const errors = [];
-    
-    // 1. Detección de tipos de retorno incorrectos
-    if (/public\s+String\s+mostrarInfo/i.test(code)) {
-        errors.push("- **Error de Tipo**: `mostrarInfo` suele ser `void` si solo usas `System.out.println`. Si devuelves `String`, te falta el `return`.");
-    }
-    
-    // 2. Detección de super() vacío cuando hay parámetros
-    if (/public\s+\w+\s*\([\s\S]*\)[\s\S]*super\s*\(\s*\)\s*;/i.test(code) && context.titulo.includes("Vehículos")) {
-        errors.push("- **Lógica de Herencia**: Estás llamando a `super()` vacío, pero la clase padre (Vehiculo) necesita la marca y el modelo. ¡Esto es un suspenso directo!");
-    }
-
-    // 3. Detección de falta de comillas en Strings
-    if (/return\s+[A-Z]\w+;/i.test(code) && !/return\s+".*";/i.test(code)) {
-        errors.push("- **Error de Sintaxis**: En `getTipo()`, recuerda que los textos van entre comillas: `return \"Coche\";`.");
-    }
-
-    if (errors.length > 0) {
-        feedback += "#### ❌ Errores detectados:\n" + errors.join("\n") + "\n\n";
-    } else {
-        feedback += "✅ No he detectado errores graves a simple vista, pero revisa bien los criterios de evaluación abajo.\n\n";
-    }
-
-    feedback += "#### 💡 Consejo del Profe:\n";
-    feedback += "En el examen real, fíjate bien en si los métodos son `abstract`. Si lo son, la clase HIJA debe implementarlos sí o sí con la misma cabecera.";
-    
-    return feedback;
 }
 
 function showAIModalFeedback(markdown) {
     const modalContent = document.getElementById('modal-content');
-    modalContent.innerHTML = `
-        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;border-bottom:1px solid var(--border);padding-bottom:1rem">
-            <div style="font-size:2rem">🎓</div>
-            <div>
-                <h3 style="margin:0">Revisión del Profesor IA</h3>
-                <small style="color:var(--text2)">Proveedor: ${AI_CONFIG.provider.toUpperCase()}</small>
-            </div>
-        </div>
-        <div style="line-height:1.6;font-size:0.9rem">
-            ${parseMarkdown(markdown)}
-        </div>
-        <div style="margin-top:1.5rem;text-align:right">
-            <button class="btn-secondary" onclick="closeModal()">Cerrar</button>
-        </div>
-    `;
+    modalContent.innerHTML = `<div style="padding:1rem"><h3>🎓 Revisión IA</h3><div style="line-height:1.6;font-size:0.9rem">${markdown.replace(/\n/g, '<br>')}</div><button class="btn-secondary" onclick="closeModal()" style="margin-top:1rem">Cerrar</button></div>`;
     document.getElementById('modal-overlay').classList.remove('hidden');
 }
 
-function parseMarkdown(text) {
-    if (!text) return '';
-    return text
-        .replace(/### (.*)/g, '<h4 style="color:var(--accent);margin:1rem 0 0.5rem">$1</h4>')
-        .replace(/\*\*(.*)\*\*/g, '<strong>$1</strong>')
-        .replace(/\n/g, '<br>')
-        .replace(/^- (.*)/gm, '<li style="margin-left:1rem">$1</li>')
-        .replace(/```java([\s\S]*?)```/g, '<div class="code-block" style="background:#0c1e2e;padding:1rem;border-radius:8px;font-size:0.8rem">$1</div>')
-        .replace(/`([^`]+)`/g, '<code style="background:rgba(255,255,255,0.1);padding:0 4px;border-radius:4px">$1</code>');
+function openSettings() {
+    const key = localStorage.getItem('prog_ai_key') || '';
+    const modalContent = document.getElementById('modal-content');
+    modalContent.innerHTML = `<h3>⚙️ Ajustes IA</h3><input type="password" id="settings-api-key" value="${key}" placeholder="AIza..." style="width:100%;padding:.7rem;margin:1rem 0;background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:8px"><button class="btn-primary" onclick="saveSettings()">Guardar</button>`;
+    document.getElementById('modal-overlay').classList.remove('hidden');
+}
+
+function saveSettings() {
+    const key = document.getElementById('settings-api-key').value.trim();
+    localStorage.setItem('prog_ai_key', key);
+    AI_CONFIG.apiKey = key;
+    showToast('Guardado', 'success');
+    closeModal();
 }
