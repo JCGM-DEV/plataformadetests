@@ -470,17 +470,20 @@ let ejercicioState = { showPistas: false, showSolucion: false };
 function showEjercicio(ejercicioId) {
   const ej = EJERCICIOS.find(e => e.id === ejercicioId);
   if (!ej) return;
-  ejercicioState = { showPistas: false, showSolucion: false };
+  const isExam = currentUnit === 'simulacros';
+  ejercicioState = { showPistas: false, showSolucion: false, isExam };
   renderEjercicio(ej);
 }
 
 function renderEjercicio(ej) {
   const view = document.getElementById('ejercicio-view');
   view.classList.remove('hidden');
+  const isExam = ejercicioState.isExam;
 
   view.innerHTML = `
     <div class="ej-paper">
       <div class="ej-header">
+        ${isExam ? '<div class="exam-sim-badge">📋 MODO EXAMEN — SIN PISTAS</div>' : ''}
         <div class="ej-meta">
           <span class="ej-badge">${ej.nivel} ${ej.temas.join(' · ')}</span>
           <span class="ej-tiempo">⏱ ${ej.tiempo}</span>
@@ -501,12 +504,12 @@ function renderEjercicio(ej) {
 // Lo importante es la lógica y la estructura
 // Usa comentarios para explicar tu razonamiento"></textarea>
         <div class="ej-actions">
-          <button class="btn-primary" onclick="checkEjercicio('${ej.id}')">✅ Verificar criterios</button>
-          <button class="btn-ai-help" onclick="requestAIFeedback('${ej.id}')" id="btn-ai-help">✨ Consultar al Profesor IA</button>
-          <button class="btn-secondary" onclick="togglePistas('${ej.id}')" id="btn-pistas">
+          <button class="btn-exam-verify" onclick="checkEjercicio('${ej.id}')">✔️ Verificar criterios</button>
+          ${isExam ? '' : `<button class="btn-ai-help" onclick="requestAIFeedback('${ej.id}')" id="btn-ai-help">✨ Consultar al Profesor IA</button>`}
+          <button class="btn-secondary" onclick="togglePistas('${ej.id}')" id="btn-pistas" ${isExam ? 'style="display:none"' : ''}>
             💡 ${ejercicioState.showPistas ? 'Ocultar pistas' : 'Ver pistas'}
           </button>
-          <button class="btn-secondary" onclick="toggleSolucion('${ej.id}')" id="btn-solucion">
+          <button class="btn-secondary" onclick="toggleSolucion('${ej.id}')" id="btn-solucion" ${isExam ? 'style="display:none"' : ''}>
             👁 ${ejercicioState.showSolucion ? 'Ocultar solución' : 'Ver solución'}
           </button>
         </div>
@@ -587,6 +590,14 @@ function checkEjercicio(ejId) {
   }
   score.correct += passed;
   document.querySelector('#score-correct span').textContent = score.correct;
+
+  // In exam mode, reveal pistas/solucion buttons after first correction
+  if (ejercicioState.isExam) {
+    const bPistas = document.getElementById('btn-pistas');
+    const bSol = document.getElementById('btn-solucion');
+    if (bPistas) bPistas.style.display = '';
+    if (bSol) bSol.style.display = '';
+  }
 }
 
 // ── DR. JAVA LAB ───────────────────────────────────────────────────

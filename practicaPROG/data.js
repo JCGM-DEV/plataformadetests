@@ -47,6 +47,14 @@ const UNITS = {
   doctor: {
     label: 'DR. JAVA', title: 'Ejercicios del Doctor',
     sections: []
+  },
+  simulacros: {
+    label: 'EXAMEN', title: 'Simulacros de Examen',
+    sections: [
+      { id: 'sim-quiz', icon: '🧠', label: 'Test Teórico', type: 'quiz', quizId: 'poo_quiz' },
+      { id: 'sim-ej1', icon: '📝', label: 'Práctico 1 — Vehículos', type: 'ejercicio', ejercicioId: 'ej1' },
+      { id: 'sim-ej2', icon: '📝', label: 'Práctico 2 — Empleados', type: 'ejercicio', ejercicioId: 'ej2' },
+    ]
   }
 };
 
