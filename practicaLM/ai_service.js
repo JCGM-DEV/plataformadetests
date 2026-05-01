@@ -109,3 +109,7 @@ function saveAISettings() {
     alert('Clave guardada correctamente. Vamos a probar la IA.');
     location.reload();
 }
+
+function openLMSettings() {
+    openSettings();
+}
