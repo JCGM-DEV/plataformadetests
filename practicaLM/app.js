@@ -57,11 +57,12 @@ function openSection(section) {
   else if (section.type === 'quiz') showQuiz(section.quizId);
   else if (section.type === 'drag') showDrag(section.dragId);
   else if (section.type === 'editor') showEditor(section.editorId);
+  else if (section.type === 'exam') showExam(section.editorId);
   else if (section.type === 'xpath') showXPath(section.xpathId);
 }
 
 function hideAllViews() {
-  ['lesson-view','quiz-view','drag-view','editor-view','xpath-view','welcome-panel'].forEach(id => {
+  ['lesson-view','quiz-view','drag-view','editor-view','exam-view','xpath-view','welcome-panel'].forEach(id => {
     const el = document.getElementById(id); if (el) el.classList.add('hidden');
   });
 }
@@ -521,6 +522,179 @@ function nextEditorEx() {
     const unit = UNITS[currentUnit];
     const sec = unit.sections.find(s => s.id === activeSection);
     renderEditorExercise(EDITOR_LABS[sec.editorId]);
+  }
+}
+
+// ── EXAM MODE ────────────────────────────────────────────────────
+let examState = { labData: null, corrected: false };
+
+function showExam(editorId) {
+  const labData = EDITOR_LABS[editorId];
+  examState = { labData, corrected: false };
+  const view = document.getElementById('exam-view');
+  view.classList.remove('hidden');
+  const ex = labData.exercises[0];
+  const isHTML = labData.type === 'html';
+
+  const criteriaHtml = (ex.milestones || []).map(m =>
+    `<div class="exam-criterion" data-id="${m.id}">⚪ ${escapeHTML(m.instruction || m.popup)}</div>`
+  ).join('');
+
+  view.innerHTML = `
+    <div class="exam-header">
+      <div class="exam-badge">📋 MODO EXAMEN</div>
+      <h2>${escapeHTML(labData.examTitle || ex.title)}</h2>
+    </div>
+    <div class="exam-statement">
+      <h3>📄 Enunciado</h3>
+      <div class="exam-statement-body">${formatExamDesc(labData.examDesc || ex.desc)}</div>
+    </div>
+    <div class="exam-workspace">
+      <div class="exam-editor-pane">
+        <div class="editor-pane-label">${isHTML ? '📝 Tu código HTML' : '📄 Tu código XML'}</div>
+        <textarea class="editor-textarea" id="exam-input" spellcheck="false" oninput="onExamInput(${isHTML})">${ex.starter || ''}</textarea>
+        <div class="exam-actions">
+          <button class="btn-run" onclick="${isHTML ? 'updateExamPreview()' : 'updateExamXML()'}">▶ Actualizar</button>
+          <button class="btn-exam-correct" onclick="correctExam()">✓ Corregir</button>
+          <button class="btn-help" id="exam-solution-btn" onclick="showExamSolution()" style="display:none">💡 Ver Solución</button>
+        </div>
+        <div id="exam-correction-panel" class="exam-correction-panel hidden"></div>
+      </div>
+      <div class="exam-preview-pane">
+        <div class="editor-pane-label">${isHTML ? '👁 Previsualización' : '🌳 Árbol XML'}</div>
+        ${isHTML ? '<iframe id="exam-preview-frame" class="preview-frame"></iframe>' : '<div id="exam-xml-output" class="xml-output"></div>'}
+      </div>
+    </div>
+    ${criteriaHtml ? `<div class="exam-criteria-list" id="exam-criteria-list">${criteriaHtml}</div>` : ''}
+  `;
+
+  if (isHTML) setTimeout(updateExamPreview, 100);
+  else updateExamXML();
+}
+
+function formatExamDesc(desc) {
+  if (!desc) return '';
+  // Convert newlines and bullet points to HTML
+  return escapeHTML(desc)
+    .replace(/\n•/g, '<br>•')
+    .replace(/\n-/g, '<br>-')
+    .replace(/\n/g, '<br>')
+    .replace(/•/g, '&nbsp;&nbsp;•');
+}
+
+function onExamInput(isHTML) {
+  if (isHTML) updateExamPreview();
+  else updateExamXML();
+}
+
+function updateExamPreview() {
+  const code = document.getElementById('exam-input')?.value || '';
+  const frame = document.getElementById('exam-preview-frame');
+  if (!frame) return;
+  const doc = frame.contentDocument || frame.contentWindow.document;
+  doc.open(); doc.write(code); doc.close();
+}
+
+function updateExamXML() {
+  const code = document.getElementById('exam-input')?.value || '';
+  const output = document.getElementById('exam-xml-output');
+  if (!output) return;
+  output.innerHTML = syntaxHighlightXML(code);
+}
+
+function correctExam() {
+  const code = document.getElementById('exam-input')?.value || '';
+  const labData = examState.labData;
+  const ex = labData.exercises[0];
+  const milestones = ex.milestones || [];
+
+  if (!milestones.length) {
+    showToast('Este ejercicio no tiene criterios de corrección automática', 'info');
+    return;
+  }
+
+  let passed = 0;
+  const results = milestones.map(m => {
+    const ok = m.check.test(code);
+    if (ok) passed++;
+    return { id: m.id, ok, label: m.instruction || m.popup };
+  });
+
+  const pct = Math.round((passed / milestones.length) * 100);
+  const allOk = passed === milestones.length;
+
+  // Update criteria markers in the list
+  results.forEach(r => {
+    const el = document.querySelector(`.exam-criterion[data-id="${r.id}"]`);
+    if (el) {
+      el.className = `exam-criterion ${r.ok ? 'criterion-ok' : 'criterion-fail'}`;
+      el.textContent = `${r.ok ? '✅' : '❌'} ${r.label}`;
+    }
+  });
+
+  // Show correction panel
+  const panel = document.getElementById('exam-correction-panel');
+  panel.classList.remove('hidden');
+  panel.innerHTML = `
+    <div class="correction-score ${allOk ? 'score-perfect' : pct >= 60 ? 'score-good' : 'score-low'}">
+      <span class="score-pct">${pct}%</span>
+      <span class="score-label">${passed}/${milestones.length} criterios cumplidos</span>
+    </div>
+    <div class="correction-detail">
+      ${results.map(r => `<div class="corr-item ${r.ok ? 'corr-ok' : 'corr-fail'}">${r.ok ? '✅' : '❌'} ${escapeHTML(r.label)}</div>`).join('')}
+    </div>
+    ${!allOk ? `<p class="correction-tip">💡 Completa los criterios que faltan y vuelve a pulsar "Corregir".</p>` : 
+    `<p class="correction-tip">🎉 ¡Ejercicio completado! Puedes ver la solución de referencia para comparar.</p>`}
+  `;
+
+  // Show solution button
+  const sBtn = document.getElementById('exam-solution-btn');
+  if (sBtn) sBtn.style.display = 'inline-flex';
+
+  if (allOk) {
+    completedSections.add(activeSection);
+    const navEl = document.getElementById('nav-' + activeSection);
+    if (navEl && !navEl.querySelector('.item-done')) navEl.innerHTML += '<span class="item-done">✓</span>';
+    updateProgress();
+    showToast('¡Ejercicio superado! 🎉', 'success');
+    score.correct++;
+    document.querySelector('#score-correct span').textContent = score.correct;
+  } else {
+    showToast(`${passed}/${milestones.length} criterios correctos`, 'info');
+  }
+
+  examState.corrected = true;
+}
+
+function showExamSolution() {
+  const labData = examState.labData;
+  const ex = labData.exercises[0];
+  if (!ex.solution) { showToast('No hay solución disponible', 'info'); return; }
+
+  const modal = document.getElementById('modal-overlay');
+  const content = document.getElementById('modal-content');
+  content.innerHTML = `
+    <h3>💡 Solución de Referencia</h3>
+    <p style="color:var(--text2);margin-bottom:1rem">Compara con tu código. Hay múltiples soluciones correctas; lo importante es que pases todos los criterios.</p>
+    <div class="code-block">${syntaxHighlightXML(ex.solution)}</div>
+    <div style="margin-top:2rem;display:flex;gap:1rem;">
+      <button class="btn-primary" onclick="copySolutionToExamEditor()">Copiar al Editor</button>
+      <button class="btn-secondary" onclick="closeModal()">Cerrar</button>
+    </div>
+  `;
+  modal.classList.remove('hidden');
+}
+
+function copySolutionToExamEditor() {
+  const labData = examState.labData;
+  const ex = labData.exercises[0];
+  if (!ex.solution) return;
+  const input = document.getElementById('exam-input');
+  if (input) {
+    input.value = ex.solution;
+    onExamInput(labData.type === 'html');
+    closeModal();
+    showToast('Solución copiada al editor', 'success');
   }
 }
 

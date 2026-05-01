@@ -115,13 +115,13 @@ const UNITS = {
     label: 'EXAMEN', title: 'Simulacros de Examen',
     sections: [
       { id: 'sim1-quiz', icon: '🧠', label: 'Simulacro 1: Test Teórico', type: 'quiz', quizId: 'simulacro1_quiz' },
-      { id: 'sim1-h1', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '1. Estructura y Head', type: 'editor', editorId: 'sim1_p1' },
-      { id: 'sim1-h2', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '2. Header y Menú', type: 'editor', editorId: 'sim1_p2' },
-      { id: 'sim1-h3', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '3. Productos (Sección)', type: 'editor', editorId: 'sim1_p3' },
-      { id: 'sim1-h4', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '4. Formulario Contacto', type: 'editor', editorId: 'sim1_p4' },
+      { id: 'sim1-h1', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '1. Estructura y Head', type: 'exam', editorId: 'sim1_p1' },
+      { id: 'sim1-h2', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '2. Header y Menú', type: 'exam', editorId: 'sim1_p2' },
+      { id: 'sim1-h3', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '3. Productos (Sección)', type: 'exam', editorId: 'sim1_p3' },
+      { id: 'sim1-h4', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '4. Formulario Contacto', type: 'exam', editorId: 'sim1_p4' },
       { id: 'sim2-quiz', icon: '🧠', label: 'Simulacro 2: Test Teórico', type: 'quiz', quizId: 'simulacro2_quiz' },
-      { id: 'sim2-p1', category: 'Práctico 2: XML & DTD', icon: '📄', label: '1. Validación DTD', type: 'editor', editorId: 'sim2_p1' },
-      { id: 'sim2-p2', category: 'Práctico 2: XML & XSD', icon: '🛡️', label: '2. Creación XSD', type: 'editor', editorId: 'sim2_p2' }
+      { id: 'sim2-p1', category: 'Práctico 2: XML & DTD', icon: '📄', label: '1. Validación DTD', type: 'exam', editorId: 'sim2_p1' },
+      { id: 'sim2-p2', category: 'Práctico 2: XML & XSD', icon: '🛡️', label: '2. Creación XSD', type: 'exam', editorId: 'sim2_p2' }
     ]
   }
 };
@@ -2231,6 +2231,17 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
   },
   sim1_p1: {
     type: 'html',
+    examTitle: 'Parte 1: Estructura y Cabecera del Documento',
+    examDesc: `Crea la estructura base de un documento HTML5 para una tienda online. El documento debe incluir:
+• La declaración de tipo de documento HTML5.
+• La etiqueta <html> con el atributo de idioma español (lang="es").
+• Una sección <head> que contenga:
+  - La etiqueta meta para la codificación de caracteres UTF-8.
+  - La etiqueta meta viewport para diseño responsive.
+  - Un título descriptivo para la página (por ejemplo: "Mi Tienda Online").
+• Una etiqueta <body> vacía (el contenido se añadirá después).
+
+No añadas contenido dentro del body todavía.`,
     exercises: [{
       id: 1, title: 'Estructura HTML5',
       desc: 'Crea un documento HTML5 básico con DOCTYPE, html (lang="es"), head (charset, viewport, title) y body vacío.',
@@ -2248,6 +2259,18 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
   },
   sim1_p2: {
     type: 'html',
+    examTitle: 'Parte 2: Encabezado y Navegación',
+    examDesc: `La página de la tienda debe incluir un encabezado y una barra de navegación. En concreto:
+
+Encabezado (<header>):
+• Un título principal <h1> con el nombre de la tienda.
+• Un subtítulo <h2> con un eslogan o descripción breve.
+
+Navegación (<nav>):
+• Una lista no ordenada <ul> con exactamente 4 elementos <li>.
+• Cada elemento debe contener un enlace <a> con las opciones: Inicio, Productos, Contacto y Sobre Nosotros (o nombres equivalentes).
+
+El <nav> debe ir después del <header>, ambos dentro del <body>.`,
     exercises: [{
       id: 1, title: 'Encabezado y Navegación',
       desc: 'Dentro del body, crea un <header> con un <h1> y un <h2>. Después, añade un <nav> con una lista <ul> de 4 enlaces (Op1, Op2, Op3, Op4).',
@@ -2265,6 +2288,21 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
   },
   sim1_p3: {
     type: 'html',
+    examTitle: 'Parte 3: Sección de Productos',
+    examDesc: `Crea una sección principal de productos para la tienda online. Requisitos:
+
+Estructura:
+• Una etiqueta <section> que contenga toda la sección de productos.
+• Un título <h2> con el texto "Productos destacados".
+• Exactamente 3 productos, cada uno dentro de un <article>.
+
+Cada <article> debe incluir obligatoriamente:
+• <h3> con el nombre del producto.
+• <img> con los atributos src y alt rellenos.
+• <p> con una descripción del producto (mínimo una oración).
+• <p> con el precio en el formato: <strong>Precio:</strong> XXX€
+
+Puedes inventar los productos (ej: portátil, móvil, auriculares).`,
     exercises: [{
       id: 1, title: 'Sección de Productos',
       desc: `Crea una <section> con título <h2>Productos destacados</h2>. Añade 3 productos como bloques <article>. Cada producto DEBE incluir:
@@ -2288,6 +2326,21 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
   },
   sim1_p4: {
     type: 'html',
+    examTitle: 'Parte 4: Formulario de Contacto',
+    examDesc: `Crea una sección de contacto con un formulario funcional. Requisitos:
+
+Estructura:
+• Una etiqueta <section> con un <h2>Contacto</h2>.
+• Un <form> con los atributos action="#" y method="post".
+
+El formulario debe contener los siguientes campos con sus <label> correspondientes:
+• Nombre: <input type="text"> (obligatorio, con id="nombre").
+• Email: <input type="email"> (con id="email").
+• Motivo de contacto: <select> con exactamente 3 opciones: Consulta, Pedido y Reclamación.
+• Mensaje: <textarea rows="5" cols="30">.
+• Botón de envío: <input type="submit" value="Enviar">.
+
+Conecta cada <label> con su campo usando los atributos for/id.`,
     exercises: [{
       id: 1, title: 'Formulario de Contacto',
       desc: `Crea una <section> con <h2>Contacto</h2> y un formulario (<form action="#" method="post">). El formulario DEBE incluir:
@@ -2312,6 +2365,21 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
   },
   sim2_p1: {
     type: 'xml',
+    examTitle: 'Parte 1: DTD Interna para Libro',
+    examDesc: `Se te proporciona el siguiente documento XML:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<libro>
+  <titulo>XML Básico</titulo>
+  <autor>Juan Pérez</autor>
+  <precio>25</precio>
+</libro>
+
+Tarea: Añade una DTD interna (DOCTYPE) a ese documento XML para que sea válido. La DTD debe:
+• Declarar el elemento raíz libro con sus hijos en orden: titulo, autor, precio.
+• Declarar cada uno de los tres elementos hijos como contenido de texto (#PCDATA).
+
+El documento final debe ser tanto bien formado como válido según la DTD.`,
     exercises: [{
       id: 1, title: 'Validación DTD',
       desc: 'Dado un XML con <libro>, <titulo>, <autor> y <precio>, crea la DTD interna que lo valide.',
@@ -2327,6 +2395,23 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
   },
   sim2_p2: {
     type: 'xml',
+    examTitle: 'Parte 2: Esquema XSD para Producto',
+    examDesc: `Crea un esquema XSD (XML Schema Definition) para validar el siguiente documento XML:
+
+<producto>
+  <nombre>Teclado mecánico</nombre>
+  <precio>89.99</precio>
+  <stock>15</stock>
+</producto>
+
+Requisitos del esquema:
+• El elemento raíz es <producto> y es de tipo complejo (xs:complexType).
+• Los elementos hijos deben aparecer en orden (xs:sequence):
+  - <nombre>: tipo xs:string.
+  - <precio>: tipo xs:decimal.
+  - <stock>: tipo xs:positiveInteger.
+
+Recuerda incluir el namespace correcto del W3C en el elemento <xs:schema>.`,
     exercises: [{
       id: 1, title: 'Creación XSD',
       desc: 'Dado un XML con <producto>, crea un XSD donde el precio sea decimal y el stock sea entero positivo.',
