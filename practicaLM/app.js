@@ -619,7 +619,6 @@ function correctExam() {
     if (ok) passed++;
     return { id: m.id, ok, label: m.instruction || m.popup };
   });
-
   const pct = Math.round((passed / milestones.length) * 100);
   const allOk = passed === milestones.length;
 
@@ -632,6 +631,9 @@ function correctExam() {
     }
   });
 
+  const nota = (passed / milestones.length * 10).toFixed(1).replace(/\.0$/, '');
+  const notaEmoji = nota == 10 ? '🏆' : nota >= 8 ? '🎉' : nota >= 6 ? '💪' : '📚';
+
   // Show correction panel
   const panel = document.getElementById('exam-correction-panel');
   panel.classList.remove('hidden');
@@ -639,6 +641,10 @@ function correctExam() {
     <div class="correction-score ${allOk ? 'score-perfect' : pct >= 60 ? 'score-good' : 'score-low'}">
       <span class="score-pct">${pct}%</span>
       <span class="score-label">${passed}/${milestones.length} criterios cumplidos</span>
+    </div>
+    <div class="ej-nota" style="margin:.75rem 0">
+      ${notaEmoji} Nota orientativa: <strong>${nota}</strong> / 10
+      <span class="nota-sub">${passed} de ${milestones.length} criterios</span>
     </div>
     <div class="correction-detail">
       ${results.map(r => `<div class="corr-item ${r.ok ? 'corr-ok' : 'corr-fail'}">${r.ok ? '✅' : '❌'} ${escapeHTML(r.label)}</div>`).join('')}

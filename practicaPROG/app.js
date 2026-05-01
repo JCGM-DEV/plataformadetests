@@ -580,12 +580,18 @@ function checkEjercicio(ejId) {
   });
 
   const pct = Math.round((passed / ejChecks.length) * 100);
+  const nota = (passed / ejChecks.length * 10).toFixed(1).replace(/\.0$/, '');
+  const notaEmoji = nota == 10 ? '🏆' : nota >= 8 ? '🎉' : nota >= 6 ? '💪' : '📚';
   const fb = document.getElementById('ej-feedback');
   if (fb) {
     fb.innerHTML = `<div class="ej-result ${pct >= 80 ? 'ok' : pct >= 50 ? 'partial' : 'fail'}">
       ${pct >= 80 ? '🎉 ¡Muy bien! ' : pct >= 50 ? '💪 Vas por buen camino. ' : '📚 Sigue practicando. '}
       ${passed}/${ejChecks.length} criterios cumplidos (${pct}%)
       ${pct < 100 ? '<br><small>Revisa las pistas para los criterios que faltan.</small>' : ''}
+    </div>
+    <div class="ej-nota">
+      ${notaEmoji} Nota orientativa: <strong>${nota}</strong> / 10
+      <span class="nota-sub">${passed} de ${ejChecks.length} criterios</span>
     </div>`;
   }
   score.correct += passed;

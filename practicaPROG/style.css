@@ -723,3 +723,14 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
   box-shadow: 0 2px 12px rgba(220,38,38,.3);
 }
 .btn-exam-verify:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(220,38,38,.5); }
+
+/* ── NOTA ORIENTATIVA ──────────────────────────────────────────── */
+.ej-nota {
+  display: flex; align-items: center; gap: .75rem;
+  background: linear-gradient(135deg, rgba(132,204,22,.1), rgba(132,204,22,.04));
+  border: 1.5px solid rgba(132,204,22,.35); border-radius: 10px;
+  padding: .85rem 1.25rem; margin-top: .75rem; font-size: 1rem;
+  animation: fadeSlide .3s ease;
+}
+.ej-nota strong { font-size: 1.6rem; font-weight: 900; color: var(--accent2); line-height: 1; }
+.nota-sub { font-size: .8rem; color: var(--text2); margin-left: auto; }
