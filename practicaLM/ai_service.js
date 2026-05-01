@@ -1,37 +1,38 @@
 /**
- * AI SERVICE — Groq Exclusive Client (Llama 3)
+ * AI SERVICE — Groq Exclusive + Diagnostic Mode
  */
 
 async function callAI_Universal(prompt) {
     const key = (localStorage.getItem('groq_ai_key') || '').trim();
-    const model = 'llama3-70b-8192'; // Forzamos el mejor modelo de Groq
-    
-    if (!key) throw new Error('Por favor, configura tu API Key de Groq en los ajustes (icono de engranaje).');
+    if (!key) throw new Error('No hay API Key. Configúrala en el icono ⚙️.');
 
-    const url = 'https://api.groq.com/openai/v1/chat/completions';
-    const headers = { 
-        'Content-Type': 'application/json', 
-        'Authorization': `Bearer ${key}` 
-    };
-    const body = JSON.stringify({ 
-        model: model, 
-        messages: [{ role: "user", content: prompt }] 
-    });
-    
+    console.log("🧪 Iniciando petición a Groq...");
+
     try {
-        const res = await fetch(url, { method: 'POST', headers, body });
+        const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json', 
+                'Authorization': `Bearer ${key}` 
+            },
+            body: JSON.stringify({ 
+                model: 'llama3-70b-8192', 
+                messages: [{ role: "user", content: prompt }] 
+            })
+        });
+
         const data = await res.json();
 
-        if (res.ok && data.choices && data.choices.length > 0) {
+        if (res.ok) {
+            console.log("✅ Groq respondió con éxito.");
             return data.choices[0].message.content;
         } else {
-            if (res.status === 401 || res.status === 403) {
-                throw new Error('Clave de Groq inválida. Verifica que la has copiado bien desde console.groq.com.');
-            }
-            throw new Error(data.error?.message || `Error HTTP ${res.status}`);
+            console.error("❌ Groq devolvió error:", data);
+            throw new Error(data.error?.message || `Error Groq ${res.status}`);
         }
     } catch (e) {
-        throw new Error(`Conexión fallida con Groq: ${e.message}`);
+        console.error("🚨 Error de red/CORS:", e);
+        throw new Error(`Fallo de conexión: ${e.message}. Revisa la consola (F12) para detalles de CORS.`);
     }
 }
 
@@ -39,14 +40,16 @@ async function callAI_Universal(prompt) {
 
 async function requestLMAIFeedback() {
     const code = document.getElementById('exam-input')?.value || '';
-    if (!code.trim()) return;
+    if (!code.trim()) return alert("Escribe algo primero.");
+    
     const btn = document.getElementById('btn-lm-ai');
-    btn.disabled = true; btn.innerHTML = '⏳ Groq evaluando...';
+    btn.disabled = true; btn.innerHTML = '⏳ Conectando con Groq...';
+    
     try {
-        const fb = await callAI_Universal(`Eres un profesor estricto de Lenguaje de Marcas (HTML/XML). Evalúa este código y dime los fallos y la nota final: \n${code}`);
+        const fb = await callAI_Universal(`Analiza este código HTML/XML y dime los errores: \n${code}`);
         showFeedbackModal(fb);
     } catch (err) {
-        showFeedbackModal(`### ⚠️ Error de IA\n\n${err.message}`);
+        showFeedbackModal(`### ❌ Error detectado\n\n**Mensaje:** ${err.message}\n\n**Posibles causas:**\n1. Tu clave de Groq no es válida.\n2. Estás en modo incógnito y el navegador bloquea la petición.\n3. Revisa la consola (tecla F12) para ver si hay errores de color rojo.`);
     } finally {
         btn.disabled = false; btn.innerHTML = '✨ Pedir corrección IA';
     }
@@ -54,33 +57,35 @@ async function requestLMAIFeedback() {
 
 async function requestAIFeedback() {
     const code = document.getElementById('ej-input')?.value || document.getElementById('exam-code-input')?.value || '';
-    if (!code.trim()) return;
+    if (!code.trim()) return alert("Escribe algo de código Java.");
+    
     const btn = document.getElementById('btn-ai-help');
-    btn.disabled = true; btn.innerHTML = '⏳ Groq evaluando...';
+    btn.disabled = true; btn.innerHTML = '⏳ Conectando con Groq...';
+    
     try {
-        const fb = await callAI_Universal(`Eres un profesor estricto de Programación en Java. Evalúa este código y dime los fallos y la nota final: \n${code}`);
+        const fb = await callAI_Universal(`Analiza este código Java y dime los errores: \n${code}`);
         showFeedbackModal(fb);
     } catch (err) {
-        showFeedbackModal(`### ⚠️ Error de IA\n\n${err.message}`);
+        showFeedbackModal(`### ❌ Error detectado\n\n${err.message}`);
     } finally {
         btn.disabled = false; btn.innerHTML = '✨ Consultar al Profesor IA';
     }
 }
 
 function showFeedbackModal(markdown) {
+    const overlay = document.getElementById('modal-overlay');
     const content = document.getElementById('modal-content');
+    
     content.innerHTML = `
-        <div style="padding:1.5rem">
-            <h3 style="color:var(--accent);margin-bottom:1rem">🎓 Revisión del Profesor IA (Llama 3)</h3>
-            <div style="line-height:1.6; color:var(--text); font-size:0.95rem; max-height:60vh; overflow-y:auto">
+        <div style="color:white">
+            <h3 style="color:#84cc16">🎓 Revisión del Profesor IA</h3>
+            <div style="background:#141f06; padding:1rem; border-radius:8px; border:1px solid #2a3d10; max-height:50vh; overflow:auto; margin:1rem 0">
                 ${markdown.replace(/\n/g, '<br>')}
             </div>
-            <div style="margin-top:1.5rem; border-top:1px solid var(--border); padding-top:1rem; text-align:right">
-                <button class="btn-secondary" onclick="closeModal()">Cerrar revisión</button>
-            </div>
+            <button class="btn-primary" onclick="closeModal()" style="width:100%">Entendido</button>
         </div>
     `;
-    document.getElementById('modal-overlay').classList.remove('hidden');
+    overlay.classList.remove('hidden');
 }
 
 function closeModal() {
@@ -89,31 +94,26 @@ function closeModal() {
 
 function openSettings() {
     const key = localStorage.getItem('groq_ai_key') || '';
-    
     const content = document.getElementById('modal-content');
+    
     content.innerHTML = `
-        <h3>⚙️ Ajustes del Profesor IA (Groq)</h3>
-        
-        <p style="font-size:0.85rem; margin-bottom:1rem; opacity:0.9; margin-top:1rem">
-            Hemos cambiado a <b>Groq (Llama 3 70B)</b>, que es gratis, ultra rápido y no tiene bloqueos de región.
-        </p>
-
-        <p style="font-size:0.8rem; margin-bottom:0.5rem; opacity:0.8">Pega aquí tu API Key de Groq:</p>
-        <input type="password" id="ai-key-input" value="${key}" placeholder="gsk_..." style="width:100%;padding:.8rem;margin-bottom:1rem;background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:8px; outline:none">
-        <p style="font-size:0.7rem; color:var(--accent); margin-top:-0.5rem; margin-bottom:1.5rem;">
-            🔗 Consigue una clave gratis en: <a href="https://console.groq.com/keys" target="_blank" style="color:#fff; text-decoration:underline">console.groq.com/keys</a>
-        </p>
-
-        <button class="btn-primary" onclick="saveAISettings()" style="width:100%">Guardar y probar</button>
+        <h3 style="color:#84cc16">⚙️ Ajustes IA (Groq)</h3>
+        <p style="font-size:0.9rem">Pega tu clave <b>gsk_...</b> de Groq Cloud:</p>
+        <input type="password" id="ai-key-input" value="${key}" placeholder="gsk_..." style="width:100%; padding:10px; margin:10px 0; background:#0f1a04; border:1px solid #84cc16; color:white">
+        <p style="font-size:0.7rem; color:#86a85a">Consíguela en <a href="https://console.groq.com/keys" target="_blank" style="color:white">console.groq.com</a></p>
+        <button class="btn-primary" onclick="saveAISettings()" style="width:100%; margin-top:10px">Guardar Configuración</button>
     `;
     document.getElementById('modal-overlay').classList.remove('hidden');
 }
 
 function saveAISettings() {
     const key = document.getElementById('ai-key-input').value.trim();
+    if (!key.startsWith('gsk_')) {
+        alert("La clave debe empezar por gsk_");
+        return;
+    }
     localStorage.setItem('groq_ai_key', key);
-    
-    alert('Clave guardada. ¡Groq está listo para corregir!');
+    alert('✅ Clave guardada correctamente.');
     closeModal();
 }
 
