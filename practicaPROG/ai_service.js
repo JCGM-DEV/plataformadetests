@@ -3,24 +3,17 @@
  */
 
 const AI_CONFIG = {
-    provider: localStorage.getItem('prog_ai_provider') || 'gemini',
-    apiKey: localStorage.getItem('prog_ai_key') || '',
+    provider: 'gemini',
+    apiKey: (localStorage.getItem('prog_ai_key') || '').trim(),
     geminiModel: 'gemini-1.5-flash',
-    grokModel: 'grok-beta',
-    geminiEndpoint: 'https://generativelanguage.googleapis.com/v1/models/',
-    grokEndpoint: 'https://api.x.ai/v1/chat/completions'
+    geminiEndpoint: 'https://generativelanguage.googleapis.com/v1/models/'
 };
 
 async function callAI(prompt) {
     if (!AI_CONFIG.apiKey) {
-        throw new Error(`No se ha configurado la API Key de ${AI_CONFIG.provider.toUpperCase()}.`);
+        throw new Error(`API Key no configurada. Usa el botón ⚙️.`);
     }
-
-    if (AI_CONFIG.provider === 'gemini') {
-        return await callGemini(prompt);
-    } else {
-        return await callGrok(prompt);
-    }
+    return await callGemini(prompt);
 }
 
 async function callGemini(prompt) {
@@ -100,17 +93,11 @@ function openSettings() {
     
     const modalContent = document.getElementById('modal-content');
     modalContent.innerHTML = `
-        <h3>⚙️ Configuración del Tutor IA</h3>
-        <div style="margin-bottom:1.5rem">
-            <label style="display:block;font-size:0.8rem;color:var(--text2);margin-bottom:0.5rem">Proveedor de IA:</label>
-            <select id="settings-provider" onchange="updateProviderHint()" style="width:100%;padding:0.7rem;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text)">
-                <option value="gemini" ${currentProvider === 'gemini' ? 'selected' : ''}>Google Gemini (Recomendado)</option>
-                <option value="grok" ${currentProvider === 'grok' ? 'selected' : ''}>xAI Grok (Beta)</option>
-            </select>
-        </div>
+        <h3>⚙️ Configuración del Profesor IA</h3>
+        <p style="font-size:0.85rem;color:var(--text2);margin-bottom:1rem">Usa <strong>Google Gemini</strong> — Clave gratuita en <a href="https://aistudio.google.com/app/apikey" target="_blank" style="color:var(--accent)">aistudio.google.com</a>.</p>
         <div style="margin-bottom:1rem">
-            <label id="label-api-key" style="display:block;font-size:0.8rem;color:var(--text2);margin-bottom:0.5rem">API KEY:</label>
-            <input type="password" id="settings-api-key" value="${currentKey}" placeholder="Pega tu clave aquí..." 
+            <label id="label-api-key" style="display:block;font-size:0.8rem;color:var(--text2);margin-bottom:0.5rem">API KEY de Gemini:</label>
+            <input type="password" id="settings-api-key" value="${currentKey}" placeholder="AIza..." 
                 style="width:100%;padding:0.7rem;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text)">
         </div>
         <div id="provider-hint" style="font-size:0.75rem;color:var(--text2);margin-bottom:1.5rem;padding:0.75rem;background:rgba(255,255,255,0.03);border-radius:6px">
@@ -136,13 +123,9 @@ function updateProviderHint() {
 }
 
 function saveSettings() {
-    const provider = document.getElementById('settings-provider').value;
     const key = document.getElementById('settings-api-key').value.trim();
-    
-    localStorage.setItem('prog_ai_provider', provider);
+    if (!key) { showToast('Introduce una clave', 'error'); return; }
     localStorage.setItem('prog_ai_key', key);
-    
-    AI_CONFIG.provider = provider;
     AI_CONFIG.apiKey = key;
     
     showToast('Configuración actualizada', 'success');
