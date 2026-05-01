@@ -1,5 +1,6 @@
 /**
- * AI SERVICE — Ultra-Compatible
+ * AI SERVICE — Total Scanner
+ * Prueba todas las combinaciones posibles de la API de Google.
  */
 
 const AI_CONFIG = {
@@ -7,58 +8,67 @@ const AI_CONFIG = {
 };
 
 async function callAI_Universal(prompt) {
-    if (!AI_CONFIG.apiKey) throw new Error('Copia tu API Key en los ajustes (icono de engranaje).');
+    if (!AI_CONFIG.apiKey) throw new Error('Falta la API Key.');
 
-    // Intentamos la combinación más estándar que funciona en el Playground de Google
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${AI_CONFIG.apiKey}`;
-    
-    try {
-        const res = await fetch(url, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                contents: [{ parts: [{ text: prompt }] }]
-            })
-        });
+    const trials = [
+        { v: 'v1beta', m: 'gemini-1.5-flash' },
+        { v: 'v1',     m: 'gemini-1.5-flash' },
+        { v: 'v1',     m: 'gemini-pro' },
+        { v: 'v1beta', m: 'gemini-pro' },
+        { v: 'v1beta', m: 'gemini-1.5-pro' }
+    ];
 
-        const data = await res.json();
+    let results = [];
 
-        if (res.ok && data.candidates) {
-            return data.candidates[0].content.parts[0].text;
-        } else {
-            // Si falla, mostramos el error exacto de Google para saber qué pasa
-            const msg = data.error?.message || JSON.stringify(data);
-            throw new Error(msg);
+    for (const t of trials) {
+        try {
+            console.log(`[AI-SCAN] Probando ${t.m} en ${t.v}...`);
+            const url = `https://generativelanguage.googleapis.com/${t.v}/models/${t.m}:generateContent?key=${AI_CONFIG.apiKey}`;
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+            });
+            const data = await res.json();
+            
+            if (res.ok) {
+                console.log(`[AI-SCAN] ✅ ÉXITO con ${t.m} (${t.v})`);
+                return data.candidates[0].content.parts[0].text;
+            } else {
+                results.push(`${t.m}/${t.v}: ${data.error?.message || res.status}`);
+            }
+        } catch (e) {
+            results.push(`${t.m}/${t.v}: Error de red`);
         }
-    } catch (e) {
-        throw new Error(`Error de conexión: ${e.message}`);
     }
+
+    throw new Error(`Ningún modelo funcionó:\n${results.join('\n')}`);
 }
 
-// Adaptadores (Iguales)
+// Adaptadores (Sin cambios)
 async function requestLMAIFeedback() {
     const code = document.getElementById('exam-input')?.value || '';
     const btn = document.getElementById('btn-lm-ai');
-    btn.disabled = true; btn.innerHTML = '⏳ Conectando...';
+    btn.disabled = true; btn.innerHTML = '⏳ Escaneando...';
     try {
-        const fb = await callAI_Universal(`Corrige este código HTML/XML DAW: \n${code}`);
+        const fb = await callAI_Universal(`Corrige este HTML: \n${code}`);
         showLMFeedbackModal(fb);
     } catch (err) {
-        showLMFeedbackModal(`### ❌ Error de Google AI\n\n**Mensaje:** ${err.message}\n\n**Solución:** Si el error persiste, asegúrate de haber hecho 'git pull' en tu servidor.`);
+        showLMFeedbackModal(`### 🔍 Resultados del Escáner\n\n${err.message.replace(/\n/g, '<br>')}\n\n**Nota:** Si todos dan error, tu clave no tiene acceso a la API Generativa.`);
     } finally {
         btn.disabled = false; btn.innerHTML = '✨ Pedir corrección IA';
     }
 }
 
 async function requestAIFeedback() {
-    const code = document.getElementById('ej-input')?.value || document.getElementById('exam-code-input')?.value || '';
+    const code = document.getElementById('ej-input')?.value || '';
     const btn = document.getElementById('btn-ai-help');
-    btn.disabled = true; btn.innerHTML = '⏳ Conectando...';
+    btn.disabled = true; btn.innerHTML = '⏳ Escaneando...';
     try {
-        const fb = await callAI_Universal(`Corrige este código Java DAW: \n${code}`);
+        const fb = await callAI_Universal(`Corrige este Java: \n${code}`);
         showAIModalFeedback(fb);
     } catch (err) {
-        showAIModalFeedback(`### ❌ Error de Google AI\n${err.message}`);
+        showAIModalFeedback(`### 🔍 Resultados del Escáner\n${err.message}`);
     } finally {
         btn.disabled = false; btn.innerHTML = '✨ Consultar al Profesor IA';
     }
