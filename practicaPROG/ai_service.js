@@ -6,7 +6,7 @@ const AI_CONFIG = {
     provider: 'gemini',
     apiKey: (localStorage.getItem('prog_ai_key') || '').trim(),
     geminiModel: 'gemini-1.5-flash',
-    geminiEndpoint: 'https://generativelanguage.googleapis.com/v1/models/'
+    geminiEndpoint: 'https://generativelanguage.googleapis.com/v1beta/models/'
 };
 
 async function callAI(prompt) {
