@@ -1,18 +1,20 @@
 /**
- * AI SERVICE — Hardcoded Integration
+ * AI SERVICE — Secured & Robust
  */
 
 const AI_CONFIG = {
-    apiKey: 'AIzaSyDRCGgP95cwGJgquxgkXmPAVuZ2fIQfucI', // Integrada directamente por petición del usuario
+    // Ya no hay clave aquí por seguridad (GitHub detecta claves públicas)
     model: 'gemini-1.5-flash',
     version: 'v1beta'
 };
 
 async function callAI_Universal(prompt) {
-    const url = `https://generativelanguage.googleapis.com/${AI_CONFIG.version}/models/${AI_CONFIG.model}:generateContent?key=${AI_CONFIG.apiKey}`;
+    const key = (localStorage.getItem('prog_ai_key') || localStorage.getItem('lm_ai_key') || '').trim();
     
-    console.log('[AI-SYSTEM] Intentando petición con clave hardcodeada...');
+    if (!key) throw new Error('Por favor, configura tu API Key en los ajustes (icono de engranaje).');
 
+    const url = `https://generativelanguage.googleapis.com/${AI_CONFIG.version}/models/${AI_CONFIG.model}:generateContent?key=${key}`;
+    
     try {
         const res = await fetch(url, {
             method: 'POST',
@@ -25,10 +27,14 @@ async function callAI_Universal(prompt) {
         if (res.ok) {
             return data.candidates[0].content.parts[0].text;
         } else {
-            throw new Error(data.error?.message || 'Error desconocido');
+            // Si el error es 403 o 401, es que la clave ha muerto (GitHub la habrá revocado)
+            if (res.status === 403 || res.status === 401) {
+                throw new Error('Tu clave ha sido bloqueada o revocada por seguridad. Genera una NUEVA en AI Studio.');
+            }
+            throw new Error(data.error?.message || 'Error en Google AI');
         }
     } catch (e) {
-        throw new Error(`Fallo de conexión: ${e.message}`);
+        throw new Error(`Conexión fallida: ${e.message}`);
     }
 }
 
@@ -36,37 +42,31 @@ async function callAI_Universal(prompt) {
 
 async function requestLMAIFeedback() {
     const code = document.getElementById('exam-input')?.value || '';
-    if (!code.trim()) return;
-
     const btn = document.getElementById('btn-lm-ai');
-    const orig = btn.innerHTML;
-    btn.disabled = true; btn.innerHTML = '⏳ Profesor corrigiendo...';
+    btn.disabled = true; btn.innerHTML = '⏳ Profesor IA pensando...';
 
     try {
-        const feedback = await callAI_Universal(`Eres un profesor de Lenguaje de Marcas. Corrige este ejercicio: \n${code}`);
-        showFeedbackModal(feedback);
+        const fb = await callAI_Universal(`Corrige este código HTML/XML DAW: \n${code}`);
+        showFeedbackModal(fb);
     } catch (err) {
-        showFeedbackModal(`### ❌ Error en la API de Google\n\n${err.message}`);
+        showFeedbackModal(`### ⚠️ Problema con la IA\n\n${err.message}\n\n**Acción recomendada:** Si GitHub te mandó un aviso, es probable que Google haya desactivado tu clave. Crea una clave nueva en [Google AI Studio](https://aistudio.google.com/app/apikey) y pégala de nuevo.`);
     } finally {
-        btn.disabled = false; btn.innerHTML = orig;
+        btn.disabled = false; btn.innerHTML = '✨ Pedir corrección IA';
     }
 }
 
 async function requestAIFeedback() {
     const code = document.getElementById('ej-input')?.value || document.getElementById('exam-code-input')?.value || '';
-    if (!code.trim()) return;
-
     const btn = document.getElementById('btn-ai-help');
-    const orig = btn.innerHTML;
-    btn.disabled = true; btn.innerHTML = '⏳ Profesor corrigiendo...';
+    btn.disabled = true; btn.innerHTML = '⏳ Profesor IA pensando...';
 
     try {
-        const feedback = await callAI_Universal(`Eres un profesor de Programación Java. Corrige este ejercicio: \n${code}`);
-        showFeedbackModal(feedback);
+        const fb = await callAI_Universal(`Corrige este código Java DAW: \n${code}`);
+        showFeedbackModal(fb);
     } catch (err) {
-        showFeedbackModal(`### ❌ Error en la API de Google\n\n${err.message}`);
+        showFeedbackModal(`### ⚠️ Problema con la IA\n\n${err.message}`);
     } finally {
-        btn.disabled = false; btn.innerHTML = orig;
+        btn.disabled = false; btn.innerHTML = '✨ Consultar al Profesor IA';
     }
 }
 
@@ -91,5 +91,21 @@ function closeModal() {
 }
 
 function openSettings() {
-    alert("La clave está integrada directamente en el código para máxima estabilidad.");
+    const key = localStorage.getItem('prog_ai_key') || '';
+    const content = document.getElementById('modal-content');
+    content.innerHTML = `
+        <h3>⚙️ Ajustes del Profesor IA</h3>
+        <p style="font-size:0.8rem; margin-bottom:1rem; opacity:0.8">Pega aquí tu clave secreta de Google AI Studio:</p>
+        <input type="password" id="ai-key-input" value="${key}" placeholder="AIza..." style="width:100%;padding:.8rem;margin-bottom:1rem;background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:8px; outline:none">
+        <button class="btn-primary" onclick="saveAISettings()" style="width:100%">Guardar y probar</button>
+    `;
+    document.getElementById('modal-overlay').classList.remove('hidden');
+}
+
+function saveAISettings() {
+    const key = document.getElementById('ai-key-input').value.trim();
+    localStorage.setItem('prog_ai_key', key);
+    localStorage.setItem('lm_ai_key', key);
+    alert('Clave guardada correctamente. Vamos a probar la IA.');
+    location.reload();
 }
