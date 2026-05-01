@@ -1665,6 +1665,10 @@ function finishExam() {
     const calificacion = (puntuacionFinal / total) * 10;
     const passed = calificacion >= 5;
     
+    if (passed) {
+        triggerCunaoEffect();
+    }
+    
     // CONSOLDIDATE SUBJECT ID: Use parent subject_id if it's a syllabus test
     const parentId = APP_STATE.currentExam.subject_id;
     let rankingSubjectId = parentId || APP_STATE.currentExam.id;
@@ -3230,3 +3234,28 @@ document.addEventListener('click', (e) => {
         }
     });
 });
+
+function triggerCunaoEffect() {
+    const overlay = document.createElement('div');
+    overlay.className = 'cunao-overlay';
+    overlay.innerHTML = `
+        <img src="assets/cunao.png" class="cunao-img" alt="Risitas">
+        <div class="cunao-text">¡CUÑAAAAOOOOOOO!</div>
+        <div class="cunao-text" style="font-size:1.5rem;animation-delay:0.2s">QUÉ BUENO ERES</div>
+    `;
+    document.body.appendChild(overlay);
+
+    // Sonido con SpeechSynthesis (Voz de cuñao)
+    if ('speechSynthesis' in window) {
+        const msg = new SpeechSynthesisUtterance("¡Cuñaaaaaooooooo, qué bueno eres!");
+        msg.lang = 'es-ES';
+        msg.pitch = 1.4; // Un poco más agudo para el efecto risitas
+        msg.rate = 0.9;
+        window.speechSynthesis.speak(msg);
+    }
+
+    setTimeout(() => {
+        overlay.style.opacity = '0';
+        setTimeout(() => overlay.remove(), 500);
+    }, 4500);
+}
