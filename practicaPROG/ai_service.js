@@ -8,13 +8,16 @@ async function callAI_Universal(prompt) {
     
     if (!key) throw new Error('Por favor, configura tu API Key en los ajustes (icono de engranaje).');
 
-    // Usamos v1beta que es la más universal para los modelos nuevos
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`;
+    // Usamos la URL limpia y pasamos la clave por cabecera, que a veces sortea bloqueos regionales
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`;
     
     try {
         const res = await fetch(url, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 
+                'Content-Type': 'application/json',
+                'x-goog-api-key': key 
+            },
             body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
         });
 
