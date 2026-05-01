@@ -1,67 +1,71 @@
 /**
- * AI SERVICE — Autodiscovery Mode
- * Este script le pregunta a Google qué modelos tienes permitidos y elige el mejor.
+ * AI SERVICE — Diagnostic Mode
+ * Este servicio detecta fallos de región y versión automáticamente.
  */
 
 const AI_CONFIG = {
     apiKey: (localStorage.getItem('lm_ai_key') || localStorage.getItem('prog_ai_key') || '').trim(),
-    baseUrl: 'https://generativelanguage.googleapis.com/v1beta'
 };
 
-let DETECTED_MODEL = null;
-
-async function getBestModel() {
-    if (DETECTED_MODEL) return DETECTED_MODEL;
-    
-    console.log('[AI-HUB] Buscando modelos disponibles para tu clave...');
-    try {
-        const res = await fetch(`${AI_CONFIG.baseUrl}/models?key=${AI_CONFIG.apiKey}`);
-        const data = await res.json();
-        
-        if (data.models && data.models.length > 0) {
-            // Prioridad: 1.5 Flash -> 1.5 Pro -> 1.0 Pro
-            const flash = data.models.find(m => m.name.includes('gemini-1.5-flash'));
-            const pro15 = data.models.find(m => m.name.includes('gemini-1.5-pro'));
-            const pro10 = data.models.find(m => m.name.includes('gemini-pro') && !m.name.includes('1.5'));
-            
-            const best = flash || pro15 || pro10 || data.models[0];
-            DETECTED_MODEL = best.name; // El nombre ya viene como "models/XXXX"
-            console.log(`[AI-HUB] ✅ Modelo detectado y listo: ${DETECTED_MODEL}`);
-            return DETECTED_MODEL;
-        } else {
-            throw new Error('No se encontraron modelos disponibles en esta clave.');
-        }
-    } catch (e) {
-        console.error('[AI-HUB] Error al listar modelos:', e);
-        throw new Error('No se pudo validar tu clave con Google. Revisa si es correcta.');
-    }
-}
-
 async function callAI_Universal(prompt) {
-    const modelPath = await getBestModel();
-    const url = `${AI_CONFIG.baseUrl}/${modelPath}:generateContent?key=${AI_CONFIG.apiKey}`;
-    
-    const res = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-    });
+    if (!AI_CONFIG.apiKey) throw new Error('Falta la API Key.');
 
-    const data = await res.json();
-    if (res.ok) return data.candidates[0].content.parts[0].text;
-    throw new Error(data.error?.message || 'Error en la generación');
+    // 1. Probamos a listar modelos para ver qué hay disponible
+    let models = [];
+    try {
+        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${AI_CONFIG.apiKey}`);
+        const data = await res.json();
+        models = data.models || [];
+    } catch (e) {
+        throw new Error("No se pudo conectar con Google para listar modelos.");
+    }
+
+    if (models.length === 0) {
+        throw new Error("Tu clave no tiene ningún modelo habilitado. ¿Has aceptado los términos en AI Studio?");
+    }
+
+    // 2. Buscamos el mejor modelo que soporte 'generateContent'
+    const bestModel = models.find(m => m.supportedMethods.includes('generateContent') && m.name.includes('1.5-flash')) 
+                   || models.find(m => m.supportedMethods.includes('generateContent') && m.name.includes('pro'))
+                   || models.find(m => m.supportedMethods.includes('generateContent'));
+
+    if (!bestModel) throw new Error("Ninguno de tus modelos soporta generación de contenido.");
+
+    // 3. Intentamos la llamada a la API con el modelo detectado
+    // Probamos v1beta y si falla v1
+    const versions = ['v1beta', 'v1'];
+    let lastErr = "";
+
+    for (const v of versions) {
+        try {
+            console.log(`[AI-DIAG] Probando ${bestModel.name} en ${v}...`);
+            const url = `https://generativelanguage.googleapis.com/${v}/${bestModel.name}:generateContent?key=${AI_CONFIG.apiKey}`;
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+            });
+            const data = await res.json();
+            if (res.ok) return data.candidates[0].content.parts[0].text;
+            lastErr = data.error?.message || `Error ${res.status}`;
+        } catch (e) {
+            lastErr = e.message;
+        }
+    }
+
+    throw new Error(`Modelo detectado: ${bestModel.name}. Pero falló: ${lastErr}`);
 }
 
-// ── Adaptadores (No cambian) ─────────────────────────────────────
+// ── Adaptadores ──────────────────────────────────────────────────
 async function requestLMAIFeedback() {
     const code = document.getElementById('exam-input')?.value || '';
     const btn = document.getElementById('btn-lm-ai');
-    btn.disabled = true; btn.innerHTML = '⏳ Conectando...';
+    btn.disabled = true; btn.innerHTML = '⏳ Diagnosticando...';
     try {
         const fb = await callAI_Universal(`Corrige este código HTML/XML DAW: \n${code}`);
         showLMFeedbackModal(fb);
     } catch (err) {
-        showLMFeedbackModal(`### ❌ Error\n${err.message}`);
+        showLMFeedbackModal(`### 🔍 Informe de Diagnóstico\n\n**Estado:** No se pudo conectar.\n**Causa probable:** ${err.message}\n\n**Sugerencia:** Si dice 'User location not supported', necesitas usar una VPN o esperar a que Google habilite tu región.`);
     } finally {
         btn.disabled = false; btn.innerHTML = '✨ Pedir corrección IA';
     }
@@ -70,12 +74,12 @@ async function requestLMAIFeedback() {
 async function requestAIFeedback() {
     const code = document.getElementById('ej-input')?.value || document.getElementById('exam-code-input')?.value || '';
     const btn = document.getElementById('btn-ai-help');
-    btn.disabled = true; btn.innerHTML = '⏳ Conectando...';
+    btn.disabled = true; btn.innerHTML = '⏳ Diagnosticando...';
     try {
         const fb = await callAI_Universal(`Corrige este código Java DAW: \n${code}`);
         showAIModalFeedback(fb);
     } catch (err) {
-        showAIModalFeedback(`### ❌ Error\n${err.message}`);
+        showAIModalFeedback(`### 🔍 Informe de Diagnóstico\n${err.message}`);
     } finally {
         btn.disabled = false; btn.innerHTML = '✨ Consultar al Profesor IA';
     }
@@ -104,7 +108,6 @@ function saveAISettings() {
     const key = document.getElementById('ai-key-input').value.trim();
     localStorage.setItem('lm_ai_key', key);
     localStorage.setItem('prog_ai_key', key);
-    DETECTED_MODEL = null; // Reset para forzar nueva detección
     showToast('Guardado', 'success');
     closeModal();
 }
