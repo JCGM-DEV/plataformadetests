@@ -557,6 +557,7 @@ function showExam(editorId) {
           <button class="btn-run" onclick="${isHTML ? 'updateExamPreview()' : 'updateExamXML()'}">▶ Actualizar</button>
           <button class="btn-exam-correct" onclick="correctExam()">✓ Corregir</button>
           <button class="btn-help" id="exam-solution-btn" onclick="showExamSolution()" style="display:none">💡 Ver Solución</button>
+          <button class="btn-ai-lm" id="btn-lm-ai" onclick="requestLMAIFeedback()" style="display:none">✨ Pedir corrección IA</button>
         </div>
         <div id="exam-correction-panel" class="exam-correction-panel hidden"></div>
       </div>
@@ -653,9 +654,11 @@ function correctExam() {
     `<p class="correction-tip">🎉 ¡Ejercicio completado! Puedes ver la solución de referencia para comparar.</p>`}
   `;
 
-  // Show solution button
+  // Show solution + AI buttons
   const sBtn = document.getElementById('exam-solution-btn');
   if (sBtn) sBtn.style.display = 'inline-flex';
+  const aiBtn = document.getElementById('btn-lm-ai');
+  if (aiBtn) aiBtn.style.display = 'inline-flex';
 
   if (allOk) {
     completedSections.add(activeSection);

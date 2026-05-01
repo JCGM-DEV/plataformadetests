@@ -581,3 +581,22 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 }
 .ej-nota strong { font-size: 1.6rem; font-weight: 900; color: var(--accent2); line-height: 1; }
 .nota-sub { font-size: .8rem; color: var(--text2); margin-left: auto; }
+
+/* ── IA BUTTON & SETTINGS ────────────────────────────────────────── */
+.btn-ai-lm {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  color: #fff; border: none; border-radius: var(--radius2);
+  padding: .7rem 1.5rem; font-size: .95rem; font-weight: 700;
+  cursor: pointer; transition: var(--transition); font-family: inherit;
+  box-shadow: 0 2px 12px rgba(124,58,237,.35);
+}
+.btn-ai-lm:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(124,58,237,.55); }
+.btn-ai-lm:disabled { opacity: .6; cursor: wait; }
+
+.settings-btn {
+  background: none; border: 1px solid var(--border); color: var(--text2);
+  border-radius: var(--radius2); padding: .3rem .65rem; font-size: .9rem;
+  cursor: pointer; transition: var(--transition);
+}
+.settings-btn:hover { border-color: var(--accent2); color: var(--accent3); }

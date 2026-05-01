@@ -505,7 +505,7 @@ function renderEjercicio(ej) {
 // Usa comentarios para explicar tu razonamiento"></textarea>
         <div class="ej-actions">
           <button class="btn-exam-verify" onclick="checkEjercicio('${ej.id}')">✔️ Verificar criterios</button>
-          ${isExam ? '' : `<button class="btn-ai-help" onclick="requestAIFeedback('${ej.id}')" id="btn-ai-help">✨ Consultar al Profesor IA</button>`}
+          <button class="btn-ai-help" onclick="requestAIFeedback('${ej.id}')" id="btn-ai-help" ${isExam ? 'style="display:none"' : ''}>✨ Consultar al Profesor IA</button>
           <button class="btn-secondary" onclick="togglePistas('${ej.id}')" id="btn-pistas" ${isExam ? 'style="display:none"' : ''}>
             💡 ${ejercicioState.showPistas ? 'Ocultar pistas' : 'Ver pistas'}
           </button>
@@ -597,12 +597,14 @@ function checkEjercicio(ejId) {
   score.correct += passed;
   document.querySelector('#score-correct span').textContent = score.correct;
 
-  // In exam mode, reveal pistas/solucion buttons after first correction
+  // In exam mode, reveal pistas/solucion/IA buttons after first correction
   if (ejercicioState.isExam) {
     const bPistas = document.getElementById('btn-pistas');
     const bSol = document.getElementById('btn-solucion');
+    const bAI = document.getElementById('btn-ai-help');
     if (bPistas) bPistas.style.display = '';
     if (bSol) bSol.style.display = '';
+    if (bAI) bAI.style.display = 'inline-flex';
   }
 }
 
