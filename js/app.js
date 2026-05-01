@@ -1665,9 +1665,8 @@ function finishExam() {
     const calificacion = (puntuacionFinal / total) * 10;
     const passed = calificacion >= 5;
     
-    if (passed) {
-        triggerCunaoEffect();
-    }
+    // El Risitas siempre aparece, para bien o para mal
+    triggerCunaoEffect(passed);
     
     // CONSOLDIDATE SUBJECT ID: Use parent subject_id if it's a syllabus test
     const parentId = APP_STATE.currentExam.subject_id;
@@ -3235,21 +3234,29 @@ document.addEventListener('click', (e) => {
     });
 });
 
-function triggerCunaoEffect() {
+function triggerCunaoEffect(passed) {
     const overlay = document.createElement('div');
     overlay.className = 'cunao-overlay';
+    
+    const topText = passed ? "¡CUÑAAAAOOOOOOO!" : "¡CUÑAAAAOOOOOOO!";
+    const bottomText = passed ? "QUÉ BUENO ERES" : "QUÉ MALO ERES, ¡ESTUDIA PERRO!";
+    
     overlay.innerHTML = `
         <img src="assets/cunao.png" class="cunao-img" alt="Risitas">
-        <div class="cunao-text">¡CUÑAAAAOOOOOOO!</div>
-        <div class="cunao-text" style="font-size:1.5rem;animation-delay:0.2s">QUÉ BUENO ERES</div>
+        <div class="cunao-text">${topText}</div>
+        <div class="cunao-text" style="font-size:1.5rem;animation-delay:0.2s;color:${passed ? '#4ade80' : '#f87171'}">${bottomText}</div>
     `;
     document.body.appendChild(overlay);
 
     // Sonido con SpeechSynthesis (Voz de cuñao)
     if ('speechSynthesis' in window) {
-        const msg = new SpeechSynthesisUtterance("¡Cuñaaaaaooooooo, qué bueno eres!");
+        const phrase = passed 
+            ? "¡Cuñaaaaaooooooo, qué bueno eres!" 
+            : "¡Cuñaaaaaooooooo, qué malo eres, estudia perro!";
+            
+        const msg = new SpeechSynthesisUtterance(phrase);
         msg.lang = 'es-ES';
-        msg.pitch = 1.4; // Un poco más agudo para el efecto risitas
+        msg.pitch = passed ? 1.4 : 1.1; // Más agudo si apruebas, más grave/serio si suspendes
         msg.rate = 0.9;
         window.speechSynthesis.speak(msg);
     }
