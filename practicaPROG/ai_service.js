@@ -1,24 +1,30 @@
 /**
- * AI SERVICE — PROG Lab
- * Sistema de triple intento para máxima compatibilidad
+ * AI SERVICE — LM & PROG (Universal)
+ * Prueba combinaciones de Modelo + Versión de API hasta conectar.
  */
 
 const AI_CONFIG = {
-    apiKey: (localStorage.getItem('prog_ai_key') || '').trim(),
-    endpoint: 'https://generativelanguage.googleapis.com/v1beta/models/'
+    apiKey: (localStorage.getItem('lm_ai_key') || localStorage.getItem('prog_ai_key') || '').trim(),
+    baseUrl: 'https://generativelanguage.googleapis.com'
 };
 
-const MODELS_TO_TRY = ['gemini-1.5-flash-latest', 'gemini-1.5-pro-latest', 'gemini-pro'];
+// Combinaciones a probar en orden de probabilidad de éxito
+const COMBINATIONS = [
+    { model: 'gemini-1.5-flash', version: 'v1beta' },
+    { model: 'gemini-1.5-flash', version: 'v1' },
+    { model: 'gemini-pro',       version: 'v1' },
+    { model: 'gemini-1.5-pro',   version: 'v1beta' }
+];
 
-async function callAI(prompt) {
+async function callAI_Universal(prompt) {
     if (!AI_CONFIG.apiKey) throw new Error('API Key no configurada.');
 
-    let lastError = null;
+    let lastError = "";
 
-    for (const modelName of MODELS_TO_TRY) {
+    for (const combo of COMBINATIONS) {
         try {
-            console.log(`[PROG-AI] Intentando con modelo: ${modelName}...`);
-            const url = `${AI_CONFIG.endpoint}${modelName}:generateContent?key=${AI_CONFIG.apiKey}`;
+            console.log(`[AI-HUB] Probando ${combo.model} en ${combo.version}...`);
+            const url = `${AI_CONFIG.baseUrl}/${combo.version}/models/${combo.model}:generateContent?key=${AI_CONFIG.apiKey}`;
             
             const res = await fetch(url, {
                 method: 'POST',
@@ -26,42 +32,67 @@ async function callAI(prompt) {
                 body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
             });
 
+            const data = await res.json();
+
             if (res.ok) {
-                const data = await res.json();
                 if (data.candidates && data.candidates[0].content) {
+                    console.log(`[AI-HUB] ✅ Conectado con ${combo.model} (${combo.version})`);
                     return data.candidates[0].content.parts[0].text;
                 }
             } else {
-                const errJson = await res.json();
-                lastError = errJson.error?.message || `HTTP ${res.status}`;
+                lastError = data.error?.message || `Error ${res.status}`;
+                console.warn(`[AI-HUB] ❌ ${combo.model}/${combo.version} falló: ${lastError}`);
             }
         } catch (e) {
             lastError = e.message;
+            console.warn(`[AI-HUB] 🛑 Error de red: ${lastError}`);
         }
     }
-    throw new Error(lastError);
+
+    throw new Error(`Ninguna de las ${COMBINATIONS.length} combinaciones funcionó. Último error: ${lastError}`);
 }
 
-async function requestAIFeedback(ejId, isTutor = false) {
-    // ... lógica de obtención de ejercicio simplificada para el retry ...
-    let code = document.getElementById('ej-input')?.value || document.getElementById('exam-code-input')?.value || '';
+// ── Adaptadores para LM y PROG ───────────────────────────────────
+
+async function requestLMAIFeedback() {
+    const code = document.getElementById('exam-input')?.value || '';
+    if (!code.trim()) return showToast('Escribe código', 'info');
+
+    const btn = document.getElementById('btn-lm-ai');
+    btn.disabled = true; btn.innerHTML = '⏳ Buscando canal...';
+
+    try {
+        const fb = await callAI_Universal(`Corrige este código HTML/XML para un examen DAW: \n${code}`);
+        showLMFeedbackModal(fb);
+    } catch (err) {
+        showLMFeedbackModal(`### ❌ Error persistente\nNo se pudo conectar con ningún modelo de Gemini.\n\n**Detalle:** ${err.message}`);
+    } finally {
+        btn.disabled = false; btn.innerHTML = '✨ Pedir corrección IA';
+    }
+}
+
+async function requestAIFeedback() {
+    const code = document.getElementById('ej-input')?.value || document.getElementById('exam-code-input')?.value || '';
     if (!code.trim()) return showToast('Escribe código', 'info');
 
     const btn = document.getElementById('btn-ai-help');
-    const orig = btn.innerHTML;
-    btn.disabled = true;
-    btn.innerHTML = '⏳ Consultando IA...';
+    btn.disabled = true; btn.innerHTML = '⏳ Conectando...';
 
     try {
-        const feedback = await callAI(`Eres un profesor de Java. Corrige este código DAW: \n${code}`);
-        showAIModalFeedback(feedback);
+        const fb = await callAI_Universal(`Corrige este código Java para un examen DAW: \n${code}`);
+        showAIModalFeedback(fb);
     } catch (err) {
-        showToast(`Error: ${err.message}`, 'error');
-        showAIModalFeedback(`### ❌ Error de conexión\nNo se pudo contactar con Gemini tras probar 3 modelos.\nError: ${err.message}`);
+        showAIModalFeedback(`### ❌ Error de API\n${err.message}`);
     } finally {
-        btn.disabled = false;
-        btn.innerHTML = orig;
+        btn.disabled = false; btn.innerHTML = '✨ Consultar al Profesor IA';
     }
+}
+
+// ── UI Helpers (Iguales que antes) ───────────────────────────────
+function showLMFeedbackModal(markdown) {
+    const content = document.getElementById('modal-content');
+    content.innerHTML = `<div style="padding:1rem"><h3>🎓 Revisión IA</h3><div style="line-height:1.6;font-size:0.9rem">${markdown.replace(/\n/g, '<br>')}</div><button class="btn-secondary" onclick="closeModal()" style="margin-top:1rem">Cerrar</button></div>`;
+    document.getElementById('modal-overlay').classList.remove('hidden');
 }
 
 function showAIModalFeedback(markdown) {
@@ -70,15 +101,17 @@ function showAIModalFeedback(markdown) {
     document.getElementById('modal-overlay').classList.remove('hidden');
 }
 
+function openLMSettings() { openSettings(); }
 function openSettings() {
-    const key = localStorage.getItem('prog_ai_key') || '';
-    const modalContent = document.getElementById('modal-content');
-    modalContent.innerHTML = `<h3>⚙️ Ajustes IA</h3><input type="password" id="settings-api-key" value="${key}" placeholder="AIza..." style="width:100%;padding:.7rem;margin:1rem 0;background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:8px"><button class="btn-primary" onclick="saveSettings()">Guardar</button>`;
+    const key = localStorage.getItem('lm_ai_key') || localStorage.getItem('prog_ai_key') || '';
+    const content = document.getElementById('modal-content');
+    content.innerHTML = `<h3>⚙️ Ajustes IA</h3><input type="password" id="ai-key-input" value="${key}" placeholder="AIza..." style="width:100%;padding:.7rem;margin:1rem 0;background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:8px"><button class="btn-primary" onclick="saveAISettings()">Guardar</button>`;
     document.getElementById('modal-overlay').classList.remove('hidden');
 }
 
-function saveSettings() {
-    const key = document.getElementById('settings-api-key').value.trim();
+function saveAISettings() {
+    const key = document.getElementById('ai-key-input').value.trim();
+    localStorage.setItem('lm_ai_key', key);
     localStorage.setItem('prog_ai_key', key);
     AI_CONFIG.apiKey = key;
     showToast('Guardado', 'success');
