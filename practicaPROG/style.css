@@ -536,6 +536,29 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 @media(max-width:900px){ .exam-workspace{ grid-template-columns:1fr; } }
 .exam-editor-pane, .exam-preview-pane { display: flex; flex-direction: column; gap: .75rem; }
 
+/* REPARACIÓN DEL EDITOR (TEXTAREA) */
+textarea, #exam-code-input, #exam-input, #ej-input {
+    width: 100%;
+    min-height: 250px;
+    background: var(--bg3);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius2);
+    color: var(--text);
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 0.9rem;
+    padding: 1.25rem;
+    line-height: 1.6;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea:focus, #exam-code-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 15px rgba(132, 204, 22, 0.1);
+}
+
+
 /* Actions */
 .exam-actions { display: flex; gap: .75rem; flex-wrap: wrap; align-items: center; }
 
