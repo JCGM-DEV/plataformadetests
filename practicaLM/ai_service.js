@@ -1,6 +1,5 @@
 /**
- * AI SERVICE — Diagnostic Mode
- * Este servicio detecta fallos de región y versión automáticamente.
+ * AI SERVICE — Ultra-Compatible
  */
 
 const AI_CONFIG = {
@@ -8,64 +7,44 @@ const AI_CONFIG = {
 };
 
 async function callAI_Universal(prompt) {
-    if (!AI_CONFIG.apiKey) throw new Error('Falta la API Key.');
+    if (!AI_CONFIG.apiKey) throw new Error('Copia tu API Key en los ajustes (icono de engranaje).');
 
-    // 1. Probamos a listar modelos para ver qué hay disponible
-    let models = [];
+    // Intentamos la combinación más estándar que funciona en el Playground de Google
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${AI_CONFIG.apiKey}`;
+    
     try {
-        const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${AI_CONFIG.apiKey}`);
+        const res = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                contents: [{ parts: [{ text: prompt }] }]
+            })
+        });
+
         const data = await res.json();
-        models = data.models || [];
-    } catch (e) {
-        throw new Error("No se pudo conectar con Google para listar modelos.");
-    }
 
-    if (models.length === 0) {
-        throw new Error("Tu clave no tiene ningún modelo habilitado. ¿Has aceptado los términos en AI Studio?");
-    }
-
-    // 2. Buscamos el mejor modelo que soporte 'generateContent'
-    const bestModel = models.find(m => m.supportedMethods.includes('generateContent') && m.name.includes('1.5-flash')) 
-                   || models.find(m => m.supportedMethods.includes('generateContent') && m.name.includes('pro'))
-                   || models.find(m => m.supportedMethods.includes('generateContent'));
-
-    if (!bestModel) throw new Error("Ninguno de tus modelos soporta generación de contenido.");
-
-    // 3. Intentamos la llamada a la API con el modelo detectado
-    // Probamos v1beta y si falla v1
-    const versions = ['v1beta', 'v1'];
-    let lastErr = "";
-
-    for (const v of versions) {
-        try {
-            console.log(`[AI-DIAG] Probando ${bestModel.name} en ${v}...`);
-            const url = `https://generativelanguage.googleapis.com/${v}/${bestModel.name}:generateContent?key=${AI_CONFIG.apiKey}`;
-            const res = await fetch(url, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-            });
-            const data = await res.json();
-            if (res.ok) return data.candidates[0].content.parts[0].text;
-            lastErr = data.error?.message || `Error ${res.status}`;
-        } catch (e) {
-            lastErr = e.message;
+        if (res.ok && data.candidates) {
+            return data.candidates[0].content.parts[0].text;
+        } else {
+            // Si falla, mostramos el error exacto de Google para saber qué pasa
+            const msg = data.error?.message || JSON.stringify(data);
+            throw new Error(msg);
         }
+    } catch (e) {
+        throw new Error(`Error de conexión: ${e.message}`);
     }
-
-    throw new Error(`Modelo detectado: ${bestModel.name}. Pero falló: ${lastErr}`);
 }
 
-// ── Adaptadores ──────────────────────────────────────────────────
+// Adaptadores (Iguales)
 async function requestLMAIFeedback() {
     const code = document.getElementById('exam-input')?.value || '';
     const btn = document.getElementById('btn-lm-ai');
-    btn.disabled = true; btn.innerHTML = '⏳ Diagnosticando...';
+    btn.disabled = true; btn.innerHTML = '⏳ Conectando...';
     try {
         const fb = await callAI_Universal(`Corrige este código HTML/XML DAW: \n${code}`);
         showLMFeedbackModal(fb);
     } catch (err) {
-        showLMFeedbackModal(`### 🔍 Informe de Diagnóstico\n\n**Estado:** No se pudo conectar.\n**Causa probable:** ${err.message}\n\n**Sugerencia:** Si dice 'User location not supported', necesitas usar una VPN o esperar a que Google habilite tu región.`);
+        showLMFeedbackModal(`### ❌ Error de Google AI\n\n**Mensaje:** ${err.message}\n\n**Solución:** Si el error persiste, asegúrate de haber hecho 'git pull' en tu servidor.`);
     } finally {
         btn.disabled = false; btn.innerHTML = '✨ Pedir corrección IA';
     }
@@ -74,12 +53,12 @@ async function requestLMAIFeedback() {
 async function requestAIFeedback() {
     const code = document.getElementById('ej-input')?.value || document.getElementById('exam-code-input')?.value || '';
     const btn = document.getElementById('btn-ai-help');
-    btn.disabled = true; btn.innerHTML = '⏳ Diagnosticando...';
+    btn.disabled = true; btn.innerHTML = '⏳ Conectando...';
     try {
         const fb = await callAI_Universal(`Corrige este código Java DAW: \n${code}`);
         showAIModalFeedback(fb);
     } catch (err) {
-        showAIModalFeedback(`### 🔍 Informe de Diagnóstico\n${err.message}`);
+        showAIModalFeedback(`### ❌ Error de Google AI\n${err.message}`);
     } finally {
         btn.disabled = false; btn.innerHTML = '✨ Consultar al Profesor IA';
     }
