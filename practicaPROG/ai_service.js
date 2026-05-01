@@ -5,7 +5,7 @@
 const AI_CONFIG = {
     provider: 'gemini',
     apiKey: (localStorage.getItem('prog_ai_key') || '').trim(),
-    geminiModel: 'gemini-1.5-flash',
+    geminiModel: 'gemini-1.5-flash-latest',
     geminiEndpoint: 'https://generativelanguage.googleapis.com/v1beta/models/'
 };
 
