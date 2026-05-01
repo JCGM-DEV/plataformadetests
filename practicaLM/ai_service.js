@@ -1,19 +1,15 @@
 /**
- * AI SERVICE — Secured & Robust
+ * AI SERVICE — Flexible Model Selector
  */
-
-const AI_CONFIG = {
-    // Ya no hay clave aquí por seguridad (GitHub detecta claves públicas)
-    model: 'gemini-1.5-flash',
-    version: 'v1beta'
-};
 
 async function callAI_Universal(prompt) {
     const key = (localStorage.getItem('prog_ai_key') || localStorage.getItem('lm_ai_key') || '').trim();
+    const model = localStorage.getItem('ai_model') || 'gemini-1.5-flash';
     
     if (!key) throw new Error('Por favor, configura tu API Key en los ajustes (icono de engranaje).');
 
-    const url = `https://generativelanguage.googleapis.com/${AI_CONFIG.version}/models/${AI_CONFIG.model}:generateContent?key=${key}`;
+    // Usamos v1beta que es la más universal para los modelos nuevos
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`;
     
     try {
         const res = await fetch(url, {
@@ -27,11 +23,10 @@ async function callAI_Universal(prompt) {
         if (res.ok) {
             return data.candidates[0].content.parts[0].text;
         } else {
-            // Si el error es 403 o 401, es que la clave ha muerto (GitHub la habrá revocado)
             if (res.status === 403 || res.status === 401) {
-                throw new Error('Tu clave ha sido bloqueada o revocada por seguridad. Genera una NUEVA en AI Studio.');
+                throw new Error('Tu clave no es válida o no tiene permisos. Verifica que la has copiado bien.');
             }
-            throw new Error(data.error?.message || 'Error en Google AI');
+            throw new Error(`Google rechazó el modelo "${model}": ${data.error?.message || 'Error desconocido'}`);
         }
     } catch (e) {
         throw new Error(`Conexión fallida: ${e.message}`);
@@ -42,14 +37,14 @@ async function callAI_Universal(prompt) {
 
 async function requestLMAIFeedback() {
     const code = document.getElementById('exam-input')?.value || '';
+    if (!code.trim()) return;
     const btn = document.getElementById('btn-lm-ai');
-    btn.disabled = true; btn.innerHTML = '⏳ Profesor IA pensando...';
-
+    btn.disabled = true; btn.innerHTML = '⏳ Probando IA...';
     try {
         const fb = await callAI_Universal(`Corrige este código HTML/XML DAW: \n${code}`);
         showFeedbackModal(fb);
     } catch (err) {
-        showFeedbackModal(`### ⚠️ Problema con la IA\n\n${err.message}\n\n**Acción recomendada:** Si GitHub te mandó un aviso, es probable que Google haya desactivado tu clave. Crea una clave nueva en [Google AI Studio](https://aistudio.google.com/app/apikey) y pégala de nuevo.`);
+        showFeedbackModal(`### ⚠️ Error con el Modelo\n\n${err.message}\n\n**Prueba esto:** Ve al engranaje ⚙️ y selecciona otro modelo de la lista.`);
     } finally {
         btn.disabled = false; btn.innerHTML = '✨ Pedir corrección IA';
     }
@@ -57,14 +52,14 @@ async function requestLMAIFeedback() {
 
 async function requestAIFeedback() {
     const code = document.getElementById('ej-input')?.value || document.getElementById('exam-code-input')?.value || '';
+    if (!code.trim()) return;
     const btn = document.getElementById('btn-ai-help');
-    btn.disabled = true; btn.innerHTML = '⏳ Profesor IA pensando...';
-
+    btn.disabled = true; btn.innerHTML = '⏳ Probando IA...';
     try {
         const fb = await callAI_Universal(`Corrige este código Java DAW: \n${code}`);
         showFeedbackModal(fb);
     } catch (err) {
-        showFeedbackModal(`### ⚠️ Problema con la IA\n\n${err.message}`);
+        showFeedbackModal(`### ⚠️ Error con el Modelo\n\n${err.message}\n\n**Prueba esto:** Ve al engranaje ⚙️ y selecciona otro modelo de la lista.`);
     } finally {
         btn.disabled = false; btn.innerHTML = '✨ Consultar al Profesor IA';
     }
@@ -91,25 +86,49 @@ function closeModal() {
 }
 
 function openSettings() {
-    const key = localStorage.getItem('prog_ai_key') || '';
+    const key = localStorage.getItem('prog_ai_key') || localStorage.getItem('lm_ai_key') || '';
+    const currentModel = localStorage.getItem('ai_model') || 'gemini-1.5-flash';
+    
+    const models = [
+        'gemini-1.5-flash',
+        'gemini-1.5-flash-latest',
+        'gemini-1.5-flash-001',
+        'gemini-1.5-flash-002',
+        'gemini-1.5-pro',
+        'gemini-1.5-pro-latest',
+        'gemini-pro',
+        'gemini-1.0-pro'
+    ];
+
+    const options = models.map(m => `<option value="${m}" ${m === currentModel ? 'selected' : ''}>${m}</option>`).join('');
+
     const content = document.getElementById('modal-content');
     content.innerHTML = `
         <h3>⚙️ Ajustes del Profesor IA</h3>
-        <p style="font-size:0.8rem; margin-bottom:1rem; opacity:0.8">Pega aquí tu clave secreta de Google AI Studio:</p>
+        
+        <p style="font-size:0.8rem; margin-bottom:0.5rem; opacity:0.8; margin-top:1rem">Tu clave API de Google:</p>
         <input type="password" id="ai-key-input" value="${key}" placeholder="AIza..." style="width:100%;padding:.8rem;margin-bottom:1rem;background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:8px; outline:none">
-        <button class="btn-primary" onclick="saveAISettings()" style="width:100%">Guardar y probar</button>
+        
+        <p style="font-size:0.8rem; margin-bottom:0.5rem; opacity:0.8">Selecciona el Modelo (Prueba varios si falla):</p>
+        <select id="ai-model-select" style="width:100%;padding:.8rem;margin-bottom:1.5rem;background:var(--bg3);color:var(--text);border:1px solid var(--border);border-radius:8px; outline:none">
+            ${options}
+        </select>
+
+        <button class="btn-primary" onclick="saveAISettings()" style="width:100%">Guardar Ajustes</button>
     `;
     document.getElementById('modal-overlay').classList.remove('hidden');
 }
 
 function saveAISettings() {
     const key = document.getElementById('ai-key-input').value.trim();
+    const model = document.getElementById('ai-model-select').value;
+    
     localStorage.setItem('prog_ai_key', key);
     localStorage.setItem('lm_ai_key', key);
-    alert('Clave guardada correctamente. Vamos a probar la IA.');
-    location.reload();
+    localStorage.setItem('ai_model', model);
+    
+    alert(`Guardado: Usaremos ${model}.`);
+    closeModal();
 }
 
-function openLMSettings() {
-    openSettings();
-}
+function openLMSettings() { openSettings(); }
