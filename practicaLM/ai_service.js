@@ -1,71 +1,58 @@
 /**
- * AI SERVICE — LM & PROG (Universal)
- * Prueba combinaciones de Modelo + Versión de API hasta conectar.
+ * AI SERVICE — LM & PROG (Final Fix)
  */
 
 const AI_CONFIG = {
     apiKey: (localStorage.getItem('lm_ai_key') || localStorage.getItem('prog_ai_key') || '').trim(),
-    baseUrl: 'https://generativelanguage.googleapis.com'
+    endpoint: 'https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent'
 };
-
-// Combinaciones a probar en orden de probabilidad de éxito
-const COMBINATIONS = [
-    { model: 'gemini-1.5-flash', version: 'v1beta' },
-    { model: 'gemini-1.5-flash', version: 'v1' },
-    { model: 'gemini-pro',       version: 'v1' },
-    { model: 'gemini-1.5-pro',   version: 'v1beta' }
-];
 
 async function callAI_Universal(prompt) {
     if (!AI_CONFIG.apiKey) throw new Error('API Key no configurada.');
 
-    let lastError = "";
+    const url = `${AI_CONFIG.endpoint}?key=${AI_CONFIG.apiKey}`;
+    
+    console.log('[AI-HUB] Intentando conexión directa...');
 
-    for (const combo of COMBINATIONS) {
-        try {
-            console.log(`[AI-HUB] Probando ${combo.model} en ${combo.version}...`);
-            const url = `${AI_CONFIG.baseUrl}/${combo.version}/models/${combo.model}:generateContent?key=${AI_CONFIG.apiKey}`;
-            
-            const res = await fetch(url, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-            });
+    const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            contents: [{ parts: [{ text: prompt }] }]
+        })
+    });
 
-            const data = await res.json();
+    const data = await res.json();
 
-            if (res.ok) {
-                if (data.candidates && data.candidates[0].content) {
-                    console.log(`[AI-HUB] ✅ Conectado con ${combo.model} (${combo.version})`);
-                    return data.candidates[0].content.parts[0].text;
-                }
-            } else {
-                lastError = data.error?.message || `Error ${res.status}`;
-                console.warn(`[AI-HUB] ❌ ${combo.model}/${combo.version} falló: ${lastError}`);
-            }
-        } catch (e) {
-            lastError = e.message;
-            console.warn(`[AI-HUB] 🛑 Error de red: ${lastError}`);
-        }
+    if (res.ok) {
+        return data.candidates[0].content.parts[0].text;
+    } else {
+        // Si v1 falla, intentamos v1beta como último recurso
+        console.warn('[AI-HUB] v1 falló, intentando v1beta...');
+        const urlBeta = url.replace('/v1/', '/v1beta/');
+        const resBeta = await fetch(urlBeta, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+        });
+        const dataBeta = await resBeta.json();
+        if (resBeta.ok) return dataBeta.candidates[0].content.parts[0].text;
+        
+        throw new Error(dataBeta.error?.message || 'Error desconocido');
     }
-
-    throw new Error(`Ninguna de las ${COMBINATIONS.length} combinaciones funcionó. Último error: ${lastError}`);
 }
 
-// ── Adaptadores para LM y PROG ───────────────────────────────────
+// ── Adaptadores ──────────────────────────────────────────────────
 
 async function requestLMAIFeedback() {
     const code = document.getElementById('exam-input')?.value || '';
-    if (!code.trim()) return showToast('Escribe código', 'info');
-
     const btn = document.getElementById('btn-lm-ai');
-    btn.disabled = true; btn.innerHTML = '⏳ Buscando canal...';
-
+    btn.disabled = true; btn.innerHTML = '⏳ Corrigiendo...';
     try {
-        const fb = await callAI_Universal(`Corrige este código HTML/XML para un examen DAW: \n${code}`);
+        const fb = await callAI_Universal(`Corrige este código HTML/XML DAW: \n${code}`);
         showLMFeedbackModal(fb);
     } catch (err) {
-        showLMFeedbackModal(`### ❌ Error persistente\nNo se pudo conectar con ningún modelo de Gemini.\n\n**Detalle:** ${err.message}`);
+        showLMFeedbackModal(`### ❌ Error\n${err.message}`);
     } finally {
         btn.disabled = false; btn.innerHTML = '✨ Pedir corrección IA';
     }
@@ -73,22 +60,18 @@ async function requestLMAIFeedback() {
 
 async function requestAIFeedback() {
     const code = document.getElementById('ej-input')?.value || document.getElementById('exam-code-input')?.value || '';
-    if (!code.trim()) return showToast('Escribe código', 'info');
-
     const btn = document.getElementById('btn-ai-help');
-    btn.disabled = true; btn.innerHTML = '⏳ Conectando...';
-
+    btn.disabled = true; btn.innerHTML = '⏳ Corrigiendo...';
     try {
-        const fb = await callAI_Universal(`Corrige este código Java para un examen DAW: \n${code}`);
+        const fb = await callAI_Universal(`Corrige este código Java DAW: \n${code}`);
         showAIModalFeedback(fb);
     } catch (err) {
-        showAIModalFeedback(`### ❌ Error de API\n${err.message}`);
+        showAIModalFeedback(`### ❌ Error\n${err.message}`);
     } finally {
         btn.disabled = false; btn.innerHTML = '✨ Consultar al Profesor IA';
     }
 }
 
-// ── UI Helpers (Iguales que antes) ───────────────────────────────
 function showLMFeedbackModal(markdown) {
     const content = document.getElementById('modal-content');
     content.innerHTML = `<div style="padding:1rem"><h3>🎓 Revisión IA</h3><div style="line-height:1.6;font-size:0.9rem">${markdown.replace(/\n/g, '<br>')}</div><button class="btn-secondary" onclick="closeModal()" style="margin-top:1rem">Cerrar</button></div>`;
@@ -113,7 +96,6 @@ function saveAISettings() {
     const key = document.getElementById('ai-key-input').value.trim();
     localStorage.setItem('lm_ai_key', key);
     localStorage.setItem('prog_ai_key', key);
-    AI_CONFIG.apiKey = key;
     showToast('Guardado', 'success');
     closeModal();
 }
