@@ -1,53 +1,62 @@
 /**
- * AI SERVICE — LM & PROG (Final Fix)
+ * AI SERVICE — Autodiscovery Mode
+ * Este script le pregunta a Google qué modelos tienes permitidos y elige el mejor.
  */
 
 const AI_CONFIG = {
     apiKey: (localStorage.getItem('lm_ai_key') || localStorage.getItem('prog_ai_key') || '').trim(),
-    endpoint: 'https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent'
+    baseUrl: 'https://generativelanguage.googleapis.com/v1beta'
 };
 
-async function callAI_Universal(prompt) {
-    if (!AI_CONFIG.apiKey) throw new Error('API Key no configurada.');
+let DETECTED_MODEL = null;
 
-    const url = `${AI_CONFIG.endpoint}?key=${AI_CONFIG.apiKey}`;
+async function getBestModel() {
+    if (DETECTED_MODEL) return DETECTED_MODEL;
     
-    console.log('[AI-HUB] Intentando conexión directa...');
-
-    const res = await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            contents: [{ parts: [{ text: prompt }] }]
-        })
-    });
-
-    const data = await res.json();
-
-    if (res.ok) {
-        return data.candidates[0].content.parts[0].text;
-    } else {
-        // Si v1 falla, intentamos v1beta como último recurso
-        console.warn('[AI-HUB] v1 falló, intentando v1beta...');
-        const urlBeta = url.replace('/v1/', '/v1beta/');
-        const resBeta = await fetch(urlBeta, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-        });
-        const dataBeta = await resBeta.json();
-        if (resBeta.ok) return dataBeta.candidates[0].content.parts[0].text;
+    console.log('[AI-HUB] Buscando modelos disponibles para tu clave...');
+    try {
+        const res = await fetch(`${AI_CONFIG.baseUrl}/models?key=${AI_CONFIG.apiKey}`);
+        const data = await res.json();
         
-        throw new Error(dataBeta.error?.message || 'Error desconocido');
+        if (data.models && data.models.length > 0) {
+            // Prioridad: 1.5 Flash -> 1.5 Pro -> 1.0 Pro
+            const flash = data.models.find(m => m.name.includes('gemini-1.5-flash'));
+            const pro15 = data.models.find(m => m.name.includes('gemini-1.5-pro'));
+            const pro10 = data.models.find(m => m.name.includes('gemini-pro') && !m.name.includes('1.5'));
+            
+            const best = flash || pro15 || pro10 || data.models[0];
+            DETECTED_MODEL = best.name; // El nombre ya viene como "models/XXXX"
+            console.log(`[AI-HUB] ✅ Modelo detectado y listo: ${DETECTED_MODEL}`);
+            return DETECTED_MODEL;
+        } else {
+            throw new Error('No se encontraron modelos disponibles en esta clave.');
+        }
+    } catch (e) {
+        console.error('[AI-HUB] Error al listar modelos:', e);
+        throw new Error('No se pudo validar tu clave con Google. Revisa si es correcta.');
     }
 }
 
-// ── Adaptadores ──────────────────────────────────────────────────
+async function callAI_Universal(prompt) {
+    const modelPath = await getBestModel();
+    const url = `${AI_CONFIG.baseUrl}/${modelPath}:generateContent?key=${AI_CONFIG.apiKey}`;
+    
+    const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+    });
 
+    const data = await res.json();
+    if (res.ok) return data.candidates[0].content.parts[0].text;
+    throw new Error(data.error?.message || 'Error en la generación');
+}
+
+// ── Adaptadores (No cambian) ─────────────────────────────────────
 async function requestLMAIFeedback() {
     const code = document.getElementById('exam-input')?.value || '';
     const btn = document.getElementById('btn-lm-ai');
-    btn.disabled = true; btn.innerHTML = '⏳ Corrigiendo...';
+    btn.disabled = true; btn.innerHTML = '⏳ Conectando...';
     try {
         const fb = await callAI_Universal(`Corrige este código HTML/XML DAW: \n${code}`);
         showLMFeedbackModal(fb);
@@ -61,7 +70,7 @@ async function requestLMAIFeedback() {
 async function requestAIFeedback() {
     const code = document.getElementById('ej-input')?.value || document.getElementById('exam-code-input')?.value || '';
     const btn = document.getElementById('btn-ai-help');
-    btn.disabled = true; btn.innerHTML = '⏳ Corrigiendo...';
+    btn.disabled = true; btn.innerHTML = '⏳ Conectando...';
     try {
         const fb = await callAI_Universal(`Corrige este código Java DAW: \n${code}`);
         showAIModalFeedback(fb);
@@ -84,7 +93,6 @@ function showAIModalFeedback(markdown) {
     document.getElementById('modal-overlay').classList.remove('hidden');
 }
 
-function openLMSettings() { openSettings(); }
 function openSettings() {
     const key = localStorage.getItem('lm_ai_key') || localStorage.getItem('prog_ai_key') || '';
     const content = document.getElementById('modal-content');
@@ -96,6 +104,7 @@ function saveAISettings() {
     const key = document.getElementById('ai-key-input').value.trim();
     localStorage.setItem('lm_ai_key', key);
     localStorage.setItem('prog_ai_key', key);
+    DETECTED_MODEL = null; // Reset para forzar nueva detección
     showToast('Guardado', 'success');
     closeModal();
 }
