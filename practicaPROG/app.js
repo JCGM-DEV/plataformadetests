@@ -570,10 +570,19 @@ function toggleSolucion(ejId) {
   if (btn) btn.textContent = ejercicioState.showSolucion ? '👁 Ocultar solución' : '👁 Ver solución';
 }
 
-function checkEjercicio(ejId) {
+async function checkEjercicio(ejId) {
+  const btn = document.querySelector('.btn-exam-verify');
+  if (btn) { btn.disabled = true; btn.innerText = '⏳ Revisando...'; }
+
   const ej = EJERCICIOS.find(e => e.id === ejId);
   const code = document.getElementById('ej-input')?.value || '';
-  if (!code.trim()) { showToast('Escribe tu solución primero', 'info'); return; }
+  if (!code.trim()) { 
+    if (btn) { btn.disabled = false; btn.innerText = '✔️ Verificar'; }
+    showToast('Escribe tu solución primero', 'info'); 
+    return; 
+  }
+  
+  const enunciado = ej.enunciado || ej.titulo;
 
   const codeLower = code.toLowerCase();
   let passed = 0;
@@ -621,6 +630,21 @@ function checkEjercicio(ejId) {
     if (bPistas) bPistas.style.display = '';
     if (bSol) bSol.style.display = '';
     if (bAI) bAI.style.display = 'inline-flex';
+  }
+
+  // LLAMADA AUTOMÁTICA A IA (CORRECCIÓN OFICIAL)
+  try {
+    const aiResult = await requestAIFeedback(enunciado);
+    if (aiResult && aiResult.nota) {
+        const finalNota = parseFloat(aiResult.nota);
+        if (typeof triggerCunaoEffect === 'function') {
+            triggerCunaoEffect(finalNota >= 5);
+        }
+    }
+  } catch(aiErr) {
+    console.error("AI Correction failed", aiErr);
+  } finally {
+    if (btn) { btn.disabled = false; btn.innerText = '✔️ Verificar'; }
   }
 }
 

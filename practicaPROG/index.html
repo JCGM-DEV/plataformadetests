@@ -102,16 +102,12 @@
   </div>
 
   <div id="toast" class="toast hidden"></div>
-  <div id="modal-overlay" class="modal-overlay hidden" onclick="closeModal()">
-    <div class="modal" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeModal()">✕</button>
-      <div id="modal-content"></div>
-    </div>
-  </div>
-
   <!-- MODAL PARA FEEDBACK E IA -->
   <div id="modal-overlay" class="modal-overlay hidden" onclick="if(event.target===this) closeModal()">
-    <div class="modal-content" id="modal-content"></div>
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modal-content" class="modal-content"></div>
+    </div>
   </div>
 
   <script src="data.js"></script>

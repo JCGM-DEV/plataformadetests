@@ -50,18 +50,74 @@ async function requestLMAIFeedback() {
     }
 }
 
-async function requestAIFeedback() {
+async function requestAIFeedback(customEnunciado = null) {
     const code = document.getElementById('ej-input')?.value || document.getElementById('exam-code-input')?.value || '';
     if (!code.trim()) return;
     const btn = document.getElementById('btn-ai-help');
-    btn.disabled = true; btn.innerHTML = '⏳ Revisando...';
+    const originalText = btn ? btn.innerHTML : null;
+    if (btn) { btn.disabled = true; btn.innerHTML = '⏳ Compilando con IA...'; }
+    
+    const enunciado = customEnunciado || "Implementa la lógica Java solicitada.";
+
+    const strictPrompt = `Actúa como una PROFESORA DE PROGRAMACIÓN (JAVA) extremadamente exigente.
+Tu misión es evaluar el código Java de un alumno basándote en el enunciado.
+
+ENUNCIADO DEL EJERCICIO:
+"""
+${enunciado}
+"""
+
+CÓDIGO DEL ALUMNO:
+"""
+${code}
+"""
+
+CRITERIOS DE EVALUACIÓN:
+1. LÓGICA: ¿Resuelve el problema planteado en el enunciado?
+2. SINTAXIS: ¿Es código Java válido? (Falta de ; llaves sin cerrar, tipos mal declarados).
+3. NOMENCLATURA: ¿Usa camelCase y nombres de variables descriptivos?
+4. RIGOR: Si el enunciado pide algo específico (ej: usar un bucle while) y usa otro, penaliza.
+
+FORMATO DE RESPUESTA OBLIGATORIO:
+[NOTA]: Nota del 0 al 10.
+[ERRORES]: Lista de fallos técnicos o lógicos.
+[COMENTARIO]: Feedback sobre calidad de código y eficiencia.`;
+
     try {
-        const fb = await callAI_Universal(`Evalúa este código Java: \n${code}`);
-        showFeedbackModal(fb);
+        const fb = await callAI_Universal(strictPrompt);
+        
+        // Extraer nota para UI
+        const notaMatch = fb.match(/\[NOTA\]:\s*([\d.]+)/);
+        const aiNota = notaMatch ? notaMatch[1] : "0";
+        
+        const notaDisplay = document.querySelector('.nota-final strong') || document.querySelector('.ej-nota strong');
+        if (notaDisplay) {
+            notaDisplay.innerHTML = `${aiNota} <small>(Revisión IA)</small>`;
+            notaDisplay.style.color = aiNota >= 5 ? '#4ade80' : '#f87171';
+        }
+
+        // Inyectar feedback en el panel de resultados si existe
+        const feedbackPanel = document.getElementById('ej-feedback');
+        if (feedbackPanel) {
+            const aiSection = document.createElement('div');
+            aiSection.className = 'ai-feedback-box';
+            aiSection.style.marginTop = '1rem';
+            aiSection.style.padding = '1rem';
+            aiSection.style.background = '#0f1a04';
+            aiSection.style.border = '1px solid #2a3d10';
+            aiSection.style.borderRadius = '8px';
+            aiSection.innerHTML = `<h4 style="color:#84cc16;margin-bottom:0.5rem">🎓 Informe de la Profesora de Java</h4>${fb.replace(/\n/g, '<br>')}`;
+            feedbackPanel.appendChild(aiSection);
+        } else {
+            showFeedbackModal(fb);
+        }
+
+        return { nota: aiNota, feedback: fb };
     } catch (err) {
-        showFeedbackModal(`### ⚠️ Error\n\n${err.message}`);
+        console.error(err);
+        return { nota: 0, error: err.message };
     } finally {
-        btn.disabled = false; btn.innerHTML = '✨ Consultar al Profesor IA';
+        if (btn) { btn.disabled = false; btn.innerHTML = originalText; }
     }
 }
 
