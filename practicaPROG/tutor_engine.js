@@ -332,13 +332,18 @@ function startExamTimer(seconds) {
     }, 1000);
 }
 
-function corregirExamenTutor() {
+async function corregirExamenTutor() {
+  const btn = document.querySelector('.btn-exam-submit');
+  const originalText = btn ? btn.innerText : '';
+  if (btn) { btn.disabled = true; btn.innerText = '⏳ Revisando...'; }
+
   if (tutorState.examInterval) clearInterval(tutorState.examInterval);
   const session = TUTOR_SESSIONS.find(s => s.id === tutorState.sessionId);
   const code = document.getElementById('exam-code-input')?.value || '';
   tutorState.examenInput = code;
 
   if (!code.trim()) {
+    if (btn) { btn.disabled = false; btn.innerText = originalText; }
     showToast('Escribe tu solución antes de entregar', 'info');
     return;
   }
@@ -431,6 +436,22 @@ function corregirExamenTutor() {
 
   // Scroll to results
   document.getElementById('exam-correccion').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  // LLAMADA AUTOMÁTICA A IA (CORRECCIÓN OFICIAL)
+  try {
+    const enunciado = session.examen.enunciado;
+    const aiResult = await requestAIFeedback(enunciado);
+    if (aiResult && aiResult.nota) {
+        const finalNota = parseFloat(aiResult.nota);
+        if (typeof triggerCunaoEffect === 'function') {
+            triggerCunaoEffect(finalNota >= 5);
+        }
+    }
+  } catch(aiErr) {
+    console.error("AI Correction failed", aiErr);
+  } finally {
+    if (btn) { btn.disabled = false; btn.innerText = originalText; }
+  }
 }
 
 function volverAprendizajeTutor() {
