@@ -500,61 +500,75 @@ function renderEjercicio(ej) {
   const isExam = ejercicioState.isExam;
 
   view.innerHTML = `
-    <div class="ej-paper">
-      <div class="ej-header">
-        ${isExam ? '<div class="exam-sim-badge">📋 MODO EXAMEN — SIN PISTAS</div>' : ''}
-        <div class="ej-meta">
-          <span class="ej-badge">${ej.nivel} ${ej.temas.join(' · ')}</span>
-          <span class="ej-tiempo">⏱ ${ej.tiempo}</span>
+    <div class="ej-header">
+      <div style="display:flex; flex-direction:column; gap:0.5rem">
+        ${isExam ? '<div class="exam-badge" style="width:fit-content">📋 MODO EXAMEN — SIMULACRO REAL</div>' : ''}
+        <h2>${ej.titulo}</h2>
+        <p style="color:var(--text2); font-size:0.95rem">Módulo de Programación DAW · Java POO</p>
+      </div>
+      <div style="text-align:right">
+        <div class="ej-badge" style="background:var(--surface2); color:var(--accent); border:1px solid var(--border); padding: 0.5rem 1rem; border-radius: 8px">${ej.nivel} · ${ej.tiempo}</div>
+      </div>
+    </div>
+
+    <div class="ej-workspace">
+      <!-- PANEL IZQUIERDO: INSTRUCCIONES Y EDITOR -->
+      <div class="ej-editor-panel">
+        <div class="ej-instructions-panel">
+          <div style="display:flex; align-items:center; gap:0.75rem; color:var(--accent); font-weight:700; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.1em">
+            <span>📋</span> Enunciado del Ejercicio
+          </div>
+          <div class="ej-enunciado-text">${ej.enunciado}</div>
         </div>
-        <h2 class="ej-titulo">${ej.titulo}</h2>
-        <p class="ej-subtitulo">Ejercicio tipo examen — en papel, sin IDE, sin errores de sintaxis</p>
-      </div>
 
-      <div class="ej-enunciado">
-        <h3>📋 Enunciado</h3>
-        <div class="ej-enunciado-text">${ej.enunciado}</div>
-      </div>
-
-      <div class="ej-workspace">
-        <div class="ej-pane-label">✏️ Tu solución (escribe aquí como si fuera papel)</div>
-        <textarea class="ej-textarea" id="ej-input" placeholder="Escribe tu código Java aquí...
-// No te preocupes por la sintaxis exacta
-// Lo importante es la lógica y la estructura
-// Usa comentarios para explicar tu razonamiento"></textarea>
-        <div class="ej-actions">
-          <button class="btn-exam-verify" onclick="checkEjercicio('${ej.id}')">✔️ Verificar criterios</button>
-          <button class="btn-ai-help" onclick="requestAIFeedback('${ej.id}')" id="btn-ai-help" ${isExam ? 'style="display:none"' : ''}>✨ Consultar al Profesor IA</button>
-          <button class="btn-secondary" onclick="togglePistas('${ej.id}')" id="btn-pistas" ${isExam ? 'style="display:none"' : ''}>
-            💡 ${ejercicioState.showPistas ? 'Ocultar pistas' : 'Ver pistas'}
-          </button>
-          <button class="btn-secondary" onclick="toggleSolucion('${ej.id}')" id="btn-solucion" ${isExam ? 'style="display:none"' : ''}>
-            👁 ${ejercicioState.showSolucion ? 'Ocultar solución' : 'Ver solución'}
-          </button>
+        <div style="display:flex; flex-direction:column; gap:0.75rem; margin-top:1.5rem">
+          <div class="editor-pane-label" style="font-size: 0.8rem; color: var(--text2); text-transform: uppercase; letter-spacing: 0.1em">📝 Tu solución (simulacro en papel)</div>
+          <textarea class="ej-textarea" id="ej-input" spellcheck="false" placeholder="Escribe aquí tu código Java como si fuera el examen real..."></textarea>
         </div>
-        <div id="ej-feedback"></div>
+
+        <div class="ej-actions" style="margin-top:1.5rem; display:flex; gap:1rem; flex-wrap:wrap">
+          <button class="btn-check" onclick="checkEjercicio('${ej.id}')">✔️ Verificar Criterios</button>
+          <button class="btn-ai-help" onclick="requestAIFeedback(\`${ej.enunciado.replace(/`/g, '\\`').replace(/\$\{/g, '\\${')}\`)" id="btn-ai-help" style="background:linear-gradient(135deg, #7c3aed, #5b21b6); color:white; border:none; border-radius:8px; padding:0.7rem 1.5rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:0.5rem; transition:0.2s">✨ Consultar Profesor IA</button>
+          <button class="btn-secondary" onclick="togglePistas('${ej.id}')" id="btn-pistas" ${isExam ? 'style="display:none"' : ''}>💡 Pistas</button>
+          <button class="btn-secondary" onclick="toggleSolucion('${ej.id}')" id="btn-solucion" ${isExam ? 'style="display:none"' : ''}>👁 Ver Solución</button>
+        </div>
+
+        <div id="pistas-panel" class="hidden" style="margin-top:1.5rem; padding:1.5rem; background:var(--blue-bg); border:1px solid var(--blue); border-radius:12px">
+          <h4 style="color:var(--blue); margin-bottom:0.75rem">💡 Pistas de ayuda</h4>
+          <ul style="padding-left:1.5rem; font-size:0.9rem; color:var(--text)">
+            ${ej.pistas.map(p => `<li>${p}</li>`).join('')}
+          </ul>
+        </div>
+
+        <div id="solucion-panel" class="hidden" style="margin-top:1.5rem">
+          <h4 style="color:var(--green); margin-bottom:1rem">👁 Solución de referencia</h4>
+          <div class="code-block" style="background:#0d1117">${ej.solucion}</div>
+        </div>
       </div>
 
-      <div id="pistas-panel" class="ej-pistas ${ejercicioState.showPistas ? '' : 'hidden'}">
-        <h3>💡 Pistas</h3>
-        <ul class="pistas-list">
-          ${ej.pistas.map(p => `<li>${p}</li>`).join('')}
-        </ul>
-      </div>
+      <!-- PANEL DERECHO: CRITERIOS Y NOTA -->
+      <div class="ej-sidebar-panel">
+        <div class="ej-criteria-card">
+          <div class="ej-criteria-title">📊 Criterios Técnicos</div>
+          <div id="ej-criteria-list" style="display:flex; flex-direction:column; gap:0.5rem">
+            ${ej.criterios.map((c, i) => `
+              <div class="criterio-item" id="criterio-${i}">
+                <span class="check-icon">⬜</span>
+                <span style="line-height:1.4">${c}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
 
-      <div id="solucion-panel" class="ej-solucion ${ejercicioState.showSolucion ? '' : 'hidden'}">
-        <h3>✅ Solución de referencia</h3>
-        <div class="info-box warning" style="margin-bottom:1rem">⚠️ Intenta resolverlo antes de ver la solución. En el examen no la tendrás.</div>
-        <div class="code-block">${ej.solucion}</div>
+        <div id="ej-feedback">
+          <div class="ej-nota">
+            <strong>?</strong>
+            <span class="nota-sub">Pendiente de revisión</span>
+          </div>
+        </div>
       </div>
-
-      <div class="ej-criterios">
-        <h3>📊 Criterios de evaluación</h3>
-        <ul class="criterios-list" id="criterios-list">
-          ${ej.criterios.map((c, i) => `<li id="criterio-${i}" class="criterio-item">⬜ ${c}</li>`).join('')}
-        </ul>
-      </div>
-    </div>`;
+    </div>
+  `;
     
   // Hacer la lista interactiva
   makeEnunciadoInteractive('.ej-enunciado-text');
@@ -675,26 +689,33 @@ function showDoctorLab(exerciseId) {
   view.classList.remove('hidden');
   
   view.innerHTML = `
-    <div class="doctor-header" style="margin-bottom:1.5rem">
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <h2>🧑‍⚕️ Clínica Java: ${data.topic}</h2>
+    <div class="doctor-header" style="margin-bottom:2rem">
+      <div style="display:flex; justify-content:space-between; align-items:center">
+        <div>
+          <span class="unit-badge" style="background:var(--blue); color:white">🧑‍⚕️ CASO CLÍNICO</span>
+          <h2 style="font-size:2.4rem; margin-top:0.5rem">Clínica Java: ${data.topic}</h2>
+        </div>
+        <div style="font-size:3rem">🩺</div>
       </div>
-      <p style="color:var(--text2);margin-top:0.5rem">Analiza el escenario, planifica tu solución y compárala con el diagnóstico del doctor.</p>
+      <p style="color:var(--text2); font-size:1.1rem; margin-top:0.5rem">Analiza los síntomas del código, propón un tratamiento y compáralo con el diagnóstico del Dr. Java.</p>
     </div>
     
-    <div class="doctor-scenario" style="background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:var(--radius2);padding:1.5rem;margin-bottom:1.5rem;">
-      <h3 style="font-size:1rem;color:var(--accent3);margin-bottom:1rem">Caso de Estudio</h3>
-      <div style="font-size:0.95rem;line-height:1.6;white-space:pre-wrap;">${data.exercise}</div>
+    <div class="doctor-scenario" style="margin-bottom:2rem">
+      <h3 style="font-size:0.9rem; font-weight:800; color:var(--blue); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem">📋 Historia Clínica (Escenario)</h3>
+      <div style="font-size:1.05rem; line-height:1.7; color:var(--text);">${data.exercise}</div>
     </div>
     
-    <div class="doctor-workspace" style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem">
-      <h3 style="font-size:1rem;color:var(--text)">Tu Diagnóstico (Borrador)</h3>
-      <textarea id="doctor-draft" placeholder="Escribe aquí tu planteamiento o código base antes de ver la solución completa..." style="width:100%;height:150px;background:var(--bg3);border:1px dashed var(--border);border-radius:var(--radius2);color:var(--text);padding:1rem;font-family:'JetBrains Mono', monospace;font-size:0.95rem;resize:vertical;"></textarea>
+    <div class="doctor-workspace" style="display:flex; flex-direction:column; gap:1rem; margin-bottom:2rem">
+      <div style="display:flex; align-items:center; gap:0.5rem">
+        <span style="font-size:1.2rem">✍️</span>
+        <h3 style="font-size:1rem; font-weight:700; color:var(--text)">Tu Propuesta de Tratamiento (Código o Lógica)</h3>
+      </div>
+      <textarea id="doctor-draft" placeholder="Escribe aquí tu planteamiento antes de solicitar el diagnóstico oficial..." style="width:100%; height:250px; padding:1.5rem;"></textarea>
     </div>
     
-    <div class="doctor-actions" style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
-      <button class="btn-check" onclick="markDone()">✓ Ejercicio completado</button>
-      <button class="btn-help" onclick="showDoctorSolution('${exerciseId}')" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);color:white;border-radius:8px;padding:0.7rem 1.5rem;border:none;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:0.4rem;transition:0.2s;box-shadow:0 4px 12px rgba(59,130,246,0.3)">💡 Ver Diagnóstico del Dr.</button>
+    <div class="doctor-actions" style="display:flex; gap:1rem; align-items:center;">
+      <button class="btn-check" onclick="markDone()">✓ Finalizar Consulta</button>
+      <button class="btn-help" onclick="showDoctorSolution('${exerciseId}')" style="background:linear-gradient(135deg, var(--blue), #1d4ed8); color:white; border:none; border-radius:8px; padding:0.8rem 2rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:0.5rem; transition:0.2s; box-shadow:0 10px 20px rgba(59,130,246,0.3)">💡 Solicitar Diagnóstico del Dr.</button>
     </div>
   `;
 }

@@ -97,16 +97,17 @@ FORMATO DE RESPUESTA OBLIGATORIO:
         }
 
         // Inyectar feedback en el panel de resultados si existe
-        const feedbackPanel = document.getElementById('ej-feedback');
+        const feedbackPanel = document.getElementById('ej-feedback') || document.getElementById('exam-correccion');
         if (feedbackPanel) {
             const aiSection = document.createElement('div');
             aiSection.className = 'ai-feedback-box';
-            aiSection.style.marginTop = '1rem';
-            aiSection.style.padding = '1rem';
-            aiSection.style.background = '#0f1a04';
-            aiSection.style.border = '1px solid #2a3d10';
-            aiSection.style.borderRadius = '8px';
-            aiSection.innerHTML = `<h4 style="color:#84cc16;margin-bottom:0.5rem">🎓 Informe de la Profesora de Java</h4>${fb.replace(/\n/g, '<br>')}`;
+            aiSection.style.marginTop = '1.5rem';
+            aiSection.style.padding = '1.5rem';
+            aiSection.style.background = 'linear-gradient(135deg, #0f170a 0%, #050802 100%)';
+            aiSection.style.border = '1px solid #365314';
+            aiSection.style.borderRadius = '12px';
+            aiSection.innerHTML = `<h4 style="color:#84cc16;margin-bottom:0.8rem;display:flex;align-items:center;gap:0.5rem"><span>🎓</span> Informe de la Profesora de Java (IA)</h4>
+                                   <div style="line-height:1.7; color:#e2e8f0; font-size:0.95rem">${fb.replace(/\n/g, '<br>')}</div>`;
             feedbackPanel.appendChild(aiSection);
         } else {
             showFeedbackModal(fb);
