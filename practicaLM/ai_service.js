@@ -39,34 +39,46 @@ async function requestLMAIFeedback() {
     const code = document.getElementById('exam-input')?.value || '';
     if (!code.trim()) return;
     const btn = document.getElementById('btn-lm-ai');
-    btn.disabled = true; btn.innerHTML = '⏳ Revisando con rigor...';
+    const originalText = btn.innerHTML;
+    btn.disabled = true; btn.innerHTML = '⏳ Evaluando código...';
     
-    // Prompt estricto de "Profesora de Lenguaje de Marcas"
-    const strictPrompt = `Actúa como una PROFESORA DE LENGUAJE DE MARCAS extremadamente estricta y técnica.
-Tu objetivo es corregir este ejercicio de un alumno que se prepara para un examen oficial.
-No perdones fallos de sintaxis. Si falta una etiqueta de cierre, el ejercicio está MAL.
+    const strictPrompt = `Actúa como una PROFESORA DE LENGUAJE DE MARCAS de una ingeniería. 
+Tu misión es evaluar el código HTML/XML del alumno con el MÁXIMO RIGOR.
 
-CRITERIOS DE CORRECCIÓN:
-1. SINTAXIS: Etiquetas mal cerradas, atributos sin comillas o mal escritos (ej: meta charset en lugar de <meta charset="UTF-8">) deben penalizar gravemente.
-2. ESTRUCTURA: El anidamiento debe ser perfecto. Un </head> fuera de sitio o ausente es un suspenso automático en esa sección.
-3. XML: Si es XML, debe estar "Bien Formado". Si no lo está, la nota es 0.
-4. SEMÁNTICA: Uso correcto de etiquetas HTML5 si se piden.
+CÓDIGO A EVALUAR:
+\n${code}
 
-FORMATO DE RESPUESTA (Usa Markdown):
-- **NOTA FINAL**: [X/10] (Sé dura, si hay fallos técnicos graves no pases del 4).
-- **ERRORES TÉCNICOS**: Lista los fallos de sintaxis específicos (etiquetas sin cerrar, atributos mal, etc).
-- **CONSEJO DE PROFESORA**: Un comentario breve sobre por qué ha fallado.
+INSTRUCCIONES DE EVALUACIÓN:
+1. Analiza TODA la estructura (tags, cierres, atributos, comillas, doctype, semántica).
+2. Sé implacable: si falta un cierre de etiqueta o hay un error de sintaxis como <meta viewport...>, la nota debe ser INSUFICIENTE.
+3. El viewport debe ser: <meta name="viewport" content="width=device-width, initial-scale=1.0"> o equivalente exacto.
 
-CÓDIGO DEL ALUMNO:
-\n${code}`;
+FORMATO DE RESPUESTA OBLIGATORIO (Usa exactamente estas etiquetas):
+[NOTA]: Pon aquí la nota numérica del 0 al 10.
+[ERRORES]: Lista los errores técnicos detectados.
+[COMENTARIO]: Breve feedback pedagógico.
+
+No añadas introducciones innecesarias, ve directo a las etiquetas.`;
 
     try {
         const fb = await callAI_Universal(strictPrompt);
+        
+        // Intentar extraer la nota para actualizar la UI
+        const notaMatch = fb.match(/\[NOTA\]:\s*([\d.]+)/);
+        if (notaMatch) {
+            const aiNota = notaMatch[1];
+            const notaDisplay = document.querySelector('.ej-nota strong');
+            if (notaDisplay) {
+                notaDisplay.innerHTML = `${aiNota} <small>(IA Strict)</small>`;
+                notaDisplay.style.color = aiNota >= 5 ? '#4ade80' : '#f87171';
+            }
+        }
+
         showFeedbackModal(fb);
     } catch (err) {
         showFeedbackModal(`### ⚠️ Error\n\n${err.message}`);
     } finally {
-        btn.disabled = false; btn.innerHTML = '✨ Pedir corrección IA';
+        btn.disabled = false; btn.innerHTML = originalText;
     }
 }
 
