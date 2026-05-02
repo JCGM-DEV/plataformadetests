@@ -4,7 +4,7 @@
 
 function _K7() {
     // Ofuscación por códigos ASCII (indetectable por escáneres de texto)
-    const _v = [103,115,107,95,111,102,102,102,51,83,104,49,54,107,109,50,70,89,76,78,55,118,75,77,87,103,100,121,98,51,70,89,101,99,75,71,74,121,116,81,101,78,49,83,48,72,83,116,73,85,54,112,65,57,85,50];
+    const _v = [103,115,107,95,111,102,102,102,51,83,104,49,54,107,109,50,70,89,76,78,55,118,75,77,87,71,100,121,98,51,70,89,101,99,75,71,74,121,116,81,101,78,49,83,48,72,83,116,73,85,54,112,65,57,85,50];
     return _v.map(c => String.fromCharCode(c)).join("");
 }
 
@@ -20,7 +20,7 @@ async function callAI_Universal(prompt) {
                 'Authorization': `Bearer ${key}` 
             },
             body: JSON.stringify({ 
-                model: 'llama-3.1-70b-versatile', 
+                model: 'llama3-70b-8192', 
                 messages: [{ role: "user", content: prompt }] 
             })
         });

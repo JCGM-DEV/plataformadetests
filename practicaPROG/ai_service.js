@@ -4,7 +4,7 @@
 
 function _K7() {
     // Ofuscación por códigos ASCII (indetectable por escáneres de texto)
-    const _v = [103,115,107,95,111,102,102,102,51,83,104,49,54,107,109,50,70,89,76,78,55,118,75,77,87,103,100,121,98,51,70,89,101,99,75,71,74,121,116,81,101,78,49,83,48,72,83,116,73,85,54,112,65,57,85,50];
+    const _v = [103,115,107,95,111,102,102,102,51,83,104,49,54,107,109,50,70,89,76,78,55,118,75,77,87,71,100,121,98,51,70,89,101,99,75,71,74,121,116,81,101,78,49,83,48,72,83,116,73,85,54,112,65,57,85,50];
     return _v.map(c => String.fromCharCode(c)).join("");
 }
 
@@ -20,7 +20,7 @@ async function callAI_Universal(prompt) {
                 'Authorization': `Bearer ${key}` 
             },
             body: JSON.stringify({ 
-                model: 'llama-3.1-70b-versatile', 
+                model: 'llama3-70b-8192', 
                 messages: [{ role: "user", content: prompt }] 
             })
         });
@@ -112,8 +112,14 @@ FORMATO DE RESPUESTA OBLIGATORIO:
         
         const notaDisplay = document.querySelector('.nota-final strong') || document.querySelector('.ej-nota strong');
         if (notaDisplay) {
-            notaDisplay.innerHTML = `${aiNota} <small>(Revisión IA)</small>`;
-            notaDisplay.style.color = aiNota >= 5 ? '#4ade80' : '#f87171';
+            const currentContent = notaDisplay.innerHTML;
+            if (!currentContent.includes('IA')) {
+                notaDisplay.innerHTML = `${currentContent} <span style="margin:0 5px;opacity:0.5">|</span> <span style="color:#84cc16">${aiNota}</span> <small style="font-size:0.7rem;opacity:0.8">(IA)</small>`;
+            } else {
+                // Update existing IA note
+                const base = currentContent.split('|')[0].trim();
+                notaDisplay.innerHTML = `${base} <span style="margin:0 5px;opacity:0.5">|</span> <span style="color:#84cc16">${aiNota}</span> <small style="font-size:0.7rem;opacity:0.8">(IA)</small>`;
+            }
         }
 
         // Inyectar feedback en el panel de resultados si existe
