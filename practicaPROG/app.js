@@ -528,7 +528,7 @@ function renderEjercicio(ej) {
 
         <div class="ej-actions" style="margin-top:1.5rem; display:flex; gap:1rem; flex-wrap:wrap">
           <button class="btn-check" onclick="checkEjercicio('${ej.id}')">✔️ Verificar Criterios</button>
-          <button class="btn-ai-help" onclick="requestAIFeedback(\`${ej.enunciado.replace(/`/g, '\\`').replace(/\$\{/g, '\\${')}\`)" id="btn-ai-help" style="background:linear-gradient(135deg, #7c3aed, #5b21b6); color:white; border:none; border-radius:8px; padding:0.7rem 1.5rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:0.5rem; transition:0.2s">✨ Consultar Profesor IA</button>
+          <button class="btn-ai-help" onclick="requestAIFeedback('${ej.id}')" id="btn-ai-help" style="background:linear-gradient(135deg, #7c3aed, #5b21b6); color:white; border:none; border-radius:8px; padding:0.7rem 1.5rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:0.5rem; transition:0.2s">✨ Consultar Profesor IA</button>
           <button class="btn-secondary" onclick="togglePistas('${ej.id}')" id="btn-pistas" ${isExam ? 'style="display:none"' : ''}>💡 Pistas</button>
           <button class="btn-secondary" onclick="toggleSolucion('${ej.id}')" id="btn-solucion" ${isExam ? 'style="display:none"' : ''}>👁 Ver Solución</button>
         </div>
@@ -667,7 +667,7 @@ async function checkEjercicio(ejId) {
 
   // LLAMADA AUTOMÁTICA A IA (CORRECCIÓN OFICIAL)
   try {
-    const aiResult = await requestAIFeedback(enunciado);
+    const aiResult = await requestAIFeedback(ejId);
     if (aiResult && aiResult.nota) {
         const finalNota = parseFloat(aiResult.nota);
         if (typeof triggerCunaoEffect === 'function') {

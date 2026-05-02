@@ -557,10 +557,18 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 
 .ej-instructions-panel {
   background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  padding: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3); color: var(--text);
+  text-align: left;
 }
-.ej-enunciado-text { font-size: 1.05rem; line-height: 1.7; color: var(--text); }
+.ej-enunciado-text { font-size: 1.08rem; line-height: 1.8; color: var(--text); text-align: left; }
+.code-exercise-desc {
+  background: rgba(255,255,255,0.03); border-radius: 8px; padding: 1.25rem;
+  border-left: 4px solid var(--accent); margin: 1rem 0;
+}
+.code-exercise-desc h4 { margin-bottom: 0.75rem; font-weight: 700; }
+.code-exercise-desc ul { padding-left: 1.5rem; }
+.code-exercise-desc li { margin-bottom: 0.5rem; }
 
 .ej-editor-panel {
   display: flex; flex-direction: column; gap: 1rem;

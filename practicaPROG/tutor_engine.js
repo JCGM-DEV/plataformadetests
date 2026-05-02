@@ -439,8 +439,7 @@ async function corregirExamenTutor() {
 
   // LLAMADA AUTOMÁTICA A IA (CORRECCIÓN OFICIAL)
   try {
-    const enunciado = session.examen.enunciado;
-    const aiResult = await requestAIFeedback(enunciado);
+    const aiResult = await requestAIFeedback(session.id);
     if (aiResult && aiResult.nota) {
         const finalNota = parseFloat(aiResult.nota);
         if (typeof triggerCunaoEffect === 'function') {

@@ -50,14 +50,25 @@ async function requestLMAIFeedback() {
     }
 }
 
-async function requestAIFeedback(customEnunciado = null) {
+async function requestAIFeedback(ejId = null) {
     const code = document.getElementById('ej-input')?.value || document.getElementById('exam-code-input')?.value || '';
     if (!code.trim()) return;
     const btn = document.getElementById('btn-ai-help');
     const originalText = btn ? btn.innerHTML : null;
     if (btn) { btn.disabled = true; btn.innerHTML = '⏳ Compilando con IA...'; }
     
-    const enunciado = customEnunciado || "Implementa la lógica Java solicitada.";
+    let enunciado = "Implementa la lógica Java solicitada.";
+    
+    // Buscar el enunciado en EJERCICIOS o TUTOR_SESSIONS
+    if (ejId) {
+        const ej = (typeof EJERCICIOS !== 'undefined') ? EJERCICIOS.find(e => e.id === ejId) : null;
+        if (ej) {
+            enunciado = ej.enunciado;
+        } else if (typeof TUTOR_SESSIONS !== 'undefined') {
+            const session = TUTOR_SESSIONS.find(s => s.id === ejId || s.examen?.enunciado);
+            if (session) enunciado = session.examen?.enunciado || session.titulo;
+        }
+    }
 
     const strictPrompt = `Actúa como una PROFESORA DE PROGRAMACIÓN (JAVA) extremadamente exigente.
 Tu misión es evaluar el código Java de un alumno basándote en el enunciado.
