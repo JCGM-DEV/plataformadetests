@@ -333,7 +333,10 @@ function renderCodeExercise(labData) {
     </div>`;
 }
 
-function analyzeCode() {
+async function analyzeCode() {
+  const btn = document.querySelector('.btn-run');
+  if (btn) { btn.disabled = true; btn.innerText = '⏳ Revisando...'; }
+
   const code = document.getElementById('code-input')?.value || '';
   const ex = codeState.exercises[codeState.current];
   const output = document.getElementById('code-output');
@@ -361,6 +364,22 @@ function analyzeCode() {
   }
 
   output.innerHTML = html;
+
+  // LLAMADA AUTOMÁTICA A IA (CORRECCIÓN OFICIAL)
+  try {
+    const enunciado = ex.desc;
+    const aiResult = await requestAIFeedback(enunciado);
+    if (aiResult && aiResult.nota) {
+        const finalNota = parseFloat(aiResult.nota);
+        if (typeof triggerCunaoEffect === 'function') {
+            triggerCunaoEffect(finalNota >= 5);
+        }
+    }
+  } catch(aiErr) {
+    console.error("AI Correction failed", aiErr);
+  } finally {
+    if (btn) { btn.disabled = false; btn.innerText = '🔍 Analizar Código'; }
+  }
 }
 
 function prevCodeEx() {
