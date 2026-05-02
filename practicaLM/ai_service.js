@@ -35,50 +35,73 @@ async function callAI_Universal(prompt) {
 
 // ── Adaptadores ──────────────────────────────────────────────────
 
-async function requestLMAIFeedback() {
+async function requestLMAIFeedback(customEnunciado = null) {
     const code = document.getElementById('exam-input')?.value || '';
     if (!code.trim()) return;
     const btn = document.getElementById('btn-lm-ai');
-    const originalText = btn.innerHTML;
-    btn.disabled = true; btn.innerHTML = '⏳ Evaluando código...';
+    
+    // Si no hay botón (llamada automática), ignoramos la actualización del botón
+    const originalText = btn ? btn.innerHTML : null;
+    if (btn) { btn.disabled = true; btn.innerHTML = '⏳ Evaluando...'; }
+    
+    const enunciado = customEnunciado || "Sigue las instrucciones del ejercicio.";
     
     const strictPrompt = `Actúa como una PROFESORA DE LENGUAJE DE MARCAS de una ingeniería. 
-Tu misión es evaluar el código HTML/XML del alumno con el MÁXIMO RIGOR.
 
-CÓDIGO A EVALUAR:
-\n${code}
+ENUNCIADO DEL EJERCICIO:
+"""
+${enunciado}
+"""
 
-INSTRUCCIONES DE EVALUACIÓN:
-1. Analiza TODA la estructura (tags, cierres, atributos, comillas, doctype, semántica).
-2. Sé implacable: si falta un cierre de etiqueta o hay un error de sintaxis como <meta viewport...>, la nota debe ser INSUFICIENTE.
-3. El viewport debe ser: <meta name="viewport" content="width=device-width, initial-scale=1.0"> o equivalente exacto.
+CÓDIGO DEL ALUMNO A EVALUAR:
+"""
+${code}
+"""
+
+TU MISIÓN:
+1. Analiza si el código cumple EXACTAMENTE con lo que pide el enunciado.
+2. Revisa la sintaxis técnica (cierres, atributos, comillas, anidamiento).
+3. Sé implacable: si el enunciado pide algo (ej: un título específico o un meta) y no está o está mal escrito, la nota debe bajar.
 
 FORMATO DE RESPUESTA OBLIGATORIO (Usa exactamente estas etiquetas):
 [NOTA]: Pon aquí la nota numérica del 0 al 10.
-[ERRORES]: Lista los errores técnicos detectados.
-[COMENTARIO]: Breve feedback pedagógico.
-
-No añadas introducciones innecesarias, ve directo a las etiquetas.`;
+[ERRORES]: Lista los errores técnicos o incumplimientos del enunciado detectados.
+[COMENTARIO]: Breve feedback sobre qué mejorar.`;
 
     try {
         const fb = await callAI_Universal(strictPrompt);
         
-        // Intentar extraer la nota para actualizar la UI
+        // Extraer la nota para actualizar la UI
         const notaMatch = fb.match(/\[NOTA\]:\s*([\d.]+)/);
-        if (notaMatch) {
-            const aiNota = notaMatch[1];
-            const notaDisplay = document.querySelector('.ej-nota strong');
-            if (notaDisplay) {
-                notaDisplay.innerHTML = `${aiNota} <small>(IA Strict)</small>`;
-                notaDisplay.style.color = aiNota >= 5 ? '#4ade80' : '#f87171';
-            }
+        const aiNota = notaMatch ? notaMatch[1] : "0";
+        
+        const notaDisplay = document.querySelector('.ej-nota strong');
+        if (notaDisplay) {
+            notaDisplay.innerHTML = `${aiNota} <small>(Revisión IA)</small>`;
+            notaDisplay.style.color = aiNota >= 5 ? '#4ade80' : '#f87171';
         }
 
-        showFeedbackModal(fb);
+        // Si hay un panel de corrección visible, añadir el feedback detallado
+        const panel = document.getElementById('exam-correction-panel');
+        if (panel) {
+            const feedbackSection = document.createElement('div');
+            feedbackSection.style.marginTop = '1rem';
+            feedbackSection.style.padding = '1rem';
+            feedbackSection.style.background = '#141f06';
+            feedbackSection.style.border = '1px solid #2a3d10';
+            feedbackSection.style.borderRadius = '8px';
+            feedbackSection.innerHTML = `<h4 style="color:#84cc16;margin-bottom:0.5rem">📝 Informe Detallado del Profesor</h4>${fb.replace(/\n/g, '<br>')}`;
+            panel.appendChild(feedbackSection);
+        } else {
+            showFeedbackModal(fb);
+        }
+        
+        return { nota: aiNota, feedback: fb };
     } catch (err) {
-        showFeedbackModal(`### ⚠️ Error\n\n${err.message}`);
+        console.error(err);
+        return { nota: 0, error: err.message };
     } finally {
-        btn.disabled = false; btn.innerHTML = originalText;
+        if (btn) { btn.disabled = false; btn.innerHTML = originalText; }
     }
 }
 

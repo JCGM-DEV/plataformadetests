@@ -603,11 +603,15 @@ function updateExamXML() {
   output.innerHTML = syntaxHighlightXML(code);
 }
 
-function correctExam() {
+async function correctExam() {
+  const btn = document.querySelector('.btn-exam-correct');
+  if (btn) { btn.disabled = true; btn.innerText = '⏳ Revisando...'; }
+
   const code = document.getElementById('exam-input')?.value || '';
   const labData = examState.labData;
   const ex = labData.exercises[0];
   const milestones = ex.milestones || [];
+  const enunciado = labData.examDesc || ex.desc;
 
   if (!milestones.length) {
     showToast('Este ejercicio no tiene criterios de corrección automática', 'info');
@@ -654,11 +658,24 @@ function correctExam() {
     `<p class="correction-tip">🎉 ¡Ejercicio completado! Puedes ver la solución de referencia para comparar.</p>`}
   `;
 
-  // Show solution + AI buttons
+  // Show solution + AI buttons (already implemented, but we'll use them as fallback)
   const sBtn = document.getElementById('exam-solution-btn');
   if (sBtn) sBtn.style.display = 'inline-flex';
-  const aiBtn = document.getElementById('btn-lm-ai');
-  if (aiBtn) aiBtn.style.display = 'inline-flex';
+  
+  // LLAMADA AUTOMÁTICA A IA (CORRECCIÓN OFICIAL)
+  try {
+    const aiResult = await requestLMAIFeedback(enunciado);
+    if (aiResult && aiResult.nota) {
+        const finalNota = parseFloat(aiResult.nota);
+        if (typeof triggerCunaoEffect === 'function') {
+            triggerCunaoEffect(finalNota >= 5);
+        }
+    }
+  } catch(aiErr) {
+    console.error("AI Correction failed", aiErr);
+  } finally {
+    if (btn) { btn.disabled = false; btn.innerText = '✓ Corregir'; }
+  }
 
   if (allOk) {
     completedSections.add(activeSection);
@@ -834,3 +851,27 @@ document.addEventListener('DOMContentLoaded', () => {
     selectUnit(unit);
   }
 });
+
+function triggerCunaoEffect(passed) {
+    const overlay = document.createElement('div');
+    overlay.className = 'cunao-overlay';
+    
+    const topText = passed ? "¡QUÉ BUENO ERES!" : "¡QUÉ MALO ERES PERRO!";
+    const bottomText = passed ? "CUÑAAAAOOOOOOO" : "ESTUDIA, CUÑAAAAOOOOOOO";
+    
+    overlay.innerHTML = `
+        <img src="../risitas/pngegg.png" class="cunao-img" alt="Risitas">
+        <div class="cunao-text">${topText}</div>
+        <div class="cunao-text" style="font-size:1.5rem;animation-delay:0.2s;color:${passed ? '#4ade80' : '#f87171'}">${bottomText}</div>
+    `;
+    document.body.appendChild(overlay);
+
+    // Sonido Real del Risitas (Ruta relativa al lab)
+    const audio = new Audio('../risitas/Voicy_El Risitas Laugh.mp3');
+    audio.play().catch(e => console.log("Audio play blocked by browser", e));
+
+    setTimeout(() => {
+        overlay.style.opacity = '0';
+        setTimeout(() => overlay.remove(), 500);
+    }, 4500);
+}
