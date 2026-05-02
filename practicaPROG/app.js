@@ -368,18 +368,19 @@ async function analyzeCode() {
   output.innerHTML = html;
 
   // LLAMADA AUTOMÁTICA A IA (CORRECCIÓN OFICIAL)
+  let aiPassed = allPass;
   try {
     const enunciado = ex.desc;
     const aiResult = await requestAIFeedback(enunciado);
     if (aiResult && aiResult.nota) {
-        const finalNota = parseFloat(aiResult.nota);
-        if (typeof triggerCunaoEffect === 'function') {
-            triggerCunaoEffect(finalNota >= 5);
-        }
+        aiPassed = parseFloat(aiResult.nota) >= 5;
     }
   } catch(aiErr) {
     console.error("AI Correction failed", aiErr);
   } finally {
+    if (typeof triggerCunaoEffect === 'function') {
+        triggerCunaoEffect(aiPassed);
+    }
     if (btn) { btn.disabled = false; btn.innerText = '🔍 Analizar Código'; }
   }
 }
@@ -668,17 +669,18 @@ async function checkEjercicio(ejId) {
   }
 
   // LLAMADA AUTOMÁTICA A IA (CORRECCIÓN OFICIAL)
+  let aiPassed = (pct >= 50);
   try {
     const aiResult = await requestAIFeedback(ejId);
     if (aiResult && aiResult.nota) {
-        const finalNota = parseFloat(aiResult.nota);
-        if (typeof triggerCunaoEffect === 'function') {
-            triggerCunaoEffect(finalNota >= 5);
-        }
+        aiPassed = parseFloat(aiResult.nota) >= 5;
     }
   } catch(aiErr) {
     console.error("AI Correction failed", aiErr);
   } finally {
+    if (typeof triggerCunaoEffect === 'function') {
+        triggerCunaoEffect(aiPassed);
+    }
     if (btn) { btn.disabled = false; btn.innerText = '✔️ Verificar'; }
   }
 }

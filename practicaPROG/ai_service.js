@@ -20,7 +20,7 @@ async function callAI_Universal(prompt) {
                 'Authorization': `Bearer ${key}` 
             },
             body: JSON.stringify({ 
-                model: 'llama-3.3-70b-versatile', 
+                model: 'llama-3.1-70b-versatile', 
                 messages: [{ role: "user", content: prompt }] 
             })
         });
@@ -73,7 +73,7 @@ async function requestAIFeedback(ejId = null) {
             if (ej) {
                 enunciado = ej.enunciado;
             } else if (typeof TUTOR_SESSIONS !== 'undefined') {
-                const session = TUTOR_SESSIONS.find(s => s.id === ejId || s.examen?.enunciado);
+                const session = TUTOR_SESSIONS.find(s => s.id === ejId);
                 if (session) enunciado = session.examen?.enunciado || session.titulo;
             }
         }

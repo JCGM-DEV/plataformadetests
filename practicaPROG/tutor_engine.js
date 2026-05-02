@@ -438,17 +438,18 @@ async function corregirExamenTutor() {
   document.getElementById('exam-correccion').scrollIntoView({ behavior: 'smooth', block: 'start' });
 
   // LLAMADA AUTOMÁTICA A IA (CORRECCIÓN OFICIAL)
+  let aiPassed = true; // Assume success if tutor validation reached here
   try {
     const aiResult = await requestAIFeedback(session.id);
     if (aiResult && aiResult.nota) {
-        const finalNota = parseFloat(aiResult.nota);
-        if (typeof triggerCunaoEffect === 'function') {
-            triggerCunaoEffect(finalNota >= 5);
-        }
+        aiPassed = parseFloat(aiResult.nota) >= 5;
     }
   } catch(aiErr) {
     console.error("AI Correction failed", aiErr);
   } finally {
+    if (typeof triggerCunaoEffect === 'function') {
+        triggerCunaoEffect(aiPassed);
+    }
     if (btn) { btn.disabled = false; btn.innerText = originalText; }
   }
 }

@@ -664,17 +664,18 @@ async function correctExam() {
   if (sBtn) sBtn.style.display = 'inline-flex';
   
   // LLAMADA AUTOMÁTICA A IA (CORRECCIÓN OFICIAL)
+  let aiPassed = allOk;
   try {
     const aiResult = await requestLMAIFeedback(enunciado);
     if (aiResult && aiResult.nota) {
-        const finalNota = parseFloat(aiResult.nota);
-        if (typeof triggerCunaoEffect === 'function') {
-            triggerCunaoEffect(finalNota >= 5);
-        }
+        aiPassed = parseFloat(aiResult.nota) >= 5;
     }
   } catch(aiErr) {
     console.error("AI Correction failed", aiErr);
   } finally {
+    if (typeof triggerCunaoEffect === 'function') {
+        triggerCunaoEffect(aiPassed);
+    }
     if (btn) { btn.disabled = false; btn.innerText = '✓ Corregir'; }
   }
 
