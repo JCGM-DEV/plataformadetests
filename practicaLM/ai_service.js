@@ -20,7 +20,7 @@ async function callAI_Universal(prompt) {
                 'Authorization': `Bearer ${key}` 
             },
             body: JSON.stringify({ 
-                model: 'llama3-70b-8192', 
+                model: 'llama-3.3-70b-versatile', 
                 messages: [{ role: "user", content: prompt }] 
             })
         });
@@ -77,8 +77,13 @@ FORMATO DE RESPUESTA OBLIGATORIO (Usa exactamente estas etiquetas):
         
         const notaDisplay = document.querySelector('.ej-nota strong');
         if (notaDisplay) {
-            notaDisplay.innerHTML = `${aiNota} <small>(Revisión IA)</small>`;
-            notaDisplay.style.color = aiNota >= 5 ? '#4ade80' : '#f87171';
+            const currentContent = notaDisplay.innerHTML;
+            if (!currentContent.includes('IA')) {
+                notaDisplay.innerHTML = `${currentContent} <span style="margin:0 5px;opacity:0.5">|</span> <span style="color:#84cc16">${aiNota}</span> <small style="font-size:0.7rem;opacity:0.8">(IA)</small>`;
+            } else {
+                const base = currentContent.split('|')[0].trim();
+                notaDisplay.innerHTML = `${base} <span style="margin:0 5px;opacity:0.5">|</span> <span style="color:#84cc16">${aiNota}</span> <small style="font-size:0.7rem;opacity:0.8">(IA)</small>`;
+            }
         }
 
         // Si hay un panel de corrección visible, añadir el feedback detallado
