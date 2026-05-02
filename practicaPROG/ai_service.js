@@ -51,22 +51,31 @@ async function requestLMAIFeedback() {
 }
 
 async function requestAIFeedback(ejId = null) {
-    const code = document.getElementById('ej-input')?.value || document.getElementById('exam-code-input')?.value || '';
+    const code = document.getElementById('ej-input')?.value || 
+                 document.getElementById('code-input')?.value || 
+                 document.getElementById('exam-code-input')?.value || '';
+                 
     if (!code.trim()) return;
-    const btn = document.getElementById('btn-ai-help');
+    
+    const btn = document.getElementById('btn-ai-help') || document.querySelector('.btn-run');
     const originalText = btn ? btn.innerHTML : null;
     if (btn) { btn.disabled = true; btn.innerHTML = '⏳ Compilando con IA...'; }
     
     let enunciado = "Implementa la lógica Java solicitada.";
     
-    // Buscar el enunciado en EJERCICIOS o TUTOR_SESSIONS
+    // Buscar el enunciado en EJERCICIOS, CODE_LABS o TUTOR_SESSIONS
     if (ejId) {
-        const ej = (typeof EJERCICIOS !== 'undefined') ? EJERCICIOS.find(e => e.id === ejId) : null;
-        if (ej) {
-            enunciado = ej.enunciado;
-        } else if (typeof TUTOR_SESSIONS !== 'undefined') {
-            const session = TUTOR_SESSIONS.find(s => s.id === ejId || s.examen?.enunciado);
-            if (session) enunciado = session.examen?.enunciado || session.titulo;
+        // Si ejId es un objeto o un string largo, asumimos que es el enunciado directamente
+        if (typeof ejId === 'string' && ejId.length > 50) {
+            enunciado = ejId;
+        } else {
+            const ej = (typeof EJERCICIOS !== 'undefined') ? EJERCICIOS.find(e => e.id === ejId) : null;
+            if (ej) {
+                enunciado = ej.enunciado;
+            } else if (typeof TUTOR_SESSIONS !== 'undefined') {
+                const session = TUTOR_SESSIONS.find(s => s.id === ejId || s.examen?.enunciado);
+                if (session) enunciado = session.examen?.enunciado || session.titulo;
+            }
         }
     }
 
@@ -108,8 +117,17 @@ FORMATO DE RESPUESTA OBLIGATORIO:
         }
 
         // Inyectar feedback en el panel de resultados si existe
-        const feedbackPanel = document.getElementById('ej-feedback') || document.getElementById('exam-correccion');
+        const feedbackPanel = document.getElementById('ej-feedback') || 
+                              document.getElementById('code-output') || 
+                              document.getElementById('exam-correccion');
+                              
         if (feedbackPanel) {
+            // Limpiar si ya había un bloque de IA anterior en Code Lab
+            if (feedbackPanel.id === 'code-output') {
+                const oldAI = feedbackPanel.querySelector('.ai-feedback-box');
+                if (oldAI) oldAI.remove();
+            }
+
             const aiSection = document.createElement('div');
             aiSection.className = 'ai-feedback-box';
             aiSection.style.marginTop = '1.5rem';
@@ -120,6 +138,11 @@ FORMATO DE RESPUESTA OBLIGATORIO:
             aiSection.innerHTML = `<h4 style="color:#84cc16;margin-bottom:0.8rem;display:flex;align-items:center;gap:0.5rem"><span>🎓</span> Informe de la Profesora de Java (IA)</h4>
                                    <div style="line-height:1.7; color:#e2e8f0; font-size:0.95rem">${fb.replace(/\n/g, '<br>')}</div>`;
             feedbackPanel.appendChild(aiSection);
+            
+            // Si es Code Lab, hacer scroll al final para ver el feedback
+            if (feedbackPanel.id === 'code-output') {
+                feedbackPanel.scrollTop = feedbackPanel.scrollHeight;
+            }
         } else {
             showFeedbackModal(fb);
         }

@@ -174,6 +174,7 @@ function nextQuestion() { quizState.current++; renderQuestion(); }
 
 function renderQuizResult() {
   const pct = Math.round((score.correct / (score.correct + score.wrong || 1)) * 100);
+  if (typeof triggerCunaoEffect === 'function') triggerCunaoEffect(pct >= 50);
   const msg = pct >= 80 ? '¡Excelente! 🚀' : pct >= 60 ? 'Buen trabajo 💪' : 'Repasa la teoría 📚';
   document.getElementById('quiz-view').innerHTML = `
     <div class="quiz-result">
@@ -557,7 +558,7 @@ function showExam(editorId) {
           <button class="btn-run" onclick="${isHTML ? 'updateExamPreview()' : 'updateExamXML()'}">▶ Actualizar</button>
           <button class="btn-exam-correct" onclick="correctExam()">✓ Corregir</button>
           <button class="btn-help" id="exam-solution-btn" onclick="showExamSolution()" style="display:none">💡 Ver Solución</button>
-          <button class="btn-ai-lm" id="btn-lm-ai" onclick="requestLMAIFeedback()" style="display:none">✨ Pedir corrección IA</button>
+          <button class="btn-ai-lm" id="btn-lm-ai" onclick="requestLMAIFeedback()" style="display:inline-flex; align-items:center; gap:0.5rem; background:linear-gradient(135deg, #7c3aed, #5b21b6); color:white; border:none; border-radius:8px; padding:0.6rem 1.2rem; font-weight:600; cursor:pointer; transition:0.2s; box-shadow:0 4px 12px rgba(124,58,237,0.3)">✨ Pedir corrección IA</button>
         </div>
         <div id="exam-correction-panel" class="exam-correction-panel hidden"></div>
       </div>

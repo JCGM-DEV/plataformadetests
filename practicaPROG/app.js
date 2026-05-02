@@ -201,6 +201,7 @@ function renderQuizResult() {
       </div>
     </div>`;
   markDone();
+  if (typeof triggerCunaoEffect === 'function') triggerCunaoEffect(pct >= 50);
 }
 
 // ── DRAG ─────────────────────────────────────────────────────────
@@ -316,6 +317,7 @@ function renderCodeExercise(labData) {
         <textarea class="code-textarea" id="code-input" spellcheck="false">${ex.starter}</textarea>
         <div class="code-actions">
           <button class="btn-run" onclick="analyzeCode()">🔍 Analizar Código</button>
+          <button class="btn-ai-help" onclick="requestAIFeedback(codeState.exercises[codeState.current].desc)" style="background:linear-gradient(135deg, #7c3aed, #5b21b6); color:white; border:none; border-radius:8px; padding:0.6rem 1.2rem; border:none; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:0.4rem; transition:0.2s">✨ Consultar Profesor IA</button>
           <button class="btn-help" onclick="showCodeSolution()" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8);color:white;border-radius:8px;padding:0.6rem 1.2rem;border:none;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:0.4rem;transition:0.2s;box-shadow:0 4px 12px rgba(59,130,246,0.3)">💡 Ayuda</button>
           <div class="code-nav">
             <button onclick="prevCodeEx()" ${codeState.current === 0 ? 'disabled' : ''}>← Anterior</button>
@@ -737,3 +739,27 @@ function showDoctorSolution(exerciseId) {
 }
 
 loadCompletionState();
+
+function triggerCunaoEffect(passed) {
+    const overlay = document.createElement('div');
+    overlay.className = 'cunao-overlay';
+    
+    const topText = passed ? "¡QUÉ BUENO ERES!" : "¡QUÉ MALO ERES PERRO!";
+    const bottomText = passed ? "CUÑAAAAOOOOOOO" : "ESTUDIA, CUÑAAAAOOOOOOO";
+    
+    overlay.innerHTML = `
+        <img src="../risitas/pngegg.png" class="cunao-img" alt="Risitas">
+        <div class="cunao-text">${topText}</div>
+        <div class="cunao-text" style="font-size:1.5rem;animation-delay:0.2s;color:${passed ? '#4ade80' : '#f87171'}">${bottomText}</div>
+    `;
+    document.body.appendChild(overlay);
+
+    // Sonido Real del Risitas (Ruta relativa al lab)
+    const audio = new Audio('../risitas/Voicy_El Risitas Laugh.mp3');
+    audio.play().catch(e => console.log("Audio play blocked by browser", e));
+
+    setTimeout(() => {
+        overlay.style.opacity = '0';
+        setTimeout(() => overlay.remove(), 500);
+    }, 4500);
+}
