@@ -164,10 +164,10 @@ const LESSONS = {
     subtitle: 'Etiquetas semánticas, formularios y atributos globales',
     concepts: [
       { icon: '🏗️', title: 'Etiquetas Semánticas', body: '<code>&lt;header&gt;</code>: cabecera. <code>&lt;nav&gt;</code>: navegación. <code>&lt;main&gt;</code>: contenido principal. <code>&lt;article&gt;</code>: contenido independiente. <code>&lt;section&gt;</code>: sección temática. <code>&lt;aside&gt;</code>: contenido lateral. <code>&lt;footer&gt;</code>: pie.' },
-      { icon: '📝', title: 'Formularios HTML5', body: '<code>&lt;form action="" method="post"&gt;</code>. Tipos de input: text, email, number, date, checkbox, radio, file. Atributos: required, placeholder, min, max, pattern. <code>enctype="multipart/form-data"</code> para subir archivos.' },
+      { icon: '📝', title: 'Formularios HTML5', body: 'Etiqueta <code>&lt;form&gt;</code>. Tipos de input: text, email, number, date, checkbox, radio, file. Atributos: required, placeholder, min, max. Botón de envío: <code>&lt;button type="submit"&gt;</code>.' },
       { icon: '🔗', title: 'Atributos Globales', body: '<code>id</code>: identificador único. <code>class</code>: clase CSS. <code>style</code>: CSS inline (no recomendado). <code>data-*</code>: atributos personalizados. <code>lang</code>: idioma. <code>tabindex</code>: orden de tabulación.' },
       { icon: '📊', title: 'Tablas HTML', body: '<code>&lt;table&gt;</code> → <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code> → <code>&lt;tr&gt;</code> → <code>&lt;th&gt;</code> (cabecera) / <code>&lt;td&gt;</code> (dato). Atributos: colspan, rowspan.' },
-      { icon: '🖼️', title: 'Multimedia', body: '<code>&lt;img src="" alt=""&gt;</code>: imagen (alt obligatorio para accesibilidad). <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>: multimedia nativa. <code>&lt;figure&gt;</code> + <code>&lt;figcaption&gt;</code>: imagen con pie.' },
+      { icon: '🖼️', title: 'Multimedia', body: '<code>&lt;img src=""&gt;</code>: imagen. <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>: multimedia nativa. <code>&lt;figure&gt;</code> + <code>&lt;figcaption&gt;</code>: imagen con pie de foto.' },
       { icon: '⚠️', title: 'Etiquetas Obsoletas', body: '<code>&lt;font&gt;</code>, <code>&lt;center&gt;</code>, <code>&lt;b&gt;</code> (usar <code>&lt;strong&gt;</code>), <code>&lt;i&gt;</code> (usar <code>&lt;em&gt;</code>), <code>&lt;u&gt;</code>. En HTML5 el estilo va en CSS, no en el HTML.' },
     ],
     codeExample: `<span class="kw">&lt;!DOCTYPE html&gt;</span>
@@ -327,12 +327,12 @@ const LESSONS = {
   },
 
   reto_xsd_maria: {
-    title: '🏆 Reto Oficial: Restricciones de Calidad',
-    subtitle: 'Implementa las reglas de validación enviadas por María',
+    title: '📝 Simulacro: Restricciones XSD',
+    subtitle: 'Validación de tipos de datos y rangos',
     concepts: [
-      { icon: '🔞', title: 'Rango de Edad', body: 'Configura un <code>xs:restriction</code> con <code>minInclusive value="0"</code> y <code>maxInclusive value="120"</code>.' },
-      { icon: '📏', title: 'Longitud de Nombre', body: 'Usa <code>minLength value="3"</code> para asegurar que el nombre del alumno sea válido.' },
-      { icon: '🔁', title: 'Indicadores', body: 'Configura <code>minOccurs="1"</code> y <code>maxOccurs="unbounded"</code> para permitir múltiples alumnos en una clase.' }
+      { icon: '🔢', title: 'Rangos Numéricos', body: 'Usa <code>xs:minInclusive</code> y <code>xs:maxInclusive</code> para limitar valores (ej: edad 0-120).' },
+      { icon: '📏', title: 'Longitud de Texto', body: 'Usa <code>xs:minLength</code> y <code>xs:maxLength</code> para restringir el tamaño de los strings.' },
+      { icon: '📋', title: 'Enumeraciones', body: 'Usa <code>xs:enumeration</code> para definir una lista cerrada de valores permitidos.' }
     ],
     codeExample: `<span class="kw">&lt;xs:simpleType</span> <span class="fn">name</span>=<span class="str">"edadTipo"</span><span class="kw">&gt;</span>
   <span class="kw">&lt;xs:restriction</span> <span class="fn">base</span>=<span class="str">"xs:integer"</span><span class="kw">&gt;</span>
@@ -344,12 +344,12 @@ const LESSONS = {
   },
 
   reto_xslt_maria: {
-    title: '🏆 Reto Oficial: Transformación de Factura',
-    subtitle: 'Extraer datos específicos usando XPath y XSLT',
+    title: '📝 Simulacro: Transformación XSLT',
+    subtitle: 'Extraer y mostrar datos de un XML en HTML',
     concepts: [
-      { icon: '📑', title: 'Cabecera XSLT', body: 'Asegúrate de incluir la versión 1.0 y el namespace oficial de W3C.' },
-      { icon: '🔍', title: 'xsl:value-of', body: 'Extrae el total de la factura usando <code>select="factura/total"</code>.' },
-      { icon: '📊', title: 'Generación de Tabla', body: 'Envuelve el <code>xsl:for-each</code> en etiquetas <code>&lt;table&gt;</code> y <code>&lt;tr&gt;</code>.' }
+      { icon: '🔍', title: 'xsl:value-of', body: 'Extrae el valor de un nodo o atributo (select="@id").' },
+      { icon: '🔁', title: 'xsl:for-each', body: 'Recorre una lista de elementos (select="ruta/nodo").' },
+      { icon: '📊', title: 'Tablas HTML', body: 'Genera <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code> y <code>&lt;td&gt;</code> dentro de la transformación.' }
     ],
     codeExample: `<span class="kw">&lt;xsl:template</span> <span class="fn">match</span>=<span class="str">"/"</span><span class="kw">&gt;</span>
   <span class="kw">&lt;html&gt;</span>
@@ -367,12 +367,12 @@ const LESSONS = {
   },
 
   reto_xquery_maria: {
-    title: '🏆 Reto Oficial: Catálogo FLWOR',
-    subtitle: 'Consultas complejas sobre el catálogo de María',
+    title: '📝 Simulacro: Consultas XQuery',
+    subtitle: 'Uso de FLWOR para filtrar y ordenar datos',
     concepts: [
-      { icon: '📚', title: 'Selección de Libros', body: 'Usa <code>for $b in //book</code> para recorrer el catálogo.' },
-      { icon: '💲', title: 'Filtro de Precio', body: 'Añade <code>where $b/price > 30</code> para filtrar libros caros.' },
-      { icon: '🏗️', title: 'Construir XML', body: 'Usa <code>return &lt;libro&gt;{ $b/title/text() }&lt;/libro&gt;</code> para formatear la salida.' }
+      { icon: '🔄', title: 'FOR / WHERE', body: 'Recorre nodos y aplica filtros (where $x/precio > 10).' },
+      { icon: '🔢', title: 'ORDER BY / RETURN', body: 'Ordena resultados y define el formato de salida.' },
+      { icon: '🏗️', title: 'Construcción XML', body: 'Envuelve los resultados en nuevas etiquetas usando <code>{}</code>.' }
     ],
     codeExample: `<span class="cm">(: Reto: Libros de Maria con precio > 30 :)</span>
 <span class="kw">for</span> <span class="fn">$libro</span> <span class="kw">in</span> doc(<span class="str">"biblioteca.xml"</span>)//libro

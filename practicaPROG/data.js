@@ -36,24 +36,19 @@ const UNITS = {
     ]
   },
   practicas: {
-    label: 'EXAMEN', title: 'Prácticas Examen Final',
+    label: 'REPASO', title: 'Ejercicios de Examen',
     sections: [
-      { id: 'prac-guia', icon: '📘', label: 'Guía de Supervivencia', type: 'guide', guideId: 'exam_guide' },
-      { id: 'prac-tutor', icon: '🎓', label: '🎓 Tutor Interactivo', type: 'tutor' },
-      { id: 'prac-ej1', icon: '📝', label: 'Ej 1 — Sistema de Vehículos', type: 'ejercicio', ejercicioId: 'ej1' },
-      { id: 'prac-ej2', icon: '📝', label: 'Ej 2 — Sistema de Empleados', type: 'ejercicio', ejercicioId: 'ej2' },
+      { id: 'prac-guia', icon: '📘', label: 'Survival Guide (Claves)', type: 'guide', guideId: 'exam_guide' },
+      { id: 'prac-ej1', icon: '📝', label: 'Ejercicio 1: Vehículos', type: 'ejercicio', ejercicioId: 'ej1' },
+      { id: 'prac-ej2', icon: '📝', label: 'Ejercicio 2: Empleados', type: 'ejercicio', ejercicioId: 'ej2' },
     ]
   },
-  doctor: {
-    label: 'DR. JAVA', title: 'Ejercicios del Doctor',
-    sections: []
-  },
   simulacros: {
-    label: 'EXAMEN', title: 'Simulacros de Examen',
+    label: 'SIMULACRO', title: 'Simulacros Reales',
     sections: [
-      { id: 'sim-quiz', icon: '🧠', label: 'Test Teórico', type: 'quiz', quizId: 'poo_quiz' },
-      { id: 'sim-ej1', icon: '📝', label: 'Práctico 1 — Vehículos', type: 'ejercicio', ejercicioId: 'ej1' },
-      { id: 'sim-ej2', icon: '📝', label: 'Práctico 2 — Empleados', type: 'ejercicio', ejercicioId: 'ej2' },
+      { id: 'sim-quiz', icon: '🧠', label: 'Test de Examen', type: 'quiz', quizId: 'poo_quiz' },
+      { id: 'sim-ej1', icon: '📝', label: 'Práctico A: Flota', type: 'ejercicio', ejercicioId: 'ej1' },
+      { id: 'sim-ej2', icon: '📝', label: 'Práctico B: Nóminas', type: 'ejercicio', ejercicioId: 'ej2' },
     ]
   }
 };
