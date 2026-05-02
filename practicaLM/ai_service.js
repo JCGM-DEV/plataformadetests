@@ -39,9 +39,29 @@ async function requestLMAIFeedback() {
     const code = document.getElementById('exam-input')?.value || '';
     if (!code.trim()) return;
     const btn = document.getElementById('btn-lm-ai');
-    btn.disabled = true; btn.innerHTML = '⏳ Revisando...';
+    btn.disabled = true; btn.innerHTML = '⏳ Revisando con rigor...';
+    
+    // Prompt estricto de "Profesora de Lenguaje de Marcas"
+    const strictPrompt = `Actúa como una PROFESORA DE LENGUAJE DE MARCAS extremadamente estricta y técnica.
+Tu objetivo es corregir este ejercicio de un alumno que se prepara para un examen oficial.
+No perdones fallos de sintaxis. Si falta una etiqueta de cierre, el ejercicio está MAL.
+
+CRITERIOS DE CORRECCIÓN:
+1. SINTAXIS: Etiquetas mal cerradas, atributos sin comillas o mal escritos (ej: meta charset en lugar de <meta charset="UTF-8">) deben penalizar gravemente.
+2. ESTRUCTURA: El anidamiento debe ser perfecto. Un </head> fuera de sitio o ausente es un suspenso automático en esa sección.
+3. XML: Si es XML, debe estar "Bien Formado". Si no lo está, la nota es 0.
+4. SEMÁNTICA: Uso correcto de etiquetas HTML5 si se piden.
+
+FORMATO DE RESPUESTA (Usa Markdown):
+- **NOTA FINAL**: [X/10] (Sé dura, si hay fallos técnicos graves no pases del 4).
+- **ERRORES TÉCNICOS**: Lista los fallos de sintaxis específicos (etiquetas sin cerrar, atributos mal, etc).
+- **CONSEJO DE PROFESORA**: Un comentario breve sobre por qué ha fallado.
+
+CÓDIGO DEL ALUMNO:
+\n${code}`;
+
     try {
-        const fb = await callAI_Universal(`Evalúa este código HTML/XML: \n${code}`);
+        const fb = await callAI_Universal(strictPrompt);
         showFeedbackModal(fb);
     } catch (err) {
         showFeedbackModal(`### ⚠️ Error\n\n${err.message}`);

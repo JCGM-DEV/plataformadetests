@@ -2250,10 +2250,10 @@ No añadas contenido dentro del body todavía.`,
       solution: `<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>Mi Tienda Online</title>\n</head>\n<body>\n</body>\n</html>`,
       milestones: [
         { id: 'doctype', check: /<!DOCTYPE html>/i, popup: '¡Bien! HTML5 iniciado.', instruction: 'Escribe la declaración <!DOCTYPE html>.' },
-        { id: 'html', check: /<html lang="es">/i, popup: 'Idioma configurado.', instruction: 'Añade la etiqueta <html lang="es">.' },
-        { id: 'head', check: /<head>/i, popup: 'Cabecera detectada.', instruction: 'Crea la sección <head>.' },
-        { id: 'meta', check: /meta charset="UTF-8"/i, popup: 'Codificación UTF-8 lista.', instruction: 'Añade el meta charset="UTF-8".' },
-        { id: 'title', check: /<title>.*<\/title>/i, popup: 'Título configurado.', instruction: 'Pon un <title> descriptivo.' }
+        { id: 'html', check: /<html lang="es">[\s\S]*<\/html>/i, popup: 'Idioma y cierre de html correctos.', instruction: 'Añade <html lang="es"> y su cierre.' },
+        { id: 'head', check: /<head>[\s\S]*<\/head>/i, popup: 'Cabecera abierta y cerrada correctamente.', instruction: 'Crea la sección <head> con su cierre.' },
+        { id: 'meta', check: /<meta charset="UTF-8">/i, popup: 'Codificación UTF-8 lista.', instruction: 'Añade <meta charset="UTF-8">.' },
+        { id: 'title', check: /<title>[\s\S]+<\/title>/i, popup: 'Título configurado.', instruction: 'Pon un <title> descriptivo.' }
       ]
     }]
   },
