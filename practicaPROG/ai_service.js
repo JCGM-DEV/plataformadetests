@@ -79,8 +79,14 @@ async function requestAIFeedback(ejId = null) {
         }
     }
 
-    const strictPrompt = `Actúa como una PROFESORA DE PROGRAMACIÓN (JAVA) extremadamente exigente.
+    const strictPrompt = `Actúa como una PROFESORA DE PROGRAMACIÓN (JAVA) que valora la LÓGICA por encima de todo.
 Tu misión es evaluar el código Java de un alumno basándote en el enunciado.
+
+IMPORTANTE: El profesor ha indicado que la SINTAXIS NO CUENTA para la nota. Solo importa la LÓGICA.
+- Ignora si faltan puntos y coma (;).
+- Ignora si hay llaves sin cerrar si la intención es clara.
+- Ignora tipos mal declarados si el flujo es correcto.
+- Céntrate 100% en si el alumno ha entendido el problema y lo ha resuelto lógicamente.
 
 ENUNCIADO DEL EJERCICIO:
 """
@@ -93,15 +99,14 @@ ${code}
 """
 
 CRITERIOS DE EVALUACIÓN:
-1. LÓGICA: ¿Resuelve el problema planteado en el enunciado?
-2. SINTAXIS: ¿Es código Java válido? (Falta de ; llaves sin cerrar, tipos mal declarados).
-3. NOMENCLATURA: ¿Usa camelCase y nombres de variables descriptivos?
-4. RIGOR: Si el enunciado pide algo específico (ej: usar un bucle while) y usa otro, penaliza.
+1. LÓGICA (100% de la nota): ¿Resuelve el problema planteado en el enunciado de forma coherente?
+2. RIGOR: Si el enunciado pide algo específico (ej: usar un bucle while) y usa otro, puedes comentarlo, pero la nota debe reflejar si la lógica es válida.
+3. SINTAXIS: IGNORAR PARA LA NOTA. Menciona los errores solo como feedback constructivo, no restes puntos por ellos.
 
 FORMATO DE RESPUESTA OBLIGATORIO:
-[NOTA]: Nota del 0 al 10.
-[ERRORES]: Lista de fallos técnicos o lógicos.
-[COMENTARIO]: Feedback sobre calidad de código y eficiencia.`;
+[NOTA]: Nota del 0 al 10 (Basada únicamente en la lógica).
+[ERRORES]: Lista de fallos lógicos (no de sintaxis).
+[COMENTARIO]: Feedback sobre calidad de la lógica y consejos de sintaxis (sin penalizar).`;
 
     try {
         const fb = await callAI_Universal(strictPrompt);

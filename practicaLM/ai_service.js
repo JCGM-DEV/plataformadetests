@@ -46,7 +46,12 @@ async function requestLMAIFeedback(customEnunciado = null) {
     
     const enunciado = customEnunciado || "Sigue las instrucciones del ejercicio.";
     
-    const strictPrompt = `Actúa como una PROFESORA DE LENGUAJE DE MARCAS de una ingeniería. 
+    const strictPrompt = `Actúa como una PROFESORA DE LENGUAJE DE MARCAS que prioriza la LÓGICA y el cumplimiento de requisitos sobre la sintaxis. 
+
+IMPORTANTE: El profesor ha decidido que lo que cuenta es la LÓGICA. La sintaxis es secundaria.
+- No penalices por falta de cierres de etiquetas si la estructura es lógica.
+- No penalices por errores tipográficos en atributos si se entiende la intención.
+- Céntrate en si el código cumple con la estructura lógica solicitada en el enunciado.
 
 ENUNCIADO DEL EJERCICIO:
 """
@@ -59,14 +64,14 @@ ${code}
 """
 
 TU MISIÓN:
-1. Analiza si el código cumple EXACTAMENTE con lo que pide el enunciado.
-2. Revisa la sintaxis técnica (cierres, atributos, comillas, anidamiento).
-3. Sé implacable: si el enunciado pide algo (ej: un título específico o un meta) y no está o está mal escrito, la nota debe bajar.
+1. Analiza si el código cumple con la LÓGICA y los requisitos del enunciado.
+2. La SINTAXIS técnica (comillas, cierres, etc.) NO debe afectar a la nota.
+3. Si el enunciado pide elementos específicos, verifica que estén presentes lógicamente.
 
 FORMATO DE RESPUESTA OBLIGATORIO (Usa exactamente estas etiquetas):
-[NOTA]: Pon aquí la nota numérica del 0 al 10.
-[ERRORES]: Lista los errores técnicos o incumplimientos del enunciado detectados.
-[COMENTARIO]: Breve feedback sobre qué mejorar.`;
+[NOTA]: Pon aquí la nota numérica del 0 al 10 (basada exclusivamente en la lógica).
+[ERRORES]: Lista solo errores de lógica o requisitos no cumplidos. Menciona la sintaxis solo como nota informativa.
+[COMENTARIO]: Feedback constructivo sobre la solución lógica.`;
 
     try {
         const fb = await callAI_Universal(strictPrompt);
