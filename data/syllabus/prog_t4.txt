@@ -59,3 +59,29 @@ Java mantiene siempre disponible el constructor vacío implícito.
 Se impide la sobrecarga de constructores.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Si escribes un constructor, Java asume que quieres control total y quita el de por defecto.
+
+
+¿Cuál es el propósito del constructor por defecto en Java y qué hace exactamente?
+*[No hace nada, es un constructor vacío]
+Es un constructor que se ejecuta automáticamente cuando se crea un objeto
+Es un constructor que se utiliza para inicializar las variables de instancia
+Es un constructor que se utiliza para crear un objeto con parámetros
+EXPL: El constructor por defecto en Java es un constructor vacío que se crea automáticamente si no se define ningún constructor en la clase, su propósito es permitir la creación de objetos sin parámetros.
+
+ 
+
+¿Cuál es la diferencia entre una variable de instancia (atributo) y una variable local en términos de visibilidad y alcance en Java?
+*[Una variable de instancia es visible en toda la clase, mientras que una variable local es visible solo dentro del método o bloque donde se declara]
+Una variable de instancia es visible solo dentro del método o bloque donde se declara, mientras que una variable local es visible en toda la clase
+Una variable de instancia es visible en toda la clase, mientras que una variable local es visible solo dentro del método o bloque donde se declara
+Una variable de instancia y una variable local tienen el mismo alcance y visibilidad
+EXPL: La diferencia entre una variable de instancia y una variable local en Java es que una variable de instancia es visible en toda la clase, mientras que una variable local es visible solo dentro del método o bloque donde se declara.
+
+ 
+
+¿Cuál es el propósito de la palabra clave "this" en Java y cómo se utiliza para diferenciar entre un atributo de objeto y un parámetro de método?
+*[Se utiliza para referirse al atributo de objeto y evitar la ocultación de variable]
+Se utiliza para referirse al parámetro de método y evitar la ocultación de variable
+Se utiliza para crear un nuevo objeto y evitar la ocultación de variable
+Se utiliza para eliminar un objeto y evitar la ocultación de variable
+EXPL: La palabra clave "this" en Java se utiliza para referirse al atributo de objeto y evitar la ocultación de variable, que ocurre cuando un atributo de objeto y un parámetro de método tienen el mismo nombre.

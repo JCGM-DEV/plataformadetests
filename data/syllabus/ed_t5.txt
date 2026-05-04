@@ -68,3 +68,59 @@ Muestran la definición y estructura estática de los componentes de un sistema 
 Describen exclusivamente la interacción entre usuarios finales y la interfaz gráfica del sistema
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y t...
+
+
+¿Cuál es el símbolo utilizado para representar la relación de inclusión entre casos de uso en UML?
+*[Línea discontinua terminada en flecha que apunta al caso de uso "incluido" y el texto include entre comillas angulares: <<include>>]
+[Línea continua]
+[Línea discontinua rematada en punta que señala al caso de uso "extendido"]
+[Línea de vida]
+EXPL: La relación de inclusión se representa mediante una línea discontinua terminada en flecha que apunta al caso de uso "incluido" y el texto include entre comillas angulares: <<include>>.
+
+
+¿Qué es un diagrama de secuencia en UML?
+*[Un diagrama que refleja la sucesión de llamadas que se realizan entre los diferentes objetos que participan en la realización de una actividad]
+[Un diagrama que muestra la estructura de un sistema]
+[Un diagrama que representa la comunicación entre objetos]
+[Un diagrama que muestra la relación entre casos de uso]
+EXPL: Un diagrama de secuencia es un diagrama que refleja la sucesión de llamadas que se realizan entre los diferentes objetos que participan en la realización de una actividad.
+
+
+¿Cuál es el propósito de la barra de activación en un diagrama de secuencia?
+*[Representar el periodo de tiempo durante el que el elemento se encuentra activo en la resolución de la actividad]
+[Representar la línea de vida de un objeto]
+[Representar un mensaje o llamada]
+[Representar una respuesta]
+EXPL: La barra de activación representa el periodo de tiempo durante el que el elemento se encuentra activo en la resolución de la actividad.
+
+
+¿Qué es un objeto en un diagrama de comunicación?
+*[Una instancia concreta de una clase]
+[Un caso de uso]
+[Un actor]
+[Un mensaje]
+EXPL: Un objeto en un diagrama de comunicación es una instancia concreta de una clase.
+
+
+¿Cuál es la diferencia fundamental entre la extensión y la inclusión en UML?
+*[La extensión tiene un componente de opcionalidad que no existe en la inclusión]
+[La inclusión tiene un componente de opcionalidad que no existe en la extensión]
+[La extensión se utiliza para casos de uso y la inclusión se utiliza para actores]
+[La inclusión se utiliza para casos de uso y la extensión se utiliza para actores]
+EXPL: La extensión tiene un componente de opcionalidad que no existe en la inclusión.
+
+
+¿Qué es un diagrama de comunicación en UML?
+*[Un diagrama que representa la comunicación que se produce entre objetos para un caso concreto de uso del sistema]
+[Un diagrama que muestra la estructura de un sistema]
+[Un diagrama que representa la relación entre casos de uso]
+[Un diagrama que refleja la sucesión de llamadas que se realizan entre los diferentes objetos]
+EXPL: Un diagrama de comunicación es un diagrama que representa la comunicación que se produce entre objetos para un caso concreto de uso del sistema.
+
+
+¿Cuál es el propósito de la línea de vida en un diagrama de secuencia?
+*[Representar la "línea de vida" del elemento durante la actividad, desde arriba (principio) hacia abajo (final)]
+[Representar un mensaje o llamada]
+[Representar una respuesta]
+[Representar la barra de activación]
+EXPL: La línea de vida representa la "línea de vida" del elemento durante la actividad, desde arriba (principio) hacia abajo (final).

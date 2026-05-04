@@ -68,3 +68,67 @@ En el proceso de optimizar el código fuente a partir de un diagrama de clases p
 En la transformación de un diagrama de clases en un diagrama de componentes para la implementación
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:En la obtención de un diagrama de clases a partir del código fuente ya existente de una aplicación.
+
+
+¿Cuál es el símbolo utilizado en UML para representar la navegabilidad en una relación de asociación?
+*[Punta de flecha]
+[X]
+[Línea sólida]
+[Línea discontinua]
+EXPL: El símbolo de navegabilidad se representa mediante una punta de flecha en el extremo de la línea que conecta las clases afectadas.
+
+
+¿Cómo se representa la relación de composición en UML?
+*[Línea sólida rematada con un diamante sólido]
+[Línea discontinua rematada con una punta de flecha]
+[Línea sólida rematada con un diamante hueco]
+[Línea discontinua rematada con una equis]
+EXPL: La relación de composición se representa con una línea sólida rematada con el símbolo de un diamante sólido en el extremo de la clase que representa el conjunto.
+
+
+¿Cuál es el propósito del botón "Class" en el menú izquierdo de la herramienta Software Ideas Modeler?
+*[Crear una nueva clase]
+*[Crear un nuevo diagrama de clases]
+*[Crear un nuevo proyecto]
+*[Crear un nuevo atributo]
+EXPL: El botón "Class" se utiliza para insertar una nueva clase en el diagrama de clases.
+
+
+¿Cómo se accede al menú de propiedades de un atributo en la herramienta Software Ideas Modeler?
+*[Pulsando con el botón derecho sobre el atributo]
+*[Pulsando con el botón izquierdo sobre el atributo]
+*[Seleccionando el atributo y presionando la tecla "Enter"]
+*[Seleccionando el atributo y presionando la tecla "F1"]
+EXPL: Se accede al menú de propiedades de un atributo pulsando con el botón derecho sobre el mismo.
+
+
+¿Cuál es el nombre del complemento opcional (plugin) en el IDE PyCharm que permite representar el diagrama de clases de una aplicación Python?
+*[Diagrams]
+*[UML Designer]
+*[Class Diagram]
+*[Python Diagrams]
+EXPL: El complemento opcional (plugin) se llama "Diagrams".
+
+
+¿Cómo se representa la relación de agregación en UML?
+*[Línea sólida rematada con un diamante hueco]
+*[Línea discontinua rematada con una punta de flecha]
+*[Línea sólida rematada con un diamante sólido]
+*[Línea discontinua rematada con una equis]
+EXPL: La relación de agregación se representa con una línea sólida rematada con el símbolo de un diamante hueco en el extremo de la clase que representa el conjunto.
+
+
+¿Cuál es el prefijo que la herramienta CASE Software Ideas Modeler agrega al nombre de los constructores para una mejor identificación?
+*["create"]
+*["constructor"]
+*["method"]
+*["attribute"]
+EXPL: La herramienta CASE Software Ideas Modeler agrega el prefijo "create" al nombre de los constructores.
+
+
+¿Cuál es el símbolo utilizado en UML para representar la no navegabilidad en una relación de asociación?
+*[X]
+*[Punta de flecha]
+*[Línea sólida]
+*[Línea discontinua]
+EXPL: El símbolo de no navegabilidad se representa mediante una equis (X) en el extremo de la línea que conecta las clases afectadas.

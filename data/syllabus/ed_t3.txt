@@ -68,3 +68,74 @@ Diagramas de diseño y diagramas de implementación
 Diagramas de requisitos y diagramas de arquitectura
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Diagramas estructurales y diagramas de comportamiento.'.
+
+
+¿Cuál es la versión actual de UML vigente desde diciembre de 2017?
+*[2.5.1]
+[1.1]
+[2.0]
+[1.5]
+EXPL: La versión 2.5.1 de UML es la vigente desde diciembre de 2017.
+
+ 
+
+¿Cuál es el propósito del diagrama de estructura compuesta en UML?
+*[Representar el interior de una clase, las interacciones internas y las conexiones con el exterior]
+[Representar las clases del sistema y sus relaciones]
+[Representar los componentes del sistema y sus relaciones]
+[Representar los paquetes del sistema y sus dependencias]
+EXPL: El diagrama de estructura compuesta representa el interior de una clase, las interacciones internas y las conexiones con el exterior.
+
+ 
+
+¿Cuál es el nombre del diagrama que representa la secuencia de interacciones entre las clases de un sistema para resolver un problema?
+*[Diagrama de secuencia]
+[Diagrama de actividad]
+[Diagrama de comunicación]
+[Diagrama de tiempos]
+EXPL: El diagrama de secuencia representa la secuencia de interacciones entre las clases de un sistema para resolver un problema.
+
+ 
+
+¿Cuál es el nombre de la herramienta CASE que dispone de una versión gratuita para uso no profesional y tiene soporte para UML?
+*[Software Ideas Modeler]
+[Smartdraw]
+[Visual Paradigm]
+[Microsoft Visio]
+EXPL: Software Ideas Modeler es una herramienta CASE que dispone de una versión gratuita para uso no profesional y tiene soporte para UML.
+
+ 
+
+¿Cuál es el nombre del diagrama que representa cómo se relacionan los usuarios del sistema con las funciones de alto nivel que proporciona?
+*[Diagrama de casos de uso]
+[Diagrama de actividad]
+[Diagrama de secuencia]
+[Diagrama de comunicación]
+EXPL: El diagrama de casos de uso representa cómo se relacionan los usuarios del sistema con las funciones de alto nivel que proporciona.
+
+ 
+
+¿Cuál es el nombre de la metodología de desarrollo orientado a objetos que utiliza UML para representar las clases del sistema?
+*[OOSE]
+[OMT]
+[Booch]
+[Ninguna de las anteriores]
+EXPL: OOSE es una metodología de desarrollo orientado a objetos que utiliza UML para representar las clases del sistema.
+
+ 
+
+¿Cuál es el nombre del diagrama que representa los estados de un sistema, subsistema u objeto y las transiciones que se pueden producir entre ellos?
+*[Diagrama de estados o de máquina de estados]
+[Diagrama de actividad]
+[Diagrama de secuencia]
+[Diagrama de comunicación]
+EXPL: El diagrama de estados o de máquina de estados representa los estados de un sistema, subsistema u objeto y las transiciones que se pueden producir entre ellos.
+
+ 
+
+¿Cuál es el nombre del grupo de diagramas UML que muestra el sistema desde un punto de vista dinámico y permite representar la actividad que realiza el sistema?
+*[Diagramas de comportamiento]
+[Diagramas estructurales]
+[Diagramas de interacción]
+[Diagramas de casos de uso]
+EXPL: Los diagramas de comportamiento muestran el sistema desde un punto de vista dinámico y permiten representar la actividad que realiza el sistema.

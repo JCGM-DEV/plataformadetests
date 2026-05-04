@@ -68,3 +68,74 @@ Se truncan los valores silenciosamente
 Se insertan valores nulos por defecto sin avisar
 Mediante una subconsulta correlacionada con EXISTS
 EXPL:La respuesta es 'Se rechaza la operación y se genera un error.'. "Se truncan los valores silenciosamente." y "Se insertan valores nulos por defecto sin avisar." son incorrectos porque describen conceptos diferentes.
+
+
+¿Cuál es el comando SQL para eliminar todos los posts de los usuarios que no han tenido actividad desde el año 2020?
+*[DELETE FROM posts WHERE id_usuario IN (SELECT id_usuario FROM usuarios WHERE YEAR(ultima_actividad) <= 2020)]
+[UPDATE posts SET estado = 'inactivo' WHERE id_usuario IN (SELECT id_usuario FROM usuarios WHERE YEAR(ultima_actividad) <= 2020)]
+[INSERT INTO posts (id_usuario, contenido) VALUES (1, 'Nuevo post')]
+[SELECT * FROM posts WHERE id_usuario IN (SELECT id_usuario FROM usuarios WHERE YEAR(ultima_actividad) <= 2020)]
+EXPL: La sentencia DELETE utiliza una subconsulta para seleccionar los IDs de los usuarios inactivos y eliminar sus posts.
+
+ 
+
+¿Cuál es el propósito de la función LAST_INSERT_ID() en la inserción de membresías?
+*[Obtener el ID del último miembro insertado]
+[Obtener el ID de la última membresía insertada]
+[Obtener la fecha de inicio de la membresía]
+[Obtener el tipo de membresía]
+EXPL: La función LAST_INSERT_ID() se utiliza para referirnos a los últimos IDs generados en la tabla Miembros y asignar membresías a los nuevos miembros.
+
+ 
+
+¿Cuál es el comando SQL para actualizar la membresía de Carlos Ruiz a trimestral?
+*[UPDATE Membresías m JOIN Miembros p ON m.miembro_id = p.id SET m.tipo = 'Trimestral', m.fecha_fin = '2025-10-13' WHERE p.nombre = 'Carlos' AND p.apellidos = 'Ruiz']
+[UPDATE Membresías SET tipo = 'Trimestral' WHERE miembro_id = 1]
+[INSERT INTO Membresías (miembro_id, tipo, fecha_inicio, fecha_fin) VALUES (1, 'Trimestral', '2025-07-13', '2025-10-13')]
+[DELETE FROM Membresías WHERE miembro_id = 1]
+EXPL: La sentencia UPDATE utiliza un JOIN para localizar la fila de membresía asociada a Carlos Ruiz y actualizar su tipo y fecha de fin.
+
+ 
+
+¿Cuál es el propósito de la cláusula ON DELETE CASCADE en la relación entre las tablas Clientes y Facturas?
+*[Borrar automáticamente las facturas relacionadas con un cliente cuando se borre el cliente]
+[Actualizar automáticamente el ID del cliente en las facturas cuando se actualice el ID del cliente]
+[Establecer automáticamente el ID del cliente en NULL en las facturas cuando se borre el cliente]
+[Crear automáticamente una nueva factura para un cliente cuando se cree un nuevo cliente]
+EXPL: La cláusula ON DELETE CASCADE se utiliza para borrar automáticamente las facturas relacionadas con un cliente cuando se borre el cliente.
+
+ 
+
+¿Cuál es el comando SQL para eliminar las membresías cuyo fecha_fin sea anterior al 2025-06-01?
+*[DELETE m FROM Membresías m WHERE m.fecha_fin < '2025-06-01']
+[UPDATE Membresías SET estado = 'inactivo' WHERE fecha_fin < '2025-06-01']
+[INSERT INTO Membresías (miembro_id, tipo, fecha_inicio, fecha_fin) VALUES (1, 'Mensual', '2025-05-01', '2025-06-01')]
+[SELECT * FROM Membresías WHERE fecha_fin < '2025-06-01']
+EXPL: La sentencia DELETE utiliza una condición para eliminar las membresías cuyo fecha_fin sea anterior al 2025-06-01.
+
+ 
+
+¿Cuál es el propósito de la función YEAR() en la subconsulta para seleccionar los IDs de los usuarios inactivos?
+*[Obtener el año de la última actividad del usuario]
+[Obtener el mes de la última actividad del usuario]
+[Obtener el día de la última actividad del usuario]
+[Obtener la hora de la última actividad del usuario]
+EXPL: La función YEAR() se utiliza para obtener el año de la última actividad del usuario y compararlo con el año 2020.
+
+ 
+
+¿Cuál es el comando SQL para insertar tres nuevos miembros en la tabla Miembros?
+*[INSERT INTO Miembros (nombre, apellidos, fecha_nacimiento, fecha_inscripcion) VALUES ('Laura', 'Gómez', '1988-07-15', '2025-07-13'), ('Carlos', 'Ruiz', '1992-03-10', '2025-07-13'), ('Elena', 'Martín', '1975-11-22', '2025-07-13')]
+[UPDATE Miembros SET nombre = 'Laura' WHERE id = 1]
+[INSERT INTO Membresías (miembro_id, tipo, fecha_inicio, fecha_fin) VALUES (1, 'Mensual', '2025-07-13', '2025-08-13')]
+[DELETE FROM Miembros WHERE id = 1]
+EXPL: La sentencia INSERT utiliza la forma múltiple VALUES para insertar tres filas de golpe en la tabla Miembros.
+
+ 
+
+¿Cuál es el propósito de la cláusula FOREIGN KEY en la definición de la tabla Membresías?
+*[Establecer una relación entre la tabla Membresías y la tabla Miembros]
+[Establecer una relación entre la tabla Membresías y la tabla Clientes]
+[Establecer una relación entre la tabla Miembros y la tabla Clientes]
+[Establecer una relación entre la tabla Facturas y la tabla Membresías]
+EXPL: La cláusula FOREIGN KEY se utiliza para establecer una relación entre la tabla Membresías y la tabla Miembros, específicamente entre el campo miembro_id y el campo id de la tabla Miembros.

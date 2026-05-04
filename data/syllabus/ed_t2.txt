@@ -68,3 +68,60 @@ Solo el control directo del hardware y la programación de sistemas de bajo nive
 El desarrollo exclusivo de aplicaciones web del lado del servidor (back-end)
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El trabajo en equipo, el control de versiones y el seguimiento de incidencias, entre otras tareas.
+
+
+¿Cuál es el lenguaje de programación utilizado por el editor de código Brackets?
+*[JavaScript]
+[C++]
+[Python]
+[Java]
+EXPL: Según la tabla de editores de código, Brackets utiliza JavaScript como lenguaje de programación.
+
+¿Quién es el fundador del movimiento del software libre y creador del sistema operativo GNU?
+*[Richard Stallman]
+[Bill Gates]
+[Steve Jobs]
+[Linus Torvalds]
+EXPL: Según el texto, Richard Stallman es el fundador del movimiento del software libre y creador del sistema operativo GNU.
+
+¿Cuál es el nombre del IDE de desarrollo para proyectos Python mencionado en el texto?
+*[PyCharm]
+*[Visual Studio Code]
+*[Sublime Text 3]
+*[Notepad++]
+EXPL: Según el texto, PyCharm es el IDE de desarrollo para proyectos Python mencionado.
+
+¿Qué es lo que se debe marcar durante la instalación de Python para que se agregue a la PATH la ruta de la instalación?
+*[La opción de añadir a la PATH la ruta de la instalación]
+*[La opción de no añadir a la PATH la ruta de la instalación]
+*[La opción de instalar el intérprete de Python]
+*[La opción de instalar el IDE PyCharm]
+EXPL: Según el texto, se recomienda marcar la opción de añadir a la PATH la ruta de la instalación durante la instalación de Python.
+
+¿Cuál es el nombre de la sección en la que se debe seleccionar la ubicación del proyecto en PyCharm?
+*[Location]
+*[Project]
+*[File]
+*[Settings]
+EXPL: Según el texto, la sección en la que se debe seleccionar la ubicación del proyecto en PyCharm se llama "Location".
+
+¿Qué es lo que se conoce como módulos o scripts en un proyecto Python?
+*[Ficheros escritos en lenguaje de programación]
+*[Ficheros de configuración]
+*[Ficheros de datos]
+*[Ficheros de ejecución]
+EXPL: Según el texto, los elementos de un proyecto Python son ficheros escritos en este mismo lenguaje, conocidos como módulos o scripts.
+
+¿Cuál es el nombre del mensaje de error que se muestra cuando se produce un error sintáctico en un programa Python?
+*[SyntaxError]
+*[RuntimeError]
+*[TypeError]
+*[SyntaxWarning]
+EXPL: Según el texto, el mensaje de error que se muestra cuando se produce un error sintáctico en un programa Python se llama "SyntaxError".
+
+¿Qué es lo que se utiliza para ejecutar los ficheros de la aplicación en Python?
+*[Un ejecutable generado por el compilador]
+*[Un intérprete de Python]
+*[Un IDE de desarrollo]
+*[Un editor de código]
+EXPL: Según el texto, en Python no se suele generar ejecutables, simplemente los ficheros de la aplicación se copian en la ubicación deseada y se ejecutan mediante la llamada al intérprete.

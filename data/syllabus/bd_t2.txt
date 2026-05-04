@@ -59,3 +59,74 @@ DELETE TABLE
 TRUNCATE TABLE
 *DROP TABLE
 EXPL:DROP TABLE elimina la tabla completa: estructura y datos. ALTER TABLE modifica la estructura. DELETE borra filas (DML). TRUNCATE vacía los datos pero mantiene la estructura. Solo DROP TABLE elimina la tabla definitivamente.
+
+
+¿Cuál es el tipo de índice más adecuado para la búsqueda de cliente por correo en la tabla Clientes?
+*[Índice hash]
+[Índice B-tree]
+[Índice compuesto]
+[Índice simple]
+EXPL: Un índice hash sobre la columna Email permite localizar al cliente de forma muy rápida cuando solo importa la coincidencia exacta.
+
+ 
+
+¿Qué tipo de índice se utiliza para optimizar las búsquedas basadas en claves únicas o en rangos en la tabla Citas?
+*[Índice B-tree compuesto]
+[Índice hash]
+[Índice simple]
+[Índice hash compuesto]
+EXPL: Un índice B-tree compuesto que cubra primero ArtistaID y luego FechaHora acelera drásticamente las consultas de búsqueda de citas de un artista ordenadas por fecha.
+
+ 
+
+¿Cuál es el propósito de utilizar un índice B-tree simple en la columna DiseñoID de la tabla DetalleCita?
+*[Optimizar la búsqueda de todas las tuplas con un ID de diseño específico y las operaciones de agrupamiento y conteo]
+[Optimizar la búsqueda de clientes por correo]
+[Optimizar la búsqueda de citas de un artista ordenadas por fecha]
+[Optimizar la inserción de nuevos registros]
+EXPL: Un índice B-tree en la columna DiseñoID optimiza tanto la búsqueda de todas las tuplas con ese ID como las operaciones de agrupamiento y conteo.
+
+ 
+
+¿Qué característica de los índices en bases de datos relacionales se refiere a la mejora del rendimiento de las consultas?
+*[Mejora del rendimiento]
+[Optimización de búsquedas]
+[Ordenación de datos]
+[Espacio adicional]
+EXPL: Los índices permiten a los motores de base de datos acceder a los datos con gran eficiencia, lo que mejora significativamente el rendimiento de las consultas.
+
+ 
+
+¿Cuál es el valor especial que indica que una columna en una tabla no tiene un valor asignado?
+*[Valor NULL]
+[Valor vacío]
+[Valor cero]
+[Valor desconocido]
+EXPL: El valor NULL es un valor especial que indica que una columna en una tabla no tiene un valor asignado.
+
+ 
+
+¿Qué tipo de restricción en una base de datos relacional establece una relación entre dos tablas?
+*[Clave foránea]
+[Clave primaria]
+[Índice]
+[Relación de unión]
+EXPL: Una clave foránea es un tipo de restricción en una base de datos relacional que establece una relación entre dos tablas, donde la clave foránea de una tabla hace referencia a una clave primaria en otra tabla.
+
+ 
+
+¿Cuál es la característica de las claves foráneas que ayuda a mantener la integridad de los datos al evitar la inserción de registros inválidos en la tabla que contiene la clave foránea?
+*[Integridad referencial]
+[Referencialidad]
+[Unidireccionalidad]
+[Bidireccionalidad]
+EXPL: Las claves foráneas ayudan a mantener la integridad de los datos al evitar la inserción de registros inválidos en la tabla que contiene la clave foránea.
+
+ 
+
+¿Qué tipo de índice se utiliza para la detección de citas duplicadas en la tabla Citas?
+*[Índice compuesto, B-tree]
+[Índice hash]
+[Índice simple]
+[Índice hash compuesto]
+EXPL: Un índice compuesto, B-tree, que cubra las columnas ArtistaID y FechaHora, se utiliza para la detección de citas duplicadas en la tabla Citas.

@@ -68,3 +68,74 @@ La "fase de pruebas" se realiza únicamente después de la implementación, asum
 Las pruebas son una tarea puntual que se realiza solo al final del mantenimiento del software
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:En el ciclo de vida en V, cada fase de construcción lleva asociada una fase de pruebas para detectar errores lo antes po...
+
+
+¿Cuál es el objetivo principal de las pruebas de aceptación en el desarrollo de software?
+*[Verificar que el sistema cumple con lo acordado]
+[Verificar la eficiencia del sistema]
+[Verificar la seguridad del sistema]
+[Verificar la escalabilidad del sistema]
+EXPL: Las pruebas de aceptación se realizan para verificar que el sistema cumple con los requisitos y especificaciones acordados con el cliente.
+
+ 
+
+¿Qué tipo de pruebas se realizan para verificar que el sistema funciona correctamente bajo diferentes cargas de trabajo?
+*[Pruebas de rendimiento]
+[Pruebas de unidad]
+[Pruebas de integración]
+[Pruebas de sistema]
+EXPL: Las pruebas de rendimiento se realizan para verificar que el sistema funciona correctamente bajo diferentes cargas de trabajo y para detectar posibles problemas de rendimiento.
+
+ 
+
+¿Cuál es el propósito de la técnica de "clases de equivalencia" en las pruebas de código?
+*[Agrupar parámetros de entrada en conjuntos homogéneos]
+[Identificar valores límite]
+[Realizar pruebas unitarias]
+[Realizar pruebas de integración]
+EXPL: La técnica de "clases de equivalencia" se utiliza para agrupar parámetros de entrada en conjuntos homogéneos y reducir el número de pruebas necesarias.
+
+ 
+
+¿Qué es el "cubrimiento" o "cobertura" en el contexto de las pruebas de código?
+*[El porcentaje del código fuente que ha sido probado]
+[El número de pruebas unitarias realizadas]
+[El tiempo necesario para realizar las pruebas]
+[El costo de las pruebas]
+EXPL: El cubrimiento o cobertura se refiere al porcentaje del código fuente que ha sido probado y es una métrica para evaluar la calidad de las pruebas.
+
+ 
+
+¿Cuál es el nombre del framework de pruebas unitarias más popular en Java?
+*[Junit]
+[Unittest]
+[TestNG]
+[Cucumber]
+EXPL: Junit es el framework de pruebas unitarias más popular en Java y se utiliza ampliamente en el desarrollo de software.
+
+ 
+
+¿Qué tipo de pruebas se realizan para detectar fallos en el funcionamiento del código?
+*[Análisis dinámico]
+[Análisis estático]
+[Pruebas unitarias]
+[Pruebas de integración]
+EXPL: El análisis dinámico se realiza para detectar fallos en el funcionamiento del código y se centra en comprobar que el código funciona correctamente en diferentes escenarios.
+
+ 
+
+¿Cuál es el propósito de las pruebas de regresión en el desarrollo de software?
+*[Comprobar que otras partes del sistema no se han visto afectadas después de realizar cambios]
+[Comprobar la seguridad del sistema]
+[Comprobar la escalabilidad del sistema]
+[Comprobar la eficiencia del sistema]
+EXPL: Las pruebas de regresión se realizan para comprobar que otras partes del sistema no se han visto afectadas después de realizar cambios o correcciones de errores.
+
+ 
+
+¿Qué tipo de pruebas se realizan para verificar que la funcionalidad principal del sistema funciona correctamente?
+*[Pruebas de humo]
+[Pruebas unitarias]
+[Pruebas de integración]
+[Pruebas de sistema]
+EXPL: Las pruebas de humo se realizan para verificar que la funcionalidad principal del sistema funciona correctamente y se centran en detectar problemas graves y obvios.

@@ -139,6 +139,118 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "Los ficheros dBASE (.dbf) son ficheros de base de datos con índices que permiten acceso directo a registros. Son ficheros indexados, no planos ni multimedia.",
       "unit": "1",
       "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_1_q10",
+      "question": "¿Cuál es el tipo de base de datos que se utiliza principalmente en aplicaciones empresariales debido a su estructura y organización que encaja bien con los datos y conceptos de índole económica y mercantil?",
+      "options": [
+        "[Relacional]",
+        "[NoSQL]",
+        "[Jerárquica]",
+        "[Orientada a Objetos]"
+      ],
+      "correct": 0,
+      "explanation": "Las bases de datos relacionales se utilizan principalmente en aplicaciones empresariales debido a su estructura y organización que encaja bien con los datos y conceptos de índole económica y mercantil.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_1_q11",
+      "question": "¿Qué tipo de base de datos es adecuado para almacenar grandes cantidades de datos no estructurados o semiestructurados y es escalable y altamente disponible?",
+      "options": [
+        "[NoSQL]",
+        "[Relacional]",
+        "[Jerárquica]",
+        "[Orientada a Objetos]"
+      ],
+      "correct": 0,
+      "explanation": "Las bases de datos NoSQL son adecuadas para almacenar grandes cantidades de datos no estructurados o semiestructurados y son escalables y altamente disponibles.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_1_q12",
+      "question": "¿Cuál es el tipo de base de datos que permite describir objetos del mundo real, como se hace en lenguajes de programación que utilizan el paradigma de la programación orientada a objetos?",
+      "options": [
+        "[Orientada a Objetos]",
+        "[Relacional]",
+        "[NoSQL]",
+        "[Jerárquica]"
+      ],
+      "correct": 0,
+      "explanation": "Las bases de datos orientadas a objetos permiten describir objetos del mundo real, como se hace en lenguajes de programación que utilizan el paradigma de la programación orientada a objetos.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_1_q13",
+      "question": "¿Qué tipo de base de datos es adecuado para sistemas en los que los datos están relacionados de manera no jerárquica o en varios niveles de relaciones?",
+      "options": [
+        "[De Red]",
+        "[Relacional]",
+        "[NoSQL]",
+        "[Jerárquica]"
+      ],
+      "correct": 0,
+      "explanation": "Las bases de datos de red son adecuadas para sistemas en los que los datos están relacionados de manera no jerárquica o en varios niveles de relaciones.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_1_q14",
+      "question": "¿Cuál es el tipo de base de datos que se utiliza para almacenar y recuperar objetos Java con su jerarquía e información de manera directa?",
+      "options": [
+        "[Orientada a Objetos]",
+        "[Relacional]",
+        "[NoSQL]",
+        "[Jerárquica]"
+      ],
+      "correct": 0,
+      "explanation": "Las bases de datos orientadas a objetos se utilizan para almacenar y recuperar objetos Java con su jerarquía e información de manera directa.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_1_q15",
+      "question": "¿Qué tipo de base de datos es adecuado para consultar ramas enteras de un árbol jerárquico sin complejas uniones?",
+      "options": [
+        "[Jerárquica]",
+        "[Relacional]",
+        "[NoSQL]",
+        "[Orientada a Objetos]"
+      ],
+      "correct": 0,
+      "explanation": "Las bases de datos jerárquicas son adecuadas para consultar ramas enteras de un árbol jerárquico sin complejas uniones.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_1_q16",
+      "question": "¿Cuál es el tipo de base de datos que se utiliza para garantizar la integridad de datos y soportar transacciones seguras entre facturas, clientes y pagos en un sistema de facturación empresarial?",
+      "options": [
+        "[Relacional]",
+        "[NoSQL]",
+        "[Jerárquica]",
+        "[Orientada a Objetos]"
+      ],
+      "correct": 0,
+      "explanation": "Las bases de datos relacionales se utilizan para garantizar la integridad de datos y soportar transacciones seguras entre facturas, clientes y pagos en un sistema de facturación empresarial.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_1_q17",
+      "question": "¿Qué tipo de base de datos es adecuado para manejar grandes volúmenes de documentos semiestructurados y permitir crecimiento horizontal eficiente en un sistema de streaming de vídeo?",
+      "options": [
+        "[NoSQL]",
+        "[Relacional]",
+        "[Jerárquica]",
+        "[Orientada a Objetos]"
+      ],
+      "correct": 0,
+      "explanation": "Las bases de datos NoSQL son adecuadas para manejar grandes volúmenes de documentos semiestructurados y permitir crecimiento horizontal eficiente en un sistema de streaming de vídeo.",
+      "unit": "1",
+      "noShuffle": false
     }
   ],
   "bd_tema_2": [
@@ -279,6 +391,118 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "DROP TABLE elimina la tabla completa: estructura y datos. ALTER TABLE modifica la estructura. DELETE borra filas (DML). TRUNCATE vacía los datos pero mantiene la estructura. Solo DROP TABLE elimina la tabla definitivamente.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_2_q10",
+      "question": "¿Cuál es el tipo de índice más adecuado para la búsqueda de cliente por correo en la tabla Clientes?",
+      "options": [
+        "[Índice hash]",
+        "[Índice B-tree]",
+        "[Índice compuesto]",
+        "[Índice simple]"
+      ],
+      "correct": 0,
+      "explanation": "Un índice hash sobre la columna Email permite localizar al cliente de forma muy rápida cuando solo importa la coincidencia exacta.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_2_q11",
+      "question": "¿Qué tipo de índice se utiliza para optimizar las búsquedas basadas en claves únicas o en rangos en la tabla Citas?",
+      "options": [
+        "[Índice B-tree compuesto]",
+        "[Índice hash]",
+        "[Índice simple]",
+        "[Índice hash compuesto]"
+      ],
+      "correct": 0,
+      "explanation": "Un índice B-tree compuesto que cubra primero ArtistaID y luego FechaHora acelera drásticamente las consultas de búsqueda de citas de un artista ordenadas por fecha.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_2_q12",
+      "question": "¿Cuál es el propósito de utilizar un índice B-tree simple en la columna DiseñoID de la tabla DetalleCita?",
+      "options": [
+        "[Optimizar la búsqueda de todas las tuplas con un ID de diseño específico y las operaciones de agrupamiento y conteo]",
+        "[Optimizar la búsqueda de clientes por correo]",
+        "[Optimizar la búsqueda de citas de un artista ordenadas por fecha]",
+        "[Optimizar la inserción de nuevos registros]"
+      ],
+      "correct": 0,
+      "explanation": "Un índice B-tree en la columna DiseñoID optimiza tanto la búsqueda de todas las tuplas con ese ID como las operaciones de agrupamiento y conteo.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_2_q13",
+      "question": "¿Qué característica de los índices en bases de datos relacionales se refiere a la mejora del rendimiento de las consultas?",
+      "options": [
+        "[Mejora del rendimiento]",
+        "[Optimización de búsquedas]",
+        "[Ordenación de datos]",
+        "[Espacio adicional]"
+      ],
+      "correct": 0,
+      "explanation": "Los índices permiten a los motores de base de datos acceder a los datos con gran eficiencia, lo que mejora significativamente el rendimiento de las consultas.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_2_q14",
+      "question": "¿Cuál es el valor especial que indica que una columna en una tabla no tiene un valor asignado?",
+      "options": [
+        "[Valor NULL]",
+        "[Valor vacío]",
+        "[Valor cero]",
+        "[Valor desconocido]"
+      ],
+      "correct": 0,
+      "explanation": "El valor NULL es un valor especial que indica que una columna en una tabla no tiene un valor asignado.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_2_q15",
+      "question": "¿Qué tipo de restricción en una base de datos relacional establece una relación entre dos tablas?",
+      "options": [
+        "[Clave foránea]",
+        "[Clave primaria]",
+        "[Índice]",
+        "[Relación de unión]"
+      ],
+      "correct": 0,
+      "explanation": "Una clave foránea es un tipo de restricción en una base de datos relacional que establece una relación entre dos tablas, donde la clave foránea de una tabla hace referencia a una clave primaria en otra tabla.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_2_q16",
+      "question": "¿Cuál es la característica de las claves foráneas que ayuda a mantener la integridad de los datos al evitar la inserción de registros inválidos en la tabla que contiene la clave foránea?",
+      "options": [
+        "[Integridad referencial]",
+        "[Referencialidad]",
+        "[Unidireccionalidad]",
+        "[Bidireccionalidad]"
+      ],
+      "correct": 0,
+      "explanation": "Las claves foráneas ayudan a mantener la integridad de los datos al evitar la inserción de registros inválidos en la tabla que contiene la clave foránea.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_2_q17",
+      "question": "¿Qué tipo de índice se utiliza para la detección de citas duplicadas en la tabla Citas?",
+      "options": [
+        "[Índice compuesto, B-tree]",
+        "[Índice hash]",
+        "[Índice simple]",
+        "[Índice hash compuesto]"
+      ],
+      "correct": 0,
+      "explanation": "Un índice compuesto, B-tree, que cubra las columnas ArtistaID y FechaHora, se utiliza para la detección de citas duplicadas en la tabla Citas.",
       "unit": "2",
       "noShuffle": false
     }
@@ -423,6 +647,118 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente.",
       "unit": "3",
       "noShuffle": true
+    },
+    {
+      "concept_id": "bd_tema_3_q10",
+      "question": "¿Cuál es el tipo de relación entre la entidad BonoBackstage y la entidad AccesoBackstage en el modelo ER?",
+      "options": [
+        "[Relación de dependencia de identificación y existencia]",
+        "[Relación de independencia]",
+        "[Relación de herencia]",
+        "[Relación de composición]"
+      ],
+      "correct": 0,
+      "explanation": "La relación entre BonoBackstage y AccesoBackstage es de dependencia de identificación y existencia, ya que un acceso solo se identifica al combinar BonoID + SecuenciaAcceso y su existencia está ligada a la subsistencia de su bono padre.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_3_q11",
+      "question": "¿Cuál es el propósito de la clave parcial SecuenciaAcceso en la entidad AccesoBackstage?",
+      "options": [
+        "[Distinguir accesos dentro del mismo bono]",
+        "[Distinguir accesos entre diferentes bonos]",
+        "[Identificar la fecha de validez del bono]",
+        "[Identificar el asistente que utiliza el bono]"
+      ],
+      "correct": 0,
+      "explanation": "La clave parcial SecuenciaAcceso se utiliza para distinguir accesos dentro del mismo bono, ya que solo distingue accesos dentro del mismo bono y no entre diferentes bonos.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_3_q12",
+      "question": "¿Cuál es el efecto de la eliminación de un registro de BonoBackstage en la entidad AccesoBackstage, según la relación de dependencia de existencia?",
+      "options": [
+        "[Eliminación en cascada de los registros de AccesoBackstage asociados]",
+        "[Eliminación de los registros de AccesoBackstage no asociados]",
+        "[Actualización de los registros de AccesoBackstage asociados]",
+        "[No hay efecto en los registros de AccesoBackstage]"
+      ],
+      "correct": 0,
+      "explanation": "La eliminación de un registro de BonoBackstage tiene como efecto la eliminación en cascada de los registros de AccesoBackstage asociados, según la relación de dependencia de existencia implementada con ON DELETE CASCADE.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_3_q13",
+      "question": "¿Cuál es el propósito de la generalización en el modelo EER?",
+      "options": [
+        "[Agrupar entidades que comparten características comunes en una entidad general]",
+        "[Crear entidades específicas para cada caso de uso]",
+        "[Establecer relaciones entre entidades]",
+        "[Definir atributos para cada entidad]"
+      ],
+      "correct": 0,
+      "explanation": "La generalización en el modelo EER se utiliza para agrupar entidades que comparten características comunes en una entidad general, evitando la redundancia y favoreciendo la claridad del diseño.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_3_q14",
+      "question": "¿Cuál es el tipo de relación que se establece entre la entidad Artista y sí misma en el modelo EER?",
+      "options": [
+        "[Relación recursiva]",
+        "[Relación de herencia]",
+        "[Relación de composición]",
+        "[Relación de independencia]"
+      ],
+      "correct": 0,
+      "explanation": "La relación que se establece entre la entidad Artista y sí misma es una relación recursiva, ya que un artista puede recomendar a otro artista.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_3_q15",
+      "question": "¿Cuál es el propósito de los atributos multivaluados en el modelo EER?",
+      "options": [
+        "[Reflejar propiedades que admiten múltiples valores simultáneamente]",
+        "[Reflejar propiedades que admiten un solo valor]",
+        "[Establecer relaciones entre entidades]",
+        "[Definir atributos para cada entidad]"
+      ],
+      "correct": 0,
+      "explanation": "Los atributos multivaluados en el modelo EER se utilizan para reflejar propiedades que admiten múltiples valores simultáneamente, como los géneros que acoge un escenario.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_3_q16",
+      "question": "¿Cuál es el efecto de la generalización en la integridad de la base de datos?",
+      "options": [
+        "[Introduce restricciones opcionales que regulan la cobertura de la jerarquía]",
+        "[No tiene efecto en la integridad de la base de datos]",
+        "[Establece relaciones entre entidades]",
+        "[Define atributos para cada entidad]"
+      ],
+      "correct": 0,
+      "explanation": "La generalización introduce restricciones opcionales que regulan la cobertura de la jerarquía, como la totalidad o parcialidad de la entidad padre.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_3_q17",
+      "question": "¿Cuál es el propósito de la entidad padre en la generalización del modelo EER?",
+      "options": [
+        "[Recoger las propiedades y vínculos que resultan esenciales para todas las variantes]",
+        "[Crear entidades específicas para cada caso de uso]",
+        "[Establecer relaciones entre entidades]",
+        "[Definir atributos para cada entidad]"
+      ],
+      "correct": 0,
+      "explanation": "La entidad padre en la generalización del modelo EER se utiliza para recoger las propiedades y vínculos que resultan esenciales para todas las variantes, evitando la redundancia y favoreciendo la claridad del diseño.",
+      "unit": "3",
+      "noShuffle": false
     }
   ],
   "bd_tema_4": [
@@ -563,6 +899,118 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta es 'UNION'. \"INTERSECT\" y \"EXCEPT (o MINUS)\" son incorrectos porque describen conceptos diferentes.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_4_q10",
+      "question": "¿Cuál es la cláusula SQL que se utiliza para filtrar los resultados de una consulta con agrupación?",
+      "options": [
+        "[HAVING]",
+        "[WHERE]",
+        "[GROUP BY]",
+        "[SELECT]"
+      ],
+      "correct": 0,
+      "explanation": "La cláusula HAVING se utiliza para filtrar los resultados de una consulta con agrupación.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_4_q11",
+      "question": "¿Cuál es la sintaxis básica de una consulta con agrupación y HAVING?",
+      "options": [
+        "[SELECT columna1, columna2, función_de_agregado(columna3) FROM tabla GROUP BY columna1, columna2 HAVING condición]",
+        "[SELECT columna1, columna2, función_de_agregado(columna3) FROM tabla WHERE condición]",
+        "[SELECT columna1, columna2, función_de_agregado(columna3) FROM tabla GROUP BY columna1, columna2]",
+        "[SELECT columna1, columna2, función_de_agregado(columna3) FROM tabla HAVING condición]"
+      ],
+      "correct": 0,
+      "explanation": "La sintaxis básica de una consulta con agrupación y HAVING es la siguiente: SELECT columna1, columna2, función_de_agregado(columna3) FROM tabla GROUP BY columna1, columna2 HAVING condición.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_4_q12",
+      "question": "¿Cuál es el propósito de la cláusula GROUP BY en una consulta SQL?",
+      "options": [
+        "[Agrupar las filas de una tabla en función de una o varias columnas]",
+        "[Agrupar las filas de una tabla en función de una condición]",
+        "[Filtrar los resultados de una consulta]",
+        "[Seleccionar las columnas de una tabla]"
+      ],
+      "correct": 0,
+      "explanation": "La cláusula GROUP BY se utiliza para agrupar las filas de una tabla en función de una o varias columnas.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_4_q13",
+      "question": "¿Cuál es la diferencia entre la cláusula HAVING y la cláusula WHERE en una consulta SQL?",
+      "options": [
+        "[La cláusula HAVING se aplica después de la agrupación, mientras que la cláusula WHERE se aplica antes de la agrupación]",
+        "[La cláusula HAVING se utiliza para filtrar los resultados de una consulta, mientras que la cláusula WHERE se utiliza para seleccionar las columnas de una tabla]",
+        "[La cláusula HAVING se utiliza para agrupar las filas de una tabla, mientras que la cláusula WHERE se utiliza para filtrar los resultados de una consulta]",
+        "[La cláusula HAVING y la cláusula WHERE son equivalentes]"
+      ],
+      "correct": 0,
+      "explanation": "La cláusula HAVING se aplica después de la agrupación, mientras que la cláusula WHERE se aplica antes de la agrupación.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_4_q14",
+      "question": "¿Cuál es el resultado de la consulta SELECT Tienda, SUM(Ventas) FROM Franquicias GROUP BY Tienda HAVING SUM(Ventas) > 2000?",
+      "options": [
+        "[Una lista de tiendas con ventas totales superiores a 2000]",
+        "[Una lista de tiendas con ventas totales inferiores a 2000]",
+        "[Una lista de tiendas con ventas totales iguales a 2000]",
+        "[Una lista vacía]"
+      ],
+      "correct": 0,
+      "explanation": "El resultado de la consulta es una lista de tiendas con ventas totales superiores a 2000.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_4_q15",
+      "question": "¿Cuál es la sintaxis de una composición interna en SQL?",
+      "options": [
+        "[SELECT columnas FROM tabla1 JOIN tabla2 ON tabla1.columna = tabla2.columna]",
+        "[SELECT columnas FROM tabla1, tabla2 WHERE tabla1.columna = tabla2.columna]",
+        "[SELECT columnas FROM tabla1 WHERE tabla1.columna = tabla2.columna]",
+        "[SELECT columnas FROM tabla1 JOIN tabla2]"
+      ],
+      "correct": 0,
+      "explanation": "La sintaxis de una composición interna en SQL es la siguiente: SELECT columnas FROM tabla1 JOIN tabla2 ON tabla1.columna = tabla2.columna.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_4_q16",
+      "question": "¿Cuál es el propósito de la cláusula INNER JOIN en una consulta SQL?",
+      "options": [
+        "[Unir dos o más tablas en función de una condición de igualdad]",
+        "[Unir dos o más tablas en función de una condición de desigualdad]",
+        "[Filtrar los resultados de una consulta]",
+        "[Seleccionar las columnas de una tabla]"
+      ],
+      "correct": 0,
+      "explanation": "La cláusula INNER JOIN se utiliza para unir dos o más tablas en función de una condición de igualdad.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_4_q17",
+      "question": "¿Cuál es la diferencia entre la sintaxis implícita y la sintaxis explícita de una composición interna en SQL?",
+      "options": [
+        "[La sintaxis implícita utiliza la cláusula WHERE, mientras que la sintaxis explícita utiliza la cláusula INNER JOIN]",
+        "[La sintaxis implícita utiliza la cláusula INNER JOIN, mientras que la sintaxis explícita utiliza la cláusula WHERE]",
+        "[La sintaxis implícita y la sintaxis explícita son equivalentes]",
+        "[La sintaxis implícita es más segura que la sintaxis explícita]"
+      ],
+      "correct": 0,
+      "explanation": "La sintaxis implícita utiliza la cláusula WHERE, mientras que la sintaxis explícita utiliza la cláusula INNER JOIN.",
       "unit": "4",
       "noShuffle": false
     }
@@ -707,6 +1155,118 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "La respuesta es 'Se rechaza la operación y se genera un error.'. \"Se truncan los valores silenciosamente.\" y \"Se insertan valores nulos por defecto sin avisar.\" son incorrectos porque describen conceptos diferentes.",
       "unit": "5",
       "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_5_q10",
+      "question": "¿Cuál es el comando SQL para eliminar todos los posts de los usuarios que no han tenido actividad desde el año 2020?",
+      "options": [
+        "[DELETE FROM posts WHERE id_usuario IN (SELECT id_usuario FROM usuarios WHERE YEAR(ultima_actividad) <= 2020)]",
+        "[UPDATE posts SET estado = 'inactivo' WHERE id_usuario IN (SELECT id_usuario FROM usuarios WHERE YEAR(ultima_actividad) <= 2020)]",
+        "[INSERT INTO posts (id_usuario, contenido) VALUES (1, 'Nuevo post')]",
+        "[SELECT * FROM posts WHERE id_usuario IN (SELECT id_usuario FROM usuarios WHERE YEAR(ultima_actividad) <= 2020)]"
+      ],
+      "correct": 0,
+      "explanation": "La sentencia DELETE utiliza una subconsulta para seleccionar los IDs de los usuarios inactivos y eliminar sus posts.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_5_q11",
+      "question": "¿Cuál es el propósito de la función LAST_INSERT_ID() en la inserción de membresías?",
+      "options": [
+        "[Obtener el ID del último miembro insertado]",
+        "[Obtener el ID de la última membresía insertada]",
+        "[Obtener la fecha de inicio de la membresía]",
+        "[Obtener el tipo de membresía]"
+      ],
+      "correct": 0,
+      "explanation": "La función LAST_INSERT_ID() se utiliza para referirnos a los últimos IDs generados en la tabla Miembros y asignar membresías a los nuevos miembros.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_5_q12",
+      "question": "¿Cuál es el comando SQL para actualizar la membresía de Carlos Ruiz a trimestral?",
+      "options": [
+        "[UPDATE Membresías m JOIN Miembros p ON m.miembro_id = p.id SET m.tipo = 'Trimestral', m.fecha_fin = '2025-10-13' WHERE p.nombre = 'Carlos' AND p.apellidos = 'Ruiz']",
+        "[UPDATE Membresías SET tipo = 'Trimestral' WHERE miembro_id = 1]",
+        "[INSERT INTO Membresías (miembro_id, tipo, fecha_inicio, fecha_fin) VALUES (1, 'Trimestral', '2025-07-13', '2025-10-13')]",
+        "[DELETE FROM Membresías WHERE miembro_id = 1]"
+      ],
+      "correct": 0,
+      "explanation": "La sentencia UPDATE utiliza un JOIN para localizar la fila de membresía asociada a Carlos Ruiz y actualizar su tipo y fecha de fin.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_5_q13",
+      "question": "¿Cuál es el propósito de la cláusula ON DELETE CASCADE en la relación entre las tablas Clientes y Facturas?",
+      "options": [
+        "[Borrar automáticamente las facturas relacionadas con un cliente cuando se borre el cliente]",
+        "[Actualizar automáticamente el ID del cliente en las facturas cuando se actualice el ID del cliente]",
+        "[Establecer automáticamente el ID del cliente en NULL en las facturas cuando se borre el cliente]",
+        "[Crear automáticamente una nueva factura para un cliente cuando se cree un nuevo cliente]"
+      ],
+      "correct": 0,
+      "explanation": "La cláusula ON DELETE CASCADE se utiliza para borrar automáticamente las facturas relacionadas con un cliente cuando se borre el cliente.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_5_q14",
+      "question": "¿Cuál es el comando SQL para eliminar las membresías cuyo fecha_fin sea anterior al 2025-06-01?",
+      "options": [
+        "[DELETE m FROM Membresías m WHERE m.fecha_fin < '2025-06-01']",
+        "[UPDATE Membresías SET estado = 'inactivo' WHERE fecha_fin < '2025-06-01']",
+        "[INSERT INTO Membresías (miembro_id, tipo, fecha_inicio, fecha_fin) VALUES (1, 'Mensual', '2025-05-01', '2025-06-01')]",
+        "[SELECT * FROM Membresías WHERE fecha_fin < '2025-06-01']"
+      ],
+      "correct": 0,
+      "explanation": "La sentencia DELETE utiliza una condición para eliminar las membresías cuyo fecha_fin sea anterior al 2025-06-01.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_5_q15",
+      "question": "¿Cuál es el propósito de la función YEAR() en la subconsulta para seleccionar los IDs de los usuarios inactivos?",
+      "options": [
+        "[Obtener el año de la última actividad del usuario]",
+        "[Obtener el mes de la última actividad del usuario]",
+        "[Obtener el día de la última actividad del usuario]",
+        "[Obtener la hora de la última actividad del usuario]"
+      ],
+      "correct": 0,
+      "explanation": "La función YEAR() se utiliza para obtener el año de la última actividad del usuario y compararlo con el año 2020.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_5_q16",
+      "question": "¿Cuál es el comando SQL para insertar tres nuevos miembros en la tabla Miembros?",
+      "options": [
+        "[INSERT INTO Miembros (nombre, apellidos, fecha_nacimiento, fecha_inscripcion) VALUES ('Laura', 'Gómez', '1988-07-15', '2025-07-13'), ('Carlos', 'Ruiz', '1992-03-10', '2025-07-13'), ('Elena', 'Martín', '1975-11-22', '2025-07-13')]",
+        "[UPDATE Miembros SET nombre = 'Laura' WHERE id = 1]",
+        "[INSERT INTO Membresías (miembro_id, tipo, fecha_inicio, fecha_fin) VALUES (1, 'Mensual', '2025-07-13', '2025-08-13')]",
+        "[DELETE FROM Miembros WHERE id = 1]"
+      ],
+      "correct": 0,
+      "explanation": "La sentencia INSERT utiliza la forma múltiple VALUES para insertar tres filas de golpe en la tabla Miembros.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_5_q17",
+      "question": "¿Cuál es el propósito de la cláusula FOREIGN KEY en la definición de la tabla Membresías?",
+      "options": [
+        "[Establecer una relación entre la tabla Membresías y la tabla Miembros]",
+        "[Establecer una relación entre la tabla Membresías y la tabla Clientes]",
+        "[Establecer una relación entre la tabla Miembros y la tabla Clientes]",
+        "[Establecer una relación entre la tabla Facturas y la tabla Membresías]"
+      ],
+      "correct": 0,
+      "explanation": "La cláusula FOREIGN KEY se utiliza para establecer una relación entre la tabla Membresías y la tabla Miembros, específicamente entre el campo miembro_id y el campo id de la tabla Miembros.",
+      "unit": "5",
+      "noShuffle": false
     }
   ],
   "bd_tema_6": [
@@ -847,6 +1407,118 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un cursor permite procesar el resultado de una SELECT fila a fila dentro de un procedimiento. Pasos: DECLARE → OPEN → FETCH (bucle) → CLOSE. El handler NOT FOUND detecta el fin.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_6_q10",
+      "question": "¿Cuál es el propósito de la función TRIM() en MySQL?",
+      "options": [
+        "[Eliminar los espacios en blanco al principio y al final de una cadena de caracteres]",
+        "[Redondear un valor a un número especificado de decimales]",
+        "[Devolver la diferencia entre dos fechas en días]",
+        "[Concatenar dos o más cadenas de caracteres con un separador específico]"
+      ],
+      "correct": 0,
+      "explanation": "La función TRIM() se utiliza para eliminar los espacios en blanco al principio y al final de una cadena de caracteres.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_6_q11",
+      "question": "¿Cuál es el resultado de la función CEIL(2.1)?",
+      "options": [
+        "[3]",
+        "[2]",
+        "[2.1]",
+        "[1]"
+      ],
+      "correct": 0,
+      "explanation": "La función CEIL() redondea un valor hacia arriba al entero más cercano, por lo que CEIL(2.1) devuelve 3.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_6_q12",
+      "question": "¿Cuál es la sintaxis para crear una función personalizada en MySQL?",
+      "options": [
+        "[CREATE FUNCTION]",
+        "[CREATE TABLE]",
+        "[CREATE DATABASE]",
+        "[CREATE INDEX]"
+      ],
+      "correct": 0,
+      "explanation": "La sintaxis para crear una función personalizada en MySQL es CREATE FUNCTION.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_6_q13",
+      "question": "¿Cuál es el propósito de la instrucción DELIMITER en MySQL?",
+      "options": [
+        "[Cambiar el delimitador de comandos]",
+        "[Crear una función personalizada]",
+        "[Eliminar una tabla]",
+        "[Modificar un índice]"
+      ],
+      "correct": 0,
+      "explanation": "La instrucción DELIMITER se utiliza para cambiar el delimitador de comandos en MySQL.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_6_q14",
+      "question": "¿Cuál es el significado de la etiqueta DETERMINISTIC en una función personalizada de MySQL?",
+      "options": [
+        "[Indica que la función siempre devuelve el mismo resultado para los mismos argumentos de entrada]",
+        "[Indica que la función no accede a la base de datos]",
+        "[Indica que la función accede a los datos en la base de datos, pero no los modifica]",
+        "[Indica que la función modifica los datos en la base de datos]"
+      ],
+      "correct": 0,
+      "explanation": "La etiqueta DETERMINISTIC indica que la función siempre devuelve el mismo resultado para los mismos argumentos de entrada.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_6_q15",
+      "question": "¿Cuál es el propósito de la función CONCAT_WS() en MySQL?",
+      "options": [
+        "[Concatenar dos o más cadenas de caracteres con un separador específico]",
+        "[Redondear un valor a un número especificado de decimales]",
+        "[Devolver la diferencia entre dos fechas en días]",
+        "[Eliminar los espacios en blanco al principio y al final de una cadena de caracteres]"
+      ],
+      "correct": 0,
+      "explanation": "La función CONCAT_WS() se utiliza para concatenar dos o más cadenas de caracteres con un separador específico.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_6_q16",
+      "question": "¿Cuál es el resultado de la función FLOOR(2.9)?",
+      "options": [
+        "[2]",
+        "[3]",
+        "[2.9]",
+        "[1]"
+      ],
+      "correct": 0,
+      "explanation": "La función FLOOR() redondea un valor hacia abajo al entero más cercano, por lo que FLOOR(2.9) devuelve 2.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_6_q17",
+      "question": "¿Cuál es el propósito de la opción \"log_bin_trust_function_creators\" en MySQL?",
+      "options": [
+        "[Permitir que las funciones definidas por el usuario que modifican datos sean replicadas en la base de datos secundaria]",
+        "[Crear una función personalizada]",
+        "[Eliminar una tabla]",
+        "[Modificar un índice]"
+      ],
+      "correct": 0,
+      "explanation": "La opción \"log_bin_trust_function_creators\" se utiliza para permitir que las funciones definidas por el usuario que modifican datos sean replicadas en la base de datos secundaria.",
       "unit": "6",
       "noShuffle": false
     }
@@ -991,6 +1663,118 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).",
       "unit": "7",
       "noShuffle": true
+    },
+    {
+      "concept_id": "bd_tema_7_q10",
+      "question": "¿Cuál es la sintaxis básica para definir un tipo de objeto en PostgreSQL?",
+      "options": [
+        "[CREATE TYPE nombre_del_tipo_de_objeto AS (lista_de_campos);]",
+        "[CREATE TABLE nombre_de_la_tabla (lista_de_campos);]",
+        "[INSERT INTO nombre_de_la_tabla (lista_de_campos) VALUES (valores);]",
+        "[SELECT * FROM nombre_de_la_tabla;]"
+      ],
+      "correct": 0,
+      "explanation": "La sintaxis básica para definir un tipo de objeto en PostgreSQL se utiliza el lenguaje de definición de datos (DDL) y se especifica con la instrucción CREATE TYPE.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_7_q11",
+      "question": "¿Cuál es el propósito de la cláusula INHERITS en la definición de una tabla en PostgreSQL?",
+      "options": [
+        "[Herencia de columnas y restricciones de la tabla padre]",
+        "[Creación de un índice en la tabla]",
+        "[Definición de una clave foránea]",
+        "[Creación de una vista]"
+      ],
+      "correct": 0,
+      "explanation": "La cláusula INHERITS se utiliza para heredar columnas y restricciones de la tabla padre en la definición de una tabla hija.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_7_q12",
+      "question": "¿Cuál es el resultado de heredar una tabla con una clave primaria en PostgreSQL?",
+      "options": [
+        "[La tabla hija hereda la clave primaria de la tabla padre]",
+        "[La tabla hija no hereda la clave primaria de la tabla padre y debe declararla de nuevo]",
+        "[La tabla hija puede tener varias claves primarias]",
+        "[La tabla hija no puede tener claves primarias]"
+      ],
+      "correct": 0,
+      "explanation": "La tabla hija no hereda la clave primaria de la tabla padre y debe declararla de nuevo para mantener la unicidad del identificador.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_7_q13",
+      "question": "¿Cuál es la restricción para heredar columnas con los mismos nombres en la tabla hija en PostgreSQL?",
+      "options": [
+        "[La tabla hija puede tener columnas con los mismos nombres que las columnas de la tabla padre]",
+        "[La tabla hija no puede tener columnas con los mismos nombres que las columnas de la tabla padre]",
+        "[La tabla hija puede tener columnas con nombres diferentes a las columnas de la tabla padre]",
+        "[La tabla hija debe tener columnas con nombres diferentes a las columnas de la tabla padre]"
+      ],
+      "correct": 0,
+      "explanation": "La tabla hija no puede tener columnas con los mismos nombres que las columnas de la tabla padre, ya que esto podría causar confusiones al realizar consultas.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_7_q14",
+      "question": "¿Cuál es el comportamiento de las restricciones de clave foránea en la herencia de tablas en PostgreSQL?",
+      "options": [
+        "[Las restricciones de clave foránea se aplican automáticamente a la tabla hija]",
+        "[Las restricciones de clave foránea no se aplican a la tabla hija y deben definirse de nuevo]",
+        "[Las restricciones de clave foránea se aplican solo a la tabla padre]",
+        "[Las restricciones de clave foránea se aplican a ambas tablas, padre e hija]"
+      ],
+      "correct": 0,
+      "explanation": "Las restricciones de clave foránea no se aplican automáticamente a la tabla hija y deben definirse de nuevo si se necesitan.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_7_q15",
+      "question": "¿Cuál es el propósito de la instrucción CREATE TYPE en PostgreSQL?",
+      "options": [
+        "[Crear una nueva tabla]",
+        "[Crear un nuevo índice]",
+        "[Crear una nueva vista]",
+        "[Crear un nuevo tipo de objeto]"
+      ],
+      "correct": 0,
+      "explanation": "La instrucción CREATE TYPE se utiliza para crear un nuevo tipo de objeto en PostgreSQL, que puede ser utilizado en la definición de tablas y vistas.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_7_q16",
+      "question": "¿Cuál es la sintaxis para definir una tabla con herencia en PostgreSQL?",
+      "options": [
+        "[CREATE TABLE tabla_hija (campo_1 tipo_de_dato_1, ...) INHERITS (tabla_padre);]",
+        "[CREATE TABLE tabla_hija (campo_1 tipo_de_dato_1, ...);]",
+        "[CREATE TABLE tabla_padre (campo_1 tipo_de_dato_1, ...);]",
+        "[CREATE TABLE tabla_hija (campo_1 tipo_de_dato_1, ...) INHERITS (tabla_padre, tabla_padre2);]"
+      ],
+      "correct": 0,
+      "explanation": "La sintaxis para definir una tabla con herencia en PostgreSQL se utiliza la instrucción CREATE TABLE con la cláusula INHERITS para especificar la tabla padre.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_tema_7_q17",
+      "question": "¿Cuál es el resultado de heredar varias tablas en PostgreSQL?",
+      "options": [
+        "[La tabla hija hereda todas las columnas de las tablas padre]",
+        "[La tabla hija no hereda columnas de las tablas padre]",
+        "[La tabla hija hereda solo las columnas de la primera tabla padre]",
+        "[La tabla hija hereda solo las columnas de la última tabla padre]"
+      ],
+      "correct": 0,
+      "explanation": "La tabla hija hereda todas las columnas de las tablas padre, pero debe tener en cuenta que las restricciones y los índices no se copian automáticamente.",
+      "unit": "7",
+      "noShuffle": false
     }
   ],
   "ed_tema_1": [
@@ -1133,6 +1917,118 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "La respuesta es 'Paradigma de Programación Estructurada.'. \"Paradigma Imperativo.\" y \"Paradigma Orientado a Objetos.\" son incorrectos porque describen conceptos diferentes.",
       "unit": "1",
       "noShuffle": true
+    },
+    {
+      "concept_id": "ed_tema_1_q10",
+      "question": "¿Cuál es el paradigma de programación que se enfoca en la solución de problemas a través de funciones matemáticas y es un subtipo del paradigma declarativo?",
+      "options": [
+        "[Paradigma funcional]",
+        "[Paradigma imperativo]",
+        "[Paradigma orientado a objetos]",
+        "[Paradigma de programación estructurada]"
+      ],
+      "correct": 0,
+      "explanation": "El paradigma funcional es un subtipo del paradigma declarativo que se enfoca en la solución de problemas a través de funciones matemáticas.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_1_q11",
+      "question": "¿Qué lenguaje de programación es un ejemplo de lenguaje puramente orientado a objetos?",
+      "options": [
+        "[Java]",
+        "[C]",
+        "[Python]",
+        "[PHP]"
+      ],
+      "correct": 0,
+      "explanation": "Java es un lenguaje puramente orientado a objetos.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_1_q12",
+      "question": "¿Cuál es la principal ventaja de los lenguajes de programación compilados?",
+      "options": [
+        "[Mayor velocidad de ejecución]",
+        "[Portabilidad]",
+        "[Seguridad]",
+        "[Facilidad de uso]"
+      ],
+      "correct": 0,
+      "explanation": "La principal ventaja de los lenguajes de programación compilados es la mayor velocidad de ejecución.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_1_q13",
+      "question": "¿Qué es un intérprete en el contexto de los lenguajes de programación interpretados?",
+      "options": [
+        "[Un software de traducción que traduce el código fuente al lenguaje máquina]",
+        "[Un compilador que traduce el código fuente a código máquina]",
+        "[Un entorno de desarrollo integrado]",
+        "[Un lenguaje de programación]"
+      ],
+      "correct": 0,
+      "explanation": "Un intérprete es un software de traducción que traduce el código fuente al lenguaje máquina en los lenguajes de programación interpretados.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_1_q14",
+      "question": "¿Cuál es la característica que define a una variable en programación?",
+      "options": [
+        "[Un espacio de memoria que almacena un dato]",
+        "[Un tipo de dato que se utiliza en una operación]",
+        "[Un nombre que se asigna a un valor]",
+        "[Un valor que se asigna a una variable]"
+      ],
+      "correct": 0,
+      "explanation": "Una variable es un espacio de memoria que almacena un dato.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_1_q15",
+      "question": "¿Qué es el tipo de variable en programación?",
+      "options": [
+        "[La naturaleza del dato que es capaz de almacenar]",
+        "[El nombre que se asigna a una variable]",
+        "[El valor que se asigna a una variable]",
+        "[La operación que se realiza con una variable]"
+      ],
+      "correct": 0,
+      "explanation": "El tipo de variable hace referencia a la naturaleza del dato que es capaz de almacenar.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_1_q16",
+      "question": "¿Cuál es la acción que consiste en indicar el nombre y el tipo de una variable en programación?",
+      "options": [
+        "[Declaración]",
+        "[Asignación]",
+        "[Inicialización]",
+        "[Instanciación]"
+      ],
+      "correct": 0,
+      "explanation": "La declaración consiste en indicar el nombre y el tipo de una variable.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_1_q17",
+      "question": "¿Qué lenguaje de programación es un ejemplo de lenguaje que admite los paradigmas declarativos, orientado a objetos y funcional?",
+      "options": [
+        "[Python]",
+        "[C]",
+        "[Java]",
+        "[PHP]"
+      ],
+      "correct": 0,
+      "explanation": "Python es un lenguaje que admite los paradigmas declarativos, orientado a objetos y funcional.",
+      "unit": "1",
+      "noShuffle": false
     }
   ],
   "ed_tema_2": [
@@ -1275,6 +2171,118 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "El trabajo en equipo, el control de versiones y el seguimiento de incidencias, entre otras tareas.",
       "unit": "2",
       "noShuffle": true
+    },
+    {
+      "concept_id": "ed_tema_2_q10",
+      "question": "¿Cuál es el lenguaje de programación utilizado por el editor de código Brackets?",
+      "options": [
+        "[JavaScript]",
+        "[C++]",
+        "[Python]",
+        "[Java]"
+      ],
+      "correct": 0,
+      "explanation": "Según la tabla de editores de código, Brackets utiliza JavaScript como lenguaje de programación.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_2_q11",
+      "question": "¿Quién es el fundador del movimiento del software libre y creador del sistema operativo GNU?",
+      "options": [
+        "[Richard Stallman]",
+        "[Bill Gates]",
+        "[Steve Jobs]",
+        "[Linus Torvalds]"
+      ],
+      "correct": 0,
+      "explanation": "Según el texto, Richard Stallman es el fundador del movimiento del software libre y creador del sistema operativo GNU.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_2_q12",
+      "question": "¿Cuál es el nombre del IDE de desarrollo para proyectos Python mencionado en el texto?",
+      "options": [
+        "[PyCharm]",
+        "[Visual Studio Code]",
+        "[Sublime Text 3]",
+        "[Notepad++]"
+      ],
+      "correct": 3,
+      "explanation": "Según el texto, PyCharm es el IDE de desarrollo para proyectos Python mencionado.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_2_q13",
+      "question": "¿Qué es lo que se debe marcar durante la instalación de Python para que se agregue a la PATH la ruta de la instalación?",
+      "options": [
+        "[La opción de añadir a la PATH la ruta de la instalación]",
+        "[La opción de no añadir a la PATH la ruta de la instalación]",
+        "[La opción de instalar el intérprete de Python]",
+        "[La opción de instalar el IDE PyCharm]"
+      ],
+      "correct": 3,
+      "explanation": "Según el texto, se recomienda marcar la opción de añadir a la PATH la ruta de la instalación durante la instalación de Python.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_2_q14",
+      "question": "¿Cuál es el nombre de la sección en la que se debe seleccionar la ubicación del proyecto en PyCharm?",
+      "options": [
+        "[Location]",
+        "[Project]",
+        "[File]",
+        "[Settings]"
+      ],
+      "correct": 3,
+      "explanation": "Según el texto, la sección en la que se debe seleccionar la ubicación del proyecto en PyCharm se llama \"Location\".",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_2_q15",
+      "question": "¿Qué es lo que se conoce como módulos o scripts en un proyecto Python?",
+      "options": [
+        "[Ficheros escritos en lenguaje de programación]",
+        "[Ficheros de configuración]",
+        "[Ficheros de datos]",
+        "[Ficheros de ejecución]"
+      ],
+      "correct": 3,
+      "explanation": "Según el texto, los elementos de un proyecto Python son ficheros escritos en este mismo lenguaje, conocidos como módulos o scripts.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_2_q16",
+      "question": "¿Cuál es el nombre del mensaje de error que se muestra cuando se produce un error sintáctico en un programa Python?",
+      "options": [
+        "[SyntaxError]",
+        "[RuntimeError]",
+        "[TypeError]",
+        "[SyntaxWarning]"
+      ],
+      "correct": 3,
+      "explanation": "Según el texto, el mensaje de error que se muestra cuando se produce un error sintáctico en un programa Python se llama \"SyntaxError\".",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_2_q17",
+      "question": "¿Qué es lo que se utiliza para ejecutar los ficheros de la aplicación en Python?",
+      "options": [
+        "[Un ejecutable generado por el compilador]",
+        "[Un intérprete de Python]",
+        "[Un IDE de desarrollo]",
+        "[Un editor de código]"
+      ],
+      "correct": 3,
+      "explanation": "Según el texto, en Python no se suele generar ejecutables, simplemente los ficheros de la aplicación se copian en la ubicación deseada y se ejecutan mediante la llamada al intérprete.",
+      "unit": "2",
+      "noShuffle": false
     }
   ],
   "ed_tema_3": [
@@ -1417,6 +2425,118 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "La respuesta es 'Diagramas estructurales y diagramas de comportamiento.'.",
       "unit": "3",
       "noShuffle": true
+    },
+    {
+      "concept_id": "ed_tema_3_q10",
+      "question": "¿Cuál es la versión actual de UML vigente desde diciembre de 2017?",
+      "options": [
+        "[2.5.1]",
+        "[1.1]",
+        "[2.0]",
+        "[1.5]"
+      ],
+      "correct": 0,
+      "explanation": "La versión 2.5.1 de UML es la vigente desde diciembre de 2017.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_3_q11",
+      "question": "¿Cuál es el propósito del diagrama de estructura compuesta en UML?",
+      "options": [
+        "[Representar el interior de una clase, las interacciones internas y las conexiones con el exterior]",
+        "[Representar las clases del sistema y sus relaciones]",
+        "[Representar los componentes del sistema y sus relaciones]",
+        "[Representar los paquetes del sistema y sus dependencias]"
+      ],
+      "correct": 0,
+      "explanation": "El diagrama de estructura compuesta representa el interior de una clase, las interacciones internas y las conexiones con el exterior.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_3_q12",
+      "question": "¿Cuál es el nombre del diagrama que representa la secuencia de interacciones entre las clases de un sistema para resolver un problema?",
+      "options": [
+        "[Diagrama de secuencia]",
+        "[Diagrama de actividad]",
+        "[Diagrama de comunicación]",
+        "[Diagrama de tiempos]"
+      ],
+      "correct": 0,
+      "explanation": "El diagrama de secuencia representa la secuencia de interacciones entre las clases de un sistema para resolver un problema.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_3_q13",
+      "question": "¿Cuál es el nombre de la herramienta CASE que dispone de una versión gratuita para uso no profesional y tiene soporte para UML?",
+      "options": [
+        "[Software Ideas Modeler]",
+        "[Smartdraw]",
+        "[Visual Paradigm]",
+        "[Microsoft Visio]"
+      ],
+      "correct": 0,
+      "explanation": "Software Ideas Modeler es una herramienta CASE que dispone de una versión gratuita para uso no profesional y tiene soporte para UML.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_3_q14",
+      "question": "¿Cuál es el nombre del diagrama que representa cómo se relacionan los usuarios del sistema con las funciones de alto nivel que proporciona?",
+      "options": [
+        "[Diagrama de casos de uso]",
+        "[Diagrama de actividad]",
+        "[Diagrama de secuencia]",
+        "[Diagrama de comunicación]"
+      ],
+      "correct": 0,
+      "explanation": "El diagrama de casos de uso representa cómo se relacionan los usuarios del sistema con las funciones de alto nivel que proporciona.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_3_q15",
+      "question": "¿Cuál es el nombre de la metodología de desarrollo orientado a objetos que utiliza UML para representar las clases del sistema?",
+      "options": [
+        "[OOSE]",
+        "[OMT]",
+        "[Booch]",
+        "[Ninguna de las anteriores]"
+      ],
+      "correct": 0,
+      "explanation": "OOSE es una metodología de desarrollo orientado a objetos que utiliza UML para representar las clases del sistema.",
+      "unit": "3",
+      "noShuffle": true
+    },
+    {
+      "concept_id": "ed_tema_3_q16",
+      "question": "¿Cuál es el nombre del diagrama que representa los estados de un sistema, subsistema u objeto y las transiciones que se pueden producir entre ellos?",
+      "options": [
+        "[Diagrama de estados o de máquina de estados]",
+        "[Diagrama de actividad]",
+        "[Diagrama de secuencia]",
+        "[Diagrama de comunicación]"
+      ],
+      "correct": 0,
+      "explanation": "El diagrama de estados o de máquina de estados representa los estados de un sistema, subsistema u objeto y las transiciones que se pueden producir entre ellos.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_3_q17",
+      "question": "¿Cuál es el nombre del grupo de diagramas UML que muestra el sistema desde un punto de vista dinámico y permite representar la actividad que realiza el sistema?",
+      "options": [
+        "[Diagramas de comportamiento]",
+        "[Diagramas estructurales]",
+        "[Diagramas de interacción]",
+        "[Diagramas de casos de uso]"
+      ],
+      "correct": 0,
+      "explanation": "Los diagramas de comportamiento muestran el sistema desde un punto de vista dinámico y permiten representar la actividad que realiza el sistema.",
+      "unit": "3",
+      "noShuffle": false
     }
   ],
   "ed_tema_4": [
@@ -1559,6 +2679,118 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "En la obtención de un diagrama de clases a partir del código fuente ya existente de una aplicación.",
       "unit": "4",
       "noShuffle": true
+    },
+    {
+      "concept_id": "ed_tema_4_q10",
+      "question": "¿Cuál es el símbolo utilizado en UML para representar la navegabilidad en una relación de asociación?",
+      "options": [
+        "[Punta de flecha]",
+        "[X]",
+        "[Línea sólida]",
+        "[Línea discontinua]"
+      ],
+      "correct": 0,
+      "explanation": "El símbolo de navegabilidad se representa mediante una punta de flecha en el extremo de la línea que conecta las clases afectadas.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_4_q11",
+      "question": "¿Cómo se representa la relación de composición en UML?",
+      "options": [
+        "[Línea sólida rematada con un diamante sólido]",
+        "[Línea discontinua rematada con una punta de flecha]",
+        "[Línea sólida rematada con un diamante hueco]",
+        "[Línea discontinua rematada con una equis]"
+      ],
+      "correct": 0,
+      "explanation": "La relación de composición se representa con una línea sólida rematada con el símbolo de un diamante sólido en el extremo de la clase que representa el conjunto.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_4_q12",
+      "question": "¿Cuál es el propósito del botón \"Class\" en el menú izquierdo de la herramienta Software Ideas Modeler?",
+      "options": [
+        "[Crear una nueva clase]",
+        "[Crear un nuevo diagrama de clases]",
+        "[Crear un nuevo proyecto]",
+        "[Crear un nuevo atributo]"
+      ],
+      "correct": 3,
+      "explanation": "El botón \"Class\" se utiliza para insertar una nueva clase en el diagrama de clases.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_4_q13",
+      "question": "¿Cómo se accede al menú de propiedades de un atributo en la herramienta Software Ideas Modeler?",
+      "options": [
+        "[Pulsando con el botón derecho sobre el atributo]",
+        "[Pulsando con el botón izquierdo sobre el atributo]",
+        "[Seleccionando el atributo y presionando la tecla \"Enter\"]",
+        "[Seleccionando el atributo y presionando la tecla \"F1\"]"
+      ],
+      "correct": 3,
+      "explanation": "Se accede al menú de propiedades de un atributo pulsando con el botón derecho sobre el mismo.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_4_q14",
+      "question": "¿Cuál es el nombre del complemento opcional (plugin) en el IDE PyCharm que permite representar el diagrama de clases de una aplicación Python?",
+      "options": [
+        "[Diagrams]",
+        "[UML Designer]",
+        "[Class Diagram]",
+        "[Python Diagrams]"
+      ],
+      "correct": 3,
+      "explanation": "El complemento opcional (plugin) se llama \"Diagrams\".",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_4_q15",
+      "question": "¿Cómo se representa la relación de agregación en UML?",
+      "options": [
+        "[Línea sólida rematada con un diamante hueco]",
+        "[Línea discontinua rematada con una punta de flecha]",
+        "[Línea sólida rematada con un diamante sólido]",
+        "[Línea discontinua rematada con una equis]"
+      ],
+      "correct": 3,
+      "explanation": "La relación de agregación se representa con una línea sólida rematada con el símbolo de un diamante hueco en el extremo de la clase que representa el conjunto.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_4_q16",
+      "question": "¿Cuál es el prefijo que la herramienta CASE Software Ideas Modeler agrega al nombre de los constructores para una mejor identificación?",
+      "options": [
+        "[\"create\"]",
+        "[\"constructor\"]",
+        "[\"method\"]",
+        "[\"attribute\"]"
+      ],
+      "correct": 3,
+      "explanation": "La herramienta CASE Software Ideas Modeler agrega el prefijo \"create\" al nombre de los constructores.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_4_q17",
+      "question": "¿Cuál es el símbolo utilizado en UML para representar la no navegabilidad en una relación de asociación?",
+      "options": [
+        "[X]",
+        "[Punta de flecha]",
+        "[Línea sólida]",
+        "[Línea discontinua]"
+      ],
+      "correct": 3,
+      "explanation": "El símbolo de no navegabilidad se representa mediante una equis (X) en el extremo de la línea que conecta las clases afectadas.",
+      "unit": "4",
+      "noShuffle": false
     }
   ],
   "ed_tema_5": [
@@ -1701,6 +2933,104 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y t...",
       "unit": "5",
       "noShuffle": true
+    },
+    {
+      "concept_id": "ed_tema_5_q10",
+      "question": "¿Cuál es el símbolo utilizado para representar la relación de inclusión entre casos de uso en UML?",
+      "options": [
+        "[Línea discontinua terminada en flecha que apunta al caso de uso \"incluido\" y el texto include entre comillas angulares: <<include>>]",
+        "[Línea continua]",
+        "[Línea discontinua rematada en punta que señala al caso de uso \"extendido\"]",
+        "[Línea de vida]"
+      ],
+      "correct": 0,
+      "explanation": "La relación de inclusión se representa mediante una línea discontinua terminada en flecha que apunta al caso de uso \"incluido\" y el texto include entre comillas angulares: <<include>>.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_5_q11",
+      "question": "¿Qué es un diagrama de secuencia en UML?",
+      "options": [
+        "[Un diagrama que refleja la sucesión de llamadas que se realizan entre los diferentes objetos que participan en la realización de una actividad]",
+        "[Un diagrama que muestra la estructura de un sistema]",
+        "[Un diagrama que representa la comunicación entre objetos]",
+        "[Un diagrama que muestra la relación entre casos de uso]"
+      ],
+      "correct": 0,
+      "explanation": "Un diagrama de secuencia es un diagrama que refleja la sucesión de llamadas que se realizan entre los diferentes objetos que participan en la realización de una actividad.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_5_q12",
+      "question": "¿Cuál es el propósito de la barra de activación en un diagrama de secuencia?",
+      "options": [
+        "[Representar el periodo de tiempo durante el que el elemento se encuentra activo en la resolución de la actividad]",
+        "[Representar la línea de vida de un objeto]",
+        "[Representar un mensaje o llamada]",
+        "[Representar una respuesta]"
+      ],
+      "correct": 0,
+      "explanation": "La barra de activación representa el periodo de tiempo durante el que el elemento se encuentra activo en la resolución de la actividad.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_5_q13",
+      "question": "¿Qué es un objeto en un diagrama de comunicación?",
+      "options": [
+        "[Una instancia concreta de una clase]",
+        "[Un caso de uso]",
+        "[Un actor]",
+        "[Un mensaje]"
+      ],
+      "correct": 0,
+      "explanation": "Un objeto en un diagrama de comunicación es una instancia concreta de una clase.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_5_q14",
+      "question": "¿Cuál es la diferencia fundamental entre la extensión y la inclusión en UML?",
+      "options": [
+        "[La extensión tiene un componente de opcionalidad que no existe en la inclusión]",
+        "[La inclusión tiene un componente de opcionalidad que no existe en la extensión]",
+        "[La extensión se utiliza para casos de uso y la inclusión se utiliza para actores]",
+        "[La inclusión se utiliza para casos de uso y la extensión se utiliza para actores]"
+      ],
+      "correct": 0,
+      "explanation": "La extensión tiene un componente de opcionalidad que no existe en la inclusión.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_5_q15",
+      "question": "¿Qué es un diagrama de comunicación en UML?",
+      "options": [
+        "[Un diagrama que representa la comunicación que se produce entre objetos para un caso concreto de uso del sistema]",
+        "[Un diagrama que muestra la estructura de un sistema]",
+        "[Un diagrama que representa la relación entre casos de uso]",
+        "[Un diagrama que refleja la sucesión de llamadas que se realizan entre los diferentes objetos]"
+      ],
+      "correct": 0,
+      "explanation": "Un diagrama de comunicación es un diagrama que representa la comunicación que se produce entre objetos para un caso concreto de uso del sistema.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_5_q16",
+      "question": "¿Cuál es el propósito de la línea de vida en un diagrama de secuencia?",
+      "options": [
+        "[Representar la \"línea de vida\" del elemento durante la actividad, desde arriba (principio) hacia abajo (final)]",
+        "[Representar un mensaje o llamada]",
+        "[Representar una respuesta]",
+        "[Representar la barra de activación]"
+      ],
+      "correct": 0,
+      "explanation": "La línea de vida representa la \"línea de vida\" del elemento durante la actividad, desde arriba (principio) hacia abajo (final).",
+      "unit": "5",
+      "noShuffle": false
     }
   ],
   "ed_tema_6": [
@@ -1843,6 +3173,118 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "En el ciclo de vida en V, cada fase de construcción lleva asociada una fase de pruebas para detectar errores lo antes po...",
       "unit": "6",
       "noShuffle": true
+    },
+    {
+      "concept_id": "ed_tema_6_q10",
+      "question": "¿Cuál es el objetivo principal de las pruebas de aceptación en el desarrollo de software?",
+      "options": [
+        "[Verificar que el sistema cumple con lo acordado]",
+        "[Verificar la eficiencia del sistema]",
+        "[Verificar la seguridad del sistema]",
+        "[Verificar la escalabilidad del sistema]"
+      ],
+      "correct": 0,
+      "explanation": "Las pruebas de aceptación se realizan para verificar que el sistema cumple con los requisitos y especificaciones acordados con el cliente.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_6_q11",
+      "question": "¿Qué tipo de pruebas se realizan para verificar que el sistema funciona correctamente bajo diferentes cargas de trabajo?",
+      "options": [
+        "[Pruebas de rendimiento]",
+        "[Pruebas de unidad]",
+        "[Pruebas de integración]",
+        "[Pruebas de sistema]"
+      ],
+      "correct": 0,
+      "explanation": "Las pruebas de rendimiento se realizan para verificar que el sistema funciona correctamente bajo diferentes cargas de trabajo y para detectar posibles problemas de rendimiento.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_6_q12",
+      "question": "¿Cuál es el propósito de la técnica de \"clases de equivalencia\" en las pruebas de código?",
+      "options": [
+        "[Agrupar parámetros de entrada en conjuntos homogéneos]",
+        "[Identificar valores límite]",
+        "[Realizar pruebas unitarias]",
+        "[Realizar pruebas de integración]"
+      ],
+      "correct": 0,
+      "explanation": "La técnica de \"clases de equivalencia\" se utiliza para agrupar parámetros de entrada en conjuntos homogéneos y reducir el número de pruebas necesarias.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_6_q13",
+      "question": "¿Qué es el \"cubrimiento\" o \"cobertura\" en el contexto de las pruebas de código?",
+      "options": [
+        "[El porcentaje del código fuente que ha sido probado]",
+        "[El número de pruebas unitarias realizadas]",
+        "[El tiempo necesario para realizar las pruebas]",
+        "[El costo de las pruebas]"
+      ],
+      "correct": 0,
+      "explanation": "El cubrimiento o cobertura se refiere al porcentaje del código fuente que ha sido probado y es una métrica para evaluar la calidad de las pruebas.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_6_q14",
+      "question": "¿Cuál es el nombre del framework de pruebas unitarias más popular en Java?",
+      "options": [
+        "[Junit]",
+        "[Unittest]",
+        "[TestNG]",
+        "[Cucumber]"
+      ],
+      "correct": 0,
+      "explanation": "Junit es el framework de pruebas unitarias más popular en Java y se utiliza ampliamente en el desarrollo de software.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_6_q15",
+      "question": "¿Qué tipo de pruebas se realizan para detectar fallos en el funcionamiento del código?",
+      "options": [
+        "[Análisis dinámico]",
+        "[Análisis estático]",
+        "[Pruebas unitarias]",
+        "[Pruebas de integración]"
+      ],
+      "correct": 0,
+      "explanation": "El análisis dinámico se realiza para detectar fallos en el funcionamiento del código y se centra en comprobar que el código funciona correctamente en diferentes escenarios.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_6_q16",
+      "question": "¿Cuál es el propósito de las pruebas de regresión en el desarrollo de software?",
+      "options": [
+        "[Comprobar que otras partes del sistema no se han visto afectadas después de realizar cambios]",
+        "[Comprobar la seguridad del sistema]",
+        "[Comprobar la escalabilidad del sistema]",
+        "[Comprobar la eficiencia del sistema]"
+      ],
+      "correct": 0,
+      "explanation": "Las pruebas de regresión se realizan para comprobar que otras partes del sistema no se han visto afectadas después de realizar cambios o correcciones de errores.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_6_q17",
+      "question": "¿Qué tipo de pruebas se realizan para verificar que la funcionalidad principal del sistema funciona correctamente?",
+      "options": [
+        "[Pruebas de humo]",
+        "[Pruebas unitarias]",
+        "[Pruebas de integración]",
+        "[Pruebas de sistema]"
+      ],
+      "correct": 0,
+      "explanation": "Las pruebas de humo se realizan para verificar que la funcionalidad principal del sistema funciona correctamente y se centran en detectar problemas graves y obvios.",
+      "unit": "6",
+      "noShuffle": false
     }
   ],
   "ed_tema_7": [
@@ -1985,6 +3427,118 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, l...",
       "unit": "7",
       "noShuffle": true
+    },
+    {
+      "concept_id": "ed_tema_7_q10",
+      "question": "¿Cuál es el comando utilizado para clonar un repositorio existente en Git?",
+      "options": [
+        "[git clone path]",
+        "[git init]",
+        "[git add]",
+        "[git commit]"
+      ],
+      "correct": 0,
+      "explanation": "El comando git clone se utiliza para clonar un repositorio existente en Git, como se menciona en el texto.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_7_q11",
+      "question": "¿Cuál es el propósito del comando git commit en Git?",
+      "options": [
+        "[Hacer firmes los cambios en la base de datos local del repositorio]",
+        "[Crear un nuevo repositorio]",
+        "[Clonar un repositorio existente]",
+        "[Subir los cambios al servidor]"
+      ],
+      "correct": 0,
+      "explanation": "El comando git commit hace firmes los cambios en la base de datos local del repositorio, como se explica en el texto.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_7_q12",
+      "question": "¿Cuál es el comando utilizado para agregar ficheros a una lista de cambios pendientes en Git?",
+      "options": [
+        "[git add *.*]",
+        "[git commit -m]",
+        "[git push -u origin main]",
+        "[git branch -M main]"
+      ],
+      "correct": 0,
+      "explanation": "El comando git add *.* se utiliza para agregar ficheros a una lista de cambios pendientes en Git, como se muestra en el ejemplo del texto.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_7_q13",
+      "question": "¿Cuál es el propósito de la opción -u en el comando git push en Git?",
+      "options": [
+        "[Establecer la rama principal como la rama por defecto para futuras operaciones de push]",
+        "[Crear un nuevo repositorio]",
+        "[Clonar un repositorio existente]",
+        "[Subir los cambios al servidor sin establecer la rama principal]"
+      ],
+      "correct": 0,
+      "explanation": "La opción -u en el comando git push establece la rama principal como la rama por defecto para futuras operaciones de push, como se menciona en el texto.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_7_q14",
+      "question": "¿Cuál es el comando utilizado para crear una rama principal en Git?",
+      "options": [
+        "[git branch -M main]",
+        "[git init]",
+        "[git add *.*]",
+        "[git commit -m]"
+      ],
+      "correct": 0,
+      "explanation": "El comando git branch -M main se utiliza para crear una rama principal en Git, como se muestra en el ejemplo del texto.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_7_q15",
+      "question": "¿Cuál es el propósito del comando git remote add en Git?",
+      "options": [
+        "[Vincular el repositorio local con el remoto]",
+        "[Crear un nuevo repositorio]",
+        "[Clonar un repositorio existente]",
+        "[Subir los cambios al servidor]"
+      ],
+      "correct": 0,
+      "explanation": "El comando git remote add vincula el repositorio local con el remoto, como se explica en el texto.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_7_q16",
+      "question": "¿Cuál es el comando utilizado para subir los cambios al servidor en Git?",
+      "options": [
+        "[git push -u origin main]",
+        "[git commit -m]",
+        "[git add *.*]",
+        "[git branch -M main]"
+      ],
+      "correct": 0,
+      "explanation": "El comando git push -u origin main se utiliza para subir los cambios al servidor en Git, como se muestra en el ejemplo del texto.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "ed_tema_7_q17",
+      "question": "¿Cuál es el comando utilizado para hacer firmes los cambios y agregar un mensaje de commit en Git?",
+      "options": [
+        "[git commit -m \"Mensaje de commit\"]",
+        "[git add *.*]",
+        "[git push -u origin main]",
+        "[git branch -M main]"
+      ],
+      "correct": 0,
+      "explanation": "El comando git commit -m se utiliza para hacer firmes los cambios y agregar un mensaje de commit en Git, como se muestra en el ejemplo del texto.",
+      "unit": "7",
+      "noShuffle": false
     }
   ],
   "lm_tema_1": [
@@ -2125,6 +3679,76 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "XML es un metalenguaje extensible y puramente estructural: no define cómo se presenta la información, solo su estructura y significado. HTML mezcla estructura y presentación. XML se usa para intercambio de datos entre sistemas.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_1_q10",
+      "question": "¿Cuál es el nombre del estándar que se estandarizó en 1986 y es descendiente de GML?",
+      "options": [
+        "[SGML]",
+        "[GML]",
+        "[HTML]",
+        "[XML]"
+      ],
+      "correct": 0,
+      "explanation": "El texto menciona que en 1986 se estandarizó SGML (Standard Generalized Markup Language), descendiente de GML propuesto por IBM.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_1_q11",
+      "question": "¿Qué organización internacional es responsable de desarrollar y promover estándares y tecnologías web abiertas para garantizar el crecimiento a largo plazo de la World Wide Web?",
+      "options": [
+        "[W3C]",
+        "[ISO]",
+        "[IBM]",
+        "[CERN]"
+      ],
+      "correct": 0,
+      "explanation": "El texto menciona que el W3C (World Wide Web Consortium) es una organización internacional que tiene como objetivo desarrollar y promover estándares y tecnologías web abiertas.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_1_q12",
+      "question": "¿Cuál es el nombre del lenguaje de marcas que se utiliza para describir información y es exclusivamente estructural?",
+      "options": [
+        "[XML]",
+        "[HTML]",
+        "[SGML]",
+        "[GML]"
+      ],
+      "correct": 0,
+      "explanation": "El texto menciona que el lenguaje de marcas XML es exclusivamente estructural y no contiene ninguna información relacionada con el diseño, y se utiliza para describir información.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_1_q13",
+      "question": "¿Qué es el nombre del editor de código que se menciona como ejemplo de herramienta para escribir código HTML y que es compatible con múltiples lenguajes de programación y sistemas operativos?",
+      "options": [
+        "[Sublime Text]",
+        "[Notepad++]",
+        "[gedit]",
+        "[bloc de notas]"
+      ],
+      "correct": 0,
+      "explanation": "El texto menciona que Sublime Text es un editor de código que se puede utilizar para escribir código HTML y que es compatible con múltiples lenguajes de programación y sistemas operativos.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_1_q14",
+      "question": "¿Cuál es el nombre del consorcio que publicó el Estándar SGML (ISO 8879)?",
+      "options": [
+        "[ISO]",
+        "[W3C]",
+        "[IBM]",
+        "[CERN]"
+      ],
+      "correct": 0,
+      "explanation": "El texto menciona que la ISO (Organización Internacional de Normalización) publicó el Estándar SGML (ISO 8879).",
       "unit": "1",
       "noShuffle": false
     }
@@ -2269,6 +3893,76 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "enctype=\"multipart/form-data\" es obligatorio para subir archivos en formularios HTML. Sin este atributo, el archivo no se envía correctamente. action indica la URL destino; method indica GET o POST; target indica dónde mostrar la respuesta.",
       "unit": "2",
       "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_2_q10",
+      "question": "¿Cuál es el atributo que se utiliza en la etiqueta <object> para establecer el tipo de valor asociado al objeto?",
+      "options": [
+        "[valuetype]",
+        "[type]",
+        "[id]",
+        "[name]"
+      ],
+      "correct": 0,
+      "explanation": "El atributo valuetype se utiliza para establecer el tipo de valor asociado al objeto en la etiqueta <object>.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_2_q11",
+      "question": "¿Cuál es el método que se utiliza para enviar los datos del formulario de manera más segura, según la etiqueta <form>?",
+      "options": [
+        "[post]",
+        "[get]",
+        "[put]",
+        "[delete]"
+      ],
+      "correct": 0,
+      "explanation": "El método post se utiliza para enviar los datos del formulario de manera más segura, ya que los datos se envían en el cuerpo de la petición y no en la URL.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_2_q12",
+      "question": "¿Cuál es el atributo que se utiliza en la etiqueta <input> para definir el tipo de control que se va a crear?",
+      "options": [
+        "[type]",
+        "[name]",
+        "[value]",
+        "[size]"
+      ],
+      "correct": 0,
+      "explanation": "El atributo type se utiliza para definir el tipo de control que se va a crear en la etiqueta <input>.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_2_q13",
+      "question": "¿Cuál es el atributo que se utiliza en la etiqueta <button> para definir el tipo de botón?",
+      "options": [
+        "[type]",
+        "[name]",
+        "[value]",
+        "[disabled]"
+      ],
+      "correct": 0,
+      "explanation": "El atributo type se utiliza para definir el tipo de botón en la etiqueta <button>.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_2_q14",
+      "question": "¿Cuál es el atributo que se utiliza en la etiqueta <form> para indicar la codificación de caracteres usada en los datos?",
+      "options": [
+        "[accept-charset]",
+        "[accept]",
+        "[enctype]",
+        "[char]"
+      ],
+      "correct": 0,
+      "explanation": "El atributo accept-charset se utiliza para indicar la codificación de caracteres usada en los datos en la etiqueta <form>.",
+      "unit": "2",
+      "noShuffle": false
     }
   ],
   "lm_tema_3": [
@@ -2409,6 +4103,76 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "xs:sequence indica que los elementos hijos deben aparecer en el orden exacto definido. xs:choice permite solo uno de los elementos. xs:all permite cualquier orden.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_3_q10",
+      "question": "¿Cuál es la sintaxis correcta para declarar un elemento vacío en un documento XML?",
+      "options": [
+        "[Opción correcta técnica: <elemento/>]",
+        "[Opción incorrecta 1: <elemento>]",
+        "[Opción incorrecta 2: <elemento></elemento>]",
+        "[Opción incorrecta 3: <elemento>/>"
+      ],
+      "correct": 0,
+      "explanation": "La sintaxis correcta para declarar un elemento vacío en un documento XML es <elemento/>, que se construye reemplazando el carácter \">\" por \"/>\" en la etiqueta de inicio.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_3_q11",
+      "question": "¿Cuál es el propósito de la instrucción <!DOCTYPE> en un documento XML?",
+      "options": [
+        "[Opción correcta técnica: Indicar qué DTD se usará para validar el documento]",
+        "[Opción incorrecta 1: Definir la estructura del documento XML]",
+        "[Opción incorrecta 2: Establecer los elementos permitidos y su ubicación]",
+        "[Opción incorrecta 3: Especificar el tipo de datos complejos]"
+      ],
+      "correct": 0,
+      "explanation": "La instrucción <!DOCTYPE> indica qué DTD se usará para validar el documento XML.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_3_q12",
+      "question": "¿Cuál es la sintaxis general para declarar un atributo en un DTD?",
+      "options": [
+        "[Opción correcta técnica: <!ATTLIST nombre_elemento nombre_atributo tipo_atributo caracter>]",
+        "[Opción incorrecta 1: <!ELEMENT nombre_elemento modelo_contenido>]",
+        "[Opción incorrecta 2: <!DOCTYPE elemento-raíz SYSTEM URL>]",
+        "[Opción incorrecta 3: <!DOCTYPE elemento-raíz PUBLIC FPI URL>]"
+      ],
+      "correct": 0,
+      "explanation": "La sintaxis general para declarar un atributo en un DTD es <!ATTLIST nombre_elemento nombre_atributo tipo_atributo caracter>.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_3_q13",
+      "question": "¿Cuál es el significado de la palabra SYSTEM en la declaración de un DTD?",
+      "options": [
+        "[Opción correcta técnica: Indica que el DTD es para uso privado]",
+        "[Opción incorrecta 1: Indica que el DTD es para uso público]",
+        "[Opción incorrecta 2: Especifica el tipo de datos complejos]",
+        "[Opción incorrecta 3: Establece la ubicación de las reglas]"
+      ],
+      "correct": 0,
+      "explanation": "La palabra SYSTEM en la declaración de un DTD indica que el DTD es para uso privado.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_3_q14",
+      "question": "¿Cuál es el propósito de las entidades XML, como &lt; y &gt;?",
+      "options": [
+        "[Opción correcta técnica: Reemplazar caracteres especiales para evitar problemas de interpretación]",
+        "[Opción incorrecta 1: Definir la estructura del documento XML]",
+        "[Opción incorrecta 2: Establecer los elementos permitidos y su ubicación]",
+        "[Opción incorrecta 3: Especificar el tipo de datos complejos]"
+      ],
+      "correct": 0,
+      "explanation": "Las entidades XML, como &lt; y &gt;, se utilizan para reemplazar caracteres especiales y evitar problemas de interpretación en el documento XML.",
       "unit": "3",
       "noShuffle": false
     }
@@ -2553,6 +4317,76 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "Un documento XML bien formado cumple las reglas sintácticas: un elemento raíz, todas las etiquetas cerradas, anidamiento correcto, atributos entre comillas y sensibilidad a mayúsculas.",
       "unit": "4",
       "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_4_q10",
+      "question": "¿Cuál es el elemento utilizado en XML Schema para definir un tipo de dato complejo?",
+      "options": [
+        "[xs:complexType]",
+        "[xs:simpleType]",
+        "[xs:element]",
+        "[xs:attribute]"
+      ],
+      "correct": 0,
+      "explanation": "El elemento <xs:complexType> se utiliza para definir elementos de tipo complejo en XML Schema.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_4_q11",
+      "question": "¿Cuál es el propósito del indicador de orden <xs:choice> en XML Schema?",
+      "options": [
+        "[Permite especificar uno de los elementos hijos que aparecen, pero solo uno de ellos]",
+        "[Permite especificar la secuencia de elementos en cualquier orden]",
+        "[Permite especificar la longitud fija de un elemento]",
+        "[Permite especificar el tipo de dato de un elemento]"
+      ],
+      "correct": 0,
+      "explanation": "El indicador de orden <xs:choice> permite especificar uno de los elementos hijos que aparecen, pero solo uno de ellos.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_4_q12",
+      "question": "¿Cuál es el atributo utilizado en XML Schema para especificar el tipo de dato de un elemento o atributo?",
+      "options": [
+        "[type]",
+        "[name]",
+        "[use]",
+        "[default]"
+      ],
+      "correct": 0,
+      "explanation": "El atributo type se utiliza para especificar el tipo de dato de un elemento o atributo en XML Schema.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_4_q13",
+      "question": "¿Cuál es el propósito de la restricción o faceta <xs:maxLength> en XML Schema?",
+      "options": [
+        "[Especifica el valor de longitud máxima de un elemento o atributo]",
+        "[Especifica el valor de longitud mínima de un elemento o atributo]",
+        "[Especifica el valor de longitud fija de un elemento o atributo]",
+        "[Especifica el tipo de dato de un elemento o atributo]"
+      ],
+      "correct": 0,
+      "explanation": "La restricción o faceta <xs:maxLength> especifica el valor de longitud máxima de un elemento o atributo en XML Schema.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_4_q14",
+      "question": "¿Cuál es el elemento utilizado en XML Schema para definir un tipo de dato simple personalizado?",
+      "options": [
+        "[xs:simpleType]",
+        "[xs:complexType]",
+        "[xs:element]",
+        "[xs:attribute]"
+      ],
+      "correct": 0,
+      "explanation": "El elemento <xs:simpleType> se utiliza para definir un tipo de dato simple personalizado en XML Schema.",
+      "unit": "4",
+      "noShuffle": false
     }
   ],
   "lm_tema_5": [
@@ -2693,6 +4527,76 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Chrome bloquea las transformaciones XSLT cuando se abre desde file:// por restricciones de seguridad CORS. La solución es usar un servidor web local. Este comportamiento es específico de Chrome; otros navegadores pueden comportarse diferente.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_5_q10",
+      "question": "¿Cuál es la instrucción XSLT que se utiliza para recorrer los nodos descendientes y aplicarles las plantillas correspondientes?",
+      "options": [
+        "[xsl:apply-templates]",
+        "[xsl:template]",
+        "[xsl:for-each]",
+        "[xsl:sort]"
+      ],
+      "correct": 0,
+      "explanation": "La instrucción xsl:apply-templates se utiliza para recorrer los nodos descendientes y aplicarles las plantillas correspondientes.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_5_q11",
+      "question": "¿Cuál es el propósito de la etiqueta <xsl:value-of> en XSLT?",
+      "options": [
+        "[Extraer el valor de un elemento XML y añadirlo al flujo de salida de la transformación]",
+        "[Crear una nueva etiqueta XML]",
+        "[Ordenar el contenido de un documento XML]",
+        "[Filtrar el contenido de un documento XML]"
+      ],
+      "correct": 0,
+      "explanation": "La etiqueta <xsl:value-of> se utiliza para extraer el valor de un elemento XML y añadirlo al flujo de salida de la transformación.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_5_q12",
+      "question": "¿Cuál es la función de la expresión XPath \"./artículo\" en la etiqueta <xsl:value-of>?",
+      "options": [
+        "[Seleccionar el valor del elemento \"artículo\" que es hijo del elemento actual]",
+        "[Seleccionar el valor del elemento \"artículo\" que es padre del elemento actual]",
+        "[Seleccionar el valor del elemento \"artículo\" que es hermano del elemento actual]",
+        "[Seleccionar el valor del elemento \"artículo\" que es nieto del elemento actual]"
+      ],
+      "correct": 0,
+      "explanation": "La expresión XPath \"./artículo\" se utiliza para seleccionar el valor del elemento \"artículo\" que es hijo del elemento actual.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_5_q13",
+      "question": "¿Cuál es el propósito de la etiqueta <xsl:for-each> en XSLT?",
+      "options": [
+        "[Seleccionar todos los elementos de una lista determinada y procesarlos uno a uno]",
+        "[Crear una nueva lista de elementos]",
+        "[Ordenar el contenido de un documento XML]",
+        "[Filtrar el contenido de un documento XML]"
+      ],
+      "correct": 0,
+      "explanation": "La etiqueta <xsl:for-each> se utiliza para seleccionar todos los elementos de una lista determinada y procesarlos uno a uno.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_5_q14",
+      "question": "¿Cuál es la función de la etiqueta <xsl:sort> en la etiqueta <xsl:for-each>?",
+      "options": [
+        "[Ordenar el contenido de la lista de elementos según un criterio específico]",
+        "[Crear una nueva lista de elementos]",
+        "[Filtrar el contenido de la lista de elementos]",
+        "[Seleccionar un elemento específico de la lista de elementos]"
+      ],
+      "correct": 0,
+      "explanation": "La etiqueta <xsl:sort> se utiliza para ordenar el contenido de la lista de elementos según un criterio específico.",
       "unit": "5",
       "noShuffle": false
     }
@@ -2837,6 +4741,76 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "La opción correcta es XPath es un lenguaje para seleccionar nodos en documentos XML, mientras que XQuery, además de incluir XPath, es un lenguaje completo de consulta y transformación con sintaxis FLWOR.",
       "unit": "6",
       "noShuffle": true
+    },
+    {
+      "concept_id": "lm_tema_6_q10",
+      "question": "¿Cuál es el operador utilizado en XPath para unir distintas rutas en una misma expresión?",
+      "options": [
+        "[Opción correcta: |]",
+        "[Opción incorrecta 1: &]",
+        "[Opción incorrecta 2: ^]",
+        "[Opción incorrecta 3: $]"
+      ],
+      "correct": 0,
+      "explanation": "El operador | se utiliza en XPath para unir distintas rutas en una misma expresión, actuando como un OR lógico.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_6_q11",
+      "question": "¿Cuál es el resultado de utilizar el comodín * en la ruta XPath /concesionario/coche/*?",
+      "options": [
+        "[Opción correcta: Todos los elementos hijos de cada coche]",
+        "[Opción incorrecta 1: Solo los elementos modelo de cada coche]",
+        "[Opción incorrecta 2: Solo los elementos precio de cada coche]",
+        "[Opción incorrecta 3: Ningún elemento]"
+      ],
+      "correct": 0,
+      "explanation": "El comodín * selecciona cualquier nodo elemento, por lo que /concesionario/coche/* devuelve todos los elementos hijos de cada coche.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_6_q12",
+      "question": "¿Cuál es el propósito de la cláusula \"For\" en la construcción FLWOR de XQuery?",
+      "options": [
+        "[Opción correcta: Crear variables que representan nodos o secuencias de nodos en el documento XML]",
+        "[Opción incorrecta 1: Filtrar los resultados de la consulta]",
+        "[Opción incorrecta 2: Ordenar los resultados de la consulta]",
+        "[Opción incorrecta 3: Devolver los resultados de la consulta]"
+      ],
+      "correct": 0,
+      "explanation": "La cláusula \"For\" se utiliza para crear variables que representan nodos o secuencias de nodos en el documento XML.",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_6_q13",
+      "question": "¿Cuál es el resultado de la consulta XQuery \"for $libro in /catalogo/libro where $libro/autor = 'Homero' return $libro/titulo\"?",
+      "options": [
+        "[Opción correcta: El título del libro \"La Odisea\"]",
+        "[Opción incorrecta 1: El título del libro \"El Quijote\"]",
+        "[Opción incorrecta 2: La lista de todos los títulos de libros]",
+        "[Opción incorrecta 3: La lista de todos los autores de libros]"
+      ],
+      "correct": 0,
+      "explanation": "La consulta XQuery devuelve el título del libro cuyo autor es \"Homero\", que es \"La Odisea\".",
+      "unit": "6",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_6_q14",
+      "question": "¿Cuál es el propósito de la función \"doc()\" en XQuery?",
+      "options": [
+        "[Opción correcta: Abrir y leer un documento XML]",
+        "[Opción incorrecta 1: Crear un nuevo documento XML]",
+        "[Opción incorrecta 2: Modificar un documento XML existente]",
+        "[Opción incorrecta 3: Eliminar un documento XML]"
+      ],
+      "correct": 0,
+      "explanation": "La función \"doc()\" se utiliza para abrir y leer un documento XML, como se muestra en el ejemplo \"for $x in doc(\"coches.xml\")/concesionario/coche\".",
+      "unit": "6",
+      "noShuffle": false
     }
   ],
   "lm_tema_7": [
@@ -2976,6 +4950,76 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "La opción correcta es Suscribirse a fuentes de noticias en formatos RSS o Atom y notificar al usuario sobre las actualizaciones de contenido desde la última lectura.",
       "unit": "7",
       "noShuffle": true
+    },
+    {
+      "concept_id": "lm_tema_7_q10",
+      "question": "¿Cuál es el propósito del elemento `<description>` en un canal RSS?",
+      "options": [
+        "[Describir el contenido del canal]",
+        "[Definir el título del canal]",
+        "[Establecer el hipervínculo al canal]",
+        "[Indicar el lenguaje utilizado en el canal]"
+      ],
+      "correct": 0,
+      "explanation": "El elemento `<description>` se utiliza para proporcionar una descripción del contenido que se incluirá en el canal.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_7_q11",
+      "question": "¿Cuál es el nombre del atributo que se utiliza para especificar la versión de RSS en la etiqueta `<rss>`?",
+      "options": [
+        "[version]",
+        "[encoding]",
+        "[type]",
+        "[language]"
+      ],
+      "correct": 0,
+      "explanation": "El atributo `version` se utiliza para especificar la versión de RSS en la etiqueta `<rss>`.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_7_q12",
+      "question": "¿Cuál es el propósito del elemento `<enclosure>` en un ítem de un canal RSS?",
+      "options": [
+        "[Permitir la inclusión de un archivo multimedia junto con un elemento]",
+        "[Definir el título del ítem]",
+        "[Establecer el hipervínculo al ítem]",
+        "[Indicar el autor del ítem]"
+      ],
+      "correct": 0,
+      "explanation": "El elemento `<enclosure>` se utiliza para permitir la inclusión de un archivo multimedia junto con un elemento.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_7_q13",
+      "question": "¿Cuál es el nombre de la etiqueta que se utiliza para especificar la dirección de correo electrónico del autor de un artículo en un canal RSS?",
+      "options": [
+        "[<author>]",
+        "[<editor>]",
+        "[<publisher>]",
+        "[<webMaster>]"
+      ],
+      "correct": 0,
+      "explanation": "La etiqueta `<author>` se utiliza para especificar la dirección de correo electrónico del autor de un artículo en un canal RSS.",
+      "unit": "7",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_7_q14",
+      "question": "¿Cuál es el propósito del elemento `<ttl>` en un canal RSS?",
+      "options": [
+        "[Indicar el período de tiempo, en minutos, durante el cual el contenido puede permanecer en caché antes de que se actualice desde la fuente]",
+        "[Definir el título del canal]",
+        "[Establecer el hipervínculo al canal]",
+        "[Indicar el lenguaje utilizado en el canal]"
+      ],
+      "correct": 0,
+      "explanation": "El elemento `<ttl>` se utiliza para indicar el período de tiempo, en minutos, durante el cual el contenido puede permanecer en caché antes de que se actualice desde la fuente.",
+      "unit": "7",
+      "noShuffle": false
     }
   ],
   "lm_tema_8": [
@@ -3116,6 +5160,76 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción correcta es Implementan las últimas novedades en seguridad de forma inmediata y aplican la seguridad por capas, reduciendo vulnerabilidades.",
+      "unit": "8",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_8_q10",
+      "question": "¿Cuál es el protocolo de conexión seguro utilizado en los sistemas ERP para garantizar la comunicación segura entre los dispositivos cliente y el servidor que alberga la aplicación?",
+      "options": [
+        "[HTTPS]",
+        "[HTTP]",
+        "[FTP]",
+        "[SSH]"
+      ],
+      "correct": 0,
+      "explanation": "El protocolo HTTPS se utiliza para garantizar una comunicación segura entre los dispositivos cliente y el servidor que alberga la aplicación, encriptando la información transmitida y protegiéndola contra posibles intentos de interceptación o espionaje.",
+      "unit": "8",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_8_q11",
+      "question": "¿Cuál es el nombre del lenguaje de programación utilizado para desarrollar módulos adicionales en el sistema SAP?",
+      "options": [
+        "[ABAP]",
+        "[Java]",
+        "[Python]",
+        "[C++]"
+      ],
+      "correct": 0,
+      "explanation": "El lenguaje de programación ABAP se utiliza para desarrollar módulos adicionales en el sistema SAP, como se menciona en el ejemplo práctico de la creación de un módulo adicional para automatizar el cálculo de descuentos especiales en función del historial de compras del cliente.",
+      "unit": "8",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_8_q12",
+      "question": "¿Cuál es el nombre del tipo de usuario que tiene acceso completo a la información almacenada en el sistema, pero no tiene privilegios administrativos?",
+      "options": [
+        "[Usuario normal]",
+        "[Administrador]",
+        "[Usuario de grupo]",
+        "[Usuario de portal]"
+      ],
+      "correct": 0,
+      "explanation": "El tipo de usuario \"Usuario normal\" tiene acceso completo a la información almacenada en el sistema, pero no tiene privilegios administrativos, según se describe en la sección de usuarios y roles.",
+      "unit": "8",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_8_q13",
+      "question": "¿Cuál es el nombre del módulo que se utiliza para analizar datos y proporcionar cuadros de mando y KPIs en un sistema ERP?",
+      "options": [
+        "[Business Intelligence (BI)]",
+        "[Finanzas y contabilidad]",
+        "[Recursos Humanos (RRHH)]",
+        "[Producción]"
+      ],
+      "correct": 0,
+      "explanation": "El módulo Business Intelligence (BI) se utiliza para analizar datos y proporcionar cuadros de mando y KPIs en un sistema ERP, como se menciona en la sección de módulos comunes en ERP.",
+      "unit": "8",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "lm_tema_8_q14",
+      "question": "¿Cuál es el nombre de la sección del sistema donde se encuentra el cargador de módulos para instalar módulos adicionales en un sistema ERP?",
+      "options": [
+        "[Sección de administración del sistema]",
+        "[Sección de configuración del sistema]",
+        "[Sección de seguridad del sistema]",
+        "[Sección de informes del sistema]"
+      ],
+      "correct": 0,
+      "explanation": "La sección de administración del sistema es donde se encuentra el cargador de módulos para instalar módulos adicionales en un sistema ERP, según se describe en la sección de integración de módulos.",
       "unit": "8",
       "noShuffle": false
     }
@@ -7023,6 +9137,90 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "El dato es un valor bruto; la información es el dato procesado con significado.",
       "unit": "1",
       "noShuffle": true
+    },
+    {
+      "concept_id": "prog_tema_1_q10",
+      "question": "¿Cuál es el nombre del teorema que demuestra que cualquier algoritmo computable puede ser implementado utilizando únicamente tres estructuras de control lógicas en el paradigma estructurado?",
+      "options": [
+        "[Teorema de la Estructura]",
+        "[Teorema de Böhm]",
+        "[Teorema de Jacopini]",
+        "[Teorema de Turing]"
+      ],
+      "correct": 0,
+      "explanation": "El Teorema de la Estructura, también conocido como Teorema de Böhm-Jacopini, es fundamental en el paradigma estructurado y establece que cualquier algoritmo puede ser construido utilizando solo tres estructuras de control: secuencia, selección y iteración.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_1_q11",
+      "question": "¿Qué técnica utiliza la JVM moderna para mejorar la velocidad de ejecución de los programas Java?",
+      "options": [
+        "[Compilación Just-In-Time (JIT)]",
+        "[Interpretación]",
+        "[Compilación previa]",
+        "[Optimización de código]"
+      ],
+      "correct": 0,
+      "explanation": "La Compilación Just-In-Time (JIT) es una técnica utilizada por la JVM para mejorar la velocidad de ejecución de los programas Java. Esta técnica compila el bytecode en código máquina nativo en tiempo de ejecución, lo que permite una mayor velocidad de ejecución.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_1_q12",
+      "question": "¿Cuál es el nombre del proceso automático que elimina los objetos que ya no se están utilizando en la memoria en los lenguajes modernos como Java?",
+      "options": [
+        "[Recolector de Basura (Garbage Collector)]",
+        "[Depurador]",
+        "[Compilador]",
+        "[Intérprete]"
+      ],
+      "correct": 0,
+      "explanation": "El Recolector de Basura (Garbage Collector) es un proceso automático que elimina los objetos que ya no se están utilizando en la memoria en los lenguajes modernos como Java, lo que ayuda a prevenir la fuga de memoria y a mejorar la eficiencia del programa.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_1_q13",
+      "question": "¿Cuál es el nombre del proceso que se utiliza para traducir el código fuente de un lenguaje de alto nivel a código máquina antes de su ejecución?",
+      "options": [
+        "[Compilación]",
+        "[Interpretación]",
+        "[Ensamblado]",
+        "[Depuración]"
+      ],
+      "correct": 0,
+      "explanation": "El proceso de traducir el código fuente de un lenguaje de alto nivel a código máquina antes de su ejecución se llama compilación.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_1_q14",
+      "question": "¿Qué característica de los lenguajes de alto nivel permite que un programa escrito en ellos pueda funcionar en diferentes ordenadores sin necesidad de reescribirlo?",
+      "options": [
+        "[Portabilidad]",
+        "[Legibilidad]",
+        "[Productividad]",
+        "[Control total]"
+      ],
+      "correct": 0,
+      "explanation": "La característica de los lenguajes de alto nivel que permite que un programa escrito en ellos pueda funcionar en diferentes ordenadores sin necesidad de reescribirlo se llama portabilidad.",
+      "unit": "1",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_1_q15",
+      "question": "¿Cuál es el nombre del software que se utiliza para leer el código fuente de un lenguaje interpretado, traducirlo a código máquina y ejecutarlo inmediatamente?",
+      "options": [
+        "[Intérprete]",
+        "[Compilador]",
+        "[Ensamblador]",
+        "[Depurador]"
+      ],
+      "correct": 0,
+      "explanation": "El software que se utiliza para leer el código fuente de un lenguaje interpretado, traducirlo a código máquina y ejecutarlo inmediatamente se llama intérprete.",
+      "unit": "1",
+      "noShuffle": false
     }
   ],
   "prog_tema_2": [
@@ -7165,6 +9363,48 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "En Java, el nombre del archivo fuente debe coincidir con la clase pública que contiene.",
       "unit": "2",
       "noShuffle": true
+    },
+    {
+      "concept_id": "prog_tema_2_q10",
+      "question": "¿Cuál es el modificador de acceso que se utiliza para que un atributo o método sea visible solo dentro de la misma clase en Java?",
+      "options": [
+        "[private]",
+        "[public]",
+        "[protected]",
+        "[default]"
+      ],
+      "correct": 0,
+      "explanation": "El modificador de acceso private se utiliza para que un atributo o método sea visible solo dentro de la misma clase en Java.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_2_q11",
+      "question": "¿Cuál es el propósito de un Setter en una clase Java?",
+      "options": [
+        "[Validar y asignar un nuevo valor a un atributo privado]",
+        "[Devolver el valor de un atributo privado]",
+        "[Crear un objeto inmutable]",
+        "[Inicializar un atributo final]"
+      ],
+      "correct": 0,
+      "explanation": "El propósito de un Setter es validar y asignar un nuevo valor a un atributo privado, lo que permite controlar qué datos entran en el objeto.",
+      "unit": "2",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_2_q12",
+      "question": "¿Cuál es la característica que define a un objeto inmutable en Java?",
+      "options": [
+        "[No tener atributos privados]",
+        "[Tener un constructor que inicializa todos los atributos]",
+        "[No tener Setters y tener atributos final]",
+        "[Tener un Getter y un Setter para cada atributo]"
+      ],
+      "correct": 3,
+      "explanation": "Un objeto inmutable se define por no tener Setters y tener atributos final, lo que garantiza que su estado interno no puede ser modificado una vez creado.",
+      "unit": "2",
+      "noShuffle": false
     }
   ],
   "prog_tema_3": [
@@ -7307,6 +9547,48 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "Los primitivos (int, double...) guardan el valor literal; los de referencia guardan la dirección.",
       "unit": "3",
       "noShuffle": true
+    },
+    {
+      "concept_id": "prog_tema_3_q10",
+      "question": "¿Cuál es la sintaxis correcta para declarar una constante en Java?",
+      "options": [
+        "[final TipoDeDato NOMBRE_CONSTANTE = valor;]",
+        "[public TipoDeDato NOMBRE_CONSTANTE = valor;]",
+        "[private TipoDeDato NOMBRE_CONSTANTE = valor;]",
+        "[TipoDeDato NOMBRE_CONSTANTE = valor;]"
+      ],
+      "correct": 0,
+      "explanation": "La palabra reservada final se utiliza para declarar constantes en Java.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_3_q11",
+      "question": "¿Qué ocurre cuando se divide un número entero entre otro en Java?",
+      "options": [
+        "[El resultado es un número entero, truncando los decimales]",
+        "[El resultado es un número real, con decimales]",
+        "[El resultado es un error de compilación]",
+        "[El resultado es un valor booleano]"
+      ],
+      "correct": 0,
+      "explanation": "En Java, cuando se divide un número entero entre otro, el resultado es un número entero, truncando los decimales.",
+      "unit": "3",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_3_q12",
+      "question": "¿Cuál es el propósito del casting explícito en Java?",
+      "options": [
+        "[Forzar la conversión de un valor de una caja grande a una caja más pequeña, con posible pérdida de datos]",
+        "[Forzar la conversión de un valor de una caja pequeña a una caja más grande, sin pérdida de datos]",
+        "[Realizar una conversión implícita de un valor]",
+        "[Realizar una operación aritmética]"
+      ],
+      "correct": 0,
+      "explanation": "El casting explícito se utiliza para forzar la conversión de un valor de una caja grande a una caja más pequeña, con posible pérdida de datos.",
+      "unit": "3",
+      "noShuffle": false
     }
   ],
   "prog_tema_4": [
@@ -7449,6 +9731,48 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "Si escribes un constructor, Java asume que quieres control total y quita el de por defecto.",
       "unit": "4",
       "noShuffle": true
+    },
+    {
+      "concept_id": "prog_tema_4_q10",
+      "question": "¿Cuál es el propósito del constructor por defecto en Java y qué hace exactamente?",
+      "options": [
+        "[No hace nada, es un constructor vacío]",
+        "Es un constructor que se ejecuta automáticamente cuando se crea un objeto",
+        "Es un constructor que se utiliza para inicializar las variables de instancia",
+        "Es un constructor que se utiliza para crear un objeto con parámetros"
+      ],
+      "correct": 0,
+      "explanation": "El constructor por defecto en Java es un constructor vacío que se crea automáticamente si no se define ningún constructor en la clase, su propósito es permitir la creación de objetos sin parámetros.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_4_q11",
+      "question": "¿Cuál es la diferencia entre una variable de instancia (atributo) y una variable local en términos de visibilidad y alcance en Java?",
+      "options": [
+        "[Una variable de instancia es visible en toda la clase, mientras que una variable local es visible solo dentro del método o bloque donde se declara]",
+        "Una variable de instancia es visible solo dentro del método o bloque donde se declara, mientras que una variable local es visible en toda la clase",
+        "Una variable de instancia es visible en toda la clase, mientras que una variable local es visible solo dentro del método o bloque donde se declara",
+        "Una variable de instancia y una variable local tienen el mismo alcance y visibilidad"
+      ],
+      "correct": 0,
+      "explanation": "La diferencia entre una variable de instancia y una variable local en Java es que una variable de instancia es visible en toda la clase, mientras que una variable local es visible solo dentro del método o bloque donde se declara.",
+      "unit": "4",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_4_q12",
+      "question": "¿Cuál es el propósito de la palabra clave \"this\" en Java y cómo se utiliza para diferenciar entre un atributo de objeto y un parámetro de método?",
+      "options": [
+        "[Se utiliza para referirse al atributo de objeto y evitar la ocultación de variable]",
+        "Se utiliza para referirse al parámetro de método y evitar la ocultación de variable",
+        "Se utiliza para crear un nuevo objeto y evitar la ocultación de variable",
+        "Se utiliza para eliminar un objeto y evitar la ocultación de variable"
+      ],
+      "correct": 0,
+      "explanation": "La palabra clave \"this\" en Java se utiliza para referirse al atributo de objeto y evitar la ocultación de variable, que ocurre cuando un atributo de objeto y un parámetro de método tienen el mismo nombre.",
+      "unit": "4",
+      "noShuffle": false
     }
   ],
   "prog_tema_5": [
@@ -7591,6 +9915,118 @@ const SYLLABUS_RAW_DATA = {
       "explanation": "Usa .equals() para comparar el texto. == solo compara si son el mismo objeto en memoria.",
       "unit": "5",
       "noShuffle": true
+    },
+    {
+      "concept_id": "prog_tema_5_q10",
+      "question": "Aquí te dejo 8 preguntas tipo test avanzadas basadas en el texto proporcionado:",
+      "options": [
+        "1. ¿Cuál es el requisito absoluto para utilizar la búsqueda binaria en un array?",
+        "El array debe estar vacío",
+        "El array debe estar ordenado",
+        "El array debe tener un tamaño fijo"
+      ],
+      "correct": 3,
+      "explanation": "La búsqueda binaria requiere que el array esté ordenado previamente para funcionar correctamente.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_5_q11",
+      "question": "2. ¿Cuál es la eficiencia de la búsqueda lineal en un array de 1 millón de datos?",
+      "options": [
+        "Alta",
+        "Media",
+        "Baja",
+        "Instantánea"
+      ],
+      "correct": 3,
+      "explanation": "La búsqueda lineal tiene una eficiencia baja, ya que puede requerir hasta 1 millón de comparaciones para encontrar el dato buscado.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_5_q12",
+      "question": "3. ¿Cuál es el algoritmo utilizado en la búsqueda binaria?",
+      "options": [
+        "Divide y Vencerás",
+        "Recursividad",
+        "Iteración",
+        "Selección"
+      ],
+      "correct": 3,
+      "explanation": "La búsqueda binaria utiliza el algoritmo \"Divide y Vencerás\", que consiste en dividir el array en mitades y buscar el dato en una de ellas.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_5_q13",
+      "question": "4. ¿Cuál es el resultado de la búsqueda lineal si el dato buscado no se encuentra en el array?",
+      "options": [
+        "Se devuelve el índice del dato siguiente",
+        "Se devuelve el índice del dato anterior",
+        "Se devuelve -1",
+        "Se lanza una excepción"
+      ],
+      "correct": 3,
+      "explanation": "La búsqueda lineal devuelve -1 si el dato buscado no se encuentra en el array.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_5_q14",
+      "question": "5. ¿Cuál es la ventaja de utilizar la búsqueda binaria en lugar de la búsqueda lineal?",
+      "options": [
+        "Es más fácil de programar",
+        "Es más lenta",
+        "Es más eficiente",
+        "Es más segura"
+      ],
+      "correct": 3,
+      "explanation": "La búsqueda binaria es más eficiente que la búsqueda lineal, ya que requiere menos comparaciones para encontrar el dato buscado.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_5_q15",
+      "question": "6. ¿Cuál es el tipo de datos que se puede buscar utilizando la búsqueda binaria?",
+      "options": [
+        "Solo números enteros",
+        "Solo cadenas de texto",
+        "Cualquier tipo de dato",
+        "Solo arrays de objetos"
+      ],
+      "correct": 3,
+      "explanation": "La búsqueda binaria se puede utilizar para buscar cualquier tipo de dato que se pueda comparar.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_5_q16",
+      "question": "7. ¿Cuál es el método utilizado en la búsqueda lineal para encontrar el dato buscado?",
+      "options": [
+        "Se empieza en la última posición y se busca hacia atrás",
+        "Se empieza en la primera posición y se busca hacia adelante",
+        "Se busca en la mitad del array",
+        "Se busca en la posición aleatoria"
+      ],
+      "correct": 3,
+      "explanation": "La búsqueda lineal se empieza en la primera posición del array y se busca hacia adelante hasta encontrar el dato buscado.",
+      "unit": "5",
+      "noShuffle": false
+    },
+    {
+      "concept_id": "prog_tema_5_q17",
+      "question": "8. ¿Cuál es la característica de la búsqueda binaria que la hace más rápida que la búsqueda lineal?",
+      "options": [
+        "Su complejidad es lineal",
+        "Su complejidad es logarítmica",
+        "Su complejidad es cuadrática",
+        "Su complejidad es exponencial"
+      ],
+      "correct": 3,
+      "explanation": "La búsqueda binaria tiene una complejidad logarítmica, lo que la hace más rápida que la búsqueda lineal para grandes conjuntos de datos.",
+      "unit": "5",
+      "noShuffle": false
     }
   ],
   "prog_tema_6": [

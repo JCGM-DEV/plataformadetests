@@ -68,3 +68,67 @@ Paradigma Orientado a Objetos
 *Paradigma de Programación Estructurada.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Paradigma de Programación Estructurada.'. "Paradigma Imperativo." y "Paradigma Orientado a Objetos." son incorrectos porque describen conceptos diferentes.
+
+
+¿Cuál es el paradigma de programación que se enfoca en la solución de problemas a través de funciones matemáticas y es un subtipo del paradigma declarativo?
+*[Paradigma funcional]
+[Paradigma imperativo]
+[Paradigma orientado a objetos]
+[Paradigma de programación estructurada]
+EXPL: El paradigma funcional es un subtipo del paradigma declarativo que se enfoca en la solución de problemas a través de funciones matemáticas.
+
+
+¿Qué lenguaje de programación es un ejemplo de lenguaje puramente orientado a objetos?
+*[Java]
+[C]
+[Python]
+[PHP]
+EXPL: Java es un lenguaje puramente orientado a objetos.
+
+
+¿Cuál es la principal ventaja de los lenguajes de programación compilados?
+*[Mayor velocidad de ejecución]
+[Portabilidad]
+[Seguridad]
+[Facilidad de uso]
+EXPL: La principal ventaja de los lenguajes de programación compilados es la mayor velocidad de ejecución.
+
+
+¿Qué es un intérprete en el contexto de los lenguajes de programación interpretados?
+*[Un software de traducción que traduce el código fuente al lenguaje máquina]
+[Un compilador que traduce el código fuente a código máquina]
+[Un entorno de desarrollo integrado]
+[Un lenguaje de programación]
+EXPL: Un intérprete es un software de traducción que traduce el código fuente al lenguaje máquina en los lenguajes de programación interpretados.
+
+
+¿Cuál es la característica que define a una variable en programación?
+*[Un espacio de memoria que almacena un dato]
+[Un tipo de dato que se utiliza en una operación]
+[Un nombre que se asigna a un valor]
+[Un valor que se asigna a una variable]
+EXPL: Una variable es un espacio de memoria que almacena un dato.
+
+
+¿Qué es el tipo de variable en programación?
+*[La naturaleza del dato que es capaz de almacenar]
+[El nombre que se asigna a una variable]
+[El valor que se asigna a una variable]
+[La operación que se realiza con una variable]
+EXPL: El tipo de variable hace referencia a la naturaleza del dato que es capaz de almacenar.
+
+
+¿Cuál es la acción que consiste en indicar el nombre y el tipo de una variable en programación?
+*[Declaración]
+[Asignación]
+[Inicialización]
+[Instanciación]
+EXPL: La declaración consiste en indicar el nombre y el tipo de una variable.
+
+
+¿Qué lenguaje de programación es un ejemplo de lenguaje que admite los paradigmas declarativos, orientado a objetos y funcional?
+*[Python]
+[C]
+[Java]
+[PHP]
+EXPL: Python es un lenguaje que admite los paradigmas declarativos, orientado a objetos y funcional.

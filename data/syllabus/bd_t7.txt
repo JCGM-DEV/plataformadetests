@@ -68,3 +68,74 @@ A la velocidad de navegación web de la base de datos
 Al uso de comandos NEXT y PREV en los cursores
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).
+
+
+¿Cuál es la sintaxis básica para definir un tipo de objeto en PostgreSQL?
+*[CREATE TYPE nombre_del_tipo_de_objeto AS (lista_de_campos);]
+[CREATE TABLE nombre_de_la_tabla (lista_de_campos);]
+[INSERT INTO nombre_de_la_tabla (lista_de_campos) VALUES (valores);]
+[SELECT * FROM nombre_de_la_tabla;]
+EXPL: La sintaxis básica para definir un tipo de objeto en PostgreSQL se utiliza el lenguaje de definición de datos (DDL) y se especifica con la instrucción CREATE TYPE.
+
+ 
+
+¿Cuál es el propósito de la cláusula INHERITS en la definición de una tabla en PostgreSQL?
+*[Herencia de columnas y restricciones de la tabla padre]
+[Creación de un índice en la tabla]
+[Definición de una clave foránea]
+[Creación de una vista]
+EXPL: La cláusula INHERITS se utiliza para heredar columnas y restricciones de la tabla padre en la definición de una tabla hija.
+
+ 
+
+¿Cuál es el resultado de heredar una tabla con una clave primaria en PostgreSQL?
+*[La tabla hija hereda la clave primaria de la tabla padre]
+[La tabla hija no hereda la clave primaria de la tabla padre y debe declararla de nuevo]
+[La tabla hija puede tener varias claves primarias]
+[La tabla hija no puede tener claves primarias]
+EXPL: La tabla hija no hereda la clave primaria de la tabla padre y debe declararla de nuevo para mantener la unicidad del identificador.
+
+ 
+
+¿Cuál es la restricción para heredar columnas con los mismos nombres en la tabla hija en PostgreSQL?
+*[La tabla hija puede tener columnas con los mismos nombres que las columnas de la tabla padre]
+[La tabla hija no puede tener columnas con los mismos nombres que las columnas de la tabla padre]
+[La tabla hija puede tener columnas con nombres diferentes a las columnas de la tabla padre]
+[La tabla hija debe tener columnas con nombres diferentes a las columnas de la tabla padre]
+EXPL: La tabla hija no puede tener columnas con los mismos nombres que las columnas de la tabla padre, ya que esto podría causar confusiones al realizar consultas.
+
+ 
+
+¿Cuál es el comportamiento de las restricciones de clave foránea en la herencia de tablas en PostgreSQL?
+*[Las restricciones de clave foránea se aplican automáticamente a la tabla hija]
+[Las restricciones de clave foránea no se aplican a la tabla hija y deben definirse de nuevo]
+[Las restricciones de clave foránea se aplican solo a la tabla padre]
+[Las restricciones de clave foránea se aplican a ambas tablas, padre e hija]
+EXPL: Las restricciones de clave foránea no se aplican automáticamente a la tabla hija y deben definirse de nuevo si se necesitan.
+
+ 
+
+¿Cuál es el propósito de la instrucción CREATE TYPE en PostgreSQL?
+*[Crear una nueva tabla]
+[Crear un nuevo índice]
+[Crear una nueva vista]
+[Crear un nuevo tipo de objeto]
+EXPL: La instrucción CREATE TYPE se utiliza para crear un nuevo tipo de objeto en PostgreSQL, que puede ser utilizado en la definición de tablas y vistas.
+
+ 
+
+¿Cuál es la sintaxis para definir una tabla con herencia en PostgreSQL?
+*[CREATE TABLE tabla_hija (campo_1 tipo_de_dato_1, ...) INHERITS (tabla_padre);]
+[CREATE TABLE tabla_hija (campo_1 tipo_de_dato_1, ...);]
+[CREATE TABLE tabla_padre (campo_1 tipo_de_dato_1, ...);]
+[CREATE TABLE tabla_hija (campo_1 tipo_de_dato_1, ...) INHERITS (tabla_padre, tabla_padre2);]
+EXPL: La sintaxis para definir una tabla con herencia en PostgreSQL se utiliza la instrucción CREATE TABLE con la cláusula INHERITS para especificar la tabla padre.
+
+ 
+
+¿Cuál es el resultado de heredar varias tablas en PostgreSQL?
+*[La tabla hija hereda todas las columnas de las tablas padre]
+[La tabla hija no hereda columnas de las tablas padre]
+[La tabla hija hereda solo las columnas de la primera tabla padre]
+[La tabla hija hereda solo las columnas de la última tabla padre]
+EXPL: La tabla hija hereda todas las columnas de las tablas padre, pero debe tener en cuenta que las restricciones y los índices no se copian automáticamente.

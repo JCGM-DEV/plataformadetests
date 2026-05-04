@@ -59,3 +59,47 @@ Son inherentemente invulnerables a cualquier tipo de ataque informático
 *Implementan las últimas novedades en seguridad de forma inmediata y aplican la seguridad por capas, reduciendo vulnerabilidades
 Con una instancia reservada de pago anual
 EXPL:La opción correcta es Implementan las últimas novedades en seguridad de forma inmediata y aplican la seguridad por capas, reduciendo vulnerabilidades.
+
+
+¿Cuál es el protocolo de conexión seguro utilizado en los sistemas ERP para garantizar la comunicación segura entre los dispositivos cliente y el servidor que alberga la aplicación?
+*[HTTPS]
+[HTTP]
+[FTP]
+[SSH]
+EXPL: El protocolo HTTPS se utiliza para garantizar una comunicación segura entre los dispositivos cliente y el servidor que alberga la aplicación, encriptando la información transmitida y protegiéndola contra posibles intentos de interceptación o espionaje.
+
+ 
+
+¿Cuál es el nombre del lenguaje de programación utilizado para desarrollar módulos adicionales en el sistema SAP?
+*[ABAP]
+[Java]
+[Python]
+[C++]
+EXPL: El lenguaje de programación ABAP se utiliza para desarrollar módulos adicionales en el sistema SAP, como se menciona en el ejemplo práctico de la creación de un módulo adicional para automatizar el cálculo de descuentos especiales en función del historial de compras del cliente.
+
+ 
+
+¿Cuál es el nombre del tipo de usuario que tiene acceso completo a la información almacenada en el sistema, pero no tiene privilegios administrativos?
+*[Usuario normal]
+[Administrador]
+[Usuario de grupo]
+[Usuario de portal]
+EXPL: El tipo de usuario "Usuario normal" tiene acceso completo a la información almacenada en el sistema, pero no tiene privilegios administrativos, según se describe en la sección de usuarios y roles.
+
+ 
+
+¿Cuál es el nombre del módulo que se utiliza para analizar datos y proporcionar cuadros de mando y KPIs en un sistema ERP?
+*[Business Intelligence (BI)]
+[Finanzas y contabilidad]
+[Recursos Humanos (RRHH)]
+[Producción]
+EXPL: El módulo Business Intelligence (BI) se utiliza para analizar datos y proporcionar cuadros de mando y KPIs en un sistema ERP, como se menciona en la sección de módulos comunes en ERP.
+
+ 
+
+¿Cuál es el nombre de la sección del sistema donde se encuentra el cargador de módulos para instalar módulos adicionales en un sistema ERP?
+*[Sección de administración del sistema]
+[Sección de configuración del sistema]
+[Sección de seguridad del sistema]
+[Sección de informes del sistema]
+EXPL: La sección de administración del sistema es donde se encuentra el cargador de módulos para instalar módulos adicionales en un sistema ERP, según se describe en la sección de integración de módulos.

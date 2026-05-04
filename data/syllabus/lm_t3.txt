@@ -59,3 +59,43 @@ El atributo mixed="true" del elemento xs:complexType, que permite combinar texto
 *El elemento xs:sequence, que enumera los componentes de un tipo complejo indicando la secuencia obligatoria en que deben aparecer
 El elemento xs:all, que permite que los componentes aparezcan en cualquier orden.
 EXPL:xs:sequence indica que los elementos hijos deben aparecer en el orden exacto definido. xs:choice permite solo uno de los elementos. xs:all permite cualquier orden.
+
+
+¿Cuál es la sintaxis correcta para declarar un elemento vacío en un documento XML?
+*[Opción correcta técnica: <elemento/>]
+[Opción incorrecta 1: <elemento>]
+[Opción incorrecta 2: <elemento></elemento>]
+[Opción incorrecta 3: <elemento>/>
+EXPL: La sintaxis correcta para declarar un elemento vacío en un documento XML es <elemento/>, que se construye reemplazando el carácter ">" por "/>" en la etiqueta de inicio.
+
+
+¿Cuál es el propósito de la instrucción <!DOCTYPE> en un documento XML?
+*[Opción correcta técnica: Indicar qué DTD se usará para validar el documento]
+[Opción incorrecta 1: Definir la estructura del documento XML]
+[Opción incorrecta 2: Establecer los elementos permitidos y su ubicación]
+[Opción incorrecta 3: Especificar el tipo de datos complejos]
+EXPL: La instrucción <!DOCTYPE> indica qué DTD se usará para validar el documento XML.
+
+
+¿Cuál es la sintaxis general para declarar un atributo en un DTD?
+*[Opción correcta técnica: <!ATTLIST nombre_elemento nombre_atributo tipo_atributo caracter>]
+[Opción incorrecta 1: <!ELEMENT nombre_elemento modelo_contenido>]
+[Opción incorrecta 2: <!DOCTYPE elemento-raíz SYSTEM URL>]
+[Opción incorrecta 3: <!DOCTYPE elemento-raíz PUBLIC FPI URL>]
+EXPL: La sintaxis general para declarar un atributo en un DTD es <!ATTLIST nombre_elemento nombre_atributo tipo_atributo caracter>.
+
+
+¿Cuál es el significado de la palabra SYSTEM en la declaración de un DTD?
+*[Opción correcta técnica: Indica que el DTD es para uso privado]
+[Opción incorrecta 1: Indica que el DTD es para uso público]
+[Opción incorrecta 2: Especifica el tipo de datos complejos]
+[Opción incorrecta 3: Establece la ubicación de las reglas]
+EXPL: La palabra SYSTEM en la declaración de un DTD indica que el DTD es para uso privado.
+
+
+¿Cuál es el propósito de las entidades XML, como &lt; y &gt;?
+*[Opción correcta técnica: Reemplazar caracteres especiales para evitar problemas de interpretación]
+[Opción incorrecta 1: Definir la estructura del documento XML]
+[Opción incorrecta 2: Establecer los elementos permitidos y su ubicación]
+[Opción incorrecta 3: Especificar el tipo de datos complejos]
+EXPL: Las entidades XML, como &lt; y &gt;, se utilizan para reemplazar caracteres especiales y evitar problemas de interpretación en el documento XML.

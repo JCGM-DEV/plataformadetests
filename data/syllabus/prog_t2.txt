@@ -59,3 +59,29 @@ El nombre de la clase debe escribirse en minúsculas.
 La clase debe contener al menos un método main.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:En Java, el nombre del archivo fuente debe coincidir con la clase pública que contiene.
+
+
+¿Cuál es el modificador de acceso que se utiliza para que un atributo o método sea visible solo dentro de la misma clase en Java?
+*[private]
+[public]
+[protected]
+[default]
+EXPL: El modificador de acceso private se utiliza para que un atributo o método sea visible solo dentro de la misma clase en Java.
+
+ 
+
+¿Cuál es el propósito de un Setter en una clase Java?
+*[Validar y asignar un nuevo valor a un atributo privado]
+[Devolver el valor de un atributo privado]
+[Crear un objeto inmutable]
+[Inicializar un atributo final]
+EXPL: El propósito de un Setter es validar y asignar un nuevo valor a un atributo privado, lo que permite controlar qué datos entran en el objeto.
+
+ 
+
+¿Cuál es la característica que define a un objeto inmutable en Java?
+*[No tener atributos privados]
+*[Tener un constructor que inicializa todos los atributos]
+*[No tener Setters y tener atributos final]
+*[Tener un Getter y un Setter para cada atributo]
+EXPL: Un objeto inmutable se define por no tener Setters y tener atributos final, lo que garantiza que su estado interno no puede ser modificado una vez creado.

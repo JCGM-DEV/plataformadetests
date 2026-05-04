@@ -59,3 +59,43 @@ Ambos sirven para lo mismo
 *XPath es un lenguaje para seleccionar nodos en documentos XML, mientras que XQuery, además de incluir XPath, es un lenguaje completo de consulta y transformación con sintaxis FLWOR
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La opción correcta es XPath es un lenguaje para seleccionar nodos en documentos XML, mientras que XQuery, además de incluir XPath, es un lenguaje completo de consulta y transformación con sintaxis FLWOR.
+
+
+¿Cuál es el operador utilizado en XPath para unir distintas rutas en una misma expresión?
+*[Opción correcta: |]
+[Opción incorrecta 1: &]
+[Opción incorrecta 2: ^]
+[Opción incorrecta 3: $]
+EXPL: El operador | se utiliza en XPath para unir distintas rutas en una misma expresión, actuando como un OR lógico.
+
+
+¿Cuál es el resultado de utilizar el comodín * en la ruta XPath /concesionario/coche/*?
+*[Opción correcta: Todos los elementos hijos de cada coche]
+[Opción incorrecta 1: Solo los elementos modelo de cada coche]
+[Opción incorrecta 2: Solo los elementos precio de cada coche]
+[Opción incorrecta 3: Ningún elemento]
+EXPL: El comodín * selecciona cualquier nodo elemento, por lo que /concesionario/coche/* devuelve todos los elementos hijos de cada coche.
+
+
+¿Cuál es el propósito de la cláusula "For" en la construcción FLWOR de XQuery?
+*[Opción correcta: Crear variables que representan nodos o secuencias de nodos en el documento XML]
+[Opción incorrecta 1: Filtrar los resultados de la consulta]
+[Opción incorrecta 2: Ordenar los resultados de la consulta]
+[Opción incorrecta 3: Devolver los resultados de la consulta]
+EXPL: La cláusula "For" se utiliza para crear variables que representan nodos o secuencias de nodos en el documento XML.
+
+
+¿Cuál es el resultado de la consulta XQuery "for $libro in /catalogo/libro where $libro/autor = 'Homero' return $libro/titulo"?
+*[Opción correcta: El título del libro "La Odisea"]
+[Opción incorrecta 1: El título del libro "El Quijote"]
+[Opción incorrecta 2: La lista de todos los títulos de libros]
+[Opción incorrecta 3: La lista de todos los autores de libros]
+EXPL: La consulta XQuery devuelve el título del libro cuyo autor es "Homero", que es "La Odisea".
+
+
+¿Cuál es el propósito de la función "doc()" en XQuery?
+*[Opción correcta: Abrir y leer un documento XML]
+[Opción incorrecta 1: Crear un nuevo documento XML]
+[Opción incorrecta 2: Modificar un documento XML existente]
+[Opción incorrecta 3: Eliminar un documento XML]
+EXPL: La función "doc()" se utiliza para abrir y leer un documento XML, como se muestra en el ejemplo "for $x in doc("coches.xml")/concesionario/coche".

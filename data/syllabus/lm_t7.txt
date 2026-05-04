@@ -56,3 +56,47 @@ Crear nuevos artículos y publicarlos en los sitios web de los autores
 Validar la sintaxis de los feeds RSS o Atom para asegurar su compatibilidad con los estándares
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La opción correcta es Suscribirse a fuentes de noticias en formatos RSS o Atom y notificar al usuario sobre las actualizaciones de contenido desde la última lectura.
+
+
+¿Cuál es el propósito del elemento `<description>` en un canal RSS?
+*[Describir el contenido del canal]
+[Definir el título del canal]
+[Establecer el hipervínculo al canal]
+[Indicar el lenguaje utilizado en el canal]
+EXPL: El elemento `<description>` se utiliza para proporcionar una descripción del contenido que se incluirá en el canal.
+
+ 
+
+¿Cuál es el nombre del atributo que se utiliza para especificar la versión de RSS en la etiqueta `<rss>`?
+*[version]
+[encoding]
+[type]
+[language]
+EXPL: El atributo `version` se utiliza para especificar la versión de RSS en la etiqueta `<rss>`.
+
+ 
+
+¿Cuál es el propósito del elemento `<enclosure>` en un ítem de un canal RSS?
+*[Permitir la inclusión de un archivo multimedia junto con un elemento]
+[Definir el título del ítem]
+[Establecer el hipervínculo al ítem]
+[Indicar el autor del ítem]
+EXPL: El elemento `<enclosure>` se utiliza para permitir la inclusión de un archivo multimedia junto con un elemento.
+
+ 
+
+¿Cuál es el nombre de la etiqueta que se utiliza para especificar la dirección de correo electrónico del autor de un artículo en un canal RSS?
+*[<author>]
+[<editor>]
+[<publisher>]
+[<webMaster>]
+EXPL: La etiqueta `<author>` se utiliza para especificar la dirección de correo electrónico del autor de un artículo en un canal RSS.
+
+ 
+
+¿Cuál es el propósito del elemento `<ttl>` en un canal RSS?
+*[Indicar el período de tiempo, en minutos, durante el cual el contenido puede permanecer en caché antes de que se actualice desde la fuente]
+[Definir el título del canal]
+[Establecer el hipervínculo al canal]
+[Indicar el lenguaje utilizado en el canal]
+EXPL: El elemento `<ttl>` se utiliza para indicar el período de tiempo, en minutos, durante el cual el contenido puede permanecer en caché antes de que se actualice desde la fuente.

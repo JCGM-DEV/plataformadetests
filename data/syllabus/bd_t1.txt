@@ -59,3 +59,74 @@ Multimedia
 Secuencial
 *Indexado
 EXPL:Los ficheros dBASE (.dbf) son ficheros de base de datos con índices que permiten acceso directo a registros. Son ficheros indexados, no planos ni multimedia.
+
+
+¿Cuál es el tipo de base de datos que se utiliza principalmente en aplicaciones empresariales debido a su estructura y organización que encaja bien con los datos y conceptos de índole económica y mercantil?
+*[Relacional]
+[NoSQL]
+[Jerárquica]
+[Orientada a Objetos]
+EXPL: Las bases de datos relacionales se utilizan principalmente en aplicaciones empresariales debido a su estructura y organización que encaja bien con los datos y conceptos de índole económica y mercantil.
+
+ 
+
+¿Qué tipo de base de datos es adecuado para almacenar grandes cantidades de datos no estructurados o semiestructurados y es escalable y altamente disponible?
+*[NoSQL]
+[Relacional]
+[Jerárquica]
+[Orientada a Objetos]
+EXPL: Las bases de datos NoSQL son adecuadas para almacenar grandes cantidades de datos no estructurados o semiestructurados y son escalables y altamente disponibles.
+
+ 
+
+¿Cuál es el tipo de base de datos que permite describir objetos del mundo real, como se hace en lenguajes de programación que utilizan el paradigma de la programación orientada a objetos?
+*[Orientada a Objetos]
+[Relacional]
+[NoSQL]
+[Jerárquica]
+EXPL: Las bases de datos orientadas a objetos permiten describir objetos del mundo real, como se hace en lenguajes de programación que utilizan el paradigma de la programación orientada a objetos.
+
+ 
+
+¿Qué tipo de base de datos es adecuado para sistemas en los que los datos están relacionados de manera no jerárquica o en varios niveles de relaciones?
+*[De Red]
+[Relacional]
+[NoSQL]
+[Jerárquica]
+EXPL: Las bases de datos de red son adecuadas para sistemas en los que los datos están relacionados de manera no jerárquica o en varios niveles de relaciones.
+
+ 
+
+¿Cuál es el tipo de base de datos que se utiliza para almacenar y recuperar objetos Java con su jerarquía e información de manera directa?
+*[Orientada a Objetos]
+[Relacional]
+[NoSQL]
+[Jerárquica]
+EXPL: Las bases de datos orientadas a objetos se utilizan para almacenar y recuperar objetos Java con su jerarquía e información de manera directa.
+
+ 
+
+¿Qué tipo de base de datos es adecuado para consultar ramas enteras de un árbol jerárquico sin complejas uniones?
+*[Jerárquica]
+[Relacional]
+[NoSQL]
+[Orientada a Objetos]
+EXPL: Las bases de datos jerárquicas son adecuadas para consultar ramas enteras de un árbol jerárquico sin complejas uniones.
+
+ 
+
+¿Cuál es el tipo de base de datos que se utiliza para garantizar la integridad de datos y soportar transacciones seguras entre facturas, clientes y pagos en un sistema de facturación empresarial?
+*[Relacional]
+[NoSQL]
+[Jerárquica]
+[Orientada a Objetos]
+EXPL: Las bases de datos relacionales se utilizan para garantizar la integridad de datos y soportar transacciones seguras entre facturas, clientes y pagos en un sistema de facturación empresarial.
+
+ 
+
+¿Qué tipo de base de datos es adecuado para manejar grandes volúmenes de documentos semiestructurados y permitir crecimiento horizontal eficiente en un sistema de streaming de vídeo?
+*[NoSQL]
+[Relacional]
+[Jerárquica]
+[Orientada a Objetos]
+EXPL: Las bases de datos NoSQL son adecuadas para manejar grandes volúmenes de documentos semiestructurados y permitir crecimiento horizontal eficiente en un sistema de streaming de vídeo.

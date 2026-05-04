@@ -59,3 +59,43 @@ target
 *enctype
 method
 EXPL:enctype="multipart/form-data" es obligatorio para subir archivos en formularios HTML. Sin este atributo, el archivo no se envía correctamente. action indica la URL destino; method indica GET o POST; target indica dónde mostrar la respuesta.
+
+
+¿Cuál es el atributo que se utiliza en la etiqueta <object> para establecer el tipo de valor asociado al objeto?
+*[valuetype]
+[type]
+[id]
+[name]
+EXPL: El atributo valuetype se utiliza para establecer el tipo de valor asociado al objeto en la etiqueta <object>.
+
+
+¿Cuál es el método que se utiliza para enviar los datos del formulario de manera más segura, según la etiqueta <form>?
+*[post]
+[get]
+[put]
+[delete]
+EXPL: El método post se utiliza para enviar los datos del formulario de manera más segura, ya que los datos se envían en el cuerpo de la petición y no en la URL.
+
+
+¿Cuál es el atributo que se utiliza en la etiqueta <input> para definir el tipo de control que se va a crear?
+*[type]
+[name]
+[value]
+[size]
+EXPL: El atributo type se utiliza para definir el tipo de control que se va a crear en la etiqueta <input>.
+
+
+¿Cuál es el atributo que se utiliza en la etiqueta <button> para definir el tipo de botón?
+*[type]
+[name]
+[value]
+[disabled]
+EXPL: El atributo type se utiliza para definir el tipo de botón en la etiqueta <button>.
+
+
+¿Cuál es el atributo que se utiliza en la etiqueta <form> para indicar la codificación de caracteres usada en los datos?
+*[accept-charset]
+[accept]
+[enctype]
+[char]
+EXPL: El atributo accept-charset se utiliza para indicar la codificación de caracteres usada en los datos en la etiqueta <form>.

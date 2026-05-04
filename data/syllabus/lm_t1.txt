@@ -59,3 +59,39 @@ Combinar información estructural con el diseño, permitiendo una mayor versatil
 *Ser exclusivamente estructural, sin contener ninguna información relacionada con el diseño, y se utiliza para describir información y definir la estructura de datos de un documento.
 Ser un lenguaje de programación orientado a la manipulación de bases de datos relacionales en entornos web.
 EXPL:XML es un metalenguaje extensible y puramente estructural: no define cómo se presenta la información, solo su estructura y significado. HTML mezcla estructura y presentación. XML se usa para intercambio de datos entre sistemas.
+
+
+¿Cuál es el nombre del estándar que se estandarizó en 1986 y es descendiente de GML?
+*[SGML]
+[GML]
+[HTML]
+[XML]
+EXPL: El texto menciona que en 1986 se estandarizó SGML (Standard Generalized Markup Language), descendiente de GML propuesto por IBM.
+
+¿Qué organización internacional es responsable de desarrollar y promover estándares y tecnologías web abiertas para garantizar el crecimiento a largo plazo de la World Wide Web?
+*[W3C]
+[ISO]
+[IBM]
+[CERN]
+EXPL: El texto menciona que el W3C (World Wide Web Consortium) es una organización internacional que tiene como objetivo desarrollar y promover estándares y tecnologías web abiertas.
+
+¿Cuál es el nombre del lenguaje de marcas que se utiliza para describir información y es exclusivamente estructural?
+*[XML]
+[HTML]
+[SGML]
+[GML]
+EXPL: El texto menciona que el lenguaje de marcas XML es exclusivamente estructural y no contiene ninguna información relacionada con el diseño, y se utiliza para describir información.
+
+¿Qué es el nombre del editor de código que se menciona como ejemplo de herramienta para escribir código HTML y que es compatible con múltiples lenguajes de programación y sistemas operativos?
+*[Sublime Text]
+[Notepad++]
+[gedit]
+[bloc de notas]
+EXPL: El texto menciona que Sublime Text es un editor de código que se puede utilizar para escribir código HTML y que es compatible con múltiples lenguajes de programación y sistemas operativos.
+
+¿Cuál es el nombre del consorcio que publicó el Estándar SGML (ISO 8879)?
+*[ISO]
+[W3C]
+[IBM]
+[CERN]
+EXPL: El texto menciona que la ISO (Organización Internacional de Normalización) publicó el Estándar SGML (ISO 8879).

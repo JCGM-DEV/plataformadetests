@@ -68,3 +68,74 @@ Aumentar la redundancia para facilitar la lectura de datos
 Eliminar todas las relaciones entre tablas para simplificar el modelo
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente.
+
+
+¿Cuál es el tipo de relación entre la entidad BonoBackstage y la entidad AccesoBackstage en el modelo ER?
+*[Relación de dependencia de identificación y existencia]
+[Relación de independencia]
+[Relación de herencia]
+[Relación de composición]
+EXPL: La relación entre BonoBackstage y AccesoBackstage es de dependencia de identificación y existencia, ya que un acceso solo se identifica al combinar BonoID + SecuenciaAcceso y su existencia está ligada a la subsistencia de su bono padre.
+
+ 
+
+¿Cuál es el propósito de la clave parcial SecuenciaAcceso en la entidad AccesoBackstage?
+*[Distinguir accesos dentro del mismo bono]
+[Distinguir accesos entre diferentes bonos]
+[Identificar la fecha de validez del bono]
+[Identificar el asistente que utiliza el bono]
+EXPL: La clave parcial SecuenciaAcceso se utiliza para distinguir accesos dentro del mismo bono, ya que solo distingue accesos dentro del mismo bono y no entre diferentes bonos.
+
+ 
+
+¿Cuál es el efecto de la eliminación de un registro de BonoBackstage en la entidad AccesoBackstage, según la relación de dependencia de existencia?
+*[Eliminación en cascada de los registros de AccesoBackstage asociados]
+[Eliminación de los registros de AccesoBackstage no asociados]
+[Actualización de los registros de AccesoBackstage asociados]
+[No hay efecto en los registros de AccesoBackstage]
+EXPL: La eliminación de un registro de BonoBackstage tiene como efecto la eliminación en cascada de los registros de AccesoBackstage asociados, según la relación de dependencia de existencia implementada con ON DELETE CASCADE.
+
+ 
+
+¿Cuál es el propósito de la generalización en el modelo EER?
+*[Agrupar entidades que comparten características comunes en una entidad general]
+[Crear entidades específicas para cada caso de uso]
+[Establecer relaciones entre entidades]
+[Definir atributos para cada entidad]
+EXPL: La generalización en el modelo EER se utiliza para agrupar entidades que comparten características comunes en una entidad general, evitando la redundancia y favoreciendo la claridad del diseño.
+
+ 
+
+¿Cuál es el tipo de relación que se establece entre la entidad Artista y sí misma en el modelo EER?
+*[Relación recursiva]
+[Relación de herencia]
+[Relación de composición]
+[Relación de independencia]
+EXPL: La relación que se establece entre la entidad Artista y sí misma es una relación recursiva, ya que un artista puede recomendar a otro artista.
+
+ 
+
+¿Cuál es el propósito de los atributos multivaluados en el modelo EER?
+*[Reflejar propiedades que admiten múltiples valores simultáneamente]
+[Reflejar propiedades que admiten un solo valor]
+[Establecer relaciones entre entidades]
+[Definir atributos para cada entidad]
+EXPL: Los atributos multivaluados en el modelo EER se utilizan para reflejar propiedades que admiten múltiples valores simultáneamente, como los géneros que acoge un escenario.
+
+ 
+
+¿Cuál es el efecto de la generalización en la integridad de la base de datos?
+*[Introduce restricciones opcionales que regulan la cobertura de la jerarquía]
+[No tiene efecto en la integridad de la base de datos]
+[Establece relaciones entre entidades]
+[Define atributos para cada entidad]
+EXPL: La generalización introduce restricciones opcionales que regulan la cobertura de la jerarquía, como la totalidad o parcialidad de la entidad padre.
+
+ 
+
+¿Cuál es el propósito de la entidad padre en la generalización del modelo EER?
+*[Recoger las propiedades y vínculos que resultan esenciales para todas las variantes]
+[Crear entidades específicas para cada caso de uso]
+[Establecer relaciones entre entidades]
+[Definir atributos para cada entidad]
+EXPL: La entidad padre en la generalización del modelo EER se utiliza para recoger las propiedades y vínculos que resultan esenciales para todas las variantes, evitando la redundancia y favoreciendo la claridad del diseño.

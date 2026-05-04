@@ -68,3 +68,60 @@ Los sistemas centralizados almacenan las copias del proyecto en la máquina loca
 *En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, las copias se almacenan tanto en un servidor como en cada máquina de los integrantes del equipo.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, l...
+
+
+¿Cuál es el comando utilizado para clonar un repositorio existente en Git?
+*[git clone path]
+[git init]
+[git add]
+[git commit]
+EXPL: El comando git clone se utiliza para clonar un repositorio existente en Git, como se menciona en el texto.
+
+¿Cuál es el propósito del comando git commit en Git?
+*[Hacer firmes los cambios en la base de datos local del repositorio]
+[Crear un nuevo repositorio]
+[Clonar un repositorio existente]
+[Subir los cambios al servidor]
+EXPL: El comando git commit hace firmes los cambios en la base de datos local del repositorio, como se explica en el texto.
+
+¿Cuál es el comando utilizado para agregar ficheros a una lista de cambios pendientes en Git?
+*[git add *.*]
+[git commit -m]
+[git push -u origin main]
+[git branch -M main]
+EXPL: El comando git add *.* se utiliza para agregar ficheros a una lista de cambios pendientes en Git, como se muestra en el ejemplo del texto.
+
+¿Cuál es el propósito de la opción -u en el comando git push en Git?
+*[Establecer la rama principal como la rama por defecto para futuras operaciones de push]
+[Crear un nuevo repositorio]
+[Clonar un repositorio existente]
+[Subir los cambios al servidor sin establecer la rama principal]
+EXPL: La opción -u en el comando git push establece la rama principal como la rama por defecto para futuras operaciones de push, como se menciona en el texto.
+
+¿Cuál es el comando utilizado para crear una rama principal en Git?
+*[git branch -M main]
+[git init]
+[git add *.*]
+[git commit -m]
+EXPL: El comando git branch -M main se utiliza para crear una rama principal en Git, como se muestra en el ejemplo del texto.
+
+¿Cuál es el propósito del comando git remote add en Git?
+*[Vincular el repositorio local con el remoto]
+[Crear un nuevo repositorio]
+[Clonar un repositorio existente]
+[Subir los cambios al servidor]
+EXPL: El comando git remote add vincula el repositorio local con el remoto, como se explica en el texto.
+
+¿Cuál es el comando utilizado para subir los cambios al servidor en Git?
+*[git push -u origin main]
+[git commit -m]
+[git add *.*]
+[git branch -M main]
+EXPL: El comando git push -u origin main se utiliza para subir los cambios al servidor en Git, como se muestra en el ejemplo del texto.
+
+¿Cuál es el comando utilizado para hacer firmes los cambios y agregar un mensaje de commit en Git?
+*[git commit -m "Mensaje de commit"]
+[git add *.*]
+[git push -u origin main]
+[git branch -M main]
+EXPL: El comando git commit -m se utiliza para hacer firmes los cambios y agregar un mensaje de commit en Git, como se muestra en el ejemplo del texto.

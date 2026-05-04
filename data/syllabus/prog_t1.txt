@@ -59,3 +59,53 @@ El dato es información interpretada y la información es un dato sin procesar.
 Ambos términos se utilizan indistintamente y no existe diferencia real entre ellos.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El dato es un valor bruto; la información es el dato procesado con significado.
+
+
+¿Cuál es el nombre del teorema que demuestra que cualquier algoritmo computable puede ser implementado utilizando únicamente tres estructuras de control lógicas en el paradigma estructurado?
+*[Teorema de la Estructura]
+[Teorema de Böhm]
+[Teorema de Jacopini]
+[Teorema de Turing]
+EXPL: El Teorema de la Estructura, también conocido como Teorema de Böhm-Jacopini, es fundamental en el paradigma estructurado y establece que cualquier algoritmo puede ser construido utilizando solo tres estructuras de control: secuencia, selección y iteración.
+
+
+¿Qué técnica utiliza la JVM moderna para mejorar la velocidad de ejecución de los programas Java?
+*[Compilación Just-In-Time (JIT)]
+[Interpretación]
+[Compilación previa]
+[Optimización de código]
+EXPL: La Compilación Just-In-Time (JIT) es una técnica utilizada por la JVM para mejorar la velocidad de ejecución de los programas Java. Esta técnica compila el bytecode en código máquina nativo en tiempo de ejecución, lo que permite una mayor velocidad de ejecución.
+
+
+¿Cuál es el nombre del proceso automático que elimina los objetos que ya no se están utilizando en la memoria en los lenguajes modernos como Java?
+*[Recolector de Basura (Garbage Collector)]
+[Depurador]
+[Compilador]
+[Intérprete]
+EXPL: El Recolector de Basura (Garbage Collector) es un proceso automático que elimina los objetos que ya no se están utilizando en la memoria en los lenguajes modernos como Java, lo que ayuda a prevenir la fuga de memoria y a mejorar la eficiencia del programa.
+
+
+¿Cuál es el nombre del proceso que se utiliza para traducir el código fuente de un lenguaje de alto nivel a código máquina antes de su ejecución?
+*[Compilación]
+[Interpretación]
+[Ensamblado]
+[Depuración]
+EXPL: El proceso de traducir el código fuente de un lenguaje de alto nivel a código máquina antes de su ejecución se llama compilación.
+
+ 
+
+¿Qué característica de los lenguajes de alto nivel permite que un programa escrito en ellos pueda funcionar en diferentes ordenadores sin necesidad de reescribirlo?
+*[Portabilidad]
+[Legibilidad]
+[Productividad]
+[Control total]
+EXPL: La característica de los lenguajes de alto nivel que permite que un programa escrito en ellos pueda funcionar en diferentes ordenadores sin necesidad de reescribirlo se llama portabilidad.
+
+ 
+
+¿Cuál es el nombre del software que se utiliza para leer el código fuente de un lenguaje interpretado, traducirlo a código máquina y ejecutarlo inmediatamente?
+*[Intérprete]
+[Compilador]
+[Ensamblador]
+[Depurador]
+EXPL: El software que se utiliza para leer el código fuente de un lenguaje interpretado, traducirlo a código máquina y ejecutarlo inmediatamente se llama intérprete.

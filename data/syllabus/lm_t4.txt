@@ -59,3 +59,47 @@ Un documento XML siempre es válido si está bien formado
 La validación solo verifica la sintaxis del documento, no su estructura ni el tipo de datos
 Un documento XML bien formado siempre es también válido según cualquier esquema.
 EXPL:Un documento XML bien formado cumple las reglas sintácticas: un elemento raíz, todas las etiquetas cerradas, anidamiento correcto, atributos entre comillas y sensibilidad a mayúsculas.
+
+
+¿Cuál es el elemento utilizado en XML Schema para definir un tipo de dato complejo?
+*[xs:complexType]
+[xs:simpleType]
+[xs:element]
+[xs:attribute]
+EXPL: El elemento <xs:complexType> se utiliza para definir elementos de tipo complejo en XML Schema.
+
+ 
+
+¿Cuál es el propósito del indicador de orden <xs:choice> en XML Schema?
+*[Permite especificar uno de los elementos hijos que aparecen, pero solo uno de ellos]
+[Permite especificar la secuencia de elementos en cualquier orden]
+[Permite especificar la longitud fija de un elemento]
+[Permite especificar el tipo de dato de un elemento]
+EXPL: El indicador de orden <xs:choice> permite especificar uno de los elementos hijos que aparecen, pero solo uno de ellos.
+
+ 
+
+¿Cuál es el atributo utilizado en XML Schema para especificar el tipo de dato de un elemento o atributo?
+*[type]
+[name]
+[use]
+[default]
+EXPL: El atributo type se utiliza para especificar el tipo de dato de un elemento o atributo en XML Schema.
+
+ 
+
+¿Cuál es el propósito de la restricción o faceta <xs:maxLength> en XML Schema?
+*[Especifica el valor de longitud máxima de un elemento o atributo]
+[Especifica el valor de longitud mínima de un elemento o atributo]
+[Especifica el valor de longitud fija de un elemento o atributo]
+[Especifica el tipo de dato de un elemento o atributo]
+EXPL: La restricción o faceta <xs:maxLength> especifica el valor de longitud máxima de un elemento o atributo en XML Schema.
+
+ 
+
+¿Cuál es el elemento utilizado en XML Schema para definir un tipo de dato simple personalizado?
+*[xs:simpleType]
+[xs:complexType]
+[xs:element]
+[xs:attribute]
+EXPL: El elemento <xs:simpleType> se utiliza para definir un tipo de dato simple personalizado en XML Schema.

@@ -59,3 +59,47 @@ Se mostrará el documento XML transformado con los estilos aplicados.
 *Se mostrará una página en blanco o no se aplicará la transformación, incluso si el documento está bien formado.
 Se descargará automáticamente el archivo transformado en formato HTML.
 EXPL:Chrome bloquea las transformaciones XSLT cuando se abre desde file:// por restricciones de seguridad CORS. La solución es usar un servidor web local. Este comportamiento es específico de Chrome; otros navegadores pueden comportarse diferente.
+
+
+¿Cuál es la instrucción XSLT que se utiliza para recorrer los nodos descendientes y aplicarles las plantillas correspondientes?
+*[xsl:apply-templates]
+[xsl:template]
+[xsl:for-each]
+[xsl:sort]
+EXPL: La instrucción xsl:apply-templates se utiliza para recorrer los nodos descendientes y aplicarles las plantillas correspondientes.
+
+ 
+
+¿Cuál es el propósito de la etiqueta <xsl:value-of> en XSLT?
+*[Extraer el valor de un elemento XML y añadirlo al flujo de salida de la transformación]
+[Crear una nueva etiqueta XML]
+[Ordenar el contenido de un documento XML]
+[Filtrar el contenido de un documento XML]
+EXPL: La etiqueta <xsl:value-of> se utiliza para extraer el valor de un elemento XML y añadirlo al flujo de salida de la transformación.
+
+ 
+
+¿Cuál es la función de la expresión XPath "./artículo" en la etiqueta <xsl:value-of>?
+*[Seleccionar el valor del elemento "artículo" que es hijo del elemento actual]
+[Seleccionar el valor del elemento "artículo" que es padre del elemento actual]
+[Seleccionar el valor del elemento "artículo" que es hermano del elemento actual]
+[Seleccionar el valor del elemento "artículo" que es nieto del elemento actual]
+EXPL: La expresión XPath "./artículo" se utiliza para seleccionar el valor del elemento "artículo" que es hijo del elemento actual.
+
+ 
+
+¿Cuál es el propósito de la etiqueta <xsl:for-each> en XSLT?
+*[Seleccionar todos los elementos de una lista determinada y procesarlos uno a uno]
+[Crear una nueva lista de elementos]
+[Ordenar el contenido de un documento XML]
+[Filtrar el contenido de un documento XML]
+EXPL: La etiqueta <xsl:for-each> se utiliza para seleccionar todos los elementos de una lista determinada y procesarlos uno a uno.
+
+ 
+
+¿Cuál es la función de la etiqueta <xsl:sort> en la etiqueta <xsl:for-each>?
+*[Ordenar el contenido de la lista de elementos según un criterio específico]
+[Crear una nueva lista de elementos]
+[Filtrar el contenido de la lista de elementos]
+[Seleccionar un elemento específico de la lista de elementos]
+EXPL: La etiqueta <xsl:sort> se utiliza para ordenar el contenido de la lista de elementos según un criterio específico.

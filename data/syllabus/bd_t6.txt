@@ -68,3 +68,60 @@ Index
 *Cursor
 Mediante una subconsulta correlacionada con EXISTS
 EXPL:Un cursor permite procesar el resultado de una SELECT fila a fila dentro de un procedimiento. Pasos: DECLARE → OPEN → FETCH (bucle) → CLOSE. El handler NOT FOUND detecta el fin.
+
+
+¿Cuál es el propósito de la función TRIM() en MySQL?
+*[Eliminar los espacios en blanco al principio y al final de una cadena de caracteres]
+[Redondear un valor a un número especificado de decimales]
+[Devolver la diferencia entre dos fechas en días]
+[Concatenar dos o más cadenas de caracteres con un separador específico]
+EXPL: La función TRIM() se utiliza para eliminar los espacios en blanco al principio y al final de una cadena de caracteres.
+
+¿Cuál es el resultado de la función CEIL(2.1)?
+*[3]
+[2]
+[2.1]
+[1]
+EXPL: La función CEIL() redondea un valor hacia arriba al entero más cercano, por lo que CEIL(2.1) devuelve 3.
+
+¿Cuál es la sintaxis para crear una función personalizada en MySQL?
+*[CREATE FUNCTION]
+[CREATE TABLE]
+[CREATE DATABASE]
+[CREATE INDEX]
+EXPL: La sintaxis para crear una función personalizada en MySQL es CREATE FUNCTION.
+
+¿Cuál es el propósito de la instrucción DELIMITER en MySQL?
+*[Cambiar el delimitador de comandos]
+[Crear una función personalizada]
+[Eliminar una tabla]
+[Modificar un índice]
+EXPL: La instrucción DELIMITER se utiliza para cambiar el delimitador de comandos en MySQL.
+
+¿Cuál es el significado de la etiqueta DETERMINISTIC en una función personalizada de MySQL?
+*[Indica que la función siempre devuelve el mismo resultado para los mismos argumentos de entrada]
+[Indica que la función no accede a la base de datos]
+[Indica que la función accede a los datos en la base de datos, pero no los modifica]
+[Indica que la función modifica los datos en la base de datos]
+EXPL: La etiqueta DETERMINISTIC indica que la función siempre devuelve el mismo resultado para los mismos argumentos de entrada.
+
+¿Cuál es el propósito de la función CONCAT_WS() en MySQL?
+*[Concatenar dos o más cadenas de caracteres con un separador específico]
+[Redondear un valor a un número especificado de decimales]
+[Devolver la diferencia entre dos fechas en días]
+[Eliminar los espacios en blanco al principio y al final de una cadena de caracteres]
+EXPL: La función CONCAT_WS() se utiliza para concatenar dos o más cadenas de caracteres con un separador específico.
+
+¿Cuál es el resultado de la función FLOOR(2.9)?
+*[2]
+[3]
+[2.9]
+[1]
+EXPL: La función FLOOR() redondea un valor hacia abajo al entero más cercano, por lo que FLOOR(2.9) devuelve 2.
+
+¿Cuál es el propósito de la opción "log_bin_trust_function_creators" en MySQL?
+*[Permitir que las funciones definidas por el usuario que modifican datos sean replicadas en la base de datos secundaria]
+[Crear una función personalizada]
+[Eliminar una tabla]
+[Modificar un índice]
+EXPL: La opción "log_bin_trust_function_creators" se utiliza para permitir que las funciones definidas por el usuario que modifican datos sean replicadas en la base de datos secundaria.

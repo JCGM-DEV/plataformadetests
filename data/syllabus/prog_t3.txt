@@ -59,3 +59,25 @@ Son objetos y disponen de métodos propios.
 Siempre se almacenan en el Heap.
 Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Los primitivos (int, double...) guardan el valor literal; los de referencia guardan la dirección.
+
+
+¿Cuál es la sintaxis correcta para declarar una constante en Java?
+*[final TipoDeDato NOMBRE_CONSTANTE = valor;]
+[public TipoDeDato NOMBRE_CONSTANTE = valor;]
+[private TipoDeDato NOMBRE_CONSTANTE = valor;]
+[TipoDeDato NOMBRE_CONSTANTE = valor;]
+EXPL: La palabra reservada final se utiliza para declarar constantes en Java.
+
+¿Qué ocurre cuando se divide un número entero entre otro en Java?
+*[El resultado es un número entero, truncando los decimales]
+[El resultado es un número real, con decimales]
+[El resultado es un error de compilación]
+[El resultado es un valor booleano]
+EXPL: En Java, cuando se divide un número entero entre otro, el resultado es un número entero, truncando los decimales.
+
+¿Cuál es el propósito del casting explícito en Java?
+*[Forzar la conversión de un valor de una caja grande a una caja más pequeña, con posible pérdida de datos]
+[Forzar la conversión de un valor de una caja pequeña a una caja más grande, sin pérdida de datos]
+[Realizar una conversión implícita de un valor]
+[Realizar una operación aritmética]
+EXPL: El casting explícito se utiliza para forzar la conversión de un valor de una caja grande a una caja más pequeña, con posible pérdida de datos.

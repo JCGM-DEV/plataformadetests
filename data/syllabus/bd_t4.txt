@@ -68,3 +68,67 @@ INTERSECT
 EXCEPT (o MINUS)
 Mediante una subconsulta correlacionada con EXISTS
 EXPL:La respuesta es 'UNION'. "INTERSECT" y "EXCEPT (o MINUS)" son incorrectos porque describen conceptos diferentes.
+
+
+¿Cuál es la cláusula SQL que se utiliza para filtrar los resultados de una consulta con agrupación?
+*[HAVING]
+[WHERE]
+[GROUP BY]
+[SELECT]
+EXPL: La cláusula HAVING se utiliza para filtrar los resultados de una consulta con agrupación.
+
+
+¿Cuál es la sintaxis básica de una consulta con agrupación y HAVING?
+*[SELECT columna1, columna2, función_de_agregado(columna3) FROM tabla GROUP BY columna1, columna2 HAVING condición]
+[SELECT columna1, columna2, función_de_agregado(columna3) FROM tabla WHERE condición]
+[SELECT columna1, columna2, función_de_agregado(columna3) FROM tabla GROUP BY columna1, columna2]
+[SELECT columna1, columna2, función_de_agregado(columna3) FROM tabla HAVING condición]
+EXPL: La sintaxis básica de una consulta con agrupación y HAVING es la siguiente: SELECT columna1, columna2, función_de_agregado(columna3) FROM tabla GROUP BY columna1, columna2 HAVING condición.
+
+
+¿Cuál es el propósito de la cláusula GROUP BY en una consulta SQL?
+*[Agrupar las filas de una tabla en función de una o varias columnas]
+[Agrupar las filas de una tabla en función de una condición]
+[Filtrar los resultados de una consulta]
+[Seleccionar las columnas de una tabla]
+EXPL: La cláusula GROUP BY se utiliza para agrupar las filas de una tabla en función de una o varias columnas.
+
+
+¿Cuál es la diferencia entre la cláusula HAVING y la cláusula WHERE en una consulta SQL?
+*[La cláusula HAVING se aplica después de la agrupación, mientras que la cláusula WHERE se aplica antes de la agrupación]
+[La cláusula HAVING se utiliza para filtrar los resultados de una consulta, mientras que la cláusula WHERE se utiliza para seleccionar las columnas de una tabla]
+[La cláusula HAVING se utiliza para agrupar las filas de una tabla, mientras que la cláusula WHERE se utiliza para filtrar los resultados de una consulta]
+[La cláusula HAVING y la cláusula WHERE son equivalentes]
+EXPL: La cláusula HAVING se aplica después de la agrupación, mientras que la cláusula WHERE se aplica antes de la agrupación.
+
+
+¿Cuál es el resultado de la consulta SELECT Tienda, SUM(Ventas) FROM Franquicias GROUP BY Tienda HAVING SUM(Ventas) > 2000?
+*[Una lista de tiendas con ventas totales superiores a 2000]
+[Una lista de tiendas con ventas totales inferiores a 2000]
+[Una lista de tiendas con ventas totales iguales a 2000]
+[Una lista vacía]
+EXPL: El resultado de la consulta es una lista de tiendas con ventas totales superiores a 2000.
+
+
+¿Cuál es la sintaxis de una composición interna en SQL?
+*[SELECT columnas FROM tabla1 JOIN tabla2 ON tabla1.columna = tabla2.columna]
+[SELECT columnas FROM tabla1, tabla2 WHERE tabla1.columna = tabla2.columna]
+[SELECT columnas FROM tabla1 WHERE tabla1.columna = tabla2.columna]
+[SELECT columnas FROM tabla1 JOIN tabla2]
+EXPL: La sintaxis de una composición interna en SQL es la siguiente: SELECT columnas FROM tabla1 JOIN tabla2 ON tabla1.columna = tabla2.columna.
+
+
+¿Cuál es el propósito de la cláusula INNER JOIN en una consulta SQL?
+*[Unir dos o más tablas en función de una condición de igualdad]
+[Unir dos o más tablas en función de una condición de desigualdad]
+[Filtrar los resultados de una consulta]
+[Seleccionar las columnas de una tabla]
+EXPL: La cláusula INNER JOIN se utiliza para unir dos o más tablas en función de una condición de igualdad.
+
+
+¿Cuál es la diferencia entre la sintaxis implícita y la sintaxis explícita de una composición interna en SQL?
+*[La sintaxis implícita utiliza la cláusula WHERE, mientras que la sintaxis explícita utiliza la cláusula INNER JOIN]
+[La sintaxis implícita utiliza la cláusula INNER JOIN, mientras que la sintaxis explícita utiliza la cláusula WHERE]
+[La sintaxis implícita y la sintaxis explícita son equivalentes]
+[La sintaxis implícita es más segura que la sintaxis explícita]
+EXPL: La sintaxis implícita utiliza la cláusula WHERE, mientras que la sintaxis explícita utiliza la cláusula INNER JOIN.
