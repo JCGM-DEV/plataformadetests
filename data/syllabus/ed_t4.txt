@@ -10,21 +10,21 @@ En un diagrama de clases UML, ¿cómo se representa una relación de Realizació
 Con una línea sólida y una punta de flecha rellena, representando una relación de herencia entre clases
 Con una línea punteada que termina en una punta de flecha sólida, indicando el uso de funcionalidad
 *Mediante una línea punteada que termina en una punta de flecha hueca (o rellena de color blanco), que va desde la clase hacia la interfaz que implementa.
-Mediante una clase abstracta con métodos estáticos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El diagrama de clases UML muestra la estructura estática del sistema: clases, atributos, métodos y relaciones. Es el diagrama más usado en el diseño orientado a objetos.
 
 ¿Qué información crucial puede indicarse en los extremos de una línea de relación de Asociación en un diagrama de clases UML?
 La prioridad de ejecución de los métodos de las clases relacionadas
 *La multiplicidad (cuántas instancias de una clase pueden participar en la relación) y la navegabilidad (si se puede obtener referencia a los objetos del otro extremo).
 El orden en que se deben instanciar los objetos de las clases asociadas
-Mediante una clase abstracta con métodos estáticos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El diagrama de clases UML muestra la estructura estática del sistema: clases, atributos, métodos y relaciones. Es el diagrama más usado en el diseño orientado a objetos.
 
 ¿Cómo se distinguen visualmente las clases y los métodos abstractos en un diagrama de clases UML de aquellos que no lo son?
 Se representan con un borde punteado
 Sus nombres se escriben en negrita
 *Sus nombres se escriben en cursiva.
-Mediante una clase abstracta con métodos estáticos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El diagrama de clases UML muestra la estructura estática del sistema: clases, atributos, métodos y relaciones. Es el diagrama más usado en el diseño orientado a objetos.
 
 ¿Cuál es la principal diferencia entre una relación de Composición y una de Agregación en UML, y cómo se representa la Composición?
@@ -38,7 +38,7 @@ En la notación de los diagramas de clases UML, ¿qué significa que un atributo
 Que tiene visibilidad pública
 Que tiene visibilidad de paquete
 *Que tiene visibilidad protegida.
-Mediante una clase abstracta con métodos estáticos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Que tiene visibilidad protegida.'. "Que tiene visibilidad pública." y "Que tiene visibilidad de paquete." son incorrectos porque describen conceptos diferentes.
 
 ¿Cuál es el papel principal del diagrama de clases en el diseño de software orientado a objetos según la Unidad 4?
@@ -52,7 +52,7 @@ Si un atributo en una clase UML es estático, ¿cómo se indica esta caracterís
 Su nombre se escribe entre corchetes
 *Debe ir subrayado.
 Se precede de un asterisco (*)
-Mediante una clase abstracta con métodos estáticos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'Debe ir subrayado.'. "Su nombre se escribe entre corchetes." y "Se precede de un asterisco (*)." son incorrectos porque describen conceptos diferentes.
 
 ¿Qué tipo de relación UML se representa mediante una línea discontinua rematada en una punta de flecha que apunta a la clase que proporciona la funcionalidad, y qué significado tiene esta relación?
@@ -66,5 +66,5 @@ Según la definición de la unidad, ¿en qué consiste el concepto de "ingenier�
 En el proceso de optimizar el código fuente a partir de un diagrama de clases previamente generado
 *En la obtención de un diagrama de clases a partir del código fuente ya existente de una aplicación.
 En la transformación de un diagrama de clases en un diagrama de componentes para la implementación
-Mediante una clase abstracta con métodos estáticos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:En la obtención de un diagrama de clases a partir del código fuente ya existente de una aplicación.

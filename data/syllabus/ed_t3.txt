@@ -3,7 +3,7 @@ En el contexto de las metodologías de desarrollo orientado a objetos, ¿cómo s
 UML es una metodología de desarrollo completa y prescriptiva que debe ser adoptada en todos los proyectos orientados a objetos
 UML define un conjunto estricto de reglas que restringen las metodologías de desarrollo a unas pocas opciones compatibles
 *UML no sigue ninguna metodología en concreto, sino que proporciona herramientas para aplicar en estas, permitiendo representar las diferentes partes estáticas o dinámicas del sistema como parte del trabajo metodológico.
-Mediante una clase abstracta con métodos estáticos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:UML no sigue ninguna metodología en concreto, sino que proporciona herramientas para aplicar en estas, permitiendo repre...
 
 ¿Qué organismo internacional aprobó el lenguaje UML como estándar a partir del año 2004?
@@ -11,7 +11,7 @@ El Object Management Group (OMG), que fue el consorcio que lo presentó inicialm
 La World Wide Web Consortium (W3C), por su relevancia en aplicaciones web
 *La Organización Internacional de Estandarización (ISO, International Organization for Standardization).
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
+EXPL:La respuesta correcta se basa en los conceptos fundamentales analizados en esta unidad.
 
 ¿Cuál es el objetivo fundamental del Lenguaje Unificado de Modelado (UML) según la introducción de la unidad?
 Proporcionar un lenguaje de programación de alto nivel para el desarrollo de aplicaciones empresariales
@@ -24,7 +24,7 @@ Dentro de los diagramas estructurales, ¿cuál de ellos permite representar no s
 El diagrama de componentes, que muestra la relación entre subsistemas
 El diagrama de clases, que modela la estructura estática del sistema
 *El diagrama de lanzamiento o despliegue.
-Con el atributo xmlns:xsi en el elemento raíz
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'El diagrama de lanzamiento o despliegue.'.
 
 ¿Cuál es la característica principal de las herramientas CASE (Computer Aided Software Engineering) con soporte UML, en contraste con herramientas de dibujo genéricas?
@@ -38,7 +38,7 @@ Según la unidad, ¿cuál es probablemente el diagrama más habitual y útil de 
 El diagrama de casos de uso, que describe la interacción de los actores con el sistema
 El diagrama de actividad, que detalla la secuencia de pasos de una tarea
 *El diagrama de clases.
-Mediante una clase abstracta con métodos estáticos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'El diagrama de clases.'.
 
 Más allá de la generación de código a partir de diagramas, ¿qué otra capacidad valiosa suelen ofrecer las herramientas CASE con soporte UML para la documentación de proyectos existentes?
@@ -52,7 +52,7 @@ Según el glosario de la unidad, ¿cómo se define un "Objeto" en el contexto de
 La representación genérica de un elemento del sistema, sin atributos ni métodos específicos
 Una característica o propiedad de una clase que describe su estado
 *La concreción de una clase, también conocida como instancia.
-Mediante una clase abstracta con métodos estáticos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La respuesta es 'La concreción de una clase, también conocida como instancia.'.
 
 ¿Cuál de los diagramas de comportamiento se utiliza para representar de manera más detallada la secuencia de pasos que se van a realizar para una actividad, siendo más específico que un diagrama de caso de uso?

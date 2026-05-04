@@ -24,7 +24,7 @@ Según la unidad, ¿cuáles de los siguientes son elementos esenciales que compo
 Arquitectura del sistema, diagrama de despliegue y log de errores
 Tiempo de ejecución, uso de memoria y carga de la CPU
 *Identificador, descripción, precondiciones, datos de prueba, pasos, resultado esperado, resultado obtenido y estado.
-Con el atributo xmlns:xsi en el elemento raíz
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La opción seleccionada es la correcta según la teoría técnica.
 
 ¿Cuál de las siguientes afirmaciones sobre las pruebas de software es la más precisa según el contenido de la unidad?

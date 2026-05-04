@@ -3,7 +3,7 @@ tema 6
 Utilizan SQL para todas las operaciones, facilitando la integración con sistemas relacionales
 *Almacenan el documento XML en su forma original sin alterarlo, lo que permite recuperar el original y aprovechar su modelo jerárquico mediante nodos
 Convierten el XML a un esquema relacional optimizado para búsquedas rápidas
-Con el atributo xmlns:xsi en el elemento raíz
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La opción correcta es Almacenan el documento XML en su forma original sin alterarlo, lo que permite recuperar el original y aprovechar su modelo jerárquico mediante nodos.
 ¿Cuál de los siguientes es un requisito indispensable para la instalación y ejecución de la base de datos XML nativa eXist-db?
 Un entorno de desarrollo como Apache o Nginx preinstalado
@@ -27,7 +27,7 @@ Si en un documento XML queremos seleccionar todos los nodos elemento hijos direc
 //coche/node()
 /concesionario/coche/*
 *concesionario/coche//@*
-Con el atributo xmlns:xsi en el elemento raíz
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La opción correcta es concesionario/coche//@*.
 XQuery es un lenguaje de consulta y manipulación de XML que incorpora XPath.<br/>¿Cuál de las siguientes afirmaciones sobre XQuery es correcta?
 No permite el acceso a múltiples documentos XML en una misma consulta, a diferencia de SQL
@@ -39,7 +39,7 @@ Si tenemos el siguiente fragmento XML: <concesionario><coche id="1"><marca>Volks
 /concesionario/coche[position()=2]
 //coche[id="2"]
 */concesionario/coche[@id="2"]
-Mediante una clase abstracta con métodos estáticos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:La opción correcta es /concesionario/coche[@id="2"].
 La herramienta IMPORTXML de Google Sheets, ¿para qué se utiliza principalmente?
 Para transformar documentos XML a otros formatos como JSON o PDF
@@ -50,7 +50,7 @@ EXPL:La opción correcta es Para importar datos de formatos estructurados (como 
 En XPath, si se necesita seleccionar la marca y el modelo de todos los coches en un documento XML dentro de una misma expresión de ruta, ¿qué operador se debe utilizar para unir ambas rutas?
 AND (operador lógico para condiciones en predicados)
 + (operador aritmético de suma en XPath)
-Con el atributo xmlns:xsi en el elemento raíz del documento
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 *| (operador de unión que combina dos conjuntos de nodos XPath)
 EXPL:El operador | (pipe) en XPath une dos conjuntos de nodos: //coche/marca | //coche/modelo devuelve todos los nodos marca y modelo. AND se usa en predicados para condiciones lógicas, no para unir expresiones XPath.
 ¿Cuál es la principal diferencia funcional entre XPath y XQuery según los materiales de la unidad?

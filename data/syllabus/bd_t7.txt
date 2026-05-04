@@ -25,7 +25,7 @@ EXPL:La respuesta es 'INHERITS'. "EXTENDS" y "FROM" son incorrectos porque descr
 SPHERE
 TRIANGLE
 Mediante una subconsulta correlacionada con EXISTS
-EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
+EXPL:La respuesta correcta se basa en los conceptos fundamentales analizados en esta unidad.
 
 Al ejecutar un SELECT * FROM tabla_padre en PostgreSQL, ¿qué registros se obtienen por defecto?
 Solo los de la tabla padre
@@ -66,5 +66,5 @@ EXPL:La respuesta es 'CREATE TYPE'. "CREATE OBJECT" y "DEFINE DATA" son incorrec
 A la velocidad de navegación web de la base de datos
 *A la capacidad de seguir las conexiones lógicas o referencias entre objetos.
 Al uso de comandos NEXT y PREV en los cursores
-Mediante una clase abstracta con métodos estáticos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).

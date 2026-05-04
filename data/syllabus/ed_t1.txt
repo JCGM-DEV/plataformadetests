@@ -4,13 +4,13 @@ Hardware, Firmware y Sistemas Operativos
 *Software de sistema, Software de aplicación y Software de programación.
 BIOS, UEFI y Controladores
 Ninguna de las anteriores opciones es completamente correcta en este contexto
-EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
+EXPL:La respuesta correcta se basa en los conceptos fundamentales analizados en esta unidad.
 
 Además de las líneas de código con instrucciones, ¿qué otro elemento es frecuentemente necesario para que un programa informático realice sus tareas?
 El hardware del ordenador, que es la única parte física necesaria
 El sistema operativo, que es el único intermediario entre el programa y la máquina
 *Los datos, que son la información que el programa necesita para operar, como los operandos en una operación aritmética.
-Con el atributo xmlns:xsi en el elemento raíz
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Además del código, un programa necesita datos para operar. Los datos son la información que el programa procesa (operandos en una operación, registros de una BD, etc.).
 
 Según el texto, ¿qué proceso realiza un compilador durante la compilación, además de generar el código ejecutable?
@@ -31,7 +31,7 @@ EXPL:Los lenguajes de 2ª generación son los lenguajes ensamblador. Usan mnemó
 El código objeto es el resultado directo de la escritura del programador, mientras que el código ejecutable es lo que entiende la máquina
 El código ejecutable es válido para múltiples sistemas operativos sin necesidad de recompilación, a diferencia del código objeto
 *El código objeto contiene instrucciones comprensibles por la máquina, pero no es directamente ejecutable, requiriendo un proceso de enlazado para convertirse en código ejecutable.
-Mediante una clase abstracta con métodos estáticos
+Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:El código objeto contiene instrucciones comprensibles por la máquina pero no es directamente ejecutable. El enlazador (linker) combina varios códigos objeto y resuelve referencias externas para crear el ejecutable.
 
 ¿Cuál es la distinción entre un lenguaje de tipado fuerte y uno de tipado débil, y entre tipado estático y tipado dinámico?

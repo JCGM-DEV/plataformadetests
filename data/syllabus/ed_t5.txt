@@ -31,8 +31,8 @@ EXPL:Indica que un caso de uso "extiende" o amplía la funcionalidad de otro, a�
 El diagrama de actividad, por su capacidad de mostrar flujos detallados
 El diagrama de tiempos, debido a su enfoque en la evolución de estados
 *El diagrama de comunicación (conocido como diagrama de colaboración en versiones anteriores de UML).
-Mediante una clase abstracta con métodos estáticos
-EXPL:NAT (Network Address Translation) traduce direcciones IP privadas a una IP pública en el router. Permite que múltiples dispositivos de una red local compartan una sola IP pública.
+Ninguna de las anteriores opciones es completamente correcta en este contexto
+EXPL:La respuesta correcta se basa en los conceptos fundamentales analizados en esta unidad.
 
 En un diagrama de casos de uso UML, ¿qué puede representar un "Actor"?
 Únicamente a una persona física que interactúa con el sistema, como un usuario
