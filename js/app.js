@@ -526,11 +526,11 @@ function renderAcademia() {
                 </div>
 
                 <div class="academia-main-actions">
-                    <button class="btn-primary academia-btn-main" onclick="startExam('${subject.id}')">
+                    <button class="btn-primary academia-btn-main" onclick="startSimulacroTemario('${subject.id}')">
                         <span class="btn-icon">🚀</span>
                         <div class="btn-texts">
                             <span class="btn-main-text">Simulacro General</span>
-                            <span class="btn-sub-text">60 preguntas aleatorias</span>
+                            <span class="btn-sub-text">120 preguntas aleatorias</span>
                         </div>
                     </button>
                     
@@ -913,7 +913,7 @@ function startExam(subjectId, unitId = null, mode = 'normal') {
         if (due.length >= 5) pool = due;
     }
 
-    const testSize = unitId !== null ? pool.length : Math.min(60, pool.length);
+    const testSize = unitId !== null ? pool.length : Math.min(120, pool.length);
     const lastIds = Sync.get(`last_test_${subjectId}`, []);
 
     APP_STATE.currentExam = subject;
@@ -1197,7 +1197,7 @@ function showQuickRead(subjectId, unitId, onStart) {
 }
 
 // ─── MODO EXAMEN REAL (Feature 2) ───────────────────────────────
-function startExamReal(subjectId, totalPreguntas = 60) {
+function startExamReal(subjectId, totalPreguntas = 120) {
     APP_STATE.isReview = false;
     const subject = APP_STATE.subjects.find(s => s.id === subjectId);
     const pool = QUESTION_POOL[subjectId] || [];
@@ -1272,17 +1272,17 @@ async function startExamenFinal(subjectId) {
         else if (subjectId === 'sistemas_informaticos') {
             const teoricasPool = QUESTION_POOL[subjectId] || [];
             const practicasEntry = APP_STATE.syllabusExams.find(e => e.id === 'si_practicas');
-            const teoricas = shuffleArray(teoricasPool).slice(0, 30);
+            const teoricas = shuffleArray(teoricasPool).slice(0, totalPreguntas / 2);
             
             let practicas = [];
             if (practicasEntry) {
                 const res = await fetch(practicasEntry.file + '?v=' + Date.now());
                 const text = await res.text();
-                practicas = shuffleArray(parseTxtExam(text, 'si_practicas')).slice(0, 30);
+                practicas = shuffleArray(parseTxtExam(text, 'si_practicas')).slice(0, totalPreguntas - teoricas.length);
             }
             allQ = shuffleArray([...teoricas, ...practicas]).map(prepareQuestion);
             time = allQ.length * 90;
-            titleInfo = `60 preguntas (30T + ${practicas.length}P)`;
+            titleInfo = `${totalPreguntas} preguntas (${teoricas.length}T + ${practicas.length}P)`;
             penalizacionStr = "Penalización -1/3";
         }
         else {
@@ -1380,8 +1380,8 @@ async function startSimulacroTemario(subjectId) {
 
         if (allQuestions.length === 0) { alert('No se pudieron cargar preguntas.'); showView('dashboard'); return; }
 
-        // Pick 60 questions distributed across all temas
-        const TARGET = 60;
+        // Pick 120 questions distributed across all temas
+        const TARGET = 120;
         let selected = [];
         
         // Balanced selection: try to pick an equal number from each theme
