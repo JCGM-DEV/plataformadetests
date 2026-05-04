@@ -1526,8 +1526,13 @@ function renderQuestion() {
     document.getElementById('exam-engine-root').innerHTML = `
         <div class="question-container">
             <div class="question-meta">
-                <span>Pregunta ${APP_STATE.currentQuestionIndex + 1} / ${total}</span>
-                ${q.unit ? `<span class="unit-badge">Tema ${q.unit}</span>` : ''}
+                <div class="q-meta-left">
+                    <span class="q-counter">Pregunta ${APP_STATE.currentQuestionIndex + 1} / ${total}</span>
+                    ${q.unit ? `<span class="unit-badge">Tema ${q.unit}</span>` : ''}
+                </div>
+                <div class="q-meta-right">
+                    <span id="exam-timer" class="exam-timer">00:00</span>
+                </div>
             </div>
             <div class="progress-bar-small" style="width:100%;margin:0.75rem 0 1.5rem">
                 <div class="fill" style="width:${pct}%"></div>
@@ -1685,23 +1690,43 @@ function finishExam() {
 
     // ── Build post-exam summary (Feature 5) ─────────────────────
     const failedQuestions = APP_STATE.answers.filter(a => a.selected !== a.correct);
-    const failedByTema = {};
-    failedQuestions.forEach(a => {
+    const performanceByTema = {};
+    
+    // Count total questions and errors per theme
+    APP_STATE.answers.forEach(a => {
         const tema = a.question.unit || 'General';
-        if (!failedByTema[tema]) failedByTema[tema] = [];
-        failedByTema[tema].push(a.question);
+        if (!performanceByTema[tema]) performanceByTema[tema] = { total: 0, errors: 0 };
+        performanceByTema[tema].total++;
+        if (a.selected !== a.correct) performanceByTema[tema].errors++;
     });
 
-    const worstTema = Object.entries(failedByTema).sort((a,b) => b[1].length - a[1].length)[0];
-    const pdfInfo = worstTema ? PDF_MAP[APP_STATE.currentExam.id]?.[worstTema[0]] : null;
+    const weakThemes = Object.entries(performanceByTema)
+        .map(([tema, stats]) => ({
+            tema,
+            errorRate: (stats.errors / stats.total) * 100,
+            errors: stats.errors,
+            total: stats.total
+        }))
+        .filter(t => t.errors > 0)
+        .sort((a, b) => b.errorRate - a.errorRate)
+        .slice(0, 3);
 
     const summaryHTML = failedQuestions.length > 0 ? `
         <div class="post-exam-summary">
-            <h3>📊 Resumen de lo que debes repasar</h3>
-            ${worstTema ? `<div class="worst-tema-summary">
-                <span>⚠️ Tema con más fallos: <strong>Tema ${worstTema[0]}</strong> (${worstTema[1].length} errores)</span>
-                ${pdfInfo ? `<a href="${pdfInfo.path}" target="_blank" class="pdf-link-btn">📄 Abrir PDF Tema ${worstTema[0]} →</a>` : ''}
-            </div>` : ''}
+            <h3>📊 Temas que debes repasar</h3>
+            <div class="weak-themes-list">
+                ${weakThemes.map(wt => {
+                    const pdfInfo = PDF_MAP[rankingSubjectId]?.[wt.tema];
+                    return `
+                    <div class="weak-tema-card">
+                        <div class="wt-info">
+                            <span class="wt-name">Tema ${wt.tema}</span>
+                            <span class="wt-stats">${wt.errors} fallos de ${wt.total} preguntas (${wt.errorRate.toFixed(0)}%)</span>
+                        </div>
+                        ${pdfInfo ? `<a href="${pdfInfo.path}" target="_blank" class="wt-pdf-btn">PDF →</a>` : ''}
+                    </div>`;
+                }).join('')}
+            </div>
             <div class="failed-concepts">
                 ${failedQuestions.slice(0, 4).map(a => `
                     <div class="failed-concept-item">

@@ -11,7 +11,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "CSV (Comma-Separated Values) organiza los datos en filas y columnas con un separador fijo. JSON y XML son semiestructurados y jerárquicos. Un fichero de texto plano no tiene estructura definida.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -25,7 +25,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Una entidad representa un objeto del mundo real con existencia propia (CLIENTE, PRODUCTO). Una relación es la asociación entre entidades. Un atributo es una propiedad de la entidad. Una tupla es una fila de una tabla relacional.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -39,7 +39,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Las clasificaciones por modelo lógico son: jerárquicas, en red, relacionales y orientadas a objetos. \"Empresariales\" no es una categoría del modelo lógico sino un ámbito de uso o sector de aplicación.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -53,7 +53,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Los ficheros indexados permiten incorporar medidas de seguridad como contraseñas y encriptación, además de acceso directo a registros. Los ficheros planos son simples secuencias de texto sin estas capacidades.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -67,7 +67,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Las bases de datos NoSQL (MongoDB, Cassandra, Redis) están diseñadas para datos semiestructurados o no estructurados. Las relacionales requieren esquema fijo. Las jerárquicas tienen estructura de árbol rígida.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -81,7 +81,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Las bases de datos orientadas a objetos permiten herencia entre clases de objetos, igual que en la programación orientada a objetos. Las relacionales no tienen herencia nativa; las jerárquicas tienen estructura padre-hijo pero no herencia.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -95,7 +95,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "SQL (Structured Query Language) es el lenguaje estándar para gestionar bases de datos relacionales. Permite definir estructuras (DDL), manipular datos (DML) y controlar accesos (DCL).",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -109,7 +109,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Las bases de datos distribuidas reparten los datos entre múltiples nodos, lo que reduce los cuellos de botella y aumenta la disponibilidad. Si falla un nodo, los demás siguen funcionando.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -123,7 +123,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Philippe Dreyfus acuñó el término \"informatique\" en 1962 como contracción de \"information automatique\". En español se adoptó como \"informática\". Charles Babbage fue el inventor de la máquina analítica en el siglo XIX.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -137,7 +137,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Los ficheros dBASE (.dbf) son ficheros de base de datos con índices que permiten acceso directo a registros. Son ficheros indexados, no planos ni multimedia.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     }
   ],
@@ -153,7 +153,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Una clave primaria compuesta usa dos o más columnas juntas para identificar unívocamente cada fila. Se usa cuando ninguna columna individual es suficiente como identificador único (ej: alumno_id + asignatura_id en matrículas).",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -167,7 +167,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "ROLLBACK deshace todos los cambios realizados desde el último START TRANSACTION o SAVEPOINT, devolviendo la base de datos al estado anterior. COMMIT confirma los cambios permanentemente.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -181,7 +181,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "El Árbol B mantiene los datos ordenados, lo que permite recorrer rangos eficientemente (BETWEEN, <, >). El índice Hash solo sirve para igualdad exacta (=), no para rangos, porque los valores no están ordenados.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -195,7 +195,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Una vista es una consulta almacenada que se ejecuta cada vez que se accede a ella. No ocupa espacio físico de datos; se reconstruye dinámicamente desde las tablas base. Permite simplificar consultas complejas y controlar el acceso.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -209,7 +209,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Un modelo de datos es una representación abstracta que describe la estructura, las relaciones y las restricciones de los datos, independientemente de cómo se implementen físicamente en el sistema de almacenamiento.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -223,7 +223,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "El tipo de dato booleano (BOOLEAN en SQL) almacena valores de verdad: TRUE o FALSE. Es el tipo adecuado para campos como \"activo\", \"verificado\" o \"disponible\".",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -237,7 +237,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Las relaciones entre tablas se establecen mediante claves foráneas (FOREIGN KEY) que referencian la clave primaria de otra tabla. Esto garantiza la integridad referencial: no puede existir un registro hijo sin su registro padre.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -251,7 +251,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "En bases de datos, los roles son conjuntos de privilegios que se asignan a usuarios. Facilitan la administración: en lugar de asignar permisos uno a uno, se crea un rol con los permisos necesarios y se asigna a los usuarios.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -265,7 +265,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Un atributo es una propiedad o característica de una entidad. La matrícula es un atributo de la entidad VEHÍCULO. Una entidad es el objeto (VEHÍCULO), una tupla es una fila de la tabla, y una relación es la asociación entre entidades.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -279,7 +279,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "DROP TABLE elimina la tabla completa: estructura y datos. ALTER TABLE modifica la estructura. DELETE borra filas (DML). TRUNCATE vacía los datos pero mantiene la estructura. Solo DROP TABLE elimina la tabla definitivamente.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     }
   ],
@@ -295,7 +295,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta es 'Rectángulos'. \"Elipses\" y \"Rombos\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -309,7 +309,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un atributo derivado se calcula a partir de otros atributos (ej: edad a partir de fecha_nacimiento). Se representa con elipse de línea punteada. No se almacena físicamente.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -323,7 +323,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "En 1:N, un registro de la tabla \"1\" puede relacionarse con muchos de la tabla \"N\", pero cada registro de \"N\" solo se relaciona con uno de \"1\". La clave foránea va en el lado N.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -337,7 +337,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Una entidad débil no tiene atributos suficientes para identificarse por sí sola. Depende de una entidad propietaria (fuerte) y se representa con doble rectángulo en el diagrama E-R.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -351,7 +351,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El proceso de agrupar entidades con rasgos comunes en una entidad padre abstracta.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -365,7 +365,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Disjointness (exclusividad) determina si una instancia puede pertenecer a varias subentidades (solapamiento) o solo a una (exclusividad). Completeness determina si toda instancia del supertipo debe pertenecer a alguna subentidad.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -379,7 +379,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción seleccionada es la correcta según la teoría técnica.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -393,7 +393,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La 1FN exige que todos los valores sean atómicos (indivisibles). No puede haber listas, conjuntos ni grupos repetitivos en una columna. Es el requisito mínimo de normalización.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -407,7 +407,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La 2FN requiere que todos los atributos no clave dependan de la clave primaria COMPLETA. Si hay dependencia parcial (depende solo de parte de la PK compuesta), viola la 2FN.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -421,7 +421,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     }
   ],
@@ -437,7 +437,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'FROM'. \"SELECT\" y \"WHERE\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -451,7 +451,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "BETWEEN a AND b es equivalente a col >= a AND col <= b. Incluye ambos extremos. Es más legible que escribir las dos condiciones por separado.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -465,7 +465,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "DISTINCT elimina filas duplicadas del resultado. Se aplica sobre todas las columnas del SELECT. Tiene un coste de rendimiento porque requiere ordenar o hashear los resultados.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -479,7 +479,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "MAX() devuelve el valor máximo de una columna. MIN() el mínimo, SUM() la suma, AVG() la media, COUNT() el número de filas. Son funciones de agregado que operan sobre grupos de filas.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -493,7 +493,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "GROUP BY agrupa filas con el mismo valor en las columnas especificadas. Se usa con funciones de agregado (COUNT, SUM, AVG). HAVING filtra los grupos resultantes.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -507,7 +507,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "LEFT JOIN devuelve TODAS las filas de la tabla izquierda, más las coincidentes de la derecha. Las filas sin pareja en la derecha aparecen con NULL. Útil para \"todos los X aunque no tengan Y\".",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -521,7 +521,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "INNER JOIN devuelve solo las filas que tienen coincidencia en AMBAS tablas. Las filas sin pareja se excluyen del resultado. Es el JOIN más restrictivo.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -535,7 +535,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "IN comprueba si un valor existe en una lista o en el resultado de una subconsulta. EXISTS comprueba si la subconsulta devuelve al menos una fila. LIKE busca patrones con % y _. BETWEEN comprueba rangos.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -549,7 +549,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "START WITH define el nodo raíz de la jerarquía y CONNECT BY define la relación padre-hijo. Son cláusulas específicas de Oracle para consultas jerárquicas (árboles organizativos, categorías anidadas).",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -563,7 +563,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta es 'UNION'. \"INTERSECT\" y \"EXCEPT (o MINUS)\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     }
   ],
@@ -579,7 +579,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "INSERT INTO tabla (col1, col2) VALUES (v1, v2) inserta una fila. INSERT INTO tabla SELECT... inserta múltiples filas desde otra consulta. Es la sentencia DML estándar para insertar datos.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -593,7 +593,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "INSERT INTO tabla (col1, col2) VALUES (v1, v2) inserta una fila. INSERT INTO tabla SELECT... inserta múltiples filas desde otra consulta. Es la sentencia DML estándar para insertar datos.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -607,7 +607,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La opción correcta es Porque si se omite, se actualizarán todos los registros de la tabla..",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -621,7 +621,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "ON DELETE CASCADE borra automáticamente las filas hijas cuando se borra la fila padre. ON DELETE SET NULL pone NULL en las hijas. ON DELETE RESTRICT impide borrar el padre si tiene hijos.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -635,7 +635,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "COMMIT confirma permanentemente todos los cambios de la transacción actual. Una vez ejecutado, los cambios son visibles para otros usuarios y no se pueden deshacer con ROLLBACK.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -649,7 +649,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "ROLLBACK deshace todos los cambios realizados desde el último START TRANSACTION o SAVEPOINT, devolviendo la base de datos al estado anterior. Es la operación de \"deshacer\" de las transacciones.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -663,7 +663,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Mejoran la legibilidad al permitir nombrar subconsultas y reutilizarlas en una única instrucción.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -677,7 +677,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El bloqueo a nivel de registro (row-level locking) bloquea solo la fila que se está modificando, permitiendo que otros usuarios trabajen en otras filas simultáneamente. Es más eficiente que bloquear toda la tabla.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -691,7 +691,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "SELECT ... FOR UPDATE bloquea las filas seleccionadas para que otros usuarios no puedan modificarlas hasta que se haga COMMIT o ROLLBACK. Es el mecanismo de bloqueo pesimista en MySQL.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -705,7 +705,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Se rechaza la operación y se genera un error.'. \"Se truncan los valores silenciosamente.\" y \"Se insertan valores nulos por defecto sin avisar.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     }
   ],
@@ -721,7 +721,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "SET @variable = valor define una variable de sesión de usuario en MySQL. Las variables de sesión persisten durante la conexión. DECLARE se usa para variables locales dentro de procedimientos.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -735,7 +735,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "DETERMINISTIC indica que la función siempre devuelve el mismo resultado para los mismos parámetros. Permite al optimizador cachear el resultado y mejorar el rendimiento.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -749,7 +749,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "DELIMITER cambia el carácter de fin de comando (por defecto ;) para poder escribir procedimientos que contienen ; internamente sin que MySQL los ejecute prematuramente.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -763,7 +763,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'REPEAT'. \"WHILE\" y \"LOOP\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -777,7 +777,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un procedimiento almacenado es código SQL precompilado que se ejecuta con CALL. Puede tener parámetros IN (entrada), OUT (salida) e INOUT. No devuelve valor directamente.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -791,7 +791,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "event_scheduler = ON activa el planificador de eventos de MySQL. Sin esto, los eventos creados con CREATE EVENT no se ejecutarán aunque estén correctamente definidos.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -805,7 +805,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Las funciones siempre devuelven un valor; los procedimientos no devuelven un valor (aunque pueden usar parámetros de sal...",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -819,7 +819,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'SET'. \"ENUM\" y \"ARRAY\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -833,7 +833,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "EXIT HANDLER aborta la ejecución del procedimiento inmediatamente cuando ocurre el error. CONTINUE HANDLER continúa la ejecución después del error. Se usan para gestionar excepciones en MySQL.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -847,7 +847,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un cursor permite procesar el resultado de una SELECT fila a fila dentro de un procedimiento. Pasos: DECLARE → OPEN → FETCH (bucle) → CLOSE. El handler NOT FOUND detecta el fin.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     }
   ],
@@ -863,7 +863,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Herencia de tablas'. \"Polimorfismo\" y \"Encapsulamiento de tipos\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -877,7 +877,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El puerto por defecto de PostgreSQL es 5432. MySQL usa 3306. El puerto 8080 es común para servidores web alternativos.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -891,7 +891,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'INHERITS'. \"EXTENDS\" y \"FROM\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -905,7 +905,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta correcta se basa en los conceptos fundamentales analizados en esta unidad.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -919,7 +919,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Los de la tabla padre y todos los de sus tablas hijas relacionadas.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -933,7 +933,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'RANGE'. \"ARRAY\" y \"JSONB\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -947,7 +947,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "ON DELETE CASCADE borra automáticamente las filas hijas cuando se borra la fila padre. ON DELETE SET NULL pone NULL en las hijas. ON DELETE RESTRICT impide borrar el padre si tiene hijos.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -961,7 +961,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'PL/pgSQL'. \"PL/SQL\" y \"T-SQL\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -975,7 +975,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta es 'CREATE TYPE'. \"CREATE OBJECT\" y \"DEFINE DATA\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -989,7 +989,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "ACID: Atomicidad (todo o nada), Consistencia (la BD pasa de un estado válido a otro), Aislamiento (las transacciones no se interfieren), Durabilidad (los cambios confirmados persisten aunque falle el sistema).",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     }
   ],
@@ -1005,7 +1005,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta correcta se basa en los conceptos fundamentales analizados en esta unidad.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -1019,7 +1019,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Además del código, un programa necesita datos para operar. Los datos son la información que el programa procesa (operandos en una operación, registros de una BD, etc.).",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -1033,7 +1033,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El compilador verifica el código en tres fases: léxica (tokens válidos), sintáctica (estructura gramatical correcta) y semántica (significado coherente). Si hay errores, los reporta al programador.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -1047,7 +1047,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Los lenguajes de 2ª generación son los lenguajes ensamblador. Usan mnemónicos legibles (MOV, ADD) en lugar de código binario. Se convierten a código máquina mediante un ensamblador.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -1061,7 +1061,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El código objeto contiene instrucciones comprensibles por la máquina pero no es directamente ejecutable. El enlazador (linker) combina varios códigos objeto y resuelve referencias externas para crear el ejecutable.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -1075,7 +1075,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Tipado fuerte: restringe operaciones según el tipo (Java, Python). Tipado débil: permite uso más flexible (JavaScript). Tipado estático: el tipo se asigna al declarar (Java). Dinámico: el tipo cambia en ejecución (Python).",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -1089,7 +1089,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La reutilización de código ahorra costes de creación y modificación, y reduce errores al centralizar los cambios en un único lugar. Es uno de los principios fundamentales de la ingeniería del software.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -1103,7 +1103,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software...",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -1117,7 +1117,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que...",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -1131,7 +1131,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Paradigma de Programación Estructurada.'. \"Paradigma Imperativo.\" y \"Paradigma Orientado a Objetos.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     }
   ],
@@ -1147,7 +1147,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Los IDE modernos integran una amplia gama de herramientas para dar soporte a la mayoría de las actividades de desarrollo...",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -1161,7 +1161,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La ubicación del entorno virtual, que constituye un entorno de trabajo aislado para el proyecto.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -1175,7 +1175,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "En los lenguajes interpretados, los errores se detectan y muestran durante la fase de ejecución, mientras que en los len...",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -1189,7 +1189,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción seleccionada es la correcta según la teoría técnica.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -1203,7 +1203,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El software libre permite el acceso a su código fuente para su estudio, comprensión y mejora, mientras que el software p...",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -1217,7 +1217,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Permitir que el IDE se ejecute en diferentes sistemas operativos sin necesidad de recompilación.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -1231,7 +1231,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Generalmente no se generan archivos ejecutables en Python; en su lugar, los archivos de la aplicación se copian y se eje...",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -1245,7 +1245,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Los editores de código son más ligeros y consumen menos recursos del sistema, siendo adecuados para tipos específicos de...",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -1259,7 +1259,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La apariencia de sus elementos, como el tipo y tamaño de letra, la disposición de los paneles y el esquema de color a ut...",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -1273,7 +1273,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El trabajo en equipo, el control de versiones y el seguimiento de incidencias, entre otras tareas.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     }
   ],
@@ -1289,7 +1289,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "UML no sigue ninguna metodología en concreto, sino que proporciona herramientas para aplicar en estas, permitiendo repre...",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -1303,7 +1303,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta correcta se basa en los conceptos fundamentales analizados en esta unidad.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -1317,7 +1317,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Ofrecer herramientas para la representación gráfica y textual de un sistema informático, especialmente cuando se utiliza...",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -1331,7 +1331,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'El diagrama de lanzamiento o despliegue.'.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -1345,7 +1345,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Están diseñadas y construidas específicamente para ayudar en diferentes fases del proceso de creación de software, propo...",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -1359,7 +1359,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'El diagrama de clases.'.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -1373,7 +1373,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -1387,7 +1387,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'La concreción de una clase, también conocida como instancia.'.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -1401,7 +1401,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción seleccionada es la correcta según la teoría técnica.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -1415,7 +1415,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Diagramas estructurales y diagramas de comportamiento.'.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     }
   ],
@@ -1431,7 +1431,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Generación automática de código a partir de diagramas y la ingeniería inversa para obtener diagramas a partir de código ...",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -1445,7 +1445,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El diagrama de clases UML muestra la estructura estática del sistema: clases, atributos, métodos y relaciones. Es el diagrama más usado en el diseño orientado a objetos.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -1459,7 +1459,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El diagrama de clases UML muestra la estructura estática del sistema: clases, atributos, métodos y relaciones. Es el diagrama más usado en el diseño orientado a objetos.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -1473,7 +1473,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El diagrama de clases UML muestra la estructura estática del sistema: clases, atributos, métodos y relaciones. Es el diagrama más usado en el diseño orientado a objetos.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -1487,7 +1487,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La Composición es una relación fuerte donde las partes no tienen sentido independiente del conjunto y se eliminan con él...",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -1501,7 +1501,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Que tiene visibilidad protegida.'. \"Que tiene visibilidad pública.\" y \"Que tiene visibilidad de paquete.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -1515,7 +1515,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Reflejar las clases que componen un sistema, incluyendo sus atributos, métodos y las relaciones entre ellas, para permit...",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -1529,7 +1529,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Debe ir subrayado.'. \"Su nombre se escribe entre corchetes.\" y \"Se precede de un asterisco (*).\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -1543,7 +1543,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Relación de dependencia o de uso, representando que una clase utiliza la funcionalidad proporcionada por otra.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -1557,7 +1557,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "En la obtención de un diagrama de clases a partir del código fuente ya existente de una aplicación.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     }
   ],
@@ -1573,7 +1573,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La línea de vida es una línea vertical discontinua asociada a cada elemento que indica el orden de los eventos, mientras...",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -1587,7 +1587,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un caso de uso \"incluye\" a otro cuando lo utiliza internamente para llevar a cabo su funcionalidad, y la realización de ...",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -1601,7 +1601,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción seleccionada es la correcta según la teoría técnica.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -1615,7 +1615,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Indica que un caso de uso \"extiende\" o amplía la funcionalidad de otro, añadiendo opcionalmente un punto de extensión pa...",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -1629,7 +1629,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta correcta se basa en los conceptos fundamentales analizados en esta unidad.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -1643,7 +1643,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Cualquier elemento que se relaciona con el sistema, pudiendo ser una persona física (usuario) como otro sistema o subsis...",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -1657,7 +1657,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Cada uno de los diferentes caminos que puede tomar un caso de uso, representando una secuencia de eventos posible para c...",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -1671,7 +1671,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'El diagrama de estados o de máquina de estados.'.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -1685,7 +1685,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Un IDE (Integrated Development Environment) integra editor de código, compilador/intérprete, depurador y otras herramientas en una única interfaz. Ejemplos: IntelliJ IDEA, Eclipse, VS Code.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -1699,7 +1699,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y t...",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     }
   ],
@@ -1715,7 +1715,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Ejecutar el programa línea a línea, permitiendo observar la ejecución, acceder a la memoria y examinar el valor de las v...",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -1729,7 +1729,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Los programadores, con el objetivo de verificar que un elemento mínimo funcional del programa (una función, un método o ...",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -1743,7 +1743,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Las pruebas de caja negra verifican el funcionamiento externo de un componente sin mirar su interior, mientras que las d...",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -1757,7 +1757,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción seleccionada es la correcta según la teoría técnica.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -1771,7 +1771,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Tanto la presencia de errores en el software como el esfuerzo por evitarlos tienen un coste asociado, y las pruebas son ...",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -1785,7 +1785,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Se llevan a cabo después de realizar cambios en el sistema (mejoras o corrección de errores) para comprobar que otras pa...",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -1799,7 +1799,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El porcentaje del código fuente que ha sido probado, sirviendo como una métrica de la calidad de las pruebas.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -1813,7 +1813,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El análisis estático se realiza sobre el código sin ejecutarlo, buscando ineficiencias o código muerto, mientras que el ...",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -1827,7 +1827,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Los programas casi siempre funcionan dentro de sistemas más complejos y se relacionan con otros módulos o sistemas, por ...",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -1841,7 +1841,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "En el ciclo de vida en V, cada fase de construcción lleva asociada una fase de pruebas para detectar errores lo antes po...",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     }
   ],
@@ -1857,7 +1857,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La correcta composición de métodos (creando funciones para encapsular funcionalidad) y la organización de los datos (uti...",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -1871,7 +1871,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Facilitan el control sobre el código fuente y otros ficheros del sistema, su evolución, y permiten el trabajo en grupo m...",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -1885,7 +1885,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "COMMIT confirma permanentemente todos los cambios de la transacción actual. Una vez ejecutado, los cambios son visibles para otros usuarios y no se pueden deshacer con ROLLBACK.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -1899,7 +1899,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La refactorización es un conjunto de técnicas que modifican un programa ya funcional para mejorar su legibilidad, eficie...",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -1913,7 +1913,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un IDE (Integrated Development Environment) integra editor de código, compilador/intérprete, depurador y otras herramientas en una única interfaz. Ejemplos: IntelliJ IDEA, Eclipse, VS Code.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -1927,7 +1927,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Asegurarse de poder deshacer los cambios realizados (preferiblemente con sistemas de control de versiones) y ejecutar pr...",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -1941,7 +1941,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "COMMIT confirma permanentemente todos los cambios de la transacción actual. Una vez ejecutado, los cambios son visibles para otros usuarios y no se pueden deshacer con ROLLBACK.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -1955,7 +1955,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'git merge para integrar cambios y resolver solapamientos.'.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -1969,7 +1969,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Docstring.'. \"Comentario de bloque.\" y \"Comentario de línea.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -1983,7 +1983,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, l...",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     }
   ],
@@ -1999,7 +1999,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Tim Berners-Lee propuso en 1980 el sistema ENQUIRE mientras trabajaba en el CERN. En 1989 propuso formalmente el proyecto de hipertexto que daría lugar a la World Wide Web y al lenguaje HTML.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -2013,7 +2013,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El W3C es el organismo internacional que desarrolla estándares web (HTML, CSS, XML, etc.) para garantizar que la web sea accesible, interoperable y evolucione de forma ordenada. Fue fundado por Tim Berners-Lee en 1994.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -2027,7 +2027,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "CSS no es un lenguaje de marcas sino un lenguaje de estilos. Separa el contenido (HTML) de la presentación visual. No tiene variables ni funciones aritméticas como los lenguajes de programación.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -2041,7 +2041,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "XSD supera a DTD en: soporte de tipos de datos (int, date, etc.), compatibilidad con namespaces, sintaxis XML propia y mayor capacidad expresiva. DTD tiene sintaxis propia no XML y no soporta tipos de datos complejos.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -2055,7 +2055,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Un lenguaje de marcas combina texto con etiquetas (marcas) que añaden información sobre la estructura, el significado o la presentación del contenido. No tiene variables ni funciones aritméticas como los lenguajes de programación.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -2069,7 +2069,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "SGML (ISO 8879:1986) desciende de GML (Generalized Markup Language), creado por IBM en los años 60 para compartir documentos entre sistemas. SGML es el padre de HTML y XML.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -2083,7 +2083,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La etiqueta es la marca en sí (ej: <p>). El elemento incluye la etiqueta de apertura, el contenido y la etiqueta de cierre (ej: <p>texto</p>). Un elemento puede estar vacío si no tiene contenido entre sus etiquetas.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -2097,7 +2097,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "HTML 4.0 definía tres DTD: Strict (sin elementos obsoletos), Transitional (permite elementos de presentación obsoletos) y Frameset (para páginas con marcos). Cada página debía declarar cuál usaba en el DOCTYPE.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -2111,7 +2111,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Los lenguajes de marcas (HTML, XML) no tienen variables, bucles ni funciones aritméticas. Solo añaden información estructural o de presentación al texto. Los lenguajes de programación (Java, Python) sí tienen estas capacidades.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -2125,7 +2125,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "XML es un metalenguaje extensible y puramente estructural: no define cómo se presenta la información, solo su estructura y significado. HTML mezcla estructura y presentación. XML se usa para intercambio de datos entre sistemas.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     }
   ],
@@ -2141,7 +2141,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El DOM representa el documento HTML/XML como un árbol de objetos en memoria. JavaScript puede acceder y modificar cualquier nodo del árbol dinámicamente, lo que permite crear páginas web interactivas.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -2155,7 +2155,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "src es un atributo específico de elementos como img, script, iframe y audio/video. Los atributos globales (id, class, style, title, lang, data-*) pueden usarse en cualquier elemento HTML.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -2169,7 +2169,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El CSS inline mezcla contenido y presentación, tiene la mayor especificidad (difícil de sobreescribir), no se puede reutilizar y dificulta el mantenimiento. La mejor práctica es usar un archivo CSS externo.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -2183,7 +2183,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "XHTML es HTML con sintaxis XML estricta. XML no permite atributos sin valor, por lo que los atributos booleanos deben escribirse con su propio nombre como valor: checked=\"checked\", disabled=\"disabled\", selected=\"selected\".",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -2197,7 +2197,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "aside representa contenido relacionado pero no esencial para el contenido principal, como barras laterales, publicidad o notas al margen. section es una sección temática; header es la cabecera; nav contiene enlaces de navegación.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -2211,7 +2211,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "p > span selecciona solo los span que son hijos DIRECTOS de p. En este caso, span es hijo de a, que a su vez es hijo de p. Por tanto, p > span no aplica. El selector p span (sin >) sí aplicaría porque span es descendiente de p.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -2225,7 +2225,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "XHTML es HTML reformulado como XML. Sus reglas estrictas incluyen: todas las etiquetas en minúsculas, todas cerradas (br/), todos los atributos con valor entre comillas, y un único elemento raíz.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -2239,7 +2239,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "thead agrupa las filas de cabecera, tbody el cuerpo de datos y tfoot el pie. Esta estructura semántica mejora la accesibilidad, permite estilos diferenciados y en tablas largas el navegador puede repetir el encabezado en cada página impresa.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -2253,7 +2253,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La etiqueta font está obsoleta en HTML5 porque mezcla presentación con contenido. También están obsoletas center, b (usar strong), i (usar em), u, strike. En HTML5 el estilo tipográfico debe manejarse con CSS.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -2267,7 +2267,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "enctype=\"multipart/form-data\" es obligatorio para subir archivos en formularios HTML. Sin este atributo, el archivo no se envía correctamente. action indica la URL destino; method indica GET o POST; target indica dónde mostrar la respuesta.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     }
   ],
@@ -2283,7 +2283,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Los elementos vacíos pueden representarse mediante una etiqueta de inicio seguida inmediatamente por una de cierre (ej. ...",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -2297,7 +2297,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un documento XML bien formado cumple las reglas sintácticas: un elemento raíz, todas las etiquetas cerradas, anidamiento correcto, atributos entre comillas y sensibilidad a mayúsculas.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -2311,7 +2311,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "JSON se basa en dos estructuras: objetos (pares clave-valor entre {}) y arrays (listas ordenadas entre []). Es más ligero que XML y muy usado en APIs REST.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -2325,7 +2325,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un documento XML válido está bien formado Y cumple las restricciones de un DTD o XSD. Todo documento válido es bien formado, pero no al revés. La validación verifica estructura y tipos de datos.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -2339,7 +2339,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción correcta es El navegador simplemente mostrará la jerarquía de etiquetas y el contenido del documento en texto plano, sin aplicar ningún estilo ni formato visual.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -2353,7 +2353,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción correcta es <carrera> es un descendiente de <facultad>, al estar contenida en un elemento que a su vez es hijo de <facultad>.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -2367,7 +2367,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "xs:enumeration restringe un valor a una lista de opciones predefinidas. xs:pattern usa expresiones regulares. xs:restriction es el contenedor de las facetas de restricción.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -2381,7 +2381,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "DTD tiene sintaxis propia no XML, no soporta tipos de datos complejos ni namespaces. XSD está escrito en XML, soporta tipos de datos, namespaces y es más expresivo.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -2395,7 +2395,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un namespace XML es un URI que identifica un vocabulario XML. Evita conflictos cuando se combinan elementos de diferentes esquemas. Se declara con xmlns=\"URI\" o xmlns:prefijo=\"URI\".",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -2409,7 +2409,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "xs:sequence indica que los elementos hijos deben aparecer en el orden exacto definido. xs:choice permite solo uno de los elementos. xs:all permite cualquier orden.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     }
   ],
@@ -2425,7 +2425,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "xs:sequence indica que los elementos hijos deben aparecer en el orden exacto definido. xs:choice permite solo uno de los elementos. xs:all permite cualquier orden.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -2439,7 +2439,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción correcta es Su ausencia de tipos de datos, la dificultad para acciones sencillas como ordenar elementos, y su limitada compatibilidad con los espacios de nombres XML.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -2453,7 +2453,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un namespace XML es un URI que identifica un vocabulario XML. Evita conflictos cuando se combinan elementos de diferentes esquemas. Se declara con xmlns=\"URI\" o xmlns:prefijo=\"URI\".",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -2467,7 +2467,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción correcta es Un Schema XML tiene como objetivo definir la estructura base de un documento XML, incluyendo elementos, atributos, tipos de datos, orden, ocurrencia y valores por defecto o fijos, mejorando las capacidades de los DTD.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -2481,7 +2481,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'xs:simpleType'. \"xs:complexType\" y \"xs:element\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -2495,7 +2495,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción correcta es xs:Pattern.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -2509,7 +2509,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Mediante el atributo schemaLocation.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -2523,7 +2523,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "maxOccurs=\"unbounded\" permite que el elemento aparezca un número ilimitado de veces. minOccurs=\"0\" lo hace opcional. minOccurs=\"1\" (por defecto) lo hace obligatorio.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -2537,7 +2537,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción correcta es use con valor required.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -2551,7 +2551,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Un documento XML bien formado cumple las reglas sintácticas: un elemento raíz, todas las etiquetas cerradas, anidamiento correcto, atributos entre comillas y sensibilidad a mayúsculas.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     }
   ],
@@ -2567,7 +2567,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El streaming en XSLT 2.0 permite procesar documentos XML muy grandes de forma secuencial sin cargarlos completamente en memoria, lo que mejora significativamente el rendimiento con ficheros de gran tamaño.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -2581,7 +2581,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "XSL-FO (Formatting Objects) define el formato de presentación para medios paginados como PDF o impresión. XSLT transforma XML a otros formatos. XPath es el lenguaje de consulta de nodos XML.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -2595,7 +2595,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "En XPath, los atributos se acceden con el prefijo @. Por tanto, @identificador selecciona el atributo \"identificador\" del elemento actual. Sin @, \"identificador\" seleccionaría un elemento hijo con ese nombre.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -2609,7 +2609,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "xsl:choose con xsl:when y xsl:otherwise es el equivalente XSLT de if-elseif-else. xsl:if solo tiene la parte \"if\" sin else. Para múltiples condiciones alternativas, xsl:choose es la instrucción correcta.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -2623,7 +2623,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "DOM carga todo el documento en memoria como árbol de objetos. Permite acceso aleatorio y modificación de cualquier nodo. SAX es la API basada en eventos que no carga todo en memoria, ideal para documentos grandes.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -2637,7 +2637,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "xsl:for-each con el atributo select=\"catalogo/producto\" itera sobre cada elemento producto y aplica las instrucciones del bloque a cada uno. Es el equivalente XSLT de un bucle for.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -2651,7 +2651,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El atributo match en xsl:template usa una expresión XPath para indicar qué nodos del XML de entrada activan esa plantilla. Por ejemplo, match=\"/\" activa la plantilla raíz; match=\"producto\" activa la plantilla para cada elemento producto.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -2665,7 +2665,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "XSL (eXtensible Stylesheet Language) es una familia de lenguajes para transformar y presentar documentos XML. Incluye XSLT (transformación), XPath (consulta de nodos) y XSL-FO (formato de presentación).",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -2679,7 +2679,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "SAX es basado en eventos y no carga todo en memoria, ideal para XML grandes. DOM carga todo en memoria como árbol, permite modificar pero consume más recursos. Para solo lectura de ficheros grandes, SAX es más eficiente.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -2693,7 +2693,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Chrome bloquea las transformaciones XSLT cuando se abre desde file:// por restricciones de seguridad CORS. La solución es usar un servidor web local. Este comportamiento es específico de Chrome; otros navegadores pueden comportarse diferente.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     }
   ],
@@ -2709,7 +2709,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Almacenan el documento XML en su forma original sin alterarlo, lo que permite recuperar el original y aprovechar su modelo jerárquico mediante nodos.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -2723,7 +2723,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Tener Java 1.7 o una versión posterior instalada en el sistema operativo.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -2737,7 +2737,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Crear variables temporales que representan valores o expresiones para ser usadas en otras cláusulas de la consulta.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -2751,7 +2751,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción correcta es No pueden restaurar el documento XML original sin alterarlo y tienen una diferencia de filosofía con la naturaleza jerárquica de XML.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -2765,7 +2765,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción correcta es concesionario/coche//@*.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -2779,7 +2779,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Ofrece capacidades de transformación, permitiendo no solo recuperar datos sino también devolver un resultado con una nueva estructura.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -2793,7 +2793,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción correcta es /concesionario/coche[@id=\"2\"].",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -2807,7 +2807,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Para importar datos de formatos estructurados (como XML, HTML, CSV) desde una URL específica, aplicando una consulta XPath.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -2821,7 +2821,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "El operador | (pipe) en XPath une dos conjuntos de nodos: //coche/marca | //coche/modelo devuelve todos los nodos marca y modelo. AND se usa en predicados para condiciones lógicas, no para unir expresiones XPath.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -2835,7 +2835,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción correcta es XPath es un lenguaje para seleccionar nodos en documentos XML, mientras que XQuery, además de incluir XPath, es un lenguaje completo de consulta y transformación con sintaxis FLWOR.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     }
   ],
@@ -2851,7 +2851,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es '<title>, <link>, <description>.'. \"<item>, <author>, <pubDate>.\" y \"<category>, <image>, <language>.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -2865,7 +2865,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Abordar la confusión y la incompatibilidad surgida por la existencia de varios estándares RSS similares, proporcionando una solución más consistente.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -2879,7 +2879,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Utilizar la codificación UTF-8 y las entidades XML correspondientes (por ejemplo, á en lugar de á).",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -2893,7 +2893,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Permitir que un sitio web acceda a los servicios y contenidos de otro sitio web a través de una licencia, distribuyendo automáticamente información actualizada a los usuarios interesados.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -2907,7 +2907,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es El almacenamiento directo del contenido en formato RSS en el repositorio, sin necesidad de transformación.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -2921,7 +2921,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'RSS y Atom.'. \"HTML y CSS.\" y \"JSON y YAML.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -2934,7 +2934,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Los agregadores web están alojados en sitios específicos y se acceden a través de un navegador (ideales para múltiples dispositivos), mientras que los de escritorio son aplicaciones que se instalan localmente en un dispositivo (ideales para un uso fijo).",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -2947,7 +2947,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción correcta es Indicar el tipo de contenido (texto plano, HTML o multimedia) de la noticia, y utilizar un formato de fecha estándar ISO para una mayor flexibilidad.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -2960,7 +2960,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Asegura que el feed cumple con los estándares del W3C y las especificaciones RSS/Atom, verificando la accesibilidad de su URI y la ausencia de errores de sintaxis.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -2974,7 +2974,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Suscribirse a fuentes de noticias en formatos RSS o Atom y notificar al usuario sobre las actualizaciones de contenido desde la última lectura.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     }
   ],
@@ -2990,7 +2990,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Controlar los procesos de negocio de forma coordinada para la toma de decisiones, reducir costes y aumentar la productividad.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -3004,7 +3004,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Crear previamente la base de datos en el sistema, ya que todo ERP se apoya en una base de datos centralizada.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -3018,7 +3018,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Encontrar soluciones que integren a estos empleados en los flujos de información de la empresa en tiempo real.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -3032,7 +3032,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Mantener a los equipos actualizados con información personalizada sobre los clientes, su historial y sus preferencias de compra.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -3046,7 +3046,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción correcta es El riesgo de filtrar información confidencial de la empresa hacia el exterior sin el control adecuado.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": false
     },
     {
@@ -3060,7 +3060,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Pueden ser provistos por el fabricante, desarrollados por terceros o incluso ser programas personalizados solicitados por la empresa.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -3074,7 +3074,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Activar acciones automatizadas como notificar a personas designadas o integrar los datos con otro software como SAP o Salesforce.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -3088,7 +3088,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La opción correcta es Prevalecerá el rol que imponga las restricciones más estrictas para garantizar la seguridad.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -3102,7 +3102,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La opción correcta es Añadir un campo personalizado en las órdenes de envío para indicar el tipo de embalaje, que no venía por defecto en el sistema.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -3116,7 +3116,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La opción correcta es Implementan las últimas novedades en seguridad de forma inmediata y aplican la seguridad por capas, reduciendo vulnerabilidades.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": false
     }
   ],
@@ -3132,7 +3132,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "El mobbing (acoso laboral) es un riesgo psicosocial porque afecta a la salud mental y emocional del trabajador. Los riesgos biológicos son virus/bacterias, los ergonómicos son posturas incorrectas, y los físicos son ruido/temperatura.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -3146,7 +3146,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "La Inspección de Trabajo y Seguridad Social es el organismo que vigila el cumplimiento de la normativa laboral y puede imponer sanciones. El INSST es un organismo técnico de investigación y asesoramiento, no de vigilancia.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -3160,7 +3160,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "La prevención de riesgos laborales es el conjunto de actividades o medidas adoptadas para evitar o disminuir los riesgos derivados del trabajo. Está regulada por la Ley 31/1995 de Prevención de Riesgos Laborales.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -3174,7 +3174,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Según la normativa de prevención, el local de primeros auxilios es obligatorio en empresas de más de 50 trabajadores. En empresas menores, basta con un botiquín portátil adecuadamente equipado.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -3188,7 +3188,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "El accidente de trabajo incluye el accidente in itinere (en el trayecto al trabajo o de vuelta). La definición legal abarca toda lesión corporal sufrida con ocasión o por consecuencia del trabajo, incluyendo los ocurridos en misión.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -3202,7 +3202,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "La emergencia general requiere la evacuación total y la intervención de servicios externos (bomberos, ambulancias). El conato es un inicio de emergencia que se controla internamente. La emergencia parcial afecta a una zona y se controla con medios propios.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -3216,7 +3216,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "La secuencia correcta según la LPRL es: 1) Identificar los riesgos, 2) Evaluar los que no se pueden evitar, 3) Evitar los riesgos cuando sea posible, 4) Planificar la acción preventiva para los que no se pueden evitar.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -3230,7 +3230,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "El Plan de Prevención debe ser aprobado por la dirección de la empresa e implantado en todos los niveles jerárquicos. Los trabajadores participan en su elaboración pero la responsabilidad y aprobación final es de la empresa.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -3244,7 +3244,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Las guías internacionales de RCP establecen compresiones torácicas a 100-120 por minuto con una profundidad de 5-6 cm. La relación compresiones/ventilaciones es 30:2 en adultos con un solo reanimador.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -3258,7 +3258,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "PAS: Proteger (asegurar la zona para evitar más víctimas), Avisar (llamar al 112 u otros servicios de emergencia), Socorrer (prestar primeros auxilios). El orden es fundamental: primero proteger para no crear más víctimas.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     }
   ],
@@ -3274,7 +3274,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "En el arbitraje, un tercero (árbitro) impone la solución vinculante para ambas partes. En la conciliación y mediación, el tercero facilita el acuerdo pero no lo impone. En la negociación, las partes llegan al acuerdo directamente.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -3288,7 +3288,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "El artículo 35 CE reconoce el derecho al trabajo y a la remuneración suficiente. El artículo 28 CE reconoce la libertad sindical y el derecho de huelga. El artículo 37 CE reconoce la negociación colectiva.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -3302,7 +3302,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "El contrato indefinido no tiene fecha de finalización predeterminada. Puede ser a tiempo completo o parcial. Solo se extingue por causas legales (despido, baja voluntaria, jubilación, etc.).",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -3316,7 +3316,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Tras la reforma laboral de 2022, el contrato por circunstancias de la producción tiene una duración máxima de 12 meses, ampliable hasta 18 meses por convenio colectivo sectorial.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -3330,7 +3330,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "El ET establece que el periodo de prueba no puede exceder de 6 meses para los técnicos titulados y de 2 meses para los demás trabajadores (3 meses en empresas de menos de 25 trabajadores).",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -3344,7 +3344,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "El Comité de empresa es obligatorio en empresas de 50 o más trabajadores. Para 75-100 trabajadores, el comité tiene 9 miembros. Los delegados de personal son para empresas de 10-49 trabajadores.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -3358,7 +3358,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "La movilidad funcional entre grupos profesionales distintos requiere: razones técnicas u organizativas, que sea por el tiempo imprescindible y comunicación a los representantes de los trabajadores. No tiene que ser permanente.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -3372,7 +3372,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Para trabajadores menores de 18 años, el descanso mínimo entre jornadas es de 12 horas (1 día y medio). Para trabajadores adultos, el descanso mínimo entre jornadas es también de 12 horas según el ET.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -3386,7 +3386,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "La prevención de riesgos laborales aparece en el ET tanto como derecho (a una protección eficaz) como deber (cumplir las medidas de seguridad). La ocupación efectiva es solo un derecho; la negociación colectiva es un derecho colectivo.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -3400,7 +3400,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "La Ley Benot (1873) fue la primera ley laboral española. Prohibía el trabajo de niños menores de 10 años en la industria, limitaba la jornada de los menores de 15 años y establecía condiciones mínimas de seguridad.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     }
   ],
@@ -3416,7 +3416,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El sector TIC tiene una tasa de desempleo muy inferior a la media nacional. La demanda de profesionales digitales supera la oferta, lo que convierte al sector en uno de los más dinámicos del mercado laboral español.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -3430,7 +3430,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El grupo B de funcionarios requiere título de Técnico Superior (FP de grado superior) o equivalente. El grupo A1 requiere título universitario de grado, el grupo A2 diplomatura, y el grupo C1 bachillerato.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -3444,7 +3444,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Las actitudes son predisposiciones aprendidas para responder de forma favorable o desfavorable ante situaciones, personas o ideas. En el trabajo incluyen la proactividad, la responsabilidad, la empatía y la orientación al cliente.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -3458,7 +3458,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Los requisitos generales para acceder a la función pública son: ser español (o ciudadano UE en algunos casos), tener la titulación exigida, no haber sido separado del servicio público, y no estar inhabilitado para el ejercicio de funciones públicas.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -3472,7 +3472,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Las competencias profesionales integran el saber (conocimientos), el saber hacer (habilidades) y el saber ser (actitudes). Son la base del sistema de Formación Profesional y de los procesos de selección de personal.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -3486,7 +3486,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Las aptitudes son capacidades naturales o adquiridas que determinan el potencial de una persona para realizar determinadas tareas. Son esenciales porque permiten predecir el rendimiento laboral futuro.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -3500,7 +3500,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Las soft skills (comunicación, trabajo en equipo, liderazgo, resolución de problemas, adaptabilidad) son cada vez más valoradas por las empresas. Se diferencian de las hard skills (conocimientos técnicos) en que son más difíciles de medir.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -3514,7 +3514,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El artículo 23.2 de la Constitución Española reconoce el derecho de los ciudadanos a acceder en condiciones de igualdad a las funciones y cargos públicos, con los requisitos que señalen las leyes, según los principios de mérito y capacidad.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -3528,7 +3528,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La competencia digital es una de las ocho competencias clave del Marco Europeo de Referencia. Incluye el uso seguro y crítico de las TIC para el trabajo, el ocio y la comunicación, así como la resolución de problemas en entornos digitales.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -3542,7 +3542,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La IA y la automatización están transformando el mercado laboral TIC: crean nuevos perfiles (ingenieros de ML, especialistas en datos) y modifican los existentes. Es la tendencia más relevante para los próximos años según todos los informes del sector.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     }
   ],
@@ -3558,7 +3558,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "EURES es el portal europeo de movilidad laboral que facilita la búsqueda de empleo en los países de la UE. Europass es el portfolio de documentos para presentar competencias. Erasmus es un programa de intercambio educativo.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -3572,7 +3572,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "El análisis DAFO (Debilidades, Amenazas, Fortalezas, Oportunidades) aplicado al empleo permite conocer los puntos fuertes y débiles propios (internos) y las oportunidades y amenazas del mercado laboral (externos).",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -3586,7 +3586,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Un Plan de Acción es un documento que detalla qué acciones concretas se van a realizar, en qué plazo y con qué recursos, para alcanzar los objetivos de desarrollo profesional definidos en el Plan de Desarrollo Personal.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -3600,7 +3600,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "La carta de motivación acompaña al CV y permite al candidato expresar su interés por el puesto, destacar sus puntos fuertes más relevantes y mostrar que conoce la empresa. No sustituye al CV sino que lo complementa.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -3614,7 +3614,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Conocer las propias competencias e intereses permite orientar la búsqueda de empleo hacia puestos donde se puede aportar más valor y donde se estará más motivado, aumentando las posibilidades de éxito y satisfacción laboral.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -3628,7 +3628,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Las pruebas de selección (tests psicotécnicos, pruebas técnicas, dinámicas de grupo, entrevistas) evalúan las competencias del candidato: sus conocimientos (saber), habilidades (saber hacer) y actitudes (saber ser/estar).",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -3642,7 +3642,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "El Curriculum Vitae Europass es un formato estándar europeo que facilita la presentación de competencias y cualificaciones de forma clara y comprensible en toda Europa. Forma parte del portfolio Europass junto al Pasaporte de Lenguas y otros documentos.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -3656,7 +3656,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "El CV funcional organiza la información por competencias o áreas temáticas en lugar de por orden cronológico. Es útil para candidatos con poca experiencia, cambios de sector o periodos de inactividad laboral que no quieren destacar.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -3670,7 +3670,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "La FP Dual (regulada por la Ley Orgánica 3/2022) combina la formación en el centro educativo con la actividad formativa en la empresa. El alumno alterna períodos en ambos entornos, obteniendo experiencia real mientras estudia.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -3684,7 +3684,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "El CV es un resumen estructurado de la trayectoria académica y profesional. La carta de presentación explica la motivación, destaca los puntos más relevantes del CV y personaliza la candidatura. Son documentos complementarios.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     }
   ],
@@ -3700,7 +3700,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La huella digital es permanente. Comentarios inapropiados o publicaciones controvertidas pueden ser encontrados por reclutadores y afectar negativamente a la imagen profesional, dificultando el acceso a oportunidades laborales.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -3714,7 +3714,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El primer paso para crear un PLE es identificar qué necesitas aprender y por qué. A partir de ahí se seleccionan las herramientas, fuentes y conexiones más adecuadas para cubrir esas necesidades de aprendizaje.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -3728,7 +3728,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La identidad digital es la huella que dejamos en internet: perfiles en redes sociales, comentarios, publicaciones, fotos, etc. Es importante gestionarla activamente para proyectar una imagen profesional coherente con los objetivos laborales.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -3742,7 +3742,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un PDP es un documento vivo que debe revisarse periódicamente. La evaluación del progreso permite identificar qué está funcionando, qué hay que mejorar y si los objetivos siguen siendo relevantes o necesitan actualizarse.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -3756,7 +3756,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un PLE (Personal Learning Environment) es el ecosistema de aprendizaje personal que cada individuo construye: blogs, podcasts, redes sociales profesionales, cursos online, comunidades de práctica, etc. Es autogestionado y personalizado.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -3770,7 +3770,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "LinkedIn y otras redes profesionales permiten mostrar el perfil a reclutadores, conectar con profesionales del sector, participar en grupos temáticos y acceder al mercado oculto de empleo (ofertas no publicadas). El networking digital es clave en la búsqueda de empleo.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -3784,7 +3784,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La suplantación de identidad digital es un delito tipificado en el Código Penal. Consiste en usar la identidad de otra persona en internet sin su consentimiento para obtener beneficios, cometer fraude o dañar su imagen.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -3798,7 +3798,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un PDP es una herramienta de autogestión del aprendizaje y el desarrollo. Incluye el análisis de la situación actual, los objetivos a alcanzar, las acciones concretas, los recursos necesarios y los indicadores para medir el progreso.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -3812,7 +3812,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "SMART es un acrónimo para definir objetivos de calidad: Specific (específico), Measurable (medible), Achievable (alcanzable), Relevant (relevante) y Time-bound (con plazo definido). Aplicar este criterio aumenta la probabilidad de alcanzar los objetivos.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -3826,7 +3826,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Una PLN (Personal Learning Network) es la red de personas con las que intercambiamos conocimiento y aprendemos. Incluye mentores, compañeros, expertos del sector y comunidades de práctica. Amplía el acceso a información actualizada y perspectivas diversas.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     }
   ],
@@ -6895,7 +6895,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un array o arreglo es una estructura de datos, no un tipo primitivo básico (int, boolean, char, etc.).",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -6909,7 +6909,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "El algoritmo es el diseño lógico (pasos) y el programa es la implementación en un lenguaje específico.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -6923,7 +6923,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un depurador permite detener la ejecución y ver el estado de las variables paso a paso.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -6937,7 +6937,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Un algoritmo debe ser finito, preciso y definido.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -6951,7 +6951,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El algoritmo/proceso es el núcleo que transforma las entradas en salidas.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -6965,7 +6965,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Las estructuras iterativas (bucles) repiten código mientras se cumple una condición.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -6979,7 +6979,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "En POO, todo gira en torno a los objetos y sus interacciones.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -6993,7 +6993,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Java compila a bytecode y la JVM lo interpreta/ejecuta.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -7007,7 +7007,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Programar es el proceso completo de solución de problemas mediante software.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -7021,7 +7021,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El dato es un valor bruto; la información es el dato procesado con significado.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     }
   ],
@@ -7037,7 +7037,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "void indica que el método realiza una tarea pero no devuelve ningún valor al llamador.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -7051,7 +7051,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Cada instancia (objeto) mantiene su propio estado a través de sus atributos.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -7065,7 +7065,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El constructor se invoca al crear el objeto para asegurar que empiece en un estado válido.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -7079,7 +7079,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La clase es el plano; el objeto es la casa construida con ese plano.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -7093,7 +7093,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "En Java, las variables de objeto son punteros/referencias a la memoria Heap.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -7107,7 +7107,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La composición es una relación de pertenencia fuerte donde la parte desaparece con el todo.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -7121,7 +7121,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Los setters permiten añadir lógica de validación (por ejemplo, que una edad no sea negativa).",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -7135,7 +7135,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Ocultar los datos (private) y exponer el servicio (public) es el núcleo del encapsulamiento.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -7149,7 +7149,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Para el polimorfismo dinámico es necesario que el hijo redefine el comportamiento del padre.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -7163,7 +7163,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "En Java, el nombre del archivo fuente debe coincidir con la clase pública que contiene.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     }
   ],
@@ -7179,7 +7179,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Primero se define el tipo y nombre, luego se le asigna un valor antes de leerlo.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -7193,7 +7193,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Sintácticamente, el ; es el terminador de sentencias en Java.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -7207,7 +7207,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Un cast 'estrecho' puede perder decimales o desbordar el rango del tipo destino.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -7221,7 +7221,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Las llaves delimitan el 'scope'. Una variable declarada dentro no existe fuera.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -7235,7 +7235,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Los paréntesis rompen el orden natural de evaluación (PEMDAS/BODMAS).",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -7249,7 +7249,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Si cambias el valor en un solo sitio (la constante), se actualiza en todo el programa.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -7263,7 +7263,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "return interrumpe totalmente el método actual y devuelve el control al llamador.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -7277,7 +7277,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "En Java se usa lowerCamelCase para variables (no empezar con número, no espacios).",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -7291,7 +7291,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Estructura estándar de un archivo Java: package -> class -> method -> statements.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -7305,7 +7305,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Los primitivos (int, double...) guardan el valor literal; los de referencia guardan la dirección.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     }
   ],
@@ -7321,7 +7321,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Una clase es el molde; el objeto es la galleta. El molde define la forma.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -7335,7 +7335,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El GC libera objetos que ya no pueden ser accedidos desde ningún hilo en ejecución.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -7349,7 +7349,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "En Java TODO se pasa por valor. Para objetos, el 'valor' es la referencia de memoria.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -7363,7 +7363,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Ocultar la complejidad interna y proteger la integridad de los datos.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -7377,7 +7377,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La firma (nombre + parámetros) debe ser distinta para que el compilador sepa cuál llamar.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -7391,7 +7391,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La herencia es jerárquica (especialización); la composición es ensamblaje (piezas).",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -7405,7 +7405,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El Stack guarda variables locales y referencias; el Heap guarda los objetos reales.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -7419,7 +7419,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Paquetes para estructurar, librerías para reutilizar y Javadoc para comunicar.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -7433,7 +7433,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "No se crea un nuevo objeto; ahora hay dos punteros apuntando al mismo sitio en el Heap.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -7447,7 +7447,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Si escribes un constructor, Java asume que quieres control total y quita el de por defecto.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     }
   ],
@@ -7463,7 +7463,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Un array multidimensional en Java es un array de objetos array, no una matriz contigua.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -7477,7 +7477,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "0 es la base. Por tanto, el último es N-1.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -7491,7 +7491,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Los arrays son objetos. La variable solo guarda la referencia al bloque de memoria.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -7505,7 +7505,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "for-each es un azúcar sintáctico para iterar sobre valores de forma limpia.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -7519,7 +7519,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "length es un atributo final que nos dice cuántas casillas fueron reservadas.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -7533,7 +7533,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Usa implementaciones estándar (como Arrays.sort) que son muy eficientes y seguras.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -7547,7 +7547,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Divide el problema a la mitad en cada paso, pero requiere que los datos estén en orden.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -7561,7 +7561,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "En Java los arrays son estáticos en tamaño; para dinámicos se usa ArrayList.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -7575,7 +7575,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Una vez creado un String, cualquier operación crea un nuevo objeto String en el pool.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     },
     {
@@ -7589,7 +7589,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Usa .equals() para comparar el texto. == solo compara si son el mismo objeto en memoria.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": true
     }
   ],
@@ -7605,7 +7605,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La interfaz garantiza que el objeto cumple un contrato de comportamiento.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -7619,7 +7619,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "protected une la visibilidad de paquete con la de herencia.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -7633,7 +7633,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Object es la raíz definitiva de todo el árbol de clases en Java.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -7647,7 +7647,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Se evita la complejidad de heredar múltiples estados contradictorios (herencia de implementación).",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -7661,7 +7661,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Evita errores de dedo al escribir el nombre del método en la subclase.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -7675,7 +7675,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Son conceptos puros; no puedes tener un 'Animal' genérico, solo perros o gatos concretos.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -7689,7 +7689,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "final impide que alguien 'pise' la lógica de ese método en una clase hija.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -7703,7 +7703,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La composición suele ser preferible porque es más flexible y menos rígida que la herencia.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -7717,7 +7717,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Lo estático es de la 'clase', no de las 'instancias'. No conoce a 'this'.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -7731,7 +7731,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Antes de construir el hijo, Java debe asegurar que la parte padre esté lista.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     }
   ],
@@ -7747,7 +7747,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Propaga la excepción para que el método superior decida cómo gestionarla.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -7761,7 +7761,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Iterator permite usar .remove() de forma segura durante la iteración.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -7775,7 +7775,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Evitas el ClassCastException en tiempo de ejecución al restringir los tipos en compilación.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -7789,7 +7789,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Set es un conjunto matemático: no hay repetidos y no suele haber orden.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -7803,7 +7803,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "ArrayList es una lista (secuencial); HashSet es una bolsa (dispersión por hash).",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -7817,7 +7817,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Map usa diccionarios (k/v). No es una Collection propiamente dicha.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -7831,7 +7831,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Garantiza que el archivo se cierre aunque ocurra una excepción (AutoCloseable).",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -7845,7 +7845,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Error = fallo de la máquina (OutOfMemory); Exception = fallo lógico (FileNotFound).",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -7859,7 +7859,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Son excepciones 'no comprobadas' que suelen indicar fallos de programación (null pointer).",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -7873,7 +7873,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "finally es el bloque de limpieza garantizada (cierre de BD, logs, etc.).",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     }
   ],
@@ -7889,7 +7889,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "transient le dice a la JVM: 'este dato no es persistente' (ej: una contraseña).",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -7903,7 +7903,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Bytes (0-255) para archivos binarios; Characters para texto idiomático (Unicode).",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -7917,7 +7917,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "append=true no pisa el archivo, añade al final del contenido actual.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -7931,7 +7931,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "nextLine() lee hasta encontrar el salto de línea, incluyendo los espacios intermedios.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -7945,7 +7945,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "FileReader es el Stream de caracteres orientado específicamente a archivos de disco.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -7959,7 +7959,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Permite convertir el estado de un objeto en un chorro de bytes persistente.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -7973,7 +7973,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Es un canal separado para que los errores no se mezclen con la salida normal de datos.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -7987,7 +7987,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Acceder al disco por cada byte es muy lento; el buffer agrupa las lecturas/escrituras.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -8001,7 +8001,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Representa el flujo continuo de datos de un punto A a un punto B.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     },
     {
@@ -8015,7 +8015,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Serializable es una interfaz de marcado (interfaz vacía) que da permiso a la JVM.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": true
     }
   ],
@@ -8031,7 +8031,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "El driver es el intérprete entre Java (estándar) y la base de datos (propietaria).",
-      "unit": null,
+      "unit": "9",
       "noShuffle": true
     },
     {
@@ -8045,7 +8045,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "rollback deshace todos los cambios realizados desde el último commit.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": true
     },
     {
@@ -8059,7 +8059,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Son las 4 reglas de oro de las bases de datos transaccionales.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": true
     },
     {
@@ -8073,7 +8073,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Debemos quitar el modo automático para poder decidir cuándo hacer commit.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": true
     },
     {
@@ -8087,7 +8087,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "localhost es el host, 3306 es el puerto y empresa es la base de datos.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": true
     },
     {
@@ -8101,7 +8101,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "PreparedStatement evita que el usuario pegue código malicioso en los campos de texto.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": true
     },
     {
@@ -8115,7 +8115,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "next() mueve el cursor a la primera fila, luego a la segunda, etc.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": true
     },
     {
@@ -8129,7 +8129,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "try-with-resources es el estándar moderno para asegurar el cierre de conexiones.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": true
     },
     {
@@ -8143,7 +8143,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "executeUpdate se usa para todo lo que sea MODIFICAR datos (Insert/Update/Delete).",
-      "unit": null,
+      "unit": "9",
       "noShuffle": true
     },
     {
@@ -8157,7 +8157,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Java Database Connectivity es la interfaz estándar de Java para SQL.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": true
     }
   ],
@@ -8173,7 +8173,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El OID permite identificar al objeto aunque cambien todos sus valores internos.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": true
     },
     {
@@ -8187,7 +8187,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Es la puerta de entrada para persistir y recuperar objetos de la base de datos.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": true
     },
     {
@@ -8201,7 +8201,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Simula la integridad referencial en cascada del modelo relacional.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": true
     },
     {
@@ -8215,7 +8215,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Las BDOO resuelven el problema de tener que 'trocear' objetos en tablas.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": true
     },
     {
@@ -8229,7 +8229,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Es como buscar a alguien dándole una foto (el ejemplo) en lugar de una descripción.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": true
     },
     {
@@ -8243,7 +8243,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Al usar Java puro para filtrar, el compilador detecta errores de tipos de datos.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": true
     },
     {
@@ -8257,7 +8257,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Es mucho más natural navegar por atributos (punto) que hacer JOINs manuales.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": true
     },
     {
@@ -8271,7 +8271,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Evita cargar toda la base de datos en RAM al abrir un solo objeto pequeño.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": true
     },
     {
@@ -8285,7 +8285,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "ODL define clases/atributos; OQL realiza las búsquedas de objetos.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": true
     },
     {
@@ -8299,7 +8299,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Embebido = misma memoria que la App; Servidor = red independiente.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": true
     }
   ],
@@ -8315,7 +8315,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Un tipo de ordenador que se basa en el uso de una cinta infinita y extensible para ejecutar funciones.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -8329,7 +8329,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Adaptarse a las necesidades crecientes de la organización.'.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -8343,7 +8343,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -8357,7 +8357,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Los usuarios pueden enviar y recibir información de manera rápida y eficiente.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -8371,7 +8371,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Permitir la comunicación entre los dispositivos conectados.'.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -8385,7 +8385,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Altavoces.'. \"Ratón.\" y \"Impresora.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -8399,7 +8399,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Realizar copias de seguridad periódicas.'. \"Mantener una buena organización de cables.\" y \"No proteger dispositivos móviles.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -8413,7 +8413,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Hardware.'. \"Software.\" y \"Componente humano.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -8427,7 +8427,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta es 'Guiados.'. \"No guiados.\" y \"Ambos.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     },
     {
@@ -8441,7 +8441,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Teclado.'. \"Escáner.\" y \"Cámara web.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": true
     }
   ],
@@ -8457,7 +8457,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Hardware, software, datos, usuarios.'. \"Hardware, software, usuarios, seguridad.\" y \"Hardware, software, redes, periféricos.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -8471,7 +8471,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Administrar la ejecución de los procesos.'.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -8485,7 +8485,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Realizar una copia de seguridad de los archivos y carpetas asociados a la aplicación.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -8499,7 +8499,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -8513,7 +8513,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta es 'Su simplicidad y eficiencia.'.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -8527,7 +8527,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Para automatizar la instalación del sistema operativo en varios ordenadores.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -8541,7 +8541,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Para garantizar el correcto funcionamiento de la aplicación y evitar problemas de licencia.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -8555,7 +8555,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La división del disco duro en secciones o particiones lógicas.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     },
     {
@@ -8569,7 +8569,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Programas que se utilizan para proteger el sistema informático contra virus, malware y otras amenazas de seguridad.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -8583,7 +8583,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Gestionar y coordinar el uso de los recursos de hardware y software.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": true
     }
   ],
@@ -8599,7 +8599,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta es 'Primarias.'. \"Extendidas.\" y \"Lógicas.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -8613,7 +8613,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "GPT (GUID Partition Table) soporta discos de más de 2TB y hasta 128 particiones primarias. MBR está limitado a 2TB y 4 particiones primarias.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -8627,7 +8627,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'C:, C:\\Windows, C:\\Program Files, C:\\Users.'. \"/, /bin, /etc, /home, /usr, /var.\" y \"/, /Applications, /Library, /System, /Users.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -8641,7 +8641,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Mayor flexibilidad y portabilidad.'. \"Mayor velocidad de transferencia de datos.\" y \"Mayor capacidad de almacenamiento.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -8655,7 +8655,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'La ubicación física del dispositivo.'. \"La velocidad de transferencia de datos.\" y \"La capacidad de almacenamiento.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -8669,7 +8669,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'top.'. \"systeminfo.\" y \"free.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -8683,7 +8683,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -8697,7 +8697,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "GPT (GUID Partition Table) soporta discos de más de 2TB y hasta 128 particiones primarias. MBR está limitado a 2TB y 4 particiones primarias.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     },
     {
@@ -8711,7 +8711,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Unidad de estado sólido (SSD).'. \"Disco duro (HDD).\" y \"Tarjeta de memoria.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": true
     }
   ],
@@ -8727,7 +8727,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Una cuenta de usuario que solo puede acceder a recursos locales en una computadora.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -8741,7 +8741,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'net group.'. \"add_group_member.\" y \"add_user_to_group.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -8755,7 +8755,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Para controlar el acceso y los permisos de los usuarios a los recursos del sistema.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -8769,7 +8769,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'net user.'. \"create_user.\" y \"add_user.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -8783,7 +8783,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Liberar espacio en el disco principal y reducir la fragmentación del disco.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -8797,7 +8797,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Con el comando \"net user\".'. \"Con el comando \"show_user\".\" y \"Con el comando \"verify_user\".\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -8811,7 +8811,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta marcada es la correcta basándose en los conceptos fundamentales del currículo de este tema.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -8825,7 +8825,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Para prevenir el acceso no autorizado a datos confidenciales.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -8839,7 +8839,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Para simplificar la administración de permisos y ahorrar tiempo y esfuerzo.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     },
     {
@@ -8853,7 +8853,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La contraseña debe contener una combinación de letras mayúsculas y minúsculas, números y símbolos.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": true
     }
   ],
@@ -8869,7 +8869,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "OSPF es un protocolo de enrutamiento dinámico de estado de enlace que calcula automáticamente las rutas óptimas. El enrutamiento estático requiere configuración manual. HTTP y FTP son protocolos de aplicación, no de enrutamiento.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -8883,7 +8883,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "La configuración estática ofrece mayor seguridad (no hay intercambio de información de enrutamiento), mayor estabilidad (las rutas no cambian automáticamente) y mayor control (el administrador decide exactamente las rutas).",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -8897,7 +8897,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "En el enrutamiento estático, el administrador configura manualmente cada ruta en la tabla de enrutamiento. Es más seguro y predecible que el dinámico, pero requiere más mantenimiento cuando cambia la topología de la red.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -8911,7 +8911,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "WLAN (Wireless Local Area Network) es una red de área local que usa ondas de radio en lugar de cables. El estándar más común es IEEE 802.11 (WiFi). Conecta dispositivos en un área limitada como una oficina o edificio.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -8925,7 +8925,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Una dirección IP (Internet Protocol) es un identificador numérico único asignado a cada dispositivo en una red. IPv4 usa 32 bits (ej: 192.168.1.1) e IPv6 usa 128 bits. Permite el enrutamiento de paquetes entre dispositivos.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -8939,7 +8939,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "La máscara de subred (ej: 255.255.255.0 o /24) divide la dirección IP en dos partes: la parte de red (igual para todos los dispositivos de la misma red) y la parte de host (única para cada dispositivo).",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -8953,7 +8953,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "DHCP asigna automáticamente direcciones IP, máscara de subred, puerta de enlace y DNS a los dispositivos cuando se conectan a la red. Sin DHCP, habría que configurar manualmente cada dispositivo.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -8967,7 +8967,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "route print muestra la tabla de enrutamiento de Windows: las rutas que sigue el tráfico de red. route add añade una ruta estática; route delete la elimina. En Linux el equivalente es \"ip route\" o \"netstat -r\".",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -8981,7 +8981,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "DNS (Domain Name System) funciona como la \"agenda telefónica\" de Internet: traduce nombres de dominio (google.com) a direcciones IP (142.250.185.46). Sin DNS habría que memorizar IPs para acceder a cada sitio web.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -8995,7 +8995,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "WAN (Wide Area Network) es una red de área amplia que conecta redes LAN separadas geográficamente. Internet es la WAN más grande del mundo. MAN cubre una ciudad; LAN cubre un edificio o campus; WLAN es la versión inalámbrica de LAN.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     }
   ],
@@ -9011,7 +9011,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Una técnica que restringe el acceso a ciertos recursos del sistema en función del rol del usuario.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -9025,7 +9025,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Una técnica que se utiliza para proteger la confidencialidad de los datos almacenados o transmitidos.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -9039,7 +9039,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Para crear y gestionar certificados digitales y claves de cifrado.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -9053,7 +9053,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Los permisos que se otorgan a los usuarios para acceder y utilizar los recursos compartidos de la red.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -9067,7 +9067,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Una lista de control de acceso.'. \"Un objeto de directiva de seguridad.\" y \"Un sistema operativo.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -9081,7 +9081,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Active Directory.'. \"Firewall.\" y \"LDAP.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -9095,7 +9095,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Una técnica que requiere que los usuarios proporcionen dos o más formas de identificación antes de acceder a una cuenta.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -9109,7 +9109,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Todas las anteriores.'. \"Para proteger la información confidencial.\" y \"Para garantizar la integridad del sistema.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -9123,7 +9123,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Contraseñas.'. \"Usuarios y grupos.\" y \"Auditoría.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     },
     {
@@ -9137,7 +9137,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Para evitar que los usuarios accedan a recursos que no necesitan y reducir el riesgo de violaciones de seguridad.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": true
     }
   ],
@@ -9153,7 +9153,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'EaseUS.'. \"Norton.\" y \"McAfee.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -9167,7 +9167,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Una herramienta informática que permite la creación, edición y formateo de documentos de texto.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -9181,7 +9181,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'El sistema operativo.'. \"Los sistemas de archivos.\" y \"Los controladores de dispositivos.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -9195,7 +9195,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta es 'Automatización de tareas.'. \"Recuperación de datos.\" y \"Escaneo de archivos.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -9209,7 +9209,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Almacenamiento en la nube y acceso en cualquier momento y desde cualquier lugar.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -9223,7 +9223,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta es 'Microsoft Word.'. \"Google Docs.\" y \"LibreOffice Writer.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -9237,7 +9237,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Un tipo de software diseñado para detectar, prevenir y eliminar programas maliciosos.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -9251,7 +9251,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Controlar y coordinar el funcionamiento del hardware y proporcionar una interfaz entre el usuario y el hardware.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -9265,7 +9265,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Herramientas que incluyen un editor de código, un depurador y un compilador, todos integrados en una única interfaz de u...",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     },
     {
@@ -9279,7 +9279,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Que pueden crecer y evolucionar a medida que cambian las necesidades de la organización.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": true
     }
   ],
@@ -11259,7 +11259,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Acceso ubicuo a los datos y aplicaciones.'. \"Aumento de costos operativos.\" y \"Dependencia del hardware local.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -11273,7 +11273,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La escalabilidad elástica permite aumentar o reducir recursos automáticamente según la demanda en tiempo real. Es una ventaja clave de la nube frente a la infraestructura tradicional.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -11287,7 +11287,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Dependencia del proveedor de servicios.'. \"Reducción de costos operativos.\" y \"Mayor control sobre la infraestructura.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -11301,7 +11301,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Garantiza la disponibilidad de los servicios en caso de fallos.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -11315,7 +11315,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La nube híbrida combina infraestructura pública y privada, permitiendo mover cargas de trabajo entre ambas según necesidades de seguridad, coste o rendimiento.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -11329,7 +11329,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'La seguridad, fiabilidad y escalabilidad del servicio.'. \"La disponibilidad de planes gratuitos.\" y \"La ubicación de los servidores en el mismo país.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -11343,7 +11343,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "SaaS (Software as a Service) proporciona aplicaciones completas listas para usar a través de Internet. El proveedor gestiona todo. Ejemplos: Gmail, Microsoft 365, Salesforce.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -11357,7 +11357,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Permite acceder a recursos informáticos a través de Internet.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -11371,7 +11371,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Debe incluir evaluación de necesidades, migración de datos y pruebas.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     },
     {
@@ -11385,7 +11385,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "PaaS (Platform as a Service) proporciona una plataforma completa de desarrollo y despliegue. El proveedor gestiona la infraestructura; el usuario solo despliega aplicaciones. Ejemplo: Google App Engine.",
-      "unit": null,
+      "unit": "1",
       "noShuffle": false
     }
   ],
@@ -11401,7 +11401,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La escalabilidad en la nube permite ajustar los recursos en tiempo real según las necesidades del momento, aumentando o reduciendo capacidad de forma dinámica.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -11415,7 +11415,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Los proveedores de nube garantizan medidas de seguridad robustas y cumplimiento normativo (ISO 27001, SOC 2, GDPR), incluyendo cifrado, control de acceso y auditorías.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -11429,7 +11429,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Las instancias spot permiten adquirir capacidad de cómputo no utilizada a precios significativamente más bajos que las instancias bajo demanda, aunque pueden ser interrumpidas por el proveedor.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -11443,7 +11443,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Las instancias reservadas ofrecen descuentos significativos (hasta 75%) a cambio de comprometerse a usar el recurso durante 1 o 3 años. Ideal para cargas de trabajo predecibles y estables.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -11457,7 +11457,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta es 'Plataformas de análisis de datos y predicciones.'. \"Redes sociales y foros de discusión.\" y \"Servicios de almacenamiento en la nube.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -11471,7 +11471,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El modelo de facturación en la nube se basa en el pago por uso (pay-as-you-go): solo se paga por los recursos efectivamente consumidos, sin compromisos de pago anticipado.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -11485,7 +11485,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La facturación consolidada permite gestionar múltiples cuentas desde una sola plataforma, simplificando la administración y pudiendo obtener descuentos por volumen agregado.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -11499,7 +11499,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El TCO (Total Cost of Ownership) incluye hardware, software, mantenimiento, energía y costes operativos. Los gastos de transporte de empleados no forman parte del TCO de infraestructura tecnológica.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -11513,7 +11513,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Los servicios de monitorización de costes permiten establecer presupuestos, crear alertas cuando se superan umbrales y analizar el gasto para optimizarlo.",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     },
     {
@@ -11527,7 +11527,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Uso de inteligencia artificial y aprendizaje automático para optimizar los costes",
-      "unit": null,
+      "unit": "2",
       "noShuffle": false
     }
   ],
@@ -11543,7 +11543,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Ancho de banda alto y baja latencia'. \"Alta latencia en la transmisión de datos\" y \"Conexiones inestables\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -11557,7 +11557,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La infraestructura de la nube ofrece protección de datos mediante encriptación, alta disponibilidad, escalabilidad y acceso desde cualquier dispositivo.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -11571,7 +11571,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La infraestructura de la nube permite almacenamiento escalable y accesible, pudiendo crecer según las necesidades sin inversión en hardware físico.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -11585,7 +11585,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta es 'Desarrollo de software'. \"Solo almacenamiento de archivos personales\" y \"Exclusivamente para videojuegos\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -11599,7 +11599,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Google Docs es un ejemplo de SaaS (Software as a Service): una aplicación completa lista para usar a través del navegador, sin necesidad de instalar ni gestionar infraestructura.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -11613,7 +11613,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La computación en la nube es una red de servidores remotos que ofrece servicios informáticos (cómputo, almacenamiento, bases de datos, etc.) a través de internet bajo demanda.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -11627,7 +11627,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "IaaS (Infrastructure as a Service) proporciona infraestructura virtualizada (VMs, almacenamiento, redes). Azure Virtual Machines es IaaS. AWS Elastic Beanstalk es PaaS. Google Docs y Microsoft Office 365 son SaaS.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -11641,7 +11641,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Escalabilidad flexible'. \"Mayor consumo de recursos físicos\" y \"Acceso limitado a servidores\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -11655,7 +11655,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La nube híbrida combina infraestructura pública y privada, permitiendo mover cargas de trabajo entre ambas según necesidades de seguridad, coste o rendimiento.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     },
     {
@@ -11669,7 +11669,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Microsoft Azure'.",
-      "unit": null,
+      "unit": "3",
       "noShuffle": false
     }
   ],
@@ -11685,7 +11685,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "RBAC (Role-Based Access Control) asigna permisos según el rol del usuario en la organización. DAC (Discretionary Access Control) permite al propietario del recurso decidir quién accede.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -11699,7 +11699,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Permite a los usuarios acceder a múltiples sistemas sin necesidad de múltiples credenciales",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -11713,7 +11713,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Autenticación de dos factores (2FA)'. \"Contraseña segura\" y \"Token de seguridad único\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -11727,7 +11727,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Las soluciones DLP (Data Loss Prevention) monitorizan y controlan el flujo de datos para evitar que información confidencial salga de la red corporativa sin autorización.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -11741,7 +11741,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Asegurar que los datos puedan recuperarse en caso de un desastre o ataque",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -11755,7 +11755,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Los controles técnicos de seguridad incluyen cortafuegos, sistemas de prevención de intrusiones (IPS), cifrado y autenticación. Las políticas y la capacitación son controles administrativos.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -11769,7 +11769,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El cifrado en tránsito (TLS/SSL) protege los datos mientras se transmiten entre el cliente y la nube. El cifrado en reposo protege los datos almacenados.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -11783,7 +11783,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "PCI DSS (Payment Card Industry Data Security Standard) es la normativa de seguridad para empresas que procesan pagos con tarjeta. HIPAA es para datos sanitarios en EE.UU. GDPR es para protección de datos en Europa.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -11797,7 +11797,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Según el modelo de responsabilidad compartida, el proveedor de nube es responsable de la seguridad de la infraestructura física y la plataforma. El cliente es responsable de sus datos y configuraciones.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     },
     {
@@ -11811,7 +11811,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Las políticas de contraseñas fuertes mejoran la seguridad de las cuentas y reducen el riesgo de ataques de fuerza bruta, diccionario y accesos no autorizados.",
-      "unit": null,
+      "unit": "4",
       "noShuffle": false
     }
   ],
@@ -11827,7 +11827,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Una VPC (Virtual Private Cloud) ofrece control total sobre la infraestructura de red virtual, incluyendo selección de rangos IP, creación de subredes y configuración de tablas de enrutamiento.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -11841,7 +11841,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El propósito principal de una red de computadoras es conectar dispositivos para compartir información y recursos como archivos, impresoras, conexión a internet, etc.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -11855,7 +11855,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "DNS (Domain Name System) traduce nombres de dominio legibles (google.com) a direcciones IP numéricas. Sin DNS habría que memorizar IPs para acceder a cada sitio.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -11869,7 +11869,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La capa de red (capa 3 del modelo OSI) es responsable del enrutamiento de paquetes de datos entre redes diferentes, determinando la mejor ruta para llegar al destino.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -11883,7 +11883,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Una CDN (Content Delivery Network) distribuye el contenido desde servidores geográficamente cercanos al usuario, reduciendo la latencia y mejorando la velocidad de carga.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -11897,7 +11897,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "TCP/IP es el protocolo fundamental de Internet. TCP garantiza la entrega fiable de datos y IP gestiona el direccionamiento y enrutamiento. HTTP funciona sobre TCP/IP.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -11911,7 +11911,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "DDoS (Distributed Denial of Service) es una de las principales amenazas a la seguridad en redes, inundando un servidor con tráfico para dejarlo inaccesible. CSS, HTML y XML son tecnologías web, no amenazas.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -11925,7 +11925,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El cifrado de datos es una medida fundamental de seguridad en una VPC, protegiendo la confidencialidad de los datos tanto en tránsito como en reposo.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -11939,7 +11939,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "LAN (Local Area Network) es el tipo de red que conecta dispositivos dentro de un área geográfica limitada como una oficina o un hogar. WAN conecta redes geográficamente dispersas.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     },
     {
@@ -11953,7 +11953,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta es 'SSL/TLS'. \"UDP\" y \"RIP\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "5",
       "noShuffle": false
     }
   ],
@@ -11969,7 +11969,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Los servicios de cómputo en la nube permiten delegar la gestión de la infraestructura al proveedor, reduciendo costes operativos y permitiendo al equipo centrarse en el desarrollo.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -11983,7 +11983,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Al adoptar servicios administrados de cómputo se deben considerar múltiples aspectos: seguridad, escalabilidad, coste, disponibilidad, cumplimiento normativo y facilidad de uso.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -11997,7 +11997,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Las máquinas virtuales (VMs) permiten ejecutar múltiples sistemas operativos completos en una misma máquina física mediante un hipervisor. Los contenedores comparten el SO del host.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -12011,7 +12011,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La computación sin servidor (serverless) permite escalar automáticamente en función de la demanda sin necesidad de gestionar servidores, pagando solo por el tiempo de ejecución real.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -12025,7 +12025,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "SaaS (Software as a Service) proporciona aplicaciones completas listas para usar a través de Internet. Microsoft 365 es SaaS. Amazon EC2 es IaaS. Google App Engine es PaaS. Kubernetes es una plataforma de orquestación de contenedores.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -12039,7 +12039,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El pago por uso (pay-as-you-go) es uno de los principios clave de los servicios de cómputo en la nube: solo se paga por los recursos efectivamente consumidos.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -12053,7 +12053,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Las máquinas virtuales comparten los recursos físicos del servidor host mediante un hipervisor, optimizando costos al consolidar múltiples cargas de trabajo en menos hardware físico.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -12067,7 +12067,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta es 'Computación sin servidor (serverless)'. \"Máquinas virtuales\" y \"IaaS\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -12081,7 +12081,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Los contenedores comparten el sistema operativo del host, lo que los hace más ligeros y rápidos que las VMs. Las VMs incluyen un SO completo por cada instancia.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     },
     {
@@ -12095,7 +12095,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "PaaS (Platform as a Service) proporciona un entorno completo de desarrollo y despliegue de aplicaciones. El proveedor gestiona la infraestructura; el usuario solo despliega aplicaciones. Ejemplo: Google App Engine.",
-      "unit": null,
+      "unit": "6",
       "noShuffle": false
     }
   ],
@@ -12111,7 +12111,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Los servicios de almacenamiento en la nube son escalables y permiten gestionar grandes volúmenes de datos, accesibles desde cualquier lugar con conexión a internet.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -12125,7 +12125,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Reduce los costos al utilizar soluciones de almacenamiento de bajo costo",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -12139,7 +12139,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El almacenamiento de ficheros (file storage) es ideal para repositorios de código fuente, documentos compartidos y sistemas de archivos colaborativos gracias a su estructura jerárquica.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -12153,7 +12153,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "El almacenamiento de ficheros permite una estructura jerárquica de archivos y carpetas, facilitando la organización y el acceso a los datos de forma intuitiva.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -12167,7 +12167,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El archivado de datos es la solución recomendada para datos históricos o con baja frecuencia de acceso, ya que ofrece el menor coste de almacenamiento a cambio de mayor latencia de acceso.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -12181,7 +12181,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El almacenamiento de objetos permite identificar cada archivo mediante una URL única, facilitando el acceso directo y la distribución de contenido a través de internet.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -12195,7 +12195,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El almacenamiento de bloques ofrece acceso rápido y aleatorio a los datos, siendo ideal para bases de datos transaccionales y aplicaciones que requieren baja latencia.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -12209,7 +12209,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El almacenamiento de objetos es ideal para contenido multimedia (imágenes, vídeos) para streaming, backups y datos estáticos accesibles mediante URL. Ejemplo: Amazon S3.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -12223,7 +12223,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El almacenamiento de bloques divide los datos en bloques de tamaño fijo, cada uno con su propio identificador. Es la base de los discos duros virtuales y bases de datos de alto rendimiento.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     },
     {
@@ -12237,7 +12237,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El almacenamiento de objetos es más adecuado para análisis de datos a gran escala (data lakes), ya que permite almacenar grandes volúmenes de datos no estructurados accesibles mediante APIs.",
-      "unit": null,
+      "unit": "7",
       "noShuffle": false
     }
   ],
@@ -12253,7 +12253,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Las bases de datos analíticas están optimizadas para consultas complejas sobre grandes volúmenes de datos históricos, usando técnicas como almacenamiento columnar y procesamiento paralelo.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": false
     },
     {
@@ -12267,7 +12267,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 3,
       "explanation": "Las bases de datos Key-Value (clave-valor) organizan los datos en pares clave-valor. Ejemplos: Redis, DynamoDB. Son las más simples y rápidas para acceso por clave.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": false
     },
     {
@@ -12281,7 +12281,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La escalabilidad horizontal (añadir más nodos) es característica de las bases de datos NoSQL. Las relacionales usan principalmente escalabilidad vertical. Las claves foráneas y ACID son propias de las relacionales.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": false
     },
     {
@@ -12295,7 +12295,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "MySQL es una base de datos relacional que usa SQL y organiza los datos en tablas. MongoDB es documental NoSQL, Cassandra es column-family NoSQL, Redis es key-value NoSQL.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": false
     },
     {
@@ -12309,7 +12309,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "MongoDB es un proveedor de bases de datos NoSQL documental. PostgreSQL, Oracle y SQL Server son bases de datos relacionales.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": false
     },
     {
@@ -12323,7 +12323,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El mayor consumo de recursos NO es una ventaja de los servicios de bases de datos. Las ventajas incluyen mayor eficiencia, mejora de la toma de decisiones, seguridad y confiabilidad.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": false
     },
     {
@@ -12337,7 +12337,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "SQL (Structured Query Language) es el lenguaje estándar para interactuar con bases de datos relacionales. Python es un lenguaje de programación, NoSQL es un tipo de BD, XML es un formato de datos.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": false
     },
     {
@@ -12351,7 +12351,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Las bases de datos analíticas (OLAP) están diseñadas específicamente para analizar grandes conjuntos de datos históricos con consultas complejas, a diferencia de las OLTP que son para transacciones.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": false
     },
     {
@@ -12365,7 +12365,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La escalabilidad permite que los servicios de bases de datos ajusten su capacidad según la demanda, aumentando o reduciendo recursos de forma dinámica.",
-      "unit": null,
+      "unit": "8",
       "noShuffle": false
     }
   ],
@@ -12381,7 +12381,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Escalar recursos según la demanda'. \"Mantener servidores encendidos sin monitoreo\" y \"Comprar más recursos de los necesarios\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": false
     },
     {
@@ -12395,7 +12395,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La excelencia operacional es el pilar del Well-Architected Framework que se enfoca en minimizar interrupciones, optimizar operaciones y mejorar continuamente los procesos.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": false
     },
     {
@@ -12409,7 +12409,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Kubernetes es una plataforma de orquestación de contenedores que automatiza el despliegue, escalado y gestión de aplicaciones en la nube.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": false
     },
     {
@@ -12423,7 +12423,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Diseñar sistemas escalables, seguros y eficientes'. \"Reducir la velocidad de procesamiento\" y \"Aumentar los costos de infraestructura\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": false
     },
     {
@@ -12437,7 +12437,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La alta disponibilidad se logra implementando redundancia (múltiples instancias) y tolerancia a fallos (failover automático), garantizando que el servicio continúe aunque fallen componentes individuales.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": false
     },
     {
@@ -12451,7 +12451,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "Amazon S3 es un servicio de almacenamiento de objetos en la nube. Cada objeto tiene una URL única. Es ideal para almacenar archivos estáticos, backups, contenido multimedia y datos de análisis.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": false
     },
     {
@@ -12465,7 +12465,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "El balanceo de carga distribuye las solicitudes entre múltiples servidores para evitar que uno se sature. Mejora la disponibilidad y el rendimiento. Least Connections envía al servidor con menos conexiones activas.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": false
     },
     {
@@ -12479,7 +12479,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La supervisión constante permite detectar y resolver problemas de forma proactiva antes de que afecten a los usuarios, optimizar el rendimiento y controlar los costes.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": false
     },
     {
@@ -12493,7 +12493,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La implementación de encriptación de datos es clave para mejorar la seguridad en la nube, protegiendo la confidencialidad de los datos tanto en tránsito como en reposo.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": false
     },
     {
@@ -12507,7 +12507,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "La respuesta es 'Implementar estrategias de respaldo y recuperación'.",
-      "unit": null,
+      "unit": "9",
       "noShuffle": false
     }
   ],
@@ -12523,7 +12523,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "El escalado horizontal añade más servidores (scale out). El escalado vertical aumenta la capacidad de un servidor existente (scale up). El horizontal es más flexible y tolerante a fallos.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": false
     },
     {
@@ -12537,7 +12537,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 2,
       "explanation": "Disminuir la cantidad de usuarios NO es una ventaja del escalado automático. Sus ventajas reales son: reducir costes, mejorar disponibilidad y adaptar recursos a la demanda.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": false
     },
     {
@@ -12551,7 +12551,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Distribuir las solicitudes de usuarios entre varios servidores.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": false
     },
     {
@@ -12565,7 +12565,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La monitorización permite recopilar datos continuamente sobre el estado y rendimiento de la aplicación, generando alertas en tiempo real y facilitando la detección proactiva de problemas.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": false
     },
     {
@@ -12579,7 +12579,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "El escalado automático se desencadena típicamente cuando el uso de CPU supera un umbral definido, cuando la memoria está al límite, o cuando el número de solicitudes supera cierto nivel.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": false
     },
     {
@@ -12593,7 +12593,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta es 'Uso de CPU'. \"Consumo de memoria\" y \"Color de la interfaz gráfica\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": false
     },
     {
@@ -12607,7 +12607,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 0,
       "explanation": "La respuesta es 'Una aplicación de escritorio instalada en un solo equipo.'.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": false
     },
     {
@@ -12621,7 +12621,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "La respuesta es 'Ajustar los recursos de una aplicación según la demanda.'. \"Reducir la necesidad de servidores físicos.\" y \"Mejorar la seguridad de la infraestructura.\" son incorrectos porque describen conceptos diferentes.",
-      "unit": null,
+      "unit": "10",
       "noShuffle": false
     },
     {
@@ -12635,7 +12635,7 @@ const SYLLABUS_RAW_DATA = {
       ],
       "correct": 1,
       "explanation": "Configurar reglas de escalado precisas y monitorear continuamente la aplicación",
-      "unit": null,
+      "unit": "10",
       "noShuffle": false
     }
   ],
