@@ -1376,6 +1376,22 @@ async function startSimulacroTemario(subjectId) {
 
             allArrays = await Promise.all(fetches);
         }
+        let allQuestionsRaw = allArrays.flat();
+        
+        const seenText = new Set();
+        const deduplicatedArrays = allArrays.map(pool => {
+            const uniquePool = [];
+            for (const q of pool) {
+                const txt = q.question.trim().toLowerCase();
+                if (!seenText.has(txt)) {
+                    seenText.add(txt);
+                    uniquePool.push(q);
+                }
+            }
+            return uniquePool;
+        });
+        
+        allArrays = deduplicatedArrays;
         const allQuestions = allArrays.flat();
 
         if (allQuestions.length === 0) { alert('No se pudieron cargar preguntas.'); showView('dashboard'); return; }
