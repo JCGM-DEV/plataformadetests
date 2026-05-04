@@ -9918,112 +9918,112 @@ const SYLLABUS_RAW_DATA = {
     },
     {
       "concept_id": "prog_tema_5_q10",
-      "question": "Aquí te dejo 8 preguntas tipo test avanzadas basadas en el texto proporcionado:",
+      "question": "¿Cuál es el requisito absoluto para utilizar la búsqueda binaria en un array?",
       "options": [
-        "1. ¿Cuál es el requisito absoluto para utilizar la búsqueda binaria en un array?",
         "El array debe estar vacío",
         "El array debe estar ordenado",
-        "El array debe tener un tamaño fijo"
+        "El array debe tener un tamaño fijo",
+        "El array debe ser de tipo String"
       ],
-      "correct": 3,
+      "correct": 1,
       "explanation": "La búsqueda binaria requiere que el array esté ordenado previamente para funcionar correctamente.",
       "unit": "5",
       "noShuffle": false
     },
     {
       "concept_id": "prog_tema_5_q11",
-      "question": "2. ¿Cuál es la eficiencia de la búsqueda lineal en un array de 1 millón de datos?",
+      "question": "¿Cuál es la eficiencia de la búsqueda lineal en un array de 1 millón de datos?",
       "options": [
         "Alta",
         "Media",
         "Baja",
         "Instantánea"
       ],
-      "correct": 3,
+      "correct": 2,
       "explanation": "La búsqueda lineal tiene una eficiencia baja, ya que puede requerir hasta 1 millón de comparaciones para encontrar el dato buscado.",
       "unit": "5",
       "noShuffle": false
     },
     {
       "concept_id": "prog_tema_5_q12",
-      "question": "3. ¿Cuál es el algoritmo utilizado en la búsqueda binaria?",
+      "question": "¿Cuál es el algoritmo utilizado en la búsqueda binaria?",
       "options": [
         "Divide y Vencerás",
         "Recursividad",
         "Iteración",
         "Selección"
       ],
-      "correct": 3,
+      "correct": 0,
       "explanation": "La búsqueda binaria utiliza el algoritmo \"Divide y Vencerás\", que consiste en dividir el array en mitades y buscar el dato en una de ellas.",
       "unit": "5",
       "noShuffle": false
     },
     {
       "concept_id": "prog_tema_5_q13",
-      "question": "4. ¿Cuál es el resultado de la búsqueda lineal si el dato buscado no se encuentra en el array?",
+      "question": "¿Cuál es el resultado de la búsqueda lineal si el dato buscado no se encuentra en el array?",
       "options": [
         "Se devuelve el índice del dato siguiente",
         "Se devuelve el índice del dato anterior",
         "Se devuelve -1",
         "Se lanza una excepción"
       ],
-      "correct": 3,
+      "correct": 2,
       "explanation": "La búsqueda lineal devuelve -1 si el dato buscado no se encuentra en el array.",
       "unit": "5",
       "noShuffle": false
     },
     {
       "concept_id": "prog_tema_5_q14",
-      "question": "5. ¿Cuál es la ventaja de utilizar la búsqueda binaria en lugar de la búsqueda lineal?",
+      "question": "¿Cuál es la ventaja de utilizar la búsqueda binaria en lugar de la búsqueda lineal?",
       "options": [
         "Es más fácil de programar",
         "Es más lenta",
         "Es más eficiente",
         "Es más segura"
       ],
-      "correct": 3,
+      "correct": 2,
       "explanation": "La búsqueda binaria es más eficiente que la búsqueda lineal, ya que requiere menos comparaciones para encontrar el dato buscado.",
       "unit": "5",
       "noShuffle": false
     },
     {
       "concept_id": "prog_tema_5_q15",
-      "question": "6. ¿Cuál es el tipo de datos que se puede buscar utilizando la búsqueda binaria?",
+      "question": "¿Cuál es el tipo de datos que se puede buscar utilizando la búsqueda binaria?",
       "options": [
         "Solo números enteros",
         "Solo cadenas de texto",
-        "Cualquier tipo de dato",
+        "Cualquier tipo de dato comparable",
         "Solo arrays de objetos"
       ],
-      "correct": 3,
+      "correct": 2,
       "explanation": "La búsqueda binaria se puede utilizar para buscar cualquier tipo de dato que se pueda comparar.",
       "unit": "5",
       "noShuffle": false
     },
     {
       "concept_id": "prog_tema_5_q16",
-      "question": "7. ¿Cuál es el método utilizado en la búsqueda lineal para encontrar el dato buscado?",
+      "question": "¿Cuál es el método utilizado en la búsqueda lineal para encontrar el dato buscado?",
       "options": [
         "Se empieza en la última posición y se busca hacia atrás",
         "Se empieza en la primera posición y se busca hacia adelante",
         "Se busca en la mitad del array",
         "Se busca en la posición aleatoria"
       ],
-      "correct": 3,
+      "correct": 1,
       "explanation": "La búsqueda lineal se empieza en la primera posición del array y se busca hacia adelante hasta encontrar el dato buscado.",
       "unit": "5",
       "noShuffle": false
     },
     {
       "concept_id": "prog_tema_5_q17",
-      "question": "8. ¿Cuál es la característica de la búsqueda binaria que la hace más rápida que la búsqueda lineal?",
+      "question": "¿Cuál es la característica de la búsqueda binaria que la hace más rápida que la búsqueda lineal?",
       "options": [
         "Su complejidad es lineal",
         "Su complejidad es logarítmica",
         "Su complejidad es cuadrática",
         "Su complejidad es exponencial"
       ],
-      "correct": 3,
+      "correct": 1,
       "explanation": "La búsqueda binaria tiene una complejidad logarítmica, lo que la hace más rápida que la búsqueda lineal para grandes conjuntos de datos.",
       "unit": "5",
       "noShuffle": false

@@ -61,68 +61,66 @@ Ninguna de las anteriores opciones es completamente correcta en este contexto
 EXPL:Usa .equals() para comparar el texto. == solo compara si son el mismo objeto en memoria.
 
 
-Aquí te dejo 8 preguntas tipo test avanzadas basadas en el texto proporcionado:
+¿Cuál es el requisito absoluto para utilizar la búsqueda binaria en un array?
+El array debe estar vacío
+*El array debe estar ordenado
+El array debe tener un tamaño fijo
+El array debe ser de tipo String
 
-1. ¿Cuál es el requisito absoluto para utilizar la búsqueda binaria en un array?
-* El array debe estar vacío
-* El array debe estar ordenado
-* El array debe tener un tamaño fijo
-* El array debe ser de tipo String
+EXPL:La búsqueda binaria requiere que el array esté ordenado previamente para funcionar correctamente.
 
-EXPL: La búsqueda binaria requiere que el array esté ordenado previamente para funcionar correctamente.
+¿Cuál es la eficiencia de la búsqueda lineal en un array de 1 millón de datos?
+Alta
+Media
+*Baja
+Instantánea
 
-2. ¿Cuál es la eficiencia de la búsqueda lineal en un array de 1 millón de datos?
-* Alta
-* Media
-* Baja
-* Instantánea
+EXPL:La búsqueda lineal tiene una eficiencia baja, ya que puede requerir hasta 1 millón de comparaciones para encontrar el dato buscado.
 
-EXPL: La búsqueda lineal tiene una eficiencia baja, ya que puede requerir hasta 1 millón de comparaciones para encontrar el dato buscado.
+¿Cuál es el algoritmo utilizado en la búsqueda binaria?
+*Divide y Vencerás
+Recursividad
+Iteración
+Selección
 
-3. ¿Cuál es el algoritmo utilizado en la búsqueda binaria?
-* Divide y Vencerás
-* Recursividad
-* Iteración
-* Selección
+EXPL:La búsqueda binaria utiliza el algoritmo "Divide y Vencerás", que consiste en dividir el array en mitades y buscar el dato en una de ellas.
 
-EXPL: La búsqueda binaria utiliza el algoritmo "Divide y Vencerás", que consiste en dividir el array en mitades y buscar el dato en una de ellas.
+¿Cuál es el resultado de la búsqueda lineal si el dato buscado no se encuentra en el array?
+Se devuelve el índice del dato siguiente
+Se devuelve el índice del dato anterior
+*-1
+Se lanza una excepción
 
-4. ¿Cuál es el resultado de la búsqueda lineal si el dato buscado no se encuentra en el array?
-* Se devuelve el índice del dato siguiente
-* Se devuelve el índice del dato anterior
-* Se devuelve -1
-* Se lanza una excepción
+EXPL:La búsqueda lineal devuelve -1 si el dato buscado no se encuentra en el array.
 
-EXPL: La búsqueda lineal devuelve -1 si el dato buscado no se encuentra en el array.
+¿Cuál es la ventaja de utilizar la búsqueda binaria en lugar de la búsqueda lineal?
+Es más fácil de programar
+Es más lenta
+*Es más eficiente
+Es más segura
 
-5. ¿Cuál es la ventaja de utilizar la búsqueda binaria en lugar de la búsqueda lineal?
-* Es más fácil de programar
-* Es más lenta
-* Es más eficiente
-* Es más segura
+EXPL:La búsqueda binaria es más eficiente que la búsqueda lineal, ya que requiere menos comparaciones para encontrar el dato buscado.
 
-EXPL: La búsqueda binaria es más eficiente que la búsqueda lineal, ya que requiere menos comparaciones para encontrar el dato buscado.
+¿Cuál es el tipo de datos que se puede buscar utilizando la búsqueda binaria?
+Solo números enteros
+Solo cadenas de texto
+*Cualquier tipo de dato comparable
+Solo arrays de objetos
 
-6. ¿Cuál es el tipo de datos que se puede buscar utilizando la búsqueda binaria?
-* Solo números enteros
-* Solo cadenas de texto
-* Cualquier tipo de dato
-* Solo arrays de objetos
+EXPL:La búsqueda binaria se puede utilizar para buscar cualquier tipo de dato que se pueda comparar.
 
-EXPL: La búsqueda binaria se puede utilizar para buscar cualquier tipo de dato que se pueda comparar.
+¿Cuál es el método utilizado en la búsqueda lineal para encontrar el dato buscado?
+Se empieza en la última posición y se busca hacia atrás
+*Se empieza en la primera posición y se busca hacia adelante
+Se busca en la mitad del array
+Se busca en la posición aleatoria
 
-7. ¿Cuál es el método utilizado en la búsqueda lineal para encontrar el dato buscado?
-* Se empieza en la última posición y se busca hacia atrás
-* Se empieza en la primera posición y se busca hacia adelante
-* Se busca en la mitad del array
-* Se busca en la posición aleatoria
+EXPL:La búsqueda lineal se empieza en la primera posición del array y se busca hacia adelante hasta encontrar el dato buscado.
 
-EXPL: La búsqueda lineal se empieza en la primera posición del array y se busca hacia adelante hasta encontrar el dato buscado.
+¿Cuál es la característica de la búsqueda binaria que la hace más rápida que la búsqueda lineal?
+Su complejidad es lineal
+*Su complejidad es logarítmica
+Su complejidad es cuadrática
+Su complejidad es exponencial
 
-8. ¿Cuál es la característica de la búsqueda binaria que la hace más rápida que la búsqueda lineal?
-* Su complejidad es lineal
-* Su complejidad es logarítmica
-* Su complejidad es cuadrática
-* Su complejidad es exponencial
-
-EXPL: La búsqueda binaria tiene una complejidad logarítmica, lo que la hace más rápida que la búsqueda lineal para grandes conjuntos de datos.
+EXPL:La búsqueda binaria tiene una complejidad logarítmica, lo que la hace más rápida que la búsqueda lineal para grandes conjuntos de datos.
