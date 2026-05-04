@@ -117,11 +117,12 @@ function showHint() {
 // ── TERMINAL ENGINE ─────────────────────────────────────────
 terminalInput.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') {
-    const cmd = terminalInput.value.trim();
+    const raw = terminalInput.value;
+    const cmd = raw.trim();
     if (cmd) {
       processCommand(cmd);
-      terminalInput.value = '';
     }
+    terminalInput.value = '';
   }
 });
 

@@ -196,7 +196,7 @@ body {
   border-radius: 0 8px 8px 0;
 }
 
-.hidden { display: none; }
+.hidden { display: none !important; }
 
 /* ── TERMINAL ──────────────────────────────────────────────── */
 .terminal-container {
