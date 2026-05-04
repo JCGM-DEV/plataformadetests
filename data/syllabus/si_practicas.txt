@@ -1,10 +1,10 @@
 tema practicas
 En la empresa TodoEsGratis se necesita una topología que permita que si un cable falla, el resto de la red siga funcionando. ¿Qué topología cumple mejor este requisito?
 Topología en bus
-Topología en estrella
-*Topología en anillo o malla.
+*Topología en estrella
+Topología en anillo
 Topología lineal
-EXPL:En la topología en anillo, los datos viajan en una dirección (o ambas en anillo doble). Si un nodo falla, puede interrumpir toda la red (en anillo simple). Es más ordenada que el bus.
+EXPL:En la topología en estrella, todos los nodos se conectan a un dispositivo central. Si un cable falla, solo se desconecta el nodo de ese cable; el resto de la red sigue funcionando. (La topología en malla también serviría, pero el anillo simple no).
 En la topología en estrella, ¿qué ocurre si el dispositivo central (switch/hub) falla?
 Solo falla el nodo más alejado
 La red sigue funcionando con menor velocidad

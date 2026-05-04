@@ -903,11 +903,11 @@ const TEST_BANK_DATA = {
       "options": [
         "Topología en bus",
         "Topología en estrella",
-        "Topología en anillo o malla.",
+        "Topología en anillo",
         "Topología lineal"
       ],
-      "correct": 2,
-      "explanation": "En la topología en anillo, los datos viajan en una dirección (o ambas en anillo doble). Si un nodo falla, puede interrumpir toda la red (en anillo simple). Es más ordenada que el bus.",
+      "correct": 1,
+      "explanation": "En la topología en estrella, todos los nodos se conectan a un dispositivo central. Si un cable falla, solo se desconecta el nodo de ese cable; el resto de la red sigue funcionando. (La topología en malla también serviría, pero el anillo simple no).",
       "unit": null
     },
     {
