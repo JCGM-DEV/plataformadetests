@@ -1066,52 +1066,52 @@ const LAB_EXERCISES = {
     },
     { 
       id: 'ud4-ex2', 
-      title: 'Herencia Animal', 
-      scenario: 'Crea una clase padre "Animal" y una clase hija "Perro" que herede de ella. Perro debe tener "- raza : String".',
+      title: 'Herencia: Flota de Vehículos', 
+      scenario: 'En nuestra empresa de alquiler, necesitamos modelar la herencia. Crea una clase padre "Vehiculo" y una clase hija "Bicicleta" que herede de ella. La Bicicleta debe tener un atributo privado "- modelo : String".',
       solution: {
         nodes: [
-          { text: 'Animal' }, 
-          { text: 'Perro', attrs: [
-            { keyword: 'raza', visibility: '-', type: 'String' }
+          { text: 'Vehiculo' }, 
+          { text: 'Bicicleta', attrs: [
+            { keyword: 'modelo', visibility: '-', type: 'String' }
           ]}
         ],
-        rels: [{ from: 'Perro', to: 'Animal', type: 'inherit' }],
+        rels: [{ from: 'Bicicleta', to: 'Vehiculo', type: 'inherit' }],
         hints: { 
-          node_count: 'Necesitas dos clases: Animal y Perro.', 
-          missing_rel: 'Falta la relación de herencia de Perro a Animal.', 
-          wrong_attr: 'La clase Perro debe tener el atributo "raza".',
-          wrong_visibility: 'El atributo "raza" debe ser privado (-).',
-          wrong_type: 'El atributo "raza" debe ser de tipo String.'
+          node_count: 'Necesitas dos clases: Vehiculo y Bicicleta.', 
+          missing_rel: 'Falta la relación de herencia de Bicicleta a Vehiculo.', 
+          wrong_attr: 'La clase Bicicleta debe tener el atributo "modelo".',
+          wrong_visibility: 'El atributo "modelo" debe ser privado (-).',
+          wrong_type: 'El atributo "modelo" debe ser de tipo String.'
         }
       }
     },
     {
       id: 'ud4-ex3',
-      title: 'Composición Casa',
-      scenario: 'Modelar una Casa que tiene una Habitación. Si la Casa se destruye, la Habitación también (Composición ◆).',
+      title: 'Composición: Pedido y Líneas',
+      scenario: 'Cuando un cliente alquila algo, se crea un "Pedido". Un Pedido tiene obligatoriamente una "LineaPedido". Si el Pedido se cancela/borra, las líneas desaparecen (Composición ◆).',
       solution: {
-        nodes: [{ text: 'Casa' }, { text: 'Habitacion' }],
-        rels: [{ from: 'Casa', to: 'Habitacion', type: 'compose' }],
-        hints: { missing_rel: 'El diamante relleno ◆ debe estar en el lado de "Casa".', node_count: 'Crea las clases Casa y Habitacion.' }
+        nodes: [{ text: 'Pedido' }, { text: 'LineaPedido' }],
+        rels: [{ from: 'Pedido', to: 'LineaPedido', type: 'compose' }],
+        hints: { missing_rel: 'El diamante relleno ◆ debe estar en el lado de "Pedido".', node_count: 'Crea las clases Pedido y LineaPedido.' }
       }
     },
     {
       id: 'ud4-ex4',
-      title: 'Interfaz Volable',
-      scenario: 'Define una clase "Avion" que implemente una interfaz "Volable". La interfaz tiene "+ volar() : void". El avión tiene "- matricula : String".',
+      title: 'Interfaz: Elementos Alquilables',
+      scenario: 'Define una clase "Bicicleta" que implemente una interfaz "Alquilable". La interfaz define el método público "+ alquilar() : void". La Bicicleta tiene un atributo "- id : int".',
       solution: {
         nodes: [
-          { text: 'Volable', methods: [
-            { keyword: 'volar', visibility: '+', returnType: 'void' }
+          { text: 'Alquilable', methods: [
+            { keyword: 'alquilar', visibility: '+', returnType: 'void' }
           ]}, 
-          { text: 'Avion', attrs: [
-            { keyword: 'matricula', visibility: '-', type: 'String' }
+          { text: 'Bicicleta', attrs: [
+            { keyword: 'id', visibility: '-', type: 'int' }
           ]}
         ],
-        rels: [{ from: 'Avion', to: 'Volable', type: 'inherit' }],
+        rels: [{ from: 'Bicicleta', to: 'Alquilable', type: 'inherit' }],
         hints: { 
-          missing_meths: 'La interfaz Volable debe tener el método "volar()".', 
-          missing_rel: 'Conecta Avion con Volable.',
+          missing_meths: 'La interfaz Alquilable debe tener el método "alquilar()".', 
+          missing_rel: 'Conecta Bicicleta con Alquilable.',
           wrong_visibility: 'Revisa la visibilidad del método/atributo.',
           wrong_type: 'Revisa los tipos de datos.'
         }
@@ -1119,55 +1119,55 @@ const LAB_EXERCISES = {
     },
     {
       id: 'ud4-ex5',
-      title: 'Agregación Universidad',
-      scenario: 'Una Universidad ◇ tiene Profesores. Los profesores pueden existir sin la universidad.',
+      title: 'Agregación: Tienda y Clientes',
+      scenario: 'Nuestra "Tienda" tiene "Clientes". Los clientes existen aunque la tienda cierre (Agregación ◇). Representa esta relación.',
       solution: {
-        nodes: [{ text: 'Universidad' }, { text: 'Profesor' }],
-        rels: [{ from: 'Universidad', to: 'Profesor', type: 'agg' }],
-        hints: { missing_rel: 'Usa la agregación ◇ (diamante vacío) desde Universidad.', node_count: 'Crea las clases Universidad y Profesor.' }
+        nodes: [{ text: 'Tienda' }, { text: 'Cliente' }],
+        rels: [{ from: 'Tienda', to: 'Cliente', type: 'agg' }],
+        hints: { missing_rel: 'Usa la agregación ◇ (diamante vacío) desde Tienda.', node_count: 'Crea las clases Tienda y Cliente.' }
       }
     }
   ],
   'ud5-lab': [
     { 
       id: 'ud5-ex1', 
-      title: 'Login Básico', 
-      scenario: 'Diseña un flujo: Inicio -> Leer Usuario -> ¿Usuario correcto? (Sí: Acceso / No: Error) -> Fin.',
+      title: 'Acceso al Sistema de Alquiler', 
+      scenario: 'Model el flujo de entrada a la App: Inicio -> Introducir PIN -> ¿PIN correcto? (Sí: Acceso Concedido / No: Error de PIN) -> Fin.',
       solution: {
-        nodes_flow: ['Inicio', 'Usuario', '?', 'Acceso', 'Error', 'Fin'],
-        hints: { missing_start: 'Todo flujograma empieza con un bloque "Inicio".', missing_decision: 'Necesitas un bloque de Decisión para comprobar el usuario.', missing_end: 'No olvides el bloque "Fin".' }
+        nodes_flow: ['Inicio', 'PIN', '?', 'Acceso', 'Error', 'Fin'],
+        hints: { missing_start: 'Todo flujograma empieza con un bloque "Inicio".', missing_decision: 'Necesitas un bloque de Decisión para comprobar el PIN.', missing_end: 'No olvides el bloque "Fin".' }
       }
     },
     { 
       id: 'ud5-ex2', 
-      title: 'Cálculo Descuento', 
-      scenario: 'Flujo: Inicio -> ¿Es VIP? -> Si es VIP, "-20%". Si no, "-5%". -> Aplicar Pago -> Fin.',
+      title: 'Descuento por Fidelidad', 
+      scenario: 'Al alquilar: Inicio -> ¿El cliente es VIP? -> Si es VIP, aplicar "-20%". Si no, aplicar "-5%". -> Emitir Factura -> Fin.',
       solution: {
-        nodes_flow: ['Inicio', 'VIP', '-20%', '-5%', 'Aplicar', 'Fin'],
-        hints: { missing_branches: 'Tienes que prever qué pasa si es VIP y qué pasa si no lo es.', missing_action: 'Falta la acción final de "Aplicar pago" antes de terminar.' }
+        nodes_flow: ['Inicio', 'VIP', '-20%', '-5%', 'Factura', 'Fin'],
+        hints: { missing_branches: 'Tienes que prever qué pasa si es VIP y qué pasa si no lo es.', missing_action: 'Falta la acción final de "Emitir factura" antes de terminar.' }
       }
     },
     {
       id: 'ud5-ex3',
-      title: 'Bucle de Intentos',
-      scenario: 'Proceso de reintento: Inicio -> Intento -> ¿Ha funcionado? -> Si No: Volver a Intento. Si Sí: Éxito -> Fin.',
+      title: 'Reintento de Pago',
+      scenario: 'Si falla el pago: Inicio -> Intentar Cobro -> ¿Cobro OK? -> Si No: Volver a Intentar Cobro. Si Sí: Confirmar Reserva -> Fin.',
       solution: {
-        nodes_flow: ['Inicio', 'Intento', '?', 'Exito', 'Fin'],
-        hints: { missing_decision: 'Usa una decisión para verificar si funcionó.', missing_path: 'Debes volver al bloque "Intento" si ha fallado.' }
+        nodes_flow: ['Inicio', 'Cobro', '?', 'Confirmar', 'Fin'],
+        hints: { missing_decision: 'Usa una decisión para verificar si el cobro funcionó.', missing_path: 'Debes volver al bloque "Cobro" si ha fallado.' }
       }
     },
-    {
-      id: 'ud5-ex4',
-      title: 'Cajero Automático',
+    { 
+      id: 'ud5-ex4', 
+      title: 'Cajero Automático', 
       scenario: 'Sacar dinero: Inicio -> Meter PIN -> ¿PIN OK? -> Si Sí: Dar Dinero -> Fin. Si No: Bloquear Tarjeta -> Fin.',
       solution: {
         nodes_flow: ['Inicio', 'PIN', '?', 'Dinero', 'Bloquear', 'Fin'],
         hints: { missing_decision: 'Comprueba si el PIN es correcto.', missing_end: 'Asegúrate de que ambos caminos lleguen al Fin.' }
       }
     },
-    {
-      id: 'ud5-ex5',
-      title: 'Sensor de Alarma',
+    { 
+      id: 'ud5-ex5', 
+      title: 'Sensor de Alarma', 
       scenario: 'Alarma temp: Leer Temp -> ¿Temp > 30? -> Si Sí: Activar Sirena -> Fin. Si No: Reposo -> Fin.',
       solution: {
         nodes_flow: ['Leer', '?', 'Sirena', 'Reposo', 'Fin'],
@@ -1181,40 +1181,40 @@ const LAB_EXERCISES = {
 Object.assign(LAB_EXERCISES, {
   'ud5-lab-usecase': [
     {
-      id: 'uc-ex1', title: 'Sistema de Login',
-      scenario: 'Un actor "Usuario" puede "Identificarse". Ese caso de uso incluye (obligatoriamente) "Verificar Contraseña". Adiciona el sistema y las conexiones.',
+      id: 'uc-ex1', title: 'Alquiler de Bicicletas',
+      scenario: 'Un actor "Cliente" puede "Alquilar Bicicleta". Ese caso de uso incluye (obligatoriamente) "Verificar Identidad". Adiciona el sistema y las conexiones.',
       solution: {
-        actors: ['Usuario'], usecases: ['Identificarse', 'Verificar'],
+        actors: ['Cliente'], usecases: ['Alquilar', 'Verificar'],
         rels: [
-          { from: 'Usuario', to: 'Identificarse', type: 'assoc' },
-          { from: 'Identificarse', to: 'Verificar', type: 'include' }
+          { from: 'Cliente', to: 'Alquilar', type: 'assoc' },
+          { from: 'Alquilar', to: 'Verificar', type: 'include' }
         ]
       }
     },
     {
-      id: 'uc-ex2', title: 'Cajero Automático',
-      scenario: 'Actor "Cliente" puede "Retirar Efectivo" (que incluye "Verificar Saldo"). Opcionalmente "Pagar Servicio" puede extender "Retirar Efectivo".',
+      id: 'uc-ex2', title: 'Mantenimiento de Flota',
+      scenario: 'Actor "Mecánico" puede "Reparar Bicicleta" (que incluye "Verificar Daños"). Opcionalmente "Pedir Piezas" puede extender "Reparar Bicicleta".',
       solution: {
-        actors: ['Cliente'], usecases: ['Retirar', 'Verificar', 'Pagar'],
+        actors: ['Mecanico'], usecases: ['Reparar', 'Verificar', 'Pedir'],
         rels: [
-          { from: 'Cliente', to: 'Retirar', type: 'assoc' },
-          { from: 'Retirar', to: 'Verificar', type: 'include' },
-          { from: 'Pagar', to: 'Retirar', type: 'extend' }
+          { from: 'Mecanico', to: 'Reparar', type: 'assoc' },
+          { from: 'Reparar', to: 'Verificar', type: 'include' },
+          { from: 'Pedir', to: 'Reparar', type: 'extend' }
         ]
       }
     },
     {
-      id: 'uc-ex3', title: 'Tienda Online',
-      scenario: 'Actor "Cliente" realiza pedido (incluye iniciar sesión). Actor "Admin" gestiona productos. Ambos actores extienden el actor base "Usuario".',
+      id: 'uc-ex3', title: 'Suscripciones Premium',
+      scenario: 'Actor "Cliente Premium" realiza reserva (incluye login). Actor "Gerente" gestiona inventario. Ambos actores heredan del actor base "Usuario".',
       solution: {
-        actors: ['Cliente', 'Admin', 'Usuario'],
-        usecases: ['Realizar Pedido', 'Iniciar Sesión', 'Gestionar'],
+        actors: ['Cliente', 'Gerente', 'Usuario'],
+        usecases: ['Reserva', 'Login', 'Gestionar'],
         rels: [
           { from: 'Cliente', to: 'Usuario', type: 'generalize' },
-          { from: 'Admin', to: 'Usuario', type: 'generalize' },
-          { from: 'Cliente', to: 'Realizar Pedido', type: 'assoc' },
-          { from: 'Realizar Pedido', to: 'Iniciar Sesión', type: 'include' },
-          { from: 'Admin', to: 'Gestionar', type: 'assoc' }
+          { from: 'Gerente', to: 'Usuario', type: 'generalize' },
+          { from: 'Cliente', to: 'Reserva', type: 'assoc' },
+          { from: 'Reserva', to: 'Login', type: 'include' },
+          { from: 'Gerente', to: 'Gestionar', type: 'assoc' }
         ]
       }
     }
@@ -1222,29 +1222,29 @@ Object.assign(LAB_EXERCISES, {
 
   'ud5-lab-seq': [
     {
-      id: 'seq-ex1', title: 'Login — 3 Objetos',
-      scenario: 'Añade 3 objetos: ":Cliente", ":Sistema", ":BBDD". El cliente envía "login()" al sistema (síncrono), el sistema envía "findUser()" a la BBDD, la BBDD retorna un resultado.',
+      id: 'seq-ex1', title: 'Reserva de Bicicleta',
+      scenario: 'Añade 3 objetos: ":Cliente", ":Sistema", ":Stock". El cliente envía "reservar()" al sistema (síncrono), el sistema envía "checkDisponibilidad()" al Stock, el Stock retorna confirmación.',
       solution: {
-        lifelines: [':Cliente', ':Sistema', ':BBDD'],
-        messages: ['login', 'findUser'],
+        lifelines: [':Cliente', ':Sistema', ':Stock'],
+        messages: ['reservar', 'checkDisponibilidad'],
         minMessages: 2
       }
     },
     {
-      id: 'seq-ex2', title: 'Compra Online',
-      scenario: 'Objetos: ":Cliente", ":Tienda", ":Pago". El cliente hace "realizarPedido()", la tienda llama "procesarPago()" al servicio de pago (asíncrono), y el pago retorna confirmación.',
+      id: 'seq-ex2', title: 'Pago de Alquiler',
+      scenario: 'Objetos: ":Cliente", ":Terminal", ":Banco". El cliente hace "pagar()", el terminal llama "procesarTransaccion()" al banco (asíncrono), y el banco retorna el OK.',
       solution: {
-        lifelines: [':Cliente', ':Tienda', ':Pago'],
-        messages: ['realizarPedido', 'procesarPago'],
+        lifelines: [':Cliente', ':Terminal', ':Banco'],
+        messages: ['pagar', 'procesarTransaccion'],
         minMessages: 2
       }
     },
     {
-      id: 'seq-ex3', title: 'Reserva de Hotel',
-      scenario: 'Objetos: ":Cliente", ":Web", ":Reservas", ":BBDD". Flujo de reserva con al menos 3 mensajes: buscarDisponibilidad, confirmarReserva, guardarReserva.',
+      id: 'seq-ex3', title: 'Baja de Usuario',
+      scenario: 'Objetos: ":Admin", ":App", ":BBDD". Flujo de borrado de cuenta con al menos 3 mensajes: solicitarBaja, verificarPendientes, borrarRegistro.',
       solution: {
-        lifelines: [':Cliente', ':Web', ':Reservas'],
-        messages: ['buscarDisponibilidad', 'confirmarReserva', 'guardar'],
+        lifelines: [':Admin', ':App', ':BBDD'],
+        messages: ['solicitarBaja', 'verificar', 'borrar'],
         minMessages: 3
       }
     }
@@ -1252,25 +1252,25 @@ Object.assign(LAB_EXERCISES, {
 
   'ud5-lab-comms': [
     {
-      id: 'comms-ex1', title: 'Login — Diagrama de Comunicación',
-      scenario: 'Crea los mismos 3 objetos que en el diagrama de secuencia: ":Cliente", ":Sistema", ":BBDD". Enlázalos con mensajes numerados (1: login(), 2: findUser(), 2.1: query()). Compara: ¡es la misma información que la secuencia, pero sin eje de tiempo!',
+      id: 'comms-ex1', title: 'Devolución de Bicicleta',
+      scenario: 'Crea 3 objetos: ":Cliente", ":Terminal", ":Almacén". Enlázalos: Cliente→Terminal (1: devolver()), Terminal→Almacén (2: registrarEntrada(), 2.1: actualizarStock()).',
       solution: {
-        objects: [':Cliente', ':Sistema', ':BBDD'],
+        objects: [':Cliente', ':Terminal', ':Almacén'],
         links: [
-          { from: ':Cliente', to: ':Sistema' },
-          { from: ':Sistema', to: ':BBDD' }
+          { from: ':Cliente', to: ':Terminal' },
+          { from: ':Terminal', to: ':Almacén' }
         ],
         minMessages: 2
       }
     },
     {
-      id: 'comms-ex2', title: 'Pedido con 4 Objetos',
-      scenario: 'Crea: ":Cliente", ":Carrito", ":Pago", ":Almacén". Enlaza: Cliente→Carrito (1: añadirProducto()), Carrito→Pago (2: procesarPago()), Pago→Almacén (2.1: reservarStock()).',
+      id: 'comms-ex2', title: 'Alta de Bicicleta Nueva',
+      scenario: 'Crea: ":Admin", ":Catalogo", ":BBDD". Enlaza: Admin→Catalogo (1: altaNueva()), Catalogo→BBDD (2: crearRegistro()).',
       solution: {
-        objects: [':Cliente', ':Carrito', ':Pago'],
+        objects: [':Admin', ':Catalogo', ':BBDD'],
         links: [
-          { from: ':Cliente', to: ':Carrito' },
-          { from: ':Carrito', to: ':Pago' }
+          { from: ':Admin', to: ':Catalogo' },
+          { from: ':Catalogo', to: ':BBDD' }
         ],
         minMessages: 2
       }
@@ -1279,16 +1279,17 @@ Object.assign(LAB_EXERCISES, {
 
   'ud5-lab-states': [
     {
-      id: 'st-ex1', title: 'Estados de una Factura',
-      scenario: 'Modela el ciclo de vida de una Factura: Inicial → CREADA → PENDIENTE → PAGADA → Final. Añade también una transición de PENDIENTE a CANCELADA.',
+      id: 'st-ex1', title: 'Ciclo de vida Bicicleta',
+      scenario: 'Modela los estados de una Bici: Inicial → DISPONIBLE → ALQUILADA → EN_REPARACIÓN → DISPONIBLE. Añade también transiciones a RETIRADA (Final).',
       solution: {
         needsInitial: true, needsFinal: true,
-        states: ['CREADA', 'PENDIENTE', 'PAGADA', 'CANCELADA'],
+        states: ['DISPONIBLE', 'ALQUILADA', 'REPARACION', 'RETIRADA'],
         transitions: [
-          { from: 'initial', to: 'CREADA' },
-          { from: 'CREADA', to: 'PENDIENTE' },
-          { from: 'PENDIENTE', to: 'PAGADA' },
-          { from: 'PENDIENTE', to: 'CANCELADA' }
+          { from: 'initial', to: 'DISPONIBLE' },
+          { from: 'DISPONIBLE', to: 'ALQUILADA' },
+          { from: 'ALQUILADA', to: 'REPARACION' },
+          { from: 'REPARACION', to: 'DISPONIBLE' },
+          { from: 'ALQUILADA', to: 'RETIRADA' }
         ]
       }
     },
