@@ -311,15 +311,46 @@ const LESSONS = {
     subtitle: 'Modelado completo de un sistema de gestión veterinaria',
     concepts: [
       { icon: '🏥', title: 'Clínica Veterinaria', body: 'Diseña un diagrama de clases completo para gestionar pacientes, propietarios, empleados, citas, diagnósticos, tratamientos y facturas.' },
-      { icon: '🐾', title: 'Entidades Clave', body: 'Identifica las clases principales: <strong>Animal</strong>, <strong>Propietario</strong>, <strong>Empleado</strong> (Veterinario/Auxiliar), <strong>Cita</strong>, <strong>Diagnóstico</strong>, <strong>Tratamiento</strong>, <strong>Medicamento</strong> y <strong>Factura</strong>.' },
-      { icon: '🔗', title: 'Relaciones Complejas', body: 'Usa herencia para los tipos de empleados. Aplica multiplicidades correctas (ej: un Propietario tiene N Animales). Usa agregación/composición según corresponda.' },
-      { icon: '📋', title: 'Requisitos', body: 'El diagrama debe incluir atributos relevantes, métodos clave y al menos una relación muchos-a-muchos y una enumeración (ej: estados de cita o gravedad).' }
+      { icon: '🐾', title: 'Entidades Clave', body: 'Animal, Propietario, Empleado (Vet/Aux), Cita, Diagnóstico, Tratamiento, Medicamento y Factura.' },
+      { icon: '🔗', title: 'Relaciones', body: 'Herencia de empleados, asociaciones 1:N y N:M, y composiciones necesarias.' },
+      { icon: '📋', title: 'Requisitos UML', body: 'Atributos, métodos, multiplicidades, herencia y enumeraciones de estados.' }
     ],
+    fullText: `
+      <div class="simulation-case">
+        <h3>📋 Enunciado Completo: Clínica Veterinaria</h3>
+        <p>Una clínica veterinaria desea desarrollar una aplicación para gestionar la atención de sus pacientes animales, sus propietarios, las citas médicas, los tratamientos aplicados y las facturas generadas.</p>
+        
+        <div class="case-section">
+          <h4>1. Pacientes y Propietarios</h4>
+          <p>La clínica atiende a distintos <strong>animales domésticos</strong>. Cada animal tiene un nombre, una especie, una raza, una fecha de nacimiento, un peso aproximado y un número de historial clínico. Cada animal pertenece a un <strong>único propietario</strong>, aunque un propietario puede tener varios animales registrados. De cada propietario interesa guardar sus datos personales y de contacto.</p>
+        </div>
+
+        <div class="case-section">
+          <h4>2. Empleados y Roles</h4>
+          <p>En la clínica trabajan varios <strong>empleados</strong>. Todos comparten datos básicos (nombre, apellidos, DNI, teléfono y correo electrónico), pero existen dos tipos: <strong>veterinarios</strong> y <strong>auxiliares</strong>. Los veterinarios realizan consultas, diagnostican y prescriben tratamientos. Los auxiliares registran citas, modifican datos de animales y ayudan en administración.</p>
+        </div>
+
+        <div class="case-section">
+          <h4>3. Citas Médicas</h4>
+          <p>Los propietarios solicitan <strong>citas</strong> para sus animales. Cada cita corresponde a un único animal y es atendida por un veterinario concreto. Una cita tiene fecha, hora, motivo de consulta y un <strong>estado</strong> (pendiente, realizada o cancelada). Un animal puede tener muchas citas.</p>
+        </div>
+
+        <div class="case-section">
+          <h4>4. Diagnósticos y Tratamientos</h4>
+          <p>Durante una cita, el veterinario puede registrar un <strong>diagnóstico</strong> (descripción, fecha y gravedad). Una cita realizada puede tener uno o varios diagnósticos asociados. El veterinario podrá prescribir <strong>tratamientos</strong> (descripción, fecha inicio, fin estimada e indicaciones). Un tratamiento puede estar asociado a un diagnóstico, y un diagnóstico puede requerir varios tratamientos.</p>
+        </div>
+
+        <div class="case-section">
+          <h4>5. Medicamentos y Facturas</h4>
+          <p>Un tratamiento puede incluir uno o varios <strong>medicamentos</strong> (dosis y frecuencia). Un mismo medicamento puede usarse en muchos tratamientos. De cada medicamento interesa: nombre comercial, principio activo y si requiere receta. Además, cada cita puede generar una <strong>factura</strong> (fecha emisión, importe total, estado de pago y método de pago).</p>
+        </div>
+      </div>
+    `,
     codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
   <p style="margin-bottom:1rem; color:var(--text1); font-size:1.1rem;">Las prácticas se realizan con <strong>Visual Paradigm Online</strong>.</p>
   <a href="https://online.visual-paradigm.com/drive/#proj=0&dashboard" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
 </div>`,
-    info: { type: 'tip', text: '💡 <strong>Enunciado:</strong> Lee detenidamente los requisitos del simulacro. Asegúrate de capturar todas las relaciones de pertenencia y los tipos de empleados mediante herencia.' },
+    info: { type: 'tip', text: '💡 <strong>Objetivo</strong>: El diagrama debe incluir atributos, métodos, multiplicidades, al menos una herencia y una relación N:M.' },
     svg: 'uml_tipos'
   }
 };

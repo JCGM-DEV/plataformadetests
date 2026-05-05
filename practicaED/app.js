@@ -138,6 +138,8 @@ function showSimulation(lessonId) {
 
     ${data.codeExample}
 
+    ${data.fullText || ''}
+
     <div id="paste-area" class="paste-area" tabindex="0">
       <div class="paste-placeholder">
         <span>📸</span>
