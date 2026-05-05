@@ -65,11 +65,12 @@ function openSection(section) {
   else if (section.type === 'drag') showDrag(section.dragId);
   else if (section.type === 'diagram') showDiagrams(section.diagId);
   else if (section.type === 'lab') showLab();
+  else if (section.type === 'simulation') showSimulation(section.lessonId);
   else if (section.type === 'git') showGitLab();
 }
 
 function hideAllViews() {
-  ['lesson-view','quiz-view','drag-view','diagram-view','lab-view','git-view','welcome-panel'].forEach(id => {
+  ['lesson-view','quiz-view','drag-view','diagram-view','lab-view','simulation-view','git-view','welcome-panel'].forEach(id => {
     document.getElementById(id).classList.add('hidden');
   });
 }
@@ -106,6 +107,86 @@ function showLesson(lessonId) {
       <button class="btn-primary" onclick="markDone()">✓ Marcar como repasado</button>
       <button class="btn-secondary" onclick="openModal('${lessonId}')">💡 Ampliar explicación</button>
     </div>`;
+}
+
+// ---- SIMULATION VIEW ----
+function showSimulation(lessonId) {
+  const data = LESSONS[lessonId];
+  const view = document.getElementById('simulation-view');
+  view.classList.remove('hidden');
+
+  view.innerHTML = `
+    <div class="lesson-header">
+      <h2>🎯 Simulacro: ${data.title}</h2>
+      <p>Realiza este ejercicio en un software externo (ej. Visual Paradigm), toma una captura de pantalla y pégala aquí para corregirla.</p>
+    </div>
+    
+    <div class="concept-grid">
+      ${data.concepts.map(c => `
+        <div class="concept-card">
+          <h4><span>${c.icon}</span>${c.title}</h4>
+          <p>${c.body}</p>
+        </div>`).join('')}
+    </div>
+
+    <div class="info-box tip">
+      <strong>Instrucciones:</strong> 
+      1. Haz el diagrama. 
+      2. Copia el diagrama (Ctrl+C o Captura). 
+      3. Haz clic en el recuadro de abajo y pulsa <strong>Ctrl+V</strong> para pegarlo.
+    </div>
+
+    <div id="paste-area" class="paste-area" tabindex="0">
+      <div class="paste-placeholder">
+        <span>📸</span>
+        <p>Haz clic aquí y pulsa Ctrl+V para pegar tu diagrama</p>
+      </div>
+      <img id="pasted-image" class="hidden">
+    </div>
+
+    <div id="sim-actions" class="lesson-actions hidden">
+      <button class="btn-check" id="btn-ai-sim" onclick="requestSimAIFeedback('${lessonId}')">✨ Corregir con IA Vision</button>
+      <button class="btn-secondary" onclick="resetSim()">🗑️ Borrar imagen</button>
+    </div>
+
+    <div id="sim-feedback" class="lab-feedback-board hidden" style="margin-top:2rem">
+       <div class="fb-icon">🎓</div>
+       <div id="sim-fb-msg" class="fb-msg">...</div>
+    </div>
+  `;
+
+  setupPasteListener();
+}
+
+function setupPasteListener() {
+  const area = document.getElementById('paste-area');
+  area.addEventListener('paste', (e) => {
+    const items = (e.clipboardData || e.originalEvent.clipboardData).items;
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].type.indexOf('image') !== -1) {
+        const blob = items[i].getAsFile();
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          const img = document.getElementById('pasted-image');
+          img.src = event.target.result;
+          img.classList.remove('hidden');
+          area.querySelector('.paste-placeholder').classList.add('hidden');
+          document.getElementById('sim-actions').classList.remove('hidden');
+          window.lastPastedImage = event.target.result;
+        };
+        reader.readAsDataURL(blob);
+      }
+    }
+  });
+}
+
+function resetSim() {
+  const area = document.getElementById('paste-area');
+  area.querySelector('.paste-placeholder').classList.remove('hidden');
+  document.getElementById('pasted-image').classList.add('hidden');
+  document.getElementById('sim-actions').classList.add('hidden');
+  document.getElementById('sim-feedback').classList.add('hidden');
+  window.lastPastedImage = null;
 }
 
 function markDone() {

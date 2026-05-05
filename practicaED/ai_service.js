@@ -139,6 +139,93 @@ function serializeDiagram() {
     return JSON.stringify(data, null, 2);
 }
 
+async function requestSimAIFeedback(simId) {
+    const imageData = window.lastPastedImage;
+    if (!imageData) {
+        showToast('⚠️ No hay imagen pegada', 'warning');
+        return;
+    }
+
+    const btn = document.getElementById('btn-ai-sim');
+    const originalContent = btn ? btn.innerHTML : '';
+    if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = '⏳ Analizando imagen con IA Vision...';
+    }
+
+    try {
+        const lesson = LESSONS[simId];
+        const exerciseContext = lesson ? `EJERCICIO: ${lesson.title}\nENUNCIADO: ${lesson.subtitle}` : 'Diagrama externo';
+
+        const prompt = `Actúa como un PROFESOR DE ENTORNOS DE DESARROLLO experto en UML.
+Te adjunto una captura de pantalla de un diagrama UML creado por un alumno en Visual Paradigm.
+
+${exerciseContext}
+
+TU MISIÓN:
+1. Analiza la IMAGEN adjunta.
+2. Identifica si el tipo de diagrama es correcto (Clases, Casos de Uso, Secuencia, etc).
+3. Evalúa la lógica y la notación UML (flechas, símbolos, multiplicidad, visibilidad).
+4. Sé estricto pero constructivo.
+
+FORMATO DE RESPUESTA OBLIGATORIO:
+[NOTA]: Nota del 0 al 10.
+[ERRORES]: Lista detallada de fallos detectados en la imagen.
+[COMENTARIO]: Feedback profesional.
+
+Responde en español.`;
+
+        // We use the Vision model for images
+        const userKey = (localStorage.getItem('groq_ai_key') || '').trim();
+        const key = userKey || _K7();
+        
+        const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json', 
+                'Authorization': `Bearer ${key}` 
+            },
+            body: JSON.stringify({ 
+                model: 'llama-3.2-11b-vision-preview', 
+                messages: [{ 
+                    role: "user", 
+                    content: [
+                        { type: "text", text: prompt },
+                        { type: "image_url", image_url: { url: imageData } }
+                    ]
+                }] 
+            })
+        });
+
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error?.message || `Error Groq Vision ${res.status}`);
+        
+        const feedback = data.choices[0].message.content;
+        
+        // Show in simulation feedback board
+        const board = document.getElementById('sim-feedback');
+        const msgEl = document.getElementById('sim-fb-msg');
+        board.classList.remove('hidden');
+        
+        let html = feedback
+            .replace(/\[NOTA\]:/g, '<h3 style="color:var(--green);margin-top:0">🎯 Nota:</h3>')
+            .replace(/\[ERRORES\]:/g, '<h4 style="color:var(--red);margin-top:1rem">❌ Errores detectados:</h4>')
+            .replace(/\[COMENTARIO\]:/g, '<h4 style="color:var(--accent3);margin-top:1rem">💬 Comentario del profesor:</h4>')
+            .replace(/\n/g, '<br>');
+            
+        msgEl.innerHTML = html;
+        board.scrollIntoView({ behavior: 'smooth' });
+
+    } catch (err) {
+        showToast('Error Vision: ' + err.message, 'error');
+    } finally {
+        if (btn) {
+            btn.disabled = false;
+            btn.innerHTML = originalContent;
+        }
+    }
+}
+
 function showFeedbackModal(markdown) {
     const content = document.getElementById('modal-content');
     if (!content) return;

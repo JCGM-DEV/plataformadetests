@@ -62,10 +62,10 @@ const UNITS = {
     title: 'Simulacros de Examen',
     sections: [
       { id: 'sim-quiz', icon: '🧠', label: 'Test de Conocimientos', type: 'quiz', quizId: 'sim_quiz' },
-      { id: 'sim-p1', icon: '🧑', label: 'Práctica 1: Casos de Uso', type: 'lesson', lessonId: 'sim_vp_p1' },
-      { id: 'sim-p2', icon: '⏱️', label: 'Práctica 2: Secuencia', type: 'lesson', lessonId: 'sim_vp_p2' },
-      { id: 'sim-p3', icon: '🔄', label: 'Práctica 3: Actividad', type: 'lesson', lessonId: 'sim_vp_p3' },
-      { id: 'sim-p4', icon: '🚦', label: 'Práctica 4: Estados', type: 'lesson', lessonId: 'sim_vp_p4' }
+      { id: 'sim-p1', icon: '🧑', label: 'Práctica 1: Casos de Uso', type: 'simulation', lessonId: 'sim_vp_p1' },
+      { id: 'sim-p2', icon: '⏱️', label: 'Práctica 2: Secuencia', type: 'simulation', lessonId: 'sim_vp_p2' },
+      { id: 'sim-p3', icon: '🔄', label: 'Práctica 3: Actividad', type: 'simulation', lessonId: 'sim_vp_p3' },
+      { id: 'sim-p4', icon: '🚦', label: 'Práctica 4: Estados', type: 'simulation', lessonId: 'sim_vp_p4' }
     ]
   }
 };
