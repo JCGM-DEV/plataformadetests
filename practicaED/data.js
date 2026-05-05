@@ -75,6 +75,17 @@ const UNITS = {
       { id: 'sim-quiz-2', icon: '🧠', label: 'Test de Conocimientos (II)', type: 'quiz', quizId: 'sim_quiz_2' },
       { id: 'sim-p5', icon: '🏥', label: 'Práctica: Clínica Veterinaria (Clases)', type: 'simulation', lessonId: 'sim_vp_p5' },
     ]
+  },
+  simulacros_3: {
+    label: 'EXAMEN 3',
+    title: 'Simulacro 3',
+    sections: [
+      { id: 'sim-quiz-3', icon: '🧠', label: 'Test de Conocimientos (III)', type: 'quiz', quizId: 'sim_quiz_3' },
+      { id: 'sim-p6', icon: '🧑', label: 'P1: Casos de Uso (Academia)', type: 'simulation', lessonId: 'sim_vp_p6' },
+      { id: 'sim-p7', icon: '📐', label: 'P2: Diagrama de Clases (Academia)', type: 'simulation', lessonId: 'sim_vp_p7' },
+      { id: 'sim-p8', icon: '⏱️', label: 'P3: Secuencia (Reservar)', type: 'simulation', lessonId: 'sim_vp_p8' },
+      { id: 'sim-p9', icon: '🔄', label: 'P4: Actividad (Cancelar)', type: 'simulation', lessonId: 'sim_vp_p9' }
+    ]
   }
 };
 
@@ -1727,3 +1738,164 @@ const GIT_CHALLENGES = [
     solution: 'git add .\ngit commit -m "Feature 1"'
   }
 ];
+
+// =============================================
+// SIMULACRO 3 DATA
+// =============================================
+
+QUIZZES.sim_quiz_3 = [
+  { q: "¿Cuál de las siguientes afirmaciones sobre el lenguaje natural y los lenguajes de programación es correcta?", a: "B", options: { A: "El lenguaje natural es el más adecuado para programar por su flexibilidad.", B: "Los lenguajes de programación evitan la ambigüedad mediante reglas formales.", C: "El ordenador interpreta directamente cualquier instrucción humana.", D: "No necesitan sintaxis porque se ejecutan mediante el SO." } },
+  { q: "¿Qué afirmación describe mejor el papel del sistema operativo en la ejecución de programas?", a: "B", options: { A: "Sustituye al código fuente y genera el programa final.", B: "Actúa como intermediario entre los programas y el hardware.", C: "Convierte siempre el código fuente en código objeto antes de ejecutar.", D: "Es una aplicación de usuario que solo sirve para abrir archivos." } },
+  { q: "¿Cuál corresponde a una característica propia de un lenguaje compilado?", a: "B", options: { A: "Se ejecuta línea a línea sin generar código intermedio.", B: "El código fuente se traduce previamente para obtener un ejecutable o código objeto.", C: "Solo puede ejecutarse dentro de un navegador web.", D: "El programador no necesita escribir instrucciones formales." } },
+  { q: "¿Por qué es importante diferenciar fases como análisis, diseño, codificación, pruebas y mantenimiento?", a: "A", options: { A: "Porque cada fase aborda un aspecto distinto y permite organizar mejor el proyecto.", B: "Porque todas las fases son equivalentes y pueden eliminarse.", C: "Porque la fase de pruebas sustituye siempre a la de diseño.", D: "Porque el mantenimiento solo existe antes de entregar el programa." } },
+  { q: "¿Qué representa mejor una función habitual de un entorno de desarrollo integrado (IDE)?", a: "B", options: { A: "Gestionar únicamente el sistema operativo del equipo.", B: "Facilitar tareas como edición de código, ejecución, depuración y gestión.", C: "Diseñar exclusivamente diagramas de red.", D: "Reemplazar al programador en la toma de decisiones de análisis." } },
+  { q: "¿Qué afirmación sobre Visual Studio y Visual Studio Code es correcta?", a: "C", options: { A: "Son exactamente el mismo producto con distinto nombre.", B: "VS Code es un SO y Visual Studio es un navegador.", C: "Visual Studio es un IDE más completo, VS Code es principalmente un editor.", D: "VS Code solo permite Java y Visual Studio solo Python." } },
+  { q: "¿Qué ventaja suelen tener los editores de código frente a los IDE completos?", a: "A", options: { A: "Son más ligeros y consumen menos recursos.", B: "Permiten compilar cualquier lenguaje sin configuración.", C: "Siempre incluyen más herramientas que un IDE.", D: "No permiten instalar extensiones ni personalizar el entorno." } },
+  { q: "¿Cuál es una característica fundamental de UML?", a: "B", options: { A: "Es un lenguaje de programación compilado.", B: "Sirve para modelar visualmente sistemas software, especialmente OO.", C: "Es una base de datos relacional para almacenar clases.", D: "Se utiliza únicamente para escribir código HTML." } },
+  { q: "¿Qué tipo de diagrama UML muestra el sistema desde una perspectiva estática?", a: "A", options: { A: "Diagrama de clases.", B: "Diagrama de secuencia.", C: "Diagrama de actividad.", D: "Diagrama de casos de uso." } },
+  { q: "¿Cuál de las siguientes afirmaciones sobre los diagramas de clases es correcta?", a: "B", options: { A: "Solo representan métodos, pero no atributos.", B: "Representan clases, atributos, métodos y relaciones.", C: "Solo se utilizan después de programar.", D: "No pueden usarse para generar código mediante CASE." } },
+  { q: "En UML, ¿qué indica normalmente una relación de realización?", a: "A", options: { A: "Que una clase implementa una interfaz.", B: "Que una clase contiene obligatoriamente a otra.", C: "Que un objeto se destruye al destruirse otro.", D: "Que un actor utiliza un caso de uso." } },
+  { q: "En un diagrama de casos de uso, ¿qué representa un escenario?", a: "B", options: { A: "Una clase abstracta no instanciable.", B: "Un camino concreto o alternativa dentro de un caso de uso.", C: "Una relación de herencia entre dos actores.", D: "Un atributo privado del sistema." } },
+  { q: "¿Qué diferencia principal existe entre secuencia y comunicación?", a: "A", options: { A: "Secuencia destaca el orden temporal, comunicación destaca la colaboración.", B: "Comunicación solo representa clases abstractas.", C: "Secuencia no permite mostrar mensajes entre objetos.", D: "Ambos son diagramas estructurales." } },
+  { q: "En el diseño de pruebas, ¿qué se busca con las clases de equivalencia?", a: "A", options: { A: "Dividir los datos de entrada en grupos que deberían comportarse igual.", B: "Probar únicamente el diseño gráfico.", C: "Sustituir las pruebas unitarias por las de aceptación.", D: "Evitar cualquier tipo de documentación de casos de prueba." } },
+  { q: "¿Cuál de las siguientes afirmaciones sobre pruebas de regresión es correcta?", a: "A", options: { A: "Sirven para comprobar que cambios recientes no han roto lo que ya funcionaba.", B: "Solo se utilizan antes de escribir el código fuente.", C: "Son pruebas exclusivas de hardware.", D: "Consisten en eliminar código duplicado." } },
+  { q: "¿Cuál es una buena práctica antes de realizar una refactorización importante?", a: "B", options: { A: "Modificar directamente el código sin guardar versiones anteriores.", B: "Asegurarse de poder deshacer cambios y ejecutar pruebas de regresión.", C: "Añadir funcionalidades nuevas para justificar el cambio.", D: "Eliminar todos los comentarios y documentación." } }
+];
+
+LESSONS.sim_vp_p6 = {
+  title: 'P1: Casos de Uso (Academia)',
+  subtitle: 'Gestión de Reservas de Aulas',
+  concepts: [
+    { icon: '🧑', title: 'Actores', body: 'Identifica los roles (ej. Alumno, Administrador).' },
+    { icon: '⭕', title: 'Funcionalidades', body: 'Consultar aulas, Realizar reserva, Cancelar reserva, Gestionar aulas.' }
+  ],
+  fullText: `
+    <div class="simulation-case">
+      <h3>🏫 Enunciado: Sistema de Academia</h3>
+      <p>La academia necesita gestionar la reserva de aulas:</p>
+      <ul>
+        <li>Los <strong>Alumnos</strong> registrados pueden consultar aulas disponibles y realizar reservas.</li>
+        <li>Solo los alumnos marcados como <strong>activos</strong> pueden realizar reservas.</li>
+        <li>Los alumnos pueden <strong>cancelar</strong> sus reservas si aún no han comenzado.</li>
+        <li>El <strong>Administrador</strong> se encarga de registrar nuevas aulas y cambiar su estado (Disponible/Mantenimiento).</li>
+      </ul>
+    </div>
+  `,
+  solution: `
+    <div class="solution-model">
+      <h4>✅ Solución Propuesta (Casos de Uso)</h4>
+      <ul>
+        <li><strong>Actores:</strong> Alumno y Administrador.</li>
+        <li><strong>Casos de Uso:</strong> "Consultar Aulas", "Realizar Reserva" (asociado a Alumno), "Cancelar Reserva" (asociado a Alumno), "Gestionar Aulas" (asociado a Administrador).</li>
+        <li><strong>Restricción:</strong> El sistema valida si el alumno está activo antes de permitir la reserva.</li>
+      </ul>
+    </div>
+  `,
+  codeExample: '',
+  info: { type: 'tip', text: '💡 Recuerda incluir el límite del sistema.' },
+  svg: 'casos_uso'
+};
+
+LESSONS.sim_vp_p7 = {
+  title: 'P2: Diagrama de Clases (Academia)',
+  subtitle: 'Modelado de Entidades y Relaciones',
+  concepts: [
+    { icon: '📐', title: 'Clases', body: 'Alumno, Aula, Reserva, Administrador.' },
+    { icon: '🔗', title: 'Relaciones', body: 'Alumno 1 -- * Reserva. Aula 1 -- * Reserva.' }
+  ],
+  fullText: `
+    <div class="simulation-case">
+      <h3>📐 Requisitos del Diagrama de Clases</h3>
+      <ul>
+        <li><strong>Alumno</strong>: id, nombre, apellidos, email, telefono, activo (boolean).</li>
+        <li><strong>Aula</strong>: codigo, nombre, capacidad, planta, tieneProyector (boolean), estado (Disponible, Ocupada, Mantenimiento).</li>
+        <li><strong>Reserva</strong>: codigoReserva, fecha, horaInicio, horaFin, estado (Pendiente, Confirmada, Cancelada).</li>
+      </ul>
+    </div>
+  `,
+  solution: `
+    <div class="solution-model">
+      <h4>✅ Solución Propuesta (Clases)</h4>
+      <ul>
+        <li><strong>Relaciones:</strong>
+          <br>- Alumno (1) ---- (*) Reserva
+          <br>- Aula (1) ---- (*) Reserva
+        </li>
+        <li><strong>Enumeraciones:</strong> Crea enumeraciones para <code>EstadoAula</code> y <code>EstadoReserva</code>.</li>
+        <li><strong>Métodos:</strong> Alumno: <code>consultarAulas()</code>, <code>reservar()</code>. Administrador: <code>addAula()</code>, <code>modificarEstado()</code>.</li>
+      </ul>
+    </div>
+  `,
+  codeExample: '',
+  info: { type: 'tip', text: '💡 Define bien los tipos de datos (String, int, boolean, Date).' },
+  svg: 'uml_tipos'
+};
+
+LESSONS.sim_vp_p8 = {
+  title: 'P3: Diagrama de Secuencia (Reservar)',
+  subtitle: 'Proceso de Reserva de Aula',
+  concepts: [
+    { icon: '⏱️', title: 'Secuencia', body: 'Interacción Alumno-Sistema-Aula.' }
+  ],
+  fullText: `
+    <div class="simulation-case">
+      <h3>⏱️ Enunciado: Realizar Reserva</h3>
+      <ol>
+        <li>El <strong>Alumno</strong> solicita reservar indicando fecha y horas.</li>
+        <li>El <strong>Sistema</strong> consulta al objeto <strong>Aula</strong> su disponibilidad.</li>
+        <li>Si está disponible, el <strong>Sistema</strong> crea la <strong>Reserva</strong>.</li>
+        <li>El <strong>Sistema</strong> confirma al Alumno.</li>
+        <li>Si no está disponible, informa del error.</li>
+      </ol>
+    </div>
+  `,
+  solution: `
+    <div class="solution-model">
+      <h4>✅ Solución Propuesta (Secuencia)</h4>
+      <ul>
+        <li><strong>Objetos:</strong> <code>:Alumno</code>, <code>:Sistema</code>, <code>a:Aula</code>, <code>r:Reserva</code>.</li>
+        <li><strong>Mensajes:</strong>
+          <br>1. Alumno -> solicitarReserva(datos) -> Sistema.
+          <br>2. Sistema -> getDisponibilidad() -> a:Aula.
+          <br>3. Sistema -> [if disponible] create(datos) -> r:Reserva.
+          <br>4. Sistema -> confirmar() -> Alumno.
+        </li>
+      </ul>
+    </div>
+  `,
+  codeExample: '',
+  info: { type: 'tip', text: '💡 Usa un fragmento "alt" para manejar la disponibilidad.' },
+  svg: 'secuencia'
+};
+
+LESSONS.sim_vp_p9 = {
+  title: 'P4: Diagrama de Actividad (Cancelar)',
+  subtitle: 'Flujo de Cancelación de Reservas',
+  concepts: [
+    { icon: '🔄', title: 'Actividad', body: 'Lógica de cancelación con comprobaciones.' }
+  ],
+  fullText: `
+    <div class="simulation-case">
+      <h3>🔄 Enunciado: Cancelar Reserva</h3>
+      <ol>
+        <li>El Alumno selecciona la reserva.</li>
+        <li>El Sistema comprueba si existe.</li>
+        <li>Si existe, comprueba si ya ha comenzado la franja horaria.</li>
+        <li>Si NO ha comenzado, se cancela y se libera el aula.</li>
+        <li>Se muestra mensaje final (éxito o error).</li>
+      </ol>
+    </div>
+  `,
+  solution: `
+    <div class="solution-model">
+      <h4>✅ Solución Propuesta (Actividad)</h4>
+      <ul>
+        <li><strong>Nodos:</strong> "Seleccionar Reserva", "¿Existe?", "¿Ha comenzado?", "Cambiar a Cancelada", "Liberar Aula", "Mostrar Error".</li>
+        <li><strong>Rombos:</strong> Necesitas dos rombos de decisión para las validaciones de existencia y tiempo.</li>
+      </ul>
+    </div>
+  `,
+  codeExample: '',
+  info: { type: 'tip', text: '💡 No olvides los nodos inicial y final.' },
+  svg: 'estados'
+};
