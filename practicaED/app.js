@@ -136,6 +136,8 @@ function showSimulation(lessonId) {
       3. Haz clic en el recuadro de abajo y pulsa <strong>Ctrl+V</strong> para pegarlo.
     </div>
 
+    ${data.codeExample}
+
     <div id="paste-area" class="paste-area" tabindex="0">
       <div class="paste-placeholder">
         <span>📸</span>
