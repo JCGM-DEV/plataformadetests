@@ -122,7 +122,10 @@ function renderLabUI() {
         <div class="canvas-header">
           <span>Vista Previa</span>
           <div id="realtime-status" class="realtime-status"></div>
-          <button class="btn-tiny" onclick="downloadLabSVG()">💾 Descargar</button>
+          <div style="display:flex; gap:0.5rem">
+            <button id="btn-ai-correct" class="btn-tiny" style="background:var(--accent); color:white; border:none" onclick="requestEDAIFeedback()">🤖 Corregir con IA</button>
+            <button class="btn-tiny" onclick="downloadLabSVG()">💾 Descargar</button>
+          </div>
         </div>
         <div id="lab-canvas" class="lab-canvas"></div>
         <div id="lab-feedback" class="lab-feedback-board hidden">
