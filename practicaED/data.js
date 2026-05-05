@@ -58,14 +58,22 @@ const UNITS = {
     ]
   },
   simulacros: {
-    label: 'EXAMEN',
-    title: 'Simulacros de Examen',
+    label: 'EXAMEN 1',
+    title: 'Simulacro 1',
     sections: [
       { id: 'sim-quiz', icon: '🧠', label: 'Test de Conocimientos', type: 'quiz', quizId: 'sim_quiz' },
       { id: 'sim-p1', icon: '🧑', label: 'Práctica 1: Casos de Uso', type: 'simulation', lessonId: 'sim_vp_p1' },
       { id: 'sim-p2', icon: '⏱️', label: 'Práctica 2: Secuencia', type: 'simulation', lessonId: 'sim_vp_p2' },
       { id: 'sim-p3', icon: '🔄', label: 'Práctica 3: Actividad', type: 'simulation', lessonId: 'sim_vp_p3' },
       { id: 'sim-p4', icon: '🚦', label: 'Práctica 4: Estados', type: 'simulation', lessonId: 'sim_vp_p4' }
+    ]
+  },
+  simulacros_2: {
+    label: 'EXAMEN 2',
+    title: 'Simulacro 2',
+    sections: [
+      { id: 'sim-quiz-2', icon: '🧠', label: 'Test de Conocimientos (II)', type: 'quiz', quizId: 'sim_quiz_2' },
+      { id: 'sim-p5', icon: '🏥', label: 'Práctica: Clínica Veterinaria (Clases)', type: 'simulation', lessonId: 'sim_vp_p5' },
     ]
   }
 };
@@ -297,6 +305,22 @@ const LESSONS = {
 </div>`,
     info: { type: 'tip', text: '💡 <strong>Instrucciones:</strong> Crea la máquina de estados. Exporte como imagen y pégalo en tu entrega.' },
     svg: 'estados'
+  },
+  sim_vp_p5: {
+    title: 'Práctica: Clínica Veterinaria (UML)',
+    subtitle: 'Modelado completo de un sistema de gestión veterinaria',
+    concepts: [
+      { icon: '🏥', title: 'Clínica Veterinaria', body: 'Diseña un diagrama de clases completo para gestionar pacientes, propietarios, empleados, citas, diagnósticos, tratamientos y facturas.' },
+      { icon: '🐾', title: 'Entidades Clave', body: 'Identifica las clases principales: <strong>Animal</strong>, <strong>Propietario</strong>, <strong>Empleado</strong> (Veterinario/Auxiliar), <strong>Cita</strong>, <strong>Diagnóstico</strong>, <strong>Tratamiento</strong>, <strong>Medicamento</strong> y <strong>Factura</strong>.' },
+      { icon: '🔗', title: 'Relaciones Complejas', body: 'Usa herencia para los tipos de empleados. Aplica multiplicidades correctas (ej: un Propietario tiene N Animales). Usa agregación/composición según corresponda.' },
+      { icon: '📋', title: 'Requisitos', body: 'El diagrama debe incluir atributos relevantes, métodos clave y al menos una relación muchos-a-muchos y una enumeración (ej: estados de cita o gravedad).' }
+    ],
+    codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
+  <p style="margin-bottom:1rem; color:var(--text1); font-size:1.1rem;">Las prácticas se realizan con <strong>Visual Paradigm Online</strong>.</p>
+  <a href="https://online.visual-paradigm.com/drive/#proj=0&dashboard" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
+</div>`,
+    info: { type: 'tip', text: '💡 <strong>Enunciado:</strong> Lee detenidamente los requisitos del simulacro. Asegúrate de capturar todas las relaciones de pertenencia y los tipos de empleados mediante herencia.' },
+    svg: 'uml_tipos'
   }
 };
 
@@ -781,6 +805,203 @@ const QUIZZES = {
         opts: ['Para gestionar cambios en el código y poder consultar o restaurar versiones anteriores.', 'Para ejecutar programas sin sistema operativo.', 'Para sustituir los diagramas UML.', 'Para eliminar la necesidad de trabajar en equipo.'],
         ans: 0,
         exp: 'Permite <strong>rastrear y gestionar el historial</strong> de cambios en el código fuente de un proyecto.'
+      }
+    ]
+  },
+  sim_quiz_2: {
+    title: 'Test de Conocimientos (II)',
+    questions: [
+      {
+        q: '¿Cuál de las siguientes afirmaciones describe mejor qué es un programa informático?',
+        hint: 'Definición fundamental de software.',
+        opts: [
+          'Un conjunto de componentes físicos que ejecutan operaciones aritméticas.',
+          'Un conjunto de instrucciones escritas en un lenguaje formal para realizar tareas en un ordenador.',
+          'Un documento de análisis que describe las necesidades del cliente.',
+          'Un sistema operativo que permite comunicarse directamente con el hardware.'
+        ],
+        ans: 1,
+        exp: 'Un <strong>programa</strong> es un conjunto de instrucciones lógicas que el hardware procesa para realizar tareas.'
+      },
+      {
+        q: 'En el proceso de obtención de un programa ejecutable, ¿qué diferencia principal existe entre código fuente y código objeto?',
+        hint: 'Piensa en quién "entiende" cada uno.',
+        opts: [
+          'El código fuente está escrito para ser entendido por personas, mientras que el código objeto es resultado de una traducción más cercana a la máquina.',
+          'El código objeto siempre se escribe manualmente y el código fuente lo genera el compilador.',
+          'El código fuente solo existe en lenguajes interpretados y el código objeto solo en lenguajes visuales.',
+          'No existe diferencia; ambos son nombres distintos para el archivo ejecutable final.'
+        ],
+        ans: 0,
+        exp: 'El <strong>código fuente</strong> lo escribe el humano; el <strong>código objeto</strong> es la traducción intermedia (o final) para la máquina.'
+      },
+      {
+        q: '¿Cuál de las siguientes opciones representa mejor una diferencia entre software de sistema y software de aplicación?',
+        hint: 'Uno ayuda al hardware, otro al usuario.',
+        opts: [
+          'El software de sistema está formado únicamente por documentos, mientras que el software de aplicación contiene código fuente.',
+          'El software de aplicación gestiona directamente la CPU y la memoria, mientras que el software de sistema solo muestra interfaces gráficas.',
+          'El software de sistema permite el funcionamiento general del ordenador, mientras que el software de aplicación resuelve tareas concretas del usuario.',
+          'El software de sistema siempre es libre y el software de aplicación siempre es propietario.'
+        ],
+        ans: 2,
+        exp: 'El <strong>software de sistema</strong> (como el SO) gestiona los recursos; el de <strong>aplicación</strong> resuelve necesidades específicas (Word, navegador).'
+      },
+      {
+        q: '¿Qué afirmación sobre un IDE es más precisa?',
+        hint: 'Significa "Entorno de Desarrollo Integrado".',
+        opts: [
+          'Es únicamente un editor de texto avanzado con coloreado de sintaxis.',
+          'Es una aplicación que integra herramientas para crear, editar, ejecutar, depurar, probar y gestionar proyectos software.',
+          'Es un lenguaje de programación orientado a objetos.',
+          'Es una herramienta exclusiva para generar diagramas UML.'
+        ],
+        ans: 1,
+        exp: 'Un <strong>IDE</strong> (como VS Code o IntelliJ) centraliza todas las herramientas que necesita un programador en una sola interfaz.'
+      },
+      {
+        q: '¿Cuál de las siguientes opciones distingue correctamente un IDE de un editor de código moderno?',
+        hint: 'Grado de "integración" del ciclo de vida.',
+        opts: [
+          'Un editor de código nunca permite instalar extensiones.',
+          'Un IDE suele integrar más herramientas del ciclo de desarrollo, mientras que un editor suele ser más ligero y menos completo.',
+          'Un IDE solo sirve para desarrollo web y un editor solo para aplicaciones de escritorio.',
+          'Un editor siempre incluye compilador, depurador, control de versiones y generador de ejecutables.'
+        ],
+        ans: 1,
+        exp: 'Aunque los editores modernos (con extensiones) se acercan a los IDE, por definición un <strong>IDE</strong> viene "con todo incluido" para el desarrollo profesional.'
+      },
+      {
+        q: 'En relación con el software libre y el software propietario, ¿cuál es la afirmación correcta?',
+        hint: 'Libertad de acceso al código.',
+        opts: [
+          'El software libre permite acceder al código para estudiarlo, modificarlo o mejorarlo, mientras que el propietario restringe esos usos.',
+          'El software propietario siempre es gratuito, pero no puede instalarse en varios equipos.',
+          'El software libre no puede utilizarse en empresas.',
+          'El software propietario siempre es más seguro que el software libre porque oculta su código.'
+        ],
+        ans: 0,
+        exp: 'La clave del <strong>software libre</strong> no es el precio (gratis), sino la <strong>libertad</strong> de ver, tocar y redistribuir el código.'
+      },
+      {
+        q: '¿Cuál es el objetivo principal de UML dentro del desarrollo orientado a objetos?',
+        hint: 'Es un lenguaje de modelado.',
+        opts: [
+          'Sustituir completamente la escritura de código fuente.',
+          'Representar gráfica y textualmente distintos aspectos de un sistema software.',
+          'Ejecutar programas escritos en Java, Python o C++.',
+          'Detectar automáticamente errores de compilación.'
+        ],
+        ans: 1,
+        exp: '<strong>UML</strong> sirve para documentar y diseñar la arquitectura del software de forma que humanos y herramientas CASE lo entiendan.'
+      },
+      {
+        q: '¿Cuál de las siguientes parejas clasifica correctamente los diagramas UML?',
+        hint: 'Estático vs Dinámico.',
+        opts: [
+          'Diagramas compilados y diagramas interpretados.',
+          'Diagramas funcionales y diagramas ejecutables.',
+          'Diagramas estructurales y diagramas de comportamiento.',
+          'Diagramas libres y diagramas propietarios.'
+        ],
+        ans: 2,
+        exp: 'UML divide sus 15 diagramas en <strong>Estructurales</strong> (qué hay) y <strong>Comportamiento</strong> (qué hace).'
+      },
+      {
+        q: 'En un diagrama de clases UML, ¿qué representa una relación de generalización?',
+        hint: 'Se dibuja con una flecha de punta hueca.',
+        opts: [
+          'Una clase utiliza temporalmente los métodos de otra.',
+          'Una clase contiene de forma obligatoria a otra clase.',
+          'Una clase hija hereda de una clase base o superclase.',
+          'Una clase implementa una base de datos externa.'
+        ],
+        ans: 2,
+        exp: 'La <strong>Generalización</strong> es el término formal de UML para la <strong>herencia</strong>.'
+      },
+      {
+        q: 'En la notación UML de clases, ¿qué significa que un atributo o método aparezca precedido por el símbolo -?',
+        hint: 'Signos de visibilidad.',
+        opts: [
+          'Que es público.',
+          'Que es privado.',
+          'Que es protegido.',
+          'Que pertenece al paquete.'
+        ],
+        ans: 1,
+        exp: 'El símbolo <strong>-</strong> (menos) indica visibilidad <strong>private</strong>. El símbolo + es public, y # es protected.'
+      },
+      {
+        q: '¿Cuál de las siguientes afirmaciones diferencia mejor una composición de una agregación en un diagrama de clases?',
+        hint: 'Diamante relleno vs diamante hueco.',
+        opts: [
+          'En la composición existe una relación más fuerte de pertenencia y dependencia de ciclo de vida entre las clases.',
+          'En la agregación siempre hay herencia múltiple.',
+          'La composición se representa con una flecha discontinua y la agregación con una línea sin símbolos.',
+          'La agregación solo se usa para interfaces y la composición solo para clases abstractas.'
+        ],
+        ans: 0,
+        exp: 'En la <strong>composición</strong> (◆), si el contenedor muere, las partes mueren. En la agregación (◇), las partes pueden sobrevivir solas.'
+      },
+      {
+        q: 'En un diagrama de casos de uso, ¿qué es un actor?',
+        hint: 'Representación externa del sistema.',
+        opts: [
+          'Siempre una persona física que utiliza directamente la interfaz gráfica.',
+          'Cualquier elemento externo que interactúa con el sistema, como una persona, otro sistema o un subsistema.',
+          'Una clase interna encargada de almacenar datos.',
+          'Un método privado que ejecuta una funcionalidad.'
+        ],
+        ans: 1,
+        exp: 'Un <strong>actor</strong> es cualquier entidad (humana o no) que intercambia información con el sistema desde fuera.'
+      },
+      {
+        q: 'En un diagrama de secuencia, ¿qué aspecto se representa principalmente?',
+        hint: 'Énfasis en el tiempo.',
+        opts: [
+          'La estructura estática de las clases y sus atributos.',
+          'La evolución temporal de las interacciones y mensajes entre objetos o actores.',
+          'La relación jerárquica entre clases padre e hijas.',
+          'La instalación de un entorno de desarrollo.'
+        ],
+        ans: 1,
+        exp: 'El diagrama de <strong>secuencia</strong> es dinámico y muestra el "paso a paso" temporal de los mensajes.'
+      },
+      {
+        q: '¿Cuál es la diferencia más adecuada entre pruebas de caja negra y pruebas de caja blanca?',
+        hint: 'Ver el interior vs no verlo.',
+        opts: [
+          'Las pruebas de caja negra se centran en entradas y salidas sin analizar el código interno, mientras que las de caja blanca consideran la estructura interna del programa.',
+          'Las pruebas de caja blanca solo se hacen al final del proyecto y las de caja negra solo al principio.',
+          'Las pruebas de caja negra requieren conocer todas las ramas del código.',
+          'Las pruebas de caja blanca nunca pueden automatizarse.'
+        ],
+        ans: 0,
+        exp: 'Caja <strong>negra</strong>: probamos funcionalidad (I/O). Caja <strong>blanca</strong>: probamos lógica interna (bucles, ifs, etc.).'
+      },
+      {
+        q: '¿Qué finalidad tiene colocar un punto de ruptura durante la depuración de un programa?',
+        hint: 'Breakpoint.',
+        opts: [
+          'Eliminar definitivamente una línea de código sospechosa.',
+          'Detener la ejecución en un punto concreto para analizar el estado del programa y sus variables.',
+          'Convertir automáticamente el código fuente en código ejecutable.',
+          'Generar documentación automática de una clase.'
+        ],
+        ans: 1,
+        exp: 'Un <strong>punto de ruptura</strong> (breakpoint) permite pausar el programa para ver qué valores tienen las variables en ese instante exacto.'
+      },
+      {
+        q: '¿Cuál de las siguientes afirmaciones sobre refactorización es correcta?',
+        hint: 'Mejorar sin romper.',
+        opts: [
+          'Consiste en añadir nuevas funcionalidades visibles para el usuario.',
+          'Consiste en modificar el código para mejorar su estructura, legibilidad y mantenimiento sin cambiar su funcionamiento externo.',
+          'Consiste en eliminar todas las pruebas unitarias para simplificar el proyecto.',
+          'Consiste en transformar código fuente en código objeto mediante un compilador.'
+        ],
+        ans: 1,
+        exp: '<strong>Refactorizar</strong> es limpiar el código para que sea más fácil de mantener en el futuro, manteniendo la misma funcionalidad para el usuario.'
       }
     ]
   }
