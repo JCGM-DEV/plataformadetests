@@ -278,6 +278,7 @@ const LESSONS = {
     solution: `
       <div class="solution-model">
         <h4>✅ Solución Propuesta (Casos de Uso)</h4>
+        <img src="img/sim1_p1.png" alt="Diagrama de Casos de Uso Bicis" style="width:100%; border-radius:8px; margin:1rem 0; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
         <ul>
           <li><strong>Actores:</strong> Usuario (Socio) y Empleado (Mantenimiento).</li>
           <li><strong>Casos de Uso base:</strong> "Alquilar Bicicleta", "Devolver Bicicleta", "Buscar Bici", "Gestionar Inventario".</li>
@@ -313,6 +314,7 @@ const LESSONS = {
     solution: `
       <div class="solution-model">
         <h4>✅ Solución Propuesta (Secuencia)</h4>
+        <img src="img/sim1_p2.png" alt="Diagrama de Secuencia Bicis" style="width:100%; border-radius:8px; margin:1rem 0; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
         <ul>
           <li><strong>Participantes (Objetos):</strong> <code>:Socio</code>, <code>:AppAlquiler</code>, <code>b:Bicicleta</code>, <code>:Registro</code>.</li>
           <li><strong>Flujo principal:</strong>
@@ -358,6 +360,7 @@ const LESSONS = {
     solution: `
       <div class="solution-model">
         <h4>✅ Solución Propuesta (Actividad)</h4>
+        <img src="img/sim1_p3.png" alt="Diagrama de Actividad Bicis" style="width:100%; border-radius:8px; margin:1rem 0; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
         <ul>
           <li><strong>Nodos de acción:</strong> "Entregar Bici", "Inspeccionar", "Registrar Avería", "Emitir Multa", "Marcar Disponible", "Notificar App".</li>
           <li><strong>Nodo de decisión:</strong> Rombo con dos salidas: "[daños]" y "[sin daños]".</li>
@@ -395,6 +398,7 @@ const LESSONS = {
     solution: `
       <div class="solution-model">
         <h4>✅ Solución Propuesta (Estados)</h4>
+        <img src="img/sim1_p4.png" alt="Diagrama de Estados Bicis" style="width:100%; border-radius:8px; margin:1rem 0; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
         <ul>
           <li><strong>Estados:</strong> Disponible (inicial), Alquilada, En Reparación, Retirada (final).</li>
           <li><strong>Transiciones clave:</strong>
@@ -456,6 +460,7 @@ const LESSONS = {
     solution: `
       <div class="solution-model">
         <h4>✅ Solución Propuesta (Diagrama de Clases)</h4>
+        <img src="img/sim2_p5.png" alt="Diagrama de Clases Veterinaria" style="width:100%; border-radius:8px; margin:1rem 0; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
         <ul>
           <li><strong>Herencia:</strong> Clase <code>Empleado</code> (superclase) con subclases <code>Veterinario</code> y <code>Auxiliar</code>.</li>
           <li><strong>Relaciones 1:N:</strong>
@@ -500,6 +505,7 @@ const LESSONS = {
     solution: `
       <div class="solution-model">
         <h4>✅ Solución Propuesta (Casos de Uso)</h4>
+        <img src="img/sim3_p1.png" alt="Diagrama de Casos de Uso Academia" style="width:100%; border-radius:8px; margin:1rem 0; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
         <ul>
           <li><strong>Actores:</strong> Alumno y Administrador.</li>
           <li><strong>Casos de Uso:</strong> "Consultar Aulas", "Realizar Reserva" (asociado a Alumno), "Cancelar Reserva" (asociado a Alumno), "Gestionar Aulas" (asociado a Administrador).</li>
@@ -531,6 +537,7 @@ const LESSONS = {
     solution: `
       <div class="solution-model">
         <h4>✅ Solución Propuesta (Clases)</h4>
+        <img src="img/sim3_p2.png" alt="Diagrama de Clases Academia" style="width:100%; border-radius:8px; margin:1rem 0; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
         <ul>
           <li><strong>Relaciones:</strong>
             <br>- Alumno (1) ---- (*) Reserva
@@ -566,6 +573,7 @@ const LESSONS = {
     solution: `
       <div class="solution-model">
         <h4>✅ Solución Propuesta (Secuencia)</h4>
+        <img src="img/sim3_p3.png" alt="Diagrama de Secuencia Reserva" style="width:100%; border-radius:8px; margin:1rem 0; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
         <ul>
           <li><strong>Objetos:</strong> <code>:Alumno</code>, <code>:Sistema</code>, <code>a:Aula</code>, <code>r:Reserva</code>.</li>
           <li><strong>Mensajes:</strong>
@@ -602,6 +610,7 @@ const LESSONS = {
     solution: `
       <div class="solution-model">
         <h4>✅ Solución Propuesta (Actividad)</h4>
+        <img src="img/sim3_p4.png" alt="Diagrama de Actividad Cancelación" style="width:100%; border-radius:8px; margin:1rem 0; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
         <ul>
           <li><strong>Nodos:</strong> "Seleccionar Reserva", "¿Existe?", "¿Ha comenzado?", "Cambiar a Cancelada", "Liberar Aula", "Mostrar Error".</li>
           <li><strong>Rombos:</strong> Necesitas dos rombos de decisión para las validaciones de existencia y tiempo.</li>
