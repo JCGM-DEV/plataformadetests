@@ -246,64 +246,160 @@ const LESSONS = {
 
   sim_vp_p1: {
     title: 'Práctica 1: Diagrama de Casos de Uso',
-    subtitle: 'Sistema de Gestión de Préstamos de Bicicletas',
+    subtitle: 'Sistema de Gestión de Alquiler de Bicicletas',
     concepts: [
-      { icon: '🧑', title: 'Identificar Actores', body: 'Identifica al menos 2 tipos de actores principales que interactuarán con el sistema (ej. Usuario, Empleado).' },
-      { icon: '⭕', title: 'Casos de Uso (Funcionalidades)', body: 'Define al menos 5 funcionalidades (Buscar, Prestar, Devolver, Registrar, etc).' },
-      { icon: '➡️', title: 'Asociaciones', body: 'Representa las relaciones de comunicación entre los actores y los casos de uso.' },
-      { icon: '«include»', title: 'Relación de Inclusión', body: 'Identifica y representa al menos una relación de inclusión («include»).' },
-      { icon: '«extend»', title: 'Relación de Extensión', body: 'Identifica y representa al menos una relación de extensión («extend»).' },
-      { icon: '📦', title: 'Límite del Sistema', body: 'Ubica los casos de uso dentro del rectángulo de límite del sistema y los actores fuera.' }
+      { icon: '🧑', title: 'Actores', body: 'Identifica los roles externos (ej. Cliente, Administrador).' },
+      { icon: '⭕', title: 'Funcionalidades', body: 'Define las acciones principales del sistema.' },
+      { icon: '🔗', title: 'Relaciones', body: 'Usa asociaciones, «include» y «extend» según la lógica.' }
     ],
+    fullText: `
+      <div class="simulation-case">
+        <h3>🚲 Enunciado: Sistema de Alquiler de Bicis</h3>
+        <p>Se desea modelar un sistema para una empresa de alquiler de bicicletas urbanas. El sistema debe permitir:</p>
+        <ul>
+          <li>Los <strong>Usuarios</strong> pueden buscar bicicletas disponibles, alquilar una y devolverla.</li>
+          <li>Para alquilar una bicicleta, es <strong>obligatorio</strong> que el usuario esté identificado en el sistema.</li>
+          <li>Al devolver la bicicleta, el sistema permite de forma <strong>opcional</strong> dejar una reseña sobre el estado de la misma.</li>
+          <li>Los <strong>Empleados</strong> pueden añadir nuevas bicicletas al inventario y gestionar las averías reportadas.</li>
+        </ul>
+      </div>
+    `,
+    solution: `
+      <div class="solution-model">
+        <h4>✅ Solución Propuesta (Casos de Uso)</h4>
+        <ul>
+          <li><strong>Actores:</strong> Usuario (Socio) y Empleado (Mantenimiento).</li>
+          <li><strong>Casos de Uso base:</strong> "Alquilar Bicicleta", "Devolver Bicicleta", "Buscar Bici", "Gestionar Inventario".</li>
+          <li><strong>Relación Include:</strong> "Alquilar Bicicleta" ---«include»---> "Identificarse".</li>
+          <li><strong>Relación Extend:</strong> "Dejar Reseña" ---«extend»---> "Devolver Bicicleta" (Punto de extensión: Tras confirmar entrega).</li>
+        </ul>
+      </div>
+    `,
     codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
-  <p style="margin-bottom:1rem; color:var(--text1); font-size:1.1rem;">Las prácticas se realizan con <strong>Visual Paradigm Online</strong>.</p>
   <a href="https://online.visual-paradigm.com/drive/#proj=0&dashboard" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
 </div>`,
-    info: { type: 'tip', text: '💡 <strong>Instrucciones:</strong> Dibuja el diagrama en Visual Paradigm, expórtalo como imagen (PNG/JPG) y añádelo a tu documento de entrega.' },
+    info: { type: 'tip', text: '💡 <strong>Recuerda</strong>: Los actores siempre van fuera del rectángulo del sistema.' },
     svg: 'casos_uso'
   },
   sim_vp_p2: {
     title: 'Práctica 2: Diagrama de Secuencia',
-    subtitle: 'Interacción para "Prestar Bicicleta"',
+    subtitle: 'Proceso de "Alquilar Bicicleta"',
     concepts: [
-      { icon: '👤', title: 'Actor / Usuario', body: 'Inicia el flujo solicitando "Prestar Bicicleta".' },
-      { icon: '🧱', title: 'Objetos Clave', body: 'Identifica las clases u objetos que participan (Sistema, Bicicleta, Registro, etc).' },
-      { icon: '⬇️', title: 'Líneas de Vida', body: 'Traza las líneas verticales para cada participante en la interacción.' },
-      { icon: '▬', title: 'Barras de Activación', body: 'Indica los focos de control donde el objeto procesa datos.' },
-      { icon: '→', title: 'Mensajes y Respuestas', body: 'Dibuja los mensajes (llamadas a métodos) y los retornos en el orden temporal correcto.' }
+      { icon: '⏳', title: 'Línea de tiempo', body: 'Representa el orden de los mensajes de arriba a abajo.' },
+      { icon: '🧱', title: 'Objetos', body: 'Identifica quién envía y quién recibe cada mensaje.' }
     ],
+    fullText: `
+      <div class="simulation-case">
+        <h3>⏱️ Enunciado: Secuencia de Alquiler</h3>
+        <p>Modela la interacción temporal para el proceso de alquiler:</p>
+        <ol>
+          <li>El <strong>Usuario</strong> solicita alquilar una bicicleta al <strong>Sistema</strong>.</li>
+          <li>El <strong>Sistema</strong> verifica en la base de datos de <strong>Bicicletas</strong> si el ID solicitado está libre.</li>
+          <li>Si está libre, el <strong>Sistema</strong> crea un nuevo <strong>Registro</strong> de alquiler y confirma al usuario.</li>
+        </ol>
+      </div>
+    `,
+    solution: `
+      <div class="solution-model">
+        <h4>✅ Solución Propuesta (Secuencia)</h4>
+        <ul>
+          <li><strong>Participantes (Objetos):</strong> <code>:Socio</code>, <code>:AppAlquiler</code>, <code>b:Bicicleta</code>, <code>:Registro</code>.</li>
+          <li><strong>Flujo principal:</strong>
+            <br>1. Socio -> solicitarAlquiler(id) -> AppAlquiler.
+            <br>2. AppAlquiler -> checkEstado() -> b:Bicicleta.
+            <br>3. AppAlquiler -> create() -> :Registro (Mensaje de creación).
+            <br>4. AppAlquiler -> confirmación -> Socio.
+          </li>
+          <li><strong>Nota:</strong> Usa barras de activación largas para la AppAlquiler mientras gestiona la lógica interna.</li>
+        </ul>
+      </div>
+    `,
     codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
   <a href="https://online.visual-paradigm.com/drive/#proj=0&dashboard" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
 </div>`,
-    info: { type: 'tip', text: '💡 <strong>Instrucciones:</strong> Representa la sucesión de llamadas para completar un préstamo. Exporte como imagen.' },
+    info: { type: 'tip', text: '💡 <strong>Clave</strong>: No olvides los mensajes de retorno (línea discontinua).' },
     svg: 'secuencia'
   },
   sim_vp_p3: {
     title: 'Práctica 3: Diagrama de Actividad',
-    subtitle: 'Flujo del proceso "Devolver Bicicleta"',
+    subtitle: 'Flujo de "Devolución y Revisión"',
     concepts: [
-      { icon: '⚫', title: 'Nodo Inicial y Final', body: 'Todo diagrama de actividad necesita un punto de inicio y al menos un punto final.' },
-      { icon: '⭕', title: 'Actividades', body: 'Las acciones que se realizan paso a paso (Evaluar daños, Actualizar stock...).' },
-      { icon: '🔷', title: 'Decisión (Rombo)', body: 'Implementa la decisión: ¿Devuelta con retraso o daños? Sí → Penalizar. No → Actualizar como disponible.' }
+      { icon: '🔄', title: 'Flujo lógico', body: 'Representa pasos y decisiones algorítmicas.' },
+      { icon: '🔷', title: 'Decisiones', body: 'Usa rombos para bifurcar el camino según condiciones.' }
     ],
+    fullText: `
+      <div class="simulation-case">
+        <h3>🔄 Enunciado: Flujo de Devolución</h3>
+        <p>Diseña el proceso de devolución de una bicicleta:</p>
+        <ol>
+          <li>El usuario entrega la bicicleta en la estación.</li>
+          <li>El empleado realiza una <strong>inspección visual</strong>.</li>
+          <li><strong>Decisión:</strong> ¿Tiene daños graves?
+            <ul>
+              <li><strong>SÍ</strong>: Se registra la avería y se emite una multa automática.</li>
+              <li><strong>NO</strong>: Se marca la bicicleta como "Disponible".</li>
+            </ul>
+          </li>
+          <li>El proceso finaliza notificando al usuario por la App.</li>
+        </ol>
+      </div>
+    `,
+    solution: `
+      <div class="solution-model">
+        <h4>✅ Solución Propuesta (Actividad)</h4>
+        <ul>
+          <li><strong>Nodos de acción:</strong> "Entregar Bici", "Inspeccionar", "Registrar Avería", "Emitir Multa", "Marcar Disponible", "Notificar App".</li>
+          <li><strong>Nodo de decisión:</strong> Rombo con dos salidas: "[daños]" y "[sin daños]".</li>
+          <li><strong>Estructura:</strong> El flujo debe ser lineal hasta el rombo, abrirse en dos ramas y volver a unirse (Merge) antes del paso final "Notificar App".</li>
+        </ul>
+      </div>
+    `,
     codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
-  <a href="https://online.visual-paradigm.com/es/diagrams/features/uml-tool/" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
+  <a href="https://online.visual-paradigm.com/drive/#proj=0&dashboard" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
 </div>`,
-    info: { type: 'tip', text: '💡 <strong>Instrucciones:</strong> Modela el proceso secuencial con sus bifurcaciones. Exporte como imagen.' },
+    info: { type: 'tip', text: '💡 <strong>Merge</strong>: Usa un rombo de unión para juntar las ramas antes del nodo final.' },
     svg: 'estados'
   },
   sim_vp_p4: {
     title: 'Práctica 4: Diagrama de Estados',
     subtitle: 'Ciclo de vida de una "Bicicleta"',
     concepts: [
-      { icon: '🚲', title: 'Objeto Bicicleta', body: 'Analiza los posibles estados estables en los que puede estar una bicicleta en el sistema.' },
-      { icon: '⭕', title: 'Estados Posibles', body: 'Por ejemplo: Disponible, Prestada, En Mantenimiento, Retirada, etc.' },
-      { icon: '→', title: 'Transiciones', body: 'Representa las acciones que hacen cambiar la bicicleta de un estado a otro (ej. "prestar()", "devolver()", "avería()").' }
+      { icon: '🚲', title: 'Estados', body: 'Situaciones estables del objeto (ej. Disponible, Prestada).' },
+      { icon: '→', title: 'Transiciones', body: 'Acciones o eventos que cambian el estado.' }
     ],
+    fullText: `
+      <div class="simulation-case">
+        <h3>🚦 Enunciado: Estados de la Bicicleta</h3>
+        <p>Modela los estados por los que pasa una bicicleta en la empresa:</p>
+        <ul>
+          <li>Al comprarla, entra en estado <strong>Disponible</strong>.</li>
+          <li>Si un socio la alquila, pasa a <strong>Alquilada</strong>.</li>
+          <li>Al devolverla, vuelve a estar <strong>Disponible</strong>.</li>
+          <li>Si se detecta una avería, pasa a <strong>En Reparación</strong>.</li>
+          <li>Una vez reparada, vuelve a estar <strong>Disponible</strong>.</li>
+          <li>Si la avería es irreparable, pasa a <strong>Retirada</strong> (Estado Final).</li>
+        </ul>
+      </div>
+    `,
+    solution: `
+      <div class="solution-model">
+        <h4>✅ Solución Propuesta (Estados)</h4>
+        <ul>
+          <li><strong>Estados:</strong> Disponible (inicial), Alquilada, En Reparación, Retirada (final).</li>
+          <li><strong>Transiciones clave:</strong>
+            <br>- Disponible --[alquilar]--> Alquilada
+            <br>- Alquilada --[devolver]--> Disponible
+            <br>- Alquilada --[avería]--> En Reparación
+            <br>- En Reparación --[arreglada]--> Disponible
+            <br>- En Reparación --[desguace]--> Retirada (⊙)
+          </li>
+        </ul>
+      </div>
+    `,
     codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
-  <a href="https://online.visual-paradigm.com/es/diagrams/features/uml-tool/" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
+  <a href="https://online.visual-paradigm.com/drive/#proj=0&dashboard" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
 </div>`,
-    info: { type: 'tip', text: '💡 <strong>Instrucciones:</strong> Crea la máquina de estados. Exporte como imagen y pégalo en tu entrega.' },
+    info: { type: 'tip', text: '💡 <strong>Estado Final</strong>: Se representa con un ojo de buey (círculo con punto central).' },
     svg: 'estados'
   },
   sim_vp_p5: {
@@ -344,6 +440,25 @@ const LESSONS = {
           <h4>5. Medicamentos y Facturas</h4>
           <p>Un tratamiento puede incluir uno o varios <strong>medicamentos</strong> (dosis y frecuencia). Un mismo medicamento puede usarse en muchos tratamientos. De cada medicamento interesa: nombre comercial, principio activo y si requiere receta. Además, cada cita puede generar una <strong>factura</strong> (fecha emisión, importe total, estado de pago y método de pago).</p>
         </div>
+      </div>
+    `,
+    solution: `
+      <div class="solution-model">
+        <h4>✅ Solución Propuesta (Diagrama de Clases)</h4>
+        <ul>
+          <li><strong>Herencia:</strong> Clase <code>Empleado</code> (superclase) con subclases <code>Veterinario</code> y <code>Auxiliar</code>.</li>
+          <li><strong>Relaciones 1:N:</strong>
+            <br>- Propietario (1) -- (*) Animal
+            <br>- Animal (1) -- (*) Cita
+            <br>- Veterinario (1) -- (*) Cita
+            <br>- Cita (1) -- (0..*) Diagnóstico
+            <br>- Diagnóstico (1) -- (0..*) Tratamiento
+            <br>- Cita (1) -- (0..1) Factura
+          </li>
+          <li><strong>Relación N:M:</strong> <code>Tratamiento</code> (*) -- (*) <code>Medicamento</code> (Se requiere una clase intermedia o lista de medicamentos).</li>
+          <li><strong>Atributos:</strong> No olvides tipos de datos (String, Date, float) y visibilidad (- para atributos, + para métodos).</li>
+          <li><strong>Enumeraciones:</strong> Crea tipos <code>EstadoCita</code> (PENDIENTE, etc.) y <code>Gravedad</code> (LEVE, MEDIA, GRAVE).</li>
+        </ul>
       </div>
     `,
     codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">

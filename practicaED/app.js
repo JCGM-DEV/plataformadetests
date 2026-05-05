@@ -153,6 +153,13 @@ function showSimulation(lessonId) {
       <button class="btn-secondary" onclick="resetSim()">🗑️ Borrar imagen</button>
     </div>
 
+    <div class="solution-container" style="margin-top: 2rem;">
+      <button class="btn-solution" onclick="toggleSimulationSolution()">👁️ Ver Solución Modelo</button>
+      <div id="simulation-solution" class="solution-content hidden">
+        ${data.solution || '<p>No hay solución disponible para este ejercicio.</p>'}
+      </div>
+    </div>
+
     <div id="sim-feedback" class="lab-feedback-board hidden" style="margin-top:2rem">
        <div class="fb-icon">🎓</div>
        <div id="sim-fb-msg" class="fb-msg">...</div>
@@ -160,6 +167,20 @@ function showSimulation(lessonId) {
   `;
 
   setupPasteListener();
+}
+
+function toggleSimulationSolution() {
+  const content = document.getElementById('simulation-solution');
+  const btn = document.querySelector('.btn-solution');
+  if (content.classList.contains('hidden')) {
+    content.classList.remove('hidden');
+    btn.textContent = '🙈 Ocultar Solución';
+    btn.classList.add('active');
+  } else {
+    content.classList.add('hidden');
+    btn.textContent = '👁️ Ver Solución Modelo';
+    btn.classList.remove('active');
+  }
 }
 
 function setupPasteListener() {
