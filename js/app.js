@@ -2953,7 +2953,14 @@ function closeSummary() {
 
 // ─── RANKING SYSTEM (GLOBAL) ────────────────────────────────────
 function getUnitTitle(subjectId, unitId) {
-    if (!unitId || unitId.toString().startsWith('sim')) return "Simulacro General";
+    if (!unitId) return "Simulacro General";
+    
+    // Handle simulations with specific numbers
+    if (unitId.toString().startsWith('sim')) {
+        const parts = unitId.toString().split('_');
+        const num = (parts.length > 1) ? parts[1] : '1';
+        return `Simulacro Examen ${num}`;
+    }
     
     const prefixes = {
         sistemas_informaticos: 'si',
