@@ -217,11 +217,20 @@ Responde en español.`;
         board.scrollIntoView({ behavior: 'smooth' });
 
         // Extract score and save to system
-        const notaMatch = feedback.match(/\[NOTA\]:\s*([\d.]+)/);
+        const notaRegex = /(?:\[NOTA\]|NOTA|Nota)\s*[:\-]?\s*([\d.,]+)/i;
+        const notaMatch = feedback.match(notaRegex);
+        
         if (notaMatch) {
-            const nota = parseFloat(notaMatch[1]);
+            let notaStr = notaMatch[1].replace(',', '.');
+            const nota = parseFloat(notaStr);
+            
             if (typeof sectionScores !== 'undefined') {
-                sectionScores[simId] = nota;
+                // Use activeSection (e.g., 'sim-p1') instead of simId ('sim_vp_p1')
+                const scoreKey = (typeof activeSection !== 'undefined' && activeSection) ? activeSection : simId;
+                sectionScores[scoreKey] = nota;
+                
+                console.log(`Saved score ${nota} for key ${scoreKey}`);
+                
                 // Force marked as done and update UI
                 if (typeof markDone === 'function') markDone();
                 else if (typeof updateLiveGrade === 'function') updateLiveGrade();
