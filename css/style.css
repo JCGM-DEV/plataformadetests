@@ -3810,3 +3810,114 @@ body.has-active-session .assistant-fab {
     background: var(--primary-color);
     color: white;
 }
+
+/* ── HALL OF FAME (TOP 5) ────────────────────────────────── */
+.hall-of-fame-section {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(15, 23, 42, 0.5));
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    border-radius: 24px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+}
+
+.hall-of-fame-section::before {
+    content: "🏆";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 10rem;
+    opacity: 0.05;
+    transform: rotate(15deg);
+}
+
+.hall-of-fame-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fbbf24;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+}
+
+.hof-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.hof-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.5rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.hof-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: #fbbf24;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3), 0 0 20px rgba(251, 191, 36, 0.1);
+}
+
+.hof-item.rank-1 { border-color: #fbbf24; background: linear-gradient(to bottom, rgba(251, 191, 36, 0.05), transparent); }
+.hof-item.rank-2 { border-color: #94a3b8; }
+.hof-item.rank-3 { border-color: #d97706; }
+
+.hof-rank {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+}
+
+.hof-username {
+    font-weight: 800;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.hof-stats {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hof-stats strong {
+    color: var(--text-primary);
+}
+
+.hof-badge {
+    background: linear-gradient(135deg, #fbbf24, #d97706);
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 10px rgba(251, 191, 36, 0.3);
+}
+
+@media (max-width: 600px) {
+    .hof-grid {
+        grid-template-columns: 1fr;
+    }
+}

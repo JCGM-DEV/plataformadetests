@@ -2,40 +2,6 @@
 // LM LAB — DATA
 // =============================================
 const UNITS = {
-  html: {
-    label: 'T2', title: 'HTML5 & CSS3',
-    sections: [
-      { id: 'html-teoria', icon: '📖', label: 'Teoría: HTML5 Semántico', type: 'lesson', lessonId: 'html5' },
-      { id: 'html-teoria2', icon: '📖', label: 'Teoría: CSS3 y Selectores', type: 'lesson', lessonId: 'css3' },
-      { id: 'html-quiz1', icon: '🧠', label: 'Quiz: HTML5', type: 'quiz', quizId: 'html_quiz' },
-      { id: 'html-quiz2', icon: '🧠', label: 'Quiz: CSS3', type: 'quiz', quizId: 'css_quiz' },
-      { id: 'html-drag1', icon: '🎯', label: 'Ejercicio: Etiquetas semánticas', type: 'drag', dragId: 'semantica' },
-      { id: 'html-editor', icon: '⌨️', label: 'Editor HTML en Vivo', type: 'editor', editorId: 'html_editor' },
-    ]
-  },
-  xml: {
-    label: 'T3–T4', title: 'XML & XSD',
-    sections: [
-      { id: 'xml-teoria', icon: '📖', label: 'Teoría: XML Bien Formado', type: 'lesson', lessonId: 'xml_teoria' },
-      { id: 'xml-teoria2', icon: '📖', label: 'Teoría: XSD (XML Schema)', type: 'lesson', lessonId: 'xsd_teoria' },
-      { id: 'xml-quiz1', icon: '🧠', label: 'Quiz: XML', type: 'quiz', quizId: 'xml_quiz' },
-      { id: 'xml-quiz2', icon: '🧠', label: 'Quiz: XSD', type: 'quiz', quizId: 'xsd_quiz' },
-      { id: 'xml-drag1', icon: '🎯', label: 'Ejercicio: Bien formado vs Válido', type: 'drag', dragId: 'xml_valido' },
-      { id: 'xml-editor', icon: '⌨️', label: 'Editor XML con Validación', type: 'editor', editorId: 'xml_editor' },
-      { id: 'xml-reto', icon: '🏆', label: 'Reto María: XSD Avanzado', type: 'lesson', lessonId: 'reto_xsd_maria' },
-    ]
-  },
-  xslt: {
-    label: 'T5', title: 'XPath & XSLT',
-    sections: [
-      { id: 'xslt-teoria', icon: '📖', label: 'Teoría: XPath', type: 'lesson', lessonId: 'xpath_teoria' },
-      { id: 'xslt-teoria2', icon: '📖', label: 'Teoría: XSLT', type: 'lesson', lessonId: 'xslt_teoria' },
-      { id: 'xslt-quiz1', icon: '🧠', label: 'Quiz: XPath y XSLT', type: 'quiz', quizId: 'xslt_quiz' },
-      { id: 'xslt-drag1', icon: '🎯', label: 'Ejercicio: Instrucciones XSLT', type: 'drag', dragId: 'xslt_instr' },
-      { id: 'xslt-xpath', icon: '🧪', label: 'Evaluador XPath Interactivo', type: 'xpath', xpathId: 'xpath_main' },
-      { id: 'xslt-reto', icon: '🏆', label: 'Reto María: Transformación', type: 'lesson', lessonId: 'reto_xslt_maria' },
-    ]
-  },
   bachero: {
     label: 'EXAMEN', title: 'Repaso Práctico Bachero',
     sections: [

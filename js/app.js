@@ -3036,7 +3036,7 @@ async function renderRanking() {
     try {
         const snapshot = await Auth.db.collection('rankings')
             .orderBy('score', 'desc')
-            .limit(200) // Increase limit for nested results
+            .limit(500) // Increase limit for nested results
             .get();
         
         if (snapshot.empty) {
@@ -3113,6 +3113,8 @@ async function renderRanking() {
                 <span class="info-icon">💡</span>
                 <p>El ranking solo contabiliza exámenes estándar y simulacros. Los repasos de fallos no se incluyen por justicia competitiva.</p>
             </div>
+
+            ${renderHallOfFame(data)}
             
             <div class="ranking-section">
                 <h3 class="ranking-section-title">🏆 Simulacros Generales</h3>
@@ -3124,6 +3126,49 @@ async function renderRanking() {
                 <div id="ranking-themes-grid" class="ranking-grid"></div>
             </div>
         `;
+
+        function renderHallOfFame(allData) {
+            const userStats = {};
+            allData.forEach(entry => {
+                if (!entry.userId) return;
+                if (!userStats[entry.userId]) {
+                    userStats[entry.userId] = { username: entry.username, passes: 0, totalScore: 0, attempts: 0 };
+                }
+                const s = userStats[entry.userId];
+                if (entry.score >= 5) s.passes++;
+                s.totalScore += entry.score;
+                s.attempts++;
+            });
+
+            const hof = Object.values(userStats)
+                .map(u => ({ ...u, avg: u.totalScore / (u.attempts || 1) }))
+                .sort((a, b) => b.passes - a.passes || b.avg - a.avg)
+                .slice(0, 5);
+
+            if (hof.length === 0) return '';
+
+            const medals = ['🥇', '🥈', '🥉', '🏅', '🏅'];
+            const labels = ['Leyenda', 'Maestro', 'Experto', 'Promesa', 'Promesa'];
+
+            return `
+                <div class="hall-of-fame-section">
+                    <h3 class="hall-of-fame-title">✨ Cuadro de Honor: Hall of Fame</h3>
+                    <div class="hof-grid">
+                        ${hof.map((u, i) => `
+                            <div class="hof-item rank-${i+1}">
+                                <div class="hof-rank">${medals[i]}</div>
+                                <div class="hof-username">${u.username}</div>
+                                <div class="hof-stats">
+                                    <span><strong>${u.passes}</strong> aprobados</span>
+                                    <span>Media: <strong>${u.avg.toFixed(2).replace('.', ',')}</strong></span>
+                                </div>
+                                <div class="hof-badge">${labels[i]}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
 
         const renderGroup = (group, gridId) => {
             const grid = document.getElementById(gridId);
