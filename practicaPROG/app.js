@@ -1,7 +1,7 @@
 // =============================================
 // PROG LAB — APP
 // =============================================
-let currentUnit = null, completedSections = new Set(), score = { correct: 0, wrong: 0, quizCorrect: 0, quizWrong: 0 }, activeSection = null;
+let currentUnit = null, completedSections = new Set(), sectionScores = {}, score = { correct: 0, wrong: 0, quizCorrect: 0, quizWrong: 0 }, activeSection = null;
 let quizState = { questions: [], current: 0, answered: false };
 let currentDragItem = null, dragExerciseIdx = 0, dragResults = [];
 let codeState = { exercises: [], current: 0 };
@@ -376,15 +376,21 @@ async function analyzeCode() {
     html += `<div style="margin-top:1rem;padding:1rem;background:var(--green-bg);border:1px solid rgba(34,211,160,.3);border-radius:8px;color:var(--green)">
       🎉 <strong>¡Todos los requisitos cumplidos!</strong> Buen trabajo.
     </div>`;
-    score.correct++; document.querySelector('#score-correct span').textContent = score.correct;
+    if (!completedSections.has(activeSection)) {
+        score.correct++; document.querySelector('#score-correct span').textContent = score.correct;
+    }
+    sectionScores[activeSection] = 10;
     markDone();
     showToast('¡Ejercicio completado! 🎉', 'success');
   } else {
     const passed = ex.checks.filter(c => c.test(code)).length;
+    sectionScores[activeSection] = (passed / ex.checks.length) * 10;
     html += `<div style="margin-top:1rem;padding:.75rem 1rem;background:var(--yellow-bg);border:1px solid rgba(251,191,36,.3);border-radius:8px;color:var(--yellow)">
       ${passed}/${ex.checks.length} requisitos cumplidos. Sigue trabajando.
     </div>`;
   }
+
+  updateLiveGrade();
 
   output.innerHTML = html;
 
@@ -628,7 +634,7 @@ function toggleSolucion(ejId) {
 }
 
 async function checkEjercicio(ejId) {
-  const btn = document.querySelector('.btn-exam-verify');
+  const btn = document.querySelector('.btn-check');
   if (btn) { btn.disabled = true; btn.innerText = '⏳ Revisando...'; }
 
   const ej = EJERCICIOS.find(e => e.id === ejId);
@@ -676,8 +682,19 @@ async function checkEjercicio(ejId) {
       <span class="nota-sub">${passed} de ${ejChecks.length} criterios</span>
     </div>`;
   }
-  score.correct += passed;
-  document.querySelector('#score-correct span').textContent = score.correct;
+  
+  // Guardar puntuación para la nota en vivo
+  sectionScores[ejId] = parseFloat(nota);
+  
+  if (pct === 100) {
+      if (!completedSections.has(activeSection)) {
+          score.correct++;
+          document.querySelector('#score-correct span').textContent = score.correct;
+      }
+      markDone();
+  }
+  
+  updateLiveGrade();
 
   // In exam mode, reveal pistas/solucion/IA buttons after first correction
   if (ejercicioState.isExam) {
@@ -819,8 +836,14 @@ function updateLiveGrade() {
   // Find simulation sections (in PROG they are 'ejercicio')
   const sims = sections.filter(s => s.type === 'ejercicio' || s.type === 'code');
   if (sims.length > 0) {
-    const completedSimsCount = sims.filter(s => completedSections.has(s.id)).length;
-    simsScore = (completedSimsCount / sims.length) * 6;
+    let totalSimPoints = 0;
+    sims.forEach(s => {
+      // Proportional: if grade is 7/10, contribute 0.7 of its weight
+      const sScore = sectionScores[s.id] || 0;
+      totalSimPoints += (sScore / 10); 
+    });
+    // simsScore = average % of completion * 6
+    simsScore = (totalSimPoints / sims.length) * 6;
   }
   
   const totalScore = quizScore + simsScore;

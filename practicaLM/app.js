@@ -1,11 +1,17 @@
 // =============================================
 // LM LAB — APP
 // =============================================
-let currentUnit = null, completedSections = new Set(), score = { correct: 0, wrong: 0, quizCorrect: 0, quizWrong: 0 }, activeSection = null;
+let currentUnit = null;
+let completedSections = new Set();
+let sectionScores = {}; // { sectionId: score (0-10) }
+let score = { correct: 0, wrong: 0, quizCorrect: 0, quizWrong: 0 };
+let activeSection = null;
 let quizState = { questions: [], current: 0, answered: false };
 let currentDragItem = null, dragExerciseIdx = 0, dragResults = [];
 let editorState = { exercises: [], current: 0, type: 'html', achievedMilestones: new Set() };
 let stuckTimer = null, touchChip = null, toastTimer = null;
+
+
 
 function selectUnit(unitId) {
   currentUnit = unitId;
@@ -16,6 +22,7 @@ function selectUnit(unitId) {
   document.getElementById('topbar-title').textContent = unit.title;
   if (unitId.startsWith('simulacros')) {
     score = { correct: 0, wrong: 0, quizCorrect: 0, quizWrong: 0 };
+    sectionScores = {};
     document.querySelector('#score-correct span').textContent = '0';
     document.querySelector('#score-wrong span').textContent = '0';
   }
@@ -28,6 +35,7 @@ function goHome() {
   document.getElementById('app').classList.add('hidden');
   currentUnit = null; activeSection = null;
   score = { correct: 0, wrong: 0, quizCorrect: 0, quizWrong: 0 };
+  sectionScores = {};
   document.querySelector('#score-correct span').textContent = '0';
   document.querySelector('#score-wrong span').textContent = '0';
   updateLiveGrade();
@@ -204,6 +212,7 @@ function renderQuizResult() {
         <button class="btn-secondary" onclick="showWelcome()">Menú</button>
       </div>
     </div>`;
+  sectionScores[activeSection] = (pct / 100) * 10;
   completedSections.add(activeSection); 
   updateProgress();
   updateLiveGrade();
@@ -290,6 +299,7 @@ function checkDrag(idxStr, dragId) {
         <button class="btn-primary" onclick="showDrag('${dragId}')">Repetir 🔁</button>
         <button class="btn-secondary" onclick="showWelcome()">Menú</button>
       </div></div>`;
+    sectionScores[activeSection] = (pct / 100) * 10;
     completedSections.add(activeSection); 
     updateProgress();
     updateLiveGrade();
@@ -360,6 +370,7 @@ function updatePreview() {
   if (!frame) return;
   const doc = frame.contentDocument || frame.contentWindow.document;
   doc.open(); doc.write(code); doc.close();
+  checkExercise();
 }
 
 function updateXMLOutput() {
@@ -370,9 +381,40 @@ function updateXMLOutput() {
 }
 
 function onEditorInput(isHTML) {
-  if (isHTML) updatePreview(); else updateXMLOutput();
+  if (isHTML) updatePreview(); else { updateXMLOutput(); checkExercise(); }
   checkMilestones();
   resetStuckTimer();
+}
+
+function checkExercise() {
+  const code = document.getElementById('editor-input')?.value || '';
+  const result = document.getElementById('validation-result');
+  const ex = editorState.exercises[editorState.current];
+  if (!ex || !ex.milestones) return;
+
+  const passed = ex.milestones.filter(m => m.check.test(code)).length;
+  const total = ex.milestones.length;
+  const allPass = passed === total;
+  let html = '';
+
+  if (allPass) {
+    html += `<div style="margin-top:1rem;padding:1rem;background:var(--green-bg);border:1px solid rgba(34,211,160,.3);border-radius:8px;color:var(--green)">
+      🎉 <strong>¡Todos los requisitos cumplidos!</strong> Buen trabajo.
+    </div>`;
+    if (!completedSections.has(activeSection)) {
+        score.correct++; document.querySelector('#score-correct span').textContent = score.correct;
+    }
+    sectionScores[activeSection] = 10;
+    markDone();
+  } else {
+    sectionScores[activeSection] = total > 0 ? (passed / total) * 10 : 0;
+    html += `<div style="margin-top:1rem;padding:.75rem 1rem;background:var(--yellow-bg);border:1px solid rgba(251,191,36,.3);border-radius:8px;color:var(--yellow)">
+      ${passed}/${total} requisitos cumplidos. Sigue trabajando.
+    </div>`;
+  }
+  
+  updateLiveGrade();
+  if (result) result.innerHTML = html;
 }
 
 function checkMilestones(silent = false) {
@@ -501,15 +543,16 @@ function validateXML() {
   try {
     if (type === 'xquery' || type === 'xslt') {
       const ex = editorState.exercises[editorState.current];
-      const completed = editorState.achievedMilestones.size;
-      const total = (ex.milestones || []).length;
+      const allPass = (ex.milestones || []).every(m => m.check.test(code));
       
-      if (completed < total && total > 0) {
-        result.innerHTML = `<div class="validation-result invalid">⚠️ Aún te faltan pasos por completar (${completed}/${total}). Revisa las instrucciones del tutor.</div>`;
+      if (!allPass) {
+        const passed = (ex.milestones || []).filter(m => m.check.test(code)).length;
+        result.innerHTML = `<div class="validation-result invalid">⚠️ Aún te faltan pasos por completar (${passed}/${ex.milestones.length}). Revisa las instrucciones del tutor.</div>`;
         score.wrong++; document.querySelector('#score-wrong span').textContent = score.wrong;
       } else {
         result.innerHTML = `<div class="validation-result valid">✅ ${type.toUpperCase()} completado correctamente. ¡Buen trabajo!</div>`;
         score.correct++; document.querySelector('#score-correct span').textContent = score.correct;
+        sectionScores[activeSection] = 10;
         completedSections.add(activeSection); 
         updateProgress();
         updateLiveGrade();
@@ -524,6 +567,7 @@ function validateXML() {
       } else {
         result.innerHTML = `<div class="validation-result valid">✅ XML bien formado. Estructura válida.</div>`;
         score.correct++; document.querySelector('#score-correct span').textContent = score.correct;
+        sectionScores[activeSection] = 10;
         completedSections.add(activeSection); 
         updateProgress();
         updateLiveGrade();
@@ -653,7 +697,7 @@ async function correctExam() {
     return { id: m.id, ok, label: m.instruction || m.popup };
   });
   const pct = Math.round((passed / milestones.length) * 100);
-  const allOk = passed === milestones.length;
+  const allPass = passed === milestones.length;
 
   // Update criteria markers in the list
   results.forEach(r => {
@@ -670,8 +714,8 @@ async function correctExam() {
   // Show correction panel
   const panel = document.getElementById('exam-correction-panel');
   panel.classList.remove('hidden');
-  panel.innerHTML = `
-    <div class="correction-score ${allOk ? 'score-perfect' : pct >= 60 ? 'score-good' : 'score-low'}">
+  let html = `
+    <div class="correction-score ${allPass ? 'score-perfect' : pct >= 60 ? 'score-good' : 'score-low'}">
       <span class="score-pct">${pct}%</span>
       <span class="score-label">${passed}/${milestones.length} criterios cumplidos</span>
     </div>
@@ -682,16 +726,33 @@ async function correctExam() {
     <div class="correction-detail">
       ${results.map(r => `<div class="corr-item ${r.ok ? 'corr-ok' : 'corr-fail'}">${r.ok ? '✅' : '❌'} ${escapeHTML(r.label)}</div>`).join('')}
     </div>
-    ${!allOk ? `<p class="correction-tip">💡 Completa los criterios que faltan y vuelve a pulsar "Corregir".</p>` : 
-    `<p class="correction-tip">🎉 ¡Ejercicio completado! Puedes ver la solución de referencia para comparar.</p>`}
   `;
+
+  if (allPass) {
+    html += `<div style="margin-top:1rem;padding:1rem;background:var(--green-bg);border:1px solid rgba(34,211,160,.3);border-radius:8px;color:var(--green)">
+      🎉 <strong>¡Simulacro completado con éxito!</strong> Has cumplido todos los criterios del examen.
+    </div>`;
+    if (!completedSections.has(activeSection)) {
+        score.correct++; document.querySelector('#score-correct span').textContent = score.correct;
+    }
+    sectionScores[activeSection] = 10;
+    markDone();
+  } else {
+    sectionScores[activeSection] = (passed / milestones.length) * 10;
+    html += `<div style="margin-top:1rem;padding:.75rem 1rem;background:var(--yellow-bg);border:1px solid rgba(251,191,36,.3);border-radius:8px;color:var(--yellow)">
+      ${passed}/${milestones.length} criterios cumplidos. Sigue trabajando para el 10.
+    </div>`;
+  }
+  
+  updateLiveGrade();
+  panel.innerHTML = html;
 
   // Show solution + AI buttons (already implemented, but we'll use them as fallback)
   const sBtn = document.getElementById('exam-solution-btn');
   if (sBtn) sBtn.style.display = 'inline-flex';
   
   // LLAMADA AUTOMÁTICA A IA (CORRECCIÓN OFICIAL)
-  let aiPassed = allOk;
+  let aiPassed = allPass;
   try {
     const aiResult = await requestLMAIFeedback(enunciado);
     if (aiResult && aiResult.nota) {
@@ -939,8 +1000,12 @@ function updateLiveGrade() {
   // Find simulation sections (in LM they are 'exam')
   const sims = sections.filter(s => s.type === 'exam');
   if (sims.length > 0) {
-    const completedSimsCount = sims.filter(s => completedSections.has(s.id)).length;
-    simsScore = (completedSimsCount / sims.length) * 6;
+    let totalSimPoints = 0;
+    sims.forEach(s => {
+      const sScore = sectionScores[s.id] || 0;
+      totalSimPoints += (sScore / 10); 
+    });
+    simsScore = (totalSimPoints / sims.length) * 6;
   }
   
   const totalScore = quizScore + simsScore;

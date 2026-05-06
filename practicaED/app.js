@@ -477,6 +477,11 @@ function checkDrag(idxStr, dataStr) {
   fb.innerHTML = (isCorrect ? '✅ <strong>¡Correcto!</strong> ' : `❌ <strong>Incorrecto.</strong> La respuesta era: <strong>${curEx.answer}</strong>. `) + curEx.explanation;
   if (isCorrect) { score.correct++; document.querySelector('#score-correct span').textContent = score.correct; }
   else { score.wrong++; document.querySelector('#score-wrong span').textContent = score.wrong; }
+
+  // Actualizar nota proporcional para el ranking
+  const passedCount = dragResults.filter(Boolean).length;
+  sectionScores[activeSection] = (passedCount / data.exercises.length) * 10;
+  updateLiveGrade();
   // Replace check button
   const actions = document.querySelector('.drag-actions');
   actions.innerHTML = '';
