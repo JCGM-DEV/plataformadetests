@@ -4,6 +4,7 @@
 
 let currentUnit = null;
 let completedSections = new Set();
+let sectionScores = {}; // { sectionId: score (0-10) }
 let score = { correct: 0, wrong: 0 };
 let activeSection = null;
 
@@ -769,8 +770,14 @@ function updateLiveGrade() {
   // Find simulations
   const sims = sections.filter(s => s.type === 'simulation');
   if (sims.length > 0) {
-    const completedSimsCount = sims.filter(s => completedSections.has(s.id)).length;
-    simsScore = (completedSimsCount / sims.length) * 6;
+    let totalSimPoints = 0;
+    sims.forEach(s => {
+      // Proportional: if grade is 7/10, contribute 0.7 of its weight
+      const sScore = sectionScores[s.id] || 0;
+      totalSimPoints += (sScore / 10); 
+    });
+    // totalSimPoints / sims.length gives the average % of completion
+    simsScore = (totalSimPoints / sims.length) * 6;
   }
   
   const totalScore = quizScore + simsScore;

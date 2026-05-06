@@ -266,14 +266,28 @@ const LESSONS = {
     ],
     fullText: `
       <div class="simulation-case">
-        <h3>🚲 Enunciado: Sistema de Alquiler de Bicis</h3>
-        <p>Se desea modelar un sistema para una empresa de alquiler de bicicletas urbanas. El sistema debe permitir:</p>
-        <ul>
-          <li>Los <strong>Usuarios</strong> pueden buscar bicicletas disponibles, alquilar una y devolverla.</li>
-          <li>Para alquilar una bicicleta, es <strong>obligatorio</strong> que el usuario esté identificado en el sistema.</li>
-          <li>Al devolver la bicicleta, el sistema permite de forma <strong>opcional</strong> dejar una reseña sobre el estado de la misma.</li>
-          <li>Los <strong>Empleados</strong> pueden añadir nuevas bicicletas al inventario y gestionar las averías reportadas.</li>
-        </ul>
+        <h3>🚲 Enunciado Detallado: Sistema de Alquiler de Bicicletas (P1)</h3>
+        <p>Se requiere modelar el diagrama de <strong>Casos de Uso</strong> para un sistema de gestión de alquiler de bicicletas urbanas. El sistema debe contemplar al menos <strong>5 casos de uso</strong> principales y cumplir los siguientes requisitos:</p>
+        <div class="case-section">
+          <h4>1. Actores</h4>
+          <ul>
+            <li><strong>Socio</strong>: Persona registrada que utiliza las bicicletas.</li>
+            <li><strong>Mantenimiento</strong>: Empleado encargado del estado de la flota.</li>
+          </ul>
+        </div>
+        <div class="case-section">
+          <h4>2. Funcionalidades y Relaciones</h4>
+          <ul>
+            <li>El Socio puede <strong>Consultar Disponibilidad</strong> de bicicletas en una estación.</li>
+            <li>El Socio puede realizar un <strong>Alquiler de Bicicleta</strong>. Para ello, el sistema debe realizar obligatoriamente una <strong>Validación de Usuario</strong> (relación include).</li>
+            <li>Al finalizar el uso, el Socio puede <strong>Devolver Bicicleta</strong>. Existe la posibilidad de que, opcionalmente, el socio pueda <strong>Reportar Avería</strong> durante la devolución si ha detectado algún fallo (relación extend).</li>
+            <li>El personal de Mantenimiento debe poder <strong>Reparar Bicicleta</strong> y <strong>Gestionar Inventario</strong> (añadir/retirar unidades).</li>
+          </ul>
+        </div>
+        <div class="case-section">
+          <h4>3. Restricciones Técnicas</h4>
+          <p>El diagrama debe incluir el <strong>límite del sistema</strong>, los nombres de los actores, los casos de uso dentro del sistema y las flechas de relación correctamente orientadas (especialmente en include/extend).</p>
+        </div>
       </div>
     `,
     solution: `
@@ -303,13 +317,22 @@ const LESSONS = {
     ],
     fullText: `
       <div class="simulation-case">
-        <h3>\u23f1\ufe0f Enunciado: Secuencia de Alquiler</h3>
-        <p>Modela la interacción temporal para el proceso de alquiler:</p>
-        <ol>
-          <li>El <strong>Usuario</strong> solicita alquilar una bicicleta al <strong>Sistema</strong>.</li>
-          <li>El <strong>Sistema</strong> verifica en la base de datos de <strong>Bicicletas</strong> si el ID solicitado está libre.</li>
-          <li>Si está libre, el <strong>Sistema</strong> crea un nuevo <strong>Registro</strong> de alquiler y confirma al usuario.</li>
-        </ol>
+        <h3>⏱️ Enunciado Detallado: Diagrama de Secuencia (P2)</h3>
+        <p>Modela la interacción temporal para el proceso de <strong>Alquiler de Bicicleta</strong>. El diagrama debe mostrar el intercambio de mensajes entre los siguientes objetos:</p>
+        <div class="case-section">
+          <h4>1. Flujo de Mensajes</h4>
+          <ol>
+            <li>El <strong>Socio</strong> envía el mensaje <code>solicitarAlquiler(idBici)</code> al objeto <code>:Sistema</code>.</li>
+            <li>El <code>:Sistema</code> debe enviar un mensaje de consulta <code>checkDisponibilidad()</code> al objeto <code>b:Bicicleta</code>.</li>
+            <li>La <code>b:Bicicleta</code> devuelve el estado (mensaje de retorno).</li>
+            <li>Si está libre, el <code>:Sistema</code> solicita la creación de un nuevo objeto <code>:Registro</code> enviando <code>new(datos)</code>.</li>
+            <li>Finalmente, el <code>:Sistema</code> confirma la operación al <strong>Socio</strong> con el mensaje <code>confirmarAlquiler()</code>.</li>
+          </ol>
+        </div>
+        <div class="case-section">
+          <h4>2. Requisitos Visuales</h4>
+          <p>Usa correctamente las <strong>líneas de vida</strong> (lifelines) y las <strong>barras de activación</strong>. Diferencia entre mensajes síncronos (flecha rellena) y mensajes de retorno (línea discontinua).</p>
+        </div>
       </div>
     `,
     solution: `
@@ -343,19 +366,26 @@ const LESSONS = {
     ],
     fullText: `
       <div class="simulation-case">
-        <h3>\ud83d\udcac Enunciado: Flujo de Devolución</h3>
-        <p>Diseña el proceso de devolución de una bicicleta:</p>
-        <ol>
-          <li>El usuario entrega la bicicleta en la estación.</li>
-          <li>El empleado realiza una <strong>inspección visual</strong>.</li>
-          <li><strong>Decisión:</strong> ¿Tiene daños graves?
-            <ul>
-              <li><strong>SÍ</strong>: Se registra la avería y se emite una multa automática.</li>
-              <li><strong>NO</strong>: Se marca la bicicleta como "Disponible".</li>
-            </ul>
-          </li>
-          <li>El proceso finaliza notificando al usuario por la App.</li>
-        </ol>
+        <h3>🔄 Enunciado Detallado: Diagrama de Actividad (P3)</h3>
+        <p>Diseña el proceso lógico de <strong>Devolución y Revisión</strong> de la flota. El diagrama debe representar el flujo de trabajo desde que la bici llega a la estación hasta su disponibilidad final:</p>
+        <div class="case-section">
+          <h4>1. Pasos del Proceso</h4>
+          <ol>
+            <li>Inicio del proceso: <strong>Entrega de Bicicleta</strong>.</li>
+            <li>Acción: El empleado realiza la <strong>Inspección Técnica</strong>.</li>
+            <li><strong>Decisión</strong>: ¿Se han detectado daños graves o averías?
+              <ul>
+                <li><strong>SI</strong>: Se ejecutan dos acciones en paralelo: <strong>Registrar Avería</strong> y <strong>Generar Penalización</strong>.</li>
+                <li><strong>NO</strong>: Se procede directamente a <strong>Limpieza y Puesta a Punto</strong>.</li>
+              </ul>
+            </li>
+            <li>Ambas ramas deben unirse (Merge) para la acción final: <strong>Notificar Disponibilidad en App</strong>.</li>
+          </ol>
+        </div>
+        <div class="case-section">
+          <h4>2. Requisitos de Notación</h4>
+          <p>Usa el <strong>rombo</strong> para la decisión y las <strong>barras gruesas</strong> (fork/join) para el paralelismo en caso de daños.</p>
+        </div>
       </div>
     `,
     solution: `
@@ -384,16 +414,20 @@ const LESSONS = {
     ],
     fullText: `
       <div class="simulation-case">
-        <h3>\ud83d\udea6 Enunciado: Estados de la Bicicleta</h3>
-        <p>Modela los estados por los que pasa una bicicleta en la empresa:</p>
-        <ul>
-          <li>Al comprarla, entra en estado <strong>Disponible</strong>.</li>
-          <li>Si un socio la alquila, pasa a <strong>Alquilada</strong>.</li>
-          <li>Al devolverla, vuelve a estar <strong>Disponible</strong>.</li>
-          <li>Si se detecta una avería, pasa a <strong>En Reparación</strong>.</li>
-          <li>Una vez reparada, vuelve a estar <strong>Disponible</strong>.</li>
-          <li>Si la avería es irreparable, pasa a <strong>Retirada</strong> (Estado Final).</li>
-        </ul>
+        <h3>🚉 Enunciado Detallado: Diagrama de Estados (P4)</h3>
+        <p>Modela el ciclo de vida completo del objeto <strong>Bicicleta</strong> dentro de la plataforma. El objeto debe transitar por los siguientes estados según los eventos indicados:</p>
+        <div class="case-section">
+          <h4>1. Estados y Eventos</h4>
+          <ul>
+            <li>Estado inicial (compra): <strong>Disponible</strong>.</li>
+            <li>De <strong>Disponible</strong> a <strong>En Uso</strong> mediante el evento <code>alquilar()</code>.</li>
+            <li>De <strong>En Uso</strong> a <strong>Disponible</strong> mediante el evento <code>devolver()</code> (si no hay fallos).</li>
+            <li>De <strong>En Uso</strong> a <strong>Averiada</strong> si el socio ejecuta el evento <code>reportarFallo()</code>.</li>
+            <li>De <strong>Averiada</strong> a <strong>En Taller</strong> mediante <code>recogerParaReparar()</code>.</li>
+            <li>De <strong>En Taller</strong> a <strong>Disponible</strong> tras el evento <code>reparacionFinalizada()</code>.</li>
+            <li>De <strong>En Taller</strong> a estado <strong>Retirada</strong> (Final) si se determina que es <code>irreparable()</code>.</li>
+          </ul>
+        </div>
       </div>
     `,
     solution: `

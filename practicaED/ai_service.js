@@ -216,6 +216,20 @@ Responde en español.`;
         msgEl.innerHTML = html;
         board.scrollIntoView({ behavior: 'smooth' });
 
+        // Extract score and save to system
+        const notaMatch = feedback.match(/\[NOTA\]:\s*([\d.]+)/);
+        if (notaMatch) {
+            const nota = parseFloat(notaMatch[1]);
+            if (typeof sectionScores !== 'undefined') {
+                sectionScores[simId] = nota;
+                // Force marked as done and update UI
+                if (typeof markDone === 'function') markDone();
+                else if (typeof updateLiveGrade === 'function') updateLiveGrade();
+                
+                showToast(`Nota registrada: ${nota}/10`, 'success');
+            }
+        }
+
     } catch (err) {
         showToast('Error Vision: ' + err.message, 'error');
     } finally {
