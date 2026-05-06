@@ -28,6 +28,13 @@ const SUBJECTS_DATA = [
         "color": "#f59e0b"
     },
     {
+        "id": "entornos_de_desarrollo",
+        "name": "Entornos de Desarrollo",
+        "units_count": 7,
+        "icon": "🛠️",
+        "color": "#10b981"
+    },
+    {
         "id": "cloud_computing",
         "name": "Cloud Computing",
         "units_count": 10,

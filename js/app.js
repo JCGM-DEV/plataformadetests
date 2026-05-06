@@ -526,6 +526,7 @@ function renderAcademia() {
                 </div>
 
                 <div class="academia-main-actions">
+                    ${subject.id !== 'entornos_de_desarrollo' ? `
                     <button class="btn-primary academia-btn-main" onclick="startSimulacroTemario('${subject.id}')">
                         <span class="btn-icon">🚀</span>
                         <div class="btn-texts">
@@ -533,6 +534,7 @@ function renderAcademia() {
                             <span class="btn-sub-text">120 preguntas aleatorias</span>
                         </div>
                     </button>
+                    ` : ''}
                     
                     <div class="academia-secondary-actions" style="display:flex; flex-direction:column; gap:0.5rem; width:100%;">
                         ${subjectLabs.map(lab => `
