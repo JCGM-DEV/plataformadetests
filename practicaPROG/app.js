@@ -10,6 +10,11 @@ let touchChip = null, toastTimer = null;
 function selectUnit(unitId) {
   currentUnit = unitId;
   const unit = UNITS[unitId];
+  if (unitId.startsWith('simulacros')) {
+    score = { correct: 0, wrong: 0 };
+    document.querySelector('#score-correct span').textContent = '0';
+    document.querySelector('#score-wrong span').textContent = '0';
+  }
   if (unitId === 'doctor' && unit.sections.length === 0 && typeof DOCTOR_EXERCISES_MODIFIED !== 'undefined') {
     unit.sections = DOCTOR_EXERCISES_MODIFIED.map(e => ({
       id: e.id, icon: '🧑‍⚕️', label: e.titulo, type: 'ejercicio', ejercicioId: e.id
@@ -20,6 +25,7 @@ function selectUnit(unitId) {
   document.getElementById('topbar-unit').textContent = unit.label;
   document.getElementById('topbar-title').textContent = unit.title;
   buildSidebar(unit); showWelcome();
+  updateLiveGrade();
 }
 
 function loadCompletionState() {
@@ -40,6 +46,7 @@ function goHome() {
   score = { correct: 0, wrong: 0 };
   document.querySelector('#score-correct span').textContent = '0';
   document.querySelector('#score-wrong span').textContent = '0';
+  updateLiveGrade();
 }
 
 function buildSidebar(unit) {
@@ -76,6 +83,7 @@ function toggleSectionCompletion(sectionId, event) {
   const el = document.getElementById('nav-' + sectionId);
   if (el) el.classList.toggle('done', completedSections.has(sectionId));
   updateProgress();
+  updateLiveGrade();
 }
 
 function openSection(section) {
@@ -123,7 +131,9 @@ function markDone() {
     saveCompletionState();
     const el = document.getElementById('nav-' + activeSection);
     if (el) el.classList.add('done');
-    updateProgress(); showToast('¡Sección completada! ✓', 'success');
+    updateProgress(); 
+    updateLiveGrade();
+    showToast('¡Sección completada! ✓', 'success');
   }
 }
 
@@ -175,6 +185,7 @@ function selectAnswer(idx) {
   exp.innerHTML = (isCorrect ? '✅ <strong>¡Correcto!</strong> ' : '❌ <strong>Incorrecto.</strong> ') + q.exp;
   if (isCorrect) { score.correct++; document.querySelector('#score-correct span').textContent = score.correct; showToast('¡Correcto! 🎉','success'); }
   else { score.wrong++; document.querySelector('#score-wrong span').textContent = score.wrong; showToast('Incorrecto','error'); }
+  updateLiveGrade();
   document.getElementById('btn-next').style.display = 'inline-flex';
   const skipBtn = document.getElementById('skip-btn');
   if (skipBtn) skipBtn.style.display = 'none';
@@ -272,6 +283,7 @@ function checkDrag(dragId) {
   fb.innerHTML = (isCorrect ? '✅ <strong>¡Correcto!</strong> ' : `❌ <strong>Incorrecto.</strong> Era: <strong>${curEx.answer}</strong>. `) + curEx.explanation;
   if (isCorrect) { score.correct++; document.querySelector('#score-correct span').textContent = score.correct; }
   else { score.wrong++; document.querySelector('#score-wrong span').textContent = score.wrong; }
+  updateLiveGrade();
   const actions = document.querySelector('.drag-actions'); actions.innerHTML = '';
   if (dragExerciseIdx + 1 < data.exercises.length) {
     const btn = document.createElement('button'); btn.className = 'btn-primary'; btn.textContent = 'Siguiente →';
@@ -764,4 +776,51 @@ function triggerCunaoEffect(passed) {
         overlay.style.opacity = '0';
         setTimeout(() => overlay.remove(), 500);
     }, 4500);
+}
+// ---- LIVE GRADE LOGIC ----
+function updateLiveGrade() {
+  const container = document.getElementById('live-grade-container');
+  if (!currentUnit || !currentUnit.startsWith('simulacros')) {
+    container.classList.add('hidden');
+    return;
+  }
+  
+  container.classList.remove('hidden');
+  const unit = UNITS[currentUnit];
+  const sections = unit.sections;
+  
+  // Weights: Test = 4, Practicas = 6
+  let quizScore = 0;
+  let simsScore = 0;
+  
+  // Find the quiz section
+  const quizSec = sections.find(s => s.type === 'quiz');
+  if (quizSec) {
+    const quizData = QUIZZES[quizSec.quizId];
+    if (quizData) {
+      const totalQuestions = quizData.questions.length;
+      quizScore = totalQuestions ? (score.correct / totalQuestions) * 4 : 0;
+      
+      // Penalization: Every 2 wrong answers = -1 point
+      const penalization = Math.floor(score.wrong / 2) * 1.0;
+      quizScore = Math.max(0, quizScore - penalization);
+    }
+  }
+  
+  // Find simulation sections (in PROG they are 'ejercicio')
+  const sims = sections.filter(s => s.type === 'ejercicio' || s.type === 'code');
+  if (sims.length > 0) {
+    const completedSimsCount = sims.filter(s => completedSections.has(s.id)).length;
+    simsScore = (completedSimsCount / sims.length) * 6;
+  }
+  
+  const totalScore = quizScore + simsScore;
+  const gradeEl = document.getElementById('live-grade-value');
+  gradeEl.textContent = totalScore.toFixed(2);
+  
+  // Update class based on grade
+  gradeEl.className = ''; // reset
+  if (totalScore < 5) gradeEl.classList.add('grade-fail');
+  else if (totalScore < 7) gradeEl.classList.add('grade-pass');
+  else gradeEl.classList.add('grade-good');
 }

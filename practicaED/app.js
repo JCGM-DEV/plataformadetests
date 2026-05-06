@@ -14,15 +14,20 @@ let quizState = { questions: [], current: 0, answered: false };
 let dragState = { exercises: [], current: 0, score: 0 };
 
 // ---- INIT ----
-function selectUnit(unitId) {
   currentUnit = unitId;
   const unit = UNITS[unitId];
+  if (unitId.startsWith('simulacros')) {
+    score = { correct: 0, wrong: 0 };
+    document.querySelector('#score-correct span').textContent = '0';
+    document.querySelector('#score-wrong span').textContent = '0';
+  }
   document.getElementById('splash').classList.add('hidden');
   document.getElementById('app').classList.remove('hidden');
   document.getElementById('topbar-unit').textContent = unit.label;
   document.getElementById('topbar-title').textContent = unit.title;
   buildSidebar(unit);
   showWelcome();
+  updateLiveGrade();
 }
 
 function goHome() {
@@ -33,6 +38,8 @@ function goHome() {
   score = { correct: 0, wrong: 0 };
   document.querySelector('#score-correct span').textContent = '0';
   document.querySelector('#score-wrong span').textContent = '0';
+  completedSections.clear();
+  updateLiveGrade();
 }
 
 function buildSidebar(unit) {
@@ -222,6 +229,7 @@ function markDone() {
       el.innerHTML += '<span class="item-done">✓</span>';
     }
     updateProgress();
+    updateLiveGrade();
     showToast('¡Sección completada! ✓', 'success');
   }
 }
@@ -286,6 +294,7 @@ function selectAnswer(idx) {
   // Score
   if (isCorrect) { score.correct++; document.querySelector('#score-correct span').textContent = score.correct; showToast('¡Correcto! 🎉','success'); }
   else { score.wrong++; document.querySelector('#score-wrong span').textContent = score.wrong; showToast('Incorrecto — lee la explicación','error'); }
+  updateLiveGrade();
   document.getElementById('btn-next').style.display = 'inline-flex';
 }
 
@@ -728,6 +737,50 @@ function showLabSolution() {
       <button class="btn-secondary" onclick="closeModal()">Entendido</button>
     </div>`;
   document.getElementById('modal-overlay').classList.remove('hidden');
+}
+
+// ---- LIVE GRADE LOGIC ----
+function updateLiveGrade() {
+  const container = document.getElementById('live-grade-container');
+  if (!currentUnit || !currentUnit.startsWith('simulacros')) {
+    container.classList.add('hidden');
+    return;
+  }
+  
+  container.classList.remove('hidden');
+  const unit = UNITS[currentUnit];
+  const sections = unit.sections;
+  
+  // Weights: Test = 4, Practicas = 6
+  let quizScore = 0;
+  let simsScore = 0;
+  
+  // Find the quiz section
+  const quizSec = sections.find(s => s.type === 'quiz');
+  if (quizSec) {
+    const quizData = QUIZZES[quizSec.quizId];
+    if (quizData) {
+      const totalQuestions = quizData.questions.length;
+      quizScore = totalQuestions ? (score.correct / totalQuestions) * 4 : 0;
+    }
+  }
+  
+  // Find simulations
+  const sims = sections.filter(s => s.type === 'simulation');
+  if (sims.length > 0) {
+    const completedSimsCount = sims.filter(s => completedSections.has(s.id)).length;
+    simsScore = (completedSimsCount / sims.length) * 6;
+  }
+  
+  const totalScore = quizScore + simsScore;
+  const gradeEl = document.getElementById('live-grade-value');
+  gradeEl.textContent = totalScore.toFixed(2);
+  
+  // Update class based on grade
+  gradeEl.className = ''; // reset
+  if (totalScore < 5) gradeEl.classList.add('grade-fail');
+  else if (totalScore < 7) gradeEl.classList.add('grade-pass');
+  else gradeEl.classList.add('grade-good');
 }
 
 // Auto-load unit from URL if present

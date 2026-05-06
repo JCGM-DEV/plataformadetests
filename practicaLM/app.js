@@ -14,7 +14,13 @@ function selectUnit(unitId) {
   document.getElementById('app').classList.remove('hidden');
   document.getElementById('topbar-unit').textContent = unit.label;
   document.getElementById('topbar-title').textContent = unit.title;
+  if (unitId.startsWith('simulacros')) {
+    score = { correct: 0, wrong: 0 };
+    document.querySelector('#score-correct span').textContent = '0';
+    document.querySelector('#score-wrong span').textContent = '0';
+  }
   buildSidebar(unit); showWelcome();
+  updateLiveGrade();
 }
 
 function goHome() {
@@ -24,6 +30,7 @@ function goHome() {
   score = { correct: 0, wrong: 0 };
   document.querySelector('#score-correct span').textContent = '0';
   document.querySelector('#score-wrong span').textContent = '0';
+  updateLiveGrade();
 }
 
 function buildSidebar(unit) {
@@ -111,6 +118,7 @@ function markDone() {
   const el = document.getElementById('nav-' + activeSection);
   if (el && !el.querySelector('.item-done')) el.innerHTML += '<span class="item-done">✓</span>';
   updateProgress();
+  updateLiveGrade();
   showToast('¡Sección completada! ✓', 'success');
 }
 
@@ -167,6 +175,7 @@ function selectAnswer(idx) {
   exp.innerHTML = (isCorrect ? '✅ <strong>¡Correcto!</strong> ' : '❌ <strong>Incorrecto.</strong> ') + q.exp;
   if (isCorrect) { score.correct++; document.querySelector('#score-correct span').textContent = score.correct; showToast('¡Correcto! 🎉','success'); }
   else { score.wrong++; document.querySelector('#score-wrong span').textContent = score.wrong; showToast('Incorrecto','error'); }
+  updateLiveGrade();
   document.getElementById('btn-next').style.display = 'inline-flex';
 }
 
@@ -186,7 +195,9 @@ function renderQuizResult() {
         <button class="btn-secondary" onclick="showWelcome()">Menú</button>
       </div>
     </div>`;
-  completedSections.add(activeSection); updateProgress();
+  completedSections.add(activeSection); 
+  updateProgress();
+  updateLiveGrade();
 }
 
 // ── DRAG ─────────────────────────────────────────────────────────
@@ -257,6 +268,7 @@ function checkDrag(idxStr, dragId) {
   fb.innerHTML = (isCorrect ? '✅ <strong>¡Correcto!</strong> ' : `❌ <strong>Incorrecto.</strong> Era: <strong>${curEx.answer}</strong>. `) + curEx.explanation;
   if (isCorrect) { score.correct++; document.querySelector('#score-correct span').textContent = score.correct; }
   else { score.wrong++; document.querySelector('#score-wrong span').textContent = score.wrong; }
+  updateLiveGrade();
   const actions = document.querySelector('.drag-actions'); actions.innerHTML = '';
   if (dragExerciseIdx + 1 < data.exercises.length) {
     const btn = document.createElement('button'); btn.className = 'btn-primary'; btn.textContent = 'Siguiente →';
@@ -269,7 +281,9 @@ function checkDrag(idxStr, dragId) {
         <button class="btn-primary" onclick="showDrag('${dragId}')">Repetir 🔁</button>
         <button class="btn-secondary" onclick="showWelcome()">Menú</button>
       </div></div>`;
-    completedSections.add(activeSection); updateProgress();
+    completedSections.add(activeSection); 
+    updateProgress();
+    updateLiveGrade();
   }
 }
 
@@ -487,7 +501,9 @@ function validateXML() {
       } else {
         result.innerHTML = `<div class="validation-result valid">✅ ${type.toUpperCase()} completado correctamente. ¡Buen trabajo!</div>`;
         score.correct++; document.querySelector('#score-correct span').textContent = score.correct;
-        completedSections.add(activeSection); updateProgress();
+        completedSections.add(activeSection); 
+        updateProgress();
+        updateLiveGrade();
       }
     } else {
       const parser = new DOMParser();
@@ -499,7 +515,9 @@ function validateXML() {
       } else {
         result.innerHTML = `<div class="validation-result valid">✅ XML bien formado. Estructura válida.</div>`;
         score.correct++; document.querySelector('#score-correct span').textContent = score.correct;
-        completedSections.add(activeSection); updateProgress();
+        completedSections.add(activeSection); 
+        updateProgress();
+        updateLiveGrade();
       }
     }
     updateXMLOutput();
@@ -687,6 +705,7 @@ async function correctExam() {
     showToast('¡Ejercicio superado! 🎉', 'success');
     score.correct++;
     document.querySelector('#score-correct span').textContent = score.correct;
+    updateLiveGrade();
   } else {
     showToast(`${passed}/${milestones.length} criterios correctos`, 'info');
   }
@@ -876,4 +895,54 @@ function triggerCunaoEffect(passed) {
         overlay.style.opacity = '0';
         setTimeout(() => overlay.remove(), 500);
     }, 4500);
+}
+// ---- LIVE GRADE LOGIC ----
+function updateLiveGrade() {
+  const container = document.getElementById('live-grade-container');
+  if (!currentUnit || !currentUnit.startsWith('simulacros')) {
+    if (container) container.classList.add('hidden');
+    return;
+  }
+  
+  if (container) container.classList.remove('hidden');
+  const unit = UNITS[currentUnit];
+  if (!unit) return;
+  const sections = unit.sections;
+  
+  // Weights: Test = 4, Practicas = 6
+  let quizScore = 0;
+  let simsScore = 0;
+  
+  // Find the quiz section
+  const quizSec = sections.find(s => s.type === 'quiz');
+  if (quizSec) {
+    const quizData = QUIZZES[quizSec.quizId];
+    if (quizData) {
+      const totalQuestions = quizData.questions.length;
+      quizScore = totalQuestions ? (score.correct / totalQuestions) * 4 : 0;
+      
+      // Penalization: Every 3 wrong answers = -1 point
+      const penalization = Math.floor(score.wrong / 3) * 1.0;
+      quizScore = Math.max(0, quizScore - penalization);
+    }
+  }
+  
+  // Find simulation sections (in LM they are 'exam')
+  const sims = sections.filter(s => s.type === 'exam');
+  if (sims.length > 0) {
+    const completedSimsCount = sims.filter(s => completedSections.has(s.id)).length;
+    simsScore = (completedSimsCount / sims.length) * 6;
+  }
+  
+  const totalScore = quizScore + simsScore;
+  const gradeEl = document.getElementById('live-grade-value');
+  if (gradeEl) {
+    gradeEl.textContent = totalScore.toFixed(2);
+    
+    // Update class based on grade
+    gradeEl.className = ''; // reset
+    if (totalScore < 5) gradeEl.classList.add('grade-fail');
+    else if (totalScore < 7) gradeEl.classList.add('grade-pass');
+    else gradeEl.classList.add('grade-good');
+  }
 }
