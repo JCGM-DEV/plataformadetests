@@ -3003,6 +3003,14 @@ async function updateGlobalRanking(subjectId, subjectName, score, unitId = null)
     }
 }
 
+// Global bridge for iframes (Labs)
+window.reportSimScore = function(subjectId, subjectName, unitId, score) {
+    console.log(`Score reported from Lab: ${subjectId} - ${unitId}: ${score}`);
+    if (typeof updateGlobalRanking === 'function') {
+        updateGlobalRanking(subjectId, subjectName, unitId, score);
+    }
+};
+
 async function renderRanking() {
     const container = document.getElementById('ranking-container');
     if (!container) return;

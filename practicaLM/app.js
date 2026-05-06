@@ -938,11 +938,14 @@ function updateLiveGrade() {
   const gradeEl = document.getElementById('live-grade-value');
   if (gradeEl) {
     gradeEl.textContent = totalScore.toFixed(2);
-    
-    // Update class based on grade
-    gradeEl.className = ''; // reset
+    gradeEl.className = '';
     if (totalScore < 5) gradeEl.classList.add('grade-fail');
     else if (totalScore < 7) gradeEl.classList.add('grade-pass');
     else gradeEl.classList.add('grade-good');
+  }
+
+  // Report to global ranking
+  if (window.parent && typeof window.parent.reportSimScore === 'function') {
+    window.parent.reportSimScore('lenguaje_de_marcas', 'Lenguaje de Marcas', currentUnit, totalScore);
   }
 }

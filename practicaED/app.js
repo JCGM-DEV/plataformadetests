@@ -14,6 +14,7 @@ let quizState = { questions: [], current: 0, answered: false };
 let dragState = { exercises: [], current: 0, score: 0 };
 
 // ---- INIT ----
+function selectUnit(unitId) {
   currentUnit = unitId;
   const unit = UNITS[unitId];
   if (unitId.startsWith('simulacros')) {
@@ -774,13 +775,18 @@ function updateLiveGrade() {
   
   const totalScore = quizScore + simsScore;
   const gradeEl = document.getElementById('live-grade-value');
-  gradeEl.textContent = totalScore.toFixed(2);
-  
-  // Update class based on grade
-  gradeEl.className = ''; // reset
-  if (totalScore < 5) gradeEl.classList.add('grade-fail');
-  else if (totalScore < 7) gradeEl.classList.add('grade-pass');
-  else gradeEl.classList.add('grade-good');
+  if (gradeEl) {
+    gradeEl.textContent = totalScore.toFixed(2);
+    gradeEl.className = '';
+    if (totalScore < 5) gradeEl.classList.add('grade-fail');
+    else if (totalScore < 7) gradeEl.classList.add('grade-pass');
+    else gradeEl.classList.add('grade-good');
+  }
+
+  // Report to global ranking
+  if (window.parent && typeof window.parent.reportSimScore === 'function') {
+    window.parent.reportSimScore('entornos_de_desarrollo', 'Entornos de Desarrollo', currentUnit, totalScore);
+  }
 }
 
 // Auto-load unit from URL if present
