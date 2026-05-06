@@ -1,3 +1,4 @@
+window.DATA_JS_LOAD_START = true;
 // =============================================
 // DATA — UD4 & UD5 Content
 // =============================================
@@ -7,84 +8,84 @@ const UNITS = {
     label: 'UD3',
     title: 'Introducción al UML',
     sections: [
-      { id: 'ud3-teoria', icon: '📖', label: 'Teoría: ¿Qué es UML?', type: 'lesson', lessonId: 'ud3_intro' },
-      { id: 'ud3-quiz', icon: '🧠', label: 'Quiz: Tipos de Diagramas', type: 'quiz', quizId: 'ud3_quiz' },
-      { id: 'ud3-drag', icon: '🎯', label: 'Ejercicio: Clasifica el Diagrama', type: 'drag', dragId: 'clasifica_diagrams' },
-      { id: 'ud3-diagram', icon: '📐', label: 'Mapa Visual de UML', type: 'diagram', diagId: 'ud3_diag' },
+      { id: 'ud3-teoria', icon: '\ud83d\udcd6', label: 'Teoría: ¿Qué es UML?', type: 'lesson', lessonId: 'ud3_intro' },
+      { id: 'ud3-quiz', icon: '\ud83e\udde0', label: 'Quiz: Tipos de Diagramas', type: 'quiz', quizId: 'ud3_quiz' },
+      { id: 'ud3-drag', icon: '\ud83c\udfaf', label: 'Ejercicio: Clasifica el Diagrama', type: 'drag', dragId: 'clasifica_diagrams' },
+      { id: 'ud3-diagram', icon: '\ud83d\udcd0', label: 'Mapa Visual de UML', type: 'diagram', diagId: 'ud3_diag' },
     ]
   },
   ud4: {
     label: 'UD4',
     title: 'Diagramas de Clases',
     sections: [
-      { id: 'ud4-teoria', icon: '📖', label: 'Teoría: Notación UML', type: 'lesson', lessonId: 'notacion' },
-      { id: 'ud4-relaciones', icon: '🔗', label: 'Teoría: Relaciones', type: 'lesson', lessonId: 'relaciones' },
-      { id: 'ud4-quiz1', icon: '🧠', label: 'Quiz: Visibilidad', type: 'quiz', quizId: 'visibilidad' },
-      { id: 'ud4-quiz2', icon: '🧠', label: 'Quiz: Relaciones', type: 'quiz', quizId: 'relaciones' },
-      { id: 'ud4-drag1', icon: '🎯', label: 'Ejercicio: Clasifica', type: 'drag', dragId: 'clasifica_rel' },
-      { id: 'ud4-drag2', icon: '🎯', label: 'Ejercicio: Visibilidad', type: 'drag', dragId: 'visibilidad_drag' },
-      { id: 'ud4-diagram', icon: '📐', label: 'Diagramas Guiados', type: 'diagram', diagId: 'ud4_diag' },
-      { id: 'ud4-lab', icon: '🧪', label: 'Laboratorio: Clases UML', type: 'lab' },
+      { id: 'ud4-teoria', icon: '\ud83d\udcd6', label: 'Teoría: Notación UML', type: 'lesson', lessonId: 'notacion' },
+      { id: 'ud4-relaciones', icon: '\ud83d\udd17', label: 'Teoría: Relaciones', type: 'lesson', lessonId: 'relaciones' },
+      { id: 'ud4-quiz1', icon: '\ud83e\udde0', label: 'Quiz: Visibilidad', type: 'quiz', quizId: 'visibilidad' },
+      { id: 'ud4-quiz2', icon: '\ud83e\udde0', label: 'Quiz: Relaciones', type: 'quiz', quizId: 'relaciones' },
+      { id: 'ud4-drag1', icon: '\ud83c\udfaf', label: 'Ejercicio: Clasifica', type: 'drag', dragId: 'clasifica_rel' },
+      { id: 'ud4-drag2', icon: '\ud83c\udfaf', label: 'Ejercicio: Visibilidad', type: 'drag', dragId: 'visibilidad_drag' },
+      { id: 'ud4-diagram', icon: '\ud83d\udcd0', label: 'Diagramas Guiados', type: 'diagram', diagId: 'ud4_diag' },
+      { id: 'ud4-lab', icon: '\ud83e\uddea', label: 'Laboratorio: Clases UML', type: 'lab' },
     ]
   },
   ud5: {
     label: 'UD5',
     title: 'Diagramas de Comportamiento',
     sections: [
-      { id: 'ud5-teoria1', icon: '📖', label: 'Teoría: Casos de Uso', type: 'lesson', lessonId: 'casos_uso' },
-      { id: 'ud5-teoria2', icon: '📖', label: 'Teoría: Secuencia', type: 'lesson', lessonId: 'secuencia' },
-      { id: 'ud5-teoria3', icon: '📖', label: 'Teoría: Comunicación', type: 'lesson', lessonId: 'comunicacion' },
-      { id: 'ud5-teoria4', icon: '📖', label: 'Teoría: Estados y Actividad', type: 'lesson', lessonId: 'estados' },
-      { id: 'ud5-quiz1', icon: '🧠', label: 'Quiz: Casos de Uso', type: 'quiz', quizId: 'casos_uso' },
-      { id: 'ud5-quiz2', icon: '🧠', label: 'Quiz: Secuencia y Comunicación', type: 'quiz', quizId: 'secuencia' },
-      { id: 'ud5-drag1', icon: '🎯', label: 'Ejercicio: include vs extend', type: 'drag', dragId: 'include_extend' },
-      { id: 'ud5-drag2', icon: '🎯', label: 'Ejercicio: Tipo de mensaje', type: 'drag', dragId: 'tipo_mensaje' },
-      { id: 'ud5-drag3', icon: '🎯', label: 'Ejercicio: Secuencia vs Comunicación', type: 'drag', dragId: 'comunicacion_vs_secuencia' },
-      { id: 'ud5-diagram', icon: '📐', label: 'Diagramas Guiados', type: 'diagram', diagId: 'ud5_diag' },
-      { id: 'ud5-lab', icon: '🧪', label: 'Lab: Actividad / Flujo', type: 'lab' },
-      { id: 'ud5-lab-usecase', icon: '🧪', label: 'Lab: Casos de Uso', type: 'lab' },
-      { id: 'ud5-lab-seq', icon: '🧪', label: 'Lab: Secuencia', type: 'lab' },
-      { id: 'ud5-lab-comms', icon: '🧪', label: 'Lab: Comunicación', type: 'lab' },
-      { id: 'ud5-lab-states', icon: '🧪', label: 'Lab: Estados', type: 'lab' },
+      { id: 'ud5-teoria1', icon: '\ud83d\udcd6', label: 'Teoría: Casos de Uso', type: 'lesson', lessonId: 'casos_uso' },
+      { id: 'ud5-teoria2', icon: '\ud83d\udcd6', label: 'Teoría: Secuencia', type: 'lesson', lessonId: 'secuencia' },
+      { id: 'ud5-teoria3', icon: '\ud83d\udcd6', label: 'Teoría: Comunicación', type: 'lesson', lessonId: 'comunicacion' },
+      { id: 'ud5-teoria4', icon: '\ud83d\udcd6', label: 'Teoría: Estados y Actividad', type: 'lesson', lessonId: 'estados' },
+      { id: 'ud5-quiz1', icon: '\ud83e\udde0', label: 'Quiz: Casos de Uso', type: 'quiz', quizId: 'casos_uso' },
+      { id: 'ud5-quiz2', icon: '\ud83e\udde0', label: 'Quiz: Secuencia y Comunicación', type: 'quiz', quizId: 'secuencia' },
+      { id: 'ud5-drag1', icon: '\ud83c\udfaf', label: 'Ejercicio: include vs extend', type: 'drag', dragId: 'include_extend' },
+      { id: 'ud5-drag2', icon: '\ud83c\udfaf', label: 'Ejercicio: Tipo de mensaje', type: 'drag', dragId: 'tipo_mensaje' },
+      { id: 'ud5-drag3', icon: '\ud83c\udfaf', label: 'Ejercicio: Secuencia vs Comunicación', type: 'drag', dragId: 'comunicacion_vs_secuencia' },
+      { id: 'ud5-diagram', icon: '\ud83d\udcd0', label: 'Diagramas Guiados', type: 'diagram', diagId: 'ud5_diag' },
+      { id: 'ud5-lab', icon: '\ud83e\uddea', label: 'Lab: Actividad / Flujo', type: 'lab' },
+      { id: 'ud5-lab-usecase', icon: '\ud83e\uddea', label: 'Lab: Casos de Uso', type: 'lab' },
+      { id: 'ud5-lab-seq', icon: '\ud83e\uddea', label: 'Lab: Secuencia', type: 'lab' },
+      { id: 'ud5-lab-comms', icon: '\ud83e\uddea', label: 'Lab: Comunicación', type: 'lab' },
+      { id: 'ud5-lab-states', icon: '\ud83e\uddea', label: 'Lab: Estados', type: 'lab' },
     ]
   },
   ud7: {
     label: 'UD7',
     title: 'Optimización y Control de Versiones',
     sections: [
-      { id: 'ud7-teoria', icon: '📖', label: 'Teoría: Git (Fundamentos)', type: 'lesson', lessonId: 'git_teoria' },
-      { id: 'ud7-quiz', icon: '🧠', label: 'Quiz: Comandos Git', type: 'quiz', quizId: 'git_quiz' },
-      { id: 'ud7-lab', icon: '🧪', label: 'Simulador Git Visual', type: 'git' },
+      { id: 'ud7-teoria', icon: '\ud83d\udcd6', label: 'Teoría: Git (Fundamentos)', type: 'lesson', lessonId: 'git_teoria' },
+      { id: 'ud7-quiz', icon: '\ud83e\udde0', label: 'Quiz: Comandos Git', type: 'quiz', quizId: 'git_quiz' },
+      { id: 'ud7-lab', icon: '\ud83e\uddea', label: 'Simulador Git Visual', type: 'git' },
     ]
   },
   simulacros: {
     label: 'EXAMEN 1',
     title: 'Simulacro 1',
     sections: [
-      { id: 'sim-quiz', icon: '🧠', label: 'Test de Conocimientos', type: 'quiz', quizId: 'sim_quiz' },
-      { id: 'sim-p1', icon: '🧑', label: 'Práctica 1: Casos de Uso', type: 'simulation', lessonId: 'sim_vp_p1' },
-      { id: 'sim-p2', icon: '⏱️', label: 'Práctica 2: Secuencia', type: 'simulation', lessonId: 'sim_vp_p2' },
-      { id: 'sim-p3', icon: '🔄', label: 'Práctica 3: Actividad', type: 'simulation', lessonId: 'sim_vp_p3' },
-      { id: 'sim-p4', icon: '🚦', label: 'Práctica 4: Estados', type: 'simulation', lessonId: 'sim_vp_p4' }
+      { id: 'sim-quiz', icon: '\ud83e\udde0', label: 'Test de Conocimientos', type: 'quiz', quizId: 'sim_quiz' },
+      { id: 'sim-p1', icon: '\ud83e\uddd1', label: 'Práctica 1: Casos de Uso', type: 'simulation', lessonId: 'sim_vp_p1' },
+      { id: 'sim-p2', icon: '\u23f1\ufe0f', label: 'Práctica 2: Secuencia', type: 'simulation', lessonId: 'sim_vp_p2' },
+      { id: 'sim-p3', icon: '\ud83d\udcac', label: 'Práctica 3: Actividad', type: 'simulation', lessonId: 'sim_vp_p3' },
+      { id: 'sim-p4', icon: '\ud83d\udea6', label: 'Práctica 4: Estados', type: 'simulation', lessonId: 'sim_vp_p4' }
     ]
   },
   simulacros_2: {
     label: 'EXAMEN 2',
     title: 'Simulacro 2',
     sections: [
-      { id: 'sim-quiz-2', icon: '🧠', label: 'Test de Conocimientos (II)', type: 'quiz', quizId: 'sim_quiz_2' },
-      { id: 'sim-p5', icon: '🏥', label: 'Práctica: Clínica Veterinaria (Clases)', type: 'simulation', lessonId: 'sim_vp_p5' },
+      { id: 'sim-quiz-2', icon: '\ud83e\udde0', label: 'Test de Conocimientos (II)', type: 'quiz', quizId: 'sim_quiz_2' },
+      { id: 'sim-p5', icon: '\ud83c\udfe5', label: 'Práctica: Clínica Veterinaria (Clases)', type: 'simulation', lessonId: 'sim_vp_p5' },
     ]
   },
   simulacros_3: {
     label: 'EXAMEN 3',
     title: 'Simulacro 3',
     sections: [
-      { id: 'sim-quiz-3', icon: '🧠', label: 'Test de Conocimientos (III)', type: 'quiz', quizId: 'sim_quiz_3' },
-      { id: 'sim-p6', icon: '🧑', label: 'P1: Casos de Uso (Academia)', type: 'simulation', lessonId: 'sim_vp_p6' },
-      { id: 'sim-p7', icon: '📐', label: 'P2: Diagrama de Clases (Academia)', type: 'simulation', lessonId: 'sim_vp_p7' },
-      { id: 'sim-p8', icon: '⏱️', label: 'P3: Secuencia (Reservar)', type: 'simulation', lessonId: 'sim_vp_p8' },
-      { id: 'sim-p9', icon: '🔄', label: 'P4: Actividad (Cancelar)', type: 'simulation', lessonId: 'sim_vp_p9' }
+      { id: 'sim-quiz-3', icon: '\ud83e\udde0', label: 'Test de Conocimientos (III)', type: 'quiz', quizId: 'sim_quiz_3' },
+      { id: 'sim-p6', icon: '\ud83e\uddd1', label: 'P1: Casos de Uso (Academia)', type: 'simulation', lessonId: 'sim_vp_p6' },
+      { id: 'sim-p7', icon: '\ud83d\udcd0', label: 'P2: Diagrama de Clases (Academia)', type: 'simulation', lessonId: 'sim_vp_p7' },
+      { id: 'sim-p8', icon: '\u23f1\ufe0f', label: 'P3: Secuencia (Reservar)', type: 'simulation', lessonId: 'sim_vp_p8' },
+      { id: 'sim-p9', icon: '\ud83d\udcac', label: 'P4: Actividad (Cancelar)', type: 'simulation', lessonId: 'sim_vp_p9' }
     ]
   }
 };
@@ -99,7 +100,7 @@ const LESSONS = {
     concepts: [
       { icon: '🏛️', title: '¿Qué es UML?', body: '<strong>Unified Modeling Language</strong>: lenguaje de modelado estandarizado para representar sistemas orientados a objetos. Presentado en <strong>1997</strong> por la OMG. Estándar ISO desde <strong>2004</strong>. Versión actual: <strong>2.5.1</strong> (diciembre 2017).' },
       { icon: '📊', title: 'Diagramas Estructurales (estáticos)', body: 'Muestran el sistema en reposo (foto fija). Incluyen: <strong>Clases, Objetos, Componentes, Despliegue, Estructura Compuesta, Paquetes</strong>. El más importante: <em>Diagrama de clases</em>.' },
-      { icon: '🔄', title: 'Diagramas de Comportamiento (dinámicos)', body: 'Muestran la actividad y funcionalidad del sistema. Incluyen: <strong>Casos de Uso, Actividad, Estado (máquina de estados)</strong>, y los de <strong>Interacción</strong>: Secuencia, Comunicación, Tiempos, General de Interacción.' },
+      { icon: '\ud83d\udcac', title: 'Diagramas de Comportamiento (dinámicos)', body: 'Muestran la actividad y funcionalidad del sistema. Incluyen: <strong>Casos de Uso, Actividad, Estado (máquina de estados)</strong>, y los de <strong>Interacción</strong>: Secuencia, Comunicación, Tiempos, General de Interacción.' },
       { icon: '🔧', title: 'Herramientas CASE', body: '<em>Computer Aided Software Engineering</em>. Software que da soporte a la ingeniería de software: crear diagramas UML, <strong>generar código</strong> a partir de diagramas e <strong>ingeniería inversa</strong> (generar diagramas desde código existente).' },
       { icon: '↔️', title: 'Estructural vs Comportamiento', body: '<strong>Estructurales</strong>: ¿qué hay en el sistema? (clases, objetos, módulos). <strong>Comportamiento</strong>: ¿qué hace el sistema? (procesos, interacciones, estados). UML propone <strong>15 diagramas</strong> en total.' },
       { icon: '⭐', title: 'El más importante: Clases', body: 'El diagrama de clases es el más utilizado. Muchas herramientas CASE permiten <strong>generar código Java</strong> directamente desde él, y también hacer ingeniería inversa del código a diagrama.' },
@@ -168,7 +169,7 @@ const LESSONS = {
     title: 'Diagramas de Casos de Uso',
     subtitle: 'Relaciones entre actores y funcionalidades del sistema',
     concepts: [
-      { icon: '🧑', title: 'Actor', body: 'Monigote (stick figure). Persona, sistema o hardware externo que interactúa con el sistema.' },
+      { icon: '\ud83e\uddd1', title: 'Actor', body: 'Monigote (stick figure). Persona, sistema o hardware externo que interactúa con el sistema.' },
       { icon: '⭕', title: 'Caso de Uso', body: 'Elipse con el nombre de la funcionalidad. Representa lo que el sistema hace.' },
       { icon: '📦', title: 'Límite del sistema', body: 'Rectángulo que encierra los casos de uso. Los actores están fuera.' },
       { icon: '➡️', title: 'Asociación', body: 'Línea entre actor y caso de uso. Indica que el actor usa esa funcionalidad.' },
@@ -215,11 +216,11 @@ const LESSONS = {
     subtitle: 'Objetos conectados, mensajes numerados y diferencias con el diagrama de secuencia',
     concepts: [
       { icon: '🔵', title: 'Objetos', body: 'Se representan como rectángulos con el nombre en formato <code>nombre:Clase</code> (ej: <code>:Cliente</code>, <code>:Pedido</code>). Igual que en el diagrama de secuencia, pero sin línea de vida.' },
-      { icon: '🔗', title: 'Enlace (Link)', body: 'Línea continua entre objetos que se comunican. Representa que existe una relación (asociación) entre ellos. Los mensajes viajan por esta línea.' },
+      { icon: '\ud83d\udd17', title: 'Enlace (Link)', body: 'Línea continua entre objetos que se comunican. Representa que existe una relación (asociación) entre ellos. Los mensajes viajan por esta línea.' },
       { icon: '🔢', title: 'Mensajes numerados', body: 'Los mensajes llevan un <strong>número de secuencia</strong> para indicar el orden: <code>1: login()</code>, <code>2: query()</code>, <code>2.1: findUser()</code>. La numeración anidada (1.1, 1.2) indica sub-mensajes dentro de una llamada.' },
       { icon: '↔️', title: 'Vs Diagrama de Secuencia', body: '<strong>Secuencia</strong>: énfasis en el <em>tiempo</em> (eje vertical). Más fácil leer el orden. <strong>Comunicación</strong>: énfasis en las <em>relaciones entre objetos</em>. Más compacto y muestra mejor la arquitectura.' },
       { icon: '→', title: 'Dirección del mensaje', body: 'La flecha indica la dirección del mensaje. Los números indican la secuencia temporal. Se puede indicar retorno añadiendo <code>/ retorno</code> al mensaje.' },
-      { icon: '🔄', title: 'Equivalencia', body: 'Un diagrama de comunicación <strong>se puede transformar en secuencia y viceversa</strong>. Muestran exactamente la misma información pero con diferente énfasis visual.' },
+      { icon: '\ud83d\udcac', title: 'Equivalencia', body: 'Un diagrama de comunicación <strong>se puede transformar en secuencia y viceversa</strong>. Muestran exactamente la misma información pero con diferente énfasis visual.' },
     ],
     codeExample: `<span class="cm">// Diagrama de Comunicación — Sistema de Login</span>
 <span class="vis-pub">:Cliente</span> ────────── <span class="vis-prot">:LoginCtrl</span> ────────── <span class="vis-pub">:UserService</span>
@@ -243,7 +244,7 @@ const LESSONS = {
       { icon: '⚫', title: 'Estado inicial', body: 'Círculo negro relleno. Punto de entrada del diagrama. Solo puede haber uno.' },
       { icon: '⭕', title: 'Estados', body: 'Rectángulos redondeados con el nombre del estado. Representan situaciones estables del objeto.' },
       { icon: '→', title: 'Transición', body: 'Flecha entre estados. Puede llevar: evento [condición] / acción.' },
-      { icon: '🎯', title: 'Estado final', body: 'Círculo negro dentro de otro círculo. Fin del ciclo de vida.' },
+      { icon: '\ud83c\udfaf', title: 'Estado final', body: 'Círculo negro dentro de otro círculo. Fin del ciclo de vida.' },
       { icon: '🔷', title: 'Decisión (Actividad)', body: 'Rombo en diagramas de actividad. Bifurcación del flujo según condición.' },
       { icon: '═══', title: 'Fork/Join (barra)', body: 'Barra gruesa para división (fork) y unión (join) de flujos paralelos.' },
     ],
@@ -259,9 +260,9 @@ const LESSONS = {
     title: 'Práctica 1: Diagrama de Casos de Uso',
     subtitle: 'Sistema de Gestión de Alquiler de Bicicletas',
     concepts: [
-      { icon: '🧑', title: 'Actores', body: 'Identifica los roles externos (ej. Cliente, Administrador).' },
+      { icon: '\ud83e\uddd1', title: 'Actores', body: 'Identifica los roles externos (ej. Cliente, Administrador).' },
       { icon: '⭕', title: 'Funcionalidades', body: 'Define las acciones principales del sistema.' },
-      { icon: '🔗', title: 'Relaciones', body: 'Usa asociaciones, «include» y «extend» según la lógica.' }
+      { icon: '\ud83d\udd17', title: 'Relaciones', body: 'Usa asociaciones, «include» y «extend» según la lógica.' }
     ],
     fullText: `
       <div class="simulation-case">
@@ -302,7 +303,7 @@ const LESSONS = {
     ],
     fullText: `
       <div class="simulation-case">
-        <h3>⏱️ Enunciado: Secuencia de Alquiler</h3>
+        <h3>\u23f1\ufe0f Enunciado: Secuencia de Alquiler</h3>
         <p>Modela la interacción temporal para el proceso de alquiler:</p>
         <ol>
           <li>El <strong>Usuario</strong> solicita alquilar una bicicleta al <strong>Sistema</strong>.</li>
@@ -337,12 +338,12 @@ const LESSONS = {
     title: 'Práctica 3: Diagrama de Actividad',
     subtitle: 'Flujo de "Devolución y Revisión"',
     concepts: [
-      { icon: '🔄', title: 'Flujo lógico', body: 'Representa pasos y decisiones algorítmicas.' },
+      { icon: '\ud83d\udcac', title: 'Flujo lógico', body: 'Representa pasos y decisiones algorítmicas.' },
       { icon: '🔷', title: 'Decisiones', body: 'Usa rombos para bifurcar el camino según condiciones.' }
     ],
     fullText: `
       <div class="simulation-case">
-        <h3>🔄 Enunciado: Flujo de Devolución</h3>
+        <h3>\ud83d\udcac Enunciado: Flujo de Devolución</h3>
         <p>Diseña el proceso de devolución de una bicicleta:</p>
         <ol>
           <li>El usuario entrega la bicicleta en la estación.</li>
@@ -383,7 +384,7 @@ const LESSONS = {
     ],
     fullText: `
       <div class="simulation-case">
-        <h3>🚦 Enunciado: Estados de la Bicicleta</h3>
+        <h3>\ud83d\udea6 Enunciado: Estados de la Bicicleta</h3>
         <p>Modela los estados por los que pasa una bicicleta en la empresa:</p>
         <ul>
           <li>Al comprarla, entra en estado <strong>Disponible</strong>.</li>
@@ -421,9 +422,9 @@ const LESSONS = {
     title: 'Práctica: Clínica Veterinaria (UML)',
     subtitle: 'Modelado completo de un sistema de gestión veterinaria',
     concepts: [
-      { icon: '🏥', title: 'Clínica Veterinaria', body: 'Diseña un diagrama de clases completo para gestionar pacientes, propietarios, empleados, citas, diagnósticos, tratamientos y facturas.' },
+      { icon: '\ud83c\udfe5', title: 'Clínica Veterinaria', body: 'Diseña un diagrama de clases completo para gestionar pacientes, propietarios, empleados, citas, diagnósticos, tratamientos y facturas.' },
       { icon: '🐾', title: 'Entidades Clave', body: 'Animal, Propietario, Empleado (Vet/Aux), Cita, Diagnóstico, Tratamiento, Medicamento y Factura.' },
-      { icon: '🔗', title: 'Relaciones', body: 'Herencia de empleados, asociaciones 1:N y N:M, y composiciones necesarias.' },
+      { icon: '\ud83d\udd17', title: 'Relaciones', body: 'Herencia de empleados, asociaciones 1:N y N:M, y composiciones necesarias.' },
       { icon: '📋', title: 'Requisitos UML', body: 'Atributos, métodos, multiplicidades, herencia y enumeraciones de estados.' }
     ],
     fullText: `
@@ -487,7 +488,7 @@ const LESSONS = {
     title: 'P1: Casos de Uso (Academia)',
     subtitle: 'Gestión de Reservas de Aulas',
     concepts: [
-      { icon: '🧑', title: 'Actores', body: 'Identifica los roles (ej. Alumno, Administrador).' },
+      { icon: '\ud83e\uddd1', title: 'Actores', body: 'Identifica los roles (ej. Alumno, Administrador).' },
       { icon: '⭕', title: 'Funcionalidades', body: 'Consultar aulas, Realizar reserva, Cancelar reserva, Gestionar aulas.' }
     ],
     fullText: `
@@ -521,12 +522,12 @@ const LESSONS = {
     title: 'P2: Diagrama de Clases (Academia)',
     subtitle: 'Modelado de Entidades y Relaciones',
     concepts: [
-      { icon: '📐', title: 'Clases', body: 'Alumno, Aula, Reserva, Administrador.' },
-      { icon: '🔗', title: 'Relaciones', body: 'Alumno 1 -- * Reserva. Aula 1 -- * Reserva.' }
+      { icon: '\ud83d\udcd0', title: 'Clases', body: 'Alumno, Aula, Reserva, Administrador.' },
+      { icon: '\ud83d\udd17', title: 'Relaciones', body: 'Alumno 1 -- * Reserva. Aula 1 -- * Reserva.' }
     ],
     fullText: `
       <div class="simulation-case">
-        <h3>📐 Requisitos del Diagrama de Clases</h3>
+        <h3>\ud83d\udcd0 Requisitos del Diagrama de Clases</h3>
         <ul>
           <li><strong>Alumno</strong>: id, nombre, apellidos, email, telefono, activo (boolean).</li>
           <li><strong>Aula</strong>: codigo, nombre, capacidad, planta, tieneProyector (boolean), estado (Disponible, Ocupada, Mantenimiento).</li>
@@ -556,11 +557,11 @@ const LESSONS = {
     title: 'P3: Diagrama de Secuencia (Reservar)',
     subtitle: 'Proceso de Reserva de Aula',
     concepts: [
-      { icon: '⏱️', title: 'Secuencia', body: 'Interacción Alumno-Sistema-Aula.' }
+      { icon: '\u23f1\ufe0f', title: 'Secuencia', body: 'Interacción Alumno-Sistema-Aula.' }
     ],
     fullText: `
       <div class="simulation-case">
-        <h3>⏱️ Enunciado: Realizar Reserva</h3>
+        <h3>\u23f1\ufe0f Enunciado: Realizar Reserva</h3>
         <ol>
           <li>El <strong>Alumno</strong> solicita reservar indicando fecha y horas.</li>
           <li>El <strong>Sistema</strong> consulta al objeto <strong>Aula</strong> su disponibilidad.</li>
@@ -593,11 +594,11 @@ const LESSONS = {
     title: 'P4: Diagrama de Actividad (Cancelar)',
     subtitle: 'Flujo de Cancelación de Reservas',
     concepts: [
-      { icon: '🔄', title: 'Actividad', body: 'Lógica de cancelación con comprobaciones.' }
+      { icon: '\ud83d\udcac', title: 'Actividad', body: 'Lógica de cancelación con comprobaciones.' }
     ],
     fullText: `
       <div class="simulation-case">
-        <h3>🔄 Enunciado: Cancelar Reserva</h3>
+        <h3>\ud83d\udcac Enunciado: Cancelar Reserva</h3>
         <ol>
           <li>El Alumno selecciona la reserva.</li>
           <li>El Sistema comprueba si existe.</li>
@@ -1299,6 +1300,9 @@ const QUIZZES = {
           'Consiste en eliminar todas las pruebas unitarias para simplificar el proyecto.',
           'Consiste en transformar código fuente en código objeto mediante un compilador.'
         ],
+        ans: 1,
+        exp: '<strong>Refactorizar</strong> es limpiar el código para que sea más fácil de mantener en el futuro, manteniendo la misma funcionalidad para el usuario.'
+      }
     ]
   },
   sim_quiz_3: {
@@ -1861,7 +1865,7 @@ Object.assign(LAB_EXERCISES, {
       }
     }
   ]
-};
+});
 
 
 const GIT_CHALLENGES = [
@@ -1900,3 +1904,4 @@ const GIT_CHALLENGES = [
 ];
 
 
+window.DATA_JS_LOAD_END = true;
