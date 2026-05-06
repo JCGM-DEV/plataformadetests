@@ -5,7 +5,7 @@
 let currentUnit = null;
 let completedSections = new Set();
 let sectionScores = {}; // { sectionId: score (0-10) }
-let score = { correct: 0, wrong: 0 };
+let score = { correct: 0, wrong: 0, quizCorrect: 0, quizWrong: 0 };
 let activeSection = null;
 
 // Quiz state
@@ -37,7 +37,7 @@ function goHome() {
   document.getElementById('app').classList.add('hidden');
   currentUnit = null;
   activeSection = null;
-  score = { correct: 0, wrong: 0 };
+  score = { correct: 0, wrong: 0, quizCorrect: 0, quizWrong: 0 };
   document.querySelector('#score-correct span').textContent = '0';
   document.querySelector('#score-wrong span').textContent = '0';
   completedSections.clear();
@@ -294,8 +294,17 @@ function selectAnswer(idx) {
   exp.classList.add('visible');
   exp.innerHTML = (isCorrect ? '✅ <strong>¡Correcto!</strong> ' : '❌ <strong>Incorrecto.</strong> ') + q.exp;
   // Score
-  if (isCorrect) { score.correct++; document.querySelector('#score-correct span').textContent = score.correct; showToast('¡Correcto! 🎉','success'); }
-  else { score.wrong++; document.querySelector('#score-wrong span').textContent = score.wrong; showToast('Incorrecto — lee la explicación','error'); }
+  if (isCorrect) { 
+    score.correct++; 
+    score.quizCorrect++;
+    document.querySelector('#score-correct span').textContent = score.correct; 
+    showToast('¡Correcto! 🎉','success'); 
+  } else { 
+    score.wrong++; 
+    score.quizWrong++;
+    document.querySelector('#score-wrong span').textContent = score.wrong; 
+    showToast('Incorrecto — lee la explicación','error'); 
+  }
   updateLiveGrade();
   document.getElementById('btn-next').style.display = 'inline-flex';
 }
@@ -763,7 +772,7 @@ function updateLiveGrade() {
     const quizData = QUIZZES[quizSec.quizId];
     if (quizData) {
       const totalQuestions = quizData.questions.length;
-      quizScore = totalQuestions ? (score.correct / totalQuestions) * 4 : 0;
+      quizScore = totalQuestions ? (score.quizCorrect / totalQuestions) * 4 : 0;
     }
   }
   

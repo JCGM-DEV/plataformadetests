@@ -1,7 +1,7 @@
 // =============================================
 // LM LAB — APP
 // =============================================
-let currentUnit = null, completedSections = new Set(), score = { correct: 0, wrong: 0 }, activeSection = null;
+let currentUnit = null, completedSections = new Set(), score = { correct: 0, wrong: 0, quizCorrect: 0, quizWrong: 0 }, activeSection = null;
 let quizState = { questions: [], current: 0, answered: false };
 let currentDragItem = null, dragExerciseIdx = 0, dragResults = [];
 let editorState = { exercises: [], current: 0, type: 'html', achievedMilestones: new Set() };
@@ -15,7 +15,7 @@ function selectUnit(unitId) {
   document.getElementById('topbar-unit').textContent = unit.label;
   document.getElementById('topbar-title').textContent = unit.title;
   if (unitId.startsWith('simulacros')) {
-    score = { correct: 0, wrong: 0 };
+    score = { correct: 0, wrong: 0, quizCorrect: 0, quizWrong: 0 };
     document.querySelector('#score-correct span').textContent = '0';
     document.querySelector('#score-wrong span').textContent = '0';
   }
@@ -27,7 +27,7 @@ function goHome() {
   document.getElementById('splash').classList.remove('hidden');
   document.getElementById('app').classList.add('hidden');
   currentUnit = null; activeSection = null;
-  score = { correct: 0, wrong: 0 };
+  score = { correct: 0, wrong: 0, quizCorrect: 0, quizWrong: 0 };
   document.querySelector('#score-correct span').textContent = '0';
   document.querySelector('#score-wrong span').textContent = '0';
   updateLiveGrade();
@@ -173,8 +173,17 @@ function selectAnswer(idx) {
   const exp = document.getElementById('explanation');
   exp.classList.add('visible');
   exp.innerHTML = (isCorrect ? '✅ <strong>¡Correcto!</strong> ' : '❌ <strong>Incorrecto.</strong> ') + q.exp;
-  if (isCorrect) { score.correct++; document.querySelector('#score-correct span').textContent = score.correct; showToast('¡Correcto! 🎉','success'); }
-  else { score.wrong++; document.querySelector('#score-wrong span').textContent = score.wrong; showToast('Incorrecto','error'); }
+  if (isCorrect) { 
+    score.correct++; 
+    score.quizCorrect++;
+    document.querySelector('#score-correct span').textContent = score.correct; 
+    showToast('¡Correcto! 🎉','success'); 
+  } else { 
+    score.wrong++; 
+    score.quizWrong++;
+    document.querySelector('#score-wrong span').textContent = score.wrong; 
+    showToast('Incorrecto — lee la explicación','error'); 
+  }
   updateLiveGrade();
   document.getElementById('btn-next').style.display = 'inline-flex';
 }
@@ -919,10 +928,10 @@ function updateLiveGrade() {
     const quizData = QUIZZES[quizSec.quizId];
     if (quizData) {
       const totalQuestions = quizData.questions.length;
-      quizScore = totalQuestions ? (score.correct / totalQuestions) * 4 : 0;
+      quizScore = totalQuestions ? (score.quizCorrect / totalQuestions) * 4 : 0;
       
       // Penalization: Every 3 wrong answers = -1 point
-      const penalization = Math.floor(score.wrong / 3) * 1.0;
+      const penalization = Math.floor(score.quizWrong / 3) * 1.0;
       quizScore = Math.max(0, quizScore - penalization);
     }
   }
