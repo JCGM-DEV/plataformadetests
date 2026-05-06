@@ -949,3 +949,22 @@ function updateLiveGrade() {
     window.parent.reportSimScore('lenguaje_de_marcas', 'Lenguaje de Marcas', currentUnit, totalScore);
   }
 }
+
+function manualReportScore() {
+  const gradeEl = document.getElementById('live-grade-value');
+  if (!gradeEl) return;
+  
+  const totalScore = parseFloat(gradeEl.textContent);
+  if (window.parent && typeof window.parent.reportSimScore === 'function') {
+    window.parent.reportSimScore('lenguaje_de_marcas', 'Lenguaje de Marcas', currentUnit, totalScore);
+    showToast('🏆 ¡Nota registrada en el Ranking!', 'success');
+    
+    const btn = document.getElementById('btn-register-ranking');
+    if (btn) {
+        btn.classList.add('btn-registered');
+        setTimeout(() => btn.classList.remove('btn-registered'), 2000);
+    }
+  } else {
+    showToast('⚠️ No se pudo conectar con el Ranking', 'error');
+  }
+}

@@ -780,6 +780,39 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
   font-weight: 500;
 }
 
+.btn-register-ranking {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 10px;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-register-ranking:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.5);
+  filter: brightness(1.1);
+}
+
+.btn-register-ranking:active {
+  transform: translateY(0) scale(0.95);
+}
+
+.btn-registered {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.6) !important;
+  transform: scale(1.1) !important;
+}
+
 .grade-fail { color: #ff4d4d; text-shadow: 0 0 10px rgba(255, 77, 77, 0.3); }
 .grade-pass { color: #ffcc00; text-shadow: 0 0 10px rgba(255, 204, 0, 0.3); }
 .grade-good { color: #22d3a0; text-shadow: 0 0 15px rgba(34, 211, 160, 0.4); animation: pulse-pass 2s infinite; }

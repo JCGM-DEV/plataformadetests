@@ -796,6 +796,27 @@ function updateLiveGrade() {
   }
 }
 
+function manualReportScore() {
+  const gradeEl = document.getElementById('live-grade-value');
+  if (!gradeEl) return;
+  
+  const totalScore = parseFloat(gradeEl.textContent);
+  if (window.parent && typeof window.parent.reportSimScore === 'function') {
+    // Send with the unit ID (e.g. 'simulacros')
+    window.parent.reportSimScore('entornos_de_desarrollo', 'Entornos de Desarrollo', currentUnit, totalScore);
+    showToast('🏆 ¡Nota registrada en el Ranking!', 'success');
+    
+    // Add a small animation to the button
+    const btn = document.getElementById('btn-register-ranking');
+    if (btn) {
+        btn.classList.add('btn-registered');
+        setTimeout(() => btn.classList.remove('btn-registered'), 2000);
+    }
+  } else {
+    showToast('⚠️ No se pudo conectar con el Ranking', 'error');
+  }
+}
+
 // Auto-load unit from URL if present
 document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
