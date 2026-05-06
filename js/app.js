@@ -2953,7 +2953,7 @@ function closeSummary() {
 
 // ─── RANKING SYSTEM (GLOBAL) ────────────────────────────────────
 function getUnitTitle(subjectId, unitId) {
-    if (!unitId) return "Simulacro Completo";
+    if (!unitId || unitId.toString().startsWith('sim')) return "Simulacro General";
     
     const prefixes = {
         sistemas_informaticos: 'si',
@@ -3008,7 +3008,8 @@ async function updateGlobalRanking(subjectId, subjectName, score, unitId = null)
 window.reportSimScore = function(subjectId, subjectName, unitId, score) {
     console.log(`Score reported from Lab: ${subjectId} - ${unitId}: ${score}`);
     if (typeof updateGlobalRanking === 'function') {
-        updateGlobalRanking(subjectId, subjectName, unitId, score);
+        // FIXED: The order was swapped. Now: subjectId, subjectName, score, unitId
+        updateGlobalRanking(subjectId, subjectName, score, unitId);
     }
 };
 
@@ -3072,7 +3073,11 @@ async function renderRanking() {
         const themes = {};
 
         data.forEach(entry => {
-            const isMock = !entry.unitId;
+            // SKIP CORRUPT ENTRIES: If unitId contains a dot, it was a score saved as a unitId due to the previous bug.
+            if (entry.unitId && entry.unitId.toString().includes('.')) return;
+
+            // Anything without unitId or starting with "sim" is a Mock Exam
+            const isMock = !entry.unitId || entry.unitId.toString().startsWith('sim');
             const targetGroup = isMock ? mocks : themes;
 
             if (!targetGroup[entry.subjectId]) {
