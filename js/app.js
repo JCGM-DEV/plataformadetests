@@ -2985,7 +2985,8 @@ async function updateGlobalRanking(subjectId, subjectName, score, unitId = null)
         const docRef = Auth.db.collection('rankings').doc(docId);
         const doc = await docRef.get();
         
-        if (!doc.exists || doc.data().score < score) {
+        const scoreNum = Number(score);
+        if (!doc.exists || Number(doc.data().score || 0) < scoreNum) {
             await docRef.set({
                 userId,
                 username,
@@ -2993,7 +2994,7 @@ async function updateGlobalRanking(subjectId, subjectName, score, unitId = null)
                 subjectName,
                 unitId: unitId,
                 unitName: unitName,
-                score: score,
+                score: scoreNum,
                 timestamp: firebase.firestore.FieldValue.serverTimestamp()
             });
             console.log(`Global ranking updated for ${subjectName} - ${unitName}: ${score}`);
@@ -3148,7 +3149,7 @@ async function renderRanking() {
                                     <span class="rank-number">${index + 1}</span>
                                     <span class="rank-username">${entry.username}</span>
                                 </div>
-                                <span class="rank-score">${entry.score.toFixed(1).replace('.', ',')}</span>
+                                <span class="rank-score">${Number(entry.score || 0).toFixed(1).replace('.', ',')}</span>
                             </li>
                         `;
                     });
