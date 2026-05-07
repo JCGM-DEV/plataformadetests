@@ -831,24 +831,24 @@ function updateLiveGrade() {
     const quizData = QUIZZES[quizSec.quizId];
     if (quizData) {
       const totalQuestions = quizData.questions.length;
-      quizScore = totalQuestions ? (score.quizCorrect / totalQuestions) * 4 : 0;
       
-      // Penalization: Every 2 wrong answers = -1 point
-      const penalization = Math.floor(score.quizWrong / 2) * 1.0;
-      quizScore = Math.max(0, quizScore - penalization);
+      // Penalización: Cada 2 mal restan 1 bien
+      const netCorrect = score.quizCorrect - (score.quizWrong / 2);
+      quizScore = totalQuestions ? Math.max(0, (netCorrect / totalQuestions) * 4) : 0;
     }
   }
   
-  // Find simulation sections (in PROG they are 'ejercicio')
-  const sims = sections.filter(s => s.type === 'ejercicio' || s.type === 'code');
+  // En PROG los casos prácticos son de tipo 'ejercicio' o 'code'
+  const sims = sections.filter(s => s.type === 'ejercicio' || s.type === 'code' || s.type === 'simulation');
   if (sims.length > 0) {
     let totalSimPoints = 0;
     sims.forEach(s => {
-      // Proportional: if grade is 7/10, contribute 0.7 of its weight
+      // Proporcional: si la nota es 7/10, aporta 0.7 de su peso
       const sScore = sectionScores[s.id] || 0;
       totalSimPoints += (sScore / 10); 
     });
-    // simsScore = average % of completion * 6
+    // totalSimPoints / sims.length es el % medio de completitud
+    // Multiplicado por 6 da el peso total de la práctica
     simsScore = (totalSimPoints / sims.length) * 6;
   }
   

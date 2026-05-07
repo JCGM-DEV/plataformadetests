@@ -3131,17 +3131,20 @@ async function renderRanking() {
             const userStats = {};
             allData.forEach(entry => {
                 if (!entry.userId) return;
+                const score = Number(entry.score);
+                if (isNaN(score)) return;
+
                 if (!userStats[entry.userId]) {
                     userStats[entry.userId] = { username: entry.username, passes: 0, totalScore: 0, attempts: 0 };
                 }
                 const s = userStats[entry.userId];
-                if (entry.score >= 5) s.passes++;
-                s.totalScore += entry.score;
+                if (score >= 5) s.passes++;
+                s.totalScore += score;
                 s.attempts++;
             });
 
             const hof = Object.values(userStats)
-                .map(u => ({ ...u, avg: u.totalScore / (u.attempts || 1) }))
+                .map(u => ({ ...u, avg: u.attempts > 0 ? u.totalScore / u.attempts : 0 }))
                 .sort((a, b) => b.passes - a.passes || b.avg - a.avg)
                 .slice(0, 5);
 
