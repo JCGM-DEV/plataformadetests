@@ -1,141 +1,120 @@
-SIMULACRO CLOUD COMPUTING — 04/05/2026
+1. Una empresa tiene una aplicación web que recibe picos de tráfico solo en campañas puntuales (Black Friday). Quiere pagar lo mínimo posible el resto del año sin perder rendimiento en esos picos. ¿Qué solución es la MÁS adecuada?
+a) Comprar servidores físicos para todo el año
+b) Usar máquinas virtuales siempre activas
+*c) Usar escalado automático
+d) Usar almacenamiento en frío
 
-Una empresa tiene una aplicación web que recibe picos de tráfico solo en campañas puntuales (Black Friday). Quiere pagar lo mínimo posible el resto del año sin perder rendimiento en esos picos. ¿Qué solución es la MÁS adecuada?
-A) Comprar servidores físicos para todo el año
-B) Usar máquinas virtuales siempre activas
-*C) Usar escalado automático
-D) Usar almacenamiento en frío
-EXPLICACION: El escalado automático permite ajustar recursos según la demanda, evitando pagar por capacidad innecesaria y garantizando rendimiento en picos.
+2. Un desarrollador quiere desplegar una aplicación sin preocuparse por servidores, sistemas operativos ni infraestructura. Solo quiere subir código. ¿Qué modelo debe usar?
+a) IaaS
+b) PaaS
+c) SaaS
+*d) Serverless
 
-Un desarrollador quiere desplegar una aplicación sin preocuparse por servidores, sistemas operativos ni infraestructura. Solo quiere subir código. ¿Qué modelo debe usar?
-A) IaaS
-B) PaaS
-C) SaaS
-*D) Serverless
-EXPLICACION: Serverless abstrae completamente la infraestructura. El desarrollador solo gestiona el código y se ejecuta en función de eventos.
+3. Una empresa necesita almacenar millones de imágenes accesibles desde internet mediante enlaces directos. ¿Qué tipo de almacenamiento es el más adecuado?
+a) Bloques
+b) Ficheros
+*c) Objetos
+d) RAM
 
-Una empresa necesita almacenar millones de imágenes accesibles desde internet mediante enlaces directos. ¿Qué tipo de almacenamiento es el más adecuado?
-A) Bloques
-B) Ficheros
-*C) Objetos
-D) RAM
-EXPLICACION: El almacenamiento de objetos permite acceder a los datos mediante URL, ideal para contenido multimedia y web.
+4. Un sistema requiere altísimo rendimiento en operaciones de lectura/escritura para una base de datos crítica. ¿Qué tipo de almacenamiento elegirías?
+a) Objetos
+*b) Bloques
+c) Ficheros
+d) Archivado
 
-Un sistema requiere altísimo rendimiento en operaciones de lectura/escritura para una base de datos crítica. ¿Qué tipo de almacenamiento elegirías?
-A) Objetos
-*B) Bloques
-C) Ficheros
-D) Archivado
-EXPLICACION: El almacenamiento en bloques ofrece alto rendimiento y baja latencia, ideal para bases de datos.
+5. Un arquitecto diseña una aplicación en la nube con múltiples servidores en distintas zonas para evitar caídas. ¿Qué principio está aplicando?
+a) Coste optimizado
+b) Seguridad
+*c) Fiabilidad
+d) Escalabilidad
 
-Un arquitecto diseña una aplicación en la nube con múltiples servidores en distintas zonas para evitar caídas. ¿Qué principio está aplicando?
-A) Coste optimizado
-B) Seguridad
-*C) Fiabilidad
-D) Escalabilidad
-EXPLICACION: Distribuir recursos para evitar fallos mejora la tolerancia a fallos y la disponibilidad del sistema.
+6. Una aplicación empieza a responder lentamente porque todos los usuarios acceden al mismo servidor. ¿Qué solución es más adecuada?
+a) Aumentar almacenamiento
+b) Eliminar monitorización
+c) Reducir usuarios
+*d) Implementar balanceador de carga
 
-Una aplicación empieza a responder lentamente porque todos los usuarios acceden al mismo servidor. ¿Qué solución es más adecuada?
-A) Aumentar almacenamiento
-B) Eliminar monitorización
-C) Reducir usuarios
-*D) Implementar balanceador de carga
-EXPLICACION: El balanceador distribuye el tráfico entre varios servidores, evitando sobrecargas.
+7. Una startup necesita lanzar su aplicación rápidamente en distintos entornos (local, cloud, test) con el mismo comportamiento. ¿Qué tecnología usaría?
+*a) Contenedores
+b) Máquinas físicas
+c) Bases de datos
+d) DNS
 
-Una startup necesita lanzar su aplicación rápidamente en distintos entornos (local, cloud, test) con el mismo comportamiento. ¿Qué tecnología usaría?
-*A) Contenedores
-B) Máquinas físicas
-C) Bases de datos
-D) DNS
-EXPLICACION: Los contenedores garantizan portabilidad y consistencia entre entornos.
+8. Una empresa quiere analizar relaciones complejas entre usuarios (por ejemplo, redes sociales). ¿Qué tipo de base de datos es más adecuada?
+a) Relacional
+b) Key-Value
+c) Documental
+*d) Grafos
 
-Una empresa quiere analizar relaciones complejas entre usuarios (por ejemplo, redes sociales). ¿Qué tipo de base de datos es más adecuada?
-A) Relacional
-B) Key-Value
-C) Documental
-*D) Grafos
-EXPLICACION: Las bases de datos de grafos permiten representar relaciones mediante nodos y aristas.
+9. Un sistema necesita detectar rápidamente si hay errores o caídas en producción para actuar automáticamente. ¿Qué componente es imprescindible?
+a) Almacenamiento
+*b) Monitorización
+c) Virtualización
+d) CDN
 
-Un sistema necesita detectar rápidamente si hay errores o caídas en producción para actuar automáticamente. ¿Qué componente es imprescindible?
-A) Almacenamiento
-*B) Monitorización
-C) Virtualización
-D) CDN
-EXPLICACION: La monitorización permite detectar anomalías y activar alertas para reaccionar rápidamente.
+10. Una empresa quiere reducir costes moviendo datos antiguos que casi no se usan, pero que deben conservarse. ¿Qué solución es más adecuada?
+a) RAM
+b) Base de datos
+*c) Archivado
+d) Bloques
 
-Una empresa quiere reducir costes moviendo datos antiguos que casi no se usan, pero que deben conservarse. ¿Qué solución es más adecuada?
-A) RAM
-B) Base de datos
-*C) Archivado
-D) Bloques
-EXPLICACION: El almacenamiento de archivado es barato y está pensado para datos a largo plazo con poco acceso.
+11. ¿Qué modelo implica pagar solo por lo que se usa?
+a) Pago fijo
+*b) Pago por uso
+c) Pago anual
+d) Pago único
 
-¿Qué modelo implica pagar solo por lo que se usa?
-A) Pago fijo
-*B) Pago por uso
-C) Pago anual
-D) Pago único
-EXPLICACION: El modelo de pago por uso (pay-as-you-go) es una característica fundamental de la nube: solo pagas por los recursos que consumes.
+12. ¿Qué base de datos usa tablas?
+a) NoSQL
+b) Documental
+*c) Relacional
+d) Grafos
 
-¿Qué base de datos usa tablas?
-A) NoSQL
-B) Documental
-*C) Relacional
-D) Grafos
-EXPLICACION: Las bases de datos relacionales organizan la información en tablas con filas y columnas, usando SQL para consultarlas.
+13. ¿Qué ventaja clave tiene el almacenamiento de bloques?
+*a) Alto rendimiento
+b) Bajo coste
+c) Portabilidad
+d) Simplicidad
 
-¿Qué ventaja clave tiene el almacenamiento de bloques?
-*A) Alto rendimiento
-B) Bajo coste
-C) Portabilidad
-D) Simplicidad
-EXPLICACION: El almacenamiento en bloques ofrece alto rendimiento y baja latencia, siendo ideal para cargas de trabajo de I/O intensivo como bases de datos.
+14. ¿Qué significa ACID?
+*a) Atomicidad, consistencia, aislamiento, durabilidad
+b) Acceso, control, integración, datos
+c) Aplicación, código, interfaz, datos
+d) Ninguna de las anteriores
 
-¿Qué significa ACID?
-*A) Atomicidad, consistencia, aislamiento, durabilidad
-B) Acceso, control, integración, datos
-C) Aplicación, código, interfaz, datos
-D) Ninguna de las anteriores
-EXPLICACION: ACID define las propiedades que garantizan que las transacciones de bases de datos se procesen de manera fiable: Atomicidad (todo o nada), Consistencia, Aislamiento y Durabilidad.
+15. ¿Qué es redundancia?
+a) Eliminar datos
+*b) Duplicar componentes para garantizar disponibilidad
+c) Reducir servidores
+d) Aumentar coste
 
-¿Qué es redundancia?
-A) Eliminar datos
-*B) Duplicar componentes
-C) Reducir servidores
-D) Aumentar coste
-EXPLICACION: La redundancia consiste en duplicar componentes críticos del sistema para garantizar disponibilidad ante fallos.
+16. ¿Qué almacenamiento es ideal para bases de datos?
+a) Objetos
+b) Ficheros
+*c) Bloques
+d) Archivado
 
-¿Qué almacenamiento es ideal para bases de datos?
-A) Objetos
-B) Ficheros
-*C) Bloques
-D) Archivado
-EXPLICACION: El almacenamiento en bloques ofrece el rendimiento y la baja latencia necesarios para sistemas de gestión de bases de datos.
+17. ¿Qué permite la computación en la nube?
+*a) Acceder a recursos bajo demanda
+b) Comprar más hardware
+c) Reducir internet
+d) Eliminar datos
 
-¿Qué permite la computación en la nube?
-*A) Acceder a recursos bajo demanda
-B) Comprar más hardware
-C) Reducir internet
-D) Eliminar datos
-EXPLICACION: La computación en la nube proporciona acceso bajo demanda a recursos de computación (servidores, almacenamiento, redes) a través de internet.
+18. ¿Qué característica permite aumentar recursos automáticamente?
+a) Seguridad
+*b) Escalabilidad
+c) Latencia
+d) Backup
 
-¿Qué característica permite aumentar recursos automáticamente?
-A) Seguridad
-*B) Escalabilidad
-C) Latencia
-D) Backup
-EXPLICACION: La escalabilidad permite a un sistema aumentar (o disminuir) sus recursos de forma dinámica para adaptarse a la demanda.
+19. ¿Qué significa NoSQL?
+*a) Not Only SQL
+b) No SQL
+c) New SQL
+d) Next SQL
 
-¿Qué significa NoSQL?
-*A) Not Only SQL
-B) No SQL
-C) New SQL
-D) Next SQL
-EXPLICACION: NoSQL significa "Not Only SQL" e indica que estas bases de datos no están limitadas al modelo relacional, pudiendo almacenar datos en formatos como documentos, grafos o clave-valor.
+20. ¿Qué permite el archivado de datos?
+a) Eliminar datos
+b) Aumentar velocidad
+*c) Guardar datos a largo plazo con bajo coste
+d) Reducir seguridad
 
-¿Qué permite el archivado de datos?
-A) Eliminar datos
-B) Aumentar velocidad
-*C) Guardar a largo plazo
-D) Reducir seguridad
-EXPLICACION: El archivado de datos está diseñado para guardar información a largo plazo a bajo coste, aunque con mayor latencia de acceso.
