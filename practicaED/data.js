@@ -509,21 +509,114 @@ const LESSONS = {
     `,
     solution: `
       <div class="solution-model">
-        <h4>✅ Solución Propuesta (Diagrama de Clases)</h4>
+        <h4>✅ Solución Propuesta — Diagrama de Clases Completo</h4>
         <img src="img/sim2_p5.png" alt="Diagrama de Clases Veterinaria" style="width:100%; border-radius:8px; margin:1rem 0; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+
+        <h5 style="margin-top:1.2rem; color:var(--accent);">📦 Clases y sus Atributos</h5>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-bottom:1rem;">
+          <div style="background:var(--bg3); border-radius:6px; padding:0.8rem; border-left:3px solid var(--accent);">
+            <strong>Animal</strong><br>
+            <code>- idHistorial: int</code><br>
+            <code>- nombre: String</code><br>
+            <code>- especie: String</code><br>
+            <code>- raza: String</code><br>
+            <code>- fechaNacimiento: Date</code><br>
+            <code>- peso: double</code><br>
+            <code>+ getCitas(): List</code><br>
+            <code>+ getHistorial(): String</code>
+          </div>
+          <div style="background:var(--bg3); border-radius:6px; padding:0.8rem; border-left:3px solid var(--accent);">
+            <strong>Propietario</strong><br>
+            <code>- idPropietario: int</code><br>
+            <code>- nombre: String</code><br>
+            <code>- apellidos: String</code><br>
+            <code>- dni: String</code><br>
+            <code>- telefono: String</code><br>
+            <code>- correo: String</code><br>
+            <code>+ getAnimales(): List</code><br>
+            <code>+ solicitarCita(): void</code>
+          </div>
+          <div style="background:var(--bg3); border-radius:6px; padding:0.8rem; border-left:3px solid #6366f1;">
+            <strong>Empleado</strong> <em>(superclase abstracta)</em><br>
+            <code>- idEmpleado: int</code><br>
+            <code>- nombre: String</code><br>
+            <code>- apellidos: String</code><br>
+            <code>- dni: String</code><br>
+            <code>- telefono: String</code><br>
+            <code>- correo: String</code>
+          </div>
+          <div style="background:var(--bg3); border-radius:6px; padding:0.8rem; border-left:3px solid #6366f1;">
+            <strong>Veterinario</strong> extends Empleado<br>
+            <code>- numColegiado: String</code><br>
+            <code>- especialidad: String</code><br>
+            <code>+ realizarConsulta(): void</code><br>
+            <code>+ registrarDiagnostico(): void</code><br>
+            <code>+ prescribirTratamiento(): void</code><br><br>
+            <strong>Auxiliar</strong> extends Empleado<br>
+            <code>+ registrarCita(): void</code><br>
+            <code>+ modificarDatosAnimal(): void</code>
+          </div>
+          <div style="background:var(--bg3); border-radius:6px; padding:0.8rem; border-left:3px solid #f59e0b;">
+            <strong>Cita</strong><br>
+            <code>- idCita: int</code><br>
+            <code>- fecha: Date</code><br>
+            <code>- hora: String</code><br>
+            <code>- motivo: String</code><br>
+            <code>- estado: EstadoCita</code><br>
+            <code>+ confirmar(): void</code><br>
+            <code>+ cancelar(): void</code><br>
+            <code>+ generarFactura(): Factura</code>
+          </div>
+          <div style="background:var(--bg3); border-radius:6px; padding:0.8rem; border-left:3px solid #f59e0b;">
+            <strong>Diagnóstico</strong><br>
+            <code>- idDiagnostico: int</code><br>
+            <code>- descripcion: String</code><br>
+            <code>- fecha: Date</code><br>
+            <code>- gravedad: Gravedad</code><br>
+            <code>+ getTratamientos(): List</code><br><br>
+            <strong>Tratamiento</strong><br>
+            <code>- idTratamiento: int</code><br>
+            <code>- descripcion: String</code><br>
+            <code>- fechaInicio: Date</code><br>
+            <code>- finEstimada: Date</code><br>
+            <code>- indicaciones: String</code>
+          </div>
+          <div style="background:var(--bg3); border-radius:6px; padding:0.8rem; border-left:3px solid #10b981;">
+            <strong>Medicamento</strong><br>
+            <code>- idMedicamento: int</code><br>
+            <code>- nombreComercial: String</code><br>
+            <code>- principioActivo: String</code><br>
+            <code>- requiereReceta: boolean</code><br>
+            <code>+ getDosis(): String</code>
+          </div>
+          <div style="background:var(--bg3); border-radius:6px; padding:0.8rem; border-left:3px solid #10b981;">
+            <strong>Factura</strong><br>
+            <code>- idFactura: int</code><br>
+            <code>- fechaEmision: Date</code><br>
+            <code>- importeTotal: double</code><br>
+            <code>- estadoPago: String</code><br>
+            <code>- metodoPago: String</code><br>
+            <code>+ pagar(): void</code><br>
+            <code>+ getDetalle(): String</code>
+          </div>
+        </div>
+
+        <h5 style="color:var(--accent);">🔗 Relaciones (Multiplicidades)</h5>
         <ul>
-          <li><strong>Herencia:</strong> Clase <code>Empleado</code> (superclase) con subclases <code>Veterinario</code> y <code>Auxiliar</code>.</li>
-          <li><strong>Relaciones 1:N:</strong>
-            <br>- Propietario (1) -- (*) Animal
-            <br>- Animal (1) -- (*) Cita
-            <br>- Veterinario (1) -- (*) Cita
-            <br>- Cita (1) -- (0..*) Diagnóstico
-            <br>- Diagnóstico (1) -- (0..*) Tratamiento
-            <br>- Cita (1) -- (0..1) Factura
-          </li>
-          <li><strong>Relación N:M:</strong> <code>Tratamiento</code> (*) -- (*) <code>Medicamento</code> (Se requiere una clase intermedia o lista de medicamentos).</li>
-          <li><strong>Atributos:</strong> No olvides tipos de datos (String, Date, float) y visibilidad (- para atributos, + para métodos).</li>
-          <li><strong>Enumeraciones:</strong> Crea tipos <code>EstadoCita</code> (PENDIENTE, etc.) y <code>Gravedad</code> (LEVE, MEDIA, GRAVE).</li>
+          <li><strong>Herencia:</strong> <code>Empleado</code> ◁── <code>Veterinario</code> y <code>Empleado</code> ◁── <code>Auxiliar</code></li>
+          <li><strong>Propietario (1) ─── (0..*) Animal</strong> — Un propietario tiene 0 o más animales. Un animal tiene un único propietario.</li>
+          <li><strong>Animal (1) ─── (0..*) Cita</strong> — Un animal puede tener muchas citas.</li>
+          <li><strong>Veterinario (1) ─── (0..*) Cita</strong> — Un veterinario atiende muchas citas.</li>
+          <li><strong>Cita (1) ─── (0..*) Diagnóstico</strong> — Una cita puede tener 0 o más diagnósticos.</li>
+          <li><strong>Diagnóstico (1) ─── (0..*) Tratamiento</strong> — Un diagnóstico puede requerir varios tratamientos.</li>
+          <li><strong>Tratamiento (*) ─── (*) Medicamento</strong> → Relación <strong>N:M</strong> (un tratamiento incluye varios medicamentos y un mismo medicamento puede estar en muchos tratamientos). Añade atributos de enlace: <code>dosis: String</code> y <code>frecuencia: String</code>.</li>
+          <li><strong>Cita (1) ─── (0..1) Factura</strong> — Una cita puede generar como máximo una factura.</li>
+        </ul>
+
+        <h5 style="color:var(--accent);">🏷️ Enumeraciones recomendadas</h5>
+        <ul>
+          <li><code>EstadoCita</code>: PENDIENTE, REALIZADA, CANCELADA</li>
+          <li><code>Gravedad</code>: LEVE, MEDIA, GRAVE</li>
         </ul>
       </div>
     `,
