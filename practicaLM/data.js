@@ -77,14 +77,19 @@ const UNITS = {
       { id: 'b-q24', category: 'Bloque 6: Repaso XQuery (Extra)', icon: '💡', label: 'Extra 7: Pedidos', type: 'editor', editorId: 'q_25' }
     ]
   },
-  simulacros: {
-    label: 'EXAMEN', title: 'Simulacros de Examen',
+  simulacro1: {
+    label: 'EXAMEN', title: 'Simulacro 1: HTML5 & Test',
     sections: [
       { id: 'sim1-quiz', icon: '🧠', label: 'Simulacro 1: Test Teórico', type: 'quiz', quizId: 'simulacro1_quiz' },
       { id: 'sim1-h1', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '1. Estructura y Head', type: 'exam', editorId: 'sim1_p1' },
       { id: 'sim1-h2', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '2. Header y Menú', type: 'exam', editorId: 'sim1_p2' },
       { id: 'sim1-h3', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '3. Productos (Sección)', type: 'exam', editorId: 'sim1_p3' },
-      { id: 'sim1-h4', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '4. Formulario Contacto', type: 'exam', editorId: 'sim1_p4' },
+      { id: 'sim1-h4', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '4. Formulario Contacto', type: 'exam', editorId: 'sim1_p4' }
+    ]
+  },
+  simulacro2: {
+    label: 'EXAMEN', title: 'Simulacro 2: XML & XSD',
+    sections: [
       { id: 'sim2-quiz', icon: '🧠', label: 'Simulacro 2: Test Teórico', type: 'quiz', quizId: 'simulacro2_quiz' },
       { id: 'sim2-p1', category: 'Práctico 2: XML & DTD', icon: '📄', label: '1. Validación DTD', type: 'exam', editorId: 'sim2_p1' },
       { id: 'sim2-p2', category: 'Práctico 2: XML & XSD', icon: '🛡️', label: '2. Creación XSD', type: 'exam', editorId: 'sim2_p2' }

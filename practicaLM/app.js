@@ -20,7 +20,7 @@ function selectUnit(unitId) {
   document.getElementById('app').classList.remove('hidden');
   document.getElementById('topbar-unit').textContent = unit.label;
   document.getElementById('topbar-title').textContent = unit.title;
-  if (unitId.startsWith('simulacros')) {
+  if (unitId.startsWith('simulacro')) {
     score = { correct: 0, wrong: 0, quizCorrect: 0, quizWrong: 0 };
     sectionScores = {};
     document.querySelector('#score-correct span').textContent = '0';
@@ -973,7 +973,7 @@ function triggerCunaoEffect(passed) {
 // ---- LIVE GRADE LOGIC ----
 function updateLiveGrade() {
   const container = document.getElementById('live-grade-container');
-  if (!currentUnit || !currentUnit.startsWith('simulacros')) {
+  if (!currentUnit || !currentUnit.startsWith('simulacro')) {
     if (container) container.classList.add('hidden');
     return;
   }
