@@ -541,5 +541,14 @@ const SYLLABUS_REGISTRY_DATA = [
     "file": "data/syllabus/cc_simulacro_27_04.txt",
     "icon": "☁️",
     "solution": "Cloud Computing/bachero/Repaso_2704-_SOL.pdf"
+  },
+  {
+    "id": "cc_simulacro_04_05",
+    "name": "🎯 SIMULACRO 04/05",
+    "type": "examen_final",
+    "subject_id": "cloud_computing",
+    "file": "data/syllabus/cc_simulacro_04_05.txt",
+    "icon": "☁️",
+    "solution": "Cloud Computing/bachero/Simulacros_04-05_-_Sol.pdf"
   }
 ];
