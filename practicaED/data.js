@@ -478,32 +478,15 @@ const LESSONS = {
     ],
     fullText: `
       <div class="simulation-case">
-        <h3>📋 Enunciado Completo: Clínica Veterinaria</h3>
-        <p>Una clínica veterinaria desea desarrollar una aplicación para gestionar la atención de sus pacientes animales, sus propietarios, las citas médicas, los tratamientos aplicados y las facturas generadas.</p>
+        <h3>📋 Enunciado de Proyecto: Gestión de Clínica Veterinaria</h3>
+        <p>Una clínica veterinaria desea desarrollar una aplicación para gestionar la atención de sus pacientes animales, sus propietarios, las citas médicas, los tratamientos aplicados y las facturas generadas. Se requiere diseñar el <strong>Diagrama de Clases UML</strong> contemplando los siguientes aspectos del negocio:</p>
         
         <div class="case-section">
-          <h4>1. Pacientes y Propietarios</h4>
-          <p>La clínica atiende a distintos <strong>animales domésticos</strong>. Cada animal tiene un nombre, una especie, una raza, una fecha de nacimiento, un peso aproximado y un número de historial clínico. Cada animal pertenece a un <strong>único propietario</strong>, aunque un propietario puede tener varios animales registrados. De cada propietario interesa guardar sus datos personales y de contacto.</p>
-        </div>
-
-        <div class="case-section">
-          <h4>2. Empleados y Roles</h4>
-          <p>En la clínica trabajan varios <strong>empleados</strong>. Todos comparten datos básicos (nombre, apellidos, DNI, teléfono y correo electrónico), pero existen dos tipos: <strong>veterinarios</strong> y <strong>auxiliares</strong>. Los veterinarios realizan consultas, diagnostican y prescriben tratamientos. Los auxiliares registran citas, modifican datos de animales y ayudan en administración.</p>
-        </div>
-
-        <div class="case-section">
-          <h4>3. Citas Médicas</h4>
-          <p>Los propietarios solicitan <strong>citas</strong> para sus animales. Cada cita corresponde a un único animal y es atendida por un veterinario concreto. Una cita tiene fecha, hora, motivo de consulta y un <strong>estado</strong> (pendiente, realizada o cancelada). Un animal puede tener muchas citas.</p>
-        </div>
-
-        <div class="case-section">
-          <h4>4. Diagnósticos y Tratamientos</h4>
-          <p>Durante una cita, el veterinario puede registrar un <strong>diagnóstico</strong> (descripción, fecha y gravedad). Una cita realizada puede tener uno o varios diagnósticos asociados. El veterinario podrá prescribir <strong>tratamientos</strong> (descripción, fecha inicio, fin estimada e indicaciones). Un tratamiento puede estar asociado a un diagnóstico, y un diagnóstico puede requerir varios tratamientos.</p>
-        </div>
-
-        <div class="case-section">
-          <h4>5. Medicamentos y Facturas</h4>
-          <p>Un tratamiento puede incluir uno o varios <strong>medicamentos</strong> (dosis y frecuencia). Un mismo medicamento puede usarse en muchos tratamientos. De cada medicamento interesa: nombre comercial, principio activo y si requiere receta. Además, cada cita puede generar una <strong>factura</strong> (fecha emisión, importe total, estado de pago y método de pago).</p>
+          <p><strong>1. Pacientes y Propietarios:</strong> La clínica atiende a distintos animales domésticos. Cada animal tiene un nombre, una especie, una raza, una fecha de nacimiento, un peso aproximado y un número de historial clínico. Cada animal pertenece a un único propietario, aunque un propietario puede tener varios animales registrados. De cada propietario interesa guardar sus datos personales y de contacto.</p>
+          <p><strong>2. Empleados y Roles:</strong> En la clínica trabajan varios empleados. Todos comparten datos básicos (nombre, apellidos, DNI, teléfono y correo electrónico), pero existen dos tipos: veterinarios y auxiliares. Los veterinarios realizan consultas, diagnostican y prescribir tratamientos. Los auxiliares registran citas, modifican datos de animales y ayudan en administración.</p>
+          <p><strong>3. Citas Médicas:</strong> Los propietarios solicitan citas para sus animales. Cada cita corresponde a un único animal y es atendida por un veterinario concreto. Una cita tiene fecha, hora, motivo de consulta y un estado (pendiente, realizada o cancelada). Un animal puede tener muchas citas.</p>
+          <p><strong>4. Diagnósticos y Tratamientos:</strong> Durante una cita, el veterinario puede registrar un diagnóstico (descripción, fecha y gravedad). Una cita realizada puede tener uno o varios diagnósticos asociados. El veterinario podrá prescribir tratamientos (descripción, fecha inicio, fin estimada e indicaciones). Un tratamiento puede estar asociado a un diagnóstico, y un diagnóstico puede requerir varios tratamientos.</p>
+          <p><strong>5. Medicamentos y Facturas:</strong> Un tratamiento puede incluir uno o varios medicamentos (dosis y frecuencia). Un mismo medicamento puede usarse en muchos tratamientos. De cada medicamento interesa: nombre comercial, principio activo y si requiere receta. Además, cada cita puede generar una factura (fecha emisión, importe total, estado de pago y método de pago).</p>
         </div>
       </div>
     `,
@@ -635,14 +618,13 @@ const LESSONS = {
     ],
     fullText: `
       <div class="simulation-case">
-        <h3>🏫 Enunciado: Sistema de Academia</h3>
-        <p>La academia necesita gestionar la reserva de aulas:</p>
-        <ul>
-          <li>Los <strong>Alumnos</strong> registrados pueden consultar aulas disponibles y realizar reservas.</li>
-          <li>Solo los alumnos marcados como <strong>activos</strong> pueden realizar reservas.</li>
-          <li>Los alumnos pueden <strong>cancelar</strong> sus reservas si aún no han comenzado.</li>
-          <li>El <strong>Administrador</strong> se encarga de registrar nuevas aulas y cambiar su estado (Disponible/Mantenimiento).</li>
-        </ul>
+        <h3>🏫 Enunciado de Proyecto: Gestión de Academia de Estudios</h3>
+        <p>Una academia de estudios necesita digitalizar su proceso de reserva de aulas. Para ello, se requiere modelar los <strong>Casos de Uso</strong> del sistema teniendo en cuenta la siguiente descripción:</p>
+        <div class="case-section">
+          <p>Los <strong>Alumnos</strong> registrados en la plataforma pueden consultar en tiempo real las aulas que están disponibles. Si encuentran un aula libre, pueden realizar una reserva indicando la franja horaria. Sin embargo, el sistema solo debe permitir realizar reservas a aquellos alumnos que figuren con el estado de <strong>activo</strong> (al corriente de pago).</p>
+          <p>Una vez realizada una reserva, el alumno tiene la potestad de <strong>cancelar</strong> su reserva siempre y cuando el tiempo de uso no haya comenzado todavía.</p>
+          <p>Por otro lado, el personal de <strong>Administración</strong> tiene privilegios para gestionar el inventario de aulas: pueden dar de alta nuevas aulas en el sistema, dar de baja las existentes o cambiar su estado manualmente a "Mantenimiento" si detectan alguna avería técnica.</p>
+        </div>
       </div>
     `,
     solution: `
@@ -656,7 +638,10 @@ const LESSONS = {
         </ul>
       </div>
     `,
-    codeExample: '',
+    codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
+  <p style="margin-bottom:1rem; color:var(--text1); font-size:1.1rem;">Las prácticas se realizan con <strong>Visual Paradigm Online</strong>.</p>
+  <a href="https://online.visual-paradigm.com/drive/#proj=0&dashboard" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
+</div>`,
     info: { type: 'tip', text: '💡 Recuerda incluir el límite del sistema.' },
     svg: 'casos_uso'
   },
@@ -669,12 +654,13 @@ const LESSONS = {
     ],
     fullText: `
       <div class="simulation-case">
-        <h3>\ud83d\udcd0 Requisitos del Diagrama de Clases</h3>
-        <ul>
-          <li><strong>Alumno</strong>: id, nombre, apellidos, email, telefono, activo (boolean).</li>
-          <li><strong>Aula</strong>: codigo, nombre, capacidad, planta, tieneProyector (boolean), estado (Disponible, Ocupada, Mantenimiento).</li>
-          <li><strong>Reserva</strong>: codigoReserva, fecha, horaInicio, horaFin, estado (Pendiente, Confirmada, Cancelada).</li>
-        </ul>
+        <h3>📏 Enunciado de Proyecto: Estructura de Datos (Academia)</h3>
+        <p>Basándote en el sistema de gestión de la academia descrito anteriormente, define el <strong>Diagrama de Clases UML</strong> detallando los atributos y tipos de datos necesarios para cada entidad:</p>
+        <div class="case-section">
+          <p><strong>Clase Alumno:</strong> Debe almacenar el identificador único, nombre completo, apellidos, correo electrónico institucional, teléfono de contacto y un indicador booleano de si está activo.</p>
+          <p><strong>Clase Aula:</strong> Se identifica por un código alfanumérico. Debe guardar su nombre (ej. "Aula 101"), capacidad de alumnos, la planta del edificio donde se ubica, si dispone de proyector y su estado actual (Disponible, Ocupada o Mantenimiento).</p>
+          <p><strong>Clase Reserva:</strong> Registra un código de reserva único, la fecha solicitada, la hora de inicio y fin del uso, y el estado de la reserva (Pendiente, Confirmada o Cancelada).</p>
+        </div>
       </div>
     `,
     solution: `
@@ -691,7 +677,10 @@ const LESSONS = {
         </ul>
       </div>
     `,
-    codeExample: '',
+    codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
+  <p style="margin-bottom:1rem; color:var(--text1); font-size:1.1rem;">Las prácticas se realizan con <strong>Visual Paradigm Online</strong>.</p>
+  <a href="https://online.visual-paradigm.com/drive/#proj=0&dashboard" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
+</div>`,
     info: { type: 'tip', text: '💡 Define bien los tipos de datos (String, int, boolean, Date).' },
     svg: 'uml_tipos'
   },
@@ -703,14 +692,12 @@ const LESSONS = {
     ],
     fullText: `
       <div class="simulation-case">
-        <h3>\u23f1\ufe0f Enunciado: Realizar Reserva</h3>
-        <ol>
-          <li>El <strong>Alumno</strong> solicita reservar indicando fecha y horas.</li>
-          <li>El <strong>Sistema</strong> consulta al objeto <strong>Aula</strong> su disponibilidad.</li>
-          <li>Si está disponible, el <strong>Sistema</strong> crea la <strong>Reserva</strong>.</li>
-          <li>El <strong>Sistema</strong> confirma al Alumno.</li>
-          <li>Si no está disponible, informa del error.</li>
-        </ol>
+        <h3>⏱️ Enunciado de Proyecto: Interacción de Reserva</h3>
+        <p>Modela el <strong>Diagrama de Secuencia</strong> para el proceso de "Realizar Reserva" en la academia, siguiendo este flujo narrativo:</p>
+        <div class="case-section">
+          <p>El <strong>Alumno</strong> inicia el proceso solicitando una reserva al <strong>Sistema</strong> para un día y hora concretos. El <strong>Sistema</strong>, antes de proceder, debe interrogar al objeto <strong>Aula</strong> correspondiente para verificar su disponibilidad física en ese momento.</p>
+          <p>En el caso de que el aula esté disponible, el <strong>Sistema</strong> procede a instanciar (crear) un nuevo objeto de la clase <strong>Reserva</strong> con los datos facilitados y notifica la confirmación al alumno. En caso contrario, el sistema debe responder con un mensaje de error indicando que el aula ya está ocupada.</p>
+        </div>
       </div>
     `,
     solution: `
@@ -728,7 +715,10 @@ const LESSONS = {
         </ul>
       </div>
     `,
-    codeExample: '',
+    codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
+  <p style="margin-bottom:1rem; color:var(--text1); font-size:1.1rem;">Las prácticas se realizan con <strong>Visual Paradigm Online</strong>.</p>
+  <a href="https://online.visual-paradigm.com/drive/#proj=0&dashboard" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
+</div>`,
     info: { type: 'tip', text: '💡 Usa un fragmento "alt" para manejar la disponibilidad.' },
     svg: 'secuencia'
   },
@@ -740,14 +730,12 @@ const LESSONS = {
     ],
     fullText: `
       <div class="simulation-case">
-        <h3>\ud83d\udcac Enunciado: Cancelar Reserva</h3>
-        <ol>
-          <li>El Alumno selecciona la reserva.</li>
-          <li>El Sistema comprueba si existe.</li>
-          <li>Si existe, comprueba si ya ha comenzado la franja horaria.</li>
-          <li>Si NO ha comenzado, se cancela y se libera el aula.</li>
-          <li>Se muestra mensaje final (éxito o error).</li>
-        </ol>
+        <h3>🔄 Enunciado de Proyecto: Flujo de Cancelación</h3>
+        <p>Diseña el <strong>Diagrama de Actividad</strong> que represente la lógica de control para cancelar una reserva en la academia:</p>
+        <div class="case-section">
+          <p>El proceso comienza cuando el Alumno selecciona una reserva activa de su lista. El Sistema primero debe validar que dicha reserva existe en la base de datos. Si existe, debe realizar una comprobación crítica: verificar si la hora de inicio de la reserva ya ha pasado o si todavía está a tiempo de cancelarse.</p>
+          <p>Si la reserva aún no ha comenzado, el sistema cambia su estado a "Cancelada", libera el aula asociada para futuros usos y muestra un mensaje de éxito. Si la reserva ya está en curso o ha finalizado, el sistema deniega la operación con un mensaje informativo de error.</p>
+        </div>
       </div>
     `,
     solution: `
@@ -760,7 +748,10 @@ const LESSONS = {
         </ul>
       </div>
     `,
-    codeExample: '',
+    codeExample: `<div style="text-align:center; padding: 1.5rem; background: var(--bg3); border-radius: 8px; margin: 1rem 0;">
+  <p style="margin-bottom:1rem; color:var(--text1); font-size:1.1rem;">Las prácticas se realizan con <strong>Visual Paradigm Online</strong>.</p>
+  <a href="https://online.visual-paradigm.com/drive/#proj=0&dashboard" target="_blank" class="btn-primary" style="text-decoration:none; display:inline-block; font-size:1.1rem; padding:0.8rem 1.5rem; border-radius:4px;">🚀 Abrir Visual Paradigm Online</a>
+</div>`,
     info: { type: 'tip', text: '💡 No olvides los nodos inicial y final.' },
     svg: 'estados'
   }
