@@ -25,6 +25,9 @@ function selectUnit(unitId) {
     sectionScores = {};
     document.querySelector('#score-correct span').textContent = '0';
     document.querySelector('#score-wrong span').textContent = '0';
+    startExamTimer();
+  } else {
+    stopExamTimer();
   }
   buildSidebar(unit); showWelcome();
   updateLiveGrade();
@@ -38,6 +41,7 @@ function goHome() {
   sectionScores = {};
   document.querySelector('#score-correct span').textContent = '0';
   document.querySelector('#score-wrong span').textContent = '0';
+  stopExamTimer();
   updateLiveGrade();
 }
 
@@ -1041,4 +1045,65 @@ function manualReportScore() {
   } else {
     showToast('⚠️ No se pudo conectar con el Ranking', 'error');
   }
+}
+// ---- TIMER LOGIC ----
+let examTimer = null;
+let examTimeLeft = 0;
+
+function startExamTimer() {
+  const container = document.getElementById('sim-timer-container');
+  const valueEl = document.getElementById('sim-timer-value');
+  if (!container || !valueEl) return;
+
+  container.classList.remove('hidden');
+  container.classList.remove('warning');
+  
+  examTimeLeft = 90 * 60; // 90 minutes
+  updateTimerDisplay(valueEl);
+
+  if (examTimer) clearInterval(examTimer);
+  examTimer = setInterval(() => {
+    examTimeLeft--;
+    updateTimerDisplay(valueEl);
+
+    if (examTimeLeft === 3600) { // 30 mins passed
+      showToast('⚠️ Han pasado 30 min. ¡Empieza con los casos prácticos!', 'info');
+    }
+    
+    if (examTimeLeft === 600) { // 10 mins left
+      container.classList.add('warning');
+      showToast('⚠️ ¡Solo quedan 10 minutos!', 'warning');
+    }
+
+    if (examTimeLeft <= 0) {
+      clearInterval(examTimer);
+      showTimeUpModal();
+    }
+  }, 1000);
+}
+
+function updateTimerDisplay(el) {
+  const m = Math.floor(examTimeLeft / 60);
+  const s = examTimeLeft % 60;
+  el.textContent = `${m}:${s.toString().padStart(2, '0')}`;
+}
+
+function stopExamTimer() {
+  if (examTimer) clearInterval(examTimer);
+  const container = document.getElementById('sim-timer-container');
+  if (container) container.classList.add('hidden');
+}
+
+function showTimeUpModal() {
+  const content = document.getElementById('modal-content');
+  content.innerHTML = `
+    <div style="text-align:center; padding: 2rem;">
+      <span style="font-size:4rem">⏰</span>
+      <h2 style="color:var(--red); margin: 1.5rem 0;">¡TIEMPO AGOTADO!</h2>
+      <p>El tiempo para el simulacro de examen ha finalizado.</p>
+      <p style="font-size:0.9rem; color:var(--text2)">Tu nota actual ha sido registrada. Puedes ver los resultados en el ranking.</p>
+      <button class="btn-primary" onclick="goHome()" style="margin-top:2rem; width:100%; justify-content:center">Volver al inicio</button>
+    </div>
+  `;
+  document.getElementById('modal-overlay').classList.remove('hidden');
 }

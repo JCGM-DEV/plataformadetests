@@ -1640,3 +1640,29 @@ body {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.8; }
 }
+
+/* TIMER STYLES */
+.sim-timer-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0,0,0,0.3);
+  padding: 0.35rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: var(--accent3);
+  min-width: 90px;
+  justify-content: center;
+}
+.sim-timer-container.warning {
+  border-color: var(--red);
+  color: var(--red);
+  animation: pulse-timer 1s infinite alternate;
+}
+@keyframes pulse-timer {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0.7; transform: scale(1.05); }
+}
+.timer-icon { font-size: 1rem; }
