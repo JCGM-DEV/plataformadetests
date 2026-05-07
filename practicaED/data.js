@@ -295,10 +295,11 @@ const LESSONS = {
         <h4>✅ Solución Propuesta (Casos de Uso)</h4>
         <img src="img/sim1_p1.png" alt="Diagrama de Casos de Uso Bicis" style="width:100%; border-radius:8px; margin:1rem 0; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
         <ul>
-          <li><strong>Actores:</strong> Usuario (Socio) y Empleado (Mantenimiento).</li>
-          <li><strong>Casos de Uso base:</strong> "Alquilar Bicicleta", "Devolver Bicicleta", "Buscar Bici", "Gestionar Inventario".</li>
-          <li><strong>Relación Include:</strong> "Alquilar Bicicleta" ---«include»---> "Identificarse".</li>
-          <li><strong>Relación Extend:</strong> "Dejar Reseña" ---«extend»---> "Devolver Bicicleta" (Punto de extensión: Tras confirmar entrega).</li>
+          <li><strong>Actores:</strong> <code>Socio</code> (usuario del sistema) y <code>Mantenimiento</code> (empleado técnico). Ambos fuera del rectángulo del sistema.</li>
+          <li><strong>Casos de Uso del Socio:</strong> "Consultar Disponibilidad", "Alquiler de Bicicleta", "Devolver Bicicleta".</li>
+          <li><strong>Casos de Uso de Mantenimiento:</strong> "Reparar Bicicleta", "Gestionar Inventario".</li>
+          <li><strong>Relación Include:</strong> "Alquiler de Bicicleta" ---«include»---> "Validación de Usuario" (siempre se valida al alquilar).</li>
+          <li><strong>Relación Extend:</strong> "Reportar Avería" ---«extend»---> "Devolver Bicicleta" (solo si se detectó un fallo durante el uso).</li>
         </ul>
       </div>
     `,
@@ -340,14 +341,15 @@ const LESSONS = {
         <h4>✅ Solución Propuesta (Secuencia)</h4>
         <img src="img/sim1_p2.png" alt="Diagrama de Secuencia Bicis" style="width:100%; border-radius:8px; margin:1rem 0; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
         <ul>
-          <li><strong>Participantes (Objetos):</strong> <code>:Socio</code>, <code>:AppAlquiler</code>, <code>b:Bicicleta</code>, <code>:Registro</code>.</li>
-          <li><strong>Flujo principal:</strong>
-            <br>1. Socio -> solicitarAlquiler(id) -> AppAlquiler.
-            <br>2. AppAlquiler -> checkEstado() -> b:Bicicleta.
-            <br>3. AppAlquiler -> create() -> :Registro (Mensaje de creación).
-            <br>4. AppAlquiler -> confirmación -> Socio.
+          <li><strong>Participantes (Objetos):</strong> <code>:Socio</code>, <code>:Sistema</code>, <code>b:Bicicleta</code>, <code>:Registro</code>.</li>
+          <li><strong>Flujo principal (mensajes síncronos → y retornos ⤶):</strong>
+            <br>1. Socio → <code>solicitarAlquiler(idBici)</code> → :Sistema
+            <br>2. :Sistema → <code>checkDisponibilidad()</code> → b:Bicicleta
+            <br>3. b:Bicicleta ⤶ retorno de estado → :Sistema
+            <br>4. [Si disponible] :Sistema → <code>new(datos)</code> → :Registro (mensaje de creación)
+            <br>5. :Sistema → <code>confirmarAlquiler()</code> → Socio
           </li>
-          <li><strong>Nota:</strong> Usa barras de activación largas para la AppAlquiler mientras gestiona la lógica interna.</li>
+          <li><strong>Nota visual:</strong> Dibuja las barras de activación sobre el :Sistema durante los pasos 2 al 5, ya que está gestionando la lógica. El Socio solo tiene barra en el paso 1. Usa un fragmento <code>alt</code> para modelar el caso en que la bici no esté disponible.</li>
         </ul>
       </div>
     `,
@@ -393,9 +395,19 @@ const LESSONS = {
         <h4>✅ Solución Propuesta (Actividad)</h4>
         <img src="img/sim1_p3.png" alt="Diagrama de Actividad Bicis" style="width:100%; border-radius:8px; margin:1rem 0; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
         <ul>
-          <li><strong>Nodos de acción:</strong> "Entregar Bici", "Inspeccionar", "Registrar Avería", "Emitir Multa", "Marcar Disponible", "Notificar App".</li>
-          <li><strong>Nodo de decisión:</strong> Rombo con dos salidas: "[daños]" y "[sin daños]".</li>
-          <li><strong>Estructura:</strong> El flujo debe ser lineal hasta el rombo, abrirse en dos ramas y volver a unirse (Merge) antes del paso final "Notificar App".</li>
+          <li><strong>Inicio (⚫) → Nodo de acción:</strong> "Entrega de Bicicleta"</li>
+          <li><strong>Nodo de acción:</strong> "Inspección Técnica" (empleado evalúa el estado)</li>
+          <li><strong>Rombo de decisión:</strong> ¿Daños graves/averías?
+            <br>→ <strong>[SÍ]</strong>: Fork (barra gruesa) que abre dos ramas en paralelo:
+            <ul style="margin:0.5rem 0 0.5rem 1.5rem">
+              <li>Rama A: "Registrar Avería"</li>
+              <li>Rama B: "Generar Penalización"</li>
+            </ul>
+            Ambas ramas se unen en un Join (barra gruesa) antes de continuar.
+            <br>→ <strong>[NO]</strong>: "Limpieza y Puesta a Punto"
+          </li>
+          <li><strong>Rombo de Merge (unión):</strong> Ambos caminos confluyen.</li>
+          <li><strong>Nodo de acción final:</strong> "Notificar Disponibilidad en App" → Estado Final (⊙)</li>
         </ul>
       </div>
     `,
@@ -435,14 +447,17 @@ const LESSONS = {
         <h4>✅ Solución Propuesta (Estados)</h4>
         <img src="img/sim1_p4.png" alt="Diagrama de Estados Bicis" style="width:100%; border-radius:8px; margin:1rem 0; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
         <ul>
-          <li><strong>Estados:</strong> Disponible (inicial), Alquilada, En Reparación, Retirada (final).</li>
-          <li><strong>Transiciones clave:</strong>
-            <br>- Disponible --[alquilar]--> Alquilada
-            <br>- Alquilada --[devolver]--> Disponible
-            <br>- Alquilada --[avería]--> En Reparación
-            <br>- En Reparación --[arreglada]--> Disponible
-            <br>- En Reparación --[desguace]--> Retirada (⊙)
+          <li><strong>Estado inicial (⚫):</strong> La bici empieza en estado <strong>Disponible</strong> al comprarse.</li>
+          <li><strong>Transiciones según el enunciado:</strong>
+            <br>⚫ → <strong>Disponible</strong> (estado inicial)
+            <br><strong>Disponible</strong> --[<code>alquilar()</code>]--> <strong>En Uso</strong>
+            <br><strong>En Uso</strong> --[<code>devolver()</code> / sin fallos]--> <strong>Disponible</strong>
+            <br><strong>En Uso</strong> --[<code>reportarFallo()</code>]--> <strong>Averiada</strong>
+            <br><strong>Averiada</strong> --[<code>recogerParaReparar()</code>]--> <strong>En Taller</strong>
+            <br><strong>En Taller</strong> --[<code>reparacionFinalizada()</code>]--> <strong>Disponible</strong>
+            <br><strong>En Taller</strong> --[<code>irreparable()</code>]--> <strong>Retirada</strong> (⊙)
           </li>
+          <li><strong>Importante:</strong> Los nombres de los eventos en las transiciones deben coincidir exactamente con los del enunciado. Hay 4 estados intermedios (Disponible, En Uso, Averiada, En Taller) + 1 estado final.</li>
         </ul>
       </div>
     `,

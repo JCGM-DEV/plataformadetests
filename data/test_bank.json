@@ -6,7 +6,7 @@
       "options": [
         "Una máquina matemática que permite reducir la estructura de cualquier dispositivo a su forma más esencial",
         "Un sistema de hardware y software que permite realizar tareas en una secuencia de pasos discretos",
-        "Un tipo de ordenador que se basa en el uso de una cinta infinita y extensible para ejecutar funciones.",
+        "Un tipo de ordenador que se basa en el uso de una cinta infinita y extensible para ejecutar funciones",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -19,7 +19,7 @@
       "question": "¿Qué permite la escalabilidad de las redes informáticas?",
       "options": [
         "Proteger la información y los recursos de posibles amenazas",
-        "Adaptarse a las necesidades crecientes de la organización.",
+        "Adaptarse a las necesidades crecientes de la organización",
         "Ser fiables y estar disponibles en todo momento",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -34,7 +34,7 @@
       "options": [
         "Fiables y estar disponibles en todo momento",
         "Escalables",
-        "Seguras.",
+        "Seguras",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -47,7 +47,7 @@
       "question": "¿Qué significa que las redes informáticas permitan la comunicación entre los dispositivos conectados?",
       "options": [
         "Los usuarios deben ser capaces de acceder a los mismos recursos de manera simultánea",
-        "Los usuarios pueden enviar y recibir información de manera rápida y eficiente.",
+        "Los usuarios pueden enviar y recibir información de manera rápida y eficiente",
         "Deben estar diseñadas para proteger la información y los recursos de posibles amenazas",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -61,7 +61,7 @@
       "question": "¿Cuál es una de las principales características de las redes informáticas?",
       "options": [
         "Proteger la privacidad y la integridad de los datos",
-        "Permitir la comunicación entre los dispositivos conectados.",
+        "Permitir la comunicación entre los dispositivos conectados",
         "Adquirir una copia independiente para cada usuario",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -75,7 +75,7 @@
       "question": "¿Qué dispositivo permite la reproducción de sonido en el ordenador?",
       "options": [
         "Ratón",
-        "Altavoces.",
+        "Altavoces",
         "Impresora",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -89,7 +89,7 @@
       "question": "¿Qué es una de las normas importantes que un administrador de redes debe seguir para garantizar la seguridad?",
       "options": [
         "Mantener una buena organización de cables",
-        "Realizar copias de seguridad periódicas.",
+        "Realizar copias de seguridad periódicas",
         "No proteger dispositivos móviles",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -103,7 +103,7 @@
       "question": "¿Cuál es el componente físico del sistema informático?",
       "options": [
         "Software",
-        "Hardware.",
+        "Hardware",
         "Componente humano",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -116,7 +116,7 @@
       "concept_id": "si_tema_1_q8",
       "question": "¿Qué tipo de medios de transmisión requiere un canal físico para transmitir los datos?",
       "options": [
-        "Guiados.",
+        "Guiados",
         "No guiados",
         "Ambos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -131,7 +131,7 @@
       "question": "¿Qué periférico permite ingresar texto y comandos en el ordenador?",
       "options": [
         "Escáner",
-        "Teclado.",
+        "Teclado",
         "Cámara web",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -145,7 +145,7 @@
       "question": "¿Cuáles son los cuatro componentes principales de un sistema informático?",
       "options": [
         "Hardware, software, usuarios, seguridad",
-        "Hardware, software, datos, usuarios.",
+        "Hardware, software, datos, usuarios",
         "Hardware, software, redes, periféricos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -159,7 +159,7 @@
       "question": "¿Qué tarea crítica del sistema operativo implica la planificación de la ejecución de procesos y supervisar su finalización?",
       "options": [
         "Controlar y gestionar el uso del hardware del ordenador",
-        "Administrar la ejecución de los procesos.",
+        "Administrar la ejecución de los procesos",
         "Controlar el proceso de organización de la información",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -174,7 +174,7 @@
       "options": [
         "Descargar manualmente e instalar la versión superior",
         "Comprobar si la versión superior es compatible con el sistema operativo y la licencia de la aplicación",
-        "Realizar una copia de seguridad de los archivos y carpetas asociados a la aplicación.",
+        "Realizar una copia de seguridad de los archivos y carpetas asociados a la aplicación",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -187,7 +187,7 @@
       "question": "¿Qué es la virtualización del hardware?",
       "options": [
         "La capacidad de ejecutar múltiples sistemas operativos en diferentes servidores físicos",
-        "La capacidad de crear varias máquinas virtuales en un solo servidor físico.",
+        "La capacidad de crear varias máquinas virtuales en un solo servidor físico",
         "La capacidad de almacenar datos de diferentes sistemas operativos en un solo servidor físico",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -200,7 +200,7 @@
       "concept_id": "si_tema_2_q4",
       "question": "¿Cuál es la ventaja principal de la arquitectura monolítica?",
       "options": [
-        "Su simplicidad y eficiencia.",
+        "Su simplicidad y eficiencia",
         "Su modularidad y escalabilidad",
         "Su capacidad para agregar o eliminar funciones sin tener que recompilar todo el sistema",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -216,7 +216,7 @@
       "options": [
         "Para verificar si se dispone de la licencia correspondiente",
         "Para dividir el disco duro en secciones o particiones lógicas",
-        "Para automatizar la instalación del sistema operativo en varios ordenadores.",
+        "Para automatizar la instalación del sistema operativo en varios ordenadores",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -229,7 +229,7 @@
       "question": "¿Por qué es importante comprobar los requisitos, versiones y licencias antes de instalar una aplicación?",
       "options": [
         "Para asegurarse de tener suficiente espacio en disco",
-        "Para garantizar el correcto funcionamiento de la aplicación y evitar problemas de licencia.",
+        "Para garantizar el correcto funcionamiento de la aplicación y evitar problemas de licencia",
         "Para obtener nuevas funcionalidades y correcciones de errores",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -243,7 +243,7 @@
       "question": "¿Qué es el particionado del disco duro?",
       "options": [
         "La instalación de un sistema operativo",
-        "La división del disco duro en secciones o particiones lógicas.",
+        "La división del disco duro en secciones o particiones lógicas",
         "La verificación de la memoria RAM",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -256,7 +256,7 @@
       "concept_id": "si_tema_2_q8",
       "question": "¿Qué son las aplicaciones de seguridad?",
       "options": [
-        "Programas que se utilizan para proteger el sistema informático contra virus, malware y otras amenazas de seguridad.",
+        "Programas que se utilizan para proteger el sistema informático contra virus, malware y otras amenazas de seguridad",
         "Programas que se utilizan para la diversión y el entretenimiento",
         "Programas que se utilizan para la comunicación en línea",
         "Con un certificado SSL autofirmado"
@@ -271,7 +271,7 @@
       "question": "¿Cuál es una de las funciones principales de un sistema operativo?",
       "options": [
         "Ejecutar aplicaciones",
-        "Gestionar y coordinar el uso de los recursos de hardware y software.",
+        "Gestionar y coordinar el uso de los recursos de hardware y software",
         "Proteger el sistema de ataques de virus",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -284,7 +284,7 @@
       "concept_id": "si_tema_3_q0",
       "question": "¿Qué tipo de particiones solo se pueden crear en un esquema MBR?",
       "options": [
-        "Primarias.",
+        "Primarias",
         "Extendidas",
         "Lógicas",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -299,7 +299,7 @@
       "question": "¿Cuál es la principal ventaja del esquema GPT sobre el esquema MBR?",
       "options": [
         "Es compatible con una amplia variedad de sistemas operativos y software",
-        "Tiene una mejor protección contra la corrupción de datos y soporta discos de más de 2TB.",
+        "Tiene una mejor protección contra la corrupción de datos y soporta discos de más de 2TB",
         "Solo permite la creación de particiones primarias",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -313,7 +313,7 @@
       "question": "¿Cuál es la estructura de directorios típica de Windows?",
       "options": [
         "/, /bin, /etc, /home, /usr, /var",
-        "C:, C:\\Windows, C:\\Program Files, C:\\Users.",
+        "C:, C:\\Windows, C:\\Program Files, C:\\Users",
         "/, /Applications, /Library, /System, /Users",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -328,7 +328,7 @@
       "options": [
         "Mayor velocidad de transferencia de datos",
         "Mayor capacidad de almacenamiento",
-        "Mayor flexibilidad y portabilidad.",
+        "Mayor flexibilidad y portabilidad",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -341,7 +341,7 @@
       "question": "¿Cuál es la principal diferencia entre el almacenamiento interno y externo?",
       "options": [
         "La velocidad de transferencia de datos",
-        "La ubicación física del dispositivo.",
+        "La ubicación física del dispositivo",
         "La capacidad de almacenamiento",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -355,7 +355,7 @@
       "question": "¿Qué comando se utiliza en Linux para mostrar información sobre los procesos que se están ejecutando en el sistema?",
       "options": [
         "systeminfo",
-        "top.",
+        "top",
         "free",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -369,7 +369,7 @@
       "question": "¿Cuál es la capacidad de almacenamiento de un disco DVD estándar?",
       "options": [
         "Hasta 2,5 GB",
-        "Hasta 4,7 GB.",
+        "Hasta 4,7 GB",
         "Hasta 25 GB",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -383,7 +383,7 @@
       "question": "¿Cuáles son los dos esquemas de particiones más comunes?",
       "options": [
         "FAT y NTFS",
-        "MBR y GPT.",
+        "MBR y GPT",
         "HFS+ y APFS",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -397,7 +397,7 @@
       "question": "¿Qué tipo de dispositivo de almacenamiento es más resistente a golpes y vibraciones?",
       "options": [
         "Disco duro (HDD)",
-        "Unidad de estado sólido (SSD).",
+        "Unidad de estado sólido (SSD)",
         "Tarjeta de memoria",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -411,7 +411,7 @@
       "question": "¿Qué es un perfil de usuario local en Windows?",
       "options": [
         "Una cuenta de usuario que solo puede acceder a recursos en línea",
-        "Una cuenta de usuario que solo puede acceder a recursos locales en una computadora.",
+        "Una cuenta de usuario que solo puede acceder a recursos locales en una computadora",
         "Una cuenta de usuario que solo puede acceder a recursos en una red local",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -425,7 +425,7 @@
       "question": "¿Qué comando se utiliza para añadir un usuario a un grupo en la consola de comandos de Windows?",
       "options": [
         "add_group_member",
-        "net group.",
+        "net group",
         "add_user_to_group",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -439,7 +439,7 @@
       "question": "¿Por qué es importante la configuración de usuarios y grupos locales en la gestión de sistemas operativos?",
       "options": [
         "Para personalizar la apariencia del sistema operativo",
-        "Para controlar el acceso y los permisos de los usuarios a los recursos del sistema.",
+        "Para controlar el acceso y los permisos de los usuarios a los recursos del sistema",
         "Para mejorar la velocidad del sistema operativo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -454,7 +454,7 @@
       "options": [
         "create_user",
         "add_user",
-        "net user.",
+        "net user",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -466,7 +466,7 @@
       "concept_id": "si_tema_4_q4",
       "question": "¿Qué beneficios puede tener cambiar la ruta de las carpetas de documentos a otra partición o recurso de red?",
       "options": [
-        "Liberar espacio en el disco principal y reducir la fragmentación del disco.",
+        "Liberar espacio en el disco principal y reducir la fragmentación del disco",
         "Mejorar la velocidad de Internet",
         "Aumentar el rendimiento del procesador",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -482,7 +482,7 @@
       "options": [
         "Con el comando \"show_user\"",
         "Con el comando \"verify_user\"",
-        "Con el comando \"net user\".",
+        "Con el comando \"net user\"",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -495,7 +495,7 @@
       "question": "¿Quién debe tener la capacidad de habilitar o deshabilitar cuentas de usuario?",
       "options": [
         "Todos los usuarios del sistema",
-        "Solo los usuarios con privilegios de administrador.",
+        "Solo los usuarios con privilegios de administrador",
         "Solo los usuarios que tengan una contraseña segura",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -508,7 +508,7 @@
       "concept_id": "si_tema_4_q7",
       "question": "¿Por qué es importante tener una correcta gestión de permisos y acceso a recursos en un sistema informático?",
       "options": [
-        "Para prevenir el acceso no autorizado a datos confidenciales.",
+        "Para prevenir el acceso no autorizado a datos confidenciales",
         "Para mejorar la velocidad de Internet",
         "Para aumentar el rendimiento del procesador",
         "Con un certificado SSL autofirmado"
@@ -523,7 +523,7 @@
       "question": "¿Por qué es importante asignar a un usuario a un grupo en un sistema operativo?",
       "options": [
         "Para que el usuario tenga acceso a todos los recursos del sistema",
-        "Para simplificar la administración de permisos y ahorrar tiempo y esfuerzo.",
+        "Para simplificar la administración de permisos y ahorrar tiempo y esfuerzo",
         "Para aumentar el riesgo de que un usuario tenga acceso a recursos que no debería tener",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -537,7 +537,7 @@
       "question": "¿Cuáles son algunas normas para crear una contraseña segura?",
       "options": [
         "La contraseña debe tener menos de ocho caracteres de longitud",
-        "La contraseña debe contener una combinación de letras mayúsculas y minúsculas, números y símbolos.",
+        "La contraseña debe contener una combinación de letras mayúsculas y minúsculas, números y símbolos",
         "La contraseña debe ser una palabra común o una secuencia de caracteres fácilmente reconocible",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -690,7 +690,7 @@
       "concept_id": "si_tema_6_q0",
       "question": "¿Qué es el control de acceso basado en roles?",
       "options": [
-        "Una técnica que restringe el acceso a ciertos recursos del sistema en función del rol del usuario.",
+        "Una técnica que restringe el acceso a ciertos recursos del sistema en función del rol del usuario",
         "Una técnica que permite el acceso a todos los recursos del sistema sin restricciones",
         "Una técnica que no tiene relación con el acceso a recursos del sistema",
         "Con un certificado SSL autofirmado"
@@ -704,7 +704,7 @@
       "concept_id": "si_tema_6_q1",
       "question": "¿Qué es el cifrado de datos?",
       "options": [
-        "Una técnica que se utiliza para proteger la confidencialidad de los datos almacenados o transmitidos.",
+        "Una técnica que se utiliza para proteger la confidencialidad de los datos almacenados o transmitidos",
         "Una técnica que se utiliza para compartir datos públicamente sin protección",
         "Una técnica que no tiene relación con la protección de datos",
         "Con un certificado SSL autofirmado"
@@ -719,7 +719,7 @@
       "question": "¿Para qué se utiliza OpenSSL?",
       "options": [
         "Para cifrar unidades de almacenamiento como discos duros internos o externos",
-        "Para crear y gestionar certificados digitales y claves de cifrado.",
+        "Para crear y gestionar certificados digitales y claves de cifrado",
         "Para enviar y recibir correos electrónicos cifrados",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -732,7 +732,7 @@
       "concept_id": "si_tema_6_q3",
       "question": "¿Qué son los derechos de usuario en una red?",
       "options": [
-        "Los permisos que se otorgan a los usuarios para acceder y utilizar los recursos compartidos de la red.",
+        "Los permisos que se otorgan a los usuarios para acceder y utilizar los recursos compartidos de la red",
         "Los privilegios que se otorgan a los administradores de la red",
         "Los permisos que se otorgan a los usuarios para acceder a Internet",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -747,7 +747,7 @@
       "question": "¿Qué es una ACL?",
       "options": [
         "Un objeto de directiva de seguridad",
-        "Una lista de control de acceso.",
+        "Una lista de control de acceso",
         "Un sistema operativo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -762,7 +762,7 @@
       "options": [
         "Firewall",
         "LDAP",
-        "Active Directory.",
+        "Active Directory",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -775,7 +775,7 @@
       "question": "¿Qué es la autenticación multifactorial?",
       "options": [
         "Una técnica que requiere que los usuarios proporcionen una forma de identificación antes de acceder a una cuenta",
-        "Una técnica que requiere que los usuarios proporcionen dos o más formas de identificación antes de acceder a una cuenta.",
+        "Una técnica que requiere que los usuarios proporcionen dos o más formas de identificación antes de acceder a una cuenta",
         "Una técnica que permite el acceso a una cuenta sin necesidad de identificación",
         "Con un certificado SSL autofirmado"
       ],
@@ -790,7 +790,7 @@
       "options": [
         "Para proteger la información confidencial",
         "Para garantizar la integridad del sistema",
-        "Todas las anteriores.",
+        "Todas las anteriores",
         "Con un certificado SSL autofirmado"
       ],
       "correct": 2,
@@ -803,7 +803,7 @@
       "question": "¿Qué tipo de objetos de directiva de seguridad se utilizan para especificar los requisitos de contraseña?",
       "options": [
         "Usuarios y grupos",
-        "Contraseñas.",
+        "Contraseñas",
         "Auditoría",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -817,7 +817,7 @@
       "question": "¿Por qué es importante establecer diferentes niveles de acceso en una red?",
       "options": [
         "Para que los usuarios tengan acceso completo a todos los recursos de la red",
-        "Para evitar que los usuarios accedan a recursos que no necesitan y reducir el riesgo de violaciones de seguridad.",
+        "Para evitar que los usuarios accedan a recursos que no necesitan y reducir el riesgo de violaciones de seguridad",
         "Para permitir que todos los usuarios tengan acceso a todos los recursos de la red",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -832,7 +832,7 @@
       "options": [
         "Norton",
         "McAfee",
-        "EaseUS.",
+        "EaseUS",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -844,7 +844,7 @@
       "concept_id": "si_tema_7_q1",
       "question": "¿Qué es un procesador de texto?",
       "options": [
-        "Una herramienta informática que permite la creación, edición y formateo de documentos de texto.",
+        "Una herramienta informática que permite la creación, edición y formateo de documentos de texto",
         "Un tipo de hoja de cálculo que se utiliza para realizar cálculos y análisis de datos",
         "Un programa de edición de imágenes",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -860,7 +860,7 @@
       "options": [
         "Los sistemas de archivos",
         "Los controladores de dispositivos",
-        "El sistema operativo.",
+        "El sistema operativo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -872,7 +872,7 @@
       "concept_id": "si_tema_7_q3",
       "question": "¿Cuál es una de las características principales de las herramientas de productividad?",
       "options": [
-        "Automatización de tareas.",
+        "Automatización de tareas",
         "Recuperación de datos",
         "Escaneo de archivos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -887,7 +887,7 @@
       "question": "¿Qué ventaja ofrece Google Docs en comparación con Microsoft Word?",
       "options": [
         "Amplia gama de funciones y herramientas avanzadas para crear documentos complejos",
-        "Almacenamiento en la nube y acceso en cualquier momento y desde cualquier lugar.",
+        "Almacenamiento en la nube y acceso en cualquier momento y desde cualquier lugar",
         "Es software libre y de pago",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -900,7 +900,7 @@
       "concept_id": "si_tema_7_q5",
       "question": "¿Cuál es el procesador de texto más utilizado en el mundo?",
       "options": [
-        "Microsoft Word.",
+        "Microsoft Word",
         "Google Docs",
         "LibreOffice Writer",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -914,7 +914,7 @@
       "concept_id": "si_tema_7_q6",
       "question": "¿Qué es el software antivirus?",
       "options": [
-        "Un tipo de software diseñado para detectar, prevenir y eliminar programas maliciosos.",
+        "Un tipo de software diseñado para detectar, prevenir y eliminar programas maliciosos",
         "Un tipo de software diseñado para mejorar la productividad",
         "Un tipo de software diseñado para recuperar datos perdidos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -929,7 +929,7 @@
       "question": "¿Cuál es la función principal del software de sistema?",
       "options": [
         "Realizar tareas específicas en la computadora",
-        "Controlar y coordinar el funcionamiento del hardware y proporcionar una interfaz entre el usuario y el hardware.",
+        "Controlar y coordinar el funcionamiento del hardware y proporcionar una interfaz entre el usuario y el hardware",
         "Escribir, depurar y mantener programas de software",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -943,7 +943,7 @@
       "question": "¿Qué son las herramientas de desarrollo integradas?",
       "options": [
         "Herramientas que permiten al usuario realizar diferentes tareas, como realizar copias de seguridad de datos, optimizar el rendimiento del sistema, o desinstalar programas",
-        "Herramientas que incluyen un editor de código, un depurador y un compilador, todos integrados en una única interfaz de usuario.",
+        "Herramientas que incluyen un editor de código, un depurador y un compilador, todos integrados en una única interfaz de usuario",
         "Herramientas que permiten al usuario identificar y solucionar problemas en el sistema, como errores de hardware o software",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -957,7 +957,7 @@
       "question": "¿Qué significa que las bases de datos sean escalables y flexibles?",
       "options": [
         "Que tienen una estructura y organización definida",
-        "Que pueden crecer y evolucionar a medida que cambian las necesidades de la organización.",
+        "Que pueden crecer y evolucionar a medida que cambian las necesidades de la organización",
         "Que no se pueden integrar con otras aplicaciones informáticas",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -986,7 +986,7 @@
       "options": [
         "Solo falla el nodo más alejado",
         "La red sigue funcionando con menor velocidad",
-        "Toda la red deja de funcionar.",
+        "Toda la red deja de funcionar",
         "Solo fallan los nodos pares"
       ],
       "correct": 2,
@@ -1000,7 +1000,7 @@
       "options": [
         "512 MB",
         "1024 MB",
-        "2048 MB.",
+        "2048 MB",
         "4096 MB"
       ],
       "correct": 2,
@@ -1014,7 +1014,7 @@
       "options": [
         "Red interna",
         "Adaptador puente",
-        "NAT.",
+        "NAT",
         "Solo anfitrión"
       ],
       "correct": 2,
@@ -1070,7 +1070,7 @@
       "options": [
         "Explorador de archivos",
         "Panel de control",
-        "Administración de discos.",
+        "Administración de discos",
         "Símbolo del sistema"
       ],
       "correct": 2,
@@ -1084,7 +1084,7 @@
       "options": [
         "Formatear volumen",
         "Extender volumen",
-        "Nuevo volumen simple.",
+        "Nuevo volumen simple",
         "Convertir a disco dinámico"
       ],
       "correct": 2,
@@ -1098,7 +1098,7 @@
       "options": [
         "Acronis True Image",
         "Clonezilla",
-        "EaseUS Partition Master.",
+        "EaseUS Partition Master",
         "GParted"
       ],
       "correct": 2,
@@ -1112,7 +1112,7 @@
       "options": [
         "Eliminar volumen",
         "Ampliar volumen",
-        "Reducir volumen.",
+        "Reducir volumen",
         "Desfragmentar volumen"
       ],
       "correct": 2,
@@ -1126,7 +1126,7 @@
       "options": [
         "Visor de eventos",
         "Administración de discos",
-        "Monitor de rendimiento (Performance Monitor).",
+        "Monitor de rendimiento (Performance Monitor)",
         "Administrador de tareas avanzado"
       ],
       "correct": 2,
@@ -1210,7 +1210,7 @@
       "options": [
         "Los permisos que el administrador asigna globalmente",
         "Los permisos del grupo al que pertenece el usuario",
-        "Los permisos resultantes de combinar los permisos del usuario y los de sus grupos, aplicando las restricciones de denegación.",
+        "Los permisos resultantes de combinar los permisos del usuario y los de sus grupos, aplicando las restricciones de denegación",
         "Los permisos heredados del directorio raíz"
       ],
       "correct": 2,
@@ -1238,7 +1238,7 @@
       "options": [
         "Microsoft 365",
         "Notion",
-        "Google Workspace.",
+        "Google Workspace",
         "Slack"
       ],
       "correct": 2,
@@ -1252,7 +1252,7 @@
       "options": [
         "Gestión de proyectos con tableros Kanban",
         "Almacenamiento de archivos en la nube",
-        "Comunicación en tiempo real mediante canales y mensajes.",
+        "Comunicación en tiempo real mediante canales y mensajes",
         "Creación de documentos colaborativos"
       ],
       "correct": 2,
@@ -1266,7 +1266,7 @@
       "options": [
         "Kaspersky",
         "Norton",
-        "Avast.",
+        "Avast",
         "Malwarebytes"
       ],
       "correct": 2,
@@ -1280,7 +1280,7 @@
       "options": [
         "Clonar particiones del disco duro",
         "Monitorizar el rendimiento del sistema",
-        "Recuperar archivos perdidos o eliminados del ordenador.",
+        "Recuperar archivos perdidos o eliminados del ordenador",
         "Gestionar usuarios y permisos"
       ],
       "correct": 2,
@@ -1294,7 +1294,7 @@
       "options": [
         "NAT",
         "Red interna",
-        "Adaptador puente.",
+        "Adaptador puente",
         "Solo anfitrión"
       ],
       "correct": 2,
@@ -1308,7 +1308,7 @@
       "options": [
         "Es más barata de implementar",
         "Usa menos cable",
-        "Un fallo en un nodo no afecta al resto de la red.",
+        "Un fallo en un nodo no afecta al resto de la red",
         "No necesita dispositivo central"
       ],
       "correct": 2,
@@ -1322,7 +1322,7 @@
       "options": [
         "Los datos se mueven automáticamente a otra partición",
         "Los datos quedan en el espacio no asignado y se pueden recuperar fácilmente",
-        "Los datos se pierden permanentemente.",
+        "Los datos se pierden permanentemente",
         "Los datos se comprimen y se guardan en la partición del sistema"
       ],
       "correct": 2,
@@ -1336,7 +1336,7 @@
       "options": [
         "UDP",
         "ICMP",
-        "TCP.",
+        "TCP",
         "FTP"
       ],
       "correct": 2,
@@ -1364,7 +1364,7 @@
       "options": [
         "10 GB",
         "15 GB",
-        "20 GB.",
+        "20 GB",
         "50 GB"
       ],
       "correct": 2,
@@ -1378,7 +1378,7 @@
       "options": [
         "Necesita un dispositivo central caro",
         "Es difícil de instalar",
-        "Un fallo en el cable principal afecta a toda la red.",
+        "Un fallo en el cable principal afecta a toda la red",
         "No permite compartir recursos"
       ],
       "correct": 2,
@@ -1393,7 +1393,7 @@
         "Estrella",
         "Bus",
         "Anillo",
-        "Malla."
+        "Malla"
       ],
       "correct": 3,
       "explanation": "La topología en malla conecta cada nodo con todos los demás. Ofrece máxima redundancia: si falla un enlace, los datos pueden tomar rutas alternativas. Es cara pero muy tolerante a fallos.",
@@ -1406,7 +1406,7 @@
       "options": [
         "En ambas direcciones simultáneamente siempre",
         "Solo de izquierda a derecha",
-        "En una dirección (o ambas en anillo doble).",
+        "En una dirección (o ambas en anillo doble)",
         "De forma aleatoria según la carga"
       ],
       "correct": 2,
@@ -1420,7 +1420,7 @@
       "options": [
         "Malla",
         "Anillo",
-        "Bus o estrella simple.",
+        "Bus o estrella simple",
         "Árbol jerárquico"
       ],
       "correct": 2,
@@ -1434,7 +1434,7 @@
       "options": [
         "NAT",
         "Adaptador puente",
-        "Red interna.",
+        "Red interna",
         "Solo anfitrión"
       ],
       "correct": 2,
@@ -1448,7 +1448,7 @@
       "options": [
         "Windows 10",
         "Debian",
-        "Ubuntu.",
+        "Ubuntu",
         "Fedora"
       ],
       "correct": 2,
@@ -1462,7 +1462,7 @@
       "options": [
         "Desde el repositorio de VirtualBox",
         "Desde GitHub",
-        "Desde el sitio web oficial de Ubuntu (ubuntu.com).",
+        "Desde el sitio web oficial de Ubuntu (ubuntu.com)",
         "Desde Microsoft Store"
       ],
       "correct": 2,
@@ -1476,7 +1476,7 @@
       "options": [
         "192.168.1.100",
         "172.16.0.1",
-        "10.0.2.15.",
+        "10.0.2.15",
         "10.0.0.1"
       ],
       "correct": 2,
@@ -1490,7 +1490,7 @@
       "options": [
         "Red",
         "Almacenamiento",
-        "Sistema → Procesador.",
+        "Sistema → Procesador",
         "Pantalla"
       ],
       "correct": 2,
@@ -1504,7 +1504,7 @@
       "options": [
         "Una copia del disco duro físico del anfitrión",
         "Una captura de pantalla de la máquina virtual",
-        "Un punto de restauración del estado completo de la máquina virtual en un momento dado.",
+        "Un punto de restauración del estado completo de la máquina virtual en un momento dado",
         "Un archivo de configuración exportado"
       ],
       "correct": 2,
@@ -1518,7 +1518,7 @@
       "options": [
         "Monitor de rendimiento",
         "Administración de discos",
-        "Visor de eventos.",
+        "Visor de eventos",
         "Administrador de tareas"
       ],
       "correct": 2,
@@ -1532,7 +1532,7 @@
       "options": [
         "Memory\\Available MBytes",
         "Disk\\Avg. Disk Queue Length",
-        "Processor\\% Processor Time.",
+        "Processor\\% Processor Time",
         "Network\\Bytes Total/sec"
       ],
       "correct": 2,
@@ -1546,7 +1546,7 @@
       "options": [
         "Que la CPU está saturada",
         "Que la red está congestionada",
-        "Que el disco duro es el cuello de botella del sistema.",
+        "Que el disco duro es el cuello de botella del sistema",
         "Que la memoria RAM es insuficiente"
       ],
       "correct": 2,
@@ -1588,7 +1588,7 @@
       "options": [
         "Renueva la dirección IP obtenida por DHCP",
         "Muestra la configuración de red",
-        "Libera la dirección IP obtenida por DHCP.",
+        "Libera la dirección IP obtenida por DHCP",
         "Borra la caché DNS"
       ],
       "correct": 2,
@@ -1644,7 +1644,7 @@
       "options": [
         "Que el puerto está bloqueado por el firewall",
         "Que hay una conexión activa en ese puerto",
-        "Que hay un servicio esperando conexiones entrantes en ese puerto.",
+        "Que hay un servicio esperando conexiones entrantes en ese puerto",
         "Que el puerto está cerrado"
       ],
       "correct": 2,
@@ -1658,7 +1658,7 @@
       "options": [
         "644",
         "777",
-        "755.",
+        "755",
         "700"
       ],
       "correct": 2,
@@ -1672,7 +1672,7 @@
       "options": [
         "Permite ejecutar el archivo",
         "Permite modificar el archivo",
-        "Permite leer el contenido del archivo.",
+        "Permite leer el contenido del archivo",
         "Permite borrar el archivo"
       ],
       "correct": 2,
@@ -1686,7 +1686,7 @@
       "options": [
         "chmod",
         "chgrp",
-        "chown.",
+        "chown",
         "setperm"
       ],
       "correct": 2,
@@ -1700,7 +1700,7 @@
       "options": [
         "Heredado",
         "Explícito",
-        "Denegar.",
+        "Denegar",
         "De grupo"
       ],
       "correct": 2,
@@ -1714,7 +1714,7 @@
       "options": [
         "Asignar todos los permisos a un usuario estándar",
         "Eliminar permisos de administrador",
-        "Permitir que un usuario o grupo gestione permisos sobre recursos específicos sin ser administrador global.",
+        "Permitir que un usuario o grupo gestione permisos sobre recursos específicos sin ser administrador global",
         "Copiar los permisos de un archivo a otro"
       ],
       "correct": 2,
@@ -1728,7 +1728,7 @@
       "options": [
         "Trello",
         "Asana",
-        "Notion.",
+        "Notion",
         "Jira"
       ],
       "correct": 2,
@@ -1742,7 +1742,7 @@
       "options": [
         "Análisis de rendimiento del sistema",
         "Análisis de particiones del disco",
-        "Análisis de amenazas (virus, malware) en el ordenador.",
+        "Análisis de amenazas (virus, malware) en el ordenador",
         "Análisis de la red local"
       ],
       "correct": 2,
@@ -1756,7 +1756,7 @@
       "options": [
         "Mayor velocidad de procesamiento",
         "No requiere conexión a Internet",
-        "Colaboración en tiempo real y acceso desde cualquier dispositivo con Internet.",
+        "Colaboración en tiempo real y acceso desde cualquier dispositivo con Internet",
         "Mayor compatibilidad con hardware antiguo"
       ],
       "correct": 2,
@@ -1770,7 +1770,7 @@
       "options": [
         "Software antivirus",
         "Herramienta de monitorización",
-        "Herramienta de gestión y clonación de particiones de disco.",
+        "Herramienta de gestión y clonación de particiones de disco",
         "Gestor de máquinas virtuales"
       ],
       "correct": 2,
@@ -1784,7 +1784,7 @@
       "options": [
         "No hay diferencia, ambas borran los datos",
         "Reducir volumen borra los datos; eliminar volumen los conserva",
-        "Reducir volumen disminuye el tamaño conservando los datos; eliminar volumen borra la partición y sus datos.",
+        "Reducir volumen disminuye el tamaño conservando los datos; eliminar volumen borra la partición y sus datos",
         "Eliminar volumen solo funciona en discos externos"
       ],
       "correct": 2,
@@ -1798,7 +1798,7 @@
       "options": [
         "Una IP pública asignada por el ISP",
         "La misma IP que el huésped",
-        "La IP real del anfitrión en la red local.",
+        "La IP real del anfitrión en la red local",
         "Siempre 192.168.0.1"
       ],
       "correct": 2,
@@ -1826,7 +1826,7 @@
       "options": [
         "El ancho de banda disponible en cada salto",
         "Los puertos abiertos en cada router",
-        "Los routers intermedios (saltos) y la latencia en cada uno hasta el destino.",
+        "Los routers intermedios (saltos) y la latencia en cada uno hasta el destino",
         "La dirección MAC de cada dispositivo en la ruta"
       ],
       "correct": 2,
@@ -1840,7 +1840,7 @@
       "options": [
         "Windows crea automáticamente espacio no asignado",
         "Se puede ampliar usando espacio de otra partición directamente",
-        "La opción \"Ampliar volumen\" aparece desactivada (en gris).",
+        "La opción \"Ampliar volumen\" aparece desactivada (en gris)",
         "Windows mueve los datos automáticamente para hacer espacio"
       ],
       "correct": 2,
@@ -1854,7 +1854,7 @@
       "options": [
         "Ubuntu 32-bit",
         "Ubuntu Server",
-        "Ubuntu 64-bit.",
+        "Ubuntu 64-bit",
         "Ubuntu LTS 32-bit"
       ],
       "correct": 2,
@@ -1868,7 +1868,7 @@
       "options": [
         "80",
         "443",
-        "22.",
+        "22",
         "3389"
       ],
       "correct": 2,
@@ -1882,7 +1882,7 @@
       "options": [
         "Network Access Terminal",
         "Node Address Transfer",
-        "Network Address Translation.",
+        "Network Address Translation",
         "Network Allocation Table"
       ],
       "correct": 2,
@@ -1896,7 +1896,7 @@
       "options": [
         "Monitor de rendimiento",
         "Visor de eventos",
-        "Administrador de tareas.",
+        "Administrador de tareas",
         "Administración de discos"
       ],
       "correct": 2,
@@ -1910,7 +1910,7 @@
       "options": [
         "dir -p",
         "chmod -l",
-        "ls -la.",
+        "ls -la",
         "perms -show"
       ],
       "correct": 2,
@@ -1924,7 +1924,7 @@
       "options": [
         "Caso 2 (VirtualBox)",
         "Caso 5 (Redes)",
-        "Caso 3 (Particiones).",
+        "Caso 3 (Particiones)",
         "Caso 6 (Permisos)"
       ],
       "correct": 2,
@@ -2458,7 +2458,7 @@
       "options": [
         "Un atributo que se descompone en varios atributos simples",
         "Un atributo que puede tener múltiples valores para una misma entidad",
-        "Un atributo cuyo valor se calcula a partir de otros atributos del modelo.",
+        "Un atributo cuyo valor se calcula a partir de otros atributos del modelo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2470,7 +2470,7 @@
       "concept_id": "bd_tema_3_q2",
       "question": "En una relación de cardinalidad 1:N entre \"Agentes\" y \"Clientes\", ¿qué se entiende?",
       "options": [
-        "Un agente gestiona varios clientes, pero un cliente solo es gestionado por un agente.",
+        "Un agente gestiona varios clientes, pero un cliente solo es gestionado por un agente",
         "Varios agentes pueden gestionar a un solo cliente",
         "Un agente solo puede tener un cliente asignado",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -2485,7 +2485,7 @@
       "question": "¿Cuál es una característica fundamental de una entidad débil?",
       "options": [
         "Posee una clave primaria única e independiente",
-        "Carece de identificador autosuficiente y depende de una entidad propietaria.",
+        "Carece de identificador autosuficiente y depende de una entidad propietaria",
         "Se representa gráficamente con un rectángulo de línea simple",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2499,7 +2499,7 @@
       "question": "En el modelo E/R ampliado, ¿qué es la generalización?",
       "options": [
         "El proceso de dividir una entidad en subentidades más específicas",
-        "El proceso de agrupar entidades con rasgos comunes en una entidad padre abstracta.",
+        "El proceso de agrupar entidades con rasgos comunes en una entidad padre abstracta",
         "Una relación donde una entidad se vincula consigo misma",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2513,7 +2513,7 @@
       "question": "¿Qué restricción de especialización determina si una instancia del supertipo puede pertenecer a una sola subentidad o a varias?",
       "options": [
         "Completeness (totalidad/parcialidad)",
-        "Disjointness (exclusividad/solapamiento).",
+        "Disjointness (exclusividad/solapamiento)",
         "Relación recursiva",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2527,7 +2527,7 @@
       "question": "Al pasar del modelo E/R al modelo relacional, ¿cuándo se crean normalmente las claves foráneas?",
       "options": [
         "Al identificar las entidades",
-        "Al establecer las relaciones entre las tablas para vincular registros.",
+        "Al establecer las relaciones entre las tablas para vincular registros",
         "Únicamente durante el proceso de normalización",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2541,7 +2541,7 @@
       "question": "¿Qué requisito debe cumplir una tabla para estar en Primera Forma Normal (1FN)?",
       "options": [
         "No tener dependencias transitivas",
-        "Que todas las columnas almacenen valores atómicos e indivisibles.",
+        "Que todas las columnas almacenen valores atómicos e indivisibles",
         "Que todos los atributos dependan de la clave primaria completa",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -2555,7 +2555,7 @@
       "question": "¿Cuándo se dice que una tabla viola la Segunda Forma Normal (2FN)?",
       "options": [
         "Cuando existen atributos que pueden tomar varios valores",
-        "Cuando un atributo no clave depende solo de una parte de la clave primaria (dependencia parcial).",
+        "Cuando un atributo no clave depende solo de una parte de la clave primaria (dependencia parcial)",
         "Cuando un atributo no clave depende de otro atributo no clave",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -2569,7 +2569,7 @@
       "question": "¿Cuál es el objetivo principal de la normalización de modelos relacionales?",
       "options": [
         "Aumentar la redundancia para facilitar la lectura de datos",
-        "Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente.",
+        "Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente",
         "Eliminar todas las relaciones entre tablas para simplificar el modelo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2723,7 +2723,7 @@
       "question": "¿Para qué sirve el modificador DISTINCT en una sentencia SELECT?",
       "options": [
         "Para ordenar los resultados de forma alfabética",
-        "Para eliminar las filas duplicadas en el conjunto de resultados.",
+        "Para eliminar las filas duplicadas en el conjunto de resultados",
         "Para filtrar registros que contengan valores nulos",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -2751,7 +2751,7 @@
       "question": "¿Qué diferencia principal hay entre las cláusulas WHERE y HAVING?",
       "options": [
         "WHERE se aplica a los grupos y HAVING a las filas individuales",
-        "WHERE filtra registros antes de la agrupación; HAVING filtra grupos después de aplicarse GROUP BY.",
+        "WHERE filtra registros antes de la agrupación; HAVING filtra grupos después de aplicarse GROUP BY",
         "Ambas cláusulas son idénticas y se pueden usar indistintamente",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2779,7 +2779,7 @@
       "question": "En una composición interna (INNER JOIN), ¿qué ocurre con las filas de la tabla A que no coinciden con ninguna de la tabla B?",
       "options": [
         "Aparecen en el resultado con valores NULL",
-        "Se excluyen del conjunto de resultados.",
+        "Se excluyen del conjunto de resultados",
         "Detienen la ejecución de la consulta por error de integridad",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -2807,7 +2807,7 @@
       "question": "En Oracle, ¿qué combinación de cláusulas se utiliza para realizar consultas jerárquicas?",
       "options": [
         "GROUP BY y HAVING",
-        "START WITH y CONNECT BY.",
+        "START WITH y CONNECT BY",
         "UNION e INTERSECT",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -2960,7 +2960,7 @@
       "concept_id": "bd_tema_5_q1",
       "question": "¿Cómo se insertan datos en una tabla de destino a partir del resultado de otra consulta?",
       "options": [
-        "Usando la sintaxis INSERT INTO tabla_destino SELECT ...",
+        "Usando la sintaxis INSERT INTO tabla_destino SELECT ",
         "Ejecutando un UPDATE con una subconsulta en el SET",
         "No es posible realizar esta operación en una sola sentencia",
         "Mediante una subconsulta correlacionada con EXISTS"
@@ -2974,7 +2974,7 @@
       "concept_id": "bd_tema_5_q2",
       "question": "¿Por qué es fundamental incluir la cláusula WHERE en una sentencia UPDATE?",
       "options": [
-        "Porque si se omite, se actualizarán todos los registros de la tabla.",
+        "Porque si se omite, se actualizarán todos los registros de la tabla",
         "Porque es necesaria para definir qué columnas se van a modificar",
         "Porque sin ella, el motor de la base de datos devolverá un error de sintaxis siempre",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -3017,7 +3017,7 @@
       "question": "¿Qué acción realiza el comando ROLLBACK?",
       "options": [
         "Guarda los cambios actuales de forma definitiva",
-        "Deshace todos los cambios realizados en la transacción actual volviendo al estado inicial.",
+        "Deshace todos los cambios realizados en la transacción actual volviendo al estado inicial",
         "Bloquea la tabla para impedir ediciones de otros usuarios",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3031,7 +3031,7 @@
       "question": "¿Cuál es una ventaja clave de utilizar Common Table Expressions (CTE) o composiciones en órdenes de edición?",
       "options": [
         "Permiten saltarse las restricciones de integridad referencial",
-        "Mejoran la legibilidad al permitir nombrar subconsultas y reutilizarlas en una única instrucción.",
+        "Mejoran la legibilidad al permitir nombrar subconsultas y reutilizarlas en una única instrucción",
         "Cifran los datos antes de insertarlos en la base de datos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3045,7 +3045,7 @@
       "question": "¿En qué consiste el \"bloqueo a nivel de registro\" (row-level locking)?",
       "options": [
         "Impide el acceso a toda la tabla mientras un usuario edita una fila",
-        "Bloquea solo la fila específica que se está modificando, permitiendo que otros usuarios trabajen en otras filas.",
+        "Bloquea solo la fila específica que se está modificando, permitiendo que otros usuarios trabajen en otras filas",
         "Borra el registro si detecta que dos usuarios intentan acceder a él",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3073,7 +3073,7 @@
       "question": "En el modo estricto de MySQL (STRICT_ALL_TABLES), ¿qué ocurre si se intenta realizar una operación con datos inválidos?",
       "options": [
         "Se truncan los valores silenciosamente",
-        "Se rechaza la operación y se genera un error.",
+        "Se rechaza la operación y se genera un error",
         "Se insertan valores nulos por defecto sin avisar",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -3227,7 +3227,7 @@
       "question": "¿Cuál es la función del comando DELIMITER en MySQL?",
       "options": [
         "Definir el tamaño máximo de una tabla",
-        "Cambiar temporalmente el carácter de finalización de comandos para escribir procedimientos complejos.",
+        "Cambiar temporalmente el carácter de finalización de comandos para escribir procedimientos complejos",
         "Separar los campos de un archivo CSV durante una importación",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -3282,7 +3282,7 @@
       "concept_id": "bd_tema_6_q6",
       "question": "¿Cuál es una diferencia fundamental entre las Funciones y los Procedimientos almacenados?",
       "options": [
-        "Las funciones siempre devuelven un valor; los procedimientos no devuelven un valor (aunque pueden usar parámetros de salida).",
+        "Las funciones siempre devuelven un valor; los procedimientos no devuelven un valor (aunque pueden usar parámetros de salida)",
         "Los procedimientos solo pueden leer datos; las funciones pueden modificarlos",
         "Las funciones se llaman con CALL y los procedimientos con SELECT",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -3508,7 +3508,7 @@
       "options": [
         "Solo los de la tabla padre",
         "Solo los de las tablas hijas",
-        "Los de la tabla padre y todos los de sus tablas hijas relacionadas.",
+        "Los de la tabla padre y todos los de sus tablas hijas relacionadas",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
       "correct": 2,
@@ -3535,7 +3535,7 @@
       "question": "Respecto al borrado de datos en una estructura de herencia en PostgreSQL, ¿cuál es la afirmación correcta?",
       "options": [
         "Existe un borrado en cascada automático entre padres e hijos",
-        "No hay cascada automática; se debe declarar ON DELETE CASCADE en las claves foráneas si se requiere.",
+        "No hay cascada automática; se debe declarar ON DELETE CASCADE en las claves foráneas si se requiere",
         "Si borras un registro en el padre, el hijo se bloquea",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -3577,7 +3577,7 @@
       "question": "¿A qué se refiere la \"navegabilidad\" en el contexto de bases de datos objeto-relacionales?",
       "options": [
         "A la velocidad de navegación web de la base de datos",
-        "A la capacidad de seguir las conexiones lógicas o referencias entre objetos.",
+        "A la capacidad de seguir las conexiones lógicas o referencias entre objetos",
         "Al uso de comandos NEXT y PREV en los cursores",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3706,7 +3706,7 @@
       "options": [
         "Número entero.",
         "Valor booleano.",
-        "Array o arreglo.",
+        "Array o arreglo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3718,7 +3718,7 @@
       "concept_id": "prog_tema_1_q1",
       "question": "Aunque a menudo se confunden, los conceptos de algoritmo y programa no son equivalentes. ¿Cuál de las siguientes afirmaciones describe correctamente la relación entre ambos?",
       "options": [
-        "El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación.",
+        "El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación",
         "El programa es independiente del lenguaje y el algoritmo depende del lenguaje utilizado.",
         "Ambos conceptos son idénticos y se diferencian solo por el formato en el que se escriben.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -3734,7 +3734,7 @@
       "options": [
         "Detectar errores de sintaxis antes de ejecutar el programa.",
         "Ejecutar el programa de forma más rápida y optimizada.",
-        "Analizar la ejecución paso a paso para localizar errores lógicos.",
+        "Analizar la ejecución paso a paso para localizar errores lógicos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3747,7 +3747,7 @@
       "question": "Antes de escribir un programa, es fundamental diseñar correctamente el algoritmo que resolverá el problema. Para que una secuencia de pasos pueda considerarse un algoritmo válido, debe cumplir una serie de características. ¿Cuál de las siguientes es una de ellas?",
       "options": [
         "Debe poder ejecutarse directamente por la máquina sin traducción.",
-        "Debe ser finito y finalizar tras un número limitado de pasos.",
+        "Debe ser finito y finalizar tras un número limitado de pasos",
         "Debe estar escrito obligatoriamente en un lenguaje de programación concreto.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3761,7 +3761,7 @@
       "question": "Todo programa informático sigue un modelo básico de funcionamiento que permite transformar datos en información útil. Dentro del modelo Entrada–Proceso–Salida, ¿qué elemento se considera el núcleo del programa?",
       "options": [
         "Los datos que introduce el usuario mediante dispositivos de entrada.",
-        "El algoritmo que procesa los datos y aplica la lógica del programa.",
+        "El algoritmo que procesa los datos y aplica la lógica del programa",
         "El sistema que muestra el resultado final al usuario.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3776,7 +3776,7 @@
       "options": [
         "Estructura secuencial.",
         "Estructura selectiva.",
-        "Estructura iterativa.",
+        "Estructura iterativa",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3789,7 +3789,7 @@
       "question": "Los paradigmas de programación ofrecen diferentes formas de organizar y estructurar el software. En el paradigma orientado a objetos, ¿cuál es el elemento central sobre el que se construyen los programas?",
       "options": [
         "Las funciones matemáticas.",
-        "Los objetos que combinan datos y comportamiento.",
+        "Los objetos que combinan datos y comportamiento",
         "Las instrucciones ejecutadas de forma secuencial.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3803,7 +3803,7 @@
       "question": "Java es un lenguaje de programación con un modelo de ejecución particular que combina características de distintos enfoques. ¿Por qué se considera que Java utiliza un sistema híbrido de compilación e interpretación?",
       "options": [
         "Porque el código se ejecuta directamente como código máquina del sistema operativo.",
-        "Porque el código se compila a bytecode y se ejecuta mediante la Máquina Virtual de Java.",
+        "Porque el código se compila a bytecode y se ejecuta mediante la Máquina Virtual de Java",
         "Porque no necesita ningún proceso previo para poder ejecutarse.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3817,7 +3817,7 @@
       "question": "La programación no se limita únicamente a escribir código, sino que engloba varias tareas necesarias para que un programa funcione correctamente a lo largo del tiempo. ¿Cuál de las siguientes opciones define mejor qué es programar?",
       "options": [
         "Utilizar programas informáticos ya existentes para resolver tareas cotidianas.",
-        "Diseñar, codificar, depurar y mantener programas que ejecuta un ordenador.",
+        "Diseñar, codificar, depurar y mantener programas que ejecuta un ordenador",
         "Ejecutar instrucciones previamente creadas sin necesidad de modificarlas.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3831,7 +3831,7 @@
       "question": "En informática es importante diferenciar entre los conceptos de dato e información, ya que no significan exactamente lo mismo. ¿Cuál de las siguientes afirmaciones es correcta?",
       "options": [
         "El dato es información interpretada y la información es un dato sin procesar.",
-        "El dato es un valor aislado y la información es el resultado de procesar datos con un contexto.",
+        "El dato es un valor aislado y la información es el resultado de procesar datos con un contexto",
         "Ambos términos se utilizan indistintamente y no existe diferencia real entre ellos.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3930,7 +3930,7 @@
       "options": [
         "Que el método devuelve un valor vacío.",
         "Que el método no realiza ninguna acción.",
-        "Que el método realiza una acción pero no devuelve ningún valor.",
+        "Que el método realiza una acción pero no devuelve ningún valor",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3943,7 +3943,7 @@
       "question": "Los atributos de una clase representan el estado de los objetos creados a partir de ella. ¿Cuál de las siguientes afirmaciones sobre los atributos es correcta?",
       "options": [
         "Los atributos se declaran dentro de los métodos.",
-        "Cada objeto tiene su propia copia de los atributos definidos en la clase.",
+        "Cada objeto tiene su propia copia de los atributos definidos en la clase",
         "Todos los objetos comparten los mismos valores de los atributos.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3957,7 +3957,7 @@
       "question": "El constructor es un elemento fundamental dentro de una clase en Java y cumple una función específica. ¿Cuál es la misión principal de un constructor?",
       "options": [
         "Ejecutar la lógica principal del programa.",
-        "Inicializar los atributos del objeto en el momento de su creación.",
+        "Inicializar los atributos del objeto en el momento de su creación",
         "Definir el comportamiento común de todas las clases.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3971,7 +3971,7 @@
       "question": "En programación orientada a objetos, una clase no representa directamente un objeto real, sino una definición abstracta que sirve como base para crear instancias. ¿Cuál de las siguientes afirmaciones describe correctamente el concepto de clase?",
       "options": [
         "Es una estructura que contiene únicamente métodos sin datos asociados.",
-        "Es una plantilla que define los atributos y comportamientos de una entidad.",
+        "Es una plantilla que define los atributos y comportamientos de una entidad",
         "Es un objeto creado en memoria mediante el operador new.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3985,7 +3985,7 @@
       "question": "En Java, las variables que hacen referencia a objetos no almacenan el objeto en sí, sino una dirección de memoria. ¿Qué consecuencia tiene esto al asignar una referencia a otra?",
       "options": [
         "Se crea automáticamente una copia independiente del objeto.",
-        "Ambas referencias apuntan al mismo objeto en memoria.",
+        "Ambas referencias apuntan al mismo objeto en memoria",
         "El objeto original se elimina de la memoria.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4000,7 +4000,7 @@
       "options": [
         "Dependencia.",
         "Agregación.",
-        "Composición.",
+        "Composición",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -4013,7 +4013,7 @@
       "question": "Los métodos getter y setter se utilizan para controlar el acceso a los atributos privados de una clase. ¿Cuál es una de las principales ventajas de usar setters en lugar de hacer públicos los atributos?",
       "options": [
         "Permiten acceder directamente a la memoria del objeto.",
-        "Permiten validar los datos antes de modificar el estado del objeto.",
+        "Permiten validar los datos antes de modificar el estado del objeto",
         "Eliminan la necesidad de constructores.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4027,7 +4027,7 @@
       "question": "El encapsulamiento es uno de los principios clave de la programación orientada a objetos y se apoya en los modificadores de acceso. ¿Cuál es la regla de oro más habitual en Java para aplicar correctamente el encapsulamiento?",
       "options": [
         "Atributos públicos y métodos privados.",
-        "Atributos privados y métodos públicos.",
+        "Atributos privados y métodos públicos",
         "Atributos y métodos siempre protected.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4041,7 +4041,7 @@
       "question": "El polimorfismo permite que un mismo mensaje provoque comportamientos distintos según el objeto que lo reciba. ¿Qué requisito técnico es necesario para que el polimorfismo funcione correctamente en Java?",
       "options": [
         "El uso exclusivo de atributos protected.",
-        "La sobreescritura de métodos en las clases hijas.",
+        "La sobreescritura de métodos en las clases hijas",
         "La creación de múltiples constructores.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4055,7 +4055,7 @@
       "question": "En Java, todo el código debe estar contenido dentro de clases, y estas siguen una estructura concreta y unas normas estrictas. ¿Cuál de las siguientes reglas es obligatoria cuando se define una clase pública?",
       "options": [
         "El nombre de la clase debe escribirse en minúsculas.",
-        "El archivo debe llamarse igual que la clase pública y tener extensión .java.",
+        "El archivo debe llamarse igual que la clase pública y tener extensión .java",
         "La clase debe contener al menos un método main.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4111,7 +4111,7 @@
       "question": "Las variables en Java tienen un ciclo de vida y un proceso de uso muy definido. ¿Cuál es el orden correcto para poder utilizar una variable sin provocar un error de compilación?",
       "options": [
         "Inicializar &rarr; declarar &rarr; utilizar.",
-        "Declarar &rarr; inicializar &rarr; utilizar.",
+        "Declarar &rarr; inicializar &rarr; utilizar",
         "Utilizar &rarr; declarar &rarr; inicializar.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4125,7 +4125,7 @@
       "question": "En Java, el punto y coma es un elemento sintáctico obligatorio en la mayoría de las instrucciones. ¿Qué indica realmente el punto y coma dentro del código?",
       "options": [
         "El final lógico de un bloque de código.",
-        "El final de una sentencia para el compilador.",
+        "El final de una sentencia para el compilador",
         "El final de una línea de texto para el programador.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4139,7 +4139,7 @@
       "question": "Cuando se realiza una conversión explícita de un tipo de dato mayor a uno menor, como de double a int, ¿qué efecto se produce?",
       "options": [
         "El valor se redondea automáticamente.",
-        "Se produce un truncamiento y posible pérdida de información.",
+        "Se produce un truncamiento y posible pérdida de información",
         "Java lanza siempre una excepción en tiempo de ejecución.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4153,7 +4153,7 @@
       "question": "Las llaves { } juegan un papel fundamental en la organización del código Java y afectan directamente a la visibilidad de las variables. ¿Qué función principal cumplen las llaves dentro de un programa?",
       "options": [
         "Indicar el final de cada instrucción.",
-        "Definir bloques de código y el ámbito de las variables.",
+        "Definir bloques de código y el ámbito de las variables",
         "Separar visualmente el código para mejorar su legibilidad.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4168,7 +4168,7 @@
       "options": [
         "Los operadores aritméticos de suma y resta.",
         "Los operadores de asignación.",
-        "Los paréntesis.",
+        "Los paréntesis",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -4182,7 +4182,7 @@
       "options": [
         "Aumentan el rendimiento del programa.",
         "Permiten cambiar su valor en tiempo de ejecución.",
-        "Mejoran la legibilidad y facilitan el mantenimiento del código.",
+        "Mejoran la legibilidad y facilitan el mantenimiento del código",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -4196,7 +4196,7 @@
       "options": [
         "Se salta únicamente la iteración actual del bucle.",
         "Se finaliza el bucle pero continúa el método.",
-        "Se sale inmediatamente del método completo.",
+        "Se sale inmediatamente del método completo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -4223,7 +4223,7 @@
       "question": "En Java, el código fuente no es un texto plano, sino que sigue una estructura jerárquica muy concreta. ¿Cuál es el orden correcto y obligatorio de los elementos que debe respetar un programa ejecutable?",
       "options": [
         "Clase &rarr; Paquete &rarr; Método &rarr; Sentencias.",
-        "Paquete (opcional) &rarr; Clase &rarr; Método &rarr; Sentencias.",
+        "Paquete (opcional) &rarr; Clase &rarr; Método &rarr; Sentencias",
         "Método &rarr; Clase &rarr; Paquete &rarr; Sentencias.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4237,7 +4237,7 @@
       "question": "Java distingue claramente entre tipos de datos primitivos y tipos de referencia. ¿Cuál de las siguientes afirmaciones es correcta respecto a los tipos primitivos?",
       "options": [
         "Son objetos y disponen de métodos propios.",
-        "Almacenan directamente el valor en memoria y no son objetos.",
+        "Almacenan directamente el valor en memoria y no son objetos",
         "Siempre se almacenan en el Heap.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4293,7 +4293,7 @@
       "question": "¿Cuál de las siguientes afirmaciones describe correctamente la relación entre una clase y un objeto en Python?",
       "options": [
         "Una clase es un tipo de dato primitivo, y un objeto es una variable que almacena ese tipo de dato.",
-        "Una clase actúa como una plantilla o plano que define las propiedades y métodos, mientras que un objeto es una instancia específica creada a partir de esa clase.",
+        "Una clase actúa como una plantilla o plano que define las propiedades y métodos, mientras que un objeto es una instancia específica creada a partir de esa clase",
         "Un objeto es una función que se define dentro de una clase, y la clase es el resultado de la ejecución de un objeto.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4307,7 +4307,7 @@
       "question": "Durante la ejecución de un programa Java, ¿en qué situación un objeto pasa a ser considerado inalcanzable y candidato a la recolección de basura?",
       "options": [
         "Cuando se declara la variable de referencia que lo apuntará.",
-        "Cuando ninguna referencia activa apunta al objeto en memoria.",
+        "Cuando ninguna referencia activa apunta al objeto en memoria",
         "Cuando el programa invoca explícitamente el recolector de basura.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4321,7 +4321,7 @@
       "question": "En relación con el paso de parámetros en Java, señale la afirmación correcta:",
       "options": [
         "Java utiliza paso por referencia para objetos y paso por valor para primitivos.",
-        "Java pasa siempre una copia del valor, aunque en los objetos dicho valor sea la referencia.",
+        "Java pasa siempre una copia del valor, aunque en los objetos dicho valor sea la referencia",
         "Java permite elegir entre paso por valor o por referencia.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4335,7 +4335,7 @@
       "question": "En el uso profesional de la Programación Orientada a Objetos, ¿cuál es la finalidad principal del encapsulamiento?",
       "options": [
         "Facilitar el acceso directo a los atributos desde cualquier clase.",
-        "Proteger el estado interno del objeto y controlar su modificación.",
+        "Proteger el estado interno del objeto y controlar su modificación",
         "Reducir el número de métodos definidos en una clase.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4349,7 +4349,7 @@
       "question": "Respecto a la definición y uso de métodos en una clase, ¿qué característica permite la sobrecarga de métodos?",
       "options": [
         "Diferenciar los métodos únicamente por su tipo de retorno.",
-        "Definir varios métodos con el mismo nombre y distinta firma de parámetros.",
+        "Definir varios métodos con el mismo nombre y distinta firma de parámetros",
         "Utilizar modificadores de acceso diferentes en cada método.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4363,7 +4363,7 @@
       "question": "Desde el punto de vista del diseño orientado a objetos, ¿cuál es la diferencia conceptual entre herencia y composición?",
       "options": [
         "La herencia modela una relación “tiene un” y la composición una relación “es un”.",
-        "La herencia establece una relación “es un” y la composición una relación “tiene un”.",
+        "La herencia establece una relación “es un” y la composición una relación “tiene un”",
         "Ambas representan exactamente el mismo tipo de relación.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4377,7 +4377,7 @@
       "question": "Desde el punto de vista de la gestión de memoria, ¿qué elemento se almacena en el Stack cuando se trabaja con objetos en Java?",
       "options": [
         "El objeto completo con todos sus atributos.",
-        "La referencia que apunta al objeto almacenado en el Heap.",
+        "La referencia que apunta al objeto almacenado en el Heap",
         "Una copia independiente del objeto original.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4390,7 +4390,7 @@
       "concept_id": "prog_tema_4_q7",
       "question": "En proyectos Java de tamaño medio o grande, ¿qué combinación de prácticas contribuye directamente a la organización, reutilización y mantenibilidad del código?",
       "options": [
-        "Uso de paquetes, gestión de librerías y documentación mediante Javadoc.",
+        "Uso de paquetes, gestión de librerías y documentación mediante Javadoc",
         "Uso exclusivo de clases públicas sin separación en paquetes.",
         "Eliminación de comentarios y documentación para simplificar el código.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -4405,7 +4405,7 @@
       "question": "En relación con la asignación de variables en Java, ¿qué ocurre cuando dos variables de tipo objeto se igualan?",
       "options": [
         "Se crea automáticamente una copia independiente del objeto.",
-        "Ambas variables pasan a compartir la referencia al mismo objeto.",
+        "Ambas variables pasan a compartir la referencia al mismo objeto",
         "El objeto se duplica en el Heap para evitar efectos colaterales.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4419,7 +4419,7 @@
       "question": "En el diseño de constructores, ¿qué consecuencia tiene definir al menos un constructor con parámetros en una clase?",
       "options": [
         "Java mantiene siempre disponible el constructor vacío implícito.",
-        "El constructor vacío deja de existir si no se define explícitamente.",
+        "El constructor vacío deja de existir si no se define explícitamente",
         "Se impide la sobrecarga de constructores.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4475,7 +4475,7 @@
       "question": "En relación con los arrays multidimensionales en Java, ¿cuál de las siguientes afirmaciones es correcta?",
       "options": [
         "Representan una estructura continua de memoria bidimensional real.",
-        "Son arrays cuyos elementos son, a su vez, otros arrays.",
+        "Son arrays cuyos elementos son, a su vez, otros arrays",
         "Tienen un único valor de longitud para filas y columnas.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4490,7 +4490,7 @@
       "options": [
         "El primer elemento se encuentra en la posición 1.",
         "El último elemento se encuentra en la posición igual a la longitud del array.",
-        "Los índices válidos van desde 0 hasta longitud menos uno.",
+        "Los índices válidos van desde 0 hasta longitud menos uno",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -4503,7 +4503,7 @@
       "question": "Desde el punto de vista de la memoria en Java, ¿cuál es la característica fundamental de un array?",
       "options": [
         "Es una estructura primitiva que se almacena íntegramente en el Stack.",
-        "Es un objeto que se almacena en el Heap y se accede mediante una referencia.",
+        "Es un objeto que se almacena en el Heap y se accede mediante una referencia",
         "Es una colección dinámica cuyo tamaño puede variar durante la ejecución.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4518,7 +4518,7 @@
       "options": [
         "Permite modificar directamente los elementos del array.",
         "Proporciona acceso al índice y al valor simultáneamente.",
-        "Está orientado a la lectura secuencial sin acceso a la posición.",
+        "Está orientado a la lectura secuencial sin acceso a la posición",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -4531,7 +4531,7 @@
       "question": "¿Cuál es la finalidad principal de la propiedad length en los arrays?",
       "options": [
         "Modificar el tamaño del array durante la ejecución.",
-        "Conocer el número de elementos para acceder y recorrer el array de forma segura.",
+        "Conocer el número de elementos para acceder y recorrer el array de forma segura",
         "Contar únicamente los elementos que han sido inicializados explícitamente.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4545,7 +4545,7 @@
       "question": "Desde un enfoque profesional, ¿cuál es la ventaja principal de utilizar los métodos de ordenación proporcionados por Java frente a los algoritmos académicos?",
       "options": [
         "Son más sencillos conceptualmente que los algoritmos clásicos.",
-        "Están optimizados y reducen errores en la implementación.",
+        "Están optimizados y reducen errores en la implementación",
         "Permiten mantener el orden original del array automáticamente.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4559,7 +4559,7 @@
       "question": "Respecto a los algoritmos de búsqueda, ¿cuál es la condición indispensable para poder aplicar una búsqueda binaria?",
       "options": [
         "Que el array tenga un tamaño reducido.",
-        "Que el array esté previamente ordenado.",
+        "Que el array esté previamente ordenado",
         "Que el array contenga únicamente valores numéricos.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4573,7 +4573,7 @@
       "question": "¿Qué afirmación describe correctamente el tamaño de un array en Java?",
       "options": [
         "El tamaño puede modificarse añadiendo o eliminando elementos.",
-        "El tamaño se fija en el momento de su creación y no puede cambiar.",
+        "El tamaño se fija en el momento de su creación y no puede cambiar",
         "El tamaño depende del número de elementos inicializados manualmente.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4587,7 +4587,7 @@
       "question": "Al trabajar con cadenas de caracteres en Java, ¿qué significa que la clase String sea inmutable?",
       "options": [
         "Que no se pueden comparar dos cadenas entre sí.",
-        "Que una vez creado un texto, no puede modificarse su contenido.",
+        "Que una vez creado un texto, no puede modificarse su contenido",
         "Que solo puede crearse mediante el operador new.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4602,7 +4602,7 @@
       "options": [
         "Utilizando el operador de igualdad para comprobar las referencias.",
         "Comparando directamente su longitud.",
-        "Utilizando un método que evalúa el contenido textual.",
+        "Utilizando un método que evalúa el contenido textual",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -4726,7 +4726,7 @@
       "concept_id": "prog_tema_6_q0",
       "question": "¿Cuál es la diferencia fundamental de diseño entre una Clase Abstracta y una Interfaz?",
       "options": [
-        "La Clase Abstracta define qué \"ES\" el objeto (identidad), mientras que la Interfaz define qué \"PUEDE HACER\" (capacidad).",
+        "La Clase Abstracta define qué \"ES\" el objeto (identidad), mientras que la Interfaz define qué \"PUEDE HACER\" (capacidad)",
         "Las Interfaces permiten guardar variables de estado mutables y las Clases Abstractas no.",
         "Las Clases Abstractas permiten herencia múltiple y las Interfaces solo herencia simple.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -4741,7 +4741,7 @@
       "question": "¿Qué característica define al modificador de acceso protected?",
       "options": [
         "Hace que el miembro sea visible solo para la clase actual y nadie más.",
-        "Permite el acceso a cualquier clase del mismo paquete y a cualquier subclase, incluso en paquetes distintos.",
+        "Permite el acceso a cualquier clase del mismo paquete y a cualquier subclase, incluso en paquetes distintos",
         "Es exactamente igual al acceso public, pero solo funciona con métodos static.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4754,7 +4754,7 @@
       "concept_id": "prog_tema_6_q2",
       "question": "En Java, ¿cuál es la jerarquía máxima de la que heredan implícitamente todas las clases, incluidos los arrays y Strings?",
       "options": [
-        "La clase java.lang.Object.",
+        "La clase java.lang.Object",
         "La clase Super.",
         "No existe una jerarquía común; cada clase es independiente a menos que use extends.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -4768,7 +4768,7 @@
       "concept_id": "prog_tema_6_q3",
       "question": "¿Por qué Java prohíbe la herencia múltiple de clases (heredar de dos padres a la vez)?",
       "options": [
-        "Para evitar el \"Problema del Diamante\" y la ambigüedad en la ejecución de métodos.",
+        "Para evitar el \"Problema del Diamante\" y la ambigüedad en la ejecución de métodos",
         "Porque consumiría demasiada memoria en el Heap al duplicar los constructores.",
         "Porque todas las clases deben ser obligatoriamente final para ser seguras.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -4783,7 +4783,7 @@
       "question": "¿Cuál es la función principal de la anotación @Override en la sobreescritura de métodos?",
       "options": [
         "Obligar al método a ser final para que no pueda volver a cambiarse.",
-        "Actuar como un control de calidad que avisa al compilador si el método no existe en el padre.",
+        "Actuar como un control de calidad que avisa al compilador si el método no existe en el padre",
         "Permitir que el método cambie su lista de parámetros (Sobrecarga).",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4797,7 +4797,7 @@
       "question": "Sobre las clases abstractas, ¿cuál es la \"Regla de Hierro\" mencionada en el temario?",
       "options": [
         "Deben tener obligatoriamente todos sus métodos vacíos.",
-        "No se pueden crear objetos (instancias) de una clase abstracta.",
+        "No se pueden crear objetos (instancias) de una clase abstracta",
         "Solo pueden heredar de interfaces y nunca de otras clases.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4811,7 +4811,7 @@
       "question": "Si deseamos garantizar que un algoritmo crítico no sea alterado por ninguna subclase, ¿qué debemos hacer?",
       "options": [
         "Declarar el método como abstract.",
-        "Declarar el método como final.",
+        "Declarar el método como final",
         "Declarar el método como static y private simultáneamente.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4825,7 +4825,7 @@
       "question": "Al decidir entre Herencia y Composición, ¿qué principio de diseño de software recomienda el temario?",
       "options": [
         "Priorizar siempre la Herencia para maximizar la reutilización de código de \"Caja Blanca\".",
-        "Favorecer la Composición sobre la Herencia para obtener un acoplamiento más bajo y flexible.",
+        "Favorecer la Composición sobre la Herencia para obtener un acoplamiento más bajo y flexible",
         "Usar la Herencia para relaciones \"Tiene-Un\" y la Composición para relaciones \"Es-Un\".",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4838,7 +4838,7 @@
       "concept_id": "prog_tema_6_q8",
       "question": "Si un método es declarado como static, ¿cuál de las siguientes afirmaciones es CORRECTA?",
       "options": [
-        "Pertenece a la clase y no puede acceder a variables de instancia ni usar this.",
+        "Pertenece a la clase y no puede acceder a variables de instancia ni usar this",
         "Requiere crear un objeto con new antes de poder ser invocado.",
         "Cada objeto creado tiene su propia copia privada de dicho método en memoria.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -4854,7 +4854,7 @@
       "options": [
         "Primero se inicializa la subclase (hija) y finalmente la superclase (padre).",
         "Se inicializan simultáneamente para optimizar la carga de la JVM.",
-        "Los padres siempre se inicializan antes que los hijos, empezando desde la clase Object.",
+        "Los padres siempre se inicializan antes que los hijos, empezando desde la clase Object",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -4867,7 +4867,7 @@
       "question": "¿Para qué se utiliza la palabra clave throws (en plural) en la firma de un método?",
       "options": [
         "Para lanzar una instancia específica de una excepción en una línea concreta de código.",
-        "Para indicar que el método delega la responsabilidad de gestionar ciertas excepciones a quien lo invoque.",
+        "Para indicar que el método delega la responsabilidad de gestionar ciertas excepciones a quien lo invoque",
         "Para obligar al bloque finally a cerrar todos los recursos abiertos de forma manual.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4882,7 +4882,7 @@
       "options": [
         "Cuando solo necesitamos leer los datos sin modificarlos.",
         "Cuando queremos filtrar la colección mediante un objeto Stream.",
-        "Cuando necesitamos eliminar elementos de la colección de forma segura mientras la recorremos.",
+        "Cuando necesitamos eliminar elementos de la colección de forma segura mientras la recorremos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -4895,7 +4895,7 @@
       "question": "¿Cuál es el propósito de utilizar Genéricos (<T>) al declarar una colección como ArrayList<String>?",
       "options": [
         "Permitir que la lista guarde cualquier tipo de objeto (mezclar enteros, cadenas, etc.).",
-        "Aportar seguridad de tipos en tiempo de compilación y evitar la necesidad de realizar castings manuales.",
+        "Aportar seguridad de tipos en tiempo de compilación y evitar la necesidad de realizar castings manuales",
         "Hacer que la colección sea inmutable y no se puedan añadir más elementos tras su creación.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4922,7 +4922,7 @@
       "concept_id": "prog_tema_7_q4",
       "question": "¿Cuál es la diferencia principal entre un ArrayList y un HashSet?",
       "options": [
-        "El ArrayList mantiene el orden de inserción, mientras que el HashSet no garantiza ningún orden.",
+        "El ArrayList mantiene el orden de inserción, mientras que el HashSet no garantiza ningún orden",
         "El ArrayList no permite duplicados y el HashSet sí.",
         "El HashSet es más lento para acceder a elementos que el ArrayList porque usa índices.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -4937,7 +4937,7 @@
       "question": "Sobre la interfaz Map, ¿cuál de las siguientes afirmaciones es correcta según el temario?",
       "options": [
         "Hereda directamente de la interfaz Collection.",
-        "Almacena elementos en parejas de Clave-Valor y no pertenece a la jerarquía de Collection.",
+        "Almacena elementos en parejas de Clave-Valor y no pertenece a la jerarquía de Collection",
         "Es una lista ordenada que permite acceder a los elementos mediante un índice numérico.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4951,7 +4951,7 @@
       "question": "¿Cuál es la principal ventaja del \"try-with-resources\" introducido en versiones modernas de Java?",
       "options": [
         "Permite capturar múltiples excepciones en una sola línea de código.",
-        "Gestiona automáticamente el cierre de recursos (como archivos o conexiones) al finalizar el bloque.",
+        "Gestiona automáticamente el cierre de recursos (como archivos o conexiones) al finalizar el bloque",
         "Aumenta la velocidad de ejecución de las colecciones tipo List y Map.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4965,7 +4965,7 @@
       "question": "Según la jerarquía de excepciones en Java, ¿cuál es la diferencia entre un Error y una Exception?",
       "options": [
         "Las Exception son fallos graves del sistema (como falta de memoria), mientras que los Error son fallos del programa.",
-        "Los Error son situaciones irrecuperables de la JVM, mientras que las Exception son condiciones que una aplicación debería capturar.",
+        "Los Error son situaciones irrecuperables de la JVM, mientras que las Exception son condiciones que una aplicación debería capturar",
         "No hay diferencia; ambos términos se usan indistintamente para cualquier fallo en tiempo de ejecución.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4978,7 +4978,7 @@
       "concept_id": "prog_tema_7_q8",
       "question": "¿Qué caracteriza a las excepciones de tipo RuntimeException (Unchecked)?",
       "options": [
-        "El compilador no obliga a capturarlas ni a declararlas en la firma del método.",
+        "El compilador no obliga a capturarlas ni a declararlas en la firma del método",
         "Son excepciones que deben ser revisadas obligatoriamente por el programador antes de compilar.",
         "Son las únicas excepciones que pueden lanzarse mediante la palabra clave throw.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -4994,7 +4994,7 @@
       "options": [
         "Solo si se produce una excepción y esta es capturada correctamente.",
         "Solo si no se produce ninguna excepción durante la ejecución del try.",
-        "Siempre, independientemente de si se lanzó una excepción o si fue capturada.",
+        "Siempre, independientemente de si se lanzó una excepción o si fue capturada",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -5007,7 +5007,7 @@
       "question": "Si un atributo de una clase se marca con la palabra clave transient, ¿qué ocurre durante la serialización?",
       "options": [
         "Ese atributo se guarda con prioridad absoluta antes que los demás.",
-        "Ese atributo se ignora y no se guarda en el fichero (útil para datos sensibles como contraseñas).",
+        "Ese atributo se ignora y no se guarda en el fichero (útil para datos sensibles como contraseñas)",
         "El atributo se convierte automáticamente a formato hexadecimal para ahorrar espacio.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5020,7 +5020,7 @@
       "concept_id": "prog_tema_8_q1",
       "question": "¿Cuál es la diferencia principal entre un flujo de Bytes y un flujo de Caracteres?",
       "options": [
-        "Los de Bytes procesan datos de 8 bits (imágenes, audio), mientras que los de Caracteres procesan datos de 16 bits usando Unicode (texto).",
+        "Los de Bytes procesan datos de 8 bits (imágenes, audio), mientras que los de Caracteres procesan datos de 16 bits usando Unicode (texto)",
         "Los flujos de Bytes son solo para lectura y los de Caracteres solo para escritura.",
         "No hay diferencia técnica; Java decide cuál usar automáticamente según el tamaño del archivo.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -5035,7 +5035,7 @@
       "question": "Al trabajar con archivos de texto, ¿qué sucede si se abre un FileWriter con el parámetro append en true?",
       "options": [
         "El archivo se borra completamente antes de empezar a escribir.",
-        "El nuevo contenido se añade al final del archivo sin borrar lo que ya existía.",
+        "El nuevo contenido se añade al final del archivo sin borrar lo que ya existía",
         "El archivo se bloquea para que otros programas no puedan leerlo mientras se escribe.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5076,7 +5076,7 @@
       "concept_id": "prog_tema_8_q5",
       "question": "¿Qué es la \"Serialización\" de objetos en Java?",
       "options": [
-        "El proceso de convertir un objeto en una secuencia de bytes para poder almacenarlo en un fichero o enviarlo por red.",
+        "El proceso de convertir un objeto en una secuencia de bytes para poder almacenarlo en un fichero o enviarlo por red",
         "Un método para ordenar alfabéticamente los atributos de una clase.",
         "El proceso de borrar un objeto del Heap para liberar memoria.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -5091,7 +5091,7 @@
       "question": "Respecto a la Salida Estándar de Errores (System.err), ¿qué afirmación es correcta?",
       "options": [
         "Envía los datos directamente a la impresora del sistema.",
-        "Se utiliza para mensajes de diagnóstico y errores, y por defecto suele mostrarse en color rojo en la consola.",
+        "Se utiliza para mensajes de diagnóstico y errores, y por defecto suele mostrarse en color rojo en la consola",
         "Es exactamente lo mismo que System.out y no se recomienda su uso en entornos profesionales.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5104,7 +5104,7 @@
       "concept_id": "prog_tema_8_q7",
       "question": "¿Cuál es la función del \"Buffer\" en las operaciones de entrada/salida?",
       "options": [
-        "Actuar como una memoria intermedia para reducir el número de accesos físicos al disco o red, mejorando el rendimiento.",
+        "Actuar como una memoria intermedia para reducir el número de accesos físicos al disco o red, mejorando el rendimiento",
         "Cifrar los datos para que no puedan ser leídos por otros programas del sistema operativo.",
         "Convertir automáticamente archivos binarios en archivos de texto plano.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -5119,7 +5119,7 @@
       "question": "En el contexto de Java, ¿qué es un \"Stream\" o flujo de datos?",
       "options": [
         "Es una estructura de datos estática que almacena información en la memoria RAM.",
-        "Es un canal unidireccional que transporta información de forma secuencial desde un origen a un destino.",
+        "Es un canal unidireccional que transporta información de forma secuencial desde un origen a un destino",
         "Es una base de datos interna que Java utiliza para guardar objetos de forma permanente.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5133,7 +5133,7 @@
       "question": "Para que una clase pueda ser serializada, ¿qué requisito debe cumplir obligatoriamente?",
       "options": [
         "Debe heredar de la clase File.",
-        "Debe implementar la interfaz Serializable, que actúa como una \"interfaz de marcado\".",
+        "Debe implementar la interfaz Serializable, que actúa como una \"interfaz de marcado\"",
         "Todos sus métodos deben ser declarados como static.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5146,7 +5146,7 @@
       "concept_id": "prog_tema_9_q0",
       "question": "¿Cuál es la función del \"Driver\" (Controlador) en una conexión JDBC?",
       "options": [
-        "Traducir las llamadas de la API JDBC al protocolo específico del gestor de base de datos (MySQL, Oracle, etc.).",
+        "Traducir las llamadas de la API JDBC al protocolo específico del gestor de base de datos (MySQL, Oracle, etc.)",
         "Diseñar las tablas de la base de datos automáticamente desde el código Java.",
         "Comprobar que el código SQL no tenga errores de sintaxis antes de enviarlo.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -5174,7 +5174,7 @@
       "concept_id": "prog_tema_9_q2",
       "question": "¿Qué representan las siglas ACID en el contexto de las transacciones de bases de datos?",
       "options": [
-        "Un conjunto de propiedades (Atomicidad, Consistencia, Aislamiento y Durabilidad) que garantizan la integridad de las operaciones.",
+        "Un conjunto de propiedades (Atomicidad, Consistencia, Aislamiento y Durabilidad) que garantizan la integridad de las operaciones",
         "Un protocolo de cifrado para que las contraseñas de la base de datos viajen seguras.",
         "El nombre del driver estándar utilizado para conectar Java con bases de datos SQLite.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -5189,7 +5189,7 @@
       "question": "Para gestionar una transacción de forma manual en Java, ¿cuál es el primer paso imprescindible?",
       "options": [
         "Llamar al método conn.commit().",
-        "Establecer conn.setAutoCommit(false).",
+        "Establecer conn.setAutoCommit(false)",
         "Cerrar la conexión con el bloque finally.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5217,7 +5217,7 @@
       "question": "¿Por qué se recomienda el uso de PreparedStatement en lugar de Statement para ejecutar consultas con parámetros?",
       "options": [
         "Porque Statement no permite ejecutar consultas de tipo SELECT.",
-        "Porque PreparedStatement aumenta la seguridad contra ataques de Inyección SQL y mejora el rendimiento mediante la precompilación.",
+        "Porque PreparedStatement aumenta la seguridad contra ataques de Inyección SQL y mejora el rendimiento mediante la precompilación",
         "Porque Statement solo puede usarse con bases de datos locales y no en red.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5231,7 +5231,7 @@
       "question": "¿Cómo funciona el objeto ResultSet al recuperar datos de una consulta?",
       "options": [
         "Carga todos los datos de la base de datos en una lista estática de forma inmediata.",
-        "Actúa como un cursor que inicialmente apunta \"antes de la primera fila\" y requiere el método next() para avanzar.",
+        "Actúa como un cursor que inicialmente apunta \"antes de la primera fila\" y requiere el método next() para avanzar",
         "Es una interfaz que solo permite leer datos de tipo texto (String).",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5246,7 +5246,7 @@
       "options": [
         "Cerrarlos manualmente uno a uno en el cuerpo principal del código.",
         "Confiar en que el Garbage Collector los cerrará cuando el programa termine.",
-        "Utilizar la estructura try-with-resources para que Java los cierre automáticamente al finalizar el bloque.",
+        "Utilizar la estructura try-with-resources para que Java los cierre automáticamente al finalizar el bloque",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -5273,7 +5273,7 @@
       "question": "¿Qué es JDBC dentro del ecosistema de Java?",
       "options": [
         "Una base de datos ligera que se integra directamente en el JDK.",
-        "Una API que proporciona un conjunto de interfaces estándar para interactuar con bases de datos independientemente del motor usado.",
+        "Una API que proporciona un conjunto de interfaces estándar para interactuar con bases de datos independientemente del motor usado",
         "Un lenguaje de consulta que sustituye al SQL tradicional para mejorar el rendimiento.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5287,7 +5287,7 @@
       "question": "¿Qué es el OID (Object Identifier) en una base de datos orientada a objetos?",
       "options": [
         "Una clave primaria numérica que el programador debe gestionar manualmente.",
-        "Un identificador único generado por el sistema que es independiente del valor de los atributos del objeto.",
+        "Un identificador único generado por el sistema que es independiente del valor de los atributos del objeto",
         "El nombre de la variable que utilizamos en el código Java para referenciar al objeto.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5314,7 +5314,7 @@
       "concept_id": "prog_tema_10_q2",
       "question": "¿Qué sucede si se activa la propiedad de \"Cascada\" (Cascade On Update/Delete)?",
       "options": [
-        "Las operaciones realizadas sobre un objeto padre se propagan automáticamente a sus objetos hijos relacionados.",
+        "Las operaciones realizadas sobre un objeto padre se propagan automáticamente a sus objetos hijos relacionados",
         "El sistema operativo borra la base de datos si ocurre un error crítico.",
         "El objeto se guarda simultáneamente en dos bases de datos distintas para mayor seguridad.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -5329,7 +5329,7 @@
       "question": "¿Qué problema fundamental vienen a solucionar las BDOO en comparación con las bases de datos relacionales?",
       "options": [
         "La lentitud de los discos duros actuales.",
-        "La \"Desadaptación de Impedancia\", evitando tener que traducir objetos a tablas y filas.",
+        "La \"Desadaptación de Impedancia\", evitando tener que traducir objetos a tablas y filas",
         "La imposibilidad de usar SQL en entornos de red.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5343,7 +5343,7 @@
       "question": "¿Cómo funciona el mecanismo de consulta QBE (Query By Example)?",
       "options": [
         "Se escribe una sentencia de texto similar a SQL.",
-        "Se crea un objeto \"prototipo\" o plantilla y el sistema busca objetos que coincidan con sus atributos no nulos.",
+        "Se crea un objeto \"prototipo\" o plantilla y el sistema busca objetos que coincidan con sus atributos no nulos",
         "Se programa un filtro mediante una función lambda de Java.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5357,7 +5357,7 @@
       "question": "¿Qué ventaja principal ofrecen las \"Native Queries\" (Consultas Nativas) frente a otros métodos?",
       "options": [
         "Son mucho más rápidas que las consultas por OID.",
-        "Permiten usar código Java puro para filtrar, proporcionando total seguridad de tipos (Type-Safe).",
+        "Permiten usar código Java puro para filtrar, proporcionando total seguridad de tipos (Type-Safe)",
         "No requieren que la base de datos esté abierta para ejecutarse.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5371,7 +5371,7 @@
       "question": "En las consultas OQL, ¿cómo se navega a través de las relaciones entre objetos?",
       "options": [
         "Mediante el uso de sentencias JOIN complejas como en el modelo relacional.",
-        "Utilizando la \"notación de punto\" (ej. p.ciudad.nombre) para seguir los grafos de objetos.",
+        "Utilizando la \"notación de punto\" (ej. p.ciudad.nombre) para seguir los grafos de objetos",
         "No se puede navegar entre relaciones; solo se pueden consultar objetos aislados.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5385,7 +5385,7 @@
       "question": "¿Qué controla el parámetro \"Activation Depth\" (Profundidad de Activación)?",
       "options": [
         "El número máximo de usuarios que pueden conectarse a la vez.",
-        "El nivel de profundidad del grafo de objetos que se carga en la memoria RAM al recuperar un objeto.",
+        "El nivel de profundidad del grafo de objetos que se carga en la memoria RAM al recuperar un objeto",
         "La cantidad de copias de seguridad que el sistema realiza cada hora.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5399,7 +5399,7 @@
       "question": "En el estándar ODMG, ¿qué lenguaje se utiliza específicamente para definir la estructura de la base de datos?",
       "options": [
         "OQL (Object Query Language).",
-        "ODL (Object Definition Language).",
+        "ODL (Object Definition Language)",
         "SQL-92.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5413,7 +5413,7 @@
       "question": "¿Cuál es la diferencia principal entre el modo de funcionamiento \"Embebido\" y el modo \"Servidor\"?",
       "options": [
         "El modo Embebido permite múltiples conexiones remotas, mientras que el Servidor es solo para un usuario.",
-        "El modo Embebido la base de datos corre en el mismo proceso que la aplicación, mientras que el modo Servidor es un proceso independiente.",
+        "El modo Embebido la base de datos corre en el mismo proceso que la aplicación, mientras que el modo Servidor es un proceso independiente",
         "El modo Servidor es gratuito y el modo Embebido requiere licencia comercial.",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -5850,7 +5850,7 @@
       "options": [
         "Las etiquetas XML no son sensibles a las mayúsculas y minúsculas, lo que permite flexibilidad en su escritura para mejorar la legibilidad del código",
         "Es posible cerrar una etiqueta exterior antes de que todos los elementos anidados dentro de ella hayan sido cerrados, siempre que el documento tenga un elemento raíz único",
-        "Los elementos vacíos pueden representarse mediante una etiqueta de inicio seguida inmediatamente por una de cierre (ej. <hr></hr>), o con una etiqueta única con \"/>\" al final (ej. <hr />).",
+        "Los elementos vacíos pueden representarse mediante una etiqueta de inicio seguida inmediatamente por una de cierre (ej. <hr></hr>), o con una etiqueta única con \"/>\" al final (ej. <hr />)",
         "Las etiquetas XML pueden anidarse en cualquier orden sin restricciones de jerarquía."
       ],
       "correct": 2,
@@ -5864,7 +5864,7 @@
       "options": [
         "Debe ser compatible con cualquier navegador web sin necesidad de hojas de estilo o transformaciones adicionales para su visualización",
         "Debe contener obligatoriamente un prólogo con la declaración XML que incluya la versión, la codificación y el atributo standalone=\"yes\"",
-        "Debe ajustarse a las restricciones estructurales y de contenido definidas en una Declaración de Tipo de Documento (DTD) o un Esquema XML (XSD) asociado.",
+        "Debe ajustarse a las restricciones estructurales y de contenido definidas en una Declaración de Tipo de Documento (DTD) o un Esquema XML (XSD) asociado",
         "Debe incluir obligatoriamente una declaración de tipo de documento (DOCTYPE) al inicio."
       ],
       "correct": 2,
@@ -6507,7 +6507,7 @@
       "question": "¿Cuál es el propósito fundamental de la cláusula Let en una expresión FLWOR de XQuery?",
       "options": [
         "Iterar sobre un conjunto de nodos en el documento XML",
-        "Crear variables temporales que representan valores o expresiones para ser usadas en otras cláusulas de la consulta.",
+        "Crear variables temporales que representan valores o expresiones para ser usadas en otras cláusulas de la consulta",
         "Filtrar los resultados de la consulta utilizando una expresión booleana",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -6690,7 +6690,7 @@
       "options": [
         "<item>, <author>, <pubDate>",
         "<category>, <image>, <language>",
-        "<title>, <link>, <description>.",
+        "<title>, <link>, <description>",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -6760,7 +6760,7 @@
       "options": [
         "HTML y CSS",
         "JSON y YAML",
-        "RSS y Atom.",
+        "RSS y Atom",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7108,7 +7108,7 @@
       "question": "¿Cómo se categoriza el software según su naturaleza en un ordenador?",
       "options": [
         "Hardware, Firmware y Sistemas Operativos",
-        "Software de sistema, Software de aplicación y Software de programación.",
+        "Software de sistema, Software de aplicación y Software de programación",
         "BIOS, UEFI y Controladores",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7123,7 +7123,7 @@
       "options": [
         "El hardware del ordenador, que es la única parte física necesaria",
         "El sistema operativo, que es el único intermediario entre el programa y la máquina",
-        "Los datos, que son la información que el programa necesita para operar, como los operandos en una operación aritmética.",
+        "Los datos, que son la información que el programa necesita para operar, como los operandos en una operación aritmética",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7136,7 +7136,7 @@
       "question": "Según el texto, ¿qué proceso realiza un compilador durante la compilación, además de generar el código ejecutable?",
       "options": [
         "Transforma el bytecode en código máquina para su ejecución",
-        "Verifica que el código fuente esté escrito correctamente desde los puntos de vista léxico, sintáctico y semántico, avisando al programador de posibles errores.",
+        "Verifica que el código fuente esté escrito correctamente desde los puntos de vista léxico, sintáctico y semántico, avisando al programador de posibles errores",
         "Une uno o más códigos objeto para construir un programa ejecutable",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7151,7 +7151,7 @@
       "options": [
         "Son lenguajes de alto nivel con sintaxis sencilla, como Java o C#",
         "Implican programación directa en código máquina o binario (ceros y unos)",
-        "Son lenguajes de programación en ensamblador, que utilizan una simbología y códigos legibles por las personas, y son convertidos a código máquina mediante un ensamblador.",
+        "Son lenguajes de programación en ensamblador, que utilizan una simbología y códigos legibles por las personas, y son convertidos a código máquina mediante un ensamblador",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7165,7 +7165,7 @@
       "options": [
         "El código objeto es el resultado directo de la escritura del programador, mientras que el código ejecutable es lo que entiende la máquina",
         "El código ejecutable es válido para múltiples sistemas operativos sin necesidad de recompilación, a diferencia del código objeto",
-        "El código objeto contiene instrucciones comprensibles por la máquina, pero no es directamente ejecutable, requiriendo un proceso de enlazado para convertirse en código ejecutable.",
+        "El código objeto contiene instrucciones comprensibles por la máquina, pero no es directamente ejecutable, requiriendo un proceso de enlazado para convertirse en código ejecutable",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7179,7 +7179,7 @@
       "options": [
         "En el tipado fuerte, el tipo de la variable se asigna dinámicamente, mientras que en el tipado débil, se define estáticamente",
         "Un lenguaje de tipado débil no permite hacer uso indiscriminado de las variables sin importar su tipo, lo contrario al tipado fuerte",
-        "Un lenguaje de tipado fuerte restringe las operaciones basándose en el tipo de sus variables, mientras que uno de tipado débil permite un uso más indiscriminado. En el tipado estático, el tipo se vincula a la variable al declararla y no cambia; en el tipado dinámico, el tipo se asigna por el valor y puede cambiar durante la ejecución.",
+        "Un lenguaje de tipado fuerte restringe las operaciones basándose en el tipo de sus variables, mientras que uno de tipado débil permite un uso más indiscriminado. En el tipado estático, el tipo se vincula a la variable al declararla y no cambia; en el tipado dinámico, el tipo se asigna por el valor y puede cambiar durante la ejecución",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7192,7 +7192,7 @@
       "question": "¿Por qué se considera la reutilización de código de máxima importancia en el desarrollo de software?",
       "options": [
         "Porque implica duplicar bloques de código para asegurar la redundancia y fiabilidad",
-        "Porque ahorra costes de creación y modificación, y reduce la probabilidad de cometer errores al centralizar los cambios en un único lugar.",
+        "Porque ahorra costes de creación y modificación, y reduce la probabilidad de cometer errores al centralizar los cambios en un único lugar",
         "Porque permite que el código fuente sea directamente comprensible por el ordenador sin necesidad de compilación o interpretación",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7207,7 +7207,7 @@
       "options": [
         "La creación del código fuente y la ayuda de herramientas de generación de código",
         "La determinación de cómo se va a organizar el proyecto a nivel de software y la definición de las interfaces gráficas",
-        "La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software.",
+        "La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7220,7 +7220,7 @@
       "question": "En el contexto de los lenguajes de programación como Java, ¿cuál es uno de los objetivos principales al utilizar máquinas virtuales y bytecode?",
       "options": [
         "Reducir el tamaño de los programas ejecutables para un almacenamiento más eficiente",
-        "Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que tenga instalada la máquina virtual correspondiente.",
+        "Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que tenga instalada la máquina virtual correspondiente",
         "Aumentar la velocidad de ejecución de los programas, superando a los lenguajes compilados",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7235,7 +7235,7 @@
       "options": [
         "Paradigma Imperativo",
         "Paradigma Orientado a Objetos",
-        "Paradigma de Programación Estructurada.",
+        "Paradigma de Programación Estructurada",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7361,7 +7361,7 @@
       "options": [
         "Los IDE modernos son exclusivamente de código abierto y gratuitos, a diferencia de las herramientas antiguas",
         "Los IDE modernos se enfocan únicamente en la edición de código, mientras que las herramientas antiguas integraban la compilación y el enlazado",
-        "Los IDE modernos integran una amplia gama de herramientas para dar soporte a la mayoría de las actividades de desarrollo de software, incluyendo documentación, control de versiones y pruebas, más allá de la mera escritura y compilación de código.",
+        "Los IDE modernos integran una amplia gama de herramientas para dar soporte a la mayoría de las actividades de desarrollo de software, incluyendo documentación, control de versiones y pruebas, más allá de la mera escritura y compilación de código",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7374,7 +7374,7 @@
       "question": "Al crear un nuevo proyecto en PyCharm para Python, ¿cuál es uno de los elementos clave que deben seleccionarse o configurarse, además de la ubicación del proyecto y la versión de Python a utilizar?",
       "options": [
         "El tipo específico de interfaz gráfica de usuario (GUI) que se utilizará para la aplicación",
-        "La ubicación del entorno virtual, que constituye un entorno de trabajo aislado para el proyecto.",
+        "La ubicación del entorno virtual, que constituye un entorno de trabajo aislado para el proyecto",
         "El compilador predeterminado para C++ o Java, incluso para proyectos Python",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7389,7 +7389,7 @@
       "options": [
         "En ambos tipos de lenguajes, interpretados y compilados, los errores son detectados y mostrados principalmente durante la fase de compilación por el IDE",
         "En los lenguajes interpretados, los errores solo se detectan manualmente por el programador, mientras que los lenguajes compilados tienen detección automatizada",
-        "En los lenguajes interpretados, los errores se detectan y muestran durante la fase de ejecución, mientras que en los lenguajes compilados, los errores son revisados y mostrados durante el proceso de compilación.",
+        "En los lenguajes interpretados, los errores se detectan y muestran durante la fase de ejecución, mientras que en los lenguajes compilados, los errores son revisados y mostrados durante el proceso de compilación",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7402,7 +7402,7 @@
       "question": "Antes de instalar PyCharm, ¿cuál es un paso previo recomendado para asegurar que todas las herramientas necesarias para el desarrollo en Python estén disponibles?",
       "options": [
         "Instalar el IDE Visual Studio para asegurar el soporte de Python",
-        "Descargar e instalar la última versión del intérprete de Python y sus herramientas.",
+        "Descargar e instalar la última versión del intérprete de Python y sus herramientas",
         "Configurar las variables de entorno del sistema operativo para que apunten al instalador de PyCharm",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7417,7 +7417,7 @@
       "options": [
         "El software libre siempre tiene un coste asociado a su uso, mientras que el software propietario es siempre gratuito",
         "El software libre es desarrollado por grandes corporaciones, mientras que el software propietario suele ser creado por desarrolladores independientes",
-        "El software libre permite el acceso a su código fuente para su estudio, comprensión y mejora, mientras que el software propietario restringe el acceso a su código, generalmente solo permitiéndolo a su dueño o creador.",
+        "El software libre permite el acceso a su código fuente para su estudio, comprensión y mejora, mientras que el software propietario restringe el acceso a su código, generalmente solo permitiéndolo a su dueño o creador",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7431,7 +7431,7 @@
       "options": [
         "Reemplazar las funcionalidades centrales del IDE, requiriendo una reinstalación completa",
         "Permitir que el IDE se ejecute en diferentes sistemas operativos sin necesidad de recompilación",
-        "Permitir que el IDE se ejecute en diferentes sistemas operativos sin necesidad de recompilación.",
+        "Permitir que el IDE se ejecute en diferentes sistemas operativos sin necesidad de recompilación",
         "Extender o mejorar las características y funcionalidades del IDE, actuando como complementos opcionales"
       ],
       "correct": 2,
@@ -7444,7 +7444,7 @@
       "question": "Respecto a la generación de ejecutables, ¿qué se menciona específicamente sobre Python dentro de los entornos de desarrollo?",
       "options": [
         "Python suele generar ejecutables directamente desde el IDE, de manera similar a los lenguajes compilados",
-        "Generalmente no se generan archivos ejecutables en Python; en su lugar, los archivos de la aplicación se copian y se ejecutan llamando al intérprete.",
+        "Generalmente no se generan archivos ejecutables en Python; en su lugar, los archivos de la aplicación se copian y se ejecutan llamando al intérprete",
         "La generación de ejecutables en Python siempre es automatizada por el IDE sin necesidad de herramientas de terceros",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7458,7 +7458,7 @@
       "question": "Según el contenido proporcionado, ¿cuál es una ventaja clave de los editores de código modernos en comparación con los Entornos de Desarrollo Integrados (IDEs)?",
       "options": [
         "Los editores de código son generalmente más completos y ofrecen más funcionalidades integradas para todas las fases del desarrollo",
-        "Los editores de código son más ligeros y consumen menos recursos del sistema, siendo adecuados para tipos específicos de desarrollo como las aplicaciones web de \"front-end\".",
+        "Los editores de código son más ligeros y consumen menos recursos del sistema, siendo adecuados para tipos específicos de desarrollo como las aplicaciones web de \"front-end\"",
         "Los editores de código están dedicados exclusivamente a un único lenguaje de programación, lo que garantiza un rendimiento superior",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7473,7 +7473,7 @@
       "options": [
         "Solo el idioma de los menús y las sugerencias del IDE",
         "La lógica fundamental y las funcionalidades principales del propio IDE",
-        "La apariencia de sus elementos, como el tipo y tamaño de letra, la disposición de los paneles y el esquema de color a utilizar.",
+        "La apariencia de sus elementos, como el tipo y tamaño de letra, la disposición de los paneles y el esquema de color a utilizar",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7486,7 +7486,7 @@
       "question": "Además de la edición y compilación de código, ¿qué actividad de desarrollo moderna soportan los IDEs, lo que indica su papel en proyectos colaborativos?",
       "options": [
         "Solo el control directo del hardware y la programación de sistemas de bajo nivel",
-        "El trabajo en equipo, el control de versiones y el seguimiento de incidencias, entre otras tareas.",
+        "El trabajo en equipo, el control de versiones y el seguimiento de incidencias, entre otras tareas",
         "El desarrollo exclusivo de aplicaciones web del lado del servidor (back-end)",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7613,7 +7613,7 @@
       "options": [
         "UML es una metodología de desarrollo completa y prescriptiva que debe ser adoptada en todos los proyectos orientados a objetos",
         "UML define un conjunto estricto de reglas que restringen las metodologías de desarrollo a unas pocas opciones compatibles",
-        "UML no sigue ninguna metodología en concreto, sino que proporciona herramientas para aplicar en estas, permitiendo representar las diferentes partes estáticas o dinámicas del sistema como parte del trabajo metodológico.",
+        "UML no sigue ninguna metodología en concreto, sino que proporciona herramientas para aplicar en estas, permitiendo representar las diferentes partes estáticas o dinámicas del sistema como parte del trabajo metodológico",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7627,7 +7627,7 @@
       "options": [
         "El Object Management Group (OMG), que fue el consorcio que lo presentó inicialmente en 1997",
         "La World Wide Web Consortium (W3C), por su relevancia en aplicaciones web",
-        "La Organización Internacional de Estandarización (ISO, International Organization for Standardization).",
+        "La Organización Internacional de Estandarización (ISO, International Organization for Standardization)",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7640,7 +7640,7 @@
       "question": "¿Cuál es el objetivo fundamental del Lenguaje Unificado de Modelado (UML) según la introducción de la unidad?",
       "options": [
         "Proporcionar un lenguaje de programación de alto nivel para el desarrollo de aplicaciones empresariales",
-        "Ofrecer herramientas para la representación gráfica y textual de un sistema informático, especialmente cuando se utiliza el paradigma de la orientación a objetos.",
+        "Ofrecer herramientas para la representación gráfica y textual de un sistema informático, especialmente cuando se utiliza el paradigma de la orientación a objetos",
         "Estandarizar las interfaces de comunicación entre diferentes lenguajes de programación y sistemas operativos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7655,7 +7655,7 @@
       "options": [
         "El diagrama de componentes, que muestra la relación entre subsistemas",
         "El diagrama de clases, que modela la estructura estática del sistema",
-        "El diagrama de lanzamiento o despliegue.",
+        "El diagrama de lanzamiento o despliegue",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7669,7 +7669,7 @@
       "options": [
         "Son exclusivamente gratuitas y de código abierto",
         "Se centran únicamente en la generación automática de interfaces de usuario",
-        "Están diseñadas y construidas específicamente para ayudar en diferentes fases del proceso de creación de software, proporcionando soporte específico para UML.",
+        "Están diseñadas y construidas específicamente para ayudar en diferentes fases del proceso de creación de software, proporcionando soporte específico para UML",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7683,7 +7683,7 @@
       "options": [
         "El diagrama de casos de uso, que describe la interacción de los actores con el sistema",
         "El diagrama de actividad, que detalla la secuencia de pasos de una tarea",
-        "El diagrama de clases.",
+        "El diagrama de clases",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7697,7 +7697,7 @@
       "options": [
         "La capacidad de optimizar automáticamente el rendimiento del código generado sin intervención del desarrollador",
         "La posibilidad de migrar bases de datos entre diferentes sistemas de gestión",
-        "La ingeniería inversa, que permite generar diagramas de clase u otros a partir del código fuente ya programado.",
+        "La ingeniería inversa, que permite generar diagramas de clase u otros a partir del código fuente ya programado",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7711,7 +7711,7 @@
       "options": [
         "La representación genérica de un elemento del sistema, sin atributos ni métodos específicos",
         "Una característica o propiedad de una clase que describe su estado",
-        "La concreción de una clase, también conocida como instancia.",
+        "La concreción de una clase, también conocida como instancia",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7725,7 +7725,7 @@
       "options": [
         "El diagrama de secuencia, que muestra la interacción entre objetos a lo largo del tiempo",
         "El diagrama de comunicación, que se centra en el intercambio de mensajes entre objetos",
-        "El diagrama de actividad.",
+        "El diagrama de actividad",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7738,7 +7738,7 @@
       "question": "Los múltiples diagramas de UML, diseñados para cubrir diversas perspectivas de un sistema software, se agrupan en dos grandes categorías principales. ¿Cuáles son estas categorías?",
       "options": [
         "Diagramas de diseño y diagramas de implementación",
-        "Diagramas estructurales y diagramas de comportamiento.",
+        "Diagramas estructurales y diagramas de comportamiento",
         "Diagramas de requisitos y diagramas de arquitectura",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7864,7 +7864,7 @@
       "question": "Además de la ayuda en la construcción visual de diagramas, ¿qué dos funcionalidades avanzadas y complementarias suelen ofrecer las herramientas CASE con soporte UML para mejorar la eficiencia del desarrollo de software?",
       "options": [
         "Monitorización del rendimiento en tiempo real y depuración de código",
-        "Generación automática de código a partir de diagramas y la ingeniería inversa para obtener diagramas a partir de código fuente.",
+        "Generación automática de código a partir de diagramas y la ingeniería inversa para obtener diagramas a partir de código fuente",
         "Gestión de versiones del código fuente y pruebas unitarias automatizadas",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7879,7 +7879,7 @@
       "options": [
         "Con una línea sólida y una punta de flecha rellena, representando una relación de herencia entre clases",
         "Con una línea punteada que termina en una punta de flecha sólida, indicando el uso de funcionalidad",
-        "Mediante una línea punteada que termina en una punta de flecha hueca (o rellena de color blanco), que va desde la clase hacia la interfaz que implementa.",
+        "Mediante una línea punteada que termina en una punta de flecha hueca (o rellena de color blanco), que va desde la clase hacia la interfaz que implementa",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7892,7 +7892,7 @@
       "question": "¿Qué información crucial puede indicarse en los extremos de una línea de relación de Asociación en un diagrama de clases UML?",
       "options": [
         "La prioridad de ejecución de los métodos de las clases relacionadas",
-        "La multiplicidad (cuántas instancias de una clase pueden participar en la relación) y la navegabilidad (si se puede obtener referencia a los objetos del otro extremo).",
+        "La multiplicidad (cuántas instancias de una clase pueden participar en la relación) y la navegabilidad (si se puede obtener referencia a los objetos del otro extremo)",
         "El orden en que se deben instanciar los objetos de las clases asociadas",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7907,7 +7907,7 @@
       "options": [
         "Se representan con un borde punteado",
         "Sus nombres se escriben en negrita",
-        "Sus nombres se escriben en cursiva.",
+        "Sus nombres se escriben en cursiva",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7920,7 +7920,7 @@
       "question": "¿Cuál es la principal diferencia entre una relación de Composición y una de Agregación en UML, y cómo se representa la Composición?",
       "options": [
         "La Agregación es una composición fuerte donde las partes no pueden existir sin el todo (diamante sólido), mientras que la Composición es débil (diamante hueco)",
-        "La Composición es una relación fuerte donde las partes no tienen sentido independiente del conjunto y se eliminan con él (diamante sólido), mientras que la Agregación es débil donde las partes conservan su entidad (diamante hueco).",
+        "La Composición es una relación fuerte donde las partes no tienen sentido independiente del conjunto y se eliminan con él (diamante sólido), mientras que la Agregación es débil donde las partes conservan su entidad (diamante hueco)",
         "La Composición se representa con un diamante hueco, y la Agregación con un diamante sólido",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7935,7 +7935,7 @@
       "options": [
         "Que tiene visibilidad pública",
         "Que tiene visibilidad de paquete",
-        "Que tiene visibilidad protegida.",
+        "Que tiene visibilidad protegida",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7948,7 +7948,7 @@
       "question": "¿Cuál es el papel principal del diagrama de clases en el diseño de software orientado a objetos según la Unidad 4?",
       "options": [
         "Representar la secuencia de interacciones entre objetos en tiempo de ejecución",
-        "Reflejar las clases que componen un sistema, incluyendo sus atributos, métodos y las relaciones entre ellas, para permitir a los desarrolladores escribir programas a partir de una especificación formal.",
+        "Reflejar las clases que componen un sistema, incluyendo sus atributos, métodos y las relaciones entre ellas, para permitir a los desarrolladores escribir programas a partir de una especificación formal",
         "Describir el comportamiento del sistema desde la perspectiva de los usuarios externos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7962,7 +7962,7 @@
       "question": "Si un atributo en una clase UML es estático, ¿cómo se indica esta característica en su representación gráfica dentro del diagrama de clases?",
       "options": [
         "Su nombre se escribe entre corchetes",
-        "Debe ir subrayado.",
+        "Debe ir subrayado",
         "Se precede de un asterisco (*)",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -7977,7 +7977,7 @@
       "options": [
         "Relación de agregación, indicando que una clase es parte de otra sin dependencia fuerte",
         "Relación de generalización, mostrando que una clase hereda de otra",
-        "Relación de dependencia o de uso, representando que una clase utiliza la funcionalidad proporcionada por otra.",
+        "Relación de dependencia o de uso, representando que una clase utiliza la funcionalidad proporcionada por otra",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -7990,7 +7990,7 @@
       "question": "Según la definición de la unidad, ¿en qué consiste el concepto de \"ingeniería inversa\" aplicado a los diagramas de clases en el contexto del desarrollo de software?",
       "options": [
         "En el proceso de optimizar el código fuente a partir de un diagrama de clases previamente generado",
-        "En la obtención de un diagrama de clases a partir del código fuente ya existente de una aplicación.",
+        "En la obtención de un diagrama de clases a partir del código fuente ya existente de una aplicación",
         "En la transformación de un diagrama de clases en un diagrama de componentes para la implementación",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -8116,7 +8116,7 @@
       "question": "En un diagrama de secuencia, ¿qué representan la \"línea de vida\" y la \"barra de activación\" respectivamente?",
       "options": [
         "La línea de vida representa la duración absoluta de un proceso y la barra de activación el tiempo de respuesta",
-        "La línea de vida es una línea vertical discontinua asociada a cada elemento que indica el orden de los eventos, mientras que la barra de activación representa el periodo de tiempo durante el que el elemento se encuentra activo en la resolución de la actividad.",
+        "La línea de vida es una línea vertical discontinua asociada a cada elemento que indica el orden de los eventos, mientras que la barra de activación representa el periodo de tiempo durante el que el elemento se encuentra activo en la resolución de la actividad",
         "La línea de vida muestra la jerarquía de las clases y la barra de activación la herencia de métodos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -8131,7 +8131,7 @@
       "options": [
         "Se representa con una línea discontinua con flecha que apunta al caso de uso \"incluyente\" y es opcional para la funcionalidad",
         "Indica que un caso de uso amplía la funcionalidad de otro de manera condicional",
-        "Un caso de uso \"incluye\" a otro cuando lo utiliza internamente para llevar a cabo su funcionalidad, y la realización de ambos casos de uso es siempre obligatoria.",
+        "Un caso de uso \"incluye\" a otro cuando lo utiliza internamente para llevar a cabo su funcionalidad, y la realización de ambos casos de uso es siempre obligatoria",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8144,7 +8144,7 @@
       "question": "¿Qué tipo de diagrama de comportamiento se utiliza para representar de manera detallada la secuencia de pasos que se van a realizar para una actividad, incluyendo elementos como nodos inicial y final, actividades, decisiones y conexiones?",
       "options": [
         "El diagrama de secuencia, por su enfoque en la interacción entre objetos",
-        "El diagrama de actividad.",
+        "El diagrama de actividad",
         "El diagrama de estados, ya que muestra el ciclo de vida de un componente",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -8158,7 +8158,7 @@
       "question": "¿Cuál es una característica fundamental de la relación de Extensión (<<extend>>) en los diagramas de casos de uso UML?",
       "options": [
         "Es una relación fuerte y obligatoria donde la funcionalidad extendida siempre se ejecuta",
-        "Indica que un caso de uso \"extiende\" o amplía la funcionalidad de otro, añadiendo opcionalmente un punto de extensión para especificar las condiciones.",
+        "Indica que un caso de uso \"extiende\" o amplía la funcionalidad de otro, añadiendo opcionalmente un punto de extensión para especificar las condiciones",
         "Se representa con una línea continua y un diamante hueco, mostrando una relación de \"parte-todo\"",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -8173,7 +8173,7 @@
       "options": [
         "El diagrama de actividad, por su capacidad de mostrar flujos detallados",
         "El diagrama de tiempos, debido a su enfoque en la evolución de estados",
-        "El diagrama de comunicación (conocido como diagrama de colaboración en versiones anteriores de UML).",
+        "El diagrama de comunicación (conocido como diagrama de colaboración en versiones anteriores de UML)",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8186,7 +8186,7 @@
       "question": "En un diagrama de casos de uso UML, ¿qué puede representar un \"Actor\"?",
       "options": [
         "Únicamente a una persona física que interactúa con el sistema, como un usuario",
-        "Cualquier elemento que se relaciona con el sistema, pudiendo ser una persona física (usuario) como otro sistema o subsistema (un programa informático o un sistema hardware).",
+        "Cualquier elemento que se relaciona con el sistema, pudiendo ser una persona física (usuario) como otro sistema o subsistema (un programa informático o un sistema hardware)",
         "Una función o actividad interna del sistema que no tiene interacción externa",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -8201,7 +8201,7 @@
       "options": [
         "El conjunto completo de actores y casos de uso que componen un sistema",
         "La representación gráfica de una actividad o funcionalidad del sistema como una elipse",
-        "Cada uno de los diferentes caminos que puede tomar un caso de uso, representando una secuencia de eventos posible para completar la interacción.",
+        "Cada uno de los diferentes caminos que puede tomar un caso de uso, representando una secuencia de eventos posible para completar la interacción",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8215,7 +8215,7 @@
       "options": [
         "El diagrama general de interacción, que muestra eventos a alto nivel",
         "El diagrama de casos de uso, que define las funcionalidades del sistema",
-        "El diagrama de estados o de máquina de estados.",
+        "El diagrama de estados o de máquina de estados",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8228,7 +8228,7 @@
       "question": "En el contexto de la elaboración de diagramas de comportamiento UML, ¿qué tipo de herramientas suelen proporcionar funcionalidades para su creación y qué ejemplo de plug-in para un Entorno de Desarrollo Integrado (IDE) popular se menciona?",
       "options": [
         "Solo herramientas de dibujo genéricas; ningún plug-in específico es mencionado",
-        "Herramientas CASE están diseñadas para facilitar su creación, y plug-ins integrados en entornos de desarrollo (IDEs) como AmaterasUML para Eclipse también ofrecen soporte.",
+        "Herramientas CASE están diseñadas para facilitar su creación, y plug-ins integrados en entornos de desarrollo (IDEs) como AmaterasUML para Eclipse también ofrecen soporte",
         "Exclusivamente aplicaciones de línea de comandos; no se usan interfaces gráficas",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -8242,7 +8242,7 @@
       "question": "¿Cuál es la principal característica que definen los diagramas de comportamiento en UML, diferenciándolos de los diagramas estructurales?",
       "options": [
         "Muestran la definición y estructura estática de los componentes de un sistema en reposo",
-        "Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y transformación.",
+        "Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y transformación",
         "Describen exclusivamente la interacción entre usuarios finales y la interfaz gráfica del sistema",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -8354,7 +8354,7 @@
       "question": "¿Cuál es el propósito principal de un depurador (debugger) y qué herramientas clave proporciona para lograrlo?",
       "options": [
         "Optimizar el código fuente para mejorar su eficiencia sin necesidad de ejecución",
-        "Ejecutar el programa línea a línea, permitiendo observar la ejecución, acceder a la memoria y examinar el valor de las variables en puntos de ruptura, con el fin de detectar errores o comprender el código.",
+        "Ejecutar el programa línea a línea, permitiendo observar la ejecución, acceder a la memoria y examinar el valor de las variables en puntos de ruptura, con el fin de detectar errores o comprender el código",
         "Generar automáticamente casos de prueba a partir del código fuente para su posterior ejecución manual",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -8368,7 +8368,7 @@
       "question": "¿Quién es el principal responsable de realizar las pruebas unitarias y qué objetivo persiguen?",
       "options": [
         "El equipo del cliente, con el fin de verificar que el sistema cumple con lo acordado en las especicaciones",
-        "Los programadores, con el objetivo de verificar que un elemento mínimo funcional del programa (una función, un método o una clase) funciona correctamente.",
+        "Los programadores, con el objetivo de verificar que un elemento mínimo funcional del programa (una función, un método o una clase) funciona correctamente",
         "Cualquier actor del desarrollo de manera no exhaustiva para comprobar la funcionalidad principal del sistema",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -8383,7 +8383,7 @@
       "options": [
         "Las pruebas de caja negra comprueban el rendimiento bajo carga, mientras que las de caja blanca verifican la usabilidad",
         "Las pruebas de caja negra buscan errores de eficiencia interna, y las de caja blanca se centran en la experiencia del usuario",
-        "Las pruebas de caja negra verifican el funcionamiento externo de un componente sin mirar su interior, mientras que las de caja blanca (estructurales) observan la construcción interna buscando problemas de eficiencia o seguridad.",
+        "Las pruebas de caja negra verifican el funcionamiento externo de un componente sin mirar su interior, mientras que las de caja blanca (estructurales) observan la construcción interna buscando problemas de eficiencia o seguridad",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8397,7 +8397,7 @@
       "options": [
         "Arquitectura del sistema, diagrama de despliegue y log de errores",
         "Tiempo de ejecución, uso de memoria y carga de la CPU",
-        "Identificador, descripción, precondiciones, datos de prueba, pasos, resultado esperado, resultado obtenido y estado.",
+        "Identificador, descripción, precondiciones, datos de prueba, pasos, resultado esperado, resultado obtenido y estado",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8411,7 +8411,7 @@
       "options": [
         "Las pruebas solo son necesarias para software de gran complejidad, y siempre eliminan todos los errores",
         "El software sin errores no existe y las pruebas son un gasto innecesario que ralentiza el desarrollo",
-        "Tanto la presencia de errores en el software como el esfuerzo por evitarlos tienen un coste asociado, y las pruebas son fundamentales para minimizar los problemas y asegurar la calidad.",
+        "Tanto la presencia de errores en el software como el esfuerzo por evitarlos tienen un coste asociado, y las pruebas son fundamentales para minimizar los problemas y asegurar la calidad",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8424,7 +8424,7 @@
       "question": "¿Cuándo se realizan las pruebas de regresión y cuál es su principal propósito?",
       "options": [
         "Se realizan antes de cualquier cambio en el sistema para establecer una línea base de rendimiento",
-        "Se llevan a cabo después de realizar cambios en el sistema (mejoras o corrección de errores) para comprobar que otras partes del sistema no se han visto afectadas negativamente.",
+        "Se llevan a cabo después de realizar cambios en el sistema (mejoras o corrección de errores) para comprobar que otras partes del sistema no se han visto afectadas negativamente",
         "Son pruebas exhaustivas para detectar todos los posibles fallos en el sistema antes de su despliegue inicial",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -8438,7 +8438,7 @@
       "question": "¿Qué representa el concepto de \"cubrimiento\" o \"cobertura\" en el contexto de las pruebas de código?",
       "options": [
         "El número de errores detectados por el conjunto de pruebas",
-        "El porcentaje del código fuente que ha sido probado, sirviendo como una métrica de la calidad de las pruebas.",
+        "El porcentaje del código fuente que ha sido probado, sirviendo como una métrica de la calidad de las pruebas",
         "La capacidad de un programa para manejar excepciones y errores de entrada",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -8453,7 +8453,7 @@
       "options": [
         "El análisis estático se realiza en entornos de producción, y el dinámico en entornos de desarrollo",
         "El análisis estático busca errores de sintaxis, mientras que el dinámico solo se enfoca en la interfaz de usuario",
-        "El análisis estático se realiza sobre el código sin ejecutarlo, buscando ineficiencias o código muerto, mientras que el análisis dinámico comprueba el funcionamiento del código mediante su ejecución en diversos escenarios.",
+        "El análisis estático se realiza sobre el código sin ejecutarlo, buscando ineficiencias o código muerto, mientras que el análisis dinámico comprueba el funcionamiento del código mediante su ejecución en diversos escenarios",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8466,7 +8466,7 @@
       "question": "Aunque las pruebas unitarias son imprescindibles, ¿por qué son también necesarias las pruebas de integración?",
       "options": [
         "Las pruebas unitarias solo verifican la lógica de negocio, no la interacción con la interfaz de usuario",
-        "Los programas casi siempre funcionan dentro de sistemas más complejos y se relacionan con otros módulos o sistemas, por lo que las pruebas de integración verifican que el componente funciona correctamente en sus relaciones con estos.",
+        "Los programas casi siempre funcionan dentro de sistemas más complejos y se relacionan con otros módulos o sistemas, por lo que las pruebas de integración verifican que el componente funciona correctamente en sus relaciones con estos",
         "Las pruebas de integración se enfocan en detectar errores en el rendimiento del sistema bajo altas cargas, algo que las pruebas unitarias no hacen",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -8480,7 +8480,7 @@
       "question": "En el contexto del ciclo de vida del software, ¿qué enfoque para la realización de pruebas se considera correcto y por qué?",
       "options": [
         "La \"fase de pruebas\" se realiza únicamente después de la implementación, asumiendo que los errores son solo de codificación",
-        "En el ciclo de vida en V, cada fase de construcción lleva asociada una fase de pruebas para detectar errores lo antes posible y evitar arrastrarlos.",
+        "En el ciclo de vida en V, cada fase de construcción lleva asociada una fase de pruebas para detectar errores lo antes posible y evitar arrastrarlos",
         "Las pruebas son una tarea puntual que se realiza solo al final del mantenimiento del software",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -8607,7 +8607,7 @@
       "options": [
         "La creación de un nuevo esquema de base de datos para optimizar las consultas",
         "La redefinición de la interfaz de usuario para mejorar la experiencia del usuario final",
-        "La correcta composición de métodos (creando funciones para encapsular funcionalidad) y la organización de los datos (utilizando objetos y encapsulación).",
+        "La correcta composición de métodos (creando funciones para encapsular funcionalidad) y la organización de los datos (utilizando objetos y encapsulación)",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8620,7 +8620,7 @@
       "question": "Según el contenido de la unidad, ¿cuál es la razón fundamental por la que los sistemas de control de versiones son herramientas imprescindibles en la ingeniería de software, especialmente en desarrollos colectivos?",
       "options": [
         "Permiten generar automáticamente la documentación técnica del proyecto sin intervención manual",
-        "Facilitan el control sobre el código fuente y otros ficheros del sistema, su evolución, y permiten el trabajo en grupo minimizando el impacto de los cambios entre programadores.",
+        "Facilitan el control sobre el código fuente y otros ficheros del sistema, su evolución, y permiten el trabajo en grupo minimizando el impacto de los cambios entre programadores",
         "Son herramientas exclusivas para el despliegue automático del software en diferentes entornos de producción",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -8635,7 +8635,7 @@
       "options": [
         "git add y luego git clone",
         "git push y luego git commit",
-        "git commit para consolidar los cambios en el repositorio local y git push para subirlos al servidor remoto.",
+        "git commit para consolidar los cambios en el repositorio local y git push para subirlos al servidor remoto",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8649,7 +8649,7 @@
       "options": [
         "La refactorización tiene como objetivo principal añadir nuevas funcionalidades o características a un programa existente",
         "La refactorización se realiza para eliminar errores funcionales o fallos del sistema que impiden su correcto funcionamiento",
-        "La refactorización es un conjunto de técnicas que modifican un programa ya funcional para mejorar su legibilidad, eficiencia, comprensión y mantenimiento, sin alterar su comportamiento externo.",
+        "La refactorización es un conjunto de técnicas que modifican un programa ya funcional para mejorar su legibilidad, eficiencia, comprensión y mantenimiento, sin alterar su comportamiento externo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8663,7 +8663,7 @@
       "options": [
         "La detección y corrección automática de errores de sintaxis en tiempo real",
         "La ejecución de pruebas de rendimiento del código bajo diferentes cargas de trabajo",
-        "El renombrado automático de variables, funciones o clases en todo el proyecto, o la extracción de un bloque de código para crear un nuevo método.",
+        "El renombrado automático de variables, funciones o clases en todo el proyecto, o la extracción de un bloque de código para crear un nuevo método",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8676,7 +8676,7 @@
       "question": "A pesar de que una refactorización de código no implica cambios en su funcionamiento, el manual indica que puede generar errores si se realiza incorrectamente. ¿Qué acciones se deben considerar para mitigar este riesgo?",
       "options": [
         "Realizar únicamente revisiones de código manuales para identificar posibles fallos visualmente",
-        "Asegurarse de poder deshacer los cambios realizados (preferiblemente con sistemas de control de versiones) y ejecutar pruebas (unitarias, de regresión o de humo) para verificar la correcta funcionalidad del código modificado.",
+        "Asegurarse de poder deshacer los cambios realizados (preferiblemente con sistemas de control de versiones) y ejecutar pruebas (unitarias, de regresión o de humo) para verificar la correcta funcionalidad del código modificado",
         "Implementar un sistema de autenticación de dos factores para el acceso al código fuente",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -8691,7 +8691,7 @@
       "options": [
         "git merge <nombre_de_rama> para combinar con una rama antigua",
         "git log para ver el historial y luego git revert para deshacer el último cambio",
-        "git reset --hard <identificador_del_commit> utilizando el identificador único del commit al que se desea regresar.",
+        "git reset --hard <identificador_del_commit> utilizando el identificador único del commit al que se desea regresar",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8705,7 +8705,7 @@
       "options": [
         "git status para ver el estado de los fcheros",
         "git diff para ver las diferencias entre versiones",
-        "git merge para integrar cambios y resolver solapamientos.",
+        "git merge para integrar cambios y resolver solapamientos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8719,7 +8719,7 @@
       "options": [
         "Comentario de bloque",
         "Comentario de línea",
-        "Docstring.",
+        "Docstring",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8733,7 +8733,7 @@
       "options": [
         "Los sistemas centralizados son de código cerrado, mientras que los distribuidos son siempre de código abierto",
         "Los sistemas centralizados almacenan las copias del proyecto en la máquina local del desarrollador, mientras que los distribuidos lo hacen en un servidor remoto",
-        "En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, las copias se almacenan tanto en un servidor como en cada máquina de los integrantes del equipo.",
+        "En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, las copias se almacenan tanto en un servidor como en cada máquina de los integrantes del equipo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -8861,7 +8861,7 @@
       "options": [
         "Aumento de costos operativos",
         "Dependencia del hardware local",
-        "Acceso ubicuo a los datos y aplicaciones.",
+        "Acceso ubicuo a los datos y aplicaciones",
         "Falta de escalabilidad"
       ],
       "correct": 2,
@@ -8873,7 +8873,7 @@
       "concept_id": "cc_tema_1_q1",
       "question": "¿Qué significa \"escalabilidad elástica\" en la computación en la nube?",
       "options": [
-        "Capacidad de aumentar o reducir recursos según la demanda.",
+        "Capacidad de aumentar o reducir recursos según la demanda",
         "La infraestructura solo se adapta a aumentos de demanda",
         "Es un modelo exclusivo para grandes empresas",
         "La nube no permite escalabilidad"
@@ -8888,7 +8888,7 @@
       "question": "¿Cuál de los siguientes es un posible riesgo de la computación en la nube?",
       "options": [
         "Reducción de costos operativos",
-        "Dependencia del proveedor de servicios.",
+        "Dependencia del proveedor de servicios",
         "Mayor control sobre la infraestructura",
         "Eliminación total de amenazas cibernéticas"
       ],
@@ -8902,7 +8902,7 @@
       "question": "¿Qué función cumple la redundancia en la computación en la nube?",
       "options": [
         "Aumenta los costos operativos",
-        "Garantiza la disponibilidad de los servicios en caso de fallos.",
+        "Garantiza la disponibilidad de los servicios en caso de fallos",
         "Limita el acceso a los datos",
         "Reduce la seguridad de la información"
       ],
@@ -8917,7 +8917,7 @@
       "options": [
         "Nube privada",
         "Nube pública",
-        "Nube híbrida.",
+        "Nube híbrida",
         "Nube comunitaria"
       ],
       "correct": 2,
@@ -8931,7 +8931,7 @@
       "options": [
         "La disponibilidad de planes gratuitos",
         "La ubicación de los servidores en el mismo país",
-        "La seguridad, fiabilidad y escalabilidad del servicio.",
+        "La seguridad, fiabilidad y escalabilidad del servicio",
         "Que ofrezca hardware de última generación"
       ],
       "correct": 2,
@@ -8945,7 +8945,7 @@
       "options": [
         "IaaS",
         "PaaS",
-        "SaaS.",
+        "SaaS",
         "On-Premise"
       ],
       "correct": 2,
@@ -8958,7 +8958,7 @@
       "question": "¿Cuál es la principal característica del modelo de computación en la nube?",
       "options": [
         "Requiere una gran inversión en hardware propio",
-        "Permite acceder a recursos informáticos a través de Internet.",
+        "Permite acceder a recursos informáticos a través de Internet",
         "Solo puede ser utilizado por grandes empresas",
         "No ofrece ventajas sobre la infraestructura tradicional"
       ],
@@ -8973,7 +8973,7 @@
       "options": [
         "Es un proceso inmediato y sin riesgos",
         "No requiere planificación previa",
-        "Debe incluir evaluación de necesidades, migración de datos y pruebas.",
+        "Debe incluir evaluación de necesidades, migración de datos y pruebas",
         "Solo es recomendable para pequeñas empresas"
       ],
       "correct": 2,
@@ -8986,7 +8986,7 @@
       "question": "¿Qué modelo de servicio permite a los desarrolladores crear aplicaciones sin gestionar la infraestructura?",
       "options": [
         "SaaS",
-        "PaaS.",
+        "PaaS",
         "IaaS",
         "VPN"
       ],
@@ -9055,7 +9055,7 @@
       "concept_id": "cc_tema_2_q4",
       "question": "¿Qué tipo de herramientas ayudan a analizar los costes en la nube?",
       "options": [
-        "Plataformas de análisis de datos y predicciones.",
+        "Plataformas de análisis de datos y predicciones",
         "Redes sociales y foros de discusión",
         "Servicios de almacenamiento en la nube",
         "Programas de ofimática"
@@ -10106,7 +10106,7 @@
       "question": "¿Cuál es la principal diferencia entre el escalado horizontal y vertical?",
       "options": [
         "El escalado horizontal agrega más servidores, mientras que el vertical aumenta la capacidad de un servidor existente",
-        "El escalado vertical es más eficiente que el horizontal.",
+        "El escalado vertical es más eficiente que el horizontal",
         "El escalado horizontal solo funciona en servidores físicos",
         "Ambos términos significan lo mismo"
       ],
@@ -10134,7 +10134,7 @@
       "question": "¿Qué función cumple un balanceador de carga en el escalado automático?",
       "options": [
         "Almacenar los datos de los usuarios",
-        "Distribuir las solicitudes de usuarios entre varios servidores.",
+        "Distribuir las solicitudes de usuarios entre varios servidores",
         "Reducir el tráfico de red",
         "Cerrar conexiones inactivas"
       ],
@@ -10189,7 +10189,7 @@
       "concept_id": "cc_tema_10_q6",
       "question": "¿En qué escenario es más útil el escalado automático?",
       "options": [
-        "Una aplicación de escritorio instalada en un solo equipo.",
+        "Una aplicación de escritorio instalada en un solo equipo",
         "Un sitio de comercio electrónico que recibe picos de tráfico en eventos especiales",
         "Un documento almacenado en una memoria USB",
         "Un usuario navegando en su propio sitio web local"
@@ -10204,7 +10204,7 @@
       "question": "¿Cuál es el principal objetivo del escalado automático?",
       "options": [
         "Reducir la necesidad de servidores físicos",
-        "Ajustar los recursos de una aplicación según la demanda.",
+        "Ajustar los recursos de una aplicación según la demanda",
         "Mejorar la seguridad de la infraestructura",
         "Minimizar la cantidad de servidores disponibles"
       ],
