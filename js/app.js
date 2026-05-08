@@ -1968,6 +1968,8 @@ function parseTxtExam(text, syllabusId) {
             const stripped = (isCorrect ? l.slice(1) : l)
                 .trim()
                 .replace(/^[A-Ea-e][).\-]\s*/, '')  // Remove "A) ", "B. ", "C- " etc.
+                .trim()
+                .replace(/\.$/, '')  // Remove trailing period to avoid correct answer "tell"
                 .trim();
             if (isCorrect) {
                 correctIndex = options.length;
