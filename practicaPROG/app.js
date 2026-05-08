@@ -11,10 +11,7 @@ function selectUnit(unitId) {
   currentUnit = unitId;
   const unit = UNITS[unitId];
   if (unitId.startsWith('simulacros')) {
-    score = { correct: 0, wrong: 0, quizCorrect: 0, quizWrong: 0 };
-    sectionScores = {};
-    document.querySelector('#score-correct span').textContent = '0';
-    document.querySelector('#score-wrong span').textContent = '0';
+    // Solo iniciamos el temporizador, no reseteamos nota para permitir persistencia
     startExamTimer();
   } else {
     stopExamTimer();
@@ -34,13 +31,27 @@ function selectUnit(unitId) {
 
 function loadCompletionState() {
   try {
-    const saved = localStorage.getItem('prog_completed_sections');
-    if (saved) completedSections = new Set(JSON.parse(saved));
+    const savedSections = localStorage.getItem('prog_completed_sections');
+    if (savedSections) completedSections = new Set(JSON.parse(savedSections));
+    
+    const savedScores = localStorage.getItem('prog_section_scores');
+    if (savedScores) sectionScores = JSON.parse(savedScores);
+    
+    const savedGlobalScore = localStorage.getItem('prog_global_score');
+    if (savedGlobalScore) {
+        score = JSON.parse(savedGlobalScore);
+        const correctEl = document.querySelector('#score-correct span');
+        const wrongEl = document.querySelector('#score-wrong span');
+        if (correctEl) correctEl.textContent = score.correct;
+        if (wrongEl) wrongEl.textContent = score.wrong;
+    }
   } catch (e) { console.error("Error loading progress", e); }
 }
 
 function saveCompletionState() {
   localStorage.setItem('prog_completed_sections', JSON.stringify([...completedSections]));
+  localStorage.setItem('prog_section_scores', JSON.stringify(sectionScores));
+  localStorage.setItem('prog_global_score', JSON.stringify(score));
 }
 
 function goHome() {
@@ -396,6 +407,7 @@ async function analyzeCode() {
     </div>`;
   }
 
+  saveCompletionState();
   updateLiveGrade();
 
   output.innerHTML = html;
@@ -689,8 +701,9 @@ async function checkEjercicio(ejId) {
     </div>`;
   }
   
-  // Guardar puntuación para la nota en vivo
-  sectionScores[ejId] = parseFloat(nota);
+  // Guardar puntuación para la nota en vivo utilizando la sección activa (ej: sim-ej1)
+  sectionScores[activeSection] = parseFloat(nota);
+  saveCompletionState();
   
   if (pct === 100) {
       if (!completedSections.has(activeSection)) {
@@ -785,6 +798,7 @@ function showDoctorSolution(exerciseId) {
 }
 
 loadCompletionState();
+updateLiveGrade();
 
 function triggerCunaoEffect(passed) {
     const overlay = document.createElement('div');

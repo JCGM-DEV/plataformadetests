@@ -3697,6 +3697,426 @@ const TEST_BANK = {
       "explanation": "La tabla hija hereda todas las columnas de las tablas padre, pero debe tener en cuenta que las restricciones y los índices no se copian automáticamente.",
       "unit": 7,
       "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q0",
+      "question": "[CASO FESTIVAL] En la tabla ACTUACIONES(id_artista, id_escenario, hora_inicio, duracion), se decide que la PK sea (id_artista, id_escenario, hora_inicio). ¿Qué problema práctico resuelve?",
+      "options": [
+        "Que un artista no pueda actuar en dos escenarios a la vez",
+        "Que dos artistas no puedan actuar en el mismo escenario a la misma hora",
+        "Que un escenario no tenga más capacidad de la permitida",
+        "Que los artistas tengan nombres únicos"
+      ],
+      "correct": 1,
+      "explanation": "Evita solapamientos de artistas en el mismo lugar y tiempo al ser parte de la clave primaria.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q1",
+      "question": "[CASO FESTIVAL] Quieres saber qué escenarios están vacíos (sin actuaciones). ¿Qué consulta es la más correcta y estándar?",
+      "options": [
+        "SELECT * FROM ESCENARIOS WHERE id NOT IN (SELECT id_escenario FROM ACTUACIONES)",
+        "SELECT * FROM ESCENARIOS E LEFT JOIN ACTUACIONES A ON E.id = A.id_escenario WHERE A.id_escenario IS NULL",
+        "SELECT * FROM ESCENARIOS E INNER JOIN ACTUACIONES A ON E.id <> A.id_escenario",
+        "DELETE FROM ESCENARIOS WHERE actuaciones = 0"
+      ],
+      "correct": 1,
+      "explanation": "El LEFT JOIN con filtro WHERE IS NULL es la forma estándar de encontrar registros en una tabla que no tienen relación en otra.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q2",
+      "question": "[CASO FESTIVAL] Ejecutas: SELECT genero, COUNT(*) FROM ARTISTAS GROUP BY genero HAVING COUNT(*) > 5. ¿Qué obtienes?",
+      "options": [
+        "Los 5 géneros con más artistas",
+        "Artistas de más de 5 géneros",
+        "Los géneros musicales que tienen más de 5 artistas registrados",
+        "Un error porque falta la cláusula WHERE"
+      ],
+      "correct": 2,
+      "explanation": "HAVING filtra grupos después de realizar la agregación (COUNT).",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q3",
+      "question": "[CASO FESTIVAL] La tabla ARTISTAS tiene una columna 'redes_sociales' con valor 'Instagram: @user, Twitter: @user'. ¿Qué viola?",
+      "options": [
+        "1FN (Valores no atómicos)",
+        "2FN (Dependencia parcial)",
+        "3FN (Dependencia transitiva)",
+        "Ninguna, es correcto"
+      ],
+      "correct": 0,
+      "explanation": "La 1FN exige que cada columna contenga un solo valor atómico. Guardar una lista de redes viola esta regla.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q4",
+      "question": "[CASO FESTIVAL] Intentas INSERT INTO ACTUACIONES (id_artista, id_escenario) VALUES (99, 1) pero el artista 99 no existe. ¿Qué ocurre si hay FK?",
+      "options": [
+        "El artista se crea solo",
+        "Se acepta pero con alerta",
+        "Error de violación de integridad referencial",
+        "Se inserta con NULL"
+      ],
+      "correct": 2,
+      "explanation": "La integridad referencial impide insertar claves foráneas que no existan en la tabla maestra.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q5",
+      "question": "[CASO TIENDA] Quieres subir un 10% el precio solo a productos de categoría 'Electrónica'. ¿Código correcto?",
+      "options": [
+        "UPDATE PRODUCTOS SET precio = precio + 10 WHERE id_categoria = 'Electrónica'",
+        "UPDATE PRODUCTOS SET precio = precio * 1.10 WHERE id_categoria = (SELECT id FROM CATEGORIAS WHERE nombre = 'Electrónica')",
+        "ALTER PRODUCTOS MODIFY precio * 1.10",
+        "SELECT precio * 1.10 FROM PRODUCTOS"
+      ],
+      "correct": 1,
+      "explanation": "Usa una subconsulta para encontrar el ID de la categoría y luego actualiza los precios multiplicando por 1.10.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q6",
+      "question": "[CASO TIENDA] En LINEAS_PEDIDO, 'num_linea' empieza en 1 para cada pedido. ¿Tipo de entidad en E-R?",
+      "options": [
+        "Entidad Fuerte",
+        "Entidad Débil (dependiente de identificación)",
+        "Atributo multivaluado",
+        "Relación recursiva"
+      ],
+      "correct": 1,
+      "explanation": "Es una entidad débil porque su identificador (num_linea) solo tiene sentido junto al ID del pedido.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q7",
+      "question": "[CASO TIENDA] ¿Qué arroja SELECT SUM(precio * stock) FROM PRODUCTOS?",
+      "options": [
+        "El precio del producto más caro",
+        "El valor total del inventario",
+        "El número total de productos",
+        "Error de sintaxis"
+      ],
+      "correct": 1,
+      "explanation": "Multiplica el precio por el stock de cada fila y luego suma todos los resultados.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q8",
+      "question": "[CASO TIENDA] Stock baja a 0 en una compra. El pago falla y haces ROLLBACK. ¿Qué pasa con el stock?",
+      "options": [
+        "Se queda en 0",
+        "Vuelve a su valor anterior automáticamente",
+        "Hay que actualizarlo manualmente",
+        "El producto desaparece"
+      ],
+      "correct": 1,
+      "explanation": "ROLLBACK revierte todos los cambios realizados en la base de datos durante la transacción actual.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q9",
+      "question": "[CASO TIENDA] ¿Riesgo de DELETE FROM PRODUCTOS sin WHERE?",
+      "options": [
+        "Se borra la estructura",
+        "Pide confirmación siempre",
+        "Borra TODOS los datos de la tabla",
+        "Solo borra el primero"
+      ],
+      "correct": 2,
+      "explanation": "Sin WHERE, el comando DELETE afecta a todas las filas de la tabla.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q10",
+      "question": "[CASO ESCUELA] Tabla CALIFICACIONES(id_alumno, nombre_alumno, asignatura, nota). PK=(id_alumno, asignatura). ¿Qué problema hay?",
+      "options": [
+        "Dependencia transitiva",
+        "Redundancia: el nombre se repite por cada asignatura",
+        "Falta de PK",
+        "Nombres no pueden ser claves"
+      ],
+      "correct": 1,
+      "explanation": "Viola la 2FN porque nombre_alumno depende solo de id_alumno, no de la clave completa.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q11",
+      "question": "[CASO ESCUELA] ¿Cláusula para alumnos con nota entre 5 y 7 inclusive?",
+      "options": [
+        "WHERE nota > 5 AND nota < 7",
+        "WHERE nota IN (5, 6, 7)",
+        "WHERE nota BETWEEN 5 AND 7",
+        "WHERE nota = 5 OR 7"
+      ],
+      "correct": 2,
+      "explanation": "BETWEEN incluye ambos límites y es más legible.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q12",
+      "question": "[CASO ESCUELA] Trigger BEFORE INSERT valida nota > 10. ¿Por qué BEFORE y no AFTER?",
+      "options": [
+        "AFTER no permite cancelar",
+        "BEFORE es más rápido",
+        "El valor ya está en la tabla en AFTER",
+        "Es indiferente"
+      ],
+      "correct": 0,
+      "explanation": "BEFORE permite abortar la operación antes de que se consume el cambio en la tabla.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q13",
+      "question": "[CASO ESCUELA] ¿Qué busca SELECT nombre FROM ALUMNOS WHERE nombre LIKE '_a%'?",
+      "options": [
+        "Nombres que empiecen por 'a'",
+        "Nombres con 'a' en la segunda posición",
+        "Nombres con solo dos letras",
+        "Nombres que terminen en 'a'"
+      ],
+      "correct": 1,
+      "explanation": "El guion bajo representa exactamente un carácter cualquiera.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q14",
+      "question": "[CASO ESCUELA] Relación (1,1) a (0,1) entre PROFESOR y DESPACHO significa:",
+      "options": [
+        "Todos tienen despacho",
+        "Un profesor puede tener despacho, pero hay despachos vacíos",
+        "Un profesor tiene muchos despachos",
+        "El despacho es obligatorio"
+      ],
+      "correct": 1,
+      "explanation": "La cardinalidad (0,1) indica que la relación es opcional para una de las partes.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q15",
+      "question": "[PRÁCTICA SQL] 10 empleados en depto A, 5 en depto B. ¿Resultado de SELECT * FROM EMPLEADOS, DEPARTAMENTOS?",
+      "options": [
+        "15 filas",
+        "10 filas",
+        "50 filas (Producto cartesiano)",
+        "Error de sintaxis"
+      ],
+      "correct": 2,
+      "explanation": "Sin condición de unión (JOIN), SQL combina cada fila de una tabla con todas las de la otra.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q16",
+      "question": "[PRÁCTICA SQL] Diferencia: COUNT(*) vs COUNT(comision).",
+      "options": [
+        "Son iguales",
+        "COUNT(*) cuenta todo; COUNT(comision) ignora NULLs",
+        "COUNT(comision) es más rápido",
+        "COUNT(*) solo cuenta con PK"
+      ],
+      "correct": 1,
+      "explanation": "Las funciones de agregado suelen ignorar los valores NULL, excepto COUNT(*).",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q17",
+      "question": "[PRÁCTICA SQL] 1 millón de usuarios. Búsqueda por DNI tarda 5s. Creas un índice UNIQUE. ¿Qué esperas?",
+      "options": [
+        "Búsqueda en ms pero inserción algo más lenta",
+        "Todo más rápido",
+        "Menos espacio",
+        "No repetir nombres"
+      ],
+      "correct": 0,
+      "explanation": "Los índices agilizan la lectura pero añaden una carga extra en las escrituras al tener que actualizar el índice.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q18",
+      "question": "[PRÁCTICA SQL] Resultado de SELECT '2' + '2' en MySQL/SQL Server:",
+      "options": [
+        "'22'",
+        "4 (Conversión implícita)",
+        "Error",
+        "'2 + 2'"
+      ],
+      "correct": 1,
+      "explanation": "El motor intenta convertir los strings a números para realizar la operación aritmética suma.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q19",
+      "question": "[PRÁCTICA SQL] Insertas en tabla un empleado de BCN. ¿Aparece en VISTA_MADRID?",
+      "options": [
+        "Sí, se actualiza",
+        "No, no cumple el filtro de la vista",
+        "No, hasta refrescar",
+        "Error"
+      ],
+      "correct": 1,
+      "explanation": "La vista es una consulta filtrada; solo muestra los datos que cumplen sus condiciones en tiempo real.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q20",
+      "question": "[PRÁCTICA] GRANT SELECT ON clientes TO 'juan'. ¿Qué puede hacer?",
+      "options": [
+        "Ver y modificar",
+        "Solo ver",
+        "Borrar tabla",
+        "Dar permisos"
+      ],
+      "correct": 1,
+      "explanation": "El permiso SELECT solo otorga capacidad de lectura sobre la tabla.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q21",
+      "question": "[PRÁCTICA] ¿Cómo obtienes la fecha y hora actual?",
+      "options": [
+        "GET DATE()",
+        "NOW()",
+        "DATE.TODAY",
+        "SELECT CLOCK"
+      ],
+      "correct": 1,
+      "explanation": "NOW() es la función estándar en MySQL/PostgreSQL para obtener el timestamp actual.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q22",
+      "question": "[PRÁCTICA] Una 'Relación Recursiva' es:",
+      "options": [
+        "Tablas con mismo nombre",
+        "Entidad relacionada consigo misma",
+        "PK = FK",
+        "Datos repetidos"
+      ],
+      "correct": 1,
+      "explanation": "Ocurre cuando una instancia de una entidad se relaciona con otra instancia de la misma entidad (ej: jefe/empleado).",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q23",
+      "question": "[PRÁCTICA] Vaciar tabla LOGS (1GB) rápido sin borrar estructura:",
+      "options": [
+        "DELETE FROM LOGS",
+        "DROP y CREATE",
+        "TRUNCATE TABLE LOGS",
+        "VACUUM"
+      ],
+      "correct": 2,
+      "explanation": "TRUNCATE es mucho más rápido que DELETE porque no registra el borrado fila por fila.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q24",
+      "question": "[PRÁCTICA] Orden alfabético inverso:",
+      "options": [
+        "SORT BY",
+        "ORDER BY nombre DESC",
+        "GROUP BY DESC",
+        "ARRANGE"
+      ],
+      "correct": 1,
+      "explanation": "ORDER BY ordena, y DESC especifica el sentido descendente.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q25",
+      "question": "[PRÁCTICA] País depende de Ciudad, Ciudad depende de PK ID_Sede. ¿Qué viola?",
+      "options": [
+        "1FN",
+        "2FN",
+        "3FN (Dependencia transitiva)",
+        "BCNF"
+      ],
+      "correct": 2,
+      "explanation": "Existe una cadena de dependencias entre atributos no clave, lo cual viola la 3FN.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q26",
+      "question": "[PRÁCTICA] Resultado de NULL = NULL:",
+      "options": [
+        "TRUE",
+        "FALSE",
+        "UNKNOWN/NULL",
+        "Error"
+      ],
+      "correct": 2,
+      "explanation": "En lógica SQL, nada es igual a NULL. Se debe usar IS NULL o IS NOT NULL.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q27",
+      "question": "[PRÁCTICA] Borras PADRE y se borran hijos. ¿Configuración?",
+      "options": [
+        "ON DELETE RESTRICT",
+        "ON DELETE SET NULL",
+        "ON DELETE CASCADE",
+        "ON DELETE NO ACTION"
+      ],
+      "correct": 2,
+      "explanation": "CASCADE propaga la acción de borrado a todos los registros dependientes.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q28",
+      "question": "[PRÁCTICA] ¿Para qué sirve COALESCE(columna, 0)?",
+      "options": [
+        "Sumar todo",
+        "Sustituir NULL por 0",
+        "Borrar nulos",
+        "Contar distintos"
+      ],
+      "correct": 1,
+      "explanation": "Devuelve el primer valor no nulo de la lista de argumentos.",
+      "unit": 8,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "bd_practica_q29",
+      "question": "[PRÁCTICA] Mostrar empleado y nombre de su jefe (también empleado):",
+      "options": [
+        "CROSS JOIN",
+        "SELF JOIN",
+        "UNION",
+        "No se puede"
+      ],
+      "correct": 1,
+      "explanation": "Se une la tabla consigo misma usando dos alias diferentes para distinguir roles.",
+      "unit": 8,
+      "noShuffle": false
     }
   ],
   "programacion": [
