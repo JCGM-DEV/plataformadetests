@@ -862,11 +862,25 @@ function renderStats() {
 // ─── EXAM ENGINE ────────────────────────────────────────────────
 function prepareQuestion(q) {
     if (!q.options || q.options.length === 0) return q;
+    // Clean options (remove trailing periods that act as "tells")
+    const cleanedOptions = q.options.map(opt => 
+        typeof opt === 'string' ? opt.trim().replace(/\.$/, '').trim() : opt
+    );
+    
+    // Use cleaned options for the rest of the function
+    const qClean = { ...q, options: cleanedOptions };
+
     // Don't shuffle if the question comes from a txt bateria (options have fixed order from PDF)
-    if (q.noShuffle) return q;
+    if (q.noShuffle) {
+        return {
+            ...qClean,
+            _shuffledOptions: cleanedOptions,
+            _shuffledCorrect: q.correct
+        };
+    }
     
     // Create an array of indices [0, 1, 2, 3...]
-    const indices = q.options.map((_, i) => i);
+    const indices = cleanedOptions.map((_, i) => i);
     
     // Shuffle the indices (Fisher-Yates)
     for (let i = indices.length - 1; i > 0; i--) {
@@ -878,8 +892,8 @@ function prepareQuestion(q) {
     const shuffledCorrect = indices.indexOf(q.correct);
     
     return {
-        ...q,
-        _shuffledOptions: indices.map(i => q.options[i]),
+        ...qClean,
+        _shuffledOptions: indices.map(i => cleanedOptions[i]),
         _shuffledCorrect: shuffledCorrect
     };
 }

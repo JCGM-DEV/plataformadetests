@@ -300,10 +300,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "bd_tema_2_q3",
       "question": "¿Qué diferencia esencial hay entre una vista y una tabla?",
       "options": [
-        "Una vista almacena datos físicamente en el disco.",
-        "Una vista no admite filtros ni condiciones WHERE.",
-        "Una vista siempre es más lenta que una tabla equivalente.",
-        "Una vista es virtual y se reconstruye al vuelo desde las tablas base."
+        "Una vista almacena datos físicamente en el disco",
+        "Una vista no admite filtros ni condiciones WHERE",
+        "Una vista siempre es más lenta que una tabla equivalente",
+        "Una vista es virtual y se reconstruye al vuelo desde las tablas base"
       ],
       "correct": 3,
       "explanation": "Una vista es una consulta almacenada que se ejecuta cada vez que se accede a ella. No ocupa espacio físico de datos; se reconstruye dinámicamente desde las tablas base. Permite simplificar consultas complejas y controlar el acceso.",
@@ -314,10 +314,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "bd_tema_2_q4",
       "question": "¿Qué tipo de representación es un modelo de datos?",
       "options": [
-        "Física de cómo se almacenan los datos en el disco duro.",
-        "Básica de los requisitos funcionales del sistema.",
-        "Visual del interfaz de usuario de la aplicación.",
-        "Abstracta de la estructura y relaciones de los datos."
+        "Física de cómo se almacenan los datos en el disco duro",
+        "Básica de los requisitos funcionales del sistema",
+        "Visual del interfaz de usuario de la aplicación",
+        "Abstracta de la estructura y relaciones de los datos"
       ],
       "correct": 3,
       "explanation": "Un modelo de datos es una representación abstracta que describe la estructura, las relaciones y las restricciones de los datos, independientemente de cómo se implementen físicamente en el sistema de almacenamiento.",
@@ -528,7 +528,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Un atributo que se descompone en varios atributos simples",
         "Un atributo que puede tener múltiples valores para una misma entidad",
-        "Un atributo cuyo valor se calcula a partir de otros atributos del modelo.",
+        "Un atributo cuyo valor se calcula a partir de otros atributos del modelo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -540,7 +540,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "bd_tema_3_q2",
       "question": "En una relación de cardinalidad 1:N entre \"Agentes\" y \"Clientes\", ¿qué se entiende?",
       "options": [
-        "Un agente gestiona varios clientes, pero un cliente solo es gestionado por un agente.",
+        "Un agente gestiona varios clientes, pero un cliente solo es gestionado por un agente",
         "Varios agentes pueden gestionar a un solo cliente",
         "Un agente solo puede tener un cliente asignado",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -555,7 +555,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es una característica fundamental de una entidad débil?",
       "options": [
         "Posee una clave primaria única e independiente",
-        "Carece de identificador autosuficiente y depende de una entidad propietaria.",
+        "Carece de identificador autosuficiente y depende de una entidad propietaria",
         "Se representa gráficamente con un rectángulo de línea simple",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -569,7 +569,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "En el modelo E/R ampliado, ¿qué es la generalización?",
       "options": [
         "El proceso de dividir una entidad en subentidades más específicas",
-        "El proceso de agrupar entidades con rasgos comunes en una entidad padre abstracta.",
+        "El proceso de agrupar entidades con rasgos comunes en una entidad padre abstracta",
         "Una relación donde una entidad se vincula consigo misma",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -583,7 +583,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué restricción de especialización determina si una instancia del supertipo puede pertenecer a una sola subentidad o a varias?",
       "options": [
         "Completeness (totalidad/parcialidad)",
-        "Disjointness (exclusividad/solapamiento).",
+        "Disjointness (exclusividad/solapamiento)",
         "Relación recursiva",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -597,7 +597,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "Al pasar del modelo E/R al modelo relacional, ¿cuándo se crean normalmente las claves foráneas?",
       "options": [
         "Al identificar las entidades",
-        "Al establecer las relaciones entre las tablas para vincular registros.",
+        "Al establecer las relaciones entre las tablas para vincular registros",
         "Únicamente durante el proceso de normalización",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -611,7 +611,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué requisito debe cumplir una tabla para estar en Primera Forma Normal (1FN)?",
       "options": [
         "No tener dependencias transitivas",
-        "Que todas las columnas almacenen valores atómicos e indivisibles.",
+        "Que todas las columnas almacenen valores atómicos e indivisibles",
         "Que todos los atributos dependan de la clave primaria completa",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -625,7 +625,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuándo se dice que una tabla viola la Segunda Forma Normal (2FN)?",
       "options": [
         "Cuando existen atributos que pueden tomar varios valores",
-        "Cuando un atributo no clave depende solo de una parte de la clave primaria (dependencia parcial).",
+        "Cuando un atributo no clave depende solo de una parte de la clave primaria (dependencia parcial)",
         "Cuando un atributo no clave depende de otro atributo no clave",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -639,7 +639,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es el objetivo principal de la normalización de modelos relacionales?",
       "options": [
         "Aumentar la redundancia para facilitar la lectura de datos",
-        "Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente.",
+        "Reducir la redundancia de datos y asegurar un almacenamiento eficiente y coherente",
         "Eliminar todas las relaciones entre tablas para simplificar el modelo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -795,7 +795,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Para qué sirve el modificador DISTINCT en una sentencia SELECT?",
       "options": [
         "Para ordenar los resultados de forma alfabética",
-        "Para eliminar las filas duplicadas en el conjunto de resultados.",
+        "Para eliminar las filas duplicadas en el conjunto de resultados",
         "Para filtrar registros que contengan valores nulos",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -823,7 +823,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué diferencia principal hay entre las cláusulas WHERE y HAVING?",
       "options": [
         "WHERE se aplica a los grupos y HAVING a las filas individuales",
-        "WHERE filtra registros antes de la agrupación; HAVING filtra grupos después de aplicarse GROUP BY.",
+        "WHERE filtra registros antes de la agrupación; HAVING filtra grupos después de aplicarse GROUP BY",
         "Ambas cláusulas son idénticas y se pueden usar indistintamente",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -851,7 +851,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "En una composición interna (INNER JOIN), ¿qué ocurre con las filas de la tabla A que no coinciden con ninguna de la tabla B?",
       "options": [
         "Aparecen en el resultado con valores NULL",
-        "Se excluyen del conjunto de resultados.",
+        "Se excluyen del conjunto de resultados",
         "Detienen la ejecución de la consulta por error de integridad",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -879,7 +879,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "En Oracle, ¿qué combinación de cláusulas se utiliza para realizar consultas jerárquicas?",
       "options": [
         "GROUP BY y HAVING",
-        "START WITH y CONNECT BY.",
+        "START WITH y CONNECT BY",
         "UNION e INTERSECT",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -1034,7 +1034,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "bd_tema_5_q1",
       "question": "¿Cómo se insertan datos en una tabla de destino a partir del resultado de otra consulta?",
       "options": [
-        "Usando la sintaxis INSERT INTO tabla_destino SELECT ...",
+        "Usando la sintaxis INSERT INTO tabla_destino SELECT ..",
         "Ejecutando un UPDATE con una subconsulta en el SET",
         "No es posible realizar esta operación en una sola sentencia",
         "Mediante una subconsulta correlacionada con EXISTS"
@@ -1048,7 +1048,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "bd_tema_5_q2",
       "question": "¿Por qué es fundamental incluir la cláusula WHERE en una sentencia UPDATE?",
       "options": [
-        "Porque si se omite, se actualizarán todos los registros de la tabla.",
+        "Porque si se omite, se actualizarán todos los registros de la tabla",
         "Porque es necesaria para definir qué columnas se van a modificar",
         "Porque sin ella, el motor de la base de datos devolverá un error de sintaxis siempre",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -1091,7 +1091,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué acción realiza el comando ROLLBACK?",
       "options": [
         "Guarda los cambios actuales de forma definitiva",
-        "Deshace todos los cambios realizados en la transacción actual volviendo al estado inicial.",
+        "Deshace todos los cambios realizados en la transacción actual volviendo al estado inicial",
         "Bloquea la tabla para impedir ediciones de otros usuarios",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -1105,7 +1105,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es una ventaja clave de utilizar Common Table Expressions (CTE) o composiciones en órdenes de edición?",
       "options": [
         "Permiten saltarse las restricciones de integridad referencial",
-        "Mejoran la legibilidad al permitir nombrar subconsultas y reutilizarlas en una única instrucción.",
+        "Mejoran la legibilidad al permitir nombrar subconsultas y reutilizarlas en una única instrucción",
         "Cifran los datos antes de insertarlos en la base de datos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -1119,7 +1119,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿En qué consiste el \"bloqueo a nivel de registro\" (row-level locking)?",
       "options": [
         "Impide el acceso a toda la tabla mientras un usuario edita una fila",
-        "Bloquea solo la fila específica que se está modificando, permitiendo que otros usuarios trabajen en otras filas.",
+        "Bloquea solo la fila específica que se está modificando, permitiendo que otros usuarios trabajen en otras filas",
         "Borra el registro si detecta que dos usuarios intentan acceder a él",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -1147,7 +1147,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "En el modo estricto de MySQL (STRICT_ALL_TABLES), ¿qué ocurre si se intenta realizar una operación con datos inválidos?",
       "options": [
         "Se truncan los valores silenciosamente",
-        "Se rechaza la operación y se genera un error.",
+        "Se rechaza la operación y se genera un error",
         "Se insertan valores nulos por defecto sin avisar",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -1303,7 +1303,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es la función del comando DELIMITER en MySQL?",
       "options": [
         "Definir el tamaño máximo de una tabla",
-        "Cambiar temporalmente el carácter de finalización de comandos para escribir procedimientos complejos.",
+        "Cambiar temporalmente el carácter de finalización de comandos para escribir procedimientos complejos",
         "Separar los campos de un archivo CSV durante una importación",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -1358,7 +1358,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "bd_tema_6_q6",
       "question": "¿Cuál es una diferencia fundamental entre las Funciones y los Procedimientos almacenados?",
       "options": [
-        "Las funciones siempre devuelven un valor; los procedimientos no devuelven un valor (aunque pueden usar parámetros de salida).",
+        "Las funciones siempre devuelven un valor; los procedimientos no devuelven un valor (aunque pueden usar parámetros de salida)",
         "Los procedimientos solo pueden leer datos; las funciones pueden modificarlos",
         "Las funciones se llaman con CALL y los procedimientos con SELECT",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -1586,7 +1586,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Solo los de la tabla padre",
         "Solo los de las tablas hijas",
-        "Los de la tabla padre y todos los de sus tablas hijas relacionadas.",
+        "Los de la tabla padre y todos los de sus tablas hijas relacionadas",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
       "correct": 2,
@@ -1613,7 +1613,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "Respecto al borrado de datos en una estructura de herencia en PostgreSQL, ¿cuál es la afirmación correcta?",
       "options": [
         "Existe un borrado en cascada automático entre padres e hijos",
-        "No hay cascada automática; se debe declarar ON DELETE CASCADE en las claves foráneas si se requiere.",
+        "No hay cascada automática; se debe declarar ON DELETE CASCADE en las claves foráneas si se requiere",
         "Si borras un registro en el padre, el hijo se bloquea",
         "Mediante una subconsulta correlacionada con EXISTS"
       ],
@@ -1655,7 +1655,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿A qué se refiere la \"navegabilidad\" en el contexto de bases de datos objeto-relacionales?",
       "options": [
         "A la velocidad de navegación web de la base de datos",
-        "A la capacidad de seguir las conexiones lógicas o referencias entre objetos.",
+        "A la capacidad de seguir las conexiones lógicas o referencias entre objetos",
         "Al uso de comandos NEXT y PREV en los cursores",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -1783,7 +1783,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cómo se categoriza el software según su naturaleza en un ordenador?",
       "options": [
         "Hardware, Firmware y Sistemas Operativos",
-        "Software de sistema, Software de aplicación y Software de programación.",
+        "Software de sistema, Software de aplicación y Software de programación",
         "BIOS, UEFI y Controladores",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -1798,7 +1798,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "El hardware del ordenador, que es la única parte física necesaria",
         "El sistema operativo, que es el único intermediario entre el programa y la máquina",
-        "Los datos, que son la información que el programa necesita para operar, como los operandos en una operación aritmética.",
+        "Los datos, que son la información que el programa necesita para operar, como los operandos en una operación aritmética",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -1811,7 +1811,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "Según el texto, ¿qué proceso realiza un compilador durante la compilación, además de generar el código ejecutable?",
       "options": [
         "Transforma el bytecode en código máquina para su ejecución",
-        "Verifica que el código fuente esté escrito correctamente desde los puntos de vista léxico, sintáctico y semántico, avisando al programador de posibles errores.",
+        "Verifica que el código fuente esté escrito correctamente desde los puntos de vista léxico, sintáctico y semántico, avisando al programador de posibles errores",
         "Une uno o más códigos objeto para construir un programa ejecutable",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -1826,7 +1826,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Son lenguajes de alto nivel con sintaxis sencilla, como Java o C#",
         "Implican programación directa en código máquina o binario (ceros y unos)",
-        "Son lenguajes de programación en ensamblador, que utilizan una simbología y códigos legibles por las personas, y son convertidos a código máquina mediante un ensamblador.",
+        "Son lenguajes de programación en ensamblador, que utilizan una simbología y códigos legibles por las personas, y son convertidos a código máquina mediante un ensamblador",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -1840,7 +1840,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "El código objeto es el resultado directo de la escritura del programador, mientras que el código ejecutable es lo que entiende la máquina",
         "El código ejecutable es válido para múltiples sistemas operativos sin necesidad de recompilación, a diferencia del código objeto",
-        "El código objeto contiene instrucciones comprensibles por la máquina, pero no es directamente ejecutable, requiriendo un proceso de enlazado para convertirse en código ejecutable.",
+        "El código objeto contiene instrucciones comprensibles por la máquina, pero no es directamente ejecutable, requiriendo un proceso de enlazado para convertirse en código ejecutable",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -1854,7 +1854,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "En el tipado fuerte, el tipo de la variable se asigna dinámicamente, mientras que en el tipado débil, se define estáticamente",
         "Un lenguaje de tipado débil no permite hacer uso indiscriminado de las variables sin importar su tipo, lo contrario al tipado fuerte",
-        "Un lenguaje de tipado fuerte restringe las operaciones basándose en el tipo de sus variables, mientras que uno de tipado débil permite un uso más indiscriminado. En el tipado estático, el tipo se vincula a la variable al declararla y no cambia; en el tipado dinámico, el tipo se asigna por el valor y puede cambiar durante la ejecución.",
+        "Un lenguaje de tipado fuerte restringe las operaciones basándose en el tipo de sus variables, mientras que uno de tipado débil permite un uso más indiscriminado. En el tipado estático, el tipo se vincula a la variable al declararla y no cambia; en el tipado dinámico, el tipo se asigna por el valor y puede cambiar durante la ejecución",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -1867,7 +1867,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Por qué se considera la reutilización de código de máxima importancia en el desarrollo de software?",
       "options": [
         "Porque implica duplicar bloques de código para asegurar la redundancia y fiabilidad",
-        "Porque ahorra costes de creación y modificación, y reduce la probabilidad de cometer errores al centralizar los cambios en un único lugar.",
+        "Porque ahorra costes de creación y modificación, y reduce la probabilidad de cometer errores al centralizar los cambios en un único lugar",
         "Porque permite que el código fuente sea directamente comprensible por el ordenador sin necesidad de compilación o interpretación",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -1882,7 +1882,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "La creación del código fuente y la ayuda de herramientas de generación de código",
         "La determinación de cómo se va a organizar el proyecto a nivel de software y la definición de las interfaces gráficas",
-        "La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software.",
+        "La determinación del alcance de solución de una necesidad, definiendo exhaustivamente qué va a hacer el sistema software",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -1895,7 +1895,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "En el contexto de los lenguajes de programación como Java, ¿cuál es uno de los objetivos principales al utilizar máquinas virtuales y bytecode?",
       "options": [
         "Reducir el tamaño de los programas ejecutables para un almacenamiento más eficiente",
-        "Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que tenga instalada la máquina virtual correspondiente.",
+        "Lograr la portabilidad de los programas, permitiendo que un mismo bytecode se ejecute en cualquier sistema operativo que tenga instalada la máquina virtual correspondiente",
         "Aumentar la velocidad de ejecución de los programas, superando a los lenguajes compilados",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -1910,7 +1910,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Paradigma Imperativo",
         "Paradigma Orientado a Objetos",
-        "Paradigma de Programación Estructurada.",
+        "Paradigma de Programación Estructurada",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2038,7 +2038,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Los IDE modernos son exclusivamente de código abierto y gratuitos, a diferencia de las herramientas antiguas",
         "Los IDE modernos se enfocan únicamente en la edición de código, mientras que las herramientas antiguas integraban la compilación y el enlazado",
-        "Los IDE modernos integran una amplia gama de herramientas para dar soporte a la mayoría de las actividades de desarrollo de software, incluyendo documentación, control de versiones y pruebas, más allá de la mera escritura y compilación de código.",
+        "Los IDE modernos integran una amplia gama de herramientas para dar soporte a la mayoría de las actividades de desarrollo de software, incluyendo documentación, control de versiones y pruebas, más allá de la mera escritura y compilación de código",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2051,7 +2051,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "Al crear un nuevo proyecto en PyCharm para Python, ¿cuál es uno de los elementos clave que deben seleccionarse o configurarse, además de la ubicación del proyecto y la versión de Python a utilizar?",
       "options": [
         "El tipo específico de interfaz gráfica de usuario (GUI) que se utilizará para la aplicación",
-        "La ubicación del entorno virtual, que constituye un entorno de trabajo aislado para el proyecto.",
+        "La ubicación del entorno virtual, que constituye un entorno de trabajo aislado para el proyecto",
         "El compilador predeterminado para C++ o Java, incluso para proyectos Python",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2066,7 +2066,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "En ambos tipos de lenguajes, interpretados y compilados, los errores son detectados y mostrados principalmente durante la fase de compilación por el IDE",
         "En los lenguajes interpretados, los errores solo se detectan manualmente por el programador, mientras que los lenguajes compilados tienen detección automatizada",
-        "En los lenguajes interpretados, los errores se detectan y muestran durante la fase de ejecución, mientras que en los lenguajes compilados, los errores son revisados y mostrados durante el proceso de compilación.",
+        "En los lenguajes interpretados, los errores se detectan y muestran durante la fase de ejecución, mientras que en los lenguajes compilados, los errores son revisados y mostrados durante el proceso de compilación",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2079,7 +2079,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "Antes de instalar PyCharm, ¿cuál es un paso previo recomendado para asegurar que todas las herramientas necesarias para el desarrollo en Python estén disponibles?",
       "options": [
         "Instalar el IDE Visual Studio para asegurar el soporte de Python",
-        "Descargar e instalar la última versión del intérprete de Python y sus herramientas.",
+        "Descargar e instalar la última versión del intérprete de Python y sus herramientas",
         "Configurar las variables de entorno del sistema operativo para que apunten al instalador de PyCharm",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2094,7 +2094,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "El software libre siempre tiene un coste asociado a su uso, mientras que el software propietario es siempre gratuito",
         "El software libre es desarrollado por grandes corporaciones, mientras que el software propietario suele ser creado por desarrolladores independientes",
-        "El software libre permite el acceso a su código fuente para su estudio, comprensión y mejora, mientras que el software propietario restringe el acceso a su código, generalmente solo permitiéndolo a su dueño o creador.",
+        "El software libre permite el acceso a su código fuente para su estudio, comprensión y mejora, mientras que el software propietario restringe el acceso a su código, generalmente solo permitiéndolo a su dueño o creador",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2108,7 +2108,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Reemplazar las funcionalidades centrales del IDE, requiriendo una reinstalación completa",
         "Permitir que el IDE se ejecute en diferentes sistemas operativos sin necesidad de recompilación",
-        "Permitir que el IDE se ejecute en diferentes sistemas operativos sin necesidad de recompilación.",
+        "Permitir que el IDE se ejecute en diferentes sistemas operativos sin necesidad de recompilación",
         "Extender o mejorar las características y funcionalidades del IDE, actuando como complementos opcionales"
       ],
       "correct": 2,
@@ -2121,7 +2121,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "Respecto a la generación de ejecutables, ¿qué se menciona específicamente sobre Python dentro de los entornos de desarrollo?",
       "options": [
         "Python suele generar ejecutables directamente desde el IDE, de manera similar a los lenguajes compilados",
-        "Generalmente no se generan archivos ejecutables en Python; en su lugar, los archivos de la aplicación se copian y se ejecutan llamando al intérprete.",
+        "Generalmente no se generan archivos ejecutables en Python; en su lugar, los archivos de la aplicación se copian y se ejecutan llamando al intérprete",
         "La generación de ejecutables en Python siempre es automatizada por el IDE sin necesidad de herramientas de terceros",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2135,7 +2135,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "Según el contenido proporcionado, ¿cuál es una ventaja clave de los editores de código modernos en comparación con los Entornos de Desarrollo Integrados (IDEs)?",
       "options": [
         "Los editores de código son generalmente más completos y ofrecen más funcionalidades integradas para todas las fases del desarrollo",
-        "Los editores de código son más ligeros y consumen menos recursos del sistema, siendo adecuados para tipos específicos de desarrollo como las aplicaciones web de \"front-end\".",
+        "Los editores de código son más ligeros y consumen menos recursos del sistema, siendo adecuados para tipos específicos de desarrollo como las aplicaciones web de \"front-end\"",
         "Los editores de código están dedicados exclusivamente a un único lenguaje de programación, lo que garantiza un rendimiento superior",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2150,7 +2150,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Solo el idioma de los menús y las sugerencias del IDE",
         "La lógica fundamental y las funcionalidades principales del propio IDE",
-        "La apariencia de sus elementos, como el tipo y tamaño de letra, la disposición de los paneles y el esquema de color a utilizar.",
+        "La apariencia de sus elementos, como el tipo y tamaño de letra, la disposición de los paneles y el esquema de color a utilizar",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2163,7 +2163,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "Además de la edición y compilación de código, ¿qué actividad de desarrollo moderna soportan los IDEs, lo que indica su papel en proyectos colaborativos?",
       "options": [
         "Solo el control directo del hardware y la programación de sistemas de bajo nivel",
-        "El trabajo en equipo, el control de versiones y el seguimiento de incidencias, entre otras tareas.",
+        "El trabajo en equipo, el control de versiones y el seguimiento de incidencias, entre otras tareas",
         "El desarrollo exclusivo de aplicaciones web del lado del servidor (back-end)",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2292,7 +2292,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "UML es una metodología de desarrollo completa y prescriptiva que debe ser adoptada en todos los proyectos orientados a objetos",
         "UML define un conjunto estricto de reglas que restringen las metodologías de desarrollo a unas pocas opciones compatibles",
-        "UML no sigue ninguna metodología en concreto, sino que proporciona herramientas para aplicar en estas, permitiendo representar las diferentes partes estáticas o dinámicas del sistema como parte del trabajo metodológico.",
+        "UML no sigue ninguna metodología en concreto, sino que proporciona herramientas para aplicar en estas, permitiendo representar las diferentes partes estáticas o dinámicas del sistema como parte del trabajo metodológico",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2306,7 +2306,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "El Object Management Group (OMG), que fue el consorcio que lo presentó inicialmente en 1997",
         "La World Wide Web Consortium (W3C), por su relevancia en aplicaciones web",
-        "La Organización Internacional de Estandarización (ISO, International Organization for Standardization).",
+        "La Organización Internacional de Estandarización (ISO, International Organization for Standardization)",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2319,7 +2319,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es el objetivo fundamental del Lenguaje Unificado de Modelado (UML) según la introducción de la unidad?",
       "options": [
         "Proporcionar un lenguaje de programación de alto nivel para el desarrollo de aplicaciones empresariales",
-        "Ofrecer herramientas para la representación gráfica y textual de un sistema informático, especialmente cuando se utiliza el paradigma de la orientación a objetos.",
+        "Ofrecer herramientas para la representación gráfica y textual de un sistema informático, especialmente cuando se utiliza el paradigma de la orientación a objetos",
         "Estandarizar las interfaces de comunicación entre diferentes lenguajes de programación y sistemas operativos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2334,7 +2334,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "El diagrama de componentes, que muestra la relación entre subsistemas",
         "El diagrama de clases, que modela la estructura estática del sistema",
-        "El diagrama de lanzamiento o despliegue.",
+        "El diagrama de lanzamiento o despliegue",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2348,7 +2348,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Son exclusivamente gratuitas y de código abierto",
         "Se centran únicamente en la generación automática de interfaces de usuario",
-        "Están diseñadas y construidas específicamente para ayudar en diferentes fases del proceso de creación de software, proporcionando soporte específico para UML.",
+        "Están diseñadas y construidas específicamente para ayudar en diferentes fases del proceso de creación de software, proporcionando soporte específico para UML",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2362,7 +2362,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "El diagrama de casos de uso, que describe la interacción de los actores con el sistema",
         "El diagrama de actividad, que detalla la secuencia de pasos de una tarea",
-        "El diagrama de clases.",
+        "El diagrama de clases",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2376,7 +2376,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "La capacidad de optimizar automáticamente el rendimiento del código generado sin intervención del desarrollador",
         "La posibilidad de migrar bases de datos entre diferentes sistemas de gestión",
-        "La ingeniería inversa, que permite generar diagramas de clase u otros a partir del código fuente ya programado.",
+        "La ingeniería inversa, que permite generar diagramas de clase u otros a partir del código fuente ya programado",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2390,7 +2390,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "La representación genérica de un elemento del sistema, sin atributos ni métodos específicos",
         "Una característica o propiedad de una clase que describe su estado",
-        "La concreción de una clase, también conocida como instancia.",
+        "La concreción de una clase, también conocida como instancia",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2404,7 +2404,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "El diagrama de secuencia, que muestra la interacción entre objetos a lo largo del tiempo",
         "El diagrama de comunicación, que se centra en el intercambio de mensajes entre objetos",
-        "El diagrama de actividad.",
+        "El diagrama de actividad",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2417,7 +2417,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "Los múltiples diagramas de UML, diseñados para cubrir diversas perspectivas de un sistema software, se agrupan en dos grandes categorías principales. ¿Cuáles son estas categorías?",
       "options": [
         "Diagramas de diseño y diagramas de implementación",
-        "Diagramas estructurales y diagramas de comportamiento.",
+        "Diagramas estructurales y diagramas de comportamiento",
         "Diagramas de requisitos y diagramas de arquitectura",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2545,7 +2545,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "Además de la ayuda en la construcción visual de diagramas, ¿qué dos funcionalidades avanzadas y complementarias suelen ofrecer las herramientas CASE con soporte UML para mejorar la eficiencia del desarrollo de software?",
       "options": [
         "Monitorización del rendimiento en tiempo real y depuración de código",
-        "Generación automática de código a partir de diagramas y la ingeniería inversa para obtener diagramas a partir de código fuente.",
+        "Generación automática de código a partir de diagramas y la ingeniería inversa para obtener diagramas a partir de código fuente",
         "Gestión de versiones del código fuente y pruebas unitarias automatizadas",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2560,7 +2560,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Con una línea sólida y una punta de flecha rellena, representando una relación de herencia entre clases",
         "Con una línea punteada que termina en una punta de flecha sólida, indicando el uso de funcionalidad",
-        "Mediante una línea punteada que termina en una punta de flecha hueca (o rellena de color blanco), que va desde la clase hacia la interfaz que implementa.",
+        "Mediante una línea punteada que termina en una punta de flecha hueca (o rellena de color blanco), que va desde la clase hacia la interfaz que implementa",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2573,7 +2573,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué información crucial puede indicarse en los extremos de una línea de relación de Asociación en un diagrama de clases UML?",
       "options": [
         "La prioridad de ejecución de los métodos de las clases relacionadas",
-        "La multiplicidad (cuántas instancias de una clase pueden participar en la relación) y la navegabilidad (si se puede obtener referencia a los objetos del otro extremo).",
+        "La multiplicidad (cuántas instancias de una clase pueden participar en la relación) y la navegabilidad (si se puede obtener referencia a los objetos del otro extremo)",
         "El orden en que se deben instanciar los objetos de las clases asociadas",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2588,7 +2588,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Se representan con un borde punteado",
         "Sus nombres se escriben en negrita",
-        "Sus nombres se escriben en cursiva.",
+        "Sus nombres se escriben en cursiva",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2601,7 +2601,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es la principal diferencia entre una relación de Composición y una de Agregación en UML, y cómo se representa la Composición?",
       "options": [
         "La Agregación es una composición fuerte donde las partes no pueden existir sin el todo (diamante sólido), mientras que la Composición es débil (diamante hueco)",
-        "La Composición es una relación fuerte donde las partes no tienen sentido independiente del conjunto y se eliminan con él (diamante sólido), mientras que la Agregación es débil donde las partes conservan su entidad (diamante hueco).",
+        "La Composición es una relación fuerte donde las partes no tienen sentido independiente del conjunto y se eliminan con él (diamante sólido), mientras que la Agregación es débil donde las partes conservan su entidad (diamante hueco)",
         "La Composición se representa con un diamante hueco, y la Agregación con un diamante sólido",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2616,7 +2616,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Que tiene visibilidad pública",
         "Que tiene visibilidad de paquete",
-        "Que tiene visibilidad protegida.",
+        "Que tiene visibilidad protegida",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2629,7 +2629,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es el papel principal del diagrama de clases en el diseño de software orientado a objetos según la Unidad 4?",
       "options": [
         "Representar la secuencia de interacciones entre objetos en tiempo de ejecución",
-        "Reflejar las clases que componen un sistema, incluyendo sus atributos, métodos y las relaciones entre ellas, para permitir a los desarrolladores escribir programas a partir de una especificación formal.",
+        "Reflejar las clases que componen un sistema, incluyendo sus atributos, métodos y las relaciones entre ellas, para permitir a los desarrolladores escribir programas a partir de una especificación formal",
         "Describir el comportamiento del sistema desde la perspectiva de los usuarios externos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2643,7 +2643,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "Si un atributo en una clase UML es estático, ¿cómo se indica esta característica en su representación gráfica dentro del diagrama de clases?",
       "options": [
         "Su nombre se escribe entre corchetes",
-        "Debe ir subrayado.",
+        "Debe ir subrayado",
         "Se precede de un asterisco (*)",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2658,7 +2658,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Relación de agregación, indicando que una clase es parte de otra sin dependencia fuerte",
         "Relación de generalización, mostrando que una clase hereda de otra",
-        "Relación de dependencia o de uso, representando que una clase utiliza la funcionalidad proporcionada por otra.",
+        "Relación de dependencia o de uso, representando que una clase utiliza la funcionalidad proporcionada por otra",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2671,7 +2671,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "Según la definición de la unidad, ¿en qué consiste el concepto de \"ingeniería inversa\" aplicado a los diagramas de clases en el contexto del desarrollo de software?",
       "options": [
         "En el proceso de optimizar el código fuente a partir de un diagrama de clases previamente generado",
-        "En la obtención de un diagrama de clases a partir del código fuente ya existente de una aplicación.",
+        "En la obtención de un diagrama de clases a partir del código fuente ya existente de una aplicación",
         "En la transformación de un diagrama de clases en un diagrama de componentes para la implementación",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2799,7 +2799,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "En un diagrama de secuencia, ¿qué representan la \"línea de vida\" y la \"barra de activación\" respectivamente?",
       "options": [
         "La línea de vida representa la duración absoluta de un proceso y la barra de activación el tiempo de respuesta",
-        "La línea de vida es una línea vertical discontinua asociada a cada elemento que indica el orden de los eventos, mientras que la barra de activación representa el periodo de tiempo durante el que el elemento se encuentra activo en la resolución de la actividad.",
+        "La línea de vida es una línea vertical discontinua asociada a cada elemento que indica el orden de los eventos, mientras que la barra de activación representa el periodo de tiempo durante el que el elemento se encuentra activo en la resolución de la actividad",
         "La línea de vida muestra la jerarquía de las clases y la barra de activación la herencia de métodos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2814,7 +2814,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Se representa con una línea discontinua con flecha que apunta al caso de uso \"incluyente\" y es opcional para la funcionalidad",
         "Indica que un caso de uso amplía la funcionalidad de otro de manera condicional",
-        "Un caso de uso \"incluye\" a otro cuando lo utiliza internamente para llevar a cabo su funcionalidad, y la realización de ambos casos de uso es siempre obligatoria.",
+        "Un caso de uso \"incluye\" a otro cuando lo utiliza internamente para llevar a cabo su funcionalidad, y la realización de ambos casos de uso es siempre obligatoria",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2827,7 +2827,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué tipo de diagrama de comportamiento se utiliza para representar de manera detallada la secuencia de pasos que se van a realizar para una actividad, incluyendo elementos como nodos inicial y final, actividades, decisiones y conexiones?",
       "options": [
         "El diagrama de secuencia, por su enfoque en la interacción entre objetos",
-        "El diagrama de actividad.",
+        "El diagrama de actividad",
         "El diagrama de estados, ya que muestra el ciclo de vida de un componente",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2841,7 +2841,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es una característica fundamental de la relación de Extensión (<<extend>>) en los diagramas de casos de uso UML?",
       "options": [
         "Es una relación fuerte y obligatoria donde la funcionalidad extendida siempre se ejecuta",
-        "Indica que un caso de uso \"extiende\" o amplía la funcionalidad de otro, añadiendo opcionalmente un punto de extensión para especificar las condiciones.",
+        "Indica que un caso de uso \"extiende\" o amplía la funcionalidad de otro, añadiendo opcionalmente un punto de extensión para especificar las condiciones",
         "Se representa con una línea continua y un diamante hueco, mostrando una relación de \"parte-todo\"",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2856,7 +2856,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "El diagrama de actividad, por su capacidad de mostrar flujos detallados",
         "El diagrama de tiempos, debido a su enfoque en la evolución de estados",
-        "El diagrama de comunicación (conocido como diagrama de colaboración en versiones anteriores de UML).",
+        "El diagrama de comunicación (conocido como diagrama de colaboración en versiones anteriores de UML)",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2869,7 +2869,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "En un diagrama de casos de uso UML, ¿qué puede representar un \"Actor\"?",
       "options": [
         "Únicamente a una persona física que interactúa con el sistema, como un usuario",
-        "Cualquier elemento que se relaciona con el sistema, pudiendo ser una persona física (usuario) como otro sistema o subsistema (un programa informático o un sistema hardware).",
+        "Cualquier elemento que se relaciona con el sistema, pudiendo ser una persona física (usuario) como otro sistema o subsistema (un programa informático o un sistema hardware)",
         "Una función o actividad interna del sistema que no tiene interacción externa",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2884,7 +2884,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "El conjunto completo de actores y casos de uso que componen un sistema",
         "La representación gráfica de una actividad o funcionalidad del sistema como una elipse",
-        "Cada uno de los diferentes caminos que puede tomar un caso de uso, representando una secuencia de eventos posible para completar la interacción.",
+        "Cada uno de los diferentes caminos que puede tomar un caso de uso, representando una secuencia de eventos posible para completar la interacción",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2898,7 +2898,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "El diagrama general de interacción, que muestra eventos a alto nivel",
         "El diagrama de casos de uso, que define las funcionalidades del sistema",
-        "El diagrama de estados o de máquina de estados.",
+        "El diagrama de estados o de máquina de estados",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -2911,7 +2911,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "En el contexto de la elaboración de diagramas de comportamiento UML, ¿qué tipo de herramientas suelen proporcionar funcionalidades para su creación y qué ejemplo de plug-in para un Entorno de Desarrollo Integrado (IDE) popular se menciona?",
       "options": [
         "Solo herramientas de dibujo genéricas; ningún plug-in específico es mencionado",
-        "Herramientas CASE están diseñadas para facilitar su creación, y plug-ins integrados en entornos de desarrollo (IDEs) como AmaterasUML para Eclipse también ofrecen soporte.",
+        "Herramientas CASE están diseñadas para facilitar su creación, y plug-ins integrados en entornos de desarrollo (IDEs) como AmaterasUML para Eclipse también ofrecen soporte",
         "Exclusivamente aplicaciones de línea de comandos; no se usan interfaces gráficas",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -2925,7 +2925,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es la principal característica que definen los diagramas de comportamiento en UML, diferenciándolos de los diagramas estructurales?",
       "options": [
         "Muestran la definición y estructura estática de los componentes de un sistema en reposo",
-        "Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y transformación.",
+        "Reflejan qué van a realizar y cómo se van a comportar los componentes dentro del sistema, incluyendo su comunicación y transformación",
         "Describen exclusivamente la interacción entre usuarios finales y la interfaz gráfica del sistema",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3039,7 +3039,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es el propósito principal de un depurador (debugger) y qué herramientas clave proporciona para lograrlo?",
       "options": [
         "Optimizar el código fuente para mejorar su eficiencia sin necesidad de ejecución",
-        "Ejecutar el programa línea a línea, permitiendo observar la ejecución, acceder a la memoria y examinar el valor de las variables en puntos de ruptura, con el fin de detectar errores o comprender el código.",
+        "Ejecutar el programa línea a línea, permitiendo observar la ejecución, acceder a la memoria y examinar el valor de las variables en puntos de ruptura, con el fin de detectar errores o comprender el código",
         "Generar automáticamente casos de prueba a partir del código fuente para su posterior ejecución manual",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3053,7 +3053,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Quién es el principal responsable de realizar las pruebas unitarias y qué objetivo persiguen?",
       "options": [
         "El equipo del cliente, con el fin de verificar que el sistema cumple con lo acordado en las especicaciones",
-        "Los programadores, con el objetivo de verificar que un elemento mínimo funcional del programa (una función, un método o una clase) funciona correctamente.",
+        "Los programadores, con el objetivo de verificar que un elemento mínimo funcional del programa (una función, un método o una clase) funciona correctamente",
         "Cualquier actor del desarrollo de manera no exhaustiva para comprobar la funcionalidad principal del sistema",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3068,7 +3068,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Las pruebas de caja negra comprueban el rendimiento bajo carga, mientras que las de caja blanca verifican la usabilidad",
         "Las pruebas de caja negra buscan errores de eficiencia interna, y las de caja blanca se centran en la experiencia del usuario",
-        "Las pruebas de caja negra verifican el funcionamiento externo de un componente sin mirar su interior, mientras que las de caja blanca (estructurales) observan la construcción interna buscando problemas de eficiencia o seguridad.",
+        "Las pruebas de caja negra verifican el funcionamiento externo de un componente sin mirar su interior, mientras que las de caja blanca (estructurales) observan la construcción interna buscando problemas de eficiencia o seguridad",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3082,7 +3082,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Arquitectura del sistema, diagrama de despliegue y log de errores",
         "Tiempo de ejecución, uso de memoria y carga de la CPU",
-        "Identificador, descripción, precondiciones, datos de prueba, pasos, resultado esperado, resultado obtenido y estado.",
+        "Identificador, descripción, precondiciones, datos de prueba, pasos, resultado esperado, resultado obtenido y estado",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3096,7 +3096,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Las pruebas solo son necesarias para software de gran complejidad, y siempre eliminan todos los errores",
         "El software sin errores no existe y las pruebas son un gasto innecesario que ralentiza el desarrollo",
-        "Tanto la presencia de errores en el software como el esfuerzo por evitarlos tienen un coste asociado, y las pruebas son fundamentales para minimizar los problemas y asegurar la calidad.",
+        "Tanto la presencia de errores en el software como el esfuerzo por evitarlos tienen un coste asociado, y las pruebas son fundamentales para minimizar los problemas y asegurar la calidad",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3109,7 +3109,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuándo se realizan las pruebas de regresión y cuál es su principal propósito?",
       "options": [
         "Se realizan antes de cualquier cambio en el sistema para establecer una línea base de rendimiento",
-        "Se llevan a cabo después de realizar cambios en el sistema (mejoras o corrección de errores) para comprobar que otras partes del sistema no se han visto afectadas negativamente.",
+        "Se llevan a cabo después de realizar cambios en el sistema (mejoras o corrección de errores) para comprobar que otras partes del sistema no se han visto afectadas negativamente",
         "Son pruebas exhaustivas para detectar todos los posibles fallos en el sistema antes de su despliegue inicial",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3123,7 +3123,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué representa el concepto de \"cubrimiento\" o \"cobertura\" en el contexto de las pruebas de código?",
       "options": [
         "El número de errores detectados por el conjunto de pruebas",
-        "El porcentaje del código fuente que ha sido probado, sirviendo como una métrica de la calidad de las pruebas.",
+        "El porcentaje del código fuente que ha sido probado, sirviendo como una métrica de la calidad de las pruebas",
         "La capacidad de un programa para manejar excepciones y errores de entrada",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3138,7 +3138,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "El análisis estático se realiza en entornos de producción, y el dinámico en entornos de desarrollo",
         "El análisis estático busca errores de sintaxis, mientras que el dinámico solo se enfoca en la interfaz de usuario",
-        "El análisis estático se realiza sobre el código sin ejecutarlo, buscando ineficiencias o código muerto, mientras que el análisis dinámico comprueba el funcionamiento del código mediante su ejecución en diversos escenarios.",
+        "El análisis estático se realiza sobre el código sin ejecutarlo, buscando ineficiencias o código muerto, mientras que el análisis dinámico comprueba el funcionamiento del código mediante su ejecución en diversos escenarios",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3151,7 +3151,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "Aunque las pruebas unitarias son imprescindibles, ¿por qué son también necesarias las pruebas de integración?",
       "options": [
         "Las pruebas unitarias solo verifican la lógica de negocio, no la interacción con la interfaz de usuario",
-        "Los programas casi siempre funcionan dentro de sistemas más complejos y se relacionan con otros módulos o sistemas, por lo que las pruebas de integración verifican que el componente funciona correctamente en sus relaciones con estos.",
+        "Los programas casi siempre funcionan dentro de sistemas más complejos y se relacionan con otros módulos o sistemas, por lo que las pruebas de integración verifican que el componente funciona correctamente en sus relaciones con estos",
         "Las pruebas de integración se enfocan en detectar errores en el rendimiento del sistema bajo altas cargas, algo que las pruebas unitarias no hacen",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3165,7 +3165,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "En el contexto del ciclo de vida del software, ¿qué enfoque para la realización de pruebas se considera correcto y por qué?",
       "options": [
         "La \"fase de pruebas\" se realiza únicamente después de la implementación, asumiendo que los errores son solo de codificación",
-        "En el ciclo de vida en V, cada fase de construcción lleva asociada una fase de pruebas para detectar errores lo antes posible y evitar arrastrarlos.",
+        "En el ciclo de vida en V, cada fase de construcción lleva asociada una fase de pruebas para detectar errores lo antes posible y evitar arrastrarlos",
         "Las pruebas son una tarea puntual que se realiza solo al final del mantenimiento del software",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3294,7 +3294,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "La creación de un nuevo esquema de base de datos para optimizar las consultas",
         "La redefinición de la interfaz de usuario para mejorar la experiencia del usuario final",
-        "La correcta composición de métodos (creando funciones para encapsular funcionalidad) y la organización de los datos (utilizando objetos y encapsulación).",
+        "La correcta composición de métodos (creando funciones para encapsular funcionalidad) y la organización de los datos (utilizando objetos y encapsulación)",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3307,7 +3307,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "Según el contenido de la unidad, ¿cuál es la razón fundamental por la que los sistemas de control de versiones son herramientas imprescindibles en la ingeniería de software, especialmente en desarrollos colectivos?",
       "options": [
         "Permiten generar automáticamente la documentación técnica del proyecto sin intervención manual",
-        "Facilitan el control sobre el código fuente y otros ficheros del sistema, su evolución, y permiten el trabajo en grupo minimizando el impacto de los cambios entre programadores.",
+        "Facilitan el control sobre el código fuente y otros ficheros del sistema, su evolución, y permiten el trabajo en grupo minimizando el impacto de los cambios entre programadores",
         "Son herramientas exclusivas para el despliegue automático del software en diferentes entornos de producción",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3322,7 +3322,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "git add y luego git clone",
         "git push y luego git commit",
-        "git commit para consolidar los cambios en el repositorio local y git push para subirlos al servidor remoto.",
+        "git commit para consolidar los cambios en el repositorio local y git push para subirlos al servidor remoto",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3336,7 +3336,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "La refactorización tiene como objetivo principal añadir nuevas funcionalidades o características a un programa existente",
         "La refactorización se realiza para eliminar errores funcionales o fallos del sistema que impiden su correcto funcionamiento",
-        "La refactorización es un conjunto de técnicas que modifican un programa ya funcional para mejorar su legibilidad, eficiencia, comprensión y mantenimiento, sin alterar su comportamiento externo.",
+        "La refactorización es un conjunto de técnicas que modifican un programa ya funcional para mejorar su legibilidad, eficiencia, comprensión y mantenimiento, sin alterar su comportamiento externo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3350,7 +3350,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "La detección y corrección automática de errores de sintaxis en tiempo real",
         "La ejecución de pruebas de rendimiento del código bajo diferentes cargas de trabajo",
-        "El renombrado automático de variables, funciones o clases en todo el proyecto, o la extracción de un bloque de código para crear un nuevo método.",
+        "El renombrado automático de variables, funciones o clases en todo el proyecto, o la extracción de un bloque de código para crear un nuevo método",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3363,7 +3363,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "A pesar de que una refactorización de código no implica cambios en su funcionamiento, el manual indica que puede generar errores si se realiza incorrectamente. ¿Qué acciones se deben considerar para mitigar este riesgo?",
       "options": [
         "Realizar únicamente revisiones de código manuales para identificar posibles fallos visualmente",
-        "Asegurarse de poder deshacer los cambios realizados (preferiblemente con sistemas de control de versiones) y ejecutar pruebas (unitarias, de regresión o de humo) para verificar la correcta funcionalidad del código modificado.",
+        "Asegurarse de poder deshacer los cambios realizados (preferiblemente con sistemas de control de versiones) y ejecutar pruebas (unitarias, de regresión o de humo) para verificar la correcta funcionalidad del código modificado",
         "Implementar un sistema de autenticación de dos factores para el acceso al código fuente",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -3378,7 +3378,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "git merge <nombre_de_rama> para combinar con una rama antigua",
         "git log para ver el historial y luego git revert para deshacer el último cambio",
-        "git reset --hard <identificador_del_commit> utilizando el identificador único del commit al que se desea regresar.",
+        "git reset --hard <identificador_del_commit> utilizando el identificador único del commit al que se desea regresar",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3392,7 +3392,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "git status para ver el estado de los fcheros",
         "git diff para ver las diferencias entre versiones",
-        "git merge para integrar cambios y resolver solapamientos.",
+        "git merge para integrar cambios y resolver solapamientos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3406,7 +3406,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Comentario de bloque",
         "Comentario de línea",
-        "Docstring.",
+        "Docstring",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3420,7 +3420,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Los sistemas centralizados son de código cerrado, mientras que los distribuidos son siempre de código abierto",
         "Los sistemas centralizados almacenan las copias del proyecto en la máquina local del desarrollador, mientras que los distribuidos lo hacen en un servidor remoto",
-        "En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, las copias se almacenan tanto en un servidor como en cada máquina de los integrantes del equipo.",
+        "En los sistemas centralizados, las copias del proyecto se almacenan en un único servidor central; en los distribuidos, las copias se almacenan tanto en un servidor como en cada máquina de los integrantes del equipo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -3546,10 +3546,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_1_q0",
       "question": "¿Quién propuso la creación de un nuevo sistema de \"hipertexto\" en 1980 con el objetivo de facilitar el intercambio de documentos entre diferentes usuarios, lo que eventualmente dio origen a HTML?",
       "options": [
-        "El Consorcio World Wide Web (W3C).",
-        "Tim Berners-Lee, mientras trabajaba en la Organización Europea para la Investigación Nuclear (CERN).",
-        "La International Organization for Standardization (ISO).",
-        "El Instituto Nacional de Estándares y Tecnología (NIST) de Estados Unidos."
+        "El Consorcio World Wide Web (W3C)",
+        "Tim Berners-Lee, mientras trabajaba en la Organización Europea para la Investigación Nuclear (CERN)",
+        "La International Organization for Standardization (ISO)",
+        "El Instituto Nacional de Estándares y Tecnología (NIST) de Estados Unidos"
       ],
       "correct": 1,
       "explanation": "Tim Berners-Lee propuso en 1980 el sistema ENQUIRE mientras trabajaba en el CERN. En 1989 propuso formalmente el proyecto de hipertexto que daría lugar a la World Wide Web y al lenguaje HTML.",
@@ -3560,10 +3560,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_1_q1",
       "question": "¿Cuál es el objetivo principal del World Wide Web Consortium (W3C)?",
       "options": [
-        "Establecer normas internacionales para garantizar la calidad y seguridad de productos en una amplia gama de sectores industriales.",
-        "Desarrollar y promover estándares y tecnologías web abiertas para garantizar el crecimiento a largo plazo y la interoperabilidad de la World Wide Web.",
-        "Lanzar nuevas versiones de lenguajes de programación del lado del cliente como JavaScript para mejorar la interactividad web.",
-        "Gestionar el registro de nombres de dominio y direcciones IP a nivel mundial."
+        "Establecer normas internacionales para garantizar la calidad y seguridad de productos en una amplia gama de sectores industriales",
+        "Desarrollar y promover estándares y tecnologías web abiertas para garantizar el crecimiento a largo plazo y la interoperabilidad de la World Wide Web",
+        "Lanzar nuevas versiones de lenguajes de programación del lado del cliente como JavaScript para mejorar la interactividad web",
+        "Gestionar el registro de nombres de dominio y direcciones IP a nivel mundial"
       ],
       "correct": 1,
       "explanation": "El W3C es el organismo internacional que desarrolla estándares web (HTML, CSS, XML, etc.) para garantizar que la web sea accesible, interoperable y evolucione de forma ordenada. Fue fundado por Tim Berners-Lee en 1994.",
@@ -3574,10 +3574,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_1_q2",
       "question": "¿Cómo se clasifica CSS (Cascading Style Sheets) en relación con los lenguajes de marcas como HTML o XML?",
       "options": [
-        "Es un lenguaje de marcas estructural, utilizado para definir la estructura de documentos web y de datos.",
-        "Es un lenguaje de marcas jerárquico, organizado en forma de árbol para la presentación de datos en la web.",
-        "No es un lenguaje de marcas, sino un lenguaje de estilos encaminado a separar el contenido de su representación o estética, permitiendo adaptar la información según el dispositivo.",
-        "Es un lenguaje de programación orientado a objetos para crear aplicaciones web interactivas."
+        "Es un lenguaje de marcas estructural, utilizado para definir la estructura de documentos web y de datos",
+        "Es un lenguaje de marcas jerárquico, organizado en forma de árbol para la presentación de datos en la web",
+        "No es un lenguaje de marcas, sino un lenguaje de estilos encaminado a separar el contenido de su representación o estética, permitiendo adaptar la información según el dispositivo",
+        "Es un lenguaje de programación orientado a objetos para crear aplicaciones web interactivas"
       ],
       "correct": 2,
       "explanation": "CSS no es un lenguaje de marcas sino un lenguaje de estilos. Separa el contenido (HTML) de la presentación visual. No tiene variables ni funciones aritméticas como los lenguajes de programación.",
@@ -3588,10 +3588,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_1_q3",
       "question": "¿Cuál es una ventaja clave de la especificación XML Schema (XSD) sobre la DTD para definir la estructura de documentos XML?",
       "options": [
-        "Un menor consumo de recursos para la validación del documento, lo que la hace más eficiente en entornos de alta demanda.",
-        "Una mayor capacidad expresiva, soporte para tipos de datos, espacios de nombres y una gramática más sofisticada que la DTD.",
-        "La simplificación de la declaración del tipo de documento a una única variante, eliminando la necesidad de elegir entre diferentes tipos.",
-        "Su compatibilidad exclusiva con documentos HTML, lo que facilita la integración con páginas web modernas."
+        "Un menor consumo de recursos para la validación del documento, lo que la hace más eficiente en entornos de alta demanda",
+        "Una mayor capacidad expresiva, soporte para tipos de datos, espacios de nombres y una gramática más sofisticada que la DTD",
+        "La simplificación de la declaración del tipo de documento a una única variante, eliminando la necesidad de elegir entre diferentes tipos",
+        "Su compatibilidad exclusiva con documentos HTML, lo que facilita la integración con páginas web modernas"
       ],
       "correct": 1,
       "explanation": "XSD supera a DTD en: soporte de tipos de datos (int, date, etc.), compatibilidad con namespaces, sintaxis XML propia y mayor capacidad expresiva. DTD tiene sintaxis propia no XML y no soporta tipos de datos complejos.",
@@ -3602,10 +3602,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_1_q4",
       "question": "¿Cómo se define principalmente un lenguaje de marcas?",
       "options": [
-        "Un método de codificación de documentos que utiliza variables y funciones aritméticas para el procesamiento de datos complejos.",
-        "Un método de codificación de documentos donde el texto se combina con etiquetas para proporcionar información adicional sobre la estructura o el estilo de presentación.",
-        "Un lenguaje de programación utilizado para crear aplicaciones web interactivas y dinámicas.",
-        "Un sistema de gestión de bases de datos orientado al almacenamiento de documentos estructurados."
+        "Un método de codificación de documentos que utiliza variables y funciones aritméticas para el procesamiento de datos complejos",
+        "Un método de codificación de documentos donde el texto se combina con etiquetas para proporcionar información adicional sobre la estructura o el estilo de presentación",
+        "Un lenguaje de programación utilizado para crear aplicaciones web interactivas y dinámicas",
+        "Un sistema de gestión de bases de datos orientado al almacenamiento de documentos estructurados"
       ],
       "correct": 1,
       "explanation": "Un lenguaje de marcas combina texto con etiquetas (marcas) que añaden información sobre la estructura, el significado o la presentación del contenido. No tiene variables ni funciones aritméticas como los lenguajes de programación.",
@@ -3616,10 +3616,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_1_q5",
       "question": "¿De qué lenguaje se originó el Standard Generalized Markup Language (SGML), estandarizado en 1986?",
       "options": [
-        "HTML, debido a su creciente complejidad y necesidad de estandarización.",
-        "GML, propuesto por IBM para compartir información entre sistemas, y posteriormente estandarizado por ISO 8879.",
-        "XML, buscando un lenguaje más potente y con estructura semántica avanzada.",
-        "XHTML, como evolución del HTML con sintaxis más estricta basada en XML."
+        "HTML, debido a su creciente complejidad y necesidad de estandarización",
+        "GML, propuesto por IBM para compartir información entre sistemas, y posteriormente estandarizado por ISO 8879",
+        "XML, buscando un lenguaje más potente y con estructura semántica avanzada",
+        "XHTML, como evolución del HTML con sintaxis más estricta basada en XML"
       ],
       "correct": 1,
       "explanation": "SGML (ISO 8879:1986) desciende de GML (Generalized Markup Language), creado por IBM en los años 60 para compartir documentos entre sistemas. SGML es el padre de HTML y XML.",
@@ -3630,10 +3630,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_1_q6",
       "question": "En el contexto de los lenguajes de marcas, ¿cuál es la distinción correcta entre una \"etiqueta\" y un \"elemento\"?",
       "options": [
-        "Una etiqueta es un par nombre-valor que indica propiedades asociadas a los elementos, mientras que un elemento es el texto entre los símbolos.",
-        "Una etiqueta es el texto que va entre los símbolos menor-que y mayor-que, mientras que un elemento es una estructura básica que organiza el contenido y generalmente tiene una etiqueta de inicio y una de cierre.",
-        "Un elemento siempre se refiere a un contenido vacío que no requiere etiqueta de fin, mientras que una etiqueta siempre encierra contenido explícito.",
-        "Una etiqueta define el estilo visual del contenido, mientras que un elemento define su significado semántico."
+        "Una etiqueta es un par nombre-valor que indica propiedades asociadas a los elementos, mientras que un elemento es el texto entre los símbolos",
+        "Una etiqueta es el texto que va entre los símbolos menor-que y mayor-que, mientras que un elemento es una estructura básica que organiza el contenido y generalmente tiene una etiqueta de inicio y una de cierre",
+        "Un elemento siempre se refiere a un contenido vacío que no requiere etiqueta de fin, mientras que una etiqueta siempre encierra contenido explícito",
+        "Una etiqueta define el estilo visual del contenido, mientras que un elemento define su significado semántico"
       ],
       "correct": 1,
       "explanation": "La etiqueta es la marca en sí (ej: <p>). El elemento incluye la etiqueta de apertura, el contenido y la etiqueta de cierre (ej: <p>texto</p>). Un elemento puede estar vacío si no tiene contenido entre sus etiquetas.",
@@ -3644,10 +3644,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_1_q7",
       "question": "¿Cuáles eran los tres tipos de DTD que contemplaba la especificación del W3C para HTML 4.0?",
       "options": [
-        "Lineal, Jerárquico y de Programación.",
-        "Estructural, de Presentación y de Programación.",
-        "Estricta, de Transición (transicional o flexible) y Frameset.",
-        "Básica, Extendida y Completa."
+        "Lineal, Jerárquico y de Programación",
+        "Estructural, de Presentación y de Programación",
+        "Estricta, de Transición (transicional o flexible) y Frameset",
+        "Básica, Extendida y Completa"
       ],
       "correct": 2,
       "explanation": "HTML 4.0 definía tres DTD: Strict (sin elementos obsoletos), Transitional (permite elementos de presentación obsoletos) y Frameset (para páginas con marcos). Cada página debía declarar cuál usaba en el DOCTYPE.",
@@ -3658,10 +3658,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_1_q8",
       "question": "¿Cuál es una característica fundamental que diferencia a los lenguajes de marcas de los lenguajes de programación?",
       "options": [
-        "Su flexibilidad, que permite combinarlos con otros lenguajes como PHP y JavaScript para crear páginas web dinámicas.",
-        "No poseen variables ni funciones aritméticas, y su uso principal es dar formato a documentos de texto o definir la estructura de datos.",
-        "Su compacidad, que hace que los archivos sean muy eficientes en cuanto al uso del espacio de almacenamiento.",
-        "Su capacidad para ejecutar instrucciones directamente en el procesador sin necesidad de compilación previa."
+        "Su flexibilidad, que permite combinarlos con otros lenguajes como PHP y JavaScript para crear páginas web dinámicas",
+        "No poseen variables ni funciones aritméticas, y su uso principal es dar formato a documentos de texto o definir la estructura de datos",
+        "Su compacidad, que hace que los archivos sean muy eficientes en cuanto al uso del espacio de almacenamiento",
+        "Su capacidad para ejecutar instrucciones directamente en el procesador sin necesidad de compilación previa"
       ],
       "correct": 1,
       "explanation": "Los lenguajes de marcas (HTML, XML) no tienen variables, bucles ni funciones aritméticas. Solo añaden información estructural o de presentación al texto. Los lenguajes de programación (Java, Python) sí tienen estas capacidades.",
@@ -3672,10 +3672,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_1_q9",
       "question": "¿Cómo se caracteriza el lenguaje de marcas XML (eXtensible Markup Language) a diferencia de HTML?",
       "options": [
-        "Ser una versión más estricta y bien formada de HTML, utilizando una sintaxis basada en XML para asegurar la compatibilidad con múltiples dispositivos.",
-        "Combinar información estructural con el diseño, permitiendo una mayor versatilidad en la presentación visual de documentos.",
-        "Ser exclusivamente estructural, sin contener ninguna información relacionada con el diseño, y se utiliza para describir información y definir la estructura de datos de un documento.",
-        "Ser un lenguaje de programación orientado a la manipulación de bases de datos relacionales en entornos web."
+        "Ser una versión más estricta y bien formada de HTML, utilizando una sintaxis basada en XML para asegurar la compatibilidad con múltiples dispositivos",
+        "Combinar información estructural con el diseño, permitiendo una mayor versatilidad en la presentación visual de documentos",
+        "Ser exclusivamente estructural, sin contener ninguna información relacionada con el diseño, y se utiliza para describir información y definir la estructura de datos de un documento",
+        "Ser un lenguaje de programación orientado a la manipulación de bases de datos relacionales en entornos web"
       ],
       "correct": 2,
       "explanation": "XML es un metalenguaje extensible y puramente estructural: no define cómo se presenta la información, solo su estructura y significado. HTML mezcla estructura y presentación. XML se usa para intercambio de datos entre sistemas.",
@@ -3758,10 +3758,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_2_q0",
       "question": "¿Cuál es el objetivo principal del DOM (Modelo de Objetos de Documentos)?",
       "options": [
-        "Establecer la estructura y el significado del contenido en línea o web.",
-        "Definir la forma en que los documentos HTML, XHTML y XML son almacenados en el servidor.",
-        "Permitir que los programas (por ejemplo, JavaScript) puedan acceder y modificar dinámicamente el contenido, la estructura y el estilo de los documentos HTML y XML.",
-        "Gestionar la comunicación entre el servidor web y el navegador del cliente."
+        "Establecer la estructura y el significado del contenido en línea o web",
+        "Definir la forma en que los documentos HTML, XHTML y XML son almacenados en el servidor",
+        "Permitir que los programas (por ejemplo, JavaScript) puedan acceder y modificar dinámicamente el contenido, la estructura y el estilo de los documentos HTML y XML",
+        "Gestionar la comunicación entre el servidor web y el navegador del cliente"
       ],
       "correct": 2,
       "explanation": "El DOM representa el documento HTML/XML como un árbol de objetos en memoria. JavaScript puede acceder y modificar cualquier nodo del árbol dinámicamente, lo que permite crear páginas web interactivas.",
@@ -3786,10 +3786,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_2_q2",
       "question": "De las siguientes formas de incluir CSS en una página web, ¿cuál es considerada la menos recomendable porque mezcla contenido y presentación, dificultando el mantenimiento del código?",
       "options": [
-        "Enlace a CSS externo mediante la etiqueta link en el head.",
-        "CSS en el HTML mediante la etiqueta style en el head.",
-        "CSS en línea (inline) a través del atributo style directamente en la etiqueta HTML.",
-        "Importar el CSS con @import dentro de otro archivo CSS."
+        "Enlace a CSS externo mediante la etiqueta link en el head",
+        "CSS en el HTML mediante la etiqueta style en el head",
+        "CSS en línea (inline) a través del atributo style directamente en la etiqueta HTML",
+        "Importar el CSS con @import dentro de otro archivo CSS"
       ],
       "correct": 2,
       "explanation": "El CSS inline mezcla contenido y presentación, tiene la mayor especificidad (difícil de sobreescribir), no se puede reutilizar y dificulta el mantenimiento. La mejor práctica es usar un archivo CSS externo.",
@@ -3800,10 +3800,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_2_q3",
       "question": "Según las restricciones básicas de XHTML, si en HTML se permite la minimización de atributos (ej. input checked), ¿cómo debe manejarse este tipo de atributo en XHTML?",
       "options": [
-        "El atributo debe omitirse completamente, ya que no es compatible con la sintaxis XML.",
-        "El atributo debe llevar siempre un valor, como por ejemplo checked=\"checked\".",
-        "El atributo se puede usar tal cual, sin necesidad de asignarle un valor explícito.",
-        "El atributo debe escribirse en mayúsculas para indicar que es booleano."
+        "El atributo debe omitirse completamente, ya que no es compatible con la sintaxis XML",
+        "El atributo debe llevar siempre un valor, como por ejemplo checked=\"checked\"",
+        "El atributo se puede usar tal cual, sin necesidad de asignarle un valor explícito",
+        "El atributo debe escribirse en mayúsculas para indicar que es booleano"
       ],
       "correct": 1,
       "explanation": "XHTML es HTML con sintaxis XML estricta. XML no permite atributos sin valor, por lo que los atributos booleanos deben escribirse con su propio nombre como valor: checked=\"checked\", disabled=\"disabled\", selected=\"selected\".",
@@ -3842,10 +3842,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_2_q6",
       "question": "¿Cuál de las siguientes afirmaciones sobre las diferencias entre HTML y XHTML es correcta?",
       "options": [
-        "En XHTML, los nombres de etiquetas y atributos pueden escribirse indistintamente en mayúsculas o minúsculas.",
-        "XHTML exige el cierre de todas las etiquetas, incluidas las vacías, y que todos los atributos tengan un valor y estén entre comillas.",
-        "HTML permite la integración de otros lenguajes basados en XML como MathML o SVG, mientras que XHTML no.",
-        "XHTML no requiere un DOCTYPE al inicio del documento, a diferencia de HTML."
+        "En XHTML, los nombres de etiquetas y atributos pueden escribirse indistintamente en mayúsculas o minúsculas",
+        "XHTML exige el cierre de todas las etiquetas, incluidas las vacías, y que todos los atributos tengan un valor y estén entre comillas",
+        "HTML permite la integración de otros lenguajes basados en XML como MathML o SVG, mientras que XHTML no",
+        "XHTML no requiere un DOCTYPE al inicio del documento, a diferencia de HTML"
       ],
       "correct": 1,
       "explanation": "XHTML es HTML reformulado como XML. Sus reglas estrictas incluyen: todas las etiquetas en minúsculas, todas cerradas (br/), todos los atributos con valor entre comillas, y un único elemento raíz.",
@@ -3972,8 +3972,8 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Las etiquetas XML no son sensibles a las mayúsculas y minúsculas, lo que permite flexibilidad en su escritura para mejorar la legibilidad del código",
         "Es posible cerrar una etiqueta exterior antes de que todos los elementos anidados dentro de ella hayan sido cerrados, siempre que el documento tenga un elemento raíz único",
-        "Los elementos vacíos pueden representarse mediante una etiqueta de inicio seguida inmediatamente por una de cierre (ej. <hr></hr>), o con una etiqueta única con \"/>\" al final (ej. <hr />).",
-        "Las etiquetas XML pueden anidarse en cualquier orden sin restricciones de jerarquía."
+        "Los elementos vacíos pueden representarse mediante una etiqueta de inicio seguida inmediatamente por una de cierre (ej. <hr></hr>), o con una etiqueta única con \"/>\" al final (ej. <hr />)",
+        "Las etiquetas XML pueden anidarse en cualquier orden sin restricciones de jerarquía"
       ],
       "correct": 2,
       "explanation": "Los elementos vacíos pueden representarse mediante una etiqueta de inicio seguida inmediatamente por una de cierre (ej. ...",
@@ -3986,8 +3986,8 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Debe ser compatible con cualquier navegador web sin necesidad de hojas de estilo o transformaciones adicionales para su visualización",
         "Debe contener obligatoriamente un prólogo con la declaración XML que incluya la versión, la codificación y el atributo standalone=\"yes\"",
-        "Debe ajustarse a las restricciones estructurales y de contenido definidas en una Declaración de Tipo de Documento (DTD) o un Esquema XML (XSD) asociado.",
-        "Debe incluir obligatoriamente una declaración de tipo de documento (DOCTYPE) al inicio."
+        "Debe ajustarse a las restricciones estructurales y de contenido definidas en una Declaración de Tipo de Documento (DTD) o un Esquema XML (XSD) asociado",
+        "Debe incluir obligatoriamente una declaración de tipo de documento (DOCTYPE) al inicio"
       ],
       "correct": 2,
       "explanation": "Un documento XML bien formado cumple las reglas sintácticas: un elemento raíz, todas las etiquetas cerradas, anidamiento correcto, atributos entre comillas y sensibilidad a mayúsculas.",
@@ -4001,7 +4001,7 @@ const SYLLABUS_RAW_DATA = {
         "JSON es un lenguaje de marcado extensible diseñado principalmente para la elaboración de documentos complejos con una estructura jerárquica basada en etiquetas",
         "Los documentos JSON suelen ser más difíciles de interpretar y comprender por las personas en comparación con los documentos XML debido a su sintaxis técnica",
         "JSON se basa en dos estructuras fundamentales: una colección de pares nombre/valor (objetos) y una lista ordenada de valores (arrays)",
-        "JSON no puede representar estructuras jerárquicas anidadas como lo hace XML."
+        "JSON no puede representar estructuras jerárquicas anidadas como lo hace XML"
       ],
       "correct": 2,
       "explanation": "JSON se basa en dos estructuras: objetos (pares clave-valor entre {}) y arrays (listas ordenadas entre []). Es más ligero que XML y muy usado en APIs REST.",
@@ -4015,7 +4015,7 @@ const SYLLABUS_RAW_DATA = {
         "<nombreValido>",
         "<dato-2023>",
         "<XML_data>",
-        "Un nombre de etiqueta XML puede comenzar con un número si va seguido de letras."
+        "Un nombre de etiqueta XML puede comenzar con un número si va seguido de letras"
       ],
       "correct": 2,
       "explanation": "Un documento XML válido está bien formado Y cumple las restricciones de un DTD o XSD. Todo documento válido es bien formado, pero no al revés. La validación verifica estructura y tipos de datos.",
@@ -4029,7 +4029,7 @@ const SYLLABUS_RAW_DATA = {
         "El navegador intentará aplicar un conjunto de estilos por defecto para hacer el documento visualmente atractivo y navegable",
         "Se mostrará un mensaje de error indicando que el documento no tiene un formato de presentación válido y requiere un estilo",
         "El navegador simplemente mostrará la jerarquía de etiquetas y el contenido del documento en texto plano, sin aplicar ningún estilo ni formato visual",
-        "El navegador aplicará automáticamente estilos CSS predeterminados al documento XML."
+        "El navegador aplicará automáticamente estilos CSS predeterminados al documento XML"
       ],
       "correct": 2,
       "explanation": "La opción correcta es El navegador simplemente mostrará la jerarquía de etiquetas y el contenido del documento en texto plano, sin aplicar ningún estilo ni formato visual.",
@@ -4043,7 +4043,7 @@ const SYLLABUS_RAW_DATA = {
         "<carrera> es un hijo directo de <facultad>, ya que se encuentra dentro de su ámbito",
         "<carrera> es un hermano de <facultad>, dado que ambos descienden del mismo elemento raíz",
         "<carrera> es un descendiente de <facultad>, al estar contenida en un elemento que a su vez es hijo de <facultad>",
-        "carrera es un hermano de facultad porque ambos están en el mismo nivel del árbol."
+        "carrera es un hermano de facultad porque ambos están en el mismo nivel del árbol"
       ],
       "correct": 2,
       "explanation": "La opción correcta es <carrera> es un descendiente de <facultad>, al estar contenida en un elemento que a su vez es hijo de <facultad>.",
@@ -4057,7 +4057,7 @@ const SYLLABUS_RAW_DATA = {
         "La faceta xs:maxLength, para definir la longitud máxima permitida de la cadena de texto",
         "La faceta xs:pattern, para establecer una expresión regular que el valor de la cadena debe cumplir",
         "La faceta xs:enumeration, que permite listar los valores exactos que el elemento puede tomar",
-        "La faceta xs:length, para especificar la longitud exacta que debe tener la cadena."
+        "La faceta xs:length, para especificar la longitud exacta que debe tener la cadena"
       ],
       "correct": 2,
       "explanation": "xs:enumeration restringe un valor a una lista de opciones predefinidas. xs:pattern usa expresiones regulares. xs:restriction es el contenedor de las facetas de restricción.",
@@ -4071,7 +4071,7 @@ const SYLLABUS_RAW_DATA = {
         "Su sintaxis es demasiado compleja y, a diferencia de XML Schema, no está basada en XML, lo que dificulta su integración",
         "Permiten la definición flexible de secuencias no ordenadas de elementos y la creación de claves combinadas a partir de varios atributos o elementos",
         "Carecen de soporte para espacios de nombres (namespaces), limitan los elementos terminales a datos textuales y no permiten definir tipos de datos complejos",
-        "DTD no puede definir el elemento raíz del documento XML, a diferencia de XSD."
+        "DTD no puede definir el elemento raíz del documento XML, a diferencia de XSD"
       ],
       "correct": 2,
       "explanation": "DTD tiene sintaxis propia no XML, no soporta tipos de datos complejos ni namespaces. XSD está escrito en XML, soporta tipos de datos, namespaces y es más expresivo.",
@@ -4085,7 +4085,7 @@ const SYLLABUS_RAW_DATA = {
         "A todos los elementos y atributos del documento XML, incluyendo los de elementos anidados, de forma global",
         "Solo al elemento en el que se declara y a los atributos específicos de ese elemento, excluyendo a sus descendientes",
         "Al elemento en el que está declarado y a todos sus elementos descendientes",
-        "El espacio de nombres por defecto afecta solo al elemento donde se declara, no a sus hijos."
+        "El espacio de nombres por defecto afecta solo al elemento donde se declara, no a sus hijos"
       ],
       "correct": 2,
       "explanation": "Un namespace XML es un URI que identifica un vocabulario XML. Evita conflictos cuando se combinan elementos de diferentes esquemas. Se declara con xmlns=\"URI\" o xmlns:prefijo=\"URI\".",
@@ -4099,7 +4099,7 @@ const SYLLABUS_RAW_DATA = {
         "El elemento xs:choice, que permite seleccionar uno de varios elementos definidos sin un orden estricto",
         "El atributo mixed=\"true\" del elemento xs:complexType, que permite combinar texto con elementos en cualquier orden",
         "El elemento xs:sequence, que enumera los componentes de un tipo complejo indicando la secuencia obligatoria en que deben aparecer",
-        "El elemento xs:all, que permite que los componentes aparezcan en cualquier orden."
+        "El elemento xs:all, que permite que los componentes aparezcan en cualquier orden"
       ],
       "correct": 2,
       "explanation": "xs:sequence indica que los elementos hijos deben aparecer en el orden exacto definido. xs:choice permite solo uno de los elementos. xs:all permite cualquier orden.",
@@ -4185,7 +4185,7 @@ const SYLLABUS_RAW_DATA = {
         "xs:all",
         "xs:choice",
         "xs:sequence",
-        "xs:restriction, que define restricciones sobre tipos de datos existentes."
+        "xs:restriction, que define restricciones sobre tipos de datos existentes"
       ],
       "correct": 2,
       "explanation": "xs:sequence indica que los elementos hijos deben aparecer en el orden exacto definido. xs:choice permite solo uno de los elementos. xs:all permite cualquier orden.",
@@ -4199,7 +4199,7 @@ const SYLLABUS_RAW_DATA = {
         "Su capacidad para combinarse fácilmente con otros DTD y su soporte nativo para espacios de nombres XML",
         "Su soporte robusto para la definición de tipos de datos complejos y la especificación del elemento raíz del documento",
         "Su ausencia de tipos de datos, la dificultad para acciones sencillas como ordenar elementos, y su limitada compatibilidad con los espacios de nombres XML",
-        "DTD tiene mayor capacidad expresiva que XSD para definir estructuras complejas."
+        "DTD tiene mayor capacidad expresiva que XSD para definir estructuras complejas"
       ],
       "correct": 2,
       "explanation": "La opción correcta es Su ausencia de tipos de datos, la dificultad para acciones sencillas como ordenar elementos, y su limitada compatibilidad con los espacios de nombres XML.",
@@ -4213,7 +4213,7 @@ const SYLLABUS_RAW_DATA = {
         "TargetNamespace",
         "xmlns:alias",
         "elementFormDefault",
-        "xmlns, para declarar el espacio de nombres por defecto del documento."
+        "xmlns, para declarar el espacio de nombres por defecto del documento"
       ],
       "correct": 2,
       "explanation": "Un namespace XML es un URI que identifica un vocabulario XML. Evita conflictos cuando se combinan elementos de diferentes esquemas. Se declara con xmlns=\"URI\" o xmlns:prefijo=\"URI\".",
@@ -4227,7 +4227,7 @@ const SYLLABUS_RAW_DATA = {
         "Un Schema XML se centra exclusivamente en la sintaxis de las etiquetas XML, sin capacidad para definir tipos de datos o restricciones",
         "Los Schemas XML están escritos en un lenguaje diferente a XML, lo que requiere analizadores y APIs distintos para su procesamiento",
         "Un Schema XML tiene como objetivo definir la estructura base de un documento XML, incluyendo elementos, atributos, tipos de datos, orden, ocurrencia y valores por defecto o fijos, mejorando las capacidades de los DTD",
-        "DTD y XSD son equivalentes en capacidad expresiva y solo difieren en la sintaxis."
+        "DTD y XSD son equivalentes en capacidad expresiva y solo difieren en la sintaxis"
       ],
       "correct": 2,
       "explanation": "La opción correcta es Un Schema XML tiene como objetivo definir la estructura base de un documento XML, incluyendo elementos, atributos, tipos de datos, orden, ocurrencia y valores por defecto o fijos, mejorando las capacidades de los DTD.",
@@ -4241,7 +4241,7 @@ const SYLLABUS_RAW_DATA = {
         "xs:complexType",
         "xs:simpleType",
         "xs:element",
-        "xs:complexType, para definir tipos que contienen elementos hijos o atributos."
+        "xs:complexType, para definir tipos que contienen elementos hijos o atributos"
       ],
       "correct": 1,
       "explanation": "La respuesta es 'xs:simpleType'. \"xs:complexType\" y \"xs:element\" son incorrectos porque describen conceptos diferentes.",
@@ -4255,7 +4255,7 @@ const SYLLABUS_RAW_DATA = {
         "xs:Enumeration",
         "xs:MaxLength",
         "xs:Pattern",
-        "xs:Restriction, para limitar los valores posibles de un tipo de dato existente."
+        "xs:Restriction, para limitar los valores posibles de un tipo de dato existente"
       ],
       "correct": 2,
       "explanation": "La opción correcta es xs:Pattern.",
@@ -4269,7 +4269,7 @@ const SYLLABUS_RAW_DATA = {
         "Mediante el atributo noNamespaceSchemaLocation",
         "Mediante el atributo schemaLocation",
         "El documento XML no necesita asociarse explícitamente; el navegador lo detecta automáticamente",
-        "Mediante el atributo targetNamespace en el elemento raíz del documento XML."
+        "Mediante el atributo targetNamespace en el elemento raíz del documento XML"
       ],
       "correct": 1,
       "explanation": "La opción correcta es Mediante el atributo schemaLocation.",
@@ -4283,7 +4283,7 @@ const SYLLABUS_RAW_DATA = {
         "0",
         "1",
         "unbounded",
-        "El valor 0, que indica que el elemento no puede aparecer en el documento."
+        "El valor 0, que indica que el elemento no puede aparecer en el documento"
       ],
       "correct": 2,
       "explanation": "maxOccurs=\"unbounded\" permite que el elemento aparezca un número ilimitado de veces. minOccurs=\"0\" lo hace opcional. minOccurs=\"1\" (por defecto) lo hace obligatorio.",
@@ -4297,7 +4297,7 @@ const SYLLABUS_RAW_DATA = {
         "default",
         "use con valor optional",
         "use con valor required",
-        "El atributo fixed, para establecer un valor fijo que no puede modificarse."
+        "El atributo fixed, para establecer un valor fijo que no puede modificarse"
       ],
       "correct": 2,
       "explanation": "La opción correcta es use con valor required.",
@@ -4311,7 +4311,7 @@ const SYLLABUS_RAW_DATA = {
         "Un documento XML siempre es válido si está bien formado",
         "Un documento XML puede estar bien formado pero no ser válido si no cumple las restricciones de un DTD o XSD",
         "La validación solo verifica la sintaxis del documento, no su estructura ni el tipo de datos",
-        "Un documento XML bien formado siempre es también válido según cualquier esquema."
+        "Un documento XML bien formado siempre es también válido según cualquier esquema"
       ],
       "correct": 1,
       "explanation": "Un documento XML bien formado cumple las reglas sintácticas: un elemento raíz, todas las etiquetas cerradas, anidamiento correcto, atributos entre comillas y sensibilidad a mayúsculas.",
@@ -4394,10 +4394,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_5_q0",
       "question": "¿Qué característica clave introducida en XSLT 2.0 permite procesar documentos XML de gran tamaño sin cargar todo el documento en memoria?",
       "options": [
-        "La mejora del sistema de tipos de datos con soporte para XML Schema.",
-        "La instrucción xsl:function para definir funciones reutilizables en la hoja de estilo.",
-        "El soporte de streaming para documentos fuente de gran tamaño.",
-        "La instrucción xsl:result-document para generar múltiples documentos de salida."
+        "La mejora del sistema de tipos de datos con soporte para XML Schema",
+        "La instrucción xsl:function para definir funciones reutilizables en la hoja de estilo",
+        "El soporte de streaming para documentos fuente de gran tamaño",
+        "La instrucción xsl:result-document para generar múltiples documentos de salida"
       ],
       "correct": 2,
       "explanation": "El streaming en XSLT 2.0 permite procesar documentos XML muy grandes de forma secuencial sin cargarlos completamente en memoria, lo que mejora significativamente el rendimiento con ficheros de gran tamaño.",
@@ -4436,10 +4436,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_5_q3",
       "question": "Un desarrollador necesita aplicar lógica condicional en XSLT con múltiples condiciones (if-elseif-else). ¿Qué instrucción XSLT es la más adecuada?",
       "options": [
-        "xsl:if con una sola condición, sin rama alternativa para el otro caso.",
-        "xsl:choose con xsl:when y xsl:otherwise.",
-        "xsl:for-each para iterar sobre los valores de cantidad.",
-        "xsl:value-of para mostrar el valor sin aplicar formato condicional."
+        "xsl:if con una sola condición, sin rama alternativa para el otro caso",
+        "xsl:choose con xsl:when y xsl:otherwise",
+        "xsl:for-each para iterar sobre los valores de cantidad",
+        "xsl:value-of para mostrar el valor sin aplicar formato condicional"
       ],
       "correct": 1,
       "explanation": "xsl:choose con xsl:when y xsl:otherwise es el equivalente XSLT de if-elseif-else. xsl:if solo tiene la parte \"if\" sin else. Para múltiples condiciones alternativas, xsl:choose es la instrucción correcta.",
@@ -4450,10 +4450,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_5_q4",
       "question": "¿Cuál de las siguientes afirmaciones sobre el procesador DOM es correcta?",
       "options": [
-        "Es una API basada en eventos, ideal para documentos XML muy grandes debido a su bajo consumo de memoria.",
-        "Carga todo el documento XML en memoria, construyendo un árbol de objetos que permite la manipulación y modificación dinámica de sus nodos.",
-        "No permite modificar el documento XML, solo leerlo de forma secuencial.",
-        "Procesa el documento XML de forma paralela para mejorar el rendimiento en sistemas multicore."
+        "Es una API basada en eventos, ideal para documentos XML muy grandes debido a su bajo consumo de memoria",
+        "Carga todo el documento XML en memoria, construyendo un árbol de objetos que permite la manipulación y modificación dinámica de sus nodos",
+        "No permite modificar el documento XML, solo leerlo de forma secuencial",
+        "Procesa el documento XML de forma paralela para mejorar el rendimiento en sistemas multicore"
       ],
       "correct": 1,
       "explanation": "DOM carga todo el documento en memoria como árbol de objetos. Permite acceso aleatorio y modificación de cualquier nodo. SAX es la API basada en eventos que no carga todo en memoria, ideal para documentos grandes.",
@@ -4478,10 +4478,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_5_q6",
       "question": "En una hoja de estilo XSLT, ¿cuál es el propósito del atributo match en xsl:template?",
       "options": [
-        "Indica el espacio de nombres de la hoja de estilo para asegurar su compatibilidad.",
-        "Define el tipo de documento de salida (xml, html, text) que se generará.",
-        "Especifica los elementos del documento XML de entrada a los que se aplicará la plantilla, usando una expresión XPath.",
-        "Establece el orden de prioridad entre plantillas cuando varias coinciden con el mismo nodo."
+        "Indica el espacio de nombres de la hoja de estilo para asegurar su compatibilidad",
+        "Define el tipo de documento de salida (xml, html, text) que se generará",
+        "Especifica los elementos del documento XML de entrada a los que se aplicará la plantilla, usando una expresión XPath",
+        "Establece el orden de prioridad entre plantillas cuando varias coinciden con el mismo nodo"
       ],
       "correct": 2,
       "explanation": "El atributo match en xsl:template usa una expresión XPath para indicar qué nodos del XML de entrada activan esa plantilla. Por ejemplo, match=\"/\" activa la plantilla raíz; match=\"producto\" activa la plantilla para cada elemento producto.",
@@ -4492,10 +4492,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_5_q7",
       "question": "¿Cuál describe con mayor precisión el rol de XSL en el procesamiento de documentos XML?",
       "options": [
-        "XSL es un lenguaje de programación para crear bases de datos XML y gestionar su almacenamiento.",
-        "XSL es un lenguaje de consulta para extraer datos específicos de documentos XML sin modificarlos.",
-        "XSL es un lenguaje que define la presentación y la transformación de documentos XML, permitiendo adaptarlos a diversos formatos y sistemas.",
-        "XSL es un protocolo de comunicación para el intercambio de documentos XML entre servidores."
+        "XSL es un lenguaje de programación para crear bases de datos XML y gestionar su almacenamiento",
+        "XSL es un lenguaje de consulta para extraer datos específicos de documentos XML sin modificarlos",
+        "XSL es un lenguaje que define la presentación y la transformación de documentos XML, permitiendo adaptarlos a diversos formatos y sistemas",
+        "XSL es un protocolo de comunicación para el intercambio de documentos XML entre servidores"
       ],
       "correct": 2,
       "explanation": "XSL (eXtensible Stylesheet Language) es una familia de lenguajes para transformar y presentar documentos XML. Incluye XSLT (transformación), XPath (consulta de nodos) y XSL-FO (formato de presentación).",
@@ -4506,10 +4506,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_5_q8",
       "question": "¿En qué escenario se recomienda priorizar SAX sobre DOM para procesar documentos XML?",
       "options": [
-        "Cuando se necesita modificar el documento XML en memoria antes de generar la salida final.",
-        "Cuando el documento XML es de tamaño pequeño y se requiere acceso aleatorio a los nodos.",
-        "Cuando se procesan documentos XML muy grandes y el bajo consumo de memoria y la velocidad de lectura secuencial son críticos.",
-        "Cuando se necesita construir un árbol de objetos para navegar por el documento de forma no lineal."
+        "Cuando se necesita modificar el documento XML en memoria antes de generar la salida final",
+        "Cuando el documento XML es de tamaño pequeño y se requiere acceso aleatorio a los nodos",
+        "Cuando se procesan documentos XML muy grandes y el bajo consumo de memoria y la velocidad de lectura secuencial son críticos",
+        "Cuando se necesita construir un árbol de objetos para navegar por el documento de forma no lineal"
       ],
       "correct": 2,
       "explanation": "SAX es basado en eventos y no carga todo en memoria, ideal para XML grandes. DOM carga todo en memoria como árbol, permite modificar pero consume más recursos. Para solo lectura de ficheros grandes, SAX es más eficiente.",
@@ -4520,10 +4520,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "lm_tema_5_q9",
       "question": "Al abrir un XML con XSLT en Google Chrome desde file://, ¿qué resultado es probable?",
       "options": [
-        "Se mostrará el documento XML original con su estructura de etiquetas.",
-        "Se mostrará el documento XML transformado con los estilos aplicados.",
-        "Se mostrará una página en blanco o no se aplicará la transformación, incluso si el documento está bien formado.",
-        "Se descargará automáticamente el archivo transformado en formato HTML."
+        "Se mostrará el documento XML original con su estructura de etiquetas",
+        "Se mostrará el documento XML transformado con los estilos aplicados",
+        "Se mostrará una página en blanco o no se aplicará la transformación, incluso si el documento está bien formado",
+        "Se descargará automáticamente el archivo transformado en formato HTML"
       ],
       "correct": 2,
       "explanation": "Chrome bloquea las transformaciones XSLT cuando se abre desde file:// por restricciones de seguridad CORS. La solución es usar un servidor web local. Este comportamiento es específico de Chrome; otros navegadores pueden comportarse diferente.",
@@ -4635,7 +4635,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es el propósito fundamental de la cláusula Let en una expresión FLWOR de XQuery?",
       "options": [
         "Iterar sobre un conjunto de nodos en el documento XML",
-        "Crear variables temporales que representan valores o expresiones para ser usadas en otras cláusulas de la consulta.",
+        "Crear variables temporales que representan valores o expresiones para ser usadas en otras cláusulas de la consulta",
         "Filtrar los resultados de la consulta utilizando una expresión booleana",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -4820,7 +4820,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "<item>, <author>, <pubDate>",
         "<category>, <image>, <language>",
-        "<title>, <link>, <description>.",
+        "<title>, <link>, <description>",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -4890,7 +4890,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "HTML y CSS",
         "JSON y YAML",
-        "RSS y Atom.",
+        "RSS y Atom",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -5253,10 +5253,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_1_q1",
       "question": "¿Qué organismo es el encargado de vigilar el cumplimiento de las normas en materia laboral?",
       "options": [
-        "La Fundación Estatal para la Prevención de los Riesgos Laborales.",
-        "El Instituto Nacional de Seguridad y Salud en el Trabajo.",
-        "El Ministerio de Sanidad y Consumo.",
-        "La Inspección de Trabajo y Seguridad Social."
+        "La Fundación Estatal para la Prevención de los Riesgos Laborales",
+        "El Instituto Nacional de Seguridad y Salud en el Trabajo",
+        "El Ministerio de Sanidad y Consumo",
+        "La Inspección de Trabajo y Seguridad Social"
       ],
       "correct": 3,
       "explanation": "La Inspección de Trabajo y Seguridad Social es el organismo que vigila el cumplimiento de la normativa laboral y puede imponer sanciones. El INSST es un organismo técnico de investigación y asesoramiento, no de vigilancia.",
@@ -5267,10 +5267,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_1_q2",
       "question": "¿Cómo se denomina el conjunto de medidas destinadas a evitar o disminuir los riesgos derivados del trabajo?",
       "options": [
-        "Daños derivados del trabajo.",
-        "Riesgo laboral.",
-        "Evaluación de riesgos.",
-        "Prevención de riesgos laborales."
+        "Daños derivados del trabajo",
+        "Riesgo laboral",
+        "Evaluación de riesgos",
+        "Prevención de riesgos laborales"
       ],
       "correct": 3,
       "explanation": "La prevención de riesgos laborales es el conjunto de actividades o medidas adoptadas para evitar o disminuir los riesgos derivados del trabajo. Está regulada por la Ley 31/1995 de Prevención de Riesgos Laborales.",
@@ -5281,10 +5281,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_1_q3",
       "question": "¿En qué tipo de empresas es obligatorio el local de primeros auxilios?",
       "options": [
-        "En todas las empresas sin excepción.",
-        "En empresas de más de 25 trabajadores/as, en todo caso.",
-        "Solo en empresas con actividades de especial peligrosidad.",
-        "En empresas de más de 50 trabajadores/as, en todo caso."
+        "En todas las empresas sin excepción",
+        "En empresas de más de 25 trabajadores/as, en todo caso",
+        "Solo en empresas con actividades de especial peligrosidad",
+        "En empresas de más de 50 trabajadores/as, en todo caso"
       ],
       "correct": 3,
       "explanation": "Según la normativa de prevención, el local de primeros auxilios es obligatorio en empresas de más de 50 trabajadores. En empresas menores, basta con un botiquín portátil adecuadamente equipado.",
@@ -5295,10 +5295,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_1_q4",
       "question": "¿Qué es el accidente de trabajo según la legislación española?",
       "options": [
-        "Una lesión corporal que debe aparecer en el listado de accidentes profesionales y no incluye el accidente in itinere.",
-        "Una lesión corporal que el trabajador sufre como consecuencia del trabajo, y no incluye el accidente in itinere.",
-        "Cualquier lesión que sufra el trabajador, independientemente de si ocurre durante el trabajo o fuera de él.",
-        "Una lesión corporal que el trabajador sufre como consecuencia del trabajo, e incluye el accidente in itinere."
+        "Una lesión corporal que debe aparecer en el listado de accidentes profesionales y no incluye el accidente in itinere",
+        "Una lesión corporal que el trabajador sufre como consecuencia del trabajo, y no incluye el accidente in itinere",
+        "Cualquier lesión que sufra el trabajador, independientemente de si ocurre durante el trabajo o fuera de él",
+        "Una lesión corporal que el trabajador sufre como consecuencia del trabajo, e incluye el accidente in itinere"
       ],
       "correct": 3,
       "explanation": "El accidente de trabajo incluye el accidente in itinere (en el trayecto al trabajo o de vuelta). La definición legal abarca toda lesión corporal sufrida con ocasión o por consecuencia del trabajo, incluyendo los ocurridos en misión.",
@@ -5309,10 +5309,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_1_q5",
       "question": "¿Qué tipo de emergencia requiere recurrir a servicios externos para controlarla?",
       "options": [
-        "Un conato de emergencia.",
-        "Una emergencia parcial.",
-        "Una emergencia sectorial.",
-        "Una emergencia general."
+        "Un conato de emergencia",
+        "Una emergencia parcial",
+        "Una emergencia sectorial",
+        "Una emergencia general"
       ],
       "correct": 3,
       "explanation": "La emergencia general requiere la evacuación total y la intervención de servicios externos (bomberos, ambulancias). El conato es un inicio de emergencia que se controla internamente. La emergencia parcial afecta a una zona y se controla con medios propios.",
@@ -5323,10 +5323,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_1_q6",
       "question": "¿Cuál es la secuencia correcta de actuación en prevención de riesgos laborales?",
       "options": [
-        "Identificar los riesgos, evitarlos, evaluar los que no se pueden evitar.",
-        "Evaluar los riesgos, identificarlos y evitarlos.",
-        "Planificar la prevención, evaluar los riesgos e identificarlos.",
-        "Identificar los riesgos, evaluar los que no se pueden evitar, evitarlos y planificar la acción preventiva."
+        "Identificar los riesgos, evitarlos, evaluar los que no se pueden evitar",
+        "Evaluar los riesgos, identificarlos y evitarlos",
+        "Planificar la prevención, evaluar los riesgos e identificarlos",
+        "Identificar los riesgos, evaluar los que no se pueden evitar, evitarlos y planificar la acción preventiva"
       ],
       "correct": 3,
       "explanation": "La secuencia correcta según la LPRL es: 1) Identificar los riesgos, 2) Evaluar los que no se pueden evitar, 3) Evitar los riesgos cuando sea posible, 4) Planificar la acción preventiva para los que no se pueden evitar.",
@@ -5337,10 +5337,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_1_q7",
       "question": "¿A quién corresponde la aprobación del Plan de Prevención de Riesgos Laborales?",
       "options": [
-        "Al Servicio de Prevención.",
-        "A los representantes de los/as trabajadores/as.",
-        "Al Comité de Seguridad y Salud.",
-        "A la empresa (dirección)."
+        "Al Servicio de Prevención",
+        "A los representantes de los/as trabajadores/as",
+        "Al Comité de Seguridad y Salud",
+        "A la empresa (dirección)"
       ],
       "correct": 3,
       "explanation": "El Plan de Prevención debe ser aprobado por la dirección de la empresa e implantado en todos los niveles jerárquicos. Los trabajadores participan en su elaboración pero la responsabilidad y aprobación final es de la empresa.",
@@ -5351,10 +5351,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_1_q8",
       "question": "¿A qué ritmo se realizan las compresiones torácicas en la reanimación cardiopulmonar (RCP)?",
       "options": [
-        "A un ritmo de 60 por minuto.",
-        "A un ritmo de entre 60 y 80 por minuto.",
-        "A un ritmo de 80 por minuto con una profundidad de 3 cm.",
-        "A un ritmo de entre 100 y 120 por minuto, con una profundidad de 5-6 cm."
+        "A un ritmo de 60 por minuto",
+        "A un ritmo de entre 60 y 80 por minuto",
+        "A un ritmo de 80 por minuto con una profundidad de 3 cm",
+        "A un ritmo de entre 100 y 120 por minuto, con una profundidad de 5-6 cm"
       ],
       "correct": 3,
       "explanation": "Las guías internacionales de RCP establecen compresiones torácicas a 100-120 por minuto con una profundidad de 5-6 cm. La relación compresiones/ventilaciones es 30:2 en adultos con un solo reanimador.",
@@ -5365,10 +5365,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_1_q9",
       "question": "¿En qué consiste el protocolo PAS ante una situación de emergencia?",
       "options": [
-        "Proteger, Avisar y Supervisar.",
-        "Proteger, Atender y Socorrer.",
-        "Prevenir, Actuar y Supervisar.",
-        "Proteger, Avisar y Socorrer."
+        "Proteger, Avisar y Supervisar",
+        "Proteger, Atender y Socorrer",
+        "Prevenir, Actuar y Supervisar",
+        "Proteger, Avisar y Socorrer"
       ],
       "correct": 3,
       "explanation": "PAS: Proteger (asegurar la zona para evitar más víctimas), Avisar (llamar al 112 u otros servicios de emergencia), Socorrer (prestar primeros auxilios). El orden es fundamental: primero proteger para no crear más víctimas.",
@@ -5395,10 +5395,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_2_q1",
       "question": "¿Qué derechos laborales recoge la Constitución española de 1978?",
       "options": [
-        "Descanso, Seguridad Social, remuneración suficiente y libertad sindical.",
-        "Pertenencia a una mutua, Seguridad Social, pago de IRPF y derecho a huelga.",
-        "Permisos no remunerados, Seguridad Social, libertad sindical y cumplimiento de obligaciones laborales.",
-        "Derecho al trabajo, libre elección de profesión, remuneración suficiente, no discriminación, integridad física, libertad sindical, huelga y negociación colectiva."
+        "Descanso, Seguridad Social, remuneración suficiente y libertad sindical",
+        "Pertenencia a una mutua, Seguridad Social, pago de IRPF y derecho a huelga",
+        "Permisos no remunerados, Seguridad Social, libertad sindical y cumplimiento de obligaciones laborales",
+        "Derecho al trabajo, libre elección de profesión, remuneración suficiente, no discriminación, integridad física, libertad sindical, huelga y negociación colectiva"
       ],
       "correct": 3,
       "explanation": "El artículo 35 CE reconoce el derecho al trabajo y a la remuneración suficiente. El artículo 28 CE reconoce la libertad sindical y el derecho de huelga. El artículo 37 CE reconoce la negociación colectiva.",
@@ -5409,10 +5409,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_2_q2",
       "question": "¿Cómo se caracteriza el contrato indefinido?",
       "options": [
-        "Puede ser por circunstancias de la producción o por interinidad.",
-        "Solo puede concertarse a tiempo completo.",
-        "Siempre requiere un periodo de prueba de 6 meses.",
-        "No establece un límite temporal de finalización y puede ser a tiempo completo o parcial."
+        "Puede ser por circunstancias de la producción o por interinidad",
+        "Solo puede concertarse a tiempo completo",
+        "Siempre requiere un periodo de prueba de 6 meses",
+        "No establece un límite temporal de finalización y puede ser a tiempo completo o parcial"
       ],
       "correct": 3,
       "explanation": "El contrato indefinido no tiene fecha de finalización predeterminada. Puede ser a tiempo completo o parcial. Solo se extingue por causas legales (despido, baja voluntaria, jubilación, etc.).",
@@ -5423,10 +5423,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_2_q3",
       "question": "¿Cuál es la duración máxima del contrato temporal por circunstancias de la producción?",
       "options": [
-        "6 meses, que por convenio sectorial se puede ampliar hasta 1 año.",
-        "24 meses en cualquier caso.",
-        "18 meses sin posibilidad de ampliación.",
-        "12 meses, que por convenio sectorial puede ampliarse hasta 18 meses."
+        "6 meses, que por convenio sectorial se puede ampliar hasta 1 año",
+        "24 meses en cualquier caso",
+        "18 meses sin posibilidad de ampliación",
+        "12 meses, que por convenio sectorial puede ampliarse hasta 18 meses"
       ],
       "correct": 3,
       "explanation": "Tras la reforma laboral de 2022, el contrato por circunstancias de la producción tiene una duración máxima de 12 meses, ampliable hasta 18 meses por convenio colectivo sectorial.",
@@ -5437,10 +5437,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_2_q4",
       "question": "¿Cuál es la duración máxima del periodo de prueba para técnicos titulados?",
       "options": [
-        "No más de 2 meses (y 3 meses para empresas de menos de 25 trabajadores).",
-        "4 meses para contratos temporales y 8 meses para contratos indefinidos.",
-        "3 meses en todos los casos según el Estatuto de los Trabajadores.",
-        "No más de 6 meses para técnicos titulados, según el Estatuto de los Trabajadores."
+        "No más de 2 meses (y 3 meses para empresas de menos de 25 trabajadores)",
+        "4 meses para contratos temporales y 8 meses para contratos indefinidos",
+        "3 meses en todos los casos según el Estatuto de los Trabajadores",
+        "No más de 6 meses para técnicos titulados, según el Estatuto de los Trabajadores"
       ],
       "correct": 3,
       "explanation": "El ET establece que el periodo de prueba no puede exceder de 6 meses para los técnicos titulados y de 2 meses para los demás trabajadores (3 meses en empresas de menos de 25 trabajadores).",
@@ -5451,10 +5451,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_2_q5",
       "question": "Si una empresa cuenta con 85 trabajadores, ¿qué órgano de representación debe tener?",
       "options": [
-        "3 Delegados/as de personal.",
-        "Un Comité de empresa con 5 miembros.",
-        "Un Comité de empresa con 13 miembros.",
-        "Un Comité de empresa con 9 miembros."
+        "3 Delegados/as de personal",
+        "Un Comité de empresa con 5 miembros",
+        "Un Comité de empresa con 13 miembros",
+        "Un Comité de empresa con 9 miembros"
       ],
       "correct": 3,
       "explanation": "El Comité de empresa es obligatorio en empresas de 50 o más trabajadores. Para 75-100 trabajadores, el comité tiene 9 miembros. Los delegados de personal son para empresas de 10-49 trabajadores.",
@@ -5465,10 +5465,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_2_q6",
       "question": "¿Qué NO exige la movilidad funcional de un trabajador a otro grupo profesional?",
       "options": [
-        "Acuerdo entre trabajador/a y empresa.",
-        "Que se haga por el tiempo imprescindible.",
-        "Razones técnicas u organizativas.",
-        "Que sea permanente y definitiva."
+        "Acuerdo entre trabajador/a y empresa",
+        "Que se haga por el tiempo imprescindible",
+        "Razones técnicas u organizativas",
+        "Que sea permanente y definitiva"
       ],
       "correct": 3,
       "explanation": "La movilidad funcional entre grupos profesionales distintos requiere: razones técnicas u organizativas, que sea por el tiempo imprescindible y comunicación a los representantes de los trabajadores. No tiene que ser permanente.",
@@ -5479,10 +5479,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_2_q7",
       "question": "¿Cuál es el descanso mínimo entre jornadas para trabajadores menores de 18 años?",
       "options": [
-        "2 días completos.",
-        "1 día completo (8 horas).",
-        "8 horas entre jornadas.",
-        "1 día y medio (12 horas)."
+        "2 días completos",
+        "1 día completo (8 horas)",
+        "8 horas entre jornadas",
+        "1 día y medio (12 horas)"
       ],
       "correct": 3,
       "explanation": "Para trabajadores menores de 18 años, el descanso mínimo entre jornadas es de 12 horas (1 día y medio). Para trabajadores adultos, el descanso mínimo entre jornadas es también de 12 horas según el ET.",
@@ -5493,10 +5493,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_2_q8",
       "question": "¿Qué aparece en el Estatuto de los Trabajadores a la vez como derecho y como deber de los trabajadores?",
       "options": [
-        "La ocupación efectiva.",
-        "La negociación colectiva.",
-        "La formación profesional continua.",
-        "La prevención de riesgos laborales."
+        "La ocupación efectiva",
+        "La negociación colectiva",
+        "La formación profesional continua",
+        "La prevención de riesgos laborales"
       ],
       "correct": 3,
       "explanation": "La prevención de riesgos laborales aparece en el ET tanto como derecho (a una protección eficaz) como deber (cumplir las medidas de seguridad). La ocupación efectiva es solo un derecho; la negociación colectiva es un derecho colectivo.",
@@ -5507,10 +5507,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_2_q9",
       "question": "¿De qué trataba la primera Ley española en materia laboral, la Ley Benot de 1873?",
       "options": [
-        "Proteger a las mujeres y los niños en la actividad agrícola.",
-        "Reconocer el seguro por enfermedad para todos los trabajadores.",
-        "Establecer la jornada máxima de 8 horas diarias.",
-        "Proteger a los menores en la industria, prohibiendo el trabajo de niños menores de 10 años."
+        "Proteger a las mujeres y los niños en la actividad agrícola",
+        "Reconocer el seguro por enfermedad para todos los trabajadores",
+        "Establecer la jornada máxima de 8 horas diarias",
+        "Proteger a los menores en la industria, prohibiendo el trabajo de niños menores de 10 años"
       ],
       "correct": 3,
       "explanation": "La Ley Benot (1873) fue la primera ley laboral española. Prohibía el trabajo de niños menores de 10 años en la industria, limitaba la jornada de los menores de 15 años y establecía condiciones mínimas de seguridad.",
@@ -5523,10 +5523,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_3_q0",
       "question": "¿Cuál es la tasa de paro en el sector de las TIC en España en comparación con la tasa general de desempleo del país?",
       "options": [
-        "Considerablemente más alta.",
-        "Aproximadamente igual.",
-        "Considerablemente más baja.",
-        "Ligeramente superior a la media nacional."
+        "Considerablemente más alta",
+        "Aproximadamente igual",
+        "Considerablemente más baja",
+        "Ligeramente superior a la media nacional"
       ],
       "correct": 2,
       "explanation": "El sector TIC tiene una tasa de desempleo muy inferior a la media nacional. La demanda de profesionales digitales supera la oferta, lo que convierte al sector en uno de los más dinámicos del mercado laboral español.",
@@ -5537,10 +5537,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_3_q1",
       "question": "¿Cuál es la titulación exigida para pertenecer al grupo B del cuerpo de funcionarios?",
       "options": [
-        "Licenciado, graduado, diplomado, ingeniero, arquitecto o equivalente.",
-        "Bachillerato o equivalente.",
-        "Ciclo de grado superior de Formación Profesional o equivalente.",
-        "Ciclo de grado medio de Formación Profesional."
+        "Licenciado, graduado, diplomado, ingeniero, arquitecto o equivalente",
+        "Bachillerato o equivalente",
+        "Ciclo de grado superior de Formación Profesional o equivalente",
+        "Ciclo de grado medio de Formación Profesional"
       ],
       "correct": 2,
       "explanation": "El grupo B de funcionarios requiere título de Técnico Superior (FP de grado superior) o equivalente. El grupo A1 requiere título universitario de grado, el grupo A2 diplomatura, y el grupo C1 bachillerato.",
@@ -5551,10 +5551,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_3_q2",
       "question": "¿Qué son las actitudes en el contexto laboral?",
       "options": [
-        "Las habilidades y capacidades técnicas que permiten realizar tareas específicas.",
-        "Los conocimientos técnicos adquiridos mediante la educación reglada.",
-        "La disposición o tendencias emocionales y mentales que influyen en el comportamiento de las personas en el entorno laboral.",
-        "Los títulos académicos que acreditan la formación de una persona."
+        "Las habilidades y capacidades técnicas que permiten realizar tareas específicas",
+        "Los conocimientos técnicos adquiridos mediante la educación reglada",
+        "La disposición o tendencias emocionales y mentales que influyen en el comportamiento de las personas en el entorno laboral",
+        "Los títulos académicos que acreditan la formación de una persona"
       ],
       "correct": 2,
       "explanation": "Las actitudes son predisposiciones aprendidas para responder de forma favorable o desfavorable ante situaciones, personas o ideas. En el trabajo incluyen la proactividad, la responsabilidad, la empatía y la orientación al cliente.",
@@ -5565,10 +5565,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_3_q3",
       "question": "Uno de los requisitos para el ingreso en la administración pública es:",
       "options": [
-        "Haber trabajado previamente en una administración del Estado.",
-        "Contar con al menos 4 años de experiencia laboral demostrable.",
-        "Poseer la titulación exigida en la convocatoria para cada puesto.",
-        "Ser ciudadano de la Unión Europea sin excepción."
+        "Haber trabajado previamente en una administración del Estado",
+        "Contar con al menos 4 años de experiencia laboral demostrable",
+        "Poseer la titulación exigida en la convocatoria para cada puesto",
+        "Ser ciudadano de la Unión Europea sin excepción"
       ],
       "correct": 2,
       "explanation": "Los requisitos generales para acceder a la función pública son: ser español (o ciudadano UE en algunos casos), tener la titulación exigida, no haber sido separado del servicio público, y no estar inhabilitado para el ejercicio de funciones públicas.",
@@ -5579,10 +5579,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_3_q4",
       "question": "¿Qué son las competencias profesionales?",
       "options": [
-        "Son los títulos académicos que una persona posee.",
-        "Son el conjunto de conocimientos técnicos que se pueden aprender en un curso específico.",
-        "Son una combinación de conocimientos, habilidades y actitudes que permiten desempeñar eficazmente una actividad profesional.",
-        "Son exclusivamente las habilidades prácticas adquiridas mediante la experiencia laboral."
+        "Son los títulos académicos que una persona posee",
+        "Son el conjunto de conocimientos técnicos que se pueden aprender en un curso específico",
+        "Son una combinación de conocimientos, habilidades y actitudes que permiten desempeñar eficazmente una actividad profesional",
+        "Son exclusivamente las habilidades prácticas adquiridas mediante la experiencia laboral"
       ],
       "correct": 2,
       "explanation": "Las competencias profesionales integran el saber (conocimientos), el saber hacer (habilidades) y el saber ser (actitudes). Son la base del sistema de Formación Profesional y de los procesos de selección de personal.",
@@ -5593,10 +5593,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_3_q5",
       "question": "Las aptitudes profesionales son esenciales para la empleabilidad porque:",
       "options": [
-        "Sustituyen a la experiencia profesional en los procesos de selección.",
-        "Favorecen exclusivamente las competencias sociales como trabajo en equipo.",
-        "Determinan la capacidad de un individuo para desempeñar eficazmente las tareas y responsabilidades de un puesto de trabajo.",
-        "Son el único factor que valoran las empresas en los procesos de selección."
+        "Sustituyen a la experiencia profesional en los procesos de selección",
+        "Favorecen exclusivamente las competencias sociales como trabajo en equipo",
+        "Determinan la capacidad de un individuo para desempeñar eficazmente las tareas y responsabilidades de un puesto de trabajo",
+        "Son el único factor que valoran las empresas en los procesos de selección"
       ],
       "correct": 2,
       "explanation": "Las aptitudes son capacidades naturales o adquiridas que determinan el potencial de una persona para realizar determinadas tareas. Son esenciales porque permiten predecir el rendimiento laboral futuro.",
@@ -5607,10 +5607,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_3_q6",
       "question": "¿Qué son las soft skills o habilidades blandas?",
       "options": [
-        "Son capacidades técnicas y conocimientos concretos que se pueden medir y evaluar de manera objetiva.",
-        "Son capacidades técnicas que se adquieren mediante la experiencia laboral en la empresa.",
-        "Son competencias personales y sociales que afectan cómo una persona se relaciona consigo misma y con los demás en el entorno laboral.",
-        "Son certificaciones profesionales reconocidas internacionalmente."
+        "Son capacidades técnicas y conocimientos concretos que se pueden medir y evaluar de manera objetiva",
+        "Son capacidades técnicas que se adquieren mediante la experiencia laboral en la empresa",
+        "Son competencias personales y sociales que afectan cómo una persona se relaciona consigo misma y con los demás en el entorno laboral",
+        "Son certificaciones profesionales reconocidas internacionalmente"
       ],
       "correct": 2,
       "explanation": "Las soft skills (comunicación, trabajo en equipo, liderazgo, resolución de problemas, adaptabilidad) son cada vez más valoradas por las empresas. Se diferencian de las hard skills (conocimientos técnicos) en que son más difíciles de medir.",
@@ -5621,10 +5621,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_3_q7",
       "question": "¿Qué establece la Constitución Española con respecto al acceso al empleo público?",
       "options": [
-        "Establece el derecho a acceder a puestos de funcionariado público siempre que se esté en posesión de un título universitario.",
-        "Establece que solo los funcionarios de carrera pueden acceder a las pruebas de acceso a la administración pública.",
-        "Establece el derecho de todos los ciudadanos al acceso al empleo público de acuerdo con los principios constitucionales de mérito y capacidad.",
-        "Establece que el acceso al empleo público es libre y sin requisitos de titulación."
+        "Establece el derecho a acceder a puestos de funcionariado público siempre que se esté en posesión de un título universitario",
+        "Establece que solo los funcionarios de carrera pueden acceder a las pruebas de acceso a la administración pública",
+        "Establece el derecho de todos los ciudadanos al acceso al empleo público de acuerdo con los principios constitucionales de mérito y capacidad",
+        "Establece que el acceso al empleo público es libre y sin requisitos de titulación"
       ],
       "correct": 2,
       "explanation": "El artículo 23.2 de la Constitución Española reconoce el derecho de los ciudadanos a acceder en condiciones de igualdad a las funciones y cargos públicos, con los requisitos que señalen las leyes, según los principios de mérito y capacidad.",
@@ -5635,10 +5635,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_3_q8",
       "question": "¿Qué es la competencia digital?",
       "options": [
-        "La capacidad de diseñar y fabricar dispositivos electrónicos avanzados.",
-        "La habilidad de programar en varios lenguajes de codificación.",
-        "La destreza en el manejo de las herramientas de las tecnologías de la información y la comunicación en diversos contextos.",
-        "El conocimiento teórico de los fundamentos de la informática y las telecomunicaciones."
+        "La capacidad de diseñar y fabricar dispositivos electrónicos avanzados",
+        "La habilidad de programar en varios lenguajes de codificación",
+        "La destreza en el manejo de las herramientas de las tecnologías de la información y la comunicación en diversos contextos",
+        "El conocimiento teórico de los fundamentos de la informática y las telecomunicaciones"
       ],
       "correct": 2,
       "explanation": "La competencia digital es una de las ocho competencias clave del Marco Europeo de Referencia. Incluye el uso seguro y crítico de las TIC para el trabajo, el ocio y la comunicación, así como la resolución de problemas en entornos digitales.",
@@ -5649,10 +5649,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_3_q9",
       "question": "¿Cuál es la principal tendencia del mercado laboral en el sector de la informática?",
       "options": [
-        "Computación cuántica como tecnología dominante en todos los sectores.",
-        "Robótica industrial como principal área de crecimiento.",
-        "Inteligencia artificial y automatización como motores de transformación del mercado laboral.",
-        "Realidad virtual como tecnología más demandada por las empresas."
+        "Computación cuántica como tecnología dominante en todos los sectores",
+        "Robótica industrial como principal área de crecimiento",
+        "Inteligencia artificial y automatización como motores de transformación del mercado laboral",
+        "Realidad virtual como tecnología más demandada por las empresas"
       ],
       "correct": 2,
       "explanation": "La IA y la automatización están transformando el mercado laboral TIC: crean nuevos perfiles (ingenieros de ML, especialistas en datos) y modifican los existentes. Es la tendencia más relevante para los próximos años según todos los informes del sector.",
@@ -5679,10 +5679,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_4_q1",
       "question": "¿Cuál es el propósito principal del análisis DAFO en el contexto del empleo?",
       "options": [
-        "Evaluar el entorno social y económico de una persona de forma general.",
-        "Analizar y planificar la gestión de la carrera profesional a largo plazo.",
-        "Comparar el perfil profesional propio con el de otros candidatos del sector.",
-        "Identificar fortalezas y debilidades personales, así como amenazas y oportunidades del entorno laboral."
+        "Evaluar el entorno social y económico de una persona de forma general",
+        "Analizar y planificar la gestión de la carrera profesional a largo plazo",
+        "Comparar el perfil profesional propio con el de otros candidatos del sector",
+        "Identificar fortalezas y debilidades personales, así como amenazas y oportunidades del entorno laboral"
       ],
       "correct": 3,
       "explanation": "El análisis DAFO (Debilidades, Amenazas, Fortalezas, Oportunidades) aplicado al empleo permite conocer los puntos fuertes y débiles propios (internos) y las oportunidades y amenazas del mercado laboral (externos).",
@@ -5693,10 +5693,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_4_q2",
       "question": "¿Cuál es la finalidad de un Plan de Acción en el desarrollo profesional?",
       "options": [
-        "Evaluar el rendimiento financiero en la vida laboral.",
-        "Elegir el plan formativo más adecuado a los intereses profesionales a largo plazo.",
-        "Establecer los objetivos salariales para los próximos cinco años.",
-        "Describir paso a paso las actividades, metas y plazos para mejorar competencias y aumentar la empleabilidad."
+        "Evaluar el rendimiento financiero en la vida laboral",
+        "Elegir el plan formativo más adecuado a los intereses profesionales a largo plazo",
+        "Establecer los objetivos salariales para los próximos cinco años",
+        "Describir paso a paso las actividades, metas y plazos para mejorar competencias y aumentar la empleabilidad"
       ],
       "correct": 3,
       "explanation": "Un Plan de Acción es un documento que detalla qué acciones concretas se van a realizar, en qué plazo y con qué recursos, para alcanzar los objetivos de desarrollo profesional definidos en el Plan de Desarrollo Personal.",
@@ -5707,10 +5707,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_4_q3",
       "question": "¿Para qué sirve la Carta de motivación o de presentación?",
       "options": [
-        "Sustituye al currículum vitae en los procesos de selección modernos.",
-        "Solo opera en la búsqueda de empleo a través de internet.",
-        "Es obligatoria en todos los procesos de selección de personal.",
-        "Muestra el interés por participar en un proceso de selección y complementa el CV destacando la motivación del candidato."
+        "Sustituye al currículum vitae en los procesos de selección modernos",
+        "Solo opera en la búsqueda de empleo a través de internet",
+        "Es obligatoria en todos los procesos de selección de personal",
+        "Muestra el interés por participar en un proceso de selección y complementa el CV destacando la motivación del candidato"
       ],
       "correct": 3,
       "explanation": "La carta de motivación acompaña al CV y permite al candidato expresar su interés por el puesto, destacar sus puntos fuertes más relevantes y mostrar que conoce la empresa. No sustituye al CV sino que lo complementa.",
@@ -5721,10 +5721,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_4_q4",
       "question": "¿Por qué es importante reflexionar sobre las competencias e intereses profesionales en el sector de la informática?",
       "options": [
-        "Para decidir si cambiar de sector profesional.",
-        "Para seleccionar cursos online que amplíen los conocimientos técnicos.",
-        "Para determinar el salario mínimo que se debe exigir en una entrevista.",
-        "Para encontrar el equilibrio entre las habilidades y aspiraciones propias y lo que busca el mercado laboral."
+        "Para decidir si cambiar de sector profesional",
+        "Para seleccionar cursos online que amplíen los conocimientos técnicos",
+        "Para determinar el salario mínimo que se debe exigir en una entrevista",
+        "Para encontrar el equilibrio entre las habilidades y aspiraciones propias y lo que busca el mercado laboral"
       ],
       "correct": 3,
       "explanation": "Conocer las propias competencias e intereses permite orientar la búsqueda de empleo hacia puestos donde se puede aportar más valor y donde se estará más motivado, aumentando las posibilidades de éxito y satisfacción laboral.",
@@ -5735,10 +5735,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_4_q5",
       "question": "¿Qué tratan de valorar las pruebas de evaluación en los procesos de selección de personal?",
       "options": [
-        "El desempeño histórico del candidato en puestos anteriores.",
-        "La valoración funcional del puesto de trabajo ofertado.",
-        "Exclusivamente los conocimientos técnicos mediante pruebas escritas.",
-        "Las competencias del candidato: conocimientos, habilidades y actitudes relevantes para el puesto."
+        "El desempeño histórico del candidato en puestos anteriores",
+        "La valoración funcional del puesto de trabajo ofertado",
+        "Exclusivamente los conocimientos técnicos mediante pruebas escritas",
+        "Las competencias del candidato: conocimientos, habilidades y actitudes relevantes para el puesto"
       ],
       "correct": 3,
       "explanation": "Las pruebas de selección (tests psicotécnicos, pruebas técnicas, dinámicas de grupo, entrevistas) evalúan las competencias del candidato: sus conocimientos (saber), habilidades (saber hacer) y actitudes (saber ser/estar).",
@@ -5749,10 +5749,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_4_q6",
       "question": "¿Qué es el Curriculum Europass?",
       "options": [
-        "Un formato de CV utilizado solo en España para acceder a la función pública.",
-        "Un formato de CV utilizado exclusivamente para solicitar becas Erasmus.",
-        "Un certificado de competencias digitales reconocido en toda la Unión Europea.",
-        "Un formato de CV común en Europa que facilita la movilidad laboral y educativa entre países."
+        "Un formato de CV utilizado solo en España para acceder a la función pública",
+        "Un formato de CV utilizado exclusivamente para solicitar becas Erasmus",
+        "Un certificado de competencias digitales reconocido en toda la Unión Europea",
+        "Un formato de CV común en Europa que facilita la movilidad laboral y educativa entre países"
       ],
       "correct": 3,
       "explanation": "El Curriculum Vitae Europass es un formato estándar europeo que facilita la presentación de competencias y cualificaciones de forma clara y comprensible en toda Europa. Forma parte del portfolio Europass junto al Pasaporte de Lenguas y otros documentos.",
@@ -5763,10 +5763,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_4_q7",
       "question": "¿Cómo se organiza la información en un currículum funcional?",
       "options": [
-        "Por orden cronológico inverso (de lo más reciente a lo más antiguo).",
-        "De forma interactiva con enlaces a proyectos y trabajos realizados.",
-        "Por orden de importancia según el puesto al que se opta.",
-        "Por sectores o áreas de competencia, destacando habilidades y logros independientemente del orden temporal."
+        "Por orden cronológico inverso (de lo más reciente a lo más antiguo)",
+        "De forma interactiva con enlaces a proyectos y trabajos realizados",
+        "Por orden de importancia según el puesto al que se opta",
+        "Por sectores o áreas de competencia, destacando habilidades y logros independientemente del orden temporal"
       ],
       "correct": 3,
       "explanation": "El CV funcional organiza la información por competencias o áreas temáticas en lugar de por orden cronológico. Es útil para candidatos con poca experiencia, cambios de sector o periodos de inactividad laboral que no quieren destacar.",
@@ -5777,10 +5777,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_4_q8",
       "question": "¿Qué caracteriza a la Formación Profesional Dual en España según la nueva ley?",
       "options": [
-        "Se centra exclusivamente en la teoría impartida en el aula.",
-        "Ofrece formación online exclusivamente sin presencia en empresa.",
-        "Solo está disponible para ciclos formativos de grado superior.",
-        "Combina formación en el centro educativo con experiencia práctica en la empresa de forma simultánea."
+        "Se centra exclusivamente en la teoría impartida en el aula",
+        "Ofrece formación online exclusivamente sin presencia en empresa",
+        "Solo está disponible para ciclos formativos de grado superior",
+        "Combina formación en el centro educativo con experiencia práctica en la empresa de forma simultánea"
       ],
       "correct": 3,
       "explanation": "La FP Dual (regulada por la Ley Orgánica 3/2022) combina la formación en el centro educativo con la actividad formativa en la empresa. El alumno alterna períodos en ambos entornos, obteniendo experiencia real mientras estudia.",
@@ -5791,10 +5791,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_4_q9",
       "question": "¿Cuál es la relación entre el currículum vitae y la carta de presentación?",
       "options": [
-        "El CV sustituye a la carta de presentación en los procesos modernos de selección.",
-        "La carta de presentación es la forma actual del CV en formato digital.",
-        "El CV es menos importante que la carta de presentación para los reclutadores.",
-        "El CV y la carta se complementan: el CV detalla la trayectoria y la carta explica la motivación."
+        "El CV sustituye a la carta de presentación en los procesos modernos de selección",
+        "La carta de presentación es la forma actual del CV en formato digital",
+        "El CV es menos importante que la carta de presentación para los reclutadores",
+        "El CV y la carta se complementan: el CV detalla la trayectoria y la carta explica la motivación"
       ],
       "correct": 3,
       "explanation": "El CV es un resumen estructurado de la trayectoria académica y profesional. La carta de presentación explica la motivación, destaca los puntos más relevantes del CV y personaliza la candidatura. Son documentos complementarios.",
@@ -5807,10 +5807,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_5_q0",
       "question": "¿Qué pueden representar comentarios inapropiados o publicaciones controvertidas en línea para un profesional?",
       "options": [
-        "Una disminución en la interacción con los seguidores de las redes sociales.",
-        "Una mejora en la visibilidad online al generar debate y engagement.",
-        "Un riesgo para la reputación personal y profesional que puede afectar a la empleabilidad.",
-        "Una oportunidad para demostrar autenticidad y transparencia ante los empleadores."
+        "Una disminución en la interacción con los seguidores de las redes sociales",
+        "Una mejora en la visibilidad online al generar debate y engagement",
+        "Un riesgo para la reputación personal y profesional que puede afectar a la empleabilidad",
+        "Una oportunidad para demostrar autenticidad y transparencia ante los empleadores"
       ],
       "correct": 2,
       "explanation": "La huella digital es permanente. Comentarios inapropiados o publicaciones controvertidas pueden ser encontrados por reclutadores y afectar negativamente a la imagen profesional, dificultando el acceso a oportunidades laborales.",
@@ -5821,10 +5821,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_5_q1",
       "question": "¿Cuál es el primer paso para crear un entorno personal de aprendizaje (PLE)?",
       "options": [
-        "Seleccionar las herramientas digitales a utilizar para el aprendizaje.",
-        "Definir las metodologías de estudio a aplicar en el proceso formativo.",
-        "Identificar las necesidades de aprendizaje y los objetivos que se quieren alcanzar.",
-        "Buscar comunidades de práctica y redes de aprendizaje en línea."
+        "Seleccionar las herramientas digitales a utilizar para el aprendizaje",
+        "Definir las metodologías de estudio a aplicar en el proceso formativo",
+        "Identificar las necesidades de aprendizaje y los objetivos que se quieren alcanzar",
+        "Buscar comunidades de práctica y redes de aprendizaje en línea"
       ],
       "correct": 2,
       "explanation": "El primer paso para crear un PLE es identificar qué necesitas aprender y por qué. A partir de ahí se seleccionan las herramientas, fuentes y conexiones más adecuadas para cubrir esas necesidades de aprendizaje.",
@@ -5835,10 +5835,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_5_q2",
       "question": "¿Qué implica el concepto de identidad digital?",
       "options": [
-        "La representación visual de los perfiles en redes sociales (foto, diseño, colores).",
-        "La frecuencia con la que se actualiza la información en plataformas digitales.",
-        "El conjunto de información, actividades y contenidos que una persona genera y comparte en el entorno digital, configurando su imagen online.",
-        "Exclusivamente los datos personales almacenados en bases de datos de empresas."
+        "La representación visual de los perfiles en redes sociales (foto, diseño, colores)",
+        "La frecuencia con la que se actualiza la información en plataformas digitales",
+        "El conjunto de información, actividades y contenidos que una persona genera y comparte en el entorno digital, configurando su imagen online",
+        "Exclusivamente los datos personales almacenados en bases de datos de empresas"
       ],
       "correct": 2,
       "explanation": "La identidad digital es la huella que dejamos en internet: perfiles en redes sociales, comentarios, publicaciones, fotos, etc. Es importante gestionarla activamente para proyectar una imagen profesional coherente con los objetivos laborales.",
@@ -5849,10 +5849,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_5_q3",
       "question": "¿Qué es importante hacer periódicamente en un Plan de Desarrollo Personal (PDP)?",
       "options": [
-        "Cambiar completamente los objetivos para adaptarse a las nuevas tendencias del mercado.",
-        "Revisar los recursos utilizados y sustituirlos por otros más modernos.",
-        "Evaluar el progreso alcanzado y hacer los ajustes necesarios en objetivos y acciones.",
-        "Compartir el plan con mentores y compañeros para obtener retroalimentación externa."
+        "Cambiar completamente los objetivos para adaptarse a las nuevas tendencias del mercado",
+        "Revisar los recursos utilizados y sustituirlos por otros más modernos",
+        "Evaluar el progreso alcanzado y hacer los ajustes necesarios en objetivos y acciones",
+        "Compartir el plan con mentores y compañeros para obtener retroalimentación externa"
       ],
       "correct": 2,
       "explanation": "Un PDP es un documento vivo que debe revisarse periódicamente. La evaluación del progreso permite identificar qué está funcionando, qué hay que mejorar y si los objetivos siguen siendo relevantes o necesitan actualizarse.",
@@ -5863,10 +5863,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_5_q4",
       "question": "¿Qué es un entorno personal de aprendizaje (PLE)?",
       "options": [
-        "Un software especializado en gestión de cursos en línea (LMS).",
-        "Una plataforma educativa que ofrece recursos para el aprendizaje basado en proyectos.",
-        "El conjunto de herramientas, fuentes de información, conexiones y actividades que una persona utiliza para aprender de forma autónoma y continua.",
-        "Un espacio físico o virtual proporcionado por la empresa para la formación de sus empleados."
+        "Un software especializado en gestión de cursos en línea (LMS)",
+        "Una plataforma educativa que ofrece recursos para el aprendizaje basado en proyectos",
+        "El conjunto de herramientas, fuentes de información, conexiones y actividades que una persona utiliza para aprender de forma autónoma y continua",
+        "Un espacio físico o virtual proporcionado por la empresa para la formación de sus empleados"
       ],
       "correct": 2,
       "explanation": "Un PLE (Personal Learning Environment) es el ecosistema de aprendizaje personal que cada individuo construye: blogs, podcasts, redes sociales profesionales, cursos online, comunidades de práctica, etc. Es autogestionado y personalizado.",
@@ -5877,10 +5877,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_5_q5",
       "question": "¿Qué impacto positivo puede tener la participación activa en redes sociales profesionales en la empleabilidad?",
       "options": [
-        "Incrementa la cantidad de publicidad dirigida que recibes en tu perfil.",
-        "Disminuye la necesidad de actualizar regularmente el perfil profesional.",
-        "Mejora la visibilidad ante profesionales y empleadores del sector, facilitando el acceso a oportunidades laborales.",
-        "Garantiza automáticamente el acceso a ofertas de empleo exclusivas no publicadas."
+        "Incrementa la cantidad de publicidad dirigida que recibes en tu perfil",
+        "Disminuye la necesidad de actualizar regularmente el perfil profesional",
+        "Mejora la visibilidad ante profesionales y empleadores del sector, facilitando el acceso a oportunidades laborales",
+        "Garantiza automáticamente el acceso a ofertas de empleo exclusivas no publicadas"
       ],
       "correct": 2,
       "explanation": "LinkedIn y otras redes profesionales permiten mostrar el perfil a reclutadores, conectar con profesionales del sector, participar en grupos temáticos y acceder al mercado oculto de empleo (ofertas no publicadas). El networking digital es clave en la búsqueda de empleo.",
@@ -5891,10 +5891,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_5_q6",
       "question": "¿Qué es la suplantación de identidad digital?",
       "options": [
-        "Actualizar información en un perfil profesional de otra persona con su permiso.",
-        "Compartir información privada de otra persona en plataformas públicas sin su consentimiento.",
-        "Hacerse pasar por otra persona en el entorno digital para cometer fraude, robar información o dañar su reputación.",
-        "Crear un perfil falso en redes sociales para proteger la privacidad personal."
+        "Actualizar información en un perfil profesional de otra persona con su permiso",
+        "Compartir información privada de otra persona en plataformas públicas sin su consentimiento",
+        "Hacerse pasar por otra persona en el entorno digital para cometer fraude, robar información o dañar su reputación",
+        "Crear un perfil falso en redes sociales para proteger la privacidad personal"
       ],
       "correct": 2,
       "explanation": "La suplantación de identidad digital es un delito tipificado en el Código Penal. Consiste en usar la identidad de otra persona en internet sin su consentimiento para obtener beneficios, cometer fraude o dañar su imagen.",
@@ -5905,10 +5905,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_5_q7",
       "question": "¿Qué es un Plan de Desarrollo Personal (PDP)?",
       "options": [
-        "Una estrategia para establecer metas profesionales y financieras a corto plazo.",
-        "Un plan de formación para integrar nuevas tecnologías en la educación.",
-        "Un documento que detalla los objetivos de desarrollo personal y profesional, las acciones para alcanzarlos y los plazos establecidos.",
-        "Un informe de evaluación del desempeño elaborado por el responsable de RRHH."
+        "Una estrategia para establecer metas profesionales y financieras a corto plazo",
+        "Un plan de formación para integrar nuevas tecnologías en la educación",
+        "Un documento que detalla los objetivos de desarrollo personal y profesional, las acciones para alcanzarlos y los plazos establecidos",
+        "Un informe de evaluación del desempeño elaborado por el responsable de RRHH"
       ],
       "correct": 2,
       "explanation": "Un PDP es una herramienta de autogestión del aprendizaje y el desarrollo. Incluye el análisis de la situación actual, los objetivos a alcanzar, las acciones concretas, los recursos necesarios y los indicadores para medir el progreso.",
@@ -5919,10 +5919,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_5_q8",
       "question": "Los objetivos SMART deben ser:",
       "options": [
-        "Sustantivos, Mensurables, Alcanzables, Razonables y Temporales.",
-        "Esfuerzos, Metas, Actuaciones, Resultados y Tiempos.",
-        "Específicos, Medibles, Alcanzables, Relevantes y Limitados en el tiempo.",
-        "Simples, Motivadores, Ambiciosos, Realistas y Técnicos."
+        "Sustantivos, Mensurables, Alcanzables, Razonables y Temporales",
+        "Esfuerzos, Metas, Actuaciones, Resultados y Tiempos",
+        "Específicos, Medibles, Alcanzables, Relevantes y Limitados en el tiempo",
+        "Simples, Motivadores, Ambiciosos, Realistas y Técnicos"
       ],
       "correct": 2,
       "explanation": "SMART es un acrónimo para definir objetivos de calidad: Specific (específico), Measurable (medible), Achievable (alcanzable), Relevant (relevante) y Time-bound (con plazo definido). Aplicar este criterio aumenta la probabilidad de alcanzar los objetivos.",
@@ -5933,10 +5933,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_tema_5_q9",
       "question": "¿Cuál de las siguientes es una ventaja de tener una red personal de aprendizaje (PLN)?",
       "options": [
-        "Mejorar las habilidades de investigación colaborativa de forma exclusiva.",
-        "Acceder a certificaciones académicas exclusivas no disponibles de otra forma.",
-        "Facilitar el intercambio de conocimiento con otros profesionales y estudiantes, ampliando perspectivas y recursos de aprendizaje.",
-        "Sustituir la formación reglada por el aprendizaje informal en comunidades digitales."
+        "Mejorar las habilidades de investigación colaborativa de forma exclusiva",
+        "Acceder a certificaciones académicas exclusivas no disponibles de otra forma",
+        "Facilitar el intercambio de conocimiento con otros profesionales y estudiantes, ampliando perspectivas y recursos de aprendizaje",
+        "Sustituir la formación reglada por el aprendizaje informal en comunidades digitales"
       ],
       "correct": 2,
       "explanation": "Una PLN (Personal Learning Network) es la red de personas con las que intercambiamos conocimiento y aprendemos. Incluye mentores, compañeros, expertos del sector y comunidades de práctica. Amplía el acceso a información actualizada y perspectivas diversas.",
@@ -5949,10 +5949,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q0",
       "question": "Cuando hablamos del Derecho del Trabajo dentro del sistema jurídico español, nos referimos a un conjunto de normas que no solo regulan la prestación de servicios, sino que también buscan corregir ciertos desequilibrios. ¿Cuál es su finalidad principal?",
       "options": [
-        "Regular exclusivamente la actividad económica de las empresas.",
-        "Equilibrar la relación entre trabajador y empresario, protegiendo especialmente al trabajador.",
-        "Organizar el comercio entre empresas privadas.",
-        "Ninguna de las anteriores describe correctamente su finalidad."
+        "Regular exclusivamente la actividad económica de las empresas",
+        "Equilibrar la relación entre trabajador y empresario, protegiendo especialmente al trabajador",
+        "Organizar el comercio entre empresas privadas",
+        "Ninguna de las anteriores describe correctamente su finalidad"
       ],
       "correct": 1,
       "explanation": "El Derecho del Trabajo busca equilibrar la relación laboral, que es desigual por naturaleza: el trabajador depende económicamente del empresario. Por eso protege especialmente al trabajador mediante normas mínimas irrenunciables.",
@@ -5963,10 +5963,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q1",
       "question": "Para que una actividad pueda considerarse una relación laboral y quede dentro del ámbito del Derecho del Trabajo, debe cumplir una serie de características básicas. ¿Cuál de las siguientes opciones recoge correctamente esas características?",
       "options": [
-        "Actividad ocasional, voluntaria y sin remuneración.",
-        "Actividad voluntaria, retribuida, por cuenta ajena y bajo la organización de un empresario.",
-        "Actividad autónoma realizada sin dependencia.",
-        "Actividad puntual realizada de forma independiente y sin contrato."
+        "Actividad ocasional, voluntaria y sin remuneración",
+        "Actividad voluntaria, retribuida, por cuenta ajena y bajo la organización de un empresario",
+        "Actividad autónoma realizada sin dependencia",
+        "Actividad puntual realizada de forma independiente y sin contrato"
       ],
       "correct": 1,
       "explanation": "Los cuatro elementos esenciales de la relación laboral son: voluntariedad (libre), retribución (salario), ajenidad (trabaja para otro) y dependencia (bajo las órdenes del empresario). Sin estos cuatro, no hay relación laboral.",
@@ -5977,10 +5977,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q2",
       "question": "Dentro de las fuentes del Derecho del Trabajo existe una jerarquía normativa que determina qué norma prevalece sobre otra en caso de conflicto. ¿Cuál de las siguientes tiene mayor rango?",
       "options": [
-        "El convenio colectivo.",
-        "El contrato de trabajo.",
-        "La ley, como el Estatuto de los Trabajadores.",
-        "Los usos y costumbres del sector."
+        "El convenio colectivo",
+        "El contrato de trabajo",
+        "La ley, como el Estatuto de los Trabajadores",
+        "Los usos y costumbres del sector"
       ],
       "correct": 2,
       "explanation": "La jerarquía normativa laboral es: Constitución → Ley (ET) → Reglamentos → Convenio colectivo → Contrato de trabajo → Usos y costumbres. La ley tiene mayor rango que el convenio y el contrato.",
@@ -5991,10 +5991,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q3",
       "question": "El principio de norma más favorable es uno de los pilares del Derecho Laboral. ¿Qué implica exactamente este principio en la práctica?",
       "options": [
-        "Que siempre se aplica la norma más reciente.",
-        "Que se aplicará aquella norma que resulte más beneficiosa para el trabajador en su conjunto.",
-        "Que se aplica únicamente lo pactado en el contrato.",
-        "Que prevalece siempre el convenio colectivo sobre la ley."
+        "Que siempre se aplica la norma más reciente",
+        "Que se aplicará aquella norma que resulte más beneficiosa para el trabajador en su conjunto",
+        "Que se aplica únicamente lo pactado en el contrato",
+        "Que prevalece siempre el convenio colectivo sobre la ley"
       ],
       "correct": 1,
       "explanation": "El principio de norma más favorable permite aplicar la norma que más beneficie al trabajador cuando hay conflicto entre normas de igual o distinto rango. Siempre se compara el conjunto de condiciones, no norma por norma.",
@@ -6005,10 +6005,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q4",
       "question": "Para que exista un contrato de trabajo válido deben darse ciertos elementos esenciales. ¿Cuál de los siguientes NO es uno de ellos?",
       "options": [
-        "El consentimiento de las partes.",
-        "El objeto del contrato (la prestación laboral).",
-        "La nacionalidad del trabajador.",
-        "La causa del contrato."
+        "El consentimiento de las partes",
+        "El objeto del contrato (la prestación laboral)",
+        "La nacionalidad del trabajador",
+        "La causa del contrato"
       ],
       "correct": 2,
       "explanation": "Los elementos esenciales del contrato son: consentimiento, objeto y causa. La nacionalidad del trabajador no es un elemento esencial del contrato; cualquier persona puede trabajar legalmente con independencia de su nacionalidad si tiene los permisos correspondientes.",
@@ -6019,10 +6019,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q5",
       "question": "Cuando en una nómina aparece el salario base, este concepto hace referencia a?",
       "options": [
-        "La suma de todos los ingresos del trabajador.",
-        "La cantidad fija que se percibe por el trabajo realizado, sin incluir complementos.",
-        "Solo a las pagas extraordinarias.",
-        "El importe total después de deducciones."
+        "La suma de todos los ingresos del trabajador",
+        "La cantidad fija que se percibe por el trabajo realizado, sin incluir complementos",
+        "Solo a las pagas extraordinarias",
+        "El importe total después de deducciones"
       ],
       "correct": 1,
       "explanation": "El salario base es la retribución fija establecida en el convenio colectivo o contrato por unidad de tiempo o de obra, sin incluir complementos salariales (antigüedad, nocturnidad, etc.) ni pagas extraordinarias.",
@@ -6033,10 +6033,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q6",
       "question": "En relación con los conceptos salariales y extrasalariales, ¿cuál de los siguientes se considera salario?",
       "options": [
-        "Una indemnización por despido.",
-        "Las dietas por desplazamiento.",
-        "Las pagas extraordinarias.",
-        "Los gastos de transporte al trabajo."
+        "Una indemnización por despido",
+        "Las dietas por desplazamiento",
+        "Las pagas extraordinarias",
+        "Los gastos de transporte al trabajo"
       ],
       "correct": 2,
       "explanation": "Las pagas extraordinarias son salario diferido. Las indemnizaciones y dietas son conceptos extrasalariales: compensan gastos o daños pero no retribuyen el trabajo. Los gastos de transporte tampoco son salario.",
@@ -6047,10 +6047,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q7",
       "question": "El periodo de prueba permite a ambas partes comprobar si la relación laboral funciona correctamente. Para que sea válido?",
       "options": [
-        "Debe acordarse expresamente, normalmente por escrito.",
-        "Es obligatorio en todos los contratos.",
-        "No permite la extinción del contrato durante ese tiempo.",
-        "Su duración es siempre de 6 meses en todos los casos."
+        "Debe acordarse expresamente, normalmente por escrito",
+        "Es obligatorio en todos los contratos",
+        "No permite la extinción del contrato durante ese tiempo",
+        "Su duración es siempre de 6 meses en todos los casos"
       ],
       "correct": 0,
       "explanation": "El periodo de prueba es voluntario y debe pactarse expresamente (normalmente por escrito). Durante él, cualquiera de las partes puede extinguir el contrato sin preaviso ni indemnización. Su duración máxima depende del convenio y la categoría profesional.",
@@ -6061,10 +6061,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q8",
       "question": "La normativa laboral establece límites a la jornada de trabajo con el objetivo de proteger la salud del trabajador. ¿Cuál es la duración máxima de la jornada ordinaria semanal?",
       "options": [
-        "35 horas semanales.",
-        "40 horas semanales de promedio anual.",
-        "45 horas semanales.",
-        "48 horas semanales incluyendo horas extra."
+        "35 horas semanales",
+        "40 horas semanales de promedio anual",
+        "45 horas semanales",
+        "48 horas semanales incluyendo horas extra"
       ],
       "correct": 1,
       "explanation": "El Estatuto de los Trabajadores fija la jornada máxima en 40 horas semanales de trabajo efectivo de promedio en cómputo anual. Esto permite flexibilidad semanal siempre que el promedio anual no supere ese límite.",
@@ -6075,10 +6075,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q9",
       "question": "Las horas extraordinarias pueden realizarse en determinadas circunstancias, pero no siempre son obligatorias. ¿Cuál de las siguientes afirmaciones es correcta?",
       "options": [
-        "Son obligatorias en todos los casos.",
-        "Solo pueden compensarse con dinero.",
-        "Son voluntarias salvo pacto en contrario.",
-        "No tienen límite anual de realización."
+        "Son obligatorias en todos los casos",
+        "Solo pueden compensarse con dinero",
+        "Son voluntarias salvo pacto en contrario",
+        "No tienen límite anual de realización"
       ],
       "correct": 2,
       "explanation": "Las horas extraordinarias son voluntarias salvo que se hayan pactado en convenio o contrato. Pueden compensarse con descanso o con retribución económica. El límite legal es 80 horas extraordinarias al año.",
@@ -6089,10 +6089,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q10",
       "question": "Entre una jornada laboral y la siguiente debe existir un tiempo mínimo de descanso para garantizar la recuperación del trabajador. ¿Cuál es ese descanso mínimo?",
       "options": [
-        "8 horas.",
-        "10 horas.",
-        "12 horas.",
-        "6 horas."
+        "8 horas",
+        "10 horas",
+        "12 horas",
+        "6 horas"
       ],
       "correct": 2,
       "explanation": "El ET establece un descanso mínimo de 12 horas entre el final de una jornada y el inicio de la siguiente. Esto garantiza la recuperación física y mental del trabajador y es un derecho irrenunciable.",
@@ -6103,10 +6103,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q11",
       "question": "El derecho a vacaciones anuales retribuidas es irrenunciable. Según la legislación española, su duración mínima es?",
       "options": [
-        "15 días naturales.",
-        "30 días naturales.",
-        "20 días laborables obligatorios.",
-        "25 días laborables."
+        "15 días naturales",
+        "30 días naturales",
+        "20 días laborables obligatorios",
+        "25 días laborables"
       ],
       "correct": 1,
       "explanation": "El ET garantiza un mínimo de 30 días naturales de vacaciones anuales retribuidas. Este derecho es irrenunciable: no se puede sustituir por compensación económica salvo en caso de extinción del contrato.",
@@ -6117,10 +6117,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q12",
       "question": "La suspensión del contrato de trabajo implica una situación particular en la relación laboral. ¿Cuál es su principal característica?",
       "options": [
-        "Se rompe definitivamente el vínculo laboral.",
-        "Se mantiene la relación, pero se interrumpen temporalmente las obligaciones de trabajar y pagar salario.",
-        "El trabajador pierde todos sus derechos.",
-        "El empresario puede contratar a otro trabajador de forma permanente."
+        "Se rompe definitivamente el vínculo laboral",
+        "Se mantiene la relación, pero se interrumpen temporalmente las obligaciones de trabajar y pagar salario",
+        "El trabajador pierde todos sus derechos",
+        "El empresario puede contratar a otro trabajador de forma permanente"
       ],
       "correct": 1,
       "explanation": "En la suspensión, el contrato no se extingue: el vínculo laboral se mantiene. Solo se interrumpen temporalmente las obligaciones principales (trabajar y cobrar). Al finalizar la causa, el trabajador tiene derecho a reincorporarse.",
@@ -6131,10 +6131,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q13",
       "question": "Existen diversas causas que pueden dar lugar a la suspensión del contrato. ¿Cuál de las siguientes es una de ellas?",
       "options": [
-        "El despido disciplinario.",
-        "La baja voluntaria.",
-        "La incapacidad temporal.",
-        "La jubilación del trabajador."
+        "El despido disciplinario",
+        "La baja voluntaria",
+        "La incapacidad temporal",
+        "La jubilación del trabajador"
       ],
       "correct": 2,
       "explanation": "La incapacidad temporal (IT) es una causa de suspensión del contrato: el trabajador no puede trabajar por enfermedad o accidente, pero el contrato no se extingue. El despido y la baja voluntaria son causas de extinción, no de suspensión.",
@@ -6145,10 +6145,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q14",
       "question": "El despido disciplinario se produce cuando el empresario decide extinguir el contrato debido a?",
       "options": [
-        "Problemas económicos de la empresa.",
-        "Un incumplimiento grave y culpable del trabajador.",
-        "La finalización del contrato temporal.",
-        "Una reducción de la plantilla por causas organizativas."
+        "Problemas económicos de la empresa",
+        "Un incumplimiento grave y culpable del trabajador",
+        "La finalización del contrato temporal",
+        "Una reducción de la plantilla por causas organizativas"
       ],
       "correct": 1,
       "explanation": "El despido disciplinario sanciona conductas del trabajador que constituyen un incumplimiento grave y culpable de sus obligaciones laborales (faltas repetidas, desobediencia, acoso, etc.). No requiere indemnización si se declara procedente.",
@@ -6159,10 +6159,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q15",
       "question": "Cuando un trabajador decide dejar su empleo por iniciativa propia, estamos ante una situación de?",
       "options": [
-        "Despido improcedente.",
-        "Baja voluntaria o dimisión.",
-        "Suspensión del contrato.",
-        "Extinción por mutuo acuerdo."
+        "Despido improcedente",
+        "Baja voluntaria o dimisión",
+        "Suspensión del contrato",
+        "Extinción por mutuo acuerdo"
       ],
       "correct": 1,
       "explanation": "La baja voluntaria o dimisión es la extinción del contrato por decisión unilateral del trabajador. No genera derecho a indemnización ni a prestación por desempleo, salvo que sea por causas imputables al empresario (despido indirecto).",
@@ -6173,10 +6173,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q16",
       "question": "Al finalizar la relación laboral, el trabajador recibe el finiquito. Este documento incluye?",
       "options": [
-        "Solo el salario pendiente del último mes.",
-        "Todas las cantidades pendientes, como vacaciones no disfrutadas o pagas extra.",
-        "Únicamente la indemnización.",
-        "Solo las cotizaciones a la Seguridad Social pendientes."
+        "Solo el salario pendiente del último mes",
+        "Todas las cantidades pendientes, como vacaciones no disfrutadas o pagas extra",
+        "Únicamente la indemnización",
+        "Solo las cotizaciones a la Seguridad Social pendientes"
       ],
       "correct": 1,
       "explanation": "El finiquito liquida todas las cantidades pendientes al finalizar la relación laboral: salarios pendientes, parte proporcional de pagas extra, vacaciones no disfrutadas e indemnización si corresponde. Es un documento que debe firmarse con cautela.",
@@ -6187,10 +6187,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q17",
       "question": "El sistema de Seguridad Social tiene un papel fundamental en el Estado del bienestar. Su objetivo principal es?",
       "options": [
-        "Regular contratos de trabajo.",
-        "Proteger a los ciudadanos ante determinadas situaciones (desempleo, enfermedad, jubilación…).",
-        "Controlar las empresas.",
-        "Recaudar impuestos para el Estado."
+        "Regular contratos de trabajo",
+        "Proteger a los ciudadanos ante determinadas situaciones (desempleo, enfermedad, jubilación…)",
+        "Controlar las empresas",
+        "Recaudar impuestos para el Estado"
       ],
       "correct": 1,
       "explanation": "La Seguridad Social es el sistema público de protección social que cubre situaciones de necesidad: enfermedad, accidente, desempleo, jubilación, maternidad, etc. Se financia mediante cotizaciones de trabajadores y empresas.",
@@ -6201,10 +6201,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q18",
       "question": "Dentro de la estructura de la Seguridad Social en España, ¿cuál de los siguientes es uno de sus regímenes principales?",
       "options": [
-        "Régimen general.",
-        "Régimen comercial.",
-        "Régimen fiscal.",
-        "Régimen mercantil."
+        "Régimen general",
+        "Régimen comercial",
+        "Régimen fiscal",
+        "Régimen mercantil"
       ],
       "correct": 0,
       "explanation": "Los regímenes principales de la Seguridad Social son el Régimen General (trabajadores por cuenta ajena) y los Regímenes Especiales (autónomos, agrario, del mar, minería del carbón, empleados del hogar). No existen regímenes comercial ni fiscal.",
@@ -6215,10 +6215,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q19",
       "question": "La afiliación a la Seguridad Social es un requisito imprescindible para trabajar legalmente. Esto significa que?",
       "options": [
-        "Es voluntaria.",
-        "Es obligatoria para trabajadores y empresas.",
-        "Solo afecta a funcionarios.",
-        "Solo es obligatoria para contratos indefinidos."
+        "Es voluntaria",
+        "Es obligatoria para trabajadores y empresas",
+        "Solo afecta a funcionarios",
+        "Solo es obligatoria para contratos indefinidos"
       ],
       "correct": 1,
       "explanation": "La afiliación a la Seguridad Social es obligatoria, única y vitalicia. El empresario tiene la obligación de afiliar al trabajador antes de que comience a trabajar. No hacerlo constituye una infracción grave.",
@@ -6229,10 +6229,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q20",
       "question": "La cotización a la Seguridad Social se caracteriza porque?",
       "options": [
-        "Solo la paga el trabajador.",
-        "Solo la paga la empresa.",
-        "Se reparte entre trabajador y empresa.",
-        "La paga íntegramente el Estado."
+        "Solo la paga el trabajador",
+        "Solo la paga la empresa",
+        "Se reparte entre trabajador y empresa",
+        "La paga íntegramente el Estado"
       ],
       "correct": 2,
       "explanation": "La cotización se reparte entre empresa y trabajador, aunque la empresa paga la mayor parte. El empresario ingresa ambas cuotas en la Seguridad Social: la suya propia y la del trabajador (que descuenta de la nómina).",
@@ -6243,10 +6243,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q21",
       "question": "Para poder acceder a la prestación por desempleo es necesario cumplir ciertos requisitos. Uno de los más importantes es?",
       "options": [
-        "No haber trabajado nunca.",
-        "Haber cotizado un periodo mínimo.",
-        "Tener contrato indefinido.",
-        "Haber sido despedido disciplinariamente."
+        "No haber trabajado nunca",
+        "Haber cotizado un periodo mínimo",
+        "Tener contrato indefinido",
+        "Haber sido despedido disciplinariamente"
       ],
       "correct": 1,
       "explanation": "Para acceder al paro es necesario haber cotizado al menos 360 días en los últimos 6 años, estar en situación legal de desempleo (no baja voluntaria), estar inscrito como demandante de empleo y no tener rentas superiores al SMI.",
@@ -6257,10 +6257,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q22",
       "question": "El contrato indefinido se diferencia de otros tipos de contrato porque?",
       "options": [
-        "Tiene una duración concreta.",
-        "No establece un límite temporal de finalización.",
-        "Es siempre obligatorio.",
-        "Solo puede celebrarse por escrito."
+        "Tiene una duración concreta",
+        "No establece un límite temporal de finalización",
+        "Es siempre obligatorio",
+        "Solo puede celebrarse por escrito"
       ],
       "correct": 1,
       "explanation": "El contrato indefinido no tiene fecha de finalización predeterminada. Puede extinguirse por causas legales (despido, baja voluntaria, jubilación, etc.) pero no por el mero transcurso del tiempo. Es la modalidad que más estabilidad ofrece al trabajador.",
@@ -6271,10 +6271,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q23",
       "question": "Un contrato temporal se caracteriza principalmente porque?",
       "options": [
-        "No tiene causa.",
-        "Tiene una duración limitada en el tiempo.",
-        "Es igual que el indefinido.",
-        "No puede convertirse en indefinido."
+        "No tiene causa",
+        "Tiene una duración limitada en el tiempo",
+        "Es igual que el indefinido",
+        "No puede convertirse en indefinido"
       ],
       "correct": 1,
       "explanation": "El contrato temporal tiene una duración determinada vinculada a una causa específica (obra o servicio, eventualidad, interinidad). Si se supera la duración máxima o se encadenan contratos temporales más de 24 meses en 30, se convierte en indefinido.",
@@ -6285,10 +6285,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q24",
       "question": "El convenio colectivo es una herramienta fundamental en el ámbito laboral. ¿Cuál es su función?",
       "options": [
-        "Regular condiciones laborales de forma colectiva.",
-        "Sustituir las leyes.",
-        "Aplicarse solo a una persona.",
-        "Fijar los impuestos que pagan los trabajadores."
+        "Regular condiciones laborales de forma colectiva",
+        "Sustituir las leyes",
+        "Aplicarse solo a una persona",
+        "Fijar los impuestos que pagan los trabajadores"
       ],
       "correct": 0,
       "explanation": "El convenio colectivo es el acuerdo negociado entre representantes de trabajadores y empresarios que regula condiciones de trabajo (salarios, jornada, vacaciones, etc.) para un sector o empresa. Mejora las condiciones mínimas legales pero no puede empeorarlas.",
@@ -6299,10 +6299,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q25",
       "question": "La negociación colectiva es el proceso mediante el cual?",
       "options": [
-        "El Estado fija los salarios.",
-        "Empresarios y representantes de los trabajadores acuerdan condiciones laborales.",
-        "Solo negocian los trabajadores.",
-        "El Gobierno establece los convenios colectivos."
+        "El Estado fija los salarios",
+        "Empresarios y representantes de los trabajadores acuerdan condiciones laborales",
+        "Solo negocian los trabajadores",
+        "El Gobierno establece los convenios colectivos"
       ],
       "correct": 1,
       "explanation": "La negociación colectiva es el diálogo entre sindicatos (representantes de trabajadores) y asociaciones empresariales para acordar condiciones de trabajo mediante convenios colectivos. Es un derecho constitucional reconocido en el artículo 37 de la CE.",
@@ -6313,10 +6313,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q26",
       "question": "El derecho de huelga está reconocido en la Constitución española como?",
       "options": [
-        "Un derecho fundamental.",
-        "Una obligación.",
-        "Un delito.",
-        "Un derecho solo para funcionarios."
+        "Un derecho fundamental",
+        "Una obligación",
+        "Un delito",
+        "Un derecho solo para funcionarios"
       ],
       "correct": 0,
       "explanation": "El derecho de huelga está reconocido en el artículo 28.2 de la Constitución española como derecho fundamental. Permite a los trabajadores cesar colectivamente en su actividad para presionar en la negociación de sus condiciones laborales.",
@@ -6327,10 +6327,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q27",
       "question": "El comité de empresa tiene como función principal?",
       "options": [
-        "Representar a la empresa.",
-        "Representar a los trabajadores.",
-        "Representar al Estado.",
-        "Negociar los contratos individuales."
+        "Representar a la empresa",
+        "Representar a los trabajadores",
+        "Representar al Estado",
+        "Negociar los contratos individuales"
       ],
       "correct": 1,
       "explanation": "El comité de empresa es el órgano representativo y colegiado de los trabajadores en empresas de 50 o más trabajadores. Tiene funciones de información, consulta y negociación con la empresa sobre condiciones laborales.",
@@ -6341,10 +6341,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q28",
       "question": "La prevención de riesgos laborales tiene como objetivo principal?",
       "options": [
-        "Reducir costes empresariales.",
-        "Evitar accidentes de trabajo y enfermedades profesionales.",
-        "Aumentar la productividad.",
-        "Controlar el absentismo laboral."
+        "Reducir costes empresariales",
+        "Evitar accidentes de trabajo y enfermedades profesionales",
+        "Aumentar la productividad",
+        "Controlar el absentismo laboral"
       ],
       "correct": 1,
       "explanation": "La Ley de Prevención de Riesgos Laborales (LPRL) tiene como objetivo principal promover la seguridad y salud de los trabajadores mediante la prevención de riesgos derivados del trabajo, evitando accidentes y enfermedades profesionales.",
@@ -6355,10 +6355,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q29",
       "question": "Un riesgo laboral se puede definir como?",
       "options": [
-        "Una ventaja económica.",
-        "Una situación que puede provocar daño al trabajador.",
-        "Un derecho laboral.",
-        "Una obligación del empresario."
+        "Una ventaja económica",
+        "Una situación que puede provocar daño al trabajador",
+        "Un derecho laboral",
+        "Una obligación del empresario"
       ],
       "correct": 1,
       "explanation": "Un riesgo laboral es la posibilidad de que un trabajador sufra un daño derivado del trabajo. Los daños pueden ser enfermedades, patologías o lesiones. La evaluación de riesgos es el primer paso de la acción preventiva.",
@@ -6369,10 +6369,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q30",
       "question": "Se considera accidente de trabajo aquel que?",
       "options": [
-        "Ocurre solo en el domicilio.",
-        "Se produce con ocasión o como consecuencia del trabajo.",
-        "Ocurre en vacaciones.",
-        "Solo ocurre dentro de las instalaciones de la empresa."
+        "Ocurre solo en el domicilio",
+        "Se produce con ocasión o como consecuencia del trabajo",
+        "Ocurre en vacaciones",
+        "Solo ocurre dentro de las instalaciones de la empresa"
       ],
       "correct": 1,
       "explanation": "El accidente de trabajo es toda lesión corporal que sufre el trabajador con ocasión o por consecuencia del trabajo. Incluye el accidente in itinere (en el trayecto al trabajo), los ocurridos en misión y los cardiovasculares durante el trabajo.",
@@ -6383,10 +6383,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q31",
       "question": "La enfermedad profesional es aquella que?",
       "options": [
-        "No tiene relación con el trabajo.",
-        "Está causada por la actividad laboral.",
-        "Es siempre leve.",
-        "Solo afecta a trabajadores manuales."
+        "No tiene relación con el trabajo",
+        "Está causada por la actividad laboral",
+        "Es siempre leve",
+        "Solo afecta a trabajadores manuales"
       ],
       "correct": 1,
       "explanation": "La enfermedad profesional está causada por agentes físicos, químicos o biológicos presentes en el trabajo y está recogida en el cuadro de enfermedades profesionales. Se diferencia del accidente de trabajo en que su aparición es gradual, no súbita.",
@@ -6397,10 +6397,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q32",
       "question": "El empresario, en materia de prevención, tiene la obligación de?",
       "options": [
-        "Ignorar los riesgos.",
-        "Garantizar la seguridad y salud de los trabajadores.",
-        "Delegar toda responsabilidad.",
-        "Solo actuar cuando ocurre un accidente."
+        "Ignorar los riesgos",
+        "Garantizar la seguridad y salud de los trabajadores",
+        "Delegar toda responsabilidad",
+        "Solo actuar cuando ocurre un accidente"
       ],
       "correct": 1,
       "explanation": "El empresario tiene la obligación legal de garantizar la seguridad y salud de sus trabajadores mediante la evaluación de riesgos, la planificación preventiva, la formación e información, la vigilancia de la salud y la dotación de EPIs.",
@@ -6411,10 +6411,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q33",
       "question": "El trabajador también tiene obligaciones en prevención. Entre ellas?",
       "options": [
-        "Cumplir las medidas de seguridad.",
-        "Ignorar las normas.",
-        "No participar en formación.",
-        "Decidir por sí mismo qué medidas aplicar."
+        "Cumplir las medidas de seguridad",
+        "Ignorar las normas",
+        "No participar en formación",
+        "Decidir por sí mismo qué medidas aplicar"
       ],
       "correct": 0,
       "explanation": "Los trabajadores tienen la obligación de usar correctamente los equipos de protección, seguir las instrucciones del empresario en materia de seguridad, informar de situaciones de riesgo y participar en la formación preventiva.",
@@ -6425,10 +6425,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q34",
       "question": "La formación en materia de prevención de riesgos laborales es un elemento clave dentro de la empresa. En este sentido, dicha formación?",
       "options": [
-        "Es opcional y depende únicamente del interés del trabajador por formarse.",
-        "Es obligatoria y debe ser proporcionada por la empresa de manera suficiente y adecuada.",
-        "Solo es necesaria en trabajos considerados peligrosos.",
-        "Solo se imparte una vez al inicio de la relación laboral."
+        "Es opcional y depende únicamente del interés del trabajador por formarse",
+        "Es obligatoria y debe ser proporcionada por la empresa de manera suficiente y adecuada",
+        "Solo es necesaria en trabajos considerados peligrosos",
+        "Solo se imparte una vez al inicio de la relación laboral"
       ],
       "correct": 1,
       "explanation": "La LPRL obliga al empresario a proporcionar formación teórica y práctica, suficiente y adecuada, en materia preventiva. Debe impartirse al inicio, cuando cambien las condiciones del puesto y cuando se detecten nuevos riesgos.",
@@ -6439,10 +6439,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q35",
       "question": "El salario mínimo interprofesional (SMI) actúa como una referencia básica en el ámbito laboral español. Teniendo en cuenta su función, podemos afirmar que?",
       "options": [
-        "Es una cantidad que fija libremente cada empresa en función de su situación económica.",
-        "Es un límite mínimo legal de retribución que fija el Gobierno y que debe respetarse en todos los casos.",
-        "Solo se aplica a trabajadores con contrato indefinido.",
-        "Lo fija el convenio colectivo de cada sector."
+        "Es una cantidad que fija libremente cada empresa en función de su situación económica",
+        "Es un límite mínimo legal de retribución que fija el Gobierno y que debe respetarse en todos los casos",
+        "Solo se aplica a trabajadores con contrato indefinido",
+        "Lo fija el convenio colectivo de cada sector"
       ],
       "correct": 1,
       "explanation": "El SMI es fijado anualmente por el Gobierno mediante Real Decreto, previa consulta con sindicatos y patronal. Es el salario mínimo que debe percibir cualquier trabajador por cuenta ajena, independientemente del sector, tipo de contrato o jornada.",
@@ -6453,10 +6453,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q36",
       "question": "La nómina es un documento fundamental en la relación laboral, ya que refleja de manera detallada la retribución del trabajador. En ella se incluyen?",
       "options": [
-        "Únicamente las percepciones salariales sin ningún tipo de descuento.",
-        "Tanto los ingresos (salario base y complementos) como las deducciones (cotizaciones, impuestos, etc.).",
-        "Exclusivamente los impuestos que debe pagar el trabajador.",
-        "Solo el salario base y las pagas extraordinarias."
+        "Únicamente las percepciones salariales sin ningún tipo de descuento",
+        "Tanto los ingresos (salario base y complementos) como las deducciones (cotizaciones, impuestos, etc.)",
+        "Exclusivamente los impuestos que debe pagar el trabajador",
+        "Solo el salario base y las pagas extraordinarias"
       ],
       "correct": 1,
       "explanation": "La nómina tiene dos partes: devengos (salario base + complementos salariales + percepciones extrasalariales) y deducciones (cotización a la SS del trabajador + IRPF + otras). El resultado es el líquido a percibir (salario neto).",
@@ -6467,10 +6467,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q37",
       "question": "Dentro de las deducciones que aparecen en la nómina, el IRPF tiene una especial relevancia. Este concepto corresponde a?",
       "options": [
-        "Una cantidad adicional que recibe el trabajador por su rendimiento.",
-        "Una retención que se descuenta del salario como adelanto del impuesto sobre la renta.",
-        "Un complemento salarial obligatorio.",
-        "Una cotización a la Seguridad Social."
+        "Una cantidad adicional que recibe el trabajador por su rendimiento",
+        "Una retención que se descuenta del salario como adelanto del impuesto sobre la renta",
+        "Un complemento salarial obligatorio",
+        "Una cotización a la Seguridad Social"
       ],
       "correct": 1,
       "explanation": "El IRPF (Impuesto sobre la Renta de las Personas Físicas) se retiene mensualmente del salario como pago anticipado del impuesto anual. El porcentaje de retención depende del salario y las circunstancias personales del trabajador.",
@@ -6481,10 +6481,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q38",
       "question": "En el sistema de Seguridad Social, las contingencias comunes cubren determinadas situaciones que pueden afectar al trabajador. Entre ellas se encuentran?",
       "options": [
-        "Los accidentes de trabajo ocurridos en la empresa.",
-        "Las enfermedades comunes y los accidentes no laborales.",
-        "Las sanciones administrativas.",
-        "Las enfermedades profesionales."
+        "Los accidentes de trabajo ocurridos en la empresa",
+        "Las enfermedades comunes y los accidentes no laborales",
+        "Las sanciones administrativas",
+        "Las enfermedades profesionales"
       ],
       "correct": 1,
       "explanation": "Las contingencias comunes cubren situaciones no relacionadas con el trabajo: enfermedad común, accidente no laboral, maternidad/paternidad y jubilación. Las contingencias profesionales cubren accidentes de trabajo y enfermedades profesionales.",
@@ -6495,10 +6495,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q39",
       "question": "Por otro lado, las contingencias profesionales están directamente relacionadas con la actividad laboral del trabajador. Estas incluyen?",
       "options": [
-        "Las vacaciones y permisos retribuidos.",
-        "Los accidentes de trabajo y las enfermedades profesionales.",
-        "Las bajas voluntarias del trabajador.",
-        "Las enfermedades comunes."
+        "Las vacaciones y permisos retribuidos",
+        "Los accidentes de trabajo y las enfermedades profesionales",
+        "Las bajas voluntarias del trabajador",
+        "Las enfermedades comunes"
       ],
       "correct": 1,
       "explanation": "Las contingencias profesionales cubren los riesgos derivados directamente del trabajo: accidentes de trabajo (incluido el in itinere) y enfermedades profesionales. Tienen una cobertura más favorable que las contingencias comunes.",
@@ -6509,10 +6509,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q40",
       "question": "El contrato en prácticas es una modalidad contractual que tiene como objetivo facilitar la inserción laboral de determinadas personas. Este tipo de contrato está dirigido principalmente a?",
       "options": [
-        "Personas que no han finalizado ningún tipo de estudios.",
-        "Personas que han obtenido recientemente una titulación y buscan adquirir experiencia profesional.",
-        "Trabajadores con amplia experiencia laboral.",
-        "Personas mayores de 45 años en situación de desempleo."
+        "Personas que no han finalizado ningún tipo de estudios",
+        "Personas que han obtenido recientemente una titulación y buscan adquirir experiencia profesional",
+        "Trabajadores con amplia experiencia laboral",
+        "Personas mayores de 45 años en situación de desempleo"
       ],
       "correct": 1,
       "explanation": "El contrato en prácticas (ahora contrato formativo para la obtención de práctica profesional) está dirigido a quienes tienen un título universitario, FP o certificado de profesionalidad, para que adquieran experiencia práctica en su campo de formación.",
@@ -6523,10 +6523,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q41",
       "question": "El contrato para la formación y el aprendizaje tiene una finalidad claramente formativa. Por ello, se caracteriza porque?",
       "options": [
-        "Se basa exclusivamente en la realización de trabajo sin formación adicional.",
-        "Combina la actividad laboral retribuida con un proceso de formación teórica relacionada con el puesto.",
-        "Solo incluye formación sin prestación laboral.",
-        "Es exclusivo para titulados universitarios."
+        "Se basa exclusivamente en la realización de trabajo sin formación adicional",
+        "Combina la actividad laboral retribuida con un proceso de formación teórica relacionada con el puesto",
+        "Solo incluye formación sin prestación laboral",
+        "Es exclusivo para titulados universitarios"
       ],
       "correct": 1,
       "explanation": "El contrato de formación en alternancia combina trabajo retribuido con formación teórica (mínimo 25% del tiempo). Está dirigido a jóvenes sin cualificación profesional. La retribución mínima es proporcional al tiempo trabajado respecto al SMI.",
@@ -6537,10 +6537,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q42",
       "question": "El despido objetivo es una forma de extinción del contrato que no depende de la conducta del trabajador. Este tipo de despido se produce cuando?",
       "options": [
-        "El trabajador incumple gravemente sus obligaciones.",
-        "Existen causas económicas, técnicas, organizativas o de producción en la empresa.",
-        "El trabajador decide abandonar su puesto.",
-        "El contrato temporal llega a su fin."
+        "El trabajador incumple gravemente sus obligaciones",
+        "Existen causas económicas, técnicas, organizativas o de producción en la empresa",
+        "El trabajador decide abandonar su puesto",
+        "El contrato temporal llega a su fin"
       ],
       "correct": 1,
       "explanation": "El despido objetivo (art. 52 ET) se basa en causas ajenas al trabajador: económicas (pérdidas), técnicas (cambios tecnológicos), organizativas (reorganización) o de producción (cambios en la demanda). Requiere preaviso de 15 días e indemnización de 20 días/año.",
@@ -6551,10 +6551,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q43",
       "question": "Se considera que un despido es improcedente cuando, tras ser impugnado, se comprueba que?",
       "options": [
-        "Está perfectamente justificado conforme a la ley.",
-        "No cumple los requisitos formales o no queda acreditada la causa alegada.",
-        "Ha sido solicitado por el trabajador.",
-        "El trabajador lleva menos de un año en la empresa."
+        "Está perfectamente justificado conforme a la ley",
+        "No cumple los requisitos formales o no queda acreditada la causa alegada",
+        "Ha sido solicitado por el trabajador",
+        "El trabajador lleva menos de un año en la empresa"
       ],
       "correct": 1,
       "explanation": "El despido improcedente ocurre cuando no se acredita la causa o no se cumplen los requisitos formales. El empresario puede optar entre readmitir al trabajador o pagarle una indemnización de 33 días/año (45 días para contratos anteriores a 2012).",
@@ -6565,10 +6565,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q44",
       "question": "En caso de despido, la indemnización que puede corresponder al trabajador?",
       "options": [
-        "Es siempre la misma con independencia del tipo de despido.",
-        "Depende del tipo de despido y de las circunstancias concretas del trabajador.",
-        "No existe en ningún caso.",
-        "Solo corresponde si el trabajador lleva más de 5 años en la empresa."
+        "Es siempre la misma con independencia del tipo de despido",
+        "Depende del tipo de despido y de las circunstancias concretas del trabajador",
+        "No existe en ningún caso",
+        "Solo corresponde si el trabajador lleva más de 5 años en la empresa"
       ],
       "correct": 1,
       "explanation": "La indemnización varía según el tipo de despido: objetivo = 20 días/año (máx. 12 mensualidades), improcedente = 33 días/año (máx. 24 mensualidades), disciplinario procedente = 0. También depende del salario y la antigüedad del trabajador.",
@@ -6579,10 +6579,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q45",
       "question": "El contrato a tiempo parcial es una modalidad cada vez más utilizada en el mercado laboral. Se caracteriza porque?",
       "options": [
-        "El trabajador realiza la misma jornada que en un contrato a tiempo completo.",
-        "La jornada de trabajo es inferior a la de un trabajador a tiempo completo comparable.",
-        "No existe un horario definido.",
-        "No puede convertirse en contrato a tiempo completo."
+        "El trabajador realiza la misma jornada que en un contrato a tiempo completo",
+        "La jornada de trabajo es inferior a la de un trabajador a tiempo completo comparable",
+        "No existe un horario definido",
+        "No puede convertirse en contrato a tiempo completo"
       ],
       "correct": 1,
       "explanation": "El contrato a tiempo parcial implica una jornada inferior a la ordinaria a tiempo completo. El trabajador tiene los mismos derechos que un trabajador a tiempo completo, pero en proporción a su jornada (principio de proporcionalidad).",
@@ -6593,10 +6593,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q46",
       "question": "El empresario dispone de un poder disciplinario dentro de la empresa que le permite actuar ante determinadas conductas del trabajador. Este poder implica que?",
       "options": [
-        "Puede sancionar los incumplimientos del trabajador respetando lo establecido en la ley y el convenio colectivo.",
-        "Puede despedir libremente sin necesidad de justificar su decisión.",
-        "No puede imponer ningún tipo de sanción.",
-        "Puede imponer cualquier sanción sin límite."
+        "Puede sancionar los incumplimientos del trabajador respetando lo establecido en la ley y el convenio colectivo",
+        "Puede despedir libremente sin necesidad de justificar su decisión",
+        "No puede imponer ningún tipo de sanción",
+        "Puede imponer cualquier sanción sin límite"
       ],
       "correct": 0,
       "explanation": "El poder disciplinario del empresario está limitado por la ley y el convenio colectivo. Las sanciones deben ser proporcionales a la falta (leve, grave o muy grave), comunicarse por escrito y respetarse los plazos de prescripción.",
@@ -6607,10 +6607,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q47",
       "question": "Las sanciones que puede imponer el empresario deben cumplir una serie de requisitos para ser válidas. Entre ellos, destaca que?",
       "options": [
-        "Pueden imponerse de forma arbitraria sin necesidad de justificación.",
-        "Deben ajustarse a lo establecido en la normativa laboral y en el convenio colectivo aplicable.",
-        "Deben comunicarse únicamente de forma verbal.",
-        "No pueden ser impugnadas por el trabajador."
+        "Pueden imponerse de forma arbitraria sin necesidad de justificación",
+        "Deben ajustarse a lo establecido en la normativa laboral y en el convenio colectivo aplicable",
+        "Deben comunicarse únicamente de forma verbal",
+        "No pueden ser impugnadas por el trabajador"
       ],
       "correct": 1,
       "explanation": "Las sanciones deben ser proporcionales a la gravedad de la falta, estar tipificadas en el convenio colectivo, comunicarse por escrito con fecha y hechos, y respetar los plazos de prescripción. El trabajador puede impugnarlas ante el juzgado de lo social.",
@@ -6621,10 +6621,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q48",
       "question": "El Estatuto de los Trabajadores es una norma clave dentro del Derecho Laboral español. Su importancia radica en que?",
       "options": [
-        "Es la norma básica que regula los derechos y deberes de trabajadores y empresarios.",
-        "Es un acuerdo privado entre empresas.",
-        "Solo se aplica a determinados sectores.",
-        "Es una norma de carácter voluntario."
+        "Es la norma básica que regula los derechos y deberes de trabajadores y empresarios",
+        "Es un acuerdo privado entre empresas",
+        "Solo se aplica a determinados sectores",
+        "Es una norma de carácter voluntario"
       ],
       "correct": 0,
       "explanation": "El Estatuto de los Trabajadores (ET) es la norma legal básica del Derecho Laboral español. Regula los derechos y obligaciones de trabajadores y empresarios, los contratos, la jornada, el salario, la representación colectiva y la extinción del contrato.",
@@ -6635,10 +6635,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_bateria_q49",
       "question": "En cuanto a la forma del contrato de trabajo, la legislación permite cierta flexibilidad. En este sentido?",
       "options": [
-        "Todos los contratos deben formalizarse obligatoriamente por escrito.",
-        "Pueden celebrarse tanto de forma verbal como por escrito, aunque algunos casos exigen forma escrita.",
-        "Solo tienen validez si se firman ante notario.",
-        "La forma verbal solo es válida para contratos de menos de una semana."
+        "Todos los contratos deben formalizarse obligatoriamente por escrito",
+        "Pueden celebrarse tanto de forma verbal como por escrito, aunque algunos casos exigen forma escrita",
+        "Solo tienen validez si se firman ante notario",
+        "La forma verbal solo es válida para contratos de menos de una semana"
       ],
       "correct": 1,
       "explanation": "El ET permite que los contratos se celebren verbalmente o por escrito. Sin embargo, algunos contratos deben formalizarse por escrito obligatoriamente (prácticas, formación, a tiempo parcial, fijos discontinuos, etc.). Si no se formaliza por escrito cuando es obligatorio, se presume indefinido.",
@@ -8300,10 +8300,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q0",
       "question": "Cuando hablamos del Derecho del Trabajo dentro del sistema jurídico español, nos referimos a un conjunto de normas que no solo regulan la prestación de servicios, sino que también buscan corregir ciertos desequilibrios. ¿Cuál es su finalidad principal?",
       "options": [
-        "Regular exclusivamente la actividad económica de las empresas.",
-        "Equilibrar la relación entre trabajador y empresario, protegiendo especialmente al trabajador.",
-        "Organizar el comercio entre empresas privadas.",
-        "Ninguna de las anteriores describe correctamente su finalidad."
+        "Regular exclusivamente la actividad económica de las empresas",
+        "Equilibrar la relación entre trabajador y empresario, protegiendo especialmente al trabajador",
+        "Organizar el comercio entre empresas privadas",
+        "Ninguna de las anteriores describe correctamente su finalidad"
       ],
       "correct": 1,
       "explanation": "El Derecho del Trabajo busca equilibrar la relación laboral, que es desigual por naturaleza: el trabajador depende económicamente del empresario. Por eso protege especialmente al trabajador mediante normas mínimas irrenunciables.",
@@ -8314,10 +8314,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q1",
       "question": "Para que una actividad pueda considerarse una relación laboral y quede dentro del ámbito del Derecho del Trabajo, debe cumplir una serie de características básicas. ¿Cuál de las siguientes opciones recoge correctamente esas características?",
       "options": [
-        "Actividad ocasional, voluntaria y sin remuneración.",
-        "Actividad voluntaria, retribuida, por cuenta ajena y bajo la organización de un empresario.",
-        "Actividad autónoma realizada sin dependencia.",
-        "Actividad puntual realizada de forma independiente y sin contrato."
+        "Actividad ocasional, voluntaria y sin remuneración",
+        "Actividad voluntaria, retribuida, por cuenta ajena y bajo la organización de un empresario",
+        "Actividad autónoma realizada sin dependencia",
+        "Actividad puntual realizada de forma independiente y sin contrato"
       ],
       "correct": 1,
       "explanation": "Los cuatro elementos esenciales de la relación laboral son: voluntariedad (libre), retribución (salario), ajenidad (trabaja para otro) y dependencia (bajo las órdenes del empresario). Sin estos cuatro, no hay relación laboral.",
@@ -8328,10 +8328,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q2",
       "question": "Dentro de las fuentes del Derecho del Trabajo existe una jerarquía normativa que determina qué norma prevalece sobre otra en caso de conflicto. ¿Cuál de las siguientes tiene mayor rango?",
       "options": [
-        "El convenio colectivo.",
-        "El contrato de trabajo.",
-        "La ley, como el Estatuto de los Trabajadores.",
-        "Los usos y costumbres del sector."
+        "El convenio colectivo",
+        "El contrato de trabajo",
+        "La ley, como el Estatuto de los Trabajadores",
+        "Los usos y costumbres del sector"
       ],
       "correct": 2,
       "explanation": "La jerarquía normativa laboral es: Constitución → Ley (ET) → Reglamentos → Convenio colectivo → Contrato de trabajo → Usos y costumbres. La ley tiene mayor rango que el convenio y el contrato.",
@@ -8342,10 +8342,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q3",
       "question": "El principio de norma más favorable es uno de los pilares del Derecho Laboral. ¿Qué implica exactamente este principio en la práctica?",
       "options": [
-        "Que siempre se aplica la norma más reciente.",
-        "Que se aplicará aquella norma que resulte más beneficiosa para el trabajador en su conjunto.",
-        "Que se aplica únicamente lo pactado en el contrato.",
-        "Que prevalece siempre el convenio colectivo sobre la ley."
+        "Que siempre se aplica la norma más reciente",
+        "Que se aplicará aquella norma que resulte más beneficiosa para el trabajador en su conjunto",
+        "Que se aplica únicamente lo pactado en el contrato",
+        "Que prevalece siempre el convenio colectivo sobre la ley"
       ],
       "correct": 1,
       "explanation": "El principio de norma más favorable permite aplicar la norma que más beneficie al trabajador cuando hay conflicto entre normas de igual o distinto rango. Siempre se compara el conjunto de condiciones, no norma por norma.",
@@ -8356,10 +8356,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q4",
       "question": "Para que exista un contrato de trabajo válido deben darse ciertos elementos esenciales. ¿Cuál de los siguientes NO es uno de ellos?",
       "options": [
-        "El consentimiento de las partes.",
-        "El objeto del contrato (la prestación laboral).",
-        "La nacionalidad del trabajador.",
-        "La causa del contrato."
+        "El consentimiento de las partes",
+        "El objeto del contrato (la prestación laboral)",
+        "La nacionalidad del trabajador",
+        "La causa del contrato"
       ],
       "correct": 2,
       "explanation": "Los elementos esenciales del contrato son: consentimiento, objeto y causa. La nacionalidad del trabajador no es un elemento esencial del contrato; cualquier persona puede trabajar legalmente con independencia de su nacionalidad si tiene los permisos correspondientes.",
@@ -8370,10 +8370,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q5",
       "question": "Cuando en una nómina aparece el salario base, este concepto hace referencia a?",
       "options": [
-        "La suma de todos los ingresos del trabajador.",
-        "La cantidad fija que se percibe por el trabajo realizado, sin incluir complementos.",
-        "Solo a las pagas extraordinarias.",
-        "El importe total después de deducciones."
+        "La suma de todos los ingresos del trabajador",
+        "La cantidad fija que se percibe por el trabajo realizado, sin incluir complementos",
+        "Solo a las pagas extraordinarias",
+        "El importe total después de deducciones"
       ],
       "correct": 1,
       "explanation": "El salario base es la retribución fija establecida en el convenio colectivo o contrato por unidad de tiempo o de obra, sin incluir complementos salariales (antigüedad, nocturnidad, etc.) ni pagas extraordinarias.",
@@ -8384,10 +8384,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q6",
       "question": "En relación con los conceptos salariales y extrasalariales, ¿cuál de los siguientes se considera salario?",
       "options": [
-        "Una indemnización por despido.",
-        "Las dietas por desplazamiento.",
-        "Las pagas extraordinarias.",
-        "Los gastos de transporte al trabajo."
+        "Una indemnización por despido",
+        "Las dietas por desplazamiento",
+        "Las pagas extraordinarias",
+        "Los gastos de transporte al trabajo"
       ],
       "correct": 2,
       "explanation": "Las pagas extraordinarias son salario diferido. Las indemnizaciones y dietas son conceptos extrasalariales: compensan gastos o daños pero no retribuyen el trabajo. Los gastos de transporte tampoco son salario.",
@@ -8398,10 +8398,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q7",
       "question": "El periodo de prueba permite a ambas partes comprobar si la relación laboral funciona correctamente. Para que sea válido?",
       "options": [
-        "Debe acordarse expresamente, normalmente por escrito.",
-        "Es obligatorio en todos los contratos.",
-        "No permite la extinción del contrato durante ese tiempo.",
-        "Su duración es siempre de 6 meses en todos los casos."
+        "Debe acordarse expresamente, normalmente por escrito",
+        "Es obligatorio en todos los contratos",
+        "No permite la extinción del contrato durante ese tiempo",
+        "Su duración es siempre de 6 meses en todos los casos"
       ],
       "correct": 0,
       "explanation": "El periodo de prueba es voluntario y debe pactarse expresamente (normalmente por escrito). Durante él, cualquiera de las partes puede extinguir el contrato sin preaviso ni indemnización. Su duración máxima depende del convenio y la categoría profesional.",
@@ -8412,10 +8412,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q8",
       "question": "La normativa laboral establece límites a la jornada de trabajo con el objetivo de proteger la salud del trabajador. ¿Cuál es la duración máxima de la jornada ordinaria semanal?",
       "options": [
-        "35 horas semanales.",
-        "40 horas semanales de promedio anual.",
-        "45 horas semanales.",
-        "48 horas semanales incluyendo horas extra."
+        "35 horas semanales",
+        "40 horas semanales de promedio anual",
+        "45 horas semanales",
+        "48 horas semanales incluyendo horas extra"
       ],
       "correct": 1,
       "explanation": "El Estatuto de los Trabajadores fija la jornada máxima en 40 horas semanales de trabajo efectivo de promedio en cómputo anual. Esto permite flexibilidad semanal siempre que el promedio anual no supere ese límite.",
@@ -8426,10 +8426,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q9",
       "question": "Las horas extraordinarias pueden realizarse en determinadas circunstancias, pero no siempre son obligatorias. ¿Cuál de las siguientes afirmaciones es correcta?",
       "options": [
-        "Son obligatorias en todos los casos.",
-        "Solo pueden compensarse con dinero.",
-        "Son voluntarias salvo pacto en contrario.",
-        "No tienen límite anual de realización."
+        "Son obligatorias en todos los casos",
+        "Solo pueden compensarse con dinero",
+        "Son voluntarias salvo pacto en contrario",
+        "No tienen límite anual de realización"
       ],
       "correct": 2,
       "explanation": "Las horas extraordinarias son voluntarias salvo que se hayan pactado en convenio o contrato. Pueden compensarse con descanso o con retribución económica. El límite legal es 80 horas extraordinarias al año.",
@@ -8440,10 +8440,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q10",
       "question": "Entre una jornada laboral y la siguiente debe existir un tiempo mínimo de descanso para garantizar la recuperación del trabajador. ¿Cuál es ese descanso mínimo?",
       "options": [
-        "8 horas.",
-        "10 horas.",
-        "12 horas.",
-        "6 horas."
+        "8 horas",
+        "10 horas",
+        "12 horas",
+        "6 horas"
       ],
       "correct": 2,
       "explanation": "El ET establece un descanso mínimo de 12 horas entre el final de una jornada y el inicio de la siguiente. Esto garantiza la recuperación física y mental del trabajador y es un derecho irrenunciable.",
@@ -8454,10 +8454,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q11",
       "question": "El derecho a vacaciones anuales retribuidas es irrenunciable. Según la legislación española, su duración mínima es?",
       "options": [
-        "15 días naturales.",
-        "30 días naturales.",
-        "20 días laborables obligatorios.",
-        "25 días laborables."
+        "15 días naturales",
+        "30 días naturales",
+        "20 días laborables obligatorios",
+        "25 días laborables"
       ],
       "correct": 1,
       "explanation": "El ET garantiza un mínimo de 30 días naturales de vacaciones anuales retribuidas. Este derecho es irrenunciable: no se puede sustituir por compensación económica salvo en caso de extinción del contrato.",
@@ -8468,10 +8468,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q12",
       "question": "La suspensión del contrato de trabajo implica una situación particular en la relación laboral. ¿Cuál es su principal característica?",
       "options": [
-        "Se rompe definitivamente el vínculo laboral.",
-        "Se mantiene la relación, pero se interrumpen temporalmente las obligaciones de trabajar y pagar salario.",
-        "El trabajador pierde todos sus derechos.",
-        "El empresario puede contratar a otro trabajador de forma permanente."
+        "Se rompe definitivamente el vínculo laboral",
+        "Se mantiene la relación, pero se interrumpen temporalmente las obligaciones de trabajar y pagar salario",
+        "El trabajador pierde todos sus derechos",
+        "El empresario puede contratar a otro trabajador de forma permanente"
       ],
       "correct": 1,
       "explanation": "En la suspensión, el contrato no se extingue: el vínculo laboral se mantiene. Solo se interrumpen temporalmente las obligaciones principales (trabajar y cobrar). Al finalizar la causa, el trabajador tiene derecho a reincorporarse.",
@@ -8482,10 +8482,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q13",
       "question": "Existen diversas causas que pueden dar lugar a la suspensión del contrato. ¿Cuál de las siguientes es una de ellas?",
       "options": [
-        "El despido disciplinario.",
-        "La baja voluntaria.",
-        "La incapacidad temporal.",
-        "La jubilación del trabajador."
+        "El despido disciplinario",
+        "La baja voluntaria",
+        "La incapacidad temporal",
+        "La jubilación del trabajador"
       ],
       "correct": 2,
       "explanation": "La incapacidad temporal (IT) es una causa de suspensión del contrato: el trabajador no puede trabajar por enfermedad o accidente, pero el contrato no se extingue. El despido y la baja voluntaria son causas de extinción, no de suspensión.",
@@ -8496,10 +8496,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q14",
       "question": "El despido disciplinario se produce cuando el empresario decide extinguir el contrato debido a?",
       "options": [
-        "Problemas económicos de la empresa.",
-        "Un incumplimiento grave y culpable del trabajador.",
-        "La finalización del contrato temporal.",
-        "Una reducción de la plantilla por causas organizativas."
+        "Problemas económicos de la empresa",
+        "Un incumplimiento grave y culpable del trabajador",
+        "La finalización del contrato temporal",
+        "Una reducción de la plantilla por causas organizativas"
       ],
       "correct": 1,
       "explanation": "El despido disciplinario sanciona conductas del trabajador que constituyen un incumplimiento grave y culpable de sus obligaciones laborales (faltas repetidas, desobediencia, acoso, etc.). No requiere indemnización si se declara procedente.",
@@ -8510,10 +8510,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q15",
       "question": "Cuando un trabajador decide dejar su empleo por iniciativa propia, estamos ante una situación de?",
       "options": [
-        "Despido improcedente.",
-        "Baja voluntaria o dimisión.",
-        "Suspensión del contrato.",
-        "Extinción por mutuo acuerdo."
+        "Despido improcedente",
+        "Baja voluntaria o dimisión",
+        "Suspensión del contrato",
+        "Extinción por mutuo acuerdo"
       ],
       "correct": 1,
       "explanation": "La baja voluntaria o dimisión es la extinción del contrato por decisión unilateral del trabajador. No genera derecho a indemnización ni a prestación por desempleo, salvo que sea por causas imputables al empresario (despido indirecto).",
@@ -8524,10 +8524,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q16",
       "question": "Al finalizar la relación laboral, el trabajador recibe el finiquito. Este documento incluye?",
       "options": [
-        "Solo el salario pendiente del último mes.",
-        "Todas las cantidades pendientes, como vacaciones no disfrutadas o pagas extra.",
-        "Únicamente la indemnización.",
-        "Solo las cotizaciones a la Seguridad Social pendientes."
+        "Solo el salario pendiente del último mes",
+        "Todas las cantidades pendientes, como vacaciones no disfrutadas o pagas extra",
+        "Únicamente la indemnización",
+        "Solo las cotizaciones a la Seguridad Social pendientes"
       ],
       "correct": 1,
       "explanation": "El finiquito liquida todas las cantidades pendientes al finalizar la relación laboral: salarios pendientes, parte proporcional de pagas extra, vacaciones no disfrutadas e indemnización si corresponde. Es un documento que debe firmarse con cautela.",
@@ -8538,10 +8538,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q17",
       "question": "El sistema de Seguridad Social tiene un papel fundamental en el Estado del bienestar. Su objetivo principal es?",
       "options": [
-        "Regular contratos de trabajo.",
-        "Proteger a los ciudadanos ante determinadas situaciones (desempleo, enfermedad, jubilación…).",
-        "Controlar las empresas.",
-        "Recaudar impuestos para el Estado."
+        "Regular contratos de trabajo",
+        "Proteger a los ciudadanos ante determinadas situaciones (desempleo, enfermedad, jubilación…)",
+        "Controlar las empresas",
+        "Recaudar impuestos para el Estado"
       ],
       "correct": 1,
       "explanation": "La Seguridad Social es el sistema público de protección social que cubre situaciones de necesidad: enfermedad, accidente, desempleo, jubilación, maternidad, etc. Se financia mediante cotizaciones de trabajadores y empresas.",
@@ -8552,10 +8552,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q18",
       "question": "Dentro de la estructura de la Seguridad Social en España, ¿cuál de los siguientes es uno de sus regímenes principales?",
       "options": [
-        "Régimen general.",
-        "Régimen comercial.",
-        "Régimen fiscal.",
-        "Régimen mercantil."
+        "Régimen general",
+        "Régimen comercial",
+        "Régimen fiscal",
+        "Régimen mercantil"
       ],
       "correct": 0,
       "explanation": "Los regímenes principales de la Seguridad Social son el Régimen General (trabajadores por cuenta ajena) y los Regímenes Especiales (autónomos, agrario, del mar, minería del carbón, empleados del hogar). No existen regímenes comercial ni fiscal.",
@@ -8566,10 +8566,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q19",
       "question": "La afiliación a la Seguridad Social es un requisito imprescindible para trabajar legalmente. Esto significa que?",
       "options": [
-        "Es voluntaria.",
-        "Es obligatoria para trabajadores y empresas.",
-        "Solo afecta a funcionarios.",
-        "Solo es obligatoria para contratos indefinidos."
+        "Es voluntaria",
+        "Es obligatoria para trabajadores y empresas",
+        "Solo afecta a funcionarios",
+        "Solo es obligatoria para contratos indefinidos"
       ],
       "correct": 1,
       "explanation": "La afiliación a la Seguridad Social es obligatoria, única y vitalicia. El empresario tiene la obligación de afiliar al trabajador antes de que comience a trabajar. No hacerlo constituye una infracción grave.",
@@ -8580,10 +8580,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q20",
       "question": "La cotización a la Seguridad Social se caracteriza porque?",
       "options": [
-        "Solo la paga el trabajador.",
-        "Solo la paga la empresa.",
-        "Se reparte entre trabajador y empresa.",
-        "La paga íntegramente el Estado."
+        "Solo la paga el trabajador",
+        "Solo la paga la empresa",
+        "Se reparte entre trabajador y empresa",
+        "La paga íntegramente el Estado"
       ],
       "correct": 2,
       "explanation": "La cotización se reparte entre empresa y trabajador, aunque la empresa paga la mayor parte. El empresario ingresa ambas cuotas en la Seguridad Social: la suya propia y la del trabajador (que descuenta de la nómina).",
@@ -8594,10 +8594,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q21",
       "question": "Para poder acceder a la prestación por desempleo es necesario cumplir ciertos requisitos. Uno de los más importantes es?",
       "options": [
-        "No haber trabajado nunca.",
-        "Haber cotizado un periodo mínimo.",
-        "Tener contrato indefinido.",
-        "Haber sido despedido disciplinariamente."
+        "No haber trabajado nunca",
+        "Haber cotizado un periodo mínimo",
+        "Tener contrato indefinido",
+        "Haber sido despedido disciplinariamente"
       ],
       "correct": 1,
       "explanation": "Para acceder al paro es necesario haber cotizado al menos 360 días en los últimos 6 años, estar en situación legal de desempleo (no baja voluntaria), estar inscrito como demandante de empleo y no tener rentas superiores al SMI.",
@@ -8608,10 +8608,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q22",
       "question": "El contrato indefinido se diferencia de otros tipos de contrato porque?",
       "options": [
-        "Tiene una duración concreta.",
-        "No establece un límite temporal de finalización.",
-        "Es siempre obligatorio.",
-        "Solo puede celebrarse por escrito."
+        "Tiene una duración concreta",
+        "No establece un límite temporal de finalización",
+        "Es siempre obligatorio",
+        "Solo puede celebrarse por escrito"
       ],
       "correct": 1,
       "explanation": "El contrato indefinido no tiene fecha de finalización predeterminada. Puede extinguirse por causas legales (despido, baja voluntaria, jubilación, etc.) pero no por el mero transcurso del tiempo. Es la modalidad que más estabilidad ofrece al trabajador.",
@@ -8622,10 +8622,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q23",
       "question": "Un contrato temporal se caracteriza principalmente porque?",
       "options": [
-        "No tiene causa.",
-        "Tiene una duración limitada en el tiempo.",
-        "Es igual que el indefinido.",
-        "No puede convertirse en indefinido."
+        "No tiene causa",
+        "Tiene una duración limitada en el tiempo",
+        "Es igual que el indefinido",
+        "No puede convertirse en indefinido"
       ],
       "correct": 1,
       "explanation": "El contrato temporal tiene una duración determinada vinculada a una causa específica (obra o servicio, eventualidad, interinidad). Si se supera la duración máxima o se encadenan contratos temporales más de 24 meses en 30, se convierte en indefinido.",
@@ -8636,10 +8636,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q24",
       "question": "El convenio colectivo es una herramienta fundamental en el ámbito laboral. ¿Cuál es su función?",
       "options": [
-        "Regular condiciones laborales de forma colectiva.",
-        "Sustituir las leyes.",
-        "Aplicarse solo a una persona.",
-        "Fijar los impuestos que pagan los trabajadores."
+        "Regular condiciones laborales de forma colectiva",
+        "Sustituir las leyes",
+        "Aplicarse solo a una persona",
+        "Fijar los impuestos que pagan los trabajadores"
       ],
       "correct": 0,
       "explanation": "El convenio colectivo es el acuerdo negociado entre representantes de trabajadores y empresarios que regula condiciones de trabajo (salarios, jornada, vacaciones, etc.) para un sector o empresa. Mejora las condiciones mínimas legales pero no puede empeorarlas.",
@@ -8650,10 +8650,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q25",
       "question": "La negociación colectiva es el proceso mediante el cual?",
       "options": [
-        "El Estado fija los salarios.",
-        "Empresarios y representantes de los trabajadores acuerdan condiciones laborales.",
-        "Solo negocian los trabajadores.",
-        "El Gobierno establece los convenios colectivos."
+        "El Estado fija los salarios",
+        "Empresarios y representantes de los trabajadores acuerdan condiciones laborales",
+        "Solo negocian los trabajadores",
+        "El Gobierno establece los convenios colectivos"
       ],
       "correct": 1,
       "explanation": "La negociación colectiva es el diálogo entre sindicatos (representantes de trabajadores) y asociaciones empresariales para acordar condiciones de trabajo mediante convenios colectivos. Es un derecho constitucional reconocido en el artículo 37 de la CE.",
@@ -8664,10 +8664,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q26",
       "question": "El derecho de huelga está reconocido en la Constitución española como?",
       "options": [
-        "Un derecho fundamental.",
-        "Una obligación.",
-        "Un delito.",
-        "Un derecho solo para funcionarios."
+        "Un derecho fundamental",
+        "Una obligación",
+        "Un delito",
+        "Un derecho solo para funcionarios"
       ],
       "correct": 0,
       "explanation": "El derecho de huelga está reconocido en el artículo 28.2 de la Constitución española como derecho fundamental. Permite a los trabajadores cesar colectivamente en su actividad para presionar en la negociación de sus condiciones laborales.",
@@ -8678,10 +8678,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q27",
       "question": "El comité de empresa tiene como función principal?",
       "options": [
-        "Representar a la empresa.",
-        "Representar a los trabajadores.",
-        "Representar al Estado.",
-        "Negociar los contratos individuales."
+        "Representar a la empresa",
+        "Representar a los trabajadores",
+        "Representar al Estado",
+        "Negociar los contratos individuales"
       ],
       "correct": 1,
       "explanation": "El comité de empresa es el órgano representativo y colegiado de los trabajadores en empresas de 50 o más trabajadores. Tiene funciones de información, consulta y negociación con la empresa sobre condiciones laborales.",
@@ -8692,10 +8692,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q28",
       "question": "La prevención de riesgos laborales tiene como objetivo principal?",
       "options": [
-        "Reducir costes empresariales.",
-        "Evitar accidentes de trabajo y enfermedades profesionales.",
-        "Aumentar la productividad.",
-        "Controlar el absentismo laboral."
+        "Reducir costes empresariales",
+        "Evitar accidentes de trabajo y enfermedades profesionales",
+        "Aumentar la productividad",
+        "Controlar el absentismo laboral"
       ],
       "correct": 1,
       "explanation": "La Ley de Prevención de Riesgos Laborales (LPRL) tiene como objetivo principal promover la seguridad y salud de los trabajadores mediante la prevención de riesgos derivados del trabajo, evitando accidentes y enfermedades profesionales.",
@@ -8706,10 +8706,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q29",
       "question": "Un riesgo laboral se puede definir como?",
       "options": [
-        "Una ventaja económica.",
-        "Una situación que puede provocar daño al trabajador.",
-        "Un derecho laboral.",
-        "Una obligación del empresario."
+        "Una ventaja económica",
+        "Una situación que puede provocar daño al trabajador",
+        "Un derecho laboral",
+        "Una obligación del empresario"
       ],
       "correct": 1,
       "explanation": "Un riesgo laboral es la posibilidad de que un trabajador sufra un daño derivado del trabajo. Los daños pueden ser enfermedades, patologías o lesiones. La evaluación de riesgos es el primer paso de la acción preventiva.",
@@ -8720,10 +8720,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q30",
       "question": "Se considera accidente de trabajo aquel que?",
       "options": [
-        "Ocurre solo en el domicilio.",
-        "Se produce con ocasión o como consecuencia del trabajo.",
-        "Ocurre en vacaciones.",
-        "Solo ocurre dentro de las instalaciones de la empresa."
+        "Ocurre solo en el domicilio",
+        "Se produce con ocasión o como consecuencia del trabajo",
+        "Ocurre en vacaciones",
+        "Solo ocurre dentro de las instalaciones de la empresa"
       ],
       "correct": 1,
       "explanation": "El accidente de trabajo es toda lesión corporal que sufre el trabajador con ocasión o por consecuencia del trabajo. Incluye el accidente in itinere (en el trayecto al trabajo), los ocurridos en misión y los cardiovasculares durante el trabajo.",
@@ -8734,10 +8734,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q31",
       "question": "La enfermedad profesional es aquella que?",
       "options": [
-        "No tiene relación con el trabajo.",
-        "Está causada por la actividad laboral.",
-        "Es siempre leve.",
-        "Solo afecta a trabajadores manuales."
+        "No tiene relación con el trabajo",
+        "Está causada por la actividad laboral",
+        "Es siempre leve",
+        "Solo afecta a trabajadores manuales"
       ],
       "correct": 1,
       "explanation": "La enfermedad profesional está causada por agentes físicos, químicos o biológicos presentes en el trabajo y está recogida en el cuadro de enfermedades profesionales. Se diferencia del accidente de trabajo en que su aparición es gradual, no súbita.",
@@ -8748,10 +8748,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q32",
       "question": "El empresario, en materia de prevención, tiene la obligación de?",
       "options": [
-        "Ignorar los riesgos.",
-        "Garantizar la seguridad y salud de los trabajadores.",
-        "Delegar toda responsabilidad.",
-        "Solo actuar cuando ocurre un accidente."
+        "Ignorar los riesgos",
+        "Garantizar la seguridad y salud de los trabajadores",
+        "Delegar toda responsabilidad",
+        "Solo actuar cuando ocurre un accidente"
       ],
       "correct": 1,
       "explanation": "El empresario tiene la obligación legal de garantizar la seguridad y salud de sus trabajadores mediante la evaluación de riesgos, la planificación preventiva, la formación e información, la vigilancia de la salud y la dotación de EPIs.",
@@ -8762,10 +8762,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q33",
       "question": "El trabajador también tiene obligaciones en prevención. Entre ellas?",
       "options": [
-        "Cumplir las medidas de seguridad.",
-        "Ignorar las normas.",
-        "No participar en formación.",
-        "Decidir por sí mismo qué medidas aplicar."
+        "Cumplir las medidas de seguridad",
+        "Ignorar las normas",
+        "No participar en formación",
+        "Decidir por sí mismo qué medidas aplicar"
       ],
       "correct": 0,
       "explanation": "Los trabajadores tienen la obligación de usar correctamente los equipos de protección, seguir las instrucciones del empresario en materia de seguridad, informar de situaciones de riesgo y participar en la formación preventiva.",
@@ -8776,10 +8776,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q34",
       "question": "La formación en materia de prevención de riesgos laborales es un elemento clave dentro de la empresa. En este sentido, dicha formación?",
       "options": [
-        "Es opcional y depende únicamente del interés del trabajador por formarse.",
-        "Es obligatoria y debe ser proporcionada por la empresa de manera suficiente y adecuada.",
-        "Solo es necesaria en trabajos considerados peligrosos.",
-        "Solo se imparte una vez al inicio de la relación laboral."
+        "Es opcional y depende únicamente del interés del trabajador por formarse",
+        "Es obligatoria y debe ser proporcionada por la empresa de manera suficiente y adecuada",
+        "Solo es necesaria en trabajos considerados peligrosos",
+        "Solo se imparte una vez al inicio de la relación laboral"
       ],
       "correct": 1,
       "explanation": "La LPRL obliga al empresario a proporcionar formación teórica y práctica, suficiente y adecuada, en materia preventiva. Debe impartirse al inicio, cuando cambien las condiciones del puesto y cuando se detecten nuevos riesgos.",
@@ -8790,10 +8790,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q35",
       "question": "El salario mínimo interprofesional (SMI) actúa como una referencia básica en el ámbito laboral español. Teniendo en cuenta su función, podemos afirmar que?",
       "options": [
-        "Es una cantidad que fija libremente cada empresa en función de su situación económica.",
-        "Es un límite mínimo legal de retribución que fija el Gobierno y que debe respetarse en todos los casos.",
-        "Solo se aplica a trabajadores con contrato indefinido.",
-        "Lo fija el convenio colectivo de cada sector."
+        "Es una cantidad que fija libremente cada empresa en función de su situación económica",
+        "Es un límite mínimo legal de retribución que fija el Gobierno y que debe respetarse en todos los casos",
+        "Solo se aplica a trabajadores con contrato indefinido",
+        "Lo fija el convenio colectivo de cada sector"
       ],
       "correct": 1,
       "explanation": "El SMI es fijado anualmente por el Gobierno mediante Real Decreto, previa consulta con sindicatos y patronal. Es el salario mínimo que debe percibir cualquier trabajador por cuenta ajena, independientemente del sector, tipo de contrato o jornada.",
@@ -8804,10 +8804,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q36",
       "question": "La nómina es un documento fundamental en la relación laboral, ya que refleja de manera detallada la retribución del trabajador. En ella se incluyen?",
       "options": [
-        "Únicamente las percepciones salariales sin ningún tipo de descuento.",
-        "Tanto los ingresos (salario base y complementos) como las deducciones (cotizaciones, impuestos, etc.).",
-        "Exclusivamente los impuestos que debe pagar el trabajador.",
-        "Solo el salario base y las pagas extraordinarias."
+        "Únicamente las percepciones salariales sin ningún tipo de descuento",
+        "Tanto los ingresos (salario base y complementos) como las deducciones (cotizaciones, impuestos, etc.)",
+        "Exclusivamente los impuestos que debe pagar el trabajador",
+        "Solo el salario base y las pagas extraordinarias"
       ],
       "correct": 1,
       "explanation": "La nómina tiene dos partes: devengos (salario base + complementos salariales + percepciones extrasalariales) y deducciones (cotización a la SS del trabajador + IRPF + otras). El resultado es el líquido a percibir (salario neto).",
@@ -8818,10 +8818,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q37",
       "question": "Dentro de las deducciones que aparecen en la nómina, el IRPF tiene una especial relevancia. Este concepto corresponde a?",
       "options": [
-        "Una cantidad adicional que recibe el trabajador por su rendimiento.",
-        "Una retención que se descuenta del salario como adelanto del impuesto sobre la renta.",
-        "Un complemento salarial obligatorio.",
-        "Una cotización a la Seguridad Social."
+        "Una cantidad adicional que recibe el trabajador por su rendimiento",
+        "Una retención que se descuenta del salario como adelanto del impuesto sobre la renta",
+        "Un complemento salarial obligatorio",
+        "Una cotización a la Seguridad Social"
       ],
       "correct": 1,
       "explanation": "El IRPF (Impuesto sobre la Renta de las Personas Físicas) se retiene mensualmente del salario como pago anticipado del impuesto anual. El porcentaje de retención depende del salario y las circunstancias personales del trabajador.",
@@ -8832,10 +8832,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q38",
       "question": "En el sistema de Seguridad Social, las contingencias comunes cubren determinadas situaciones que pueden afectar al trabajador. Entre ellas se encuentran?",
       "options": [
-        "Los accidentes de trabajo ocurridos en la empresa.",
-        "Las enfermedades comunes y los accidentes no laborales.",
-        "Las sanciones administrativas.",
-        "Las enfermedades profesionales."
+        "Los accidentes de trabajo ocurridos en la empresa",
+        "Las enfermedades comunes y los accidentes no laborales",
+        "Las sanciones administrativas",
+        "Las enfermedades profesionales"
       ],
       "correct": 1,
       "explanation": "Las contingencias comunes cubren situaciones no relacionadas con el trabajo: enfermedad común, accidente no laboral, maternidad/paternidad y jubilación. Las contingencias profesionales cubren accidentes de trabajo y enfermedades profesionales.",
@@ -8846,10 +8846,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q39",
       "question": "Por otro lado, las contingencias profesionales están directamente relacionadas con la actividad laboral del trabajador. Estas incluyen?",
       "options": [
-        "Las vacaciones y permisos retribuidos.",
-        "Los accidentes de trabajo y las enfermedades profesionales.",
-        "Las bajas voluntarias del trabajador.",
-        "Las enfermedades comunes."
+        "Las vacaciones y permisos retribuidos",
+        "Los accidentes de trabajo y las enfermedades profesionales",
+        "Las bajas voluntarias del trabajador",
+        "Las enfermedades comunes"
       ],
       "correct": 1,
       "explanation": "Las contingencias profesionales cubren los riesgos derivados directamente del trabajo: accidentes de trabajo (incluido el in itinere) y enfermedades profesionales. Tienen una cobertura más favorable que las contingencias comunes.",
@@ -8860,10 +8860,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q40",
       "question": "El contrato en prácticas es una modalidad contractual que tiene como objetivo facilitar la inserción laboral de determinadas personas. Este tipo de contrato está dirigido principalmente a?",
       "options": [
-        "Personas que no han finalizado ningún tipo de estudios.",
-        "Personas que han obtenido recientemente una titulación y buscan adquirir experiencia profesional.",
-        "Trabajadores con amplia experiencia laboral.",
-        "Personas mayores de 45 años en situación de desempleo."
+        "Personas que no han finalizado ningún tipo de estudios",
+        "Personas que han obtenido recientemente una titulación y buscan adquirir experiencia profesional",
+        "Trabajadores con amplia experiencia laboral",
+        "Personas mayores de 45 años en situación de desempleo"
       ],
       "correct": 1,
       "explanation": "El contrato en prácticas (ahora contrato formativo para la obtención de práctica profesional) está dirigido a quienes tienen un título universitario, FP o certificado de profesionalidad, para que adquieran experiencia práctica en su campo de formación.",
@@ -8874,10 +8874,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q41",
       "question": "El contrato para la formación y el aprendizaje tiene una finalidad claramente formativa. Por ello, se caracteriza porque?",
       "options": [
-        "Se basa exclusivamente en la realización de trabajo sin formación adicional.",
-        "Combina la actividad laboral retribuida con un proceso de formación teórica relacionada con el puesto.",
-        "Solo incluye formación sin prestación laboral.",
-        "Es exclusivo para titulados universitarios."
+        "Se basa exclusivamente en la realización de trabajo sin formación adicional",
+        "Combina la actividad laboral retribuida con un proceso de formación teórica relacionada con el puesto",
+        "Solo incluye formación sin prestación laboral",
+        "Es exclusivo para titulados universitarios"
       ],
       "correct": 1,
       "explanation": "El contrato de formación en alternancia combina trabajo retribuido con formación teórica (mínimo 25% del tiempo). Está dirigido a jóvenes sin cualificación profesional. La retribución mínima es proporcional al tiempo trabajado respecto al SMI.",
@@ -8888,10 +8888,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q42",
       "question": "El despido objetivo es una forma de extinción del contrato que no depende de la conducta del trabajador. Este tipo de despido se produce cuando?",
       "options": [
-        "El trabajador incumple gravemente sus obligaciones.",
-        "Existen causas económicas, técnicas, organizativas o de producción en la empresa.",
-        "El trabajador decide abandonar su puesto.",
-        "El contrato temporal llega a su fin."
+        "El trabajador incumple gravemente sus obligaciones",
+        "Existen causas económicas, técnicas, organizativas o de producción en la empresa",
+        "El trabajador decide abandonar su puesto",
+        "El contrato temporal llega a su fin"
       ],
       "correct": 1,
       "explanation": "El despido objetivo (art. 52 ET) se basa en causas ajenas al trabajador: económicas (pérdidas), técnicas (cambios tecnológicos), organizativas (reorganización) o de producción (cambios en la demanda). Requiere preaviso de 15 días e indemnización de 20 días/año.",
@@ -8902,10 +8902,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q43",
       "question": "Se considera que un despido es improcedente cuando, tras ser impugnado, se comprueba que?",
       "options": [
-        "Está perfectamente justificado conforme a la ley.",
-        "No cumple los requisitos formales o no queda acreditada la causa alegada.",
-        "Ha sido solicitado por el trabajador.",
-        "El trabajador lleva menos de un año en la empresa."
+        "Está perfectamente justificado conforme a la ley",
+        "No cumple los requisitos formales o no queda acreditada la causa alegada",
+        "Ha sido solicitado por el trabajador",
+        "El trabajador lleva menos de un año en la empresa"
       ],
       "correct": 1,
       "explanation": "El despido improcedente ocurre cuando no se acredita la causa o no se cumplen los requisitos formales. El empresario puede optar entre readmitir al trabajador o pagarle una indemnización de 33 días/año (45 días para contratos anteriores a 2012).",
@@ -8916,10 +8916,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q44",
       "question": "En caso de despido, la indemnización que puede corresponder al trabajador?",
       "options": [
-        "Es siempre la misma con independencia del tipo de despido.",
-        "Depende del tipo de despido y de las circunstancias concretas del trabajador.",
-        "No existe en ningún caso.",
-        "Solo corresponde si el trabajador lleva más de 5 años en la empresa."
+        "Es siempre la misma con independencia del tipo de despido",
+        "Depende del tipo de despido y de las circunstancias concretas del trabajador",
+        "No existe en ningún caso",
+        "Solo corresponde si el trabajador lleva más de 5 años en la empresa"
       ],
       "correct": 1,
       "explanation": "La indemnización varía según el tipo de despido: objetivo = 20 días/año (máx. 12 mensualidades), improcedente = 33 días/año (máx. 24 mensualidades), disciplinario procedente = 0. También depende del salario y la antigüedad del trabajador.",
@@ -8930,10 +8930,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q45",
       "question": "El contrato a tiempo parcial es una modalidad cada vez más utilizada en el mercado laboral. Se caracteriza porque?",
       "options": [
-        "El trabajador realiza la misma jornada que en un contrato a tiempo completo.",
-        "La jornada de trabajo es inferior a la de un trabajador a tiempo completo comparable.",
-        "No existe un horario definido.",
-        "No puede convertirse en contrato a tiempo completo."
+        "El trabajador realiza la misma jornada que en un contrato a tiempo completo",
+        "La jornada de trabajo es inferior a la de un trabajador a tiempo completo comparable",
+        "No existe un horario definido",
+        "No puede convertirse en contrato a tiempo completo"
       ],
       "correct": 1,
       "explanation": "El contrato a tiempo parcial implica una jornada inferior a la ordinaria a tiempo completo. El trabajador tiene los mismos derechos que un trabajador a tiempo completo, pero en proporción a su jornada (principio de proporcionalidad).",
@@ -8944,10 +8944,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q46",
       "question": "El empresario dispone de un poder disciplinario dentro de la empresa que le permite actuar ante determinadas conductas del trabajador. Este poder implica que?",
       "options": [
-        "Puede sancionar los incumplimientos del trabajador respetando lo establecido en la ley y el convenio colectivo.",
-        "Puede despedir libremente sin necesidad de justificar su decisión.",
-        "No puede imponer ningún tipo de sanción.",
-        "Puede imponer cualquier sanción sin límite."
+        "Puede sancionar los incumplimientos del trabajador respetando lo establecido en la ley y el convenio colectivo",
+        "Puede despedir libremente sin necesidad de justificar su decisión",
+        "No puede imponer ningún tipo de sanción",
+        "Puede imponer cualquier sanción sin límite"
       ],
       "correct": 0,
       "explanation": "El poder disciplinario del empresario está limitado por la ley y el convenio colectivo. Las sanciones deben ser proporcionales a la falta (leve, grave o muy grave), comunicarse por escrito y respetarse los plazos de prescripción.",
@@ -8958,10 +8958,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q47",
       "question": "Las sanciones que puede imponer el empresario deben cumplir una serie de requisitos para ser válidas. Entre ellos, destaca que?",
       "options": [
-        "Pueden imponerse de forma arbitraria sin necesidad de justificación.",
-        "Deben ajustarse a lo establecido en la normativa laboral y en el convenio colectivo aplicable.",
-        "Deben comunicarse únicamente de forma verbal.",
-        "No pueden ser impugnadas por el trabajador."
+        "Pueden imponerse de forma arbitraria sin necesidad de justificación",
+        "Deben ajustarse a lo establecido en la normativa laboral y en el convenio colectivo aplicable",
+        "Deben comunicarse únicamente de forma verbal",
+        "No pueden ser impugnadas por el trabajador"
       ],
       "correct": 1,
       "explanation": "Las sanciones deben ser proporcionales a la gravedad de la falta, estar tipificadas en el convenio colectivo, comunicarse por escrito con fecha y hechos, y respetar los plazos de prescripción. El trabajador puede impugnarlas ante el juzgado de lo social.",
@@ -8972,10 +8972,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q48",
       "question": "El Estatuto de los Trabajadores es una norma clave dentro del Derecho Laboral español. Su importancia radica en que?",
       "options": [
-        "Es la norma básica que regula los derechos y deberes de trabajadores y empresarios.",
-        "Es un acuerdo privado entre empresas.",
-        "Solo se aplica a determinados sectores.",
-        "Es una norma de carácter voluntario."
+        "Es la norma básica que regula los derechos y deberes de trabajadores y empresarios",
+        "Es un acuerdo privado entre empresas",
+        "Solo se aplica a determinados sectores",
+        "Es una norma de carácter voluntario"
       ],
       "correct": 0,
       "explanation": "El Estatuto de los Trabajadores (ET) es la norma legal básica del Derecho Laboral español. Regula los derechos y obligaciones de trabajadores y empresarios, los contratos, la jornada, el salario, la representación colectiva y la extinción del contrato.",
@@ -8986,10 +8986,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "emp_examen_final_q49",
       "question": "En cuanto a la forma del contrato de trabajo, la legislación permite cierta flexibilidad. En este sentido?",
       "options": [
-        "Todos los contratos deben formalizarse obligatoriamente por escrito.",
-        "Pueden celebrarse tanto de forma verbal como por escrito, aunque algunos casos exigen forma escrita.",
-        "Solo tienen validez si se firman ante notario.",
-        "La forma verbal solo es válida para contratos de menos de una semana."
+        "Todos los contratos deben formalizarse obligatoriamente por escrito",
+        "Pueden celebrarse tanto de forma verbal como por escrito, aunque algunos casos exigen forma escrita",
+        "Solo tienen validez si se firman ante notario",
+        "La forma verbal solo es válida para contratos de menos de una semana"
       ],
       "correct": 1,
       "explanation": "El ET permite que los contratos se celebren verbalmente o por escrito. Sin embargo, algunos contratos deben formalizarse por escrito obligatoriamente (prácticas, formación, a tiempo parcial, fijos discontinuos, etc.). Si no se formaliza por escrito cuando es obligatorio, se presume indefinido.",
@@ -9002,9 +9002,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_1_q0",
       "question": "Los lenguajes de programación utilizan distintos tipos de datos para representar la información y gestionar la memoria de forma adecuada. ¿Cuál de los siguientes no pertenece a los tipos de datos básicos o primitivos?",
       "options": [
-        "Número entero.",
-        "Valor booleano.",
-        "Array o arreglo.",
+        "Número entero",
+        "Valor booleano",
+        "Array o arreglo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -9016,9 +9016,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_1_q1",
       "question": "Aunque a menudo se confunden, los conceptos de algoritmo y programa no son equivalentes. ¿Cuál de las siguientes afirmaciones describe correctamente la relación entre ambos?",
       "options": [
-        "El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación.",
-        "El programa es independiente del lenguaje y el algoritmo depende del lenguaje utilizado.",
-        "Ambos conceptos son idénticos y se diferencian solo por el formato en el que se escriben.",
+        "El algoritmo es la lógica del problema y el programa es su implementación en un lenguaje de programación",
+        "El programa es independiente del lenguaje y el algoritmo depende del lenguaje utilizado",
+        "Ambos conceptos son idénticos y se diferencian solo por el formato en el que se escriben",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
@@ -9030,9 +9030,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_1_q2",
       "question": "Durante el desarrollo de un programa, pueden aparecer errores que no impiden la compilación pero provocan resultados incorrectos. ¿Cuál es la función principal de un depurador (debugger) dentro de un entorno de desarrollo?",
       "options": [
-        "Detectar errores de sintaxis antes de ejecutar el programa.",
-        "Ejecutar el programa de forma más rápida y optimizada.",
-        "Analizar la ejecución paso a paso para localizar errores lógicos.",
+        "Detectar errores de sintaxis antes de ejecutar el programa",
+        "Ejecutar el programa de forma más rápida y optimizada",
+        "Analizar la ejecución paso a paso para localizar errores lógicos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -9044,9 +9044,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_1_q3",
       "question": "Antes de escribir un programa, es fundamental diseñar correctamente el algoritmo que resolverá el problema. Para que una secuencia de pasos pueda considerarse un algoritmo válido, debe cumplir una serie de características. ¿Cuál de las siguientes es una de ellas?",
       "options": [
-        "Debe poder ejecutarse directamente por la máquina sin traducción.",
-        "Debe ser finito y finalizar tras un número limitado de pasos.",
-        "Debe estar escrito obligatoriamente en un lenguaje de programación concreto.",
+        "Debe poder ejecutarse directamente por la máquina sin traducción",
+        "Debe ser finito y finalizar tras un número limitado de pasos",
+        "Debe estar escrito obligatoriamente en un lenguaje de programación concreto",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9058,9 +9058,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_1_q4",
       "question": "Todo programa informático sigue un modelo básico de funcionamiento que permite transformar datos en información útil. Dentro del modelo Entrada–Proceso–Salida, ¿qué elemento se considera el núcleo del programa?",
       "options": [
-        "Los datos que introduce el usuario mediante dispositivos de entrada.",
-        "El algoritmo que procesa los datos y aplica la lógica del programa.",
-        "El sistema que muestra el resultado final al usuario.",
+        "Los datos que introduce el usuario mediante dispositivos de entrada",
+        "El algoritmo que procesa los datos y aplica la lógica del programa",
+        "El sistema que muestra el resultado final al usuario",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9072,9 +9072,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_1_q5",
       "question": "Las estructuras de control permiten modificar el flujo normal de ejecución de un programa. ¿Qué tipo de estructura se utiliza cuando es necesario repetir varias veces un conjunto de instrucciones mientras se cumpla una condición?",
       "options": [
-        "Estructura secuencial.",
-        "Estructura selectiva.",
-        "Estructura iterativa.",
+        "Estructura secuencial",
+        "Estructura selectiva",
+        "Estructura iterativa",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -9086,9 +9086,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_1_q6",
       "question": "Los paradigmas de programación ofrecen diferentes formas de organizar y estructurar el software. En el paradigma orientado a objetos, ¿cuál es el elemento central sobre el que se construyen los programas?",
       "options": [
-        "Las funciones matemáticas.",
-        "Los objetos que combinan datos y comportamiento.",
-        "Las instrucciones ejecutadas de forma secuencial.",
+        "Las funciones matemáticas",
+        "Los objetos que combinan datos y comportamiento",
+        "Las instrucciones ejecutadas de forma secuencial",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9100,9 +9100,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_1_q7",
       "question": "Java es un lenguaje de programación con un modelo de ejecución particular que combina características de distintos enfoques. ¿Por qué se considera que Java utiliza un sistema híbrido de compilación e interpretación?",
       "options": [
-        "Porque el código se ejecuta directamente como código máquina del sistema operativo.",
-        "Porque el código se compila a bytecode y se ejecuta mediante la Máquina Virtual de Java.",
-        "Porque no necesita ningún proceso previo para poder ejecutarse.",
+        "Porque el código se ejecuta directamente como código máquina del sistema operativo",
+        "Porque el código se compila a bytecode y se ejecuta mediante la Máquina Virtual de Java",
+        "Porque no necesita ningún proceso previo para poder ejecutarse",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9114,9 +9114,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_1_q8",
       "question": "La programación no se limita únicamente a escribir código, sino que engloba varias tareas necesarias para que un programa funcione correctamente a lo largo del tiempo. ¿Cuál de las siguientes opciones define mejor qué es programar?",
       "options": [
-        "Utilizar programas informáticos ya existentes para resolver tareas cotidianas.",
-        "Diseñar, codificar, depurar y mantener programas que ejecuta un ordenador.",
-        "Ejecutar instrucciones previamente creadas sin necesidad de modificarlas.",
+        "Utilizar programas informáticos ya existentes para resolver tareas cotidianas",
+        "Diseñar, codificar, depurar y mantener programas que ejecuta un ordenador",
+        "Ejecutar instrucciones previamente creadas sin necesidad de modificarlas",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9128,9 +9128,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_1_q9",
       "question": "En informática es importante diferenciar entre los conceptos de dato e información, ya que no significan exactamente lo mismo. ¿Cuál de las siguientes afirmaciones es correcta?",
       "options": [
-        "El dato es información interpretada y la información es un dato sin procesar.",
-        "El dato es un valor aislado y la información es el resultado de procesar datos con un contexto.",
-        "Ambos términos se utilizan indistintamente y no existe diferencia real entre ellos.",
+        "El dato es información interpretada y la información es un dato sin procesar",
+        "El dato es un valor aislado y la información es el resultado de procesar datos con un contexto",
+        "Ambos términos se utilizan indistintamente y no existe diferencia real entre ellos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9228,9 +9228,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_2_q0",
       "question": "Los métodos permiten definir el comportamiento de los objetos y pueden devolver o no un valor. ¿Qué indica que un método tenga como tipo de retorno la palabra clave void?",
       "options": [
-        "Que el método devuelve un valor vacío.",
-        "Que el método no realiza ninguna acción.",
-        "Que el método realiza una acción pero no devuelve ningún valor.",
+        "Que el método devuelve un valor vacío",
+        "Que el método no realiza ninguna acción",
+        "Que el método realiza una acción pero no devuelve ningún valor",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -9242,9 +9242,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_2_q1",
       "question": "Los atributos de una clase representan el estado de los objetos creados a partir de ella. ¿Cuál de las siguientes afirmaciones sobre los atributos es correcta?",
       "options": [
-        "Los atributos se declaran dentro de los métodos.",
-        "Cada objeto tiene su propia copia de los atributos definidos en la clase.",
-        "Todos los objetos comparten los mismos valores de los atributos.",
+        "Los atributos se declaran dentro de los métodos",
+        "Cada objeto tiene su propia copia de los atributos definidos en la clase",
+        "Todos los objetos comparten los mismos valores de los atributos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9256,9 +9256,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_2_q2",
       "question": "El constructor es un elemento fundamental dentro de una clase en Java y cumple una función específica. ¿Cuál es la misión principal de un constructor?",
       "options": [
-        "Ejecutar la lógica principal del programa.",
-        "Inicializar los atributos del objeto en el momento de su creación.",
-        "Definir el comportamiento común de todas las clases.",
+        "Ejecutar la lógica principal del programa",
+        "Inicializar los atributos del objeto en el momento de su creación",
+        "Definir el comportamiento común de todas las clases",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9270,9 +9270,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_2_q3",
       "question": "En programación orientada a objetos, una clase no representa directamente un objeto real, sino una definición abstracta que sirve como base para crear instancias. ¿Cuál de las siguientes afirmaciones describe correctamente el concepto de clase?",
       "options": [
-        "Es una estructura que contiene únicamente métodos sin datos asociados.",
-        "Es una plantilla que define los atributos y comportamientos de una entidad.",
-        "Es un objeto creado en memoria mediante el operador new.",
+        "Es una estructura que contiene únicamente métodos sin datos asociados",
+        "Es una plantilla que define los atributos y comportamientos de una entidad",
+        "Es un objeto creado en memoria mediante el operador new",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9284,9 +9284,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_2_q4",
       "question": "En Java, las variables que hacen referencia a objetos no almacenan el objeto en sí, sino una dirección de memoria. ¿Qué consecuencia tiene esto al asignar una referencia a otra?",
       "options": [
-        "Se crea automáticamente una copia independiente del objeto.",
-        "Ambas referencias apuntan al mismo objeto en memoria.",
-        "El objeto original se elimina de la memoria.",
+        "Se crea automáticamente una copia independiente del objeto",
+        "Ambas referencias apuntan al mismo objeto en memoria",
+        "El objeto original se elimina de la memoria",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9298,9 +9298,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_2_q5",
       "question": "Cuando una clase tiene una relación fuerte de “todo-parte” con otra y la parte no puede existir sin el todo, estamos ante un tipo concreto de relación entre clases. ¿De cuál se trata?",
       "options": [
-        "Dependencia.",
-        "Agregación.",
-        "Composición.",
+        "Dependencia",
+        "Agregación",
+        "Composición",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -9312,9 +9312,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_2_q6",
       "question": "Los métodos getter y setter se utilizan para controlar el acceso a los atributos privados de una clase. ¿Cuál es una de las principales ventajas de usar setters en lugar de hacer públicos los atributos?",
       "options": [
-        "Permiten acceder directamente a la memoria del objeto.",
-        "Permiten validar los datos antes de modificar el estado del objeto.",
-        "Eliminan la necesidad de constructores.",
+        "Permiten acceder directamente a la memoria del objeto",
+        "Permiten validar los datos antes de modificar el estado del objeto",
+        "Eliminan la necesidad de constructores",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9326,9 +9326,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_2_q7",
       "question": "El encapsulamiento es uno de los principios clave de la programación orientada a objetos y se apoya en los modificadores de acceso. ¿Cuál es la regla de oro más habitual en Java para aplicar correctamente el encapsulamiento?",
       "options": [
-        "Atributos públicos y métodos privados.",
-        "Atributos privados y métodos públicos.",
-        "Atributos y métodos siempre protected.",
+        "Atributos públicos y métodos privados",
+        "Atributos privados y métodos públicos",
+        "Atributos y métodos siempre protected",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9340,9 +9340,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_2_q8",
       "question": "El polimorfismo permite que un mismo mensaje provoque comportamientos distintos según el objeto que lo reciba. ¿Qué requisito técnico es necesario para que el polimorfismo funcione correctamente en Java?",
       "options": [
-        "El uso exclusivo de atributos protected.",
-        "La sobreescritura de métodos en las clases hijas.",
-        "La creación de múltiples constructores.",
+        "El uso exclusivo de atributos protected",
+        "La sobreescritura de métodos en las clases hijas",
+        "La creación de múltiples constructores",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9354,9 +9354,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_2_q9",
       "question": "En Java, todo el código debe estar contenido dentro de clases, y estas siguen una estructura concreta y unas normas estrictas. ¿Cuál de las siguientes reglas es obligatoria cuando se define una clase pública?",
       "options": [
-        "El nombre de la clase debe escribirse en minúsculas.",
-        "El archivo debe llamarse igual que la clase pública y tener extensión .java.",
-        "La clase debe contener al menos un método main.",
+        "El nombre de la clase debe escribirse en minúsculas",
+        "El archivo debe llamarse igual que la clase pública y tener extensión .java",
+        "La clase debe contener al menos un método main",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9412,9 +9412,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_3_q0",
       "question": "Las variables en Java tienen un ciclo de vida y un proceso de uso muy definido. ¿Cuál es el orden correcto para poder utilizar una variable sin provocar un error de compilación?",
       "options": [
-        "Inicializar &rarr; declarar &rarr; utilizar.",
-        "Declarar &rarr; inicializar &rarr; utilizar.",
-        "Utilizar &rarr; declarar &rarr; inicializar.",
+        "Inicializar &rarr; declarar &rarr; utilizar",
+        "Declarar &rarr; inicializar &rarr; utilizar",
+        "Utilizar &rarr; declarar &rarr; inicializar",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9426,9 +9426,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_3_q1",
       "question": "En Java, el punto y coma es un elemento sintáctico obligatorio en la mayoría de las instrucciones. ¿Qué indica realmente el punto y coma dentro del código?",
       "options": [
-        "El final lógico de un bloque de código.",
-        "El final de una sentencia para el compilador.",
-        "El final de una línea de texto para el programador.",
+        "El final lógico de un bloque de código",
+        "El final de una sentencia para el compilador",
+        "El final de una línea de texto para el programador",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9440,9 +9440,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_3_q2",
       "question": "Cuando se realiza una conversión explícita de un tipo de dato mayor a uno menor, como de double a int, ¿qué efecto se produce?",
       "options": [
-        "El valor se redondea automáticamente.",
-        "Se produce un truncamiento y posible pérdida de información.",
-        "Java lanza siempre una excepción en tiempo de ejecución.",
+        "El valor se redondea automáticamente",
+        "Se produce un truncamiento y posible pérdida de información",
+        "Java lanza siempre una excepción en tiempo de ejecución",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9454,9 +9454,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_3_q3",
       "question": "Las llaves { } juegan un papel fundamental en la organización del código Java y afectan directamente a la visibilidad de las variables. ¿Qué función principal cumplen las llaves dentro de un programa?",
       "options": [
-        "Indicar el final de cada instrucción.",
-        "Definir bloques de código y el ámbito de las variables.",
-        "Separar visualmente el código para mejorar su legibilidad.",
+        "Indicar el final de cada instrucción",
+        "Definir bloques de código y el ámbito de las variables",
+        "Separar visualmente el código para mejorar su legibilidad",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9468,9 +9468,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_3_q4",
       "question": "Las expresiones pueden combinar varios operadores, y Java sigue una jerarquía estricta para evaluarlas. ¿Qué operador tiene mayor prioridad en una expresión compleja?",
       "options": [
-        "Los operadores aritméticos de suma y resta.",
-        "Los operadores de asignación.",
-        "Los paréntesis.",
+        "Los operadores aritméticos de suma y resta",
+        "Los operadores de asignación",
+        "Los paréntesis",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -9482,9 +9482,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_3_q5",
       "question": "Al trabajar con constantes en Java se utiliza la palabra reservada final. ¿Cuál es la principal ventaja de usar constantes frente a valores literales repetidos en el código?",
       "options": [
-        "Aumentan el rendimiento del programa.",
-        "Permiten cambiar su valor en tiempo de ejecución.",
-        "Mejoran la legibilidad y facilitan el mantenimiento del código.",
+        "Aumentan el rendimiento del programa",
+        "Permiten cambiar su valor en tiempo de ejecución",
+        "Mejoran la legibilidad y facilitan el mantenimiento del código",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -9496,9 +9496,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_3_q6",
       "question": "Dentro de las estructuras de control de flujo, las sentencias break, continue y return tienen efectos distintos. ¿Qué ocurre cuando se ejecuta una sentencia return dentro de un bucle?",
       "options": [
-        "Se salta únicamente la iteración actual del bucle.",
-        "Se finaliza el bucle pero continúa el método.",
-        "Se sale inmediatamente del método completo.",
+        "Se salta únicamente la iteración actual del bucle",
+        "Se finaliza el bucle pero continúa el método",
+        "Se sale inmediatamente del método completo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -9524,9 +9524,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_3_q8",
       "question": "En Java, el código fuente no es un texto plano, sino que sigue una estructura jerárquica muy concreta. ¿Cuál es el orden correcto y obligatorio de los elementos que debe respetar un programa ejecutable?",
       "options": [
-        "Clase &rarr; Paquete &rarr; Método &rarr; Sentencias.",
-        "Paquete (opcional) &rarr; Clase &rarr; Método &rarr; Sentencias.",
-        "Método &rarr; Clase &rarr; Paquete &rarr; Sentencias.",
+        "Clase &rarr; Paquete &rarr; Método &rarr; Sentencias",
+        "Paquete (opcional) &rarr; Clase &rarr; Método &rarr; Sentencias",
+        "Método &rarr; Clase &rarr; Paquete &rarr; Sentencias",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9538,9 +9538,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_3_q9",
       "question": "Java distingue claramente entre tipos de datos primitivos y tipos de referencia. ¿Cuál de las siguientes afirmaciones es correcta respecto a los tipos primitivos?",
       "options": [
-        "Son objetos y disponen de métodos propios.",
-        "Almacenan directamente el valor en memoria y no son objetos.",
-        "Siempre se almacenan en el Heap.",
+        "Son objetos y disponen de métodos propios",
+        "Almacenan directamente el valor en memoria y no son objetos",
+        "Siempre se almacenan en el Heap",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9596,9 +9596,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_4_q0",
       "question": "¿Cuál de las siguientes afirmaciones describe correctamente la relación entre una clase y un objeto en Python?",
       "options": [
-        "Una clase es un tipo de dato primitivo, y un objeto es una variable que almacena ese tipo de dato.",
-        "Una clase actúa como una plantilla o plano que define las propiedades y métodos, mientras que un objeto es una instancia específica creada a partir de esa clase.",
-        "Un objeto es una función que se define dentro de una clase, y la clase es el resultado de la ejecución de un objeto.",
+        "Una clase es un tipo de dato primitivo, y un objeto es una variable que almacena ese tipo de dato",
+        "Una clase actúa como una plantilla o plano que define las propiedades y métodos, mientras que un objeto es una instancia específica creada a partir de esa clase",
+        "Un objeto es una función que se define dentro de una clase, y la clase es el resultado de la ejecución de un objeto",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9610,9 +9610,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_4_q1",
       "question": "Durante la ejecución de un programa Java, ¿en qué situación un objeto pasa a ser considerado inalcanzable y candidato a la recolección de basura?",
       "options": [
-        "Cuando se declara la variable de referencia que lo apuntará.",
-        "Cuando ninguna referencia activa apunta al objeto en memoria.",
-        "Cuando el programa invoca explícitamente el recolector de basura.",
+        "Cuando se declara la variable de referencia que lo apuntará",
+        "Cuando ninguna referencia activa apunta al objeto en memoria",
+        "Cuando el programa invoca explícitamente el recolector de basura",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9624,9 +9624,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_4_q2",
       "question": "En relación con el paso de parámetros en Java, señale la afirmación correcta:",
       "options": [
-        "Java utiliza paso por referencia para objetos y paso por valor para primitivos.",
-        "Java pasa siempre una copia del valor, aunque en los objetos dicho valor sea la referencia.",
-        "Java permite elegir entre paso por valor o por referencia.",
+        "Java utiliza paso por referencia para objetos y paso por valor para primitivos",
+        "Java pasa siempre una copia del valor, aunque en los objetos dicho valor sea la referencia",
+        "Java permite elegir entre paso por valor o por referencia",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9638,9 +9638,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_4_q3",
       "question": "En el uso profesional de la Programación Orientada a Objetos, ¿cuál es la finalidad principal del encapsulamiento?",
       "options": [
-        "Facilitar el acceso directo a los atributos desde cualquier clase.",
-        "Proteger el estado interno del objeto y controlar su modificación.",
-        "Reducir el número de métodos definidos en una clase.",
+        "Facilitar el acceso directo a los atributos desde cualquier clase",
+        "Proteger el estado interno del objeto y controlar su modificación",
+        "Reducir el número de métodos definidos en una clase",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9652,9 +9652,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_4_q4",
       "question": "Respecto a la definición y uso de métodos en una clase, ¿qué característica permite la sobrecarga de métodos?",
       "options": [
-        "Diferenciar los métodos únicamente por su tipo de retorno.",
-        "Definir varios métodos con el mismo nombre y distinta firma de parámetros.",
-        "Utilizar modificadores de acceso diferentes en cada método.",
+        "Diferenciar los métodos únicamente por su tipo de retorno",
+        "Definir varios métodos con el mismo nombre y distinta firma de parámetros",
+        "Utilizar modificadores de acceso diferentes en cada método",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9666,9 +9666,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_4_q5",
       "question": "Desde el punto de vista del diseño orientado a objetos, ¿cuál es la diferencia conceptual entre herencia y composición?",
       "options": [
-        "La herencia modela una relación “tiene un” y la composición una relación “es un”.",
-        "La herencia establece una relación “es un” y la composición una relación “tiene un”.",
-        "Ambas representan exactamente el mismo tipo de relación.",
+        "La herencia modela una relación “tiene un” y la composición una relación “es un”",
+        "La herencia establece una relación “es un” y la composición una relación “tiene un”",
+        "Ambas representan exactamente el mismo tipo de relación",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9680,9 +9680,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_4_q6",
       "question": "Desde el punto de vista de la gestión de memoria, ¿qué elemento se almacena en el Stack cuando se trabaja con objetos en Java?",
       "options": [
-        "El objeto completo con todos sus atributos.",
-        "La referencia que apunta al objeto almacenado en el Heap.",
-        "Una copia independiente del objeto original.",
+        "El objeto completo con todos sus atributos",
+        "La referencia que apunta al objeto almacenado en el Heap",
+        "Una copia independiente del objeto original",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9694,9 +9694,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_4_q7",
       "question": "En proyectos Java de tamaño medio o grande, ¿qué combinación de prácticas contribuye directamente a la organización, reutilización y mantenibilidad del código?",
       "options": [
-        "Uso de paquetes, gestión de librerías y documentación mediante Javadoc.",
-        "Uso exclusivo de clases públicas sin separación en paquetes.",
-        "Eliminación de comentarios y documentación para simplificar el código.",
+        "Uso de paquetes, gestión de librerías y documentación mediante Javadoc",
+        "Uso exclusivo de clases públicas sin separación en paquetes",
+        "Eliminación de comentarios y documentación para simplificar el código",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
@@ -9708,9 +9708,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_4_q8",
       "question": "En relación con la asignación de variables en Java, ¿qué ocurre cuando dos variables de tipo objeto se igualan?",
       "options": [
-        "Se crea automáticamente una copia independiente del objeto.",
-        "Ambas variables pasan a compartir la referencia al mismo objeto.",
-        "El objeto se duplica en el Heap para evitar efectos colaterales.",
+        "Se crea automáticamente una copia independiente del objeto",
+        "Ambas variables pasan a compartir la referencia al mismo objeto",
+        "El objeto se duplica en el Heap para evitar efectos colaterales",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9722,9 +9722,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_4_q9",
       "question": "En el diseño de constructores, ¿qué consecuencia tiene definir al menos un constructor con parámetros en una clase?",
       "options": [
-        "Java mantiene siempre disponible el constructor vacío implícito.",
-        "El constructor vacío deja de existir si no se define explícitamente.",
-        "Se impide la sobrecarga de constructores.",
+        "Java mantiene siempre disponible el constructor vacío implícito",
+        "El constructor vacío deja de existir si no se define explícitamente",
+        "Se impide la sobrecarga de constructores",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9780,9 +9780,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_5_q0",
       "question": "En relación con los arrays multidimensionales en Java, ¿cuál de las siguientes afirmaciones es correcta?",
       "options": [
-        "Representan una estructura continua de memoria bidimensional real.",
-        "Son arrays cuyos elementos son, a su vez, otros arrays.",
-        "Tienen un único valor de longitud para filas y columnas.",
+        "Representan una estructura continua de memoria bidimensional real",
+        "Son arrays cuyos elementos son, a su vez, otros arrays",
+        "Tienen un único valor de longitud para filas y columnas",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9794,9 +9794,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_5_q1",
       "question": "En relación con los índices de un array, señale la afirmación correcta:",
       "options": [
-        "El primer elemento se encuentra en la posición 1.",
-        "El último elemento se encuentra en la posición igual a la longitud del array.",
-        "Los índices válidos van desde 0 hasta longitud menos uno.",
+        "El primer elemento se encuentra en la posición 1",
+        "El último elemento se encuentra en la posición igual a la longitud del array",
+        "Los índices válidos van desde 0 hasta longitud menos uno",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -9808,9 +9808,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_5_q2",
       "question": "Desde el punto de vista de la memoria en Java, ¿cuál es la característica fundamental de un array?",
       "options": [
-        "Es una estructura primitiva que se almacena íntegramente en el Stack.",
-        "Es un objeto que se almacena en el Heap y se accede mediante una referencia.",
-        "Es una colección dinámica cuyo tamaño puede variar durante la ejecución.",
+        "Es una estructura primitiva que se almacena íntegramente en el Stack",
+        "Es un objeto que se almacena en el Heap y se accede mediante una referencia",
+        "Es una colección dinámica cuyo tamaño puede variar durante la ejecución",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9822,9 +9822,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_5_q3",
       "question": "En el procesamiento de arrays, ¿qué característica distingue al recorrido con for-each frente al for clásico?",
       "options": [
-        "Permite modificar directamente los elementos del array.",
-        "Proporciona acceso al índice y al valor simultáneamente.",
-        "Está orientado a la lectura secuencial sin acceso a la posición.",
+        "Permite modificar directamente los elementos del array",
+        "Proporciona acceso al índice y al valor simultáneamente",
+        "Está orientado a la lectura secuencial sin acceso a la posición",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -9836,9 +9836,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_5_q4",
       "question": "¿Cuál es la finalidad principal de la propiedad length en los arrays?",
       "options": [
-        "Modificar el tamaño del array durante la ejecución.",
-        "Conocer el número de elementos para acceder y recorrer el array de forma segura.",
-        "Contar únicamente los elementos que han sido inicializados explícitamente.",
+        "Modificar el tamaño del array durante la ejecución",
+        "Conocer el número de elementos para acceder y recorrer el array de forma segura",
+        "Contar únicamente los elementos que han sido inicializados explícitamente",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9850,9 +9850,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_5_q5",
       "question": "Desde un enfoque profesional, ¿cuál es la ventaja principal de utilizar los métodos de ordenación proporcionados por Java frente a los algoritmos académicos?",
       "options": [
-        "Son más sencillos conceptualmente que los algoritmos clásicos.",
-        "Están optimizados y reducen errores en la implementación.",
-        "Permiten mantener el orden original del array automáticamente.",
+        "Son más sencillos conceptualmente que los algoritmos clásicos",
+        "Están optimizados y reducen errores en la implementación",
+        "Permiten mantener el orden original del array automáticamente",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9864,9 +9864,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_5_q6",
       "question": "Respecto a los algoritmos de búsqueda, ¿cuál es la condición indispensable para poder aplicar una búsqueda binaria?",
       "options": [
-        "Que el array tenga un tamaño reducido.",
-        "Que el array esté previamente ordenado.",
-        "Que el array contenga únicamente valores numéricos.",
+        "Que el array tenga un tamaño reducido",
+        "Que el array esté previamente ordenado",
+        "Que el array contenga únicamente valores numéricos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9878,9 +9878,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_5_q7",
       "question": "¿Qué afirmación describe correctamente el tamaño de un array en Java?",
       "options": [
-        "El tamaño puede modificarse añadiendo o eliminando elementos.",
-        "El tamaño se fija en el momento de su creación y no puede cambiar.",
-        "El tamaño depende del número de elementos inicializados manualmente.",
+        "El tamaño puede modificarse añadiendo o eliminando elementos",
+        "El tamaño se fija en el momento de su creación y no puede cambiar",
+        "El tamaño depende del número de elementos inicializados manualmente",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9892,9 +9892,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_5_q8",
       "question": "Al trabajar con cadenas de caracteres en Java, ¿qué significa que la clase String sea inmutable?",
       "options": [
-        "Que no se pueden comparar dos cadenas entre sí.",
-        "Que una vez creado un texto, no puede modificarse su contenido.",
-        "Que solo puede crearse mediante el operador new.",
+        "Que no se pueden comparar dos cadenas entre sí",
+        "Que una vez creado un texto, no puede modificarse su contenido",
+        "Que solo puede crearse mediante el operador new",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -9906,9 +9906,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_5_q9",
       "question": "¿Cuál es la forma correcta de comparar el contenido de dos cadenas de caracteres en Java?",
       "options": [
-        "Utilizando el operador de igualdad para comprobar las referencias.",
-        "Comparando directamente su longitud.",
-        "Utilizando un método que evalúa el contenido textual.",
+        "Utilizando el operador de igualdad para comprobar las referencias",
+        "Comparando directamente su longitud",
+        "Utilizando un método que evalúa el contenido textual",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -9964,7 +9964,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Se devuelve el índice del dato siguiente",
         "Se devuelve el índice del dato anterior",
-        "Se devuelve -1",
+        "-1",
         "Se lanza una excepción"
       ],
       "correct": 2,
@@ -10034,9 +10034,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_6_q0",
       "question": "¿Cuál es la diferencia fundamental de diseño entre una Clase Abstracta y una Interfaz?",
       "options": [
-        "La Clase Abstracta define qué \"ES\" el objeto (identidad), mientras que la Interfaz define qué \"PUEDE HACER\" (capacidad).",
-        "Las Interfaces permiten guardar variables de estado mutables y las Clases Abstractas no.",
-        "Las Clases Abstractas permiten herencia múltiple y las Interfaces solo herencia simple.",
+        "La Clase Abstracta define qué \"ES\" el objeto (identidad), mientras que la Interfaz define qué \"PUEDE HACER\" (capacidad)",
+        "Las Interfaces permiten guardar variables de estado mutables y las Clases Abstractas no",
+        "Las Clases Abstractas permiten herencia múltiple y las Interfaces solo herencia simple",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
@@ -10048,9 +10048,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_6_q1",
       "question": "¿Qué característica define al modificador de acceso protected?",
       "options": [
-        "Hace que el miembro sea visible solo para la clase actual y nadie más.",
-        "Permite el acceso a cualquier clase del mismo paquete y a cualquier subclase, incluso en paquetes distintos.",
-        "Es exactamente igual al acceso public, pero solo funciona con métodos static.",
+        "Hace que el miembro sea visible solo para la clase actual y nadie más",
+        "Permite el acceso a cualquier clase del mismo paquete y a cualquier subclase, incluso en paquetes distintos",
+        "Es exactamente igual al acceso public, pero solo funciona con métodos static",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10062,9 +10062,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_6_q2",
       "question": "En Java, ¿cuál es la jerarquía máxima de la que heredan implícitamente todas las clases, incluidos los arrays y Strings?",
       "options": [
-        "La clase java.lang.Object.",
-        "La clase Super.",
-        "No existe una jerarquía común; cada clase es independiente a menos que use extends.",
+        "La clase java.lang.Object",
+        "La clase Super",
+        "No existe una jerarquía común; cada clase es independiente a menos que use extends",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
@@ -10076,9 +10076,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_6_q3",
       "question": "¿Por qué Java prohíbe la herencia múltiple de clases (heredar de dos padres a la vez)?",
       "options": [
-        "Para evitar el \"Problema del Diamante\" y la ambigüedad en la ejecución de métodos.",
-        "Porque consumiría demasiada memoria en el Heap al duplicar los constructores.",
-        "Porque todas las clases deben ser obligatoriamente final para ser seguras.",
+        "Para evitar el \"Problema del Diamante\" y la ambigüedad en la ejecución de métodos",
+        "Porque consumiría demasiada memoria en el Heap al duplicar los constructores",
+        "Porque todas las clases deben ser obligatoriamente final para ser seguras",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
@@ -10090,9 +10090,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_6_q4",
       "question": "¿Cuál es la función principal de la anotación @Override en la sobreescritura de métodos?",
       "options": [
-        "Obligar al método a ser final para que no pueda volver a cambiarse.",
-        "Actuar como un control de calidad que avisa al compilador si el método no existe en el padre.",
-        "Permitir que el método cambie su lista de parámetros (Sobrecarga).",
+        "Obligar al método a ser final para que no pueda volver a cambiarse",
+        "Actuar como un control de calidad que avisa al compilador si el método no existe en el padre",
+        "Permitir que el método cambie su lista de parámetros (Sobrecarga)",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10104,9 +10104,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_6_q5",
       "question": "Sobre las clases abstractas, ¿cuál es la \"Regla de Hierro\" mencionada en el temario?",
       "options": [
-        "Deben tener obligatoriamente todos sus métodos vacíos.",
-        "No se pueden crear objetos (instancias) de una clase abstracta.",
-        "Solo pueden heredar de interfaces y nunca de otras clases.",
+        "Deben tener obligatoriamente todos sus métodos vacíos",
+        "No se pueden crear objetos (instancias) de una clase abstracta",
+        "Solo pueden heredar de interfaces y nunca de otras clases",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10118,9 +10118,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_6_q6",
       "question": "Si deseamos garantizar que un algoritmo crítico no sea alterado por ninguna subclase, ¿qué debemos hacer?",
       "options": [
-        "Declarar el método como abstract.",
-        "Declarar el método como final.",
-        "Declarar el método como static y private simultáneamente.",
+        "Declarar el método como abstract",
+        "Declarar el método como final",
+        "Declarar el método como static y private simultáneamente",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10132,9 +10132,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_6_q7",
       "question": "Al decidir entre Herencia y Composición, ¿qué principio de diseño de software recomienda el temario?",
       "options": [
-        "Priorizar siempre la Herencia para maximizar la reutilización de código de \"Caja Blanca\".",
-        "Favorecer la Composición sobre la Herencia para obtener un acoplamiento más bajo y flexible.",
-        "Usar la Herencia para relaciones \"Tiene-Un\" y la Composición para relaciones \"Es-Un\".",
+        "Priorizar siempre la Herencia para maximizar la reutilización de código de \"Caja Blanca\"",
+        "Favorecer la Composición sobre la Herencia para obtener un acoplamiento más bajo y flexible",
+        "Usar la Herencia para relaciones \"Tiene-Un\" y la Composición para relaciones \"Es-Un\"",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10146,9 +10146,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_6_q8",
       "question": "Si un método es declarado como static, ¿cuál de las siguientes afirmaciones es CORRECTA?",
       "options": [
-        "Pertenece a la clase y no puede acceder a variables de instancia ni usar this.",
-        "Requiere crear un objeto con new antes de poder ser invocado.",
-        "Cada objeto creado tiene su propia copia privada de dicho método en memoria.",
+        "Pertenece a la clase y no puede acceder a variables de instancia ni usar this",
+        "Requiere crear un objeto con new antes de poder ser invocado",
+        "Cada objeto creado tiene su propia copia privada de dicho método en memoria",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
@@ -10160,9 +10160,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_6_q9",
       "question": "Respecto a los constructores y la herencia, ¿cuál es el orden estricto de inicialización?",
       "options": [
-        "Primero se inicializa la subclase (hija) y finalmente la superclase (padre).",
-        "Se inicializan simultáneamente para optimizar la carga de la JVM.",
-        "Los padres siempre se inicializan antes que los hijos, empezando desde la clase Object.",
+        "Primero se inicializa la subclase (hija) y finalmente la superclase (padre)",
+        "Se inicializan simultáneamente para optimizar la carga de la JVM",
+        "Los padres siempre se inicializan antes que los hijos, empezando desde la clase Object",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -10176,9 +10176,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_7_q0",
       "question": "¿Para qué se utiliza la palabra clave throws (en plural) en la firma de un método?",
       "options": [
-        "Para lanzar una instancia específica de una excepción en una línea concreta de código.",
-        "Para indicar que el método delega la responsabilidad de gestionar ciertas excepciones a quien lo invoque.",
-        "Para obligar al bloque finally a cerrar todos los recursos abiertos de forma manual.",
+        "Para lanzar una instancia específica de una excepción en una línea concreta de código",
+        "Para indicar que el método delega la responsabilidad de gestionar ciertas excepciones a quien lo invoque",
+        "Para obligar al bloque finally a cerrar todos los recursos abiertos de forma manual",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10190,9 +10190,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_7_q1",
       "question": "Al recorrer una colección, ¿en qué caso es indispensable utilizar un Iterator en lugar de un bucle for-each?",
       "options": [
-        "Cuando solo necesitamos leer los datos sin modificarlos.",
-        "Cuando queremos filtrar la colección mediante un objeto Stream.",
-        "Cuando necesitamos eliminar elementos de la colección de forma segura mientras la recorremos.",
+        "Cuando solo necesitamos leer los datos sin modificarlos",
+        "Cuando queremos filtrar la colección mediante un objeto Stream",
+        "Cuando necesitamos eliminar elementos de la colección de forma segura mientras la recorremos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -10204,9 +10204,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_7_q2",
       "question": "¿Cuál es el propósito de utilizar Genéricos (<T>) al declarar una colección como ArrayList<String>?",
       "options": [
-        "Permitir que la lista guarde cualquier tipo de objeto (mezclar enteros, cadenas, etc.).",
-        "Aportar seguridad de tipos en tiempo de compilación y evitar la necesidad de realizar castings manuales.",
-        "Hacer que la colección sea inmutable y no se puedan añadir más elementos tras su creación.",
+        "Permitir que la lista guarde cualquier tipo de objeto (mezclar enteros, cadenas, etc.)",
+        "Aportar seguridad de tipos en tiempo de compilación y evitar la necesidad de realizar castings manuales",
+        "Hacer que la colección sea inmutable y no se puedan añadir más elementos tras su creación",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10232,9 +10232,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_7_q4",
       "question": "¿Cuál es la diferencia principal entre un ArrayList y un HashSet?",
       "options": [
-        "El ArrayList mantiene el orden de inserción, mientras que el HashSet no garantiza ningún orden.",
-        "El ArrayList no permite duplicados y el HashSet sí.",
-        "El HashSet es más lento para acceder a elementos que el ArrayList porque usa índices.",
+        "El ArrayList mantiene el orden de inserción, mientras que el HashSet no garantiza ningún orden",
+        "El ArrayList no permite duplicados y el HashSet sí",
+        "El HashSet es más lento para acceder a elementos que el ArrayList porque usa índices",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
@@ -10246,9 +10246,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_7_q5",
       "question": "Sobre la interfaz Map, ¿cuál de las siguientes afirmaciones es correcta según el temario?",
       "options": [
-        "Hereda directamente de la interfaz Collection.",
-        "Almacena elementos en parejas de Clave-Valor y no pertenece a la jerarquía de Collection.",
-        "Es una lista ordenada que permite acceder a los elementos mediante un índice numérico.",
+        "Hereda directamente de la interfaz Collection",
+        "Almacena elementos en parejas de Clave-Valor y no pertenece a la jerarquía de Collection",
+        "Es una lista ordenada que permite acceder a los elementos mediante un índice numérico",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10260,9 +10260,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_7_q6",
       "question": "¿Cuál es la principal ventaja del \"try-with-resources\" introducido en versiones modernas de Java?",
       "options": [
-        "Permite capturar múltiples excepciones en una sola línea de código.",
-        "Gestiona automáticamente el cierre de recursos (como archivos o conexiones) al finalizar el bloque.",
-        "Aumenta la velocidad de ejecución de las colecciones tipo List y Map.",
+        "Permite capturar múltiples excepciones en una sola línea de código",
+        "Gestiona automáticamente el cierre de recursos (como archivos o conexiones) al finalizar el bloque",
+        "Aumenta la velocidad de ejecución de las colecciones tipo List y Map",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10274,9 +10274,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_7_q7",
       "question": "Según la jerarquía de excepciones en Java, ¿cuál es la diferencia entre un Error y una Exception?",
       "options": [
-        "Las Exception son fallos graves del sistema (como falta de memoria), mientras que los Error son fallos del programa.",
-        "Los Error son situaciones irrecuperables de la JVM, mientras que las Exception son condiciones que una aplicación debería capturar.",
-        "No hay diferencia; ambos términos se usan indistintamente para cualquier fallo en tiempo de ejecución.",
+        "Las Exception son fallos graves del sistema (como falta de memoria), mientras que los Error son fallos del programa",
+        "Los Error son situaciones irrecuperables de la JVM, mientras que las Exception son condiciones que una aplicación debería capturar",
+        "No hay diferencia; ambos términos se usan indistintamente para cualquier fallo en tiempo de ejecución",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10288,9 +10288,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_7_q8",
       "question": "¿Qué caracteriza a las excepciones de tipo RuntimeException (Unchecked)?",
       "options": [
-        "El compilador no obliga a capturarlas ni a declararlas en la firma del método.",
-        "Son excepciones que deben ser revisadas obligatoriamente por el programador antes de compilar.",
-        "Son las únicas excepciones que pueden lanzarse mediante la palabra clave throw.",
+        "El compilador no obliga a capturarlas ni a declararlas en la firma del método",
+        "Son excepciones que deben ser revisadas obligatoriamente por el programador antes de compilar",
+        "Son las únicas excepciones que pueden lanzarse mediante la palabra clave throw",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
@@ -10302,9 +10302,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_7_q9",
       "question": "En una estructura try-catch-finally, ¿cuándo se ejecuta el bloque finally?",
       "options": [
-        "Solo si se produce una excepción y esta es capturada correctamente.",
-        "Solo si no se produce ninguna excepción durante la ejecución del try.",
-        "Siempre, independientemente de si se lanzó una excepción o si fue capturada.",
+        "Solo si se produce una excepción y esta es capturada correctamente",
+        "Solo si no se produce ninguna excepción durante la ejecución del try",
+        "Siempre, independientemente de si se lanzó una excepción o si fue capturada",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -10318,9 +10318,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_8_q0",
       "question": "Si un atributo de una clase se marca con la palabra clave transient, ¿qué ocurre durante la serialización?",
       "options": [
-        "Ese atributo se guarda con prioridad absoluta antes que los demás.",
-        "Ese atributo se ignora y no se guarda en el fichero (útil para datos sensibles como contraseñas).",
-        "El atributo se convierte automáticamente a formato hexadecimal para ahorrar espacio.",
+        "Ese atributo se guarda con prioridad absoluta antes que los demás",
+        "Ese atributo se ignora y no se guarda en el fichero (útil para datos sensibles como contraseñas)",
+        "El atributo se convierte automáticamente a formato hexadecimal para ahorrar espacio",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10332,9 +10332,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_8_q1",
       "question": "¿Cuál es la diferencia principal entre un flujo de Bytes y un flujo de Caracteres?",
       "options": [
-        "Los de Bytes procesan datos de 8 bits (imágenes, audio), mientras que los de Caracteres procesan datos de 16 bits usando Unicode (texto).",
-        "Los flujos de Bytes son solo para lectura y los de Caracteres solo para escritura.",
-        "No hay diferencia técnica; Java decide cuál usar automáticamente según el tamaño del archivo.",
+        "Los de Bytes procesan datos de 8 bits (imágenes, audio), mientras que los de Caracteres procesan datos de 16 bits usando Unicode (texto)",
+        "Los flujos de Bytes son solo para lectura y los de Caracteres solo para escritura",
+        "No hay diferencia técnica; Java decide cuál usar automáticamente según el tamaño del archivo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
@@ -10346,9 +10346,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_8_q2",
       "question": "Al trabajar con archivos de texto, ¿qué sucede si se abre un FileWriter con el parámetro append en true?",
       "options": [
-        "El archivo se borra completamente antes de empezar a escribir.",
-        "El nuevo contenido se añade al final del archivo sin borrar lo que ya existía.",
-        "El archivo se bloquea para que otros programas no puedan leerlo mientras se escribe.",
+        "El archivo se borra completamente antes de empezar a escribir",
+        "El nuevo contenido se añade al final del archivo sin borrar lo que ya existía",
+        "El archivo se bloquea para que otros programas no puedan leerlo mientras se escribe",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10388,9 +10388,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_8_q5",
       "question": "¿Qué es la \"Serialización\" de objetos en Java?",
       "options": [
-        "El proceso de convertir un objeto en una secuencia de bytes para poder almacenarlo en un fichero o enviarlo por red.",
-        "Un método para ordenar alfabéticamente los atributos de una clase.",
-        "El proceso de borrar un objeto del Heap para liberar memoria.",
+        "El proceso de convertir un objeto en una secuencia de bytes para poder almacenarlo en un fichero o enviarlo por red",
+        "Un método para ordenar alfabéticamente los atributos de una clase",
+        "El proceso de borrar un objeto del Heap para liberar memoria",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
@@ -10402,9 +10402,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_8_q6",
       "question": "Respecto a la Salida Estándar de Errores (System.err), ¿qué afirmación es correcta?",
       "options": [
-        "Envía los datos directamente a la impresora del sistema.",
-        "Se utiliza para mensajes de diagnóstico y errores, y por defecto suele mostrarse en color rojo en la consola.",
-        "Es exactamente lo mismo que System.out y no se recomienda su uso en entornos profesionales.",
+        "Envía los datos directamente a la impresora del sistema",
+        "Se utiliza para mensajes de diagnóstico y errores, y por defecto suele mostrarse en color rojo en la consola",
+        "Es exactamente lo mismo que System.out y no se recomienda su uso en entornos profesionales",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10416,9 +10416,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_8_q7",
       "question": "¿Cuál es la función del \"Buffer\" en las operaciones de entrada/salida?",
       "options": [
-        "Actuar como una memoria intermedia para reducir el número de accesos físicos al disco o red, mejorando el rendimiento.",
-        "Cifrar los datos para que no puedan ser leídos por otros programas del sistema operativo.",
-        "Convertir automáticamente archivos binarios en archivos de texto plano.",
+        "Actuar como una memoria intermedia para reducir el número de accesos físicos al disco o red, mejorando el rendimiento",
+        "Cifrar los datos para que no puedan ser leídos por otros programas del sistema operativo",
+        "Convertir automáticamente archivos binarios en archivos de texto plano",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
@@ -10430,9 +10430,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_8_q8",
       "question": "En el contexto de Java, ¿qué es un \"Stream\" o flujo de datos?",
       "options": [
-        "Es una estructura de datos estática que almacena información en la memoria RAM.",
-        "Es un canal unidireccional que transporta información de forma secuencial desde un origen a un destino.",
-        "Es una base de datos interna que Java utiliza para guardar objetos de forma permanente.",
+        "Es una estructura de datos estática que almacena información en la memoria RAM",
+        "Es un canal unidireccional que transporta información de forma secuencial desde un origen a un destino",
+        "Es una base de datos interna que Java utiliza para guardar objetos de forma permanente",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10444,9 +10444,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_8_q9",
       "question": "Para que una clase pueda ser serializada, ¿qué requisito debe cumplir obligatoriamente?",
       "options": [
-        "Debe heredar de la clase File.",
-        "Debe implementar la interfaz Serializable, que actúa como una \"interfaz de marcado\".",
-        "Todos sus métodos deben ser declarados como static.",
+        "Debe heredar de la clase File",
+        "Debe implementar la interfaz Serializable, que actúa como una \"interfaz de marcado\"",
+        "Todos sus métodos deben ser declarados como static",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10460,9 +10460,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_9_q0",
       "question": "¿Cuál es la función del \"Driver\" (Controlador) en una conexión JDBC?",
       "options": [
-        "Traducir las llamadas de la API JDBC al protocolo específico del gestor de base de datos (MySQL, Oracle, etc.).",
-        "Diseñar las tablas de la base de datos automáticamente desde el código Java.",
-        "Comprobar que el código SQL no tenga errores de sintaxis antes de enviarlo.",
+        "Traducir las llamadas de la API JDBC al protocolo específico del gestor de base de datos (MySQL, Oracle, etc.)",
+        "Diseñar las tablas de la base de datos automáticamente desde el código Java",
+        "Comprobar que el código SQL no tenga errores de sintaxis antes de enviarlo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
@@ -10488,9 +10488,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_9_q2",
       "question": "¿Qué representan las siglas ACID en el contexto de las transacciones de bases de datos?",
       "options": [
-        "Un conjunto de propiedades (Atomicidad, Consistencia, Aislamiento y Durabilidad) que garantizan la integridad de las operaciones.",
-        "Un protocolo de cifrado para que las contraseñas de la base de datos viajen seguras.",
-        "El nombre del driver estándar utilizado para conectar Java con bases de datos SQLite.",
+        "Un conjunto de propiedades (Atomicidad, Consistencia, Aislamiento y Durabilidad) que garantizan la integridad de las operaciones",
+        "Un protocolo de cifrado para que las contraseñas de la base de datos viajen seguras",
+        "El nombre del driver estándar utilizado para conectar Java con bases de datos SQLite",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
@@ -10502,9 +10502,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_9_q3",
       "question": "Para gestionar una transacción de forma manual en Java, ¿cuál es el primer paso imprescindible?",
       "options": [
-        "Llamar al método conn.commit().",
-        "Establecer conn.setAutoCommit(false).",
-        "Cerrar la conexión con el bloque finally.",
+        "Llamar al método conn.commit()",
+        "Establecer conn.setAutoCommit(false)",
+        "Cerrar la conexión con el bloque finally",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10530,9 +10530,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_9_q5",
       "question": "¿Por qué se recomienda el uso de PreparedStatement en lugar de Statement para ejecutar consultas con parámetros?",
       "options": [
-        "Porque Statement no permite ejecutar consultas de tipo SELECT.",
-        "Porque PreparedStatement aumenta la seguridad contra ataques de Inyección SQL y mejora el rendimiento mediante la precompilación.",
-        "Porque Statement solo puede usarse con bases de datos locales y no en red.",
+        "Porque Statement no permite ejecutar consultas de tipo SELECT",
+        "Porque PreparedStatement aumenta la seguridad contra ataques de Inyección SQL y mejora el rendimiento mediante la precompilación",
+        "Porque Statement solo puede usarse con bases de datos locales y no en red",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10544,9 +10544,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_9_q6",
       "question": "¿Cómo funciona el objeto ResultSet al recuperar datos de una consulta?",
       "options": [
-        "Carga todos los datos de la base de datos en una lista estática de forma inmediata.",
-        "Actúa como un cursor que inicialmente apunta \"antes de la primera fila\" y requiere el método next() para avanzar.",
-        "Es una interfaz que solo permite leer datos de tipo texto (String).",
+        "Carga todos los datos de la base de datos en una lista estática de forma inmediata",
+        "Actúa como un cursor que inicialmente apunta \"antes de la primera fila\" y requiere el método next() para avanzar",
+        "Es una interfaz que solo permite leer datos de tipo texto (String)",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10558,9 +10558,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_9_q7",
       "question": "¿Cuál es la forma más profesional y segura de gestionar el cierre de Connection, Statement y ResultSet para evitar fugas de memoria?",
       "options": [
-        "Cerrarlos manualmente uno a uno en el cuerpo principal del código.",
-        "Confiar en que el Garbage Collector los cerrará cuando el programa termine.",
-        "Utilizar la estructura try-with-resources para que Java los cierre automáticamente al finalizar el bloque.",
+        "Cerrarlos manualmente uno a uno en el cuerpo principal del código",
+        "Confiar en que el Garbage Collector los cerrará cuando el programa termine",
+        "Utilizar la estructura try-with-resources para que Java los cierre automáticamente al finalizar el bloque",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -10586,9 +10586,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_9_q9",
       "question": "¿Qué es JDBC dentro del ecosistema de Java?",
       "options": [
-        "Una base de datos ligera que se integra directamente en el JDK.",
-        "Una API que proporciona un conjunto de interfaces estándar para interactuar con bases de datos independientemente del motor usado.",
-        "Un lenguaje de consulta que sustituye al SQL tradicional para mejorar el rendimiento.",
+        "Una base de datos ligera que se integra directamente en el JDK",
+        "Una API que proporciona un conjunto de interfaces estándar para interactuar con bases de datos independientemente del motor usado",
+        "Un lenguaje de consulta que sustituye al SQL tradicional para mejorar el rendimiento",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10602,9 +10602,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_10_q0",
       "question": "¿Qué es el OID (Object Identifier) en una base de datos orientada a objetos?",
       "options": [
-        "Una clave primaria numérica que el programador debe gestionar manualmente.",
-        "Un identificador único generado por el sistema que es independiente del valor de los atributos del objeto.",
-        "El nombre de la variable que utilizamos en el código Java para referenciar al objeto.",
+        "Una clave primaria numérica que el programador debe gestionar manualmente",
+        "Un identificador único generado por el sistema que es independiente del valor de los atributos del objeto",
+        "El nombre de la variable que utilizamos en el código Java para referenciar al objeto",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10630,9 +10630,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_10_q2",
       "question": "¿Qué sucede si se activa la propiedad de \"Cascada\" (Cascade On Update/Delete)?",
       "options": [
-        "Las operaciones realizadas sobre un objeto padre se propagan automáticamente a sus objetos hijos relacionados.",
-        "El sistema operativo borra la base de datos si ocurre un error crítico.",
-        "El objeto se guarda simultáneamente en dos bases de datos distintas para mayor seguridad.",
+        "Las operaciones realizadas sobre un objeto padre se propagan automáticamente a sus objetos hijos relacionados",
+        "El sistema operativo borra la base de datos si ocurre un error crítico",
+        "El objeto se guarda simultáneamente en dos bases de datos distintas para mayor seguridad",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 0,
@@ -10644,9 +10644,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_10_q3",
       "question": "¿Qué problema fundamental vienen a solucionar las BDOO en comparación con las bases de datos relacionales?",
       "options": [
-        "La lentitud de los discos duros actuales.",
-        "La \"Desadaptación de Impedancia\", evitando tener que traducir objetos a tablas y filas.",
-        "La imposibilidad de usar SQL en entornos de red.",
+        "La lentitud de los discos duros actuales",
+        "La \"Desadaptación de Impedancia\", evitando tener que traducir objetos a tablas y filas",
+        "La imposibilidad de usar SQL en entornos de red",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10658,9 +10658,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_10_q4",
       "question": "¿Cómo funciona el mecanismo de consulta QBE (Query By Example)?",
       "options": [
-        "Se escribe una sentencia de texto similar a SQL.",
-        "Se crea un objeto \"prototipo\" o plantilla y el sistema busca objetos que coincidan con sus atributos no nulos.",
-        "Se programa un filtro mediante una función lambda de Java.",
+        "Se escribe una sentencia de texto similar a SQL",
+        "Se crea un objeto \"prototipo\" o plantilla y el sistema busca objetos que coincidan con sus atributos no nulos",
+        "Se programa un filtro mediante una función lambda de Java",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10672,9 +10672,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_10_q5",
       "question": "¿Qué ventaja principal ofrecen las \"Native Queries\" (Consultas Nativas) frente a otros métodos?",
       "options": [
-        "Son mucho más rápidas que las consultas por OID.",
-        "Permiten usar código Java puro para filtrar, proporcionando total seguridad de tipos (Type-Safe).",
-        "No requieren que la base de datos esté abierta para ejecutarse.",
+        "Son mucho más rápidas que las consultas por OID",
+        "Permiten usar código Java puro para filtrar, proporcionando total seguridad de tipos (Type-Safe)",
+        "No requieren que la base de datos esté abierta para ejecutarse",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10686,9 +10686,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_10_q6",
       "question": "En las consultas OQL, ¿cómo se navega a través de las relaciones entre objetos?",
       "options": [
-        "Mediante el uso de sentencias JOIN complejas como en el modelo relacional.",
-        "Utilizando la \"notación de punto\" (ej. p.ciudad.nombre) para seguir los grafos de objetos.",
-        "No se puede navegar entre relaciones; solo se pueden consultar objetos aislados.",
+        "Mediante el uso de sentencias JOIN complejas como en el modelo relacional",
+        "Utilizando la \"notación de punto\" (ej. p.ciudad.nombre) para seguir los grafos de objetos",
+        "No se puede navegar entre relaciones; solo se pueden consultar objetos aislados",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10700,9 +10700,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_10_q7",
       "question": "¿Qué controla el parámetro \"Activation Depth\" (Profundidad de Activación)?",
       "options": [
-        "El número máximo de usuarios que pueden conectarse a la vez.",
-        "El nivel de profundidad del grafo de objetos que se carga en la memoria RAM al recuperar un objeto.",
-        "La cantidad de copias de seguridad que el sistema realiza cada hora.",
+        "El número máximo de usuarios que pueden conectarse a la vez",
+        "El nivel de profundidad del grafo de objetos que se carga en la memoria RAM al recuperar un objeto",
+        "La cantidad de copias de seguridad que el sistema realiza cada hora",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10714,9 +10714,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_10_q8",
       "question": "En el estándar ODMG, ¿qué lenguaje se utiliza específicamente para definir la estructura de la base de datos?",
       "options": [
-        "OQL (Object Query Language).",
-        "ODL (Object Definition Language).",
-        "SQL-92.",
+        "OQL (Object Query Language)",
+        "ODL (Object Definition Language)",
+        "SQL-92",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10728,9 +10728,9 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "prog_tema_10_q9",
       "question": "¿Cuál es la diferencia principal entre el modo de funcionamiento \"Embebido\" y el modo \"Servidor\"?",
       "options": [
-        "El modo Embebido permite múltiples conexiones remotas, mientras que el Servidor es solo para un usuario.",
-        "El modo Embebido la base de datos corre en el mismo proceso que la aplicación, mientras que el modo Servidor es un proceso independiente.",
-        "El modo Servidor es gratuito y el modo Embebido requiere licencia comercial.",
+        "El modo Embebido permite múltiples conexiones remotas, mientras que el Servidor es solo para un usuario",
+        "El modo Embebido la base de datos corre en el mismo proceso que la aplicación, mientras que el modo Servidor es un proceso independiente",
+        "El modo Servidor es gratuito y el modo Embebido requiere licencia comercial",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 1,
@@ -10746,7 +10746,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Una máquina matemática que permite reducir la estructura de cualquier dispositivo a su forma más esencial",
         "Un sistema de hardware y software que permite realizar tareas en una secuencia de pasos discretos",
-        "Un tipo de ordenador que se basa en el uso de una cinta infinita y extensible para ejecutar funciones.",
+        "Un tipo de ordenador que se basa en el uso de una cinta infinita y extensible para ejecutar funciones",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -10759,7 +10759,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué permite la escalabilidad de las redes informáticas?",
       "options": [
         "Proteger la información y los recursos de posibles amenazas",
-        "Adaptarse a las necesidades crecientes de la organización.",
+        "Adaptarse a las necesidades crecientes de la organización",
         "Ser fiables y estar disponibles en todo momento",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -10774,7 +10774,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Fiables y estar disponibles en todo momento",
         "Escalables",
-        "Seguras.",
+        "Seguras",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -10787,7 +10787,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué significa que las redes informáticas permitan la comunicación entre los dispositivos conectados?",
       "options": [
         "Los usuarios deben ser capaces de acceder a los mismos recursos de manera simultánea",
-        "Los usuarios pueden enviar y recibir información de manera rápida y eficiente.",
+        "Los usuarios pueden enviar y recibir información de manera rápida y eficiente",
         "Deben estar diseñadas para proteger la información y los recursos de posibles amenazas",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -10801,7 +10801,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es una de las principales características de las redes informáticas?",
       "options": [
         "Proteger la privacidad y la integridad de los datos",
-        "Permitir la comunicación entre los dispositivos conectados.",
+        "Permitir la comunicación entre los dispositivos conectados",
         "Adquirir una copia independiente para cada usuario",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -10815,7 +10815,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué dispositivo permite la reproducción de sonido en el ordenador?",
       "options": [
         "Ratón",
-        "Altavoces.",
+        "Altavoces",
         "Impresora",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -10829,7 +10829,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué es una de las normas importantes que un administrador de redes debe seguir para garantizar la seguridad?",
       "options": [
         "Mantener una buena organización de cables",
-        "Realizar copias de seguridad periódicas.",
+        "Realizar copias de seguridad periódicas",
         "No proteger dispositivos móviles",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -10843,7 +10843,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es el componente físico del sistema informático?",
       "options": [
         "Software",
-        "Hardware.",
+        "Hardware",
         "Componente humano",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -10856,7 +10856,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_1_q8",
       "question": "¿Qué tipo de medios de transmisión requiere un canal físico para transmitir los datos?",
       "options": [
-        "Guiados.",
+        "Guiados",
         "No guiados",
         "Ambos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -10871,7 +10871,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué periférico permite ingresar texto y comandos en el ordenador?",
       "options": [
         "Escáner",
-        "Teclado.",
+        "Teclado",
         "Cámara web",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -10887,7 +10887,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuáles son los cuatro componentes principales de un sistema informático?",
       "options": [
         "Hardware, software, usuarios, seguridad",
-        "Hardware, software, datos, usuarios.",
+        "Hardware, software, datos, usuarios",
         "Hardware, software, redes, periféricos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -10901,7 +10901,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué tarea crítica del sistema operativo implica la planificación de la ejecución de procesos y supervisar su finalización?",
       "options": [
         "Controlar y gestionar el uso del hardware del ordenador",
-        "Administrar la ejecución de los procesos.",
+        "Administrar la ejecución de los procesos",
         "Controlar el proceso de organización de la información",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -10916,7 +10916,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Descargar manualmente e instalar la versión superior",
         "Comprobar si la versión superior es compatible con el sistema operativo y la licencia de la aplicación",
-        "Realizar una copia de seguridad de los archivos y carpetas asociados a la aplicación.",
+        "Realizar una copia de seguridad de los archivos y carpetas asociados a la aplicación",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -10929,7 +10929,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué es la virtualización del hardware?",
       "options": [
         "La capacidad de ejecutar múltiples sistemas operativos en diferentes servidores físicos",
-        "La capacidad de crear varias máquinas virtuales en un solo servidor físico.",
+        "La capacidad de crear varias máquinas virtuales en un solo servidor físico",
         "La capacidad de almacenar datos de diferentes sistemas operativos en un solo servidor físico",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -10942,7 +10942,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_2_q4",
       "question": "¿Cuál es la ventaja principal de la arquitectura monolítica?",
       "options": [
-        "Su simplicidad y eficiencia.",
+        "Su simplicidad y eficiencia",
         "Su modularidad y escalabilidad",
         "Su capacidad para agregar o eliminar funciones sin tener que recompilar todo el sistema",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -10958,7 +10958,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Para verificar si se dispone de la licencia correspondiente",
         "Para dividir el disco duro en secciones o particiones lógicas",
-        "Para automatizar la instalación del sistema operativo en varios ordenadores.",
+        "Para automatizar la instalación del sistema operativo en varios ordenadores",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -10971,7 +10971,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Por qué es importante comprobar los requisitos, versiones y licencias antes de instalar una aplicación?",
       "options": [
         "Para asegurarse de tener suficiente espacio en disco",
-        "Para garantizar el correcto funcionamiento de la aplicación y evitar problemas de licencia.",
+        "Para garantizar el correcto funcionamiento de la aplicación y evitar problemas de licencia",
         "Para obtener nuevas funcionalidades y correcciones de errores",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -10985,7 +10985,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué es el particionado del disco duro?",
       "options": [
         "La instalación de un sistema operativo",
-        "La división del disco duro en secciones o particiones lógicas.",
+        "La división del disco duro en secciones o particiones lógicas",
         "La verificación de la memoria RAM",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -10998,7 +10998,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_2_q8",
       "question": "¿Qué son las aplicaciones de seguridad?",
       "options": [
-        "Programas que se utilizan para proteger el sistema informático contra virus, malware y otras amenazas de seguridad.",
+        "Programas que se utilizan para proteger el sistema informático contra virus, malware y otras amenazas de seguridad",
         "Programas que se utilizan para la diversión y el entretenimiento",
         "Programas que se utilizan para la comunicación en línea",
         "Con un certificado SSL autofirmado"
@@ -11013,7 +11013,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es una de las funciones principales de un sistema operativo?",
       "options": [
         "Ejecutar aplicaciones",
-        "Gestionar y coordinar el uso de los recursos de hardware y software.",
+        "Gestionar y coordinar el uso de los recursos de hardware y software",
         "Proteger el sistema de ataques de virus",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11028,7 +11028,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_3_q0",
       "question": "¿Qué tipo de particiones solo se pueden crear en un esquema MBR?",
       "options": [
-        "Primarias.",
+        "Primarias",
         "Extendidas",
         "Lógicas",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -11043,7 +11043,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es la principal ventaja del esquema GPT sobre el esquema MBR?",
       "options": [
         "Es compatible con una amplia variedad de sistemas operativos y software",
-        "Tiene una mejor protección contra la corrupción de datos y soporta discos de más de 2TB.",
+        "Tiene una mejor protección contra la corrupción de datos y soporta discos de más de 2TB",
         "Solo permite la creación de particiones primarias",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11057,7 +11057,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es la estructura de directorios típica de Windows?",
       "options": [
         "/, /bin, /etc, /home, /usr, /var",
-        "C:, C:\\Windows, C:\\Program Files, C:\\Users.",
+        "C:, C:\\Windows, C:\\Program Files, C:\\Users",
         "/, /Applications, /Library, /System, /Users",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11072,7 +11072,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Mayor velocidad de transferencia de datos",
         "Mayor capacidad de almacenamiento",
-        "Mayor flexibilidad y portabilidad.",
+        "Mayor flexibilidad y portabilidad",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -11085,7 +11085,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es la principal diferencia entre el almacenamiento interno y externo?",
       "options": [
         "La velocidad de transferencia de datos",
-        "La ubicación física del dispositivo.",
+        "La ubicación física del dispositivo",
         "La capacidad de almacenamiento",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11099,7 +11099,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué comando se utiliza en Linux para mostrar información sobre los procesos que se están ejecutando en el sistema?",
       "options": [
         "systeminfo",
-        "top.",
+        "top",
         "free",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11113,7 +11113,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es la capacidad de almacenamiento de un disco DVD estándar?",
       "options": [
         "Hasta 2,5 GB",
-        "Hasta 4,7 GB.",
+        "Hasta 4,7 GB",
         "Hasta 25 GB",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11127,7 +11127,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuáles son los dos esquemas de particiones más comunes?",
       "options": [
         "FAT y NTFS",
-        "MBR y GPT.",
+        "MBR y GPT",
         "HFS+ y APFS",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11141,7 +11141,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué tipo de dispositivo de almacenamiento es más resistente a golpes y vibraciones?",
       "options": [
         "Disco duro (HDD)",
-        "Unidad de estado sólido (SSD).",
+        "Unidad de estado sólido (SSD)",
         "Tarjeta de memoria",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11157,7 +11157,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué es un perfil de usuario local en Windows?",
       "options": [
         "Una cuenta de usuario que solo puede acceder a recursos en línea",
-        "Una cuenta de usuario que solo puede acceder a recursos locales en una computadora.",
+        "Una cuenta de usuario que solo puede acceder a recursos locales en una computadora",
         "Una cuenta de usuario que solo puede acceder a recursos en una red local",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11171,7 +11171,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué comando se utiliza para añadir un usuario a un grupo en la consola de comandos de Windows?",
       "options": [
         "add_group_member",
-        "net group.",
+        "net group",
         "add_user_to_group",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11185,7 +11185,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Por qué es importante la configuración de usuarios y grupos locales en la gestión de sistemas operativos?",
       "options": [
         "Para personalizar la apariencia del sistema operativo",
-        "Para controlar el acceso y los permisos de los usuarios a los recursos del sistema.",
+        "Para controlar el acceso y los permisos de los usuarios a los recursos del sistema",
         "Para mejorar la velocidad del sistema operativo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11200,7 +11200,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "create_user",
         "add_user",
-        "net user.",
+        "net user",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -11212,7 +11212,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_4_q4",
       "question": "¿Qué beneficios puede tener cambiar la ruta de las carpetas de documentos a otra partición o recurso de red?",
       "options": [
-        "Liberar espacio en el disco principal y reducir la fragmentación del disco.",
+        "Liberar espacio en el disco principal y reducir la fragmentación del disco",
         "Mejorar la velocidad de Internet",
         "Aumentar el rendimiento del procesador",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -11228,7 +11228,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Con el comando \"show_user\"",
         "Con el comando \"verify_user\"",
-        "Con el comando \"net user\".",
+        "Con el comando \"net user\"",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -11241,7 +11241,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Quién debe tener la capacidad de habilitar o deshabilitar cuentas de usuario?",
       "options": [
         "Todos los usuarios del sistema",
-        "Solo los usuarios con privilegios de administrador.",
+        "Solo los usuarios con privilegios de administrador",
         "Solo los usuarios que tengan una contraseña segura",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11254,7 +11254,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_4_q7",
       "question": "¿Por qué es importante tener una correcta gestión de permisos y acceso a recursos en un sistema informático?",
       "options": [
-        "Para prevenir el acceso no autorizado a datos confidenciales.",
+        "Para prevenir el acceso no autorizado a datos confidenciales",
         "Para mejorar la velocidad de Internet",
         "Para aumentar el rendimiento del procesador",
         "Con un certificado SSL autofirmado"
@@ -11269,7 +11269,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Por qué es importante asignar a un usuario a un grupo en un sistema operativo?",
       "options": [
         "Para que el usuario tenga acceso a todos los recursos del sistema",
-        "Para simplificar la administración de permisos y ahorrar tiempo y esfuerzo.",
+        "Para simplificar la administración de permisos y ahorrar tiempo y esfuerzo",
         "Para aumentar el riesgo de que un usuario tenga acceso a recursos que no debería tener",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11283,7 +11283,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuáles son algunas normas para crear una contraseña segura?",
       "options": [
         "La contraseña debe tener menos de ocho caracteres de longitud",
-        "La contraseña debe contener una combinación de letras mayúsculas y minúsculas, números y símbolos.",
+        "La contraseña debe contener una combinación de letras mayúsculas y minúsculas, números y símbolos",
         "La contraseña debe ser una palabra común o una secuencia de caracteres fácilmente reconocible",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11312,10 +11312,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_5_q1",
       "question": "¿Cuáles son las ventajas de la configuración estática de redes frente a la dinámica?",
       "options": [
-        "Menor seguridad, estabilidad y control.",
-        "Mayor seguridad pero menor estabilidad y control.",
-        "Configuración automática sin intervención del administrador.",
-        "Mayor seguridad, estabilidad y control sobre el tráfico de red."
+        "Menor seguridad, estabilidad y control",
+        "Mayor seguridad pero menor estabilidad y control",
+        "Configuración automática sin intervención del administrador",
+        "Mayor seguridad, estabilidad y control sobre el tráfico de red"
       ],
       "correct": 3,
       "explanation": "La configuración estática ofrece mayor seguridad (no hay intercambio de información de enrutamiento), mayor estabilidad (las rutas no cambian automáticamente) y mayor control (el administrador decide exactamente las rutas).",
@@ -11326,10 +11326,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_5_q2",
       "question": "¿Qué es una tabla de enrutamiento estática?",
       "options": [
-        "Una tabla en la que las rutas se determinan automáticamente mediante protocolos de enrutamiento.",
-        "Una tabla que se actualiza en tiempo real según el estado de la red.",
-        "Una tabla generada por el protocolo OSPF para optimizar rutas.",
-        "Una tabla en la que se especifican manualmente las rutas que deben tomar los paquetes de datos para llegar a su destino."
+        "Una tabla en la que las rutas se determinan automáticamente mediante protocolos de enrutamiento",
+        "Una tabla que se actualiza en tiempo real según el estado de la red",
+        "Una tabla generada por el protocolo OSPF para optimizar rutas",
+        "Una tabla en la que se especifican manualmente las rutas que deben tomar los paquetes de datos para llegar a su destino"
       ],
       "correct": 3,
       "explanation": "En el enrutamiento estático, el administrador configura manualmente cada ruta en la tabla de enrutamiento. Es más seguro y predecible que el dinámico, pero requiere más mantenimiento cuando cambia la topología de la red.",
@@ -11340,10 +11340,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_5_q3",
       "question": "¿Qué es una WLAN?",
       "options": [
-        "Una red de área amplia que conecta ciudades o países mediante fibra óptica.",
-        "Una red cableada de alta velocidad para centros de datos.",
-        "Una red privada virtual que cifra el tráfico entre dos puntos.",
-        "Una red inalámbrica de área local que conecta dispositivos en un área geográfica limitada."
+        "Una red de área amplia que conecta ciudades o países mediante fibra óptica",
+        "Una red cableada de alta velocidad para centros de datos",
+        "Una red privada virtual que cifra el tráfico entre dos puntos",
+        "Una red inalámbrica de área local que conecta dispositivos en un área geográfica limitada"
       ],
       "correct": 3,
       "explanation": "WLAN (Wireless Local Area Network) es una red de área local que usa ondas de radio en lugar de cables. El estándar más común es IEEE 802.11 (WiFi). Conecta dispositivos en un área limitada como una oficina o edificio.",
@@ -11354,10 +11354,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_5_q4",
       "question": "¿Qué son las direcciones IP?",
       "options": [
-        "Un número aleatorio que se asigna a cada dispositivo en una red.",
-        "Una secuencia de letras que identifica a cada dispositivo en una red.",
-        "El nombre de dominio asociado a cada dispositivo conectado a Internet.",
-        "Un número único que identifica a cada dispositivo en una red para permitir la comunicación."
+        "Un número aleatorio que se asigna a cada dispositivo en una red",
+        "Una secuencia de letras que identifica a cada dispositivo en una red",
+        "El nombre de dominio asociado a cada dispositivo conectado a Internet",
+        "Un número único que identifica a cada dispositivo en una red para permitir la comunicación"
       ],
       "correct": 3,
       "explanation": "Una dirección IP (Internet Protocol) es un identificador numérico único asignado a cada dispositivo en una red. IPv4 usa 32 bits (ej: 192.168.1.1) e IPv6 usa 128 bits. Permite el enrutamiento de paquetes entre dispositivos.",
@@ -11368,10 +11368,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_5_q5",
       "question": "¿Qué es una máscara de subred?",
       "options": [
-        "Una herramienta para bloquear el tráfico no autorizado en la red.",
-        "Un código para identificar el dispositivo dentro de la red local.",
-        "El identificador único del router en la red de área local.",
-        "Una herramienta que indica qué parte de una dirección IP identifica la red y qué parte identifica el dispositivo."
+        "Una herramienta para bloquear el tráfico no autorizado en la red",
+        "Un código para identificar el dispositivo dentro de la red local",
+        "El identificador único del router en la red de área local",
+        "Una herramienta que indica qué parte de una dirección IP identifica la red y qué parte identifica el dispositivo"
       ],
       "correct": 3,
       "explanation": "La máscara de subred (ej: 255.255.255.0 o /24) divide la dirección IP en dos partes: la parte de red (igual para todos los dispositivos de la misma red) y la parte de host (única para cada dispositivo).",
@@ -11410,10 +11410,10 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_5_q8",
       "question": "¿Qué es el protocolo DNS?",
       "options": [
-        "Un protocolo para asignar direcciones IP automáticamente a los dispositivos.",
-        "Un protocolo para cifrar las comunicaciones entre cliente y servidor.",
-        "Un protocolo para transferir ficheros entre equipos de la red.",
-        "Un protocolo que traduce nombres de dominio legibles (como google.com) a direcciones IP numéricas."
+        "Un protocolo para asignar direcciones IP automáticamente a los dispositivos",
+        "Un protocolo para cifrar las comunicaciones entre cliente y servidor",
+        "Un protocolo para transferir ficheros entre equipos de la red",
+        "Un protocolo que traduce nombres de dominio legibles (como google.com) a direcciones IP numéricas"
       ],
       "correct": 3,
       "explanation": "DNS (Domain Name System) funciona como la \"agenda telefónica\" de Internet: traduce nombres de dominio (google.com) a direcciones IP (142.250.185.46). Sin DNS habría que memorizar IPs para acceder a cada sitio web.",
@@ -11440,7 +11440,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_6_q0",
       "question": "¿Qué es el control de acceso basado en roles?",
       "options": [
-        "Una técnica que restringe el acceso a ciertos recursos del sistema en función del rol del usuario.",
+        "Una técnica que restringe el acceso a ciertos recursos del sistema en función del rol del usuario",
         "Una técnica que permite el acceso a todos los recursos del sistema sin restricciones",
         "Una técnica que no tiene relación con el acceso a recursos del sistema",
         "Con un certificado SSL autofirmado"
@@ -11454,7 +11454,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_6_q1",
       "question": "¿Qué es el cifrado de datos?",
       "options": [
-        "Una técnica que se utiliza para proteger la confidencialidad de los datos almacenados o transmitidos.",
+        "Una técnica que se utiliza para proteger la confidencialidad de los datos almacenados o transmitidos",
         "Una técnica que se utiliza para compartir datos públicamente sin protección",
         "Una técnica que no tiene relación con la protección de datos",
         "Con un certificado SSL autofirmado"
@@ -11469,7 +11469,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Para qué se utiliza OpenSSL?",
       "options": [
         "Para cifrar unidades de almacenamiento como discos duros internos o externos",
-        "Para crear y gestionar certificados digitales y claves de cifrado.",
+        "Para crear y gestionar certificados digitales y claves de cifrado",
         "Para enviar y recibir correos electrónicos cifrados",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11482,7 +11482,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_6_q3",
       "question": "¿Qué son los derechos de usuario en una red?",
       "options": [
-        "Los permisos que se otorgan a los usuarios para acceder y utilizar los recursos compartidos de la red.",
+        "Los permisos que se otorgan a los usuarios para acceder y utilizar los recursos compartidos de la red",
         "Los privilegios que se otorgan a los administradores de la red",
         "Los permisos que se otorgan a los usuarios para acceder a Internet",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -11497,7 +11497,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué es una ACL?",
       "options": [
         "Un objeto de directiva de seguridad",
-        "Una lista de control de acceso.",
+        "Una lista de control de acceso",
         "Un sistema operativo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11512,7 +11512,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Firewall",
         "LDAP",
-        "Active Directory.",
+        "Active Directory",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -11525,7 +11525,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué es la autenticación multifactorial?",
       "options": [
         "Una técnica que requiere que los usuarios proporcionen una forma de identificación antes de acceder a una cuenta",
-        "Una técnica que requiere que los usuarios proporcionen dos o más formas de identificación antes de acceder a una cuenta.",
+        "Una técnica que requiere que los usuarios proporcionen dos o más formas de identificación antes de acceder a una cuenta",
         "Una técnica que permite el acceso a una cuenta sin necesidad de identificación",
         "Con un certificado SSL autofirmado"
       ],
@@ -11540,7 +11540,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Para proteger la información confidencial",
         "Para garantizar la integridad del sistema",
-        "Todas las anteriores.",
+        "Todas las anteriores",
         "Con un certificado SSL autofirmado"
       ],
       "correct": 2,
@@ -11553,7 +11553,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué tipo de objetos de directiva de seguridad se utilizan para especificar los requisitos de contraseña?",
       "options": [
         "Usuarios y grupos",
-        "Contraseñas.",
+        "Contraseñas",
         "Auditoría",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11567,7 +11567,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Por qué es importante establecer diferentes niveles de acceso en una red?",
       "options": [
         "Para que los usuarios tengan acceso completo a todos los recursos de la red",
-        "Para evitar que los usuarios accedan a recursos que no necesitan y reducir el riesgo de violaciones de seguridad.",
+        "Para evitar que los usuarios accedan a recursos que no necesitan y reducir el riesgo de violaciones de seguridad",
         "Para permitir que todos los usuarios tengan acceso a todos los recursos de la red",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11584,7 +11584,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Norton",
         "McAfee",
-        "EaseUS.",
+        "EaseUS",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -11596,7 +11596,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_7_q1",
       "question": "¿Qué es un procesador de texto?",
       "options": [
-        "Una herramienta informática que permite la creación, edición y formateo de documentos de texto.",
+        "Una herramienta informática que permite la creación, edición y formateo de documentos de texto",
         "Un tipo de hoja de cálculo que se utiliza para realizar cálculos y análisis de datos",
         "Un programa de edición de imágenes",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -11612,7 +11612,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Los sistemas de archivos",
         "Los controladores de dispositivos",
-        "El sistema operativo.",
+        "El sistema operativo",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
       "correct": 2,
@@ -11624,7 +11624,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_7_q3",
       "question": "¿Cuál es una de las características principales de las herramientas de productividad?",
       "options": [
-        "Automatización de tareas.",
+        "Automatización de tareas",
         "Recuperación de datos",
         "Escaneo de archivos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -11639,7 +11639,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué ventaja ofrece Google Docs en comparación con Microsoft Word?",
       "options": [
         "Amplia gama de funciones y herramientas avanzadas para crear documentos complejos",
-        "Almacenamiento en la nube y acceso en cualquier momento y desde cualquier lugar.",
+        "Almacenamiento en la nube y acceso en cualquier momento y desde cualquier lugar",
         "Es software libre y de pago",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11652,7 +11652,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_7_q5",
       "question": "¿Cuál es el procesador de texto más utilizado en el mundo?",
       "options": [
-        "Microsoft Word.",
+        "Microsoft Word",
         "Google Docs",
         "LibreOffice Writer",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -11666,7 +11666,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "si_tema_7_q6",
       "question": "¿Qué es el software antivirus?",
       "options": [
-        "Un tipo de software diseñado para detectar, prevenir y eliminar programas maliciosos.",
+        "Un tipo de software diseñado para detectar, prevenir y eliminar programas maliciosos",
         "Un tipo de software diseñado para mejorar la productividad",
         "Un tipo de software diseñado para recuperar datos perdidos",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
@@ -11681,7 +11681,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es la función principal del software de sistema?",
       "options": [
         "Realizar tareas específicas en la computadora",
-        "Controlar y coordinar el funcionamiento del hardware y proporcionar una interfaz entre el usuario y el hardware.",
+        "Controlar y coordinar el funcionamiento del hardware y proporcionar una interfaz entre el usuario y el hardware",
         "Escribir, depurar y mantener programas de software",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11695,7 +11695,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué son las herramientas de desarrollo integradas?",
       "options": [
         "Herramientas que permiten al usuario realizar diferentes tareas, como realizar copias de seguridad de datos, optimizar el rendimiento del sistema, o desinstalar programas",
-        "Herramientas que incluyen un editor de código, un depurador y un compilador, todos integrados en una única interfaz de usuario.",
+        "Herramientas que incluyen un editor de código, un depurador y un compilador, todos integrados en una única interfaz de usuario",
         "Herramientas que permiten al usuario identificar y solucionar problemas en el sistema, como errores de hardware o software",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11709,7 +11709,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué significa que las bases de datos sean escalables y flexibles?",
       "options": [
         "Que tienen una estructura y organización definida",
-        "Que pueden crecer y evolucionar a medida que cambian las necesidades de la organización.",
+        "Que pueden crecer y evolucionar a medida que cambian las necesidades de la organización",
         "Que no se pueden integrar con otras aplicaciones informáticas",
         "Ninguna de las anteriores opciones es completamente correcta en este contexto"
       ],
@@ -11740,7 +11740,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Solo falla el nodo más alejado",
         "La red sigue funcionando con menor velocidad",
-        "Toda la red deja de funcionar.",
+        "Toda la red deja de funcionar",
         "Solo fallan los nodos pares"
       ],
       "correct": 2,
@@ -11754,7 +11754,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "512 MB",
         "1024 MB",
-        "2048 MB.",
+        "2048 MB",
         "4096 MB"
       ],
       "correct": 2,
@@ -11768,7 +11768,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Red interna",
         "Adaptador puente",
-        "NAT.",
+        "NAT",
         "Solo anfitrión"
       ],
       "correct": 2,
@@ -11824,7 +11824,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Explorador de archivos",
         "Panel de control",
-        "Administración de discos.",
+        "Administración de discos",
         "Símbolo del sistema"
       ],
       "correct": 2,
@@ -11838,7 +11838,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Formatear volumen",
         "Extender volumen",
-        "Nuevo volumen simple.",
+        "Nuevo volumen simple",
         "Convertir a disco dinámico"
       ],
       "correct": 2,
@@ -11852,7 +11852,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Acronis True Image",
         "Clonezilla",
-        "EaseUS Partition Master.",
+        "EaseUS Partition Master",
         "GParted"
       ],
       "correct": 2,
@@ -11866,7 +11866,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Eliminar volumen",
         "Ampliar volumen",
-        "Reducir volumen.",
+        "Reducir volumen",
         "Desfragmentar volumen"
       ],
       "correct": 2,
@@ -11880,7 +11880,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Visor de eventos",
         "Administración de discos",
-        "Monitor de rendimiento (Performance Monitor).",
+        "Monitor de rendimiento (Performance Monitor)",
         "Administrador de tareas avanzado"
       ],
       "correct": 2,
@@ -11978,7 +11978,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Los permisos que el administrador asigna globalmente",
         "Los permisos del grupo al que pertenece el usuario",
-        "Los permisos resultantes de combinar los permisos del usuario y los de sus grupos, aplicando las restricciones de denegación.",
+        "Los permisos resultantes de combinar los permisos del usuario y los de sus grupos, aplicando las restricciones de denegación",
         "Los permisos heredados del directorio raíz"
       ],
       "correct": 2,
@@ -12006,7 +12006,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Microsoft 365",
         "Notion",
-        "Google Workspace.",
+        "Google Workspace",
         "Slack"
       ],
       "correct": 2,
@@ -12020,7 +12020,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Gestión de proyectos con tableros Kanban",
         "Almacenamiento de archivos en la nube",
-        "Comunicación en tiempo real mediante canales y mensajes.",
+        "Comunicación en tiempo real mediante canales y mensajes",
         "Creación de documentos colaborativos"
       ],
       "correct": 2,
@@ -12034,7 +12034,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Kaspersky",
         "Norton",
-        "Avast.",
+        "Avast",
         "Malwarebytes"
       ],
       "correct": 2,
@@ -12048,7 +12048,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Clonar particiones del disco duro",
         "Monitorizar el rendimiento del sistema",
-        "Recuperar archivos perdidos o eliminados del ordenador.",
+        "Recuperar archivos perdidos o eliminados del ordenador",
         "Gestionar usuarios y permisos"
       ],
       "correct": 2,
@@ -12062,7 +12062,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "NAT",
         "Red interna",
-        "Adaptador puente.",
+        "Adaptador puente",
         "Solo anfitrión"
       ],
       "correct": 2,
@@ -12076,7 +12076,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Es más barata de implementar",
         "Usa menos cable",
-        "Un fallo en un nodo no afecta al resto de la red.",
+        "Un fallo en un nodo no afecta al resto de la red",
         "No necesita dispositivo central"
       ],
       "correct": 2,
@@ -12090,7 +12090,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Los datos se mueven automáticamente a otra partición",
         "Los datos quedan en el espacio no asignado y se pueden recuperar fácilmente",
-        "Los datos se pierden permanentemente.",
+        "Los datos se pierden permanentemente",
         "Los datos se comprimen y se guardan en la partición del sistema"
       ],
       "correct": 2,
@@ -12104,7 +12104,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "UDP",
         "ICMP",
-        "TCP.",
+        "TCP",
         "FTP"
       ],
       "correct": 2,
@@ -12132,7 +12132,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "10 GB",
         "15 GB",
-        "20 GB.",
+        "20 GB",
         "50 GB"
       ],
       "correct": 2,
@@ -12146,7 +12146,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Necesita un dispositivo central caro",
         "Es difícil de instalar",
-        "Un fallo en el cable principal afecta a toda la red.",
+        "Un fallo en el cable principal afecta a toda la red",
         "No permite compartir recursos"
       ],
       "correct": 2,
@@ -12161,7 +12161,7 @@ const SYLLABUS_RAW_DATA = {
         "Estrella",
         "Bus",
         "Anillo",
-        "Malla."
+        "Malla"
       ],
       "correct": 3,
       "explanation": "La topología en malla conecta cada nodo con todos los demás. Ofrece máxima redundancia: si falla un enlace, los datos pueden tomar rutas alternativas. Es cara pero muy tolerante a fallos.",
@@ -12174,7 +12174,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "En ambas direcciones simultáneamente siempre",
         "Solo de izquierda a derecha",
-        "En una dirección (o ambas en anillo doble).",
+        "En una dirección (o ambas en anillo doble)",
         "De forma aleatoria según la carga"
       ],
       "correct": 2,
@@ -12188,7 +12188,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Malla",
         "Anillo",
-        "Bus o estrella simple.",
+        "Bus o estrella simple",
         "Árbol jerárquico"
       ],
       "correct": 2,
@@ -12202,7 +12202,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "NAT",
         "Adaptador puente",
-        "Red interna.",
+        "Red interna",
         "Solo anfitrión"
       ],
       "correct": 2,
@@ -12216,7 +12216,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Windows 10",
         "Debian",
-        "Ubuntu.",
+        "Ubuntu",
         "Fedora"
       ],
       "correct": 2,
@@ -12230,7 +12230,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Desde el repositorio de VirtualBox",
         "Desde GitHub",
-        "Desde el sitio web oficial de Ubuntu (ubuntu.com).",
+        "Desde el sitio web oficial de Ubuntu (ubuntu.com)",
         "Desde Microsoft Store"
       ],
       "correct": 2,
@@ -12244,7 +12244,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "192.168.1.100",
         "172.16.0.1",
-        "10.0.2.15.",
+        "10.0.2.15",
         "10.0.0.1"
       ],
       "correct": 2,
@@ -12258,7 +12258,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Red",
         "Almacenamiento",
-        "Sistema → Procesador.",
+        "Sistema → Procesador",
         "Pantalla"
       ],
       "correct": 2,
@@ -12272,7 +12272,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Una copia del disco duro físico del anfitrión",
         "Una captura de pantalla de la máquina virtual",
-        "Un punto de restauración del estado completo de la máquina virtual en un momento dado.",
+        "Un punto de restauración del estado completo de la máquina virtual en un momento dado",
         "Un archivo de configuración exportado"
       ],
       "correct": 2,
@@ -12286,7 +12286,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Monitor de rendimiento",
         "Administración de discos",
-        "Visor de eventos.",
+        "Visor de eventos",
         "Administrador de tareas"
       ],
       "correct": 2,
@@ -12300,7 +12300,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Memory\\Available MBytes",
         "Disk\\Avg. Disk Queue Length",
-        "Processor\\% Processor Time.",
+        "Processor\\% Processor Time",
         "Network\\Bytes Total/sec"
       ],
       "correct": 2,
@@ -12314,7 +12314,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Que la CPU está saturada",
         "Que la red está congestionada",
-        "Que el disco duro es el cuello de botella del sistema.",
+        "Que el disco duro es el cuello de botella del sistema",
         "Que la memoria RAM es insuficiente"
       ],
       "correct": 2,
@@ -12356,7 +12356,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Renueva la dirección IP obtenida por DHCP",
         "Muestra la configuración de red",
-        "Libera la dirección IP obtenida por DHCP.",
+        "Libera la dirección IP obtenida por DHCP",
         "Borra la caché DNS"
       ],
       "correct": 2,
@@ -12412,7 +12412,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Que el puerto está bloqueado por el firewall",
         "Que hay una conexión activa en ese puerto",
-        "Que hay un servicio esperando conexiones entrantes en ese puerto.",
+        "Que hay un servicio esperando conexiones entrantes en ese puerto",
         "Que el puerto está cerrado"
       ],
       "correct": 2,
@@ -12426,7 +12426,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "644",
         "777",
-        "755.",
+        "755",
         "700"
       ],
       "correct": 2,
@@ -12440,7 +12440,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Permite ejecutar el archivo",
         "Permite modificar el archivo",
-        "Permite leer el contenido del archivo.",
+        "Permite leer el contenido del archivo",
         "Permite borrar el archivo"
       ],
       "correct": 2,
@@ -12454,7 +12454,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "chmod",
         "chgrp",
-        "chown.",
+        "chown",
         "setperm"
       ],
       "correct": 2,
@@ -12468,7 +12468,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Heredado",
         "Explícito",
-        "Denegar.",
+        "Denegar",
         "De grupo"
       ],
       "correct": 2,
@@ -12482,7 +12482,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Asignar todos los permisos a un usuario estándar",
         "Eliminar permisos de administrador",
-        "Permitir que un usuario o grupo gestione permisos sobre recursos específicos sin ser administrador global.",
+        "Permitir que un usuario o grupo gestione permisos sobre recursos específicos sin ser administrador global",
         "Copiar los permisos de un archivo a otro"
       ],
       "correct": 2,
@@ -12496,7 +12496,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Trello",
         "Asana",
-        "Notion.",
+        "Notion",
         "Jira"
       ],
       "correct": 2,
@@ -12510,7 +12510,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Análisis de rendimiento del sistema",
         "Análisis de particiones del disco",
-        "Análisis de amenazas (virus, malware) en el ordenador.",
+        "Análisis de amenazas (virus, malware) en el ordenador",
         "Análisis de la red local"
       ],
       "correct": 2,
@@ -12524,7 +12524,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Mayor velocidad de procesamiento",
         "No requiere conexión a Internet",
-        "Colaboración en tiempo real y acceso desde cualquier dispositivo con Internet.",
+        "Colaboración en tiempo real y acceso desde cualquier dispositivo con Internet",
         "Mayor compatibilidad con hardware antiguo"
       ],
       "correct": 2,
@@ -12538,7 +12538,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Software antivirus",
         "Herramienta de monitorización",
-        "Herramienta de gestión y clonación de particiones de disco.",
+        "Herramienta de gestión y clonación de particiones de disco",
         "Gestor de máquinas virtuales"
       ],
       "correct": 2,
@@ -12552,7 +12552,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "No hay diferencia, ambas borran los datos",
         "Reducir volumen borra los datos; eliminar volumen los conserva",
-        "Reducir volumen disminuye el tamaño conservando los datos; eliminar volumen borra la partición y sus datos.",
+        "Reducir volumen disminuye el tamaño conservando los datos; eliminar volumen borra la partición y sus datos",
         "Eliminar volumen solo funciona en discos externos"
       ],
       "correct": 2,
@@ -12566,7 +12566,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Una IP pública asignada por el ISP",
         "La misma IP que el huésped",
-        "La IP real del anfitrión en la red local.",
+        "La IP real del anfitrión en la red local",
         "Siempre 192.168.0.1"
       ],
       "correct": 2,
@@ -12594,7 +12594,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "El ancho de banda disponible en cada salto",
         "Los puertos abiertos en cada router",
-        "Los routers intermedios (saltos) y la latencia en cada uno hasta el destino.",
+        "Los routers intermedios (saltos) y la latencia en cada uno hasta el destino",
         "La dirección MAC de cada dispositivo en la ruta"
       ],
       "correct": 2,
@@ -12608,7 +12608,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Windows crea automáticamente espacio no asignado",
         "Se puede ampliar usando espacio de otra partición directamente",
-        "La opción \"Ampliar volumen\" aparece desactivada (en gris).",
+        "La opción \"Ampliar volumen\" aparece desactivada (en gris)",
         "Windows mueve los datos automáticamente para hacer espacio"
       ],
       "correct": 2,
@@ -12622,7 +12622,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Ubuntu 32-bit",
         "Ubuntu Server",
-        "Ubuntu 64-bit.",
+        "Ubuntu 64-bit",
         "Ubuntu LTS 32-bit"
       ],
       "correct": 2,
@@ -12636,7 +12636,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "80",
         "443",
-        "22.",
+        "22",
         "3389"
       ],
       "correct": 2,
@@ -12650,7 +12650,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Network Access Terminal",
         "Node Address Transfer",
-        "Network Address Translation.",
+        "Network Address Translation",
         "Network Allocation Table"
       ],
       "correct": 2,
@@ -12664,7 +12664,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Monitor de rendimiento",
         "Visor de eventos",
-        "Administrador de tareas.",
+        "Administrador de tareas",
         "Administración de discos"
       ],
       "correct": 2,
@@ -12678,7 +12678,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "dir -p",
         "chmod -l",
-        "ls -la.",
+        "ls -la",
         "perms -show"
       ],
       "correct": 2,
@@ -12692,7 +12692,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Caso 2 (VirtualBox)",
         "Caso 5 (Redes)",
-        "Caso 3 (Particiones).",
+        "Caso 3 (Particiones)",
         "Caso 6 (Permisos)"
       ],
       "correct": 2,
@@ -12722,7 +12722,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Solo falla el nodo más alejado",
         "La red sigue funcionando con menor velocidad",
-        "Toda la red deja de funcionar.",
+        "Toda la red deja de funcionar",
         "Solo fallan los nodos pares"
       ],
       "correct": 2,
@@ -12736,7 +12736,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "512 MB",
         "1024 MB",
-        "2048 MB.",
+        "2048 MB",
         "4096 MB"
       ],
       "correct": 2,
@@ -12750,7 +12750,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Red interna",
         "Adaptador puente",
-        "NAT.",
+        "NAT",
         "Solo anfitrión"
       ],
       "correct": 2,
@@ -12806,7 +12806,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Explorador de archivos",
         "Panel de control",
-        "Administración de discos.",
+        "Administración de discos",
         "Símbolo del sistema"
       ],
       "correct": 2,
@@ -12820,7 +12820,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Formatear volumen",
         "Extender volumen",
-        "Nuevo volumen simple.",
+        "Nuevo volumen simple",
         "Convertir a disco dinámico"
       ],
       "correct": 2,
@@ -12834,7 +12834,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Acronis True Image",
         "Clonezilla",
-        "EaseUS Partition Master.",
+        "EaseUS Partition Master",
         "GParted"
       ],
       "correct": 2,
@@ -12848,7 +12848,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Eliminar volumen",
         "Ampliar volumen",
-        "Reducir volumen.",
+        "Reducir volumen",
         "Desfragmentar volumen"
       ],
       "correct": 2,
@@ -12862,7 +12862,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Visor de eventos",
         "Administración de discos",
-        "Monitor de rendimiento (Performance Monitor).",
+        "Monitor de rendimiento (Performance Monitor)",
         "Administrador de tareas avanzado"
       ],
       "correct": 2,
@@ -12960,7 +12960,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Los permisos que el administrador asigna globalmente",
         "Los permisos del grupo al que pertenece el usuario",
-        "Los permisos resultantes de combinar los permisos del usuario y los de sus grupos, aplicando las restricciones de denegación.",
+        "Los permisos resultantes de combinar los permisos del usuario y los de sus grupos, aplicando las restricciones de denegación",
         "Los permisos heredados del directorio raíz"
       ],
       "correct": 2,
@@ -12988,7 +12988,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Microsoft 365",
         "Notion",
-        "Google Workspace.",
+        "Google Workspace",
         "Slack"
       ],
       "correct": 2,
@@ -13002,7 +13002,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Gestión de proyectos con tableros Kanban",
         "Almacenamiento de archivos en la nube",
-        "Comunicación en tiempo real mediante canales y mensajes.",
+        "Comunicación en tiempo real mediante canales y mensajes",
         "Creación de documentos colaborativos"
       ],
       "correct": 2,
@@ -13016,7 +13016,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Kaspersky",
         "Norton",
-        "Avast.",
+        "Avast",
         "Malwarebytes"
       ],
       "correct": 2,
@@ -13030,7 +13030,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Clonar particiones del disco duro",
         "Monitorizar el rendimiento del sistema",
-        "Recuperar archivos perdidos o eliminados del ordenador.",
+        "Recuperar archivos perdidos o eliminados del ordenador",
         "Gestionar usuarios y permisos"
       ],
       "correct": 2,
@@ -13044,7 +13044,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "NAT",
         "Red interna",
-        "Adaptador puente.",
+        "Adaptador puente",
         "Solo anfitrión"
       ],
       "correct": 2,
@@ -13058,7 +13058,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Es más barata de implementar",
         "Usa menos cable",
-        "Un fallo en un nodo no afecta al resto de la red.",
+        "Un fallo en un nodo no afecta al resto de la red",
         "No necesita dispositivo central"
       ],
       "correct": 2,
@@ -13072,7 +13072,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Los datos se mueven automáticamente a otra partición",
         "Los datos quedan en el espacio no asignado y se pueden recuperar fácilmente",
-        "Los datos se pierden permanentemente.",
+        "Los datos se pierden permanentemente",
         "Los datos se comprimen y se guardan en la partición del sistema"
       ],
       "correct": 2,
@@ -13086,7 +13086,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "UDP",
         "ICMP",
-        "TCP.",
+        "TCP",
         "FTP"
       ],
       "correct": 2,
@@ -13114,7 +13114,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "10 GB",
         "15 GB",
-        "20 GB.",
+        "20 GB",
         "50 GB"
       ],
       "correct": 2,
@@ -13128,7 +13128,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Necesita un dispositivo central caro",
         "Es difícil de instalar",
-        "Un fallo en el cable principal afecta a toda la red.",
+        "Un fallo en el cable principal afecta a toda la red",
         "No permite compartir recursos"
       ],
       "correct": 2,
@@ -13143,7 +13143,7 @@ const SYLLABUS_RAW_DATA = {
         "Estrella",
         "Bus",
         "Anillo",
-        "Malla."
+        "Malla"
       ],
       "correct": 3,
       "explanation": "La topología en malla conecta cada nodo con todos los demás. Ofrece máxima redundancia: si falla un enlace, los datos pueden tomar rutas alternativas. Es cara pero muy tolerante a fallos.",
@@ -13156,7 +13156,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "En ambas direcciones simultáneamente siempre",
         "Solo de izquierda a derecha",
-        "En una dirección (o ambas en anillo doble).",
+        "En una dirección (o ambas en anillo doble)",
         "De forma aleatoria según la carga"
       ],
       "correct": 2,
@@ -13170,7 +13170,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Malla",
         "Anillo",
-        "Bus o estrella simple.",
+        "Bus o estrella simple",
         "Árbol jerárquico"
       ],
       "correct": 2,
@@ -13184,7 +13184,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "NAT",
         "Adaptador puente",
-        "Red interna.",
+        "Red interna",
         "Solo anfitrión"
       ],
       "correct": 2,
@@ -13198,7 +13198,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Windows 10",
         "Debian",
-        "Ubuntu.",
+        "Ubuntu",
         "Fedora"
       ],
       "correct": 2,
@@ -13212,7 +13212,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Desde el repositorio de VirtualBox",
         "Desde GitHub",
-        "Desde el sitio web oficial de Ubuntu (ubuntu.com).",
+        "Desde el sitio web oficial de Ubuntu (ubuntu.com)",
         "Desde Microsoft Store"
       ],
       "correct": 2,
@@ -13226,7 +13226,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "192.168.1.100",
         "172.16.0.1",
-        "10.0.2.15.",
+        "10.0.2.15",
         "10.0.0.1"
       ],
       "correct": 2,
@@ -13240,7 +13240,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Red",
         "Almacenamiento",
-        "Sistema → Procesador.",
+        "Sistema → Procesador",
         "Pantalla"
       ],
       "correct": 2,
@@ -13254,7 +13254,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Una copia del disco duro físico del anfitrión",
         "Una captura de pantalla de la máquina virtual",
-        "Un punto de restauración del estado completo de la máquina virtual en un momento dado.",
+        "Un punto de restauración del estado completo de la máquina virtual en un momento dado",
         "Un archivo de configuración exportado"
       ],
       "correct": 2,
@@ -13268,7 +13268,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Monitor de rendimiento",
         "Administración de discos",
-        "Visor de eventos.",
+        "Visor de eventos",
         "Administrador de tareas"
       ],
       "correct": 2,
@@ -13282,7 +13282,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Memory\\Available MBytes",
         "Disk\\Avg. Disk Queue Length",
-        "Processor\\% Processor Time.",
+        "Processor\\% Processor Time",
         "Network\\Bytes Total/sec"
       ],
       "correct": 2,
@@ -13296,7 +13296,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Que la CPU está saturada",
         "Que la red está congestionada",
-        "Que el disco duro es el cuello de botella del sistema.",
+        "Que el disco duro es el cuello de botella del sistema",
         "Que la memoria RAM es insuficiente"
       ],
       "correct": 2,
@@ -13338,7 +13338,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Renueva la dirección IP obtenida por DHCP",
         "Muestra la configuración de red",
-        "Libera la dirección IP obtenida por DHCP.",
+        "Libera la dirección IP obtenida por DHCP",
         "Borra la caché DNS"
       ],
       "correct": 2,
@@ -13394,7 +13394,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Que el puerto está bloqueado por el firewall",
         "Que hay una conexión activa en ese puerto",
-        "Que hay un servicio esperando conexiones entrantes en ese puerto.",
+        "Que hay un servicio esperando conexiones entrantes en ese puerto",
         "Que el puerto está cerrado"
       ],
       "correct": 2,
@@ -13408,7 +13408,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "644",
         "777",
-        "755.",
+        "755",
         "700"
       ],
       "correct": 2,
@@ -13422,7 +13422,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Permite ejecutar el archivo",
         "Permite modificar el archivo",
-        "Permite leer el contenido del archivo.",
+        "Permite leer el contenido del archivo",
         "Permite borrar el archivo"
       ],
       "correct": 2,
@@ -13436,7 +13436,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "chmod",
         "chgrp",
-        "chown.",
+        "chown",
         "setperm"
       ],
       "correct": 2,
@@ -13450,7 +13450,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Heredado",
         "Explícito",
-        "Denegar.",
+        "Denegar",
         "De grupo"
       ],
       "correct": 2,
@@ -13464,7 +13464,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Asignar todos los permisos a un usuario estándar",
         "Eliminar permisos de administrador",
-        "Permitir que un usuario o grupo gestione permisos sobre recursos específicos sin ser administrador global.",
+        "Permitir que un usuario o grupo gestione permisos sobre recursos específicos sin ser administrador global",
         "Copiar los permisos de un archivo a otro"
       ],
       "correct": 2,
@@ -13478,7 +13478,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Trello",
         "Asana",
-        "Notion.",
+        "Notion",
         "Jira"
       ],
       "correct": 2,
@@ -13492,7 +13492,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Análisis de rendimiento del sistema",
         "Análisis de particiones del disco",
-        "Análisis de amenazas (virus, malware) en el ordenador.",
+        "Análisis de amenazas (virus, malware) en el ordenador",
         "Análisis de la red local"
       ],
       "correct": 2,
@@ -13506,7 +13506,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Mayor velocidad de procesamiento",
         "No requiere conexión a Internet",
-        "Colaboración en tiempo real y acceso desde cualquier dispositivo con Internet.",
+        "Colaboración en tiempo real y acceso desde cualquier dispositivo con Internet",
         "Mayor compatibilidad con hardware antiguo"
       ],
       "correct": 2,
@@ -13520,7 +13520,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Software antivirus",
         "Herramienta de monitorización",
-        "Herramienta de gestión y clonación de particiones de disco.",
+        "Herramienta de gestión y clonación de particiones de disco",
         "Gestor de máquinas virtuales"
       ],
       "correct": 2,
@@ -13534,7 +13534,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "No hay diferencia, ambas borran los datos",
         "Reducir volumen borra los datos; eliminar volumen los conserva",
-        "Reducir volumen disminuye el tamaño conservando los datos; eliminar volumen borra la partición y sus datos.",
+        "Reducir volumen disminuye el tamaño conservando los datos; eliminar volumen borra la partición y sus datos",
         "Eliminar volumen solo funciona en discos externos"
       ],
       "correct": 2,
@@ -13548,7 +13548,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Una IP pública asignada por el ISP",
         "La misma IP que el huésped",
-        "La IP real del anfitrión en la red local.",
+        "La IP real del anfitrión en la red local",
         "Siempre 192.168.0.1"
       ],
       "correct": 2,
@@ -13576,7 +13576,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "El ancho de banda disponible en cada salto",
         "Los puertos abiertos en cada router",
-        "Los routers intermedios (saltos) y la latencia en cada uno hasta el destino.",
+        "Los routers intermedios (saltos) y la latencia en cada uno hasta el destino",
         "La dirección MAC de cada dispositivo en la ruta"
       ],
       "correct": 2,
@@ -13590,7 +13590,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Windows crea automáticamente espacio no asignado",
         "Se puede ampliar usando espacio de otra partición directamente",
-        "La opción \"Ampliar volumen\" aparece desactivada (en gris).",
+        "La opción \"Ampliar volumen\" aparece desactivada (en gris)",
         "Windows mueve los datos automáticamente para hacer espacio"
       ],
       "correct": 2,
@@ -13604,7 +13604,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Ubuntu 32-bit",
         "Ubuntu Server",
-        "Ubuntu 64-bit.",
+        "Ubuntu 64-bit",
         "Ubuntu LTS 32-bit"
       ],
       "correct": 2,
@@ -13618,7 +13618,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "80",
         "443",
-        "22.",
+        "22",
         "3389"
       ],
       "correct": 2,
@@ -13632,7 +13632,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Network Access Terminal",
         "Node Address Transfer",
-        "Network Address Translation.",
+        "Network Address Translation",
         "Network Allocation Table"
       ],
       "correct": 2,
@@ -13646,7 +13646,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Monitor de rendimiento",
         "Visor de eventos",
-        "Administrador de tareas.",
+        "Administrador de tareas",
         "Administración de discos"
       ],
       "correct": 2,
@@ -13660,7 +13660,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "dir -p",
         "chmod -l",
-        "ls -la.",
+        "ls -la",
         "perms -show"
       ],
       "correct": 2,
@@ -13674,7 +13674,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Caso 2 (VirtualBox)",
         "Caso 5 (Redes)",
-        "Caso 3 (Particiones).",
+        "Caso 3 (Particiones)",
         "Caso 6 (Permisos)"
       ],
       "correct": 2,
@@ -13690,7 +13690,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Aumento de costos operativos",
         "Dependencia del hardware local",
-        "Acceso ubicuo a los datos y aplicaciones.",
+        "Acceso ubicuo a los datos y aplicaciones",
         "Falta de escalabilidad"
       ],
       "correct": 2,
@@ -13702,7 +13702,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "cc_tema_1_q1",
       "question": "¿Qué significa \"escalabilidad elástica\" en la computación en la nube?",
       "options": [
-        "Capacidad de aumentar o reducir recursos según la demanda.",
+        "Capacidad de aumentar o reducir recursos según la demanda",
         "La infraestructura solo se adapta a aumentos de demanda",
         "Es un modelo exclusivo para grandes empresas",
         "La nube no permite escalabilidad"
@@ -13717,7 +13717,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál de los siguientes es un posible riesgo de la computación en la nube?",
       "options": [
         "Reducción de costos operativos",
-        "Dependencia del proveedor de servicios.",
+        "Dependencia del proveedor de servicios",
         "Mayor control sobre la infraestructura",
         "Eliminación total de amenazas cibernéticas"
       ],
@@ -13731,7 +13731,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué función cumple la redundancia en la computación en la nube?",
       "options": [
         "Aumenta los costos operativos",
-        "Garantiza la disponibilidad de los servicios en caso de fallos.",
+        "Garantiza la disponibilidad de los servicios en caso de fallos",
         "Limita el acceso a los datos",
         "Reduce la seguridad de la información"
       ],
@@ -13746,7 +13746,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Nube privada",
         "Nube pública",
-        "Nube híbrida.",
+        "Nube híbrida",
         "Nube comunitaria"
       ],
       "correct": 2,
@@ -13760,7 +13760,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "La disponibilidad de planes gratuitos",
         "La ubicación de los servidores en el mismo país",
-        "La seguridad, fiabilidad y escalabilidad del servicio.",
+        "La seguridad, fiabilidad y escalabilidad del servicio",
         "Que ofrezca hardware de última generación"
       ],
       "correct": 2,
@@ -13774,7 +13774,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "IaaS",
         "PaaS",
-        "SaaS.",
+        "SaaS",
         "On-Premise"
       ],
       "correct": 2,
@@ -13787,7 +13787,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es la principal característica del modelo de computación en la nube?",
       "options": [
         "Requiere una gran inversión en hardware propio",
-        "Permite acceder a recursos informáticos a través de Internet.",
+        "Permite acceder a recursos informáticos a través de Internet",
         "Solo puede ser utilizado por grandes empresas",
         "No ofrece ventajas sobre la infraestructura tradicional"
       ],
@@ -13802,7 +13802,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Es un proceso inmediato y sin riesgos",
         "No requiere planificación previa",
-        "Debe incluir evaluación de necesidades, migración de datos y pruebas.",
+        "Debe incluir evaluación de necesidades, migración de datos y pruebas",
         "Solo es recomendable para pequeñas empresas"
       ],
       "correct": 2,
@@ -13815,7 +13815,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué modelo de servicio permite a los desarrolladores crear aplicaciones sin gestionar la infraestructura?",
       "options": [
         "SaaS",
-        "PaaS.",
+        "PaaS",
         "IaaS",
         "VPN"
       ],
@@ -13833,7 +13833,7 @@ const SYLLABUS_RAW_DATA = {
         "Permite ajustar los recursos en tiempo real según las necesidades",
         "Bloquea el uso de recursos adicionales para evitar sobrecostes",
         "Solo está disponible en modelos de pago fijo",
-        "Asegura un descuento automático en el coste de los recursos."
+        "Asegura un descuento automático en el coste de los recursos"
       ],
       "correct": 0,
       "explanation": "La escalabilidad en la nube permite ajustar los recursos en tiempo real según las necesidades del momento, aumentando o reduciendo capacidad de forma dinámica.",
@@ -13844,7 +13844,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "cc_tema_2_q1",
       "question": "¿Qué aspecto clave de la seguridad se garantiza en los servicios en la nube?",
       "options": [
-        "Copias de seguridad físicas en todas las oficinas.",
+        "Copias de seguridad físicas en todas las oficinas",
         "Medidas de seguridad robustas y cumplimiento normativo",
         "Control absoluto de los datos por parte del usuario sin intervención del proveedor",
         "Eliminación automática de datos después de 30 días"
@@ -13858,7 +13858,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "cc_tema_2_q2",
       "question": "¿Cuál de las siguientes afirmaciones sobre las instancias spot es correcta?",
       "options": [
-        "Son más costosas que las instancias reservadas.",
+        "Son más costosas que las instancias reservadas",
         "Permiten adquirir recursos a menor precio",
         "No pueden utilizarse en entornos de producción",
         "Son el único modelo de precios disponible en la nube"
@@ -13875,7 +13875,7 @@ const SYLLABUS_RAW_DATA = {
         "Pago por uso",
         "Instancias reservadas",
         "Instancias spot",
-        "Facturación consolidada."
+        "Facturación consolidada"
       ],
       "correct": 1,
       "explanation": "Las instancias reservadas ofrecen descuentos significativos (hasta 75%) a cambio de comprometerse a usar el recurso durante 1 o 3 años. Ideal para cargas de trabajo predecibles y estables.",
@@ -13886,7 +13886,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "cc_tema_2_q4",
       "question": "¿Qué tipo de herramientas ayudan a analizar los costes en la nube?",
       "options": [
-        "Plataformas de análisis de datos y predicciones.",
+        "Plataformas de análisis de datos y predicciones",
         "Redes sociales y foros de discusión",
         "Servicios de almacenamiento en la nube",
         "Programas de ofimática"
@@ -13900,7 +13900,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "cc_tema_2_q5",
       "question": "¿Cuál es la principal característica del modelo de facturación en la nube?",
       "options": [
-        "Pago anticipado por los recursos contratados.",
+        "Pago anticipado por los recursos contratados",
         "Pago fijo mensual sin importar el uso",
         "Pago por uso, donde solo se paga por los recursos consumidos",
         "Pago único al inicio del servicio"
@@ -13916,7 +13916,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Permite pagar menos por los recursos utilizados",
         "Facilita la gestión de múltiples cuentas desde una sola plataforma",
-        "Evita el pago de impuestos sobre los servicios en la nube.",
+        "Evita el pago de impuestos sobre los servicios en la nube",
         "Automatiza completamente la contabilidad empresarial"
       ],
       "correct": 1,
@@ -13931,7 +13931,7 @@ const SYLLABUS_RAW_DATA = {
         "Coste de hardware y software",
         "Mantenimiento y energía",
         "Gastos de transporte de los empleados",
-        "Costes operativos en la nube."
+        "Costes operativos en la nube"
       ],
       "correct": 2,
       "explanation": "El TCO (Total Cost of Ownership) incluye hardware, software, mantenimiento, energía y costes operativos. Los gastos de transporte de empleados no forman parte del TCO de infraestructura tecnológica.",
@@ -13944,7 +13944,7 @@ const SYLLABUS_RAW_DATA = {
       "options": [
         "Establecer presupuestos y alertar sobre gastos elevados",
         "Modificar automáticamente los precios de los servicios en la nube",
-        "Cancelar automáticamente servicios que superan el presupuesto.",
+        "Cancelar automáticamente servicios que superan el presupuesto",
         "Garantizar un precio fijo sin variaciones"
       ],
       "correct": 0,
@@ -14953,7 +14953,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es la principal diferencia entre el escalado horizontal y vertical?",
       "options": [
         "El escalado horizontal agrega más servidores, mientras que el vertical aumenta la capacidad de un servidor existente",
-        "El escalado vertical es más eficiente que el horizontal.",
+        "El escalado vertical es más eficiente que el horizontal",
         "El escalado horizontal solo funciona en servidores físicos",
         "Ambos términos significan lo mismo"
       ],
@@ -14981,7 +14981,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Qué función cumple un balanceador de carga en el escalado automático?",
       "options": [
         "Almacenar los datos de los usuarios",
-        "Distribuir las solicitudes de usuarios entre varios servidores.",
+        "Distribuir las solicitudes de usuarios entre varios servidores",
         "Reducir el tráfico de red",
         "Cerrar conexiones inactivas"
       ],
@@ -14994,7 +14994,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "cc_tema_10_q3",
       "question": "¿Cuál de las siguientes afirmaciones sobre la monitorización es correcta?",
       "options": [
-        "Solo es útil cuando la aplicación presenta fallos.",
+        "Solo es útil cuando la aplicación presenta fallos",
         "Permite recopilar datos sobre el estado y rendimiento de la aplicación",
         "No puede generar alertas en tiempo real",
         "Es un proceso opcional en aplicaciones en la nube"
@@ -15011,7 +15011,7 @@ const SYLLABUS_RAW_DATA = {
         "Cuando el uso de CPU supera un umbral definido",
         "Cuando el usuario cambia su contraseña",
         "Cuando un servidor está en mantenimiento",
-        "Cuando la aplicación recibe menos tráfico."
+        "Cuando la aplicación recibe menos tráfico"
       ],
       "correct": 0,
       "explanation": "El escalado automático se desencadena típicamente cuando el uso de CPU supera un umbral definido, cuando la memoria está al límite, o cuando el número de solicitudes supera cierto nivel.",
@@ -15036,7 +15036,7 @@ const SYLLABUS_RAW_DATA = {
       "concept_id": "cc_tema_10_q6",
       "question": "¿En qué escenario es más útil el escalado automático?",
       "options": [
-        "Una aplicación de escritorio instalada en un solo equipo.",
+        "Una aplicación de escritorio instalada en un solo equipo",
         "Un sitio de comercio electrónico que recibe picos de tráfico en eventos especiales",
         "Un documento almacenado en una memoria USB",
         "Un usuario navegando en su propio sitio web local"
@@ -15051,7 +15051,7 @@ const SYLLABUS_RAW_DATA = {
       "question": "¿Cuál es el principal objetivo del escalado automático?",
       "options": [
         "Reducir la necesidad de servidores físicos",
-        "Ajustar los recursos de una aplicación según la demanda.",
+        "Ajustar los recursos de una aplicación según la demanda",
         "Mejorar la seguridad de la infraestructura",
         "Minimizar la cantidad de servidores disponibles"
       ],
@@ -16920,6 +16920,288 @@ const SYLLABUS_RAW_DATA = {
         "Integridad",
         "Confidencialidad",
         "Rendimiento"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    }
+  ],
+  "cc_simulacro_04_05": [
+    {
+      "concept_id": "cc_simulacro_04_05_q0",
+      "question": "1. Una empresa tiene una aplicación web que recibe picos de tráfico solo en campañas puntuales (Black Friday). Quiere pagar lo mínimo posible el resto del año sin perder rendimiento en esos picos. ¿Qué solución es la MÁS adecuada?",
+      "options": [
+        "Comprar servidores físicos para todo el año",
+        "Usar máquinas virtuales siempre activas",
+        "Usar escalado automático",
+        "Usar almacenamiento en frío"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q1",
+      "question": "2. Un desarrollador quiere desplegar una aplicación sin preocuparse por servidores, sistemas operativos ni infraestructura. Solo quiere subir código. ¿Qué modelo debe usar?",
+      "options": [
+        "IaaS",
+        "PaaS",
+        "SaaS",
+        "Serverless"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q2",
+      "question": "3. Una empresa necesita almacenar millones de imágenes accesibles desde internet mediante enlaces directos. ¿Qué tipo de almacenamiento es el más adecuado?",
+      "options": [
+        "Bloques",
+        "Ficheros",
+        "Objetos",
+        "RAM"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q3",
+      "question": "4. Un sistema requiere altísimo rendimiento en operaciones de lectura/escritura para una base de datos crítica. ¿Qué tipo de almacenamiento elegirías?",
+      "options": [
+        "Objetos",
+        "Bloques",
+        "Ficheros",
+        "Archivado"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q4",
+      "question": "5. Un arquitecto diseña una aplicación en la nube con múltiples servidores en distintas zonas para evitar caídas. ¿Qué principio está aplicando?",
+      "options": [
+        "Coste optimizado",
+        "Seguridad",
+        "Fiabilidad",
+        "Escalabilidad"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q5",
+      "question": "6. Una aplicación empieza a responder lentamente porque todos los usuarios acceden al mismo servidor. ¿Qué solución es más adecuada?",
+      "options": [
+        "Aumentar almacenamiento",
+        "Eliminar monitorización",
+        "Reducir usuarios",
+        "Implementar balanceador de carga"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q6",
+      "question": "7. Una startup necesita lanzar su aplicación rápidamente en distintos entornos (local, cloud, test) con el mismo comportamiento. ¿Qué tecnología usaría?",
+      "options": [
+        "Contenedores",
+        "Máquinas físicas",
+        "Bases de datos",
+        "DNS"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q7",
+      "question": "8. Una empresa quiere analizar relaciones complejas entre usuarios (por ejemplo, redes sociales). ¿Qué tipo de base de datos es más adecuada?",
+      "options": [
+        "Relacional",
+        "Key-Value",
+        "Documental",
+        "Grafos"
+      ],
+      "correct": 3,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q8",
+      "question": "9. Un sistema necesita detectar rápidamente si hay errores o caídas en producción para actuar automáticamente. ¿Qué componente es imprescindible?",
+      "options": [
+        "Almacenamiento",
+        "Monitorización",
+        "Virtualización",
+        "CDN"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q9",
+      "question": "10. Una empresa quiere reducir costes moviendo datos antiguos que casi no se usan, pero que deben conservarse. ¿Qué solución es más adecuada?",
+      "options": [
+        "RAM",
+        "Base de datos",
+        "Archivado",
+        "Bloques"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q10",
+      "question": "11. ¿Qué modelo implica pagar solo por lo que se usa?",
+      "options": [
+        "Pago fijo",
+        "Pago por uso",
+        "Pago anual",
+        "Pago único"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q11",
+      "question": "12. ¿Qué base de datos usa tablas?",
+      "options": [
+        "NoSQL",
+        "Documental",
+        "Relacional",
+        "Grafos"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q12",
+      "question": "13. ¿Qué ventaja clave tiene el almacenamiento de bloques?",
+      "options": [
+        "Alto rendimiento",
+        "Bajo coste",
+        "Portabilidad",
+        "Simplicidad"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q13",
+      "question": "14. ¿Qué significa ACID?",
+      "options": [
+        "Atomicidad, consistencia, aislamiento, durabilidad",
+        "Acceso, control, integración, datos",
+        "Aplicación, código, interfaz, datos",
+        "Ninguna de las anteriores"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": true
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q14",
+      "question": "15. ¿Qué es redundancia?",
+      "options": [
+        "Eliminar datos",
+        "Duplicar componentes para garantizar disponibilidad",
+        "Reducir servidores",
+        "Aumentar coste"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q15",
+      "question": "16. ¿Qué almacenamiento es ideal para bases de datos?",
+      "options": [
+        "Objetos",
+        "Ficheros",
+        "Bloques",
+        "Archivado"
+      ],
+      "correct": 2,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q16",
+      "question": "17. ¿Qué permite la computación en la nube?",
+      "options": [
+        "Acceder a recursos bajo demanda",
+        "Comprar más hardware",
+        "Reducir internet",
+        "Eliminar datos"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q17",
+      "question": "18. ¿Qué característica permite aumentar recursos automáticamente?",
+      "options": [
+        "Seguridad",
+        "Escalabilidad",
+        "Latencia",
+        "Backup"
+      ],
+      "correct": 1,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q18",
+      "question": "19. ¿Qué significa NoSQL?",
+      "options": [
+        "Not Only SQL",
+        "No SQL",
+        "New SQL",
+        "Next SQL"
+      ],
+      "correct": 0,
+      "explanation": "Pregunta del temario oficial.",
+      "unit": null,
+      "noShuffle": false
+    },
+    {
+      "concept_id": "cc_simulacro_04_05_q19",
+      "question": "20. ¿Qué permite el archivado de datos?",
+      "options": [
+        "Eliminar datos",
+        "Aumentar velocidad",
+        "Guardar datos a largo plazo con bajo coste",
+        "Reducir seguridad"
       ],
       "correct": 2,
       "explanation": "Pregunta del temario oficial.",
