@@ -2204,10 +2204,21 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
   sim1_p1: {
     type: 'html',
     examTitle: 'Parte 1: Estructura general',
-    examDesc: `Debes crear un documento HTML5 correctamente estructurado.`,
+    examDesc: `Debes crear un documento HTML5 correctamente estructurado.
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TÍTULO QUE SEA</title>
+</head>
+<body>
+</body>
+</html>`,
     exercises: [{
       id: 1, title: 'Estructura HTML5',
-      desc: 'Debes crear un documento HTML5 correctamente estructurado.',
+      desc: 'Debes crear un documento HTML5 correctamente estructurado con DOCTYPE, html lang="es", head (charset, viewport, title) y body vacío.',
       hint: 'Usa <!DOCTYPE html>, <meta charset="UTF-8">, etc.',
       starter: `<!-- Crea la estructura básica aquí -->\n`,
       solution: `<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>Mi Tienda Online</title>\n</head>\n<body>\n</body>\n</html>`,
@@ -2225,10 +2236,15 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
     examTitle: 'Parte 2: Encabezado',
     examDesc: `La página debe incluir:
 Un título principal con el nombre de la tienda.
-Un subtítulo con un eslogan.`,
+Un subtítulo con un eslogan.
+
+<header>
+  <h1>TEXTO QUE SEA</h1>
+  <h2>ORACIÓN CUALQUIERA</h2>
+</header>`,
     exercises: [{
       id: 1, title: 'Encabezado',
-      desc: 'La página debe incluir un título principal con el nombre de la tienda y un subtítulo con un eslogan.',
+      desc: 'La página debe incluir un <header> con un título principal <h1> con el nombre de la tienda y un subtítulo <h2> con un eslogan.',
       hint: '<header><h1>...</h1><h2>...</h2></header>',
       starter: `<body>\n  <!-- Añade header aquí -->\n</body>`,
       solution: `<body>\n  <header>\n    <h1>Mi Gran Tienda</h1>\n    <h2>Los mejores productos al mejor precio</h2>\n  </header>\n</body>`,
@@ -2246,10 +2262,19 @@ Un subtítulo con un eslogan.`,
 Op1
 Op2
 Op3
-Op4`,
+Op4
+
+<nav>
+  <ul>
+    <li><a href="#">Op1</a></li>
+    <li><a href="#">Op2</a></li>
+    <li><a href="#">Op3</a></li>
+    <li><a href="#">Op4</a></li>
+  </ul>
+</nav>`,
     exercises: [{
       id: 1, title: 'Menú de navegación',
-      desc: 'Crea un menú con una lista que contenga los siguientes apartados: Op1, Op2, Op3, Op4.',
+      desc: 'Crea un <nav> con una lista <ul> que contenga los siguientes apartados: Op1, Op2, Op3, Op4. Cada item debe ir en un <li> con un enlace <a>.',
       hint: '<nav><ul><li><a>...</a></li></ul></nav>',
       starter: `<nav>\n  <!-- Añade el menú aquí -->\n</nav>`,
       solution: `<nav>\n    <ul>\n      <li><a href="#">Op1</a></li>\n      <li><a href="#">Op2</a></li>\n      <li><a href="#">Op3</a></li>\n      <li><a href="#">Op4</a></li>\n    </ul>\n  </nav>`,
@@ -2268,10 +2293,23 @@ Cada producto debe incluir:
 Nombre del producto (como título)
 Imagen
 Descripción
-Precio`,
+Precio
+
+<section>
+  <h2>Productos destacados</h2>
+  <article>
+    <h3>Portátil Gamer</h3>
+    <img src="URL CUALQUIERA" alt="Portátil Gamer">
+    <p>Portátil de alto rendimiento ideal para juegos y trabajo.</p>
+    <p><strong>Precio:</strong> 1200€</p>
+  </article>
+  <article>
+    ...
+  </article>
+</section>`,
     exercises: [{
       id: 1, title: 'Sección de Productos',
-      desc: 'Añade una sección con al menos 3 productos. Cada producto debe incluir: Nombre, Imagen, Descripción y Precio.',
+      desc: 'Añade una <section> con al menos 3 productos. Cada <article> debe incluir: <h3> (nombre), <img> (imagen con src y alt), <p> (descripción) y <p><strong>Precio:</strong> X€</p>.',
       hint: '&lt;section&gt; &lt;article&gt; &lt;h3&gt;...&lt;/h3&gt; &lt;img ...&gt; &lt;p&gt;...&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Precio:&lt;/strong&gt; ...€&lt;/p&gt; &lt;/article&gt; &lt;/section&gt;',
       starter: `<section>\n  <h2>Productos destacados</h2>\n  <!-- Añade 3 article (nombre, imagen, descripción, precio) -->\n</section>`,
       solution: `<section>\n  <h2>Productos destacados</h2>\n  <article>\n    <h3>Portátil Gamer</h3>\n    <img src="portatil.jpg">\n    <p>Portátil de alto rendimiento ideal para juegos y trabajo.</p>\n    <p><strong>Precio:</strong> 1200€</p>\n  </article>\n  <article>\n    <h3>Smartphone Pro</h3>\n    <img src="smartphone.jpg">\n    <p>Teléfono inteligente con cámara de alta resolución.</p>\n    <p><strong>Precio:</strong> 850€</p>\n  </article>\n  <article>\n    <h3>Auriculares inalámbricos</h3>\n    <img src="auriculares.jpg">\n    <p>Auriculares con cancelación de ruido.</p>\n    <p><strong>Precio:</strong> 150€</p>\n  </article>\n</section>`,
@@ -2297,10 +2335,29 @@ Mensaje
 También debe contener un selector con estas opciones:
 Consulta
 Pedido
-Reclamación`,
+Reclamación
+
+<section>
+  <h2>Contacto</h2>
+  <form action="#" method="post">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre"><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="tipo">Motivo:</label><br>
+    <select id="tipo" name="tipo">
+      <option value="consulta">Consulta</option>
+      <option value="pedido">Pedido</option>
+      <option value="reclamacion">Reclamación</option>
+    </select><br><br>
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="5" cols="30"></textarea><br><br>
+    <input type="submit" value="Enviar">
+  </form>
+</section>`,
     exercises: [{
       id: 1, title: 'Formulario de Contacto',
-      desc: 'Crea un formulario con campos para Nombre, Email, Mensaje y un selector con las opciones: Consulta, Pedido, Reclamación.',
+      desc: 'Crea una <section> con <h2>Contacto</h2> y un <form action="#" method="post">. El formulario debe tener <label> para cada campo: Nombre (type="text"), Email (type="email"), un <select> con las opciones Consulta/Pedido/Reclamación, un <textarea> para el Mensaje y un botón <input type="submit" value="Enviar">.',
       milestones: [
         { id: 'form', check: /<form/i, popup: 'Formulario iniciado.', instruction: 'Crea la etiqueta <form>.' },
         { id: 'nombre', check: /type="text"/i, popup: 'Campo Nombre OK.', instruction: 'Añade <input type="text"> para el nombre.' },
@@ -2321,10 +2378,16 @@ Reclamación`,
 <autor>Juan Pérez</autor>
 <precio>25</precio>
 </libro>
-Crea una DTD que valide este documento.`,
+Crea una DTD que valide este documento.
+
+Solución:
+<!ELEMENT libro (titulo, autor, precio)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>`,
     exercises: [{
       id: 1, title: 'Validación DTD',
-      desc: 'Dado el XML de un libro, crea una DTD interna que lo valide.',
+      desc: 'Dado el XML de un libro, añade una DTD interna (DOCTYPE) al documento para que sea válido. La DTD debe declarar el elemento raíz libro con sus hijos en orden (titulo, autor, precio) y cada hijo como contenido de texto (#PCDATA).',
       hint: 'Usa <!DOCTYPE libro [ ... ]>',
       starter: `<?xml version="1.0" encoding="UTF-8"?>\n<!-- Añade la declaración DOCTYPE y los elementos aquí -->\n<libro>\n  <titulo>XML Básico</titulo>\n  <autor>Juan Pérez</autor>\n  <precio>25</precio>\n</libro>`,
       solution: `<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE libro [\n  <!ELEMENT libro (titulo, autor, precio)>\n  <!ELEMENT titulo (#PCDATA)>\n  <!ELEMENT autor (#PCDATA)>\n  <!ELEMENT precio (#PCDATA)>\n]>\n<libro>\n  <titulo>XML Básico</titulo>\n  <autor>Juan Pérez</autor>\n  <precio>25</precio>\n</libro>`,
@@ -2346,10 +2409,24 @@ Crea una DTD que valide este documento.`,
 </producto>
 Crea un XSD donde:
 precio sea decimal
-stock sea entero positivo`,
+stock sea entero positivo
+
+Solución:
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="producto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="precio" type="xs:decimal"/>
+        <xs:element name="stock" type="xs:positiveInteger"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>`,
     exercises: [{
       id: 1, title: 'Creación XSD',
-      desc: 'Dado el XML de un producto, crea un XSD donde el precio sea decimal y el stock entero positivo.',
+      desc: 'Dado el XML de un producto, crea un esquema XSD (xs:schema con xmlns:xs) donde <nombre> sea xs:string, <precio> sea xs:decimal y <stock> sea xs:positiveInteger. El elemento raiz es <producto> de tipo complejo (xs:complexType > xs:sequence).',
       hint: 'Crea la estructura <xs:schema> y define los tipos xs:decimal y xs:positiveInteger',
       starter: `<?xml version="1.0" encoding="UTF-8"?>\n<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">\n  <!-- Define el esquema aquí -->\n  \n</xs:schema>`,
       solution: `<?xml version="1.0" encoding="UTF-8"?>\n<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">\n  <xs:element name="producto">\n    <xs:complexType>\n      <xs:sequence>\n        <xs:element name="nombre" type="xs:string"/>\n        <xs:element name="precio" type="xs:decimal"/>\n        <xs:element name="stock" type="xs:positiveInteger"/>\n      </xs:sequence>\n    </xs:complexType>\n  </xs:element>\n</xs:schema>`,
