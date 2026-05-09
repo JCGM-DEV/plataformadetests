@@ -1,6 +1,0 @@
-<!DOCTYPE chat> [
-<!ELEMENT chat (usuario, texto, hora)>
-<!ELEMENT usuario (#PCDATA)>
-<!ELEMENT texto (#PCDATA)>
-<!ELEMENT hora (#PCDATA)>
-]
