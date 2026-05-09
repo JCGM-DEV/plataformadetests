@@ -765,6 +765,30 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
   transform: translateY(0) scale(0.95);
 }
 
+.btn-reset-exam {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text2);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: 0.5rem;
+}
+
+.btn-reset-exam:hover {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
+  color: #ef4444;
+}
+
+.btn-reset-exam:active { transform: scale(0.95); }
+
 .btn-registered {
   background: linear-gradient(135deg, #10b981, #059669) !important;
   box-shadow: 0 0 20px rgba(16, 185, 129, 0.6) !important;

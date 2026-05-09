@@ -11,7 +11,7 @@ function selectUnit(unitId) {
   currentUnit = unitId;
   const unit = UNITS[unitId];
   if (unitId.startsWith('simulacros')) {
-    // Solo iniciamos el temporizador, no reseteamos nota para permitir persistencia
+    resetSimulationScores(false); // false para que no pida confirmación al entrar desde el menú
     startExamTimer();
   } else {
     stopExamTimer();
@@ -794,6 +794,31 @@ function showDoctorSolution(exerciseId) {
       <button class="btn-secondary" onclick="closeModal()">Cerrar Consulta</button>
     </div>`;
   document.getElementById('modal-overlay').classList.remove('hidden');
+}
+
+function resetSimulationScores(confirmFirst = true) {
+  if (confirmFirst && !confirm('¿Estás seguro de que quieres reiniciar el examen? Perderás todo el progreso actual.')) return;
+  
+  score = { correct: 0, wrong: 0, quizCorrect: 0, quizWrong: 0 };
+  sectionScores = {};
+  completedSections = new Set();
+  
+  document.querySelector('#score-correct span').textContent = '0';
+  document.querySelector('#score-wrong span').textContent = '0';
+  
+  // Limpiar estados de quizzes y ejercicios
+  quizState = { questions: [], current: 0, answered: false };
+  dragExerciseIdx = 0; dragResults = [];
+  codeState = { exercises: [], current: 0 };
+  
+  saveCompletionState();
+  updateLiveGrade();
+  updateProgress();
+  
+  if (currentUnit) buildSidebar(UNITS[currentUnit]);
+  showWelcome();
+  
+  showToast('Examen reiniciado', 'info');
 }
 
 loadCompletionState();
