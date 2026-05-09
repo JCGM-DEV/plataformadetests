@@ -1702,8 +1702,8 @@ function finishExam() {
     const calificacion = (puntuacionFinal / total) * 10;
     const passed = calificacion >= 5;
     
-    // El Risitas siempre aparece, para bien o para mal
-    triggerCunaoEffect(passed);
+    // Finalizar examen
+
     
     // CONSOLDIDATE SUBJECT ID: Use parent subject_id if it's a syllabus test
     const parentId = APP_STATE.currentExam.subject_id;
@@ -3362,26 +3362,4 @@ document.addEventListener('click', (e) => {
     });
 });
 
-function triggerCunaoEffect(passed) {
-    const overlay = document.createElement('div');
-    overlay.className = 'cunao-overlay';
-    
-    const topText = passed ? "¡QUÉ BUENO ERES!" : "¡QUÉ MALO ERES PERRO!";
-    const bottomText = passed ? "CUÑAAAAOOOOOOO" : "ESTUDIA, CUÑAAAAOOOOOOO";
-    
-    overlay.innerHTML = `
-        <img src="risitas/pngegg.png" class="cunao-img" alt="Risitas">
-        <div class="cunao-text">${topText}</div>
-        <div class="cunao-text" style="font-size:1.5rem;animation-delay:0.2s;color:${passed ? '#4ade80' : '#f87171'}">${bottomText}</div>
-    `;
-    document.body.appendChild(overlay);
 
-    // Sonido Real del Risitas
-    const audio = new Audio('risitas/Voicy_El Risitas Laugh.mp3');
-    audio.play().catch(e => console.log("Audio play blocked by browser", e));
-
-    setTimeout(() => {
-        overlay.style.opacity = '0';
-        setTimeout(() => overlay.remove(), 500);
-    }, 4500);
-}

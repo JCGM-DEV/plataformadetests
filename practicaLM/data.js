@@ -78,21 +78,22 @@ const UNITS = {
     ]
   },
   simulacro1: {
-    label: 'EXAMEN', title: 'Simulacro 1: HTML5 & Test',
+    label: 'EXAMEN', title: 'Simulacro 21/04: HTML5 & Test',
     sections: [
-      { id: 'sim1-quiz', icon: '🧠', label: 'Simulacro 1: Test Teórico', type: 'quiz', quizId: 'simulacro1_quiz' },
-      { id: 'sim1-h1', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '1. Estructura y Head', type: 'exam', editorId: 'sim1_p1' },
-      { id: 'sim1-h2', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '2. Header y Menú', type: 'exam', editorId: 'sim1_p2' },
-      { id: 'sim1-h3', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '3. Productos (Sección)', type: 'exam', editorId: 'sim1_p3' },
-      { id: 'sim1-h4', category: 'Práctico 1: HTML5 Completo', icon: '🌐', label: '4. Formulario Contacto', type: 'exam', editorId: 'sim1_p4' }
+      { id: 'sim1-quiz', icon: '🧠', label: 'Simulacro 21/04: Test Teórico', type: 'quiz', quizId: 'simulacro1_quiz' },
+      { id: 'sim1-h1', category: 'Práctico 21/04: HTML5 Completo', icon: '🌐', label: '1. Estructura general', type: 'exam', editorId: 'sim1_p1' },
+      { id: 'sim1-h2', category: 'Práctico 21/04: HTML5 Completo', icon: '🌐', label: '2. Encabezado', type: 'exam', editorId: 'sim1_p2' },
+      { id: 'sim1-h3', category: 'Práctico 21/04: HTML5 Completo', icon: '🌐', label: '3. Menú de navegación', type: 'exam', editorId: 'sim1_p3' },
+      { id: 'sim1-h4', category: 'Práctico 21/04: HTML5 Completo', icon: '🌐', label: '4. Sección de productos', type: 'exam', editorId: 'sim1_p4' },
+      { id: 'sim1-h5', category: 'Práctico 21/04: HTML5 Completo', icon: '🌐', label: '5. Formulario de contacto', type: 'exam', editorId: 'sim1_p5' }
     ]
   },
   simulacro2: {
-    label: 'EXAMEN', title: 'Simulacro 2: XML & XSD',
+    label: 'EXAMEN', title: 'Simulacro 27/04: XML & XSD',
     sections: [
-      { id: 'sim2-quiz', icon: '🧠', label: 'Simulacro 2: Test Teórico', type: 'quiz', quizId: 'simulacro2_quiz' },
-      { id: 'sim2-p1', category: 'Práctico 2: XML & DTD', icon: '📄', label: '1. Validación DTD', type: 'exam', editorId: 'sim2_p1' },
-      { id: 'sim2-p2', category: 'Práctico 2: XML & XSD', icon: '🛡️', label: '2. Creación XSD', type: 'exam', editorId: 'sim2_p2' }
+      { id: 'sim2-quiz', icon: '🧠', label: 'Simulacro 27/04: Test Teórico', type: 'quiz', quizId: 'simulacro2_quiz' },
+      { id: 'sim2-p1', category: 'Práctico 27/04: XML & DTD', icon: '📄', label: '1. Validación DTD', type: 'exam', editorId: 'sim2_p1' },
+      { id: 'sim2-p2', category: 'Práctico 27/04: XML & XSD', icon: '🛡️', label: '2. Creación XSD', type: 'exam', editorId: 'sim2_p2' }
     ]
   }
 };
@@ -2202,20 +2203,11 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
   },
   sim1_p1: {
     type: 'html',
-    examTitle: 'Parte 1: Estructura y Cabecera del Documento',
-    examDesc: `Crea la estructura base de un documento HTML5 para una tienda online. El documento debe incluir:
-• La declaración de tipo de documento HTML5.
-• La etiqueta <html> con el atributo de idioma español (lang="es").
-• Una sección <head> que contenga:
-  - La etiqueta meta para la codificación de caracteres UTF-8.
-  - La etiqueta meta viewport para diseño responsive.
-  - Un título descriptivo para la página (por ejemplo: "Mi Tienda Online").
-• Una etiqueta <body> vacía (el contenido se añadirá después).
-
-No añadas contenido dentro del body todavía.`,
+    examTitle: 'Parte 1: Estructura general',
+    examDesc: `Debes crear un documento HTML5 correctamente estructurado.`,
     exercises: [{
       id: 1, title: 'Estructura HTML5',
-      desc: 'Crea un documento HTML5 básico con DOCTYPE, html (lang="es"), head (charset, viewport, title) y body vacío.',
+      desc: 'Debes crear un documento HTML5 correctamente estructurado.',
       hint: 'Usa <!DOCTYPE html>, <meta charset="UTF-8">, etc.',
       starter: `<!-- Crea la estructura básica aquí -->\n`,
       solution: `<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>Mi Tienda Online</title>\n</head>\n<body>\n</body>\n</html>`,
@@ -2230,56 +2222,57 @@ No añadas contenido dentro del body todavía.`,
   },
   sim1_p2: {
     type: 'html',
-    examTitle: 'Parte 2: Encabezado y Navegación',
-    examDesc: `La página de la tienda debe incluir un encabezado y una barra de navegación. En concreto:
-
-Encabezado (<header>):
-• Un título principal <h1> con el nombre de la tienda.
-• Un subtítulo <h2> con un eslogan o descripción breve.
-
-Navegación (<nav>):
-• Una lista no ordenada <ul> con exactamente 4 elementos <li>.
-• Cada elemento debe contener un enlace <a> con las opciones: Inicio, Productos, Contacto y Sobre Nosotros (o nombres equivalentes).
-
-El <nav> debe ir después del <header>, ambos dentro del <body>.`,
+    examTitle: 'Parte 2: Encabezado',
+    examDesc: `La página debe incluir:
+Un título principal con el nombre de la tienda.
+Un subtítulo con un eslogan.`,
     exercises: [{
-      id: 1, title: 'Encabezado y Navegación',
-      desc: 'Dentro del body, crea un <header> con un <h1> y un <h2>. Después, añade un <nav> con una lista <ul> de 4 enlaces (Op1, Op2, Op3, Op4).',
-      hint: '<header><h1>...</h1></header> <nav><ul><li><a>...</a></li></ul></nav>',
-      starter: `<body>\n  <!-- Añade header y nav aquí -->\n</body>`,
-      solution: `<body>\n  <header>\n    <h1>Mi Gran Tienda</h1>\n    <h2>Los mejores productos al mejor precio</h2>\n  </header>\n  <nav>\n    <ul>\n      <li><a href="#">Op1</a></li>\n      <li><a href="#">Op2</a></li>\n      <li><a href="#">Op3</a></li>\n      <li><a href="#">Op4</a></li>\n    </ul>\n  </nav>\n</body>`,
+      id: 1, title: 'Encabezado',
+      desc: 'La página debe incluir un título principal con el nombre de la tienda y un subtítulo con un eslogan.',
+      hint: '<header><h1>...</h1><h2>...</h2></header>',
+      starter: `<body>\n  <!-- Añade header aquí -->\n</body>`,
+      solution: `<body>\n  <header>\n    <h1>Mi Gran Tienda</h1>\n    <h2>Los mejores productos al mejor precio</h2>\n  </header>\n</body>`,
       milestones: [
         { id: 'header', check: /<header>/i, popup: 'Encabezado listo.', instruction: 'Crea el bloque <header>.' },
         { id: 'h1', check: /<h1>/i, popup: 'Título principal OK.', instruction: 'Añade el título <h1>.' },
+        { id: 'h2', check: /<h2>/i, popup: 'Subtítulo OK.', instruction: 'Añade el subtítulo <h2>.' }
+      ]
+    }]
+  },
+  sim1_p3: {
+    type: 'html',
+    examTitle: 'Parte 3: Menú de navegación',
+    examDesc: `Crea un menú con una lista que contenga los siguientes apartados:
+Op1
+Op2
+Op3
+Op4`,
+    exercises: [{
+      id: 1, title: 'Menú de navegación',
+      desc: 'Crea un menú con una lista que contenga los siguientes apartados: Op1, Op2, Op3, Op4.',
+      hint: '<nav><ul><li><a>...</a></li></ul></nav>',
+      starter: `<nav>\n  <!-- Añade el menú aquí -->\n</nav>`,
+      solution: `<nav>\n    <ul>\n      <li><a href="#">Op1</a></li>\n      <li><a href="#">Op2</a></li>\n      <li><a href="#">Op3</a></li>\n      <li><a href="#">Op4</a></li>\n    </ul>\n  </nav>`,
+      milestones: [
         { id: 'nav', check: /<nav>/i, popup: 'Menú de navegación detectado.', instruction: 'Crea el bloque <nav>.' },
         { id: 'ul', check: /<ul>/i, popup: 'Lista iniciada.', instruction: 'Crea una lista <ul> para el menú.' },
         { id: 'li', check: /<li>.*<li>.*<li>.*<li>/si, popup: '4 opciones listas.', instruction: 'Añade los 4 elementos <li> con sus enlaces <a>.' }
       ]
     }]
   },
-  sim1_p3: {
+  sim1_p4: {
     type: 'html',
-    examTitle: 'Parte 3: Sección de Productos',
-    examDesc: `Crea una sección principal de productos para la tienda online. Requisitos:
-
-Estructura:
-• Una etiqueta <section> que contenga toda la sección de productos.
-• Un título <h2> con el texto "Productos destacados".
-• Exactamente 3 productos, cada uno dentro de un <article>.
-
-Cada <article> debe incluir obligatoriamente:
-• <h3> con el nombre del producto.
-• <img> con el atributo src.
-• <p> con una descripción del producto.
-• <p> con el precio en el formato: <strong>Precio:</strong> XXX€`,
+    examTitle: 'Parte 4: Sección de productos',
+    examDesc: `Añade una sección con al menos 3 productos.
+Cada producto debe incluir:
+Nombre del producto (como título)
+Imagen
+Descripción
+Precio`,
     exercises: [{
       id: 1, title: 'Sección de Productos',
-      desc: `Crea una <section> con título <h2>Productos destacados</h2>. Añade 3 productos como bloques <article>. Cada producto debe incluir:
-• <h3> (nombre)
-• <img> (con src)
-• <p> (descripción)
-• <p><strong>Precio:</strong> X€</p>`,
-      hint: '&lt;section&gt; &lt;h2&gt;...&lt;/h2&gt; &lt;article&gt; &lt;h3&gt;...&lt;/h3&gt; &lt;img src="..."&gt; &lt;p&gt;descripción&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Precio:&lt;/strong&gt; ...€&lt;/p&gt; &lt;/article&gt; &lt;/section&gt;',
+      desc: 'Añade una sección con al menos 3 productos. Cada producto debe incluir: Nombre, Imagen, Descripción y Precio.',
+      hint: '&lt;section&gt; &lt;article&gt; &lt;h3&gt;...&lt;/h3&gt; &lt;img ...&gt; &lt;p&gt;...&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Precio:&lt;/strong&gt; ...€&lt;/p&gt; &lt;/article&gt; &lt;/section&gt;',
       starter: `<section>\n  <h2>Productos destacados</h2>\n  <!-- Añade 3 article (nombre, imagen, descripción, precio) -->\n</section>`,
       solution: `<section>\n  <h2>Productos destacados</h2>\n  <article>\n    <h3>Portátil Gamer</h3>\n    <img src="portatil.jpg">\n    <p>Portátil de alto rendimiento ideal para juegos y trabajo.</p>\n    <p><strong>Precio:</strong> 1200€</p>\n  </article>\n  <article>\n    <h3>Smartphone Pro</h3>\n    <img src="smartphone.jpg">\n    <p>Teléfono inteligente con cámara de alta resolución.</p>\n    <p><strong>Precio:</strong> 850€</p>\n  </article>\n  <article>\n    <h3>Auriculares inalámbricos</h3>\n    <img src="auriculares.jpg">\n    <p>Auriculares con cancelación de ruido.</p>\n    <p><strong>Precio:</strong> 150€</p>\n  </article>\n</section>`,
       milestones: [
@@ -2293,29 +2286,21 @@ Cada <article> debe incluir obligatoriamente:
       ]
     }]
   },
-  sim1_p4: {
+  sim1_p5: {
     type: 'html',
-    examTitle: 'Parte 4: Formulario de Contacto',
-    examDesc: `Crea una sección de contacto con un formulario simple. Requisitos:
+    examTitle: 'Parte 5: Formulario de contacto',
+    examDesc: `Crea un formulario que incluya los siguientes campos:
+Nombre
+Email
+Mensaje
 
-Estructura:
-• Una etiqueta <section> con un <h2>Contacto</h2>.
-• Un <form> para agrupar los campos.
-
-El formulario debe incluir:
-• Nombre: <input type="text">.
-• Email: <input type="email">.
-• Motivo de contacto: <select> con 3 opciones.
-• Mensaje: <textarea>.
-• Botón de envío: <input type="submit" value="Enviar">.`,
+También debe contener un selector con estas opciones:
+Consulta
+Pedido
+Reclamación`,
     exercises: [{
       id: 1, title: 'Formulario de Contacto',
-      desc: `Crea una <section> con <h2>Contacto</h2> y un <form>. El formulario debe incluir:
-• <input type="text"> para Nombre
-• <input type="email"> para Email
-• <select> con 3 opciones
-• <textarea> para Mensaje
-• <input type="submit" value="Enviar">`,
+      desc: 'Crea un formulario con campos para Nombre, Email, Mensaje y un selector con las opciones: Consulta, Pedido, Reclamación.',
       milestones: [
         { id: 'form', check: /<form/i, popup: 'Formulario iniciado.', instruction: 'Crea la etiqueta <form>.' },
         { id: 'nombre', check: /type="text"/i, popup: 'Campo Nombre OK.', instruction: 'Añade <input type="text"> para el nombre.' },
@@ -2330,23 +2315,16 @@ El formulario debe incluir:
   sim2_p1: {
     type: 'xml',
     examTitle: 'Parte 1: DTD Interna para Libro',
-    examDesc: `Se te proporciona el siguiente documento XML:
-
-<?xml version="1.0" encoding="UTF-8"?>
+    examDesc: `1. Dado el XML:
 <libro>
-  <titulo>XML Básico</titulo>
-  <autor>Juan Pérez</autor>
-  <precio>25</precio>
+<titulo>XML Básico</titulo>
+<autor>Juan Pérez</autor>
+<precio>25</precio>
 </libro>
-
-Tarea: Añade una DTD interna (DOCTYPE) a ese documento XML para que sea válido. La DTD debe:
-• Declarar el elemento raíz libro con sus hijos en orden: titulo, autor, precio.
-• Declarar cada uno de los tres elementos hijos como contenido de texto (#PCDATA).
-
-El documento final debe ser tanto bien formado como válido según la DTD.`,
+Crea una DTD que valide este documento.`,
     exercises: [{
       id: 1, title: 'Validación DTD',
-      desc: 'Dado un XML con <libro>, <titulo>, <autor> y <precio>, crea la DTD interna que lo valide.',
+      desc: 'Dado el XML de un libro, crea una DTD interna que lo valide.',
       hint: 'Usa <!DOCTYPE libro [ ... ]>',
       starter: `<?xml version="1.0" encoding="UTF-8"?>\n<!-- Añade la declaración DOCTYPE y los elementos aquí -->\n<libro>\n  <titulo>XML Básico</titulo>\n  <autor>Juan Pérez</autor>\n  <precio>25</precio>\n</libro>`,
       solution: `<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE libro [\n  <!ELEMENT libro (titulo, autor, precio)>\n  <!ELEMENT titulo (#PCDATA)>\n  <!ELEMENT autor (#PCDATA)>\n  <!ELEMENT precio (#PCDATA)>\n]>\n<libro>\n  <titulo>XML Básico</titulo>\n  <autor>Juan Pérez</autor>\n  <precio>25</precio>\n</libro>`,
@@ -2360,25 +2338,18 @@ El documento final debe ser tanto bien formado como válido según la DTD.`,
   sim2_p2: {
     type: 'xml',
     examTitle: 'Parte 2: Esquema XSD para Producto',
-    examDesc: `Crea un esquema XSD (XML Schema Definition) para validar el siguiente documento XML:
-
+    examDesc: `2. Dado el XML:
 <producto>
-  <nombre>Teclado mecánico</nombre>
-  <precio>89.99</precio>
-  <stock>15</stock>
+<nombre>Teclado</nombre>
+<precio>49.99</precio>
+<stock>10</stock>
 </producto>
-
-Requisitos del esquema:
-• El elemento raíz es <producto> y es de tipo complejo (xs:complexType).
-• Los elementos hijos deben aparecer en orden (xs:sequence):
-  - <nombre>: tipo xs:string.
-  - <precio>: tipo xs:decimal.
-  - <stock>: tipo xs:positiveInteger.
-
-Recuerda incluir el namespace correcto del W3C en el elemento <xs:schema>.`,
+Crea un XSD donde:
+precio sea decimal
+stock sea entero positivo`,
     exercises: [{
       id: 1, title: 'Creación XSD',
-      desc: 'Dado un XML con <producto>, crea un XSD donde el precio sea decimal y el stock sea entero positivo.',
+      desc: 'Dado el XML de un producto, crea un XSD donde el precio sea decimal y el stock entero positivo.',
       hint: 'Crea la estructura <xs:schema> y define los tipos xs:decimal y xs:positiveInteger',
       starter: `<?xml version="1.0" encoding="UTF-8"?>\n<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">\n  <!-- Define el esquema aquí -->\n  \n</xs:schema>`,
       solution: `<?xml version="1.0" encoding="UTF-8"?>\n<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">\n  <xs:element name="producto">\n    <xs:complexType>\n      <xs:sequence>\n        <xs:element name="nombre" type="xs:string"/>\n        <xs:element name="precio" type="xs:decimal"/>\n        <xs:element name="stock" type="xs:positiveInteger"/>\n      </xs:sequence>\n    </xs:complexType>\n  </xs:element>\n</xs:schema>`,

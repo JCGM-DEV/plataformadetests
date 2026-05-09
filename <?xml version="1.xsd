@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<empleados>
+<empleado id="1">
+<nombre>Ana</nombre>
+<edad>30</edad>
+<salario>2500.50</salario>
+</empleado>
+</empleados>

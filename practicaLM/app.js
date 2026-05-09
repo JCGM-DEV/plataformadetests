@@ -204,7 +204,8 @@ function nextQuestion() { quizState.current++; renderQuestion(); }
 
 function renderQuizResult() {
   const pct = Math.round((score.correct / (score.correct + score.wrong || 1)) * 100);
-  if (typeof triggerCunaoEffect === 'function') triggerCunaoEffect(pct >= 50);
+  // Quiz finalizado
+
   const msg = pct >= 80 ? '¡Excelente! 🚀' : pct >= 60 ? 'Buen trabajo 💪' : 'Repasa la teoría 📚';
   document.getElementById('quiz-view').innerHTML = `
     <div class="quiz-result">
@@ -765,9 +766,8 @@ async function correctExam() {
   } catch(aiErr) {
     console.error("AI Correction failed", aiErr);
   } finally {
-    if (typeof triggerCunaoEffect === 'function') {
-        triggerCunaoEffect(aiPassed);
-    }
+    // Fin de corrección
+
     if (btn) { btn.disabled = false; btn.innerText = '✓ Corregir'; }
   }
 
@@ -947,29 +947,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-function triggerCunaoEffect(passed) {
-    const overlay = document.createElement('div');
-    overlay.className = 'cunao-overlay';
-    
-    const topText = passed ? "¡QUÉ BUENO ERES!" : "¡QUÉ MALO ERES PERRO!";
-    const bottomText = passed ? "CUÑAAAAOOOOOOO" : "ESTUDIA, CUÑAAAAOOOOOOO";
-    
-    overlay.innerHTML = `
-        <img src="../risitas/pngegg.png" class="cunao-img" alt="Risitas">
-        <div class="cunao-text">${topText}</div>
-        <div class="cunao-text" style="font-size:1.5rem;animation-delay:0.2s;color:${passed ? '#4ade80' : '#f87171'}">${bottomText}</div>
-    `;
-    document.body.appendChild(overlay);
 
-    // Sonido Real del Risitas (Ruta relativa al lab)
-    const audio = new Audio('../risitas/Voicy_El Risitas Laugh.mp3');
-    audio.play().catch(e => console.log("Audio play blocked by browser", e));
-
-    setTimeout(() => {
-        overlay.style.opacity = '0';
-        setTimeout(() => overlay.remove(), 500);
-    }, 4500);
-}
 // ---- LIVE GRADE LOGIC ----
 function updateLiveGrade() {
   const container = document.getElementById('live-grade-container');
