@@ -715,6 +715,11 @@ async function checkEjercicio(ejId) {
   
   updateLiveGrade();
 
+  // Trigger Easter Egg
+  if (typeof triggerEasterEgg === 'function') {
+      triggerEasterEgg();
+  }
+
   // In exam mode, reveal pistas/solucion/IA buttons after first correction
   if (ejercicioState.isExam) {
     const bPistas = document.getElementById('btn-pistas');
@@ -900,6 +905,11 @@ function manualReportScore() {
   } else {
     showToast('⚠️ No se pudo conectar con el Ranking', 'error');
   }
+  
+  // Trigger Easter Egg
+  if (typeof triggerEasterEgg === 'function') {
+      triggerEasterEgg();
+  }
 }
 // ---- TIMER LOGIC ----
 let examTimer = null;
@@ -961,4 +971,9 @@ function showTimeUpModal() {
     </div>
   `;
   document.getElementById('modal-overlay').classList.remove('hidden');
+
+  // Trigger Easter Egg
+  if (typeof triggerEasterEgg === 'function') {
+      triggerEasterEgg();
+  }
 }

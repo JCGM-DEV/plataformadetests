@@ -155,6 +155,11 @@ function renderQuizResult() {
       </div>
     </div>`;
   completedSections.add(activeSection); updateProgress();
+  
+  // Trigger Easter Egg
+  if (typeof triggerEasterEgg === 'function') {
+      triggerEasterEgg();
+  }
 }
 
 // ── DRAG ─────────────────────────────────────────────────────────
@@ -244,6 +249,11 @@ function checkDrag(dragId) {
         <button class="btn-secondary" onclick="showWelcome()">Menú</button>
       </div></div>`;
     completedSections.add(activeSection); updateProgress();
+
+    // Trigger Easter Egg
+    if (typeof triggerEasterEgg === 'function') {
+        triggerEasterEgg();
+    }
   }
 }
 

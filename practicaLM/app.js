@@ -221,6 +221,11 @@ function renderQuizResult() {
   completedSections.add(activeSection); 
   updateProgress();
   updateLiveGrade();
+
+  // Trigger Easter Egg
+  if (typeof triggerEasterEgg === 'function') {
+      triggerEasterEgg();
+  }
 }
 
 // ── DRAG ─────────────────────────────────────────────────────────
@@ -308,6 +313,11 @@ function checkDrag(idxStr, dragId) {
     completedSections.add(activeSection); 
     updateProgress();
     updateLiveGrade();
+
+    // Trigger Easter Egg
+    if (typeof triggerEasterEgg === 'function') {
+        triggerEasterEgg();
+    }
   }
 }
 
@@ -561,6 +571,11 @@ function validateXML() {
         completedSections.add(activeSection); 
         updateProgress();
         updateLiveGrade();
+
+        // Trigger Easter Egg
+        if (typeof triggerEasterEgg === 'function') {
+            triggerEasterEgg();
+        }
       }
     } else {
       const parser = new DOMParser();
@@ -576,6 +591,11 @@ function validateXML() {
         completedSections.add(activeSection); 
         updateProgress();
         updateLiveGrade();
+
+        // Trigger Easter Egg
+        if (typeof triggerEasterEgg === 'function') {
+            triggerEasterEgg();
+        }
       }
     }
     updateXMLOutput();
@@ -785,6 +805,11 @@ async function correctExam() {
   }
 
   examState.corrected = true;
+  
+  // Trigger Easter Egg
+  if (typeof triggerEasterEgg === 'function') {
+      triggerEasterEgg();
+  }
 }
 
 function showExamSolution() {

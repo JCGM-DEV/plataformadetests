@@ -1815,6 +1815,12 @@ function finishExam() {
                 </div>
             </div>
         </div>`;
+        
+        // Trigger Easter Egg Meme
+        if (typeof triggerEasterEgg === 'function') {
+            triggerEasterEgg();
+        }
+
     } catch (error) {
         console.error('Error in finishExam:', error);
         document.getElementById('exam-engine-root').innerHTML = `
