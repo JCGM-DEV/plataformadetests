@@ -2204,18 +2204,7 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
   sim1_p1: {
     type: 'html',
     examTitle: 'Parte 1: Estructura general',
-    examDesc: `Debes crear un documento HTML5 correctamente estructurado.
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TÍTULO QUE SEA</title>
-</head>
-<body>
-</body>
-</html>`,
+    examDesc: `Debes crear un documento HTML5 correctamente estructurado.`,
     exercises: [{
       id: 1, title: 'Estructura HTML5',
       desc: 'Debes crear un documento HTML5 correctamente estructurado con DOCTYPE, html lang="es", head (charset, viewport, title) y body vacío.',
@@ -2236,12 +2225,7 @@ return <inventario>{$p/nombre}{$p/stock}</inventario>`,
     examTitle: 'Parte 2: Encabezado',
     examDesc: `La página debe incluir:
 Un título principal con el nombre de la tienda.
-Un subtítulo con un eslogan.
-
-<header>
-  <h1>TEXTO QUE SEA</h1>
-  <h2>ORACIÓN CUALQUIERA</h2>
-</header>`,
+Un subtítulo con un eslogan.`,
     exercises: [{
       id: 1, title: 'Encabezado',
       desc: 'La página debe incluir un <header> con un título principal <h1> con el nombre de la tienda y un subtítulo <h2> con un eslogan.',
@@ -2262,16 +2246,7 @@ Un subtítulo con un eslogan.
 Op1
 Op2
 Op3
-Op4
-
-<nav>
-  <ul>
-    <li><a href="#">Op1</a></li>
-    <li><a href="#">Op2</a></li>
-    <li><a href="#">Op3</a></li>
-    <li><a href="#">Op4</a></li>
-  </ul>
-</nav>`,
+Op4`,
     exercises: [{
       id: 1, title: 'Menú de navegación',
       desc: 'Crea un <nav> con una lista <ul> que contenga los siguientes apartados: Op1, Op2, Op3, Op4. Cada item debe ir en un <li> con un enlace <a>.',
@@ -2293,20 +2268,7 @@ Cada producto debe incluir:
 Nombre del producto (como título)
 Imagen
 Descripción
-Precio
-
-<section>
-  <h2>Productos destacados</h2>
-  <article>
-    <h3>Portátil Gamer</h3>
-    <img src="URL CUALQUIERA" alt="Portátil Gamer">
-    <p>Portátil de alto rendimiento ideal para juegos y trabajo.</p>
-    <p><strong>Precio:</strong> 1200€</p>
-  </article>
-  <article>
-    ...
-  </article>
-</section>`,
+Precio`,
     exercises: [{
       id: 1, title: 'Sección de Productos',
       desc: 'Añade una <section> con al menos 3 productos. Cada <article> debe incluir: <h3> (nombre), <img> (imagen con src y alt), <p> (descripción) y <p><strong>Precio:</strong> X€</p>.',
@@ -2337,24 +2299,7 @@ Consulta
 Pedido
 Reclamación
 
-<section>
-  <h2>Contacto</h2>
-  <form action="#" method="post">
-    <label for="nombre">Nombre:</label><br>
-    <input type="text" id="nombre" name="nombre"><br><br>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br><br>
-    <label for="tipo">Motivo:</label><br>
-    <select id="tipo" name="tipo">
-      <option value="consulta">Consulta</option>
-      <option value="pedido">Pedido</option>
-      <option value="reclamacion">Reclamación</option>
-    </select><br><br>
-    <label for="mensaje">Mensaje:</label><br>
-    <textarea id="mensaje" name="mensaje" rows="5" cols="30"></textarea><br><br>
-    <input type="submit" value="Enviar">
-  </form>
-</section>`,
+Y un botón de envío (submit).`,
     exercises: [{
       id: 1, title: 'Formulario de Contacto',
       desc: 'Crea una <section> con <h2>Contacto</h2> y un <form action="#" method="post">. El formulario debe tener <label> para cada campo: Nombre (type="text"), Email (type="email"), un <select> con las opciones Consulta/Pedido/Reclamación, un <textarea> para el Mensaje y un botón <input type="submit" value="Enviar">.',
@@ -2378,13 +2323,7 @@ Reclamación
 <autor>Juan Pérez</autor>
 <precio>25</precio>
 </libro>
-Crea una DTD que valide este documento.
-
-Solución:
-<!ELEMENT libro (titulo, autor, precio)>
-<!ELEMENT titulo (#PCDATA)>
-<!ELEMENT autor (#PCDATA)>
-<!ELEMENT precio (#PCDATA)>`,
+Crea una DTD que valide este documento.`,
     exercises: [{
       id: 1, title: 'Validación DTD',
       desc: 'Dado el XML de un libro, añade una DTD interna (DOCTYPE) al documento para que sea válido. La DTD debe declarar el elemento raíz libro con sus hijos en orden (titulo, autor, precio) y cada hijo como contenido de texto (#PCDATA).',
@@ -2409,21 +2348,7 @@ Solución:
 </producto>
 Crea un XSD donde:
 precio sea decimal
-stock sea entero positivo
-
-Solución:
-<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="producto">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="nombre" type="xs:string"/>
-        <xs:element name="precio" type="xs:decimal"/>
-        <xs:element name="stock" type="xs:positiveInteger"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-</xs:schema>`,
+stock sea entero positivo`,
     exercises: [{
       id: 1, title: 'Creación XSD',
       desc: 'Dado el XML de un producto, crea un esquema XSD (xs:schema con xmlns:xs) donde <nombre> sea xs:string, <precio> sea xs:decimal y <stock> sea xs:positiveInteger. El elemento raiz es <producto> de tipo complejo (xs:complexType > xs:sequence).',
