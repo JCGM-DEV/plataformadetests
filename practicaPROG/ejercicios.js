@@ -13,50 +13,47 @@ const EJERCICIOS = [
     nivel: '⭐⭐',
     temas: ['Abstract', 'Herencia', 'Interfaces', 'Encapsulación', 'Polimorfismo', 'Excepciones'],
     tiempo: '30 min',
-    enunciado: `<p style="margin-bottom:1rem;">Diseña un sistema para gestionar una flota de vehículos. El examen pide que escribas en papel las clases Java con la lógica correcta.</p>
+    enunciado: `
+<div class="exam-header" style="margin-bottom:1.5rem; text-align:center; border-bottom:2px solid var(--blue); padding-bottom:0.5rem;">
+  <h3 style="color:var(--blue); margin:0;">EXAMEN PRÁCTICO DE PROGRAMACIÓN (DAW1)</h3>
+  <p style="margin:0; font-size:0.9rem; opacity:0.8;">Unidad: POO, Herencia, Polimorfismo y Excepciones</p>
+</div>
 
-<div class="code-exercise-desc" style="margin-bottom:1rem;border-left:3px solid var(--blue)">
-  <h4 style="color:var(--blue)">Parte 1 — Interfaz y clase abstracta</h4>
+<p style="margin-bottom:1rem;"><strong>Contexto:</strong> Una empresa de logística requiere una aplicación para gestionar su flota de vehículos. Se solicita el diseño y codificación en Java de la siguiente jerarquía de clases, asegurando el cumplimiento de los principios de encapsulación y polimorfismo.</p>
+
+<div class="code-exercise-desc" style="margin-bottom:1rem; padding:1rem; background:rgba(var(--blue-rgb), 0.05); border-radius:8px;">
+  <h4 style="color:var(--blue); margin-top:0;">1. Estructura de Clases e Interfaces</h4>
+  <p>Debes implementar los siguientes elementos técnicos:</p>
   <ul style="padding-left:1.25rem">
-    <li>Crea la interfaz <strong>Conducible</strong> con el método <code>void arrancar()</code>.</li>
-    <li>Crea la clase <strong>abstracta</strong> <code>Vehiculo</code> que <strong>implemente</strong> <code>Conducible</code>.<br>
-        Atributos <code>protected</code>: <code>marca (String)</code>, <code>modelo (String)</code>, <code>velocidadMax (int)</code>.<br>
-        Constructor que reciba los tres atributos.<br>
-        Constructor sin parámetros (valores "Genérica", "Genérico", 0) usando <code>this()</code>.<br>
-        Método abstracto: <code>String getTipo()</code>.<br>
-        Método <code>mostrarInfo()</code> que imprima marca, modelo, velocidadMax y tipo.
+    <li><strong>Interfaz Conducible:</strong> Declarar un método <code>void arrancar()</code>.</li>
+    <li><strong>Clase Abstracta Vehiculo:</strong> Debe implementar <code>Conducible</code>. 
+      <ul>
+        <li>Atributos protegidos (<code>protected</code>): <code>marca (String)</code>, <code>modelo (String)</code> y <code>velocidadMax (int)</code>.</li>
+        <li>Constructor completo para inicializar todos los atributos.</li>
+        <li>Constructor por defecto (sin parámetros) que asigne "Genérica", "Genérico" y 0 respectivamente, haciendo uso obligatorio de <code>this(...)</code>.</li>
+        <li>Método abstracto: <code>String getTipo()</code>.</li>
+        <li>Método <code>mostrarInfo()</code>: Imprimirá por consola los datos del vehículo incluyendo el tipo devuelto por el método abstracto.</li>
+      </ul>
     </li>
   </ul>
 </div>
 
-<div class="code-exercise-desc" style="margin-bottom:1rem;border-left:3px solid var(--accent)">
-  <h4 style="color:var(--accent)">Parte 2 — Subclases con herencia</h4>
+<div class="code-exercise-desc" style="margin-bottom:1rem; padding:1rem; background:rgba(var(--accent-rgb), 0.05); border-radius:8px;">
+  <h4 style="color:var(--accent); margin-top:0;">2. Especialización de Vehículos</h4>
   <ul style="padding-left:1.25rem">
-    <li>Clase <strong>Coche</strong> que extienda <code>Vehiculo</code>.<br>
-        Añade atributo <code>private int numPuertas</code>.<br>
-        Constructor con <code>marca, modelo, velocidadMax, numPuertas</code> usando <code>super()</code>.<br>
-        Constructor sin parámetros: hereda de <code>Vehiculo()</code> y pone puertas = 4.<br>
-        <code>@Override getTipo()</code> → devuelve <code>"Coche"</code>.<br>
-        <code>@Override mostrarInfo()</code> → llama <code>super.mostrarInfo()</code> y añade numPuertas.<br>
-        <code>@Override arrancar()</code> → imprime <code>"El coche [marca] arranca"</code>.
-    </li>
-    <li>Clase <strong>Moto</strong> que extienda <code>Vehiculo</code>.<br>
-        Añade atributo <code>private int cilindrada</code>.<br>
-        Constructor con <code>marca, modelo, velocidadMax, cilindrada</code> usando <code>super()</code>.<br>
-        Constructor sin parámetros: hereda de <code>Vehiculo()</code> y pone cilindrada = 125.<br>
-        <code>@Override getTipo()</code> → devuelve <code>"Moto"</code>.<br>
-        <code>@Override mostrarInfo()</code> → llama <code>super.mostrarInfo()</code> y añade cilindrada.<br>
-        <code>@Override arrancar()</code> → imprime <code>"La moto [marca] arranca"</code>.
-    </li>
+    <li><strong>Clase Coche:</strong> Extiende de <code>Vehiculo</code>. Añade el atributo privado <code>numPuertas (int)</code>. Debe sobrescribir <code>getTipo()</code>, <code>mostrarInfo()</code> (usando <code>super</code>) y <code>arrancar()</code>.</li>
+    <li><strong>Clase Moto:</strong> Extiende de <code>Vehiculo</code>. Añade el atributo privado <code>cilindrada (int)</code>. Debe sobrescribir los mismos métodos que la clase Coche adaptando la salida.</li>
   </ul>
 </div>
 
-<div class="code-exercise-desc" style="margin-bottom:1rem;border-left:3px solid var(--green)">
-  <h4 style="color:var(--green)">Parte 3 — Array de objetos y excepciones en el main</h4>
+<div class="code-exercise-desc" style="margin-bottom:1rem; padding:1rem; background:rgba(var(--green-rgb), 0.05); border-radius:8px;">
+  <h4 style="color:var(--green); margin-top:0;">3. Lógica de Ejecución y Gestión de Errores</h4>
+  <p>En el método <code>main</code> de la clase principal, realiza lo siguiente:</p>
   <ul style="padding-left:1.25rem">
-    <li>En el <code>main()</code>: crea un array de 4 <code>Vehiculo</code> con instancias de Coche y Moto.</li>
-    <li>Recorre el array con un <code>for</code> y llama a <code>arrancar()</code> y <code>mostrarInfo()</code> de cada uno (polimorfismo).</li>
-    <li>Añade un bloque <code>try-catch</code>: si <code>velocidadMax</code> fuera negativo, lanza una <code>IllegalArgumentException</code> con un mensaje descriptivo.</li>
+    <li>Declara un <strong>array polimórfico</strong> de tipo <code>Vehiculo</code> con capacidad para 4 elementos.</li>
+    <li>Instancia objetos de tipo <code>Coche</code> y <code>Moto</code> dentro del array.</li>
+    <li>Recorre el array mediante un bucle, invocando a <code>arrancar()</code> y <code>mostrarInfo()</code> de cada elemento.</li>
+    <li><strong>Control de Excepciones:</strong> Implementa una validación para que si la <code>velocidadMax</code> es inferior a 0, se lance una <code>IllegalArgumentException</code>. Captura dicha excepción mediante un bloque <code>try-catch</code> informando del error.</li>
   </ul>
 </div>`,
 
@@ -186,54 +183,50 @@ const EJERCICIOS = [
     nivel: '⭐⭐',
     temas: ['Abstract', 'Interfaces', 'Herencia', 'Polimorfismo', 'Encapsulación', 'Excepciones', 'Array de objetos'],
     tiempo: '30 min',
-    enunciado: `<p style="margin-bottom:1rem;">Diseña un sistema para gestionar distintos tipos de empleados en una empresa. El examen pide que escribas en papel las clases Java con la lógica correcta.</p>
+    enunciado: `
+<div class="exam-header" style="margin-bottom:1.5rem; text-align:center; border-bottom:2px solid var(--purple); padding-bottom:0.5rem;">
+  <h3 style="color:var(--purple); margin:0;">EXAMEN PRÁCTICO DE PROGRAMACIÓN (DAW1)</h3>
+  <p style="margin:0; font-size:0.9rem; opacity:0.8;">Unidad: Jerarquías, Sobrecarga y Gestión de Excepciones</p>
+</div>
 
-<div class="code-exercise-desc" style="margin-bottom:1rem;border-left:3px solid var(--blue)">
-  <h4 style="color:var(--blue)">Parte 1 — Interfaz y clase abstracta</h4>
+<p style="margin-bottom:1rem;"><strong>Contexto:</strong> Se requiere desarrollar un módulo para un sistema de Recursos Humanos que gestione distintos perfiles profesionales de una empresa tecnológica. El sistema debe permitir el cálculo automatizado de salarios y la evaluación de desempeño.</p>
+
+<div class="code-exercise-desc" style="margin-bottom:1rem; padding:1rem; background:rgba(var(--purple-rgb), 0.05); border-radius:8px;">
+  <h4 style="color:var(--purple); margin-top:0;">1. Modelo Base</h4>
   <ul style="padding-left:1.25rem">
-    <li>Crea la interfaz <strong>Evaluable</strong> con el método <code>String evaluar()</code>.</li>
-    <li>Crea la clase <strong>abstracta</strong> <code>Empleado</code> que <strong>implemente</strong> <code>Evaluable</code>.<br>
-        Atributos <code>private</code>: <code>nombre (String)</code>, <code>salarioBase (double)</code>.<br>
-        Constructor que reciba nombre y salarioBase. Si salarioBase &lt; 0, lanza <code>IllegalArgumentException</code>.<br>
-        Constructor sin parámetros (nombre = "Sin nombre", salarioBase = 1000.0) usando <code>this()</code>.<br>
-        Getters <code>getNombre()</code> y <code>getSalarioBase()</code>.<br>
-        Método abstracto: <code>double calcularSalario()</code>.<br>
-        Método <code>mostrarInfo()</code> que imprima nombre, salario base y salario calculado.
+    <li><strong>Interfaz Evaluable:</strong> Método <code>String evaluar()</code>.</li>
+    <li><strong>Clase Abstracta Empleado:</strong> Implementa <code>Evaluable</code>.
+      <ul>
+        <li>Atributos privados: <code>nombre (String)</code> y <code>salarioBase (double)</code>.</li>
+        <li>Constructor que valide el salario: si es negativo, lanzará <code>IllegalArgumentException</code>.</li>
+        <li>Constructor por defecto que invoque al anterior con "Sin nombre" y 1000.0.</li>
+        <li>Getters públicos para los atributos.</li>
+        <li>Método abstracto: <code>double calcularSalario()</code>.</li>
+        <li>Método final (no abstracto): <code>mostrarInfo()</code> que visualice el estado completo del empleado.</li>
+      </ul>
     </li>
   </ul>
 </div>
 
-<div class="code-exercise-desc" style="margin-bottom:1rem;border-left:3px solid var(--accent)">
-  <h4 style="color:var(--accent)">Parte 2 — Subclases (Herencia y Polimorfismo)</h4>
+<div class="code-exercise-desc" style="margin-bottom:1rem; padding:1rem; background:rgba(var(--accent-rgb), 0.05); border-radius:8px;">
+  <h4 style="color:var(--accent); margin-top:0;">2. Especialización del Personal</h4>
+  <p>Implementa las siguientes subclases de Empleado:</p>
   <ul style="padding-left:1.25rem">
-    <li>Clase <strong>Gerente</strong> que extienda <code>Empleado</code>.<br>
-        Atributo <code>private double bonificacion</code>.<br>
-        Constructor con <code>nombre, salarioBase, bonificacion</code> usando <code>super()</code>.<br>
-        <code>@Override calcularSalario()</code> → devuelve <code>getSalarioBase() + bonificacion</code>.<br>
-        <code>@Override evaluar()</code> → devuelve <code>"Gerente [nombre]: Rendimiento alto"</code>.
-    </li>
-    <li>Clase <strong>Desarrollador</strong> que extienda <code>Empleado</code>.<br>
-        Atributo <code>private int numProyectos</code>.<br>
-        Constructor con <code>nombre, salarioBase, numProyectos</code> usando <code>super()</code>.<br>
-        <code>@Override calcularSalario()</code> → devuelve <code>getSalarioBase() + (numProyectos * 200)</code>.<br>
-        <strong>Sobrecarga</strong>: añade <code>double calcularSalario(int horasExtra)</code> → devuelve <code>calcularSalario() + (horasExtra * 15)</code>.<br>
-        <code>@Override evaluar()</code> → devuelve <code>"Desarrollador [nombre]: "</code> + proyectos + <code>" proyectos"</code>.
-    </li>
-    <li>Clase <strong>Asistente</strong> que extienda <code>Empleado</code>.<br>
-        Constructor con <code>nombre, salarioBase</code> usando <code>super()</code>.<br>
-        <code>@Override calcularSalario()</code> → devuelve <code>getSalarioBase()</code> (sin extras).<br>
-        <code>@Override evaluar()</code> → devuelve <code>"Asistente [nombre]: Soporte al equipo"</code>.
-    </li>
+    <li><strong>Gerente:</strong> Incluye bono de gestión. El salario total es la suma de la base y dicho bono.</li>
+    <li><strong>Desarrollador:</strong> Incluye incentivo por número de proyectos (200€ por proyecto). 
+      <br><strong>Importante:</strong> Sobrecarga el método <code>calcularSalario</code> para que acepte un parámetro entero <code>horasExtra</code> (precio hora: 15€).</li>
+    <li><strong>Asistente:</strong> Percibe únicamente el salario base.</li>
   </ul>
 </div>
 
-<div class="code-exercise-desc" style="margin-bottom:1rem;border-left:3px solid var(--green)">
-  <h4 style="color:var(--green)">Parte 3 — Array de objetos y polimorfismo en el main</h4>
+<div class="code-exercise-desc" style="margin-bottom:1rem; padding:1rem; background:rgba(var(--green-rgb), 0.05); border-radius:8px;">
+  <h4 style="color:var(--green); margin-top:0;">3. Integración y Prueba</h4>
+  <p>En el programa principal (<code>Main</code>):</p>
   <ul style="padding-left:1.25rem">
-    <li>En el <code>main()</code>: usa <code>try-catch</code> para crear los objetos y capturar posibles <code>IllegalArgumentException</code>.</li>
-    <li>Crea un array de 4 <code>Empleado</code> con mezcla de Gerente, Desarrollador y Asistente.</li>
-    <li>Recorre el array con un <code>for</code> y llama a <code>mostrarInfo()</code> de cada uno (polimorfismo).</li>
-    <li>Para el Desarrollador, llama también a la versión sobrecargada <code>calcularSalario(10)</code> e imprime el resultado.</li>
+    <li>Gestiona la creación de objetos dentro de un bloque <code>try-catch</code> para controlar errores de inicialización.</li>
+    <li>Crea una colección (Array) de tipo <code>Empleado</code> con al menos 4 integrantes de diversas categorías.</li>
+    <li>Itera la colección aplicando polimorfismo para mostrar la información y evaluación de cada uno.</li>
+    <li>Realiza una llamada específica a la versión sobrecargada del salario para un desarrollador.</li>
   </ul>
 </div>`,
 
