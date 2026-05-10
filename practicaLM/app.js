@@ -1017,8 +1017,15 @@ function manualReportScore() {
   
   const totalScore = parseFloat(gradeEl.textContent);
   if (window.parent && typeof window.parent.reportSimScore === 'function') {
-    window.parent.reportSimScore('lenguaje_de_marcas', 'Lenguaje de Marcas', currentUnit, totalScore);
-    showToast('🏆 ¡Nota registrada en el Ranking!', 'success');
+    // Collect details for history
+    const details = {
+        aciertos: score.quizCorrect,
+        errores: score.quizWrong,
+        omitidas: 0,
+        total: QUIZZES[UNITS[currentUnit].sections.find(s => s.type === 'quiz')?.quizId]?.questions.length || 1
+    };
+    window.parent.reportSimScore('lenguaje_de_marcas', 'Lenguaje de Marcas', currentUnit, totalScore, details);
+    showToast('🏆 ¡Nota registrada en tu progreso!', 'success');
     
     const btn = document.getElementById('btn-register-ranking');
     if (btn) {
@@ -1026,7 +1033,7 @@ function manualReportScore() {
         setTimeout(() => btn.classList.remove('btn-registered'), 2000);
     }
   } else {
-    showToast('⚠️ No se pudo conectar con el Ranking', 'error');
+    showToast('⚠️ No se pudo conectar con el Dashboard', 'error');
   }
 }
 // ---- TIMER LOGIC ----
@@ -1084,9 +1091,10 @@ function showTimeUpModal() {
       <span style="font-size:4rem">⏰</span>
       <h2 style="color:var(--red); margin: 1.5rem 0;">¡TIEMPO AGOTADO!</h2>
       <p>El tiempo para el simulacro de examen ha finalizado.</p>
-      <p style="font-size:0.9rem; color:var(--text2)">Tu nota actual ha sido registrada. Puedes ver los resultados en el ranking.</p>
+      <p style="font-size:0.9rem; color:var(--text2)">Tu nota actual ha sido registrada automáticamente en tu progreso.</p>
       <button class="btn-primary" onclick="goHome()" style="margin-top:2rem; width:100%; justify-content:center">Volver al inicio</button>
     </div>
   `;
   document.getElementById('modal-overlay').classList.remove('hidden');
+  manualReportScore(); // Auto-register score
 }

@@ -3030,11 +3030,25 @@ async function updateGlobalRanking(subjectId, subjectName, score, unitId = null)
 }
 
 // Global bridge for iframes (Labs)
-window.reportSimScore = function(subjectId, subjectName, unitId, score) {
+window.reportSimScore = function(subjectId, subjectName, unitId, score, details = null) {
     console.log(`Score reported from Lab: ${subjectId} - ${unitId}: ${score}`);
     if (typeof updateGlobalRanking === 'function') {
-        // FIXED: The order was swapped. Now: subjectId, subjectName, score, unitId
         updateGlobalRanking(subjectId, subjectName, score, unitId);
+    }
+    
+    // If details are provided, it means it's a final/manual report, so save to history
+    if (details && typeof saveExamResult === 'function') {
+        saveExamResult(
+            subjectId, 
+            subjectName, 
+            score, 
+            details.aciertos || 0, 
+            details.errores || 0, 
+            details.omitidas || 0, 
+            details.total || 1, 
+            unitId
+        );
+        console.log(`Score saved to history for ${subjectId}`);
     }
 };
 
