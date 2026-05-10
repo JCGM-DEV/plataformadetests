@@ -157,7 +157,17 @@ function markDone() {
 // ── QUIZ ─────────────────────────────────────────────────────────
 function showQuiz(quizId) {
   const data = QUIZZES[quizId];
-  quizState = { questions: [...data.questions].sort(() => Math.random() - .5), current: 0, answered: false, quizId };
+  let questions = [...data.questions].sort(() => Math.random() - .5);
+  
+  // Si es un simulacro, seleccionamos solo 40 preguntas aleatorias del banco total
+  if (currentUnit === 'simulacros') {
+    questions = questions.slice(0, 40);
+  } else if (quizId === 'poo_quiz') {
+    // Para la práctica temática regular de POO (que ahora tiene 123 preguntas), limitamos a 20 para que sea ameno
+    questions = questions.slice(0, 20);
+  }
+
+  quizState = { questions, current: 0, answered: false, quizId };
   renderQuestion();
 }
 
@@ -715,10 +725,6 @@ async function checkEjercicio(ejId) {
   
   updateLiveGrade();
 
-  // Trigger Easter Egg
-  if (typeof triggerEasterEgg === 'function') {
-      triggerEasterEgg();
-  }
 
   // In exam mode, reveal pistas/solucion/IA buttons after first correction
   if (ejercicioState.isExam) {
@@ -851,7 +857,13 @@ function updateLiveGrade() {
   if (quizSec) {
     const quizData = QUIZZES[quizSec.quizId];
     if (quizData) {
-      const totalQuestions = quizData.questions.length;
+      let totalQuestions = quizData.questions.length;
+      // Ajustar el total según el límite de preguntas del modo simulacro o práctica
+      if (currentUnit === 'simulacros' && quizSec.quizId === 'poo_quiz') {
+        totalQuestions = 40;
+      } else if (quizSec.quizId === 'poo_quiz') {
+        totalQuestions = 20;
+      }
       
       // Penalización: Cada 2 mal restan 1 bien
       const netCorrect = score.quizCorrect - (score.quizWrong / 2);
@@ -906,10 +918,6 @@ function manualReportScore() {
     showToast('⚠️ No se pudo conectar con el Ranking', 'error');
   }
   
-  // Trigger Easter Egg
-  if (typeof triggerEasterEgg === 'function') {
-      triggerEasterEgg();
-  }
 }
 // ---- TIMER LOGIC ----
 let examTimer = null;
@@ -972,8 +980,4 @@ function showTimeUpModal() {
   `;
   document.getElementById('modal-overlay').classList.remove('hidden');
 
-  // Trigger Easter Egg
-  if (typeof triggerEasterEgg === 'function') {
-      triggerEasterEgg();
-  }
 }

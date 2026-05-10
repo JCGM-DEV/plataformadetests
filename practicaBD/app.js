@@ -156,10 +156,6 @@ function renderQuizResult() {
     </div>`;
   completedSections.add(activeSection); updateProgress();
   
-  // Trigger Easter Egg
-  if (typeof triggerEasterEgg === 'function') {
-      triggerEasterEgg();
-  }
 }
 
 // ── DRAG ─────────────────────────────────────────────────────────
@@ -250,10 +246,6 @@ function checkDrag(dragId) {
       </div></div>`;
     completedSections.add(activeSection); updateProgress();
 
-    // Trigger Easter Egg
-    if (typeof triggerEasterEgg === 'function') {
-        triggerEasterEgg();
-    }
   }
 }
 
