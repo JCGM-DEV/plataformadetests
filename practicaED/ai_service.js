@@ -158,24 +158,26 @@ async function requestSimAIFeedback(simId) {
         const exerciseContext = lesson ? `EJERCICIO: ${lesson.title}\nENUNCIADO: ${lesson.subtitle}` : 'Diagrama externo';
 
         const prompt = `Actúa como un PROFESOR DE ENTORNOS DE DESARROLLO experto en UML.
-Te adjunto una captura de pantalla de un diagrama UML creado por un alumno en Visual Paradigm.
+TE HAN ADJUNTO UNA IMAGEN PARA EVALUAR.
+
+PASO 0 (CRÍTICO): Identifica el contenido de la imagen. 
+Si la imagen NO es un diagrama UML (por ejemplo: es una captura de WhatsApp, un meme, una foto personal, texto sin formato de diagrama, etc.), DEBES asignar una nota de [NOTA]: 0 y explicar en [ERRORES] que el contenido no es un diagrama UML válido para la asignatura.
+
+SI ES UN DIAGRAMA UML:
+1. Analiza el contenido técnico.
+2. Identifica si el tipo de diagrama es correcto (Clases, Casos de Uso, Secuencia, etc) según el ejercicio.
+3. Evalúa la lógica y la notación UML (flechas, símbolos, multiplicidad, visibilidad).
 
 ${exerciseContext}
 
-TU MISIÓN:
-1. Analiza la IMAGEN adjunta.
-2. Identifica si el tipo de diagrama es correcto (Clases, Casos de Uso, Secuencia, etc).
-3. Evalúa la lógica y la notación UML (flechas, símbolos, multiplicidad, visibilidad).
-4. Sé estricto pero constructivo.
-
 FORMATO DE RESPUESTA OBLIGATORIO:
 [NOTA]: Nota del 0 al 10.
-[ERRORES]: Lista detallada de fallos detectados en la imagen.
+[ERRORES]: Lista de fallos o confirmación de que no es un diagrama.
 [COMENTARIO]: Feedback profesional.
 
-Responde en español.`;
+Responde en español de forma rigurosa.`;
 
-        // We use the Vision model for images
+        // We use a standard Groq Vision model
         const userKey = (localStorage.getItem('groq_ai_key') || '').trim();
         const key = userKey || _K7();
         
@@ -186,7 +188,7 @@ Responde en español.`;
                 'Authorization': `Bearer ${key}` 
             },
             body: JSON.stringify({ 
-                model: 'meta-llama/llama-4-scout-17b-16e-instruct', 
+                model: 'llama-3.2-90b-vision-preview', 
                 messages: [{ 
                     role: "user", 
                     content: [
