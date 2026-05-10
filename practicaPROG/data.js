@@ -594,7 +594,7 @@ const QUIZZES = {
       exp: "ODL define clases/atributos; OQL realiza las búsquedas de objetos." },
     { q: "¿Cuál es la diferencia principal entre el modo de funcionamiento \"Embebido\" y el modo \"Servidor\"?", hint: "Refuerza este concepto.",
       opts: ["El modo Embebido permite múltiples conexiones remotas, mientras que el Servidor es solo para un usuario", "El modo Embebido la base de datos corre en el mismo proceso que la aplicación, mientras que el modo Servidor es un proceso independiente", "El modo Servidor es gratuito y el modo Embebido requiere licencia comercial", "Ninguna de las anteriores opciones es completamente correcta en este contexto"], ans: 1,
-      exp: "Embebido = misma memoria que la App; Servidor = red independiente."    ]
+      exp: "Embebido = misma memoria que la App; Servidor = red independiente." }    ]
   },
   final_simulacro_quiz: { title: 'Simulacro Real Final (40 Preguntas)', questions: [
     { q: "¿Cuál de las siguientes declaraciones de variable es válida en Java?",
