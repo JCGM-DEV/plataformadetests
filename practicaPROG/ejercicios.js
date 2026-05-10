@@ -534,5 +534,112 @@ public class Main {
       (c) => /LinkedList\s*<\s*EmpleadoIT\s*>/i.test(c) && /Stack\s*<\s*String\s*>/i.test(c),
       (c) => /try\s*\{[\s\S]*\}\s*catch\s*\(\s*SalarioInvalidoException/i.test(c)
     ]
+  },
+  {
+    id: 'ej_sim2_1',
+    titulo: 'Simulacro 2: Inventario con HashMap',
+    nivel: '⭐⭐⭐',
+    temas: ['HashMap', 'Iteración', 'Interfaces', 'Excepciones'],
+    enunciado: `
+      <div class="exam-header" style="border-bottom:2px solid var(--orange)">
+        <h3 style="color:var(--orange)">CASO PRÁCTICO: GESTIÓN DE ALMACÉN</h3>
+      </div>
+      <p>Diseña un sistema para gestionar el stock de una tienda:</p>
+      <ul style="padding-left:1.2rem">
+        <li><strong>Interfaz Imponible:</strong> Método <code>double obtenerIVA()</code>.</li>
+        <li><strong>Clase Producto:</strong> Atributos: <code>codigo (String)</code>, <code>precio (double)</code>.</li>
+        <li><strong>Main:</strong>
+          <ul>
+            <li>Crea un <b>HashMap&lt;String, Producto&gt;</b> para almacenar productos por su código.</li>
+            <li>Implementa una búsqueda por código que lance una excepción personalizada <code>ProductoNoEncontradoException</code> si el código no existe.</li>
+            <li>Muestra el precio total de todos los productos del mapa.</li>
+          </ul>
+        </li>
+      </ul>
+    `,
+    solucion: `class ProductoNoEncontradoException extends Exception {
+    public ProductoNoEncontradoException(String m) { super(m); }
+}
+
+abstract class Producto {
+    protected String codigo;
+    protected double precio;
+    public Producto(String c, double p) { this.codigo = c; this.precio = p; }
+}
+
+class Articulo extends Producto {
+    public Articulo(String c, double p) { super(c, p); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        java.util.HashMap<String, Producto> inventario = new java.util.HashMap<>();
+        inventario.put("P01", new Articulo("P01", 100));
+        inventario.put("P02", new Articulo("P02", 50));
+
+        try {
+            String buscar = "P03";
+            if (!inventario.containsKey(buscar)) throw new ProductoNoEncontradoException("No existe");
+        } catch (ProductoNoEncontradoException e) {
+            System.err.println(e.getMessage());
+        }
+
+        double total = 0;
+        for (Producto p : inventario.values()) {
+            total += p.precio;
+        }
+        System.out.println("Total: " + total);
+    }
+}`,
+    criterios: ['Uso de HashMap<String, Producto>', 'Excepción personalizada', 'Iteración con values()'],
+    checks: [
+      (c) => /HashMap\s*<\s*String\s*,\s*Producto\s*>/i.test(c),
+      (c) => /throw\s+new\s+ProductoNoEncontradoException/i.test(c),
+      (c) => /\.values\s*\(\s*\)/i.test(c)
+    ]
+  },
+  {
+    id: 'ej_sim2_2',
+    titulo: 'Simulacro 2: Registro Único con HashSet',
+    nivel: '⭐⭐',
+    temas: ['HashSet', 'Excepciones', 'Colecciones'],
+    enunciado: `
+      <div class="exam-header" style="border-bottom:2px solid var(--green)">
+        <h3 style="color:var(--green)">CASO PRÁCTICO: REGISTRO DE EVENTOS</h3>
+      </div>
+      <p>Implementa un sistema que asegure que no haya correos duplicados en un evento:</p>
+      <ul style="padding-left:1.2rem">
+        <li>Crea un <b>HashSet&lt;String&gt;</b> para los emails.</li>
+        <li>Si al añadir un email con <code>add()</code> el método devuelve <b>false</b>, lanza una <code>DuplicateEmailException</code>.</li>
+        <li>Muestra el total de asistentes únicos al final.</li>
+      </ul>
+    `,
+    solucion: `class DuplicateEmailException extends Exception {
+    public DuplicateEmailException(String m) { super(m); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        java.util.HashSet<String> asistentes = new java.util.HashSet<>();
+        String[] lista = {"a@a.com", "b@b.com", "a@a.com"};
+
+        for (String email : lista) {
+            try {
+                if (!asistentes.add(email)) {
+                    throw new DuplicateEmailException("Email repetido: " + email);
+                }
+            } catch (DuplicateEmailException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        System.out.println("Asistentes totales: " + asistentes.size());
+    }
+}`,
+    criterios: ['Uso de HashSet<String>', 'Control de duplicados con el retorno de add()', 'Excepción personalizada'],
+    checks: [
+      (c) => /HashSet\s*<\s*String\s*>/i.test(c),
+      (c) => /if\s*\(\s*!\s*\w+\.add\s*\(\s*\w+\s*\)\s*\)/i.test(c),
+      (c) => /throw\s+new\s+DuplicateEmailException/i.test(c)
+    ]
   }
 ];
