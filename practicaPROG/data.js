@@ -716,7 +716,16 @@ const QUIZZES = {
       exp: "ArrayList<String> asegura que solo entren cadenas, evitando errores en ejecución." },
     { q: "En un examen en papel, ¿qué es lo más importante según el profesor?",
       opts: ["No cometer errores de sintaxis (punto y coma)", "La lógica y el diseño de la jerarquía de clases", "Escribir muy rápido", "Que el código sea muy largo"], ans: 1,
-      exp: "La sintaxis es secundaria si la estructura POO y la lógica son correctas." }
+      exp: "La sintaxis es secundaria si la estructura POO y la lógica son correctas." },
+    { q: "¿Cuál es una característica fundamental de un ArrayList en cuanto a su rendimiento?",
+      opts: ["Rápido para acceder por índice, pero lento para insertar en el medio", "Lento para acceder por índice, pero rápido para insertar en el medio", "No permite elementos duplicados", "Su tamaño se fija al crear la instancia"], ans: 0,
+      exp: "ArrayList usa un array interno; el acceso directo es O(1) pero insertar en medio requiere desplazar elementos O(n)." },
+    { q: "¿Qué ventaja principal ofrece una LinkedList frente a un ArrayList?",
+      opts: ["Usa menos memoria total", "Es más rápida para acceder a posiciones aleatorias por índice", "Es muy eficiente para insertar o eliminar elementos en cualquier posición", "Solo permite almacenar tipos primitivos"], ans: 2,
+      exp: "Al ser una lista de nodos enlazados, insertar solo requiere reubicar punteros, no desplazar bloques de memoria." },
+    { q: "¿Cómo se definen las estructuras de datos dinámicas (como Stack) frente a los arrays estáticos?",
+      opts: ["Requieren definir un tamaño fijo de antemano", "Su capacidad de almacenamiento puede crecer o disminuir durante la ejecución", "Son más rápidas que los arrays convencionales siempre", "Solo pueden declararse dentro del método main"], ans: 1,
+      exp: "Las estructuras dinámicas no tienen un tamaño prefijado y gestionan su memoria según se añaden o quitan elementos." }
   ]},
   herencia_quiz: { title: 'Quiz: Herencia e Interfaces', questions: [
     { q: '¿Qué diferencia hay entre clase abstracta e interfaz?', hint: 'Sobre implementación y herencia.',
@@ -803,7 +812,9 @@ const DRAG_EXERCISES = {
       { scenario: 'Necesitas almacenar una lista de nombres y acceder a ellos por posición (índice) frecuentemente.', chips: ['ArrayList', 'LinkedList', 'HashMap', 'HashSet'], answer: 'ArrayList', explanation: 'ArrayList: acceso por índice O(1). Ideal cuando el acceso aleatorio es frecuente.' },
       { scenario: 'Necesitas un diccionario de palabras con su traducción. Búsqueda por palabra clave.', chips: ['ArrayList', 'LinkedList', 'HashMap', 'HashSet'], answer: 'HashMap', explanation: 'HashMap: pares clave-valor, búsqueda O(1) por clave. Perfecto para diccionarios y cachés.' },
       { scenario: 'Necesitas almacenar emails únicos de usuarios (sin repetidos).', chips: ['ArrayList', 'LinkedList', 'HashMap', 'HashSet'], answer: 'HashSet', explanation: 'HashSet: no permite duplicados. Ideal para conjuntos donde la unicidad es importante.' },
-      { scenario: 'Necesitas una cola (FIFO) donde añades al final y extraes del principio frecuentemente.', chips: ['ArrayList', 'LinkedList', 'HashMap', 'HashSet'], answer: 'LinkedList', explanation: 'LinkedList implementa Queue. Inserción/extracción en extremos O(1). Ideal para colas y pilas.' }
+      { scenario: 'Necesitas una cola (FIFO) donde añades al final y extraes del principio frecuentemente.', chips: ['ArrayList', 'LinkedList', 'HashMap', 'HashSet'], answer: 'LinkedList', explanation: 'LinkedList implementa Queue. Inserción/extracción en extremos O(1). Ideal para colas y pilas.' },
+      { scenario: 'Necesitas insertar o eliminar elementos frecuentemente en cualquier posición (especialmente en el medio) de forma eficiente.', chips: ['ArrayList', 'LinkedList', 'HashMap', 'HashSet'], answer: 'LinkedList', explanation: 'LinkedList es muy eficiente para insertar/eliminar en cualquier posición ya que solo requiere cambiar punteros entre nodos.' },
+      { scenario: 'Deseas acceder a los elementos por su índice de forma instantánea pero no te importa que insertar en el medio sea lento.', chips: ['ArrayList', 'LinkedList', 'HashMap', 'HashSet'], answer: 'ArrayList', explanation: 'ArrayList es rápido para acceso directo por índice (O(1)), pero lento para insertar/eliminar en el medio debido al desplazamiento de elementos.' }
     ]
   },
   clases_io: { title: 'Clasifica las Clases I/O', description: 'Arrastra cada clase a su categoría correcta.',
@@ -1108,6 +1119,31 @@ const GUIDES = [
           <li>🏷 <strong>@Override:</strong> Ponlo encima de cada método sobreescrito. El profesor lo mira.</li>
           <li>🧩 <strong>this() en constructor sin parámetros:</strong> <code>public Vehiculo() { this("Marca", "Modelo", 0); }</code></li>
           <li>🚨 <strong>try-catch:</strong> Siempre que pueda fallar algo (ej: salario negativo en el constructor).</li>
+        </ul>
+      </div>
+
+      <div class="guide-section" style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.3);border-radius:12px;padding:1.25rem;margin-bottom:1.5rem">
+        <h3 style="color:#60a5fa">📦 Colecciones Dinámicas (Java Collections Framework)</h3>
+        <p>El profesor ha confirmado que entrarán estas estructuras de <code>java.util</code>:</p>
+        <ul class="guide-list">
+          <li><strong>ArrayList:</strong> Es un array que se redimensiona automáticamente.
+            <ul>
+              <li>✅ <strong>Rápido:</strong> Para acceder a elementos por índice (acceso directo).</li>
+              <li>❌ <strong>Lento:</strong> Para insertar o eliminar elementos en el medio de la lista (hay que desplazar el resto).</li>
+            </ul>
+          </li>
+          <li><strong>LinkedList (Lista Enlazada):</strong> Cada elemento apunta al siguiente.
+            <ul>
+              <li>✅ <strong>Muy eficiente:</strong> Para insertar o eliminar elementos en cualquier posición (solo se cambian los punteros).</li>
+              <li>❌ <strong>Lento:</strong> Para acceder a una posición específica (hay que recorrer la lista desde el principio).</li>
+            </ul>
+          </li>
+          <li><strong>Stack (Pila):</strong> Ejemplo de <strong>estructura dinámica</strong>. A diferencia de los arrays estáticos:
+            <ul>
+              <li>📈 Su capacidad crece o disminuye en tiempo de ejecución.</li>
+              <li>⚙️ No requieren definir un tamaño fijo de antemano.</li>
+            </ul>
+          </li>
         </ul>
       </div>
 
