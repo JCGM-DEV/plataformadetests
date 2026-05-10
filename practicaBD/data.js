@@ -561,15 +561,6 @@ const QUIZZES = {
       opts: ['DELETE DATABASE empresa;', 'REMOVE DATABASE empresa;', 'DROP DATABASE empresa;', 'TRUNCATE DATABASE empresa;'], ans: 2,
       exp: '<strong>DROP DATABASE</strong> elimina el esquema completo y todas las tablas y datos que contiene. ¡Úsalo con cuidado!' }
   ]}
-];
-L filtra para excluir los registros que no tienen dato en esa columna.' },
-    { q: '¿Qué hace CASE WHEN salario > 2000 THEN "Alto" ELSE "Bajo" END?', hint: 'Condicional.',
-      opts: ['Actualiza el salario', 'Crea una columna calculada con etiquetas según el valor', 'Filtra empleados', 'Borra datos'], ans: 1,
-      exp: 'Permite aplicar lógica "IF-THEN-ELSE" dentro de una consulta de selección.' },
-    { q: '¿Qué es la integridad referencial?', hint: 'FK.',
-      opts: ['Que los datos sean correctos', 'Asegurar que las relaciones entre tablas sean consistentes (no hay hijos sin padre)', 'Que la BD sea rápida', 'Que no haya duplicados'], ans: 1,
-      exp: 'Es el pilar de las BD relacionales. Se apoya en las FOREIGN KEYs para evitar datos huérfanos.' }
-  ]}
 };
 
 // =============================================
