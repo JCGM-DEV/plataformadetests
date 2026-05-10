@@ -556,16 +556,23 @@ function renderEjercicio(ej) {
   const view = document.getElementById('ejercicio-view');
   view.classList.remove('hidden');
   const isExam = ejercicioState.isExam;
+  
+  // Normalizar datos (compatibilidad entre ej1/ej2 y ej_finalX)
+  const titulo = ej.titulo || ej.title || 'Ejercicio';
+  const enunciado = ej.enunciado || ej.problem || 'Sin enunciado';
+  const pistas = ej.pistas || [];
+  const criterios = ej.criterios || [];
+  const solucion = ej.solucion || ej.solution || 'No hay solución disponible';
 
   view.innerHTML = `
     <div class="ej-header">
       <div style="display:flex; flex-direction:column; gap:0.5rem">
         ${isExam ? '<div class="exam-badge" style="width:fit-content">📋 MODO EXAMEN — SIMULACRO REAL</div>' : ''}
-        <h2>${ej.titulo}</h2>
+        <h2>${titulo}</h2>
         <p style="color:var(--text2); font-size:0.95rem">Módulo de Programación DAW · Java POO</p>
       </div>
       <div style="text-align:right">
-        <div class="ej-badge" style="background:var(--surface2); color:var(--accent); border:1px solid var(--border); padding: 0.5rem 1rem; border-radius: 8px">${ej.nivel} · ${ej.tiempo}</div>
+        <div class="ej-badge" style="background:var(--surface2); color:var(--accent); border:1px solid var(--border); padding: 0.5rem 1rem; border-radius: 8px">${(ej.nivel || '⭐⭐')} · ${(ej.tiempo || '30 min')}</div>
       </div>
     </div>
 
@@ -576,7 +583,7 @@ function renderEjercicio(ej) {
           <div style="display:flex; align-items:center; gap:0.75rem; color:var(--accent); font-weight:700; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.1em">
             <span>📋</span> Enunciado del Ejercicio
           </div>
-          <div class="ej-enunciado-text">${ej.enunciado}</div>
+          <div class="ej-enunciado-text">${enunciado}</div>
         </div>
 
         <div style="display:flex; flex-direction:column; gap:0.75rem; margin-top:1.5rem">
@@ -587,20 +594,20 @@ function renderEjercicio(ej) {
         <div class="ej-actions" style="margin-top:1.5rem; display:flex; gap:1rem; flex-wrap:wrap">
           <button class="btn-check" onclick="checkEjercicio('${ej.id}')">✔️ Verificar Criterios</button>
           <button class="btn-ai-help" onclick="requestAIFeedback('${ej.id}')" id="btn-ai-help" style="background:linear-gradient(135deg, #7c3aed, #5b21b6); color:white; border:none; border-radius:8px; padding:0.7rem 1.5rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:0.5rem; transition:0.2s">✨ Consultar Profesor IA</button>
-          <button class="btn-secondary" onclick="togglePistas('${ej.id}')" id="btn-pistas" ${isExam ? 'style="display:none"' : ''}>💡 Pistas</button>
+          <button class="btn-secondary" onclick="togglePistas('${ej.id}')" id="btn-pistas" ${(isExam || pistas.length === 0) ? 'style="display:none"' : ''}>💡 Pistas</button>
           <button class="btn-secondary" onclick="toggleSolucion('${ej.id}')" id="btn-solucion" ${isExam ? 'style="display:none"' : ''}>👁 Ver Solución</button>
         </div>
 
         <div id="pistas-panel" class="hidden" style="margin-top:1.5rem; padding:1.5rem; background:var(--blue-bg); border:1px solid var(--blue); border-radius:12px">
           <h4 style="color:var(--blue); margin-bottom:0.75rem">💡 Pistas de ayuda</h4>
           <ul style="padding-left:1.5rem; font-size:0.9rem; color:var(--text)">
-            ${ej.pistas.map(p => `<li>${p}</li>`).join('')}
+            ${pistas.map(p => `<li>${p}</li>`).join('')}
           </ul>
         </div>
 
         <div id="solucion-panel" class="hidden" style="margin-top:1.5rem">
           <h4 style="color:var(--green); margin-bottom:1rem">👁 Solución de referencia</h4>
-          <div class="code-block" style="background:#0d1117">${ej.solucion}</div>
+          <div class="code-block" style="background:#0d1117">${solucion}</div>
         </div>
       </div>
 
@@ -609,7 +616,7 @@ function renderEjercicio(ej) {
         <div class="ej-criteria-card">
           <div class="ej-criteria-title">📊 Criterios Técnicos</div>
           <div id="ej-criteria-list" style="display:flex; flex-direction:column; gap:0.5rem">
-            ${ej.criterios.map((c, i) => `
+            ${criterios.map((c, i) => `
               <div class="criterio-item" id="criterio-${i}">
                 <span class="check-icon">⬜</span>
                 <span style="line-height:1.4">${c}</span>
