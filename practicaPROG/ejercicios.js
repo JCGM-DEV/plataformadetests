@@ -50,9 +50,9 @@ const EJERCICIOS = [
   <h4 style="color:var(--green); margin-top:0;">3. Lógica de Ejecución y Gestión de Errores</h4>
   <p>En el método <code>main</code> de la clase principal, realiza lo siguiente:</p>
   <ul style="padding-left:1.25rem">
-    <li>Declara un <strong>array polimórfico</strong> de tipo <code>Vehiculo</code> con capacidad para 4 elementos.</li>
-    <li>Instancia objetos de tipo <code>Coche</code> y <code>Moto</code> dentro del array.</li>
-    <li>Recorre el array mediante un bucle, invocando a <code>arrancar()</code> y <code>mostrarInfo()</code> de cada elemento.</li>
+    <li>Declara un <strong>ArrayList polimórfico</strong> de tipo <code>Vehiculo</code> (<code>java.util.ArrayList</code>).</li>
+    <li>Instancia objetos de tipo <code>Coche</code> y <code>Moto</code> y añádelos a la lista usando <code>add()</code>.</li>
+    <li>Recorre el ArrayList mediante un bucle <b>for-each</b>, invocando a <code>arrancar()</code> y <code>mostrarInfo()</code> de cada elemento.</li>
     <li><strong>Control de Excepciones:</strong> Implementa una validación para que si la <code>velocidadMax</code> es inferior a 0, se lance una <code>IllegalArgumentException</code>. Captura dicha excepción mediante un bloque <code>try-catch</code> informando del error.</li>
   </ul>
 </div>`,
@@ -131,15 +131,15 @@ const EJERCICIOS = [
 
 <span class="kw">public class</span> <span class="fn">Main</span> {
     <span class="kw">public static void</span> <span class="fn">main</span>(<span class="tp">String</span>[] args) {
-        <span class="fn">Vehiculo</span>[] flota = <span class="kw">new</span> <span class="fn">Vehiculo</span>[<span class="num">4</span>];
-        flota[<span class="num">0</span>] = <span class="kw">new</span> <span class="fn">Coche</span>(<span class="str">"Toyota"</span>, <span class="str">"Corolla"</span>, <span class="num">180</span>, <span class="num">4</span>);
-        flota[<span class="num">1</span>] = <span class="kw">new</span> <span class="fn">Moto</span>(<span class="str">"Honda"</span>, <span class="str">"CB500"</span>, <span class="num">200</span>, <span class="num">500</span>);
-        flota[<span class="num">2</span>] = <span class="kw">new</span> <span class="fn">Coche</span>(<span class="str">"Ford"</span>, <span class="str">"Focus"</span>, <span class="num">190</span>, <span class="num">5</span>);
-        flota[<span class="num">3</span>] = <span class="kw">new</span> <span class="fn">Moto</span>(<span class="str">"Kawasaki"</span>, <span class="str">"Ninja"</span>, <span class="num">250</span>, <span class="num">650</span>);
+        <span class="tp">java.util.ArrayList</span>&lt;<span class="fn">Vehiculo</span>&gt; flota = <span class="kw">new</span> <span class="tp">java.util.ArrayList</span>&lt;&gt;();
+        flota.<span class="fn">add</span>(<span class="kw">new</span> <span class="fn">Coche</span>(<span class="str">"Toyota"</span>, <span class="str">"Corolla"</span>, <span class="num">180</span>, <span class="num">4</span>));
+        flota.<span class="fn">add</span>(<span class="kw">new</span> <span class="fn">Moto</span>(<span class="str">"Honda"</span>, <span class="str">"CB500"</span>, <span class="num">200</span>, <span class="num">500</span>));
+        flota.<span class="fn">add</span>(<span class="kw">new</span> <span class="fn">Coche</span>(<span class="str">"Ford"</span>, <span class="str">"Focus"</span>, <span class="num">190</span>, <span class="num">5</span>));
+        flota.<span class="fn">add</span>(<span class="kw">new</span> <span class="fn">Moto</span>(<span class="str">"Kawasaki"</span>, <span class="str">"Ninja"</span>, <span class="num">250</span>, <span class="num">650</span>));
 
-        <span class="kw">for</span> (<span class="kw">int</span> i = 0; i < flota.length; i++) {
-            flota[i].<span class="fn">arrancar</span>();
-            flota[i].<span class="fn">mostrarInfo</span>();
+        <span class="kw">for</span> (<span class="fn">Vehiculo</span> v : flota) {
+            v.<span class="fn">arrancar</span>();
+            v.<span class="fn">mostrarInfo</span>();
         }
 
         <span class="kw">try</span> {
@@ -159,7 +159,7 @@ const EJERCICIOS = [
       '@Override getTipo() en Coche devolviendo "Coche" (String)',
       '@Override mostrarInfo() en Coche llamando a super.mostrarInfo()',
       'Moto extiende Vehiculo y llama a super(marca, modelo, velocidadMax)',
-      'Array Vehiculo[] con instancias de Coche y Moto (Polimorfismo)',
+      'ArrayList<Vehiculo> con instancias de Coche y Moto (Polimorfismo)',
       'Uso de try-catch capturando IllegalArgumentException',
     ],
 
@@ -172,7 +172,7 @@ const EJERCICIOS = [
       (c) => /@Override[\s\S]*public\s+String\s+getTipo\s*\(\s*\)[\s\S]*return\s+".*Coche.*"/i.test(c),
       (c) => /@Override[\s\S]*public\s+void\s+mostrarInfo\s*\(\s*\)[\s\S]*super\s*\.\s*mostrarInfo\s*\(\s*\)\s*;/i.test(c),
       (c) => /class\s+Moto\s+extends\s+Vehiculo/i.test(c) && /super\s*\(\s*\w+\s*,\s*\w+\s*,\s*\w+\s*\)\s*;/i.test(c),
-      (c) => /Vehiculo\s*\[\s*\]\s+\w+\s*=\s*new\s+Vehiculo\s*\[\s*\d+\s*\]/i.test(c) && /new\s+Coche/i.test(c) && /new\s+Moto/i.test(c),
+      (c) => /ArrayList\s*<\s*Vehiculo\s*>/i.test(c) && /new\s+Coche/i.test(c) && /new\s+Moto/i.test(c),
       (c) => /try\s*\{[\s\S]*\}\s*catch\s*\(\s*IllegalArgumentException\s+\w+\s*\)\s*\{/i.test(c),
     ]
   },
@@ -224,8 +224,8 @@ const EJERCICIOS = [
   <p>En el programa principal (<code>Main</code>):</p>
   <ul style="padding-left:1.25rem">
     <li>Gestiona la creación de objetos dentro de un bloque <code>try-catch</code> para controlar errores de inicialización.</li>
-    <li>Crea una colección (Array) de tipo <code>Empleado</code> con al menos 4 integrantes de diversas categorías.</li>
-    <li>Itera la colección aplicando polimorfismo para mostrar la información y evaluación de cada uno.</li>
+    <li>Crea un <strong>ArrayList polimórfico</strong> de tipo <code>Empleado</code>.</li>
+    <li>Itera la lista aplicando polimorfismo para mostrar la información y evaluación de cada uno.</li>
     <li>Realiza una llamada específica a la versión sobrecargada del salario para un desarrollador.</li>
   </ul>
 </div>`,
@@ -299,22 +299,22 @@ const EJERCICIOS = [
 
 <span class="kw">public class</span> <span class="fn">Main</span> {
     <span class="kw">public static void</span> <span class="fn">main</span>(<span class="tp">String</span>[] args) {
-        <span class="fn">Empleado</span>[] plantilla = <span class="kw">new</span> <span class="fn">Empleado</span>[<span class="num">4</span>];
+        <span class="tp">java.util.ArrayList</span>&lt;<span class="fn">Empleado</span>&gt; plantilla = <span class="kw">new</span> <span class="tp">java.util.ArrayList</span>&lt;&gt;();
         <span class="kw">try</span> {
-            plantilla[0] = <span class="kw">new</span> <span class="fn">Gerente</span>(<span class="str">"Ana"</span>, <span class="num">3000</span>, <span class="num">1500</span>);
-            plantilla[1] = <span class="kw">new</span> <span class="fn">Desarrollador</span>(<span class="str">"Luis"</span>, <span class="num">2500</span>, <span class="num">3</span>);
-            plantilla[2] = <span class="kw">new</span> <span class="fn">Asistente</span>(<span class="str">"María"</span>, <span class="num">1800</span>);
-            plantilla[3] = <span class="kw">new</span> <span class="fn">Gerente</span>(<span class="str">"Pedro"</span>, <span class="num">3500</span>, <span class="num">2000</span>);
+            plantilla.<span class="fn">add</span>(<span class="kw">new</span> <span class="fn">Gerente</span>(<span class="str">"Ana"</span>, <span class="num">3000</span>, <span class="num">1500</span>));
+            plantilla.<span class="fn">add</span>(<span class="kw">new</span> <span class="fn">Desarrollador</span>(<span class="str">"Luis"</span>, <span class="num">2500</span>, <span class="num">3</span>));
+            plantilla.<span class="fn">add</span>(<span class="kw">new</span> <span class="fn">Asistente</span>(<span class="str">"María"</span>, <span class="num">1800</span>));
+            plantilla.<span class="fn">add</span>(<span class="kw">new</span> <span class="fn">Gerente</span>(<span class="str">"Pedro"</span>, <span class="num">3500</span>, <span class="num">2000</span>));
         } <span class="kw">catch</span> (<span class="fn">IllegalArgumentException</span> e) {
             System.out.<span class="fn">println</span>(<span class="str">"Error al crear empleado: "</span> + e.<span class="fn">getMessage</span>());
         }
 
-        <span class="kw">for</span> (<span class="kw">int</span> i = 0; i < plantilla.length; i++) {
-            plantilla[i].<span class="fn">mostrarInfo</span>();
+        <span class="kw">for</span> (<span class="fn">Empleado</span> e : plantilla) {
+            e.<span class="fn">mostrarInfo</span>();
         }
 
         // Sobrecarga: calcularSalario con horas extra
-        <span class="fn">Desarrollador</span> dev = (<span class="fn">Desarrollador</span>) plantilla[1];
+        <span class="fn">Desarrollador</span> dev = (<span class="fn">Desarrollador</span>) plantilla.<span class="fn">get</span>(<span class="num">1</span>);
         System.out.<span class="fn">println</span>(<span class="str">"Salario con 10h extra: "</span> + dev.<span class="fn">calcularSalario</span>(10));
     }
 }`,
@@ -328,7 +328,7 @@ const EJERCICIOS = [
       '@Override evaluar() en Gerente devolviendo String correcto',
       'Desarrollador con sobrecarga calcularSalario(int horasExtra)',
       'Asistente extiende Empleado y llama a super()',
-      'Array Empleado[] con instancias variadas (Polimorfismo)',
+      'ArrayList<Empleado> con instancias variadas (Polimorfismo)',
       'Bloque try-catch capturando IllegalArgumentException',
     ],
 
@@ -341,7 +341,7 @@ const EJERCICIOS = [
       (c) => /class\s+Gerente[\s\S]*@Override[\s\S]*public\s+String\s+evaluar\s*\(\s*\)/i.test(c),
       (c) => /public\s+double\s+calcularSalario\s*\(\s*int\s+\w+\s*\)/i.test(c),
       (c) => /class\s+Asistente\s+extends\s+Empleado/i.test(c) && /super\s*\(\s*\w+\s*,\s*\w+\s*\)\s*;/i.test(c),
-      (c) => /Empleado\s*\[\s*\]\s+\w+\s*=\s*new\s+Empleado\s*\[\s*\d+\s*\]/i.test(c) && /new\s+Gerente/i.test(c) && /new\s+Desarrollador/i.test(c),
+      (c) => /ArrayList\s*<\s*Empleado\s*>/i.test(c) && /new\s+Gerente/i.test(c) && /new\s+Desarrollador/i.test(c),
       (c) => /try\s*\{[\s\S]*\}\s*catch\s*\(\s*IllegalArgumentException\s+\w+\s*\)/i.test(c),
     ]
   },
@@ -443,8 +443,10 @@ public class Main {
       4. Clase <b>Analista</b>: añosExperiencia.
          - Tiene un método <code>revisarProyecto()</code> que imprime un mensaje.
       5. Implementa un método <code>main</code> que:
-         - Cree un array de 3 EmpleadosIT.
-         - Use <b>instanceof</b> para llamar a <code>aplicarBono()</code> solo si el empleado es Programador.
+         - Cree una <b>LinkedList</b> de EmpleadosIT (<code>java.util.LinkedList</code>).
+         - Use una <b>Stack</b> de String (<code>java.util.Stack</code>) para guardar los nombres de los que reciban el bono.
+         - Use <b>instanceof</b> para llamar a <code>aplicarBono()</code> y añade el nombre a la pila.
+         - Al final, muestra el historial de bonos vaciando la pila (LIFO).
          - Capture una posible excepción personalizada <b>SalarioInvalidoException</b> si el salario base es menor al SMI (1080€).
     `,
     solution: `class SalarioInvalidoException extends Exception {
@@ -489,19 +491,27 @@ class Analista extends EmpleadoIT {
 
 public class Main {
     public static void main(String[] args) {
+        java.util.LinkedList<EmpleadoIT> equipo = new java.util.LinkedList<>();
+        java.util.Stack<String> historialBonos = new java.util.Stack<>();
+        
         try {
-            EmpleadoIT[] equipo = {
-                new Programador("Cata", 2000, "Senior"),
-                new Analista("Dani", 2500),
-                new Programador("Eli", 1200, "Junior")
-            };
+            equipo.add(new Programador("Cata", 2000, "Senior"));
+            equipo.add(new Analista("Dani", 2500));
+            equipo.add(new Programador("Eli", 1200, "Junior"));
 
             for (EmpleadoIT e : equipo) {
                 if (e instanceof Bonificable) {
                     ((Bonificable) e).aplicarBono();
+                    historialBonos.push(e.nombre);
                 }
                 System.out.println(e.nombre + " - Salario: " + e.salarioBase);
             }
+            
+            System.out.println("Historial de Bonos (LIFO):");
+            while (!historialBonos.isEmpty()) {
+                System.out.println("- " + historialBonos.pop());
+            }
+            
         } catch (SalarioInvalidoException e) {
             System.err.println(e.getMessage());
         }
@@ -513,6 +523,7 @@ public class Main {
       'Clase abstracta EmpleadoIT con constructor que lanza excepción',
       'Clase Programador con lógica de bonos según nivel',
       'Uso de instanceof para filtrado de tipos',
+      'Uso de LinkedList para el equipo y Stack para el historial de bonos',
       'Gestión de errores con try-catch'
     ],
     checks: [
@@ -520,7 +531,7 @@ public class Main {
       (c) => /interface\s+Bonificable/i.test(c),
       (c) => /throws\s+SalarioInvalidoException/i.test(c),
       (c) => /instanceof\s+Bonificable/i.test(c),
-      (c) => /salarioBase\s*\+?=\s*1\.15/i.test(c) || /salarioBase\s*\*=\s*1\.15/i.test(c),
+      (c) => /LinkedList\s*<\s*EmpleadoIT\s*>/i.test(c) && /Stack\s*<\s*String\s*>/i.test(c),
       (c) => /try\s*\{[\s\S]*\}\s*catch\s*\(\s*SalarioInvalidoException/i.test(c)
     ]
   }
