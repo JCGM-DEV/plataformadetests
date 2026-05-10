@@ -435,7 +435,11 @@ const QUIZZES = {
     { q: '[CASO SQL] NULL = NULL.', hint: 'UNKNOWN.',
       opts: ['TRUE', 'FALSE', 'UNKNOWN/NULL', 'Error'], ans: 2,
       exp: 'NULL no es comparable; se debe usar IS NULL.' },
-    { q: '[CASO DISEÑO] Borras padre y mueren hijos.'  sql_40_quiz: { title: 'Batería SQL: 40 Preguntas de Consultas', questions: [
+    { q: '[CASO DISEÑO] Borras padre y mueren hijos.', hint: 'Cascada.',
+      opts: ['RESTRICT', 'SET NULL', 'CASCADE', 'NO ACTION'], ans: 2,
+      exp: 'CASCADE propaga el borrado a los dependientes.' }
+  ]},
+  sql_40_quiz: { title: 'Batería SQL: 40 Preguntas de Consultas', questions: [
     { q: '1. ¿Cómo seleccionarías todos los campos de la tabla "usuarios"?', hint: 'Usa el comodín universal.',
       opts: ['SELECT ALL FROM usuarios;', 'SELECT * FROM usuarios;', 'SELECT usuarios.*;', 'GET * FROM usuarios;'], ans: 1,
       exp: '<strong>SELECT *</strong> es la sintaxis estándar para obtener todas las columnas de una tabla.' },
