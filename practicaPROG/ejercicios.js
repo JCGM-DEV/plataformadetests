@@ -344,5 +344,184 @@ const EJERCICIOS = [
       (c) => /Empleado\s*\[\s*\]\s+\w+\s*=\s*new\s+Empleado\s*\[\s*\d+\s*\]/i.test(c) && /new\s+Gerente/i.test(c) && /new\s+Desarrollador/i.test(c),
       (c) => /try\s*\{[\s\S]*\}\s*catch\s*\(\s*IllegalArgumentException\s+\w+\s*\)/i.test(c),
     ]
+  },
+  {
+    id: 'ej_final1',
+    title: 'Caso Final A: Sistema de Reservas de Hotel',
+    description: 'Implementa una jerarquía de clases para gestionar las habitaciones de un hotel, aplicando herencia, interfaces y excepciones.',
+    problem: `
+      1. Crea la interfaz <b>Reservable</b> con un método <code>double calcularPrecio(int dias)</code>.
+      2. Crea la clase abstracta <b>Habitacion</b> que implemente <b>Reservable</b>. Atributos privados: <code>numero</code> (int) y <code>precioBase</code> (double).
+      3. Añade un constructor a <b>Habitacion</b> que valide que el precio no sea negativo (si lo es, lanza <b>IllegalArgumentException</b>).
+      4. Crea la clase <b>Suite</b> que extiende <b>Habitacion</b>. Tiene un atributo extra <code>servicioCatering</code> (double).
+         - Sobrescribe <code>calcularPrecio</code>: (precioBase * dias) + servicioCatering.
+      5. Crea la clase <b>HabitacionEstandar</b> que extiende <b>Habitacion</b>.
+         - Si se reserva más de 5 días, tiene un descuento del 10% en el precio base.
+      6. En un <b>Main</b>, crea un ArrayList de Habitaciones y añade una de cada tipo. Recórrelo mostrando el precio para una estancia de 7 días.
+    `,
+    solution: `public interface Reservable {
+    double calcularPrecio(int dias);
+}
+
+abstract class Habitacion implements Reservable {
+    private int numero;
+    private double precioBase;
+
+    public Habitacion(int numero, double precioBase) {
+        if (precioBase < 0) throw new IllegalArgumentException("Precio negativo");
+        this.numero = numero;
+        this.precioBase = precioBase;
+    }
+
+    public double getPrecioBase() { return precioBase; }
+}
+
+class Suite extends Habitacion {
+    private double catering;
+
+    public Suite(int numero, double precio, double catering) {
+        super(numero, precio);
+        this.catering = catering;
+    }
+
+    @Override
+    public double calcularPrecio(int dias) {
+        return (getPrecioBase() * dias) + catering;
+    }
+}
+
+class HabitacionEstandar extends Habitacion {
+    public HabitacionEstandar(int numero, double precio) {
+        super(numero, precio);
+    }
+
+    @Override
+    public double calcularPrecio(int dias) {
+        double total = getPrecioBase() * dias;
+        if (dias > 5) total *= 0.9;
+        return total;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        java.util.ArrayList<Habitacion> hotel = new java.util.ArrayList<>();
+        hotel.add(new Suite(101, 200, 50));
+        hotel.add(new HabitacionEstandar(202, 80));
+
+        for (Habitacion h : hotel) {
+            System.out.println("Precio: " + h.calcularPrecio(7));
+        }
+    }
+}`,
+    criterios: [
+      'Interface Reservable con método calcularPrecio',
+      'Clase abstracta Habitacion con atributos privados',
+      'Validación en constructor (Excepción)',
+      'Clase Suite con atributo propio y cálculo específico',
+      'Clase HabitacionEstandar con lógica de descuento',
+      'Uso de ArrayList<Habitacion> y Polimorfismo'
+    ],
+    checks: [
+      (c) => /interface\s+Reservable/i.test(c) && /double\s+calcularPrecio/i.test(c),
+      (c) => /abstract\s+class\s+Habitacion\s+implements\s+Reservable/i.test(c),
+      (c) => /throw\s+new\s+IllegalArgumentException/i.test(c),
+      (c) => /class\s+Suite\s+extends\s+Habitacion/i.test(c),
+      (c) => /if\s*\(\s*dias\s*>\s*5\s*\)/i.test(c),
+      (c) => /ArrayList\s*<\s*Habitacion\s*>/i.test(c) || /List\s*<\s*Habitacion\s*>/i.test(c)
+    ]
+  },
+  {
+    id: 'ej_final2',
+    title: 'Caso Final B: Gestión de Proyectos IT',
+    description: 'Sistema complejo para gestionar empleados y bonos de rendimiento.',
+    problem: `
+      1. Crea la interfaz <b>Bonificable</b> con el método <code>void aplicarBono()</code>.
+      2. Clase abstracta <b>EmpleadoIT</b>: nombre, salarioBase, proyectoActual.
+      3. Clase <b>Programador</b>: nivel (Junior/Senior). Implementa <b>Bonificable</b>.
+         - Si es Senior, el bono incrementa el salarioBase un 15%. Si es Junior, un 5%.
+      4. Clase <b>Analista</b>: añosExperiencia.
+         - Tiene un método <code>revisarProyecto()</code> que imprime un mensaje.
+      5. Implementa un método <code>main</code> que:
+         - Cree un array de 3 EmpleadosIT.
+         - Use <b>instanceof</b> para llamar a <code>aplicarBono()</code> solo si el empleado es Programador.
+         - Capture una posible excepción personalizada <b>SalarioInvalidoException</b> si el salario base es menor al SMI (1080€).
+    `,
+    solution: `class SalarioInvalidoException extends Exception {
+    public SalarioInvalidoException(String msg) { super(msg); }
+}
+
+interface Bonificable {
+    void aplicarBono();
+}
+
+abstract class EmpleadoIT {
+    protected String nombre;
+    protected double salarioBase;
+
+    public EmpleadoIT(String nombre, double salario) throws SalarioInvalidoException {
+        if (salario < 1080) throw new SalarioInvalidoException("Salario bajo SMI");
+        this.nombre = nombre;
+        this.salarioBase = salario;
+    }
+}
+
+class Programador extends EmpleadoIT implements Bonificable {
+    private String nivel;
+
+    public Programador(String nombre, double salario, String nivel) throws SalarioInvalidoException {
+        super(nombre, salario);
+        this.nivel = nivel;
+    }
+
+    @Override
+    public void aplicarBono() {
+        if (nivel.equals("Senior")) salarioBase *= 1.15;
+        else salarioBase *= 1.05;
+    }
+}
+
+class Analista extends EmpleadoIT {
+    public Analista(String nombre, double salario) throws SalarioInvalidoException {
+        super(nombre, salario);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            EmpleadoIT[] equipo = {
+                new Programador("Cata", 2000, "Senior"),
+                new Analista("Dani", 2500),
+                new Programador("Eli", 1200, "Junior")
+            };
+
+            for (EmpleadoIT e : equipo) {
+                if (e instanceof Bonificable) {
+                    ((Bonificable) e).aplicarBono();
+                }
+                System.out.println(e.nombre + " - Salario: " + e.salarioBase);
+            }
+        } catch (SalarioInvalidoException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+}`,
+    criterios: [
+      'Excepción personalizada SalarioInvalidoException',
+      'Interface Bonificable con aplicarBono()',
+      'Clase abstracta EmpleadoIT con constructor que lanza excepción',
+      'Clase Programador con lógica de bonos según nivel',
+      'Uso de instanceof para filtrado de tipos',
+      'Gestión de errores con try-catch'
+    ],
+    checks: [
+      (c) => /class\s+SalarioInvalidoException\s+extends\s+Exception/i.test(c),
+      (c) => /interface\s+Bonificable/i.test(c),
+      (c) => /throws\s+SalarioInvalidoException/i.test(c),
+      (c) => /instanceof\s+Bonificable/i.test(c),
+      (c) => /salarioBase\s*\+?=\s*1\.15/i.test(c) || /salarioBase\s*\*=\s*1\.15/i.test(c),
+      (c) => /try\s*\{[\s\S]*\}\s*catch\s*\(\s*SalarioInvalidoException/i.test(c)
+    ]
   }
 ];

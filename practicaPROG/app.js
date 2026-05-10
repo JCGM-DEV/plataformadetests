@@ -160,7 +160,7 @@ function showQuiz(quizId) {
   let questions = [...data.questions].sort(() => Math.random() - .5);
   
   // Si es un simulacro, seleccionamos solo 40 preguntas aleatorias del banco total
-  if (currentUnit === 'simulacros') {
+  if (currentUnit && currentUnit.startsWith('simulacro')) {
     questions = questions.slice(0, 40);
   } else if (quizId === 'poo_quiz') {
     // Para la práctica temática regular de POO (que ahora tiene 123 preguntas), limitamos a 20 para que sea ameno
@@ -859,7 +859,7 @@ function updateLiveGrade() {
     if (quizData) {
       let totalQuestions = quizData.questions.length;
       // Ajustar el total según el límite de preguntas del modo simulacro o práctica
-      if (currentUnit === 'simulacros' && quizSec.quizId === 'poo_quiz') {
+      if (currentUnit && currentUnit.startsWith('simulacro')) {
         totalQuestions = 40;
       } else if (quizSec.quizId === 'poo_quiz') {
         totalQuestions = 20;
