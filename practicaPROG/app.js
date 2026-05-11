@@ -716,6 +716,9 @@ async function checkEjercicio(ejId) {
       ${notaEmoji} Nota orientativa: <strong>${nota}</strong> / 10
       <span class="nota-sub">${passed} de ${ejChecks.length} criterios</span>
     </div>`;
+    
+    // Scroll al feedback en pantallas pequeñas
+    fb.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
   
   // Guardar puntuación para la nota en vivo utilizando la sección activa (ej: sim-ej1)

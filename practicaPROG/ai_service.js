@@ -150,7 +150,8 @@ FORMATO DE RESPUESTA OBLIGATORIO:
                                    <div style="line-height:1.7; color:#e2e8f0; font-size:0.95rem">${fb.replace(/\n/g, '<br>')}</div>`;
             feedbackPanel.appendChild(aiSection);
             
-            // Si es Code Lab, hacer scroll al final para ver el feedback
+            // Hacer scroll al feedback para que el usuario siempre lo vea
+            feedbackPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             if (feedbackPanel.id === 'code-output') {
                 feedbackPanel.scrollTop = feedbackPanel.scrollHeight;
             }
