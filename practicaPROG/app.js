@@ -721,18 +721,9 @@ async function checkEjercicio(ejId) {
     fb.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
   
-  // Guardar puntuación para la nota en vivo utilizando la sección activa (ej: sim-ej1)
-  sectionScores[activeSection] = parseFloat(nota);
+  // La puntuación oficial y la compleción real ahora dependen EXCLUSIVAMENTE de la IA.
+  // Solo guardamos el estado de las vistas, pero no inyectamos la nota.
   saveCompletionState();
-  
-  if (pct === 100) {
-      if (!completedSections.has(activeSection)) {
-          score.correct++;
-          document.querySelector('#score-correct span').textContent = score.correct;
-      }
-      markDone();
-  }
-  
   updateLiveGrade();
 
 

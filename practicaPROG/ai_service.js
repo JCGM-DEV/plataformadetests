@@ -126,6 +126,23 @@ FORMATO DE RESPUESTA OBLIGATORIO:
                 notaDisplay.innerHTML = `${base} <span style="margin:0 5px;opacity:0.5">|</span> <span style="color:#84cc16">${aiNota}</span> <small style="font-size:0.7rem;opacity:0.8">(IA)</small>`;
             }
         }
+        
+        // Actualizar la puntuación oficial con la nota de la IA
+        if (typeof sectionScores !== 'undefined' && typeof activeSection !== 'undefined') {
+            sectionScores[activeSection] = parseFloat(aiNota);
+            if (typeof saveCompletionState === 'function') saveCompletionState();
+            if (typeof updateLiveGrade === 'function') updateLiveGrade();
+            
+            // Si tiene un 10, lo marcamos como perfecto
+            if (parseFloat(aiNota) >= 9.9 && typeof markDone === 'function') {
+                if (typeof completedSections !== 'undefined' && !completedSections.has(activeSection) && typeof score !== 'undefined') {
+                    score.correct++;
+                    const scEl = document.querySelector('#score-correct span');
+                    if (scEl) scEl.textContent = score.correct;
+                }
+                markDone();
+            }
+        }
 
         // Inyectar feedback en el panel de resultados si existe
         const feedbackPanel = document.getElementById('ej-feedback') || 
