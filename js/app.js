@@ -491,6 +491,9 @@ function renderAcademia() {
                                         <button class="theme-dropdown-item" onclick="startSyllabusExam('${t.id}')">
                                             <span class="icon">✍️</span> Hacer Test
                                         </button>
+                                        <button class="theme-dropdown-item" onclick="downloadThemePDF('${subject.id}', ${t.unit})">
+                                            <span class="icon">🖨️</span> Descargar PDF
+                                        </button>
                                         
                                         ${res ? `
                                             <div class="theme-dropdown-divider"></div>
@@ -526,14 +529,18 @@ function renderAcademia() {
                 </div>
 
                 <div class="academia-main-actions">
-                    ${subject.id !== 'entornos_de_desarrollo' ? `
-                    <button class="btn-primary academia-btn-main" onclick="startSimulacroTemario('${subject.id}')">
-                        <span class="btn-icon">🚀</span>
-                        <div class="btn-texts">
-                            <span class="btn-main-text">Simulacro General</span>
-                            <span class="btn-sub-text">120 preguntas aleatorias</span>
-                        </div>
-                    </button>
+                    <div style="display:flex; gap:0.5rem; width:100%; margin-bottom: 0.5rem;">
+                        <button class="btn-primary academia-btn-main" onclick="startSimulacroTemario('${subject.id}')" style="flex:1;">
+                            <span class="btn-icon">🚀</span>
+                            <div class="btn-texts">
+                                <span class="btn-main-text">Simulacro General</span>
+                                <span class="btn-sub-text">120 preguntas aleatorias</span>
+                            </div>
+                        </button>
+                        <button class="btn-primary" onclick="downloadGeneralSimulacroPDF('${subject.id}')" title="Descargar PDF para imprimir" style="width:50px; padding:0; display:flex; align-items:center; justify-content:center; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; cursor:pointer;">
+                            <span style="font-size: 1.2rem;">🖨️</span>
+                        </button>
+                    </div>
                     ` : ''}
                     
                     <div class="academia-secondary-actions" style="display:flex; flex-direction:column; gap:0.5rem; width:100%;">
@@ -542,8 +549,11 @@ function renderAcademia() {
                             <button class="btn-secondary btn-lab-link" onclick="${lab.type === 'examen_final' ? `startSyllabusExam('${lab.id}')` : `startLab('${lab.id}')`}" style="flex:1; justify-content:flex-start; text-align:left; border-radius: 8px 0 0 8px;">
                                 <span class="btn-icon">${lab.icon || '🧪'}</span> <span style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${lab.name}</span>
                             </button>
+                            <button class="btn-secondary" onclick="downloadLabPDF('${lab.id}')" title="Descargar PDF" style="width:42px; padding:0; display:flex; align-items:center; justify-content:center; border-radius: 0; background: var(--bg-card); border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color);">
+                                <span style="font-size: 1.1rem;">🖨️</span>
+                            </button>
                             ${lab.solution ? `
-                            <button class="btn-secondary" onclick="window.open('${lab.solution}', '_blank')" title="Ver Solución" style="width:42px; padding:0; display:flex; align-items:center; justify-content:center; border-radius: 0 8px 8px 0; background: var(--bg-card); border-left: 1px solid var(--border-color);">
+                            <button class="btn-secondary" onclick="window.open('${lab.solution}', '_blank')" title="Ver Solución" style="width:42px; padding:0; display:flex; align-items:center; justify-content:center; border-radius: 0 8px 8px 0; background: var(--bg-card);">
                                 <span style="font-size: 1.1rem;">📄</span>
                             </button>` : ''}
                         </div>`).join('')}
