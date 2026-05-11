@@ -188,7 +188,7 @@ Responde en español de forma rigurosa.`;
                 'Authorization': `Bearer ${key}` 
             },
             body: JSON.stringify({ 
-                model: 'llama-3.2-90b-vision-preview', 
+                model: 'llama-3.2-11b-vision-preview', 
                 messages: [{ 
                     role: "user", 
                     content: [
