@@ -344,8 +344,8 @@ const EJERCICIOS = [
   },
   {
     id: 'ej_final1',
-    title: 'Caso Final A: Sistema de Reservas de Hotel',
-    description: 'Implementa una jerarquía de clases para gestionar las habitaciones de un hotel, aplicando herencia, interfaces y excepciones.',
+    title: 'Caso Final A: Reservas y Ficheros (45 min)',
+    description: 'Ejercicio Principal (45 min) - Implementa una jerarquía de clases para gestionar reservas, aplicando herencia, interfaces, excepciones y guardado de datos en Ficheros.',
     problem: `
       1. Crea la interfaz <b>Reservable</b> con un método <code>double calcularPrecio(int dias)</code>.
       2. Crea la clase abstracta <b>Habitacion</b> que implemente <b>Reservable</b>. Atributos privados: <code>numero</code> (int) y <code>precioBase</code> (double).
@@ -354,7 +354,9 @@ const EJERCICIOS = [
          - Sobrescribe <code>calcularPrecio</code>: (precioBase * dias) + servicioCatering.
       5. Crea la clase <b>HabitacionEstandar</b> que extiende <b>Habitacion</b>.
          - Si se reserva más de 5 días, tiene un descuento del 10% en el precio base.
-      6. En un <b>Main</b>, crea un ArrayList de Habitaciones y añade una de cada tipo. Recórrelo mostrando el precio para una estancia de 7 días.
+      6. En un <b>Main</b>, crea un ArrayList de Habitaciones y añade una de cada tipo. 
+      7. Recorre la lista y usa <code>java.io.BufferedWriter</code> o <code>PrintWriter</code> para escribir el resumen de cada reserva (precio para 7 días) en un archivo llamado <b>reservas.txt</b>.
+      8. Gestiona correctamente la <b>IOException</b> con un bloque try-catch.
     `,
     solution: `public interface Reservable {
     double calcularPrecio(int dias);
@@ -406,18 +408,26 @@ public class Main {
         hotel.add(new Suite(101, 200, 50));
         hotel.add(new HabitacionEstandar(202, 80));
 
-        for (Habitacion h : hotel) {
-            System.out.println("Precio: " + h.calcularPrecio(7));
+        try (java.io.BufferedWriter bw = new java.io.BufferedWriter(new java.io.FileWriter("reservas.txt"))) {
+            for (Habitacion h : hotel) {
+                bw.write("Precio reserva (7 días): " + h.calcularPrecio(7));
+                bw.newLine();
+            }
+            System.out.println("Reservas guardadas en reservas.txt");
+        } catch (java.io.IOException e) {
+            System.err.println("Error al escribir el archivo: " + e.getMessage());
         }
     }
 }`,
     criterios: [
       'Interface Reservable con método calcularPrecio',
       'Clase abstracta Habitacion con atributos privados',
-      'Validación en constructor (Excepción)',
+      'Validación en constructor (IllegalArgumentException)',
       'Clase Suite con atributo propio y cálculo específico',
       'Clase HabitacionEstandar con lógica de descuento',
-      'Uso de ArrayList<Habitacion> y Polimorfismo'
+      'Uso de ArrayList<Habitacion> y Polimorfismo',
+      'Uso de clases de Ficheros (BufferedWriter/FileWriter)',
+      'Captura de IOException con try-catch'
     ],
     checks: [
       (c) => /interface\s+Reservable/i.test(c) && /double\s+calcularPrecio/i.test(c),
@@ -425,111 +435,76 @@ public class Main {
       (c) => /throw\s+new\s+IllegalArgumentException/i.test(c),
       (c) => /class\s+Suite\s+extends\s+Habitacion/i.test(c),
       (c) => /if\s*\(\s*dias\s*>\s*5\s*\)/i.test(c),
-      (c) => /ArrayList\s*<\s*Habitacion\s*>/i.test(c) || /List\s*<\s*Habitacion\s*>/i.test(c)
+      (c) => /ArrayList\s*<\s*Habitacion\s*>/i.test(c) || /List\s*<\s*Habitacion\s*>/i.test(c),
+      (c) => /BufferedWriter/i.test(c) || /FileWriter/i.test(c) || /PrintWriter/i.test(c),
+      (c) => /catch\s*\(\s*IOException\s+\w+\s*\)/i.test(c) || /catch\s*\(\s*java\.io\.IOException\s+\w+\s*\)/i.test(c)
     ]
   },
   {
     id: 'ej_final2',
-    title: 'Caso Final B: Gestión de Proyectos IT',
-    description: 'Sistema complejo para gestionar empleados y bonos de rendimiento.',
+    title: 'Caso Final B: Pilas y Colas (15 min)',
+    description: 'Ejercicio Secundario (15 min) - Gestiona un sistema de procesamiento rápido aplicando estructuras dinámicas (FIFO y LIFO).',
     problem: `
-      1. Crea la interfaz <b>Bonificable</b> con el método <code>void aplicarBono()</code>.
-      2. Clase abstracta <b>EmpleadoIT</b>: nombre, salarioBase, proyectoActual.
-      3. Clase <b>Programador</b>: nivel (Junior/Senior). Implementa <b>Bonificable</b>.
-         - Si es Senior, el bono incrementa el salarioBase un 15%. Si es Junior, un 5%.
-      4. Clase <b>Analista</b>: añosExperiencia.
-         - Tiene un método <code>revisarProyecto()</code> que imprime un mensaje.
-      5. Implementa un método <code>main</code> que:
-         - Cree una <b>LinkedList</b> de EmpleadosIT (<code>java.util.LinkedList</code>).
-         - Use una <b>Stack</b> de String (<code>java.util.Stack</code>) para guardar los nombres de los que reciban el bono.
-         - Use <b>instanceof</b> para llamar a <code>aplicarBono()</code> y añade el nombre a la pila.
-         - Al final, muestra el historial de bonos vaciando la pila (LIFO).
-         - Capture una posible excepción personalizada <b>SalarioInvalidoException</b> si el salario base es menor al SMI (1080€).
+      1. Crea una clase <b>Incidencia</b> con los atributos <code>id</code> (String) y <code>resuelta</code> (boolean). Añade un constructor para inicializar el ID.
+      2. En un <b>Main</b>, declara explícitamente una <b>Queue</b> de tipo Incidencia (instanciando <code>java.util.LinkedList</code>).
+      3. Declara también un <b>Stack</b> de tipo String (<code>java.util.Stack</code>) para guardar el historial de incidencias resueltas.
+      4. Añade 3 incidencias a la cola usando <code>offer()</code> o <code>add()</code>.
+      5. Usa un bucle <code>while (!cola.isEmpty())</code> para procesarlas secuencialmente (FIFO):
+         - Extrae la incidencia de la cola usando <code>poll()</code>.
+         - Márcala como resuelta.
+         - Guarda su <code>id</code> en la pila usando <code>push()</code>.
+      6. Al finalizar, muestra el historial completo vaciando la pila mediante un bucle con <code>pop()</code> (LIFO).
     `,
-    solution: `class SalarioInvalidoException extends Exception {
-    public SalarioInvalidoException(String msg) { super(msg); }
-}
+    solution: `class Incidencia {
+    String id;
+    boolean resuelta;
 
-interface Bonificable {
-    void aplicarBono();
-}
-
-abstract class EmpleadoIT {
-    protected String nombre;
-    protected double salarioBase;
-
-    public EmpleadoIT(String nombre, double salario) throws SalarioInvalidoException {
-        if (salario < 1080) throw new SalarioInvalidoException("Salario bajo SMI");
-        this.nombre = nombre;
-        this.salarioBase = salario;
-    }
-}
-
-class Programador extends EmpleadoIT implements Bonificable {
-    private String nivel;
-
-    public Programador(String nombre, double salario, String nivel) throws SalarioInvalidoException {
-        super(nombre, salario);
-        this.nivel = nivel;
-    }
-
-    @Override
-    public void aplicarBono() {
-        if (nivel.equals("Senior")) salarioBase *= 1.15;
-        else salarioBase *= 1.05;
-    }
-}
-
-class Analista extends EmpleadoIT {
-    public Analista(String nombre, double salario) throws SalarioInvalidoException {
-        super(nombre, salario);
+    public Incidencia(String id) {
+        this.id = id;
+        this.resuelta = false;
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        java.util.LinkedList<EmpleadoIT> equipo = new java.util.LinkedList<>();
-        java.util.Stack<String> historialBonos = new java.util.Stack<>();
-        
-        try {
-            equipo.add(new Programador("Cata", 2000, "Senior"));
-            equipo.add(new Analista("Dani", 2500));
-            equipo.add(new Programador("Eli", 1200, "Junior"));
+        java.util.Queue<Incidencia> cola = new java.util.LinkedList<>();
+        java.util.Stack<String> historial = new java.util.Stack<>();
 
-            for (EmpleadoIT e : equipo) {
-                if (e instanceof Bonificable) {
-                    ((Bonificable) e).aplicarBono();
-                    historialBonos.push(e.nombre);
-                }
-                System.out.println(e.nombre + " - Salario: " + e.salarioBase);
-            }
-            
-            System.out.println("Historial de Bonos (LIFO):");
-            while (!historialBonos.isEmpty()) {
-                System.out.println("- " + historialBonos.pop());
-            }
-            
-        } catch (SalarioInvalidoException e) {
-            System.err.println(e.getMessage());
+        cola.offer(new Incidencia("INC-001"));
+        cola.offer(new Incidencia("INC-002"));
+        cola.offer(new Incidencia("INC-003"));
+
+        System.out.println("Procesando cola (FIFO):");
+        while (!cola.isEmpty()) {
+            Incidencia inc = cola.poll();
+            inc.resuelta = true;
+            historial.push(inc.id);
+            System.out.println("  -> Resuelta: " + inc.id);
+        }
+
+        System.out.println("\\nHistorial de resoluciones (LIFO):");
+        while (!historial.isEmpty()) {
+            System.out.println("  - " + historial.pop());
         }
     }
 }`,
     criterios: [
-      'Excepción personalizada SalarioInvalidoException',
-      'Interface Bonificable con aplicarBono()',
-      'Clase abstracta EmpleadoIT con constructor que lanza excepción',
-      'Clase Programador con lógica de bonos según nivel',
-      'Uso de instanceof para filtrado de tipos',
-      'Uso de LinkedList para el equipo y Stack para el historial de bonos',
-      'Gestión de errores con try-catch'
+      'Declaración de clase Incidencia con atributos',
+      'Uso explícito de Queue<Incidencia> instanciada con LinkedList',
+      'Uso explícito de Stack<String>',
+      'Bucle while comprobando !isEmpty() en la cola',
+      'Extracción de elementos de la cola usando poll() o remove()',
+      'Inserción en la pila con push()',
+      'Vaciado de la pila con pop()'
     ],
     checks: [
-      (c) => /class\s+SalarioInvalidoException\s+extends\s+Exception/i.test(c),
-      (c) => /interface\s+Bonificable/i.test(c),
-      (c) => /throws\s+SalarioInvalidoException/i.test(c),
-      (c) => /instanceof\s+Bonificable/i.test(c),
-      (c) => /LinkedList\s*<\s*EmpleadoIT\s*>/i.test(c) && /Stack\s*<\s*String\s*>/i.test(c),
-      (c) => /try\s*\{[\s\S]*\}\s*catch\s*\(\s*SalarioInvalidoException/i.test(c)
+      (c) => /class\s+Incidencia/i.test(c),
+      (c) => /Queue\s*<\s*Incidencia\s*>/i.test(c) && /new\s+LinkedList/i.test(c),
+      (c) => /Stack\s*<\s*String\s*>/i.test(c) && /new\s+Stack/i.test(c),
+      (c) => /while\s*\(\s*!\s*\w+\s*\.\s*isEmpty\s*\(\s*\)\s*\)/i.test(c),
+      (c) => /\.poll\s*\(\s*\)/i.test(c) || /\.remove\s*\(\s*\)/i.test(c),
+      (c) => /\.push\s*\(/i.test(c),
+      (c) => /\.pop\s*\(\s*\)/i.test(c)
     ]
   },
   {
