@@ -1,0 +1,347 @@
+REPASO GLOBAL LENGUAJE DE MARCAS
+1.​¿Qué significa HTML?​
+A) Hyper Transfer Markup Language​
+B) HyperText Markup Language​
+C) High Text Machine Language​
+D) Hyper Tool Markup List​
+Respuesta: B
+2.​¿Qué elemento representa el contenido visible de una
+página HTML?​
+A) <head>​
+B) <meta>​
+C) <body>​
+D) <title>​
+Respuesta: C
+3.​¿Cuál de estos atributos se usa normalmente en un
+enlace?​
+A) src​
+B) alt​
+C) href​
+D) action​
+Respuesta: C
+4.​¿Cuál de estos fragmentos HTML es incorrecto?​
+A) <p>Hola mundo</p>​
+B) <h1>Título</h1>​
+C) <a href="web.html">Ir</a>​
+
+D) <p>Texto</h2>​
+Respuesta: D
+5.​¿Para qué sirve CSS?​
+A) Para definir la estructura del documento​
+B) Para separar presentación y contenido​
+C) Para validar documentos XML​
+D) Para consultar bases de datos XML​
+Respuesta: B
+6.​¿Cuál es la forma menos recomendable de aplicar CSS si
+se busca buen mantenimiento?​
+A) CSS externo​
+B) CSS interno​
+C) CSS en línea​
+D) CSS mediante archivo .css​
+Respuesta: C
+7.​En CSS, ¿qué selector selecciona todos los elementos?​
+A) #​
+B) .​
+C) *​
+D) all​
+Respuesta: C
+8.​¿Cuál de estas reglas CSS selecciona elementos con clase
+aviso?​
+A) #aviso { color: red; }​
+B) .aviso { color: red; }​
+C) aviso { color: red; }​
+
+D) *aviso { color: red; }​
+Respuesta: B
+9.​¿Qué representa el DOM?​
+A) Un lenguaje de estilos​
+B) Un árbol de nodos del documento​
+C) Una base de datos XML​
+D) Un tipo de DTD​
+Respuesta: B
+10.​ ¿Cuál de estos fragmentos HTML contiene un error?​
+A) <ul><li>Uno</li><li>Dos</li></ul>​
+B) <table><tr><td>A</td></tr></table>​
+C) <select><option>Madrid</option></select>​
+D) <ol><li>Uno</ol></li>​
+Respuesta: D
+11.​ ¿Qué etiqueta se usa para insertar una imagen?​
+A) <image>​
+B) <img>​
+C) <src>​
+D) <picturelink>​
+Respuesta: B
+12.​ ¿Qué atributo es recomendable en imágenes por
+accesibilidad?​
+A) alt​
+B) href​
+C) target​
+D) method​
+Respuesta: A
+
+13.​ ¿Cuál es la función principal de XML?​
+A) Diseñar visualmente páginas web​
+B) Representar información estructurada​
+C) Crear animaciones​
+D) Sustituir a CSS​
+Respuesta: B
+14.​ ¿Cuál de estos documentos XML está mal formado?​
+A) <libro><titulo>XML</titulo></libro>​
+B) <persona><nombre>Ana</nombre></persona>​
+C) <curso><modulo>LM</curso></modulo>​
+D) <raiz><dato /></raiz>​
+Respuesta: C
+15.​ En XML, un documento bien formado debe tener:​
+A) Varias raíces​
+B) Una única raíz​
+C) Etiquetas sin cerrar​
+D) Atributos sin comillas​
+Respuesta: B
+16.​ ¿Cuál de estas opciones es JSON válido?​
+A) { curso: "LM" }​
+B) { "curso": "LM" }​
+C) <curso>LM</curso>​
+D) [ curso = "LM" ]​
+Respuesta: B
+17.​ ¿Qué estructura usa JSON para representar listas
+ordenadas?​
+A) Paréntesis ( )​
+
+B) Llaves { }​
+C) Corchetes [ ]​
+D) Etiquetas < >​
+Respuesta: C
+18.​ ¿Cuál es el error en este XML? <alumno
+edad=20><nombre>Luis</nombre></alumno>​
+A) Falta elemento raíz​
+B) El atributo debe ir entre comillas​
+C) <nombre> no puede contener texto​
+D) XML no permite atributos​
+Respuesta: B
+19.​ ¿Qué significa DTD?​
+A) Data Type Document​
+B) Document Type Definition​
+C) Document Text Design​
+D) Data Transfer Definition​
+Respuesta: B
+20.​ ¿Para qué sirve una DTD?​
+A) Para dar estilo visual a HTML​
+B) Para describir la estructura válida de un XML​
+C) Para crear consultas XPath​
+D) Para comprimir XML​
+Respuesta: B
+21.​ ¿Cuál es una limitación de DTD frente a XSD?​
+A) DTD no permite definir tipos de datos avanzados como
+enteros restringidos​
+B) DTD permite más tipos de datos que XSD ​
+
+C) DTD está escrito siempre en XML​
+D) DTD sustituye a CSS​
+Respuesta: A
+22.​ ¿Qué significa XSD?​
+A) XML Style Document​
+B) XML Schema Definition​
+C) XHTML Schema Data​
+D) XML Source Design​
+Respuesta: B
+23.​ En XSD, ¿qué tipo usarías para texto?​
+A) xs:string​
+B) xs:numberText​
+C) xs:word​
+D) xs:textOnly​
+Respuesta: A
+24.​ ¿Cuál de estas opciones indica correctamente un
+elemento XSD llamado edad de tipo entero?​
+A) <xs:element edad="xs:int"/>​
+B) <xs:element name="edad" type="xs:int"/>​
+C) <element name="edad" int="true"/>​
+D) <xs:int name="edad"/>​
+Respuesta: B
+25.​ ¿Qué diferencia hay entre XML bien formado y XML
+válido?​
+A) Son exactamente lo mismo​
+B) Bien formado cumple sintaxis; válido cumple además
+DTD/XSD​
+
+C) Válido solo significa que abre en navegador​
+D) Bien formado exige usar CSS​
+Respuesta: B
+26.​ ¿Cuál de estos fragmentos XML es incorrecto por
+mayúsculas/minúsculas?​
+A) <Dato>1</Dato>​
+B) <dato>1</dato>​
+C) <Dato>1</dato>​
+D) <dato valor="1" />​
+Respuesta: C
+27.​ ¿Para qué sirven los namespaces en XML?​
+A) Para aplicar colores al documento​
+B) Para convertir XML en JSON automáticamente ​
+C) Para comprimir archivos XML​
+D) Para evitar conflictos entre nombres de etiquetas​
+Respuesta: D
+28.​ ¿Qué lenguaje se utiliza para transformar XML en
+HTML, XML u otros formatos?​
+A) XSLT​
+B) CSS​
+C) SQL​
+D) Atom​
+Respuesta: A
+29.​ ¿Cuál es la función de <xsl:value-of>?​
+A) Repetir nodos​
+B) Extraer el valor de un nodo​
+C) Crear una DTD​
+
+D) Validar JSON​
+Respuesta: B
+30.​ ¿Cuál es la función de <xsl:for-each>?​
+A) Recorrer un conjunto de nodos​
+B) Crear atributos obligatorios​
+C) Definir tipos de datos​
+D) Declarar namespaces​
+Respuesta: A
+31.​ Dado el XML:
+<libros><libro><titulo>A</titulo></libro></libros>, ¿qué
+XPath selecciona los títulos?​
+A) /libros/libro/titulo​
+B) libros>libro>titulo​
+C) SELECT titulo FROM libros​
+D) <titulo>​
+Respuesta: A
+32.​ ¿Qué diferencia principal hay entre XPath y XQuery?​
+A) No hay diferencia​
+B) XPath es para CSS y XQuery para HTML​
+C) XPath valida XML y XQuery valida JSON​
+D) XPath sirve para seleccionar nodos; XQuery permite
+consultas más complejas​
+Respuesta: D
+33.​ En XQuery, ¿qué cláusula se usa para filtrar resultados?​
+A) for​
+B) where​
+C) return​
+
+D) let​
+Respuesta: B
+34.​ ¿Cuál de estas consultas XQuery devuelve modelos de
+coches con precio mayor que 20000?​
+A) for $x in //coche where $x/precio > 20000 return
+$x/modelo​
+B) select modelo from coche where precio > 20000​
+C) <xsl:value-of select="//precio > 20000"/>​
+D) //coche/precio/modelo > 20000​
+Respuesta: A
+35.​ ¿Qué es una base de datos XML nativa?​
+A) Una base relacional que elimina las etiquetas XML​
+B) Una base que almacena directamente documentos
+XML​
+C) Una hoja CSS para XML​
+D) Un validador DTD​
+Respuesta: B
+36.​ ¿Cuál es una ventaja de una base de datos XML nativa?​
+A) Siempre convierte XML a tablas relacionales​
+B) Mantiene la estructura original del documento XML​
+C) No permite consultas XPath​
+D) Solo almacena JSON​
+Respuesta: B
+37.​ ¿Qué significa RSS?​
+A) Really Simple Syndication​
+B) Real Style Sheet​
+C) Rapid Server System​
+
+D) Random Site Schema​
+Respuesta: A
+38.​ ¿Para qué sirve un agregador RSS?​
+A) Para validar HTML​
+B) Para leer y organizar canales o noticias sindicadas​
+C) Para crear bases de datos SQL​
+D) Para escribir hojas CSS​
+Respuesta: B
+39.​ ¿Qué es un ERP?​
+A) Sistema para gestionar recursos y procesos
+empresariales​
+B) Lenguaje de marcas extensible​
+C) Hoja de estilo para XML​
+D) Formato de sindicación web​
+Respuesta: A
+40.​ ¿Qué es un CRM?​
+A) Sistema orientado a gestionar relaciones con clientes​
+B) Validador de XML​
+C) Lenguaje de consulta XML​
+D) Tipo de selector CSS​
+Respuesta: A
+
+REPASO GLOBAL LENGUAJE DE MARCAS
+EJERCICIOS PRÁCTICOS
+1.​<p>Bienvenido a mi web</h1>
+A) Falta el atributo href
+B) La etiqueta de apertura y cierre no coinciden
+C) <p> no puede contener texto
+D) Falta la etiqueta <body>
+2.​<a>https://www.ejemplo.com</a>
+A) Falta el atributo href para indicar el destino del enlace
+B) La etiqueta <a> no existe en HTML
+C) El enlace debe cerrarse con </link>
+D) El texto debe ir dentro de <p> obligatoriamente
+3.​<img src="foto.jpg">
+A) La etiqueta <img> debe cerrarse obligatoriamente con
+</img> en HTML
+B) Falta el atributo alt, recomendable para accesibilidad
+C) src no es un atributo válido
+D) Las imágenes solo pueden insertarse con CSS
+
+4.​<ul>
+<li>HTML
+<li>CSS</li>
+</ul>
+A) Falta cerrar correctamente el primer <li>
+B) <ul> solo puede contener párrafos
+C) La etiqueta <li> no existe
+D) La lista debería ser siempre <ol>
+5.​<table>
+<td>Nombre</td>
+<td>Edad</td>
+</table>
+A) Falta una etiqueta <form>
+B) La tabla necesita obligatoriamente un atributo href
+C) <table> no puede contener texto
+D) Los <td> deben estar dentro de una fila <tr>
+6.​<alumno>
+<nombre>Lucía</nombre>
+</estudiante>
+A) La etiqueta raíz no coincide en apertura y cierre
+B) XML no permite texto dentro de etiquetas
+C) Falta declarar CSS
+
+D) <nombre> debería ser un atributo
+7.​<libro id=25>
+<titulo>XML básico</titulo>
+</libro>
+A) El atributo id debe ir entre comillas
+B) XML no permite atributos
+C) La etiqueta <titulo> está mal cerrada
+D) Falta una segunda raíz
+8.​<curso>
+<modulo>Lenguaje de Marcas</modulo>
+</curso>
+<profesor>Ana</profesor>
+A) XML no permite etiquetas con nombres largos
+B) Falta cerrar <modulo>
+C)Hay más de un elemento raíz
+D) Los nombres de etiquetas deben ir en mayúsculas
+9.​<Persona>
+<nombre>Carlos</nombre>
+</persona>
+A) El texto debe escribirse entre comillas
+B) XML no permite usar la etiqueta <nombre>
+
+C) Falta el atributo type
+D) XML distingue mayúsculas y minúsculas, por eso
+<Persona> y </persona> no coinciden
+10.​ <producto>
+<nombre>Ratón</nombre>
+<precio>15</precio>
+A) <precio> debe ser un atributo
+B) XML no permite números
+C) Falta cerrar la etiqueta raíz <producto>
+D) Falta una DTD obligatoria
+
+

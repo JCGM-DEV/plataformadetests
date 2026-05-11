@@ -66,6 +66,7 @@
       <div class="score-display">
         <span id="score-correct" class="score correct">✓ <span>0</span></span>
         <span id="score-wrong" class="score wrong">✗ <span>0</span></span>
+        <button class="settings-btn" onclick="printCurrentLabUnit()" title="Exportar a PDF" style="background:none; border:none; cursor:pointer; font-size:1.2rem; margin-left:1rem;">🖨️</button>
       </div>
     </header>
     <div class="layout">
@@ -102,6 +103,7 @@
 
   <script src="data.js?v=2.0"></script>
 
+  <script src="../js/pdf_utils.js"></script>
   <script src="app.js?v=removal"></script>
 </body>
 </html>

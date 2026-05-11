@@ -1,0 +1,482 @@
+[
+  {
+    "q": "1. ¿Qué significa HTML?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Hyper Transfer Markup Language​",
+      "HyperText Markup Language​",
+      "High Text Machine Language​",
+      "Hyper Tool Markup List​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "2. ¿Qué elemento representa el contenido visible de una\npágina HTML?",
+    "hint": "Repaso Global",
+    "opts": [
+      "<head>​",
+      "<meta>​",
+      "<body>​",
+      "<title>​"
+    ],
+    "ans": 2,
+    "exp": "La respuesta correcta es la C."
+  },
+  {
+    "q": "3. ¿Cuál de estos atributos se usa normalmente en un\nenlace?",
+    "hint": "Repaso Global",
+    "opts": [
+      "src​",
+      "alt​",
+      "href​",
+      "action​"
+    ],
+    "ans": 2,
+    "exp": "La respuesta correcta es la C."
+  },
+  {
+    "q": "4. ¿Cuál de estos fragmentos HTML es incorrecto?",
+    "hint": "Repaso Global",
+    "opts": [
+      "<p>Hola mundo</p>​",
+      "<h1>Título</h1>​",
+      "<a href=\"web.html\">Ir</a>​",
+      "<p>Texto</h2>​"
+    ],
+    "ans": 3,
+    "exp": "La respuesta correcta es la D."
+  },
+  {
+    "q": "5. ¿Para qué sirve CSS?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Para definir la estructura del documento​",
+      "Para separar presentación y contenido​",
+      "Para validar documentos XML​",
+      "Para consultar bases de datos XML​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "6. ¿Cuál es la forma menos recomendable de aplicar CSS si\nse busca buen mantenimiento?",
+    "hint": "Repaso Global",
+    "opts": [
+      "CSS externo​",
+      "CSS interno​",
+      "CSS en línea​",
+      "CSS mediante archivo .css​"
+    ],
+    "ans": 2,
+    "exp": "La respuesta correcta es la C."
+  },
+  {
+    "q": "7. En CSS, ¿qué selector selecciona todos los elementos?",
+    "hint": "Repaso Global",
+    "opts": [
+      "#​",
+      ".​",
+      "*​",
+      "all​"
+    ],
+    "ans": 2,
+    "exp": "La respuesta correcta es la C."
+  },
+  {
+    "q": "8. ¿Cuál de estas reglas CSS selecciona elementos con clase\naviso?",
+    "hint": "Repaso Global",
+    "opts": [
+      "#aviso { color: red; }​",
+      ".aviso { color: red; }​",
+      "aviso { color: red; }​",
+      "*aviso { color: red; }​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "9. ¿Qué representa el DOM?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Un lenguaje de estilos​",
+      "Un árbol de nodos del documento​",
+      "Una base de datos XML​",
+      "Un tipo de DTD​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "10. ¿Cuál de estos fragmentos HTML contiene un error?",
+    "hint": "Repaso Global",
+    "opts": [
+      "<ul><li>Uno</li><li>Dos</li></ul>​",
+      "<table><tr><td>A</td></tr></table>​",
+      "<select><option>Madrid</option></select>​",
+      "<ol><li>Uno</ol></li>​"
+    ],
+    "ans": 3,
+    "exp": "La respuesta correcta es la D."
+  },
+  {
+    "q": "11. ¿Qué etiqueta se usa para insertar una imagen?",
+    "hint": "Repaso Global",
+    "opts": [
+      "<image>​",
+      "<img>​",
+      "<src>​",
+      "<picturelink>​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "12. ¿Qué atributo es recomendable en imágenes por\naccesibilidad?",
+    "hint": "Repaso Global",
+    "opts": [
+      "alt​",
+      "href​",
+      "target​",
+      "method​"
+    ],
+    "ans": 0,
+    "exp": "La respuesta correcta es la A."
+  },
+  {
+    "q": "13. ¿Cuál es la función principal de XML?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Diseñar visualmente páginas web​",
+      "Representar información estructurada​",
+      "Crear animaciones​",
+      "Sustituir a CSS​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "14. ¿Cuál de estos documentos XML está mal formado?",
+    "hint": "Repaso Global",
+    "opts": [
+      "<libro><titulo>XML</titulo></libro>​",
+      "<persona><nombre>Ana</nombre></persona>​",
+      "<curso><modulo>LM</curso></modulo>​",
+      "<raiz><dato /></raiz>​"
+    ],
+    "ans": 2,
+    "exp": "La respuesta correcta es la C."
+  },
+  {
+    "q": "15. En XML, un documento bien formado debe tener:",
+    "hint": "Repaso Global",
+    "opts": [
+      "Varias raíces​",
+      "Una única raíz​",
+      "Etiquetas sin cerrar​",
+      "Atributos sin comillas​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "16. ¿Cuál de estas opciones es JSON válido?",
+    "hint": "Repaso Global",
+    "opts": [
+      "{ curso: \"LM\" }​",
+      "{ \"curso\": \"LM\" }​",
+      "<curso>LM</curso>​",
+      "[ curso = \"LM\" ]​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "17. ¿Qué estructura usa JSON para representar listas\nordenadas?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Paréntesis ( )​",
+      "Llaves { }​",
+      "Corchetes [ ]​",
+      "Etiquetas < >​"
+    ],
+    "ans": 2,
+    "exp": "La respuesta correcta es la C."
+  },
+  {
+    "q": "18. ¿Cuál es el error en este XML? <alumno\nedad=20><nombre>Luis</nombre></alumno>",
+    "hint": "Repaso Global",
+    "opts": [
+      "Falta elemento raíz​",
+      "El atributo debe ir entre comillas​",
+      "<nombre> no puede contener texto​",
+      "XML no permite atributos​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "19. ¿Qué significa DTD?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Data Type Document​",
+      "Document Type Definition​",
+      "Document Text Design​",
+      "Data Transfer Definition​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "20. ¿Para qué sirve una DTD?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Para dar estilo visual a HTML​",
+      "Para describir la estructura válida de un XML​",
+      "Para crear consultas XPath​",
+      "Para comprimir XML​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "21. ¿Cuál es una limitación de DTD frente a XSD?",
+    "hint": "Repaso Global",
+    "opts": [
+      "DTD no permite definir tipos de datos avanzados como\nenteros restringidos​",
+      "DTD permite más tipos de datos que XSD ​",
+      "DTD está escrito siempre en XML​",
+      "DTD sustituye a CSS​"
+    ],
+    "ans": 0,
+    "exp": "La respuesta correcta es la A."
+  },
+  {
+    "q": "22. ¿Qué significa XSD?",
+    "hint": "Repaso Global",
+    "opts": [
+      "XML Style Document​",
+      "XML Schema Definition​",
+      "XHTML Schema Data​",
+      "XML Source Design​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "23. En XSD, ¿qué tipo usarías para texto?",
+    "hint": "Repaso Global",
+    "opts": [
+      "xs:string​",
+      "xs:numberText​",
+      "xs:word​",
+      "xs:textOnly​"
+    ],
+    "ans": 0,
+    "exp": "La respuesta correcta es la A."
+  },
+  {
+    "q": "24. ¿Cuál de estas opciones indica correctamente un\nelemento XSD llamado edad de tipo entero?",
+    "hint": "Repaso Global",
+    "opts": [
+      "<xs:element edad=\"xs:int\"/>​",
+      "<xs:element name=\"edad\" type=\"xs:int\"/>​",
+      "<element name=\"edad\" int=\"true\"/>​",
+      "<xs:int name=\"edad\"/>​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "25. ¿Qué diferencia hay entre XML bien formado y XML\nválido?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Son exactamente lo mismo​",
+      "Bien formado cumple sintaxis; válido cumple además\nDTD/XSD​",
+      "Válido solo significa que abre en navegador​",
+      "Bien formado exige usar CSS​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "26. ¿Cuál de estos fragmentos XML es incorrecto por\nmayúsculas/minúsculas?",
+    "hint": "Repaso Global",
+    "opts": [
+      "<Dato>1</Dato>​",
+      "<dato>1</dato>​",
+      "<Dato>1</dato>​",
+      "<dato valor=\"1\" />​"
+    ],
+    "ans": 2,
+    "exp": "La respuesta correcta es la C."
+  },
+  {
+    "q": "27. ¿Para qué sirven los namespaces en XML?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Para aplicar colores al documento​",
+      "Para convertir XML en JSON automáticamente ​",
+      "Para comprimir archivos XML​",
+      "Para evitar conflictos entre nombres de etiquetas​"
+    ],
+    "ans": 3,
+    "exp": "La respuesta correcta es la D."
+  },
+  {
+    "q": "28. ¿Qué lenguaje se utiliza para transformar XML en\nHTML, XML u otros formatos?",
+    "hint": "Repaso Global",
+    "opts": [
+      "XSLT​",
+      "CSS​",
+      "SQL​",
+      "Atom​"
+    ],
+    "ans": 0,
+    "exp": "La respuesta correcta es la A."
+  },
+  {
+    "q": "29. ¿Cuál es la función de <xsl:value-of>?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Repetir nodos​",
+      "Extraer el valor de un nodo​",
+      "Crear una DTD​",
+      "Validar JSON​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "30. ¿Cuál es la función de <xsl:for-each>?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Recorrer un conjunto de nodos​",
+      "Crear atributos obligatorios​",
+      "Definir tipos de datos​",
+      "Declarar namespaces​"
+    ],
+    "ans": 0,
+    "exp": "La respuesta correcta es la A."
+  },
+  {
+    "q": "31. Dado el XML:\n<libros><libro><titulo>A</titulo></libro></libros>, ¿qué\nXPath selecciona los títulos?",
+    "hint": "Repaso Global",
+    "opts": [
+      "/libros/libro/titulo​",
+      "libros>libro>titulo​",
+      "SELECT titulo FROM libros​",
+      "<titulo>​"
+    ],
+    "ans": 0,
+    "exp": "La respuesta correcta es la A."
+  },
+  {
+    "q": "32. ¿Qué diferencia principal hay entre XPath y XQuery?",
+    "hint": "Repaso Global",
+    "opts": [
+      "No hay diferencia​",
+      "XPath es para CSS y XQuery para HTML​",
+      "XPath valida XML y XQuery valida JSON​",
+      "XPath sirve para seleccionar nodos; XQuery permite\nconsultas más complejas​"
+    ],
+    "ans": 3,
+    "exp": "La respuesta correcta es la D."
+  },
+  {
+    "q": "33. En XQuery, ¿qué cláusula se usa para filtrar resultados?",
+    "hint": "Repaso Global",
+    "opts": [
+      "for​",
+      "where​",
+      "return​",
+      "let​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "34. ¿Cuál de estas consultas XQuery devuelve modelos de\ncoches con precio mayor que 20000?",
+    "hint": "Repaso Global",
+    "opts": [
+      "for $x in //coche where $x/precio > 20000 return\n$x/modelo​",
+      "select modelo from coche where precio > 20000​",
+      "<xsl:value-of select=\"//precio > 20000\"/>​",
+      "//coche/precio/modelo > 20000​"
+    ],
+    "ans": 0,
+    "exp": "La respuesta correcta es la A."
+  },
+  {
+    "q": "35. ¿Qué es una base de datos XML nativa?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Una base relacional que elimina las etiquetas XML​",
+      "Una base que almacena directamente documentos\nXML​",
+      "Una hoja CSS para XML​",
+      "Un validador DTD​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "36. ¿Cuál es una ventaja de una base de datos XML nativa?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Siempre convierte XML a tablas relacionales​",
+      "Mantiene la estructura original del documento XML​",
+      "No permite consultas XPath​",
+      "Solo almacena JSON​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "37. ¿Qué significa RSS?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Really Simple Syndication​",
+      "Real Style Sheet​",
+      "Rapid Server System​",
+      "Random Site Schema​"
+    ],
+    "ans": 0,
+    "exp": "La respuesta correcta es la A."
+  },
+  {
+    "q": "38. ¿Para qué sirve un agregador RSS?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Para validar HTML​",
+      "Para leer y organizar canales o noticias sindicadas​",
+      "Para crear bases de datos SQL​",
+      "Para escribir hojas CSS​"
+    ],
+    "ans": 1,
+    "exp": "La respuesta correcta es la B."
+  },
+  {
+    "q": "39. ¿Qué es un ERP?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Sistema para gestionar recursos y procesos\nempresariales​",
+      "Lenguaje de marcas extensible​",
+      "Hoja de estilo para XML​",
+      "Formato de sindicación web​"
+    ],
+    "ans": 0,
+    "exp": "La respuesta correcta es la A."
+  },
+  {
+    "q": "40. ¿Qué es un CRM?",
+    "hint": "Repaso Global",
+    "opts": [
+      "Sistema orientado a gestionar relaciones con clientes​",
+      "Validador de XML​",
+      "Lenguaje de consulta XML​",
+      "Tipo de selector CSS​"
+    ],
+    "ans": 0,
+    "exp": "La respuesta correcta es la A."
+  }
+]

@@ -4,7 +4,7 @@
  * Utility to generate PDF versions of tests and simulations.
  */
 
-const { jsPDF } = window.jspdf;
+const jsPDF = window.jspdf ? window.jspdf.jsPDF : null;
 
 /**
  * Generates a PDF for a given set of questions.
@@ -226,3 +226,191 @@ async function downloadLabPDF(labId) {
         doc.save(`${labId}.pdf`);
     }
 }
+
+/**
+ * Generates an HTML document for the current lab unit and triggers native print/PDF export.
+ * This is used INSIDE the lab environments (practicaPROG, practicaLM, etc.)
+ */
+function printCurrentLabUnit() {
+    if (typeof UNITS === 'undefined' || typeof currentUnit === 'undefined' || !currentUnit || !UNITS[currentUnit]) {
+        alert("Abre un simulacro o tema primero para poder exportarlo a PDF.");
+        return;
+    }
+    
+    const unit = UNITS[currentUnit];
+    
+    let htmlContent = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>${unit.title} - Exportación PDF</title>
+            <style>
+                body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #1f2937; margin: 0; padding: 20px; }
+                h1 { color: #1e3a8a; border-bottom: 2px solid #e5e7eb; padding-bottom: 10px; margin-bottom: 30px; }
+                h2 { color: #2563eb; margin-top: 40px; border-bottom: 1px solid #e5e7eb; padding-bottom: 5px; }
+                h3 { color: #3b82f6; margin-top: 30px; }
+                .question-block { margin-bottom: 25px; page-break-inside: avoid; }
+                .question-text { font-weight: bold; margin-bottom: 10px; font-size: 1.05em; }
+                .options-list { list-style-type: upper-alpha; margin-top: 0; padding-left: 25px; }
+                .options-list li { margin-bottom: 5px; }
+                .case-block { margin-bottom: 30px; padding: 20px; background: #f8fafc; border-left: 4px solid #2563eb; page-break-inside: avoid; border-radius: 4px; }
+                .code-block { font-family: 'Consolas', 'Monaco', monospace; background: #1e293b; color: #f8fafc; padding: 15px; white-space: pre-wrap; font-size: 13px; border-radius: 6px; overflow-x: auto; }
+                .solution-block { page-break-inside: avoid; margin-bottom: 25px; padding: 15px; border: 1px solid #e5e7eb; border-radius: 6px; }
+                .solution-title { font-weight: bold; color: #166534; display: block; margin-bottom: 10px; font-size: 1.1em; }
+                .page-break { page-break-before: always; }
+                .explanation { background: #f0fdf4; padding: 10px; border-left: 3px solid #22c55e; margin-top: 10px; border-radius: 0 4px 4px 0; }
+            </style>
+        </head>
+        <body>
+            <h1>${unit.label} - ${unit.title}</h1>
+            <h2>PARTE 1: ENUNCIADOS</h2>
+    `;
+    
+    let solutionsHtml = `
+        <div class="page-break"></div>
+        <h2>PARTE 2: SOLUCIONES</h2>
+    `;
+    
+    let qCounter = 1;
+
+    unit.sections.forEach(sec => {
+        htmlContent += `<h3>${sec.icon || ''} ${sec.label}</h3>`;
+        solutionsHtml += `<h3>${sec.icon || ''} ${sec.label} - Soluciones</h3>`;
+        
+        // QUIZZES
+        if (sec.type === 'quiz' && typeof QUIZZES !== 'undefined' && QUIZZES[sec.quizId]) {
+            const quiz = QUIZZES[sec.quizId];
+            quiz.questions.forEach(q => {
+                htmlContent += `
+                    <div class="question-block">
+                        <div class="question-text">${qCounter}. ${q.q.replace(/\n/g, '<br>')}</div>
+                        <ul class="options-list">
+                            ${q.opts.map(o => `<li>${o.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                
+                let expText = '';
+                if (q.exp && q.exp !== 'Pregunta del temario oficial.') {
+                    expText = `<div class="explanation"><em>Explicación:</em><br>${q.exp.replace(/\n/g, '<br>')}</div>`;
+                }
+
+                solutionsHtml += `
+                    <div class="solution-block">
+                        <span class="solution-title">Pregunta ${qCounter}:</span> 
+                        <strong>Opción ${String.fromCharCode(65 + q.ans)}</strong>
+                        ${expText}
+                    </div>
+                `;
+                qCounter++;
+            });
+        }
+        
+        // EJERCICIOS (PROG, BD, etc)
+        else if (sec.type === 'ejercicio' && typeof EJERCICIOS !== 'undefined') {
+            const ej = EJERCICIOS.find(e => e.id === sec.ejercicioId);
+            if (ej) {
+                const enunciado = (ej.enunciado || ej.problem || '').replace(/\n/g, '<br>');
+                htmlContent += `
+                    <div class="case-block">
+                        <strong style="font-size:1.2em;">${ej.titulo || 'Caso Práctico'}</strong><br><br>
+                        ${enunciado}
+                    </div>
+                `;
+                
+                const solucion = ej.solucion || ej.solution || 'No hay solución estática disponible para este ejercicio.';
+                solutionsHtml += `
+                    <div class="solution-block">
+                        <span class="solution-title">${ej.titulo || 'Caso Práctico'}</span>
+                        <div class="code-block">${solucion.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>
+                    </div>
+                `;
+            }
+        }
+        
+        // EDITOR_LABS / EXAM (LM, BD, SI)
+        else if ((sec.type === 'editor' || sec.type === 'exam') && typeof EDITOR_LABS !== 'undefined' && EDITOR_LABS[sec.editorId]) {
+            const lab = EDITOR_LABS[sec.editorId];
+            const ex = lab.exercises[0]; 
+            const desc = lab.examDesc || ex.desc || '';
+            
+            htmlContent += `
+                <div class="case-block">
+                    <strong style="font-size:1.2em;">${lab.examTitle || lab.title || 'Ejercicio Práctico'}</strong><br><br>
+                    ${desc.replace(/\n/g, '<br>')}
+                </div>
+            `;
+            
+            const solucion = ex.solution || 'Solución estructurada en hitos. Consultar plataforma interactiva.';
+            solutionsHtml += `
+                <div class="solution-block">
+                    <span class="solution-title">${lab.examTitle || lab.title || 'Ejercicio Práctico'}</span>
+                    <div class="code-block">${solucion.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>
+                </div>
+            `;
+        }
+        
+        // CODE_LABS (PROG)
+        else if (sec.type === 'code' && typeof CODE_LABS !== 'undefined' && CODE_LABS[sec.codeId]) {
+            const lab = CODE_LABS[sec.codeId];
+            htmlContent += `<div class="case-block"><strong style="font-size:1.2em;">${lab.title}</strong><br><br>${lab.description.replace(/\n/g, '<br>')}</div>`;
+            solutionsHtml += `<div style="margin-bottom:20px;"><strong style="font-size:1.2em;">${lab.title}</strong></div>`;
+            
+            lab.exercises.forEach((ex, idx) => {
+                htmlContent += `
+                    <div style="margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #cbd5e1;">
+                        <strong>Ejercicio ${idx+1}: ${ex.title}</strong><br><br>
+                        ${ex.desc.replace(/\n/g, '<br>')}
+                    </div>
+                `;
+                solutionsHtml += `
+                    <div class="solution-block">
+                        <span class="solution-title">Ejercicio ${idx+1}: ${ex.title}</span>
+                        <div class="code-block">${(ex.solution || 'No disponible').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>
+                    </div>
+                `;
+            });
+        }
+        
+        // DRAG EXERCISES (All)
+        else if (sec.type === 'drag' && typeof DRAG_EXERCISES !== 'undefined' && DRAG_EXERCISES[sec.dragId]) {
+            const drag = DRAG_EXERCISES[sec.dragId];
+            htmlContent += `<div class="case-block"><strong style="font-size:1.2em;">${drag.title}</strong><br><br>${drag.description.replace(/\n/g, '<br>')}</div>`;
+            solutionsHtml += `<div style="margin-bottom:20px;"><strong style="font-size:1.2em;">${drag.title}</strong></div>`;
+            
+            drag.exercises.forEach((ex, idx) => {
+                htmlContent += `
+                    <div style="margin-bottom: 20px; padding-left: 20px; border-left: 2px solid #cbd5e1;">
+                        <strong>Escenario ${idx+1}:</strong><br>
+                        ${ex.scenario.replace(/\n/g, '<br>')}
+                    </div>
+                `;
+                solutionsHtml += `
+                    <div class="solution-block">
+                        <span class="solution-title">Escenario ${idx+1}</span>
+                        Respuesta correcta: <strong>${ex.answer}</strong><br>
+                        <div class="explanation"><em>Explicación:</em><br>${ex.explanation.replace(/\n/g, '<br>')}</div>
+                    </div>
+                `;
+            });
+        }
+    });
+
+    htmlContent += solutionsHtml;
+    htmlContent += `
+        </body>
+        </html>
+    `;
+    
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write(htmlContent);
+    printWindow.document.close();
+    printWindow.focus();
+    
+    // Allow images/styles to load then print
+    setTimeout(() => {
+        printWindow.print();
+    }, 500);
+}
+

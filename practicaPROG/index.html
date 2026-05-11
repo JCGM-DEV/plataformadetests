@@ -96,6 +96,7 @@
         </div>
         <span id="score-correct" class="score correct">✓ <span>0</span></span>
         <span id="score-wrong" class="score wrong">✗ <span>0</span></span>
+        <button class="settings-btn" onclick="printCurrentLabUnit()" title="Exportar a PDF">🖨️</button>
         <button class="settings-btn" onclick="openSettings()" title="Configuración IA">⚙️</button>
       </div>
     </header>
@@ -141,6 +142,7 @@
   <script src="tutor.js"></script>
   <script src="tutor_engine.js"></script>
   <script src="ai_service.js?v=7.0"></script>
+  <script src="../js/pdf_utils.js"></script>
 
   <script src="app.js?v=removal"></script>
 </body>
