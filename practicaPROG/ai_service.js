@@ -79,34 +79,34 @@ async function requestAIFeedback(ejId = null) {
         }
     }
 
-    const strictPrompt = `Actúa como una PROFESORA DE PROGRAMACIÓN (JAVA) que valora la LÓGICA por encima de todo.
-Tu misión es evaluar el código Java de un alumno basándote en el enunciado.
+    const strictPrompt = `Actúa como un PROFESOR DE PROGRAMACIÓN (JAVA) estricto con la lógica pero MUY PERMISIVO con la sintaxis.
+Tu misión es evaluar el código de un alumno basándote en el enunciado.
 
-IMPORTANTE: El profesor ha indicado que la SINTAXIS NO CUENTA para la nota. Solo importa la LÓGICA.
-- Ignora si faltan puntos y coma (;).
-- Ignora si hay llaves sin cerrar si la intención es clara.
-- Ignora tipos mal declarados si el flujo es correcto.
-- Céntrate 100% en si el alumno ha entendido el problema y lo ha resuelto lógicamente.
+¡ALERTA CRÍTICA!: EL EXAMEN SE REALIZA EN PAPEL (A MANO). 
+Por tanto, la SINTAXIS NO SE DEBE PENALIZAR EN ABSOLUTO.
+- Ignora por completo puntos y coma (;), llaves sin cerrar ({}), mayúsculas/minúsculas incorrectas, importaciones faltantes y pequeños errores de escritura o tipos.
+- Tu nota del 0 al 10 debe basarse ÚNICA Y EXCLUSIVAMENTE en la LÓGICA DE PROGRAMACIÓN (uso correcto de herencia, polimorfismo, diseño de clases, algoritmos y comprensión del problema).
+- Si la idea lógica y la estructura del código es correcta, el ejercicio está bien.
 
 ENUNCIADO DEL EJERCICIO:
 """
 ${enunciado}
 """
 
-CÓDIGO DEL ALUMNO:
+CÓDIGO DEL ALUMNO (Escrito a mano):
 """
 ${code}
 """
 
 CRITERIOS DE EVALUACIÓN:
 1. LÓGICA (100% de la nota): ¿Resuelve el problema planteado en el enunciado de forma coherente?
-2. RIGOR: Si el enunciado pide algo específico (ej: usar un bucle while) y usa otro, puedes comentarlo, pero la nota debe reflejar si la lógica es válida.
-3. SINTAXIS: IGNORAR PARA LA NOTA. Menciona los errores solo como feedback constructivo, no restes puntos por ellos.
+2. RIGOR: Si el enunciado pide algo específico (ej: una excepción personalizada) y usa otra cosa, puedes comentarlo para ajustar la nota, pero valorando el flujo lógico.
+3. SINTAXIS: IGNORAR TOTALMENTE PARA LA NOTA. Menciona los errores solo como feedback constructivo breve, no restes puntos por ellos bajo ningún concepto.
 
 FORMATO DE RESPUESTA OBLIGATORIO:
 [NOTA]: Nota del 0 al 10 (Basada únicamente en la lógica).
 [ERRORES]: Lista de fallos lógicos (no de sintaxis).
-[COMENTARIO]: Feedback sobre calidad de la lógica y consejos de sintaxis (sin penalizar).`;
+[COMENTARIO]: Feedback sobre la calidad de la lógica y consejos constructivos.`;
 
     try {
         const fb = await callAI_Universal(strictPrompt);

@@ -73,8 +73,13 @@ async function requestEDAIFeedback() {
         const ex = currentExerciseIdx !== -1 ? (LAB_EXERCISES[activeSection]?.[currentExerciseIdx]) : null;
         const exerciseContext = ex ? `EJERCICIO: ${ex.title}\nESCENARIO: ${ex.scenario}` : 'Diagrama libre (sin ejercicio específico)';
 
-        const prompt = `Actúa como un PROFESOR DE ENTORNOS DE DESARROLLO experto en UML.
+        const prompt = `Actúa como un PROFESOR DE ENTORNOS DE DESARROLLO experto en UML, estricto con la lógica pero permisivo con la notación.
 Tu misión es evaluar el siguiente diagrama UML creado por un alumno.
+
+¡ALERTA CRÍTICA!: EL EXAMEN SE REALIZA EN PAPEL (A MANO) BAJO PRESIÓN. 
+Por tanto, la EXACTITUD MILIMÉTRICA DE LA NOTACIÓN (ej: estilo exacto de flechas o tipografía) NO SE DEBE PENALIZAR EN ABSOLUTO.
+- Tu nota del 0 al 10 debe basarse ÚNICA Y EXCLUSIVAMENTE en la LÓGICA DE DISEÑO (¿El diagrama modela correctamente el problema? ¿Las relaciones tienen sentido? ¿Faltan clases clave?).
+- Si la idea estructural y el diseño orientado a objetos son correctos, el ejercicio está bien.
 
 ${exerciseContext}
 
@@ -86,14 +91,14 @@ ${diagramDescription}
 """
 
 CRITERIOS DE EVALUACIÓN:
-1. LÓGICA: ¿El diagrama resuelve el problema planteado?
-2. NOTACIÓN: ¿Se usan correctamente los símbolos UML (clases, relaciones, flechas, etc)?
-3. COMPLETITUD: ¿Faltan elementos esenciales?
+1. LÓGICA (100% de la nota): ¿El diagrama resuelve el problema planteado lógicamente?
+2. NOTACIÓN: IGNORAR PARA LA NOTA. Menciona pequeños fallos de formato UML solo como feedback constructivo, no restes puntos por ello.
+3. COMPLETITUD: ¿Faltan elementos lógicos esenciales?
 
 FORMATO DE RESPUESTA OBLIGATORIO:
-[NOTA]: Nota del 0 al 10.
-[ERRORES]: Lista detallada de fallos o carencias.
-[MEJORAS]: Consejos prácticos para mejorar el diagrama.
+[NOTA]: Nota del 0 al 10 (basada en la lógica).
+[ERRORES]: Lista detallada de fallos lógicos o carencias estructurales.
+[MEJORAS]: Consejos prácticos para mejorar el diseño UML.
 [COMENTARIO]: Breve feedback motivador.
 
 Responde en español de forma profesional y constructiva.`;
@@ -158,22 +163,24 @@ async function requestSimAIFeedback(simId) {
         const exerciseContext = lesson ? `EJERCICIO: ${lesson.title}\nENUNCIADO: ${lesson.subtitle}` : 'Diagrama externo';
 
         const prompt = `Actúa como un PROFESOR DE ENTORNOS DE DESARROLLO experto en UML.
-TE HAN ADJUNTO UNA IMAGEN PARA EVALUAR.
+TE HAN ADJUNTO UNA IMAGEN (FOTO DE UN EXAMEN HECHO A MANO EN PAPEL) PARA EVALUAR.
 
 PASO 0 (CRÍTICO): Identifica el contenido de la imagen. 
-Si la imagen NO es un diagrama UML (por ejemplo: es una captura de WhatsApp, un meme, una foto personal, texto sin formato de diagrama, etc.), DEBES asignar una nota de [NOTA]: 0 y explicar en [ERRORES] que el contenido no es un diagrama UML válido para la asignatura.
+Si la imagen NO es un diagrama UML (por ejemplo: es un meme, una foto personal, texto sin formato, etc.), DEBES asignar una nota de [NOTA]: 0 y explicar en [ERRORES] que el contenido no es un diagrama válido.
 
-SI ES UN DIAGRAMA UML:
-1. Analiza el contenido técnico.
-2. Identifica si el tipo de diagrama es correcto (Clases, Casos de Uso, Secuencia, etc) según el ejercicio.
-3. Evalúa la lógica y la notación UML (flechas, símbolos, multiplicidad, visibilidad).
+SI ES UN DIAGRAMA UML (DIBUJADO A MANO O DIGITAL):
+¡ALERTA CRÍTICA!: EL EXAMEN ES EN PAPEL, ASÍ QUE LA NOTACIÓN UML PERFECTA NO IMPORTA PARA LA NOTA.
+1. Analiza el contenido conceptual y de diseño (LÓGICA).
+2. Identifica si el tipo de diagrama tiene sentido (Clases, Casos de Uso, Secuencia, etc).
+3. Evalúa ÚNICAMENTE la lógica estructural (relaciones lógicas, multiplicidad conceptual, abstracción del problema).
+4. IGNORA fallos estéticos, tipos de flecha mal dibujados por las prisas, o faltas de rigor en la notación pura UML si el concepto de diseño que el alumno intenta transmitir es correcto.
 
 ${exerciseContext}
 
 FORMATO DE RESPUESTA OBLIGATORIO:
-[NOTA]: Nota del 0 al 10.
-[ERRORES]: Lista de fallos o confirmación de que no es un diagrama.
-[COMENTARIO]: Feedback profesional.
+[NOTA]: Nota del 0 al 10 (basada estrictamente en la lógica de diseño).
+[ERRORES]: Lista de fallos lógicos graves o confirmación de que no es un diagrama.
+[COMENTARIO]: Feedback profesional sobre el modelo mental usado.
 
 Responde en español de forma rigurosa.`;
 

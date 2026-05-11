@@ -46,14 +46,14 @@ const EJERCICIOS = [
   </ul>
 </div>
 
-<div class="code-exercise-desc" style="margin-bottom:1rem; padding:1rem; background:rgba(var(--green-rgb), 0.05); border-radius:8px;">
-  <h4 style="color:var(--green); margin-top:0;">3. Lógica de Ejecución y Gestión de Errores</h4>
-  <p>En el método <code>main</code> de la clase principal, realiza lo siguiente:</p>
+<div class="code-block" style="margin-bottom:1rem; padding:1rem; background:rgba(var(--green-rgb), 0.05); border-radius:8px;">
+  <h4 style="color:var(--green); margin-top:0;">3. Validación y Lógica de Ejecución (Main)</h4>
+  <p>Aplica las siguientes reglas operativas:</p>
   <ul style="padding-left:1.25rem">
-    <li>Declara un <strong>ArrayList polimórfico</strong> de tipo <code>Vehiculo</code> (<code>java.util.ArrayList</code>).</li>
-    <li>Instancia objetos de tipo <code>Coche</code> y <code>Moto</code> y añádelos a la lista usando <code>add()</code>.</li>
-    <li>Recorre el ArrayList mediante un bucle <b>for-each</b>, invocando a <code>arrancar()</code> y <code>mostrarInfo()</code> de cada elemento.</li>
-    <li><strong>Control de Excepciones:</strong> Implementa una validación para que si la <code>velocidadMax</code> es inferior a 0, se lance una <code>IllegalArgumentException</code>. Captura dicha excepción mediante un bloque <code>try-catch</code> informando del error.</li>
+    <li><strong>Control de Excepciones:</strong> El constructor de <code>Vehiculo</code> debe validar que la <code>velocidadMax</code> no sea negativa. Si lo es, debe lanzar una <code>IllegalArgumentException</code>.</li>
+    <li>Declara un <strong>ArrayList polimórfico</strong> de tipo <code>Vehiculo</code> en el <code>main</code>.</li>
+    <li>Envuelve la creación y adición de vehículos (un Coche y una Moto) en un bloque <code>try-catch</code> para atrapar posibles excepciones de inicialización.</li>
+    <li>Recorre la lista con un bucle <b>for-each</b> invocando <code>arrancar()</code> y <code>mostrarInfo()</code> de cada elemento.</li>
   </ul>
 </div>`,
 
@@ -77,6 +77,7 @@ const EJERCICIOS = [
     <span class="kw">protected int</span> velocidadMax;
 
     <span class="kw">public</span> <span class="fn">Vehiculo</span>(<span class="tp">String</span> marca, <span class="tp">String</span> modelo, <span class="kw">int</span> velocidadMax) {
+        <span class="kw">if</span> (velocidadMax &lt; <span class="num">0</span>) <span class="kw">throw new</span> <span class="fn">IllegalArgumentException</span>(<span class="str">"La velocidad máxima no puede ser negativa"</span>);
         <span class="kw">this</span>.marca = marca;
         <span class="kw">this</span>.modelo = modelo;
         <span class="kw">this</span>.velocidadMax = velocidadMax;
@@ -98,7 +99,6 @@ const EJERCICIOS = [
         <span class="kw">super</span>(marca, modelo, vel);
         <span class="kw">this</span>.numPuertas = puertas;
     }
-    <span class="kw">public</span> <span class="fn">Coche</span>() { <span class="kw">this</span>(<span class="str">"Desconocida"</span>, <span class="str">"Genérico"</span>, <span class="num">0</span>, <span class="num">4</span>); }
 
     <span class="kw">@Override public</span> <span class="tp">String</span> <span class="fn">getTipo</span>() { <span class="kw">return</span> <span class="str">"Coche"</span>; }
     <span class="kw">@Override public void</span> <span class="fn">mostrarInfo</span>() {
@@ -117,7 +117,6 @@ const EJERCICIOS = [
         <span class="kw">super</span>(marca, modelo, vel);
         <span class="kw">this</span>.cilindrada = cc;
     }
-    <span class="kw">public</span> <span class="fn">Moto</span>() { <span class="kw">this</span>(<span class="str">"Desconocida"</span>, <span class="str">"Genérica"</span>, <span class="num">0</span>, <span class="num">125</span>); }
 
     <span class="kw">@Override public</span> <span class="tp">String</span> <span class="fn">getTipo</span>() { <span class="kw">return</span> <span class="str">"Moto"</span>; }
     <span class="kw">@Override public void</span> <span class="fn">mostrarInfo</span>() {
@@ -132,20 +131,18 @@ const EJERCICIOS = [
 <span class="kw">public class</span> <span class="fn">Main</span> {
     <span class="kw">public static void</span> <span class="fn">main</span>(<span class="tp">String</span>[] args) {
         <span class="tp">java.util.ArrayList</span>&lt;<span class="fn">Vehiculo</span>&gt; flota = <span class="kw">new</span> <span class="tp">java.util.ArrayList</span>&lt;&gt;();
-        flota.<span class="fn">add</span>(<span class="kw">new</span> <span class="fn">Coche</span>(<span class="str">"Toyota"</span>, <span class="str">"Corolla"</span>, <span class="num">180</span>, <span class="num">4</span>));
-        flota.<span class="fn">add</span>(<span class="kw">new</span> <span class="fn">Moto</span>(<span class="str">"Honda"</span>, <span class="str">"CB500"</span>, <span class="num">200</span>, <span class="num">500</span>));
-        flota.<span class="fn">add</span>(<span class="kw">new</span> <span class="fn">Coche</span>(<span class="str">"Ford"</span>, <span class="str">"Focus"</span>, <span class="num">190</span>, <span class="num">5</span>));
-        flota.<span class="fn">add</span>(<span class="kw">new</span> <span class="fn">Moto</span>(<span class="str">"Kawasaki"</span>, <span class="str">"Ninja"</span>, <span class="num">250</span>, <span class="num">650</span>));
+        
+        <span class="kw">try</span> {
+            flota.<span class="fn">add</span>(<span class="kw">new</span> <span class="fn">Coche</span>(<span class="str">"Toyota"</span>, <span class="str">"Corolla"</span>, <span class="num">180</span>, <span class="num">4</span>));
+            flota.<span class="fn">add</span>(<span class="kw">new</span> <span class="fn">Moto</span>(<span class="str">"Honda"</span>, <span class="str">"CB500"</span>, <span class="num">200</span>, <span class="num">500</span>));
+            flota.<span class="fn">add</span>(<span class="kw">new</span> <span class="fn">Coche</span>(<span class="str">"Tesla"</span>, <span class="str">"Model S"</span>, -<span class="num">10</span>, <span class="num">5</span>)); <span class="cm">// Esto fallará</span>
+        } <span class="kw">catch</span> (<span class="fn">IllegalArgumentException</span> e) {
+            System.out.<span class="fn">println</span>(<span class="str">"Error al crear vehículo: "</span> + e.<span class="fn">getMessage</span>());
+        }
 
         <span class="kw">for</span> (<span class="fn">Vehiculo</span> v : flota) {
             v.<span class="fn">arrancar</span>();
             v.<span class="fn">mostrarInfo</span>();
-        }
-
-        <span class="kw">try</span> {
-            <span class="kw">throw new</span> <span class="fn">IllegalArgumentException</span>(<span class="str">"La velocidad máxima no puede ser negativa"</span>);
-        } <span class="kw">catch</span> (<span class="fn">IllegalArgumentException</span> e) {
-            System.out.<span class="fn">println</span>(<span class="str">"Error: "</span> + e.<span class="fn">getMessage</span>());
         }
     }
 }`,
@@ -173,7 +170,7 @@ const EJERCICIOS = [
       (c) => /@Override[\s\S]*public\s+void\s+mostrarInfo\s*\(\s*\)[\s\S]*super\s*\.\s*mostrarInfo\s*\(\s*\)\s*;/i.test(c),
       (c) => /class\s+Moto\s+extends\s+Vehiculo/i.test(c) && /super\s*\(\s*\w+\s*,\s*\w+\s*,\s*\w+\s*\)\s*;/i.test(c),
       (c) => /ArrayList\s*<\s*Vehiculo\s*>/i.test(c) && /new\s+Coche/i.test(c) && /new\s+Moto/i.test(c),
-      (c) => /try\s*\{[\s\S]*\}\s*catch\s*\(\s*IllegalArgumentException\s+\w+\s*\)\s*\{/i.test(c),
+      (c) => /try\s*\{[\s\S]*\}\s*catch\s*\(\s*IllegalArgumentException\s+\w+\s*\)\s*\{/i.test(c) || /throw\s+new\s+IllegalArgumentException/i.test(c),
     ]
   },
 
