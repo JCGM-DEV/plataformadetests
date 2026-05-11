@@ -191,26 +191,26 @@ async function respondToAI(btn) {
     const originalText = btn.innerHTML;
     btn.innerHTML = '⏳ Dialogando con IA...';
 
-    const prompt = \`Actúa como un PROFESOR DE PROGRAMACIÓN (JAVA) que está debatiendo con un alumno.
+    const prompt = `Actúa como un PROFESOR DE PROGRAMACIÓN (JAVA) que está debatiendo con un alumno.
 Anteriormente evaluaste su código y le diste este feedback:
 """
-\${previousFeedback}
+${previousFeedback}
 """
 
 El código del alumno era:
 """
-\${code}
+${code}
 """
 
 El alumno te responde o te reclama lo siguiente:
 """
-\${userMessage}
+${userMessage}
 """
 
 Tu tarea es responderle de forma constructiva, directa y educada. 
 - Si el alumno tiene razón y tú te equivocaste al evaluar su código, RECONÓCELO abiertamente y dale la razón. 
 - Si el alumno está equivocado, explícale exactamente por qué con un ejemplo técnico muy breve.
-- No vuelvas a generar una nota ni el formato de evaluación original, solo céntrate en responder la duda o queja del alumno como un chat.\`;
+- No vuelvas a generar una nota ni el formato de evaluación original, solo céntrate en responder la duda o queja del alumno como un chat.`;
 
     try {
         const response = await callAI_Universal(prompt);
@@ -218,14 +218,14 @@ Tu tarea es responderle de forma constructiva, directa y educada.
         // Añadir la respuesta al chat
         const chatLog = document.createElement('div');
         chatLog.style.marginTop = '1rem';
-        chatLog.innerHTML = \`
+        chatLog.innerHTML = `
             <div style="background:rgba(163, 230, 53, 0.1); padding:0.8rem; border-left:3px solid #a3e635; margin-bottom:0.5rem;">
-                <strong style="color:#a3e635;">Tú:</strong> <span style="color:#e2e8f0;">\${userMessage.replace(/\\n/g, '<br>')}</span>
+                <strong style="color:#a3e635;">Tú:</strong> <span style="color:#e2e8f0;">${userMessage.replace(/\n/g, '<br>')}</span>
             </div>
             <div style="background:rgba(0, 0, 0, 0.3); border:1px solid #365314; padding:0.8rem; border-radius:8px;">
-                <strong style="color:#84cc16;">🎓 Profesora IA:</strong> <div style="color:#e2e8f0; margin-top:0.3rem;">\${response.replace(/\\n/g, '<br>')}</div>
+                <strong style="color:#84cc16;">🎓 Profesora IA:</strong> <div style="color:#e2e8f0; margin-top:0.3rem;">${response.replace(/\n/g, '<br>')}</div>
             </div>
-        \`;
+        `;
         
         // Insertar antes del contenedor de input
         const replyContainer = container.querySelector('.ai-reply-container');
