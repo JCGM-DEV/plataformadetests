@@ -10,7 +10,7 @@ let touchChip = null, toastTimer = null;
 function selectUnit(unitId) {
   currentUnit = unitId;
   const unit = UNITS[unitId];
-  if (unitId.startsWith('simulacros')) {
+  if (unitId.startsWith('simulacro')) {
     resetSimulationScores(false); // false para que no pida confirmación al entrar desde el menú
     startExamTimer();
   } else {
@@ -846,7 +846,7 @@ updateLiveGrade();
 // ---- LIVE GRADE LOGIC ----
 function updateLiveGrade() {
   const container = document.getElementById('live-grade-container');
-  if (!currentUnit || !currentUnit.startsWith('simulacros')) {
+  if (!currentUnit || !currentUnit.startsWith('simulacro')) {
     container.classList.add('hidden');
     return;
   }
