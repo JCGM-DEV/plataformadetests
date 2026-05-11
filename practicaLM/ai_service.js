@@ -46,33 +46,27 @@ async function requestLMAIFeedback(customEnunciado = null) {
     
     const enunciado = customEnunciado || "Sigue las instrucciones del ejercicio.";
     
-    const strictPrompt = `Actúa como un PROFESOR DE LENGUAJE DE MARCAS de una ingeniería, estricto con la estructura lógica pero MUY PERMISIVO con la sintaxis fina.
-
-¡ALERTA CRÍTICA!: EL EXAMEN SE REALIZA EN PAPEL (A MANO). 
-Por tanto, la SINTAXIS TÉCNICA MENOR NO SE DEBE PENALIZAR EN ABSOLUTO.
-- Ignora por completo comillas faltantes, etiquetas mal cerradas accidentalmente o errores tipográficos menores.
-- Tu nota del 0 al 10 debe basarse ÚNICA Y EXCLUSIVAMENTE en la LÓGICA ESTRUCTURAL (¿Ha entendido cómo anidar los elementos? ¿Usa las etiquetas correctas conceptualmente? ¿Resuelve el problema planteado?).
-- Si la idea estructural es correcta, el ejercicio está bien.
+    const strictPrompt = `Actúa como una PROFESORA DE LENGUAJE DE MARCAS de una ingeniería. 
 
 ENUNCIADO DEL EJERCICIO:
 """
 ${enunciado}
 """
 
-CÓDIGO DEL ALUMNO (Escrito a mano):
+CÓDIGO DEL ALUMNO A EVALUAR:
 """
 ${code}
 """
 
 TU MISIÓN:
-1. LÓGICA (100% de la nota): ¿El árbol XML/HTML/JSON tiene sentido para el enunciado propuesto?
-2. RIGOR: Valora si ha usado el enfoque correcto conceptualmente.
-3. SINTAXIS: IGNORAR TOTALMENTE PARA LA NOTA. Menciona los errores (ej: falta cerrar una etiqueta) solo como feedback constructivo, no restes puntos.
+1. Analiza si el código cumple EXACTAMENTE con lo que pide el enunciado.
+2. Revisa la sintaxis técnica minuciosamente (etiquetas mal cerradas, atributos incorrectos, comillas faltantes, mal anidamiento).
+3. Sé implacable: si el enunciado pide algo específico (ej: un meta viewport, una estructura anidada exacta) y no está o está mal escrito, debes restar nota proporcionalmente. La sintaxis ES muy importante.
 
 FORMATO DE RESPUESTA OBLIGATORIO (Usa exactamente estas etiquetas):
-[NOTA]: Pon aquí la nota numérica del 0 al 10 (basada en la lógica).
-[ERRORES]: Lista los errores lógicos o conceptuales.
-[COMENTARIO]: Breve feedback constructivo.`;
+[NOTA]: Pon aquí la nota numérica del 0 al 10.
+[ERRORES]: Lista los errores técnicos, de sintaxis o incumplimientos del enunciado detectados.
+[COMENTARIO]: Breve feedback sobre qué mejorar.`;
 
     try {
         const fb = await callAI_Universal(strictPrompt);
