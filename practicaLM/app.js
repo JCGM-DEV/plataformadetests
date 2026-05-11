@@ -984,8 +984,8 @@ function updateLiveGrade() {
     }
   }
   
-  // Find simulation sections (in LM they are 'exam')
-  const sims = sections.filter(s => s.type === 'exam');
+  // Find simulation sections (in LM they are 'exam' or 'editor')
+  const sims = sections.filter(s => s.type === 'exam' || s.type === 'editor');
   if (sims.length > 0) {
     let totalSimPoints = 0;
     sims.forEach(s => {

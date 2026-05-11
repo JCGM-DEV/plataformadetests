@@ -88,7 +88,15 @@ const UNITS = {
       { id: 'sim1-h5', category: 'Práctico 21/04: HTML5 Completo', icon: '🌐', label: '5. Formulario de contacto', type: 'exam', editorId: 'sim1_p5' }
     ]
   },
-  simulacro2: {
+  
+  simulacro_global: {
+    label: 'SIMULACRO FINAL', title: 'Repaso Global Lenguaje de Marcas',
+    sections: [
+      { id: 'sim_g-quiz', icon: '🧠', label: 'Parte A: Test Teórico (40 pregs)', type: 'quiz', quizId: 'repaso_global_quiz' },
+      { id: 'sim_g-prac', category: 'Parte B: Casos Prácticos', icon: '🛠️', label: 'Corrección de Errores HTML/XML', type: 'editor', editorId: 'repaso_global_practico' }
+    ]
+  },
+simulacro2: {
     label: 'EXAMEN', title: 'Simulacro 27/04: XML & XSD',
     sections: [
       { id: 'sim2-quiz', icon: '🧠', label: 'Simulacro 27/04: Test Teórico', type: 'quiz', quizId: 'simulacro2_quiz' },
@@ -438,7 +446,49 @@ const QUIZZES = {
       opts: ['xsl:if', 'xsl:switch', 'xsl:choose', 'xsl:case'], ans: 2,
       exp: '<strong>xsl:choose</strong> con xsl:when (condiciones) y xsl:otherwise (caso por defecto) equivale a if-elseif-else. xsl:if solo tiene la parte "if" sin else.' }
   ]},
-  simulacro1_quiz: {
+  repaso_global_quiz: { title: 'Repaso Global: Test Teórico', questions: [
+    { q: "1. \u00bfQu\u00e9 significa HTML?", hint: "Repaso Global", opts: ["Hyper Transfer Markup Language\u200b", "HyperText Markup Language\u200b", "High Text Machine Language\u200b", "Hyper Tool Markup List\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "2. \u00bfQu\u00e9 elemento representa el contenido visible de una\np\u00e1gina HTML?", hint: "Repaso Global", opts: ["<head>\u200b", "<meta>\u200b", "<body>\u200b", "<title>\u200b"], ans: 2, exp: "La respuesta correcta es la C." },
+    { q: "3. \u00bfCu\u00e1l de estos atributos se usa normalmente en un\nenlace?", hint: "Repaso Global", opts: ["src\u200b", "alt\u200b", "href\u200b", "action\u200b"], ans: 2, exp: "La respuesta correcta es la C." },
+    { q: "4. \u00bfCu\u00e1l de estos fragmentos HTML es incorrecto?", hint: "Repaso Global", opts: ["<p>Hola mundo</p>\u200b", "<h1>T\u00edtulo</h1>\u200b", "<a href=\"web.html\">Ir</a>\u200b", "<p>Texto</h2>\u200b"], ans: 3, exp: "La respuesta correcta es la D." },
+    { q: "5. \u00bfPara qu\u00e9 sirve CSS?", hint: "Repaso Global", opts: ["Para definir la estructura del documento\u200b", "Para separar presentaci\u00f3n y contenido\u200b", "Para validar documentos XML\u200b", "Para consultar bases de datos XML\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "6. \u00bfCu\u00e1l es la forma menos recomendable de aplicar CSS si\nse busca buen mantenimiento?", hint: "Repaso Global", opts: ["CSS externo\u200b", "CSS interno\u200b", "CSS en l\u00ednea\u200b", "CSS mediante archivo .css\u200b"], ans: 2, exp: "La respuesta correcta es la C." },
+    { q: "7. En CSS, \u00bfqu\u00e9 selector selecciona todos los elementos?", hint: "Repaso Global", opts: ["#\u200b", ".\u200b", "*\u200b", "all\u200b"], ans: 2, exp: "La respuesta correcta es la C." },
+    { q: "8. \u00bfCu\u00e1l de estas reglas CSS selecciona elementos con clase\naviso?", hint: "Repaso Global", opts: ["#aviso { color: red; }\u200b", ".aviso { color: red; }\u200b", "aviso { color: red; }\u200b", "*aviso { color: red; }\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "9. \u00bfQu\u00e9 representa el DOM?", hint: "Repaso Global", opts: ["Un lenguaje de estilos\u200b", "Un \u00e1rbol de nodos del documento\u200b", "Una base de datos XML\u200b", "Un tipo de DTD\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "10. \u00bfCu\u00e1l de estos fragmentos HTML contiene un error?", hint: "Repaso Global", opts: ["<ul><li>Uno</li><li>Dos</li></ul>\u200b", "<table><tr><td>A</td></tr></table>\u200b", "<select><option>Madrid</option></select>\u200b", "<ol><li>Uno</ol></li>\u200b"], ans: 3, exp: "La respuesta correcta es la D." },
+    { q: "11. \u00bfQu\u00e9 etiqueta se usa para insertar una imagen?", hint: "Repaso Global", opts: ["<image>\u200b", "<img>\u200b", "<src>\u200b", "<picturelink>\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "12. \u00bfQu\u00e9 atributo es recomendable en im\u00e1genes por\naccesibilidad?", hint: "Repaso Global", opts: ["alt\u200b", "href\u200b", "target\u200b", "method\u200b"], ans: 0, exp: "La respuesta correcta es la A." },
+    { q: "13. \u00bfCu\u00e1l es la funci\u00f3n principal de XML?", hint: "Repaso Global", opts: ["Dise\u00f1ar visualmente p\u00e1ginas web\u200b", "Representar informaci\u00f3n estructurada\u200b", "Crear animaciones\u200b", "Sustituir a CSS\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "14. \u00bfCu\u00e1l de estos documentos XML est\u00e1 mal formado?", hint: "Repaso Global", opts: ["<libro><titulo>XML</titulo></libro>\u200b", "<persona><nombre>Ana</nombre></persona>\u200b", "<curso><modulo>LM</curso></modulo>\u200b", "<raiz><dato /></raiz>\u200b"], ans: 2, exp: "La respuesta correcta es la C." },
+    { q: "15. En XML, un documento bien formado debe tener:", hint: "Repaso Global", opts: ["Varias ra\u00edces\u200b", "Una \u00fanica ra\u00edz\u200b", "Etiquetas sin cerrar\u200b", "Atributos sin comillas\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "16. \u00bfCu\u00e1l de estas opciones es JSON v\u00e1lido?", hint: "Repaso Global", opts: ["{ curso: \"LM\" }\u200b", "{ \"curso\": \"LM\" }\u200b", "<curso>LM</curso>\u200b", "[ curso = \"LM\" ]\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "17. \u00bfQu\u00e9 estructura usa JSON para representar listas\nordenadas?", hint: "Repaso Global", opts: ["Par\u00e9ntesis ( )\u200b", "Llaves { }\u200b", "Corchetes [ ]\u200b", "Etiquetas < >\u200b"], ans: 2, exp: "La respuesta correcta es la C." },
+    { q: "18. \u00bfCu\u00e1l es el error en este XML? <alumno\nedad=20><nombre>Luis</nombre></alumno>", hint: "Repaso Global", opts: ["Falta elemento ra\u00edz\u200b", "El atributo debe ir entre comillas\u200b", "<nombre> no puede contener texto\u200b", "XML no permite atributos\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "19. \u00bfQu\u00e9 significa DTD?", hint: "Repaso Global", opts: ["Data Type Document\u200b", "Document Type Definition\u200b", "Document Text Design\u200b", "Data Transfer Definition\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "20. \u00bfPara qu\u00e9 sirve una DTD?", hint: "Repaso Global", opts: ["Para dar estilo visual a HTML\u200b", "Para describir la estructura v\u00e1lida de un XML\u200b", "Para crear consultas XPath\u200b", "Para comprimir XML\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "21. \u00bfCu\u00e1l es una limitaci\u00f3n de DTD frente a XSD?", hint: "Repaso Global", opts: ["DTD no permite definir tipos de datos avanzados como\nenteros restringidos\u200b", "DTD permite m\u00e1s tipos de datos que XSD \u200b", "DTD est\u00e1 escrito siempre en XML\u200b", "DTD sustituye a CSS\u200b"], ans: 0, exp: "La respuesta correcta es la A." },
+    { q: "22. \u00bfQu\u00e9 significa XSD?", hint: "Repaso Global", opts: ["XML Style Document\u200b", "XML Schema Definition\u200b", "XHTML Schema Data\u200b", "XML Source Design\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "23. En XSD, \u00bfqu\u00e9 tipo usar\u00edas para texto?", hint: "Repaso Global", opts: ["xs:string\u200b", "xs:numberText\u200b", "xs:word\u200b", "xs:textOnly\u200b"], ans: 0, exp: "La respuesta correcta es la A." },
+    { q: "24. \u00bfCu\u00e1l de estas opciones indica correctamente un\nelemento XSD llamado edad de tipo entero?", hint: "Repaso Global", opts: ["<xs:element edad=\"xs:int\"/>\u200b", "<xs:element name=\"edad\" type=\"xs:int\"/>\u200b", "<element name=\"edad\" int=\"true\"/>\u200b", "<xs:int name=\"edad\"/>\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "25. \u00bfQu\u00e9 diferencia hay entre XML bien formado y XML\nv\u00e1lido?", hint: "Repaso Global", opts: ["Son exactamente lo mismo\u200b", "Bien formado cumple sintaxis; v\u00e1lido cumple adem\u00e1s\nDTD/XSD\u200b", "V\u00e1lido solo significa que abre en navegador\u200b", "Bien formado exige usar CSS\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "26. \u00bfCu\u00e1l de estos fragmentos XML es incorrecto por\nmay\u00fasculas/min\u00fasculas?", hint: "Repaso Global", opts: ["<Dato>1</Dato>\u200b", "<dato>1</dato>\u200b", "<Dato>1</dato>\u200b", "<dato valor=\"1\" />\u200b"], ans: 2, exp: "La respuesta correcta es la C." },
+    { q: "27. \u00bfPara qu\u00e9 sirven los namespaces en XML?", hint: "Repaso Global", opts: ["Para aplicar colores al documento\u200b", "Para convertir XML en JSON autom\u00e1ticamente \u200b", "Para comprimir archivos XML\u200b", "Para evitar conflictos entre nombres de etiquetas\u200b"], ans: 3, exp: "La respuesta correcta es la D." },
+    { q: "28. \u00bfQu\u00e9 lenguaje se utiliza para transformar XML en\nHTML, XML u otros formatos?", hint: "Repaso Global", opts: ["XSLT\u200b", "CSS\u200b", "SQL\u200b", "Atom\u200b"], ans: 0, exp: "La respuesta correcta es la A." },
+    { q: "29. \u00bfCu\u00e1l es la funci\u00f3n de <xsl:value-of>?", hint: "Repaso Global", opts: ["Repetir nodos\u200b", "Extraer el valor de un nodo\u200b", "Crear una DTD\u200b", "Validar JSON\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "30. \u00bfCu\u00e1l es la funci\u00f3n de <xsl:for-each>?", hint: "Repaso Global", opts: ["Recorrer un conjunto de nodos\u200b", "Crear atributos obligatorios\u200b", "Definir tipos de datos\u200b", "Declarar namespaces\u200b"], ans: 0, exp: "La respuesta correcta es la A." },
+    { q: "31. Dado el XML:\n<libros><libro><titulo>A</titulo></libro></libros>, \u00bfqu\u00e9\nXPath selecciona los t\u00edtulos?", hint: "Repaso Global", opts: ["/libros/libro/titulo\u200b", "libros>libro>titulo\u200b", "SELECT titulo FROM libros\u200b", "<titulo>\u200b"], ans: 0, exp: "La respuesta correcta es la A." },
+    { q: "32. \u00bfQu\u00e9 diferencia principal hay entre XPath y XQuery?", hint: "Repaso Global", opts: ["No hay diferencia\u200b", "XPath es para CSS y XQuery para HTML\u200b", "XPath valida XML y XQuery valida JSON\u200b", "XPath sirve para seleccionar nodos; XQuery permite\nconsultas m\u00e1s complejas\u200b"], ans: 3, exp: "La respuesta correcta es la D." },
+    { q: "33. En XQuery, \u00bfqu\u00e9 cl\u00e1usula se usa para filtrar resultados?", hint: "Repaso Global", opts: ["for\u200b", "where\u200b", "return\u200b", "let\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "34. \u00bfCu\u00e1l de estas consultas XQuery devuelve modelos de\ncoches con precio mayor que 20000?", hint: "Repaso Global", opts: ["for $x in //coche where $x/precio > 20000 return\n$x/modelo\u200b", "select modelo from coche where precio > 20000\u200b", "<xsl:value-of select=\"//precio > 20000\"/>\u200b", "//coche/precio/modelo > 20000\u200b"], ans: 0, exp: "La respuesta correcta es la A." },
+    { q: "35. \u00bfQu\u00e9 es una base de datos XML nativa?", hint: "Repaso Global", opts: ["Una base relacional que elimina las etiquetas XML\u200b", "Una base que almacena directamente documentos\nXML\u200b", "Una hoja CSS para XML\u200b", "Un validador DTD\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "36. \u00bfCu\u00e1l es una ventaja de una base de datos XML nativa?", hint: "Repaso Global", opts: ["Siempre convierte XML a tablas relacionales\u200b", "Mantiene la estructura original del documento XML\u200b", "No permite consultas XPath\u200b", "Solo almacena JSON\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "37. \u00bfQu\u00e9 significa RSS?", hint: "Repaso Global", opts: ["Really Simple Syndication\u200b", "Real Style Sheet\u200b", "Rapid Server System\u200b", "Random Site Schema\u200b"], ans: 0, exp: "La respuesta correcta es la A." },
+    { q: "38. \u00bfPara qu\u00e9 sirve un agregador RSS?", hint: "Repaso Global", opts: ["Para validar HTML\u200b", "Para leer y organizar canales o noticias sindicadas\u200b", "Para crear bases de datos SQL\u200b", "Para escribir hojas CSS\u200b"], ans: 1, exp: "La respuesta correcta es la B." },
+    { q: "39. \u00bfQu\u00e9 es un ERP?", hint: "Repaso Global", opts: ["Sistema para gestionar recursos y procesos\nempresariales\u200b", "Lenguaje de marcas extensible\u200b", "Hoja de estilo para XML\u200b", "Formato de sindicaci\u00f3n web\u200b"], ans: 0, exp: "La respuesta correcta es la A." },
+    { q: "40. \u00bfQu\u00e9 es un CRM?", hint: "Repaso Global", opts: ["Sistema orientado a gestionar relaciones con clientes\u200b", "Validador de XML\u200b", "Lenguaje de consulta XML\u200b", "Tipo de selector CSS\u200b"], ans: 0, exp: "La respuesta correcta es la A." }
+  ]},
+simulacro1_quiz: {
     title: 'Simulacro 1: Test Teórico',
     questions: [
       {
@@ -632,7 +682,101 @@ const EDITOR_LABS = {
 </catalogo>` }
     ]
   },
-  h_1: {
+    repaso_global_practico: {
+    title: 'Repaso Global: Corrección de Errores',
+    description: 'Encuentra y arregla los errores en el código.',
+    type: 'html',
+    exercises: [
+      { id: 1, title: 'Cierre de etiquetas HTML', desc: 'Arregla la etiqueta de cierre que no coincide con la de apertura.',
+        hint: 'Ambas etiquetas deben ser p o ambas h1.',
+        starter: `<p>Bienvenido a mi web</h1>`,
+        milestones: [
+          { id: 'fix1', check: /(<h1>Bienvenido a mi web<\/h1>|<p>Bienvenido a mi web<\/p>)/i, popup: '¡Corregido!', instruction: 'Haz que coincidan.' }
+        ]
+      },
+      { id: 2, title: 'Atributos de enlace', desc: 'Añade el atributo que falta para que el enlace dirija a la URL.',
+        hint: 'Es el atributo href.',
+        starter: `<a>https://www.ejemplo.com</a>`,
+        milestones: [
+          { id: 'fix2', check: /href=["']https:\/\/www\.ejemplo\.com["']/i, popup: '¡Enlace arreglado!', instruction: 'Añade href.' }
+        ]
+      },
+      { id: 3, title: 'Imágenes accesibles y válidas', desc: 'Añade el atributo alt y asegúrate de que la etiqueta se cierra en XML/XHTML o tiene la estructura HTML correcta.',
+        hint: 'alt="texto" y <img ... />',
+        starter: `<img src="foto.jpg">`,
+        milestones: [
+          { id: 'fix3', check: /alt=["'][^"']*["']/i, popup: '¡Atributo alt añadido!', instruction: 'Falta el alt.' }
+        ]
+      },
+      { id: 4, title: 'Listas anidadas', desc: 'Cierra correctamente el primer elemento de la lista (<li>).',
+        hint: 'Cada <li> debe cerrarse con </li>.',
+        starter: `<ul>
+<li>HTML
+<li>CSS</li>
+</ul>`,
+        milestones: [
+          { id: 'fix4', check: /<li>HTML<\/li>/i, popup: '¡Elemento cerrado!', instruction: 'Cierra el <li>HTML.' }
+        ]
+      },
+      { id: 5, title: 'Filas de tabla', desc: 'Falta agrupar las celdas en una fila.',
+        hint: 'Usa <tr> para envolver los <td>.',
+        starter: `<table>
+<td>Nombre</td>
+<td>Edad</td>
+</table>`,
+        milestones: [
+          { id: 'fix5', check: /<tr>\s*<td>Nombre<\/td>\s*<td>Edad<\/td>\s*<\/tr>/i, popup: '¡Fila correcta!', instruction: 'Añade <tr>.' }
+        ]
+      },
+      { id: 6, title: 'Apertura y Cierre XML', desc: 'Arregla la etiqueta raíz para que apertura y cierre coincidan (alumno o estudiante).',
+        hint: 'Cambia alumno por estudiante, o estudiante por alumno.',
+        starter: `<alumno>
+<nombre>Lucía</nombre>
+</estudiante>`,
+        milestones: [
+          { id: 'fix6', check: /(<alumno>[\s\S]*<\/alumno>|<estudiante>[\s\S]*<\/estudiante>)/i, popup: '¡Corregido!', instruction: 'Que coincidan.' }
+        ]
+      },
+      { id: 7, title: 'Atributos XML', desc: 'En XML, los valores de los atributos siempre deben ir entre comillas.',
+        hint: 'id="25"',
+        starter: `<libro id=25>
+<titulo>XML básico</titulo>
+</libro>`,
+        milestones: [
+          { id: 'fix7', check: /id=["']25["']/i, popup: '¡Comillas añadidas!', instruction: 'Pon el id en comillas.' }
+        ]
+      },
+      { id: 8, title: 'Raíz Única XML', desc: 'Un documento XML solo puede tener UNA etiqueta raíz. Envuelve el curso y el profesor en una sola raíz llamada <colegio>.',
+        hint: '<colegio>...</colegio>',
+        starter: `<curso>
+<modulo>Lenguaje de Marcas</modulo>
+</curso>
+<profesor>Ana</profesor>`,
+        milestones: [
+          { id: 'fix8', check: /<colegio>[\s\S]*<curso>[\s\S]*<profesor>Ana<\/profesor>[\s\S]*<\/colegio>/i, popup: '¡Raíz única creada!', instruction: 'Envuelve en <colegio>.' }
+        ]
+      },
+      { id: 9, title: 'Sensibilidad a Mayúsculas XML', desc: 'XML distingue mayúsculas. Haz que <Persona> y </persona> coincidan (ambas minúsculas o ambas mayúsculas).',
+        hint: '<Persona>...</Persona> o <persona>...</persona>',
+        starter: `<Persona>
+<nombre>Carlos</nombre>
+</persona>`,
+        milestones: [
+          { id: 'fix9', check: /(<Persona>[\s\S]*<\/Persona>|<persona>[\s\S]*<\/persona>)/i, popup: '¡Coincidencia exacta!', instruction: 'Mayúsculas importan.' }
+        ]
+      },
+      { id: 10, title: 'Cierre de elementos XML', desc: 'Cierra correctamente la etiqueta raíz <producto>.',
+        hint: 'Añade </producto> al final.',
+        starter: `<producto>
+<nombre>Ratón</nombre>
+<precio>15</precio>`,
+        milestones: [
+          { id: 'fix10', check: /<\/producto>/i, popup: '¡Elemento cerrado!', instruction: 'Cierra <producto>.' }
+        ]
+      }
+    ]
+  },
+h_1: {
     title: 'HTML 1: Estructura Básica',
     description: 'Crea la estructura fundamental de un documento HTML5.',
     type: 'html',
