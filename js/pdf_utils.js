@@ -260,6 +260,12 @@ function printCurrentLabUnit() {
                 .solution-title { font-weight: bold; color: #166534; display: block; margin-bottom: 10px; font-size: 1.1em; }
                 .page-break { page-break-before: always; }
                 .explanation { background: #f0fdf4; padding: 10px; border-left: 3px solid #22c55e; margin-top: 10px; border-radius: 0 4px 4px 0; }
+                .kw { color: #c678dd; }
+                .fn { color: #61afef; }
+                .tp { color: #e5c07b; }
+                .str { color: #98c379; }
+                .num { color: #d19a66; }
+                .cm { color: #5c6370; font-style: italic; }
             </style>
         </head>
         <body>
@@ -271,6 +277,16 @@ function printCurrentLabUnit() {
         <div class="page-break"></div>
         <h2>PARTE 2: SOLUCIONES</h2>
     `;
+    
+    const formatCode = (code) => {
+        if (!code) return 'No disponible.';
+        // If it already has our syntax highlighting spans, return as HTML
+        if (code.includes('<span class="kw">') || code.includes('<span class="fn">') || code.includes('<span class="tp">') || code.includes('<span class="cm">')) {
+            return code;
+        }
+        // Otherwise it's raw text (like XML/HTML from practicaLM), escape it
+        return code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    };
     
     let qCounter = 1;
 
@@ -323,7 +339,7 @@ function printCurrentLabUnit() {
                 solutionsHtml += `
                     <div class="solution-block">
                         <span class="solution-title">${ej.titulo || 'Caso Práctico'}</span>
-                        <div class="code-block">${solucion.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>
+                        <div class="code-block">${formatCode(solucion)}</div>
                     </div>
                 `;
             }
@@ -344,10 +360,10 @@ function printCurrentLabUnit() {
             
             const solucion = ex.solution || 'Solución estructurada en hitos. Consultar plataforma interactiva.';
             solutionsHtml += `
-                <div class="solution-block">
-                    <span class="solution-title">${lab.examTitle || lab.title || 'Ejercicio Práctico'}</span>
-                    <div class="code-block">${solucion.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>
-                </div>
+                    <div class="solution-block">
+                        <span class="solution-title">${lab.examTitle || lab.title || 'Ejercicio Práctico'}</span>
+                        <div class="code-block">${formatCode(solucion)}</div>
+                    </div>
             `;
         }
         
@@ -367,7 +383,7 @@ function printCurrentLabUnit() {
                 solutionsHtml += `
                     <div class="solution-block">
                         <span class="solution-title">Ejercicio ${idx+1}: ${ex.title}</span>
-                        <div class="code-block">${(ex.solution || 'No disponible').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>
+                        <div class="code-block">${formatCode(ex.solution)}</div>
                     </div>
                 `;
             });
