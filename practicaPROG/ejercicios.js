@@ -145,7 +145,7 @@ const EJERCICIOS = [
             v.<span class="fn">mostrarInfo</span>();
         }
     }
-}`,
+} `,
 
     criterios: [
       'Interface Conducible con void arrancar()',
