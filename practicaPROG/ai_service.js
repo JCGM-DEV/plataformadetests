@@ -147,7 +147,12 @@ FORMATO DE RESPUESTA OBLIGATORIO:
             aiSection.style.border = '1px solid #365314';
             aiSection.style.borderRadius = '12px';
             aiSection.innerHTML = `<h4 style="color:#84cc16;margin-bottom:0.8rem;display:flex;align-items:center;gap:0.5rem"><span>🎓</span> Informe de la Profesora de Java (IA)</h4>
-                                   <div style="line-height:1.7; color:#e2e8f0; font-size:0.95rem">${fb.replace(/\n/g, '<br>')}</div>`;
+                                   <div class="ai-feedback-content" style="line-height:1.7; color:#e2e8f0; font-size:0.95rem">${fb.replace(/\n/g, '<br>')}</div>
+                                   
+                                   <div class="ai-reply-container" style="margin-top:1.5rem; border-top:1px solid #365314; padding-top:1rem;">
+                                       <textarea class="ai-reply-input" placeholder="¿No estás de acuerdo o tienes dudas? ¡Díselo a la IA!" style="width:100%; height:60px; background:#0f1a04; border:1px solid #2a3d10; color:#e2e8f0; padding:10px; border-radius:8px; font-size:0.9rem; resize:vertical; font-family:inherit;"></textarea>
+                                       <button onclick="respondToAI(this)" style="margin-top:0.5rem; background:#365314; border:1px solid #4d7c0f; color:#ecfccb; padding:0.5rem 1rem; border-radius:6px; cursor:pointer; font-weight:bold; transition:0.2s;">💬 Responder / Reclamar</button>
+                                   </div>`;
             feedbackPanel.appendChild(aiSection);
             
             // Hacer scroll al feedback para que el usuario siempre lo vea
@@ -165,6 +170,75 @@ FORMATO DE RESPUESTA OBLIGATORIO:
         return { nota: 0, error: err.message };
     } finally {
         if (btn) { btn.disabled = false; btn.innerHTML = originalText; }
+    }
+}
+
+async function respondToAI(btn) {
+    const container = btn.closest('.ai-feedback-box');
+    const input = container.querySelector('.ai-reply-input');
+    const userMessage = input.value.trim();
+    if (!userMessage) return;
+
+    // Obtener el código actual
+    const code = document.getElementById('ej-input')?.value || 
+                 document.getElementById('code-input')?.value || 
+                 document.getElementById('exam-code-input')?.value || '';
+
+    // Obtener el feedback previo
+    const previousFeedback = container.querySelector('.ai-feedback-content').innerText;
+
+    btn.disabled = true;
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '⏳ Dialogando con IA...';
+
+    const prompt = \`Actúa como un PROFESOR DE PROGRAMACIÓN (JAVA) que está debatiendo con un alumno.
+Anteriormente evaluaste su código y le diste este feedback:
+"""
+\${previousFeedback}
+"""
+
+El código del alumno era:
+"""
+\${code}
+"""
+
+El alumno te responde o te reclama lo siguiente:
+"""
+\${userMessage}
+"""
+
+Tu tarea es responderle de forma constructiva, directa y educada. 
+- Si el alumno tiene razón y tú te equivocaste al evaluar su código, RECONÓCELO abiertamente y dale la razón. 
+- Si el alumno está equivocado, explícale exactamente por qué con un ejemplo técnico muy breve.
+- No vuelvas a generar una nota ni el formato de evaluación original, solo céntrate en responder la duda o queja del alumno como un chat.\`;
+
+    try {
+        const response = await callAI_Universal(prompt);
+        
+        // Añadir la respuesta al chat
+        const chatLog = document.createElement('div');
+        chatLog.style.marginTop = '1rem';
+        chatLog.innerHTML = \`
+            <div style="background:rgba(163, 230, 53, 0.1); padding:0.8rem; border-left:3px solid #a3e635; margin-bottom:0.5rem;">
+                <strong style="color:#a3e635;">Tú:</strong> <span style="color:#e2e8f0;">\${userMessage.replace(/\\n/g, '<br>')}</span>
+            </div>
+            <div style="background:rgba(0, 0, 0, 0.3); border:1px solid #365314; padding:0.8rem; border-radius:8px;">
+                <strong style="color:#84cc16;">🎓 Profesora IA:</strong> <div style="color:#e2e8f0; margin-top:0.3rem;">\${response.replace(/\\n/g, '<br>')}</div>
+            </div>
+        \`;
+        
+        // Insertar antes del contenedor de input
+        const replyContainer = container.querySelector('.ai-reply-container');
+        container.insertBefore(chatLog, replyContainer);
+        
+        input.value = '';
+        container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } catch (err) {
+        console.error(err);
+        alert('Error al contactar con la IA: ' + err.message);
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = originalText;
     }
 }
 
