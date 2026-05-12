@@ -68,6 +68,15 @@ const UNITS = {
       { id: 'sim-ex-ej1', icon: '📝', label: 'Práctico C: Inventario HashMap', type: 'ejercicio', ejercicioId: 'ej_sim2_1' },
       { id: 'sim-ex-ej2', icon: '📝', label: 'Práctico D: Registro HashSet', type: 'ejercicio', ejercicioId: 'ej_sim2_2' },
     ]
+  },
+  pilas_colas: {
+    label: 'DYNAMIC', title: 'Pilas y Colas (Estructuras LIFO/FIFO)',
+    sections: [
+      { id: 'pc-guia', icon: '📘', label: 'Guía: Pilas vs Colas', type: 'guide', guideId: 'exam_guide' },
+      { id: 'pc-ej1', icon: '📝', label: 'Pila (Stack): Historial', type: 'ejercicio', ejercicioId: 'ej_stack_1' },
+      { id: 'pc-ej2', icon: '📝', label: 'Cola (Queue): Impresora', type: 'ejercicio', ejercicioId: 'ej_queue_1' },
+      { id: 'pc-ej3', icon: '📝', label: 'Caso Mixto: Soporte Técnico', type: 'ejercicio', ejercicioId: 'ej_final2' },
+    ]
   }
 };
 
