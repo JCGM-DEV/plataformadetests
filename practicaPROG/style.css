@@ -661,28 +661,19 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 
 /* --- CHECKLIST INTERACTIVA EN ENUNCIADOS --- */
 .ej-enunciado-text li, .exam-enunciado-text li {
-    list-style: none !important;
+    list-style: disc !important;
     position: relative;
-    padding-left: 2rem !important;
+    padding-left: 0.5rem !important;
     margin-bottom: 0.75rem;
-    cursor: pointer;
+    margin-left: 1.5rem;
+    cursor: default;
     transition: all 0.2s ease;
     border-radius: 6px;
-    padding: 0.4rem 0.6rem 0.4rem 2rem;
+    padding: 0.4rem 0.6rem;
 }
 
 .ej-enunciado-text li:hover, .exam-enunciado-text li:hover {
     background: rgba(255,255,255,0.03);
-}
-
-.ej-enunciado-text li::before, .exam-enunciado-text li::before {
-    content: '⬜';
-    position: absolute;
-    left: 0.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 0.9rem;
-    filter: grayscale(1) opacity(0.5);
 }
 
 .ej-enunciado-text li.todo-done, .exam-enunciado-text li.todo-done {
@@ -691,11 +682,6 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
     opacity: 0.6;
 }
 
-.ej-enunciado-text li.todo-done::before, .exam-enunciado-text li.todo-done::before {
-    content: '✅';
-    filter: none;
-    opacity: 1;
-}
 
 
 
