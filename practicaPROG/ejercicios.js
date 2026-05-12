@@ -386,7 +386,7 @@ public class Main {
     criterios: ['BufferedWriter', 'IOException', 'Polimorfismo', 'Encapsulación'],
     checks: [
       (c) => /BufferedWriter/i.test(c) && /FileWriter/i.test(c),
-      (c) => /catch\s*\(\s*IOException\s+\w+\s*\)/i.test(c) || /try\s*\(\s*BufferedWriter/i.test(c),
+      (c) => /catch\s*\(\s*IOException\s+\w+\s*\)/i.test(c) || /try\s*\(\s*BufferedWriter\s*\)/i.test(c),
       (c) => /private\s+double\s+base/i.test(c)
     ]
   },
@@ -439,108 +439,6 @@ public class Main {
       (c) => /Queue\s*<\s*String\s*>/i.test(c) && /LinkedList/i.test(c),
       (c) => /Stack\s*<\s*String\s*>/i.test(c),
       (c) => /\.pop\s*\(\s*\)/i.test(c)
-    ]
-  }
-  },
-
-  {
-    id: 'ej_stack_1',
-    titulo: 'Ejercicio Stack — Historial de Navegación',
-    nivel: '⭐⭐',
-    temas: ['Stack', 'LIFO'],
-    tiempo: '15 min',
-    enunciado: `
-<div class="exam-header">
-  <h3 style="color:var(--orange); border-bottom:2px solid var(--orange); padding-bottom:5px;">EJERCICIO: Pila de Navegación</h3>
-</div>
-
-<p>Simula el botón "Atrás" de un navegador usando una pila:</p>
-
-<div class="code-exercise-desc">
-  <ul>
-    <li>Crea un <b>Stack&lt;String&gt;</b> para almacenar las URLs visitadas.</li>
-    <li>Implementa un método <code>visitar(String url)</code> que añada la URL a la pila.</li>
-    <li>Implementa un método <code>retroceder()</code> que extraiga y muestre la última URL visitada.</li>
-    <li>Controla que la pila no esté vacía antes de retroceder (usa <code>isEmpty()</code>).</li>
-  </ul>
-</div>`,
-    solucion: `import java.util.Stack;
-
-public class Navegador {
-    private Stack<String> historial = new Stack<>();
-
-    public void visitar(String url) {
-        historial.push(url);
-        System.out.println("Visitando: " + url);
-    }
-
-    public void retroceder() {
-        if (!historial.isEmpty()) {
-            String anterior = historial.pop();
-            System.out.println("Retrocediendo de: " + anterior);
-        } else {
-            System.out.println("No hay historial.");
-        }
-    }
-
-    public static void main(String[] args) {
-        Navegador nav = new Navegador();
-        nav.visitar("google.com");
-        nav.visitar("github.com");
-        nav.retroceder();
-    }
-}`,
-    criterios: ['Uso de Stack<String>', 'push() y pop()', 'Validación isEmpty()'],
-    checks: [
-      (c) => /Stack\s*<\s*String\s*>/i.test(c),
-      (c) => /\.push\s*\(/i.test(c) && /\.pop\s*\(\s*\)/i.test(c),
-      (c) => /\.isEmpty\s*\(\s*\)/i.test(c)
-    ]
-  },
-
-  {
-    id: 'ej_queue_1',
-    titulo: 'Ejercicio Queue — Gestión de Impresora',
-    nivel: '⭐⭐',
-    temas: ['Queue', 'LinkedList', 'FIFO'],
-    tiempo: '15 min',
-    enunciado: `
-<div class="exam-header">
-  <h3 style="color:var(--blue); border-bottom:2px solid var(--blue); padding-bottom:5px;">EJERCICIO: Cola de Impresión</h3>
-</div>
-
-<p>Gestiona los documentos enviados a una impresora compartida:</p>
-
-<div class="code-exercise-desc">
-  <ul>
-    <li>Usa una <b>Queue&lt;String&gt;</b> (implementada con <b>LinkedList</b>).</li>
-    <li>Añade tres documentos a la cola usando <code>offer()</code>.</li>
-    <li>Procesa (extrae) los documentos uno a uno usando <code>poll()</code> hasta que la cola esté vacía.</li>
-    <li>Muestra por consola el nombre del documento que se está imprimiendo en cada paso.</li>
-  </ul>
-</div>`,
-    solucion: `import java.util.LinkedList;
-import java.util.Queue;
-
-public class Impresora {
-    public static void main(String[] args) {
-        Queue<String> cola = new LinkedList<>();
-
-        cola.offer("Examen_Final.pdf");
-        cola.offer("CV_Juan.pdf");
-        cola.offer("Foto.jpg");
-
-        while (!cola.isEmpty()) {
-            String doc = cola.poll();
-            System.out.println("Imprimiendo: " + doc);
-        }
-    }
-}`,
-    criterios: ['Queue con LinkedList', 'offer() y poll()', 'Bucle while (!isEmpty())'],
-    checks: [
-      (c) => /Queue\s*<\s*String\s*>/i.test(c) && /LinkedList/i.test(c),
-      (c) => /\.offer\s*\(/i.test(c) && /\.poll\s*\(\s*\)/i.test(c),
-      (c) => /while\s*\(\s*!.*\.isEmpty/i.test(c)
     ]
   }
 ];
