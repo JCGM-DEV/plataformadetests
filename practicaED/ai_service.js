@@ -7,8 +7,13 @@ const AI_ENGINE = 'groq';
 const OLLAMA_URL = 'http://localhost:11434/api/generate'; // Standard Ollama endpoint
 const OLLAMA_MODEL = 'llama3';
 
+// Utility to sanitize HTML for AI prompt
+function _cleanHTML(html) {
+    if (!html) return '';
+    return html.replace(/<[^>]*>?/gm, '').replace(/\s+/g, ' ').trim();
+}
+
 function _K7() {
-    // Reusing the obfuscated Groq key from other labs
     const _v = [103,115,107,95,111,102,102,102,51,83,104,49,54,107,109,50,70,89,76,78,55,118,75,77,87,71,100,121,98,51,70,89,101,99,75,71,74,121,116,81,101,78,49,83,48,72,83,116,73,85,54,112,65,57,85,50];
     return _v.map(c => String.fromCharCode(c)).join("");
 }
@@ -104,10 +109,16 @@ Responde en español de forma profesional y constructiva.`;
         // Update UI grade if possible
         const notaMatch = feedback.match(/\[NOTA\]:\s*([\d.]+)/);
         if (notaMatch) {
-            const nota = notaMatch[1];
+            const nota = parseFloat(notaMatch[1]);
             const statusEl = document.getElementById('realtime-status');
             if (statusEl) {
                 statusEl.innerHTML = `Nota IA: <strong style="color:var(--green)">${nota}</strong>`;
+            }
+            
+            // Save to system so it contributes to global grade
+            if (typeof sectionScores !== 'undefined' && typeof activeSection !== 'undefined') {
+                sectionScores[activeSection] = nota;
+                if (typeof updateLiveGrade === 'function') updateLiveGrade();
             }
         }
 
@@ -155,7 +166,8 @@ async function requestSimAIFeedback(simId) {
 
     try {
         const lesson = LESSONS[simId];
-        const exerciseContext = lesson ? `EJERCICIO: ${lesson.title}\nENUNCIADO: ${lesson.subtitle}` : 'Diagrama externo';
+        const fullRequirement = lesson?.fullText ? `\nREQUISITOS DETALLADOS:\n${_cleanHTML(lesson.fullText)}` : '';
+        const exerciseContext = lesson ? `EJERCICIO: ${lesson.title}\nRESUMEN: ${lesson.subtitle}${fullRequirement}` : 'Diagrama externo';
 
         const prompt = `Actúa como un PROFESOR DE ENTORNOS DE DESARROLLO experto en UML.
 TE HAN ADJUNTO UNA IMAGEN PARA EVALUAR.
@@ -164,18 +176,19 @@ PASO 0 (CRÍTICO): Identifica el contenido de la imagen.
 Si la imagen NO es un diagrama UML (por ejemplo: es una captura de WhatsApp, un meme, una foto personal, texto sin formato de diagrama, etc.), DEBES asignar una nota de [NOTA]: 0 y explicar en [ERRORES] que el contenido no es un diagrama UML válido para la asignatura.
 
 SI ES UN DIAGRAMA UML:
-1. Analiza el contenido técnico.
+1. Analiza el contenido técnico y compáralo con los REQUISITOS DETALLADOS proporcionados.
 2. Identifica si el tipo de diagrama es correcto (Clases, Casos de Uso, Secuencia, etc) según el ejercicio.
 3. Evalúa la lógica y la notación UML (flechas, símbolos, multiplicidad, visibilidad).
+4. Sé RIGUROSO: Si faltan elementos clave mencionados en los requisitos, resta puntos proporcionalmente. No des un 8 por defecto si el diagrama es incompleto.
 
 ${exerciseContext}
 
 FORMATO DE RESPUESTA OBLIGATORIO:
-[NOTA]: Nota del 0 al 10.
-[ERRORES]: Lista de fallos o confirmación de que no es un diagrama.
-[COMENTARIO]: Feedback profesional.
+[NOTA]: Nota del 0 al 10 (con un decimal si es necesario).
+[ERRORES]: Lista detallada de fallos o confirmación de que no es un diagrama.
+[COMENTARIO]: Feedback profesional sobre la calidad del modelado.
 
-Responde en español de forma rigurosa.`;
+Responde en español de forma rigurosa y constructiva.`;
 
         // We use a standard Groq Vision model
         const userKey = (localStorage.getItem('groq_ai_key') || '').trim();
@@ -188,7 +201,7 @@ Responde en español de forma rigurosa.`;
                 'Authorization': `Bearer ${key}` 
             },
             body: JSON.stringify({ 
-                model: 'meta-llama/llama-4-scout-17b-16e-instruct', 
+                model: 'meta-llama/llama-4-maverick-17b-128e-instruct', 
                 messages: [{ 
                     role: "user", 
                     content: [
@@ -203,6 +216,11 @@ Responde en español de forma rigurosa.`;
         if (!res.ok) throw new Error(data.error?.message || `Error Groq Vision ${res.status}`);
         
         const feedback = data.choices[0].message.content;
+        
+        // DEBUG: log raw feedback to check what the AI actually returned
+        console.log("=== RAW AI FEEDBACK ===");
+        console.log(feedback);
+        console.log("=======================");
         
         // Show in simulation feedback board
         const board = document.getElementById('sim-feedback');
@@ -219,26 +237,37 @@ Responde en español de forma rigurosa.`;
         board.scrollIntoView({ behavior: 'smooth' });
 
         // Extract score and save to system
-        const notaRegex = /(?:\[NOTA\]|NOTA|Nota)\s*[:\-]?\s*([\d.,]+)/i;
+        // Tight regex: only match [NOTA]: followed immediately by the number
+        const notaRegex = /\[NOTA\]\s*:\s*([\d]+(?:[.,]\d+)?)/i;
         const notaMatch = feedback.match(notaRegex);
+        
+        console.log("Nota match result:", notaMatch);
         
         if (notaMatch) {
             let notaStr = notaMatch[1].replace(',', '.');
             const nota = parseFloat(notaStr);
             
-            if (typeof sectionScores !== 'undefined') {
-                // Use activeSection (e.g., 'sim-p1') instead of simId ('sim_vp_p1')
-                const scoreKey = (typeof activeSection !== 'undefined' && activeSection) ? activeSection : simId;
-                sectionScores[scoreKey] = nota;
-                
-                console.log(`Saved score ${nota} for key ${scoreKey}`);
-                
-                // Force marked as done and update UI
-                if (typeof markDone === 'function') markDone();
-                else if (typeof updateLiveGrade === 'function') updateLiveGrade();
-                
-                showToast(`Nota registrada: ${nota}/10`, 'success');
+            if (!isNaN(nota) && nota >= 0 && nota <= 10) {
+                if (typeof sectionScores !== 'undefined') {
+                    // Use activeSection (e.g., 'sim-p1') instead of simId ('sim_vp_p1')
+                    const scoreKey = (typeof activeSection !== 'undefined' && activeSection) ? activeSection : simId;
+                    sectionScores[scoreKey] = nota;
+                    
+                    console.log(`✅ Saved score ${nota} for key ${scoreKey}`);
+                    
+                    // Force marked as done and update UI
+                    if (typeof markDone === 'function') markDone();
+                    else if (typeof updateLiveGrade === 'function') updateLiveGrade();
+                    
+                    showToast(`Nota registrada: ${nota}/10`, 'success');
+                }
+            } else {
+                console.warn(`⚠️ Nota inválida extraída: "${notaStr}" → ${nota}`);
+                showToast('La IA devolvió una nota fuera de rango', 'warning');
             }
+        } else {
+            console.warn("⚠️ No se encontró [NOTA]: en la respuesta de la IA. Feedback completo:", feedback);
+            showToast('No se pudo extraer la nota automáticamente', 'warning');
         }
 
     } catch (err) {

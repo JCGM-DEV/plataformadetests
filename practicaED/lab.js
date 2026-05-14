@@ -1091,6 +1091,7 @@ function validateLabState() {
     feedback.className = 'lab-feedback-board success';
     document.getElementById('fb-msg').innerHTML = '<strong>¡Felicidades!</strong> El diagrama cumple con todos los requisitos del desafío. 🚀';
     status.innerHTML = '<span class="status-icon success">●</span> Correcto';
+    if (typeof markDone === 'function') markDone();
   } else if (hint) {
     feedback.classList.remove('hidden');
     feedback.className = 'lab-feedback-board info';

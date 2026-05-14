@@ -238,6 +238,13 @@ function markDone() {
     }
     updateProgress();
     updateLiveGrade();
+    
+    // If it's a lab and has no score yet, give it a default 10 (or it will be updated by AI)
+    if (activeSection.includes('-lab') && !sectionScores[activeSection]) {
+        sectionScores[activeSection] = 10;
+        updateLiveGrade();
+    }
+    
     showToast('¡Sección completada! ✓', 'success');
   }
 }
@@ -767,20 +774,23 @@ function updateLiveGrade() {
     }
   }
   
-  // Find simulations
-  const sims = sections.filter(s => s.type === 'simulation');
+  // Practicas: simulation or lab types
+  const sims = sections.filter(s => s.type === 'simulation' || s.type === 'lab');
   if (sims.length > 0) {
     let totalSimPoints = 0;
+    console.log("--- SIMULATION SCORING BREAKDOWN ---");
     sims.forEach(s => {
-      // Proportional: if grade is 7/10, contribute 0.7 of its weight
       const sScore = sectionScores[s.id] || 0;
       totalSimPoints += (sScore / 10); 
+      console.log(`Section ${s.id}: ${sScore}/10 (Contribution: ${(sScore/10/sims.length*6).toFixed(2)} pts)`);
     });
-    // totalSimPoints / sims.length gives the average % of completion
     simsScore = (totalSimPoints / sims.length) * 6;
+    console.log(`Total Simulation Points (weighted): ${simsScore.toFixed(2)} / 6.00`);
+    console.log("-------------------------------------");
   }
   
   const totalScore = quizScore + simsScore;
+  console.log(`FINAL GRADE CALCULATION: ${quizScore.toFixed(2)} (Quiz) + ${simsScore.toFixed(2)} (Sims) = ${totalScore.toFixed(2)}`);
   const gradeEl = document.getElementById('live-grade-value');
   if (gradeEl) {
     gradeEl.textContent = totalScore.toFixed(2);
