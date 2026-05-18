@@ -1,4 +1,4 @@
-# 🚀 Repaso Exámenes 1º DAW 2026 - Tech Hub Euroformac
+# 🚀 Repaso Exámenes 1º DAW 2026
 
 Plataforma interactiva de alto rendimiento diseñada para el estudio intensivo de los materiales académicos de 1º de DAW (Desarrollo de Aplicaciones Web).
 
@@ -9,7 +9,7 @@ Plataforma interactiva de alto rendimiento diseñada para el estudio intensivo d
 ## 📋 Características Principales
 
 *   **Motor V6 Professional**: Generación de simulacros de 30 preguntas aleatorias con 100% de coherencia contextual (distractores específicos por asignatura).
-*   **Banco Masivo de Datos**: Pool de 3.500 preguntas técnicas reales (500 por asignatura) cubriendo el 100% del temario de Euroformac:
+*   **Banco Masivo de Datos**: Pool de 3.500 preguntas técnicas reales (500 por asignatura) cubriendo el 100% del temario:
     *   Bases de Datos (SQL, Normalización, Transacciones ACID).
     *   Sistemas Informáticos (OSI, Redes, Linux, Windows Server).
     *   Programación (Java POO, Colecciones, Hilos).
@@ -26,4 +26,4 @@ Plataforma interactiva de alto rendimiento diseñada para el estudio intensivo d
 Solo visita el enlace de [GitHub Pages](https://JCGM-DEV.github.io/plataformadetests/) y selecciona la asignatura del simulacro que desees realizar. Cada test tiene un temporizador real de 1 hora.
 
 ---
-✨ Desarrollado para el **Tech Hub Euroformac** por **[JCGM.DEV](https://JCGM.dev)**.
+✨ Desarrollado por **[JCGM.DEV](https://JCGM.dev)**.

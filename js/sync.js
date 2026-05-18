@@ -1,5 +1,5 @@
 /**
- * TechHub Euroformac — Sync System
+ * Sync System
  * Handles synchronization between localStorage and Firebase Firestore
  */
 

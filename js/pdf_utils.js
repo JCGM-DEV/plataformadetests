@@ -1,6 +1,6 @@
 
 /**
- * TechHub Euroformac — DAW 2026 — pdf_utils.js
+ * DAW 2026 — pdf_utils.js
  * Utility to generate PDF versions of tests and simulations.
  */
 

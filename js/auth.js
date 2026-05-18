@@ -1,5 +1,5 @@
 /**
- * TechHub Euroformac — Auth System
+ * Auth System
  * Manages Firebase Authentication and Login UI
  */
 
@@ -8,9 +8,9 @@ const Auth = {
     // El usuario debe reemplazar esto con su propia configuración de la consola de Firebase
     config: {
         apiKey: "AIzaSyBnevCDXEbV7TdPtsW-gaO3XabkQUsAKi0",
-        authDomain: "techhub-examenes.firebaseapp.com",
-        projectId: "techhub-examenes",
-        storageBucket: "techhub-examenes.firebasestorage.app",
+        authDomain: "examenes.firebaseapp.com",
+        projectId: "examenes",
+        storageBucket: "examenes.firebasestorage.app",
         messagingSenderId: "255739838703",
         appId: "1:255739838703:web:512555d95445e14f821b1a"
     },
@@ -117,7 +117,7 @@ const Auth = {
                 <div class="auth-card">
                     <div class="auth-header">
                         <span class="logo-icon">🎓</span>
-                        <h2>TechHub<span>Sync</span></h2>
+                        <h2>App<span>Sync</span></h2>
                         <p id="auth-subtitle">Inicia sesión para sincronizar tu progreso</p>
                     </div>
                     <form id="auth-form" onsubmit="event.preventDefault(); Auth.handleAuthSubmit();">

@@ -1115,7 +1115,7 @@ h_1: {
       solution: `<?xml version="1.0" encoding="UTF-8"?>
 <curso>
   <nombre>Desarrollo Web</nombre>
-  <centro>Euroformac</centro>
+  <centro>Centro</centro>
   <modulos>
     <modulo><nombre>HTML</nombre><horas>50</horas></modulo>
     <modulo><nombre>XML</nombre><horas>40</horas></modulo>
@@ -1257,19 +1257,19 @@ h_1: {
     type: 'xml',
     exercises: [{
       id: 1, title: 'Entidad Centro',
-      desc: 'Define una entidad llamada "centro" con el valor "Euroformac" y úsala dentro del elemento "instituto".',
-      hint: '<!ENTITY centro "Euroformac"> ... &centro;',
+      desc: 'Define una entidad llamada "centro" con el valor "Centro" y úsala dentro del elemento "instituto".',
+      hint: '<!ENTITY centro "Centro"> ... &centro;',
       starter: `<?xml version="1.0" encoding="UTF-8"?>
 <!-- Define la entidad &centro; en la DTD -->
 `,
       solution: `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE instituto [
-  <!ENTITY centro "Euroformac">
+  <!ENTITY centro "Centro">
   <!ELEMENT instituto (#PCDATA)>
 ]>
 <instituto>&centro;</instituto>`,
       milestones: [
-        { id: 'ent', check: /<!ENTITY centro "Euroformac">/i, popup: 'Entidad definida.', instruction: 'Primero define la entidad: <!ENTITY centro "Euroformac">.' },
+        { id: 'ent', check: /<!ENTITY centro "Centro">/i, popup: 'Entidad definida.', instruction: 'Primero define la entidad: <!ENTITY centro "Centro">.' },
         { id: 'use', check: /&centro;/i, popup: 'Entidad utilizada.', instruction: 'Ahora usa la entidad dentro del elemento instituto con &centro;.' }
       ]
     }]
