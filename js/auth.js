@@ -52,9 +52,17 @@ const Auth = {
                     this.isAppInitialized = true;
                     init(); 
                 }
+
+                // Prompt user to select course (1º vs 2º DAW) if not selected this session
+                if (!sessionStorage.getItem('course_chosen_session')) {
+                    if (typeof openCourseSelectModal === 'function') {
+                        setTimeout(() => openCourseSelectModal(), 350);
+                    }
+                }
             } else {
                 this.currentUser = null;
                 this.isAppInitialized = false; // Reset on logout
+                sessionStorage.removeItem('course_chosen_session');
                 console.log('No user signed in.');
                 this.showAuthModal();
                 this.clearUserUI();
@@ -89,6 +97,7 @@ const Auth = {
 
     async logout() {
         if (confirm('¿Cerrar sesión? Los datos locales se mantendrán pero no se sincronizarán hasta que vuelvas a entrar.')) {
+            sessionStorage.removeItem('course_chosen_session');
             await this.auth.signOut();
             window.location.reload(); // Hard reload to clear app state
         }

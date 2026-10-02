@@ -366,7 +366,8 @@ function switchDash(sectionId) {
         'planner': 'Planificador de Estudio',
         'progreso': 'Mi Análisis de Progreso',
         'fallos': 'Repaso de Errores',
-        'ranking': '🏆 Ranking Global de Estudiantes'
+        'ranking': '🏆 Ranking Global de Estudiantes',
+        'lab': '💻 Taller de Código y Retos Interactivos'
     };
     const titleEl = document.getElementById('current-section-title');
     if (titleEl) titleEl.textContent = titles[sectionId] || 'Dashboard';
@@ -393,45 +394,154 @@ function switchDash(sectionId) {
     if (sectionId === 'progreso') renderProgress();
     if (sectionId === 'fallos') renderFallosSection();
     if (sectionId === 'ranking') renderRanking();
+    if (sectionId === 'lab') renderLabDashboard();
+}
+
+// ─── COURSE MANAGEMENT (1º DAW vs 2º DAW) ─────────────────────────
+function applyDawCourse(courseKey, silent = false) {
+    APP_STATE.currentCourse = courseKey;
+
+    if (courseKey === 'daw1') {
+        // 1º DAW Data (7 subjects, ~1,014 questions, 1º syllabus)
+        if (typeof SUBJECTS_DATA_DAW1 !== 'undefined') {
+            APP_STATE.subjects = SUBJECTS_DATA_DAW1;
+        }
+        if (typeof TEST_BANK !== 'undefined') {
+            QUESTION_POOL = TEST_BANK;
+        }
+        if (typeof SYLLABUS_REGISTRY_DATA !== 'undefined') {
+            APP_STATE.syllabusExams = SYLLABUS_REGISTRY_DATA;
+        }
+        
+        // Update DOM
+        document.title = "Repaso Exámenes 1º DAW 2026";
+        const logoEl = document.getElementById('sidebar-logo-year');
+        if (logoEl) logoEl.innerHTML = '1º<span>Daw</span>';
+        
+        const badgeBtn = document.getElementById('current-course-badge');
+        if (badgeBtn) badgeBtn.innerHTML = '📚 1º DAW <span style="font-size:0.8rem; opacity:0.8; margin-left:4px;">⇄</span>';
+        
+        const card1 = document.getElementById('choice-card-daw1');
+        const card2 = document.getElementById('choice-card-daw2');
+        const badge1 = document.getElementById('badge-daw1');
+        const badge2 = document.getElementById('badge-daw2');
+        if (card1 && card2) {
+            card1.classList.add('recommended');
+            card2.classList.remove('recommended');
+            if (badge1) { badge1.className = 'course-choice-badge current'; badge1.textContent = 'Curso Activo'; }
+            if (badge2) { badge2.className = 'course-choice-badge'; badge2.textContent = '2º DAW'; }
+        }
+    } else {
+        // 2º DAW Data (9 subjects, 2,352 questions, 2º syllabus)
+        if (typeof SUBJECTS_DATA_DAW2 !== 'undefined') {
+            APP_STATE.subjects = SUBJECTS_DATA_DAW2;
+        } else if (typeof SUBJECTS_DATA !== 'undefined') {
+            APP_STATE.subjects = SUBJECTS_DATA;
+        }
+        if (typeof TEST_BANK_DATA !== 'undefined') {
+            QUESTION_POOL = TEST_BANK_DATA;
+        } else if (typeof TEST_BANK_DWEC !== 'undefined') {
+            QUESTION_POOL = {
+                dwec:                        TEST_BANK_DWEC      || [],
+                digitalizacion:              TEST_BANK_DIG       || [],
+                diseno_interfaces_web:       TEST_BANK_DIW       || [],
+                dwes:                        TEST_BANK_DWES      || [],
+                python:                      TEST_BANK_PYTHON    || [],
+                despliegue_aplicaciones_web: TEST_BANK_DAW       || [],
+                ingles:                      TEST_BANK_INGLES    || [],
+                empleabilidad_2:             TEST_BANK_IPE       || [],
+                sostenibilidad:              TEST_BANK_SOST      || [],
+            };
+        }
+        if (typeof SYLLABUS_REGISTRY_DAW2 !== 'undefined') {
+            APP_STATE.syllabusExams = SYLLABUS_REGISTRY_DAW2;
+        }
+        
+        // Update DOM
+        document.title = "Repaso Exámenes 2º DAW 2026";
+        const logoEl = document.getElementById('sidebar-logo-year');
+        if (logoEl) logoEl.innerHTML = '2º<span>Daw</span>';
+        
+        const badgeBtn = document.getElementById('current-course-badge');
+        if (badgeBtn) badgeBtn.innerHTML = '🚀 2º DAW <span style="font-size:0.8rem; opacity:0.8; margin-left:4px;">⇄</span>';
+        
+        const card1 = document.getElementById('choice-card-daw1');
+        const card2 = document.getElementById('choice-card-daw2');
+        const badge1 = document.getElementById('badge-daw1');
+        const badge2 = document.getElementById('badge-daw2');
+        if (card1 && card2) {
+            card1.classList.remove('recommended');
+            card2.classList.add('recommended');
+            if (badge1) { badge1.className = 'course-choice-badge'; badge1.textContent = '1º DAW'; }
+            if (badge2) { badge2.className = 'course-choice-badge current'; badge2.textContent = 'Curso Activo'; }
+        }
+    }
+
+    if (!silent) {
+        console.log(`🎓 Modo de Curso activo: ${courseKey.toUpperCase()} (${APP_STATE.subjects.length} asignaturas, ${Object.values(QUESTION_POOL).flat().length} preguntas)`);
+    }
+}
+
+function setDawCourse(courseKey) {
+    localStorage.setItem('selected_daw_course', courseKey);
+    sessionStorage.setItem('course_chosen_session', 'true');
+    applyDawCourse(courseKey);
+    
+    // Refresh all active views
+    renderProgress();
+    renderAcademicPlanner();
+    renderTutorMessage();
+    
+    const activeSection = document.querySelector('.dash-section:not(.hidden)');
+    if (activeSection) {
+        const id = activeSection.id.replace('dash-section-', '');
+        if (id === 'academia') renderAcademia();
+        else if (id === 'study-guide') renderStudyGuide();
+        else if (id === 'flashcards') renderFlashcardSubjects();
+        else if (id === 'overview') switchDash('overview');
+        else if (id === 'progreso') renderProgress();
+        else if (id === 'fallos') renderFallosSection();
+    }
+    
+    closeCourseSelectModal();
+}
+
+function openCourseSelectModal() {
+    const modal = document.getElementById('course-select-modal');
+    if (!modal) return;
+    
+    const current = APP_STATE.currentCourse || localStorage.getItem('selected_daw_course') || 'daw2';
+    applyDawCourse(current, true);
+    
+    modal.classList.add('active');
+}
+
+function closeCourseSelectModal() {
+    const modal = document.getElementById('course-select-modal');
+    if (modal) modal.classList.remove('active');
 }
 
 // ─── INIT ────────────────────────────────────────────────────────
-// ─── INIT ────────────────────────────────────────────────────────
 async function init() {
     try {
-        // Use Global Data (loaded via script tags in index.html to avoid CORS/Local File issues)
-        if (typeof SUBJECTS_DATA !== 'undefined') APP_STATE.subjects = SUBJECTS_DATA;
-        if (typeof TEST_BANK_DATA !== 'undefined') QUESTION_POOL = TEST_BANK_DATA;
-        if (typeof SYLLABUS_REGISTRY_DATA !== 'undefined') APP_STATE.syllabusExams = SYLLABUS_REGISTRY_DATA;
-        if (typeof STUDY_SUMMARIES_DATA !== 'undefined') APP_STATE.summaries = STUDY_SUMMARIES_DATA;
+        const savedCourse = localStorage.getItem('selected_daw_course') || 'daw2';
+        applyDawCourse(savedCourse, true);
 
-        // Fallback or data integrity check
-        if (APP_STATE.subjects.length === 0) {
-            console.warn('Data not found in global variables, attempting fallback fetch...');
-            const v = '?v=' + Date.now();
-            const [subRes, qRes, sylRes] = await Promise.all([
-                fetch('data/subjects.json' + v).catch(() => null),
-                fetch('data/test_bank.json' + v).catch(() => null),
-                fetch('data/syllabus_registry.json' + v).catch(() => null),
-                fetch('data/study_summaries.json' + v).then(r => r.json()).then(d => APP_STATE.summaries = d).catch(() => {})
-            ]);
-            
-            if (subRes && subRes.ok) APP_STATE.subjects = await subRes.json();
-            if (qRes && qRes.ok) QUESTION_POOL = await qRes.json();
-            if (sylRes && sylRes.ok) APP_STATE.syllabusExams = await sylRes.json();
-        }
+        // Study summaries
+        if (typeof STUDY_SUMMARIES_DATA !== 'undefined') APP_STATE.summaries = STUDY_SUMMARIES_DATA;
 
         renderProgress();
         renderAcademicPlanner();
         renderTutorMessage();
         restoreStudySession();
         switchDash('overview');
-        console.log('App initialized successfully | Data loaded from:', (typeof SUBJECTS_DATA !== 'undefined' ? 'Global JS' : 'Fetch API'));
+        console.log(`✅ ${APP_STATE.currentCourse.toUpperCase()} — App lista | ${APP_STATE.subjects.length} asignaturas | ${Object.values(QUESTION_POOL).flat().length} preguntas | ${APP_STATE.syllabusExams.length} temas`);
     } catch (err) {
         console.error('Error loading app data:', err);
         switchDash('overview');
     }
 }
+
 
 
 
@@ -491,6 +601,10 @@ function renderAcademia() {
                                         <button class="theme-dropdown-item" onclick="startSyllabusExam('${t.id}')">
                                             <span class="icon">✍️</span> Hacer Test
                                         </button>
+                                        ${typeof LAB_CHALLENGES !== 'undefined' && LAB_CHALLENGES[subject.id]?.some(c => c.unit === t.unit) ? `
+                                        <button class="theme-dropdown-item" onclick="openUnitChallenge('${subject.id}', ${t.unit})">
+                                            <span class="icon">💻</span> Reto de Código
+                                        </button>` : ''}
                                         <button class="theme-dropdown-item" onclick="downloadThemePDF('${subject.id}', ${t.unit})">
                                             <span class="icon">🖨️</span> Descargar PDF
                                         </button>
@@ -1472,22 +1586,46 @@ async function startSyllabusExam(syllabusId) {
     if (!examInfo) return;
     try {
         let questions = [];
+
+        // ── Priority 1: inline SYLLABUS_RAW_DATA (legacy 1st year) ──
         if (typeof SYLLABUS_RAW_DATA !== 'undefined' && SYLLABUS_RAW_DATA[syllabusId]) {
             questions = SYLLABUS_RAW_DATA[syllabusId];
-        } else {
+
+        // ── Priority 2: fetch .txt file (legacy 1st year) ──────────
+        } else if (examInfo.file) {
             const res = await fetch(examInfo.file);
             const text = await res.text();
             questions = parseTxtExam(text, syllabusId);
-        }
-        if (questions.length === 0) { alert('No se han podido extraer preguntas del archivo.'); return; }
 
-        APP_STATE.currentExam = { ...examInfo, id: syllabusId };
-        APP_STATE.currentUnit = examInfo.unit || null; // Set unit to sync counting
+        // ── Priority 3: QUESTION_POOL filtered by subject + unit ────
+        //    (used by ALL 2nd-year subjects that have no .txt files)
+        } else {
+            const subjectPool = QUESTION_POOL[examInfo.subject_id] || [];
+            const unitNum = examInfo.unit;
+            questions = subjectPool
+                .filter(q => q.unit === unitNum)
+                .map(prepareQuestion);
+
+            if (questions.length === 0) {
+                // If still zero, offer all questions for the subject
+                questions = subjectPool.map(prepareQuestion);
+            }
+        }
+
+        if (questions.length === 0) {
+            alert(`No hay preguntas disponibles para "${examInfo.name}".\nVuelve pronto, estamos ampliando el banco de preguntas.`);
+            return;
+        }
+
+        APP_STATE.currentExam   = { ...examInfo, id: syllabusId };
+        APP_STATE.currentUnit   = examInfo.unit || null;
         APP_STATE.isSyllabusMode = true;
-        APP_STATE.examQuestions = questions.map(prepareQuestion);
+        APP_STATE.examQuestions = (examInfo.file || (typeof SYLLABUS_RAW_DATA !== 'undefined' && SYLLABUS_RAW_DATA[syllabusId]))
+            ? questions.map(prepareQuestion)
+            : questions; // already prepared in Priority 3
         APP_STATE.currentQuestionIndex = 0;
         APP_STATE.answers = [];
-        APP_STATE.timer = questions.length * 90;
+        APP_STATE.timer   = questions.length * 90;
 
         document.getElementById('exam-subject-label').textContent = `📚 ${examInfo.name}`;
         showView('exam');
@@ -1495,9 +1633,10 @@ async function startSyllabusExam(syllabusId) {
         startTimer();
     } catch (err) {
         console.error(err);
-        alert('Error al cargar el archivo de examen.');
+        alert('Error al cargar el examen. Comprueba la consola para más detalles.');
     }
 }
+
 
 function exitExam() {
     if (!confirm('¿Seguro que quieres salir? Se perderá el progreso.')) return;
@@ -3386,5 +3525,112 @@ document.addEventListener('click', (e) => {
         }
     });
 });
+
+// ─── TALLER DE CÓDIGO INTERACTIVO (LAB DASHBOARD) ─────────────────────────
+function renderLabDashboard() {
+    const grid = document.getElementById('lab-challenges-grid');
+    if (!grid) return;
+
+    if (typeof LAB_CHALLENGES === 'undefined') {
+        grid.innerHTML = '<div class="empty-state"><p>Cargando banco de retos...</p></div>';
+        return;
+    }
+
+    const allChallenges = [];
+    Object.entries(LAB_CHALLENGES).forEach(([subId, list]) => {
+        list.forEach(c => allChallenges.push({ ...c, subjectId: subId }));
+    });
+
+    // Stats
+    const progressMap = JSON.parse(localStorage.getItem('lab_progress') || '{}');
+    const completedCount = allChallenges.filter(c => progressMap[c.id]?.success).length;
+
+    const badgeEl = document.getElementById('lab-stats-completed-badge');
+    if (badgeEl) {
+        badgeEl.textContent = `${completedCount} / ${allChallenges.length}`;
+    }
+
+    const diffColors = {
+        basic: { bg: 'rgba(34,211,238,0.15)', color: '#22d3ee', text: 'Básico' },
+        intermediate: { bg: 'rgba(245,158,11,0.15)', color: '#f59e0b', text: 'Intermedio' },
+        advanced: { bg: 'rgba(239,68,68,0.15)', color: '#ef4444', text: 'Avanzado' }
+    };
+
+    const subjectLabels = {
+        python: 'Python',
+        dwec: 'DWEC (JavaScript)',
+        dwes: 'DWES (PHP)'
+    };
+
+    const langLabels = {
+        python: '🐍 Python',
+        javascript: '🟨 JavaScript',
+        php: '🐘 PHP'
+    };
+
+    grid.innerHTML = allChallenges.map(c => {
+        const isCompleted = !!progressMap[c.id]?.success;
+        const diff = diffColors[c.difficulty] || diffColors.basic;
+        const subLabel = subjectLabels[c.subjectId] || c.subjectId.toUpperCase();
+        const plainDesc = (c.description || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+
+        return `
+        <div class="lab-challenge-card ${isCompleted ? 'completed' : ''}" data-subject="${c.subjectId}" onclick="openLabById('${c.id}')">
+            <div class="cc-unit">UD${c.unit} · ${subLabel}</div>
+            <div class="cc-title">${c.title}</div>
+            <div class="cc-desc">${plainDesc}</div>
+            <div class="cc-footer">
+                <span class="cc-lang">${langLabels[c.language] || c.language}</span>
+                <span class="cc-diff" style="background:${diff.bg}; color:${diff.color};">${diff.text}</span>
+            </div>
+        </div>`;
+    }).join('');
+}
+
+function filterLabCards(filterSubject, btn) {
+    document.querySelectorAll('.lab-filter-tab').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+
+    const cards = document.querySelectorAll('.lab-challenge-card');
+    cards.forEach(card => {
+        if (filterSubject === 'all' || card.getAttribute('data-subject') === filterSubject) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+function openLabById(id) {
+    if (typeof getLabChallengeById === 'function') {
+        const ch = getLabChallengeById(id);
+        if (ch && typeof openLab === 'function') {
+            openLab(ch);
+            return;
+        }
+    }
+    // Fallback search
+    if (typeof LAB_CHALLENGES !== 'undefined') {
+        for (const list of Object.values(LAB_CHALLENGES)) {
+            const ch = list.find(c => c.id === id);
+            if (ch && typeof openLab === 'function') {
+                openLab(ch);
+                return;
+            }
+        }
+    }
+}
+
+function openUnitChallenge(subjectId, unit) {
+    if (typeof LAB_CHALLENGES !== 'undefined' && LAB_CHALLENGES[subjectId]) {
+        const ch = LAB_CHALLENGES[subjectId].find(c => c.unit === unit);
+        if (ch && typeof openLab === 'function') {
+            openLab(ch);
+            return;
+        }
+    }
+    // Switch to lab tab if specific unit challenge not found
+    switchDash('lab');
+}
 
 

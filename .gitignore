@@ -6,3 +6,5 @@ node_modules/
 COHERENCIA_REPORT*.json
 MISALIGNMENT_REPORT*.json
 /tmp/
+*.pdf
+pdfs DAW 2/

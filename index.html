@@ -6,12 +6,19 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>Repaso Examenes 1º DAW 2026</title>
+    <title>Repaso Examenes 2º DAW 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css?v=8">
     <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/lab.css">
+    <!-- CodeMirror -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/scroll/simplescrollbars.min.css">
+    <!-- Fira Code font -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <meta name="description" content="Prepárate para tus exámenes con simulacros interactivos basados en tus materiales de estudio.">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
     
@@ -31,9 +38,33 @@
     <script src="data/syllabus_registry.js"></script>
     <script src="data/study_summaries.js"></script>
     <script src="data/pdf_map.js"></script>
+    <script src="data/lab_challenges.js?v=2.2"></script>
+    <script src="data/test_bank_dwec.js"></script>
+    <script src="data/test_bank_dig.js"></script>
+    <script src="data/test_bank_diw.js"></script>
+    <script src="data/test_bank_dwes.js"></script>
+    <script src="data/test_bank_python.js"></script>
+    <script src="data/test_bank_despliegue.js"></script>
+    <script src="data/test_bank_ingles.js"></script>
+    <script src="data/test_bank_ipe.js"></script>
+    <script src="data/test_bank_sost.js"></script>
+    <!-- Unified bank + DAW2 syllabus (must load AFTER individual banks) -->
+    <script src="data/test_bank_daw2.js"></script>
+    <script src="data/syllabus_registry_daw2.js"></script>
     <!-- PDF Generation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="js/pdf_utils.js"></script>
+    <!-- CodeMirror -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/php/php.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/scroll/simplescrollbars.min.js"></script>
+    <!-- Pyodide (Python in browser) -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js" defer></script>
 </head>
 <body class="dark-theme">
 
@@ -45,7 +76,7 @@
                 <div class="sidebar-header">
                     <div class="logo">
                         <span class="logo-icon">🎓</span>
-                        <h1>1º<span>Daw</span></h1>
+                        <h1 id="sidebar-logo-year">2º<span>Daw</span></h1>
                     </div>
                 </div>
                 
@@ -55,6 +86,9 @@
                     </a>
                     <a href="javascript:void(0)" onclick="switchDash('academia')" class="side-link" data-section="academia">
                         <span class="side-icon">🎓</span> Academia
+                    </a>
+                    <a href="javascript:void(0)" onclick="switchDash('lab')" class="side-link" data-section="lab">
+                        <span class="side-icon">💻</span> Taller de Código
                     </a>
                     <a href="javascript:void(0)" onclick="switchDash('planner')" class="side-link" data-section="planner">
                         <span class="side-icon">📅</span> Planificador
@@ -86,6 +120,9 @@
                         <h2 id="current-section-title">Resumen Académico</h2>
                     </div>
                     <div class="top-bar-actions">
+                        <button id="current-course-badge" onclick="openCourseSelectModal()" class="btn-course-switcher" title="Cambiar de curso (1º DAW / 2º DAW)">
+                            🚀 2º DAW <span style="font-size:0.8rem; opacity:0.8; margin-left:4px;">⇄</span>
+                        </button>
                         <div class="progress-info">
                             <span class="label" id="global-avg-label">Media General</span>
                             <div class="progress-bar-small"><div class="fill" id="global-progress-fill" style="width:0%"></div></div>
@@ -124,6 +161,36 @@
                         <div id="academia-grid" class="grid-container academia-grid">
                             <!-- Unified subject cards will be rendered here -->
                         </div>
+                    </div>
+
+                    <!-- Coding Lab Section -->
+                    <div id="dash-section-lab" class="dash-section hidden">
+                        <div class="hero" style="margin-bottom:1.5rem; text-align:left; background:linear-gradient(135deg, rgba(30,41,59,0.95), rgba(15,23,42,0.98)); border:1px solid rgba(168,85,247,0.35); box-shadow:0 10px 30px rgba(0,0,0,0.3);">
+                            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.25rem;">
+                                <div>
+                                    <span style="display:inline-block; font-size:0.75rem; font-weight:800; color:#c084fc; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.35rem; background:rgba(168,85,247,0.15); padding:0.2rem 0.6rem; border-radius:20px;">⚡ Práctica Interactiva 2º DAW</span>
+                                    <h2 style="font-size:1.75rem; font-weight:800; color:#f8fafc; margin-bottom:0.4rem;">💻 Taller de Código y Desafíos</h2>
+                                    <p style="color:#94a3b8; max-width:650px; font-size:0.92rem; margin:0; line-height:1.5;">
+                                        Aprende programando. Resuelve problemas con editor CodeMirror integrado, tests automatizados instantáneos, pistas progresivas y validación en PHP 8.3, JavaScript & Python.
+                                    </p>
+                                </div>
+                                <div style="background:rgba(255,255,255,0.04); padding:0.9rem 1.4rem; border-radius:12px; border:1px solid rgba(255,255,255,0.08); text-align:center; min-width:140px;">
+                                    <div id="lab-stats-completed-badge" style="font-size:1.75rem; font-weight:800; color:#4ade80;">0 / 66</div>
+                                    <div style="font-size:0.75rem; color:#94a3b8; text-transform:uppercase; font-weight:600;">Retos Superados</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Filter Tabs -->
+                        <div style="display:flex; gap:0.6rem; margin-bottom:1.25rem; flex-wrap:wrap;" id="lab-filter-tabs">
+                            <button class="btn-secondary lab-filter-tab active" onclick="filterLabCards('all', this)">🌐 Todos los retos</button>
+                            <button class="btn-secondary lab-filter-tab" onclick="filterLabCards('python', this)" id="lab-tab-python">🐍 Python (22)</button>
+                            <button class="btn-secondary lab-filter-tab" onclick="filterLabCards('dwec', this)" id="lab-tab-dwec">🟨 DWEC - JavaScript (22)</button>
+                            <button class="btn-secondary lab-filter-tab" onclick="filterLabCards('dwes', this)" id="lab-tab-dwes">🐘 DWES - PHP (22)</button>
+                        </div>
+
+                        <!-- Challenges Grid -->
+                        <div id="lab-challenges-grid" class="lab-challenges-grid"></div>
                     </div>
 
                     <!-- Planner Section -->
@@ -249,26 +316,14 @@
                 
                 <div style="display:flex; flex-direction:column; gap:1rem;">
                     <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.25rem;">
-                        <h3 style="color: #60a5fa; margin-top:0; margin-bottom: 0.5rem; font-size: 1.1rem; display:flex; align-items:center; gap:0.5rem;">👨‍💻 Programación</h3>
-                        <p style="margin: 0; font-size:0.95rem; color:#e2e8f0;"><strong>Estructura:</strong> Cuestionario basado en el syllabus unificado.</p>
-                        <p style="margin: 0.25rem 0 0 0; font-size:0.95rem; color: #f87171;"><strong>Penalización ÚNICA:</strong> 2 errores restan 1 acierto (-0.50 pts por fallo). Blanco no resta.</p>
+                        <h3 style="color: #60a5fa; margin-top:0; margin-bottom: 0.5rem; font-size: 1.1rem; display:flex; align-items:center; gap:0.5rem;">🐍 Python y Desarrollo Web</h3>
+                        <p style="margin: 0; font-size:0.95rem; color:#e2e8f0;"><strong>Estructura:</strong> Prácticas interactivas y simulacros de código.</p>
+                        <p style="margin: 0.25rem 0 0 0; font-size:0.95rem; color: #a3e635;"><strong>Novedad:</strong> Mayor interactividad para programar directamente en el navegador.</p>
                     </div>
 
                     <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.25rem;">
-                        <h3 style="color: #34d399; margin-top:0; margin-bottom: 0.5rem; font-size: 1.1rem; display:flex; align-items:center; gap:0.5rem;">🖥️ Sistemas Informáticos</h3>
-                        <p style="margin: 0; font-size:0.95rem; color:#e2e8f0;"><strong>Estructura:</strong> 60 preguntas de simulacro (30 Teóricas + 30 Prácticas de Shell/Comandos).</p>
-                        <p style="margin: 0.25rem 0 0 0; font-size:0.95rem; color: #fbbf24;"><strong>Penalización Normal:</strong> 3 errores restan 1 acierto (-0.33 pts por fallo). Blanco no resta.</p>
-                    </div>
-
-                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.25rem;">
-                        <h3 style="color: #f472b6; margin-top:0; margin-bottom: 0.5rem; font-size: 1.1rem; display:flex; align-items:center; gap:0.5rem;">💼 Empleabilidad (FOL)</h3>
-                        <p style="margin: 0; font-size:0.95rem; color:#e2e8f0;"><strong>Estructura:</strong> 50 preguntas seleccionadas de la batería oficial.</p>
-                        <p style="margin: 0.25rem 0 0 0; font-size:0.95rem; color: #a3e635;"><strong>Sin penalización:</strong> Los errores no restan puntos (0.00 pts por fallo).</p>
-                    </div>
-
-                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.25rem;">
-                        <h3 style="color: #a78bfa; margin-top:0; margin-bottom: 0.5rem; font-size: 1.1rem; display:flex; align-items:center; gap:0.5rem;">☁️ Cloud Computing, 📄 Marcas, 🗄️ BBDD, 🛠️ Entornos</h3>
-                        <p style="margin: 0; font-size:0.95rem; color:#e2e8f0;"><strong>Estructura:</strong> Tests generados desde baterías de preguntas completas (tiempo de 1 min por pregunta).</p>
+                        <h3 style="color: #34d399; margin-top:0; margin-bottom: 0.5rem; font-size: 1.1rem; display:flex; align-items:center; gap:0.5rem;">📚 Resto de asignaturas</h3>
+                        <p style="margin: 0; font-size:0.95rem; color:#e2e8f0;"><strong>Estructura:</strong> Cuestionarios basados en el nuevo temario de 2º.</p>
                         <p style="margin: 0.25rem 0 0 0; font-size:0.95rem; color: #fbbf24;"><strong>Penalización Normal:</strong> 3 errores restan 1 acierto (-0.33 pts por fallo). Blanco no resta.</p>
                     </div>
                 </div>
@@ -345,6 +400,46 @@
     </button>
 
 
+    <!-- ── COURSE SELECTION MODAL (1º vs 2º DAW) ── -->
+    <div id="course-select-modal" class="auth-overlay">
+        <div class="course-select-card">
+            <button class="course-select-close" onclick="closeCourseSelectModal()" title="Cerrar">&times;</button>
+            <div class="course-select-header">
+                <span class="course-select-icon">🎓</span>
+                <h2>Selecciona tu Curso</h2>
+                <p>Elige el año académico al que deseas acceder. Todo tu progreso, estadísticas y exámenes de ambos cursos se conservan intactos.</p>
+            </div>
+            <div class="course-cards-container">
+                <!-- 1º DAW CARD -->
+                <div class="course-choice-card" onclick="setDawCourse('daw1')" id="choice-card-daw1">
+                    <span class="course-choice-badge" id="badge-daw1">Curso Anterior</span>
+                    <div class="course-choice-icon">📚</div>
+                    <h3>1º de DAW</h3>
+                    <p class="course-choice-desc">Fundamentos de desarrollo web, programación Java/Python, bases de datos y sistemas informáticos.</p>
+                    <div class="course-choice-meta">
+                        <span>7 Asignaturas</span>
+                        <span>1.014+ Preguntas</span>
+                        <span>Labs Prácticos</span>
+                    </div>
+                    <button class="btn-select-course">Acceder a 1º DAW</button>
+                </div>
+                <!-- 2º DAW CARD -->
+                <div class="course-choice-card recommended" onclick="setDawCourse('daw2')" id="choice-card-daw2">
+                    <span class="course-choice-badge current" id="badge-daw2">Curso Actual 2026</span>
+                    <div class="course-choice-icon">🚀</div>
+                    <h3>2º de DAW</h3>
+                    <p class="course-choice-desc">Desarrollo avanzado: DWEC, DWES (PHP 8.3), Python, DIW, Despliegue y Taller de Código interactivo.</p>
+                    <div class="course-choice-meta">
+                        <span>9 Asignaturas</span>
+                        <span>2.352 Preguntas</span>
+                        <span>66 Retos de Código</span>
+                    </div>
+                    <button class="btn-select-course primary">Acceder a 2º DAW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- ── LAB MODAL ────────────────────────────────────────────── -->
     <div id="lab-modal" class="modal hidden">
         <div class="modal-content lab-modal-content">
@@ -356,7 +451,8 @@
     <div id="study-session-bar" class="study-session-bar hidden"></div>
 
 
-    <script src="js/app.js?v=removal"></script>
+    <script src="js/app.js?v=2.2"></script>
     <script src="js/assistant.js?v=2"></script>
+    <script src="js/lab_engine.js?v=2.2"></script>
 </body>
 </html>
