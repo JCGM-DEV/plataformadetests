@@ -2,34 +2,9 @@
 // DAW 2026 — app.js
 // ═══════════════════════════════════════════════════════════════
 
-const APP_STATE = {
-    subjects: [],
-    syllabusExams: [],
-    currentExam: null,
-    currentUnit: null,
-    isSyllabusMode: false,
-    examQuestions: [],
-    currentQuestionIndex: 0,
-    answers: [],
-    timer: 3600,
-    timerInterval: null,
-    summaries: {},
-    isReviewing: false,
-    // flashcard
-    fcFlipped: false,
-    isFinishing: false,
-    isReview: false,
-    studySession: { 
-        active: false, 
-        subjectId: null, 
-        startTime: null, 
-        elapsed: 0, 
-        timerInterval: null 
-    }
-};
-
-let QUESTION_POOL = {};
-let learningChart = null;
+var APP_STATE = window.APP_STATE || {};
+var QUESTION_POOL = window.QUESTION_POOL || {};
+var learningChart = window.learningChart || null;
 
 // ─── STORAGE KEYS ───────────────────────────────────────────────
 const HISTORY_KEY   = 'exam_history_v2';

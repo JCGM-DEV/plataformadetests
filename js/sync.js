@@ -1,6 +1,6 @@
 /**
- * Sync System
- * Handles synchronization between localStorage and Firebase Firestore
+ * sync.js
+ * Servicio de sincronización bidireccional entre almacenamiento local (StorageService) y Firebase Firestore.
  */
 
 const Sync = {
@@ -8,7 +8,7 @@ const Sync = {
     userId: null,
     isSyncing: false,
 
-    // Keys that will be synced to Firestore
+    // Colección de claves sincronizables
     SYNC_KEYS: [
         'exam_history_v2',
         'fallos_v2',
@@ -18,20 +18,31 @@ const Sync = {
         'libreta_errores_v1'
     ],
 
+    /**
+     * Inicializa el sistema de sincronización con la instancia de Firestore y el UID del usuario
+     * @param {Object} db
+     * @param {string} userId
+     */
     init(db, userId) {
         this.db = db;
         this.userId = userId;
-        console.log('Sync system initialized for user:', userId);
+        console.log('[Sync] Inicializado para el usuario:', userId);
     },
 
     /**
-     * Set data locally and in the cloud
+     * Guarda un dato en la caché local y, si el usuario está autenticado, en Firestore
+     * @param {string} key
+     * @param {*} value
      */
     async set(key, value) {
-        // Save to localStorage (cache)
-        localStorage.setItem(key, JSON.stringify(value));
+        // Almacenamiento local mediante StorageService
+        if (typeof StorageService !== 'undefined') {
+            StorageService.set(key, value);
+        } else {
+            localStorage.setItem(key, JSON.stringify(value));
+        }
 
-        // If authenticated, save to Firestore
+        // Sincronización remota
         if (this.db && this.userId && this.SYNC_KEYS.includes(key)) {
             try {
                 const docRef = this.db.collection('users').doc(this.userId).collection('data').doc(key);
@@ -40,46 +51,58 @@ const Sync = {
                     updatedAt: firebase.firestore.FieldValue.serverTimestamp()
                 });
             } catch (error) {
-                console.error(`Error syncing ${key} to Firestore:`, error);
+                console.error(`[Sync] Error sincronizando ${key} en Firestore:`, error);
             }
         }
     },
 
     /**
-     * Get data (prefers local cache for speed, but auth.js will handle initial pull)
+     * Recupera un valor desde la caché local con valor por defecto
+     * @param {string} key
+     * @param {*} defaultValue
+     * @returns {*}
      */
     get(key, defaultValue = null) {
+        if (typeof StorageService !== 'undefined') {
+            return StorageService.get(key, defaultValue);
+        }
         const local = localStorage.getItem(key);
         if (!local) return defaultValue;
         try {
             return JSON.parse(local);
-        } catch (error) {
-            console.error(`Error parsing localStorage key "${key}":`, error);
+        } catch {
             return defaultValue;
         }
     },
 
     /**
-     * Remove data
+     * Elimina un dato tanto en local como en la nube
+     * @param {string} key
      */
     async remove(key) {
-        localStorage.removeItem(key);
+        if (typeof StorageService !== 'undefined') {
+            StorageService.remove(key);
+        } else {
+            localStorage.removeItem(key);
+        }
+
         if (this.db && this.userId && this.SYNC_KEYS.includes(key)) {
             try {
                 await this.db.collection('users').doc(this.userId).collection('data').doc(key).delete();
             } catch (error) {
-                console.error(`Error removing ${key} from Firestore:`, error);
+                console.error(`[Sync] Error eliminando ${key} de Firestore:`, error);
             }
         }
     },
 
     /**
-     * Full pull from cloud (called after login)
+     * Descarga y fusiona todos los datos del usuario desde Firestore
+     * @returns {Promise<Object|null>}
      */
     async pullAll() {
-        if (!this.db || !this.userId) return;
+        if (!this.db || !this.userId) return null;
 
-        console.log('Pulling all data from Firestore...');
+        console.log('[Sync] Descargando datos desde Firestore...');
         try {
             const snapshot = await this.db.collection('users').doc(this.userId).collection('data').get();
             const cloudData = {};
@@ -87,35 +110,39 @@ const Sync = {
                 cloudData[doc.id] = doc.data().data;
             });
 
-            // Update localStorage with cloud data
+            // Actualizar caché local
             for (const key of this.SYNC_KEYS) {
-                if (cloudData[key]) {
-                    localStorage.setItem(key, JSON.stringify(cloudData[key]));
+                if (cloudData[key] !== undefined) {
+                    if (typeof StorageService !== 'undefined') {
+                        StorageService.set(key, cloudData[key]);
+                    } else {
+                        localStorage.setItem(key, JSON.stringify(cloudData[key]));
+                    }
                 }
             }
             return cloudData;
         } catch (error) {
-            console.error('Error pulling data from Firestore:', error);
+            console.error('[Sync] Error al descargar datos de Firestore:', error);
             return null;
         }
     },
 
     /**
-     * Push all local data to cloud (called on first registration or manual migration)
+     * Sube todos los datos locales existentes a Firestore (usado en migraciones o primer inicio)
      */
     async pushAll() {
         if (!this.db || !this.userId) return;
 
-        console.log('Pushing all local data to Firestore...');
+        console.log('[Sync] Subiendo datos locales a Firestore...');
         const batch = this.db.batch();
         let hasData = false;
 
         for (const key of this.SYNC_KEYS) {
-            const localValue = localStorage.getItem(key);
-            if (localValue) {
+            const localValue = this.get(key, null);
+            if (localValue !== null) {
                 const docRef = this.db.collection('users').doc(this.userId).collection('data').doc(key);
                 batch.set(docRef, {
-                    data: JSON.parse(localValue),
+                    data: localValue,
                     updatedAt: firebase.firestore.FieldValue.serverTimestamp()
                 });
                 hasData = true;
@@ -123,7 +150,18 @@ const Sync = {
         }
 
         if (hasData) {
-            await batch.commit();
+            try {
+                await batch.commit();
+                if (typeof Toast !== 'undefined') {
+                    Toast.success('Progreso sincronizado en la nube correctamente');
+                }
+            } catch (err) {
+                console.error('[Sync] Error en batch commit de subida:', err);
+            }
         }
     }
 };
+
+if (typeof window !== 'undefined') {
+    window.Sync = Sync;
+}

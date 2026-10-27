@@ -1,210 +1,257 @@
-// ═══════════════════════════════════════════════════════════════
-//  TechAssistant IA — Tutor Inteligente de 1º DAW
-// ═══════════════════════════════════════════════════════════════
+/**
+ * assistant.js - TechAssistant IA
+ * Asistente pedagógico inteligente y contextual para estudiantes de DAW.
+ * Implementa despacho seguro de acciones (sin eval) y análisis reactivo del progreso.
+ */
 
-const ASSISTANT_KNOWLEDGE = {
-    "examenes": {
-        keywords: ["examen", "test", "simulacro", "puntuación", "penalización", "duración", "puntos"],
-        answer: "Los simulacros son clave. Recuerda: en Programación 2 mal restan 1 bien (-0.5 cada una). En el resto de materias, intentamos seguir esa misma lógica de rigor. ¡Omitir preguntas es una gran estrategia!",
-        actions: [{ label: "Hacer Simulacro", cmd: "switchDash('simulacros')" }]
-    },
-    "libreta": {
-        keywords: ["libreta", "errores", "anotar", "notas", "repaso", "oro", "fichaje"],
-        answer: "Tu <b>Libreta de Errores</b> contiene todo lo que has fallado. Es el lugar donde más se aprende. Puedes añadir notas a cada fallo para no volver a cometerlo.",
-        actions: [{ label: "Abrir Libreta", cmd: "openLibreta()" }]
-    },
-    "progreso": {
-        keywords: ["gráfica", "nota", "media", "evolución", "cuántos", "estadísticas"],
-        answer: "En la sección de <b>Progreso</b> verás tu curva de aprendizaje. Si la curva sube, vas por buen camino. Una media de 7 es el objetivo ideal para ir tranquilo al examen.",
-        actions: [{ label: "Ver Gráficos", cmd: "showView('stats')" }]
-    },
-    "labs": {
-        keywords: ["lab", "laboratorio", "práctica", "interactivo", "java", "sql", "uml", "probar"],
-        answer: "Los <b>Laboratorios</b> son para 'ensuciarse las manos'. Si te cuesta la teoría de SQL o Java, vete al Lab y escribe código real. ¡Es la mejor forma de entenderlo!",
-        actions: [{ label: "Ir a Labs", cmd: "switchDash('labs')" }]
-    }
-};
+const TechAssistant = (() => {
+    const KNOWLEDGE_BASE = {
+        "examenes": {
+            keywords: ["examen", "test", "simulacro", "puntuación", "penalización", "duración", "puntos"],
+            answer: "Los simulacros son clave. Recuerda: en Programación 2 fallos restan 1 acierto (-0.5 cada una). En el resto de materias, la penalización estándar es -0.33 pts por error. ¡Omitir preguntas dudosas es una estrategia inteligente!",
+            action: { label: "Hacer Simulacro", command: "switchDash", arg: "academia" }
+        },
+        "libreta": {
+            keywords: ["libreta", "errores", "anotar", "notas", "repaso", "oro", "fichaje"],
+            answer: "Tu <b>Libreta de Errores</b> reúne cada fallo cometido. Es el núcleo donde más se consolida el aprendizaje. Puedes añadir notas explicativas a cada fallo para no volver a tropezar.",
+            action: { label: "Abrir Libreta", command: "openLibreta" }
+        },
+        "progreso": {
+            keywords: ["gráfica", "nota", "media", "evolución", "cuántos", "estadísticas"],
+            answer: "En la sección de <b>Progreso</b> verás tu curva de aprendizaje y evolución. Mantener una media superior a 7 te dará gran tranquilidad de cara a las pruebas oficiales.",
+            action: { label: "Ver Estadísticas", command: "showView", arg: "stats" }
+        },
+        "labs": {
+            keywords: ["lab", "laboratorio", "práctica", "interactivo", "java", "sql", "uml", "probar", "código"],
+            answer: "Los <b>Laboratorios</b> están pensados para entrenar la sintaxis y resolver problemas reales de JavaScript, Python y PHP con feedback automatizado.",
+            action: { label: "Ir al Taller de Código", command: "switchDash", arg: "lab" }
+        }
+    };
 
-const CONSEJOS_GENERALES = [
-    "No intentes hacer 100 tests al día. Haz 2 pero revisa cada fallo en profundidad.",
-    "La Libreta de Errores es tu mejor amiga. Repásala 10 minutos antes de dormir.",
-    "Si fallas mucho en un tema, para y vuelve a leer el resumen PDF.",
-    "En el examen real, si dudas mucho en una, ¡pasa a la siguiente! No regales puntos.",
-    "Usa los Laboratorios para visualizar lo que estudias en teoría."
-];
+    const CONSEJOS_GENERALES = [
+        "No intentes hacer 100 tests al día sin reflexionar. Realiza 2 y revisa cada fallo minuciosamente.",
+        "La Libreta de Errores es tu mejor aliada. Repásala 15 minutos al final del día.",
+        "Si detectas fallos reiterados en un tema, detén los tests y consulta el resumen o video correspondiente.",
+        "En el examen real, si dudas excesivamente en una pregunta, pasa a la siguiente; una respuesta errónea penaliza.",
+        "Aprovecha el Taller de Código para afianzar conceptos abstractos de programación."
+    ];
 
-function toggleAssistant() {
-    const window = document.getElementById('assistant-container');
-    const isHidden = window.classList.contains('hidden');
-    window.classList.toggle('hidden');
-    
-    if (isHidden && document.getElementById('assistant-messages').children.length === 0) {
-        showInitialSummary();
-    }
-}
+    // Despachador seguro de comandos (Sustituye a eval)
+    const COMMAND_DISPATCHER = {
+        switchDash: (section) => {
+            if (typeof switchDash === 'function') switchDash(section || 'overview');
+        },
+        openLibreta: () => {
+            if (typeof openLibreta === 'function') openLibreta();
+        },
+        showView: (view) => {
+            if (typeof showView === 'function') showView(view || 'dashboard');
+        }
+    };
 
-function showInitialSummary() {
-    addMessage("bot", "¡Hola! Soy tu tutor IA. He analizado tu estado actual...");
-    
-    setTimeout(() => {
-        const stats = getAiInsights();
-        let summary = `<b>📋 Tu estado actual:</b><br>`;
-        summary += `• Media Global: <b>${stats.avg.toFixed(2)}</b><br>`;
-        summary += `• Punto débil: <b>${stats.weakestSubject || 'Ninguno aún'}</b><br>`;
-        summary += `• Fallos en libreta: <b>${stats.libCount}</b><br>`;
-        
-        if (stats.today) summary += `<br>🎯 Hoy te toca: <b>${stats.today.labels.join(', ')}</b>.`;
-        
-        addMessage("system", summary);
-        
-        addActions([
-            { label: "📉 Ver mi progreso", query: "como voy" },
-            { label: "💡 Dame un consejo", query: "consejo" },
-            { label: "📚 ¿Qué estudio ahora?", query: "mejorar" }
-        ]);
-    }, 500);
-}
-
-function getAiInsights() {
-    const history = typeof getHistory === 'function' ? getHistory() : [];
-    const lib = typeof getLibreta === 'function' ? getLibreta() : {};
-    const libCount = Object.values(lib).reduce((s,a)=>s+a.length,0);
-    const today = typeof getDailySubjects === 'function' ? getDailySubjects() : null;
-    
-    const avg = history.length > 0 ? history.reduce((s, e) => s + e.score, 0) / history.length : 0;
-    
-    // Encontrar asignatura con más fallos
-    const fallosBySub = {};
-    history.forEach(h => {
-        if (!fallosBySub[h.subjectName]) fallosBySub[h.subjectName] = 0;
-        fallosBySub[h.subjectName] += h.errores;
-    });
-    const weakestSubject = Object.entries(fallosBySub).sort((a,b) => b[1] - a[1])[0]?.[0];
-
-    return { avg, weakestSubject, libCount, today, history };
-}
-
-function handleAssistantQuery(query) {
-    const q = query.toLowerCase();
-    const stats = getAiInsights();
-    
-    // 1. Detección Inteligente de Intenciones
-    
-    // ¿Cómo voy? / Rendimiento
-    if (q.includes("como voy") || q.includes("mi estado") || q.includes("mi nota") || q.includes("rendimiento")) {
-        let resp = `Analizando tus <b>${stats.history.length} exámenes</b> realizados...<br><br>`;
-        if (stats.history.length === 0) {
-            resp += "Aún no tengo datos suficientes. ¡Haz un simulacro para que pueda decirte cómo vas!";
+    function executeCommand(commandName, arg) {
+        const handler = COMMAND_DISPATCHER[commandName];
+        if (typeof handler === 'function') {
+            handler(arg);
         } else {
-            resp += `Tienes una media de <b>${stats.avg.toFixed(2)}</b>. `;
-            if (stats.avg >= 7) resp += "¡Vas genial! Sigue así. 🚀";
-            else if (stats.avg >= 5) resp += "Estás aprobado, pero hay margen de mejora. 💪";
-            else resp += "Estás por debajo del 5. Necesitamos reforzar la base. ⚠️";
-            
-            if (stats.weakestSubject) {
-                resp += `<br><br>Donde más estás sufriendo es en <b>${stats.weakestSubject}</b>. Deberías dedicarle un rato extra hoy.`;
+            console.warn('[TechAssistant] Comando no reconocido:', commandName);
+        }
+    }
+
+    function getInsights() {
+        const history = typeof getHistory === 'function' ? getHistory() : [];
+        const lib = typeof getLibreta === 'function' ? getLibreta() : {};
+        const libCount = Object.values(lib).reduce((sum, arr) => sum + (Array.isArray(arr) ? arr.length : 0), 0);
+        const today = typeof getDailySubjects === 'function' ? getDailySubjects() : null;
+        
+        const avg = history.length > 0
+            ? history.reduce((sum, exam) => sum + (exam.score || 0), 0) / history.length
+            : 0;
+
+        // Asignatura con mayor número acumulado de errores
+        const errorMap = {};
+        history.forEach(item => {
+            const name = item.subjectName || 'General';
+            errorMap[name] = (errorMap[name] || 0) + (item.errores || 0);
+        });
+        const weakestSubject = Object.entries(errorMap).sort((a, b) => b[1] - a[1])[0]?.[0];
+
+        return { avg, weakestSubject, libCount, today, history };
+    }
+
+    function addMessage(sender, htmlContent) {
+        const container = document.getElementById('assistant-messages');
+        if (!container) return;
+        const msgDiv = document.createElement('div');
+        msgDiv.className = `msg msg-${sender}`;
+        msgDiv.innerHTML = htmlContent;
+        container.appendChild(msgDiv);
+        container.scrollTop = container.scrollHeight;
+    }
+
+    function addActionButtons(actions) {
+        const container = document.getElementById('assistant-messages');
+        if (!container || !Array.isArray(actions)) return;
+
+        const actionWrap = document.createElement('div');
+        actionWrap.className = 'assistant-actions';
+
+        actions.forEach(act => {
+            const chip = document.createElement('div');
+            chip.className = 'assist-chip';
+            chip.textContent = act.label;
+
+            chip.onclick = () => {
+                if (act.command) {
+                    executeCommand(act.command, act.arg);
+                } else if (act.query) {
+                    handleQuery(act.query);
+                }
+            };
+            actionWrap.appendChild(chip);
+        });
+
+        container.appendChild(actionWrap);
+        container.scrollTop = container.scrollHeight;
+    }
+
+    function handleQuery(queryText) {
+        const query = queryText.toLowerCase().trim();
+        const insights = getInsights();
+
+        // 1. Detección por intención: Estado y Rendimiento
+        if (query.includes('como voy') || query.includes('estado') || query.includes('nota') || query.includes('rendimiento')) {
+            let reply = `He analizado tus <b>${insights.history.length} simulacros</b> realizados.<br><br>`;
+            if (insights.history.length === 0) {
+                reply += "Aún no disponemos de simulacros suficientes. ¡Completa tu primer test para calibrar el análisis!";
+            } else {
+                reply += `Tu nota media actual es de <b>${insights.avg.toFixed(2)} / 10</b>. `;
+                if (insights.avg >= 7) reply += "¡Excelente nivel! Mantén este ritmo. 🚀";
+                else if (insights.avg >= 5) reply += "Vas bien encaminado, pero conviene asegurar la materia clave. 💪";
+                else reply += "Estamos por debajo del 5. Te aconsejo afianzar los conceptos fundamentales. ⚠️";
+
+                if (insights.weakestSubject) {
+                    reply += `<br><br>Asignatura con mayor margen de mejora: <b>${AppHelpers.esc(insights.weakestSubject)}</b>.`;
+                }
+            }
+            addMessage('bot', reply);
+            addActionButtons([{ label: "Ver Estadísticas", command: "showView", arg: "stats" }]);
+            return;
+        }
+
+        // 2. Recomendación de estudio
+        if (query.includes('mejorar') || query.includes('estudio') || query.includes('hago') || query.includes('plan')) {
+            let reply = "Plan recomendado para tu sesión actual:<br><br>";
+            if (insights.today && insights.today.labels) {
+                reply += `• Asignaturas según calendario: <b>${insights.today.labels.join(', ')}</b>.<br>`;
+            }
+            if (insights.libCount > 5) {
+                reply += `• Acumulas <b>${insights.libCount} fallos</b> en la libreta. Limpia algunos antes de nuevos tests.<br>`;
+            }
+            if (insights.weakestSubject) {
+                reply += `• Refuerzo focalizado en: <b>${AppHelpers.esc(insights.weakestSubject)}</b>.<br>`;
+            }
+            reply += "• Realiza retos en el <b>Taller de Código</b> para consolidar la práctica.";
+            addMessage('bot', reply);
+            addActionButtons([
+                { label: "Ver Academia", command: "switchDash", arg: "academia" },
+                { label: "Repasar Libreta", command: "openLibreta" }
+            ]);
+            return;
+        }
+
+        // 3. Consejos pedagógicos
+        if (query.includes('consejo') || query.includes('ayuda') || query.includes('tip')) {
+            const randomTip = CONSEJOS_GENERALES[Math.floor(Math.random() * CONSEJOS_GENERALES.length)];
+            addMessage('bot', `💡 <b>Recomendación del Tutor:</b><br>${randomTip}`);
+            return;
+        }
+
+        // 4. Búsqueda en base de conocimientos
+        for (const data of Object.values(KNOWLEDGE_BASE)) {
+            if (data.keywords.some(k => query.includes(k))) {
+                addMessage('bot', data.answer);
+                if (data.action) addActionButtons([data.action]);
+                return;
             }
         }
-        addMessage("bot", resp);
-        addActions([{ label: "Ver Gráfica", cmd: "showView('stats')" }]);
-        return;
-    }
 
-    // ¿Qué estudio? / Mejorar
-    if (q.includes("mejorar") || q.includes("estudio") || q.includes("hago") || q.includes("tarea")) {
-        let resp = "Mi consejo para tu sesión actual:<br><br>";
-        if (stats.today) {
-            resp += `• Según tu plan, hoy toca: <b>${stats.today.labels.join(', ')}</b>.<br>`;
-        }
-        if (stats.libCount > 5) {
-            resp += `• Tienes muchos fallos acumulados (<b>${stats.libCount}</b>). Te sugiero limpiar la libreta antes de nuevos tests.<br>`;
-        }
-        if (stats.weakestSubject) {
-            resp += `• Refuerza <b>${stats.weakestSubject}</b>. Haz un test de solo 10 preguntas para coger confianza.<br>`;
-        }
-        resp += "• No olvides los <b>Laboratorios</b> si te atascas con la sintaxis.";
-        addMessage("bot", resp);
-        addActions([
-            { label: "Ver Temario PDF", cmd: "switchDash('temario')" },
-            { label: "Limpiar Libreta", cmd: "openLibreta()" }
-        ]);
-        return;
-    }
-
-    // Consejos
-    if (q.includes("consejo") || q.includes("ayuda") || q.includes("tip")) {
-        const advice = CONSEJOS_GENERALES[Math.floor(Math.random() * CONSEJOS_GENERALES.length)];
-        addMessage("bot", `💡 <b>Tip del Tutor:</b><br>${advice}`);
-        return;
-    }
-
-    // 2. Fallback a base de conocimientos fija
-    let found = false;
-    for (const [key, data] of Object.entries(ASSISTANT_KNOWLEDGE)) {
-        if (data.keywords.some(k => q.includes(k))) {
-            addMessage("bot", data.answer);
-            if (data.actions) addActions(data.actions);
-            found = true;
-            break;
-        }
-    }
-    
-    if (!found) {
-        addMessage("bot", "No estoy seguro de entenderte, pero puedo ayudarte con tu <b>progreso</b>, darte un <b>consejo</b> de estudio o decirte <b>qué mejorar</b> hoy.");
-        addActions([
-            { label: "📉 Ver mi progreso", query: "como voy" },
+        // Fallback conversacional
+        addMessage('bot', "Puedo ayudarte a revisar tu <b>progreso</b>, recomendarte qué <b>estudiar hoy</b> o darte un <b>consejo</b>.");
+        addActionButtons([
+            { label: "📉 Mi progreso", query: "como voy" },
             { label: "💡 Dame un consejo", query: "consejo" },
-            { label: "📚 ¿Qué mejorar?", query: "mejorar" }
+            { label: "🎯 ¿Qué estudio hoy?", query: "mejorar" }
         ]);
     }
-}
 
-function addMessage(sender, text) {
-    const container = document.getElementById('assistant-messages');
-    const div = document.createElement('div');
-    div.className = `msg msg-${sender}`;
-    div.innerHTML = text;
-    container.appendChild(div);
-    container.scrollTop = container.scrollHeight;
-}
+    function toggle() {
+        const container = document.getElementById('assistant-container');
+        if (!container) return;
+        const isHidden = container.classList.contains('hidden');
+        container.classList.toggle('hidden');
 
-function addActions(actions) {
-    const container = document.getElementById('assistant-messages');
-    const div = document.createElement('div');
-    div.className = 'assistant-actions';
-    actions.forEach(a => {
-        const chip = document.createElement('div');
-        chip.className = 'assist-chip';
-        chip.textContent = a.label;
-        if (a.cmd) {
-            chip.onclick = () => { eval(a.cmd); };
-        } else if (a.query) {
-            chip.onclick = () => { handleAssistantQuery(a.query); };
+        if (isHidden && document.getElementById('assistant-messages')?.children.length === 0) {
+            showInitialWelcome();
         }
-        div.appendChild(chip);
-    });
-    container.appendChild(div);
-    container.scrollTop = container.scrollHeight;
-}
+    }
 
-async function sendAssistantMessage() {
-    const input = document.getElementById('assistant-input');
-    const val = input.value.trim();
-    if (!val) return;
-    
-    addMessage("user", val);
-    input.value = '';
-    
-    setTimeout(() => {
-        handleAssistantQuery(val);
-    }, 400);
-}
+    function showInitialWelcome() {
+        addMessage('bot', "¡Hola! Soy tu tutor asistente. He preparado un resumen de tu actividad actual...");
+        setTimeout(() => {
+            const insights = getInsights();
+            let summary = `<b>📋 Resumen Académico:</b><br>`;
+            summary += `• Media General: <b>${insights.avg.toFixed(2)}</b><br>`;
+            summary += `• Asignatura a reforzar: <b>${insights.weakestSubject || 'Ninguna identificada'}</b><br>`;
+            summary += `• Fallos en libreta: <b>${insights.libCount}</b><br>`;
+            if (insights.today && insights.today.labels) {
+                summary += `<br>🎯 Recomendación para hoy: <b>${insights.today.labels.join(', ')}</b>.`;
+            }
+            addMessage('system', summary);
+            addActionButtons([
+                { label: "📉 Mi progreso", query: "como voy" },
+                { label: "💡 Dame un consejo", query: "consejo" },
+                { label: "🎯 ¿Qué estudiar?", query: "mejorar" }
+            ]);
+        }, 300);
+    }
+
+    async function sendMessage() {
+        const input = document.getElementById('assistant-input');
+        if (!input) return;
+        const text = input.value.trim();
+        if (!text) return;
+
+        addMessage('user', AppHelpers.esc(text));
+        input.value = '';
+
+        setTimeout(() => {
+            handleQuery(text);
+        }, 300);
+    }
+
+    return {
+        toggle,
+        sendMessage,
+        handleQuery
+    };
+})();
+
+// Adaptadores globales para mantener interoperabilidad con HTML
+function toggleAssistant() { TechAssistant.toggle(); }
+function sendAssistantMessage() { TechAssistant.sendMessage(); }
 
 document.addEventListener('DOMContentLoaded', () => {
     if (!sessionStorage.getItem('assistant_welcome')) {
         setTimeout(() => {
-            toggleAssistant();
+            TechAssistant.toggle();
             sessionStorage.setItem('assistant_welcome', 'true');
-        }, 2000);
+        }, 1800);
     }
 });
+
+if (typeof window !== 'undefined') {
+    window.TechAssistant = TechAssistant;
+    window.toggleAssistant = toggleAssistant;
+    window.sendAssistantMessage = sendAssistantMessage;
+}

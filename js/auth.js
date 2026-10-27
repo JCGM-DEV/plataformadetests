@@ -1,69 +1,76 @@
 /**
- * Auth System
- * Manages Firebase Authentication and Login UI
+ * auth.js
+ * Sistema de Autenticación y Gestión de Sesión de Usuario (Firebase Auth).
  */
 
 const Auth = {
-    // 🔥 CONFIGURACIÓN DE FIREBASE
-    // El usuario debe reemplazar esto con su propia configuración de la consola de Firebase
-    config: {
-        apiKey: "AIzaSyBnevCDXEbV7TdPtsW-gaO3XabkQUsAKi0",
-        authDomain: "examenes.firebaseapp.com",
-        projectId: "examenes",
-        storageBucket: "examenes.firebasestorage.app",
-        messagingSenderId: "255739838703",
-        appId: "1:255739838703:web:512555d95445e14f821b1a"
-    },
-
     auth: null,
+    db: null,
     currentUser: null,
     isAppInitialized: false,
+    mode: 'login',
 
+    /**
+     * Inicializa Firebase Auth y los listeners de estado
+     */
     async init() {
-        // Initialize Firebase
+        if (typeof firebase === 'undefined') {
+            console.warn('[Auth] Firebase SDK no detectado. Modo offline / local activo.');
+            if (typeof init === 'function' && !this.isAppInitialized) {
+                this.isAppInitialized = true;
+                init();
+            }
+            return;
+        }
+
+        const config = window.FIREBASE_CONFIG || {
+            apiKey: "AIzaSyBnevCDXEbV7TdPtsW-gaO3XabkQUsAKi0",
+            authDomain: "examenes.firebaseapp.com",
+            projectId: "examenes",
+            storageBucket: "examenes.firebasestorage.app",
+            messagingSenderId: "255739838703",
+            appId: "1:255739838703:web:512555d95445e14f821b1a"
+        };
+
         if (!firebase.apps.length) {
-            firebase.initializeApp(this.config);
+            firebase.initializeApp(config);
         }
         this.auth = firebase.auth();
         this.db = firebase.firestore();
 
-        // Listen for auth state changes
+        // Listener del estado de autenticación
         this.auth.onAuthStateChanged(async (user) => {
             if (user) {
                 this.currentUser = user;
-                console.log('User signed in:', user.email);
-                
-                // Initialize Sync system
-                Sync.init(this.db, user.uid);
-                
-                // Pull data from cloud
-                const cloudData = await Sync.pullAll();
-                
-                // Check if we should migrate local data (only if cloud is empty and local isn't)
-                this.checkMigration(cloudData);
+                console.log('[Auth] Usuario autenticado:', user.email);
 
-                // Update UI: Hide auth modal, show user info
-                this.hideAuthModal();
-                this.updateUserUI();
-                
-                // Initialize the main app if not already
-                if (typeof init === 'function' && !this.isAppInitialized) {
-                    console.log('First time initializing app from Auth...');
-                    this.isAppInitialized = true;
-                    init(); 
+                // Inicializar sistema de sincronización
+                if (typeof Sync !== 'undefined') {
+                    Sync.init(this.db, user.uid);
+                    const cloudData = await Sync.pullAll();
+                    this.checkMigration(cloudData);
                 }
 
-                // Prompt user to select course (1º vs 2º DAW) if not selected this session
+                this.hideAuthModal();
+                this.updateUserUI();
+
+                // Inicializar la aplicación principal una sola vez
+                if (typeof init === 'function' && !this.isAppInitialized) {
+                    this.isAppInitialized = true;
+                    init();
+                }
+
+                // Modal selector de curso si es primera vez en la sesión
                 if (!sessionStorage.getItem('course_chosen_session')) {
                     if (typeof openCourseSelectModal === 'function') {
-                        setTimeout(() => openCourseSelectModal(), 350);
+                        setTimeout(() => openCourseSelectModal(), 200);
                     }
                 }
             } else {
                 this.currentUser = null;
-                this.isAppInitialized = false; // Reset on logout
+                this.isAppInitialized = false;
                 sessionStorage.removeItem('course_chosen_session');
-                console.log('No user signed in.');
+                console.log('[Auth] Sin sesión activa.');
                 this.showAuthModal();
                 this.clearUserUI();
             }
@@ -71,26 +78,41 @@ const Auth = {
     },
 
     async login(email, password) {
+        const btn = document.getElementById('auth-submit-btn');
         try {
-            const btn = document.getElementById('auth-submit-btn');
             if (btn) btn.disabled = true;
             await this.auth.signInWithEmailAndPassword(email, password);
+            if (typeof Toast !== 'undefined') Toast.success('¡Sesión iniciada correctamente!');
         } catch (error) {
-            alert('Error al iniciar sesión: ' + error.message);
-            const btn = document.getElementById('auth-submit-btn');
+            const msg = error.code === 'auth/invalid-credential' || error.code === 'auth/wrong-password'
+                ? 'Credenciales inválidas. Revisa email y contraseña.'
+                : error.message;
+            if (typeof Toast !== 'undefined') {
+                Toast.error(msg);
+            } else {
+                alert('Error al iniciar sesión: ' + msg);
+            }
+        } finally {
             if (btn) btn.disabled = false;
         }
     },
 
     async signup(email, password) {
+        const btn = document.getElementById('auth-submit-btn');
         try {
-            const btn = document.getElementById('auth-submit-btn');
             if (btn) btn.disabled = true;
             await this.auth.createUserWithEmailAndPassword(email, password);
-            // Upon creation, the onAuthStateChanged listener will handle the rest
+            if (typeof Toast !== 'undefined') Toast.success('¡Cuenta creada con éxito!');
         } catch (error) {
-            alert('Error al registrarse: ' + error.message);
-            const btn = document.getElementById('auth-submit-btn');
+            const msg = error.code === 'auth/email-already-in-use'
+                ? 'Este correo ya está registrado. Prueba a iniciar sesión.'
+                : error.message;
+            if (typeof Toast !== 'undefined') {
+                Toast.error(msg);
+            } else {
+                alert('Error al registrarse: ' + msg);
+            }
+        } finally {
             if (btn) btn.disabled = false;
         }
     },
@@ -99,25 +121,23 @@ const Auth = {
         if (confirm('¿Cerrar sesión? Los datos locales se mantendrán pero no se sincronizarán hasta que vuelvas a entrar.')) {
             sessionStorage.removeItem('course_chosen_session');
             await this.auth.signOut();
-            window.location.reload(); // Hard reload to clear app state
+            window.location.reload();
         }
     },
 
     checkMigration(cloudData) {
-        // Simple logic: if cloud has no history but local does, offer to push
         const localHistory = localStorage.getItem('exam_history_v2');
         const hasLocalData = localHistory && JSON.parse(localHistory).length > 0;
         const hasCloudData = cloudData && cloudData['exam_history_v2'] && cloudData['exam_history_v2'].length > 0;
 
         if (hasLocalData && !hasCloudData) {
-            if (confirm('Hemos detectado datos locales en este dispositivo. ¿Quieres subirlos a tu nueva cuenta en la nube para verlos en otros dispositivos?')) {
-                Sync.pushAll();
+            if (confirm('Hemos detectado datos locales en este dispositivo. ¿Deseas subirlos a tu cuenta en la nube?')) {
+                if (typeof Sync !== 'undefined') Sync.pushAll();
             }
         }
     },
 
     showAuthModal() {
-        // Create modal if it doesn't exist
         if (!document.getElementById('auth-overlay')) {
             const overlay = document.createElement('div');
             overlay.id = 'auth-overlay';
@@ -132,11 +152,11 @@ const Auth = {
                     <form id="auth-form" onsubmit="event.preventDefault(); Auth.handleAuthSubmit();">
                         <div class="auth-field">
                             <label>Email</label>
-                            <input type="email" id="auth-email" required placeholder="tu@email.com">
+                            <input type="email" id="auth-email" required placeholder="tu@email.com" autocomplete="email">
                         </div>
                         <div class="auth-field">
                             <label>Contraseña</label>
-                            <input type="password" id="auth-password" required placeholder="••••••••">
+                            <input type="password" id="auth-password" required placeholder="••••••••" autocomplete="current-password">
                         </div>
                         <button type="submit" id="auth-submit-btn" class="auth-btn">Iniciar Sesión</button>
                     </form>
@@ -145,7 +165,7 @@ const Auth = {
                         <a href="javascript:void(0)" id="auth-switch-link" onclick="Auth.toggleAuthMode()">Regístrate</a>
                     </div>
                     <div class="auth-notice">
-                        <p>Los datos se guardarán de forma segura en la nube para que puedas acceder desde cualquier dispositivo.</p>
+                        <p>Tus exámenes, notas y estadísticas se mantendrán sincronizados entre tus dispositivos.</p>
                     </div>
                 </div>
             `;
@@ -159,7 +179,6 @@ const Auth = {
         if (overlay) overlay.classList.remove('active');
     },
 
-    mode: 'login',
     toggleAuthMode() {
         this.mode = this.mode === 'login' ? 'signup' : 'login';
         const title = document.getElementById('auth-subtitle');
@@ -181,8 +200,9 @@ const Auth = {
     },
 
     handleAuthSubmit() {
-        const email = document.getElementById('auth-email').value;
+        const email = document.getElementById('auth-email').value.trim();
         const password = document.getElementById('auth-password').value;
+        if (!email || !password) return;
         if (this.mode === 'login') {
             this.login(email, password);
         } else {
@@ -191,17 +211,16 @@ const Auth = {
     },
 
     updateUserUI() {
-        // Find or create user info area in header
         let userNav = document.querySelector('.user-nav');
-        if (userNav) {
-            // Check if user info already exists
+        if (userNav && this.currentUser) {
             if (!document.getElementById('user-profile-info')) {
                 const userInfo = document.createElement('div');
                 userInfo.id = 'user-profile-info';
                 userInfo.className = 'user-profile-info';
+                const safeEmail = AppHelpers ? AppHelpers.esc(this.currentUser.email.split('@')[0]) : this.currentUser.email.split('@')[0];
                 userInfo.innerHTML = `
                     <div class="user-details">
-                        <span class="user-email">${this.currentUser.email.split('@')[0]}</span>
+                        <span class="user-email">${safeEmail}</span>
                         <button onclick="Auth.logout()" class="logout-btn" title="Cerrar sesión">🚪</button>
                     </div>
                 `;
@@ -216,8 +235,16 @@ const Auth = {
     }
 };
 
-// Initialize on load
+// Auto-inicialización segura una vez cargado el DOM
 document.addEventListener('DOMContentLoaded', () => {
-    // Wait a bit for Firebase scripts to load if they are at the end
-    setTimeout(() => Auth.init(), 500);
+    // Si Firebase ya está presente, inicializar directamente, si no, esperar brevemente
+    if (typeof firebase !== 'undefined') {
+        Auth.init();
+    } else {
+        setTimeout(() => Auth.init(), 200);
+    }
 });
+
+if (typeof window !== 'undefined') {
+    window.Auth = Auth;
+}

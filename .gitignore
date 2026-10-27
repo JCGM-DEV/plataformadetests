@@ -1,10 +1,27 @@
-scripts/
-__pycache__/
+# Dependencias y entornos
 node_modules/
-*.py
+.venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Variables de entorno y secretos
+.env
+.env.local
+*.local
+
+# Logs y temporales
 *.log
+/tmp/
+*.bak
+*.swp
+*~
+.DS_Store
+
+# Reportes temporales generados
 COHERENCIA_REPORT*.json
 MISALIGNMENT_REPORT*.json
-/tmp/
-*.pdf
+scratch/output*.txt
+
+# PDFs binarios pesados (conservar assets de temario requeridos)
 pdfs DAW 2/
