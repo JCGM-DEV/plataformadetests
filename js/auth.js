@@ -59,20 +59,17 @@ const Auth = {
                     this.isAppInitialized = true;
                     init();
                 }
-
-                // Modal selector de curso si es primera vez en la sesión
-                if (!sessionStorage.getItem('course_chosen_session')) {
-                    if (typeof openCourseSelectModal === 'function') {
-                        setTimeout(() => openCourseSelectModal(), 200);
-                    }
-                }
             } else {
                 this.currentUser = null;
-                this.isAppInitialized = false;
-                sessionStorage.removeItem('course_chosen_session');
-                console.log('[Auth] Sin sesión activa.');
-                this.showAuthModal();
-                this.clearUserUI();
+                console.log('[Auth] Sin sesión activa. Modo Invitado / Local activado.');
+                this.hideAuthModal();
+                this.updateUserUI();
+
+                // Inicializar la aplicación principal para modo invitado
+                if (typeof init === 'function' && !this.isAppInitialized) {
+                    this.isAppInitialized = true;
+                    init();
+                }
             }
         });
     },
@@ -138,12 +135,17 @@ const Auth = {
     },
 
     showAuthModal() {
-        if (!document.getElementById('auth-overlay')) {
-            const overlay = document.createElement('div');
+        let overlay = document.getElementById('auth-overlay');
+        if (!overlay) {
+            overlay = document.createElement('div');
             overlay.id = 'auth-overlay';
             overlay.className = 'auth-overlay';
+            overlay.onclick = (e) => {
+                if (e.target === overlay) Auth.hideAuthModal();
+            };
             overlay.innerHTML = `
                 <div class="auth-card">
+                    <button type="button" class="auth-modal-close" onclick="Auth.hideAuthModal()" title="Cerrar modal">&times;</button>
                     <div class="auth-header">
                         <span class="logo-icon">🎓</span>
                         <h2>App<span>Sync</span></h2>
@@ -160,6 +162,7 @@ const Auth = {
                         </div>
                         <button type="submit" id="auth-submit-btn" class="auth-btn">Iniciar Sesión</button>
                     </form>
+                    <button type="button" class="btn-guest-continue" onclick="Auth.hideAuthModal()">Continuar en modo local (Invitado)</button>
                     <div class="auth-footer">
                         <span id="auth-switch-text">¿No tienes cuenta?</span>
                         <a href="javascript:void(0)" id="auth-switch-link" onclick="Auth.toggleAuthMode()">Regístrate</a>
@@ -171,7 +174,7 @@ const Auth = {
             `;
             document.body.appendChild(overlay);
         }
-        document.getElementById('auth-overlay').classList.add('active');
+        overlay.classList.add('active');
     },
 
     hideAuthModal() {
@@ -211,27 +214,40 @@ const Auth = {
     },
 
     updateUserUI() {
-        let userNav = document.querySelector('.user-nav');
-        if (userNav && this.currentUser) {
-            if (!document.getElementById('user-profile-info')) {
-                const userInfo = document.createElement('div');
-                userInfo.id = 'user-profile-info';
-                userInfo.className = 'user-profile-info';
-                const safeEmail = AppHelpers ? AppHelpers.esc(this.currentUser.email.split('@')[0]) : this.currentUser.email.split('@')[0];
-                userInfo.innerHTML = `
-                    <div class="user-details">
-                        <span class="user-email">${safeEmail}</span>
-                        <button onclick="Auth.logout()" class="logout-btn" title="Cerrar sesión">🚪</button>
-                    </div>
-                `;
-                userNav.appendChild(userInfo);
-            }
+        let userNav = document.querySelector('.user-nav') || document.querySelector('.top-bar-actions');
+        if (!userNav) return;
+
+        const existingInfo = document.getElementById('user-profile-info');
+        if (existingInfo) existingInfo.remove();
+        const existingGuest = document.getElementById('btn-auth-trigger-guest');
+        if (existingGuest) existingGuest.remove();
+
+        if (this.currentUser) {
+            const userInfo = document.createElement('div');
+            userInfo.id = 'user-profile-info';
+            userInfo.className = 'user-profile-info';
+            const emailPrefix = this.currentUser.email ? this.currentUser.email.split('@')[0] : 'Usuario';
+            const safeEmail = typeof AppHelpers !== 'undefined' ? AppHelpers.esc(emailPrefix) : emailPrefix;
+            userInfo.innerHTML = `
+                <div class="user-details">
+                    <span class="user-email" title="${typeof AppHelpers !== 'undefined' ? AppHelpers.esc(this.currentUser.email) : ''}">👤 ${safeEmail}</span>
+                    <button onclick="Auth.logout()" class="logout-btn" title="Cerrar sesión">🚪</button>
+                </div>
+            `;
+            userNav.appendChild(userInfo);
+        } else {
+            const guestBtn = document.createElement('button');
+            guestBtn.id = 'btn-auth-trigger-guest';
+            guestBtn.className = 'btn-auth-trigger';
+            guestBtn.onclick = () => this.showAuthModal();
+            guestBtn.title = 'Inicia sesión para sincronizar tus notas en la nube';
+            guestBtn.innerHTML = `<span>☁️ Sincronizar</span>`;
+            userNav.appendChild(guestBtn);
         }
     },
 
     clearUserUI() {
-        const userInfo = document.getElementById('user-profile-info');
-        if (userInfo) userInfo.remove();
+        this.updateUserUI();
     }
 };
 

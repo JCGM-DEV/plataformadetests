@@ -322,6 +322,12 @@ function toggleSidebar() {
 }
 
 function switchDash(sectionId) {
+    if (sectionId === 'simulacros' || sectionId === 'temario') {
+        sectionId = 'academia';
+    } else if (sectionId === 'labs') {
+        sectionId = 'lab';
+    }
+
     // Toggle active link
     document.querySelectorAll('.side-link').forEach(link => {
         link.classList.toggle('active', link.getAttribute('data-section') === sectionId);
@@ -500,6 +506,9 @@ function closeCourseSelectModal() {
 async function init() {
     try {
         const savedCourse = localStorage.getItem('selected_daw_course') || 'daw2';
+        if (!localStorage.getItem('selected_daw_course')) {
+            localStorage.setItem('selected_daw_course', 'daw2');
+        }
         applyDawCourse(savedCourse, true);
 
         // Study summaries
@@ -701,7 +710,7 @@ function renderFallosSection() {
             <div class="empty-state">
                 <div class="empty-icon">❌</div>
                 <p>¡Buen trabajo! No tienes fallos acumulados en este momento.</p>
-                <button class="btn-secondary" onclick="switchDash('simulacros')" style="margin-top:1rem">Ir a Simulacros</button>
+                <button class="btn-secondary" onclick="switchDash('academia')" style="margin-top:1rem">Ir a Academia</button>
             </div>`;
         return;
     }
@@ -799,7 +808,7 @@ function renderProgress() {
             <div class="empty-state">
                 <div class="empty-icon">📈</div>
                 <p>Aún no hay datos de progreso. Realiza tu primer simulacro para empezar a ver tus estadísticas.</p>
-                <button class="btn-secondary" onclick="switchDash('simulacros')" style="margin-top:1rem">Empezar a practicar</button>
+                <button class="btn-secondary" onclick="switchDash('academia')" style="margin-top:1rem">Empezar a practicar</button>
             </div>`;
         return;
     }
@@ -2714,7 +2723,7 @@ function renderTutorMessage() {
             message = `Base teórica suficiente para **${subLabel}** detectada. Ahora a por el **entrenamiento de tests**. 🤖🎯`;
             guidanceHTML = `
                 <div style="margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                    <button class="planner-go-btn" style="background:#f97316; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="showView('dashboard'); switchDash('simulacros'); setTimeout(()=>scrollToSubject('${sid}'),150)">
+                    <button class="planner-go-btn" style="background:#f97316; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="showView('dashboard'); switchDash('academia'); setTimeout(()=>scrollToSubject('${sid}'),150)">
                         🔥 Test: ${subLabel}
                     </button>
                     ${getCurrentPhase().id === 2 ? `<button onclick="showView('dashboard'); switchDash('fallos')" style="background:#6366f1; padding: 0.6rem 1.2rem; font-size: 0.85rem;" class="planner-go-btn">📓 Repasar Fallos</button>` : ''}
@@ -2723,7 +2732,7 @@ function renderTutorMessage() {
             message = `Protocolo de práctica activado para **${subLabel}**. Es hora de mancharse las manos. 🤖🔧`;
             guidanceHTML = `
                 <div style="margin-top: 1rem;">
-                    <button class="planner-go-btn" style="background:#10b981; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="showView('dashboard'); switchDash('labs')">
+                    <button class="planner-go-btn" style="background:#10b981; padding: 0.6rem 1.2rem; font-size: 0.85rem;" onclick="showView('dashboard'); switchDash('lab')">
                         🧪 Entrar al Laboratorio
                     </button>
                 </div>`;
@@ -3607,5 +3616,22 @@ function openUnitChallenge(subjectId, unit) {
     // Switch to lab tab if specific unit challenge not found
     switchDash('lab');
 }
+
+// ─── INITIALIZATION SAFETY FALLBACK ─────────────────────────────
+(function ensureAppBoot() {
+    function run() {
+        if (typeof init === 'function') {
+            if (!window.Auth || !window.Auth.isAppInitialized) {
+                if (window.Auth) window.Auth.isAppInitialized = true;
+                init();
+            }
+        }
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', run);
+    } else {
+        setTimeout(run, 50);
+    }
+})();
 
 

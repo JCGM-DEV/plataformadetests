@@ -138,6 +138,7 @@
                         <button id="current-course-badge" onclick="openCourseSelectModal()" class="btn-course-switcher" title="Cambiar de curso (1º DAW / 2º DAW)">
                             🚀 2º DAW <span style="font-size:0.8rem; opacity:0.8; margin-left:4px;">⇄</span>
                         </button>
+                        <div class="user-nav" id="user-nav"></div>
                         <div class="progress-info">
                             <span class="label" id="global-avg-label">Media General</span>
                             <div class="progress-bar-small"><div class="fill" id="global-progress-fill" style="width:0%"></div></div>
@@ -416,7 +417,7 @@
 
 
     <!-- ── COURSE SELECTION MODAL (1º vs 2º DAW) ── -->
-    <div id="course-select-modal" class="auth-overlay">
+    <div id="course-select-modal" class="auth-overlay" onclick="if(event.target === this) closeCourseSelectModal()">
         <div class="course-select-card">
             <button class="course-select-close" onclick="closeCourseSelectModal()" title="Cerrar">&times;</button>
             <div class="course-select-header">
