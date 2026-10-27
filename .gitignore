@@ -23,5 +23,11 @@ COHERENCIA_REPORT*.json
 MISALIGNMENT_REPORT*.json
 scratch/output*.txt
 
-# PDFs binarios pesados (conservar assets de temario requeridos)
+# PDFs binarios y carpetas de temario pesado
+*.pdf
+[Pp][Dd][Ff]*[Dd][Aa][Ww]*
 pdfs DAW 2/
+pdfs DAW2/
+PDFs DAW 2/
+PDFs DAW2/
+
